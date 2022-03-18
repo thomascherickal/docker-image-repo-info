@@ -639,7 +639,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:1-alpine`
 
 ```console
-$ docker pull nginx@sha256:1e18d60ec3e83a1a01f07457ba6ce045fd3cb65ad1c2bbbb07beb62cc3037543
+$ docker pull nginx@sha256:581ac1da0f8f8c342fa6cf77885a2320227667c0bc42bdca4b1dd74599d02498
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1020,74 +1020,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:1-alpine` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:af491bc7ec4cac0d5d04c2c20a8c747903b7bf2b1f57c443670cc62bd9611c23
+$ docker pull nginx@sha256:a87ac0dedbb49b4b50646b9849b9eeb66f018ef971dd967e8d05265d5bb817df
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **11.9 MB (11887405 bytes)**  
+-	Total Size: **10.5 MB (10481719 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9f016818b812b3a0dbd855f2f449ee8bcce8bd74d421ccfdb22318a3152c6719`
+-	Image ID: `sha256:aa2a7e8298b8032f4a81487c1a5030f8929f815a295cbb6812734904aec97b8e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Wed, 24 Nov 2021 20:20:16 GMT
-ADD file:57115dca2eb707f46b6301e75174e6aa316fb02ac28643b91429b75be51bd8c8 in / 
-# Wed, 24 Nov 2021 20:20:20 GMT
+# Thu, 17 Mar 2022 11:14:04 GMT
+ADD file:ddc94e1e084c05807db26adcc95b47a137fa47fb391e75998b338ada65e00c1c in / 
+# Thu, 17 Mar 2022 11:14:09 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Dec 2021 19:39:51 GMT
+# Fri, 18 Mar 2022 02:01:09 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 25 Jan 2022 20:34:22 GMT
+# Fri, 18 Mar 2022 02:01:15 GMT
 ENV NGINX_VERSION=1.21.6
-# Tue, 25 Jan 2022 20:34:30 GMT
+# Fri, 18 Mar 2022 02:01:20 GMT
 ENV NJS_VERSION=0.7.2
-# Tue, 25 Jan 2022 20:34:36 GMT
+# Fri, 18 Mar 2022 02:01:25 GMT
 ENV PKG_RELEASE=1
-# Tue, 25 Jan 2022 20:38:48 GMT
+# Fri, 18 Mar 2022 02:05:42 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"29ec1c635da36b7727953544e1a20e9d75bd9d2050e063b9f81f88ca07bb7ea0b65cef46d0f3cb7134b38ce9b94ecada631619f233231845a3d8a16b6ad0db82 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 25 Jan 2022 20:38:54 GMT
+# Fri, 18 Mar 2022 02:05:45 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 25 Jan 2022 20:38:57 GMT
+# Fri, 18 Mar 2022 02:05:46 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:38:59 GMT
+# Fri, 18 Mar 2022 02:05:48 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:39:00 GMT
+# Fri, 18 Mar 2022 02:05:49 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:39:06 GMT
+# Fri, 18 Mar 2022 02:05:53 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 25 Jan 2022 20:39:10 GMT
+# Fri, 18 Mar 2022 02:05:58 GMT
 EXPOSE 80
-# Tue, 25 Jan 2022 20:39:13 GMT
+# Fri, 18 Mar 2022 02:06:06 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 25 Jan 2022 20:39:16 GMT
+# Fri, 18 Mar 2022 02:06:10 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:159b5dcb1717c815c76ff5ea1db730e18e8609c9090238e43282856db9e71f47`  
-		Last Modified: Wed, 24 Nov 2021 20:21:14 GMT  
-		Size: 2.8 MB (2814780 bytes)  
+	-	`sha256:eef85fcc847498263d979ef7ec75680d05e90815eb83a9ec4db135b990c0d8b8`  
+		Last Modified: Thu, 17 Mar 2022 11:15:15 GMT  
+		Size: 2.8 MB (2814051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29c02cc338b8fbcca28039d2b317e6bca3aaf28e017532fcd0c51edda8ae3ca8`  
-		Last Modified: Tue, 25 Jan 2022 20:58:52 GMT  
-		Size: 9.1 MB (9069069 bytes)  
+	-	`sha256:d7dca4d0b0c5a79e71c3feb0d86e7126862b6f9396de52caf3b3c303d34ca209`  
+		Last Modified: Fri, 18 Mar 2022 02:33:34 GMT  
+		Size: 7.7 MB (7664104 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:602d1debbe13281dd67ec7db044cb82d97dc6a772149613fa30b653f9bac41f5`  
-		Last Modified: Tue, 25 Jan 2022 20:58:51 GMT  
+	-	`sha256:b6eb27df268fbba70fcb4d18a8d7c318fe004ae5963211ec8be106da86e83148`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
 		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67f4979ef0e96807bccbf40933c5907254ff6ec9d2bbd931a26ecb7a504d1682`  
-		Last Modified: Tue, 25 Jan 2022 20:58:51 GMT  
-		Size: 894.0 B  
+	-	`sha256:e566a96ccf3caff2e8a58f265330c648d22121e8ac3ee6a0cd7c82cf6d0527a9`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8feea406ce6b776acd98b07e6c7dd6ad89897747e82fe29c3d147354de5c483`  
-		Last Modified: Tue, 25 Jan 2022 20:58:50 GMT  
-		Size: 666.0 B  
+	-	`sha256:74dd3e99d68c7a3931da2b11f8cbae5410cead5e15f7b5e2c1f7534c1a150a76`  
+		Last Modified: Fri, 18 Mar 2022 02:33:32 GMT  
+		Size: 669.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:229d92d6a8bea8490a55b74af5c49641aa340746c1f7b7176eff9b9273aef7a6`  
-		Last Modified: Tue, 25 Jan 2022 20:58:50 GMT  
-		Size: 1.4 KB (1395 bytes)  
+	-	`sha256:00a9efd3e088092b44da914cdb6e095d1284fc182cfd5ea9bcd7f1c648e312cc`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
+		Size: 1.4 KB (1398 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:1-alpine` - linux; s390x
@@ -1166,7 +1166,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:1-alpine-perl`
 
 ```console
-$ docker pull nginx@sha256:eace2cab55e8b78c452dd8bba91795264c6308d213a9c508465a45c21c55b864
+$ docker pull nginx@sha256:2bc9a3cf0b93f8855659ee58101ac93a8e1b3cf3acf6809d7784a987ecd346a8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1547,74 +1547,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:1-alpine-perl` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:f44577cd4a19a25569768b58b3ec6dc3a6c261421289eb6aa9a6f457dc68cb51
+$ docker pull nginx@sha256:1fb4947517a460f496df181bf17f674c43d037639f476ccaa7855011db45013b
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.9 MB (20945003 bytes)**  
+-	Total Size: **19.5 MB (19536707 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c337eed0c91800e38bf855f46dc115e5e01b8fd1274cdc84b5beec6e16b80d3b`
+-	Image ID: `sha256:653ad5c90aeaab01b052f46eaf19fc03cf6d67925ade7b22678e7f2a470e156f`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Wed, 24 Nov 2021 20:20:16 GMT
-ADD file:57115dca2eb707f46b6301e75174e6aa316fb02ac28643b91429b75be51bd8c8 in / 
-# Wed, 24 Nov 2021 20:20:20 GMT
+# Thu, 17 Mar 2022 11:14:04 GMT
+ADD file:ddc94e1e084c05807db26adcc95b47a137fa47fb391e75998b338ada65e00c1c in / 
+# Thu, 17 Mar 2022 11:14:09 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Dec 2021 19:39:51 GMT
+# Fri, 18 Mar 2022 02:01:09 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 25 Jan 2022 20:34:22 GMT
+# Fri, 18 Mar 2022 02:01:15 GMT
 ENV NGINX_VERSION=1.21.6
-# Tue, 25 Jan 2022 20:34:30 GMT
+# Fri, 18 Mar 2022 02:01:20 GMT
 ENV NJS_VERSION=0.7.2
-# Tue, 25 Jan 2022 20:34:36 GMT
+# Fri, 18 Mar 2022 02:01:25 GMT
 ENV PKG_RELEASE=1
-# Tue, 25 Jan 2022 20:43:47 GMT
+# Fri, 18 Mar 2022 02:10:33 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-perl=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"29ec1c635da36b7727953544e1a20e9d75bd9d2050e063b9f81f88ca07bb7ea0b65cef46d0f3cb7134b38ce9b94ecada631619f233231845a3d8a16b6ad0db82 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 25 Jan 2022 20:43:51 GMT
+# Fri, 18 Mar 2022 02:10:39 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 25 Jan 2022 20:43:54 GMT
+# Fri, 18 Mar 2022 02:10:45 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:43:56 GMT
+# Fri, 18 Mar 2022 02:10:47 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:43:59 GMT
+# Fri, 18 Mar 2022 02:10:51 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:44:05 GMT
+# Fri, 18 Mar 2022 02:10:59 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 25 Jan 2022 20:44:09 GMT
+# Fri, 18 Mar 2022 02:11:07 GMT
 EXPOSE 80
-# Tue, 25 Jan 2022 20:44:11 GMT
+# Fri, 18 Mar 2022 02:11:13 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 25 Jan 2022 20:44:15 GMT
+# Fri, 18 Mar 2022 02:11:18 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:159b5dcb1717c815c76ff5ea1db730e18e8609c9090238e43282856db9e71f47`  
-		Last Modified: Wed, 24 Nov 2021 20:21:14 GMT  
-		Size: 2.8 MB (2814780 bytes)  
+	-	`sha256:eef85fcc847498263d979ef7ec75680d05e90815eb83a9ec4db135b990c0d8b8`  
+		Last Modified: Thu, 17 Mar 2022 11:15:15 GMT  
+		Size: 2.8 MB (2814051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4222da7c257200072a881461a70fc6030c174d781a029530f3cd92c64c78dc6e`  
-		Last Modified: Tue, 25 Jan 2022 20:59:17 GMT  
-		Size: 18.1 MB (18126677 bytes)  
+	-	`sha256:c2e19aa79c6ebf4782c153cfb6b3084182b00c2c628c9674504cd8f9024dc64f`  
+		Last Modified: Fri, 18 Mar 2022 02:34:03 GMT  
+		Size: 16.7 MB (16719093 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f525efba0643e31f6b2679f5b8a61182584dced6476169b05d65f7a4507953ed`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 597.0 B  
+	-	`sha256:c7d3023a5a4df7fb7c1550f3a92ba711e61f2c84d4f86ac5a01740bd0e7ed105`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6dfa689bfa3514a5f816528cc01cbc0d2f34b40cebe8b76df18d0cebba341c60`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 893.0 B  
+	-	`sha256:5f8bfeffc4f66a9a5ec1c5ed5b5f5a73486810af80a801d764d3b66488b7d8cb`  
+		Last Modified: Fri, 18 Mar 2022 02:33:58 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:37aa637ea7adb704a38239c70399a91ced735fc18c7cae61168e86f39fe4a482`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 664.0 B  
+	-	`sha256:9c03b19b3e41aaa293d96bdb4e0449b504227a3bfb456235d02384632ddb71af`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 669.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62904de971aa2af9134135d38df3496290217fa54bf93a86bc99a3c33925a55b`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 1.4 KB (1392 bytes)  
+	-	`sha256:8a24e40f8abe7fa71cf8ece6ae5a338f89f547dc10e45b5209a79742558b27e6`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 1.4 KB (1397 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:1-alpine-perl` - linux; s390x
@@ -2895,7 +2895,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:1.20-alpine`
 
 ```console
-$ docker pull nginx@sha256:fd1d617cffdbd1ce3ca63c085985f1aa5ebe5ebc43fbb2a62a75cd4585ad9a49
+$ docker pull nginx@sha256:6378bae949f6d4ee1aceadfe557d72cfffd65aafe3916c85db39d47be1deb773
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3276,74 +3276,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:1.20-alpine` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:96b39719d5011c0deeca0d390dceba19ac460c037b5190bf201e73b19fa7e5c3
+$ docker pull nginx@sha256:9b7325472e063ca4ccd21e157bc9c9f9c61125f0edd96ee9f295099fe2cdd154
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.4 MB (10383914 bytes)**  
+-	Total Size: **10.4 MB (10374396 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d5d35e81e7f06753ba9f5a82675755171622f3bbfc6e40a796735e5d42ebd4c0`
+-	Image ID: `sha256:ff8c864e6053598a24d8e81814320153a0d526131640416a2925e09d149f08b1`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Fri, 12 Nov 2021 21:18:00 GMT
-ADD file:4d45063079cb28a34f1e382fddb22f156ac99d5449aa05ed37cb653c1f7b80f2 in / 
-# Fri, 12 Nov 2021 21:18:01 GMT
+# Thu, 17 Mar 2022 18:18:43 GMT
+ADD file:bf9c99d8209e0bed9fd3b62cbe691ebf3829d5a35e63e2b066f1f842577a6d24 in / 
+# Thu, 17 Mar 2022 18:18:48 GMT
 CMD ["/bin/sh"]
-# Sat, 13 Nov 2021 02:31:57 GMT
+# Fri, 18 Mar 2022 02:21:46 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 16 Nov 2021 22:43:07 GMT
+# Fri, 18 Mar 2022 02:21:52 GMT
 ENV NGINX_VERSION=1.20.2
-# Tue, 16 Nov 2021 22:43:09 GMT
+# Fri, 18 Mar 2022 02:21:58 GMT
 ENV NJS_VERSION=0.7.0
-# Tue, 16 Nov 2021 22:43:12 GMT
+# Fri, 18 Mar 2022 02:22:05 GMT
 ENV PKG_RELEASE=1
-# Tue, 16 Nov 2021 22:47:18 GMT
+# Fri, 18 Mar 2022 02:26:37 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"af6e7eb25594dffe2903358f7a2c5c956f5b67b8df3f4e8237c30b63e50ce28e6eada3ed453687409beef8f3afa8f551cb20df2f06bd5e235eb66df212ece2ed *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 16 Nov 2021 22:47:20 GMT
+# Fri, 18 Mar 2022 02:26:44 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 16 Nov 2021 22:47:21 GMT
+# Fri, 18 Mar 2022 02:26:46 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:47:22 GMT
+# Fri, 18 Mar 2022 02:26:48 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:47:23 GMT
+# Fri, 18 Mar 2022 02:26:50 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:47:25 GMT
+# Fri, 18 Mar 2022 02:26:52 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 16 Nov 2021 22:47:27 GMT
+# Fri, 18 Mar 2022 02:27:00 GMT
 EXPOSE 80
-# Tue, 16 Nov 2021 22:47:29 GMT
+# Fri, 18 Mar 2022 02:27:07 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 16 Nov 2021 22:47:31 GMT
+# Fri, 18 Mar 2022 02:27:12 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:72940440c1ab65eca4d38846164719ffde4b147543cc658d041407a925b13368`  
-		Last Modified: Fri, 12 Nov 2021 21:19:32 GMT  
-		Size: 2.8 MB (2817467 bytes)  
+	-	`sha256:8b7e8363a93630a772b70e3cf72231f43c62addae0ee8e507c61d43e3781c4e7`  
+		Last Modified: Thu, 17 Mar 2022 18:20:01 GMT  
+		Size: 2.8 MB (2817281 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb63892f3810c92b5ddf5702abf17496cef4eab1ddbbfd8c02523f94c7befab8`  
-		Last Modified: Tue, 16 Nov 2021 22:54:22 GMT  
-		Size: 7.6 MB (7562888 bytes)  
+	-	`sha256:526c1c1e2ec4e5e4e00791229f73c8a97d1854060561d75da71485f1e4b3b2cf`  
+		Last Modified: Fri, 18 Mar 2022 02:34:28 GMT  
+		Size: 7.6 MB (7553556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:884da2e87349ba13e4819bb49716648a9a4f045084e3d82872e4f16390990eb9`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
+	-	`sha256:fc7e464ee9e048eaacf807f37379550636ab25c82c09272b8a150bd2b228ceae`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
 		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4345ee689b0ee03e3d1667b131bcefc417eaf2415caef645d7442a6b94b5b730`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
-		Size: 895.0 B  
+	-	`sha256:945d39020bb8dd77e0feb3c14ecd6d27380aea81e4c20b6ad6791d45a58f4d77`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d4fdd767373a363dea9ea8e84bbb0ff472d1b83c94af2a9d538400c7b82a6c8`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
-		Size: 667.0 B  
+	-	`sha256:9bc9d28ead8aa99d0be9104d99c5a554627dda078394d9c4498a8865adc1fc13`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
+		Size: 668.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb7b6ccec008dc9c7cd544e04ec26547c4bc18153a689134b17e358191405cbb`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
-		Size: 1.4 KB (1396 bytes)  
+	-	`sha256:29c8363b9d738f901b50c538ecb51fdb9d9a5fef293de428a39567d8174f3b76`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
+		Size: 1.4 KB (1394 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:1.20-alpine` - linux; s390x
@@ -3422,7 +3422,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:1.20-alpine-perl`
 
 ```console
-$ docker pull nginx@sha256:b35e7e46e1e6842ca1a591e4526ffafe977baae9641e5e62fd852ef7f8d179b7
+$ docker pull nginx@sha256:c70db49a0b37d651cc08542278bf8f4d911df61b761b85f47bcb3e760a1546d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3803,74 +3803,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:1.20-alpine-perl` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:a22d7d1eadda2ed411d18d3275300aa85f941513b417e6d7df4b720457e9b3be
+$ docker pull nginx@sha256:a6565aadb712fde81437c2ea49f90f0801cfa6be0a2e7202d755ed1ed72066c4
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **19.4 MB (19366585 bytes)**  
+-	Total Size: **19.4 MB (19358019 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ad1568c4eeb9dbe0afde5ef2d4efc75c4d2a3dcfe85d4ab1f5476113250db4a4`
+-	Image ID: `sha256:0bee94b5811b1a0939bb3f2e9ebaaba178077006f70071c6c12c9fbd40bf3845`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Fri, 12 Nov 2021 21:18:00 GMT
-ADD file:4d45063079cb28a34f1e382fddb22f156ac99d5449aa05ed37cb653c1f7b80f2 in / 
-# Fri, 12 Nov 2021 21:18:01 GMT
+# Thu, 17 Mar 2022 18:18:43 GMT
+ADD file:bf9c99d8209e0bed9fd3b62cbe691ebf3829d5a35e63e2b066f1f842577a6d24 in / 
+# Thu, 17 Mar 2022 18:18:48 GMT
 CMD ["/bin/sh"]
-# Sat, 13 Nov 2021 02:31:57 GMT
+# Fri, 18 Mar 2022 02:21:46 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 16 Nov 2021 22:43:07 GMT
+# Fri, 18 Mar 2022 02:21:52 GMT
 ENV NGINX_VERSION=1.20.2
-# Tue, 16 Nov 2021 22:43:09 GMT
+# Fri, 18 Mar 2022 02:21:58 GMT
 ENV NJS_VERSION=0.7.0
-# Tue, 16 Nov 2021 22:43:12 GMT
+# Fri, 18 Mar 2022 02:22:05 GMT
 ENV PKG_RELEASE=1
-# Tue, 16 Nov 2021 22:51:46 GMT
+# Fri, 18 Mar 2022 02:31:56 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-perl=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"af6e7eb25594dffe2903358f7a2c5c956f5b67b8df3f4e8237c30b63e50ce28e6eada3ed453687409beef8f3afa8f551cb20df2f06bd5e235eb66df212ece2ed *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 16 Nov 2021 22:51:49 GMT
+# Fri, 18 Mar 2022 02:32:03 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 16 Nov 2021 22:51:50 GMT
+# Fri, 18 Mar 2022 02:32:06 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:51:51 GMT
+# Fri, 18 Mar 2022 02:32:09 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:51:52 GMT
+# Fri, 18 Mar 2022 02:32:11 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:51:54 GMT
+# Fri, 18 Mar 2022 02:32:17 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 16 Nov 2021 22:51:55 GMT
+# Fri, 18 Mar 2022 02:32:21 GMT
 EXPOSE 80
-# Tue, 16 Nov 2021 22:51:58 GMT
+# Fri, 18 Mar 2022 02:32:26 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 16 Nov 2021 22:52:00 GMT
+# Fri, 18 Mar 2022 02:32:33 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:72940440c1ab65eca4d38846164719ffde4b147543cc658d041407a925b13368`  
-		Last Modified: Fri, 12 Nov 2021 21:19:32 GMT  
-		Size: 2.8 MB (2817467 bytes)  
+	-	`sha256:8b7e8363a93630a772b70e3cf72231f43c62addae0ee8e507c61d43e3781c4e7`  
+		Last Modified: Thu, 17 Mar 2022 18:20:01 GMT  
+		Size: 2.8 MB (2817281 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c5d999d2671ee1d8ee844a6250cd2a24c4dee4f590dc3666fbd14d8728a4296a`  
-		Last Modified: Tue, 16 Nov 2021 22:54:40 GMT  
-		Size: 16.5 MB (16545561 bytes)  
+	-	`sha256:c6b6e2f7d070031489c87d260910681ff0a42164cbcc29cda905e1c1e9e4fe00`  
+		Last Modified: Fri, 18 Mar 2022 02:34:48 GMT  
+		Size: 16.5 MB (16537180 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2eb7a10ee35ea1c3bd84433e455acac4a8c3d46685bf95c45f91bfb07154c4f2`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 603.0 B  
+	-	`sha256:ef5f9da426aade508059e4a136050eebd2438a193c9933d8a61923aa4fd949bf`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 602.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3fe5bc6f91d1946bf4551862af20a56966e36036c8abbb9f59a072ee62cfb9cb`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 896.0 B  
+	-	`sha256:3d463dba36223692e544ec3a97d4f032654c97ee736c53f8c0e2d291091f5a90`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 894.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e9e2b51c036b24fc96185af0a391d14701863a30e3a49c198791e80acd457ae`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 665.0 B  
+	-	`sha256:891838a5e6dc62f4ebaae7759d53306e313995979a8c7cdee5ae4ede14d108f0`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 667.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d76f9cdfd64d6b429c2a50bd89083435462b6f2a71447bbb82d7ac570b61445f`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 1.4 KB (1393 bytes)  
+	-	`sha256:3d8964c4f176c206f03d34162b01627e8e9e928b576eb0fbff0f88d8b33d00dd`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 1.4 KB (1395 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:1.20-alpine-perl` - linux; s390x
@@ -5151,7 +5151,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:1.20.2-alpine`
 
 ```console
-$ docker pull nginx@sha256:fd1d617cffdbd1ce3ca63c085985f1aa5ebe5ebc43fbb2a62a75cd4585ad9a49
+$ docker pull nginx@sha256:6378bae949f6d4ee1aceadfe557d72cfffd65aafe3916c85db39d47be1deb773
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5532,74 +5532,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:1.20.2-alpine` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:96b39719d5011c0deeca0d390dceba19ac460c037b5190bf201e73b19fa7e5c3
+$ docker pull nginx@sha256:9b7325472e063ca4ccd21e157bc9c9f9c61125f0edd96ee9f295099fe2cdd154
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.4 MB (10383914 bytes)**  
+-	Total Size: **10.4 MB (10374396 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d5d35e81e7f06753ba9f5a82675755171622f3bbfc6e40a796735e5d42ebd4c0`
+-	Image ID: `sha256:ff8c864e6053598a24d8e81814320153a0d526131640416a2925e09d149f08b1`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Fri, 12 Nov 2021 21:18:00 GMT
-ADD file:4d45063079cb28a34f1e382fddb22f156ac99d5449aa05ed37cb653c1f7b80f2 in / 
-# Fri, 12 Nov 2021 21:18:01 GMT
+# Thu, 17 Mar 2022 18:18:43 GMT
+ADD file:bf9c99d8209e0bed9fd3b62cbe691ebf3829d5a35e63e2b066f1f842577a6d24 in / 
+# Thu, 17 Mar 2022 18:18:48 GMT
 CMD ["/bin/sh"]
-# Sat, 13 Nov 2021 02:31:57 GMT
+# Fri, 18 Mar 2022 02:21:46 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 16 Nov 2021 22:43:07 GMT
+# Fri, 18 Mar 2022 02:21:52 GMT
 ENV NGINX_VERSION=1.20.2
-# Tue, 16 Nov 2021 22:43:09 GMT
+# Fri, 18 Mar 2022 02:21:58 GMT
 ENV NJS_VERSION=0.7.0
-# Tue, 16 Nov 2021 22:43:12 GMT
+# Fri, 18 Mar 2022 02:22:05 GMT
 ENV PKG_RELEASE=1
-# Tue, 16 Nov 2021 22:47:18 GMT
+# Fri, 18 Mar 2022 02:26:37 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"af6e7eb25594dffe2903358f7a2c5c956f5b67b8df3f4e8237c30b63e50ce28e6eada3ed453687409beef8f3afa8f551cb20df2f06bd5e235eb66df212ece2ed *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 16 Nov 2021 22:47:20 GMT
+# Fri, 18 Mar 2022 02:26:44 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 16 Nov 2021 22:47:21 GMT
+# Fri, 18 Mar 2022 02:26:46 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:47:22 GMT
+# Fri, 18 Mar 2022 02:26:48 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:47:23 GMT
+# Fri, 18 Mar 2022 02:26:50 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:47:25 GMT
+# Fri, 18 Mar 2022 02:26:52 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 16 Nov 2021 22:47:27 GMT
+# Fri, 18 Mar 2022 02:27:00 GMT
 EXPOSE 80
-# Tue, 16 Nov 2021 22:47:29 GMT
+# Fri, 18 Mar 2022 02:27:07 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 16 Nov 2021 22:47:31 GMT
+# Fri, 18 Mar 2022 02:27:12 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:72940440c1ab65eca4d38846164719ffde4b147543cc658d041407a925b13368`  
-		Last Modified: Fri, 12 Nov 2021 21:19:32 GMT  
-		Size: 2.8 MB (2817467 bytes)  
+	-	`sha256:8b7e8363a93630a772b70e3cf72231f43c62addae0ee8e507c61d43e3781c4e7`  
+		Last Modified: Thu, 17 Mar 2022 18:20:01 GMT  
+		Size: 2.8 MB (2817281 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb63892f3810c92b5ddf5702abf17496cef4eab1ddbbfd8c02523f94c7befab8`  
-		Last Modified: Tue, 16 Nov 2021 22:54:22 GMT  
-		Size: 7.6 MB (7562888 bytes)  
+	-	`sha256:526c1c1e2ec4e5e4e00791229f73c8a97d1854060561d75da71485f1e4b3b2cf`  
+		Last Modified: Fri, 18 Mar 2022 02:34:28 GMT  
+		Size: 7.6 MB (7553556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:884da2e87349ba13e4819bb49716648a9a4f045084e3d82872e4f16390990eb9`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
+	-	`sha256:fc7e464ee9e048eaacf807f37379550636ab25c82c09272b8a150bd2b228ceae`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
 		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4345ee689b0ee03e3d1667b131bcefc417eaf2415caef645d7442a6b94b5b730`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
-		Size: 895.0 B  
+	-	`sha256:945d39020bb8dd77e0feb3c14ecd6d27380aea81e4c20b6ad6791d45a58f4d77`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d4fdd767373a363dea9ea8e84bbb0ff472d1b83c94af2a9d538400c7b82a6c8`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
-		Size: 667.0 B  
+	-	`sha256:9bc9d28ead8aa99d0be9104d99c5a554627dda078394d9c4498a8865adc1fc13`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
+		Size: 668.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb7b6ccec008dc9c7cd544e04ec26547c4bc18153a689134b17e358191405cbb`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
-		Size: 1.4 KB (1396 bytes)  
+	-	`sha256:29c8363b9d738f901b50c538ecb51fdb9d9a5fef293de428a39567d8174f3b76`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
+		Size: 1.4 KB (1394 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:1.20.2-alpine` - linux; s390x
@@ -5678,7 +5678,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:1.20.2-alpine-perl`
 
 ```console
-$ docker pull nginx@sha256:b35e7e46e1e6842ca1a591e4526ffafe977baae9641e5e62fd852ef7f8d179b7
+$ docker pull nginx@sha256:c70db49a0b37d651cc08542278bf8f4d911df61b761b85f47bcb3e760a1546d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6059,74 +6059,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:1.20.2-alpine-perl` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:a22d7d1eadda2ed411d18d3275300aa85f941513b417e6d7df4b720457e9b3be
+$ docker pull nginx@sha256:a6565aadb712fde81437c2ea49f90f0801cfa6be0a2e7202d755ed1ed72066c4
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **19.4 MB (19366585 bytes)**  
+-	Total Size: **19.4 MB (19358019 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ad1568c4eeb9dbe0afde5ef2d4efc75c4d2a3dcfe85d4ab1f5476113250db4a4`
+-	Image ID: `sha256:0bee94b5811b1a0939bb3f2e9ebaaba178077006f70071c6c12c9fbd40bf3845`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Fri, 12 Nov 2021 21:18:00 GMT
-ADD file:4d45063079cb28a34f1e382fddb22f156ac99d5449aa05ed37cb653c1f7b80f2 in / 
-# Fri, 12 Nov 2021 21:18:01 GMT
+# Thu, 17 Mar 2022 18:18:43 GMT
+ADD file:bf9c99d8209e0bed9fd3b62cbe691ebf3829d5a35e63e2b066f1f842577a6d24 in / 
+# Thu, 17 Mar 2022 18:18:48 GMT
 CMD ["/bin/sh"]
-# Sat, 13 Nov 2021 02:31:57 GMT
+# Fri, 18 Mar 2022 02:21:46 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 16 Nov 2021 22:43:07 GMT
+# Fri, 18 Mar 2022 02:21:52 GMT
 ENV NGINX_VERSION=1.20.2
-# Tue, 16 Nov 2021 22:43:09 GMT
+# Fri, 18 Mar 2022 02:21:58 GMT
 ENV NJS_VERSION=0.7.0
-# Tue, 16 Nov 2021 22:43:12 GMT
+# Fri, 18 Mar 2022 02:22:05 GMT
 ENV PKG_RELEASE=1
-# Tue, 16 Nov 2021 22:51:46 GMT
+# Fri, 18 Mar 2022 02:31:56 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-perl=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"af6e7eb25594dffe2903358f7a2c5c956f5b67b8df3f4e8237c30b63e50ce28e6eada3ed453687409beef8f3afa8f551cb20df2f06bd5e235eb66df212ece2ed *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 16 Nov 2021 22:51:49 GMT
+# Fri, 18 Mar 2022 02:32:03 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 16 Nov 2021 22:51:50 GMT
+# Fri, 18 Mar 2022 02:32:06 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:51:51 GMT
+# Fri, 18 Mar 2022 02:32:09 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:51:52 GMT
+# Fri, 18 Mar 2022 02:32:11 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:51:54 GMT
+# Fri, 18 Mar 2022 02:32:17 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 16 Nov 2021 22:51:55 GMT
+# Fri, 18 Mar 2022 02:32:21 GMT
 EXPOSE 80
-# Tue, 16 Nov 2021 22:51:58 GMT
+# Fri, 18 Mar 2022 02:32:26 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 16 Nov 2021 22:52:00 GMT
+# Fri, 18 Mar 2022 02:32:33 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:72940440c1ab65eca4d38846164719ffde4b147543cc658d041407a925b13368`  
-		Last Modified: Fri, 12 Nov 2021 21:19:32 GMT  
-		Size: 2.8 MB (2817467 bytes)  
+	-	`sha256:8b7e8363a93630a772b70e3cf72231f43c62addae0ee8e507c61d43e3781c4e7`  
+		Last Modified: Thu, 17 Mar 2022 18:20:01 GMT  
+		Size: 2.8 MB (2817281 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c5d999d2671ee1d8ee844a6250cd2a24c4dee4f590dc3666fbd14d8728a4296a`  
-		Last Modified: Tue, 16 Nov 2021 22:54:40 GMT  
-		Size: 16.5 MB (16545561 bytes)  
+	-	`sha256:c6b6e2f7d070031489c87d260910681ff0a42164cbcc29cda905e1c1e9e4fe00`  
+		Last Modified: Fri, 18 Mar 2022 02:34:48 GMT  
+		Size: 16.5 MB (16537180 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2eb7a10ee35ea1c3bd84433e455acac4a8c3d46685bf95c45f91bfb07154c4f2`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 603.0 B  
+	-	`sha256:ef5f9da426aade508059e4a136050eebd2438a193c9933d8a61923aa4fd949bf`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 602.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3fe5bc6f91d1946bf4551862af20a56966e36036c8abbb9f59a072ee62cfb9cb`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 896.0 B  
+	-	`sha256:3d463dba36223692e544ec3a97d4f032654c97ee736c53f8c0e2d291091f5a90`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 894.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e9e2b51c036b24fc96185af0a391d14701863a30e3a49c198791e80acd457ae`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 665.0 B  
+	-	`sha256:891838a5e6dc62f4ebaae7759d53306e313995979a8c7cdee5ae4ede14d108f0`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 667.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d76f9cdfd64d6b429c2a50bd89083435462b6f2a71447bbb82d7ac570b61445f`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 1.4 KB (1393 bytes)  
+	-	`sha256:3d8964c4f176c206f03d34162b01627e8e9e928b576eb0fbff0f88d8b33d00dd`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 1.4 KB (1395 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:1.20.2-alpine-perl` - linux; s390x
@@ -7407,7 +7407,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:1.21-alpine`
 
 ```console
-$ docker pull nginx@sha256:1e18d60ec3e83a1a01f07457ba6ce045fd3cb65ad1c2bbbb07beb62cc3037543
+$ docker pull nginx@sha256:581ac1da0f8f8c342fa6cf77885a2320227667c0bc42bdca4b1dd74599d02498
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7788,74 +7788,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:1.21-alpine` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:af491bc7ec4cac0d5d04c2c20a8c747903b7bf2b1f57c443670cc62bd9611c23
+$ docker pull nginx@sha256:a87ac0dedbb49b4b50646b9849b9eeb66f018ef971dd967e8d05265d5bb817df
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **11.9 MB (11887405 bytes)**  
+-	Total Size: **10.5 MB (10481719 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9f016818b812b3a0dbd855f2f449ee8bcce8bd74d421ccfdb22318a3152c6719`
+-	Image ID: `sha256:aa2a7e8298b8032f4a81487c1a5030f8929f815a295cbb6812734904aec97b8e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Wed, 24 Nov 2021 20:20:16 GMT
-ADD file:57115dca2eb707f46b6301e75174e6aa316fb02ac28643b91429b75be51bd8c8 in / 
-# Wed, 24 Nov 2021 20:20:20 GMT
+# Thu, 17 Mar 2022 11:14:04 GMT
+ADD file:ddc94e1e084c05807db26adcc95b47a137fa47fb391e75998b338ada65e00c1c in / 
+# Thu, 17 Mar 2022 11:14:09 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Dec 2021 19:39:51 GMT
+# Fri, 18 Mar 2022 02:01:09 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 25 Jan 2022 20:34:22 GMT
+# Fri, 18 Mar 2022 02:01:15 GMT
 ENV NGINX_VERSION=1.21.6
-# Tue, 25 Jan 2022 20:34:30 GMT
+# Fri, 18 Mar 2022 02:01:20 GMT
 ENV NJS_VERSION=0.7.2
-# Tue, 25 Jan 2022 20:34:36 GMT
+# Fri, 18 Mar 2022 02:01:25 GMT
 ENV PKG_RELEASE=1
-# Tue, 25 Jan 2022 20:38:48 GMT
+# Fri, 18 Mar 2022 02:05:42 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"29ec1c635da36b7727953544e1a20e9d75bd9d2050e063b9f81f88ca07bb7ea0b65cef46d0f3cb7134b38ce9b94ecada631619f233231845a3d8a16b6ad0db82 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 25 Jan 2022 20:38:54 GMT
+# Fri, 18 Mar 2022 02:05:45 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 25 Jan 2022 20:38:57 GMT
+# Fri, 18 Mar 2022 02:05:46 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:38:59 GMT
+# Fri, 18 Mar 2022 02:05:48 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:39:00 GMT
+# Fri, 18 Mar 2022 02:05:49 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:39:06 GMT
+# Fri, 18 Mar 2022 02:05:53 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 25 Jan 2022 20:39:10 GMT
+# Fri, 18 Mar 2022 02:05:58 GMT
 EXPOSE 80
-# Tue, 25 Jan 2022 20:39:13 GMT
+# Fri, 18 Mar 2022 02:06:06 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 25 Jan 2022 20:39:16 GMT
+# Fri, 18 Mar 2022 02:06:10 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:159b5dcb1717c815c76ff5ea1db730e18e8609c9090238e43282856db9e71f47`  
-		Last Modified: Wed, 24 Nov 2021 20:21:14 GMT  
-		Size: 2.8 MB (2814780 bytes)  
+	-	`sha256:eef85fcc847498263d979ef7ec75680d05e90815eb83a9ec4db135b990c0d8b8`  
+		Last Modified: Thu, 17 Mar 2022 11:15:15 GMT  
+		Size: 2.8 MB (2814051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29c02cc338b8fbcca28039d2b317e6bca3aaf28e017532fcd0c51edda8ae3ca8`  
-		Last Modified: Tue, 25 Jan 2022 20:58:52 GMT  
-		Size: 9.1 MB (9069069 bytes)  
+	-	`sha256:d7dca4d0b0c5a79e71c3feb0d86e7126862b6f9396de52caf3b3c303d34ca209`  
+		Last Modified: Fri, 18 Mar 2022 02:33:34 GMT  
+		Size: 7.7 MB (7664104 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:602d1debbe13281dd67ec7db044cb82d97dc6a772149613fa30b653f9bac41f5`  
-		Last Modified: Tue, 25 Jan 2022 20:58:51 GMT  
+	-	`sha256:b6eb27df268fbba70fcb4d18a8d7c318fe004ae5963211ec8be106da86e83148`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
 		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67f4979ef0e96807bccbf40933c5907254ff6ec9d2bbd931a26ecb7a504d1682`  
-		Last Modified: Tue, 25 Jan 2022 20:58:51 GMT  
-		Size: 894.0 B  
+	-	`sha256:e566a96ccf3caff2e8a58f265330c648d22121e8ac3ee6a0cd7c82cf6d0527a9`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8feea406ce6b776acd98b07e6c7dd6ad89897747e82fe29c3d147354de5c483`  
-		Last Modified: Tue, 25 Jan 2022 20:58:50 GMT  
-		Size: 666.0 B  
+	-	`sha256:74dd3e99d68c7a3931da2b11f8cbae5410cead5e15f7b5e2c1f7534c1a150a76`  
+		Last Modified: Fri, 18 Mar 2022 02:33:32 GMT  
+		Size: 669.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:229d92d6a8bea8490a55b74af5c49641aa340746c1f7b7176eff9b9273aef7a6`  
-		Last Modified: Tue, 25 Jan 2022 20:58:50 GMT  
-		Size: 1.4 KB (1395 bytes)  
+	-	`sha256:00a9efd3e088092b44da914cdb6e095d1284fc182cfd5ea9bcd7f1c648e312cc`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
+		Size: 1.4 KB (1398 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:1.21-alpine` - linux; s390x
@@ -7934,7 +7934,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:1.21-alpine-perl`
 
 ```console
-$ docker pull nginx@sha256:eace2cab55e8b78c452dd8bba91795264c6308d213a9c508465a45c21c55b864
+$ docker pull nginx@sha256:2bc9a3cf0b93f8855659ee58101ac93a8e1b3cf3acf6809d7784a987ecd346a8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8315,74 +8315,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:1.21-alpine-perl` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:f44577cd4a19a25569768b58b3ec6dc3a6c261421289eb6aa9a6f457dc68cb51
+$ docker pull nginx@sha256:1fb4947517a460f496df181bf17f674c43d037639f476ccaa7855011db45013b
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.9 MB (20945003 bytes)**  
+-	Total Size: **19.5 MB (19536707 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c337eed0c91800e38bf855f46dc115e5e01b8fd1274cdc84b5beec6e16b80d3b`
+-	Image ID: `sha256:653ad5c90aeaab01b052f46eaf19fc03cf6d67925ade7b22678e7f2a470e156f`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Wed, 24 Nov 2021 20:20:16 GMT
-ADD file:57115dca2eb707f46b6301e75174e6aa316fb02ac28643b91429b75be51bd8c8 in / 
-# Wed, 24 Nov 2021 20:20:20 GMT
+# Thu, 17 Mar 2022 11:14:04 GMT
+ADD file:ddc94e1e084c05807db26adcc95b47a137fa47fb391e75998b338ada65e00c1c in / 
+# Thu, 17 Mar 2022 11:14:09 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Dec 2021 19:39:51 GMT
+# Fri, 18 Mar 2022 02:01:09 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 25 Jan 2022 20:34:22 GMT
+# Fri, 18 Mar 2022 02:01:15 GMT
 ENV NGINX_VERSION=1.21.6
-# Tue, 25 Jan 2022 20:34:30 GMT
+# Fri, 18 Mar 2022 02:01:20 GMT
 ENV NJS_VERSION=0.7.2
-# Tue, 25 Jan 2022 20:34:36 GMT
+# Fri, 18 Mar 2022 02:01:25 GMT
 ENV PKG_RELEASE=1
-# Tue, 25 Jan 2022 20:43:47 GMT
+# Fri, 18 Mar 2022 02:10:33 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-perl=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"29ec1c635da36b7727953544e1a20e9d75bd9d2050e063b9f81f88ca07bb7ea0b65cef46d0f3cb7134b38ce9b94ecada631619f233231845a3d8a16b6ad0db82 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 25 Jan 2022 20:43:51 GMT
+# Fri, 18 Mar 2022 02:10:39 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 25 Jan 2022 20:43:54 GMT
+# Fri, 18 Mar 2022 02:10:45 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:43:56 GMT
+# Fri, 18 Mar 2022 02:10:47 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:43:59 GMT
+# Fri, 18 Mar 2022 02:10:51 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:44:05 GMT
+# Fri, 18 Mar 2022 02:10:59 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 25 Jan 2022 20:44:09 GMT
+# Fri, 18 Mar 2022 02:11:07 GMT
 EXPOSE 80
-# Tue, 25 Jan 2022 20:44:11 GMT
+# Fri, 18 Mar 2022 02:11:13 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 25 Jan 2022 20:44:15 GMT
+# Fri, 18 Mar 2022 02:11:18 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:159b5dcb1717c815c76ff5ea1db730e18e8609c9090238e43282856db9e71f47`  
-		Last Modified: Wed, 24 Nov 2021 20:21:14 GMT  
-		Size: 2.8 MB (2814780 bytes)  
+	-	`sha256:eef85fcc847498263d979ef7ec75680d05e90815eb83a9ec4db135b990c0d8b8`  
+		Last Modified: Thu, 17 Mar 2022 11:15:15 GMT  
+		Size: 2.8 MB (2814051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4222da7c257200072a881461a70fc6030c174d781a029530f3cd92c64c78dc6e`  
-		Last Modified: Tue, 25 Jan 2022 20:59:17 GMT  
-		Size: 18.1 MB (18126677 bytes)  
+	-	`sha256:c2e19aa79c6ebf4782c153cfb6b3084182b00c2c628c9674504cd8f9024dc64f`  
+		Last Modified: Fri, 18 Mar 2022 02:34:03 GMT  
+		Size: 16.7 MB (16719093 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f525efba0643e31f6b2679f5b8a61182584dced6476169b05d65f7a4507953ed`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 597.0 B  
+	-	`sha256:c7d3023a5a4df7fb7c1550f3a92ba711e61f2c84d4f86ac5a01740bd0e7ed105`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6dfa689bfa3514a5f816528cc01cbc0d2f34b40cebe8b76df18d0cebba341c60`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 893.0 B  
+	-	`sha256:5f8bfeffc4f66a9a5ec1c5ed5b5f5a73486810af80a801d764d3b66488b7d8cb`  
+		Last Modified: Fri, 18 Mar 2022 02:33:58 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:37aa637ea7adb704a38239c70399a91ced735fc18c7cae61168e86f39fe4a482`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 664.0 B  
+	-	`sha256:9c03b19b3e41aaa293d96bdb4e0449b504227a3bfb456235d02384632ddb71af`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 669.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62904de971aa2af9134135d38df3496290217fa54bf93a86bc99a3c33925a55b`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 1.4 KB (1392 bytes)  
+	-	`sha256:8a24e40f8abe7fa71cf8ece6ae5a338f89f547dc10e45b5209a79742558b27e6`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 1.4 KB (1397 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:1.21-alpine-perl` - linux; s390x
@@ -9663,7 +9663,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:1.21.6-alpine`
 
 ```console
-$ docker pull nginx@sha256:1e18d60ec3e83a1a01f07457ba6ce045fd3cb65ad1c2bbbb07beb62cc3037543
+$ docker pull nginx@sha256:581ac1da0f8f8c342fa6cf77885a2320227667c0bc42bdca4b1dd74599d02498
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10044,74 +10044,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:1.21.6-alpine` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:af491bc7ec4cac0d5d04c2c20a8c747903b7bf2b1f57c443670cc62bd9611c23
+$ docker pull nginx@sha256:a87ac0dedbb49b4b50646b9849b9eeb66f018ef971dd967e8d05265d5bb817df
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **11.9 MB (11887405 bytes)**  
+-	Total Size: **10.5 MB (10481719 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9f016818b812b3a0dbd855f2f449ee8bcce8bd74d421ccfdb22318a3152c6719`
+-	Image ID: `sha256:aa2a7e8298b8032f4a81487c1a5030f8929f815a295cbb6812734904aec97b8e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Wed, 24 Nov 2021 20:20:16 GMT
-ADD file:57115dca2eb707f46b6301e75174e6aa316fb02ac28643b91429b75be51bd8c8 in / 
-# Wed, 24 Nov 2021 20:20:20 GMT
+# Thu, 17 Mar 2022 11:14:04 GMT
+ADD file:ddc94e1e084c05807db26adcc95b47a137fa47fb391e75998b338ada65e00c1c in / 
+# Thu, 17 Mar 2022 11:14:09 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Dec 2021 19:39:51 GMT
+# Fri, 18 Mar 2022 02:01:09 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 25 Jan 2022 20:34:22 GMT
+# Fri, 18 Mar 2022 02:01:15 GMT
 ENV NGINX_VERSION=1.21.6
-# Tue, 25 Jan 2022 20:34:30 GMT
+# Fri, 18 Mar 2022 02:01:20 GMT
 ENV NJS_VERSION=0.7.2
-# Tue, 25 Jan 2022 20:34:36 GMT
+# Fri, 18 Mar 2022 02:01:25 GMT
 ENV PKG_RELEASE=1
-# Tue, 25 Jan 2022 20:38:48 GMT
+# Fri, 18 Mar 2022 02:05:42 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"29ec1c635da36b7727953544e1a20e9d75bd9d2050e063b9f81f88ca07bb7ea0b65cef46d0f3cb7134b38ce9b94ecada631619f233231845a3d8a16b6ad0db82 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 25 Jan 2022 20:38:54 GMT
+# Fri, 18 Mar 2022 02:05:45 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 25 Jan 2022 20:38:57 GMT
+# Fri, 18 Mar 2022 02:05:46 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:38:59 GMT
+# Fri, 18 Mar 2022 02:05:48 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:39:00 GMT
+# Fri, 18 Mar 2022 02:05:49 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:39:06 GMT
+# Fri, 18 Mar 2022 02:05:53 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 25 Jan 2022 20:39:10 GMT
+# Fri, 18 Mar 2022 02:05:58 GMT
 EXPOSE 80
-# Tue, 25 Jan 2022 20:39:13 GMT
+# Fri, 18 Mar 2022 02:06:06 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 25 Jan 2022 20:39:16 GMT
+# Fri, 18 Mar 2022 02:06:10 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:159b5dcb1717c815c76ff5ea1db730e18e8609c9090238e43282856db9e71f47`  
-		Last Modified: Wed, 24 Nov 2021 20:21:14 GMT  
-		Size: 2.8 MB (2814780 bytes)  
+	-	`sha256:eef85fcc847498263d979ef7ec75680d05e90815eb83a9ec4db135b990c0d8b8`  
+		Last Modified: Thu, 17 Mar 2022 11:15:15 GMT  
+		Size: 2.8 MB (2814051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29c02cc338b8fbcca28039d2b317e6bca3aaf28e017532fcd0c51edda8ae3ca8`  
-		Last Modified: Tue, 25 Jan 2022 20:58:52 GMT  
-		Size: 9.1 MB (9069069 bytes)  
+	-	`sha256:d7dca4d0b0c5a79e71c3feb0d86e7126862b6f9396de52caf3b3c303d34ca209`  
+		Last Modified: Fri, 18 Mar 2022 02:33:34 GMT  
+		Size: 7.7 MB (7664104 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:602d1debbe13281dd67ec7db044cb82d97dc6a772149613fa30b653f9bac41f5`  
-		Last Modified: Tue, 25 Jan 2022 20:58:51 GMT  
+	-	`sha256:b6eb27df268fbba70fcb4d18a8d7c318fe004ae5963211ec8be106da86e83148`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
 		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67f4979ef0e96807bccbf40933c5907254ff6ec9d2bbd931a26ecb7a504d1682`  
-		Last Modified: Tue, 25 Jan 2022 20:58:51 GMT  
-		Size: 894.0 B  
+	-	`sha256:e566a96ccf3caff2e8a58f265330c648d22121e8ac3ee6a0cd7c82cf6d0527a9`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8feea406ce6b776acd98b07e6c7dd6ad89897747e82fe29c3d147354de5c483`  
-		Last Modified: Tue, 25 Jan 2022 20:58:50 GMT  
-		Size: 666.0 B  
+	-	`sha256:74dd3e99d68c7a3931da2b11f8cbae5410cead5e15f7b5e2c1f7534c1a150a76`  
+		Last Modified: Fri, 18 Mar 2022 02:33:32 GMT  
+		Size: 669.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:229d92d6a8bea8490a55b74af5c49641aa340746c1f7b7176eff9b9273aef7a6`  
-		Last Modified: Tue, 25 Jan 2022 20:58:50 GMT  
-		Size: 1.4 KB (1395 bytes)  
+	-	`sha256:00a9efd3e088092b44da914cdb6e095d1284fc182cfd5ea9bcd7f1c648e312cc`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
+		Size: 1.4 KB (1398 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:1.21.6-alpine` - linux; s390x
@@ -10190,7 +10190,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:1.21.6-alpine-perl`
 
 ```console
-$ docker pull nginx@sha256:eace2cab55e8b78c452dd8bba91795264c6308d213a9c508465a45c21c55b864
+$ docker pull nginx@sha256:2bc9a3cf0b93f8855659ee58101ac93a8e1b3cf3acf6809d7784a987ecd346a8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10571,74 +10571,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:1.21.6-alpine-perl` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:f44577cd4a19a25569768b58b3ec6dc3a6c261421289eb6aa9a6f457dc68cb51
+$ docker pull nginx@sha256:1fb4947517a460f496df181bf17f674c43d037639f476ccaa7855011db45013b
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.9 MB (20945003 bytes)**  
+-	Total Size: **19.5 MB (19536707 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c337eed0c91800e38bf855f46dc115e5e01b8fd1274cdc84b5beec6e16b80d3b`
+-	Image ID: `sha256:653ad5c90aeaab01b052f46eaf19fc03cf6d67925ade7b22678e7f2a470e156f`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Wed, 24 Nov 2021 20:20:16 GMT
-ADD file:57115dca2eb707f46b6301e75174e6aa316fb02ac28643b91429b75be51bd8c8 in / 
-# Wed, 24 Nov 2021 20:20:20 GMT
+# Thu, 17 Mar 2022 11:14:04 GMT
+ADD file:ddc94e1e084c05807db26adcc95b47a137fa47fb391e75998b338ada65e00c1c in / 
+# Thu, 17 Mar 2022 11:14:09 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Dec 2021 19:39:51 GMT
+# Fri, 18 Mar 2022 02:01:09 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 25 Jan 2022 20:34:22 GMT
+# Fri, 18 Mar 2022 02:01:15 GMT
 ENV NGINX_VERSION=1.21.6
-# Tue, 25 Jan 2022 20:34:30 GMT
+# Fri, 18 Mar 2022 02:01:20 GMT
 ENV NJS_VERSION=0.7.2
-# Tue, 25 Jan 2022 20:34:36 GMT
+# Fri, 18 Mar 2022 02:01:25 GMT
 ENV PKG_RELEASE=1
-# Tue, 25 Jan 2022 20:43:47 GMT
+# Fri, 18 Mar 2022 02:10:33 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-perl=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"29ec1c635da36b7727953544e1a20e9d75bd9d2050e063b9f81f88ca07bb7ea0b65cef46d0f3cb7134b38ce9b94ecada631619f233231845a3d8a16b6ad0db82 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 25 Jan 2022 20:43:51 GMT
+# Fri, 18 Mar 2022 02:10:39 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 25 Jan 2022 20:43:54 GMT
+# Fri, 18 Mar 2022 02:10:45 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:43:56 GMT
+# Fri, 18 Mar 2022 02:10:47 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:43:59 GMT
+# Fri, 18 Mar 2022 02:10:51 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:44:05 GMT
+# Fri, 18 Mar 2022 02:10:59 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 25 Jan 2022 20:44:09 GMT
+# Fri, 18 Mar 2022 02:11:07 GMT
 EXPOSE 80
-# Tue, 25 Jan 2022 20:44:11 GMT
+# Fri, 18 Mar 2022 02:11:13 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 25 Jan 2022 20:44:15 GMT
+# Fri, 18 Mar 2022 02:11:18 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:159b5dcb1717c815c76ff5ea1db730e18e8609c9090238e43282856db9e71f47`  
-		Last Modified: Wed, 24 Nov 2021 20:21:14 GMT  
-		Size: 2.8 MB (2814780 bytes)  
+	-	`sha256:eef85fcc847498263d979ef7ec75680d05e90815eb83a9ec4db135b990c0d8b8`  
+		Last Modified: Thu, 17 Mar 2022 11:15:15 GMT  
+		Size: 2.8 MB (2814051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4222da7c257200072a881461a70fc6030c174d781a029530f3cd92c64c78dc6e`  
-		Last Modified: Tue, 25 Jan 2022 20:59:17 GMT  
-		Size: 18.1 MB (18126677 bytes)  
+	-	`sha256:c2e19aa79c6ebf4782c153cfb6b3084182b00c2c628c9674504cd8f9024dc64f`  
+		Last Modified: Fri, 18 Mar 2022 02:34:03 GMT  
+		Size: 16.7 MB (16719093 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f525efba0643e31f6b2679f5b8a61182584dced6476169b05d65f7a4507953ed`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 597.0 B  
+	-	`sha256:c7d3023a5a4df7fb7c1550f3a92ba711e61f2c84d4f86ac5a01740bd0e7ed105`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6dfa689bfa3514a5f816528cc01cbc0d2f34b40cebe8b76df18d0cebba341c60`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 893.0 B  
+	-	`sha256:5f8bfeffc4f66a9a5ec1c5ed5b5f5a73486810af80a801d764d3b66488b7d8cb`  
+		Last Modified: Fri, 18 Mar 2022 02:33:58 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:37aa637ea7adb704a38239c70399a91ced735fc18c7cae61168e86f39fe4a482`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 664.0 B  
+	-	`sha256:9c03b19b3e41aaa293d96bdb4e0449b504227a3bfb456235d02384632ddb71af`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 669.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62904de971aa2af9134135d38df3496290217fa54bf93a86bc99a3c33925a55b`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 1.4 KB (1392 bytes)  
+	-	`sha256:8a24e40f8abe7fa71cf8ece6ae5a338f89f547dc10e45b5209a79742558b27e6`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 1.4 KB (1397 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:1.21.6-alpine-perl` - linux; s390x
@@ -11244,7 +11244,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:alpine`
 
 ```console
-$ docker pull nginx@sha256:1e18d60ec3e83a1a01f07457ba6ce045fd3cb65ad1c2bbbb07beb62cc3037543
+$ docker pull nginx@sha256:581ac1da0f8f8c342fa6cf77885a2320227667c0bc42bdca4b1dd74599d02498
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11625,74 +11625,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:alpine` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:af491bc7ec4cac0d5d04c2c20a8c747903b7bf2b1f57c443670cc62bd9611c23
+$ docker pull nginx@sha256:a87ac0dedbb49b4b50646b9849b9eeb66f018ef971dd967e8d05265d5bb817df
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **11.9 MB (11887405 bytes)**  
+-	Total Size: **10.5 MB (10481719 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9f016818b812b3a0dbd855f2f449ee8bcce8bd74d421ccfdb22318a3152c6719`
+-	Image ID: `sha256:aa2a7e8298b8032f4a81487c1a5030f8929f815a295cbb6812734904aec97b8e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Wed, 24 Nov 2021 20:20:16 GMT
-ADD file:57115dca2eb707f46b6301e75174e6aa316fb02ac28643b91429b75be51bd8c8 in / 
-# Wed, 24 Nov 2021 20:20:20 GMT
+# Thu, 17 Mar 2022 11:14:04 GMT
+ADD file:ddc94e1e084c05807db26adcc95b47a137fa47fb391e75998b338ada65e00c1c in / 
+# Thu, 17 Mar 2022 11:14:09 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Dec 2021 19:39:51 GMT
+# Fri, 18 Mar 2022 02:01:09 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 25 Jan 2022 20:34:22 GMT
+# Fri, 18 Mar 2022 02:01:15 GMT
 ENV NGINX_VERSION=1.21.6
-# Tue, 25 Jan 2022 20:34:30 GMT
+# Fri, 18 Mar 2022 02:01:20 GMT
 ENV NJS_VERSION=0.7.2
-# Tue, 25 Jan 2022 20:34:36 GMT
+# Fri, 18 Mar 2022 02:01:25 GMT
 ENV PKG_RELEASE=1
-# Tue, 25 Jan 2022 20:38:48 GMT
+# Fri, 18 Mar 2022 02:05:42 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"29ec1c635da36b7727953544e1a20e9d75bd9d2050e063b9f81f88ca07bb7ea0b65cef46d0f3cb7134b38ce9b94ecada631619f233231845a3d8a16b6ad0db82 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 25 Jan 2022 20:38:54 GMT
+# Fri, 18 Mar 2022 02:05:45 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 25 Jan 2022 20:38:57 GMT
+# Fri, 18 Mar 2022 02:05:46 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:38:59 GMT
+# Fri, 18 Mar 2022 02:05:48 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:39:00 GMT
+# Fri, 18 Mar 2022 02:05:49 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:39:06 GMT
+# Fri, 18 Mar 2022 02:05:53 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 25 Jan 2022 20:39:10 GMT
+# Fri, 18 Mar 2022 02:05:58 GMT
 EXPOSE 80
-# Tue, 25 Jan 2022 20:39:13 GMT
+# Fri, 18 Mar 2022 02:06:06 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 25 Jan 2022 20:39:16 GMT
+# Fri, 18 Mar 2022 02:06:10 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:159b5dcb1717c815c76ff5ea1db730e18e8609c9090238e43282856db9e71f47`  
-		Last Modified: Wed, 24 Nov 2021 20:21:14 GMT  
-		Size: 2.8 MB (2814780 bytes)  
+	-	`sha256:eef85fcc847498263d979ef7ec75680d05e90815eb83a9ec4db135b990c0d8b8`  
+		Last Modified: Thu, 17 Mar 2022 11:15:15 GMT  
+		Size: 2.8 MB (2814051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29c02cc338b8fbcca28039d2b317e6bca3aaf28e017532fcd0c51edda8ae3ca8`  
-		Last Modified: Tue, 25 Jan 2022 20:58:52 GMT  
-		Size: 9.1 MB (9069069 bytes)  
+	-	`sha256:d7dca4d0b0c5a79e71c3feb0d86e7126862b6f9396de52caf3b3c303d34ca209`  
+		Last Modified: Fri, 18 Mar 2022 02:33:34 GMT  
+		Size: 7.7 MB (7664104 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:602d1debbe13281dd67ec7db044cb82d97dc6a772149613fa30b653f9bac41f5`  
-		Last Modified: Tue, 25 Jan 2022 20:58:51 GMT  
+	-	`sha256:b6eb27df268fbba70fcb4d18a8d7c318fe004ae5963211ec8be106da86e83148`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
 		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67f4979ef0e96807bccbf40933c5907254ff6ec9d2bbd931a26ecb7a504d1682`  
-		Last Modified: Tue, 25 Jan 2022 20:58:51 GMT  
-		Size: 894.0 B  
+	-	`sha256:e566a96ccf3caff2e8a58f265330c648d22121e8ac3ee6a0cd7c82cf6d0527a9`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8feea406ce6b776acd98b07e6c7dd6ad89897747e82fe29c3d147354de5c483`  
-		Last Modified: Tue, 25 Jan 2022 20:58:50 GMT  
-		Size: 666.0 B  
+	-	`sha256:74dd3e99d68c7a3931da2b11f8cbae5410cead5e15f7b5e2c1f7534c1a150a76`  
+		Last Modified: Fri, 18 Mar 2022 02:33:32 GMT  
+		Size: 669.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:229d92d6a8bea8490a55b74af5c49641aa340746c1f7b7176eff9b9273aef7a6`  
-		Last Modified: Tue, 25 Jan 2022 20:58:50 GMT  
-		Size: 1.4 KB (1395 bytes)  
+	-	`sha256:00a9efd3e088092b44da914cdb6e095d1284fc182cfd5ea9bcd7f1c648e312cc`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
+		Size: 1.4 KB (1398 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:alpine` - linux; s390x
@@ -11771,7 +11771,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:alpine-perl`
 
 ```console
-$ docker pull nginx@sha256:eace2cab55e8b78c452dd8bba91795264c6308d213a9c508465a45c21c55b864
+$ docker pull nginx@sha256:2bc9a3cf0b93f8855659ee58101ac93a8e1b3cf3acf6809d7784a987ecd346a8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12152,74 +12152,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:alpine-perl` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:f44577cd4a19a25569768b58b3ec6dc3a6c261421289eb6aa9a6f457dc68cb51
+$ docker pull nginx@sha256:1fb4947517a460f496df181bf17f674c43d037639f476ccaa7855011db45013b
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.9 MB (20945003 bytes)**  
+-	Total Size: **19.5 MB (19536707 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c337eed0c91800e38bf855f46dc115e5e01b8fd1274cdc84b5beec6e16b80d3b`
+-	Image ID: `sha256:653ad5c90aeaab01b052f46eaf19fc03cf6d67925ade7b22678e7f2a470e156f`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Wed, 24 Nov 2021 20:20:16 GMT
-ADD file:57115dca2eb707f46b6301e75174e6aa316fb02ac28643b91429b75be51bd8c8 in / 
-# Wed, 24 Nov 2021 20:20:20 GMT
+# Thu, 17 Mar 2022 11:14:04 GMT
+ADD file:ddc94e1e084c05807db26adcc95b47a137fa47fb391e75998b338ada65e00c1c in / 
+# Thu, 17 Mar 2022 11:14:09 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Dec 2021 19:39:51 GMT
+# Fri, 18 Mar 2022 02:01:09 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 25 Jan 2022 20:34:22 GMT
+# Fri, 18 Mar 2022 02:01:15 GMT
 ENV NGINX_VERSION=1.21.6
-# Tue, 25 Jan 2022 20:34:30 GMT
+# Fri, 18 Mar 2022 02:01:20 GMT
 ENV NJS_VERSION=0.7.2
-# Tue, 25 Jan 2022 20:34:36 GMT
+# Fri, 18 Mar 2022 02:01:25 GMT
 ENV PKG_RELEASE=1
-# Tue, 25 Jan 2022 20:43:47 GMT
+# Fri, 18 Mar 2022 02:10:33 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-perl=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"29ec1c635da36b7727953544e1a20e9d75bd9d2050e063b9f81f88ca07bb7ea0b65cef46d0f3cb7134b38ce9b94ecada631619f233231845a3d8a16b6ad0db82 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 25 Jan 2022 20:43:51 GMT
+# Fri, 18 Mar 2022 02:10:39 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 25 Jan 2022 20:43:54 GMT
+# Fri, 18 Mar 2022 02:10:45 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:43:56 GMT
+# Fri, 18 Mar 2022 02:10:47 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:43:59 GMT
+# Fri, 18 Mar 2022 02:10:51 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:44:05 GMT
+# Fri, 18 Mar 2022 02:10:59 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 25 Jan 2022 20:44:09 GMT
+# Fri, 18 Mar 2022 02:11:07 GMT
 EXPOSE 80
-# Tue, 25 Jan 2022 20:44:11 GMT
+# Fri, 18 Mar 2022 02:11:13 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 25 Jan 2022 20:44:15 GMT
+# Fri, 18 Mar 2022 02:11:18 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:159b5dcb1717c815c76ff5ea1db730e18e8609c9090238e43282856db9e71f47`  
-		Last Modified: Wed, 24 Nov 2021 20:21:14 GMT  
-		Size: 2.8 MB (2814780 bytes)  
+	-	`sha256:eef85fcc847498263d979ef7ec75680d05e90815eb83a9ec4db135b990c0d8b8`  
+		Last Modified: Thu, 17 Mar 2022 11:15:15 GMT  
+		Size: 2.8 MB (2814051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4222da7c257200072a881461a70fc6030c174d781a029530f3cd92c64c78dc6e`  
-		Last Modified: Tue, 25 Jan 2022 20:59:17 GMT  
-		Size: 18.1 MB (18126677 bytes)  
+	-	`sha256:c2e19aa79c6ebf4782c153cfb6b3084182b00c2c628c9674504cd8f9024dc64f`  
+		Last Modified: Fri, 18 Mar 2022 02:34:03 GMT  
+		Size: 16.7 MB (16719093 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f525efba0643e31f6b2679f5b8a61182584dced6476169b05d65f7a4507953ed`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 597.0 B  
+	-	`sha256:c7d3023a5a4df7fb7c1550f3a92ba711e61f2c84d4f86ac5a01740bd0e7ed105`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6dfa689bfa3514a5f816528cc01cbc0d2f34b40cebe8b76df18d0cebba341c60`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 893.0 B  
+	-	`sha256:5f8bfeffc4f66a9a5ec1c5ed5b5f5a73486810af80a801d764d3b66488b7d8cb`  
+		Last Modified: Fri, 18 Mar 2022 02:33:58 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:37aa637ea7adb704a38239c70399a91ced735fc18c7cae61168e86f39fe4a482`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 664.0 B  
+	-	`sha256:9c03b19b3e41aaa293d96bdb4e0449b504227a3bfb456235d02384632ddb71af`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 669.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62904de971aa2af9134135d38df3496290217fa54bf93a86bc99a3c33925a55b`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 1.4 KB (1392 bytes)  
+	-	`sha256:8a24e40f8abe7fa71cf8ece6ae5a338f89f547dc10e45b5209a79742558b27e6`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 1.4 KB (1397 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:alpine-perl` - linux; s390x
@@ -13500,7 +13500,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:mainline-alpine`
 
 ```console
-$ docker pull nginx@sha256:1e18d60ec3e83a1a01f07457ba6ce045fd3cb65ad1c2bbbb07beb62cc3037543
+$ docker pull nginx@sha256:581ac1da0f8f8c342fa6cf77885a2320227667c0bc42bdca4b1dd74599d02498
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13881,74 +13881,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:mainline-alpine` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:af491bc7ec4cac0d5d04c2c20a8c747903b7bf2b1f57c443670cc62bd9611c23
+$ docker pull nginx@sha256:a87ac0dedbb49b4b50646b9849b9eeb66f018ef971dd967e8d05265d5bb817df
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **11.9 MB (11887405 bytes)**  
+-	Total Size: **10.5 MB (10481719 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9f016818b812b3a0dbd855f2f449ee8bcce8bd74d421ccfdb22318a3152c6719`
+-	Image ID: `sha256:aa2a7e8298b8032f4a81487c1a5030f8929f815a295cbb6812734904aec97b8e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Wed, 24 Nov 2021 20:20:16 GMT
-ADD file:57115dca2eb707f46b6301e75174e6aa316fb02ac28643b91429b75be51bd8c8 in / 
-# Wed, 24 Nov 2021 20:20:20 GMT
+# Thu, 17 Mar 2022 11:14:04 GMT
+ADD file:ddc94e1e084c05807db26adcc95b47a137fa47fb391e75998b338ada65e00c1c in / 
+# Thu, 17 Mar 2022 11:14:09 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Dec 2021 19:39:51 GMT
+# Fri, 18 Mar 2022 02:01:09 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 25 Jan 2022 20:34:22 GMT
+# Fri, 18 Mar 2022 02:01:15 GMT
 ENV NGINX_VERSION=1.21.6
-# Tue, 25 Jan 2022 20:34:30 GMT
+# Fri, 18 Mar 2022 02:01:20 GMT
 ENV NJS_VERSION=0.7.2
-# Tue, 25 Jan 2022 20:34:36 GMT
+# Fri, 18 Mar 2022 02:01:25 GMT
 ENV PKG_RELEASE=1
-# Tue, 25 Jan 2022 20:38:48 GMT
+# Fri, 18 Mar 2022 02:05:42 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"29ec1c635da36b7727953544e1a20e9d75bd9d2050e063b9f81f88ca07bb7ea0b65cef46d0f3cb7134b38ce9b94ecada631619f233231845a3d8a16b6ad0db82 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 25 Jan 2022 20:38:54 GMT
+# Fri, 18 Mar 2022 02:05:45 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 25 Jan 2022 20:38:57 GMT
+# Fri, 18 Mar 2022 02:05:46 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:38:59 GMT
+# Fri, 18 Mar 2022 02:05:48 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:39:00 GMT
+# Fri, 18 Mar 2022 02:05:49 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:39:06 GMT
+# Fri, 18 Mar 2022 02:05:53 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 25 Jan 2022 20:39:10 GMT
+# Fri, 18 Mar 2022 02:05:58 GMT
 EXPOSE 80
-# Tue, 25 Jan 2022 20:39:13 GMT
+# Fri, 18 Mar 2022 02:06:06 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 25 Jan 2022 20:39:16 GMT
+# Fri, 18 Mar 2022 02:06:10 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:159b5dcb1717c815c76ff5ea1db730e18e8609c9090238e43282856db9e71f47`  
-		Last Modified: Wed, 24 Nov 2021 20:21:14 GMT  
-		Size: 2.8 MB (2814780 bytes)  
+	-	`sha256:eef85fcc847498263d979ef7ec75680d05e90815eb83a9ec4db135b990c0d8b8`  
+		Last Modified: Thu, 17 Mar 2022 11:15:15 GMT  
+		Size: 2.8 MB (2814051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29c02cc338b8fbcca28039d2b317e6bca3aaf28e017532fcd0c51edda8ae3ca8`  
-		Last Modified: Tue, 25 Jan 2022 20:58:52 GMT  
-		Size: 9.1 MB (9069069 bytes)  
+	-	`sha256:d7dca4d0b0c5a79e71c3feb0d86e7126862b6f9396de52caf3b3c303d34ca209`  
+		Last Modified: Fri, 18 Mar 2022 02:33:34 GMT  
+		Size: 7.7 MB (7664104 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:602d1debbe13281dd67ec7db044cb82d97dc6a772149613fa30b653f9bac41f5`  
-		Last Modified: Tue, 25 Jan 2022 20:58:51 GMT  
+	-	`sha256:b6eb27df268fbba70fcb4d18a8d7c318fe004ae5963211ec8be106da86e83148`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
 		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67f4979ef0e96807bccbf40933c5907254ff6ec9d2bbd931a26ecb7a504d1682`  
-		Last Modified: Tue, 25 Jan 2022 20:58:51 GMT  
-		Size: 894.0 B  
+	-	`sha256:e566a96ccf3caff2e8a58f265330c648d22121e8ac3ee6a0cd7c82cf6d0527a9`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8feea406ce6b776acd98b07e6c7dd6ad89897747e82fe29c3d147354de5c483`  
-		Last Modified: Tue, 25 Jan 2022 20:58:50 GMT  
-		Size: 666.0 B  
+	-	`sha256:74dd3e99d68c7a3931da2b11f8cbae5410cead5e15f7b5e2c1f7534c1a150a76`  
+		Last Modified: Fri, 18 Mar 2022 02:33:32 GMT  
+		Size: 669.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:229d92d6a8bea8490a55b74af5c49641aa340746c1f7b7176eff9b9273aef7a6`  
-		Last Modified: Tue, 25 Jan 2022 20:58:50 GMT  
-		Size: 1.4 KB (1395 bytes)  
+	-	`sha256:00a9efd3e088092b44da914cdb6e095d1284fc182cfd5ea9bcd7f1c648e312cc`  
+		Last Modified: Fri, 18 Mar 2022 02:33:33 GMT  
+		Size: 1.4 KB (1398 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:mainline-alpine` - linux; s390x
@@ -14027,7 +14027,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:mainline-alpine-perl`
 
 ```console
-$ docker pull nginx@sha256:eace2cab55e8b78c452dd8bba91795264c6308d213a9c508465a45c21c55b864
+$ docker pull nginx@sha256:2bc9a3cf0b93f8855659ee58101ac93a8e1b3cf3acf6809d7784a987ecd346a8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14408,74 +14408,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:mainline-alpine-perl` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:f44577cd4a19a25569768b58b3ec6dc3a6c261421289eb6aa9a6f457dc68cb51
+$ docker pull nginx@sha256:1fb4947517a460f496df181bf17f674c43d037639f476ccaa7855011db45013b
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.9 MB (20945003 bytes)**  
+-	Total Size: **19.5 MB (19536707 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c337eed0c91800e38bf855f46dc115e5e01b8fd1274cdc84b5beec6e16b80d3b`
+-	Image ID: `sha256:653ad5c90aeaab01b052f46eaf19fc03cf6d67925ade7b22678e7f2a470e156f`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Wed, 24 Nov 2021 20:20:16 GMT
-ADD file:57115dca2eb707f46b6301e75174e6aa316fb02ac28643b91429b75be51bd8c8 in / 
-# Wed, 24 Nov 2021 20:20:20 GMT
+# Thu, 17 Mar 2022 11:14:04 GMT
+ADD file:ddc94e1e084c05807db26adcc95b47a137fa47fb391e75998b338ada65e00c1c in / 
+# Thu, 17 Mar 2022 11:14:09 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Dec 2021 19:39:51 GMT
+# Fri, 18 Mar 2022 02:01:09 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 25 Jan 2022 20:34:22 GMT
+# Fri, 18 Mar 2022 02:01:15 GMT
 ENV NGINX_VERSION=1.21.6
-# Tue, 25 Jan 2022 20:34:30 GMT
+# Fri, 18 Mar 2022 02:01:20 GMT
 ENV NJS_VERSION=0.7.2
-# Tue, 25 Jan 2022 20:34:36 GMT
+# Fri, 18 Mar 2022 02:01:25 GMT
 ENV PKG_RELEASE=1
-# Tue, 25 Jan 2022 20:43:47 GMT
+# Fri, 18 Mar 2022 02:10:33 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-perl=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/mainline/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre2-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"29ec1c635da36b7727953544e1a20e9d75bd9d2050e063b9f81f88ca07bb7ea0b65cef46d0f3cb7134b38ce9b94ecada631619f233231845a3d8a16b6ad0db82 *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 25 Jan 2022 20:43:51 GMT
+# Fri, 18 Mar 2022 02:10:39 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 25 Jan 2022 20:43:54 GMT
+# Fri, 18 Mar 2022 02:10:45 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:43:56 GMT
+# Fri, 18 Mar 2022 02:10:47 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:43:59 GMT
+# Fri, 18 Mar 2022 02:10:51 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 25 Jan 2022 20:44:05 GMT
+# Fri, 18 Mar 2022 02:10:59 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 25 Jan 2022 20:44:09 GMT
+# Fri, 18 Mar 2022 02:11:07 GMT
 EXPOSE 80
-# Tue, 25 Jan 2022 20:44:11 GMT
+# Fri, 18 Mar 2022 02:11:13 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 25 Jan 2022 20:44:15 GMT
+# Fri, 18 Mar 2022 02:11:18 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:159b5dcb1717c815c76ff5ea1db730e18e8609c9090238e43282856db9e71f47`  
-		Last Modified: Wed, 24 Nov 2021 20:21:14 GMT  
-		Size: 2.8 MB (2814780 bytes)  
+	-	`sha256:eef85fcc847498263d979ef7ec75680d05e90815eb83a9ec4db135b990c0d8b8`  
+		Last Modified: Thu, 17 Mar 2022 11:15:15 GMT  
+		Size: 2.8 MB (2814051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4222da7c257200072a881461a70fc6030c174d781a029530f3cd92c64c78dc6e`  
-		Last Modified: Tue, 25 Jan 2022 20:59:17 GMT  
-		Size: 18.1 MB (18126677 bytes)  
+	-	`sha256:c2e19aa79c6ebf4782c153cfb6b3084182b00c2c628c9674504cd8f9024dc64f`  
+		Last Modified: Fri, 18 Mar 2022 02:34:03 GMT  
+		Size: 16.7 MB (16719093 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f525efba0643e31f6b2679f5b8a61182584dced6476169b05d65f7a4507953ed`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 597.0 B  
+	-	`sha256:c7d3023a5a4df7fb7c1550f3a92ba711e61f2c84d4f86ac5a01740bd0e7ed105`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6dfa689bfa3514a5f816528cc01cbc0d2f34b40cebe8b76df18d0cebba341c60`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 893.0 B  
+	-	`sha256:5f8bfeffc4f66a9a5ec1c5ed5b5f5a73486810af80a801d764d3b66488b7d8cb`  
+		Last Modified: Fri, 18 Mar 2022 02:33:58 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:37aa637ea7adb704a38239c70399a91ced735fc18c7cae61168e86f39fe4a482`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 664.0 B  
+	-	`sha256:9c03b19b3e41aaa293d96bdb4e0449b504227a3bfb456235d02384632ddb71af`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 669.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62904de971aa2af9134135d38df3496290217fa54bf93a86bc99a3c33925a55b`  
-		Last Modified: Tue, 25 Jan 2022 20:59:13 GMT  
-		Size: 1.4 KB (1392 bytes)  
+	-	`sha256:8a24e40f8abe7fa71cf8ece6ae5a338f89f547dc10e45b5209a79742558b27e6`  
+		Last Modified: Fri, 18 Mar 2022 02:33:59 GMT  
+		Size: 1.4 KB (1397 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:mainline-alpine-perl` - linux; s390x
@@ -16357,7 +16357,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:stable-alpine`
 
 ```console
-$ docker pull nginx@sha256:fd1d617cffdbd1ce3ca63c085985f1aa5ebe5ebc43fbb2a62a75cd4585ad9a49
+$ docker pull nginx@sha256:6378bae949f6d4ee1aceadfe557d72cfffd65aafe3916c85db39d47be1deb773
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16738,74 +16738,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:stable-alpine` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:96b39719d5011c0deeca0d390dceba19ac460c037b5190bf201e73b19fa7e5c3
+$ docker pull nginx@sha256:9b7325472e063ca4ccd21e157bc9c9f9c61125f0edd96ee9f295099fe2cdd154
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **10.4 MB (10383914 bytes)**  
+-	Total Size: **10.4 MB (10374396 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d5d35e81e7f06753ba9f5a82675755171622f3bbfc6e40a796735e5d42ebd4c0`
+-	Image ID: `sha256:ff8c864e6053598a24d8e81814320153a0d526131640416a2925e09d149f08b1`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Fri, 12 Nov 2021 21:18:00 GMT
-ADD file:4d45063079cb28a34f1e382fddb22f156ac99d5449aa05ed37cb653c1f7b80f2 in / 
-# Fri, 12 Nov 2021 21:18:01 GMT
+# Thu, 17 Mar 2022 18:18:43 GMT
+ADD file:bf9c99d8209e0bed9fd3b62cbe691ebf3829d5a35e63e2b066f1f842577a6d24 in / 
+# Thu, 17 Mar 2022 18:18:48 GMT
 CMD ["/bin/sh"]
-# Sat, 13 Nov 2021 02:31:57 GMT
+# Fri, 18 Mar 2022 02:21:46 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 16 Nov 2021 22:43:07 GMT
+# Fri, 18 Mar 2022 02:21:52 GMT
 ENV NGINX_VERSION=1.20.2
-# Tue, 16 Nov 2021 22:43:09 GMT
+# Fri, 18 Mar 2022 02:21:58 GMT
 ENV NJS_VERSION=0.7.0
-# Tue, 16 Nov 2021 22:43:12 GMT
+# Fri, 18 Mar 2022 02:22:05 GMT
 ENV PKG_RELEASE=1
-# Tue, 16 Nov 2021 22:47:18 GMT
+# Fri, 18 Mar 2022 02:26:37 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"af6e7eb25594dffe2903358f7a2c5c956f5b67b8df3f4e8237c30b63e50ce28e6eada3ed453687409beef8f3afa8f551cb20df2f06bd5e235eb66df212ece2ed *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 16 Nov 2021 22:47:20 GMT
+# Fri, 18 Mar 2022 02:26:44 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 16 Nov 2021 22:47:21 GMT
+# Fri, 18 Mar 2022 02:26:46 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:47:22 GMT
+# Fri, 18 Mar 2022 02:26:48 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:47:23 GMT
+# Fri, 18 Mar 2022 02:26:50 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:47:25 GMT
+# Fri, 18 Mar 2022 02:26:52 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 16 Nov 2021 22:47:27 GMT
+# Fri, 18 Mar 2022 02:27:00 GMT
 EXPOSE 80
-# Tue, 16 Nov 2021 22:47:29 GMT
+# Fri, 18 Mar 2022 02:27:07 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 16 Nov 2021 22:47:31 GMT
+# Fri, 18 Mar 2022 02:27:12 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:72940440c1ab65eca4d38846164719ffde4b147543cc658d041407a925b13368`  
-		Last Modified: Fri, 12 Nov 2021 21:19:32 GMT  
-		Size: 2.8 MB (2817467 bytes)  
+	-	`sha256:8b7e8363a93630a772b70e3cf72231f43c62addae0ee8e507c61d43e3781c4e7`  
+		Last Modified: Thu, 17 Mar 2022 18:20:01 GMT  
+		Size: 2.8 MB (2817281 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb63892f3810c92b5ddf5702abf17496cef4eab1ddbbfd8c02523f94c7befab8`  
-		Last Modified: Tue, 16 Nov 2021 22:54:22 GMT  
-		Size: 7.6 MB (7562888 bytes)  
+	-	`sha256:526c1c1e2ec4e5e4e00791229f73c8a97d1854060561d75da71485f1e4b3b2cf`  
+		Last Modified: Fri, 18 Mar 2022 02:34:28 GMT  
+		Size: 7.6 MB (7553556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:884da2e87349ba13e4819bb49716648a9a4f045084e3d82872e4f16390990eb9`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
+	-	`sha256:fc7e464ee9e048eaacf807f37379550636ab25c82c09272b8a150bd2b228ceae`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
 		Size: 601.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4345ee689b0ee03e3d1667b131bcefc417eaf2415caef645d7442a6b94b5b730`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
-		Size: 895.0 B  
+	-	`sha256:945d39020bb8dd77e0feb3c14ecd6d27380aea81e4c20b6ad6791d45a58f4d77`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d4fdd767373a363dea9ea8e84bbb0ff472d1b83c94af2a9d538400c7b82a6c8`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
-		Size: 667.0 B  
+	-	`sha256:9bc9d28ead8aa99d0be9104d99c5a554627dda078394d9c4498a8865adc1fc13`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
+		Size: 668.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb7b6ccec008dc9c7cd544e04ec26547c4bc18153a689134b17e358191405cbb`  
-		Last Modified: Tue, 16 Nov 2021 22:54:20 GMT  
-		Size: 1.4 KB (1396 bytes)  
+	-	`sha256:29c8363b9d738f901b50c538ecb51fdb9d9a5fef293de428a39567d8174f3b76`  
+		Last Modified: Fri, 18 Mar 2022 02:34:26 GMT  
+		Size: 1.4 KB (1394 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:stable-alpine` - linux; s390x
@@ -16884,7 +16884,7 @@ CMD ["nginx" "-g" "daemon off;"]
 ## `nginx:stable-alpine-perl`
 
 ```console
-$ docker pull nginx@sha256:b35e7e46e1e6842ca1a591e4526ffafe977baae9641e5e62fd852ef7f8d179b7
+$ docker pull nginx@sha256:c70db49a0b37d651cc08542278bf8f4d911df61b761b85f47bcb3e760a1546d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17265,74 +17265,74 @@ CMD ["nginx" "-g" "daemon off;"]
 ### `nginx:stable-alpine-perl` - linux; ppc64le
 
 ```console
-$ docker pull nginx@sha256:a22d7d1eadda2ed411d18d3275300aa85f941513b417e6d7df4b720457e9b3be
+$ docker pull nginx@sha256:a6565aadb712fde81437c2ea49f90f0801cfa6be0a2e7202d755ed1ed72066c4
 ```
 
--	Docker Version: 20.10.7
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **19.4 MB (19366585 bytes)**  
+-	Total Size: **19.4 MB (19358019 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ad1568c4eeb9dbe0afde5ef2d4efc75c4d2a3dcfe85d4ab1f5476113250db4a4`
+-	Image ID: `sha256:0bee94b5811b1a0939bb3f2e9ebaaba178077006f70071c6c12c9fbd40bf3845`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["nginx","-g","daemon off;"]`
 
 ```dockerfile
-# Fri, 12 Nov 2021 21:18:00 GMT
-ADD file:4d45063079cb28a34f1e382fddb22f156ac99d5449aa05ed37cb653c1f7b80f2 in / 
-# Fri, 12 Nov 2021 21:18:01 GMT
+# Thu, 17 Mar 2022 18:18:43 GMT
+ADD file:bf9c99d8209e0bed9fd3b62cbe691ebf3829d5a35e63e2b066f1f842577a6d24 in / 
+# Thu, 17 Mar 2022 18:18:48 GMT
 CMD ["/bin/sh"]
-# Sat, 13 Nov 2021 02:31:57 GMT
+# Fri, 18 Mar 2022 02:21:46 GMT
 LABEL maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Tue, 16 Nov 2021 22:43:07 GMT
+# Fri, 18 Mar 2022 02:21:52 GMT
 ENV NGINX_VERSION=1.20.2
-# Tue, 16 Nov 2021 22:43:09 GMT
+# Fri, 18 Mar 2022 02:21:58 GMT
 ENV NJS_VERSION=0.7.0
-# Tue, 16 Nov 2021 22:43:12 GMT
+# Fri, 18 Mar 2022 02:22:05 GMT
 ENV PKG_RELEASE=1
-# Tue, 16 Nov 2021 22:51:46 GMT
+# Fri, 18 Mar 2022 02:31:56 GMT
 RUN set -x     && addgroup -g 101 -S nginx     && adduser -S -D -H -u 101 -h /var/cache/nginx -s /sbin/nologin -G nginx -g nginx nginx     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         nginx=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-xslt=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-geoip=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-image-filter=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-perl=${NGINX_VERSION}-r${PKG_RELEASE}         nginx-module-njs=${NGINX_VERSION}.${NJS_VERSION}-r${PKG_RELEASE}     "     && apk add --no-cache --virtual .checksum-deps         openssl     && case "$apkArch" in         x86_64|aarch64)             set -x             && KEY_SHA512="e7fa8303923d9b95db37a77ad46c68fd4755ff935d0a534d26eba83de193c76166c68bfe7f65471bf8881004ef4aa6df3e34689c305662750c0172fca5d8552a *stdin"             && wget -O /tmp/nginx_signing.rsa.pub https://nginx.org/keys/nginx_signing.rsa.pub             && if [ "$(openssl rsa -pubin -in /tmp/nginx_signing.rsa.pub -text -noout | openssl sha512 -r)" = "$KEY_SHA512" ]; then                 echo "key verification succeeded!";                 mv /tmp/nginx_signing.rsa.pub /etc/apk/keys/;             else                 echo "key verification failed!";                 exit 1;             fi             && apk add -X "https://nginx.org/packages/alpine/v$(egrep -o '^[0-9]+\.[0-9]+' /etc/alpine-release)/main" --no-cache $nginxPackages             ;;         *)             set -x             && tempDir="$(mktemp -d)"             && chown nobody:nobody $tempDir             && apk add --no-cache --virtual .build-deps                 gcc                 libc-dev                 make                 openssl-dev                 pcre-dev                 zlib-dev                 linux-headers                 libxslt-dev                 gd-dev                 geoip-dev                 perl-dev                 libedit-dev                 bash                 alpine-sdk                 findutils             && su nobody -s /bin/sh -c "                 export HOME=${tempDir}                 && cd ${tempDir}                 && curl -f -O https://hg.nginx.org/pkg-oss/archive/${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && PKGOSSCHECKSUM=\"af6e7eb25594dffe2903358f7a2c5c956f5b67b8df3f4e8237c30b63e50ce28e6eada3ed453687409beef8f3afa8f551cb20df2f06bd5e235eb66df212ece2ed *${NGINX_VERSION}-${PKG_RELEASE}.tar.gz\"                 && if [ \"\$(openssl sha512 -r ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz)\" = \"\$PKGOSSCHECKSUM\" ]; then                     echo \"pkg-oss tarball checksum verification succeeded!\";                 else                     echo \"pkg-oss tarball checksum verification failed!\";                     exit 1;                 fi                 && tar xzvf ${NGINX_VERSION}-${PKG_RELEASE}.tar.gz                 && cd pkg-oss-${NGINX_VERSION}-${PKG_RELEASE}                 && cd alpine                 && make all                 && apk index -o ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz ${tempDir}/packages/alpine/${apkArch}/*.apk                 && abuild-sign -k ${tempDir}/.abuild/abuild-key.rsa ${tempDir}/packages/alpine/${apkArch}/APKINDEX.tar.gz                 "             && cp ${tempDir}/.abuild/abuild-key.rsa.pub /etc/apk/keys/             && apk del .build-deps             && apk add -X ${tempDir}/packages/alpine/ --no-cache $nginxPackages             ;;     esac     && apk del .checksum-deps     && if [ -n "$tempDir" ]; then rm -rf "$tempDir"; fi     && if [ -n "/etc/apk/keys/abuild-key.rsa.pub" ]; then rm -f /etc/apk/keys/abuild-key.rsa.pub; fi     && if [ -n "/etc/apk/keys/nginx_signing.rsa.pub" ]; then rm -f /etc/apk/keys/nginx_signing.rsa.pub; fi     && apk add --no-cache --virtual .gettext gettext     && mv /usr/bin/envsubst /tmp/         && runDeps="$(         scanelf --needed --nobanner /tmp/envsubst             | awk '{ gsub(/,/, "\nso:", $2); print "so:" $2 }'             | sort -u             | xargs -r apk info --installed             | sort -u     )"     && apk add --no-cache $runDeps     && apk del .gettext     && mv /tmp/envsubst /usr/local/bin/     && apk add --no-cache tzdata     && apk add --no-cache curl ca-certificates     && ln -sf /dev/stdout /var/log/nginx/access.log     && ln -sf /dev/stderr /var/log/nginx/error.log     && mkdir /docker-entrypoint.d
-# Tue, 16 Nov 2021 22:51:49 GMT
+# Fri, 18 Mar 2022 02:32:03 GMT
 COPY file:65504f71f5855ca017fb64d502ce873a31b2e0decd75297a8fb0a287f97acf92 in / 
-# Tue, 16 Nov 2021 22:51:50 GMT
+# Fri, 18 Mar 2022 02:32:06 GMT
 COPY file:0b866ff3fc1ef5b03c4e6c8c513ae014f691fb05d530257dfffd07035c1b75da in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:51:51 GMT
+# Fri, 18 Mar 2022 02:32:09 GMT
 COPY file:0fd5fca330dcd6a7de297435e32af634f29f7132ed0550d342cad9fd20158258 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:51:52 GMT
+# Fri, 18 Mar 2022 02:32:11 GMT
 COPY file:09a214a3e07c919af2fb2d7c749ccbc446b8c10eb217366e5a65640ee9edcc25 in /docker-entrypoint.d 
-# Tue, 16 Nov 2021 22:51:54 GMT
+# Fri, 18 Mar 2022 02:32:17 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 16 Nov 2021 22:51:55 GMT
+# Fri, 18 Mar 2022 02:32:21 GMT
 EXPOSE 80
-# Tue, 16 Nov 2021 22:51:58 GMT
+# Fri, 18 Mar 2022 02:32:26 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 16 Nov 2021 22:52:00 GMT
+# Fri, 18 Mar 2022 02:32:33 GMT
 CMD ["nginx" "-g" "daemon off;"]
 ```
 
 -	Layers:
-	-	`sha256:72940440c1ab65eca4d38846164719ffde4b147543cc658d041407a925b13368`  
-		Last Modified: Fri, 12 Nov 2021 21:19:32 GMT  
-		Size: 2.8 MB (2817467 bytes)  
+	-	`sha256:8b7e8363a93630a772b70e3cf72231f43c62addae0ee8e507c61d43e3781c4e7`  
+		Last Modified: Thu, 17 Mar 2022 18:20:01 GMT  
+		Size: 2.8 MB (2817281 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c5d999d2671ee1d8ee844a6250cd2a24c4dee4f590dc3666fbd14d8728a4296a`  
-		Last Modified: Tue, 16 Nov 2021 22:54:40 GMT  
-		Size: 16.5 MB (16545561 bytes)  
+	-	`sha256:c6b6e2f7d070031489c87d260910681ff0a42164cbcc29cda905e1c1e9e4fe00`  
+		Last Modified: Fri, 18 Mar 2022 02:34:48 GMT  
+		Size: 16.5 MB (16537180 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2eb7a10ee35ea1c3bd84433e455acac4a8c3d46685bf95c45f91bfb07154c4f2`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 603.0 B  
+	-	`sha256:ef5f9da426aade508059e4a136050eebd2438a193c9933d8a61923aa4fd949bf`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 602.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3fe5bc6f91d1946bf4551862af20a56966e36036c8abbb9f59a072ee62cfb9cb`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 896.0 B  
+	-	`sha256:3d463dba36223692e544ec3a97d4f032654c97ee736c53f8c0e2d291091f5a90`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 894.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e9e2b51c036b24fc96185af0a391d14701863a30e3a49c198791e80acd457ae`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 665.0 B  
+	-	`sha256:891838a5e6dc62f4ebaae7759d53306e313995979a8c7cdee5ae4ede14d108f0`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 667.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d76f9cdfd64d6b429c2a50bd89083435462b6f2a71447bbb82d7ac570b61445f`  
-		Last Modified: Tue, 16 Nov 2021 22:54:36 GMT  
-		Size: 1.4 KB (1393 bytes)  
+	-	`sha256:3d8964c4f176c206f03d34162b01627e8e9e928b576eb0fbff0f88d8b33d00dd`  
+		Last Modified: Fri, 18 Mar 2022 02:34:44 GMT  
+		Size: 1.4 KB (1395 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `nginx:stable-alpine-perl` - linux; s390x
