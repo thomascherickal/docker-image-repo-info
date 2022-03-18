@@ -1365,14 +1365,9 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.8.1-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-2ubuntu1.dsc' shadow_4.8.1-2ubuntu1.dsc 2381 SHA512:04251885e4b9f51c78d133aeddbcb5097e7e9a5844c842f621cb35b49f6cc5db7dad11b3967663dd34311ae8a3f6b28136d5e6dfe95b8ef4d51e8d40d4819310
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1.orig.tar.xz' shadow_4.8.1.orig.tar.xz 1611196 SHA512:780a983483d847ed3c91c82064a0fa902b6f4185225978241bc3bc03fcc3aa143975b46aee43151c6ba43efcfdb1819516b76ba7ad3d1d3c34fcc38ea42e917b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-2ubuntu1.debian.tar.xz' shadow_4.8.1-2ubuntu1.debian.tar.xz 86604 SHA512:d0531d7faa0bb494f01b93fd7293c207b091392006300364a523f45eeed6868d891adf89d984873cbe0c9f5d8278a41d8e583bf4a1015504f6e7c2d56e4c2656
-```
 
 ### `dpkg` source package: `systemd=249.10-0ubuntu1`
 
