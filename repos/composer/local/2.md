@@ -1,10 +1,10 @@
-# `composer:2.2.7`
+# `composer:2.2.9`
 
 ## Docker Metadata
 
-- Image ID: `sha256:894c1ef3e832e85a2227ffac1b3b9ee8c4c60a35b6e1b41de397c451aea3a132`
-- Created: `2022-03-11T11:56:11.384337855Z`
-- Virtual Size: ~ 197.08 Mb  
+- Image ID: `sha256:aa6a91d32046c9419a0bdb982817ae30ee35f1a7a0cd9c13462581eba5ab3de2`
+- Created: `2022-03-16T18:20:03.873522017Z`
+- Virtual Size: ~ 200.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=5d65a11071b47669c17452fb336c290b67c101efb745c1dbe7525b5caf546ec6`
   - `COMPOSER_ALLOW_SUPERUSER=1`
   - `COMPOSER_HOME=/tmp`
-  - `COMPOSER_VERSION=2.2.7`
+  - `COMPOSER_VERSION=2.2.9`
 
 ## `apk` (`.apk`-based packages)
 
@@ -387,16 +387,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1l-r8 description:
+libcrypto1.1-1.1.1n-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1l-r8 webpage:
+libcrypto1.1-1.1.1n-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1l-r8 installed size:
+libcrypto1.1-1.1.1n-r0 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1l-r8 license:
+libcrypto1.1-1.1.1n-r0 license:
 OpenSSL
 
 ```
@@ -523,16 +523,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1l-r8 description:
+libssl1.1-1.1.1n-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1l-r8 webpage:
+libssl1.1-1.1.1n-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1l-r8 installed size:
+libssl1.1-1.1.1n-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1l-r8 license:
+libssl1.1-1.1.1n-r0 license:
 OpenSSL
 
 ```
@@ -829,16 +829,16 @@ BSD
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1l-r8 description:
+openssl-1.1.1n-r0 description:
 toolkit for transport layer security (TLS) - version 1.1
 
-openssl-1.1.1l-r8 webpage:
+openssl-1.1.1n-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1l-r8 installed size:
-660 KiB
+openssl-1.1.1n-r0 installed size:
+664 KiB
 
-openssl-1.1.1l-r8 license:
+openssl-1.1.1n-r0 license:
 OpenSSL
 
 ```
