@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:34985214466082e3f2f00384d5af950e25cb2b21a9501b82090b71ed2210780b`
-- Created: `2022-03-16T01:54:53.932129801Z`
-- Virtual Size: ~ 432.75 Mb  
+- Image ID: `sha256:5eca29daf445bf368d7cb34432c682813e71c2f60b3eeac0ad32f53d413020b9`
+- Created: `2022-03-18T22:43:20.825980274Z`
+- Virtual Size: ~ 427.98 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -1536,37 +1536,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nettle/3.7.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nettle/3.7.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.1k-1+deb11u1`
-
-Binary Packages:
-
-- `openssl=1.1.1k-1+deb11u1`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1k-1+deb11u1
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1k-1%2bdeb11u1.dsc' openssl_1.1.1k-1+deb11u1.dsc 2652 SHA256:6515a9f1250c42bd42d8439820dde65fbd6f4fbb4a9673bff58e37168a7d3228
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1k.orig.tar.gz' openssl_1.1.1k.orig.tar.gz 9823400 SHA256:892a0875b9872acd04a9fde79b1f943075d5ea162415de3047c327df33fbaee5
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1k.orig.tar.gz.asc' openssl_1.1.1k.orig.tar.gz.asc 488 SHA256:addeaa197444a62c6063d7f819512c2c22b42141dec9d8ec3bff7e4518e1d1c9
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1k-1%2bdeb11u1.debian.tar.xz' openssl_1.1.1k-1+deb11u1.debian.tar.xz 94244 SHA256:68e00f47162ecea0273b4ba453503307b8430bb2d163f92cbbec6f51b11061fd
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/openssl/1.1.1k-1+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1k-1+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1k-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
-
 ### `dpkg` source package: `openssl=1.1.1k-1+deb11u2`
 
 Binary Packages:
 
 - `libssl1.1:amd64=1.1.1k-1+deb11u2`
+- `openssl=1.1.1k-1+deb11u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
