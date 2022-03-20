@@ -1,7 +1,7 @@
 ## `php-zendserver:latest`
 
 ```console
-$ docker pull php-zendserver@sha256:ae24ffd775fead8dff4dcac6746972d492a9d5e2978d9afb1b67430d87c6676a
+$ docker pull php-zendserver@sha256:f11d1d4605879a1293437a733f9ed9fe29c5d2fbb72a22d4449850c196b36a1a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,109 +11,109 @@ $ docker pull php-zendserver@sha256:ae24ffd775fead8dff4dcac6746972d492a9d5e2978d
 ### `php-zendserver:latest` - linux; amd64
 
 ```console
-$ docker pull php-zendserver@sha256:9f7eb826cc4e302e42942461f47bf6512a31d6fe83067ecd75d8a0adf615b822
+$ docker pull php-zendserver@sha256:d926b94439d727a19ee18e2efe2516daef6ab7195e28e4251c513b3679098006
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **392.5 MB (392514720 bytes)**  
+-	Total Size: **392.6 MB (392644811 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1809539ead83e55826598b430f815fe24d6f2174690614984276a6edf004fb68`
+-	Image ID: `sha256:13cd6c8ece1ebefe1b2f6f60d5c070859a9fce2cb2410f39f51498adbdf1d990`
 -	Default Command: `["\/usr\/local\/bin\/run"]`
 
 ```dockerfile
-# Thu, 03 Mar 2022 20:19:25 GMT
-ADD file:dee0aa8497bd26ca41dffa17adff99be2523f66f9b2c557ba9ad2388ed052dca in / 
-# Thu, 03 Mar 2022 20:19:25 GMT
+# Fri, 18 Mar 2022 05:30:26 GMT
+ADD file:f554512cb0acad99508554656767804e4821ece488fac0e46fd2c643a39f7021 in / 
+# Fri, 18 Mar 2022 05:30:27 GMT
 CMD ["bash"]
-# Thu, 03 Mar 2022 22:25:14 GMT
+# Sat, 19 Mar 2022 23:16:22 GMT
 RUN apt-get update && apt-get install -y       gnupg
-# Thu, 03 Mar 2022 22:25:50 GMT
+# Sat, 19 Mar 2022 23:16:51 GMT
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-key 799058698E65316A2E7A4FF42EAE1437F7D2C623
-# Thu, 03 Mar 2022 22:27:43 GMT
+# Sat, 19 Mar 2022 23:18:38 GMT
 COPY file:1e70d8fd6f9643bffb703528edddba0aa02a58e95cc53e92f58a86cde29e732a in /etc/apt/sources.list.d/zend-server.list 
-# Thu, 03 Mar 2022 22:29:10 GMT
+# Sat, 19 Mar 2022 23:20:03 GMT
 RUN apt-get update && apt-get install -y       iproute2       curl       libmysqlclient20       unzip       git       zend-server-nginx=2021.0.0+b74     && rm -rf /var/lib/apt/lists/*     && /usr/local/zend/bin/zendctl.sh stop
-# Thu, 03 Mar 2022 22:29:13 GMT
+# Sat, 19 Mar 2022 23:20:06 GMT
 ENV ZS_INIT_VERSION=0.3
-# Thu, 03 Mar 2022 22:29:13 GMT
+# Sat, 19 Mar 2022 23:20:06 GMT
 ENV ZS_INIT_SHA256=e8d441d8503808e9fc0fafc762b2cb80d4a6e68b94fede0fe41efdeac10800cb
-# Thu, 03 Mar 2022 22:29:13 GMT
+# Sat, 19 Mar 2022 23:20:06 GMT
 COPY file:ad21ce0b2dc8345be0ef63836774934d6b2045ddc3685411221a07dd10b649d1 in /tmp/zs-init.patch 
-# Thu, 03 Mar 2022 22:29:14 GMT
+# Sat, 19 Mar 2022 23:20:07 GMT
 RUN curl -fSL -o zs-init.tar.gz "http://repos.zend.com/zs-init/zs-init-docker-${ZS_INIT_VERSION}.tar.gz"     && echo "${ZS_INIT_SHA256} *zs-init.tar.gz" | sha256sum -c -     && mkdir /usr/local/zs-init     && tar xzf zs-init.tar.gz --strip-components=1 -C /usr/local/zs-init     && rm zs-init.tar.gz     && patch -u /usr/local/zs-init/src/Init/Steps/AbstractStep.php -i /tmp/zs-init.patch     && rm /tmp/zs-init.patch
-# Thu, 03 Mar 2022 22:29:14 GMT
+# Sat, 19 Mar 2022 23:20:07 GMT
 WORKDIR /usr/local/zs-init
-# Thu, 03 Mar 2022 22:29:19 GMT
+# Sat, 19 Mar 2022 23:20:13 GMT
 RUN /usr/local/zend/bin/php -r "readfile('https://getcomposer.org/installer');" | /usr/local/zend/bin/php     && /usr/local/zend/bin/php composer.phar update
-# Thu, 03 Mar 2022 22:29:19 GMT
+# Sat, 19 Mar 2022 23:20:13 GMT
 COPY dir:eecd98e9ebf1c61a12ae67558eb2a6ce846b9ebfadabbf08503e90b3e30d9496 in /usr/local/bin 
-# Thu, 03 Mar 2022 22:29:19 GMT
+# Sat, 19 Mar 2022 23:20:13 GMT
 COPY dir:80bde0d50316e7c9350262fe3b75826a91d075303027787e759d703b60df13d6 in /usr/local/zend/var/plugins/ 
-# Thu, 03 Mar 2022 22:29:20 GMT
+# Sat, 19 Mar 2022 23:20:13 GMT
 RUN rm /var/www/html/index.nginx-debian.html
-# Thu, 03 Mar 2022 22:29:20 GMT
+# Sat, 19 Mar 2022 23:20:14 GMT
 COPY dir:d174a5d34625889b4356c566972566e0ca7da618b01ea42276562f8186517a67 in /var/www/html 
-# Thu, 03 Mar 2022 22:29:20 GMT
+# Sat, 19 Mar 2022 23:20:14 GMT
 EXPOSE 80
-# Thu, 03 Mar 2022 22:29:20 GMT
+# Sat, 19 Mar 2022 23:20:14 GMT
 EXPOSE 443
-# Thu, 03 Mar 2022 22:29:20 GMT
+# Sat, 19 Mar 2022 23:20:14 GMT
 EXPOSE 10081
-# Thu, 03 Mar 2022 22:29:20 GMT
+# Sat, 19 Mar 2022 23:20:14 GMT
 EXPOSE 10082
-# Thu, 03 Mar 2022 22:29:20 GMT
+# Sat, 19 Mar 2022 23:20:14 GMT
 WORKDIR /var/www/html
-# Thu, 03 Mar 2022 22:29:20 GMT
+# Sat, 19 Mar 2022 23:20:14 GMT
 CMD ["/usr/local/bin/run"]
 ```
 
 -	Layers:
-	-	`sha256:cf06a7c3161117888114e7e91dbd21915efae33c2dbfb086380f7b21946d6e59`  
-		Last Modified: Thu, 03 Mar 2022 20:20:28 GMT  
-		Size: 26.7 MB (26708326 bytes)  
+	-	`sha256:11323ed2c65349758e68a03a8e43825ec263dc9790daea93cf83b18ad0703109`  
+		Last Modified: Thu, 17 Mar 2022 11:55:05 GMT  
+		Size: 26.7 MB (26708634 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:36f2548dde57902f485503f0157b299cb12cb273b4f5cc0693787b048ca588ae`  
-		Last Modified: Thu, 03 Mar 2022 22:29:57 GMT  
-		Size: 34.6 MB (34640166 bytes)  
+	-	`sha256:5c5715f36ae1f077308f21070ba121637d1ab1c740a7960c7d7e5bec8f90bc1e`  
+		Last Modified: Sat, 19 Mar 2022 23:20:52 GMT  
+		Size: 34.8 MB (34766913 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a03c3f91ef06ea9c7a39f665e9d581ad78d641cbff7802be8f9292689f2c6d03`  
-		Last Modified: Thu, 03 Mar 2022 22:29:52 GMT  
-		Size: 1.4 KB (1390 bytes)  
+	-	`sha256:be743ad723a813773ebec8e400a8d4df8ddb305f06111a5936bff5f904c7a98d`  
+		Last Modified: Sat, 19 Mar 2022 23:20:47 GMT  
+		Size: 1.4 KB (1391 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8e20db9266ac098344868ce00c26122a2c37ef1563e92866770fd54baf8c763`  
-		Last Modified: Thu, 03 Mar 2022 22:30:54 GMT  
+	-	`sha256:57c58dc6559c0afa2ce7977343979de6ff3988c48d63a3f442116385a526e538`  
+		Last Modified: Sat, 19 Mar 2022 23:21:49 GMT  
 		Size: 235.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b529d144e15f238b4a537ddd5316815a94b386c03bda1a84a3ba1f90358060f4`  
-		Last Modified: Thu, 03 Mar 2022 22:31:38 GMT  
-		Size: 325.9 MB (325940450 bytes)  
+	-	`sha256:6823e781efd13bd938cd7c573f0ea60500033c2bfae34b11ce8d184ee96ea49e`  
+		Last Modified: Sat, 19 Mar 2022 23:22:32 GMT  
+		Size: 325.9 MB (325942293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e34797b83f64ece1bb9a1a49f2bca0ba7de2d9bd6314e296ff6bddb62ccfd917`  
-		Last Modified: Thu, 03 Mar 2022 22:30:54 GMT  
+	-	`sha256:6e840f491b983d347100da8b6ad12a8a8552f310851a5b280fd054adac7fcd52`  
+		Last Modified: Sat, 19 Mar 2022 23:21:48 GMT  
 		Size: 445.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d6a2a87711a9723615744f86b83b58bc2f61285d8ea95f3ccdf19b040e1ef28f`  
-		Last Modified: Thu, 03 Mar 2022 22:30:54 GMT  
-		Size: 18.9 KB (18928 bytes)  
+	-	`sha256:b83cbb4382785c2a2550cc66f574453c023d9e280e3424d72f76744d163e4862`  
+		Last Modified: Sat, 19 Mar 2022 23:21:48 GMT  
+		Size: 18.9 KB (18926 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:612faa399086e758bcebd90f13755d829932971371c51d0f7aaae1392eb458e6`  
-		Last Modified: Thu, 03 Mar 2022 22:30:53 GMT  
-		Size: 5.2 MB (5186491 bytes)  
+	-	`sha256:d4278e27443887bb47bd2931e664ebd9458288afbeadbb7f18ead693a9d0c1f1`  
+		Last Modified: Sat, 19 Mar 2022 23:21:48 GMT  
+		Size: 5.2 MB (5187685 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1a34a4211b89a0f8420cc69ca78d9fd0f0d37e456761dbe2b5f96f7a2db5bc84`  
-		Last Modified: Thu, 03 Mar 2022 22:30:52 GMT  
-		Size: 14.3 KB (14294 bytes)  
+	-	`sha256:de37f63080d1e8a55ddafa4d6edeba7b774b559510ea4eb949f4be3cf294abf6`  
+		Last Modified: Sat, 19 Mar 2022 23:21:46 GMT  
+		Size: 14.3 KB (14293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec0d6f15b5f4b92ca1d097c8f1d3ad6ccf3d0d5d313c34a114517b3d5ac132ce`  
-		Last Modified: Thu, 03 Mar 2022 22:30:52 GMT  
-		Size: 2.6 KB (2557 bytes)  
+	-	`sha256:1830b9819c223674b56e0bddc9b1738a959837455ed0b8ad72ae66e58e5ec09b`  
+		Last Modified: Sat, 19 Mar 2022 23:21:46 GMT  
+		Size: 2.6 KB (2559 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a929bca445e64128a7864013646c93428465edaa27a19257cb459bb22db4211`  
-		Last Modified: Thu, 03 Mar 2022 22:30:52 GMT  
+	-	`sha256:16b5f8536def455a5675fc37d8fbb7fc64c8983b653183a208204ae08abd8d87`  
+		Last Modified: Sat, 19 Mar 2022 23:21:46 GMT  
 		Size: 186.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebca2ac1a960d3e7903c1350b641928f4f1a06f9d6faef071371afe690d79e2d`  
-		Last Modified: Thu, 03 Mar 2022 22:30:52 GMT  
-		Size: 1.3 KB (1252 bytes)  
+	-	`sha256:5da6f5aebab796803c667b1bba016d46ee00f2b8a93dcd8fbc136df3e9dbdd6f`  
+		Last Modified: Sat, 19 Mar 2022 23:21:46 GMT  
+		Size: 1.3 KB (1251 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
