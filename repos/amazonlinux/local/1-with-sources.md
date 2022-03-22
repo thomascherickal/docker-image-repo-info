@@ -1,10 +1,10 @@
-# `amazonlinux:2018.03.0.20220209.0-with-sources`
+# `amazonlinux:2018.03.0.20220315.0-with-sources`
 
 ## Docker Metadata
 
-- Image ID: `sha256:059a456ad03a6cc52fb1459fa5a68d1921ae1c7295f2528e1bca32b1f5eaa9d2`
-- Created: `2022-02-26T02:37:12.484031891Z`
-- Virtual Size: ~ 620.11 Mb  
+- Image ID: `sha256:36c0893271a92f18800485ea04292041280f69c87a1a4c15d98fba808bd1ed14`
+- Created: `2022-03-19T00:00:56.626777103Z`
+- Virtual Size: ~ 620.10 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -55,7 +55,7 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `cyrus-sasl-lib-2.1.23-13.16.amzn1.x86_64`
+### `rpm` package: `cyrus-sasl-lib-2.1.23-13.17.amzn1.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
@@ -79,7 +79,7 @@ Licenses (from `rpm --query`): GPLv2+ or LGPLv3+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `expat-2.1.0-12.24.amzn1.x86_64`
+### `rpm` package: `expat-2.1.0-12.27.amzn1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -403,7 +403,7 @@ Licenses (from `rpm --query`): OpenLDAP
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `openssl-1.0.2k-16.155.amzn1.x86_64`
+### `rpm` package: `openssl-1.0.2k-16.156.amzn1.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
 
@@ -583,7 +583,7 @@ Licenses (from `rpm --query`): GPLv3+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `tzdata-2021a-1.79.amzn1.noarch`
+### `rpm` package: `tzdata-2021e-1.78.amzn1.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
