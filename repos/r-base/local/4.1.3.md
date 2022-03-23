@@ -87,19 +87,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.4.1
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.4.1.dsc' apt_2.4.1.dsc 2797 SHA256:d8957e38c149947b9e0d3cb6dbc0033b6b63eb8e2d602428be062e7871a100de
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.4.1.tar.xz' apt_2.4.1.tar.xz 2215760 SHA256:4a2bb326b6ab5ca35a7a6e7bee5fe3f41d32fe98e464b4ba32f93d3835aac7e7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.4.1/
 
-- https://sources.debian.net/src/apt/2.4.1/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.4.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.4.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -2855,16 +2849,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=5.16.12-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.16.12-1.dsc' linux_5.16.12-1.dsc 248961 SHA256:c4103b019373e8b3ef119de7a25a960bcfefb9ced2e3ce8d14f1566504d5df01
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.16.12.orig.tar.xz' linux_5.16.12.orig.tar.xz 129212360 SHA256:9d1deec96ec128e986c21171a0a4287f4750ea223e64fa445e927fb68d6be83f
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.16.12-1.debian.tar.xz' linux_5.16.12-1.debian.tar.xz 1316600 SHA256:d64ad1de2fd692d2831481132d3518a80dffd62642a87803bfe7f59de3df097e
+'http://http.debian.net/debian/pool/main/l/linux/linux_5.16.12-1.dsc' linux_5.16.12-1.dsc 248961 SHA256:c4103b019373e8b3ef119de7a25a960bcfefb9ced2e3ce8d14f1566504d5df01
+'http://http.debian.net/debian/pool/main/l/linux/linux_5.16.12.orig.tar.xz' linux_5.16.12.orig.tar.xz 129212360 SHA256:9d1deec96ec128e986c21171a0a4287f4750ea223e64fa445e927fb68d6be83f
+'http://http.debian.net/debian/pool/main/l/linux/linux_5.16.12-1.debian.tar.xz' linux_5.16.12-1.debian.tar.xz 1316600 SHA256:d64ad1de2fd692d2831481132d3518a80dffd62642a87803bfe7f59de3df097e
 ```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/linux/5.16.12-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.16.12-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.16.12-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `littler=0.3.15-1`
 
@@ -3242,16 +3230,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openldap=2.4.59+dfsg-1
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.59%2bdfsg-1.dsc' openldap_2.4.59+dfsg-1.dsc 3113 SHA256:cc2578c30b177406eb9cc1341cca710e4c4ac66230c40633f11a2a26290a6336
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.59%2bdfsg.orig.tar.gz' openldap_2.4.59+dfsg.orig.tar.gz 5056324 SHA256:cdeac7531ff072b0cdde29fcc19534d6ac00e9002ecd554d2ff69f897607bf6d
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.59%2bdfsg-1.debian.tar.xz' openldap_2.4.59+dfsg-1.debian.tar.xz 170320 SHA256:f57e80ab6ecdad5a0a3aed41d1ae9962129d0f3c9e5631ff6c56c2de19d10d60
+'http://http.debian.net/debian/pool/main/o/openldap/openldap_2.4.59%2bdfsg-1.dsc' openldap_2.4.59+dfsg-1.dsc 3113 SHA256:cc2578c30b177406eb9cc1341cca710e4c4ac66230c40633f11a2a26290a6336
+'http://http.debian.net/debian/pool/main/o/openldap/openldap_2.4.59%2bdfsg.orig.tar.gz' openldap_2.4.59+dfsg.orig.tar.gz 5056324 SHA256:cdeac7531ff072b0cdde29fcc19534d6ac00e9002ecd554d2ff69f897607bf6d
+'http://http.debian.net/debian/pool/main/o/openldap/openldap_2.4.59%2bdfsg-1.debian.tar.xz' openldap_2.4.59+dfsg-1.debian.tar.xz 170320 SHA256:f57e80ab6ecdad5a0a3aed41d1ae9962129d0f3c9e5631ff6c56c2de19d10d60
 ```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/openldap/2.4.59+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.59+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.59+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1m-1`
 
