@@ -1,7 +1,7 @@
 ## `ruby:3-bullseye`
 
 ```console
-$ docker pull ruby@sha256:c6be0b5750d4c103a57b60a87d27cc25b2bf64aa629671cc5138138e523d7524
+$ docker pull ruby@sha256:74122c10b09bd878e8488f3c61472fd718d815a6fadc91673da25a0e678ce4bb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -354,14 +354,14 @@ CMD ["irb"]
 ### `ruby:3-bullseye` - linux; 386
 
 ```console
-$ docker pull ruby@sha256:0f678eab38db256c79610521efb6ef95fb7e372f8b6f9c3dd0359b7a0e8ff984
+$ docker pull ruby@sha256:1a5f59bbe4d5a9725e2ee4b4e8caf01876c0761b751c7b318d9860c8a56f5211
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **358.9 MB (358868331 bytes)**  
+-	Total Size: **358.6 MB (358626617 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5655f2a1e3586db1bddc72377e65b8a91f90f44fd51bda4f876a53df560031b5`
+-	Image ID: `sha256:98507b45fd2910e0667faf5681ddd451de9b4607f729f8775053592ff7e6c6ee`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -377,27 +377,27 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Fri, 18 Mar 2022 14:28:25 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 19 Mar 2022 04:28:38 GMT
+# Wed, 23 Mar 2022 22:06:35 GMT
 RUN set -eux; 	mkdir -p /usr/local/etc; 	{ 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /usr/local/etc/gemrc
-# Sat, 19 Mar 2022 04:28:38 GMT
+# Wed, 23 Mar 2022 22:06:35 GMT
 ENV LANG=C.UTF-8
-# Sat, 19 Mar 2022 04:28:38 GMT
+# Wed, 23 Mar 2022 22:06:36 GMT
 ENV RUBY_MAJOR=3.1
-# Sat, 19 Mar 2022 04:28:39 GMT
+# Wed, 23 Mar 2022 22:06:37 GMT
 ENV RUBY_VERSION=3.1.1
-# Sat, 19 Mar 2022 04:28:39 GMT
+# Wed, 23 Mar 2022 22:06:38 GMT
 ENV RUBY_DOWNLOAD_SHA256=7aefaa6b78b076515d272ec59c4616707a54fc9f2391239737d5f10af7a16caa
-# Sat, 19 Mar 2022 04:34:17 GMT
+# Wed, 23 Mar 2022 22:08:31 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bison 		dpkg-dev 		libgdbm-dev 		ruby 	; 	rm -rf /var/lib/apt/lists/*; 		wget -O ruby.tar.xz "https://cache.ruby-lang.org/pub/ruby/${RUBY_MAJOR%-rc}/ruby-$RUBY_VERSION.tar.xz"; 	echo "$RUBY_DOWNLOAD_SHA256 *ruby.tar.xz" | sha256sum --check --strict; 		mkdir -p /usr/src/ruby; 	tar -xJf ruby.tar.xz -C /usr/src/ruby --strip-components=1; 	rm ruby.tar.xz; 		cd /usr/src/ruby; 		{ 		echo '#define ENABLE_PATH_CHECK 0'; 		echo; 		cat file.c; 	} > file.c.new; 	mv file.c.new file.c; 		autoconf; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--disable-install-doc 		--enable-shared 	; 	make -j "$(nproc)"; 	make install; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -vE '^/usr/local/lib/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		cd /; 	rm -r /usr/src/ruby; 	if dpkg -l | grep -i ruby; then exit 1; fi; 	[ "$(command -v ruby)" = '/usr/local/bin/ruby' ]; 	ruby --version; 	gem --version; 	bundle --version
-# Sat, 19 Mar 2022 04:34:17 GMT
+# Wed, 23 Mar 2022 22:08:32 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Sat, 19 Mar 2022 04:34:17 GMT
+# Wed, 23 Mar 2022 22:08:32 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Sat, 19 Mar 2022 04:34:18 GMT
+# Wed, 23 Mar 2022 22:08:33 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 19 Mar 2022 04:34:19 GMT
+# Wed, 23 Mar 2022 22:08:35 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Sat, 19 Mar 2022 04:34:19 GMT
+# Wed, 23 Mar 2022 22:08:35 GMT
 CMD ["irb"]
 ```
 
@@ -422,17 +422,17 @@ CMD ["irb"]
 		Last Modified: Fri, 18 Mar 2022 14:45:00 GMT  
 		Size: 199.5 MB (199488816 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a5967bc861303f204e7af17f8015ac00b3695eeb5a13599f9acff8a4a832360e`  
-		Last Modified: Sat, 19 Mar 2022 05:14:03 GMT  
+	-	`sha256:87d5231f744bdd4f1d1a8055d6bdedaa2d26b75d0c2a90f4cc34801ed73e31c4`  
+		Last Modified: Wed, 23 Mar 2022 23:02:11 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0e37eb405f6363cc406cbfd23c5e6c9ae49409e3bda9c8b128f839839ffcf00`  
-		Last Modified: Sat, 19 Mar 2022 05:14:10 GMT  
-		Size: 31.0 MB (30982710 bytes)  
+	-	`sha256:afd7afd659477362ba2ed301d8a4eb1f18e31a0c954f2cd94f75723368e7f2a1`  
+		Last Modified: Wed, 23 Mar 2022 23:02:15 GMT  
+		Size: 30.7 MB (30741028 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6375e04229ff80e88a30961579cb20413b9c27569d45b8ee07ac8b049e1afce8`  
-		Last Modified: Sat, 19 Mar 2022 05:14:04 GMT  
-		Size: 176.0 B  
+	-	`sha256:4c465bc352179a024dcaf9e99fa369f33d795806cfa97b0ddd1b434f84f8b510`  
+		Last Modified: Wed, 23 Mar 2022 23:02:11 GMT  
+		Size: 144.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ruby:3-bullseye` - linux; mips64le
