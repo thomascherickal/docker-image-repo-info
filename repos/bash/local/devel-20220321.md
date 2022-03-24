@@ -1,9 +1,9 @@
-# `bash:devel-20220311`
+# `bash:devel-20220321`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0fb96d2b6a25d42a65d6ac51cd7b1bfa6cc65bf91a404ac159a20357fc5ccf3f`
-- Created: `2022-03-17T08:09:15.707012693Z`
+- Image ID: `sha256:cace72b09a07750932daa23289c816171fe4a10f0976e4578b9ab375b19093c6`
+- Created: `2022-03-23T15:55:26.959092037Z`
 - Virtual Size: ~ 13.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,8 +11,8 @@
 - Command: `["bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `_BASH_COMMIT=b6a567e7f13406952cbb1d1adb2f00b2260a871e`
-  - `_BASH_VERSION=devel-20220311`
+  - `_BASH_COMMIT=5bba60397c6b92457e0a0d59cc9ad6efedff9076`
+  - `_BASH_VERSION=devel-20220321`
 
 ## `apk` (`.apk`-based packages)
 
@@ -138,16 +138,16 @@ OpenSSL
 ### `apk` package: `libretls`
 
 ```console
-libretls-3.3.4-r2 description:
+libretls-3.3.4-r3 description:
 port of libtls from libressl to openssl
 
-libretls-3.3.4-r2 webpage:
+libretls-3.3.4-r3 webpage:
 https://git.causal.agency/libretls/
 
-libretls-3.3.4-r2 installed size:
+libretls-3.3.4-r3 installed size:
 84 KiB
 
-libretls-3.3.4-r2 license:
+libretls-3.3.4-r3 license:
 ISC AND (BSD-3-Clause OR MIT)
 
 ```
