@@ -4493,14 +4493,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-171.180
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-171.180.dsc' linux_4.15.0-171.180.dsc 7060 SHA512:23779a4c864415ee1d9293bfba759b252877521b16bb910bbb996c9964f5c395cd750f52b7b675fc8b7f36d90d5ae84ef7bdda78eeab7923b907d4590b79148c
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-171.180.diff.gz' linux_4.15.0-171.180.diff.gz 12916792 SHA512:16559fc562df7f6453567ad947a82e1cd7f6e0d9a4028e3a18cab4757a8682d3abcd3b36fb27c60b44e4dd9b096be032ea84622bf7198893f1e171cd7554ff43
-```
 
 ### `dpkg` source package: `llvm-toolchain-10=1:10.0.0-4ubuntu1~18.04.2`
 
@@ -6470,14 +6465,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021e-0ubuntu0.18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e-0ubuntu0.18.04.dsc' tzdata_2021e-0ubuntu0.18.04.dsc 2090 SHA512:e478c5aa97e5f096fb276f640791e2913a57f600b59d0c643fb856b488c5e67691695cd4b471a558b0c6052150cf9ac74b3bbcc1b887b6779119957c68648f08
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz' tzdata_2021e.orig.tar.gz 422509 SHA512:c1e8d04e049157ed5d4af0868855bbd75517e3d7e1db9c41d5283ff260109de46b6fac6be94828201d093e163d868044ac2a9db2bf0aeab800e264d0c73a9119
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e-0ubuntu0.18.04.debian.tar.xz' tzdata_2021e-0ubuntu0.18.04.debian.tar.xz 106516 SHA512:7ef5baa97a92fe51853bdceb42a95dbf83cf1a1169f48867e67159d6d0257f944db0cb3923b1d2e7d8d9c8d869ef5848ab8c9754be67a766a87d273346cf21d1
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2018.09.18.1~18.04.2`
 
