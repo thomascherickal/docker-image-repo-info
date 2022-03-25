@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4924f00f9082cd8a960191ea4bd961f6a513193cd58d4fad1a8fa01ee668047a`
-- Created: `2022-03-01T12:22:56.706443225Z`
-- Virtual Size: ~ 896.08 Mb  
+- Image ID: `sha256:0d1fab8b217b70012f50b1e26dc15264c7afa1e71db084e134dd187d0ff73e47`
+- Created: `2022-03-17T11:01:55.613025789Z`
+- Virtual Size: ~ 896.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
@@ -512,11 +512,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/debconf/1.5.61/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/debconf/1.5.61/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `debian-archive-keyring=2017.5+deb9u1`
+### `dpkg` source package: `debian-archive-keyring=2017.5+deb9u2`
 
 Binary Packages:
 
-- `debian-archive-keyring=2017.5+deb9u1`
+- `debian-archive-keyring=2017.5+deb9u2`
 
 Licenses: (parsed from: `/usr/share/doc/debian-archive-keyring/copyright`)
 
@@ -525,16 +525,16 @@ Licenses: (parsed from: `/usr/share/doc/debian-archive-keyring/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris debian-archive-keyring=2017.5+deb9u1
-'http://deb.debian.org/debian/pool/main/d/debian-archive-keyring/debian-archive-keyring_2017.5%2bdeb9u1.dsc' debian-archive-keyring_2017.5+deb9u1.dsc 1827 SHA256:bc03dac3958c0d9de0a161fbd1ea3d69cd8e9146df4ce6fa4b69f80189c6b21b
-'http://deb.debian.org/debian/pool/main/d/debian-archive-keyring/debian-archive-keyring_2017.5%2bdeb9u1.tar.xz' debian-archive-keyring_2017.5+deb9u1.tar.xz 116344 SHA256:dcfffc87cc382bda49de654d205abb586519c0859d6c570f1eabdfa997350806
+$ apt-get source -qq --print-uris debian-archive-keyring=2017.5+deb9u2
+'http://security.debian.org/debian-security/pool/updates/main/d/debian-archive-keyring/debian-archive-keyring_2017.5%2bdeb9u2.dsc' debian-archive-keyring_2017.5+deb9u2.dsc 1790 SHA256:dbe9c836053c379e46d57ba1a1ac1c995ff4b5b3d4012e1e6d67a7ea57920432
+'http://security.debian.org/debian-security/pool/updates/main/d/debian-archive-keyring/debian-archive-keyring_2017.5%2bdeb9u2.tar.xz' debian-archive-keyring_2017.5+deb9u2.tar.xz 197956 SHA256:e476a451c79e1ac9482976bade2cc6d0057d8c38ad6676a25a60e1e7f2f01a8d
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/debian-archive-keyring/2017.5+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/debian-archive-keyring/2017.5+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debian-archive-keyring/2017.5+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/debian-archive-keyring/2017.5+deb9u2/ (for browsing the source)
+- https://sources.debian.net/src/debian-archive-keyring/2017.5+deb9u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/debian-archive-keyring/2017.5+deb9u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debianutils=4.8.1.1`
 
@@ -671,23 +671,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/elfutils/0.168-1+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/elfutils/0.168-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `expat=2.2.0-2+deb9u4`
+### `dpkg` source package: `expat=2.2.0-2+deb9u5`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.0-2+deb9u4`
+- `libexpat1:amd64=2.2.0-2+deb9u5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris expat=2.2.0-2+deb9u5
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.0-2%2bdeb9u5.dsc' expat_2.2.0-2+deb9u5.dsc 2295 SHA256:d50e49dd744a17a863f756c46dde06b667f420ba61dbd626087f910c294a9536
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.0.orig.tar.bz2' expat_2.2.0.orig.tar.bz2 414352 SHA256:d9e50ff2d19b3538bd2127902a89987474e1a4db8e43a66a4d1a712ab9a504ff
+'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.0-2%2bdeb9u5.debian.tar.xz' expat_2.2.0-2+deb9u5.debian.tar.xz 27136 SHA256:abc43ce663f0f46003baa9e6d1a1e6502d3e6747de80294cda54d9756a8ea747
+```
 
-- http://snapshot.debian.org/package/expat/2.2.0-2+deb9u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/expat/2.2.0-2+deb9u5/ (for browsing the source)
+- https://sources.debian.net/src/expat/2.2.0-2+deb9u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/expat/2.2.0-2+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.6.0+git+20161106-2`
 
@@ -2586,11 +2593,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libxxf86vm/1:1.1.4-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libxxf86vm/1:1.1.4-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.9.290-1`
+### `dpkg` source package: `linux=4.9.303-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.9.290-1`
+- `linux-libc-dev:amd64=4.9.303-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -2600,13 +2607,20 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `Unicode-data`
 - `Xen-interface`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris linux=4.9.303-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.303-1.dsc' linux_4.9.303-1.dsc 125025 SHA256:f15eab40fb5d7731b736c63bb69262fd79ed0570aacf38ae7ec1cfdcbcebc593
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.303.orig.tar.xz' linux_4.9.303.orig.tar.xz 94988412 SHA256:2f4c2c40e5f0d4e16a62f8a78c957736ac544418850879bd561ce908ec098f17
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.303-1.debian.tar.xz' linux_4.9.303-1.debian.tar.xz 1354972 SHA256:a403591992f0fdcb46b7dbe7ea8926713ec0375b0b0fe06a4ba35e12f431053b
+```
 
-- http://snapshot.debian.org/package/linux/4.9.290-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/linux/4.9.303-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.9.303-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.9.303-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lksctp-tools=1.0.17+dfsg-1`
 
@@ -2810,11 +2824,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nettle/3.3-1+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nettle/3.3-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u6`
+### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u7`
 
 Binary Packages:
 
-- `libssl1.0.2:amd64=1.0.2u-1~deb9u6`
+- `libssl1.0.2:amd64=1.0.2u-1~deb9u7`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2823,17 +2837,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl1.0=1.0.2u-1~deb9u6
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1%7edeb9u6.dsc' openssl1.0_1.0.2u-1~deb9u6.dsc 2463 SHA256:123441fb6f023579eea7340f3888f3d3a117cba241c9c3e6aee61a314b3f231b
+$ apt-get source -qq --print-uris openssl1.0=1.0.2u-1~deb9u7
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1%7edeb9u7.dsc' openssl1.0_1.0.2u-1~deb9u7.dsc 2304 SHA256:ae5c98694b9e3124447c50db1527bb8c5ba8d8ed8850308f099c1def9c7d32c8
 'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u.orig.tar.gz' openssl1.0_1.0.2u.orig.tar.gz 5355412 SHA256:ecd0c6ffb493dd06707d38b14bb4d8c2288bb7033735606569d8f90f89669d16
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1%7edeb9u6.debian.tar.xz' openssl1.0_1.0.2u-1~deb9u6.debian.tar.xz 106552 SHA256:33e684cdc9ff398bc5cd46bb3a5afd2d8416fb70b672038f0135a15d63438255
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl1.0/openssl1.0_1.0.2u-1%7edeb9u7.debian.tar.xz' openssl1.0_1.0.2u-1~deb9u7.debian.tar.xz 107300 SHA256:5ae9f8274909202f77894d7909df4b76b5f5fd20edf5cb098725688f5e8eddb7
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u6/ (for browsing the source)
-- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl1.0/1.0.2u-1~deb9u6/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u7/ (for browsing the source)
+- https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl1.0/1.0.2u-1~deb9u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.3-2+deb9u1`
 
@@ -3205,23 +3219,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.29b-1.1+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.29b-1.1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.0.8-2+deb9u7`
+### `dpkg` source package: `tiff=4.0.8-2+deb9u8`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.0.8-2+deb9u7`
+- `libtiff5:amd64=4.0.8-2+deb9u8`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tiff=4.0.8-2+deb9u8
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8-2%2bdeb9u8.dsc' tiff_4.0.8-2+deb9u8.dsc 2344 SHA256:b6891d6cc3c96a7f927e11907a34cf2db752afb259c2ddefe816eb0cbcebc27e
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8.orig.tar.gz' tiff_4.0.8.orig.tar.gz 2065574 SHA256:59d7a5a8ccd92059913f246877db95a2918e6c04fb9d43fd74e5c3390dac2910
+'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.0.8-2%2bdeb9u8.debian.tar.xz' tiff_4.0.8-2+deb9u8.debian.tar.xz 39936 SHA256:4585efd4fe8341e58faa8b562d0f8357b674145583727f44cebdded3163c3b19
+```
 
-- http://snapshot.debian.org/package/tiff/4.0.8-2+deb9u7/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tiff/4.0.8-2+deb9u8/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.0.8-2+deb9u8/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.0.8-2+deb9u8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-0+deb9u2`
 

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1d7b3feff76ec7f59e768bf51af8d66384ce32af52d64cef4ba9155e284097a0`
-- Created: `2022-03-01T11:39:57.562317964Z`
-- Virtual Size: ~ 259.71 Mb  
+- Image ID: `sha256:f461ec7ce8b301634b4f7a4417b2f77e7c27b7afa4d54a087d48dbd771f1d5d3`
+- Created: `2022-03-17T10:42:49.656887596Z`
+- Virtual Size: ~ 259.76 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
@@ -367,11 +367,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/debconf/1.5.61/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/debconf/1.5.61/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `debian-archive-keyring=2017.5+deb9u1`
+### `dpkg` source package: `debian-archive-keyring=2017.5+deb9u2`
 
 Binary Packages:
 
-- `debian-archive-keyring=2017.5+deb9u1`
+- `debian-archive-keyring=2017.5+deb9u2`
 
 Licenses: (parsed from: `/usr/share/doc/debian-archive-keyring/copyright`)
 
@@ -380,16 +380,16 @@ Licenses: (parsed from: `/usr/share/doc/debian-archive-keyring/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris debian-archive-keyring=2017.5+deb9u1
-'http://deb.debian.org/debian/pool/main/d/debian-archive-keyring/debian-archive-keyring_2017.5%2bdeb9u1.dsc' debian-archive-keyring_2017.5+deb9u1.dsc 1827 SHA256:bc03dac3958c0d9de0a161fbd1ea3d69cd8e9146df4ce6fa4b69f80189c6b21b
-'http://deb.debian.org/debian/pool/main/d/debian-archive-keyring/debian-archive-keyring_2017.5%2bdeb9u1.tar.xz' debian-archive-keyring_2017.5+deb9u1.tar.xz 116344 SHA256:dcfffc87cc382bda49de654d205abb586519c0859d6c570f1eabdfa997350806
+$ apt-get source -qq --print-uris debian-archive-keyring=2017.5+deb9u2
+'http://security.debian.org/debian-security/pool/updates/main/d/debian-archive-keyring/debian-archive-keyring_2017.5%2bdeb9u2.dsc' debian-archive-keyring_2017.5+deb9u2.dsc 1790 SHA256:dbe9c836053c379e46d57ba1a1ac1c995ff4b5b3d4012e1e6d67a7ea57920432
+'http://security.debian.org/debian-security/pool/updates/main/d/debian-archive-keyring/debian-archive-keyring_2017.5%2bdeb9u2.tar.xz' debian-archive-keyring_2017.5+deb9u2.tar.xz 197956 SHA256:e476a451c79e1ac9482976bade2cc6d0057d8c38ad6676a25a60e1e7f2f01a8d
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/debian-archive-keyring/2017.5+deb9u1/ (for browsing the source)
-- https://sources.debian.net/src/debian-archive-keyring/2017.5+deb9u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debian-archive-keyring/2017.5+deb9u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/debian-archive-keyring/2017.5+deb9u2/ (for browsing the source)
+- https://sources.debian.net/src/debian-archive-keyring/2017.5+deb9u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/debian-archive-keyring/2017.5+deb9u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debianutils=4.8.1.1`
 
@@ -1074,11 +1074,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libtool/2.4.6-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libtool/2.4.6-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.9.290-1`
+### `dpkg` source package: `linux=4.9.303-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.9.290-1`
+- `linux-libc-dev:amd64=4.9.303-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1088,13 +1088,20 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `Unicode-data`
 - `Xen-interface`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris linux=4.9.303-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.303-1.dsc' linux_4.9.303-1.dsc 125025 SHA256:f15eab40fb5d7731b736c63bb69262fd79ed0570aacf38ae7ec1cfdcbcebc593
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.303.orig.tar.xz' linux_4.9.303.orig.tar.xz 94988412 SHA256:2f4c2c40e5f0d4e16a62f8a78c957736ac544418850879bd561ce908ec098f17
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_4.9.303-1.debian.tar.xz' linux_4.9.303-1.debian.tar.xz 1354972 SHA256:a403591992f0fdcb46b7dbe7ea8926713ec0375b0b0fe06a4ba35e12f431053b
+```
 
-- http://snapshot.debian.org/package/linux/4.9.290-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/linux/4.9.303-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.9.303-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.9.303-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lksctp-tools=1.0.17+dfsg-1`
 
@@ -1268,11 +1275,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nettle/3.3-1+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nettle/3.3-1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.0l-1~deb9u4`
+### `dpkg` source package: `openssl=1.1.0l-1~deb9u5`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.0l-1~deb9u4`
+- `libssl1.1:amd64=1.1.0l-1~deb9u5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1281,18 +1288,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.0l-1~deb9u4
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1%7edeb9u4.dsc' openssl_1.1.0l-1~deb9u4.dsc 2770 SHA256:6f667abd5f63017eea44c0d9d97d944836f194033b65bcbeddca3846873f1122
+$ apt-get source -qq --print-uris openssl=1.1.0l-1~deb9u5
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1%7edeb9u5.dsc' openssl_1.1.0l-1~deb9u5.dsc 2611 SHA256:57c04ee99ebc08a12434d8375aa718f349bba3a2f80fc254ccd215425c4750e5
 'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz' openssl_1.1.0l.orig.tar.gz 5294857 SHA256:74a2f756c64fd7386a29184dc0344f4831192d61dc2481a93a4c5dd727f41148
 'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz.asc' openssl_1.1.0l.orig.tar.gz.asc 488 SHA256:afc83de9f9f1ef5f79ab8a31bbdeb26f9ac9a07cfdab7628a773267d31f85e42
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1%7edeb9u4.debian.tar.xz' openssl_1.1.0l-1~deb9u4.debian.tar.xz 84092 SHA256:af0b4ee520d49f927fe0cde6f30775910b4a43e63e053720a58384840c62422c
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1%7edeb9u5.debian.tar.xz' openssl_1.1.0l-1~deb9u5.debian.tar.xz 87640 SHA256:cb269e31120981990e0976a62b91a378a296641b6d8b30025eceb4b4e641ed24
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u4/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u5/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.1.8-3.6`
 
