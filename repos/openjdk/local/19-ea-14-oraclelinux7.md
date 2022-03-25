@@ -1,10 +1,10 @@
-# `openjdk:19-ea-13-jdk-oraclelinux7`
+# `openjdk:19-ea-14-jdk-oraclelinux7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b62a143fde45123843895a8b50df6db1dad25e64b003b85f0546f8c88f920a7e`
-- Created: `2022-03-14T20:14:35.083614054Z`
-- Virtual Size: ~ 505.93 Mb  
+- Image ID: `sha256:076e8a7acfb6da44eb04ac5bf9be12ee49efba6af9c6170d696dc486e8acc7fb`
+- Created: `2022-03-25T01:17:27.429518585Z`
+- Virtual Size: ~ 504.26 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/java/openjdk-19`
   - `LANG=en_US.UTF-8`
-  - `JAVA_VERSION=19-ea+13`
+  - `JAVA_VERSION=19-ea+14`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -181,15 +181,15 @@ $ dnf --quiet download --source --url elfutils-libelf-0.176-5.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/elfutils-0.176-5.el7.src.rpm
 ```
 
-### `rpm` package: `expat-2.1.0-12.el7.x86_64`
+### `rpm` package: `expat-2.1.0-12.0.1.el7.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url expat-2.1.0-12.el7
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/expat-2.1.0-12.el7.src.rpm
+$ dnf --quiet download --source --url expat-2.1.0-12.0.1.el7
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/expat-2.1.0-12.0.1.el7.src.rpm
 ```
 
 ### `rpm` package: `file-libs-5.11-37.el7.x86_64`
@@ -853,15 +853,15 @@ $ dnf --quiet download --source --url openldap-2.4.44-25.el7_9
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/openldap-2.4.44-25.el7_9.src.rpm
 ```
 
-### `rpm` package: `openssl-libs-1.0.2k-24.el7_9.x86_64`
+### `rpm` package: `openssl-libs-1.0.2k-24.0.3.el7_9.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url openssl-libs-1.0.2k-24.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/openssl-1.0.2k-24.el7_9.src.rpm
+$ dnf --quiet download --source --url openssl-libs-1.0.2k-24.0.3.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/openssl-1.0.2k-24.0.3.el7_9.src.rpm
 ```
 
 ### `rpm` package: `oraclelinux-release-7.9-1.0.9.el7.x86_64`
@@ -1194,15 +1194,15 @@ $ dnf --quiet download --source --url tar-1.26-35.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/tar-1.26-35.el7.src.rpm
 ```
 
-### `rpm` package: `tzdata-2021e-1.el7.noarch`
+### `rpm` package: `tzdata-2022a-1.el7.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url tzdata-2021e-1.el7.noarch
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/tzdata-2021e-1.el7.src.rpm
+$ dnf --quiet download --source --url tzdata-2022a-1.el7.noarch
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/tzdata-2022a-1.el7.src.rpm
 ```
 
 ### `rpm` package: `ustr-1.0.4-16.el7.x86_64`
