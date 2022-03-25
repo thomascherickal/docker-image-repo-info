@@ -53,19 +53,13 @@ Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris adduser=3.120
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.120.dsc' adduser_3.120.dsc 1677 SHA256:a4a54973740da5421c02e77358039deb3b2ea18bc3f4b53d6f769d016352c49d
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.120.tar.xz' adduser_3.120.tar.xz 214408 SHA256:6edd198b00a0d8c0354bd44f5347b85ded5e101f4dd84c2f8d8fd225ab3e30b3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/adduser/3.120/
 
-- https://sources.debian.net/src/adduser/3.120/ (for browsing the source)
-- https://sources.debian.net/src/adduser/3.120/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/adduser/3.120/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `aom=3.3.0-1`
 
@@ -597,21 +591,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.81.0-1
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.81.0-1.dsc' curl_7.81.0-1.dsc 3024 SHA256:11ad80d0f83a1ded31dc43c0bc5e3cb64edeb34798e9dbf23706d7c4f12d71fc
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.81.0.orig.tar.gz' curl_7.81.0.orig.tar.gz 4188040 SHA256:ac8e1087711084548d788ef18b9b732c8de887457b81f616fc681d1044b32f98
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.81.0.orig.tar.gz.asc' curl_7.81.0.orig.tar.gz.asc 488 SHA256:e0f0053bef0afd5c8bed7973f94f92a731c91b9152d64ce9c55fd3bb633aa735
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.81.0-1.debian.tar.xz' curl_7.81.0-1.debian.tar.xz 36364 SHA256:21178fef36132b3284b21e04e208cf67a1bfbaee2c59204cc037c79764e8b773
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.81.0-1/
 
-- https://sources.debian.net/src/curl/7.81.0-1/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.81.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.81.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-2`
 
@@ -1321,20 +1307,13 @@ Licenses: (parsed from: `/usr/share/doc/gcc-12-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-12=12-20220313-1
-'http://deb.debian.org/debian/pool/main/g/gcc-12/gcc-12_12-20220313-1.dsc' gcc-12_12-20220313-1.dsc 27445 SHA256:87103b90b9657c4a0b13b7d1c39b6f3babb2f972007ed1831f287a09883b0182
-'http://deb.debian.org/debian/pool/main/g/gcc-12/gcc-12_12-20220313.orig.tar.gz' gcc-12_12-20220313.orig.tar.gz 95862116 SHA256:29f2b67bbddc1b1f3f48286609673283d51533c4c119ca9bc7f21803b3122485
-'http://deb.debian.org/debian/pool/main/g/gcc-12/gcc-12_12-20220313-1.debian.tar.xz' gcc-12_12-20220313-1.debian.tar.xz 559680 SHA256:ee086589a0dd49f832dc107ab841aef04c8d6126daa9b3336068c794215a6385
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-12/12-20220313-1/
 
-- https://sources.debian.net/src/gcc-12/12-20220313-1/ (for browsing the source)
-- https://sources.debian.net/src/gcc-12/12-20220313-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-12/12-20220313-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gcc-defaults=1.194`
 
@@ -1496,20 +1475,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.70.4-1
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.70.4-1.dsc' glib2.0_2.70.4-1.dsc 3513 SHA256:d3c90a8a62fcd6fbd6d951407524bec0a9f12bcb45a2fa2ad7c1495ff31a6d11
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.70.4.orig.tar.xz' glib2.0_2.70.4.orig.tar.xz 4824296 SHA256:ab3d176f3115dcc4e5d02db795984e04e4f4b48d836252e23e8c468e9d423c33
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.70.4-1.debian.tar.xz' glib2.0_2.70.4-1.debian.tar.xz 102792 SHA256:7920c0a121a6e75a0a6bae8bae37d26a2a2d9c56dc7870c5ac9ae0f1c742cdd1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/glib2.0/2.70.4-1/
 
-- https://sources.debian.net/src/glib2.0/2.70.4-1/ (for browsing the source)
-- https://sources.debian.net/src/glib2.0/2.70.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/glib2.0/2.70.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.33-7`
 
@@ -1671,20 +1643,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-freedesktop/copyright`, `/usr/sha
 - `LGPL-2+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gobject-introspection=1.70.0-3
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.70.0-3.dsc' gobject-introspection_1.70.0-3.dsc 2992 SHA256:23b26f1ea2c8f1eabe8f5706700eaa67483e0c378fcd335344a9bab1f3fc6e56
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.70.0.orig.tar.xz' gobject-introspection_1.70.0.orig.tar.xz 1029372 SHA256:902b4906e3102d17aa2fcb6dad1c19971c70f2a82a159ddc4a94df73a3cafc4a
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.70.0-3.debian.tar.xz' gobject-introspection_1.70.0-3.debian.tar.xz 28108 SHA256:bff7caef08d0d2ed066f5e6b49bd23ef0025efc4badff08cc513e06e78e3381c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gobject-introspection/1.70.0-3/
 
-- https://sources.debian.net/src/gobject-introspection/1.70.0-3/ (for browsing the source)
-- https://sources.debian.net/src/gobject-introspection/1.70.0-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gobject-introspection/1.70.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `graphite2=1.3.14-1`
 
@@ -4605,20 +4570,13 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 - `TCL`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pango1.0=1.50.4+ds-1
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.4%2bds-1.dsc' pango1.0_1.50.4+ds-1.dsc 3780 SHA256:11bcd188fcbf91ca386b33f15edd1e8dcf580cc68654a3eb4d0cae80a1597f64
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.4%2bds.orig.tar.xz' pango1.0_1.50.4+ds.orig.tar.xz 2671076 SHA256:6207084ce50bb2652b3436a5e44a355c3366bbf9b6e80c1c4b6ce756cf142fe9
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.4%2bds-1.debian.tar.xz' pango1.0_1.50.4+ds-1.debian.tar.xz 50252 SHA256:c400b14b48e150985f0abe406cdd8801a622ebac391bf8039875f3e742df57ad
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pango1.0/1.50.4+ds-1/
 
-- https://sources.debian.net/src/pango1.0/1.50.4+ds-1/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.50.4+ds-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.50.4+ds-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-7`
 
@@ -5386,21 +5344,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021e-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e-1.dsc' tzdata_2021e-1.dsc 2205 SHA256:6c539a9f0d13aa425a6e4591a20b9bb47d602fafa89e9fbc8137279b90764068
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz' tzdata_2021e.orig.tar.gz 422509 SHA256:07ec42b737d0d3c6be9c337f8abb5f00554a0f9cc4fcf01a703d69403b6bb2b1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz.asc' tzdata_2021e.orig.tar.gz.asc 833 SHA256:5bb972b0675203b5d57f3e66e9e7bbc24649c711233ea0077c3ba9a32aec3cd3
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e-1.debian.tar.xz' tzdata_2021e-1.debian.tar.xz 111832 SHA256:70cc9293783c1b9e4b7f1038d5c67edb4bf0642e780b6a94533529c3ac042aff
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021e-1/
 
-- https://sources.debian.net/src/tzdata/2021e-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021e-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021e-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 

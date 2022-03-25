@@ -2098,14 +2098,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021e-0ubuntu0.18.04
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e-0ubuntu0.18.04.dsc' tzdata_2021e-0ubuntu0.18.04.dsc 2090 SHA512:e478c5aa97e5f096fb276f640791e2913a57f600b59d0c643fb856b488c5e67691695cd4b471a558b0c6052150cf9ac74b3bbcc1b887b6779119957c68648f08
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz' tzdata_2021e.orig.tar.gz 422509 SHA512:c1e8d04e049157ed5d4af0868855bbd75517e3d7e1db9c41d5283ff260109de46b6fac6be94828201d093e163d868044ac2a9db2bf0aeab800e264d0c73a9119
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e-0ubuntu0.18.04.debian.tar.xz' tzdata_2021e-0ubuntu0.18.04.debian.tar.xz 106516 SHA512:7ef5baa97a92fe51853bdceb42a95dbf83cf1a1169f48867e67159d6d0257f944db0cb3923b1d2e7d8d9c8d869ef5848ab8c9754be67a766a87d273346cf21d1
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2018.09.18.1~18.04.2`
 

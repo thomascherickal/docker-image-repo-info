@@ -2640,20 +2640,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.9-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.9=3.9.11-1
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.11-1.dsc' python3.9_3.9.11-1.dsc 3500 SHA256:e0e3076d805831a743caf891529febe249698c3b504c28d25351b56538b5b618
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.11.orig.tar.xz' python3.9_3.9.11.orig.tar.xz 19724780 SHA256:66767a35309d724f370df9e503c172b4ee444f49d62b98bc4eca725123e26c49
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.11-1.debian.tar.xz' python3.9_3.9.11-1.debian.tar.xz 212548 SHA256:d86ecc94cef8326fd72cad525b232f7f4fe15242ed2ade18d40f107263a41534
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.9/3.9.11-1/
 
-- https://sources.debian.net/src/python3.9/3.9.11-1/ (for browsing the source)
-- https://sources.debian.net/src/python3.9/3.9.11-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.9/3.9.11-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.1.2-1`
 
@@ -2974,21 +2967,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021e-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e-1.dsc' tzdata_2021e-1.dsc 2205 SHA256:6c539a9f0d13aa425a6e4591a20b9bb47d602fafa89e9fbc8137279b90764068
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz' tzdata_2021e.orig.tar.gz 422509 SHA256:07ec42b737d0d3c6be9c337f8abb5f00554a0f9cc4fcf01a703d69403b6bb2b1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz.asc' tzdata_2021e.orig.tar.gz.asc 833 SHA256:5bb972b0675203b5d57f3e66e9e7bbc24649c711233ea0077c3ba9a32aec3cd3
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e-1.debian.tar.xz' tzdata_2021e-1.debian.tar.xz 111832 SHA256:70cc9293783c1b9e4b7f1038d5c67edb4bf0642e780b6a94533529c3ac042aff
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021e-1/
 
-- https://sources.debian.net/src/tzdata/2021e-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021e-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021e-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 

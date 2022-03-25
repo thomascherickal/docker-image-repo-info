@@ -66,13 +66,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.4.1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.1.dsc' apt_2.4.1.dsc 2797 SHA512:85b15578857edc0037c5368d2330648f2b78727b25b3b950527270a00da6b3b0f818e7dbb6fd9c6a650e0dc8a3ab351192e9b199b773643e622e32280f0d7b3a
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.1.tar.xz' apt_2.4.1.tar.xz 2215760 SHA512:b472854d39797a16ea69457f9de7715367d63613b8e28110f52f7e24fabab346c3407e4bd25125c6bd14b5f7af2696564dacf9c0e381455a2e1c93963e823517
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/apt/2.4.1/
+
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -110,14 +110,13 @@ Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris audit=1:3.0.7-1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_3.0.7-1.dsc' audit_3.0.7-1.dsc 2401 SHA512:6e65b20f1e125727da33c3f36e7862db77c8faccad8aa9695b1dffa9b6f794e9056659bacaa3c478166f602b11a14ba041ef99b40947f54305bf46118e6ebea4
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_3.0.7.orig.tar.gz' audit_3.0.7.orig.tar.gz 1180226 SHA512:b5662b32082fc2ac54e247aa0db5442d76afa30134ebba1d624a17004e9ccf6856bb75344af4ce9d9a0a66c03e1c6f18b7d45658d7df13ea71af0c8362e08d70
-'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_3.0.7-1.debian.tar.xz' audit_3.0.7-1.debian.tar.xz 17700 SHA512:974c92b2575effa167390e2d95c89a3a74ed16174f5a6022b76ce45b08f42291926459c0bbf408acb6c35e0030463625661eb49c6a4449306661b20e875041b9
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/audit/1:3.0.7-1/
+
 
 ### `dpkg` source package: `base-files=12ubuntu2`
 
@@ -185,14 +184,9 @@ Licenses: (parsed from: `/usr/share/doc/libbrotli1/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris brotli=1.0.9-2build4
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.9-2build4.dsc' brotli_1.0.9-2build4.dsc 2310 SHA512:95f6ef20a83f7ec19bc0671c9ee6a37f14af885b98933f4da96f44577b8e26b7f8b1a527cd8466abeb122af793a9e52d349e38bb90c4f1d7c357b6129d157622
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.9.orig.tar.gz' brotli_1.0.9.orig.tar.gz 486984 SHA512:b8e2df955e8796ac1f022eb4ebad29532cb7e3aa6a4b6aee91dbd2c7d637eee84d9a144d3e878895bb5e62800875c2c01c8f737a1261020c54feacf9f676b5f5
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.9-2build4.debian.tar.xz' brotli_1.0.9-2build4.debian.tar.xz 5712 SHA512:bfe1828044f5f71b21a2bd358c2808078f581143004f6bc2ca70179bd1f38494a9606a89b5e57b7104e7482f1678caf7cfb845faaaded0d03186919d15b3a5d3
-```
 
 ### `dpkg` source package: `bzip2=1.0.8-5`
 
@@ -1048,15 +1042,9 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.5.3-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.3-2ubuntu1.dsc' libseccomp_2.5.3-2ubuntu1.dsc 2491 SHA512:2034ae8f0592a54dcfadc5270056baebd8f130911b18be8282e2b4e6335dafc25af1c1eba9eeefe55bc002ccf677c59e8e1754945d6ceda5fc08da1d8e760aa4
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.3.orig.tar.gz' libseccomp_2.5.3.orig.tar.gz 637572 SHA512:00170fe2360f0c0b33293dccfcc33e98fabb99619f34ecefbcc92bfdaa249ba91e7433226545b842b71542a3b224b6e980ea2ae656c4addf07e84a0def1870a0
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.3.orig.tar.gz.asc' libseccomp_2.5.3.orig.tar.gz.asc 833 SHA512:c879872448471fb1e01617145473254a0536ade1ff1e12871793631c3c63199cd46cb48317b4d596294d5cb187ff1fe9b58dc20ce52a89bfc9234a566bf8eb85
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.3-2ubuntu1.debian.tar.xz' libseccomp_2.5.3-2ubuntu1.debian.tar.xz 23536 SHA512:4529553c9893a3f727b8712d7c7b05efc8b49cc0c340ec714bb11c9260da2db976fb1878a4883b4b50be876be8983002745e5585492009d9b02d8c0b37f41929
-```
 
 ### `dpkg` source package: `libselinux=3.3-1build1`
 
@@ -1090,14 +1078,9 @@ Licenses: (parsed from: `/usr/share/doc/libsemanage-common/copyright`, `/usr/sha
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libsemanage=3.3-1build1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.3-1build1.dsc' libsemanage_3.3-1build1.dsc 2694 SHA512:7c2329fd24b57a524c311f576656d90ff8d87c293443583bbb0bf5bb9f3f7315c3b28f2fbcfdd5cfbac974b08df5d0e759e42ed8d58374709962ac6e199ee3a9
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.3.orig.tar.gz' libsemanage_3.3.orig.tar.gz 178890 SHA512:6026d9773c0886436ad801bc0c8beac888b6fb62034edeb863192dea4b6ef34a88e080758820fe635a20e048ac666beee505a0f946258f18571709cca5228aad
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.3-1build1.debian.tar.xz' libsemanage_3.3-1build1.debian.tar.xz 17884 SHA512:a20113f5b4876a90a66f63b5d63eea4d483eee8c8d98baa00f60ddaecee899470a068e47e8f8aeeb29477229218b12dc5f42c5ce590792fc10f045777d714011
-```
 
 ### `dpkg` source package: `libsepol=3.3-1`
 
@@ -1859,15 +1842,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021e-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e-1ubuntu1.dsc' tzdata_2021e-1ubuntu1.dsc 2326 SHA512:b7e1560c5fd93e4bc6971009d19f0ccee1713bcf4387bdd46a6015e2edf7e4c6adf498b6b5ff0c509294b7e4ec7efe96e90c9f85f5d28d42f27f53e163bc0467
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz' tzdata_2021e.orig.tar.gz 422509 SHA512:c1e8d04e049157ed5d4af0868855bbd75517e3d7e1db9c41d5283ff260109de46b6fac6be94828201d093e163d868044ac2a9db2bf0aeab800e264d0c73a9119
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz.asc' tzdata_2021e.orig.tar.gz.asc 833 SHA512:b0bd68939fbf4cdf4078b8e97d0cd642e8112966e874a18218469ca35ff82c29410347a99e1321d6c9d723547ebc7945173418966e80d14b10f60af8ea7bff52
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2021e-1ubuntu1.debian.tar.xz' tzdata_2021e-1ubuntu1.debian.tar.xz 172984 SHA512:1213d6763668582933ca021d2a881b4a1e0496e8591563f30a276916d2ee0bf805795b7aa7aa24584badd65ddabac84d3a498be6647ef3b17730fb4bdfcd5ac8
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2021.03.26`
 

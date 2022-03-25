@@ -5065,20 +5065,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u3
-'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117-2%7edeb10u3.dsc' tiff_4.1.0+git191117-2~deb10u3.dsc 2429 SHA256:78683a8ee5bfd5f3561e8e3d70c914c420d4cc590c9bbe9222832c2e9e8f3ec6
-'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
-'http://security.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117-2%7edeb10u3.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u3.debian.tar.xz 20896 SHA256:b58a9a797fc5526a0134bfd88081670b075a4b1bfa9a8aaf2607430e06bb63ca
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u3/
 
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u3/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-0+deb10u3`
 

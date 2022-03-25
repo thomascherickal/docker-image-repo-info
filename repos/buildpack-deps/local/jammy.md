@@ -129,13 +129,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.4.1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.1.dsc' apt_2.4.1.dsc 2797 SHA512:85b15578857edc0037c5368d2330648f2b78727b25b3b950527270a00da6b3b0f818e7dbb6fd9c6a650e0dc8a3ab351192e9b199b773643e622e32280f0d7b3a
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.1.tar.xz' apt_2.4.1.tar.xz 2215760 SHA512:b472854d39797a16ea69457f9de7715367d63613b8e28110f52f7e24fabab346c3407e4bd25125c6bd14b5f7af2696564dacf9c0e381455a2e1c93963e823517
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/apt/2.4.1/
+
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -327,14 +327,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.38-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-2ubuntu1.dsc' binutils_2.38-2ubuntu1.dsc 8799 SHA512:fae8d03cb186c23e8db877391d2bcab8296b4e5b16b2a81351799180164a9ea45dea17df2b15f7c9b246540c81bcc097aa7fafa6b73fe16342ee65c11c8543ce
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38.orig.tar.xz' binutils_2.38.orig.tar.xz 23651408 SHA512:8bf0b0d193c9c010e0518ee2b2e5a830898af206510992483b427477ed178396cd210235e85fd7bd99a96fc6d5eedbeccbd48317a10f752b7336ada8b2bb826d
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-2ubuntu1.debian.tar.xz' binutils_2.38-2ubuntu1.debian.tar.xz 212464 SHA512:29c76c2a3e4adb58e599b862e0c4ff923a97c150d8b1ab8822049536a0d821e6d51463d61b7d579e68483af8b72e0fb731c3c25c7acb0df9c7baee0392f80f31
-```
 
 ### `dpkg` source package: `brotli=1.0.9-2build4`
 
@@ -347,14 +342,9 @@ Licenses: (parsed from: `/usr/share/doc/libbrotli-dev/copyright`, `/usr/share/do
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris brotli=1.0.9-2build4
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.9-2build4.dsc' brotli_1.0.9-2build4.dsc 2310 SHA512:95f6ef20a83f7ec19bc0671c9ee6a37f14af885b98933f4da96f44577b8e26b7f8b1a527cd8466abeb122af793a9e52d349e38bb90c4f1d7c357b6129d157622
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.9.orig.tar.gz' brotli_1.0.9.orig.tar.gz 486984 SHA512:b8e2df955e8796ac1f022eb4ebad29532cb7e3aa6a4b6aee91dbd2c7d637eee84d9a144d3e878895bb5e62800875c2c01c8f737a1261020c54feacf9f676b5f5
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.9-2build4.debian.tar.xz' brotli_1.0.9-2build4.debian.tar.xz 5712 SHA512:bfe1828044f5f71b21a2bd358c2808078f581143004f6bc2ca70179bd1f38494a9606a89b5e57b7104e7482f1678caf7cfb845faaaded0d03186919d15b3a5d3
-```
 
 ### `dpkg` source package: `bzip2=1.0.8-5`
 
@@ -1143,14 +1133,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.71.3-1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.71.3-1.dsc' glib2.0_2.71.3-1.dsc 3536 SHA512:8cc54c8d9d0d67f023e7e4f06b51f6d94dad8738b56e95d8f93392fc4d83a47023635fbf52d6021ac9f4d6446227542725a2eb5120f046102727d1d73434a0a4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.71.3.orig.tar.xz' glib2.0_2.71.3.orig.tar.xz 4878320 SHA512:aeb2a8c668722e0d1866046e7be3c9f174d202f2cf698b9bf5e4942bae580d98d8f03e4df7a2f59b24872802f9f3d6bbc9e4a3a322125e16dec29acd338c61b4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.71.3-1.debian.tar.xz' glib2.0_2.71.3-1.debian.tar.xz 103388 SHA512:548f04b89fd7bc9fe45834819fa60fd2eb5973cd4e2c19cba8f8a5f9ac78e58faccea35c0d49daa689a942298f086d9ceec1cda18b9c90a0b549c344d61caea0
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/glib2.0/2.71.3-1/
+
 
 ### `dpkg` source package: `glibc=2.35-0ubuntu3`
 
@@ -1290,14 +1279,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-freedesktop/copyright`, `/usr/sha
 - `LGPL-2+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gobject-introspection=1.71.0-1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gobject-introspection/gobject-introspection_1.71.0-1.dsc' gobject-introspection_1.71.0-1.dsc 2992 SHA512:836f82b2b98eb061b57f5de821d9f5eba548b1ca986f49ff20194bb16cdd0504bb3ef4bbcde89e9f0be95ab235d98413db4147a0d4186de8a718c302c43447c9
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gobject-introspection/gobject-introspection_1.71.0.orig.tar.xz' gobject-introspection_1.71.0.orig.tar.xz 1039856 SHA512:e2ef935ba00d051ad90fe26001135b260bc7bedd495991a564b4e2525a64d7469b489e560846c714b8cf3f841dfe53edbe632d62c3a1c957abc09afa4ae09fbd
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gobject-introspection/gobject-introspection_1.71.0-1.debian.tar.xz' gobject-introspection_1.71.0-1.debian.tar.xz 25692 SHA512:155ae7c333ff1f4d82e6116d7fed9709ae607eddb159ffdddc398fddee045ccb5809106213cc00f0e8242e0941de5c0270245b7ffa6f69b8e89b6aa4d9a8f0c7
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/gobject-introspection/1.71.0-1/
+
 
 ### `dpkg` source package: `graphite2=1.3.14-1build1`
 
@@ -2868,14 +2856,13 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libx
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.13+dfsg-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.13%2bdfsg-1.dsc' libxml2_2.9.13+dfsg-1.dsc 2915 SHA512:2336afd9d770128ef5734a32a103661156b5cb58c7f00c6993dca03362288ff100e4ac63309d31a3e5d724c6b587fff2e65d4f50495b850c06e8a3a8f2cd1d9d
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.13%2bdfsg.orig.tar.xz' libxml2_2.9.13+dfsg.orig.tar.xz 2351356 SHA512:6283071de4934c856c7ff5202ac1a2ed5892d7fcde82a364d40c8bc2bf3d3201fbcbb5f6983d8bf6b962026bc216b8182d71efe280f1dcef2931b277314e6e89
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.13%2bdfsg-1.debian.tar.xz' libxml2_2.9.13+dfsg-1.debian.tar.xz 28612 SHA512:42ddec22c40138a700912b3af89dca0cb576feeb91748157eebff4c511881a44589104e4d7fd678ca8f43c4a722acfee5494c3fee98cfda702dd93d9828a9f6d
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libxml2/2.9.13+dfsg-1/
+
 
 ### `dpkg` source package: `libxrender=1:0.9.10-1build3`
 

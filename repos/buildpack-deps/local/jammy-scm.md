@@ -105,13 +105,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.4.1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.1.dsc' apt_2.4.1.dsc 2797 SHA512:85b15578857edc0037c5368d2330648f2b78727b25b3b950527270a00da6b3b0f818e7dbb6fd9c6a650e0dc8a3ab351192e9b199b773643e622e32280f0d7b3a
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.1.tar.xz' apt_2.4.1.tar.xz 2215760 SHA512:b472854d39797a16ea69457f9de7715367d63613b8e28110f52f7e24fabab346c3407e4bd25125c6bd14b5f7af2696564dacf9c0e381455a2e1c93963e823517
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/apt/2.4.1/
+
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -223,14 +223,9 @@ Licenses: (parsed from: `/usr/share/doc/libbrotli1/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris brotli=1.0.9-2build4
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.9-2build4.dsc' brotli_1.0.9-2build4.dsc 2310 SHA512:95f6ef20a83f7ec19bc0671c9ee6a37f14af885b98933f4da96f44577b8e26b7f8b1a527cd8466abeb122af793a9e52d349e38bb90c4f1d7c357b6129d157622
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.9.orig.tar.gz' brotli_1.0.9.orig.tar.gz 486984 SHA512:b8e2df955e8796ac1f022eb4ebad29532cb7e3aa6a4b6aee91dbd2c7d637eee84d9a144d3e878895bb5e62800875c2c01c8f737a1261020c54feacf9f676b5f5
-'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.9-2build4.debian.tar.xz' brotli_1.0.9-2build4.debian.tar.xz 5712 SHA512:bfe1828044f5f71b21a2bd358c2808078f581143004f6bc2ca70179bd1f38494a9606a89b5e57b7104e7482f1678caf7cfb845faaaded0d03186919d15b3a5d3
-```
 
 ### `dpkg` source package: `bzip2=1.0.8-5`
 

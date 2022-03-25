@@ -4050,20 +4050,13 @@ Licenses: (parsed from: `/usr/share/doc/libmpc3/copyright`)
 
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mpclib3=1.2.1-1
-'http://deb.debian.org/debian/pool/main/m/mpclib3/mpclib3_1.2.1-1.dsc' mpclib3_1.2.1-1.dsc 1851 SHA256:335b35bafc6b678a64b7d23c9a9baabf1162f0bdf25015df04d3aa4b517cd52f
-'http://deb.debian.org/debian/pool/main/m/mpclib3/mpclib3_1.2.1.orig.tar.gz' mpclib3_1.2.1.orig.tar.gz 838731 SHA256:17503d2c395dfcf106b622dc142683c1199431d095367c6aacba6eec30340459
-'http://deb.debian.org/debian/pool/main/m/mpclib3/mpclib3_1.2.1-1.diff.gz' mpclib3_1.2.1-1.diff.gz 4264 SHA256:1be20027ddaa518d4520449134b3bf701617b71b47632613c4ac72120f60b1cd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mpclib3/1.2.1-1/
 
-- https://sources.debian.net/src/mpclib3/1.2.1-1/ (for browsing the source)
-- https://sources.debian.net/src/mpclib3/1.2.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mpclib3/1.2.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpdecimal=2.5.1-2`
 
@@ -4568,20 +4561,13 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 - `TCL`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pango1.0=1.50.4+ds-1
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.4%2bds-1.dsc' pango1.0_1.50.4+ds-1.dsc 3780 SHA256:11bcd188fcbf91ca386b33f15edd1e8dcf580cc68654a3eb4d0cae80a1597f64
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.4%2bds.orig.tar.xz' pango1.0_1.50.4+ds.orig.tar.xz 2671076 SHA256:6207084ce50bb2652b3436a5e44a355c3366bbf9b6e80c1c4b6ce756cf142fe9
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.4%2bds-1.debian.tar.xz' pango1.0_1.50.4+ds-1.debian.tar.xz 50252 SHA256:c400b14b48e150985f0abe406cdd8801a622ebac391bf8039875f3e742df57ad
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pango1.0/1.50.4+ds-1/
 
-- https://sources.debian.net/src/pango1.0/1.50.4+ds-1/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.50.4+ds-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.50.4+ds-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-7`
 
@@ -4910,20 +4896,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-stdlib-extensions=3.9.11-1
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.11-1.dsc' python3-stdlib-extensions_3.9.11-1.dsc 2571 SHA256:102404f31adcd9d4d9f05950a5e000f7f5f35787fd80b30815ad4bf9d2ad6286
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.11.orig.tar.xz' python3-stdlib-extensions_3.9.11.orig.tar.xz 1098780 SHA256:42cff1ffc9c934599b3e3a344dff49226f4945875d2e706f12d0f4e186da4df3
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.11-1.debian.tar.xz' python3-stdlib-extensions_3.9.11-1.debian.tar.xz 25204 SHA256:7c42041f7489cc94c4eabb40090b373ad669e15bd7a33e6a83051bf1fbde9db8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-stdlib-extensions/3.9.11-1/
 
-- https://sources.debian.net/src/python3-stdlib-extensions/3.9.11-1/ (for browsing the source)
-- https://sources.debian.net/src/python3-stdlib-extensions/3.9.11-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-stdlib-extensions/3.9.11-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3.9=3.9.11-1`
 
@@ -4954,20 +4933,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.9-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.9=3.9.11-1
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.11-1.dsc' python3.9_3.9.11-1.dsc 3500 SHA256:e0e3076d805831a743caf891529febe249698c3b504c28d25351b56538b5b618
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.11.orig.tar.xz' python3.9_3.9.11.orig.tar.xz 19724780 SHA256:66767a35309d724f370df9e503c172b4ee444f49d62b98bc4eca725123e26c49
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.11-1.debian.tar.xz' python3.9_3.9.11-1.debian.tar.xz 212548 SHA256:d86ecc94cef8326fd72cad525b232f7f4fe15242ed2ade18d40f107263a41534
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.9/3.9.11-1/
 
-- https://sources.debian.net/src/python3.9/3.9.11-1/ (for browsing the source)
-- https://sources.debian.net/src/python3.9/3.9.11-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.9/3.9.11-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.1.2-1`
 
@@ -5378,21 +5350,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021e-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e-1.dsc' tzdata_2021e-1.dsc 2205 SHA256:6c539a9f0d13aa425a6e4591a20b9bb47d602fafa89e9fbc8137279b90764068
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz' tzdata_2021e.orig.tar.gz 422509 SHA256:07ec42b737d0d3c6be9c337f8abb5f00554a0f9cc4fcf01a703d69403b6bb2b1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e.orig.tar.gz.asc' tzdata_2021e.orig.tar.gz.asc 833 SHA256:5bb972b0675203b5d57f3e66e9e7bbc24649c711233ea0077c3ba9a32aec3cd3
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021e-1.debian.tar.xz' tzdata_2021e-1.debian.tar.xz 111832 SHA256:70cc9293783c1b9e4b7f1038d5c67edb4bf0642e780b6a94533529c3ac042aff
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021e-1/
 
-- https://sources.debian.net/src/tzdata/2021e-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021e-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021e-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
