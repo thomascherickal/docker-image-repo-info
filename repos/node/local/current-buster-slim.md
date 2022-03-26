@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d042bec2e7605182e1e4a36ca070aa34eebe365cd37e35550f6cef5bb3534dca`
-- Created: `2022-03-18T21:39:55.29304869Z`
+- Image ID: `sha256:20b13764c85f1c33921f5193f4b56b3a99b06085c04b0eb7cfe730f5b0324b21`
+- Created: `2022-03-23T15:33:55.169728748Z`
 - Virtual Size: ~ 230.16 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,8 +11,8 @@
 - Command: `["node"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=17.7.2`
-  - `YARN_VERSION=1.22.17`
+  - `NODE_VERSION=17.8.0`
+  - `YARN_VERSION=1.22.18`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -162,19 +162,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u11
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u11.dsc' base-files_10.3+deb10u11.dsc 1107 SHA256:c330a188675075328a715fe1d3ace68ed366293dbd002ead99e17215debab4ee
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u11.tar.xz' base-files_10.3+deb10u11.tar.xz 65496 SHA256:8b3071976d9d896c0fa3b2481d81c69c7d627ab9f13eee848bddc8ed4f446794
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/10.3+deb10u11/
 
-- https://sources.debian.net/src/base-files/10.3+deb10u11/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u11/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -605,20 +599,13 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 - `GPL-3`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gmp=2:6.1.2+dfsg-4
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2%2bdfsg-4.dsc' gmp_6.1.2+dfsg-4.dsc 2123 SHA256:5e9c98e1636344bf0c84710ee564ee6032d6a9db26aa5d29857d65b2a979877c
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2%2bdfsg.orig.tar.xz' gmp_6.1.2+dfsg.orig.tar.xz 1804424 SHA256:18016f718f621e7641ddd4e57f8e140391c5183252e5998263ffff59198a65b7
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2%2bdfsg-4.debian.tar.xz' gmp_6.1.2+dfsg-4.debian.tar.xz 21416 SHA256:cb25b080d915d9e5a641920f0471b4deb5368af739c7675d887cf290c2cffbe2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gmp/2:6.1.2+dfsg-4/
 
-- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-4/ (for browsing the source)
-- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gmp/2:6.1.2+dfsg-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnupg2=2.2.12-1+deb10u1`
 
