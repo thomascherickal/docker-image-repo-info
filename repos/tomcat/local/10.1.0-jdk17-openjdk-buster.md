@@ -221,19 +221,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u11
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u11.dsc' base-files_10.3+deb10u11.dsc 1107 SHA256:c330a188675075328a715fe1d3ace68ed366293dbd002ead99e17215debab4ee
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u11.tar.xz' base-files_10.3+deb10u11.tar.xz 65496 SHA256:8b3071976d9d896c0fa3b2481d81c69c7d627ab9f13eee848bddc8ed4f446794
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/10.3+deb10u11/
 
-- https://sources.debian.net/src/base-files/10.3+deb10u11/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u11/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -466,9 +460,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris cyrus-sasl2=2.1.27+dfsg-1+deb10u2
-'http://security.debian.org/debian-security/pool/updates/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg-1%2bdeb10u2.dsc' cyrus-sasl2_2.1.27+dfsg-1+deb10u2.dsc 3583 SHA256:64f060b2e272069c2a6f89025d586c08855179dc03425b55848c2e6bb3e5f85e
-'http://security.debian.org/debian-security/pool/updates/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg.orig.tar.xz' cyrus-sasl2_2.1.27+dfsg.orig.tar.xz 2058596 SHA256:108b0c691c423837264f05abb559ea76c3dfdd91246555e8abe87c129a6e37cd
-'http://security.debian.org/debian-security/pool/updates/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg-1%2bdeb10u2.debian.tar.xz' cyrus-sasl2_2.1.27+dfsg-1+deb10u2.debian.tar.xz 101064 SHA256:43296455617072928e3c409b3a40b08e98ad335b98fd40fc2a0d921bab72cf97
+'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg-1%2bdeb10u2.dsc' cyrus-sasl2_2.1.27+dfsg-1+deb10u2.dsc 3583 SHA256:64f060b2e272069c2a6f89025d586c08855179dc03425b55848c2e6bb3e5f85e
+'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg.orig.tar.xz' cyrus-sasl2_2.1.27+dfsg.orig.tar.xz 2058596 SHA256:108b0c691c423837264f05abb559ea76c3dfdd91246555e8abe87c129a6e37cd
+'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg-1%2bdeb10u2.debian.tar.xz' cyrus-sasl2_2.1.27+dfsg-1+deb10u2.debian.tar.xz 101064 SHA256:43296455617072928e3c409b3a40b08e98ad335b98fd40fc2a0d921bab72cf97
 ```
 
 Other potentially useful URLs:
@@ -725,9 +719,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris expat=2.2.6-2+deb10u4
-'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u4.dsc' expat_2.2.6-2+deb10u4.dsc 2136 SHA256:1c675fb1b3fcde011eef35e8a96c5ceddcf7d89ccfeffe79b4e3e4ca166732c5
-'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6.orig.tar.gz' expat_2.2.6.orig.tar.gz 8275473 SHA256:574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff
-'http://security.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u4.debian.tar.xz' expat_2.2.6-2+deb10u4.debian.tar.xz 27016 SHA256:f24d5eee71174ad5c21620e7f3374ee742be93007f6db68ba898523220405b8f
+'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.6-2%2bdeb10u4.dsc' expat_2.2.6-2+deb10u4.dsc 2136 SHA256:1c675fb1b3fcde011eef35e8a96c5ceddcf7d89ccfeffe79b4e3e4ca166732c5
+'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.6.orig.tar.gz' expat_2.2.6.orig.tar.gz 8275473 SHA256:574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff
+'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.6-2%2bdeb10u4.debian.tar.xz' expat_2.2.6-2+deb10u4.debian.tar.xz 27016 SHA256:f24d5eee71174ad5c21620e7f3374ee742be93007f6db68ba898523220405b8f
 ```
 
 Other potentially useful URLs:
@@ -1005,20 +999,13 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 - `GPL-3`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gmp=2:6.1.2+dfsg-4
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2%2bdfsg-4.dsc' gmp_6.1.2+dfsg-4.dsc 2123 SHA256:5e9c98e1636344bf0c84710ee564ee6032d6a9db26aa5d29857d65b2a979877c
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2%2bdfsg.orig.tar.xz' gmp_6.1.2+dfsg.orig.tar.xz 1804424 SHA256:18016f718f621e7641ddd4e57f8e140391c5183252e5998263ffff59198a65b7
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2%2bdfsg-4.debian.tar.xz' gmp_6.1.2+dfsg-4.debian.tar.xz 21416 SHA256:cb25b080d915d9e5a641920f0471b4deb5368af739c7675d887cf290c2cffbe2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gmp/2:6.1.2+dfsg-4/
 
-- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-4/ (for browsing the source)
-- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gmp/2:6.1.2+dfsg-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnupg2=2.2.12-1+deb10u1`
 
