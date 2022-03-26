@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:74266140ac047fbe80e491ed5cb8e4450498ce288dcefe71f7b58b39ad61951d`
-- Created: `2022-03-17T08:02:52.129152209Z`
+- Image ID: `sha256:8e8ea263115c8ee6aed3c018708d1d7c957c737ada1d6e25d68923bf2c609706`
+- Created: `2022-03-23T15:47:08.731321933Z`
 - Virtual Size: ~ 325.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -120,16 +120,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `java-common`
 
 ```console
-java-common-0.4-r0 description:
+java-common-0.5-r0 description:
 Java common (updates java links)
 
-java-common-0.4-r0 webpage:
+java-common-0.5-r0 webpage:
 https://git.alpinelinux.org/aports/
 
-java-common-0.4-r0 installed size:
+java-common-0.5-r0 installed size:
 12 KiB
 
-java-common-0.4-r0 license:
+java-common-0.5-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -171,16 +171,16 @@ OpenSSL
 ### `apk` package: `libretls`
 
 ```console
-libretls-3.3.4-r2 description:
+libretls-3.3.4-r3 description:
 port of libtls from libressl to openssl
 
-libretls-3.3.4-r2 webpage:
+libretls-3.3.4-r3 webpage:
 https://git.causal.agency/libretls/
 
-libretls-3.3.4-r2 installed size:
+libretls-3.3.4-r3 installed size:
 84 KiB
 
-libretls-3.3.4-r2 license:
+libretls-3.3.4-r3 license:
 ISC AND (BSD-3-Clause OR MIT)
 
 ```
