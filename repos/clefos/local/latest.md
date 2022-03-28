@@ -216,8 +216,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url --enablerepo=source epel-release-7-11.noarch
-https://download.sinenomine.net/epel/epel-source-7/srpms/epel-release-7-11.src.rpm
 https://download.sinenomine.net/clefos/7/source/srpms/epel-release-7-11.src.rpm
+https://download.sinenomine.net/epel/epel-source-7/srpms/epel-release-7-11.src.rpm
 ```
 
 ### `rpm` package: `expat-2.1.0-10.el7_3.s390x`
