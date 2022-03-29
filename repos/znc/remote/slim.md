@@ -1,7 +1,7 @@
 ## `znc:slim`
 
 ```console
-$ docker pull znc@sha256:9a798295fe8ce81db7829ef98571dd539f4fa006734f6cf3be4ec44a4a2548c7
+$ docker pull znc@sha256:2e6733699ff41f721b3b7477db05f9fdea64ebad9c28aa97a094d1357ecb4d25
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,58 +13,58 @@ $ docker pull znc@sha256:9a798295fe8ce81db7829ef98571dd539f4fa006734f6cf3be4ec44
 ### `znc:slim` - linux; amd64
 
 ```console
-$ docker pull znc@sha256:933c80f32d8dffed0916504852a8a34d87cc44441925bede862ce5de9590c692
+$ docker pull znc@sha256:029d8b1041c4ed3490d443119e01ee3cd89be3b67a12fe71cb4dcb37f2ba7c1e
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **46.2 MB (46177607 bytes)**  
+-	Total Size: **46.2 MB (46180066 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e53ad872f36bfb2c7002b1c41245daee14ec3a94dda7bd10c539ce5342c22c4`
+-	Image ID: `sha256:b1c4d26fc232011047921515efc69b4157bbc180ee38e0aac737271ecfb56909`
 -	Entrypoint: `["\/entrypoint.sh"]`
 
 ```dockerfile
-# Thu, 17 Mar 2022 15:19:36 GMT
-ADD file:51c08645923aa2d3513f66571f0c598a727dd5805e4f2bb87fb660b2f789348d in / 
-# Thu, 17 Mar 2022 15:19:36 GMT
+# Tue, 29 Mar 2022 00:19:46 GMT
+ADD file:a2ef39a587aac85256b55bee81f17d73aaa7154b2a32a31527c7803fb889f2e7 in / 
+# Tue, 29 Mar 2022 00:19:46 GMT
 CMD ["/bin/sh"]
-# Thu, 17 Mar 2022 16:00:08 GMT
+# Tue, 29 Mar 2022 16:07:58 GMT
 ENV GPG_KEY=D5823CACB477191CAC0075555AE420CC0209989E
-# Thu, 17 Mar 2022 16:00:08 GMT
+# Tue, 29 Mar 2022 16:07:58 GMT
 ARG CMAKEFLAGS=-DCMAKE_INSTALL_PREFIX=/opt/znc -DWANT_CYRUS=YES -DWANT_PERL=YES -DWANT_PYTHON=YES
-# Thu, 17 Mar 2022 16:00:08 GMT
+# Tue, 29 Mar 2022 16:07:58 GMT
 ARG MAKEFLAGS=
-# Thu, 17 Mar 2022 16:00:08 GMT
+# Tue, 29 Mar 2022 16:07:58 GMT
 ENV ZNC_VERSION=1.8.2
-# Thu, 17 Mar 2022 16:07:42 GMT
+# Tue, 29 Mar 2022 16:12:13 GMT
 # ARGS: CMAKEFLAGS=-DCMAKE_INSTALL_PREFIX=/opt/znc -DWANT_CYRUS=YES -DWANT_PERL=YES -DWANT_PYTHON=YES MAKEFLAGS=
 RUN set -x     && adduser -S znc     && addgroup -S znc     && apk add --no-cache --virtual runtime-dependencies         boost         ca-certificates         cyrus-sasl         icu         openssl         su-exec         tini         tzdata     && apk add --no-cache --virtual build-dependencies         boost-dev         build-base         cmake         curl         cyrus-sasl-dev         gettext         gnupg         icu-dev         openssl-dev         perl-dev         python3-dev     && mkdir /znc-src && cd /znc-src     && curl -fsSL "https://znc.in/releases/archive/znc-${ZNC_VERSION}.tar.gz" -o znc.tgz     && curl -fsSL "https://znc.in/releases/archive/znc-${ZNC_VERSION}.tar.gz.sig" -o znc.tgz.sig     && export GNUPGHOME="$(mktemp -d)"     && gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "${GPG_KEY}"     && gpg --batch --verify znc.tgz.sig znc.tgz     && rm -rf "$GNUPGHOME"     && tar -zxf znc.tgz --strip-components=1     && mkdir build && cd build     && cmake .. ${CMAKEFLAGS}     && make $MAKEFLAGS     && make install     && apk del build-dependencies     && cd / && rm -rf /znc-src
-# Thu, 17 Mar 2022 16:07:43 GMT
+# Tue, 29 Mar 2022 16:12:14 GMT
 COPY file:15e47c9cc6835e0818d6896aa6537a8adda40ff814c287685183c73fa9df4713 in / 
-# Thu, 17 Mar 2022 16:07:43 GMT
+# Tue, 29 Mar 2022 16:12:14 GMT
 COPY dir:4684da7bbf1d77862fa1a1b074543f975eb608cc0b6b1951ff5c5b58959d0faa in /startup-sequence/ 
-# Thu, 17 Mar 2022 16:07:43 GMT
+# Tue, 29 Mar 2022 16:12:14 GMT
 VOLUME [/znc-data]
-# Thu, 17 Mar 2022 16:07:43 GMT
+# Tue, 29 Mar 2022 16:12:14 GMT
 ENTRYPOINT ["/entrypoint.sh"]
 ```
 
 -	Layers:
-	-	`sha256:e1096b72685a2366348e697f5b57e3b8feb41660e3dbe68447e168381515111a`  
-		Last Modified: Thu, 17 Mar 2022 15:20:24 GMT  
-		Size: 2.8 MB (2817181 bytes)  
+	-	`sha256:b9c05db88786fd3c89b78787631257301391f898c03ba50553b556630046a741`  
+		Last Modified: Tue, 29 Mar 2022 00:20:43 GMT  
+		Size: 2.8 MB (2819223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c67a28a4b9ceca6cc104a16de89d5ef95974afbb8a2e122b58fd86e661657847`  
-		Last Modified: Thu, 17 Mar 2022 16:08:29 GMT  
-		Size: 43.4 MB (43359474 bytes)  
+	-	`sha256:5f828069458554a26d8b7395651e4a55e5f48af3b81b37fc6092491aea430405`  
+		Last Modified: Tue, 29 Mar 2022 16:12:47 GMT  
+		Size: 43.4 MB (43359890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b59b22213054b16fd1299e23fc7a5feeec2f73254543c1a2371156b58b91911`  
-		Last Modified: Thu, 17 Mar 2022 16:08:18 GMT  
-		Size: 171.0 B  
+	-	`sha256:ee677992da18b636e970f4253d80d3a318b2e3555ce8cea335338d84cfd152fa`  
+		Last Modified: Tue, 29 Mar 2022 16:12:44 GMT  
+		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3e0931023ccafc5987c147f725d43ffb5eacef2588352038ad747cb2f173570d`  
-		Last Modified: Thu, 17 Mar 2022 16:08:18 GMT  
-		Size: 781.0 B  
+	-	`sha256:893204669ae7612ae82d0ae4f26c5514eebede3b62d4ff38d233ea85ece5f761`  
+		Last Modified: Tue, 29 Mar 2022 16:12:40 GMT  
+		Size: 780.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `znc:slim` - linux; arm variant v6
