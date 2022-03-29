@@ -1,10 +1,10 @@
-# `alpine:20220316`
+# `alpine:20220328`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4655d913df59a4896009f0df079f3d286aec583238f4fe810d15d6a3367b2b34`
-- Created: `2022-03-17T04:01:46.590308962Z`
-- Virtual Size: ~ 5.59 Mb  
+- Image ID: `sha256:70b641350c4b2ffc1a2b6321cc4c1ffb01901843447a0f44efb149529252d1b0`
+- Created: `2022-03-29T00:19:31.733088982Z`
+- Virtual Size: ~ 5.60 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/sh"]`
@@ -84,16 +84,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.35.0-r5 description:
+busybox-1.35.0-r6 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.35.0-r5 webpage:
+busybox-1.35.0-r6 webpage:
 https://busybox.net/
 
-busybox-1.35.0-r5 installed size:
+busybox-1.35.0-r6 installed size:
 932 KiB
 
-busybox-1.35.0-r5 license:
+busybox-1.35.0-r6 license:
 GPL-2.0-only
 
 ```
@@ -152,17 +152,17 @@ OpenSSL
 ### `apk` package: `libretls`
 
 ```console
-libretls-3.4.2-r0 description:
+libretls-3.5.1-r0 description:
 port of libtls from libressl to openssl
 
-libretls-3.4.2-r0 webpage:
+libretls-3.5.1-r0 webpage:
 https://git.causal.agency/libretls/
 
-libretls-3.4.2-r0 installed size:
-84 KiB
+libretls-3.5.1-r0 installed size:
+88 KiB
 
-libretls-3.4.2-r0 license:
-ISC AND (BSD-3-Clause OR MIT)
+libretls-3.5.1-r0 license:
+ISC AND ( BSD-3-Clause OR MIT )
 
 ```
 
@@ -237,16 +237,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.35.0-r5 description:
+ssl_client-1.35.0-r6 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.35.0-r5 webpage:
+ssl_client-1.35.0-r6 webpage:
 https://busybox.net/
 
-ssl_client-1.35.0-r5 installed size:
+ssl_client-1.35.0-r6 installed size:
 28 KiB
 
-ssl_client-1.35.0-r5 license:
+ssl_client-1.35.0-r6 license:
 GPL-2.0-only
 
 ```
@@ -254,16 +254,16 @@ GPL-2.0-only
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.11-r3 description:
+zlib-1.2.12-r0 description:
 A compression/decompression Library
 
-zlib-1.2.11-r3 webpage:
+zlib-1.2.12-r0 webpage:
 https://zlib.net/
 
-zlib-1.2.11-r3 installed size:
+zlib-1.2.12-r0 installed size:
 108 KiB
 
-zlib-1.2.11-r3 license:
+zlib-1.2.12-r0 license:
 Zlib
 
 ```
