@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:12968ad2fcd703cd11933c8a77f4a1e5c5a11993b8cc8e1347d9ec6147fc2866`
-- Created: `2022-03-24T22:19:18.764801777Z`
+- Image ID: `sha256:7e18d594869f7d566fe4be6993280281736a303f30f8bbafc6588139a8077f98`
+- Created: `2022-03-29T07:02:35.760665316Z`
 - Virtual Size: ~ 69.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -173,16 +173,16 @@ GPL-2.0-only AND LGPL-2.1-or-later
 ### `apk` package: `libretls`
 
 ```console
-libretls-3.3.3p1-r2 description:
+libretls-3.3.3p1-r3 description:
 port of libtls from libressl to openssl
 
-libretls-3.3.3p1-r2 webpage:
+libretls-3.3.3p1-r3 webpage:
 https://git.causal.agency/libretls/
 
-libretls-3.3.3p1-r2 installed size:
+libretls-3.3.3p1-r3 installed size:
 84 KiB
 
-libretls-3.3.3p1-r2 license:
+libretls-3.3.3p1-r3 license:
 ISC AND (BSD-3-Clause OR MIT)
 
 ```
@@ -360,16 +360,16 @@ LGPL-2.0-or-later
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.11-r3 description:
+zlib-1.2.12-r0 description:
 A compression/decompression Library
 
-zlib-1.2.11-r3 webpage:
+zlib-1.2.12-r0 webpage:
 https://zlib.net/
 
-zlib-1.2.11-r3 installed size:
+zlib-1.2.12-r0 installed size:
 108 KiB
 
-zlib-1.2.11-r3 license:
+zlib-1.2.12-r0 license:
 Zlib
 
 ```
