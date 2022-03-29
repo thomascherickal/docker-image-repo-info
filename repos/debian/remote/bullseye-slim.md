@@ -1,7 +1,7 @@
 ## `debian:bullseye-slim`
 
 ```console
-$ docker pull debian@sha256:7aa7fa2e58b08fe3591efc302597baccd947553535c6dcb982a63184c696ef2e
+$ docker pull debian@sha256:dfc3a869d3f92258ad34cd1af169951291965ddcbb5f4428feb490be6f28048e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -70,27 +70,27 @@ CMD ["bash"]
 ### `debian:bullseye-slim` - linux; arm variant v7
 
 ```console
-$ docker pull debian@sha256:0b669f49062c3f25f66f7e0a0bc1e30b0828e4ffd48d8ee7f59cc45a38e0a16a
+$ docker pull debian@sha256:3a25a83cfa0cdb07bf45dbf46537f18659ce9d8a7cd02116775f398dd3e28eb2
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.6 MB (26575097 bytes)**  
+-	Total Size: **26.6 MB (26575370 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:285d7b6368b2915b11a41caf1cf32a47c17bb2af15952d09ea04ed0df978bd9a`
+-	Image ID: `sha256:f8a363a7c72f679ce919868b2429545659072e7191ac90b79b5d3feb3a33c827`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Thu, 17 Mar 2022 09:31:03 GMT
-ADD file:e52f9ee2dc3144d7b9eb3ec90c106aa2a094eb4c5c2aa8cbff5c520a5faaef43 in / 
-# Thu, 17 Mar 2022 09:31:04 GMT
+# Tue, 29 Mar 2022 02:18:34 GMT
+ADD file:e1835d1a0c70a0335757f211893e5d12ddf797e489e10434c0982bdf9b234f67 in / 
+# Tue, 29 Mar 2022 02:18:36 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:5e5e708ee1f9fdbc69324391f7d1f816c657e6116eff09e7d2247fa9de3a076a`  
-		Last Modified: Thu, 17 Mar 2022 09:46:33 GMT  
-		Size: 26.6 MB (26575097 bytes)  
+	-	`sha256:f98812e1a494a683a5b3dea593dd2ef305f5f732193044c147f22e44b00164bc`  
+		Last Modified: Tue, 29 Mar 2022 02:34:13 GMT  
+		Size: 26.6 MB (26575370 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:bullseye-slim` - linux; arm64 variant v8
