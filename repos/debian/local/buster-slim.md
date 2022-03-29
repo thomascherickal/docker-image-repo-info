@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:682f678c3fa0886b004b59b276e0c5dac604dea5cff56f6d015b8cf85b351507`
-- Created: `2022-03-17T04:04:27.387879999Z`
-- Virtual Size: ~ 69.26 Mb  
+- Image ID: `sha256:e92a8e29cec00346df3846902937944d722600e68fb8bf39b44d3be0a23fedd2`
+- Created: `2022-03-29T00:22:38.950612885Z`
+- Virtual Size: ~ 69.25 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -149,11 +149,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:2.8.4-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:2.8.4-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u11`
+### `dpkg` source package: `base-files=10.3+deb10u12`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u11`
+- `base-files=10.3+deb10u12`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
@@ -162,16 +162,16 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u11
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u11.dsc' base-files_10.3+deb10u11.dsc 1107 SHA256:c330a188675075328a715fe1d3ace68ed366293dbd002ead99e17215debab4ee
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u11.tar.xz' base-files_10.3+deb10u11.tar.xz 65496 SHA256:8b3071976d9d896c0fa3b2481d81c69c7d627ab9f13eee848bddc8ed4f446794
+$ apt-get source -qq --print-uris base-files=10.3+deb10u12
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u12.dsc' base-files_10.3+deb10u12.dsc 1107 SHA256:d1ce16a740b7ed807c4dfaa65283cef7355faeee5ca7a755ee7da7b05e3ebb48
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u12.tar.xz' base-files_10.3+deb10u12.tar.xz 65448 SHA256:b31f9c0cd0acbea65e153bf2f243acf09bcc0f6159158a8f720dd432e77aee54
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/base-files/10.3+deb10u11/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u11/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u11/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/base-files/10.3+deb10u12/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u12/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u12/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -562,12 +562,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gcc-8/8.3.0-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gcc-8/8.3.0-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `glibc=2.28-10`
+### `dpkg` source package: `glibc=2.28-10+deb10u1`
 
 Binary Packages:
 
-- `libc-bin=2.28-10`
-- `libc6:amd64=2.28-10`
+- `libc-bin=2.28-10+deb10u1`
+- `libc6:amd64=2.28-10+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`)
 
@@ -577,23 +577,23 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris glibc=2.28-10
-'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.28-10.dsc' glibc_2.28-10.dsc 8889 SHA256:9f21ef7002d51a32b46aafb9ca604427cf28c49495ecbf97e44740f53619ce69
+$ apt-get source -qq --print-uris glibc=2.28-10+deb10u1
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.28-10%2bdeb10u1.dsc' glibc_2.28-10+deb10u1.dsc 8921 SHA256:9bb410368ec00f6c6d2b281e97244337fb3513c885c250c0bd5caab694f4f62f
 'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.28.orig.tar.xz' glibc_2.28.orig.tar.xz 17061292 SHA256:53d3c1c7bff0fb25d4c7874bf13435dc44a71fd7dd5ffc9bfdcb513cdfc36854
-'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.28-10.debian.tar.xz' glibc_2.28-10.debian.tar.xz 885796 SHA256:08ca414d8428a252ea357661631885ff72e47afa0663e3811167cc0897dbb042
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.28-10%2bdeb10u1.debian.tar.xz' glibc_2.28-10+deb10u1.debian.tar.xz 899676 SHA256:2f8b22a99965eafcfbb65f14bfb2dbe2400b06cb8e646e909eb22317c222dfe7
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/glibc/2.28-10/ (for browsing the source)
-- https://sources.debian.net/src/glibc/2.28-10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/glibc/2.28-10/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/glibc/2.28-10+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/glibc/2.28-10+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/glibc/2.28-10+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gmp=2:6.1.2+dfsg-4`
+### `dpkg` source package: `gmp=2:6.1.2+dfsg-4+deb10u1`
 
 Binary Packages:
 
-- `libgmp10:amd64=2:6.1.2+dfsg-4`
+- `libgmp10:amd64=2:6.1.2+dfsg-4+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 
@@ -605,17 +605,17 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gmp=2:6.1.2+dfsg-4
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2%2bdfsg-4.dsc' gmp_6.1.2+dfsg-4.dsc 2123 SHA256:5e9c98e1636344bf0c84710ee564ee6032d6a9db26aa5d29857d65b2a979877c
+$ apt-get source -qq --print-uris gmp=2:6.1.2+dfsg-4+deb10u1
+'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2%2bdfsg-4%2bdeb10u1.dsc' gmp_6.1.2+dfsg-4+deb10u1.dsc 2180 SHA256:77451bb51699c65572249934842a032e27f336750a25958f7b59807bc33f4b03
 'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2%2bdfsg.orig.tar.xz' gmp_6.1.2+dfsg.orig.tar.xz 1804424 SHA256:18016f718f621e7641ddd4e57f8e140391c5183252e5998263ffff59198a65b7
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2%2bdfsg-4.debian.tar.xz' gmp_6.1.2+dfsg-4.debian.tar.xz 21416 SHA256:cb25b080d915d9e5a641920f0471b4deb5368af739c7675d887cf290c2cffbe2
+'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.1.2%2bdfsg-4%2bdeb10u1.debian.tar.xz' gmp_6.1.2+dfsg-4+deb10u1.debian.tar.xz 22008 SHA256:9db459dee6b7bbbf1bbc486d3f1d59ce640c25c42ca08472b4e0aee03370deaa
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-4/ (for browsing the source)
-- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gmp/2:6.1.2+dfsg-4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-4+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/gmp/2:6.1.2+dfsg-4+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gmp/2:6.1.2+dfsg-4+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnupg2=2.2.12-1+deb10u1`
 
@@ -1520,11 +1520,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-0+deb10u3`
+### `dpkg` source package: `tzdata=2021a-0+deb10u4`
 
 Binary Packages:
 
-- `tzdata=2021a-0+deb10u3`
+- `tzdata=2021a-0+deb10u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1533,18 +1533,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u3
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0%2bdeb10u3.dsc' tzdata_2021a-0+deb10u3.dsc 2264 SHA256:1730f7a8a2ac3ac3c9db9dc7ddd3074343a7846988c515d55f046be527a00834
+$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u4
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0%2bdeb10u4.dsc' tzdata_2021a-0+deb10u4.dsc 2264 SHA256:cab69d662b3950c5679d4e25f5a07d7c68eaa15ceb5784f7ebe64e63bd3ce64e
 'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
 'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0%2bdeb10u3.debian.tar.xz' tzdata_2021a-0+deb10u3.debian.tar.xz 109800 SHA256:aa09186f2ceb3d4b7ec9e7575ba51a3c1b4894e0669e1125c4cae1eafec73808
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0%2bdeb10u4.debian.tar.xz' tzdata_2021a-0+deb10u4.debian.tar.xz 110768 SHA256:fd6fce77e1f9314e0f61f3100bc5cadd606010146a65d4a3c7bf8e34b7c8026f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u3/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.33.1-0.1`
 
