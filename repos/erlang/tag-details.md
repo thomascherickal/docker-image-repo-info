@@ -11871,15 +11871,30 @@ CMD ["erl"]
 
 ## `erlang:22.3.4.25`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:22.3.4.25-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:22.3.4.25-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:23`
 
@@ -14754,15 +14769,30 @@ CMD ["erl"]
 
 ## `erlang:23.3.4.13`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:23.3.4.13-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:23.3.4.13-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:24`
 
@@ -16680,27 +16710,57 @@ CMD ["erl"]
 
 ## `erlang:24.3.3`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:24.3.3-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:24.3.3-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:24.3.3.0`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:24.3.3.0-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:24.3.3.0-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull erlang@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `erlang:25`
 
