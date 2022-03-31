@@ -1,10 +1,10 @@
-# `redmine:4.2.4-alpine`
+# `redmine:5.0.0-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8f3f259b465aa94dd4eaa8bfc035f395cd82cc20369ec50ec480482a1bd3e0db`
-- Created: `2022-03-24T01:17:57.753944932Z`
-- Virtual Size: ~ 385.20 Mb  
+- Image ID: `sha256:030ef9bf3d6327e206e6271d1fd0c4744bbaa86c8b732d40f597433684e895f8`
+- Created: `2022-03-30T13:09:38.500279527Z`
+- Virtual Size: ~ 439.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,17 +12,17 @@
 - Environment:
   - `PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `RUBY_MAJOR=2.7`
-  - `RUBY_VERSION=2.7.5`
-  - `RUBY_DOWNLOAD_SHA256=d216d95190eaacf3bf165303747b02ff13f10b6cfab67a9031b502a49512b516`
+  - `RUBY_MAJOR=3.1`
+  - `RUBY_VERSION=3.1.1`
+  - `RUBY_DOWNLOAD_SHA256=7aefaa6b78b076515d272ec59c4616707a54fc9f2391239737d5f10af7a16caa`
   - `GEM_HOME=/usr/local/bundle`
   - `BUNDLE_SILENCE_ROOT_WARNING=1`
   - `BUNDLE_APP_CONFIG=/usr/local/bundle`
   - `RAILS_ENV=production`
   - `HOME=/home/redmine`
-  - `REDMINE_VERSION=4.2.4`
-  - `REDMINE_DOWNLOAD_URL=https://www.redmine.org/releases/redmine-4.2.4.tar.gz`
-  - `REDMINE_DOWNLOAD_SHA256=cf649f5d4ff783582f82bebd4a5099ef63acb3d5573bbe6b4bf64f293c61c9ce`
+  - `REDMINE_VERSION=5.0.0`
+  - `REDMINE_DOWNLOAD_URL=https://www.redmine.org/releases/redmine-5.0.0.tar.gz`
+  - `REDMINE_DOWNLOAD_SHA256=7e840dec846646dae52fff5c631b135d1c915d6e03ea6f01ca8f12ad35803bef`
   - `BUNDLE_FORCE_RUBY_PLATFORM=1`
 
 ## `apk` (`.apk`-based packages)
@@ -387,16 +387,16 @@ GPL-2.0-or-later OR LGPL-2.0-or-later
 ### `apk` package: `freetype`
 
 ```console
-freetype-2.11.0-r0 description:
+freetype-2.11.1-r0 description:
 TrueType font rendering library
 
-freetype-2.11.0-r0 webpage:
+freetype-2.11.1-r0 webpage:
 https://www.freetype.org/
 
-freetype-2.11.0-r0 installed size:
+freetype-2.11.1-r0 installed size:
 748 KiB
 
-freetype-2.11.0-r0 license:
+freetype-2.11.1-r0 license:
 FTL GPL-2.0-or-later
 
 ```
@@ -2121,16 +2121,16 @@ MIT
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.11-r3 description:
+zlib-1.2.12-r0 description:
 A compression/decompression Library
 
-zlib-1.2.11-r3 webpage:
+zlib-1.2.12-r0 webpage:
 https://zlib.net/
 
-zlib-1.2.11-r3 installed size:
+zlib-1.2.12-r0 installed size:
 108 KiB
 
-zlib-1.2.11-r3 license:
+zlib-1.2.12-r0 license:
 Zlib
 
 ```
@@ -2138,16 +2138,16 @@ Zlib
 ### `apk` package: `zlib-dev`
 
 ```console
-zlib-dev-1.2.11-r3 description:
+zlib-dev-1.2.12-r0 description:
 A compression/decompression Library (development files)
 
-zlib-dev-1.2.11-r3 webpage:
+zlib-dev-1.2.12-r0 webpage:
 https://zlib.net/
 
-zlib-dev-1.2.11-r3 installed size:
+zlib-dev-1.2.12-r0 installed size:
 140 KiB
 
-zlib-dev-1.2.11-r3 license:
+zlib-dev-1.2.12-r0 license:
 Zlib
 
 ```

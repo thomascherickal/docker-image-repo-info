@@ -1,10 +1,10 @@
-# `redmine:4.2.4-alpine`
+# `redmine:4.2.5-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8f3f259b465aa94dd4eaa8bfc035f395cd82cc20369ec50ec480482a1bd3e0db`
-- Created: `2022-03-24T01:17:57.753944932Z`
-- Virtual Size: ~ 385.20 Mb  
+- Image ID: `sha256:8454d0eff08018bb8043d0321af239a181a7f79ce0e52729ad0352f297cea82c`
+- Created: `2022-03-30T13:13:52.458627681Z`
+- Virtual Size: ~ 386.42 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -20,9 +20,9 @@
   - `BUNDLE_APP_CONFIG=/usr/local/bundle`
   - `RAILS_ENV=production`
   - `HOME=/home/redmine`
-  - `REDMINE_VERSION=4.2.4`
-  - `REDMINE_DOWNLOAD_URL=https://www.redmine.org/releases/redmine-4.2.4.tar.gz`
-  - `REDMINE_DOWNLOAD_SHA256=cf649f5d4ff783582f82bebd4a5099ef63acb3d5573bbe6b4bf64f293c61c9ce`
+  - `REDMINE_VERSION=4.2.5`
+  - `REDMINE_DOWNLOAD_URL=https://www.redmine.org/releases/redmine-4.2.5.tar.gz`
+  - `REDMINE_DOWNLOAD_SHA256=d97084b0eaad7266056814a0c0aec2737f4d23b8f67ce90c01a79b2eb5605984`
   - `BUNDLE_FORCE_RUBY_PLATFORM=1`
 
 ## `apk` (`.apk`-based packages)
@@ -387,16 +387,16 @@ GPL-2.0-or-later OR LGPL-2.0-or-later
 ### `apk` package: `freetype`
 
 ```console
-freetype-2.11.0-r0 description:
+freetype-2.11.1-r0 description:
 TrueType font rendering library
 
-freetype-2.11.0-r0 webpage:
+freetype-2.11.1-r0 webpage:
 https://www.freetype.org/
 
-freetype-2.11.0-r0 installed size:
+freetype-2.11.1-r0 installed size:
 748 KiB
 
-freetype-2.11.0-r0 license:
+freetype-2.11.1-r0 license:
 FTL GPL-2.0-or-later
 
 ```
@@ -2121,16 +2121,16 @@ MIT
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.11-r3 description:
+zlib-1.2.12-r0 description:
 A compression/decompression Library
 
-zlib-1.2.11-r3 webpage:
+zlib-1.2.12-r0 webpage:
 https://zlib.net/
 
-zlib-1.2.11-r3 installed size:
+zlib-1.2.12-r0 installed size:
 108 KiB
 
-zlib-1.2.11-r3 license:
+zlib-1.2.12-r0 license:
 Zlib
 
 ```
@@ -2138,16 +2138,16 @@ Zlib
 ### `apk` package: `zlib-dev`
 
 ```console
-zlib-dev-1.2.11-r3 description:
+zlib-dev-1.2.12-r0 description:
 A compression/decompression Library (development files)
 
-zlib-dev-1.2.11-r3 webpage:
+zlib-dev-1.2.12-r0 webpage:
 https://zlib.net/
 
-zlib-dev-1.2.11-r3 installed size:
+zlib-dev-1.2.12-r0 installed size:
 140 KiB
 
-zlib-dev-1.2.11-r3 license:
+zlib-dev-1.2.12-r0 license:
 Zlib
 
 ```
