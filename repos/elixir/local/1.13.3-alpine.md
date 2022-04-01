@@ -2,20 +2,20 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:52f568973c8eba890d5cfaa38bafae6ba032e9ba0925765c6884acf6540351b9`
-- Created: `2022-03-23T21:35:16.005975562Z`
+- Image ID: `sha256:dd18a870ed41e66b7836198c772f63473f1af14683ec493aeda3b39d127f71e0`
+- Created: `2022-03-31T04:10:16.699268951Z`
 - Virtual Size: ~ 81.54 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["iex"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OTP_VERSION=24.3.2`
+  - `OTP_VERSION=24.3.3`
   - `REBAR3_VERSION=3.18.0`
   - `ELIXIR_VERSION=v1.13.3`
   - `LANG=C.UTF-8`
 - Labels:
-  - `org.opencontainers.image.version=24.3.2`
+  - `org.opencontainers.image.version=24.3.3`
 
 ## `apk` (`.apk`-based packages)
 
@@ -396,16 +396,16 @@ LGPL-2.0-or-later
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.11-r3 description:
+zlib-1.2.12-r0 description:
 A compression/decompression Library
 
-zlib-1.2.11-r3 webpage:
+zlib-1.2.12-r0 webpage:
 https://zlib.net/
 
-zlib-1.2.11-r3 installed size:
+zlib-1.2.12-r0 installed size:
 108 KiB
 
-zlib-1.2.11-r3 license:
+zlib-1.2.12-r0 license:
 Zlib
 
 ```
