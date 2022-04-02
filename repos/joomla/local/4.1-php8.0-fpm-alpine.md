@@ -1,10 +1,10 @@
-# `joomla:4.1.0-php8.0-fpm-alpine`
+# `joomla:4.1.2-php8.0-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:fcd4f1505cdc8668ca132e997ef853b362f3a745bac091e820589caa42f33e7a`
-- Created: `2022-03-24T00:23:54.665294087Z`
-- Virtual Size: ~ 187.01 Mb  
+- Image ID: `sha256:4849a28bddc494fa9aa38e01a81e2422b6631281fb987f7d1d2ba19d7d00dfe6`
+- Created: `2022-04-01T01:32:24.699293348Z`
+- Virtual Size: ~ 187.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -22,8 +22,8 @@
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.17.tar.xz.asc`
   - `PHP_SHA256=4e7d94bb3d144412cb8b2adeb599fb1c6c1d7b357b0d0d0478dc5ef53532ebc5`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
-  - `JOOMLA_VERSION=4.1.0`
-  - `JOOMLA_SHA512=44173170fb1598c465415cba919339c26624322621efed17c95fdffca7b62a1089863615e415f0ec36a6a4c4f5c746b7ec06dddd08929757f737e1a2a15ff714`
+  - `JOOMLA_VERSION=4.1.2`
+  - `JOOMLA_SHA512=ae1cc556ef56415875a0c8aa4deb814acdc3efcc661bee32db4fd4b6017b800ae135d78e800226eaba11b687230b1ff6ed1793a64dda6da46907b163c5f2a666`
 - Labels:
   - `maintainer=Llewellyn van der Merwe <llewellyn.van-der-merwe@community.joomla.org> (@Llewellynvdm), Harald Leithner <harald.leithner@community.joomla.org> (@HLeithner)`
 
@@ -814,16 +814,16 @@ GPL-2.0-or-later AND Public-Domain AND LGPL-2.1-or-later
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.11-r3 description:
+zlib-1.2.12-r0 description:
 A compression/decompression Library
 
-zlib-1.2.11-r3 webpage:
+zlib-1.2.12-r0 webpage:
 https://zlib.net/
 
-zlib-1.2.11-r3 installed size:
+zlib-1.2.12-r0 installed size:
 108 KiB
 
-zlib-1.2.11-r3 license:
+zlib-1.2.12-r0 license:
 Zlib
 
 ```
