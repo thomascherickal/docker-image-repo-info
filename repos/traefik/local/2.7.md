@@ -1,10 +1,10 @@
-# `traefik:v2.7.0-rc1`
+# `traefik:v2.7.0-rc2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a39992d581315a0b4b88f1e398c91dc4fc82ac4d5e4585f6b595c1ca74cd095c`
-- Created: `2022-03-25T01:36:02.698235332Z`
-- Virtual Size: ~ 104.78 Mb  
+- Image ID: `sha256:9a4db61886791f13225c2845cd57d60ff8a5a0720eccb889e7c7341ffe1b9594`
+- Created: `2022-03-31T02:24:20.819636413Z`
+- Virtual Size: ~ 104.71 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `org.opencontainers.image.title=Traefik`
   - `org.opencontainers.image.url=https://traefik.io`
   - `org.opencontainers.image.vendor=Traefik Labs`
-  - `org.opencontainers.image.version=v2.7.0-rc1`
+  - `org.opencontainers.image.version=v2.7.0-rc2`
 
 ## `apk` (`.apk`-based packages)
 
@@ -160,16 +160,16 @@ OpenSSL
 ### `apk` package: `libretls`
 
 ```console
-libretls-3.3.3p1-r2 description:
+libretls-3.3.3p1-r3 description:
 port of libtls from libressl to openssl
 
-libretls-3.3.3p1-r2 webpage:
+libretls-3.3.3p1-r3 webpage:
 https://git.causal.agency/libretls/
 
-libretls-3.3.3p1-r2 installed size:
+libretls-3.3.3p1-r3 installed size:
 84 KiB
 
-libretls-3.3.3p1-r2 license:
+libretls-3.3.3p1-r3 license:
 ISC AND (BSD-3-Clause OR MIT)
 
 ```
@@ -279,16 +279,16 @@ Public-Domain
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.11-r3 description:
+zlib-1.2.12-r0 description:
 A compression/decompression Library
 
-zlib-1.2.11-r3 webpage:
+zlib-1.2.12-r0 webpage:
 https://zlib.net/
 
-zlib-1.2.11-r3 installed size:
+zlib-1.2.12-r0 installed size:
 108 KiB
 
-zlib-1.2.11-r3 license:
+zlib-1.2.12-r0 license:
 Zlib
 
 ```
