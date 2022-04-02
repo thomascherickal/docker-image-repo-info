@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3659d5cc5d52ec3f4804973e86aaefbe2497b73f6f655f5fb509fe8da4cbe1a7`
-- Created: `2022-03-25T23:20:15.738341691Z`
-- Virtual Size: ~ 40.40 Mb  
+- Image ID: `sha256:5efd5126ed4eedebd6d49056abca659f854b8973f7a7f5aee5698fd4c0e0a582`
+- Created: `2022-04-01T23:20:28.472999402Z`
+- Virtual Size: ~ 36.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20220325`
+  - `build-date=20220401`
   - `name=Photon OS x86_64/4.0 Base Image`
   - `vendor=VMware`
 
@@ -41,13 +41,13 @@ Licenses (from `rpm --query`): Custom
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `curl-7.78.0-4.ph4.x86_64`
+### `rpm` package: `curl-7.82.0-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `curl-libs-7.78.0-4.ph4.x86_64`
+### `rpm` package: `curl-libs-7.82.0-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -107,31 +107,13 @@ Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libdb-5.3.28-2.ph4.x86_64`
-
-Licenses (from `rpm --query`): BSD and LGPLv2 and Sleepycat
-
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
-
 ### `rpm` package: `libgcc-10.2.0-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libgcrypt-1.9.4-1.ph4.x86_64`
-
-Licenses (from `rpm --query`): GPLv2+ and LGPLv2+
-
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
-
-### `rpm` package: `libgpg-error-1.39-1.ph4.x86_64`
-
-Licenses (from `rpm --query`): GPLv2+
-
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
-
-### `rpm` package: `libsolv-0.7.19-3.ph4.x86_64`
+### `rpm` package: `libsolv-0.7.19-4.ph4.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
@@ -143,13 +125,13 @@ Licenses (from `rpm --query`): BSD
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libxml2-2.9.12-2.ph4.x86_64`
+### `rpm` package: `libxml2-2.9.12-3.ph4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `lua-5.4.3-2.ph4.x86_64`
+### `rpm` package: `lua-5.4.4-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -203,7 +185,7 @@ Licenses (from `rpm --query`): GPLv3+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `rpm-libs-4.16.1.3-6.ph4.x86_64`
+### `rpm` package: `rpm-libs-4.16.1.3-7.ph4.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
