@@ -79,19 +79,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.4.3
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.4.3.dsc' apt_2.4.3.dsc 2797 SHA256:1596dc1289a04a1ce46e3285a7fae6bdc91bbe6a89cf54736fbde636ff93aea8
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.4.3.tar.xz' apt_2.4.3.tar.xz 2216172 SHA256:5a7215ca924302da0b2205862cd2d651326eea222a589184ec6ce663885729f7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.4.3/
 
-- https://sources.debian.net/src/apt/2.4.3/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.4.3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.4.3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -514,19 +508,13 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.21.2
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.2.dsc' dpkg_1.21.2.dsc 2120 SHA256:c284379b51c65d9e7352505b40ee8369f307c60ec99b9783207a3808ad1cbb1c
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.2.tar.xz' dpkg_1.21.2.tar.xz 5051548 SHA256:b8fc67fca696c6bea2f40f737c80574d53384db25202f72effc7e4de4662e1ac
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dpkg/1.21.2/
 
-- https://sources.debian.net/src/dpkg/1.21.2/ (for browsing the source)
-- https://sources.debian.net/src/dpkg/1.21.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dpkg/1.21.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `e2fsprogs=1.46.5-2`
 
@@ -1459,20 +1447,13 @@ Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 - `GPL-2`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libzstd=1.4.9+dfsg-1
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.9%2bdfsg-1.dsc' libzstd_1.4.9+dfsg-1.dsc 2165 SHA256:7b6f8fcfb0b3e1b429e0220bcec56c359f7db010d69a7a855a1a724e588492dd
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.9%2bdfsg.orig.tar.xz' libzstd_1.4.9+dfsg.orig.tar.xz 1344352 SHA256:3154e7b52e63b626a64476b5ecab57c367ec3f14220ad5deeac6f249d68cd911
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.4.9%2bdfsg-1.debian.tar.xz' libzstd_1.4.9+dfsg-1.debian.tar.xz 11704 SHA256:d68c20fb972cc174edeef6d7e31d7e8090ba7819c75747312d490cbc15bd35d1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libzstd/1.4.9+dfsg-1/
 
-- https://sources.debian.net/src/libzstd/1.4.9+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/libzstd/1.4.9+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libzstd/1.4.9+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -2011,21 +1992,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.38.1-1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.38.1-1.dsc' sqlite3_3.38.1-1.dsc 2487 SHA256:a36e3195c86d6c6fb0586872c8a53db437ef348d62a01d9b5d3fe8137b468615
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.38.1.orig-www.tar.xz' sqlite3_3.38.1.orig-www.tar.xz 5734512 SHA256:ba5e3135a82b46f07705fb9865789af89a064a3bc2cc9c14f43f026354a45afc
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.38.1.orig.tar.xz' sqlite3_3.38.1.orig.tar.xz 7670176 SHA256:421551a49292029d1ed30dd331b7fc1a6ef2932805d2603ed385ac2f3500309c
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.38.1-1.debian.tar.xz' sqlite3_3.38.1-1.debian.tar.xz 28712 SHA256:efbd314ff8071ae9f011f6688987b4d2e51c597b3594fecd4f9c14a49da753fb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.38.1-1/
 
-- https://sources.debian.net/src/sqlite3/3.38.1-1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.38.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.38.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=250.4-1`
 
