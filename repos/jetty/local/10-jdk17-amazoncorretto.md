@@ -1,10 +1,10 @@
-# `jetty:10.0.8-amazoncorretto`
+# `jetty:10.0.9-amazoncorretto`
 
 ## Docker Metadata
 
-- Image ID: `sha256:68d505ee8906e5fb5b9c9c2a5cdee32eb13411bfe405cf5157ec9f54cf15240b`
-- Created: `2022-04-01T02:07:44.704091547Z`
-- Virtual Size: ~ 490.90 Mb  
+- Image ID: `sha256:3560efb60e1d0930a2ac97c918f786ac156bdb1cf482d1834f07d2b2a1975446`
+- Created: `2022-04-05T17:23:49.248792383Z`
+- Virtual Size: ~ 491.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -13,11 +13,11 @@
   - `PATH=/usr/local/jetty/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto`
-  - `JETTY_VERSION=10.0.8`
+  - `JETTY_VERSION=10.0.9`
   - `JETTY_HOME=/usr/local/jetty`
   - `JETTY_BASE=/var/lib/jetty`
   - `TMPDIR=/tmp/jetty`
-  - `JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/10.0.8/jetty-home-10.0.8.tar.gz`
+  - `JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/10.0.9/jetty-home-10.0.9.tar.gz`
   - `JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146`
 
 ## `rpm` (`.rpm`-based packages)
