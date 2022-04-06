@@ -1,7 +1,7 @@
 ## `buildpack-deps:xenial`
 
 ```console
-$ docker pull buildpack-deps@sha256:bb21ddb4db1cc4c556c6fb1090c5f44916e9531ce31a3bb018ee0e63ba226295
+$ docker pull buildpack-deps@sha256:177f1235896b7595bb23a08c361d00948931a79af9ae77f7ed55388fcddbf40d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -208,34 +208,34 @@ RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		auto
 ### `buildpack-deps:xenial` - linux; 386
 
 ```console
-$ docker pull buildpack-deps@sha256:3b25ae18b6f86841f9fc0f19723c3406952aea11589eb2f57e996c454dc0b15f
+$ docker pull buildpack-deps@sha256:1e1e74caf2e0e8989c33f3170baddfc3ae848e6b26269fb543dc00053f8c6ec4
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **236.5 MB (236450583 bytes)**  
+-	Total Size: **236.5 MB (236450829 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:50fce80414fd79e17ff65b5931debf4a3612bb2eead544eb4f77f3b8cf6a70a4`
+-	Image ID: `sha256:aeeafa7909c0b22a7bbacfb11c178ef12c0ca3d20420f976fa215dd87ccbf58f`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Tue, 31 Aug 2021 01:39:31 GMT
+# Tue, 05 Apr 2022 22:39:28 GMT
 ADD file:a4ae521feddf8357667e9361bdd972a69ed945f3857cc8c534652592e432575d in / 
-# Tue, 31 Aug 2021 01:39:32 GMT
+# Tue, 05 Apr 2022 22:39:29 GMT
 RUN set -xe 		&& echo '#!/bin/sh' > /usr/sbin/policy-rc.d 	&& echo 'exit 101' >> /usr/sbin/policy-rc.d 	&& chmod +x /usr/sbin/policy-rc.d 		&& dpkg-divert --local --rename --add /sbin/initctl 	&& cp -a /usr/sbin/policy-rc.d /sbin/initctl 	&& sed -i 's/^exit.*/exit 0/' /sbin/initctl 		&& echo 'force-unsafe-io' > /etc/dpkg/dpkg.cfg.d/docker-apt-speedup 		&& echo 'DPkg::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' > /etc/apt/apt.conf.d/docker-clean 	&& echo 'APT::Update::Post-Invoke { "rm -f /var/cache/apt/archives/*.deb /var/cache/apt/archives/partial/*.deb /var/cache/apt/*.bin || true"; };' >> /etc/apt/apt.conf.d/docker-clean 	&& echo 'Dir::Cache::pkgcache ""; Dir::Cache::srcpkgcache "";' >> /etc/apt/apt.conf.d/docker-clean 		&& echo 'Acquire::Languages "none";' > /etc/apt/apt.conf.d/docker-no-languages 		&& echo 'Acquire::GzipIndexes "true"; Acquire::CompressionTypes::Order:: "gz";' > /etc/apt/apt.conf.d/docker-gzip-indexes 		&& echo 'Apt::AutoRemove::SuggestsImportant "false";' > /etc/apt/apt.conf.d/docker-autoremove-suggests
-# Tue, 31 Aug 2021 01:39:33 GMT
+# Tue, 05 Apr 2022 22:39:30 GMT
 RUN rm -rf /var/lib/apt/lists/*
-# Tue, 31 Aug 2021 01:39:34 GMT
+# Tue, 05 Apr 2022 22:39:31 GMT
 RUN mkdir -p /run/systemd && echo 'docker' > /run/systemd/container
-# Tue, 31 Aug 2021 01:39:34 GMT
+# Tue, 05 Apr 2022 22:39:32 GMT
 CMD ["/bin/bash"]
-# Tue, 29 Mar 2022 18:08:40 GMT
+# Tue, 05 Apr 2022 23:06:37 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		apt-transport-https 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 29 Mar 2022 18:08:41 GMT
+# Tue, 05 Apr 2022 23:06:38 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 29 Mar 2022 18:09:22 GMT
+# Tue, 05 Apr 2022 23:07:15 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		bzr 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Tue, 29 Mar 2022 18:11:55 GMT
+# Tue, 05 Apr 2022 23:09:54 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
 ```
 
@@ -244,29 +244,29 @@ RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		auto
 		Last Modified: Sun, 08 Aug 2021 01:00:22 GMT  
 		Size: 45.8 MB (45816182 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c250dcd0b24a66322cdee2165435035a76e5b72085df234bfcdc340c5321c74d`  
-		Last Modified: Tue, 31 Aug 2021 01:40:23 GMT  
+	-	`sha256:ffa6a227af79fa98ebbd1d2da516e2b7ce1cea5519a760cd0f6688738fbdb951`  
+		Last Modified: Tue, 05 Apr 2022 22:40:40 GMT  
 		Size: 851.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df3c7bbf9087c9dae9eb48a2b2a913146a0705560689407ee02802ff92408abf`  
-		Last Modified: Tue, 31 Aug 2021 01:40:23 GMT  
+	-	`sha256:ab3928723c2c34ecd7264ce4e195ddda11403213b1c93d02e8efcd11de4b07a1`  
+		Last Modified: Tue, 05 Apr 2022 22:40:40 GMT  
 		Size: 514.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9ea45938bfbd7dd3f314ea2ad08a94370db722a20c33d6407c8eaeaf906b40c5`  
-		Last Modified: Tue, 31 Aug 2021 01:40:23 GMT  
+	-	`sha256:e468001dd2f338d54f47d062d65db61c754f09897744d97084afa15cee021200`  
+		Last Modified: Tue, 05 Apr 2022 22:40:40 GMT  
 		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbc22e1425a6b0e2770426d0c67679ef683e74ee1abfa9a681dcfe10e1f0b6f5`  
-		Last Modified: Tue, 29 Mar 2022 18:20:57 GMT  
-		Size: 7.9 MB (7932472 bytes)  
+	-	`sha256:5abf8b8634fb64c0b6634daaf98b0d89d01420d22a01f63010623587194cfc7c`  
+		Last Modified: Tue, 05 Apr 2022 23:13:08 GMT  
+		Size: 7.9 MB (7932551 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12616572c59d50bf4880ffcf32efa0d4a77445cc92312e76d09815af78a7c88c`  
-		Last Modified: Tue, 29 Mar 2022 18:21:17 GMT  
-		Size: 42.9 MB (42898428 bytes)  
+	-	`sha256:6e6d144d968e58673ed441d100257197c971e98922fc325d2b9d2726c37b1669`  
+		Last Modified: Tue, 05 Apr 2022 23:13:29 GMT  
+		Size: 42.9 MB (42898142 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:95e4b11d9716ed8c73eddffad94c959af933dc7cbe692b3b9c1fdf3bc0f86f5b`  
-		Last Modified: Tue, 29 Mar 2022 18:21:49 GMT  
-		Size: 139.8 MB (139801964 bytes)  
+	-	`sha256:86384a05f478f2b7db7a8e5697851efe9ced94315317560ef2f7b936575f407b`  
+		Last Modified: Tue, 05 Apr 2022 23:13:57 GMT  
+		Size: 139.8 MB (139802417 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:xenial` - linux; ppc64le
