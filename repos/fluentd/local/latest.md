@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c6f9256f41ea259e403d5d0e19f16872a76387ec2d5efe4ee0ed187494c5d0f3`
-- Created: `2022-03-29T12:07:58.215054881Z`
-- Virtual Size: ~ 47.77 Mb  
+- Image ID: `sha256:67baae9b19cfb841cf601e71744c8ca21215ace602e9f9f19a067db195f59fe2`
+- Created: `2022-04-05T05:31:55.411798044Z`
+- Virtual Size: ~ 47.82 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","--","/bin/entrypoint.sh"]`
@@ -76,16 +76,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.32.1-r7 description:
+busybox-1.32.1-r8 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.32.1-r7 webpage:
+busybox-1.32.1-r8 webpage:
 https://busybox.net/
 
-busybox-1.32.1-r7 installed size:
+busybox-1.32.1-r8 installed size:
 924 KiB
 
-busybox-1.32.1-r7 license:
+busybox-1.32.1-r8 license:
 GPL-2.0-only
 
 ```
@@ -416,16 +416,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.32.1-r7 description:
+ssl_client-1.32.1-r8 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.32.1-r7 webpage:
+ssl_client-1.32.1-r8 webpage:
 https://busybox.net/
 
-ssl_client-1.32.1-r7 installed size:
+ssl_client-1.32.1-r8 installed size:
 28 KiB
 
-ssl_client-1.32.1-r7 license:
+ssl_client-1.32.1-r8 license:
 GPL-2.0-only
 
 ```
