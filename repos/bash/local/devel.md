@@ -1,9 +1,9 @@
-# `bash:devel-20220325`
+# `bash:devel-20220404`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e415ea97b0716c72bff748fb3d86d6a6f4b36eb1ac09e8bbf301c66d9da6db99`
-- Created: `2022-03-31T02:38:00.23233117Z`
+- Image ID: `sha256:d470cf6079efa68ae77d9881d0b63087dfe404c0ae92e8e815d0c05e806c8179`
+- Created: `2022-04-07T01:20:00.980519522Z`
 - Virtual Size: ~ 13.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,8 +11,8 @@
 - Command: `["bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `_BASH_COMMIT=8f68f9f0ff2544d03a9f38a368451e9cddcb9ece`
-  - `_BASH_VERSION=devel-20220325`
+  - `_BASH_COMMIT=505f60f94c079a2b1e1dae3c211ee67369386e86`
+  - `_BASH_VERSION=devel-20220404`
 
 ## `apk` (`.apk`-based packages)
 
@@ -70,16 +70,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.34.1-r4 description:
+busybox-1.34.1-r5 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.34.1-r4 webpage:
+busybox-1.34.1-r5 webpage:
 https://busybox.net/
 
-busybox-1.34.1-r4 installed size:
+busybox-1.34.1-r5 installed size:
 924 KiB
 
-busybox-1.34.1-r4 license:
+busybox-1.34.1-r5 license:
 GPL-2.0-only
 
 ```
@@ -257,16 +257,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.34.1-r4 description:
+ssl_client-1.34.1-r5 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.34.1-r4 webpage:
+ssl_client-1.34.1-r5 webpage:
 https://busybox.net/
 
-ssl_client-1.34.1-r4 installed size:
+ssl_client-1.34.1-r5 installed size:
 28 KiB
 
-ssl_client-1.34.1-r4 license:
+ssl_client-1.34.1-r5 license:
 GPL-2.0-only
 
 ```
