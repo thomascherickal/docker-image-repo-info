@@ -1,10 +1,10 @@
-# `mediawiki:1.37.1-fpm-alpine`
+# `mediawiki:1.37.2-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f1196d3972d8909b4ce9c4e466b47dcc4da5f8dd37b18286cfa1afa2a89f69b2`
-- Created: `2022-03-30T07:55:23.066716243Z`
-- Virtual Size: ~ 499.12 Mb  
+- Image ID: `sha256:7b6c24bbb41cb1f483b8f3ab6008debe8f1d63e791f9434aebeaafe01ad30cf0`
+- Created: `2022-04-05T13:01:46.147563977Z`
+- Virtual Size: ~ 500.33 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -22,7 +22,7 @@
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.28.tar.xz.asc`
   - `PHP_SHA256=9cc3b6f6217b60582f78566b3814532c4b71d517876c25013ae51811e65d8fce`
   - `MEDIAWIKI_MAJOR_VERSION=1.37`
-  - `MEDIAWIKI_VERSION=1.37.1`
+  - `MEDIAWIKI_VERSION=1.37.2`
 
 ## `apk` (`.apk`-based packages)
 
@@ -148,16 +148,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.34.1-r4 description:
+busybox-1.34.1-r5 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.34.1-r4 webpage:
+busybox-1.34.1-r5 webpage:
 https://busybox.net/
 
-busybox-1.34.1-r4 installed size:
+busybox-1.34.1-r5 installed size:
 924 KiB
 
-busybox-1.34.1-r4 license:
+busybox-1.34.1-r5 license:
 GPL-2.0-only
 
 ```
@@ -1525,16 +1525,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.34.1-r4 description:
+ssl_client-1.34.1-r5 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.34.1-r4 webpage:
+ssl_client-1.34.1-r5 webpage:
 https://busybox.net/
 
-ssl_client-1.34.1-r4 installed size:
+ssl_client-1.34.1-r5 installed size:
 28 KiB
 
-ssl_client-1.34.1-r4 license:
+ssl_client-1.34.1-r5 license:
 GPL-2.0-only
 
 ```

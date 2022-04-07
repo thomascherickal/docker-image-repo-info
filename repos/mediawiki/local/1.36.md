@@ -1,10 +1,10 @@
-# `mediawiki:1.36.3`
+# `mediawiki:1.36.4`
 
 ## Docker Metadata
 
-- Image ID: `sha256:44ce2785474a5f6ae3189c75bee77240ed9e08e2608f4c922e196f0e19ec878b`
-- Created: `2022-03-30T07:55:57.005384999Z`
-- Virtual Size: ~ 780.09 Mb  
+- Image ID: `sha256:2c73b22b1a21e33bca597d4fbda7e3e5e1f80366b7444cf083e4e1fcedde13b9`
+- Created: `2022-04-04T21:45:03.572675783Z`
+- Virtual Size: ~ 783.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -24,7 +24,7 @@
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.28.tar.xz.asc`
   - `PHP_SHA256=9cc3b6f6217b60582f78566b3814532c4b71d517876c25013ae51811e65d8fce`
   - `MEDIAWIKI_MAJOR_VERSION=1.36`
-  - `MEDIAWIKI_VERSION=1.36.3`
+  - `MEDIAWIKI_VERSION=1.36.4`
 
 ## `dpkg` (`.deb`-based packages)
 
