@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d4ed7feefcafec962453200420911d0f5c2b3a0c868ae8ea5add8d3055e65b2e`
-- Created: `2022-03-21T21:35:17.266120825Z`
+- Image ID: `sha256:c87bf13faa785d3ced0dc623a6938f850a351b3c04e06af9654e3c6192cf4bd7`
+- Created: `2022-04-05T23:54:19.166518606Z`
 - Virtual Size: ~ 814.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -5432,14 +5432,14 @@ $ apt-get source -qq --print-uris python3-defaults=3.8.2-0ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.2-0ubuntu2.tar.gz' python3-defaults_3.8.2-0ubuntu2.tar.gz 138226 SHA256:e4969a54306421ebfd195d0c064935db7c53f9f152d8abaae63da33819235e9a
 ```
 
-### `dpkg` source package: `python3.8=3.8.10-0ubuntu1~20.04.2`
+### `dpkg` source package: `python3.8=3.8.10-0ubuntu1~20.04.4`
 
 Binary Packages:
 
-- `libpython3.8-minimal:amd64=3.8.10-0ubuntu1~20.04.2`
-- `libpython3.8-stdlib:amd64=3.8.10-0ubuntu1~20.04.2`
-- `python3.8=3.8.10-0ubuntu1~20.04.2`
-- `python3.8-minimal=3.8.10-0ubuntu1~20.04.2`
+- `libpython3.8-minimal:amd64=3.8.10-0ubuntu1~20.04.4`
+- `libpython3.8-stdlib:amd64=3.8.10-0ubuntu1~20.04.4`
+- `python3.8=3.8.10-0ubuntu1~20.04.4`
+- `python3.8-minimal=3.8.10-0ubuntu1~20.04.4`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/share/doc/libpython3.8-stdlib/copyright`, `/usr/share/doc/python3.8/copyright`, `/usr/share/doc/python3.8-minimal/copyright`)
 
@@ -5461,9 +5461,14 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris python3.8=3.8.10-0ubuntu1~20.04.4
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1%7e20.04.4.dsc' python3.8_3.8.10-0ubuntu1~20.04.4.dsc 3504 SHA512:99509bd55a634418dc1207c94536d6af0eb271eb40b573417055bf28a71989a2afedc0bba95fb7bbdbf211ceda6ba008ae982fc8568a5d605199eb51650fc341
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10.orig.tar.xz' python3.8_3.8.10.orig.tar.xz 18433456 SHA512:0be69705483ff9692e12048a96180e586f9d84c8d53066629f7fb2389585eb75c0f3506bb8182936e322508f58b71f4d8c6dfebbab9049b31b49da11d3b98e80
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1%7e20.04.4.debian.tar.xz' python3.8_3.8.10-0ubuntu1~20.04.4.debian.tar.xz 216412 SHA512:bad7f4ea640e97fb7c2a55547c7eb8f4662216ba872ccf3481f92ef3dd5152dcc28d23844fba2cda32f25b73df501d000b83430935b597d8926e830faa854e6f
+```
 
 ### `dpkg` source package: `qhull=2015.2-4`
 
@@ -6189,19 +6194,24 @@ $ apt-get source -qq --print-uris twolame=0.4.0-2
 'http://archive.ubuntu.com/ubuntu/pool/main/t/twolame/twolame_0.4.0-2.debian.tar.xz' twolame_0.4.0-2.debian.tar.xz 4740 SHA256:c11737831db6c13b0346b5d23d39ab40235ad09373d57356dd8b23263499d67a
 ```
 
-### `dpkg` source package: `tzdata=2021e-0ubuntu0.20.04`
+### `dpkg` source package: `tzdata=2022a-0ubuntu0.20.04`
 
 Binary Packages:
 
-- `tzdata=2021e-0ubuntu0.20.04`
+- `tzdata=2022a-0ubuntu0.20.04`
 
 Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tzdata=2022a-0ubuntu0.20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022a-0ubuntu0.20.04.dsc' tzdata_2022a-0ubuntu0.20.04.dsc 2109 SHA512:bc96329a1c0d62a8e4060d8bc6add8651db7f34c0aee6788230c2c87a1528287daeee1a8913db8e5623bc67a3a224a864a863e6895037990fbec15ed9fffdd30
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022a.orig.tar.gz' tzdata_2022a.orig.tar.gz 425833 SHA512:542e4559beac8fd8c4af7d08d816fd12cfe7ffcb6f20bba4ff1c20eba717749ef96e5cf599b2fe03b5b8469c0467f8cb1c893008160da281055a123dd9e810d9
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022a-0ubuntu0.20.04.debian.tar.xz' tzdata_2022a-0ubuntu0.20.04.debian.tar.xz 167756 SHA512:983d605613453304cc7c74162697d7d6064a402beaec08cfde47079d5054c953455c8588294948164e253661015929dc56fe4356db47761222e6601a05844dde
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2020.02.11.4`
 
@@ -6693,19 +6703,24 @@ $ apt-get source -qq --print-uris zeromq3=4.3.2-2ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/universe/z/zeromq3/zeromq3_4.3.2-2ubuntu1.debian.tar.xz' zeromq3_4.3.2-2ubuntu1.debian.tar.xz 22828 SHA256:70cd7c1c1a83fd60405f30317c3416992fe1dfd39b26e2cfc61372cbf70f267c
 ```
 
-### `dpkg` source package: `zlib=1:1.2.11.dfsg-2ubuntu1.2`
+### `dpkg` source package: `zlib=1:1.2.11.dfsg-2ubuntu1.3`
 
 Binary Packages:
 
-- `zlib1g:amd64=1:1.2.11.dfsg-2ubuntu1.2`
+- `zlib1g:amd64=1:1.2.11.dfsg-2ubuntu1.3`
 
 Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
 - `Zlib`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.3.dsc' zlib_1.2.11.dfsg-2ubuntu1.3.dsc 2953 SHA512:9502158754878cd6aa11c381f121b99da42815bd77f64c44c0b41f1dc22433a1996d7628072b552ba614f71f47e1a5e3df6c348c90b5a6a30c8e6b402926b749
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA512:92819807c0b8de655021bb2d5d182f9b6b381d3072d8c8dc1df34bbaa25d36bcba140c85f754a43cc466aac65850b7a7366aa0c93e804180e5b255e61d5748de
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.3.debian.tar.xz' zlib_1.2.11.dfsg-2ubuntu1.3.debian.tar.xz 54636 SHA512:14b53a8aaf4bb0cbc3ab844a338f091dfc89c245d967c85275ab6fe8da95738a5863217b98db28f85501e52f158bb6fefa9f8c354d112999e626de1191abb42b
+```
 
 ### `dpkg` source package: `zvbi=0.2.35-17`
 
