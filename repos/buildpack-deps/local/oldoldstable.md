@@ -3692,20 +3692,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-2.2+deb9u5
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-2.2%2bdeb9u5.dsc' libxml2_2.9.4+dfsg1-2.2+deb9u5.dsc 3053 SHA256:9c390ac82ea5dd805a6c06c4c67021d19a49c7a50518da1cb4625797153ec190
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA256:a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-2.2%2bdeb9u5.debian.tar.xz' libxml2_2.9.4+dfsg1-2.2+deb9u5.debian.tar.xz 38448 SHA256:f12334100f7ef475009bb64a145816280a9ddf1947dd82d990756937bf840236
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-2.2+deb9u5/
 
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u5/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-2.2+deb9u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxpm=1:3.5.12-1`
 
