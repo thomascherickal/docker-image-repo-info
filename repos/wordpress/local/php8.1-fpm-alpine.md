@@ -1,9 +1,9 @@
-# `wordpress:5.9.2-php8.1-fpm-alpine`
+# `wordpress:5.9.3-php8.1-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8edbbb7dffffc6e97db7571109f0964ad0793173f769ea855ebd5560b8938e74`
-- Created: `2022-03-30T10:48:18.109077306Z`
+- Image ID: `sha256:6e178bc4004110a9f33355671edc46e93042d02bb1a9c53e9eb4d1360787929f`
+- Created: `2022-04-07T06:21:33.139012995Z`
 - Virtual Size: ~ 296.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -163,16 +163,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.34.1-r4 description:
+busybox-1.34.1-r5 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.34.1-r4 webpage:
+busybox-1.34.1-r5 webpage:
 https://busybox.net/
 
-busybox-1.34.1-r4 installed size:
+busybox-1.34.1-r5 installed size:
 924 KiB
 
-busybox-1.34.1-r4 license:
+busybox-1.34.1-r5 license:
 GPL-2.0-only
 
 ```
@@ -1489,16 +1489,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.34.1-r4 description:
+ssl_client-1.34.1-r5 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.34.1-r4 webpage:
+ssl_client-1.34.1-r5 webpage:
 https://busybox.net/
 
-ssl_client-1.34.1-r4 installed size:
+ssl_client-1.34.1-r5 installed size:
 28 KiB
 
-ssl_client-1.34.1-r4 license:
+ssl_client-1.34.1-r5 license:
 GPL-2.0-only
 
 ```

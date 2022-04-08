@@ -1,9 +1,9 @@
-# `wordpress:5.9.2-apache`
+# `wordpress:5.9.3-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ef25498ff6a9743827d71366f30d54ed1afcbe1ae9d65ef4325a635dea7edce8`
-- Created: `2022-03-30T10:35:48.613770015Z`
+- Image ID: `sha256:744143078625e43c0dc79075341bba0069aba2baf2767bcd98578cf1ce472fc5`
+- Created: `2022-04-07T06:20:38.793493753Z`
 - Virtual Size: ~ 605.36 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
