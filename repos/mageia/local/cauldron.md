@@ -267,7 +267,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url kbd-2.4.0-1.mga8
-https://free.nchc.org.tw/mageia/distrib/cauldron/SRPMS/core/release/kbd-2.4.0-1.mga8.src.rpm
+http://www.mirrorservice.org/sites/mageia.org/pub/mageia/distrib/cauldron/SRPMS/core/release/kbd-2.4.0-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `kmod-28-1.mga8.x86_64`
@@ -722,7 +722,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64pam_userpass1-1.0.2-15.mga8
-https://free.nchc.org.tw/mageia/distrib/cauldron/SRPMS/core/release/pam_userpass-1.0.2-15.mga8.src.rpm
+http://www.mirrorservice.org/sites/mageia.org/pub/mageia/distrib/cauldron/SRPMS/core/release/pam_userpass-1.0.2-15.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64pcre1-8.44-1.mga8.x86_64`
@@ -1459,7 +1459,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url shared-mime-info-2.1-2.mga8
-https://free.nchc.org.tw/mageia/distrib/cauldron/SRPMS/core/release/shared-mime-info-2.1-2.mga8.src.rpm
+http://www.mirrorservice.org/sites/mageia.org/pub/mageia/distrib/cauldron/SRPMS/core/release/shared-mime-info-2.1-2.mga8.src.rpm
 ```
 
 ### `rpm` package: `systemd-248-2.mga9.x86_64`
@@ -1476,7 +1476,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url tar-1.34-1.mga9
-https://free.nchc.org.tw/mageia/distrib/cauldron/SRPMS/core/release/tar-1.34-1.mga9.src.rpm
+http://www.mirrorservice.org/sites/mageia.org/pub/mageia/distrib/cauldron/SRPMS/core/release/tar-1.34-1.mga9.src.rpm
 ```
 
 ### `rpm` package: `tcb-1.1-12.mga8.x86_64`
