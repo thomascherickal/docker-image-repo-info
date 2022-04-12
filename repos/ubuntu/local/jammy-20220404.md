@@ -350,13 +350,9 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.21.1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.21.1ubuntu1.dsc' dpkg_1.21.1ubuntu1.dsc 2271 SHA512:158a3086236c22856faacb232d108f7e006a22f3d8b52e0c4147dbd6010e3534babfc2cd62fe66a59747a565c1699c092631546003113a2bd9a0e4074201b256
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.21.1ubuntu1.tar.xz' dpkg_1.21.1ubuntu1.tar.xz 5015868 SHA512:fe2443e4a498d9f74e601795b2824cb76c2938aa355dea0b4c5fee4432789271b3ecddf387b87dac938012044d1effe232e07f7afa45079bf849f38118895a58
-```
 
 ### `dpkg` source package: `e2fsprogs=1.46.5-2ubuntu1`
 
@@ -1603,15 +1599,9 @@ Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
 - `permissive-nowarranty`
 - `probably-PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xz-utils=5.2.5-2build1
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.5-2build1.dsc' xz-utils_5.2.5-2build1.dsc 2535 SHA512:290381e339adda8dbe75872360a51097b6107a2715406436ecad9f03c758b53bcfec77437afa6a3306e871ee696b144c992cf988cbf162f83a1b54dbff804bc9
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.5.orig.tar.xz' xz-utils_5.2.5.orig.tar.xz 1148824 SHA512:59266068a51cb616eb31b67cd8f07ffeb2288d1391c61665ae2ec6814465afac80fec69248f6a2f2db45b44475af001296a99af6a32287226a9c41419173ccbb
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.5.orig.tar.xz.asc' xz-utils_5.2.5.orig.tar.xz.asc 833 SHA512:582864ae306861ede34074ebfd23ab161ad3340ab4a068f727583de2bd2058da70dfe73019f4e70b8267e0e0c62f275da1e23f47d40c0b80038449b0ac335020
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.5-2build1.debian.tar.xz' xz-utils_5.2.5-2build1.debian.tar.xz 33600 SHA512:121bccaca745872de67d3c78fe38cd33f9f6fed9b2b32269fdc6852efcd3b153f21513e1c03f1157db19bca220ece82575c1b2e542d440c6eab01b495fc5b8af
-```
 
 ### `dpkg` source package: `zlib=1:1.2.11.dfsg-2ubuntu9`
 
