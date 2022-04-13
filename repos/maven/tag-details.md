@@ -14,6 +14,8 @@
 -	[`maven:3-eclipse-temurin-16-alpine`](#maven3-eclipse-temurin-16-alpine)
 -	[`maven:3-eclipse-temurin-17`](#maven3-eclipse-temurin-17)
 -	[`maven:3-eclipse-temurin-17-alpine`](#maven3-eclipse-temurin-17-alpine)
+-	[`maven:3-eclipse-temurin-18`](#maven3-eclipse-temurin-18)
+-	[`maven:3-eclipse-temurin-18-alpine`](#maven3-eclipse-temurin-18-alpine)
 -	[`maven:3-eclipse-temurin-8`](#maven3-eclipse-temurin-8)
 -	[`maven:3-ibm-semeru-11-focal`](#maven3-ibm-semeru-11-focal)
 -	[`maven:3-ibm-semeru-17-focal`](#maven3-ibm-semeru-17-focal)
@@ -48,6 +50,8 @@
 -	[`maven:3.8-eclipse-temurin-16-alpine`](#maven38-eclipse-temurin-16-alpine)
 -	[`maven:3.8-eclipse-temurin-17`](#maven38-eclipse-temurin-17)
 -	[`maven:3.8-eclipse-temurin-17-alpine`](#maven38-eclipse-temurin-17-alpine)
+-	[`maven:3.8-eclipse-temurin-18`](#maven38-eclipse-temurin-18)
+-	[`maven:3.8-eclipse-temurin-18-alpine`](#maven38-eclipse-temurin-18-alpine)
 -	[`maven:3.8-eclipse-temurin-8`](#maven38-eclipse-temurin-8)
 -	[`maven:3.8-ibm-semeru-11-focal`](#maven38-ibm-semeru-11-focal)
 -	[`maven:3.8-ibm-semeru-17-focal`](#maven38-ibm-semeru-17-focal)
@@ -83,6 +87,8 @@
 -	[`maven:3.8.5-eclipse-temurin-16-alpine`](#maven385-eclipse-temurin-16-alpine)
 -	[`maven:3.8.5-eclipse-temurin-17`](#maven385-eclipse-temurin-17)
 -	[`maven:3.8.5-eclipse-temurin-17-alpine`](#maven385-eclipse-temurin-17-alpine)
+-	[`maven:3.8.5-eclipse-temurin-18`](#maven385-eclipse-temurin-18)
+-	[`maven:3.8.5-eclipse-temurin-18-alpine`](#maven385-eclipse-temurin-18-alpine)
 -	[`maven:3.8.5-eclipse-temurin-8`](#maven385-eclipse-temurin-8)
 -	[`maven:3.8.5-ibm-semeru-11-focal`](#maven385-ibm-semeru-11-focal)
 -	[`maven:3.8.5-ibm-semeru-17-focal`](#maven385-ibm-semeru-17-focal)
@@ -108,6 +114,7 @@
 -	[`maven:3.8.5-sapmachine-17`](#maven385-sapmachine-17)
 -	[`maven:amazoncorretto`](#mavenamazoncorretto)
 -	[`maven:eclipse-temurin`](#maveneclipse-temurin)
+-	[`maven:eclipse-temurin-18-alpine`](#maveneclipse-temurin-18-alpine)
 -	[`maven:ibmjava`](#mavenibmjava)
 -	[`maven:ibmjava-alpine`](#mavenibmjava-alpine)
 -	[`maven:latest`](#mavenlatest)
@@ -3248,6 +3255,14 @@ CMD ["mvn"]
 		Last Modified: Tue, 05 Apr 2022 17:04:37 GMT  
 		Size: 356.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `maven:3-eclipse-temurin-18`
+
+**does not exist** (yet?)
+
+## `maven:3-eclipse-temurin-18-alpine`
+
+**does not exist** (yet?)
 
 ## `maven:3-eclipse-temurin-8`
 
@@ -11315,6 +11330,14 @@ CMD ["mvn"]
 		Last Modified: Tue, 05 Apr 2022 17:04:37 GMT  
 		Size: 356.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `maven:3.8-eclipse-temurin-18`
+
+**does not exist** (yet?)
+
+## `maven:3.8-eclipse-temurin-18-alpine`
+
+**does not exist** (yet?)
 
 ## `maven:3.8-eclipse-temurin-8`
 
@@ -19485,6 +19508,14 @@ CMD ["mvn"]
 		Size: 356.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `maven:3.8.5-eclipse-temurin-18`
+
+**does not exist** (yet?)
+
+## `maven:3.8.5-eclipse-temurin-18-alpine`
+
+**does not exist** (yet?)
+
 ## `maven:3.8.5-eclipse-temurin-8`
 
 ```console
@@ -25175,6 +25206,10 @@ CMD ["mvn"]
 		Last Modified: Wed, 06 Apr 2022 00:14:40 GMT  
 		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `maven:eclipse-temurin-18-alpine`
+
+**does not exist** (yet?)
 
 ## `maven:ibmjava`
 
