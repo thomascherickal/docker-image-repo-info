@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4391ee52fda9fc498cb39776c72a810acbc8ce5c67481d6087af9f478345885a`
-- Created: `2022-04-05T13:10:04.696961353Z`
-- Virtual Size: ~ 439.20 Mb  
+- Image ID: `sha256:50764028a766e8e3dafeb9642b6e7588b134864e4a20f47dd55bd10ac8d4bb12`
+- Created: `2022-04-12T19:56:15.68058876Z`
+- Virtual Size: ~ 439.57 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -13,8 +13,8 @@
   - `PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `RUBY_MAJOR=3.1`
-  - `RUBY_VERSION=3.1.1`
-  - `RUBY_DOWNLOAD_SHA256=7aefaa6b78b076515d272ec59c4616707a54fc9f2391239737d5f10af7a16caa`
+  - `RUBY_VERSION=3.1.2`
+  - `RUBY_DOWNLOAD_SHA256=ca10d017f8a1b6d247556622c841fc56b90c03b1803f87198da1e4fd3ec3bf2a`
   - `GEM_HOME=/usr/local/bundle`
   - `BUNDLE_SILENCE_ROOT_WARNING=1`
   - `BUNDLE_APP_CONFIG=/usr/local/bundle`
@@ -1934,16 +1934,16 @@ MIT
 ### `apk` package: `subversion`
 
 ```console
-subversion-1.14.1-r7 description:
+subversion-1.14.2-r0 description:
 Replacement for CVS, another versioning system (svn)
 
-subversion-1.14.1-r7 webpage:
+subversion-1.14.2-r0 webpage:
 https://subversion.apache.org/
 
-subversion-1.14.1-r7 installed size:
+subversion-1.14.2-r0 installed size:
 1044 KiB
 
-subversion-1.14.1-r7 license:
+subversion-1.14.2-r0 license:
 Apache-2.0 BSD
 
 ```
@@ -1951,16 +1951,16 @@ Apache-2.0 BSD
 ### `apk` package: `subversion-libs`
 
 ```console
-subversion-libs-1.14.1-r7 description:
+subversion-libs-1.14.2-r0 description:
 Replacement for CVS, another versioning system (svn) (libraries)
 
-subversion-libs-1.14.1-r7 webpage:
+subversion-libs-1.14.2-r0 webpage:
 https://subversion.apache.org/
 
-subversion-libs-1.14.1-r7 installed size:
+subversion-libs-1.14.2-r0 installed size:
 3628 KiB
 
-subversion-libs-1.14.1-r7 license:
+subversion-libs-1.14.2-r0 license:
 Apache-2.0 BSD
 
 ```
@@ -2070,16 +2070,16 @@ GPL-2.0-or-later
 ### `apk` package: `xz-libs`
 
 ```console
-xz-libs-5.2.5-r0 description:
+xz-libs-5.2.5-r1 description:
 Library and CLI tools for XZ and LZMA compressed files (libraries)
 
-xz-libs-5.2.5-r0 webpage:
+xz-libs-5.2.5-r1 webpage:
 https://tukaani.org/xz
 
-xz-libs-5.2.5-r0 installed size:
+xz-libs-5.2.5-r1 installed size:
 148 KiB
 
-xz-libs-5.2.5-r0 license:
+xz-libs-5.2.5-r1 license:
 GPL-2.0-or-later AND Public-Domain AND LGPL-2.1-or-later
 
 ```
