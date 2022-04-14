@@ -5,6 +5,8 @@
 -	[`emqx:4`](#emqx4)
 -	[`emqx:4.3`](#emqx43)
 -	[`emqx:4.3.5`](#emqx435)
+-	[`emqx:4.4`](#emqx44)
+-	[`emqx:4.4.2`](#emqx442)
 -	[`emqx:latest`](#emqxlatest)
 
 ## `emqx:4`
@@ -243,6 +245,24 @@ CMD ["emqx" "foreground"]
 		Last Modified: Thu, 07 Apr 2022 01:22:51 GMT  
 		Size: 789.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `emqx:4.4`
+
+```console
+$ docker pull emqx@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `emqx:4.4.2`
+
+```console
+$ docker pull emqx@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `emqx:latest`
 
