@@ -2065,9 +2065,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.15
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.dsc' systemd_245.4-4ubuntu3.15.dsc 4954 SHA512:996d262b9ce6febe25690e087bc12c2da957a9a1554dd4d186346187d0af144c3759f14e46cc052601684c9c1c65dd76ffaca0fbaad19d7819ade41d4f045e26
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.debian.tar.xz' systemd_245.4-4ubuntu3.15.debian.tar.xz 273168 SHA512:775ee33b35d6a9891ded16b381fb788f9d0cb01020720de5102175a9e4024a53a358d8b13928f2a2fb7cc2b05bf20bd80a913b314e69111b9dfa167a1ec89e45
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.dsc' systemd_245.4-4ubuntu3.15.dsc 4954 SHA512:996d262b9ce6febe25690e087bc12c2da957a9a1554dd4d186346187d0af144c3759f14e46cc052601684c9c1c65dd76ffaca0fbaad19d7819ade41d4f045e26
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.debian.tar.xz' systemd_245.4-4ubuntu3.15.debian.tar.xz 273168 SHA512:775ee33b35d6a9891ded16b381fb788f9d0cb01020720de5102175a9e4024a53a358d8b13928f2a2fb7cc2b05bf20bd80a913b314e69111b9dfa167a1ec89e45
 ```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
@@ -2255,10 +2255,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris xz-utils=5.2.4-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.dsc' xz-utils_5.2.4-1ubuntu1.dsc 2629 SHA512:09c0668c76bd1653460ae2207f2666785d6ec7bae424d168e2f5dc2c98d2c34b7f983963be27c39ac05df0ad76ccfe088b55a64a09319f26b785544d5c8ffb66
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.1.dsc' xz-utils_5.2.4-1ubuntu1.1.dsc 2604 SHA512:458e4bd7a0823dc7e5f1dcf11bd4d0653b5c3f2474835a8422918faa25ab5b5ad005aa42af70bb9a993480ae1fe4e787965b19bd2ba4bee2ddedcaa24c10376c
 'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz' xz-utils_5.2.4.orig.tar.xz 1053868 SHA512:00db7dd31a61541b1ce6946e0f21106f418dd1ac3f27cdb8682979cbc3bd777cd6dd1f04f9ba257a0a7e24041e15ca40d0dd5c130380dce62280af67a0beb97f
 'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz.asc' xz-utils_5.2.4.orig.tar.xz.asc 879 SHA512:dbfce0556bc85545ce3566a01c25e4876f560409fc2d48f2dc382b10fbd2538c61d8f2c3667d86fc7313aec86c05e53926015000320f19615e97875adae42450
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.debian.tar.xz' xz-utils_5.2.4-1ubuntu1.debian.tar.xz 135512 SHA512:9ec339da084b6aedd5d9dfafe879f7b90ae6dc473458dd8eda234e087f3aa80480b7b0792b54588d57e1b41a2c42f28ef87b8e6a8cd4bb51d43e2517f701724f
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.1.debian.tar.xz' xz-utils_5.2.4-1ubuntu1.1.debian.tar.xz 136944 SHA512:627df70d2ff3b0227d6dd74137a660c5d722cce059ee36c1db8a50105ba6c236910bba5687290a7d88c9a53ead2a3b3ab00216f279f26a57d7e4020c6db23a24
 ```
 
 ### `dpkg` source package: `zlib=1:1.2.11.dfsg-2ubuntu1.3`
