@@ -1738,9 +1738,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.15
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.dsc' systemd_245.4-4ubuntu3.15.dsc 4954 SHA512:996d262b9ce6febe25690e087bc12c2da957a9a1554dd4d186346187d0af144c3759f14e46cc052601684c9c1c65dd76ffaca0fbaad19d7819ade41d4f045e26
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.debian.tar.xz' systemd_245.4-4ubuntu3.15.debian.tar.xz 273168 SHA512:775ee33b35d6a9891ded16b381fb788f9d0cb01020720de5102175a9e4024a53a358d8b13928f2a2fb7cc2b05bf20bd80a913b314e69111b9dfa167a1ec89e45
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.dsc' systemd_245.4-4ubuntu3.15.dsc 4954 SHA512:996d262b9ce6febe25690e087bc12c2da957a9a1554dd4d186346187d0af144c3759f14e46cc052601684c9c1c65dd76ffaca0fbaad19d7819ade41d4f045e26
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.15.debian.tar.xz' systemd_245.4-4ubuntu3.15.debian.tar.xz 273168 SHA512:775ee33b35d6a9891ded16b381fb788f9d0cb01020720de5102175a9e4024a53a358d8b13928f2a2fb7cc2b05bf20bd80a913b314e69111b9dfa167a1ec89e45
 ```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
