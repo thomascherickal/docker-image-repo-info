@@ -1730,21 +1730,13 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris p11-kit=0.24.0-6
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0-6.dsc' p11-kit_0.24.0-6.dsc 2501 SHA256:c313e3ab1b9405633abe103ce44608f29556aca65c45fcc349b749bd1c114ff6
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0.orig.tar.xz' p11-kit_0.24.0.orig.tar.xz 834392 SHA256:81e6140584f635e4e956a1b93a32239acf3811ff5b2d3a5c6094e94e99d2c685
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0.orig.tar.xz.asc' p11-kit_0.24.0.orig.tar.xz.asc 833 SHA256:f9996976ae08e48ac652d2aad3f0528a75f87eaa6c17cf076ec00e7ce2fbaeed
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.0-6.debian.tar.xz' p11-kit_0.24.0-6.debian.tar.xz 23176 SHA256:076d61ccfcc53193cd40d57976a850d9c4d361b84acf6f9070c1e59930be61b1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/p11-kit/0.24.0-6/
 
-- https://sources.debian.net/src/p11-kit/0.24.0-6/ (for browsing the source)
-- https://sources.debian.net/src/p11-kit/0.24.0-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/p11-kit/0.24.0-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.4.0-11`
 
@@ -2039,20 +2031,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=3.01-1
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.01-1.dsc' sysvinit_3.01-1.dsc 2376 SHA256:3940946b5ba9c3f9c2053d6d5cb3b64a89cd1a2afa26c80abf6b956f35d04f22
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.01.orig.tar.xz' sysvinit_3.01.orig.tar.xz 126400 SHA256:4cc39f1c49f66c29e63360aea7a264a35ba2b853b41117251b9d23cf6d640b94
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.01-1.debian.tar.xz' sysvinit_3.01-1.debian.tar.xz 130496 SHA256:14aeeb78eab8621a04cdb9df9008a2c517dbee043a5f96741d4bbec6893bca5a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/3.01-1/
 
-- https://sources.debian.net/src/sysvinit/3.01-1/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/3.01-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/3.01-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1`
 
