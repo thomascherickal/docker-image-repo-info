@@ -296,14 +296,9 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=4.4.18-2ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_4.4.18-2ubuntu1.2.dsc' bash_4.4.18-2ubuntu1.2.dsc 2434 SHA512:9cac142b52cd93d5faa8db4e755c5509d2a98358a84e5522a669d3b2ad0b3bb87c9f9deb35a582d666baefb98c6e91a96d506ddf833d50b856d36768065eef97
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_4.4.18.orig.tar.xz' bash_4.4.18.orig.tar.xz 5036272 SHA512:a0c0b84133f9dc1dd404a130a6a8ac08c4551d28bf4d0a6a9be40acee5d1465270af595191cad9584f17fe098b846a70dd1f7772f771db79ff5f03e47cfd5791
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_4.4.18-2ubuntu1.2.debian.tar.xz' bash_4.4.18-2ubuntu1.2.debian.tar.xz 65236 SHA512:84ef4350f9069601a8bfe9c444400e268b927c286970270c2c635dac8946f5f499658fe822404ae662d922655a5158b019f8a4c3dcec1ffd72b1aa40b85830e4
-```
 
 ### `dpkg` source package: `boost1.65.1=1.65.1+dfsg-0ubuntu5`
 
@@ -2484,14 +2479,9 @@ Licenses: (parsed from: `/usr/share/doc/libevdev2/copyright`)
 - `GPL-2+`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libevdev=1.5.8+dfsg-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevdev/libevdev_1.5.8%2bdfsg-1ubuntu0.1.dsc' libevdev_1.5.8+dfsg-1ubuntu0.1.dsc 1628 SHA512:53ba50ed023aad891e4ad132ec10815335401be90c11d6ec0166d17126e8408e7dbec70190fc573a032a8b809d58226fe274715053a682ef47f25ac5b4430199
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevdev/libevdev_1.5.8%2bdfsg.orig.tar.xz' libevdev_1.5.8+dfsg.orig.tar.xz 304700 SHA512:800412afd607035491054bfa482e309fe91439b2dd8e31e12f73da8358e43ff1bc38909d4358e1c81e096896e96132e26f756df5f2833c168c7e15cf265cc161
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevdev/libevdev_1.5.8%2bdfsg-1ubuntu0.1.debian.tar.xz' libevdev_1.5.8+dfsg-1ubuntu0.1.debian.tar.xz 11448 SHA512:3bedc7c30e965542968b9db5daccb2e272b4384bd88ba9b539f71845773f01769f9e687713ce2818416a788c0248fcf07474c72bcd701e26f16bb4f36a47f579
-```
 
 ### `dpkg` source package: `libffi=3.2.1-8`
 
@@ -2775,15 +2765,9 @@ Licenses: (parsed from: `/usr/share/doc/libinput-bin/copyright`, `/usr/share/doc
 - `Expat`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libinput=1.10.4-1ubuntu0.18.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput_1.10.4-1ubuntu0.18.04.2.dsc' libinput_1.10.4-1ubuntu0.18.04.2.dsc 2015 SHA512:d24817269447cdcd07568c4e79854e34fee7b2de05ffff16262160d41d0d3fdd435e22ac5fbe112df3d07ef3c0399a140edf17d50682627924e17f28bce2ef0f
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput_1.10.4.orig.tar.xz' libinput_1.10.4.orig.tar.xz 493152 SHA512:b6f24f135e2396d53c0576a3b3887cd3736f2209fc448c6419cd1f1d7ee6aedff8e067f4b780f50ada5a4418d5bc47a4010cb328f366ee7fd1a2dba1ffc96c38
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput_1.10.4.orig.tar.xz.asc' libinput_1.10.4.orig.tar.xz.asc 241 SHA512:6d36abc31fcbb0892e694159a42905576bdb9e818f57ca7845ad3015a6fa9db80afbd0e98034a13eabcef67b5fe0ed705830db6f9805900c9f86a1e986daad17
-'http://archive.ubuntu.com/ubuntu/pool/main/libi/libinput/libinput_1.10.4-1ubuntu0.18.04.2.debian.tar.xz' libinput_1.10.4-1ubuntu0.18.04.2.debian.tar.xz 10000 SHA512:c627c047b680594f3ce8f229b88c88898e6fa52dca0fc7180bc3d3763962ce45bfa013c9323205e7787fb6a0b920fa9945b2dee25acec696681db31ce7bdd63e
-```
 
 ### `dpkg` source package: `libjpeg-turbo=1.5.2-0ubuntu5.18.04.4`
 
