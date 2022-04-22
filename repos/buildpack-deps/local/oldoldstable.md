@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:de7321966554baec20187865aed950828f8e3bcf4e29b7f26972163f4b066a49`
-- Created: `2022-03-29T17:35:15.198523711Z`
+- Image ID: `sha256:3c719bcd09aeb96380650107fd41c848663f91d941a3d5126585cf69f960599f`
+- Created: `2022-04-20T07:02:54.159818474Z`
 - Virtual Size: ~ 835.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1853,11 +1853,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gts/0.7.6+darcs121130-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gts/0.7.6+darcs121130-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gzip=1.6-5`
+### `dpkg` source package: `gzip=1.6-5+deb9u1`
 
 Binary Packages:
 
-- `gzip=1.6-5+b1`
+- `gzip=1.6-5+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 
@@ -1866,7 +1866,7 @@ Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gzip=1.6-5
+$ apt-get source -qq --print-uris gzip=1.6-5+deb9u1
 'http://security.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.6-5%2bdeb9u1.dsc' gzip_1.6-5+deb9u1.dsc 1946 SHA256:ba2e9a0443b6befcc2bd5d6f82679f18eb05e1c6429766422cab47c53d25dc93
 'http://security.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.6.orig.tar.gz' gzip_1.6.orig.tar.gz 1074924 SHA256:97eb83b763d9e5ad35f351fe5517e6b71521d7aac7acf3e3cacdb6b1496d8f7e
 'http://security.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.6-5%2bdeb9u1.debian.tar.xz' gzip_1.6-5+deb9u1.debian.tar.xz 16004 SHA256:6ec66e03a1bc272a00b19c94d4d90f1e4d6b4970f0faa4dd29118b52ed1ed1a2
@@ -1874,9 +1874,9 @@ $ apt-get source -qq --print-uris gzip=1.6-5
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gzip/1.6-5/ (for browsing the source)
-- https://sources.debian.net/src/gzip/1.6-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gzip/1.6-5/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gzip/1.6-5+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/gzip/1.6-5+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gzip/1.6-5+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `harfbuzz=1.4.2-1`
 
@@ -3681,24 +3681,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libxinerama/2:1.1.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libxinerama/2:1.1.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libxml2=2.9.4+dfsg1-2.2+deb9u5`
+### `dpkg` source package: `libxml2=2.9.4+dfsg1-2.2+deb9u6`
 
 Binary Packages:
 
-- `libxml2:amd64=2.9.4+dfsg1-2.2+deb9u5`
-- `libxml2-dev:amd64=2.9.4+dfsg1-2.2+deb9u5`
+- `libxml2:amd64=2.9.4+dfsg1-2.2+deb9u6`
+- `libxml2-dev:amd64=2.9.4+dfsg1-2.2+deb9u6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-2.2+deb9u6
+'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-2.2%2bdeb9u6.dsc' libxml2_2.9.4+dfsg1-2.2+deb9u6.dsc 2894 SHA256:5002f54c3f12aef19f932950c12cb92a6e1c00dcb085ac0e416088160a9e5c41
+'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1.orig.tar.gz' libxml2_2.9.4+dfsg1.orig.tar.gz 4067518 SHA256:57441479117cd4b3a3fbe1eda8028d578e3b2de7e745362f67669a0cf5fb3726
+'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-2.2%2bdeb9u6.debian.tar.xz' libxml2_2.9.4+dfsg1-2.2+deb9u6.debian.tar.xz 41540 SHA256:3edf83ed72cc8bfab3356f848a6ef7dce5dfd86524664dd83ab02574d65546e7
+```
 
-- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-2.2+deb9u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u6/ (for browsing the source)
+- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-2.2+deb9u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxpm=1:3.5.12-1`
 
@@ -4417,12 +4424,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openexr/2.2.0-11+deb9u4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openexr/2.2.0-11+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openjpeg2=2.1.2-1.1+deb9u6`
+### `dpkg` source package: `openjpeg2=2.1.2-1.1+deb9u7`
 
 Binary Packages:
 
-- `libopenjp2-7:amd64=2.1.2-1.1+deb9u6`
-- `libopenjp2-7-dev=2.1.2-1.1+deb9u6`
+- `libopenjp2-7:amd64=2.1.2-1.1+deb9u7`
+- `libopenjp2-7-dev=2.1.2-1.1+deb9u7`
 
 Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`, `/usr/share/doc/libopenjp2-7-dev/copyright`)
 
@@ -4436,13 +4443,20 @@ Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`, `/usr/share/doc
 - `ZLIB`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openjpeg2=2.1.2-1.1+deb9u7
+'http://security.debian.org/debian-security/pool/updates/main/o/openjpeg2/openjpeg2_2.1.2-1.1%2bdeb9u7.dsc' openjpeg2_2.1.2-1.1+deb9u7.dsc 2822 SHA256:f29a6e1cd404a7d53918ed1711e12b293cfa8332e62eb6dd671f0cc5837534b1
+'http://security.debian.org/debian-security/pool/updates/main/o/openjpeg2/openjpeg2_2.1.2.orig.tar.gz' openjpeg2_2.1.2.orig.tar.gz 1987071 SHA256:4ce77b6ef538ef090d9bde1d5eeff8b3069ab56c4906f083475517c2c023dfa7
+'http://security.debian.org/debian-security/pool/updates/main/o/openjpeg2/openjpeg2_2.1.2-1.1%2bdeb9u7.debian.tar.xz' openjpeg2_2.1.2-1.1+deb9u7.debian.tar.xz 31800 SHA256:e724b7d585b9cc1db6deeeefa2236e882a521d11491ffe3589170cb95c032d1f
+```
 
-- http://snapshot.debian.org/package/openjpeg2/2.1.2-1.1+deb9u6/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openjpeg2/2.1.2-1.1+deb9u7/ (for browsing the source)
+- https://sources.debian.net/src/openjpeg2/2.1.2-1.1+deb9u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openjpeg2/2.1.2-1.1+deb9u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u8`
 
@@ -5414,23 +5428,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tiff/4.0.8-2+deb9u8/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tiff/4.0.8-2+deb9u8/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-0+deb9u2`
+### `dpkg` source package: `tzdata=2021a-0+deb9u3`
 
 Binary Packages:
 
-- `tzdata=2021a-0+deb9u2`
+- `tzdata=2021a-0+deb9u3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-0+deb9u3
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb9u3.dsc' tzdata_2021a-0+deb9u3.dsc 2029 SHA256:2882260ade8d64b1f1b436ce6f7abf2cfdc63c8bfedad15457f78d99d5260751
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb9u3.debian.tar.xz' tzdata_2021a-0+deb9u3.debian.tar.xz 107648 SHA256:a7b6917310703b1d9d46d3854154ccf3a91557825d04eaa5217c409290d1b126
+```
 
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb9u2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-0+deb9u3/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-0+deb9u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb9u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0036`
 
@@ -5783,13 +5804,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/xtrans/1.3.5-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/xtrans/1.3.5-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `xz-utils=5.2.2-1.2`
+### `dpkg` source package: `xz-utils=5.2.2-1.2+deb9u1`
 
 Binary Packages:
 
-- `liblzma-dev:amd64=5.2.2-1.2+b1`
-- `liblzma5:amd64=5.2.2-1.2+b1`
-- `xz-utils=5.2.2-1.2+b1`
+- `liblzma-dev:amd64=5.2.2-1.2+deb9u1`
+- `liblzma5:amd64=5.2.2-1.2+deb9u1`
+- `xz-utils=5.2.2-1.2+deb9u1`
 
 Licenses: (parsed from: `/usr/share/doc/liblzma-dev/copyright`, `/usr/share/doc/liblzma5/copyright`, `/usr/share/doc/xz-utils/copyright`)
 
@@ -5812,7 +5833,7 @@ Licenses: (parsed from: `/usr/share/doc/liblzma-dev/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris xz-utils=5.2.2-1.2
+$ apt-get source -qq --print-uris xz-utils=5.2.2-1.2+deb9u1
 'http://security.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.2-1.2%2bdeb9u1.dsc' xz-utils_5.2.2-1.2+deb9u1.dsc 2603 SHA256:fc38d8ae04cf8bd29da50ee7bdff3a6b3ccc02585cfa334ce36a05aa5fb71f2e
 'http://security.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.2.orig.tar.xz' xz-utils_5.2.2.orig.tar.xz 1016404 SHA256:f341b1906ebcdde291dd619399ae944600edc9193619dd0c0110a5f05bfcc89e
 'http://security.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.2.orig.tar.xz.asc' xz-utils_5.2.2.orig.tar.xz.asc 543 SHA256:2cc0575556e1331b3f468e6e7dca5969ce86efcc315d62672279b4e68b2e449f
@@ -5821,16 +5842,16 @@ $ apt-get source -qq --print-uris xz-utils=5.2.2-1.2
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/xz-utils/5.2.2-1.2/ (for browsing the source)
-- https://sources.debian.net/src/xz-utils/5.2.2-1.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xz-utils/5.2.2-1.2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/xz-utils/5.2.2-1.2+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/xz-utils/5.2.2-1.2+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/xz-utils/5.2.2-1.2+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `zlib=1:1.2.8.dfsg-5`
+### `dpkg` source package: `zlib=1:1.2.8.dfsg-5+deb9u1`
 
 Binary Packages:
 
-- `zlib1g:amd64=1:1.2.8.dfsg-5`
-- `zlib1g-dev:amd64=1:1.2.8.dfsg-5`
+- `zlib1g:amd64=1:1.2.8.dfsg-5+deb9u1`
+- `zlib1g-dev:amd64=1:1.2.8.dfsg-5+deb9u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -5839,14 +5860,14 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris zlib=1:1.2.8.dfsg-5
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.8.dfsg-5.dsc' zlib_1.2.8.dfsg-5.dsc 2259 SHA256:35ebfdbb74b3563d344b2bb946909f5d3221cdf971876549ea7ccec01fabcbec
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.8.dfsg.orig.tar.gz' zlib_1.2.8.dfsg.orig.tar.gz 361943 SHA256:2caecc2c3f1ef8b87b8f72b128a03e61c307e8c14f5ec9b422ef7914ba75cf9f
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.8.dfsg-5.debian.tar.xz' zlib_1.2.8.dfsg-5.debian.tar.xz 18500 SHA256:7b88f58d1bfe8e873b8362ede3d0bc569793decc60094189fad1a110599cdd95
+$ apt-get source -qq --print-uris zlib=1:1.2.8.dfsg-5+deb9u1
+'http://security.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.8.dfsg-5%2bdeb9u1.dsc' zlib_1.2.8.dfsg-5+deb9u1.dsc 2608 SHA256:634f74b7bc5d44bb24fee4c830fed51ac71d34894f9d25ff956f561aab5dca7f
+'http://security.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.8.dfsg.orig.tar.gz' zlib_1.2.8.dfsg.orig.tar.gz 361943 SHA256:2caecc2c3f1ef8b87b8f72b128a03e61c307e8c14f5ec9b422ef7914ba75cf9f
+'http://security.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.8.dfsg-5%2bdeb9u1.debian.tar.xz' zlib_1.2.8.dfsg-5+deb9u1.debian.tar.xz 22192 SHA256:cb5d867789b4ebcc2d70fcec02aeab5c9f42c8d55aa3c2677a517de9f3a90e5f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/zlib/1:1.2.8.dfsg-5/ (for browsing the source)
-- https://sources.debian.net/src/zlib/1:1.2.8.dfsg-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/zlib/1:1.2.8.dfsg-5/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/zlib/1:1.2.8.dfsg-5+deb9u1/ (for browsing the source)
+- https://sources.debian.net/src/zlib/1:1.2.8.dfsg-5+deb9u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/zlib/1:1.2.8.dfsg-5+deb9u1/ (for access to the source package after it no longer exists in the archive)
