@@ -1,7 +1,7 @@
 ## `openjdk:18-windowsservercore`
 
 ```console
-$ docker pull openjdk@sha256:6154c52442a1a41b20db354979035958491b957b57f8c75ba34c2093da082faa
+$ docker pull openjdk@sha256:45d0b204cf9ed5d4ba8eef02628c41415773d4f1dff9f00dea3fb4be03f42795
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull openjdk@sha256:6154c52442a1a41b20db354979035958491b957b57f8c75ba34
 ### `openjdk:18-windowsservercore` - windows version 10.0.20348.643; amd64
 
 ```console
-$ docker pull openjdk@sha256:94a1a4adefd0a04b893f2c70700af6a910f3fbc7d8ed11c87a2d2c992d599410
+$ docker pull openjdk@sha256:3182053e6f5965f58b8063acb264a375fec4fa7921b1fd88d942b85cf41ee39c
 ```
 
 -	Docker Version: 20.10.8
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.4 GB (2412704419 bytes)**  
+-	Total Size: **2.4 GB (2412780799 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:332d9ad923969be14edce68f8955e976515646a274bf83617a4e2d030c9ca5f2`
+-	Image ID: `sha256:34ce67e15c27bf8cc42d8967991b773eb9be3e2ef12aed45f23efc2690b195b0`
 -	Default Command: `["jshell"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -36,15 +36,15 @@ RUN Write-Host 'Enabling TLS 1.2 (https://githubengineering.com/crypto-removal-n
 ENV JAVA_HOME=C:\openjdk-18
 # Wed, 13 Apr 2022 17:01:44 GMT
 RUN $newPath = ('{0}\bin;{1}' -f $env:JAVA_HOME, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	setx /M PATH $newPath; 	Write-Host 'Complete.'
-# Wed, 13 Apr 2022 17:01:45 GMT
-ENV JAVA_VERSION=18
-# Wed, 13 Apr 2022 17:01:46 GMT
-ENV JAVA_URL=https://download.java.net/java/GA/jdk18/43f95e8614114aeaa8e8a5fcf20a682d/36/GPL/openjdk-18_windows-x64_bin.zip
-# Wed, 13 Apr 2022 17:01:47 GMT
-ENV JAVA_SHA256=a5b91d4c12752d44aa75df70ae3e2311287b3e60c288b07dade106376c688277
-# Wed, 13 Apr 2022 17:02:36 GMT
+# Thu, 21 Apr 2022 21:37:33 GMT
+ENV JAVA_VERSION=18.0.1
+# Thu, 21 Apr 2022 21:37:34 GMT
+ENV JAVA_URL=https://download.java.net/java/GA/jdk18.0.1/3f48cabb83014f9fab465e280ccf630b/10/GPL/openjdk-18.0.1_windows-x64_bin.zip
+# Thu, 21 Apr 2022 21:37:35 GMT
+ENV JAVA_SHA256=72b1e49d83f529b340ae51f4082586d66555b740b5891ea278c4ea72dc0e29a7
+# Thu, 21 Apr 2022 21:38:31 GMT
 RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:JAVA_URL -OutFile 'openjdk.zip'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $env:JAVA_SHA256); 	if ((Get-FileHash openjdk.zip -Algorithm sha256).Hash -ne $env:JAVA_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	New-Item -ItemType Directory -Path C:\temp | Out-Null; 	Expand-Archive openjdk.zip -DestinationPath C:\temp; 	Move-Item -Path C:\temp\* -Destination $env:JAVA_HOME; 	Remove-Item C:\temp; 		Write-Host 'Removing ...'; 	Remove-Item openjdk.zip -Force; 		Write-Host 'Verifying install ...'; 	Write-Host '  javac --version'; javac --version; 	Write-Host '  java --version'; java --version; 		Write-Host 'Complete.'
-# Wed, 13 Apr 2022 17:02:37 GMT
+# Thu, 21 Apr 2022 21:38:33 GMT
 CMD ["jshell"]
 ```
 
@@ -71,38 +71,38 @@ CMD ["jshell"]
 		Last Modified: Tue, 19 Apr 2022 00:54:32 GMT  
 		Size: 560.3 KB (560302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc1ba97c9fad0a85d1d5545b8555fded8914e31a3c6c573be5eb437b5ed3d255`  
-		Last Modified: Tue, 19 Apr 2022 00:54:29 GMT  
-		Size: 1.4 KB (1425 bytes)  
+	-	`sha256:25f0159c47216516db24742ea3aa03e45e86dbcbecfaee87bed4849524122617`  
+		Last Modified: Thu, 21 Apr 2022 22:20:18 GMT  
+		Size: 1.4 KB (1438 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4323de40062b0126c2484aa14b6cd4d752f9592523db3f0eebedf7b50f366d96`  
-		Last Modified: Tue, 19 Apr 2022 00:54:30 GMT  
-		Size: 1.4 KB (1390 bytes)  
+	-	`sha256:9b3b5a07efba9177a5e4b516f6bb7d8813d1713504a7dcd17f3cffd26592ce1b`  
+		Last Modified: Thu, 21 Apr 2022 22:20:18 GMT  
+		Size: 1.4 KB (1410 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99ee587d53cd3a1606820686a93160d4a82143881e8a06048944220ac4fa36dc`  
-		Last Modified: Tue, 19 Apr 2022 00:54:29 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:9928def24c0efd4e42fe35048f9c42264f676fca5a517794f1e7d87c0d11bc52`  
+		Last Modified: Thu, 21 Apr 2022 22:20:18 GMT  
+		Size: 1.4 KB (1408 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e6401bd1a593672e387666d0825220759fef1a643dfcd09d22b50db21d90f3f7`  
-		Last Modified: Tue, 19 Apr 2022 00:54:52 GMT  
-		Size: 184.6 MB (184551161 bytes)  
+	-	`sha256:e59c9828032a0842f17671e72ad095d61758dc4bef1ef8888adc0c772d2436c9`  
+		Last Modified: Thu, 21 Apr 2022 22:23:37 GMT  
+		Size: 184.6 MB (184627534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a97388c19bf624409764954295b2c691d65e52fee8c65349170e227dd30bf79f`  
-		Last Modified: Tue, 19 Apr 2022 00:54:29 GMT  
-		Size: 1.4 KB (1436 bytes)  
+	-	`sha256:1d3606e57c729ab105264878af6764d9f23e52124129c0bdf741fb5e0fddbcfb`  
+		Last Modified: Thu, 21 Apr 2022 22:20:18 GMT  
+		Size: 1.4 KB (1419 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `openjdk:18-windowsservercore` - windows version 10.0.17763.2803; amd64
 
 ```console
-$ docker pull openjdk@sha256:e3205c069bce9b265ae7b055f40f71a19f77d5d68a8d5af379bbc972fdcf842d
+$ docker pull openjdk@sha256:f441b2b73731643496db6eb075cdce23d081d59b1fc8eae8e76ddf14f544cea4
 ```
 
 -	Docker Version: 20.10.8
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.9 GB (2900936403 bytes)**  
+-	Total Size: **2.9 GB (2901023989 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d2eea10f5eeee3813bd115dcbd65800667f1c96360ae2489a5cbef59b8a13284`
+-	Image ID: `sha256:bbecc3ed9108d06b8815792424cc1656b5676c23e633c724c7d42ed01560531a`
 -	Default Command: `["jshell"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -119,15 +119,15 @@ RUN Write-Host 'Enabling TLS 1.2 (https://githubengineering.com/crypto-removal-n
 ENV JAVA_HOME=C:\openjdk-18
 # Wed, 13 Apr 2022 17:03:43 GMT
 RUN $newPath = ('{0}\bin;{1}' -f $env:JAVA_HOME, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	setx /M PATH $newPath; 	Write-Host 'Complete.'
-# Wed, 13 Apr 2022 17:03:43 GMT
-ENV JAVA_VERSION=18
-# Wed, 13 Apr 2022 17:03:45 GMT
-ENV JAVA_URL=https://download.java.net/java/GA/jdk18/43f95e8614114aeaa8e8a5fcf20a682d/36/GPL/openjdk-18_windows-x64_bin.zip
-# Wed, 13 Apr 2022 17:03:45 GMT
-ENV JAVA_SHA256=a5b91d4c12752d44aa75df70ae3e2311287b3e60c288b07dade106376c688277
-# Wed, 13 Apr 2022 17:05:10 GMT
+# Thu, 21 Apr 2022 21:38:46 GMT
+ENV JAVA_VERSION=18.0.1
+# Thu, 21 Apr 2022 21:38:47 GMT
+ENV JAVA_URL=https://download.java.net/java/GA/jdk18.0.1/3f48cabb83014f9fab465e280ccf630b/10/GPL/openjdk-18.0.1_windows-x64_bin.zip
+# Thu, 21 Apr 2022 21:38:48 GMT
+ENV JAVA_SHA256=72b1e49d83f529b340ae51f4082586d66555b740b5891ea278c4ea72dc0e29a7
+# Thu, 21 Apr 2022 21:40:34 GMT
 RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:JAVA_URL -OutFile 'openjdk.zip'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $env:JAVA_SHA256); 	if ((Get-FileHash openjdk.zip -Algorithm sha256).Hash -ne $env:JAVA_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	New-Item -ItemType Directory -Path C:\temp | Out-Null; 	Expand-Archive openjdk.zip -DestinationPath C:\temp; 	Move-Item -Path C:\temp\* -Destination $env:JAVA_HOME; 	Remove-Item C:\temp; 		Write-Host 'Removing ...'; 	Remove-Item openjdk.zip -Force; 		Write-Host 'Verifying install ...'; 	Write-Host '  javac --version'; javac --version; 	Write-Host '  java --version'; java --version; 		Write-Host 'Complete.'
-# Wed, 13 Apr 2022 17:05:11 GMT
+# Thu, 21 Apr 2022 21:40:35 GMT
 CMD ["jshell"]
 ```
 
@@ -154,23 +154,23 @@ CMD ["jshell"]
 		Last Modified: Tue, 19 Apr 2022 00:55:06 GMT  
 		Size: 322.7 KB (322657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:84ae47d3ef32863f10d1a7d756c26542d80744b506651f24ebb75c54e7093f0e`  
-		Last Modified: Tue, 19 Apr 2022 00:55:03 GMT  
-		Size: 1.4 KB (1392 bytes)  
+	-	`sha256:bf8d81d79e5d20e331cc53c58fe7e4043cadc50658f3ff9b728659ae40e468ca`  
+		Last Modified: Thu, 21 Apr 2022 22:23:57 GMT  
+		Size: 1.4 KB (1427 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3d12841629e767ee09bfac5a6bb908d54a5f2f2ea08fa2b6b5c3774c89d47022`  
-		Last Modified: Tue, 19 Apr 2022 00:55:03 GMT  
-		Size: 1.4 KB (1430 bytes)  
+	-	`sha256:8b3f8e15f36e9a1263c80e9306ba8b666e28b3e907b76e4b80f3d79c38f2ff41`  
+		Last Modified: Thu, 21 Apr 2022 22:23:57 GMT  
+		Size: 1.4 KB (1423 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:069efa4bec45075fe11178d91bf2b07232f5b1690aedf625e42473bb8558c8dc`  
-		Last Modified: Tue, 19 Apr 2022 00:55:04 GMT  
+	-	`sha256:92d1abcb327115aff5e9839327fbe252c248e934781424273340c5de136df335`  
+		Last Modified: Thu, 21 Apr 2022 22:23:57 GMT  
+		Size: 1.4 KB (1443 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0aa1c358de03e71a15fcf927bfd8e7cc8635047756c441148b35d6e27d78756f`  
+		Last Modified: Thu, 21 Apr 2022 22:27:20 GMT  
+		Size: 184.4 MB (184405769 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7d06bc08c68ffac87d7fd9bfe6a955a1508e1038ce237e82c51db87a2943cc1e`  
+		Last Modified: Thu, 21 Apr 2022 22:23:57 GMT  
 		Size: 1.4 KB (1418 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a1a1d7bf9df2fc7e59f0c6f0870b30c3ff0f885e7e6ba66831bbd26e78758d52`  
-		Last Modified: Tue, 19 Apr 2022 00:58:25 GMT  
-		Size: 184.3 MB (184318234 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:867a6bf18f562371ce49815ab0d00025a1ad65eba5590d24e6b07349056dcbfa`  
-		Last Modified: Tue, 19 Apr 2022 00:55:03 GMT  
-		Size: 1.4 KB (1420 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
