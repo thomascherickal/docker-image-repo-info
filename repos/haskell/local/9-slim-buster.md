@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ca3205460f1dca64d4dd88bafba8a68e6b0786b7a28e2af709a36109b6bb17a3`
-- Created: `2022-03-29T17:51:51.651385151Z`
+- Image ID: `sha256:810fded7b58e5a381c4220c438ece5b79f93f1a069da0c233052fde981ebca31`
+- Created: `2022-04-20T09:32:12.997058982Z`
 - Virtual Size: ~ 1.65 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -2559,9 +2559,8 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `liblzma5:amd64=5.2.4-1`
-- `xz-utils=5.2.4-1`
 
-Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`, `/usr/share/doc/xz-utils/copyright`)
+Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
 
 - `Autoconf`
 - `GPL-2`
@@ -2595,12 +2594,51 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/xz-utils/5.2.4-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/xz-utils/5.2.4-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `zlib=1:1.2.11.dfsg-1`
+### `dpkg` source package: `xz-utils=5.2.4-1+deb10u1`
 
 Binary Packages:
 
-- `zlib1g:amd64=1:1.2.11.dfsg-1`
-- `zlib1g-dev:amd64=1:1.2.11.dfsg-1`
+- `xz-utils=5.2.4-1+deb10u1`
+
+Licenses: (parsed from: `/usr/share/doc/xz-utils/copyright`)
+
+- `Autoconf`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-3`
+- `LGPL-2`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `PD`
+- `PD-debian`
+- `config-h`
+- `noderivs`
+- `none`
+- `permissive-fsf`
+- `permissive-nowarranty`
+- `probably-PD`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris xz-utils=5.2.4-1+deb10u1
+'http://security.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.4-1%2bdeb10u1.dsc' xz-utils_5.2.4-1+deb10u1.dsc 2429 SHA256:6da82f913d22a8385837b3bb4fb9a89a34a07dea21ea6e73d22b9e225a5c895f
+'http://security.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz' xz-utils_5.2.4.orig.tar.xz 1053868 SHA256:9717ae363760dedf573dad241420c5fea86256b65bc21d2cf71b2b12f0544f4b
+'http://security.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.4-1%2bdeb10u1.debian.tar.xz' xz-utils_5.2.4-1+deb10u1.debian.tar.xz 136768 SHA256:fcf83de6468a928427734bca3a39d3813b6f0b6b5beeffaede35bba7f18e3746
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/xz-utils/5.2.4-1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/xz-utils/5.2.4-1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/xz-utils/5.2.4-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `zlib=1:1.2.11.dfsg-1+deb10u1`
+
+Binary Packages:
+
+- `zlib1g:amd64=1:1.2.11.dfsg-1+deb10u1`
+- `zlib1g-dev:amd64=1:1.2.11.dfsg-1+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`, `/usr/share/doc/zlib1g-dev/copyright`)
 
@@ -2609,14 +2647,14 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`, `/usr/share/doc/zlib1
 Source:
 
 ```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-1
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1.dsc' zlib_1.2.11.dfsg-1.dsc 2266 SHA256:bf21ab4d60cb836725162f5072884596e781a2f4974182af1868f546306eb8c8
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1.debian.tar.xz' zlib_1.2.11.dfsg-1.debian.tar.xz 18956 SHA256:00b95b629fbe9a5181f8ba1ceddedf627aba1ab42e47f5916be8a41deb54098a
+$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-1+deb10u1
+'http://security.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.dsc' zlib_1.2.11.dfsg-1+deb10u1.dsc 2774 SHA256:3eddd036f314f8a7717c41fe7d3c935653afeb6b7f7bf6d9ad80c10ef1c4bdc3
+'http://security.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
+'http://security.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.debian.tar.xz' zlib_1.2.11.dfsg-1+deb10u1.debian.tar.xz 23092 SHA256:eb26660e5b8a39f945a4fe1284e29b0279ded3513327e3cbd51c51921758f13f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
