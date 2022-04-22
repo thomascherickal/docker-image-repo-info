@@ -129,12 +129,13 @@ ENTRYPOINT ["/usr/local/bin/docker-entrypoint"]
 ## `logstash:7.17.3`
 
 ```console
-$ docker pull logstash@sha256:5caa60253f6ef7623a082a9ee01602f149f233e6149d27ed33d9ee7d872ab544
+$ docker pull logstash@sha256:099a88d870ab0161121fe307981ebb9b855188405f9f67a815f44b09e82d755a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Platforms: 2
 	-	linux; amd64
+	-	linux; arm64 variant v8
 
 ### `logstash:7.17.3` - linux; amd64
 
@@ -244,15 +245,124 @@ ENTRYPOINT ["/usr/local/bin/docker-entrypoint"]
 		Size: 1.7 MB (1663760 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `logstash:7.17.3` - linux; arm64 variant v8
+
+```console
+$ docker pull logstash@sha256:741ad283259378a1d34ef765c60aaeffbd5d856f37766defb6220defee4542f4
+```
+
+-	Docker Version: 20.10.14
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **425.3 MB (425319468 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:e8f6f900a408f2b2c307670d0629be6924413aa7e19a27ebdda3ac71653b89cd`
+-	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint"]`
+
+```dockerfile
+# Tue, 05 Apr 2022 22:40:59 GMT
+ADD file:113ba5e7bc74d50e8d35449f8a62712359e2f00146e03eee822c28c8c6f59368 in / 
+# Tue, 05 Apr 2022 22:41:00 GMT
+CMD ["bash"]
+# Tue, 19 Apr 2022 08:27:10 GMT
+RUN for iter in {1..10}; do export DEBIAN_FRONTEND=noninteractive && apt-get update -y &&     apt-get upgrade -y &&     apt-get install -y procps findutils tar gzip curl && apt-get install -y locales && apt-get clean all && locale-gen 'en_US.UTF-8' &&     apt-get clean metadata && exit_code=0 && break || exit_code=$? &&     echo "packaging error: retry $iter in 10s" &&     apt-get clean all && apt-get clean metadata && sleep 10; done;     (exit $exit_code)
+# Tue, 19 Apr 2022 08:27:11 GMT
+RUN groupadd --gid 1000 logstash &&     adduser --uid 1000 --gid 1000       --home /usr/share/logstash --no-create-home       logstash
+# Tue, 19 Apr 2022 08:27:30 GMT
+RUN curl -Lo - http://localhost:8000/logstash-7.17.3-linux-$(arch).tar.gz |     tar zxf - -C /usr/share &&     mv /usr/share/logstash-7.17.3 /usr/share/logstash &&     chown --recursive logstash:logstash /usr/share/logstash/ &&     chown -R logstash:root /usr/share/logstash &&     chmod -R g=u /usr/share/logstash &&     mkdir /licenses/ &&     mv /usr/share/logstash/NOTICE.TXT /licenses/NOTICE.TXT &&     mv /usr/share/logstash/LICENSE.txt /licenses/LICENSE.txt &&     find /usr/share/logstash -type d -exec chmod g+s {} \; &&     ln -s /usr/share/logstash /opt/logstash
+# Tue, 19 Apr 2022 08:27:32 GMT
+WORKDIR /usr/share/logstash
+# Tue, 19 Apr 2022 08:27:32 GMT
+ENV ELASTIC_CONTAINER=true
+# Tue, 19 Apr 2022 08:27:32 GMT
+ENV PATH=/usr/share/logstash/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 19 Apr 2022 08:27:32 GMT
+ADD file:1183410472ec370104718a08e1144081518db1d006a8cc82de824a34455ab3f3 in config/pipelines.yml 
+# Tue, 19 Apr 2022 08:27:33 GMT
+ADD file:83ab096464b764c812ae68c2872c05d48ee1620e6a1629948d52c13ac6dcfe11 in config/logstash.yml 
+# Tue, 19 Apr 2022 08:27:33 GMT
+ADD file:4f39d77a8986c28d67e673d4691e69ca9c175574128b0819977c2d1bb0d6e950 in config/ 
+# Tue, 19 Apr 2022 08:27:33 GMT
+ADD file:0cd9cc51daf5f37b2aa8aae8cf3570a3680e22852afb2803ccb87ddcd3369f52 in pipeline/logstash.conf 
+# Tue, 19 Apr 2022 08:27:33 GMT
+RUN chown --recursive logstash:root config/ pipeline/
+# Tue, 19 Apr 2022 08:27:33 GMT
+ENV LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
+# Tue, 19 Apr 2022 08:27:33 GMT
+ADD file:29dd60f159d64086c20a7a02f84a9314f44b2290304547233fb96744325b1245 in /usr/local/bin/ 
+# Tue, 19 Apr 2022 08:27:34 GMT
+RUN chmod 0755 /usr/local/bin/docker-entrypoint
+# Tue, 19 Apr 2022 08:27:34 GMT
+USER 1000
+# Tue, 19 Apr 2022 08:27:34 GMT
+ADD file:86be8b3554008b0941aee895258eda0ddb8a6aa71aaa83d0b5f7ef3c5ef5697e in /usr/local/bin/ 
+# Tue, 19 Apr 2022 08:27:34 GMT
+EXPOSE 5044 9600
+# Tue, 19 Apr 2022 08:27:34 GMT
+LABEL org.label-schema.schema-version=1.0 org.label-schema.vendor=Elastic org.opencontainers.image.vendor=Elastic org.label-schema.name=logstash org.opencontainers.image.title=logstash org.label-schema.version=7.17.3 org.opencontainers.image.version=7.17.3 org.label-schema.url=https://www.elastic.co/products/logstash org.label-schema.vcs-url=https://github.com/elastic/logstash org.label-schema.license=Elastic License org.opencontainers.image.licenses=Elastic License org.opencontainers.image.description=Logstash is a free and open server-side data processing pipeline that ingests data from a multitude of sources, transforms it, and then sends it to your favorite 'stash.' org.label-schema.build-date=2022-04-19T08:13:41+00:00 org.opencontainers.image.created=2022-04-19T08:13:41+00:00
+# Tue, 19 Apr 2022 08:27:34 GMT
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint"]
+```
+
+-	Layers:
+	-	`sha256:185e8a4c100571f111d924b5d4399d89f163bf95d71ce2c6a33f656a66c52f0a`  
+		Last Modified: Tue, 05 Apr 2022 13:15:01 GMT  
+		Size: 27.2 MB (27169393 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:72f656df8d13777535b0ffcb2fa4ae3c9dc1b8db0b89b79da7a8010ddba4453b`  
+		Last Modified: Thu, 21 Apr 2022 22:21:44 GMT  
+		Size: 33.8 MB (33790372 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7d15b41926ad51c2c56e743218da12cea4c35508023bb72f74f08b4dc022fbb4`  
+		Last Modified: Thu, 21 Apr 2022 22:21:40 GMT  
+		Size: 1.8 KB (1834 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8f290ae5e9e95f665ed49c5c92a1d54da6b03ec7b90dbbe486054cd8fcb23063`  
+		Last Modified: Thu, 21 Apr 2022 22:22:13 GMT  
+		Size: 362.8 MB (362822505 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:62bb0e5fde34f444a51dbd5cc4e4a48dea0f4dc6d7d89e36c67d9cb28c451447`  
+		Last Modified: Thu, 21 Apr 2022 22:21:40 GMT  
+		Size: 384.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:66946eec95c036ab6a9f81bf564162a19685df6e04e3cf62b51c29a3b1098720`  
+		Last Modified: Thu, 21 Apr 2022 22:21:40 GMT  
+		Size: 282.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a960d0cee8a37bc3245b75477754417838915f4c9f81adc7c8265ee0d9344d4e`  
+		Last Modified: Thu, 21 Apr 2022 22:21:38 GMT  
+		Size: 477.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:282c27caf75d29c1737284d5a0a118e80c6a24f149d92e395663c881c6a50778`  
+		Last Modified: Thu, 21 Apr 2022 22:21:37 GMT  
+		Size: 305.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:de5f13c66e688715f3f02fe8c157fd93a430e3848176c0fdb3011fc8517ecf82`  
+		Last Modified: Thu, 21 Apr 2022 22:21:37 GMT  
+		Size: 2.8 KB (2808 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7d44835bb7864cecd61d2811b3438b403dce13e35f9cf89ce5cc5ec6cf2fbc98`  
+		Last Modified: Thu, 21 Apr 2022 22:21:37 GMT  
+		Size: 496.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7d44835bb7864cecd61d2811b3438b403dce13e35f9cf89ce5cc5ec6cf2fbc98`  
+		Last Modified: Thu, 21 Apr 2022 22:21:37 GMT  
+		Size: 496.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:80993fb213b05786fb19a37fa3d1edba62bc95914e96dfc24b600c9ec352f3c1`  
+		Last Modified: Thu, 21 Apr 2022 22:21:37 GMT  
+		Size: 1.5 MB (1530116 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `logstash:8.1.3`
 
 ```console
-$ docker pull logstash@sha256:df63656336f19c0f548c8cae9d5758955ddf8fd4c7d5f5e738b4793446fe17f5
+$ docker pull logstash@sha256:5fe2c823d7b6f24d014e9093327f654d656e22cc8b334388ddca73bb3dd3c562
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Platforms: 2
 	-	linux; amd64
+	-	linux; arm64 variant v8
 
 ### `logstash:8.1.3` - linux; amd64
 
@@ -360,4 +470,112 @@ ENTRYPOINT ["/usr/local/bin/docker-entrypoint"]
 	-	`sha256:61ae5a73c7ead2ba7bb4ddaca64d84af932994984d0cfc7592ece8fc453c979c`  
 		Last Modified: Wed, 20 Apr 2022 22:02:04 GMT  
 		Size: 1.7 MB (1663829 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `logstash:8.1.3` - linux; arm64 variant v8
+
+```console
+$ docker pull logstash@sha256:115a75e0a77cb997f52f6119e55984d603a60fc4ef2f47507a8f5f7ff6770082
+```
+
+-	Docker Version: 20.10.14
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **406.8 MB (406753781 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:43ab1a7a781e178818f1c839f477bb858b21fcc9fc6e99a2a5105262008e9b22`
+-	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint"]`
+
+```dockerfile
+# Tue, 05 Apr 2022 22:40:59 GMT
+ADD file:113ba5e7bc74d50e8d35449f8a62712359e2f00146e03eee822c28c8c6f59368 in / 
+# Tue, 05 Apr 2022 22:41:00 GMT
+CMD ["bash"]
+# Tue, 19 Apr 2022 08:29:35 GMT
+RUN for iter in {1..10}; do export DEBIAN_FRONTEND=noninteractive && apt-get update -y &&     apt-get upgrade -y &&     apt-get install -y procps findutils tar gzip curl && apt-get install -y locales && apt-get clean all && locale-gen 'en_US.UTF-8' &&     apt-get clean metadata && exit_code=0 && break || exit_code=$? &&     echo "packaging error: retry $iter in 10s" &&     apt-get clean all && apt-get clean metadata && sleep 10; done;     (exit $exit_code)
+# Tue, 19 Apr 2022 08:29:36 GMT
+RUN groupadd --gid 1000 logstash &&     adduser --uid 1000 --gid 1000       --home /usr/share/logstash --no-create-home       logstash
+# Tue, 19 Apr 2022 08:29:56 GMT
+RUN curl -Lo - http://localhost:8000/logstash-8.1.3-linux-$(arch).tar.gz |     tar zxf - -C /usr/share &&     mv /usr/share/logstash-8.1.3 /usr/share/logstash &&     chown --recursive logstash:logstash /usr/share/logstash/ &&     chown -R logstash:root /usr/share/logstash &&     chmod -R g=u /usr/share/logstash &&     mkdir /licenses/ &&     mv /usr/share/logstash/NOTICE.TXT /licenses/NOTICE.TXT &&     mv /usr/share/logstash/LICENSE.txt /licenses/LICENSE.txt &&     find /usr/share/logstash -type d -exec chmod g+s {} \; &&     ln -s /usr/share/logstash /opt/logstash
+# Tue, 19 Apr 2022 08:29:57 GMT
+WORKDIR /usr/share/logstash
+# Tue, 19 Apr 2022 08:29:58 GMT
+ENV ELASTIC_CONTAINER=true
+# Tue, 19 Apr 2022 08:29:58 GMT
+ENV PATH=/usr/share/logstash/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 19 Apr 2022 08:29:58 GMT
+ADD file:1183410472ec370104718a08e1144081518db1d006a8cc82de824a34455ab3f3 in config/pipelines.yml 
+# Tue, 19 Apr 2022 08:29:58 GMT
+ADD file:83ab096464b764c812ae68c2872c05d48ee1620e6a1629948d52c13ac6dcfe11 in config/logstash.yml 
+# Tue, 19 Apr 2022 08:29:58 GMT
+ADD file:4f39d77a8986c28d67e673d4691e69ca9c175574128b0819977c2d1bb0d6e950 in config/ 
+# Tue, 19 Apr 2022 08:29:58 GMT
+ADD file:0cd9cc51daf5f37b2aa8aae8cf3570a3680e22852afb2803ccb87ddcd3369f52 in pipeline/logstash.conf 
+# Tue, 19 Apr 2022 08:29:58 GMT
+RUN chown --recursive logstash:root config/ pipeline/
+# Tue, 19 Apr 2022 08:29:59 GMT
+ENV LANG=en_US.UTF-8 LC_ALL=en_US.UTF-8
+# Tue, 19 Apr 2022 08:29:59 GMT
+ADD file:29dd60f159d64086c20a7a02f84a9314f44b2290304547233fb96744325b1245 in /usr/local/bin/ 
+# Tue, 19 Apr 2022 08:29:59 GMT
+RUN chmod 0755 /usr/local/bin/docker-entrypoint
+# Tue, 19 Apr 2022 08:29:59 GMT
+USER 1000
+# Tue, 19 Apr 2022 08:29:59 GMT
+ADD file:945c6fce9a9e80bbe91b66f2c2535aba760ab72a0b46cff684339f8e5b553444 in /usr/local/bin/ 
+# Tue, 19 Apr 2022 08:29:59 GMT
+EXPOSE 5044 9600
+# Tue, 19 Apr 2022 08:30:00 GMT
+LABEL org.label-schema.schema-version=1.0 org.label-schema.vendor=Elastic org.opencontainers.image.vendor=Elastic org.label-schema.name=logstash org.opencontainers.image.title=logstash org.label-schema.version=8.1.3 org.opencontainers.image.version=8.1.3 org.label-schema.url=https://www.elastic.co/products/logstash org.label-schema.vcs-url=https://github.com/elastic/logstash org.label-schema.license=Elastic License org.opencontainers.image.licenses=Elastic License org.opencontainers.image.description=Logstash is a free and open server-side data processing pipeline that ingests data from a multitude of sources, transforms it, and then sends it to your favorite 'stash.' org.label-schema.build-date=2022-04-19T08:16:13+00:00 org.opencontainers.image.created=2022-04-19T08:16:13+00:00
+# Tue, 19 Apr 2022 08:30:00 GMT
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint"]
+```
+
+-	Layers:
+	-	`sha256:185e8a4c100571f111d924b5d4399d89f163bf95d71ce2c6a33f656a66c52f0a`  
+		Last Modified: Tue, 05 Apr 2022 13:15:01 GMT  
+		Size: 27.2 MB (27169393 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f365f102615baf954f4a396cb032463f6aa689e7db0972a2f048b6f87a310142`  
+		Last Modified: Thu, 21 Apr 2022 22:21:01 GMT  
+		Size: 33.8 MB (33790396 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:33936634c012de8adbcba91ecbabc26601b712ef0cd556d6147baf26b8e47067`  
+		Last Modified: Thu, 21 Apr 2022 22:20:57 GMT  
+		Size: 1.8 KB (1837 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:16ba15f284af89fb2bbb9866b5587433d5c246d9e871c17c43906da6d1a33bb8`  
+		Last Modified: Thu, 21 Apr 2022 22:21:29 GMT  
+		Size: 344.3 MB (344256800 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:1856ff3c6c423b3edeb2a8b9155d0a9168b54969bfd336699eef7785aff05cb9`  
+		Last Modified: Thu, 21 Apr 2022 22:20:57 GMT  
+		Size: 384.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a3703828d13e0185c5504b259dd32be678c8654aaddd5e4b054856424efe5f80`  
+		Last Modified: Thu, 21 Apr 2022 22:20:56 GMT  
+		Size: 282.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:26b64d98215042881498ca1beeb641a530854d047585f9646d8b744f7fa35437`  
+		Last Modified: Thu, 21 Apr 2022 22:20:54 GMT  
+		Size: 477.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e5f9b4151e1f6c565db003ccf7acc0061923e0c5da1208bb5e4738e87f593179`  
+		Last Modified: Thu, 21 Apr 2022 22:20:54 GMT  
+		Size: 306.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3e387b9aa1abc5dab1f9a6498b5ea615f64b78b86d3d165230ab05941ac9cdd1`  
+		Last Modified: Thu, 21 Apr 2022 22:20:54 GMT  
+		Size: 2.8 KB (2828 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:bba92d0dd3f8dcb41af5608e8071baecfa483ac64379e30bf13d6a600e8ecdd7`  
+		Last Modified: Thu, 21 Apr 2022 22:20:54 GMT  
+		Size: 497.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:bba92d0dd3f8dcb41af5608e8071baecfa483ac64379e30bf13d6a600e8ecdd7`  
+		Last Modified: Thu, 21 Apr 2022 22:20:54 GMT  
+		Size: 497.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d3905b97e2eb739e836ee970054d5058938d17f13c73a1a4365512d224a2e5e0`  
+		Last Modified: Thu, 21 Apr 2022 22:20:54 GMT  
+		Size: 1.5 MB (1530084 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
