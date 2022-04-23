@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b7a8f2cae67c381876e96be30caf6078faafcae8fd70343bd8bf80023b21c850`
-- Created: `2022-04-18T18:23:43.354755102Z`
+- Image ID: `sha256:b432359f4c98611a7040452d9ebb4c6905720ab1e30447a7f53bdfdc6fb8e6fc`
+- Created: `2022-04-23T00:24:42.922615017Z`
 - Virtual Size: ~ 36.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20220416`
+  - `build-date=20220422`
   - `name=Photon OS x86_64/4.0 Base Image`
   - `vendor=VMware`
 
@@ -131,7 +131,7 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `lua-5.4.4-1.ph4.x86_64`
+### `rpm` package: `lua-5.4.4-2.ph4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
