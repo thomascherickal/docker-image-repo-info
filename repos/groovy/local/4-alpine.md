@@ -1,10 +1,10 @@
-# `groovy:4.0.1-jdk17-alpine`
+# `groovy:4.0.2-jdk17-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:03872fdb3711bec6da6d3da6fe7998c77764c90969a421331112bf397b1eb458`
-- Created: `2022-04-05T16:32:25.589840909Z`
-- Virtual Size: ~ 367.08 Mb  
+- Image ID: `sha256:707315b492b9e0216899e99fe2b2d202406208e3d19794b018ecd6a80746712d`
+- Created: `2022-04-23T00:20:57.468372209Z`
+- Virtual Size: ~ 366.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["groovysh"]`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk-17.0.2+8`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GROOVY_HOME=/opt/groovy`
-  - `GROOVY_VERSION=4.0.1`
+  - `GROOVY_VERSION=4.0.2`
 
 ## `apk` (`.apk`-based packages)
 
