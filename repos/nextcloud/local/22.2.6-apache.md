@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b9a3a2fda942244ddb5c5371f2986210acf48c80acb469f5da9705568a6631fa`
-- Created: `2022-04-19T04:34:04.434780044Z`
-- Virtual Size: ~ 926.03 Mb  
+- Image ID: `sha256:c5d363cde2af69fe78ed8f7cfc49c2a56c01057c03e6de5a46a417a588b19401`
+- Created: `2022-04-21T11:13:04.82317556Z`
+- Virtual Size: ~ 925.91 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -4174,53 +4174,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/xxhash/0.8.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/xxhash/0.8.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `xz-utils=5.2.5-2`
-
-Binary Packages:
-
-- `xz-utils=5.2.5-2`
-
-Licenses: (parsed from: `/usr/share/doc/xz-utils/copyright`)
-
-- `Autoconf`
-- `GPL-2`
-- `GPL-2+`
-- `GPL-3`
-- `LGPL-2`
-- `LGPL-2.1`
-- `LGPL-2.1+`
-- `PD`
-- `PD-debian`
-- `config-h`
-- `noderivs`
-- `none`
-- `permissive-fsf`
-- `permissive-nowarranty`
-- `probably-PD`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris xz-utils=5.2.5-2
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5-2.dsc' xz-utils_5.2.5-2.dsc 2312 SHA256:fa2706f0c863bee4715460bc9103c6fb73ad2cbc12d8d6d7d5dced81ab349949
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5.orig.tar.xz' xz-utils_5.2.5.orig.tar.xz 1148824 SHA256:3e1e518ffc912f86608a8cb35e4bd41ad1aec210df2a47aaa1f95e7f5576ef56
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5.orig.tar.xz.asc' xz-utils_5.2.5.orig.tar.xz.asc 833 SHA256:6efc0075a58912e640119d2b52ef7d1518b260d8720fadc73df21ab7fc727624
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5-2.debian.tar.xz' xz-utils_5.2.5-2.debian.tar.xz 33532 SHA256:7bf06a86c35cc6b21a7731df9e11d241f8d3c16b0fe6ed78d64506d1bc29b06e
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/xz-utils/5.2.5-2/ (for browsing the source)
-- https://sources.debian.net/src/xz-utils/5.2.5-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xz-utils/5.2.5-2/ (for access to the source package after it no longer exists in the archive)
-
 ### `dpkg` source package: `xz-utils=5.2.5-2.1~deb11u1`
 
 Binary Packages:
 
 - `liblzma5:amd64=5.2.5-2.1~deb11u1`
+- `xz-utils=5.2.5-2.1~deb11u1`
 
-Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
+Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`, `/usr/share/doc/xz-utils/copyright`)
 
 - `Autoconf`
 - `GPL-2`
