@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:03264c62072da8488d76dd2caf8d2102082cdbcc755f37d9d7bb1a9c04666d61`
-- Created: `2022-04-20T03:57:17.626459971Z`
-- Virtual Size: ~ 475.97 Mb  
+- Image ID: `sha256:65b89087cd6535da02894eb1064382fb57ac488eb5fe7331a41f55611e53a330`
+- Created: `2022-04-22T07:57:05.155520092Z`
+- Virtual Size: ~ 474.84 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -480,26 +480,26 @@ $ dnf --quiet download --source --url libattr-2.4.46-12.amzn2.0.2
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/cb59f2813ac390d40ecac3b1ba25c701b900c6cc8e1d71b705c0b88c234672dd/../../../../../blobstore/370b7813e0e86fadc241a9fb590451372429f0fe3ab17d62a4378b49089f8158/attr-2.4.46-12.amzn2.0.2.src.rpm
 ```
 
-### `rpm` package: `libblkid-2.30.2-2.amzn2.0.5.x86_64`
+### `rpm` package: `libblkid-2.30.2-2.amzn2.0.7.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libblkid-2.30.2-2.amzn2.0.5
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/cb59f2813ac390d40ecac3b1ba25c701b900c6cc8e1d71b705c0b88c234672dd/../../../../../blobstore/1e9059dd4733ce2ffc3c57b210ccb9e68af1e821d8002c90943fdb30803c2f7b/util-linux-2.30.2-2.amzn2.0.5.src.rpm
+$ dnf --quiet download --source --url libblkid-2.30.2-2.amzn2.0.7
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/cb59f2813ac390d40ecac3b1ba25c701b900c6cc8e1d71b705c0b88c234672dd/../../../../../blobstore/a5a4d2a4a26c1278046a1108226cf18bff2b4ec70b1405af734af5ef28bcb291/util-linux-2.30.2-2.amzn2.0.7.src.rpm
 ```
 
-### `rpm` package: `libcap-2.22-9.amzn2.0.2.x86_64`
+### `rpm` package: `libcap-2.54-1.amzn2.0.1.x86_64`
 
-Licenses (from `rpm --query`): LGPLv2+
+Licenses (from `rpm --query`): BSD or GPLv2
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libcap-2.22-9.amzn2.0.2
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/cb59f2813ac390d40ecac3b1ba25c701b900c6cc8e1d71b705c0b88c234672dd/../../../../../blobstore/eb7b89ef09d8fcfa7e14b00d94d983ab918a56db1b8a0ca89667e8fac94467dd/libcap-2.22-9.amzn2.0.2.src.rpm
+$ dnf --quiet download --source --url libcap-2.54-1.amzn2.0.1
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/cb59f2813ac390d40ecac3b1ba25c701b900c6cc8e1d71b705c0b88c234672dd/../../../../../blobstore/9506a32eb696ab4f98e895d6b89a80ab76cf7674eb2eba3221e10ace4844b77e/libcap-2.54-1.amzn2.0.1.src.rpm
 ```
 
 ### `rpm` package: `libcap-ng-0.7.5-4.amzn2.0.4.x86_64`
@@ -634,15 +634,15 @@ $ dnf --quiet download --source --url libmetalink-0.1.3-13.amzn2
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/cb59f2813ac390d40ecac3b1ba25c701b900c6cc8e1d71b705c0b88c234672dd/../../../../../blobstore/af0aec2e615d0ff03b96fd674c80f28b00f2d198951b2e418ec80956b87aa389/libmetalink-0.1.3-13.amzn2.src.rpm
 ```
 
-### `rpm` package: `libmount-2.30.2-2.amzn2.0.5.x86_64`
+### `rpm` package: `libmount-2.30.2-2.amzn2.0.7.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libmount-2.30.2-2.amzn2.0.5
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/cb59f2813ac390d40ecac3b1ba25c701b900c6cc8e1d71b705c0b88c234672dd/../../../../../blobstore/1e9059dd4733ce2ffc3c57b210ccb9e68af1e821d8002c90943fdb30803c2f7b/util-linux-2.30.2-2.amzn2.0.5.src.rpm
+$ dnf --quiet download --source --url libmount-2.30.2-2.amzn2.0.7
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/cb59f2813ac390d40ecac3b1ba25c701b900c6cc8e1d71b705c0b88c234672dd/../../../../../blobstore/a5a4d2a4a26c1278046a1108226cf18bff2b4ec70b1405af734af5ef28bcb291/util-linux-2.30.2-2.amzn2.0.7.src.rpm
 ```
 
 ### `rpm` package: `libnghttp2-1.41.0-1.amzn2.x86_64`
@@ -744,15 +744,15 @@ $ dnf --quiet download --source --url libunistring-0.9.3-9.amzn2.0.2
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/cb59f2813ac390d40ecac3b1ba25c701b900c6cc8e1d71b705c0b88c234672dd/../../../../../blobstore/a679646faec5cf08ced31c6b0eb872e88e1267b76b4d3a43c1e553d4446732dd/libunistring-0.9.3-9.amzn2.0.2.src.rpm
 ```
 
-### `rpm` package: `libuuid-2.30.2-2.amzn2.0.5.x86_64`
+### `rpm` package: `libuuid-2.30.2-2.amzn2.0.7.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libuuid-2.30.2-2.amzn2.0.5
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/cb59f2813ac390d40ecac3b1ba25c701b900c6cc8e1d71b705c0b88c234672dd/../../../../../blobstore/1e9059dd4733ce2ffc3c57b210ccb9e68af1e821d8002c90943fdb30803c2f7b/util-linux-2.30.2-2.amzn2.0.5.src.rpm
+$ dnf --quiet download --source --url libuuid-2.30.2-2.amzn2.0.7
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/cb59f2813ac390d40ecac3b1ba25c701b900c6cc8e1d71b705c0b88c234672dd/../../../../../blobstore/a5a4d2a4a26c1278046a1108226cf18bff2b4ec70b1405af734af5ef28bcb291/util-linux-2.30.2-2.amzn2.0.7.src.rpm
 ```
 
 ### `rpm` package: `libverto-0.2.5-4.amzn2.0.2.x86_64`
