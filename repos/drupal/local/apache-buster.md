@@ -1,10 +1,10 @@
-# `drupal:9.3.11-php8.0-apache-buster`
+# `drupal:9.3.12-php8.0-apache-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:795c493aa2cf68fb144b332be60f7855dd665d776721ec29e978c819e6a27ad5`
-- Created: `2022-04-19T02:16:12.711009451Z`
-- Virtual Size: ~ 493.14 Mb  
+- Image ID: `sha256:a7006fbbfee275ae164029ca8f147062f0781020508deb3147d260322d9e8893`
+- Created: `2022-04-21T21:20:54.829544817Z`
+- Virtual Size: ~ 493.01 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -23,7 +23,7 @@
   - `PHP_URL=https://www.php.net/distributions/php-8.0.18.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.18.tar.xz.asc`
   - `PHP_SHA256=db161652cacae4b31c347fbf2e17b80656473cb365f2bb3460c4552f5647e2e7`
-  - `DRUPAL_VERSION=9.3.11`
+  - `DRUPAL_VERSION=9.3.12`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -3053,9 +3053,8 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `liblzma5:amd64=5.2.4-1`
-- `xz-utils=5.2.4-1`
 
-Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`, `/usr/share/doc/xz-utils/copyright`)
+Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
 
 - `Autoconf`
 - `GPL-2`
@@ -3088,6 +3087,45 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/xz-utils/5.2.4-1/ (for browsing the source)
 - https://sources.debian.net/src/xz-utils/5.2.4-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/xz-utils/5.2.4-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `xz-utils=5.2.4-1+deb10u1`
+
+Binary Packages:
+
+- `xz-utils=5.2.4-1+deb10u1`
+
+Licenses: (parsed from: `/usr/share/doc/xz-utils/copyright`)
+
+- `Autoconf`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-3`
+- `LGPL-2`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `PD`
+- `PD-debian`
+- `config-h`
+- `noderivs`
+- `none`
+- `permissive-fsf`
+- `permissive-nowarranty`
+- `probably-PD`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris xz-utils=5.2.4-1+deb10u1
+'http://security.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.4-1%2bdeb10u1.dsc' xz-utils_5.2.4-1+deb10u1.dsc 2429 SHA256:6da82f913d22a8385837b3bb4fb9a89a34a07dea21ea6e73d22b9e225a5c895f
+'http://security.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz' xz-utils_5.2.4.orig.tar.xz 1053868 SHA256:9717ae363760dedf573dad241420c5fea86256b65bc21d2cf71b2b12f0544f4b
+'http://security.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.4-1%2bdeb10u1.debian.tar.xz' xz-utils_5.2.4-1+deb10u1.debian.tar.xz 136768 SHA256:fcf83de6468a928427734bca3a39d3813b6f0b6b5beeffaede35bba7f18e3746
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/xz-utils/5.2.4-1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/xz-utils/5.2.4-1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/xz-utils/5.2.4-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `zlib=1:1.2.11.dfsg-1+deb10u1`
 
