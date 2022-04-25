@@ -1,7 +1,7 @@
 ## `clojure:openjdk-19-boot-bullseye`
 
 ```console
-$ docker pull clojure@sha256:49622187cbebef8a0e2fd17a8f1d12116818bbd7c7a85ec0698447469b663dda
+$ docker pull clojure@sha256:e83cdd7429c37742f7b30d2a66b3d9fa15dbecf1488b7fac6652bc06f8e64c2c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull clojure@sha256:49622187cbebef8a0e2fd17a8f1d12116818bbd7c7a85ec0698
 ### `clojure:openjdk-19-boot-bullseye` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:fdd437b2b497a0096378e11c4c8655b9d1f6e0138b784ae806c8f49f153ebec8
+$ docker pull clojure@sha256:feecf1b42a45628cd341a512acfc7f11a789efa336803090bc0aa81b14b580a7
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **394.1 MB (394111192 bytes)**  
+-	Total Size: **394.2 MB (394185873 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f5bb920c81fc515b12fa37a16a71b1a99d6718a9f733919a272b5a7b4c143f9c`
+-	Image ID: `sha256:fc5bd0ee204d4d11180d9f5530ed2dc31721a9afc6f46de5a5e7221cb3e167c5`
 -	Entrypoint: `["entrypoint"]`
 -	Default Command: `["repl"]`
 
@@ -42,31 +42,31 @@ ENV JAVA_HOME=/usr/local/openjdk-19
 ENV PATH=/usr/local/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:47:19 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:47:19 GMT
-ENV JAVA_VERSION=19-ea+18
-# Wed, 20 Apr 2022 10:47:31 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/18/GPL/openjdk-19-ea+18_linux-x64_bin.tar.gz'; 			downloadSha256='c79b13e466464b0054cad0301cf53bcd4b083d591f5fe61e932f39d34063f93b'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/18/GPL/openjdk-19-ea+18_linux-aarch64_bin.tar.gz'; 			downloadSha256='eeec6bd83fea107d1c6de91d7eb2936b7829e8315e81458beb4e401a9f51f006'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Wed, 20 Apr 2022 10:47:32 GMT
+# Mon, 25 Apr 2022 18:23:10 GMT
+ENV JAVA_VERSION=19-ea+19
+# Mon, 25 Apr 2022 18:23:20 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/19/GPL/openjdk-19-ea+19_linux-x64_bin.tar.gz'; 			downloadSha256='5920845cb577a0883cfbd0bc3a781b5b0a4f71b19a870525c653f9815fa0596b'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/19/GPL/openjdk-19-ea+19_linux-aarch64_bin.tar.gz'; 			downloadSha256='ad9457964256d9d43d6246a0da743a73450231506d0a8a711e28b996b7e6e6e3'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Mon, 25 Apr 2022 18:23:21 GMT
 CMD ["jshell"]
-# Thu, 21 Apr 2022 00:43:18 GMT
+# Mon, 25 Apr 2022 19:06:42 GMT
 ENV BOOT_VERSION=2.8.3
-# Thu, 21 Apr 2022 00:43:19 GMT
+# Mon, 25 Apr 2022 19:06:42 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Thu, 21 Apr 2022 00:43:19 GMT
+# Mon, 25 Apr 2022 19:06:42 GMT
 WORKDIR /tmp
-# Thu, 21 Apr 2022 00:43:22 GMT
+# Mon, 25 Apr 2022 19:06:46 GMT
 RUN apt-get update && apt-get install -y make && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Thu, 21 Apr 2022 00:43:22 GMT
+# Mon, 25 Apr 2022 19:06:46 GMT
 ENV PATH=/usr/local/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 21 Apr 2022 00:43:22 GMT
+# Mon, 25 Apr 2022 19:06:46 GMT
 ENV BOOT_AS_ROOT=yes
-# Thu, 21 Apr 2022 00:44:01 GMT
+# Mon, 25 Apr 2022 19:07:07 GMT
 RUN boot
-# Thu, 21 Apr 2022 00:44:01 GMT
+# Mon, 25 Apr 2022 19:07:07 GMT
 COPY file:0282db266eb050a3ad3609149efe2188243cb9f95c0b3e48a312ddef6c6bea02 in /usr/local/bin/entrypoint 
-# Thu, 21 Apr 2022 00:44:01 GMT
+# Mon, 25 Apr 2022 19:07:07 GMT
 ENTRYPOINT ["entrypoint"]
-# Thu, 21 Apr 2022 00:44:01 GMT
+# Mon, 25 Apr 2022 19:07:08 GMT
 CMD ["repl"]
 ```
 
@@ -91,34 +91,34 @@ CMD ["repl"]
 		Last Modified: Wed, 20 Apr 2022 11:00:48 GMT  
 		Size: 14.1 MB (14071513 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5d98e17a03480cafe93149f6e57c060396f3ba3018e76982ba3c5c9add22efbb`  
-		Last Modified: Wed, 20 Apr 2022 11:01:02 GMT  
-		Size: 194.6 MB (194649805 bytes)  
+	-	`sha256:e4d6433b84569b5e1d5f587b411b36284c659f9281ad7bfb1afc5dbc57c4270c`  
+		Last Modified: Mon, 25 Apr 2022 18:34:15 GMT  
+		Size: 194.7 MB (194724845 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9882d20fa8e28279b4006bb6c4eec4e14a0f5fdc39599f474080b03c3865320f`  
-		Last Modified: Thu, 21 Apr 2022 01:02:45 GMT  
-		Size: 1.0 MB (1017504 bytes)  
+	-	`sha256:142bbd830b1939208947f919c55d37ae9b661092c2bc049724d0c5ed263ac604`  
+		Last Modified: Mon, 25 Apr 2022 19:15:26 GMT  
+		Size: 1.0 MB (1017495 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:530fc702f5f15d57835bd5b9c0f537ead07fd994f949a84c4788ba70f5512b0c`  
-		Last Modified: Thu, 21 Apr 2022 01:02:50 GMT  
-		Size: 58.8 MB (58820879 bytes)  
+	-	`sha256:7ac0275b619ea171f8e2d687479acb22845617b541fe911a029cf209c76ed3c3`  
+		Last Modified: Mon, 25 Apr 2022 19:15:29 GMT  
+		Size: 58.8 MB (58820530 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5971b20874f91863bc1ec53e6d9e346b782eb46beec5712b2666ef204cb2aa3`  
-		Last Modified: Thu, 21 Apr 2022 01:02:45 GMT  
-		Size: 407.0 B  
+	-	`sha256:3124372991f1dbdd669bf05df0b632a4e1f9afbc29daec86d7af3c6ca7a66aa2`  
+		Last Modified: Mon, 25 Apr 2022 19:15:25 GMT  
+		Size: 406.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-19-boot-bullseye` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:2aa5c5daf3f7a7bb1f5efbb21709c6f40fbed59b6e32c556c0ddfd43b9b93084
+$ docker pull clojure@sha256:968cbe532019ee7c25b27c4861c5d4f3dd7e24f824c48ad7978d6ed1a7f1fc07
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **392.5 MB (392524913 bytes)**  
+-	Total Size: **392.6 MB (392593327 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b89e60cce9769deaa6e38940ee5a891b50785c3544032a26a13b9ca13e8bec35`
+-	Image ID: `sha256:569bb199fefe1a8c9bc081305246cf5dabdc3572129cd1547bb3d13147817b74`
 -	Entrypoint: `["entrypoint"]`
 -	Default Command: `["repl"]`
 
@@ -141,31 +141,31 @@ ENV JAVA_HOME=/usr/local/openjdk-19
 ENV PATH=/usr/local/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:24:12 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:24:13 GMT
-ENV JAVA_VERSION=19-ea+18
-# Wed, 20 Apr 2022 10:24:26 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/18/GPL/openjdk-19-ea+18_linux-x64_bin.tar.gz'; 			downloadSha256='c79b13e466464b0054cad0301cf53bcd4b083d591f5fe61e932f39d34063f93b'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/18/GPL/openjdk-19-ea+18_linux-aarch64_bin.tar.gz'; 			downloadSha256='eeec6bd83fea107d1c6de91d7eb2936b7829e8315e81458beb4e401a9f51f006'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Wed, 20 Apr 2022 10:24:26 GMT
+# Mon, 25 Apr 2022 18:41:34 GMT
+ENV JAVA_VERSION=19-ea+19
+# Mon, 25 Apr 2022 18:41:43 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/19/GPL/openjdk-19-ea+19_linux-x64_bin.tar.gz'; 			downloadSha256='5920845cb577a0883cfbd0bc3a781b5b0a4f71b19a870525c653f9815fa0596b'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk19/19/GPL/openjdk-19-ea+19_linux-aarch64_bin.tar.gz'; 			downloadSha256='ad9457964256d9d43d6246a0da743a73450231506d0a8a711e28b996b7e6e6e3'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
+# Mon, 25 Apr 2022 18:41:44 GMT
 CMD ["jshell"]
-# Thu, 21 Apr 2022 03:36:53 GMT
+# Mon, 25 Apr 2022 19:35:58 GMT
 ENV BOOT_VERSION=2.8.3
-# Thu, 21 Apr 2022 03:36:54 GMT
+# Mon, 25 Apr 2022 19:35:59 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Thu, 21 Apr 2022 03:36:55 GMT
+# Mon, 25 Apr 2022 19:35:59 GMT
 WORKDIR /tmp
-# Thu, 21 Apr 2022 03:36:59 GMT
+# Mon, 25 Apr 2022 19:36:03 GMT
 RUN apt-get update && apt-get install -y make && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot
-# Thu, 21 Apr 2022 03:37:00 GMT
+# Mon, 25 Apr 2022 19:36:04 GMT
 ENV PATH=/usr/local/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 21 Apr 2022 03:37:01 GMT
+# Mon, 25 Apr 2022 19:36:05 GMT
 ENV BOOT_AS_ROOT=yes
-# Thu, 21 Apr 2022 03:37:17 GMT
+# Mon, 25 Apr 2022 19:36:18 GMT
 RUN boot
-# Thu, 21 Apr 2022 03:37:18 GMT
+# Mon, 25 Apr 2022 19:36:19 GMT
 COPY file:0282db266eb050a3ad3609149efe2188243cb9f95c0b3e48a312ddef6c6bea02 in /usr/local/bin/entrypoint 
-# Thu, 21 Apr 2022 03:37:18 GMT
+# Mon, 25 Apr 2022 19:36:19 GMT
 ENTRYPOINT ["entrypoint"]
-# Thu, 21 Apr 2022 03:37:19 GMT
+# Mon, 25 Apr 2022 19:36:20 GMT
 CMD ["repl"]
 ```
 
@@ -190,19 +190,19 @@ CMD ["repl"]
 		Last Modified: Wed, 20 Apr 2022 10:45:28 GMT  
 		Size: 15.5 MB (15525740 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:72d410addfed171379672cb6fb181d66fda4a8bfa95ade84bab502459cc5eb68`  
-		Last Modified: Wed, 20 Apr 2022 10:45:44 GMT  
-		Size: 193.5 MB (193503756 bytes)  
+	-	`sha256:a01f1aaf999fcca2aed289f306c50b5f5bc665250346d7b2fc75c9bd2f9a6655`  
+		Last Modified: Mon, 25 Apr 2022 18:58:42 GMT  
+		Size: 193.6 MB (193572668 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0979337acf9028a82bf81043c38dc19da3045fe2bf9d54783e4253ae872c746f`  
-		Last Modified: Thu, 21 Apr 2022 04:01:08 GMT  
-		Size: 777.4 KB (777419 bytes)  
+	-	`sha256:cb8df55d107c38163d5bdfb4c4702f448beff02c9b2465414c346448da7b8980`  
+		Last Modified: Mon, 25 Apr 2022 19:48:47 GMT  
+		Size: 777.4 KB (777434 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:867ed0c9e14a9b74b61889485c77ca9939f523ea111139b5ec2bf665c2b8ff73`  
-		Last Modified: Thu, 21 Apr 2022 04:01:14 GMT  
-		Size: 58.8 MB (58815928 bytes)  
+	-	`sha256:4c50109137d5c9645be83a99e535e918ffd9e39a7320bfff8bb996c2c704c694`  
+		Last Modified: Mon, 25 Apr 2022 19:48:51 GMT  
+		Size: 58.8 MB (58815417 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fbed524046b519b60d6c57beb1cfbfdf8fc7abb4a904c202ba273bd538bdbb4d`  
-		Last Modified: Thu, 21 Apr 2022 04:01:08 GMT  
-		Size: 406.0 B  
+	-	`sha256:680ff6fa24cc76507c822476f4a9a2379cb176701b00e4727996852ed3ef3646`  
+		Last Modified: Mon, 25 Apr 2022 19:48:47 GMT  
+		Size: 404.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
