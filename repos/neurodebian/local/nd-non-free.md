@@ -728,20 +728,13 @@ Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnup
 - `TinySCHEME`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnupg2=2.2.27-3
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.27-3.dsc' gnupg2_2.2.27-3.dsc 3630 SHA256:c3fcf3c8f0aad05bb86f7bdcd67bdc9dd67cb35b0605778de3ee5b07ba621934
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.27.orig.tar.bz2' gnupg2_2.2.27.orig.tar.bz2 7191555 SHA256:34e60009014ea16402069136e0a5f63d9b65f90096244975db5cea74b3d02399
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.27-3.debian.tar.xz' gnupg2_2.2.27-3.debian.tar.xz 63396 SHA256:ef72e1094b7c47c9394d1d46bfda1ca46fbea53165f3e40fe169372f8fa3f62b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnupg2/2.2.27-3/
 
-- https://sources.debian.net/src/gnupg2/2.2.27-3/ (for browsing the source)
-- https://sources.debian.net/src/gnupg2/2.2.27-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnupg2/2.2.27-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnutls28=3.7.4-2`
 
@@ -1786,20 +1779,13 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.4.0-11
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0-11.dsc' pam_1.4.0-11.dsc 2543 SHA256:49f996d03d8781d8dda78a58ea4eca3c16c4ea8430556b8ad915b4bbbb069056
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0.orig.tar.xz' pam_1.4.0.orig.tar.xz 988908 SHA256:cd6d928c51e64139be3bdb38692c68183a509b83d4f2c221024ccd4bcddfd034
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.4.0-11.debian.tar.xz' pam_1.4.0-11.debian.tar.xz 121324 SHA256:c190f584ceb5d667f1af0f9dd91f220bbb557a7e4b642263a142b702f5ee0dee
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pam/1.4.0-11/
 
-- https://sources.debian.net/src/pam/1.4.0-11/ (for browsing the source)
-- https://sources.debian.net/src/pam/1.4.0-11/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pam/1.4.0-11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pcre2=10.39-4`
 
@@ -1811,20 +1797,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pcre2=10.39-4
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.39-4.dsc' pcre2_10.39-4.dsc 2286 SHA256:976be6a92ccf0598a02c718b0f6276614398f11d7977bfd7057835cc1937cf22
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.39.orig.tar.gz' pcre2_10.39.orig.tar.gz 2309964 SHA256:0781bd2536ef5279b1943471fdcdbd9961a2845e1d2c9ad849b9bd98ba1a9bd4
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.39-4.diff.gz' pcre2_10.39-4.diff.gz 7715 SHA256:8d4f1a30310deeca495f4dd5e5be3592f35be414c6d974b8ea8a552df7c2f213
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pcre2/10.39-4/
 
-- https://sources.debian.net/src/pcre2/10.39-4/ (for browsing the source)
-- https://sources.debian.net/src/pcre2/10.39-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pcre2/10.39-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pcre3=2:8.39-14`
 
