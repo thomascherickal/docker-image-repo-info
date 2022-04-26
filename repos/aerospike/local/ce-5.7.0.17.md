@@ -1,19 +1,18 @@
-# `aerospike:ee-5.7.0.16`
+# `aerospike:ce-5.7.0.17`
 
 ## Docker Metadata
 
-- Image ID: `sha256:62d7922f42db2c222483375f2784d42b6b71dde995dd9612e2746ea35961761b`
-- Created: `2022-04-20T15:26:17.305844463Z`
-- Virtual Size: ~ 221.67 Mb  
+- Image ID: `sha256:9425b22a566104f682d1bff18dd0b1927d2d9bafc3458a38db14007028c9d882`
+- Created: `2022-04-23T01:19:57.492249351Z`
+- Virtual Size: ~ 215.25 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Entrypoint: `["/usr/bin/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","/entrypoint.sh"]`
+- Entrypoint: `["/usr/bin/dumb-init","--","/entrypoint.sh"]`
 - Command: `["asd"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `AEROSPIKE_VERSION=5.7.0.16`
-  - `AEROSPIKE_SHA256=0cf6b82692f3d8414fdade36645f8d2380ce9371bd3a6b6201471fd506864d88`
-  - `AS_TINI_SHA256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940`
+  - `AEROSPIKE_VERSION=5.7.0.17`
+  - `AEROSPIKE_SHA256=9bee7924812060fae4cf6971adbc7b3b9db34ac221bb992f6469cdfe20086390`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -70,11 +69,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.118/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.118/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `aerospike-server-enterprise=5.7.0.16-1`
+### `dpkg` source package: `aerospike-server-community=5.7.0.17-1`
 
 Binary Packages:
 
-- `aerospike-server-enterprise=5.7.0.16-1`
+- `aerospike-server-community=5.7.0.17-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -566,6 +565,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/dpkg/1.19.7/ (for browsing the source)
 - https://sources.debian.net/src/dpkg/1.19.7/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/dpkg/1.19.7/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `dumb-init=1.2.2-1.1`
+
+Binary Packages:
+
+- `dumb-init=1.2.2-1.1`
+
+Licenses: (parsed from: `/usr/share/doc/dumb-init/copyright`)
+
+- `Expat`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris dumb-init=1.2.2-1.1
+'http://deb.debian.org/debian/pool/main/d/dumb-init/dumb-init_1.2.2-1.1.dsc' dumb-init_1.2.2-1.1.dsc 1613 SHA256:6e3b3554b27624140fdcec89051de4664cabb07a19d2a15772699d741e833af3
+'http://deb.debian.org/debian/pool/main/d/dumb-init/dumb-init_1.2.2.orig.tar.xz' dumb-init_1.2.2.orig.tar.xz 22488 SHA256:c8a00ca238832502c4fdd8914af5a4636c1760bcbe04b18dba353d3ff9571f52
+'http://deb.debian.org/debian/pool/main/d/dumb-init/dumb-init_1.2.2-1.1.debian.tar.xz' dumb-init_1.2.2-1.1.debian.tar.xz 3684 SHA256:2968b02f556fe5ba6f68bcbe9f85640324220c0aeaf9f01aa432db124ef1ed70
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/dumb-init/1.2.2-1.1/ (for browsing the source)
+- https://sources.debian.net/src/dumb-init/1.2.2-1.1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/dumb-init/1.2.2-1.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `e2fsprogs=1.44.5-1+deb10u3`
 
@@ -1862,7 +1886,6 @@ Binary Packages:
 
 - `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u6`
 - `libldap-common=2.4.47+dfsg-3+deb10u6`
-- `libldap2-dev:amd64=2.4.47+dfsg-3+deb10u6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
