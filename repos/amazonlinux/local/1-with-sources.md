@@ -1,10 +1,10 @@
-# `amazonlinux:2018.03.0.20220315.0-with-sources`
+# `amazonlinux:2018.03.0.20220419.0-with-sources`
 
 ## Docker Metadata
 
-- Image ID: `sha256:36c0893271a92f18800485ea04292041280f69c87a1a4c15d98fba808bd1ed14`
-- Created: `2022-03-19T00:00:56.626777103Z`
-- Virtual Size: ~ 620.10 Mb  
+- Image ID: `sha256:5f74812e89dff5d7417f213101574bcafb217529538925d94bd5522e5df5ef86`
+- Created: `2022-04-23T01:21:23.363580353Z`
+- Virtual Size: ~ 620.11 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -115,13 +115,13 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-2.17-324.188.amzn1.x86_64`
+### `rpm` package: `glibc-2.17-324.189.amzn1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-common-2.17-324.188.amzn1.x86_64`
+### `rpm` package: `glibc-common-2.17-324.189.amzn1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
@@ -229,7 +229,7 @@ Licenses (from `rpm --query`): GPLv3+ and GPLv3+ with exceptions and GPLv2+ with
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libgcrypt-1.5.3-12.19.amzn1.x86_64`
+### `rpm` package: `libgcrypt-1.5.3-12.20.amzn1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
