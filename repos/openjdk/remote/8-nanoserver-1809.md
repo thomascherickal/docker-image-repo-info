@@ -1,7 +1,7 @@
 ## `openjdk:8-nanoserver-1809`
 
 ```console
-$ docker pull openjdk@sha256:8948560a393d816b65844c2a19b85d3fc177a00442612af374536b96b69380c5
+$ docker pull openjdk@sha256:f71fdabc06e816bf7d0900a2b3c78de6d6804fea0dd672176050781fc46a77dc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull openjdk@sha256:8948560a393d816b65844c2a19b85d3fc177a00442612af3745
 ### `openjdk:8-nanoserver-1809` - windows version 10.0.17763.2803; amd64
 
 ```console
-$ docker pull openjdk@sha256:44e9ec3a4b13388930aee2bb3e9bb21ef2eda862752d164e7b28b44b864e16ed
+$ docker pull openjdk@sha256:ae0b9098dbefcc56a133e5aaa32dd9c58e396750608df4188a1184a80455fe97
 ```
 
 -	Docker Version: 20.10.8
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **204.3 MB (204333533 bytes)**  
+-	Total Size: **204.2 MB (204212049 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0d2d1ca16749f4a9b0011725f060d0f697773734a3a054e7f6f1e5be8e7f55ed`
+-	Image ID: `sha256:81a429412809a2656869aa92aa8a5af06482e938886924120738d7ad05cab9b5`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/s","\/c"]`
 
@@ -35,11 +35,11 @@ USER ContainerAdministrator
 RUN echo Updating PATH: %JAVA_HOME%\bin;%PATH% 	&& setx /M PATH %JAVA_HOME%\bin;%PATH% 	&& echo Complete.
 # Wed, 13 Apr 2022 17:21:44 GMT
 USER ContainerUser
-# Wed, 13 Apr 2022 17:21:44 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 13 Apr 2022 17:21:58 GMT
-COPY dir:70b73c62c79b1e3a83236c8add186d48955c92966a80012af2e52ff572318d7b in C:\openjdk-8 
-# Wed, 13 Apr 2022 17:22:08 GMT
+# Wed, 27 Apr 2022 22:19:38 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 22:19:53 GMT
+COPY dir:679ecdc3b1aa3045788b8b611f7a86f57009d803f478419678a6098b0a258b48 in C:\openjdk-8 
+# Wed, 27 Apr 2022 22:20:06 GMT
 RUN echo Verifying install ... 	&& echo   javac -version && javac -version 	&& echo   java -version && java -version 	&& echo Complete.
 ```
 
@@ -67,15 +67,15 @@ RUN echo Verifying install ... 	&& echo   javac -version && javac -version 	&& e
 		Last Modified: Tue, 19 Apr 2022 01:19:32 GMT  
 		Size: 1.2 KB (1154 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:56ed6c834b69ab81bc5dcc57cf62299abe031d36fb332b26b0e30ec3ae7055dc`  
-		Last Modified: Tue, 19 Apr 2022 01:19:32 GMT  
-		Size: 1.1 KB (1120 bytes)  
+	-	`sha256:9a916d4a5c260a30f1a16a40718d959ff928c900be9607f848103cd78e06b236`  
+		Last Modified: Wed, 27 Apr 2022 22:28:39 GMT  
+		Size: 1.2 KB (1151 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7b22b6c5d0108c193285b2f5dfaeccfe3dbe70b088e5b123bd808e8e3e16493b`  
-		Last Modified: Tue, 19 Apr 2022 01:19:43 GMT  
-		Size: 101.1 MB (101101137 bytes)  
+	-	`sha256:e80ab14ad4194e22c7f09792b191567ad0df946be70b66d7faee93f1224861d1`  
+		Last Modified: Wed, 27 Apr 2022 22:30:25 GMT  
+		Size: 101.0 MB (100951921 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cf0f4233f7c135f7a19e6224648557f99b55c6fbcf96b3563b8cda9ab2496fad`  
-		Last Modified: Tue, 19 Apr 2022 01:19:32 GMT  
-		Size: 58.5 KB (58476 bytes)  
+	-	`sha256:a35cbd6739b1b921278075c90a72d0c38198d01fdaf9f7a767b415231a2edae5`  
+		Last Modified: Wed, 27 Apr 2022 22:28:39 GMT  
+		Size: 86.2 KB (86177 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
