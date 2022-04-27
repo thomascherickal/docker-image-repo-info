@@ -26,7 +26,7 @@
 ## `orientdb:2.0`
 
 ```console
-$ docker pull orientdb@sha256:813aa7053918d762fd0f4cd03d2c430424fea424bd97c057000ce9788368d008
+$ docker pull orientdb@sha256:cdb6b57600580a05df4717860e02491d32819c526c45480804bf8aad99b8e1ea
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -36,14 +36,14 @@ $ docker pull orientdb@sha256:813aa7053918d762fd0f4cd03d2c430424fea424bd97c05700
 ### `orientdb:2.0` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:692ef997324dc27bca41f5608fe90b605aeb8d7d24ccef7932c82ef8a5854be5
+$ docker pull orientdb@sha256:4cd6ac28a9da765be0d56df2d00678fa0c4d66c2adfdc48fbc4fc4bb59423ba7
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **283.6 MB (283630666 bytes)**  
+-	Total Size: **283.5 MB (283501991 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:79cbd1d9c367e1b7a151baecd12182bc25f50bea873f6b5f39835664cf13175b`
+-	Image ID: `sha256:d387f093f2dcd5cb885b1f385692861d77018c521cb9a6771b706efda6b07f1b`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -67,31 +67,31 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:00 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:00 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:10 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:15:41 GMT
+# Wed, 27 Apr 2022 21:56:01 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:07:57 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:15:41 GMT
+# Wed, 27 Apr 2022 23:07:57 GMT
 ENV ORIENTDB_VERSION=2.0.18
-# Thu, 21 Apr 2022 03:15:41 GMT
+# Wed, 27 Apr 2022 23:07:57 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=9e7b7e7b6d95795b188adb4e5898a1b8
-# Thu, 21 Apr 2022 03:15:42 GMT
+# Wed, 27 Apr 2022 23:07:57 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=f562794536bbf8ae2145f96153e58b1e5d9211b3
-# Thu, 21 Apr 2022 03:15:46 GMT
+# Wed, 27 Apr 2022 23:08:01 GMT
 RUN mkdir /orientdb &&   wget  "https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/$ORIENTDB_VERSION/orientdb-community-$ORIENTDB_VERSION.tar.gz"   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1  && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:15:46 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:15:47 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:15:47 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:15:47 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:15:47 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:15:47 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 CMD ["server.sh"]
 ```
 
@@ -120,19 +120,19 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:07 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb409b014bed35b8a2f7a6ed7ba33766dc73ae94b10c705d3f2a69119f13bd6c`  
-		Last Modified: Wed, 20 Apr 2022 11:14:16 GMT  
-		Size: 106.1 MB (106072240 bytes)  
+	-	`sha256:e8694e9cc467368a5c9f6c09742733518fe2f8c2c029f70055dfcb62719ea40e`  
+		Last Modified: Wed, 27 Apr 2022 22:07:32 GMT  
+		Size: 105.9 MB (105943552 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a08b0b48699d087a275e5e5145b136dd332969f4ba2a6ef398dea574853e0575`  
-		Last Modified: Thu, 21 Apr 2022 03:18:18 GMT  
-		Size: 46.6 MB (46586573 bytes)  
+	-	`sha256:796899be91b7126c7aa47b70e3173bed7519f929648858b4b54ad5db7d651379`  
+		Last Modified: Wed, 27 Apr 2022 23:10:30 GMT  
+		Size: 46.6 MB (46586586 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:2.0.18`
 
 ```console
-$ docker pull orientdb@sha256:813aa7053918d762fd0f4cd03d2c430424fea424bd97c057000ce9788368d008
+$ docker pull orientdb@sha256:cdb6b57600580a05df4717860e02491d32819c526c45480804bf8aad99b8e1ea
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -142,14 +142,14 @@ $ docker pull orientdb@sha256:813aa7053918d762fd0f4cd03d2c430424fea424bd97c05700
 ### `orientdb:2.0.18` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:692ef997324dc27bca41f5608fe90b605aeb8d7d24ccef7932c82ef8a5854be5
+$ docker pull orientdb@sha256:4cd6ac28a9da765be0d56df2d00678fa0c4d66c2adfdc48fbc4fc4bb59423ba7
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **283.6 MB (283630666 bytes)**  
+-	Total Size: **283.5 MB (283501991 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:79cbd1d9c367e1b7a151baecd12182bc25f50bea873f6b5f39835664cf13175b`
+-	Image ID: `sha256:d387f093f2dcd5cb885b1f385692861d77018c521cb9a6771b706efda6b07f1b`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -173,31 +173,31 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:00 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:00 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:10 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:15:41 GMT
+# Wed, 27 Apr 2022 21:56:01 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:08 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:07:57 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:15:41 GMT
+# Wed, 27 Apr 2022 23:07:57 GMT
 ENV ORIENTDB_VERSION=2.0.18
-# Thu, 21 Apr 2022 03:15:41 GMT
+# Wed, 27 Apr 2022 23:07:57 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=9e7b7e7b6d95795b188adb4e5898a1b8
-# Thu, 21 Apr 2022 03:15:42 GMT
+# Wed, 27 Apr 2022 23:07:57 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=f562794536bbf8ae2145f96153e58b1e5d9211b3
-# Thu, 21 Apr 2022 03:15:46 GMT
+# Wed, 27 Apr 2022 23:08:01 GMT
 RUN mkdir /orientdb &&   wget  "https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/$ORIENTDB_VERSION/orientdb-community-$ORIENTDB_VERSION.tar.gz"   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1  && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:15:46 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:15:47 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:15:47 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:15:47 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:15:47 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:15:47 GMT
+# Wed, 27 Apr 2022 23:08:02 GMT
 CMD ["server.sh"]
 ```
 
@@ -226,19 +226,19 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:07 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb409b014bed35b8a2f7a6ed7ba33766dc73ae94b10c705d3f2a69119f13bd6c`  
-		Last Modified: Wed, 20 Apr 2022 11:14:16 GMT  
-		Size: 106.1 MB (106072240 bytes)  
+	-	`sha256:e8694e9cc467368a5c9f6c09742733518fe2f8c2c029f70055dfcb62719ea40e`  
+		Last Modified: Wed, 27 Apr 2022 22:07:32 GMT  
+		Size: 105.9 MB (105943552 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a08b0b48699d087a275e5e5145b136dd332969f4ba2a6ef398dea574853e0575`  
-		Last Modified: Thu, 21 Apr 2022 03:18:18 GMT  
-		Size: 46.6 MB (46586573 bytes)  
+	-	`sha256:796899be91b7126c7aa47b70e3173bed7519f929648858b4b54ad5db7d651379`  
+		Last Modified: Wed, 27 Apr 2022 23:10:30 GMT  
+		Size: 46.6 MB (46586586 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:2.1`
 
 ```console
-$ docker pull orientdb@sha256:79643d0319b3673c2343a336e939be0074655ea429609613cda55f5c20a11c41
+$ docker pull orientdb@sha256:38f97d246537531b18438b04d0a5eaeb4ec65cedf4f1468757d2dc04f36ba0bb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -248,14 +248,14 @@ $ docker pull orientdb@sha256:79643d0319b3673c2343a336e939be0074655ea429609613cd
 ### `orientdb:2.1` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:74768ffd205e918d0c736ba86fcb26fca4dad1c1db73e63ef2234c0c314e0859
+$ docker pull orientdb@sha256:2880a17647c730ef103511ddef1f8938a3586e7afe4971b272f8bedc7bce9303
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **172.5 MB (172499218 bytes)**  
+-	Total Size: **172.4 MB (172370453 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:68ee524c0d09b5f2bb9aad95c47ca6dcd274b98ed693bc2d02102002434345e2`
+-	Image ID: `sha256:25faf3cc9f6fc08dfecd51e350968377433d7e7c9b56493f34a577067ed029d2`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -273,33 +273,33 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:15:30 GMT
+# Wed, 27 Apr 2022 23:07:45 GMT
 ENV ORIENTDB_VERSION=2.1.25
-# Thu, 21 Apr 2022 03:15:30 GMT
+# Wed, 27 Apr 2022 23:07:45 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=054da3fb7c56e7822b2af116966576ce
-# Thu, 21 Apr 2022 03:15:30 GMT
+# Wed, 27 Apr 2022 23:07:45 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=b7b08242b40117ac8eb9a201f8704bde839dfcb8
-# Thu, 21 Apr 2022 03:15:35 GMT
+# Wed, 27 Apr 2022 23:07:50 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:53 GMT
 RUN mkdir /orientdb &&   wget  "https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/$ORIENTDB_VERSION/orientdb-community-$ORIENTDB_VERSION.tar.gz"   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1  && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:53 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:53 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:53 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:53 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:54 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:54 GMT
 CMD ["server.sh"]
 ```
 
@@ -316,23 +316,23 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:00c17ffe8d056f86d6aa87d4fc0af7ec2fb643ea7e9586cbbf1bfba482bc89dc`  
-		Last Modified: Thu, 21 Apr 2022 03:18:03 GMT  
-		Size: 2.1 MB (2105624 bytes)  
+	-	`sha256:d2be9e2eea8a981e6633622e5b2b6b4c170e2e85eac4bee8dd6ac8d099b6f294`  
+		Last Modified: Wed, 27 Apr 2022 23:10:15 GMT  
+		Size: 2.1 MB (2105665 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc1ade4ab5fb6b2fd80b169ed0c7986861249488b174c6b8ea1c8a3d82bc6572`  
-		Last Modified: Thu, 21 Apr 2022 03:18:04 GMT  
-		Size: 31.1 MB (31087969 bytes)  
+	-	`sha256:888cc4bcb4b3a1658514d5c9e992b970a03603ad5f0d761159901c91e03e634a`  
+		Last Modified: Wed, 27 Apr 2022 23:10:17 GMT  
+		Size: 31.1 MB (31087983 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:2.1.25`
 
 ```console
-$ docker pull orientdb@sha256:79643d0319b3673c2343a336e939be0074655ea429609613cda55f5c20a11c41
+$ docker pull orientdb@sha256:38f97d246537531b18438b04d0a5eaeb4ec65cedf4f1468757d2dc04f36ba0bb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -342,14 +342,14 @@ $ docker pull orientdb@sha256:79643d0319b3673c2343a336e939be0074655ea429609613cd
 ### `orientdb:2.1.25` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:74768ffd205e918d0c736ba86fcb26fca4dad1c1db73e63ef2234c0c314e0859
+$ docker pull orientdb@sha256:2880a17647c730ef103511ddef1f8938a3586e7afe4971b272f8bedc7bce9303
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **172.5 MB (172499218 bytes)**  
+-	Total Size: **172.4 MB (172370453 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:68ee524c0d09b5f2bb9aad95c47ca6dcd274b98ed693bc2d02102002434345e2`
+-	Image ID: `sha256:25faf3cc9f6fc08dfecd51e350968377433d7e7c9b56493f34a577067ed029d2`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -367,33 +367,33 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:15:30 GMT
+# Wed, 27 Apr 2022 23:07:45 GMT
 ENV ORIENTDB_VERSION=2.1.25
-# Thu, 21 Apr 2022 03:15:30 GMT
+# Wed, 27 Apr 2022 23:07:45 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=054da3fb7c56e7822b2af116966576ce
-# Thu, 21 Apr 2022 03:15:30 GMT
+# Wed, 27 Apr 2022 23:07:45 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=b7b08242b40117ac8eb9a201f8704bde839dfcb8
-# Thu, 21 Apr 2022 03:15:35 GMT
+# Wed, 27 Apr 2022 23:07:50 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:53 GMT
 RUN mkdir /orientdb &&   wget  "https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/$ORIENTDB_VERSION/orientdb-community-$ORIENTDB_VERSION.tar.gz"   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1  && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:53 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:53 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:53 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:53 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:54 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:15:38 GMT
+# Wed, 27 Apr 2022 23:07:54 GMT
 CMD ["server.sh"]
 ```
 
@@ -410,23 +410,23 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:00c17ffe8d056f86d6aa87d4fc0af7ec2fb643ea7e9586cbbf1bfba482bc89dc`  
-		Last Modified: Thu, 21 Apr 2022 03:18:03 GMT  
-		Size: 2.1 MB (2105624 bytes)  
+	-	`sha256:d2be9e2eea8a981e6633622e5b2b6b4c170e2e85eac4bee8dd6ac8d099b6f294`  
+		Last Modified: Wed, 27 Apr 2022 23:10:15 GMT  
+		Size: 2.1 MB (2105665 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc1ade4ab5fb6b2fd80b169ed0c7986861249488b174c6b8ea1c8a3d82bc6572`  
-		Last Modified: Thu, 21 Apr 2022 03:18:04 GMT  
-		Size: 31.1 MB (31087969 bytes)  
+	-	`sha256:888cc4bcb4b3a1658514d5c9e992b970a03603ad5f0d761159901c91e03e634a`  
+		Last Modified: Wed, 27 Apr 2022 23:10:17 GMT  
+		Size: 31.1 MB (31087983 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:2.2`
 
 ```console
-$ docker pull orientdb@sha256:cbdb8c9ca794c66fed2c3dc2e3ea0c4ee9823c9501f539db9fc1dcdde4d44acb
+$ docker pull orientdb@sha256:b26a361f7e9b5bbcd4d26f209b7910c82a387a5bcbf958bab7d4f410cccd9f7e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -436,14 +436,14 @@ $ docker pull orientdb@sha256:cbdb8c9ca794c66fed2c3dc2e3ea0c4ee9823c9501f539db9f
 ### `orientdb:2.2` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:1c5d2475d0f7b056ac51241b1de83b500a6570a5568bb75c01ba3de89e7efcc3
+$ docker pull orientdb@sha256:2418ef8023f1e52f7a95c569d1e0bf99ea6e4d44bd22d96014f883bfc7b22a08
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **187.9 MB (187885105 bytes)**  
+-	Total Size: **187.8 MB (187756324 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:adf0d84874b7dbe7edb8ced92fe698f23ec4c5c266e880b6904c16769838b37b`
+-	Image ID: `sha256:c33c2a57edf9532267506b6347c03ef6032b04e23740a85c6dcc933bafa89fb8`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -461,37 +461,37 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:15:17 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_VERSION=2.2.37
-# Thu, 21 Apr 2022 03:15:17 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=cb80556ef3b0260d0ee5de88ea73fb9d
-# Thu, 21 Apr 2022 03:15:17 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=469c402dde029f265fe905de2c08b43960e81f07
-# Thu, 21 Apr 2022 03:15:18 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/2.2.37/orientdb-community-2.2.37.tar.gz
-# Thu, 21 Apr 2022 03:15:22 GMT
+# Wed, 27 Apr 2022 23:07:36 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:38 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:38 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:38 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:15:25 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 CMD ["server.sh"]
 ```
 
@@ -508,23 +508,23 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d9aa4660a5d9a0994c92ae942f43010719d4b7f5b11b7b2e56d6e1b326b6d73a`  
-		Last Modified: Thu, 21 Apr 2022 03:17:42 GMT  
-		Size: 2.1 MB (2105598 bytes)  
+	-	`sha256:3498075be2a0797b790bb393cf07a6f6e6ba1813b2480b5f0597f49813954337`  
+		Last Modified: Wed, 27 Apr 2022 23:09:56 GMT  
+		Size: 2.1 MB (2105647 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a13c05e70c64cdb68451ab1443de0330dae3b2d100ea394b5abb67acfda5808`  
-		Last Modified: Thu, 21 Apr 2022 03:17:45 GMT  
-		Size: 46.5 MB (46473882 bytes)  
+	-	`sha256:1e4716dc51cf56c3233b0aa1ff1315da431427e1aa2750bea6b3c192cd6af5ab`  
+		Last Modified: Wed, 27 Apr 2022 23:09:58 GMT  
+		Size: 46.5 MB (46473872 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:2.2.37`
 
 ```console
-$ docker pull orientdb@sha256:cbdb8c9ca794c66fed2c3dc2e3ea0c4ee9823c9501f539db9fc1dcdde4d44acb
+$ docker pull orientdb@sha256:b26a361f7e9b5bbcd4d26f209b7910c82a387a5bcbf958bab7d4f410cccd9f7e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -534,14 +534,14 @@ $ docker pull orientdb@sha256:cbdb8c9ca794c66fed2c3dc2e3ea0c4ee9823c9501f539db9f
 ### `orientdb:2.2.37` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:1c5d2475d0f7b056ac51241b1de83b500a6570a5568bb75c01ba3de89e7efcc3
+$ docker pull orientdb@sha256:2418ef8023f1e52f7a95c569d1e0bf99ea6e4d44bd22d96014f883bfc7b22a08
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **187.9 MB (187885105 bytes)**  
+-	Total Size: **187.8 MB (187756324 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:adf0d84874b7dbe7edb8ced92fe698f23ec4c5c266e880b6904c16769838b37b`
+-	Image ID: `sha256:c33c2a57edf9532267506b6347c03ef6032b04e23740a85c6dcc933bafa89fb8`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -559,37 +559,37 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:15:17 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_VERSION=2.2.37
-# Thu, 21 Apr 2022 03:15:17 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=cb80556ef3b0260d0ee5de88ea73fb9d
-# Thu, 21 Apr 2022 03:15:17 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=469c402dde029f265fe905de2c08b43960e81f07
-# Thu, 21 Apr 2022 03:15:18 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/2.2.37/orientdb-community-2.2.37.tar.gz
-# Thu, 21 Apr 2022 03:15:22 GMT
+# Wed, 27 Apr 2022 23:07:36 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:38 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:38 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:38 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:15:25 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 CMD ["server.sh"]
 ```
 
@@ -606,23 +606,23 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d9aa4660a5d9a0994c92ae942f43010719d4b7f5b11b7b2e56d6e1b326b6d73a`  
-		Last Modified: Thu, 21 Apr 2022 03:17:42 GMT  
-		Size: 2.1 MB (2105598 bytes)  
+	-	`sha256:3498075be2a0797b790bb393cf07a6f6e6ba1813b2480b5f0597f49813954337`  
+		Last Modified: Wed, 27 Apr 2022 23:09:56 GMT  
+		Size: 2.1 MB (2105647 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a13c05e70c64cdb68451ab1443de0330dae3b2d100ea394b5abb67acfda5808`  
-		Last Modified: Thu, 21 Apr 2022 03:17:45 GMT  
-		Size: 46.5 MB (46473882 bytes)  
+	-	`sha256:1e4716dc51cf56c3233b0aa1ff1315da431427e1aa2750bea6b3c192cd6af5ab`  
+		Last Modified: Wed, 27 Apr 2022 23:09:58 GMT  
+		Size: 46.5 MB (46473872 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:2.2.37-spatial`
 
 ```console
-$ docker pull orientdb@sha256:281d995ba0d1c7fdeafc7f796ce85e94cfe5f7407128b088908945c73366dc54
+$ docker pull orientdb@sha256:da3d3bb20fc1a11eb6ca6ba1db8982662ce764c2ead299974f1bee267d3d3b6b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -632,14 +632,14 @@ $ docker pull orientdb@sha256:281d995ba0d1c7fdeafc7f796ce85e94cfe5f7407128b08890
 ### `orientdb:2.2.37-spatial` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:c199fe4f008dd564e63f8856b44d936644d1ec60ec9d6143e65a8161a788ab53
+$ docker pull orientdb@sha256:6a8212c565c8b46e4d40c4c5686bf41982f4b225682ff759513a649ca89efd0c
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **189.1 MB (189087702 bytes)**  
+-	Total Size: **189.0 MB (188958917 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5b7c45387c36296a899d42bda422d0db7d7f6804f5a9c5bfa8b209bc4469aba6`
+-	Image ID: `sha256:50cb0536fd073d57b9e75386026ec9770c9038f4c1c94e5467ec67b0025eab1f`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -657,45 +657,45 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:15:17 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_VERSION=2.2.37
-# Thu, 21 Apr 2022 03:15:17 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=cb80556ef3b0260d0ee5de88ea73fb9d
-# Thu, 21 Apr 2022 03:15:17 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=469c402dde029f265fe905de2c08b43960e81f07
-# Thu, 21 Apr 2022 03:15:18 GMT
+# Wed, 27 Apr 2022 23:07:31 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/2.2.37/orientdb-community-2.2.37.tar.gz
-# Thu, 21 Apr 2022 03:15:22 GMT
+# Wed, 27 Apr 2022 23:07:36 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:38 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:38 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:38 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:15:24 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:15:25 GMT
+# Wed, 27 Apr 2022 23:07:39 GMT
 CMD ["server.sh"]
-# Thu, 21 Apr 2022 03:15:27 GMT
+# Wed, 27 Apr 2022 23:07:42 GMT
 ENV ORIENTDB_DOWNLOAD_SPATIAL_MD5=9f64ab5e959f5d9ad9ea5195d6d621d2
-# Thu, 21 Apr 2022 03:15:27 GMT
+# Wed, 27 Apr 2022 23:07:42 GMT
 ENV ORIENTDB_DOWNLOAD_SPATIAL_SHA1=1748c9779ea7a8cb8fc068fcabf960e1778e8a19
-# Thu, 21 Apr 2022 03:15:27 GMT
+# Wed, 27 Apr 2022 23:07:42 GMT
 ENV ORIENTDB_DOWNLOAD_SPATIAL_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-spatial/2.2.37/orientdb-spatial-2.2.37-dist.jar
-# Thu, 21 Apr 2022 03:15:28 GMT
+# Wed, 27 Apr 2022 23:07:43 GMT
 RUN wget $ORIENTDB_DOWNLOAD_SPATIAL_URL     && echo "$ORIENTDB_DOWNLOAD_SPATIAL_MD5 *orientdb-spatial-$ORIENTDB_VERSION-dist.jar" | md5sum -c -     && echo "$ORIENTDB_DOWNLOAD_SPATIAL_SHA1 *orientdb-spatial-$ORIENTDB_VERSION-dist.jar" | sha1sum -c -     && mv orientdb-spatial-*-dist.jar /orientdb/lib/
 ```
 
@@ -712,27 +712,27 @@ RUN wget $ORIENTDB_DOWNLOAD_SPATIAL_URL     && echo "$ORIENTDB_DOWNLOAD_SPATIAL_
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d9aa4660a5d9a0994c92ae942f43010719d4b7f5b11b7b2e56d6e1b326b6d73a`  
-		Last Modified: Thu, 21 Apr 2022 03:17:42 GMT  
-		Size: 2.1 MB (2105598 bytes)  
+	-	`sha256:3498075be2a0797b790bb393cf07a6f6e6ba1813b2480b5f0597f49813954337`  
+		Last Modified: Wed, 27 Apr 2022 23:09:56 GMT  
+		Size: 2.1 MB (2105647 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a13c05e70c64cdb68451ab1443de0330dae3b2d100ea394b5abb67acfda5808`  
-		Last Modified: Thu, 21 Apr 2022 03:17:45 GMT  
-		Size: 46.5 MB (46473882 bytes)  
+	-	`sha256:1e4716dc51cf56c3233b0aa1ff1315da431427e1aa2750bea6b3c192cd6af5ab`  
+		Last Modified: Wed, 27 Apr 2022 23:09:58 GMT  
+		Size: 46.5 MB (46473872 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:819486ca7dfbc6154574198b31eb24c62903f5d1c428207c5dccb28c22e0c2f7`  
-		Last Modified: Thu, 21 Apr 2022 03:17:56 GMT  
-		Size: 1.2 MB (1202597 bytes)  
+	-	`sha256:ab5262d5f8e6478e9e168ad24572693bf5a9872ba082379484f2e6de39593aa8`  
+		Last Modified: Wed, 27 Apr 2022 23:10:08 GMT  
+		Size: 1.2 MB (1202593 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.0`
 
 ```console
-$ docker pull orientdb@sha256:0ad7bbb806b6ccb1432dbb0b1a8111582e0f4dc7af04ad31649f143e1246ea6d
+$ docker pull orientdb@sha256:9571131f3a6f63821b2c906c6c24633df4f3fb53785a8b76edb07948dbfb10b1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -742,14 +742,14 @@ $ docker pull orientdb@sha256:0ad7bbb806b6ccb1432dbb0b1a8111582e0f4dc7af04ad3164
 ### `orientdb:3.0` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:7c36783417fa5ad5efcd3e9d44faaaa8637500f6426b72f469fb6acdfa4abff9
+$ docker pull orientdb@sha256:e4a29266bd05cf57eb0f73184dfcb1c738a2e30ad93aacdbcd43bc85835a323a
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **178.5 MB (178479791 bytes)**  
+-	Total Size: **178.4 MB (178351020 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:350604a72cd9bf10e6712e7803b593df2bcd72c15c0d0a492f94277a30365ea0`
+-	Image ID: `sha256:c18f5e0d00d70a34806b61a9ae268380b036d55ec6472982108fd3eb969ad19b`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -767,37 +767,37 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:14:50 GMT
+# Wed, 27 Apr 2022 23:07:08 GMT
 ENV ORIENTDB_VERSION=3.0.42
-# Thu, 21 Apr 2022 03:14:50 GMT
+# Wed, 27 Apr 2022 23:07:08 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=59ed522290668fb400e67503652bb813
-# Thu, 21 Apr 2022 03:14:50 GMT
+# Wed, 27 Apr 2022 23:07:08 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=fe6a510c72983b32a3ffd657be9ae62fab2b61f8
-# Thu, 21 Apr 2022 03:14:50 GMT
+# Wed, 27 Apr 2022 23:07:08 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.0.42/orientdb-community-3.0.42.tar.gz
-# Thu, 21 Apr 2022 03:14:55 GMT
+# Wed, 27 Apr 2022 23:07:13 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:14:57 GMT
+# Wed, 27 Apr 2022 23:07:15 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:14:57 GMT
+# Wed, 27 Apr 2022 23:07:15 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:14:57 GMT
+# Wed, 27 Apr 2022 23:07:15 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:14:57 GMT
+# Wed, 27 Apr 2022 23:07:16 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:14:58 GMT
+# Wed, 27 Apr 2022 23:07:16 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:14:58 GMT
+# Wed, 27 Apr 2022 23:07:16 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:14:58 GMT
+# Wed, 27 Apr 2022 23:07:16 GMT
 CMD ["server.sh"]
 ```
 
@@ -814,23 +814,23 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dab4bd1bd2d65907d8aaa236c6937aa3413e32d6bebe639344227e956d2754ce`  
-		Last Modified: Thu, 21 Apr 2022 03:17:16 GMT  
-		Size: 2.1 MB (2105618 bytes)  
+	-	`sha256:2c1984399d78704e0bff80c315878adc6f5a9ceee1c32918575a3be36310e500`  
+		Last Modified: Wed, 27 Apr 2022 23:09:30 GMT  
+		Size: 2.1 MB (2105656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b43ed683db0c54a1961686d675c07f8dca811c26e60f5d304886332d429bbc30`  
-		Last Modified: Thu, 21 Apr 2022 03:17:18 GMT  
-		Size: 37.1 MB (37068548 bytes)  
+	-	`sha256:fc6324df8b0bfcc4f1fffc018dbd0fd3e3e31a1eb2cb8caa3735c5dbaa0734e0`  
+		Last Modified: Wed, 27 Apr 2022 23:09:32 GMT  
+		Size: 37.1 MB (37068559 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.0-tp3`
 
 ```console
-$ docker pull orientdb@sha256:4566c4b5e92d7ec66303a2844a616731e3908b6639fa0597f5456e6c3851b585
+$ docker pull orientdb@sha256:c22f091e1dab7518dd2d5f2101079a081b2af02d44db01f5ad4b0d11067cf44d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -840,14 +840,14 @@ $ docker pull orientdb@sha256:4566c4b5e92d7ec66303a2844a616731e3908b6639fa0597f5
 ### `orientdb:3.0-tp3` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:0e653fa303cd57acdb292107b10f1120cea97411b06089fd319509dc7e112ba7
+$ docker pull orientdb@sha256:0b8e796e923f203ff7c82b04689f283bed17a7211de283338d9981f78be52360
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **205.5 MB (205500511 bytes)**  
+-	Total Size: **205.4 MB (205371791 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0638e4a3b38eb8e67a297778cbb58dcbd53b41f3bf88e07625ba06939d0ff78e`
+-	Image ID: `sha256:3fa330cebcb42edb0ab22def1fac9667a19bce2fdf889df6149437a39193e8b1`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -865,41 +865,41 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:14:50 GMT
+# Wed, 27 Apr 2022 23:07:08 GMT
 ENV ORIENTDB_VERSION=3.0.42
-# Thu, 21 Apr 2022 03:15:01 GMT
+# Wed, 27 Apr 2022 23:07:19 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=20104f313e82db3a2bd88b7501d596aa
-# Thu, 21 Apr 2022 03:15:01 GMT
+# Wed, 27 Apr 2022 23:07:19 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=1abc7a4979ca561d13edd01b1d18b3b869abace9
-# Thu, 21 Apr 2022 03:15:01 GMT
+# Wed, 27 Apr 2022 23:07:19 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-tp3/3.0.42/orientdb-tp3-3.0.42.tar.gz
-# Thu, 21 Apr 2022 03:15:06 GMT
+# Wed, 27 Apr 2022 23:07:24 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:15:12 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-tp3-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-tp3-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:15:12 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 ADD file:5bcd10827429355383b443914a6e6c163692cb388c7594e6e8d3d4625653a011 in /orientdb/config 
-# Thu, 21 Apr 2022 03:15:12 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 EXPOSE 8182
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:29 GMT
 CMD ["server.sh"]
 ```
 
@@ -916,27 +916,27 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ef44b213ce3840d797e368e4d39df603049e78c43d69c6df8884848db01d671`  
-		Last Modified: Thu, 21 Apr 2022 03:17:28 GMT  
-		Size: 2.1 MB (2105576 bytes)  
+	-	`sha256:652a1d9ebdaa8a0c4f2605993883e9f3ff6346d8b3fec0c5ff2605d07813adcf`  
+		Last Modified: Wed, 27 Apr 2022 23:09:42 GMT  
+		Size: 2.1 MB (2105659 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8bd489c896c58b4f75e6a2e0b7614cbcc4b42647f6cd3ad36a31825c0436dd01`  
-		Last Modified: Thu, 21 Apr 2022 03:17:32 GMT  
-		Size: 64.1 MB (64087934 bytes)  
+	-	`sha256:8a8b175598e7819623b881973f852690a566420596cae9957ee13fd92e62099e`  
+		Last Modified: Wed, 27 Apr 2022 23:09:45 GMT  
+		Size: 64.1 MB (64087951 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d9a071a2b3e2975eeba57fb69d79297aae689a492fdb1a707b6be0a226b29014`  
-		Last Modified: Thu, 21 Apr 2022 03:17:28 GMT  
+	-	`sha256:9253ee295f652d00749d79c0bd1e13c76ebf98fb247a6c2ad717d4f3cb032c9f`  
+		Last Modified: Wed, 27 Apr 2022 23:09:42 GMT  
 		Size: 1.4 KB (1376 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.0.42`
 
 ```console
-$ docker pull orientdb@sha256:0ad7bbb806b6ccb1432dbb0b1a8111582e0f4dc7af04ad31649f143e1246ea6d
+$ docker pull orientdb@sha256:9571131f3a6f63821b2c906c6c24633df4f3fb53785a8b76edb07948dbfb10b1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -946,14 +946,14 @@ $ docker pull orientdb@sha256:0ad7bbb806b6ccb1432dbb0b1a8111582e0f4dc7af04ad3164
 ### `orientdb:3.0.42` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:7c36783417fa5ad5efcd3e9d44faaaa8637500f6426b72f469fb6acdfa4abff9
+$ docker pull orientdb@sha256:e4a29266bd05cf57eb0f73184dfcb1c738a2e30ad93aacdbcd43bc85835a323a
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **178.5 MB (178479791 bytes)**  
+-	Total Size: **178.4 MB (178351020 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:350604a72cd9bf10e6712e7803b593df2bcd72c15c0d0a492f94277a30365ea0`
+-	Image ID: `sha256:c18f5e0d00d70a34806b61a9ae268380b036d55ec6472982108fd3eb969ad19b`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -971,37 +971,37 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:14:50 GMT
+# Wed, 27 Apr 2022 23:07:08 GMT
 ENV ORIENTDB_VERSION=3.0.42
-# Thu, 21 Apr 2022 03:14:50 GMT
+# Wed, 27 Apr 2022 23:07:08 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=59ed522290668fb400e67503652bb813
-# Thu, 21 Apr 2022 03:14:50 GMT
+# Wed, 27 Apr 2022 23:07:08 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=fe6a510c72983b32a3ffd657be9ae62fab2b61f8
-# Thu, 21 Apr 2022 03:14:50 GMT
+# Wed, 27 Apr 2022 23:07:08 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.0.42/orientdb-community-3.0.42.tar.gz
-# Thu, 21 Apr 2022 03:14:55 GMT
+# Wed, 27 Apr 2022 23:07:13 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:14:57 GMT
+# Wed, 27 Apr 2022 23:07:15 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:14:57 GMT
+# Wed, 27 Apr 2022 23:07:15 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:14:57 GMT
+# Wed, 27 Apr 2022 23:07:15 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:14:57 GMT
+# Wed, 27 Apr 2022 23:07:16 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:14:58 GMT
+# Wed, 27 Apr 2022 23:07:16 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:14:58 GMT
+# Wed, 27 Apr 2022 23:07:16 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:14:58 GMT
+# Wed, 27 Apr 2022 23:07:16 GMT
 CMD ["server.sh"]
 ```
 
@@ -1018,23 +1018,23 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dab4bd1bd2d65907d8aaa236c6937aa3413e32d6bebe639344227e956d2754ce`  
-		Last Modified: Thu, 21 Apr 2022 03:17:16 GMT  
-		Size: 2.1 MB (2105618 bytes)  
+	-	`sha256:2c1984399d78704e0bff80c315878adc6f5a9ceee1c32918575a3be36310e500`  
+		Last Modified: Wed, 27 Apr 2022 23:09:30 GMT  
+		Size: 2.1 MB (2105656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b43ed683db0c54a1961686d675c07f8dca811c26e60f5d304886332d429bbc30`  
-		Last Modified: Thu, 21 Apr 2022 03:17:18 GMT  
-		Size: 37.1 MB (37068548 bytes)  
+	-	`sha256:fc6324df8b0bfcc4f1fffc018dbd0fd3e3e31a1eb2cb8caa3735c5dbaa0734e0`  
+		Last Modified: Wed, 27 Apr 2022 23:09:32 GMT  
+		Size: 37.1 MB (37068559 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.0.42-tp3`
 
 ```console
-$ docker pull orientdb@sha256:4566c4b5e92d7ec66303a2844a616731e3908b6639fa0597f5456e6c3851b585
+$ docker pull orientdb@sha256:c22f091e1dab7518dd2d5f2101079a081b2af02d44db01f5ad4b0d11067cf44d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1044,14 +1044,14 @@ $ docker pull orientdb@sha256:4566c4b5e92d7ec66303a2844a616731e3908b6639fa0597f5
 ### `orientdb:3.0.42-tp3` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:0e653fa303cd57acdb292107b10f1120cea97411b06089fd319509dc7e112ba7
+$ docker pull orientdb@sha256:0b8e796e923f203ff7c82b04689f283bed17a7211de283338d9981f78be52360
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **205.5 MB (205500511 bytes)**  
+-	Total Size: **205.4 MB (205371791 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0638e4a3b38eb8e67a297778cbb58dcbd53b41f3bf88e07625ba06939d0ff78e`
+-	Image ID: `sha256:3fa330cebcb42edb0ab22def1fac9667a19bce2fdf889df6149437a39193e8b1`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -1069,41 +1069,41 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:14:50 GMT
+# Wed, 27 Apr 2022 23:07:08 GMT
 ENV ORIENTDB_VERSION=3.0.42
-# Thu, 21 Apr 2022 03:15:01 GMT
+# Wed, 27 Apr 2022 23:07:19 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=20104f313e82db3a2bd88b7501d596aa
-# Thu, 21 Apr 2022 03:15:01 GMT
+# Wed, 27 Apr 2022 23:07:19 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=1abc7a4979ca561d13edd01b1d18b3b869abace9
-# Thu, 21 Apr 2022 03:15:01 GMT
+# Wed, 27 Apr 2022 23:07:19 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-tp3/3.0.42/orientdb-tp3-3.0.42.tar.gz
-# Thu, 21 Apr 2022 03:15:06 GMT
+# Wed, 27 Apr 2022 23:07:24 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:15:12 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-tp3-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-tp3-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:15:12 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 ADD file:5bcd10827429355383b443914a6e6c163692cb388c7594e6e8d3d4625653a011 in /orientdb/config 
-# Thu, 21 Apr 2022 03:15:12 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:28 GMT
 EXPOSE 8182
-# Thu, 21 Apr 2022 03:15:13 GMT
+# Wed, 27 Apr 2022 23:07:29 GMT
 CMD ["server.sh"]
 ```
 
@@ -1120,27 +1120,27 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ef44b213ce3840d797e368e4d39df603049e78c43d69c6df8884848db01d671`  
-		Last Modified: Thu, 21 Apr 2022 03:17:28 GMT  
-		Size: 2.1 MB (2105576 bytes)  
+	-	`sha256:652a1d9ebdaa8a0c4f2605993883e9f3ff6346d8b3fec0c5ff2605d07813adcf`  
+		Last Modified: Wed, 27 Apr 2022 23:09:42 GMT  
+		Size: 2.1 MB (2105659 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8bd489c896c58b4f75e6a2e0b7614cbcc4b42647f6cd3ad36a31825c0436dd01`  
-		Last Modified: Thu, 21 Apr 2022 03:17:32 GMT  
-		Size: 64.1 MB (64087934 bytes)  
+	-	`sha256:8a8b175598e7819623b881973f852690a566420596cae9957ee13fd92e62099e`  
+		Last Modified: Wed, 27 Apr 2022 23:09:45 GMT  
+		Size: 64.1 MB (64087951 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d9a071a2b3e2975eeba57fb69d79297aae689a492fdb1a707b6be0a226b29014`  
-		Last Modified: Thu, 21 Apr 2022 03:17:28 GMT  
+	-	`sha256:9253ee295f652d00749d79c0bd1e13c76ebf98fb247a6c2ad717d4f3cb032c9f`  
+		Last Modified: Wed, 27 Apr 2022 23:09:42 GMT  
 		Size: 1.4 KB (1376 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.1`
 
 ```console
-$ docker pull orientdb@sha256:e52248d3102b4490796efc0356f5c5d689a3d1037d2d7e152bf3d36507b06500
+$ docker pull orientdb@sha256:ca4120aa5591b37e8e1397b4e87a0554a223d95d63d476e286da68d20e430638
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1150,14 +1150,14 @@ $ docker pull orientdb@sha256:e52248d3102b4490796efc0356f5c5d689a3d1037d2d7e152b
 ### `orientdb:3.1` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:b3f33cea1e8e1a41bb73e4a3afe86f5c4b48671ec1437f21e28844df7d6dd4f2
+$ docker pull orientdb@sha256:6cb17f69f65ba61e67758961622cc8d9ed2e1f7ca299b7679b06f1f4cdc8cb7c
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **194.5 MB (194489797 bytes)**  
+-	Total Size: **194.4 MB (194360988 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:caec7a2e4ffe3f95b8b68a3e3924c8e168cf6dbad4e92cc7309fa8b784869a8a`
+-	Image ID: `sha256:dfbb40abe8fddab420e116a153fbb0e2c634c8c7204f2edb70e8044eb8eefcb6`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -1175,37 +1175,37 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Wed, 27 Apr 2022 00:28:18 GMT
+# Wed, 27 Apr 2022 23:06:43 GMT
 ENV ORIENTDB_VERSION=3.1.17
-# Wed, 27 Apr 2022 00:28:18 GMT
+# Wed, 27 Apr 2022 23:06:43 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=36e331632c7ca6c2695a2126cd1edb71
-# Wed, 27 Apr 2022 00:28:18 GMT
+# Wed, 27 Apr 2022 23:06:43 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=f44f9add65b2a842a0d55398f860830b6ea08be7
-# Wed, 27 Apr 2022 00:28:19 GMT
+# Wed, 27 Apr 2022 23:06:43 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.1.17/orientdb-community-3.1.17.tar.gz
-# Wed, 27 Apr 2022 00:28:23 GMT
+# Wed, 27 Apr 2022 23:06:48 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:50 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:50 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:51 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:51 GMT
 WORKDIR /orientdb
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:51 GMT
 EXPOSE 2424
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:51 GMT
 EXPOSE 2480
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:51 GMT
 CMD ["server.sh"]
 ```
 
@@ -1222,23 +1222,23 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfc8ffedb45264efbbf81e12c8ce0c1e591c2a31c88d0bf37e9b6b4fa3d31ec`  
-		Last Modified: Wed, 27 Apr 2022 00:29:20 GMT  
-		Size: 2.1 MB (2105654 bytes)  
+	-	`sha256:308b5ab3ec1ba64a202854afcbf5b45628964f73442d71caad7ff42757bee0a2`  
+		Last Modified: Wed, 27 Apr 2022 23:09:02 GMT  
+		Size: 2.1 MB (2105651 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3f93cd8035567e022c0793257fc910a1412abb5c670e29ea5c3acad9082bedd7`  
-		Last Modified: Wed, 27 Apr 2022 00:29:22 GMT  
-		Size: 53.1 MB (53078518 bytes)  
+	-	`sha256:5cb4aa9036f3af86eeab6c279577f8c1d5cc0ee75c7a4503f015c6008fb40403`  
+		Last Modified: Wed, 27 Apr 2022 23:09:05 GMT  
+		Size: 53.1 MB (53078532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.1-tp3`
 
 ```console
-$ docker pull orientdb@sha256:e5c32392900eefedeeb1b7329f2598cfaafd9fcf660ca3b048f8d5523d0aab54
+$ docker pull orientdb@sha256:f7123a08b69ddbdfd614b01e911b15df675bd2d34ccf8bc901a4bc394843c92a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1248,14 +1248,14 @@ $ docker pull orientdb@sha256:e5c32392900eefedeeb1b7329f2598cfaafd9fcf660ca3b048
 ### `orientdb:3.1-tp3` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:369140e36982c8f0828a08f44608ae429a8c0851469d3e9b46681fe1a44048da
+$ docker pull orientdb@sha256:e5065a4adf4139c57201bcf922bd60b3c9ecda5f3937b155715319993f5843ee
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **217.5 MB (217497147 bytes)**  
+-	Total Size: **217.4 MB (217368316 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:30d294e34b3f6c1ea274fa5e5d31c909ff7e014835fd84df09a80f529f7e61c5`
+-	Image ID: `sha256:896fb0ffd40c7c11cb54820f87ebfb39a3319fa16f1b8b569e61d31ed743278c`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -1273,41 +1273,41 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Wed, 27 Apr 2022 00:28:18 GMT
+# Wed, 27 Apr 2022 23:06:43 GMT
 ENV ORIENTDB_VERSION=3.1.17
-# Wed, 27 Apr 2022 00:28:30 GMT
+# Wed, 27 Apr 2022 23:06:54 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=23db6fa0354d463c8e9820c0e38e65b3
-# Wed, 27 Apr 2022 00:28:30 GMT
+# Wed, 27 Apr 2022 23:06:54 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=4971628e3a1335a4c281476b9552ef93bbde3c4a
-# Wed, 27 Apr 2022 00:28:30 GMT
+# Wed, 27 Apr 2022 23:06:54 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-tp3/3.1.17/orientdb-tp3-3.1.17.tar.gz
-# Wed, 27 Apr 2022 00:28:34 GMT
+# Wed, 27 Apr 2022 23:06:59 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Wed, 27 Apr 2022 00:28:41 GMT
+# Wed, 27 Apr 2022 23:07:03 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-tp3-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-tp3-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Wed, 27 Apr 2022 00:28:41 GMT
+# Wed, 27 Apr 2022 23:07:03 GMT
 ADD file:5bcd10827429355383b443914a6e6c163692cb388c7594e6e8d3d4625653a011 in /orientdb/config 
-# Wed, 27 Apr 2022 00:28:41 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 27 Apr 2022 00:28:41 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Wed, 27 Apr 2022 00:28:42 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 WORKDIR /orientdb
-# Wed, 27 Apr 2022 00:28:42 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 EXPOSE 2424
-# Wed, 27 Apr 2022 00:28:42 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 EXPOSE 2480
-# Wed, 27 Apr 2022 00:28:42 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 EXPOSE 8182
-# Wed, 27 Apr 2022 00:28:42 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 CMD ["server.sh"]
 ```
 
@@ -1324,27 +1324,27 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea1b28e8957ddd265469a5c51c2851fdf9ffe8c7b3b8c9adc9309aa8b1a77501`  
-		Last Modified: Wed, 27 Apr 2022 00:29:33 GMT  
-		Size: 2.1 MB (2105645 bytes)  
+	-	`sha256:3f91de0031f49504039ca67add6c1f16601f368277f432a099f80ea50402e3ae`  
+		Last Modified: Wed, 27 Apr 2022 23:09:15 GMT  
+		Size: 2.1 MB (2105630 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b287decd158e175311288973d6de15486135a02eefdbcb88c13b6c1315d9d699`  
-		Last Modified: Wed, 27 Apr 2022 00:29:37 GMT  
-		Size: 76.1 MB (76084501 bytes)  
+	-	`sha256:6ecf30a7f54ba7470c167f864a3265dcc92529e78dfcf7fc578ed32e8c9286e6`  
+		Last Modified: Wed, 27 Apr 2022 23:09:19 GMT  
+		Size: 76.1 MB (76084504 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3364ba2a1a4b73638d155557cb27e2f89749b0ddf1ab9ada059964e5aee2bd03`  
-		Last Modified: Wed, 27 Apr 2022 00:29:32 GMT  
-		Size: 1.4 KB (1376 bytes)  
+	-	`sha256:76bcfb0b8f62adca95af21267b9bf1b413913c6101e6bd768c6f9dfbc69851d8`  
+		Last Modified: Wed, 27 Apr 2022 23:09:15 GMT  
+		Size: 1.4 KB (1377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.1.17`
 
 ```console
-$ docker pull orientdb@sha256:e52248d3102b4490796efc0356f5c5d689a3d1037d2d7e152bf3d36507b06500
+$ docker pull orientdb@sha256:ca4120aa5591b37e8e1397b4e87a0554a223d95d63d476e286da68d20e430638
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1354,14 +1354,14 @@ $ docker pull orientdb@sha256:e52248d3102b4490796efc0356f5c5d689a3d1037d2d7e152b
 ### `orientdb:3.1.17` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:b3f33cea1e8e1a41bb73e4a3afe86f5c4b48671ec1437f21e28844df7d6dd4f2
+$ docker pull orientdb@sha256:6cb17f69f65ba61e67758961622cc8d9ed2e1f7ca299b7679b06f1f4cdc8cb7c
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **194.5 MB (194489797 bytes)**  
+-	Total Size: **194.4 MB (194360988 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:caec7a2e4ffe3f95b8b68a3e3924c8e168cf6dbad4e92cc7309fa8b784869a8a`
+-	Image ID: `sha256:dfbb40abe8fddab420e116a153fbb0e2c634c8c7204f2edb70e8044eb8eefcb6`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -1379,37 +1379,37 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Wed, 27 Apr 2022 00:28:18 GMT
+# Wed, 27 Apr 2022 23:06:43 GMT
 ENV ORIENTDB_VERSION=3.1.17
-# Wed, 27 Apr 2022 00:28:18 GMT
+# Wed, 27 Apr 2022 23:06:43 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=36e331632c7ca6c2695a2126cd1edb71
-# Wed, 27 Apr 2022 00:28:18 GMT
+# Wed, 27 Apr 2022 23:06:43 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=f44f9add65b2a842a0d55398f860830b6ea08be7
-# Wed, 27 Apr 2022 00:28:19 GMT
+# Wed, 27 Apr 2022 23:06:43 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.1.17/orientdb-community-3.1.17.tar.gz
-# Wed, 27 Apr 2022 00:28:23 GMT
+# Wed, 27 Apr 2022 23:06:48 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:50 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:50 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:51 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:51 GMT
 WORKDIR /orientdb
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:51 GMT
 EXPOSE 2424
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:51 GMT
 EXPOSE 2480
-# Wed, 27 Apr 2022 00:28:27 GMT
+# Wed, 27 Apr 2022 23:06:51 GMT
 CMD ["server.sh"]
 ```
 
@@ -1426,23 +1426,23 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bfc8ffedb45264efbbf81e12c8ce0c1e591c2a31c88d0bf37e9b6b4fa3d31ec`  
-		Last Modified: Wed, 27 Apr 2022 00:29:20 GMT  
-		Size: 2.1 MB (2105654 bytes)  
+	-	`sha256:308b5ab3ec1ba64a202854afcbf5b45628964f73442d71caad7ff42757bee0a2`  
+		Last Modified: Wed, 27 Apr 2022 23:09:02 GMT  
+		Size: 2.1 MB (2105651 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3f93cd8035567e022c0793257fc910a1412abb5c670e29ea5c3acad9082bedd7`  
-		Last Modified: Wed, 27 Apr 2022 00:29:22 GMT  
-		Size: 53.1 MB (53078518 bytes)  
+	-	`sha256:5cb4aa9036f3af86eeab6c279577f8c1d5cc0ee75c7a4503f015c6008fb40403`  
+		Last Modified: Wed, 27 Apr 2022 23:09:05 GMT  
+		Size: 53.1 MB (53078532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.1.17-tp3`
 
 ```console
-$ docker pull orientdb@sha256:e5c32392900eefedeeb1b7329f2598cfaafd9fcf660ca3b048f8d5523d0aab54
+$ docker pull orientdb@sha256:f7123a08b69ddbdfd614b01e911b15df675bd2d34ccf8bc901a4bc394843c92a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1452,14 +1452,14 @@ $ docker pull orientdb@sha256:e5c32392900eefedeeb1b7329f2598cfaafd9fcf660ca3b048
 ### `orientdb:3.1.17-tp3` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:369140e36982c8f0828a08f44608ae429a8c0851469d3e9b46681fe1a44048da
+$ docker pull orientdb@sha256:e5065a4adf4139c57201bcf922bd60b3c9ecda5f3937b155715319993f5843ee
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **217.5 MB (217497147 bytes)**  
+-	Total Size: **217.4 MB (217368316 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:30d294e34b3f6c1ea274fa5e5d31c909ff7e014835fd84df09a80f529f7e61c5`
+-	Image ID: `sha256:896fb0ffd40c7c11cb54820f87ebfb39a3319fa16f1b8b569e61d31ed743278c`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -1477,41 +1477,41 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Wed, 27 Apr 2022 00:28:18 GMT
+# Wed, 27 Apr 2022 23:06:43 GMT
 ENV ORIENTDB_VERSION=3.1.17
-# Wed, 27 Apr 2022 00:28:30 GMT
+# Wed, 27 Apr 2022 23:06:54 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=23db6fa0354d463c8e9820c0e38e65b3
-# Wed, 27 Apr 2022 00:28:30 GMT
+# Wed, 27 Apr 2022 23:06:54 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=4971628e3a1335a4c281476b9552ef93bbde3c4a
-# Wed, 27 Apr 2022 00:28:30 GMT
+# Wed, 27 Apr 2022 23:06:54 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-tp3/3.1.17/orientdb-tp3-3.1.17.tar.gz
-# Wed, 27 Apr 2022 00:28:34 GMT
+# Wed, 27 Apr 2022 23:06:59 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Wed, 27 Apr 2022 00:28:41 GMT
+# Wed, 27 Apr 2022 23:07:03 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-tp3-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-tp3-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Wed, 27 Apr 2022 00:28:41 GMT
+# Wed, 27 Apr 2022 23:07:03 GMT
 ADD file:5bcd10827429355383b443914a6e6c163692cb388c7594e6e8d3d4625653a011 in /orientdb/config 
-# Wed, 27 Apr 2022 00:28:41 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 27 Apr 2022 00:28:41 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Wed, 27 Apr 2022 00:28:42 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 WORKDIR /orientdb
-# Wed, 27 Apr 2022 00:28:42 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 EXPOSE 2424
-# Wed, 27 Apr 2022 00:28:42 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 EXPOSE 2480
-# Wed, 27 Apr 2022 00:28:42 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 EXPOSE 8182
-# Wed, 27 Apr 2022 00:28:42 GMT
+# Wed, 27 Apr 2022 23:07:04 GMT
 CMD ["server.sh"]
 ```
 
@@ -1528,27 +1528,27 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea1b28e8957ddd265469a5c51c2851fdf9ffe8c7b3b8c9adc9309aa8b1a77501`  
-		Last Modified: Wed, 27 Apr 2022 00:29:33 GMT  
-		Size: 2.1 MB (2105645 bytes)  
+	-	`sha256:3f91de0031f49504039ca67add6c1f16601f368277f432a099f80ea50402e3ae`  
+		Last Modified: Wed, 27 Apr 2022 23:09:15 GMT  
+		Size: 2.1 MB (2105630 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b287decd158e175311288973d6de15486135a02eefdbcb88c13b6c1315d9d699`  
-		Last Modified: Wed, 27 Apr 2022 00:29:37 GMT  
-		Size: 76.1 MB (76084501 bytes)  
+	-	`sha256:6ecf30a7f54ba7470c167f864a3265dcc92529e78dfcf7fc578ed32e8c9286e6`  
+		Last Modified: Wed, 27 Apr 2022 23:09:19 GMT  
+		Size: 76.1 MB (76084504 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3364ba2a1a4b73638d155557cb27e2f89749b0ddf1ab9ada059964e5aee2bd03`  
-		Last Modified: Wed, 27 Apr 2022 00:29:32 GMT  
-		Size: 1.4 KB (1376 bytes)  
+	-	`sha256:76bcfb0b8f62adca95af21267b9bf1b413913c6101e6bd768c6f9dfbc69851d8`  
+		Last Modified: Wed, 27 Apr 2022 23:09:15 GMT  
+		Size: 1.4 KB (1377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.2`
 
 ```console
-$ docker pull orientdb@sha256:f5a910888b947d503e3e0604060ad58d9d40e15a32f6cf7d2f707e5b43f145b6
+$ docker pull orientdb@sha256:e83fb7887dbd2b17dc1180517319ce2943b418adce6d8bc6d25c2218cdaa493d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1558,14 +1558,14 @@ $ docker pull orientdb@sha256:f5a910888b947d503e3e0604060ad58d9d40e15a32f6cf7d2f
 ### `orientdb:3.2` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:fbcbf5590004dd4f979c4831fb07753a78e1be02a8229655aeb2378aefbdec58
+$ docker pull orientdb@sha256:1d878a3aaad81e9f7e287f2553493ed259c6eb8afb2d9528057585cffa444bed
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **213.0 MB (212957274 bytes)**  
+-	Total Size: **212.8 MB (212828480 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:963750273a40a920b86028a37a61f03738c17688f1c6f4e49b2648952f10b9fc`
+-	Image ID: `sha256:018c11ed5f376f1f455b7e89cf8728862378c1d14838ce98c0b407ac8ee24eda`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -1583,37 +1583,37 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ENV ORIENTDB_VERSION=3.2.5
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=76c3e185d26c0bbc2de194f063b0c2c0
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=f444c92aa00cabba18874b9a3c003eda68296f5e
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:14 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.2.5/orientdb-community-3.2.5.tar.gz
-# Thu, 21 Apr 2022 03:14:02 GMT
+# Wed, 27 Apr 2022 23:06:18 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:24 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:24 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 CMD ["server.sh"]
 ```
 
@@ -1630,23 +1630,23 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e74f1062881f71d35f383eff1c18e1530471c04241bf8601498b764b590fa2c`  
-		Last Modified: Thu, 21 Apr 2022 03:16:16 GMT  
-		Size: 2.1 MB (2105634 bytes)  
+	-	`sha256:d6d9f0d6557d447240de9ba503d347eda37ea739b1a06a9ec172792aa0b8a9c5`  
+		Last Modified: Wed, 27 Apr 2022 23:08:28 GMT  
+		Size: 2.1 MB (2105673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d9192a964ac4ba3013345eba7f4ef31c4a78f74f789ff9806ecc8796b1710bfd`  
-		Last Modified: Thu, 21 Apr 2022 03:16:20 GMT  
-		Size: 71.5 MB (71546015 bytes)  
+	-	`sha256:128abaee00cb94eaa62fbaaf510090c851b6c5890a8d9c34dceaf101740b7333`  
+		Last Modified: Wed, 27 Apr 2022 23:08:33 GMT  
+		Size: 71.5 MB (71546002 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.2-tp3`
 
 ```console
-$ docker pull orientdb@sha256:b6de58e7b398629019beb262d674442dedd1ca0159dafba2283adfdbd74ed8c0
+$ docker pull orientdb@sha256:a1f04fb4ba112afe8166ce1142ef4901beff5fadf40a33ebf56ef932bc0e58fc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1656,14 +1656,14 @@ $ docker pull orientdb@sha256:b6de58e7b398629019beb262d674442dedd1ca0159dafba228
 ### `orientdb:3.2-tp3` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:2abe67f1355222f13ad390c8daeb97368c2275a6e33fbd1e874a7efaefe40f28
+$ docker pull orientdb@sha256:29cb74a393eb797272f1114edcd71ac00dd446f5dbabddb471e598c7f1c9880b
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **237.2 MB (237232762 bytes)**  
+-	Total Size: **237.1 MB (237103917 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:eccf58801133eae12413c9104d29866d02c056e13993eca60ef2c4a654ffb567`
+-	Image ID: `sha256:ece521f563d0fa0399676ba336cd678f78324d6230b4a158109c1d2ab6961d7f`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -1681,41 +1681,41 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ENV ORIENTDB_VERSION=3.2.5
-# Thu, 21 Apr 2022 03:14:09 GMT
+# Wed, 27 Apr 2022 23:06:29 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=b1fc46b7a1fbdae1cf94cc8ccabfbbb9
-# Thu, 21 Apr 2022 03:14:09 GMT
+# Wed, 27 Apr 2022 23:06:29 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=7125b9cddbdfe2aaaa630b820e36880699402637
-# Thu, 21 Apr 2022 03:14:09 GMT
+# Wed, 27 Apr 2022 23:06:29 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-tp3/3.2.5/orientdb-tp3-3.2.5.tar.gz
-# Thu, 21 Apr 2022 03:14:13 GMT
+# Wed, 27 Apr 2022 23:06:34 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:14:20 GMT
+# Wed, 27 Apr 2022 23:06:39 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-tp3-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-tp3-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:14:20 GMT
+# Wed, 27 Apr 2022 23:06:39 GMT
 ADD file:5bcd10827429355383b443914a6e6c163692cb388c7594e6e8d3d4625653a011 in /orientdb/config 
-# Thu, 21 Apr 2022 03:14:20 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 EXPOSE 8182
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 CMD ["server.sh"]
 ```
 
@@ -1732,27 +1732,27 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4740f4d60ab8f0a6e3321b49493017fb347465a9fdab62917be9b5337776a78c`  
-		Last Modified: Thu, 21 Apr 2022 03:16:33 GMT  
-		Size: 2.1 MB (2105646 bytes)  
+	-	`sha256:81d003ff5e1b7da7eb6a9117917639770d1ec5d101007815322a7eeab275a5df`  
+		Last Modified: Wed, 27 Apr 2022 23:08:47 GMT  
+		Size: 2.1 MB (2105643 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d51df15a0318cb9dec3cd7bf09028256f0219af4178a72e03a4e50fcaf06dc89`  
-		Last Modified: Thu, 21 Apr 2022 03:16:38 GMT  
-		Size: 95.8 MB (95820119 bytes)  
+	-	`sha256:0c4d9931afae443e9ddf2021d89c3cba6bd663451a8e010c81f22229f91fa749`  
+		Last Modified: Wed, 27 Apr 2022 23:08:52 GMT  
+		Size: 95.8 MB (95820095 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a49b1459a14d9cfbbe974f8e95031ba31018d076af35391114e41b3086cc2dae`  
-		Last Modified: Thu, 21 Apr 2022 03:16:33 GMT  
-		Size: 1.4 KB (1372 bytes)  
+	-	`sha256:f9f3ab6494c1ced374cf14a347017be643559c56f6fe6924ca8c805271fb4561`  
+		Last Modified: Wed, 27 Apr 2022 23:08:46 GMT  
+		Size: 1.4 KB (1374 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.2.5`
 
 ```console
-$ docker pull orientdb@sha256:f5a910888b947d503e3e0604060ad58d9d40e15a32f6cf7d2f707e5b43f145b6
+$ docker pull orientdb@sha256:e83fb7887dbd2b17dc1180517319ce2943b418adce6d8bc6d25c2218cdaa493d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1762,14 +1762,14 @@ $ docker pull orientdb@sha256:f5a910888b947d503e3e0604060ad58d9d40e15a32f6cf7d2f
 ### `orientdb:3.2.5` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:fbcbf5590004dd4f979c4831fb07753a78e1be02a8229655aeb2378aefbdec58
+$ docker pull orientdb@sha256:1d878a3aaad81e9f7e287f2553493ed259c6eb8afb2d9528057585cffa444bed
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **213.0 MB (212957274 bytes)**  
+-	Total Size: **212.8 MB (212828480 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:963750273a40a920b86028a37a61f03738c17688f1c6f4e49b2648952f10b9fc`
+-	Image ID: `sha256:018c11ed5f376f1f455b7e89cf8728862378c1d14838ce98c0b407ac8ee24eda`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -1787,37 +1787,37 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ENV ORIENTDB_VERSION=3.2.5
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=76c3e185d26c0bbc2de194f063b0c2c0
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=f444c92aa00cabba18874b9a3c003eda68296f5e
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:14 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.2.5/orientdb-community-3.2.5.tar.gz
-# Thu, 21 Apr 2022 03:14:02 GMT
+# Wed, 27 Apr 2022 23:06:18 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:24 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:24 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 CMD ["server.sh"]
 ```
 
@@ -1834,23 +1834,23 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e74f1062881f71d35f383eff1c18e1530471c04241bf8601498b764b590fa2c`  
-		Last Modified: Thu, 21 Apr 2022 03:16:16 GMT  
-		Size: 2.1 MB (2105634 bytes)  
+	-	`sha256:d6d9f0d6557d447240de9ba503d347eda37ea739b1a06a9ec172792aa0b8a9c5`  
+		Last Modified: Wed, 27 Apr 2022 23:08:28 GMT  
+		Size: 2.1 MB (2105673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d9192a964ac4ba3013345eba7f4ef31c4a78f74f789ff9806ecc8796b1710bfd`  
-		Last Modified: Thu, 21 Apr 2022 03:16:20 GMT  
-		Size: 71.5 MB (71546015 bytes)  
+	-	`sha256:128abaee00cb94eaa62fbaaf510090c851b6c5890a8d9c34dceaf101740b7333`  
+		Last Modified: Wed, 27 Apr 2022 23:08:33 GMT  
+		Size: 71.5 MB (71546002 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:3.2.5-tp3`
 
 ```console
-$ docker pull orientdb@sha256:b6de58e7b398629019beb262d674442dedd1ca0159dafba2283adfdbd74ed8c0
+$ docker pull orientdb@sha256:a1f04fb4ba112afe8166ce1142ef4901beff5fadf40a33ebf56ef932bc0e58fc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1860,14 +1860,14 @@ $ docker pull orientdb@sha256:b6de58e7b398629019beb262d674442dedd1ca0159dafba228
 ### `orientdb:3.2.5-tp3` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:2abe67f1355222f13ad390c8daeb97368c2275a6e33fbd1e874a7efaefe40f28
+$ docker pull orientdb@sha256:29cb74a393eb797272f1114edcd71ac00dd446f5dbabddb471e598c7f1c9880b
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **237.2 MB (237232762 bytes)**  
+-	Total Size: **237.1 MB (237103917 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:eccf58801133eae12413c9104d29866d02c056e13993eca60ef2c4a654ffb567`
+-	Image ID: `sha256:ece521f563d0fa0399676ba336cd678f78324d6230b4a158109c1d2ab6961d7f`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -1885,41 +1885,41 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ENV ORIENTDB_VERSION=3.2.5
-# Thu, 21 Apr 2022 03:14:09 GMT
+# Wed, 27 Apr 2022 23:06:29 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=b1fc46b7a1fbdae1cf94cc8ccabfbbb9
-# Thu, 21 Apr 2022 03:14:09 GMT
+# Wed, 27 Apr 2022 23:06:29 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=7125b9cddbdfe2aaaa630b820e36880699402637
-# Thu, 21 Apr 2022 03:14:09 GMT
+# Wed, 27 Apr 2022 23:06:29 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-tp3/3.2.5/orientdb-tp3-3.2.5.tar.gz
-# Thu, 21 Apr 2022 03:14:13 GMT
+# Wed, 27 Apr 2022 23:06:34 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:14:20 GMT
+# Wed, 27 Apr 2022 23:06:39 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-tp3-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-tp3-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-tp3-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:14:20 GMT
+# Wed, 27 Apr 2022 23:06:39 GMT
 ADD file:5bcd10827429355383b443914a6e6c163692cb388c7594e6e8d3d4625653a011 in /orientdb/config 
-# Thu, 21 Apr 2022 03:14:20 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 EXPOSE 8182
-# Thu, 21 Apr 2022 03:14:21 GMT
+# Wed, 27 Apr 2022 23:06:40 GMT
 CMD ["server.sh"]
 ```
 
@@ -1936,27 +1936,27 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4740f4d60ab8f0a6e3321b49493017fb347465a9fdab62917be9b5337776a78c`  
-		Last Modified: Thu, 21 Apr 2022 03:16:33 GMT  
-		Size: 2.1 MB (2105646 bytes)  
+	-	`sha256:81d003ff5e1b7da7eb6a9117917639770d1ec5d101007815322a7eeab275a5df`  
+		Last Modified: Wed, 27 Apr 2022 23:08:47 GMT  
+		Size: 2.1 MB (2105643 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d51df15a0318cb9dec3cd7bf09028256f0219af4178a72e03a4e50fcaf06dc89`  
-		Last Modified: Thu, 21 Apr 2022 03:16:38 GMT  
-		Size: 95.8 MB (95820119 bytes)  
+	-	`sha256:0c4d9931afae443e9ddf2021d89c3cba6bd663451a8e010c81f22229f91fa749`  
+		Last Modified: Wed, 27 Apr 2022 23:08:52 GMT  
+		Size: 95.8 MB (95820095 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a49b1459a14d9cfbbe974f8e95031ba31018d076af35391114e41b3086cc2dae`  
-		Last Modified: Thu, 21 Apr 2022 03:16:33 GMT  
-		Size: 1.4 KB (1372 bytes)  
+	-	`sha256:f9f3ab6494c1ced374cf14a347017be643559c56f6fe6924ca8c805271fb4561`  
+		Last Modified: Wed, 27 Apr 2022 23:08:46 GMT  
+		Size: 1.4 KB (1374 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `orientdb:latest`
 
 ```console
-$ docker pull orientdb@sha256:f5a910888b947d503e3e0604060ad58d9d40e15a32f6cf7d2f707e5b43f145b6
+$ docker pull orientdb@sha256:e83fb7887dbd2b17dc1180517319ce2943b418adce6d8bc6d25c2218cdaa493d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1966,14 +1966,14 @@ $ docker pull orientdb@sha256:f5a910888b947d503e3e0604060ad58d9d40e15a32f6cf7d2f
 ### `orientdb:latest` - linux; amd64
 
 ```console
-$ docker pull orientdb@sha256:fbcbf5590004dd4f979c4831fb07753a78e1be02a8229655aeb2378aefbdec58
+$ docker pull orientdb@sha256:1d878a3aaad81e9f7e287f2553493ed259c6eb8afb2d9528057585cffa444bed
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **213.0 MB (212957274 bytes)**  
+-	Total Size: **212.8 MB (212828480 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:963750273a40a920b86028a37a61f03738c17688f1c6f4e49b2648952f10b9fc`
+-	Image ID: `sha256:018c11ed5f376f1f455b7e89cf8728862378c1d14838ce98c0b407ac8ee24eda`
 -	Default Command: `["server.sh"]`
 
 ```dockerfile
@@ -1991,37 +1991,37 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 20 Apr 2022 10:55:14 GMT
 ENV LANG=C.UTF-8
-# Wed, 20 Apr 2022 10:55:14 GMT
-ENV JAVA_VERSION=8u322
-# Wed, 20 Apr 2022 10:55:27 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_x64_linux_8u322b06.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u322-b06/OpenJDK8U-jdk_aarch64_linux_8u322b06.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Thu, 21 Apr 2022 03:13:57 GMT
+# Wed, 27 Apr 2022 21:56:11 GMT
+ENV JAVA_VERSION=8u332
+# Wed, 27 Apr 2022 21:56:25 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Wed, 27 Apr 2022 23:06:13 GMT
 MAINTAINER OrientDB LTD (info@orientdb.com)
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ARG ORIENTDB_DOWNLOAD_SERVER
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ENV ORIENTDB_VERSION=3.2.5
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ENV ORIENTDB_DOWNLOAD_MD5=76c3e185d26c0bbc2de194f063b0c2c0
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:13 GMT
 ENV ORIENTDB_DOWNLOAD_SHA1=f444c92aa00cabba18874b9a3c003eda68296f5e
-# Thu, 21 Apr 2022 03:13:58 GMT
+# Wed, 27 Apr 2022 23:06:14 GMT
 ENV ORIENTDB_DOWNLOAD_URL=https://repo1.maven.org/maven2/com/orientechnologies/orientdb-community/3.2.5/orientdb-community-3.2.5.tar.gz
-# Thu, 21 Apr 2022 03:14:02 GMT
+# Wed, 27 Apr 2022 23:06:18 GMT
 RUN apt update     && apt install -y curl wget     && rm -rf /var/lib/apt/lists/*
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:24 GMT
 RUN mkdir /orientdb &&   wget  $ORIENTDB_DOWNLOAD_URL   && echo "$ORIENTDB_DOWNLOAD_MD5 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | md5sum -c -   && echo "$ORIENTDB_DOWNLOAD_SHA1 *orientdb-community-$ORIENTDB_VERSION.tar.gz" | sha1sum -c -   && tar -xvzf orientdb-community-$ORIENTDB_VERSION.tar.gz -C /orientdb --strip-components=1   && rm orientdb-community-$ORIENTDB_VERSION.tar.gz   && rm -rf /orientdb/databases/*
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:24 GMT
 ENV PATH=/orientdb/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 VOLUME [/orientdb/backup /orientdb/databases /orientdb/config]
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 WORKDIR /orientdb
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 EXPOSE 2424
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 EXPOSE 2480
-# Thu, 21 Apr 2022 03:14:06 GMT
+# Wed, 27 Apr 2022 23:06:25 GMT
 CMD ["server.sh"]
 ```
 
@@ -2038,15 +2038,15 @@ CMD ["server.sh"]
 		Last Modified: Wed, 20 Apr 2022 11:14:32 GMT  
 		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d72c558ba820a555fec7d0c14584778471564f741369d98a98e338f1efb52957`  
-		Last Modified: Wed, 20 Apr 2022 11:14:41 GMT  
-		Size: 106.3 MB (106344274 bytes)  
+	-	`sha256:ccd3c592d09e3b11aa629b87ebd25e4bc580cf5a3dc898550525cce4ea0f847a`  
+		Last Modified: Wed, 27 Apr 2022 22:07:56 GMT  
+		Size: 106.2 MB (106215454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e74f1062881f71d35f383eff1c18e1530471c04241bf8601498b764b590fa2c`  
-		Last Modified: Thu, 21 Apr 2022 03:16:16 GMT  
-		Size: 2.1 MB (2105634 bytes)  
+	-	`sha256:d6d9f0d6557d447240de9ba503d347eda37ea739b1a06a9ec172792aa0b8a9c5`  
+		Last Modified: Wed, 27 Apr 2022 23:08:28 GMT  
+		Size: 2.1 MB (2105673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d9192a964ac4ba3013345eba7f4ef31c4a78f74f789ff9806ecc8796b1710bfd`  
-		Last Modified: Thu, 21 Apr 2022 03:16:20 GMT  
-		Size: 71.5 MB (71546015 bytes)  
+	-	`sha256:128abaee00cb94eaa62fbaaf510090c851b6c5890a8d9c34dceaf101740b7333`  
+		Last Modified: Wed, 27 Apr 2022 23:08:33 GMT  
+		Size: 71.5 MB (71546002 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
