@@ -1,10 +1,10 @@
-# `mongo:5.0.7-focal`
+# `mongo:5.0.8-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:20106db9aa7ac731551a17d6ec07e61fb442221460e5106fa70be71d98b5ee85`
-- Created: `2022-04-22T04:22:55.274201718Z`
-- Virtual Size: ~ 699.98 Mb  
+- Image ID: `sha256:7babdf608274b5cb26dd6bdd790fa42b229e44aac808c537e091efc7933ecca4`
+- Created: `2022-04-27T00:26:27.767048369Z`
+- Virtual Size: ~ 700.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -16,7 +16,7 @@
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=5.0`
-  - `MONGO_VERSION=5.0.7`
+  - `MONGO_VERSION=5.0.8`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1290,17 +1290,17 @@ Licenses: (parsed from: `/usr/share/doc/mongodb-mongosh/copyright`)
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `mongodb-org=5.0.7`
+### `dpkg` source package: `mongodb-org=5.0.8`
 
 Binary Packages:
 
-- `mongodb-org=5.0.7`
-- `mongodb-org-database=5.0.7`
-- `mongodb-org-database-tools-extra=5.0.7`
-- `mongodb-org-mongos=5.0.7`
-- `mongodb-org-server=5.0.7`
-- `mongodb-org-shell=5.0.7`
-- `mongodb-org-tools=5.0.7`
+- `mongodb-org=5.0.8`
+- `mongodb-org-database=5.0.8`
+- `mongodb-org-database-tools-extra=5.0.8`
+- `mongodb-org-mongos=5.0.8`
+- `mongodb-org-server=5.0.8`
+- `mongodb-org-shell=5.0.8`
+- `mongodb-org-tools=5.0.8`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
