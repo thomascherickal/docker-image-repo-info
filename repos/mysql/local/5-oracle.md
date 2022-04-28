@@ -1,10 +1,10 @@
-# `mysql:5.7.37-oracle`
+# `mysql:5.7.38-oracle`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ca04d328ed5ac0823dd3252bdf8432e49da9fdf36631d6850ddcf1284a8bbdee`
-- Created: `2022-03-31T02:13:11.328273991Z`
-- Virtual Size: ~ 407.96 Mb  
+- Image ID: `sha256:7619c1a0561f44994c5527d453687ac411749a02708aae7e966ce8407ad7a2b8`
+- Created: `2022-04-27T22:20:23.707223847Z`
+- Virtual Size: ~ 426.80 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -13,8 +13,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `GOSU_VERSION=1.14`
   - `MYSQL_MAJOR=5.7`
-  - `MYSQL_VERSION=5.7.37-1.el7`
-  - `MYSQL_SHELL_VERSION=8.0.28-1.el7`
+  - `MYSQL_VERSION=5.7.38-1.el7`
+  - `MYSQL_SHELL_VERSION=8.0.29-1.el7`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -674,13 +674,13 @@ $ dnf --quiet download --source --url make-3.82-24.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/make-3.82-24.el7.src.rpm
 ```
 
-### `rpm` package: `mysql-community-server-minimal-5.7.37-1.el7.x86_64`
+### `rpm` package: `mysql-community-server-minimal-5.7.38-1.el7.x86_64`
 
-Licenses (from `rpm --query`): Copyright (c) 2000, 2021, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field.
+Licenses (from `rpm --query`): Copyright (c) 2000, 2022, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field.
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `mysql-shell-8.0.28-1.el7.x86_64`
+### `rpm` package: `mysql-shell-8.0.29-1.el7.x86_64`
 
 Licenses (from `rpm --query`): GPLv2
 
