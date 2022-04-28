@@ -1,20 +1,20 @@
-# `clojure:openjdk-17-buster`
+# `clojure:openjdk-18-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:be72f0c09e3237249bfd61fb0d4099311b4fcf87f481f484f479e6c84386728c`
-- Created: `2022-04-21T00:30:38.282029174Z`
-- Virtual Size: ~ 706.54 Mb  
+- Image ID: `sha256:a050d2e7ac0aed8374834db7e21b7f5897ada7506aaf0585d1d7fcde82392055`
+- Created: `2022-04-26T00:35:25.222597852Z`
+- Virtual Size: ~ 708.89 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint"]`
 - Command: `["-M","--repl"]`
 - Environment:
-  - `PATH=/usr/local/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `JAVA_HOME=/usr/local/openjdk-17`
+  - `PATH=/usr/local/openjdk-18/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `JAVA_HOME=/usr/local/openjdk-18`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=17.0.2`
-  - `CLOJURE_VERSION=1.11.1.1105`
+  - `JAVA_VERSION=18.0.1`
+  - `CLOJURE_VERSION=1.11.1.1113`
 
 ## `dpkg` (`.deb`-based packages)
 

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:09dd14ac2b2d5441bf13f61378e7d238ca1f9ad28f5ad93d8a44a0fa57cde1eb`
-- Created: `2022-04-07T17:26:56.248647945Z`
-- Virtual Size: ~ 373.11 Mb  
+- Image ID: `sha256:08cf8043a824e8b78e74120a8575faff85f5bbf61c016aad86b79bebb56f5c8a`
+- Created: `2022-04-26T00:39:07.979650804Z`
+- Virtual Size: ~ 373.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint"]`
@@ -13,7 +13,7 @@
   - `PATH=/opt/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/opt/openjdk-19`
   - `JAVA_VERSION=19-ea+5`
-  - `CLOJURE_VERSION=1.11.1.1105`
+  - `CLOJURE_VERSION=1.11.1.1113`
 
 ## `apk` (`.apk`-based packages)
 
@@ -173,16 +173,16 @@ MIT
 ### `apk` package: `git`
 
 ```console
-git-2.34.1-r0 description:
+git-2.34.2-r0 description:
 Distributed version control system
 
-git-2.34.1-r0 webpage:
+git-2.34.2-r0 webpage:
 https://www.git-scm.com/
 
-git-2.34.1-r0 installed size:
+git-2.34.2-r0 installed size:
 10 MiB
 
-git-2.34.1-r0 license:
+git-2.34.2-r0 license:
 GPL-2.0-or-later
 
 ```
