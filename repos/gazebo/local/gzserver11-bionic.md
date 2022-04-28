@@ -696,13 +696,9 @@ Licenses: (parsed from: `/usr/share/doc/distro-info-data/copyright`)
 
 - `ISC`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris distro-info-data=0.37ubuntu0.13
-'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.37ubuntu0.13.dsc' distro-info-data_0.37ubuntu0.13.dsc 1417 SHA512:fc669fc25d911f03e895c61efd8ee872a96c7f1d028c7c853ddb9ef1e5f2116d18debf8d474469a21c132459770ef8840fa11bc97ade42ee5b23de3bbbf4813a
-'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.37ubuntu0.13.tar.xz' distro-info-data_0.37ubuntu0.13.tar.xz 7488 SHA512:a559b7ae03301b6a5be27278bed85884141bd34027f92378b36f2339825f6a0366344cf56fe039b20ac7abd97638cabe253191441434688ff1d7f9e6331efbe1
-```
 
 ### `dpkg` source package: `double-conversion=2.0.1-4ubuntu1`
 
@@ -5489,14 +5485,9 @@ Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sdformat9=9.7.0-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0-1%7ebionic.dsc' sdformat9_9.7.0-1~bionic.dsc 1379 SHA256:92d8336d1fe3d44c49f20a3e8b1a52b9140d7c420af52aa9ad2a6a75c862a31c
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0.orig.tar.bz2' sdformat9_9.7.0.orig.tar.bz2 699483 SHA256:dcfa6faa2a12a6814e8cf020539c351d69c3a1b82092645d0dee3ec7c968b8f0
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0-1%7ebionic.debian.tar.xz' sdformat9_9.7.0-1~bionic.debian.tar.xz 3480 SHA256:19a443397b3bb65f3d3a7c11e095fecc5e56cbd3bbc06535f48004b2160fd89d
-```
 
 ### `dpkg` source package: `sed=4.4-2`
 

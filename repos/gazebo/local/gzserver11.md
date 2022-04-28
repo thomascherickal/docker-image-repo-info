@@ -765,13 +765,9 @@ Licenses: (parsed from: `/usr/share/doc/distro-info-data/copyright`)
 
 - `ISC`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris distro-info-data=0.43ubuntu1.9
-'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.43ubuntu1.9.dsc' distro-info-data_0.43ubuntu1.9.dsc 1393 SHA512:fcce92386f5afdbc20afdfd0a11cc949380c6112b0157571296159612ccf4192b5da76254c9bad96a820bb284227d8db167591ef046e0d52fc69c7f4f30ea810
-'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.43ubuntu1.9.tar.xz' distro-info-data_0.43ubuntu1.9.tar.xz 7796 SHA512:cbf0538dd997dccf09bb54995ca646d052c70b66ea27ae3830e589423c0bb76e3c76e4ee029e61654014dc71d34e65fc594c19def65c6901accfa15645bb65a1
-```
 
 ### `dpkg` source package: `double-conversion=3.1.5-4ubuntu1`
 
@@ -5658,14 +5654,9 @@ Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sdformat9=9.7.0-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0-1%7efocal.dsc' sdformat9_9.7.0-1~focal.dsc 1376 SHA256:4d2394d20b8c6eb21bfbec8dab8ac616fee8799aea12315c356b3258e5ed5d43
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0.orig.tar.bz2' sdformat9_9.7.0.orig.tar.bz2 699483 SHA256:dcfa6faa2a12a6814e8cf020539c351d69c3a1b82092645d0dee3ec7c968b8f0
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.7.0-1%7efocal.debian.tar.xz' sdformat9_9.7.0-1~focal.debian.tar.xz 3480 SHA256:5c896eb3095b1150270ebed90539d9d9d547d034ea0f0a645a382fc89ecf12c4
-```
 
 ### `dpkg` source package: `sed=4.7-1`
 
