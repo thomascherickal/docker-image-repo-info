@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8e22c0eff9f471bc292599895c696a1730a2e0f8c11132fd7bb74df651a3c5d1`
-- Created: `2022-04-05T16:25:54.21090499Z`
-- Virtual Size: ~ 551.80 Mb  
+- Image ID: `sha256:2ed4ab3bd3fb68720393b057c96916cb804aefdd8d1c89f32763191d5e1fd284`
+- Created: `2022-04-27T18:46:50.726138676Z`
+- Virtual Size: ~ 553.31 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -13,7 +13,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.14.1+1`
+  - `JAVA_VERSION=jdk-11.0.15+10`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GRADLE_HOME=/opt/gradle`
   - `GRADLE_VERSION=7.4.2`
@@ -210,16 +210,16 @@ GPL-3.0-or-later
 ### `apk` package: `git`
 
 ```console
-git-2.34.1-r0 description:
+git-2.34.2-r0 description:
 Distributed version control system
 
-git-2.34.1-r0 webpage:
+git-2.34.2-r0 webpage:
 https://www.git-scm.com/
 
-git-2.34.1-r0 installed size:
+git-2.34.2-r0 installed size:
 10 MiB
 
-git-2.34.1-r0 license:
+git-2.34.2-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -227,16 +227,16 @@ GPL-2.0-or-later
 ### `apk` package: `git-lfs`
 
 ```console
-git-lfs-3.0.2-r0 description:
+git-lfs-3.0.2-r1 description:
 Git extension for versioning large files
 
-git-lfs-3.0.2-r0 webpage:
+git-lfs-3.0.2-r1 webpage:
 https://git-lfs.github.io/
 
-git-lfs-3.0.2-r0 installed size:
+git-lfs-3.0.2-r1 installed size:
 9 MiB
 
-git-lfs-3.0.2-r0 license:
+git-lfs-3.0.2-r1 license:
 MIT
 
 ```
@@ -295,16 +295,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.80.0-r0 description:
+libcurl-7.80.0-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.80.0-r0 webpage:
+libcurl-7.80.0-r1 webpage:
 https://curl.se/
 
-libcurl-7.80.0-r0 installed size:
+libcurl-7.80.0-r1 installed size:
 504 KiB
 
-libcurl-7.80.0-r0 license:
+libcurl-7.80.0-r1 license:
 MIT
 
 ```
@@ -720,16 +720,16 @@ GPL-2.0-only
 ### `apk` package: `subversion`
 
 ```console
-subversion-1.14.1-r7 description:
+subversion-1.14.2-r0 description:
 Replacement for CVS, another versioning system (svn)
 
-subversion-1.14.1-r7 webpage:
+subversion-1.14.2-r0 webpage:
 https://subversion.apache.org/
 
-subversion-1.14.1-r7 installed size:
+subversion-1.14.2-r0 installed size:
 1044 KiB
 
-subversion-1.14.1-r7 license:
+subversion-1.14.2-r0 license:
 Apache-2.0 BSD
 
 ```
@@ -737,16 +737,16 @@ Apache-2.0 BSD
 ### `apk` package: `subversion-libs`
 
 ```console
-subversion-libs-1.14.1-r7 description:
+subversion-libs-1.14.2-r0 description:
 Replacement for CVS, another versioning system (svn) (libraries)
 
-subversion-libs-1.14.1-r7 webpage:
+subversion-libs-1.14.2-r0 webpage:
 https://subversion.apache.org/
 
-subversion-libs-1.14.1-r7 installed size:
+subversion-libs-1.14.2-r0 installed size:
 3628 KiB
 
-subversion-libs-1.14.1-r7 license:
+subversion-libs-1.14.2-r0 license:
 Apache-2.0 BSD
 
 ```
@@ -771,16 +771,16 @@ Public-Domain
 ### `apk` package: `xz-libs`
 
 ```console
-xz-libs-5.2.5-r0 description:
+xz-libs-5.2.5-r1 description:
 Library and CLI tools for XZ and LZMA compressed files (libraries)
 
-xz-libs-5.2.5-r0 webpage:
+xz-libs-5.2.5-r1 webpage:
 https://tukaani.org/xz
 
-xz-libs-5.2.5-r0 installed size:
+xz-libs-5.2.5-r1 installed size:
 148 KiB
 
-xz-libs-5.2.5-r0 license:
+xz-libs-5.2.5-r1 license:
 GPL-2.0-or-later AND Public-Domain AND LGPL-2.1-or-later
 
 ```
