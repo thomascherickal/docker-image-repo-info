@@ -3233,9 +3233,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris mysql-8.0=8.0.28-0ubuntu0.21.10.3
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.28-0ubuntu0.21.10.3.dsc' mysql-8.0_8.0.28-0ubuntu0.21.10.3.dsc 3517 SHA512:4220d832cc692b4337021c78985fe7dcaf42840212132dfb72b1ac7b560a7765847fb6f4c8341e7617e4f25a05b3acb08cb4a3a99a09af7c4839280b5000b988
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.28.orig.tar.gz' mysql-8.0_8.0.28.orig.tar.gz 298044027 SHA512:4473678619a03a6c1349ce7330127f03d2da70b5b598375015abe871a0591171fc206f6e248b20085b46a0f465c52408bcadcb732ff72a737c012364d1e46297
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.28-0ubuntu0.21.10.3.debian.tar.xz' mysql-8.0_8.0.28-0ubuntu0.21.10.3.debian.tar.xz 159012 SHA512:65704eb381b2e71964650202dbc15d2f7a1ddeac6a6f322ebfcc04b6a4b6f89e57efbb9153d19f965de80ee8d653cf2e54049e75591d8df3e1bde4a868d6af3a
+'http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.28-0ubuntu0.21.10.3.dsc' mysql-8.0_8.0.28-0ubuntu0.21.10.3.dsc 3517 SHA512:4220d832cc692b4337021c78985fe7dcaf42840212132dfb72b1ac7b560a7765847fb6f4c8341e7617e4f25a05b3acb08cb4a3a99a09af7c4839280b5000b988
+'http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.28.orig.tar.gz' mysql-8.0_8.0.28.orig.tar.gz 298044027 SHA512:4473678619a03a6c1349ce7330127f03d2da70b5b598375015abe871a0591171fc206f6e248b20085b46a0f465c52408bcadcb732ff72a737c012364d1e46297
+'http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.28-0ubuntu0.21.10.3.debian.tar.xz' mysql-8.0_8.0.28-0ubuntu0.21.10.3.debian.tar.xz 159012 SHA512:65704eb381b2e71964650202dbc15d2f7a1ddeac6a6f322ebfcc04b6a4b6f89e57efbb9153d19f965de80ee8d653cf2e54049e75591d8df3e1bde4a868d6af3a
 ```
 
 ### `dpkg` source package: `mysql-defaults=1.0.5ubuntu2`
