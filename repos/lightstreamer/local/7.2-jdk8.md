@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3161830747bf4755db37a7b0eed8cc48c5ce78b48d2353cbd20b7f558fbbff6e`
-- Created: `2022-04-21T02:11:45.117554283Z`
-- Virtual Size: ~ 583.54 Mb  
+- Image ID: `sha256:0458324f28b4a96200105525d6df4e4e649894d0e36f5ab7bac078fba5b885cf`
+- Created: `2022-04-27T22:52:54.966812154Z`
+- Virtual Size: ~ 583.42 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["./LS.sh","run"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-8`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=8u322`
+  - `JAVA_VERSION=8u332`
   - `LIGHTSTREAMER_VERSION=7.2.2`
   - `LIGHTSTREAMER_URL_DOWNLOAD=https://lightstreamer.com/distr/ls-server/7.2.2/Lightstreamer-7.2.2.tar.gz`
 - Labels:
