@@ -1,4 +1,4 @@
-## `ubuntu:devel`
+## `ubuntu:kinetic`
 
 ```console
 $ docker pull ubuntu@sha256:88c79ab062b79c8fe13036065334ecabb3bc2f302f08fcb887a2afc7f80cfa2d
@@ -13,7 +13,7 @@ $ docker pull ubuntu@sha256:88c79ab062b79c8fe13036065334ecabb3bc2f302f08fcb887a2
 	-	linux; riscv64
 	-	linux; s390x
 
-### `ubuntu:devel` - linux; amd64
+### `ubuntu:kinetic` - linux; amd64
 
 ```console
 $ docker pull ubuntu@sha256:fb5104deb0ffa22606091c5fc569d7c013e826a58cf9c3d0dedcb7e99ac21cd3
@@ -39,7 +39,7 @@ CMD ["bash"]
 		Size: 30.4 MB (30420973 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `ubuntu:devel` - linux; arm variant v7
+### `ubuntu:kinetic` - linux; arm variant v7
 
 ```console
 $ docker pull ubuntu@sha256:99139ea3b12bc75ee149bd32c1e4d295bcfd25002d2e0d857696b3df3c252647
@@ -65,7 +65,7 @@ CMD ["bash"]
 		Size: 27.0 MB (27015929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `ubuntu:devel` - linux; arm64 variant v8
+### `ubuntu:kinetic` - linux; arm64 variant v8
 
 ```console
 $ docker pull ubuntu@sha256:27daec02acc728d62b293e954981c142333eb8dfd8ce4bfd75eac008f5528d95
@@ -91,7 +91,7 @@ CMD ["bash"]
 		Size: 28.4 MB (28376165 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `ubuntu:devel` - linux; ppc64le
+### `ubuntu:kinetic` - linux; ppc64le
 
 ```console
 $ docker pull ubuntu@sha256:045009e9203b47686922bea14515bdbcbb168459bdc987b67e2d6713340de4c8
@@ -117,7 +117,7 @@ CMD ["bash"]
 		Size: 35.7 MB (35719018 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `ubuntu:devel` - linux; riscv64
+### `ubuntu:kinetic` - linux; riscv64
 
 ```console
 $ docker pull ubuntu@sha256:c18733fbe1d10983c42f8db215657467128ad8f638d3fdd61bdf0f88e04b5220
@@ -143,7 +143,7 @@ CMD ["bash"]
 		Size: 27.7 MB (27745108 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `ubuntu:devel` - linux; s390x
+### `ubuntu:kinetic` - linux; s390x
 
 ```console
 $ docker pull ubuntu@sha256:8ce2906f39c6d06e337ad8b5ed647dd304ed1a1fa7ee54eab38cc1d5707610fc
