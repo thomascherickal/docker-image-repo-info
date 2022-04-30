@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:dfa97c4b0ef1136b7f065d3ff8d490a73f833b3b6a874710fdb85989c2949730`
-- Created: `2022-04-05T16:56:21.45535453Z`
-- Virtual Size: ~ 342.15 Mb  
+- Image ID: `sha256:32407c45e14605ad7ef28382a26e75a8b6177173fb1e5ebf43d30bd2d1a4416f`
+- Created: `2022-04-27T19:15:34.012325066Z`
+- Virtual Size: ~ 343.64 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.14.1+1`
+  - `JAVA_VERSION=jdk-11.0.15+10`
   - `JAVA_HOME=/opt/java/openjdk`
   - `MAVEN_HOME=/usr/share/maven`
   - `MAVEN_CONFIG=/root/.m2`
@@ -160,16 +160,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.80.0-r0 description:
+curl-7.80.0-r1 description:
 URL retrival utility and library
 
-curl-7.80.0-r0 webpage:
+curl-7.80.0-r1 webpage:
 https://curl.se/
 
-curl-7.80.0-r0 installed size:
+curl-7.80.0-r1 installed size:
 248 KiB
 
-curl-7.80.0-r0 license:
+curl-7.80.0-r1 license:
 MIT
 
 ```
@@ -228,16 +228,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.80.0-r0 description:
+libcurl-7.80.0-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.80.0-r0 webpage:
+libcurl-7.80.0-r1 webpage:
 https://curl.se/
 
-libcurl-7.80.0-r0 installed size:
+libcurl-7.80.0-r1 installed size:
 504 KiB
 
-libcurl-7.80.0-r0 license:
+libcurl-7.80.0-r1 license:
 MIT
 
 ```

@@ -1,1966 +1,2302 @@
-# `maven:3.8.5-openjdk-17`
+# `maven:3.8.5-eclipse-temurin-17`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d803131b73adf0e39777bcfef65f5930db6e5f94517c0abdd932c671fd6f247d`
-- Created: `2022-04-05T16:55:04.671749093Z`
-- Virtual Size: ~ 795.85 Mb  
+- Image ID: `sha256:626decc5410e8511680e8b27837ed569056515276a7fe68954a28a608a6fc310`
+- Created: `2022-04-27T19:15:51.183986899Z`
+- Virtual Size: ~ 555.76 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
 - Command: `["mvn"]`
 - Environment:
-  - `PATH=/usr/java/openjdk-17/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `JAVA_HOME=/usr/java/openjdk-17`
-  - `LANG=C.UTF-8`
-  - `JAVA_VERSION=17.0.2`
+  - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `LANG=en_US.UTF-8`
+  - `LANGUAGE=en_US:en`
+  - `LC_ALL=en_US.UTF-8`
+  - `JAVA_VERSION=jdk-17.0.3+7`
+  - `JAVA_HOME=/opt/java/openjdk`
   - `MAVEN_HOME=/usr/share/maven`
   - `MAVEN_CONFIG=/root/.m2`
 
-## `rpm` (`.rpm`-based packages)
+## `dpkg` (`.deb`-based packages)
 
-### `rpm` package: `aajohan-comfortaa-fonts-3.001-2.el8.noarch`
+### `dpkg` source package: `acl=2.2.53-6`
 
-Licenses (from `rpm --query`): OFL
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url aajohan-comfortaa-fonts-3.001-2.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/aajohan-comfortaa-fonts-3.001-2.el8.src.rpm
-```
+- `libacl1:amd64=2.2.53-6`
 
-### `rpm` package: `audit-libs-3.0-0.17.20191104git1c2f876.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libacl1/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-2+`
+- `LGPL-2.1`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url audit-libs-3.0-0.17.20191104git1c2f876.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/audit-3.0-0.17.20191104git1c2f876.el8.src.rpm
+$ apt-get source -qq --print-uris acl=2.2.53-6
+'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53-6.dsc' acl_2.2.53-6.dsc 2336 SHA256:02dad794aa09133e557552d75568324ed3e84fb56e93626e67993cf54a97df34
+'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53.orig.tar.gz' acl_2.2.53.orig.tar.gz 524300 SHA256:06be9865c6f418d851ff4494e12406568353b891ffe1f596b34693c387af26c7
+'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53.orig.tar.gz.asc' acl_2.2.53.orig.tar.gz.asc 833 SHA256:06849bece0b56a6a7269173abe101cff223bb9346d74027a3cd5ff80914abf4b
+'http://archive.ubuntu.com/ubuntu/pool/main/a/acl/acl_2.2.53-6.debian.tar.xz' acl_2.2.53-6.debian.tar.xz 25108 SHA256:c80e6150d9b213e52f5e65ff78d4ee95a71b5a258c1f8b980365d20ed1753a5c
 ```
-
-### `rpm` package: `basesystem-11-5.el8.noarch`
 
-Licenses (from `rpm --query`): Public Domain
+### `dpkg` source package: `adduser=3.118ubuntu2`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url basesystem-11-5.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/basesystem-11-5.el8.src.rpm
-```
+- `adduser=3.118ubuntu2`
 
-### `rpm` package: `bash-4.4.20-2.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 
-Licenses (from `rpm --query`): GPLv3+
+- `GPL-2`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url bash-4.4.20-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/bash-4.4.20-2.el8.src.rpm
+$ apt-get source -qq --print-uris adduser=3.118ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu2.dsc' adduser_3.118ubuntu2.dsc 1131 SHA256:785f99d8c75c972cd42d3fab3afa07f97299bb1d70013fe5d295f045224774bb
+'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu2.tar.xz' adduser_3.118ubuntu2.tar.xz 222364 SHA256:9429124c39c381b541005da6f0ae29831bd6533dd65c923e06ca2a7c310db382
 ```
 
-### `rpm` package: `binutils-2.30-108.0.2.el8_5.1.x86_64`
+### `dpkg` source package: `apt=2.0.6`
 
-Licenses (from `rpm --query`): GPLv3+
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url binutils-2.30-108.0.2.el8_5.1
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/binutils-2.30-108.0.2.el8_5.1.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/binutils-2.30-108.0.2.el8_5.1.src.rpm
-```
+- `apt=2.0.6`
+- `libapt-pkg6.0:amd64=2.0.6`
 
-### `rpm` package: `brotli-1.0.6-3.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg6.0/copyright`)
 
-Licenses (from `rpm --query`): MIT
+- `GPL-2`
+- `GPLv2+`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url brotli-1.0.6-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/brotli-1.0.6-3.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/brotli-1.0.6-3.el8.src.rpm
+$ apt-get source -qq --print-uris apt=2.0.6
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.0.6.dsc' apt_2.0.6.dsc 2835 SHA512:71a27905e35c3c53ed7e7cb255c203ff24b49a53e81d802425eca2ec6b3b587b54d54046f8970e79b51d2d23034b15509dda517d54cfd3699ab0f22111763a23
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.0.6.tar.xz' apt_2.0.6.tar.xz 2176328 SHA512:a62ca7245039791384137cc5a417a876346e570e1a6c3d9856242003ee393e91c013fe7df2154792ba0b222a95cfda31847a654c444061587353d9020d69a167
 ```
 
-### `rpm` package: `bzip2-libs-1.0.6-26.el8.x86_64`
+### `dpkg` source package: `attr=1:2.4.48-5`
 
-Licenses (from `rpm --query`): BSD
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url bzip2-libs-1.0.6-26.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/bzip2-1.0.6-26.el8.src.rpm
-```
+- `libattr1:amd64=1:2.4.48-5`
 
-### `rpm` package: `ca-certificates-2021.2.50-80.0.el8_4.noarch`
+Licenses: (parsed from: `/usr/share/doc/libattr1/copyright`)
 
-Licenses (from `rpm --query`): Public Domain
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-2+`
+- `LGPL-2.1`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url ca-certificates-2021.2.50-80.0.el8_4.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/ca-certificates-2021.2.50-80.0.el8_4.src.rpm
+$ apt-get source -qq --print-uris attr=1:2.4.48-5
+'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48-5.dsc' attr_2.4.48-5.dsc 2433 SHA256:0b20a285b758083e2e202ffdd2930cef1bf84fee498791fc3e26b69a3bced01d
+'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48.orig.tar.gz' attr_2.4.48.orig.tar.gz 467840 SHA256:5ead72b358ec709ed00bbf7a9eaef1654baad937c001c044fe8b74c57f5324e7
+'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48.orig.tar.gz.asc' attr_2.4.48.orig.tar.gz.asc 833 SHA256:5d23c2c83cc13d170f1c209f48d0efa1fc46d16487b790e9996c5206dcfe0395
+'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.4.48-5.debian.tar.xz' attr_2.4.48-5.debian.tar.xz 25560 SHA256:02238253d324250dabdc0434f7de045d85df93458995a465ac434f2a3978a312
 ```
-
-### `rpm` package: `chkconfig-1.19.1-1.0.1.el8.x86_64`
 
-Licenses (from `rpm --query`): GPLv2
+### `dpkg` source package: `audit=1:2.8.5-2ubuntu6`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url chkconfig-1.19.1-1.0.1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/chkconfig-1.19.1-1.0.1.el8.src.rpm
-```
+- `libaudit-common=1:2.8.5-2ubuntu6`
+- `libaudit1:amd64=1:2.8.5-2ubuntu6`
 
-### `rpm` package: `coreutils-single-8.30-12.0.1.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/doc/libaudit1/copyright`)
 
-Licenses (from `rpm --query`): GPLv3+
+- `GPL-1`
+- `GPL-2`
+- `LGPL-2.1`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url coreutils-single-8.30-12.0.1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/coreutils-8.30-12.0.1.el8.src.rpm
+$ apt-get source -qq --print-uris audit=1:2.8.5-2ubuntu6
+'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-2ubuntu6.dsc' audit_2.8.5-2ubuntu6.dsc 2764 SHA256:b149fad8217d68a80299c1ef72539ee7d756146d692b7e51eade7341e60ac528
+'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5.orig.tar.gz' audit_2.8.5.orig.tar.gz 1140694 SHA256:0e5d4103646e00f8d1981e1cd2faea7a2ae28e854c31a803e907a383c5e2ecb7
+'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_2.8.5-2ubuntu6.debian.tar.xz' audit_2.8.5-2ubuntu6.debian.tar.xz 18712 SHA256:d85ecf206bfe256a86e6d39602cd2744beda264a28e413f31c4da227e6542ea7
 ```
 
-### `rpm` package: `cracklib-2.9.6-15.el8.x86_64`
+### `dpkg` source package: `base-files=11ubuntu5.5`
 
-Licenses (from `rpm --query`): LGPLv2+
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url cracklib-2.9.6-15.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/cracklib-2.9.6-15.el8.src.rpm
-```
+- `base-files=11ubuntu5.5`
 
-### `rpm` package: `cracklib-dicts-2.9.6-15.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `GPL`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url cracklib-dicts-2.9.6-15.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/cracklib-2.9.6-15.el8.src.rpm
+$ apt-get source -qq --print-uris base-files=11ubuntu5.5
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.5.dsc' base-files_11ubuntu5.5.dsc 1676 SHA512:a96414af9c3a120ce23f854ab5e80807319d820825ae9027b0ff6f5be621c6aff2941eb31b7f05523b5015d6702d973e628a6e70cb17bf9312b6cf5256b98962
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.5.tar.xz' base-files_11ubuntu5.5.tar.xz 80616 SHA512:682851e1d0001fd0d79a4d61357a6ce8de8d46367259619c5c66b289fc471901d70eb47d64289a8ad63d6b784ecad912f92ef005421f732ad9d3a3ddc97a0e74
 ```
-
-### `rpm` package: `crypto-policies-20210617-1.gitc776d3e.el8.noarch`
 
-Licenses (from `rpm --query`): LGPLv2+
+### `dpkg` source package: `base-passwd=3.5.47`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url crypto-policies-20210617-1.gitc776d3e.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/crypto-policies-20210617-1.gitc776d3e.el8.src.rpm
-```
+- `base-passwd=3.5.47`
 
-### `rpm` package: `curl-7.61.1-22.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/base-passwd/copyright`)
 
-Licenses (from `rpm --query`): MIT
+- `GPL-2`
+- `PD`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url curl-7.61.1-22.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/curl-7.61.1-22.el8.src.rpm
+$ apt-get source -qq --print-uris base-passwd=3.5.47
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.47.dsc' base-passwd_3.5.47.dsc 1757 SHA256:5a77a4cce51d1eb72e9d96d4083c641435c05888922c7bd3fa6b4395bf9afad3
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.47.tar.xz' base-passwd_3.5.47.tar.xz 53024 SHA256:9810ae0216e96bf9fc7ca6163d47ef8ec7d1677f533451af5911d8202a490a23
 ```
 
-### `rpm` package: `cyrus-sasl-lib-2.1.27-6.el8_5.x86_64`
+### `dpkg` source package: `bash=5.0-6ubuntu1.1`
 
-Licenses (from `rpm --query`): BSD with advertising
+Binary Packages:
 
-Source:
+- `bash=5.0-6ubuntu1.1`
 
-```console
-$ dnf --quiet download --source --url cyrus-sasl-lib-2.1.27-6.el8_5
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/cyrus-sasl-2.1.27-6.el8_5.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/cyrus-sasl-2.1.27-6.el8_5.src.rpm
-```
+Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
-### `rpm` package: `elfutils-libelf-0.185-1.el8.x86_64`
+- `GPL-3`
 
-Licenses (from `rpm --query`): GPLv2+ or LGPLv3+
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-Source:
 
-```console
-$ dnf --quiet download --source --url elfutils-libelf-0.185-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/elfutils-0.185-1.el8.src.rpm
-```
+### `dpkg` source package: `binutils=2.34-6ubuntu1.3`
 
-### `rpm` package: `emacs-filesystem-26.1-7.el8.noarch`
+Binary Packages:
 
-Licenses (from `rpm --query`): GPLv3+ and CC0-1.0
+- `binutils=2.34-6ubuntu1.3`
+- `binutils-common:amd64=2.34-6ubuntu1.3`
+- `binutils-x86-64-linux-gnu=2.34-6ubuntu1.3`
+- `libbinutils:amd64=2.34-6ubuntu1.3`
+- `libctf-nobfd0:amd64=2.34-6ubuntu1.3`
+- `libctf0:amd64=2.34-6ubuntu1.3`
 
+Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`, `/usr/share/doc/libctf-nobfd0/copyright`, `/usr/share/doc/libctf0/copyright`)
+
+- `GFDL`
+- `GPL`
+- `LGPL`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url emacs-filesystem-26.1-7.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/emacs-26.1-7.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/emacs-26.1-7.el8.src.rpm
+$ apt-get source -qq --print-uris binutils=2.34-6ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.3.dsc' binutils_2.34-6ubuntu1.3.dsc 8829 SHA512:4bc4408053e8a0b1a4f97dba2ef1ff20f4c44a34a068e48e0e3e7414d36b968b09d9db50a8430e2527f979216c4e326a6548d75d0baed1b886adb743c5046f25
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34.orig.tar.xz' binutils_2.34.orig.tar.xz 21637796 SHA512:2c7976939dcf5e8c5b7374cccd39bfe803b1bec73c6abfa0eb17c24e1942574c6bdb874c66a092a82adc443182eacd8a5a8001c19a76101f0c7ba40c27de0bbd
+'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.3.debian.tar.xz' binutils_2.34-6ubuntu1.3.debian.tar.xz 158192 SHA512:9d182ac514e5383892a2a9bbc2267c5439c699557a7392003bdfd43e2fc5c66fb10b793a25c8f17c763d377c1628d070c5a29bf7213513da3e769305517683e2
 ```
-
-### `rpm` package: `expat-2.2.5-4.0.1.el8_5.3.x86_64`
 
-Licenses (from `rpm --query`): MIT
+### `dpkg` source package: `brotli=1.0.7-6ubuntu0.1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url expat-2.2.5-4.0.1.el8_5.3
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/expat-2.2.5-4.0.1.el8_5.3.src.rpm
-```
+- `libbrotli1:amd64=1.0.7-6ubuntu0.1`
 
-### `rpm` package: `file-libs-5.33-20.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libbrotli1/copyright`)
 
-Licenses (from `rpm --query`): BSD
+- `MIT`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url file-libs-5.33-20.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/file-5.33-20.el8.src.rpm
+$ apt-get source -qq --print-uris brotli=1.0.7-6ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7-6ubuntu0.1.dsc' brotli_1.0.7-6ubuntu0.1.dsc 2385 SHA512:139a93e110c6cf50531bdfee5ec4a8751ca81d1e02d2f38b21c1a9a478064286ddeb6bfdf20af488f7e2f53219cf460a00e68b77ef1b860fbf0df67f300d303b
+'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7.orig.tar.gz' brotli_1.0.7.orig.tar.gz 23827908 SHA512:a82362aa36d2f2094bca0b2808d9de0d57291fb3a4c29d7c0ca0a37e73087ec5ac4df299c8c363e61106fccf2fe7f58b5cf76eb97729e2696058ef43b1d3930a
+'http://archive.ubuntu.com/ubuntu/pool/main/b/brotli/brotli_1.0.7-6ubuntu0.1.debian.tar.xz' brotli_1.0.7-6ubuntu0.1.debian.tar.xz 13672 SHA512:eb24ee68d0a699bb8f382c7f80c313e0bb26bea6b22f74bf01af236eafe345cf602f7544da4a74eb8c8f70defcd6b867018df97a96e5e894535cf731400edaa8
 ```
 
-### `rpm` package: `filesystem-3.8-6.el8.x86_64`
+### `dpkg` source package: `bzip2=1.0.8-2`
 
-Licenses (from `rpm --query`): Public Domain
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url filesystem-3.8-6.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/filesystem-3.8-6.el8.src.rpm
-```
+- `bzip2=1.0.8-2`
+- `libbz2-1.0:amd64=1.0.8-2`
 
-### `rpm` package: `findutils-4.6.0-20.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/bzip2/copyright`, `/usr/share/doc/libbz2-1.0/copyright`)
 
-Licenses (from `rpm --query`): GPLv3+
+- `BSD-variant`
+- `GPL-2`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url findutils-4.6.0-20.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/findutils-4.6.0-20.el8.src.rpm
+$ apt-get source -qq --print-uris bzip2=1.0.8-2
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.8-2.dsc' bzip2_1.0.8-2.dsc 2180 SHA256:646cdcbb786a89a647cfafb280ef467143c06c445c4bf6fe69ec4a7882943064
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.8.orig.tar.gz' bzip2_1.0.8.orig.tar.gz 810029 SHA256:ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.8-2.debian.tar.bz2' bzip2_1.0.8-2.debian.tar.bz2 26032 SHA256:237c8619bc9bc16f357b1077064a3e58aa1a230dadb4b9bb3bd8dc8f454afc0b
 ```
 
-### `rpm` package: `fontconfig-2.13.1-4.el8.x86_64`
+### `dpkg` source package: `ca-certificates=20210119~20.04.2`
 
-Licenses (from `rpm --query`): MIT and Public Domain and UCD
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url fontconfig-2.13.1-4.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/fontconfig-2.13.1-4.el8.src.rpm
-```
+- `ca-certificates=20210119~20.04.2`
 
-### `rpm` package: `fontpackages-filesystem-1.44-22.el8.noarch`
+Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
-Licenses (from `rpm --query`): Public Domain
+- `GPL-2`
+- `GPL-2+`
+- `MPL-2.0`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url fontpackages-filesystem-1.44-22.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/fontpackages-1.44-22.el8.src.rpm
+$ apt-get source -qq --print-uris ca-certificates=20210119~20.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20210119%7e20.04.2.dsc' ca-certificates_20210119~20.04.2.dsc 1917 SHA512:f7cebf760482ea3514303154a40f0a143ab1d97b0fe4d2e360c325115e2b5148e387be271060238e3e4133733316bb02cb161f42c2606dbf72d2493cce0667f9
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20210119%7e20.04.2.tar.xz' ca-certificates_20210119~20.04.2.tar.xz 232956 SHA512:03740922fcc051a5252129de3e973293de1e5f5833c08b58264362fed2d5d67b53c05f71f426ff56805a8fb8a6ffe35ef4e1556006a3e09471e8424d02ff099e
 ```
 
-### `rpm` package: `freetype-2.9.1-4.el8_3.1.x86_64`
+### `dpkg` source package: `cdebconf=0.251ubuntu1`
 
-Licenses (from `rpm --query`): (FTL or GPLv2+) and BSD and MIT and Public Domain and zlib with acknowledgement
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url freetype-2.9.1-4.el8_3.1
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/freetype-2.9.1-4.el8_3.1.src.rpm
-```
+- `libdebconfclient0:amd64=0.251ubuntu1`
 
-### `rpm` package: `gawk-4.2.1-2.el8.x86_64`
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
 
-Licenses (from `rpm --query`): GPLv3+ and GPLv2+ and LGPLv2+ and BSD
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url gawk-4.2.1-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gawk-4.2.1-2.el8.src.rpm
+$ apt-get source -qq --print-uris cdebconf=0.251ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/c/cdebconf/cdebconf_0.251ubuntu1.dsc' cdebconf_0.251ubuntu1.dsc 2858 SHA256:0753b98ec773e743de19d393f444a8b88915ad75340cc58007eb7c309031121d
+'http://archive.ubuntu.com/ubuntu/pool/main/c/cdebconf/cdebconf_0.251ubuntu1.tar.xz' cdebconf_0.251ubuntu1.tar.xz 276744 SHA256:d07848e52aecb70e82d8bafd082ecee3cccd7a8229b59527e07cc49023aa22d0
 ```
 
-### `rpm` package: `gdbm-1.18-1.el8.x86_64`
+### `dpkg` source package: `coreutils=8.30-3ubuntu2`
 
-Licenses (from `rpm --query`): GPLv3+
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url gdbm-1.18-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gdbm-1.18-1.el8.src.rpm
-```
+- `coreutils=8.30-3ubuntu2`
 
-### `rpm` package: `gdbm-libs-1.18-1.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/coreutils/copyright`)
 
-Licenses (from `rpm --query`): GPLv3+
+- `GPL-3`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url gdbm-libs-1.18-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gdbm-1.18-1.el8.src.rpm
+$ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.dsc' coreutils_8.30-3ubuntu2.dsc 2048 SHA256:f36fe0ac14978b240a750b79d2bbd737d6b1939296c3a287899933aa2a1906ea
+'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30.orig.tar.xz' coreutils_8.30.orig.tar.xz 5359532 SHA256:e831b3a86091496cdba720411f9748de81507798f6130adeaef872d206e1b057
+'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `rpm` package: `git-2.27.0-1.el8.x86_64`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.7`
 
-Licenses (from `rpm --query`): GPLv2
+Binary Packages:
 
-Source:
+- `curl=7.68.0-1ubuntu2.7`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.7`
+- `libcurl4:amd64=7.68.0-1ubuntu2.7`
 
-```console
-$ dnf --quiet download --source --url git-2.27.0-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/git-2.27.0-1.el8.src.rpm
-```
+Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
-### `rpm` package: `git-core-2.27.0-1.el8.x86_64`
+- `BSD-3-Clause`
+- `BSD-4-Clause`
+- `ISC`
+- `curl`
+- `other`
+- `public-domain`
 
-Licenses (from `rpm --query`): GPLv2
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-Source:
 
-```console
-$ dnf --quiet download --source --url git-core-2.27.0-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/git-2.27.0-1.el8.src.rpm
-```
+### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
+
+Binary Packages:
 
-### `rpm` package: `git-core-doc-2.27.0-1.el8.noarch`
+- `libsasl2-2:amd64=2.1.27+dfsg-2ubuntu0.1`
+- `libsasl2-modules-db:amd64=2.1.27+dfsg-2ubuntu0.1`
 
-Licenses (from `rpm --query`): GPLv2
+Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/libsasl2-modules-db/copyright`)
 
+- `BSD-4-clause`
+- `GPL-3`
+- `GPL-3+`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url git-core-doc-2.27.0-1.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/git-2.27.0-1.el8.src.rpm
+$ apt-get source -qq --print-uris cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg-2ubuntu0.1.dsc' cyrus-sasl2_2.1.27+dfsg-2ubuntu0.1.dsc 3511 SHA512:70d73c119ef8986adbb0b8f52be7459f756ea8f8e2bf836b2c57e5230f63052999cd716d6585d4b1d65f854a471afbc0f344e88759e99c5ea129b82216400903
+'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg.orig.tar.xz' cyrus-sasl2_2.1.27+dfsg.orig.tar.xz 2058596 SHA512:a795e4362f85a50e223c5456d03526832eb29fdbc9e17a767045f8542638e3f987d382b79b072bcd694bd1a12cbb818cff6c326063ca2bbe05453c1acf7fb8ad
+'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg-2ubuntu0.1.debian.tar.xz' cyrus-sasl2_2.1.27+dfsg-2ubuntu0.1.debian.tar.xz 100804 SHA512:391bfecc0859839514a320739b93555f44e1101042d262c9c3c3623a5e1a73ca304f9509bd8bc2d62e691dc4c15570e8af5a52c97483fff8600d48eeb13ca518
 ```
 
-### `rpm` package: `glib2-2.56.4-156.el8.x86_64`
+### `dpkg` source package: `dash=0.5.10.2-6`
 
-Licenses (from `rpm --query`): LGPLv2+
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url glib2-2.56.4-156.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glib2-2.56.4-156.el8.src.rpm
-```
+- `dash=0.5.10.2-6`
 
-### `rpm` package: `glibc-2.28-164.0.5.el8_5.3.x86_64`
+Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
+- `GPL`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url glibc-2.28-164.0.5.el8_5.3
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
+$ apt-get source -qq --print-uris dash=0.5.10.2-6
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.10.2-6.dsc' dash_0.5.10.2-6.dsc 1756 SHA256:d509a23ebdc4f107c911914590c1400e5a24383f35c5d6904e48d2afeff168ac
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.10.2.orig.tar.gz' dash_0.5.10.2.orig.tar.gz 225196 SHA256:3c663919dc5c66ec991da14c7cf7e0be8ad00f3db73986a987c118862b5f6071
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.10.2-6.debian.tar.xz' dash_0.5.10.2-6.debian.tar.xz 44232 SHA256:1448fbfc2541be52787da81ce03bb81ad6b1f380cba1b7e747abefdcd44f6c86
 ```
-
-### `rpm` package: `glibc-common-2.28-164.0.5.el8_5.3.x86_64`
 
-Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
+### `dpkg` source package: `db5.3=5.3.28+dfsg1-0.6ubuntu2`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url glibc-common-2.28-164.0.5.el8_5.3
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
-```
+- `libdb5.3:amd64=5.3.28+dfsg1-0.6ubuntu2`
 
-### `rpm` package: `glibc-minimal-langpack-2.28-164.0.5.el8_5.3.x86_64`
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
 
-Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url glibc-minimal-langpack-2.28-164.0.5.el8_5.3
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
+$ apt-get source -qq --print-uris db5.3=5.3.28+dfsg1-0.6ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1-0.6ubuntu2.dsc' db5.3_5.3.28+dfsg1-0.6ubuntu2.dsc 3245 SHA256:d879f4921a2f573132031d9371f0eb020005bdce48d6e12b436bf3515dda8663
+'http://archive.ubuntu.com/ubuntu/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1.orig.tar.xz' db5.3_5.3.28+dfsg1.orig.tar.xz 19723860 SHA256:b19bf3dd8ce74b95a7b215be9a7c8489e8e8f18da60d64d6340a06e75f497749
+'http://archive.ubuntu.com/ubuntu/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1-0.6ubuntu2.debian.tar.xz' db5.3_5.3.28+dfsg1-0.6ubuntu2.debian.tar.xz 30172 SHA256:e606e7827f077efc92afc6f0d43c921fab4577d619eab06fab23182aefab7506
 ```
 
-### `rpm` package: `gmp-6.1.2-10.el8.x86_64`
+### `dpkg` source package: `debconf=1.5.73`
 
-Licenses (from `rpm --query`): LGPLv3+ or GPLv2+
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url gmp-6.1.2-10.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gmp-6.1.2-10.el8.src.rpm
-```
+- `debconf=1.5.73`
 
-### `rpm` package: `gnupg2-2.2.20-2.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/debconf/copyright`)
 
-Licenses (from `rpm --query`): GPLv3+
+- `BSD-2-clause`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url gnupg2-2.2.20-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gnupg2-2.2.20-2.el8.src.rpm
+$ apt-get source -qq --print-uris debconf=1.5.73
+'http://archive.ubuntu.com/ubuntu/pool/main/d/debconf/debconf_1.5.73.dsc' debconf_1.5.73.dsc 2081 SHA256:cdd4c049414cd167a4a9479d883e205bf5cebb19fc4bb6f132000a56291eb670
+'http://archive.ubuntu.com/ubuntu/pool/main/d/debconf/debconf_1.5.73.tar.xz' debconf_1.5.73.tar.xz 570780 SHA256:513895b2b77d9fb72542152390e7d4c67fe1e08de75fdad44d54ce1e7d83ecef
 ```
 
-### `rpm` package: `gnutls-3.6.16-4.el8.x86_64`
+### `dpkg` source package: `debianutils=4.9.1`
 
-Licenses (from `rpm --query`): GPLv3+ and LGPLv2+
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url gnutls-3.6.16-4.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gnutls-3.6.16-4.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/gnutls-3.6.16-4.el8.src.rpm
-```
+- `debianutils=4.9.1`
 
-### `rpm` package: `gobject-introspection-1.56.1-1.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/debianutils/copyright`)
 
-Licenses (from `rpm --query`): GPLv2+, LGPLv2+, MIT
+- `GPL`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url gobject-introspection-1.56.1-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/gobject-introspection-1.56.1-1.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gobject-introspection-1.56.1-1.el8.src.rpm
+$ apt-get source -qq --print-uris debianutils=4.9.1
+'http://archive.ubuntu.com/ubuntu/pool/main/d/debianutils/debianutils_4.9.1.dsc' debianutils_4.9.1.dsc 1592 SHA256:d30866ea0352263fa7756010e8743ade350024b2fd491bc5befcbaa9a97626b7
+'http://archive.ubuntu.com/ubuntu/pool/main/d/debianutils/debianutils_4.9.1.tar.xz' debianutils_4.9.1.tar.xz 157516 SHA256:af826685d9c56abfa873e84cd392539cd363cb0ba04a09d21187377e1b764091
 ```
 
-### `rpm` package: `gpg-pubkey-ad986da3-5cabf60d`
+### `dpkg` source package: `diffutils=1:3.7-3`
 
-Licenses (from `rpm --query`): pubkey
+Binary Packages:
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+- `diffutils=1:3.7-3`
 
-### `rpm` package: `gpgme-1.13.1-9.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/diffutils/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+ and GPLv3+
+- `GFDL`
+- `GPL`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url gpgme-1.13.1-9.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gpgme-1.13.1-9.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/gpgme-1.13.1-9.el8.src.rpm
+$ apt-get source -qq --print-uris diffutils=1:3.7-3
+'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7-3.dsc' diffutils_3.7-3.dsc 1453 SHA256:99dee94cec05454a65a9cb542bea1720dbd4c511d13f9784c9e3741e76a9b9ba
+'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7.orig.tar.xz' diffutils_3.7.orig.tar.xz 1448828 SHA256:b3a7a6221c3dc916085f0d205abf6b8e1ba443d4dd965118da364a1dc1cb3a26
+'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7-3.debian.tar.xz' diffutils_3.7-3.debian.tar.xz 11116 SHA256:a455228f12283b5f3c0165db4ab9b12071adc37fb9dd50dcb5e1b8851c524f1f
 ```
-
-### `rpm` package: `grep-3.1-6.el8.x86_64`
 
-Licenses (from `rpm --query`): GPLv3+
+### `dpkg` source package: `dpkg=1.19.7ubuntu3`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url grep-3.1-6.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/grep-3.1-6.el8.src.rpm
-```
+- `dpkg=1.19.7ubuntu3`
 
-### `rpm` package: `groff-base-1.22.3-18.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 
-Licenses (from `rpm --query`): GPLv3+ and GFDL and BSD and MIT
+- `BSD-2-clause`
+- `GPL-2`
+- `GPL-2+`
+- `public-domain-md5`
+- `public-domain-s-s-d`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url groff-base-1.22.3-18.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/groff-1.22.3-18.el8.src.rpm
+$ apt-get source -qq --print-uris dpkg=1.19.7ubuntu3
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.7ubuntu3.dsc' dpkg_1.19.7ubuntu3.dsc 2254 SHA256:462ecb9f8af5612f7fbc1181484d8376569f95bb0dc7b7c53891819a0434e81a
+'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.7ubuntu3.tar.xz' dpkg_1.19.7ubuntu3.tar.xz 4731220 SHA256:598eba200da2e1b6097f11537c49e9ad7eb2292e148259bd76f9cd184f281853
 ```
 
-### `rpm` package: `gzip-1.9-12.el8.x86_64`
+### `dpkg` source package: `e2fsprogs=1.45.5-2ubuntu1`
 
-Licenses (from `rpm --query`): GPLv3+ and GFDL
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url gzip-1.9-12.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gzip-1.9-12.el8.src.rpm
-```
+- `e2fsprogs=1.45.5-2ubuntu1`
+- `libcom-err2:amd64=1.45.5-2ubuntu1`
+- `libext2fs2:amd64=1.45.5-2ubuntu1`
+- `libss2:amd64=1.45.5-2ubuntu1`
+- `logsave=1.45.5-2ubuntu1`
 
-### `rpm` package: `info-6.5-6.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/libcom-err2/copyright`, `/usr/share/doc/libext2fs2/copyright`, `/usr/share/doc/libss2/copyright`, `/usr/share/doc/logsave/copyright`)
 
-Licenses (from `rpm --query`): GPLv3+
+- `GPL-2`
+- `LGPL-2`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url info-6.5-6.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/texinfo-6.5-6.el8.src.rpm
+$ apt-get source -qq --print-uris e2fsprogs=1.45.5-2ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.5-2ubuntu1.dsc' e2fsprogs_1.45.5-2ubuntu1.dsc 3342 SHA256:a4d9f6948bd041523783a727854beff6b8c3786f96f70936e1d63b6cd9596b01
+'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.5.orig.tar.gz' e2fsprogs_1.45.5.orig.tar.gz 7938826 SHA256:91e72a2f6fee21b89624d8ece5a4b3751a17b28775d32cd048921050b4760ed9
+'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.5.orig.tar.gz.asc' e2fsprogs_1.45.5.orig.tar.gz.asc 488 SHA256:0f900698a89e3e1996cd86966e5ae0dc6f8d866e2cd8a0f4285c23e7ea696720
+'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.45.5-2ubuntu1.debian.tar.xz' e2fsprogs_1.45.5-2ubuntu1.debian.tar.xz 81528 SHA256:bcf259dd0480b50996580a765fded85f89a0a6041f6c81cbbcce94f58944c51b
 ```
 
-### `rpm` package: `json-c-0.13.1-2.el8.x86_64`
+### `dpkg` source package: `expat=2.2.9-1ubuntu0.4`
 
-Licenses (from `rpm --query`): MIT
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url json-c-0.13.1-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/json-c-0.13.1-2.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/json-c-0.13.1-2.el8.src.rpm
-```
+- `libexpat1:amd64=2.2.9-1ubuntu0.4`
 
-### `rpm` package: `keyutils-libs-1.5.10-9.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
-Licenses (from `rpm --query`): GPLv2+ and LGPLv2+
+- `MIT`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url keyutils-libs-1.5.10-9.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/keyutils-1.5.10-9.el8.src.rpm
+$ apt-get source -qq --print-uris expat=2.2.9-1ubuntu0.4
+'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9-1ubuntu0.4.dsc' expat_2.2.9-1ubuntu0.4.dsc 2064 SHA512:e8fa4c5bd395f58c262075cc80f94c33c9386898809b3959812a9f01413aadacb1dfc34d1ca3f03045571e6eba125f4d6d18b0a14808862832136af12e4aea3c
+'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9.orig.tar.gz' expat_2.2.9.orig.tar.gz 8273174 SHA512:e274fa7f30630450cb3ca681b266d765dbb7f5d00d1275ff9d9b2e2f6e1095893b8af4e3f4172ae6297c7a8a831a0a6becd484fe4bcdca09c37922f630780ef0
+'http://archive.ubuntu.com/ubuntu/pool/main/e/expat/expat_2.2.9-1ubuntu0.4.debian.tar.xz' expat_2.2.9-1ubuntu0.4.debian.tar.xz 25972 SHA512:e9ee861e786b5811684233a5e5c8c3ba1f0713519e1084f0801088a5d0f29e00483b60e4e3d3024d9400ac78aee7b7a4198c30c6c2ea5c146c9947a71d237864
 ```
-
-### `rpm` package: `krb5-libs-1.18.2-14.el8.x86_64`
 
-Licenses (from `rpm --query`): MIT
+### `dpkg` source package: `findutils=4.7.0-1ubuntu1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url krb5-libs-1.18.2-14.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/krb5-1.18.2-14.el8.src.rpm
-```
+- `findutils=4.7.0-1ubuntu1`
 
-### `rpm` package: `less-530-1.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/findutils/copyright`)
 
-Licenses (from `rpm --query`): GPLv3+ or BSD
+- `GFDL-1.3`
+- `GPL-3`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url less-530-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/less-530-1.el8.src.rpm
+$ apt-get source -qq --print-uris findutils=4.7.0-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0-1ubuntu1.dsc' findutils_4.7.0-1ubuntu1.dsc 2446 SHA256:3d157948919082e66cb74e0f927efa3dd240d9fa9814973874d0fa77f3023ead
+'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0.orig.tar.xz' findutils_4.7.0.orig.tar.xz 1895048 SHA256:c5fefbdf9858f7e4feb86f036e1247a54c79fc2d8e4b7064d5aaa1f47dfa789a
+'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0.orig.tar.xz.asc' findutils_4.7.0.orig.tar.xz.asc 488 SHA256:2f620e6d941e241fac52344a89149ab1ffeefb0fb9e42174e17a508d59a31d0f
+'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0-1ubuntu1.debian.tar.xz' findutils_4.7.0-1ubuntu1.debian.tar.xz 27700 SHA256:dfb2329fd141384c2d76409c2e99f164cc25954115529245d80d5d41e3167731
 ```
 
-### `rpm` package: `libacl-2.2.53-1.el8.x86_64`
+### `dpkg` source package: `fontconfig=2.13.1-2ubuntu3`
 
-Licenses (from `rpm --query`): LGPLv2+
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libacl-2.2.53-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/acl-2.2.53-1.el8.src.rpm
-```
+- `fontconfig=2.13.1-2ubuntu3`
+- `fontconfig-config=2.13.1-2ubuntu3`
+- `libfontconfig1:amd64=2.13.1-2ubuntu3`
 
-### `rpm` package: `libarchive-3.3.3-3.el8_5.x86_64`
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
 
-Licenses (from `rpm --query`): BSD
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libarchive-3.3.3-3.el8_5
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libarchive-3.3.3-3.el8_5.src.rpm
+$ apt-get source -qq --print-uris fontconfig=2.13.1-2ubuntu3
+'http://archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig_2.13.1-2ubuntu3.dsc' fontconfig_2.13.1-2ubuntu3.dsc 1959 SHA256:a9eebf6e6e88aa64d33fb3852c97718c212579f9714afd67cb6a9b8b116dd7aa
+'http://archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig_2.13.1.orig.tar.bz2' fontconfig_2.13.1.orig.tar.bz2 1723639 SHA256:f655dd2a986d7aa97e052261b36aa67b0a64989496361eca8d604e6414006741
+'http://archive.ubuntu.com/ubuntu/pool/main/f/fontconfig/fontconfig_2.13.1-2ubuntu3.debian.tar.xz' fontconfig_2.13.1-2ubuntu3.debian.tar.xz 26344 SHA256:342671f6a1e6d392958a6eec27541c6bdffc6498b469dcc46eca66c9d23a863a
 ```
-
-### `rpm` package: `libassuan-2.5.1-3.el8.x86_64`
 
-Licenses (from `rpm --query`): LGPLv2+ and GPLv3+
+### `dpkg` source package: `fonts-dejavu=2.37-1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libassuan-2.5.1-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libassuan-2.5.1-3.el8.src.rpm
-```
+- `fonts-dejavu-core=2.37-1`
 
-### `rpm` package: `libattr-2.4.48-3.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/fonts-dejavu-core/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `GPL-2`
+- `GPL-2+`
+- `bitstream-vera`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libattr-2.4.48-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/attr-2.4.48-3.el8.src.rpm
+$ apt-get source -qq --print-uris fonts-dejavu=2.37-1
+'http://archive.ubuntu.com/ubuntu/pool/main/f/fonts-dejavu/fonts-dejavu_2.37-1.dsc' fonts-dejavu_2.37-1.dsc 2575 SHA256:f35ff7b2c8dbfda6564c9dedf088ba06cc6d279fdd8e7cccbd1ae08ded1bb71c
+'http://archive.ubuntu.com/ubuntu/pool/main/f/fonts-dejavu/fonts-dejavu_2.37.orig.tar.bz2' fonts-dejavu_2.37.orig.tar.bz2 12050109 SHA256:4b21c5203f792343d5e90ab1cb0cf07e99887218abe3d83cd9a98cea9085e799
+'http://archive.ubuntu.com/ubuntu/pool/main/f/fonts-dejavu/fonts-dejavu_2.37-1.debian.tar.xz' fonts-dejavu_2.37-1.debian.tar.xz 10424 SHA256:5105cdbfc086f4a83ab6871eb39cc904bf02aa52762402b7cacf33d0938122f7
 ```
 
-### `rpm` package: `libblkid-2.32.1-28.el8.x86_64`
+### `dpkg` source package: `freetype=2.10.1-2ubuntu0.1`
 
-Licenses (from `rpm --query`): LGPLv2+
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url libblkid-2.32.1-28.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
-```
+- `libfreetype6:amd64=2.10.1-2ubuntu0.1`
 
-### `rpm` package: `libcap-2.26-5.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
 
-Licenses (from `rpm --query`): GPLv2
+- `Apache-2.0`
+- `BSD-3-Clause`
+- `FSFUL`
+- `FSFULLR`
+- `FTL`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-3`
+- `GPL-3+`
+- `MIT`
+- `MPL-1.1`
+- `OFL-1.1`
+- `OpenGroup-BSD-like`
+- `Permissive`
+- `Public-Domain`
+- `Zlib`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libcap-2.26-5.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libcap-2.26-5.el8.src.rpm
+$ apt-get source -qq --print-uris freetype=2.10.1-2ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1-2ubuntu0.1.dsc' freetype_2.10.1-2ubuntu0.1.dsc 3556 SHA512:dc45a1f920cdee10c2b2a6d400d05d089b8467f1f9fa6eca5be61e75567acd58b17c7e2ac1d6faec9ff5edee38cb3489323709231506264bc6d1a9f4a20fe2ac
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2demos.tar.gz' freetype_2.10.1.orig-ft2demos.tar.gz 305328 SHA512:67b9dc1c03ca5588a53edd8b9cb7f27e5b52a5730add6887e6af776176ab66099bfe4a9e69d036511d32ae2f96e822a71a3c9213f1adfcc6fa45be81adf56f77
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2demos.tar.gz.asc' freetype_2.10.1.orig-ft2demos.tar.gz.asc 195 SHA512:8279e9e7ea4da030db388ac5960808d652553b97dc65bc517ebcae90834188d75101fbe29d334a0e2b0a17a723c7121ac28b1f14bab0bf29ec4c9c6df6575a67
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2docs.tar.gz' freetype_2.10.1.orig-ft2docs.tar.gz 2123885 SHA512:05dbe26c291d3fa39c167f3aa5d8da0f3d3992f8e7ec74e936547b3feb17c1a59753a111fc33b2edce12ed991c61161c0ef7084b91c770d73c4679b62edd5b2f
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2docs.tar.gz.asc' freetype_2.10.1.orig-ft2docs.tar.gz.asc 195 SHA512:48e283c72d808901b9754bb20242d493628610326f3492c6d1aa35fcdffffd4ec320f589d18442735cfc6cda7238399f4f339d58e4a536da46e2b5a13864972e
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig.tar.gz' freetype_2.10.1.orig.tar.gz 3478158 SHA512:346c682744bcf06ca9d71265c108a242ad7d78443eff20142454b72eef47ba6d76671a6e931ed4c4c9091dd8f8515ebdd71202d94b073d77931345ff93cfeaa7
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig.tar.gz.asc' freetype_2.10.1.orig.tar.gz.asc 195 SHA512:2a2750605d0fd11fbfe4f76d47ccd8e300473c3043b28a5c46f4f628e1da2c2f2308ee4f1b1b585daaf2c4b408718ee68eab6c5411e993ad9f95b08c35248178
+'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1-2ubuntu0.1.debian.tar.xz' freetype_2.10.1-2ubuntu0.1.debian.tar.xz 115576 SHA512:c24138956061abdb0c22ade45eb5ef4daa24f798310691701525face08fe372d3e32d5000cc1f078acc733da40623cc061a7ab84dab64c649f484c840b110593
 ```
 
-### `rpm` package: `libcap-ng-0.7.11-1.el8.x86_64`
+### `dpkg` source package: `gcc-10=10.3.0-1ubuntu1~20.04`
 
-Licenses (from `rpm --query`): LGPLv2+
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libcap-ng-0.7.11-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libcap-ng-0.7.11-1.el8.src.rpm
-```
+- `gcc-10-base:amd64=10.3.0-1ubuntu1~20.04`
+- `libgcc-s1:amd64=10.3.0-1ubuntu1~20.04`
+- `libstdc++6:amd64=10.3.0-1ubuntu1~20.04`
 
-### `rpm` package: `libcom_err-1.45.6-2.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
-Licenses (from `rpm --query`): MIT
+- `Artistic`
+- `GFDL-1.2`
+- `GPL`
+- `GPL-2`
+- `GPL-3`
+- `LGPL`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libcom_err-1.45.6-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/e2fsprogs-1.45.6-2.el8.src.rpm
+$ apt-get source -qq --print-uris gcc-10=10.3.0-1ubuntu1~20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0-1ubuntu1%7e20.04.dsc' gcc-10_10.3.0-1ubuntu1~20.04.dsc 31155 SHA512:c67d612edfbf2a97d4c3f436b1fdbc08b7387907a3e0cc49a9ba2a360db054b3d07082097c4b98abc9ace7b8902637f8d7126de229c164cab743eff4fd5d7520
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0.orig.tar.gz' gcc-10_10.3.0.orig.tar.gz 83679201 SHA512:c7f0fb09c79bc8c372171df7f23af6970a389dcc1237ebc0821c0a754d93c6e4065433f7ad63aed9f9b8fce2da7fce3caa61ae2e2afab494d06bf33b06a10775
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.3.0-1ubuntu1%7e20.04.debian.tar.xz' gcc-10_10.3.0-1ubuntu1~20.04.debian.tar.xz 580864 SHA512:3ae060b517a67ae2410b48c83a7836ec25e83422cb3db5dbe55cce9e97609aff82062aa55a84c64ca9c52f405a41d2da20c1d016b15521102cac3b82895f3975
 ```
-
-### `rpm` package: `libcurl-7.61.1-22.el8.x86_64`
 
-Licenses (from `rpm --query`): MIT
+### `dpkg` source package: `gdbm=1.18.1-5`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libcurl-7.61.1-22.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/curl-7.61.1-22.el8.src.rpm
-```
+- `libgdbm-compat4:amd64=1.18.1-5`
+- `libgdbm6:amd64=1.18.1-5`
 
-### `rpm` package: `libdb-5.3.28-42.el8_4.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libgdbm-compat4/copyright`, `/usr/share/doc/libgdbm6/copyright`)
 
-Licenses (from `rpm --query`): BSD and LGPLv2 and Sleepycat
+- `GFDL-NIV-1.3+`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-3`
+- `GPL-3+`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libdb-5.3.28-42.el8_4
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libdb-5.3.28-42.el8_4.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libdb-5.3.28-42.el8_4.src.rpm
+$ apt-get source -qq --print-uris gdbm=1.18.1-5
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.18.1-5.dsc' gdbm_1.18.1-5.dsc 2635 SHA256:4c0c4498378c673c9d2d8dfb5b319a4830d2dd21e65faaaa8e0f09cb7f71606b
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.18.1.orig.tar.gz' gdbm_1.18.1.orig.tar.gz 941863 SHA256:86e613527e5dba544e73208f42b78b7c022d4fa5a6d5498bf18c8d6f745b91dc
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.18.1.orig.tar.gz.asc' gdbm_1.18.1.orig.tar.gz.asc 412 SHA256:3254738e7689e44ac65e78a766806828b8282e6bb1c0e5bb6156a99e567889a5
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.18.1-5.debian.tar.xz' gdbm_1.18.1-5.debian.tar.xz 16348 SHA256:3c1a0e05b40a97ee51ce77c736c72c37738ba31b2720111d3bc99175a2c3a3ed
 ```
 
-### `rpm` package: `libdb-utils-5.3.28-42.el8_4.x86_64`
+### `dpkg` source package: `git=1:2.25.1-1ubuntu3.4`
 
-Licenses (from `rpm --query`): BSD and LGPLv2 and Sleepycat
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url libdb-utils-5.3.28-42.el8_4
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libdb-5.3.28-42.el8_4.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libdb-5.3.28-42.el8_4.src.rpm
-```
+- `git=1:2.25.1-1ubuntu3.4`
+- `git-man=1:2.25.1-1ubuntu3.4`
 
-### `rpm` package: `libdnf-0.63.0-3.0.2.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `Apache-2.0`
+- `Artistic`
+- `Artistic-1`
+- `BSD-2-clause`
+- `Boost`
+- `EDL-1.0`
+- `Expat`
+- `GPL`
+- `GPL-1+`
+- `GPL-2`
+- `GPL-2+`
+- `ISC`
+- `LGPL-2`
+- `LGPL-2+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `dlmalloc`
+- `mingw-runtime`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libdnf-0.63.0-3.0.2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libdnf-0.63.0-3.0.2.el8.src.rpm
+$ apt-get source -qq --print-uris git=1:2.25.1-1ubuntu3.4
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.25.1-1ubuntu3.4.dsc' git_2.25.1-1ubuntu3.4.dsc 2962 SHA512:eb2b1800c05ed3826469f49c95ff154e646c8187ce75f758975f0802d531a1ffbdb41f922626c46a74a5d677f3a53962b7be52c5caca7c60af47c50776a7eae4
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.25.1.orig.tar.xz' git_2.25.1.orig.tar.xz 5875548 SHA512:15241143acfd8542d85d2709ac3c80dbd6e8d5234438f70c4f33cc71a2bdec3e32938df7f6351e2746d570b021d3bd0b70474ea4beec0c51d1fc45f9c287b344
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.25.1-1ubuntu3.4.debian.tar.xz' git_2.25.1-1ubuntu3.4.debian.tar.xz 661056 SHA512:5af63bee7c5a2e2ea0214b79d3cd421d2b089676c5c3c5f78e1487fa6f5e54bc101b79dac4aa51517d6093fbc0fa7c3058a211701d2eb13999bf5ee3a869a5ea
 ```
 
-### `rpm` package: `libedit-3.1-23.20170329cvs.el8.x86_64`
+### `dpkg` source package: `glibc=2.31-0ubuntu9.7`
 
-Licenses (from `rpm --query`): BSD
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libedit-3.1-23.20170329cvs.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libedit-3.1-23.20170329cvs.el8.src.rpm
-```
+- `libc-bin=2.31-0ubuntu9.7`
+- `libc6:amd64=2.31-0ubuntu9.7`
+- `locales=2.31-0ubuntu9.7`
 
-### `rpm` package: `libfdisk-2.32.1-28.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/locales/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `GPL-2`
+- `LGPL-2.1`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libfdisk-2.32.1-28.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
+$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.7
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.7.dsc' glibc_2.31-0ubuntu9.7.dsc 9561 SHA512:1d67eee4c20e9a236b4ffc706a8ac3b53d9837be2c8dd4f52edd52ca97082284d7ed8d74bb2d533efb024a8e3596d8ca3fd12e0acfcfa2923a26ee9dd25931bb
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA512:2ff56628fe935cacbdf1825534f15d45cb87a159cbdb2e6a981590eeb6174ed4b3ff7041519cdecbd4f624ac20b745e2dd9614c420dd3ea186b8f36bc4c2453c
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.7.debian.tar.xz' glibc_2.31-0ubuntu9.7.debian.tar.xz 870504 SHA512:8653d4a47043ef759662e5451410740f2e8dac3d7845fe6434ebb6f0bf013b3eb40cfe873c7e742d0856bce219c0f7898fd8cf3d0f0f7144637dd110b9302243
 ```
-
-### `rpm` package: `libffi-3.1-22.el8.x86_64`
 
-Licenses (from `rpm --query`): MIT
+### `dpkg` source package: `gmp=2:6.2.0+dfsg-4`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libffi-3.1-22.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libffi-3.1-22.el8.src.rpm
-```
+- `libgmp10:amd64=2:6.2.0+dfsg-4`
 
-### `rpm` package: `libgcc-8.5.0-4.0.2.el8_5.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 
-Licenses (from `rpm --query`): GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD
+- `GPL`
+- `GPL-2`
+- `GPL-3`
+- `LGPL-3`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libgcc-8.5.0-4.0.2.el8_5
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/gcc-8.5.0-4.0.2.el8_5.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gcc-8.5.0-4.0.2.el8_5.src.rpm
+$ apt-get source -qq --print-uris gmp=2:6.2.0+dfsg-4
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0%2bdfsg-4.dsc' gmp_6.2.0+dfsg-4.dsc 2144 SHA256:4ca8c5bca982c78eb7679256a5d41b2c9363a6c3e3ee15ed765515bc328e9989
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0%2bdfsg.orig.tar.xz' gmp_6.2.0+dfsg.orig.tar.xz 1842912 SHA256:5d7610449498a79aa62d4b9a8f6baaef91b8716726e1009e02b879962dff32ab
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0%2bdfsg-4.debian.tar.xz' gmp_6.2.0+dfsg-4.debian.tar.xz 21120 SHA256:a0772595583dbcf2147e8457602ccf4b524b18227d6804c4a74050df64ece912
 ```
 
-### `rpm` package: `libgcrypt-1.8.5-6.el8.x86_64`
+### `dpkg` source package: `gnupg2=2.2.19-3ubuntu2.1`
 
-Licenses (from `rpm --query`): LGPLv2+
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url libgcrypt-1.8.5-6.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libgcrypt-1.8.5-6.el8.src.rpm
-```
+- `gpgv=2.2.19-3ubuntu2.1`
 
-### `rpm` package: `libgpg-error-1.31-1.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `BSD-3-clause`
+- `CC0-1.0`
+- `Expat`
+- `GPL-3`
+- `GPL-3+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `LGPL-3`
+- `LGPL-3+`
+- `RFC-Reference`
+- `TinySCHEME`
+- `permissive`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libgpg-error-1.31-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libgpg-error-1.31-1.el8.src.rpm
+$ apt-get source -qq --print-uris gnupg2=2.2.19-3ubuntu2.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.19-3ubuntu2.1.dsc' gnupg2_2.2.19-3ubuntu2.1.dsc 3939 SHA512:d756d6b7a95ec68c9fbe7c0369d36248c72921a2742014cef4d7313a2c18c96df251f87ba164c25c8ac2b0e9dda2ee72d154705660aeb57fce70d175770a0e49
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.19.orig.tar.bz2' gnupg2_2.2.19.orig.tar.bz2 6754972 SHA512:d7700136ac9f0a8cf04b33da4023a42427fced648c2f90d76250c92904353b85fe728bdd89a713d847e8d38e5900c98d46075614492fdc3d1421f927a92f49dd
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.19.orig.tar.bz2.asc' gnupg2_2.2.19.orig.tar.bz2.asc 906 SHA512:8b02ce09a50d2aa0c263f7042424ea815386fac56a8d8cea102d1aea2e75802f91bb2ebc7dc2d7a3157126d748ece554e0693d3bf355f908586cbadbe80c68fb
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.19-3ubuntu2.1.debian.tar.xz' gnupg2_2.2.19-3ubuntu2.1.debian.tar.xz 65572 SHA512:ea863eeb3d823a8ed0aad76bd9e76d9452d2061dd1170357dd73f3f7251b11c2ceed29209cfe42adc0c7a7fc17232df121192cfc976d7a7d48e7b43ef1deb3e3
 ```
 
-### `rpm` package: `libidn2-2.2.0-1.el8.x86_64`
+### `dpkg` source package: `gnutls28=3.6.13-2ubuntu1.6`
 
-Licenses (from `rpm --query`): (GPLv2+ or LGPLv3+) and GPLv3+
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libidn2-2.2.0-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libidn2-2.2.0-1.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libidn2-2.2.0-1.el8.src.rpm
-```
+- `libgnutls30:amd64=3.6.13-2ubuntu1.6`
 
-### `rpm` package: `libksba-1.3.5-7.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
-Licenses (from `rpm --query`): (LGPLv3+ or GPLv2+) and GPLv3+
+- `Apache-2.0`
+- `BSD-3-Clause`
+- `CC0 license`
+- `Expat`
+- `GFDL-1.3`
+- `GPL`
+- `GPL-3`
+- `GPLv3+`
+- `LGPL`
+- `LGPL-3`
+- `LGPLv2.1+`
+- `LGPLv3+_or_GPLv2+`
+- `The main library is licensed under GNU Lesser`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libksba-1.3.5-7.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libksba-1.3.5-7.el8.src.rpm
+$ apt-get source -qq --print-uris gnutls28=3.6.13-2ubuntu1.6
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.6.dsc' gnutls28_3.6.13-2ubuntu1.6.dsc 3594 SHA512:23014d873a5eac6c1388a5d3907172bf9f5e11cb32cfcea0bb75daef42e925385a9934d875ed47c8fe65e74462abc52c600769f282e17b9bca1de59cfeb40b94
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz' gnutls28_3.6.13.orig.tar.xz 5958956 SHA512:23581952cb72c9a34f378c002bb62413d5a1243b74b48ad8dc49eaea4020d33c550f8dc1dd374cf7fbfa4187b0ca1c5698c8a0430398268a8b8a863f8633305c
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz.asc' gnutls28_3.6.13.orig.tar.xz.asc 667 SHA512:b343a8ace6a5c81c0c44b2cb65d8e83dfe5963c9bab04d9131fa8fd03cdf0c6f990d720af8767084e01bf5f7a7dbd0f048aefe68c3b6f1dc1ea1899d567a72f7
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.6.debian.tar.xz' gnutls28_3.6.13-2ubuntu1.6.debian.tar.xz 67248 SHA512:7f01e2c774dcbbdaf4095184660b099b20600b6eca13c96abfaa27e0e69dd1f91a3320ea758ddc00887c2be62fed32c4249362f834bab98df3258a1aa8891179
 ```
-
-### `rpm` package: `libmodulemd-2.13.0-1.el8.x86_64`
 
-Licenses (from `rpm --query`): MIT
+### `dpkg` source package: `grep=3.4-1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libmodulemd-2.13.0-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libmodulemd-2.13.0-1.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libmodulemd-2.13.0-1.el8.src.rpm
-```
+- `grep=3.4-1`
 
-### `rpm` package: `libmount-2.32.1-28.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/grep/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `GPL-3`
+- `GPL-3+`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libmount-2.32.1-28.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
+$ apt-get source -qq --print-uris grep=3.4-1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.4-1.dsc' grep_3.4-1.dsc 1674 SHA256:785f527cede9631f075bdd6c7f35e65e6b82897d009682766cf35839a393277d
+'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.4.orig.tar.xz' grep_3.4.orig.tar.xz 1555820 SHA256:58e6751c41a7c25bfc6e9363a41786cff3ba5709cf11d5ad903cf7cce31cc3fb
+'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.4.orig.tar.xz.asc' grep_3.4.orig.tar.xz.asc 833 SHA256:4c1871ff6b79c5e5ce0a192272c171d06ec20762b4b258688b1ca2e47d94b23e
+'http://archive.ubuntu.com/ubuntu/pool/main/g/grep/grep_3.4-1.debian.tar.xz' grep_3.4-1.debian.tar.xz 104364 SHA256:582d181804ce72fcfc4c6a9f13ea1dd73ad04c2723b5da346b69ee5cd24a7d08
 ```
 
-### `rpm` package: `libnghttp2-1.33.0-3.el8_2.1.x86_64`
+### `dpkg` source package: `gzip=1.10-0ubuntu4.1`
 
-Licenses (from `rpm --query`): MIT
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url libnghttp2-1.33.0-3.el8_2.1
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/nghttp2-1.33.0-3.el8_2.1.src.rpm
-```
+- `gzip=1.10-0ubuntu4.1`
 
-### `rpm` package: `libnsl2-1.2.0-2.20180605git4a062cf.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 
-Licenses (from `rpm --query`): BSD and LGPLv2+
+- `GPL`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libnsl2-1.2.0-2.20180605git4a062cf.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libnsl2-1.2.0-2.20180605git4a062cf.el8.src.rpm
+$ apt-get source -qq --print-uris gzip=1.10-0ubuntu4.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-0ubuntu4.1.dsc' gzip_1.10-0ubuntu4.1.dsc 2113 SHA512:27a7c1871b33b62f6cada63d43f43eae1f3a9a3d92b10a28a28ef7f85893aba3a9513ac031c96a0dedbdaa0507aafe8922631460ff2890ab663fb732283ba073
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10.orig.tar.gz' gzip_1.10.orig.tar.gz 1201421 SHA512:7939043e74554ced0c1c05d354ab4eb36cd6dce89ad79d02ccdc5ed6b7ee390759689b2d47c07227b9b44a62851afe7c76c4cae9f92527d999f3f1b4df1cccff
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-0ubuntu4.1.debian.tar.xz' gzip_1.10-0ubuntu4.1.debian.tar.xz 31144 SHA512:26096584c400dc78d892f1721ad28778aa1a0c0476337bd37589c6d985f8636aad9c7fde55385c25ce1c8420a40c6ca33c06887f18b855ba8a5f45b980fe6c99
 ```
-
-### `rpm` package: `libpeas-1.22.0-6.el8.x86_64`
 
-Licenses (from `rpm --query`): LGPLv2+
+### `dpkg` source package: `heimdal=7.7.0+dfsg-1ubuntu1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libpeas-1.22.0-6.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libpeas-1.22.0-6.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libpeas-1.22.0-6.el8.src.rpm
-```
+- `libasn1-8-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libgssapi3-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libhcrypto4-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libheimbase1-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libheimntlm0-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libhx509-5-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libkrb5-26-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libroken18-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libwind0-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
 
-### `rpm` package: `libpng-1.6.34-5.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/share/doc/libgssapi3-heimdal/copyright`, `/usr/share/doc/libhcrypto4-heimdal/copyright`, `/usr/share/doc/libheimbase1-heimdal/copyright`, `/usr/share/doc/libheimntlm0-heimdal/copyright`, `/usr/share/doc/libhx509-5-heimdal/copyright`, `/usr/share/doc/libkrb5-26-heimdal/copyright`, `/usr/share/doc/libroken18-heimdal/copyright`, `/usr/share/doc/libwind0-heimdal/copyright`)
 
-Licenses (from `rpm --query`): zlib
+- `BSD-3-clause`
+- `GPL-2`
+- `GPL-2+`
+- `custom`
+- `none`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libpng-1.6.34-5.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libpng-1.6.34-5.el8.src.rpm
+$ apt-get source -qq --print-uris heimdal=7.7.0+dfsg-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.dsc' heimdal_7.7.0+dfsg-1ubuntu1.dsc 3633 SHA256:46b7873a11c8279f5efec50f16b5ed4abafa5a957224c3f624229f9d888e1ebe
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg.orig.tar.xz' heimdal_7.7.0+dfsg.orig.tar.xz 5945252 SHA256:6822c9547188b753b6325047fda9255744e4ebbbe02bb0dade78c261061fefac
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.debian.tar.xz' heimdal_7.7.0+dfsg-1ubuntu1.debian.tar.xz 128604 SHA256:0c0b4572de525c3c294bcdbde95ebfc3386461c47c2e8d1a86fe0d37da6bd479
 ```
 
-### `rpm` package: `libpsl-0.20.2-6.el8.x86_64`
+### `dpkg` source package: `hostname=3.23`
 
-Licenses (from `rpm --query`): MIT
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url libpsl-0.20.2-6.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libpsl-0.20.2-6.el8.src.rpm
-```
+- `hostname=3.23`
 
-### `rpm` package: `libpwquality-1.4.4-3.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/hostname/copyright`)
 
-Licenses (from `rpm --query`): BSD or GPLv2+
+- `GPL-2`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libpwquality-1.4.4-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libpwquality-1.4.4-3.el8.src.rpm
+$ apt-get source -qq --print-uris hostname=3.23
+'http://archive.ubuntu.com/ubuntu/pool/main/h/hostname/hostname_3.23.dsc' hostname_3.23.dsc 1402 SHA256:0694c083fad82da1fd33204557a30bfc745a689a64030ba360062daafe03ede0
+'http://archive.ubuntu.com/ubuntu/pool/main/h/hostname/hostname_3.23.tar.gz' hostname_3.23.tar.gz 13672 SHA256:bc6d1954b22849869ff8b2a602e39f08b1702f686d4b58dd7927cdeb5b4876ef
 ```
 
-### `rpm` package: `librepo-1.14.0-2.el8.x86_64`
+### `dpkg` source package: `init-system-helpers=1.57`
 
-Licenses (from `rpm --query`): LGPLv2+
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url librepo-1.14.0-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/librepo-1.14.0-2.el8.src.rpm
-```
+- `init-system-helpers=1.57`
 
-### `rpm` package: `libselinux-2.9-5.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/init-system-helpers/copyright`)
 
-Licenses (from `rpm --query`): Public Domain
+- `BSD-3-clause`
+- `GPL-2`
+- `GPL-2+`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libselinux-2.9-5.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libselinux-2.9-5.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libselinux-2.9-5.el8.src.rpm
+$ apt-get source -qq --print-uris init-system-helpers=1.57
+'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.57.dsc' init-system-helpers_1.57.dsc 1896 SHA256:88bb5af040c99f010b6d6947ff5c80ae4863ff787e0eeae91e99dcd15a10dbb8
+'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.57.tar.xz' init-system-helpers_1.57.tar.xz 40460 SHA256:e9d83fd8756a42666fb5d19a8835813823295846659b4e58f138bb9b54e9f5dd
 ```
-
-### `rpm` package: `libsemanage-2.9-6.el8.x86_64`
 
-Licenses (from `rpm --query`): LGPLv2+
+### `dpkg` source package: `keyutils=1.6-6ubuntu1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libsemanage-2.9-6.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libsemanage-2.9-6.el8.src.rpm
-```
+- `libkeyutils1:amd64=1.6-6ubuntu1`
 
-### `rpm` package: `libsepol-2.9-3.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libkeyutils1/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-2`
+- `LGPL-2+`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libsepol-2.9-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libsepol-2.9-3.el8.src.rpm
+$ apt-get source -qq --print-uris keyutils=1.6-6ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6-6ubuntu1.dsc' keyutils_1.6-6ubuntu1.dsc 2148 SHA256:76dfe0a0d9bb0a417d9c20c2f20b0beb9097dccd30c30a41375ef99cf0a710b6
+'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6.orig.tar.bz2' keyutils_1.6.orig.tar.bz2 93973 SHA256:d3aef20cec0005c0fa6b4be40079885567473185b1a57b629b030e67942c7115
+'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6-6ubuntu1.debian.tar.xz' keyutils_1.6-6ubuntu1.debian.tar.xz 13636 SHA256:a4ae24062e9d20a0e2092e4cb342b664c0211ba7efdfeb7bde5f8d209c9ad1db
 ```
 
-### `rpm` package: `libsigsegv-2.11-5.el8.x86_64`
+### `dpkg` source package: `krb5=1.17-6ubuntu4.1`
 
-Licenses (from `rpm --query`): GPLv2+
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url libsigsegv-2.11-5.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libsigsegv-2.11-5.el8.src.rpm
-```
+- `libgssapi-krb5-2:amd64=1.17-6ubuntu4.1`
+- `libk5crypto3:amd64=1.17-6ubuntu4.1`
+- `libkrb5-3:amd64=1.17-6ubuntu4.1`
+- `libkrb5support0:amd64=1.17-6ubuntu4.1`
 
-### `rpm` package: `libsmartcols-2.32.1-28.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `GPL-2`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libsmartcols-2.32.1-28.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
+$ apt-get source -qq --print-uris krb5=1.17-6ubuntu4.1
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17-6ubuntu4.1.dsc' krb5_1.17-6ubuntu4.1.dsc 3637 SHA512:00e77a202038d971b0cc49d77ea6f1c9eef4052016e839235f0b4b60e1dffd476d18bab1330ea5955e6e319731e5679873cf70d144e4cdabd3659aafd209fd37
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA512:7462a578b936bd17f155a362dbb5d388e157a80a096549028be6c55400b11361c7f8a28e424fd5674801873651df4e694d536cae66728b7ae5e840e532358c52
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17-6ubuntu4.1.debian.tar.xz' krb5_1.17-6ubuntu4.1.debian.tar.xz 145692 SHA512:8184287813d5dbcbe4c5153ccc0e6afab6dbf9f24a9ae993bf1a7648d029decfb6d8d928b0c365f5f0a861e90d89932a4f30ee96f75f4891d64a0287fab667be
 ```
 
-### `rpm` package: `libsolv-0.7.19-1.el8.x86_64`
+### `dpkg` source package: `less=551-1ubuntu0.1`
 
-Licenses (from `rpm --query`): BSD
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libsolv-0.7.19-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libsolv-0.7.19-1.el8.src.rpm
-```
+- `less=551-1ubuntu0.1`
 
-### `rpm` package: `libssh-0.9.4-3.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/less/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `GPL-3`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libssh-0.9.4-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libssh-0.9.4-3.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libssh-0.9.4-3.el8.src.rpm
+$ apt-get source -qq --print-uris less=551-1ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/l/less/less_551-1ubuntu0.1.dsc' less_551-1ubuntu0.1.dsc 1896 SHA512:36327d6d40de19ef896fdc1e1d49580442a06a423c0a758a1b7e0bb9403a4beb123d43fc1c8d9a371e4f65b343f4ee8526cc86f85474c597fa63c0d288a467f1
+'http://archive.ubuntu.com/ubuntu/pool/main/l/less/less_551.orig.tar.gz' less_551.orig.tar.gz 347007 SHA512:ef5296b9ebd72f83c05cad8a0f7a5eec2290e9b358ee725e09e8541bd95f94c0e14ea22aa04b287a0654079338eaeae813f2235b8e9f819fbbc9040dd65a9585
+'http://archive.ubuntu.com/ubuntu/pool/main/l/less/less_551-1ubuntu0.1.debian.tar.xz' less_551-1ubuntu0.1.debian.tar.xz 18896 SHA512:b903f507df5da4cb5ad9bdeb462d8f65bd0ee85aec63c5bcfe74e1578294be762d4b44c958fcb2a631b40479fe656b006f9c931a7a35b175fc477b3b4d45fc86
 ```
-
-### `rpm` package: `libssh-config-0.9.4-3.el8.noarch`
 
-Licenses (from `rpm --query`): LGPLv2+
+### `dpkg` source package: `libbsd=0.10.0-1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libssh-config-0.9.4-3.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libssh-0.9.4-3.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libssh-0.9.4-3.el8.src.rpm
-```
+- `libbsd0:amd64=0.10.0-1`
 
-### `rpm` package: `libstdc++-8.5.0-4.0.2.el8_5.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libbsd0/copyright`)
 
-Licenses (from `rpm --query`): GPLv3+ and GPLv3+ with exceptions and GPLv2+ with exceptions and LGPLv2+ and BSD
+- `BSD-2-clause`
+- `BSD-2-clause-NetBSD`
+- `BSD-2-clause-author`
+- `BSD-2-clause-verbatim`
+- `BSD-3-clause`
+- `BSD-3-clause-John-Birrell`
+- `BSD-3-clause-Regents`
+- `BSD-3-clause-author`
+- `BSD-4-clause-Christopher-G-Demetriou`
+- `BSD-4-clause-Niels-Provos`
+- `BSD-5-clause-Peter-Wemm`
+- `Beerware`
+- `Expat`
+- `ISC`
+- `ISC-Original`
+- `public-domain`
+- `public-domain-Colin-Plumb`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libstdc++-8.5.0-4.0.2.el8_5
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/gcc-8.5.0-4.0.2.el8_5.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gcc-8.5.0-4.0.2.el8_5.src.rpm
+$ apt-get source -qq --print-uris libbsd=0.10.0-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.10.0-1.dsc' libbsd_0.10.0-1.dsc 2197 SHA256:7c05e2c73658f64cbd4e1762b716cc7c4c1d68391191e82c7d266a351430edd6
+'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.10.0.orig.tar.xz' libbsd_0.10.0.orig.tar.xz 393576 SHA256:34b8adc726883d0e85b3118fa13605e179a62b31ba51f676136ecb2d0bc1a887
+'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.10.0.orig.tar.xz.asc' libbsd_0.10.0.orig.tar.xz.asc 833 SHA256:4362f6d811ffc06659ac5cf777d8d01157bedfc28720b41fb485afb0a5acc0c7
+'http://archive.ubuntu.com/ubuntu/pool/main/libb/libbsd/libbsd_0.10.0-1.debian.tar.xz' libbsd_0.10.0-1.debian.tar.xz 16660 SHA256:4cf37d6d5b72702b31b07384612e07173e94e081feef71fec206f86ab38f2411
 ```
 
-### `rpm` package: `libtasn1-4.13-3.el8.x86_64`
+### `dpkg` source package: `libcap-ng=0.7.9-2.1build1`
 
-Licenses (from `rpm --query`): GPLv3+ and LGPLv2+
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url libtasn1-4.13-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libtasn1-4.13-3.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libtasn1-4.13-3.el8.src.rpm
-```
+- `libcap-ng0:amd64=0.7.9-2.1build1`
 
-### `rpm` package: `libtirpc-1.1.4-5.0.1.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libcap-ng0/copyright`)
 
-Licenses (from `rpm --query`): SISSL and BSD
+- `GPL-2`
+- `GPL-3`
+- `LGPL-2.1`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libtirpc-1.1.4-5.0.1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libtirpc-1.1.4-5.0.1.el8.src.rpm
+$ apt-get source -qq --print-uris libcap-ng=0.7.9-2.1build1
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9-2.1build1.dsc' libcap-ng_0.7.9-2.1build1.dsc 2158 SHA256:6d74cf5c418659d70bce8e9a4bf6f0ef0210dbcadac15e0c4d4471c4671230a1
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9.orig.tar.gz' libcap-ng_0.7.9.orig.tar.gz 449038 SHA256:4a1532bcf3731aade40936f6d6a586ed5a66ca4c7455e1338d1f6c3e09221328
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9-2.1build1.debian.tar.xz' libcap-ng_0.7.9-2.1build1.debian.tar.xz 6256 SHA256:b73a0a36bb0c1c8144828552dedb7b3493f4a08b1c31a0f1d7046cf1682eac7d
 ```
 
-### `rpm` package: `libunistring-0.9.9-3.el8.x86_64`
+### `dpkg` source package: `libcbor=0.6.0-0ubuntu1`
 
-Licenses (from `rpm --query`): GPLv2+ or LGPLv3+
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libunistring-0.9.9-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libunistring-0.9.9-3.el8.src.rpm
-```
+- `libcbor0.6:amd64=0.6.0-0ubuntu1`
 
-### `rpm` package: `libusbx-1.0.23-4.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libcbor0.6/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `Apache-2.0`
+- `Expat`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libusbx-1.0.23-4.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libusbx-1.0.23-4.el8.src.rpm
+$ apt-get source -qq --print-uris libcbor=0.6.0-0ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcbor/libcbor_0.6.0-0ubuntu1.dsc' libcbor_0.6.0-0ubuntu1.dsc 2115 SHA256:403caca4382a40d55caf3d88b792e45fa79a2f20746f422a3ba5cabb113444f6
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcbor/libcbor_0.6.0.orig.tar.gz' libcbor_0.6.0.orig.tar.gz 262622 SHA256:ad97dfe6462a28956be38c924a5a557acf303d8454ca121e02150a5b87e03ee7
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcbor/libcbor_0.6.0-0ubuntu1.debian.tar.xz' libcbor_0.6.0-0ubuntu1.debian.tar.xz 5832 SHA256:719b8d56482b3ffc8adc05b16211d4b9bcce43ab877801801fd3927a9a8e66e1
 ```
-
-### `rpm` package: `libutempter-1.1.6-14.el8.x86_64`
 
-Licenses (from `rpm --query`): LGPLv2+
+### `dpkg` source package: `libedit=3.1-20191231-1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libutempter-1.1.6-14.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libutempter-1.1.6-14.el8.src.rpm
-```
+- `libedit2:amd64=3.1-20191231-1`
 
-### `rpm` package: `libuuid-2.32.1-28.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libedit2/copyright`)
 
-Licenses (from `rpm --query`): BSD
+- `BSD-3-clause`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libuuid-2.32.1-28.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
+$ apt-get source -qq --print-uris libedit=3.1-20191231-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/libedit/libedit_3.1-20191231-1.dsc' libedit_3.1-20191231-1.dsc 2129 SHA256:1be31eebf9cf3b38a9e7c3c4d4b37f002e3f89df48f00dec32506cbe9337ae38
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/libedit/libedit_3.1-20191231.orig.tar.gz' libedit_3.1-20191231.orig.tar.gz 516801 SHA256:dbb82cb7e116a5f8025d35ef5b4f7d4a3cdd0a3909a146a39112095a2d229071
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/libedit/libedit_3.1-20191231-1.debian.tar.xz' libedit_3.1-20191231-1.debian.tar.xz 14168 SHA256:f815baa1932f9df5d4cdb316a85ebd3cc91441c4d83ba2c8454f342573ed0eab
 ```
 
-### `rpm` package: `libverto-0.3.0-5.el8.x86_64`
+### `dpkg` source package: `liberror-perl=0.17029-1`
 
-Licenses (from `rpm --query`): MIT
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url libverto-0.3.0-5.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libverto-0.3.0-5.el8.src.rpm
-```
+- `liberror-perl=0.17029-1`
 
-### `rpm` package: `libxcrypt-4.1.1-6.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/liberror-perl/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+ and BSD and Public Domain
+- `Artistic`
+- `GPL-1`
+- `GPL-1+`
+- `MIT/X11`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libxcrypt-4.1.1-6.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libxcrypt-4.1.1-6.el8.src.rpm
+$ apt-get source -qq --print-uris liberror-perl=0.17029-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17029-1.dsc' liberror-perl_0.17029-1.dsc 2336 SHA256:0590467fe8c5f81bff9336e991462b2a9994b4876f4b732c8b8b31e927987cd7
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17029.orig.tar.gz' liberror-perl_0.17029.orig.tar.gz 33304 SHA256:1a23f7913032aed6d4b68321373a3899ca66590f4727391a091ec19c95bf7adc
+'http://archive.ubuntu.com/ubuntu/pool/main/libe/liberror-perl/liberror-perl_0.17029-1.debian.tar.xz' liberror-perl_0.17029-1.debian.tar.xz 4552 SHA256:a753b142c4c33ebf9cc98ae5f7a08da13b7c9ca2823ec26e45c96efb9c15c42e
 ```
-
-### `rpm` package: `libxml2-2.9.7-12.el8_5.x86_64`
 
-Licenses (from `rpm --query`): MIT
+### `dpkg` source package: `libffi=3.3-4`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url libxml2-2.9.7-12.el8_5
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libxml2-2.9.7-12.el8_5.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libxml2-2.9.7-12.el8_5.src.rpm
-```
+- `libffi7:amd64=3.3-4`
 
-### `rpm` package: `libyaml-0.1.7-5.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libffi7/copyright`)
 
-Licenses (from `rpm --query`): MIT
+- `GPL`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libyaml-0.1.7-5.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libyaml-0.1.7-5.el8.src.rpm
+$ apt-get source -qq --print-uris libffi=3.3-4
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.3-4.dsc' libffi_3.3-4.dsc 1932 SHA256:4190ad8e7ae9167a0c67c5926bc3705acb191745cca93ef845dbc06fc097f380
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.3.orig.tar.gz' libffi_3.3.orig.tar.gz 1305466 SHA256:72fba7922703ddfa7a028d513ac15a85c8d54c8d67f55fa5a4802885dc652056
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libffi/libffi_3.3-4.debian.tar.xz' libffi_3.3-4.debian.tar.xz 9016 SHA256:0e8a6d9d87202d04d7646178479c3d365a845f9723da26625d533a169b378100
 ```
 
-### `rpm` package: `libzstd-1.4.4-1.0.1.el8.x86_64`
+### `dpkg` source package: `libfido2=1.3.1-1ubuntu2`
 
-Licenses (from `rpm --query`): BSD and GPLv2
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url libzstd-1.4.4-1.0.1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/zstd-1.4.4-1.0.1.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/zstd-1.4.4-1.0.1.el8.src.rpm
-```
+- `libfido2-1:amd64=1.3.1-1ubuntu2`
 
-### `rpm` package: `lua-libs-5.3.4-12.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libfido2-1/copyright`)
 
-Licenses (from `rpm --query`): MIT
+- `BSD-2-clause`
+- `ISC`
+- `public-domain`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url lua-libs-5.3.4-12.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/lua-5.3.4-12.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/lua-5.3.4-12.el8.src.rpm
+$ apt-get source -qq --print-uris libfido2=1.3.1-1ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libfido2/libfido2_1.3.1-1ubuntu2.dsc' libfido2_1.3.1-1ubuntu2.dsc 2315 SHA256:2ff6b7cc320b84461404fa3830dfb5b705f7920b431173479144c73b4b50a59c
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libfido2/libfido2_1.3.1.orig.tar.gz' libfido2_1.3.1.orig.tar.gz 1512676 SHA256:ba35e22016b60c1e4be66dff3cd6a60c1fe4bfa0d91ec0b89ca9da25ebeaaf41
+'http://archive.ubuntu.com/ubuntu/pool/main/libf/libfido2/libfido2_1.3.1-1ubuntu2.debian.tar.xz' libfido2_1.3.1-1ubuntu2.debian.tar.xz 73992 SHA256:678fed0bfe9ae7cdb1834caedfeb0d1c86a16c4476f679de017b39f2b356a2f8
 ```
 
-### `rpm` package: `lz4-libs-1.8.3-3.el8_4.x86_64`
+### `dpkg` source package: `libgcrypt20=1.8.5-5ubuntu1.1`
 
-Licenses (from `rpm --query`): GPLv2+ and BSD
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url lz4-libs-1.8.3-3.el8_4
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/lz4-1.8.3-3.el8_4.src.rpm
-```
+- `libgcrypt20:amd64=1.8.5-5ubuntu1.1`
 
-### `rpm` package: `microdnf-3.8.0-2.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libgcrypt20/copyright`)
 
-Licenses (from `rpm --query`): GPLv2+
+- `GPL-2`
+- `LGPL`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url microdnf-3.8.0-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/microdnf-3.8.0-2.el8.src.rpm
+$ apt-get source -qq --print-uris libgcrypt20=1.8.5-5ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.5-5ubuntu1.1.dsc' libgcrypt20_1.8.5-5ubuntu1.1.dsc 2915 SHA512:7b1cdda11632962e872b5d70b351851d95a3d5ed896f19650da618ef8ec835ed3aee54905b33f507ed16a7bae7d1ba0d5df8546712a1ee851bbed61d008250f9
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.5.orig.tar.bz2' libgcrypt20_1.8.5.orig.tar.bz2 2991291 SHA512:b55e16e838d1b1208e7673366971ae7c0f9c1c79e042f41c03d14ed74c5e387fa69ea81d5414ffda3d2b4f82ea5467fe13b00115727e257db22808cf351bde89
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.5.orig.tar.bz2.asc' libgcrypt20_1.8.5.orig.tar.bz2.asc 488 SHA512:3993c5e3f2f1714f40a9ad1a19782362c5b80c070ed8d76feacc503d8719f6775465f478098a092730e02683c665c5c91cf30e7700215aae2322be6230f207d6
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.8.5-5ubuntu1.1.debian.tar.xz' libgcrypt20_1.8.5-5ubuntu1.1.debian.tar.xz 34660 SHA512:ffcb506488147ceefe4c67c65de91f9d736d7e6a49d5ff3f04e8ec91a017a7c112c5bc46f6c71f07ff3dd565b494783cbd5b4f017f05c2a5b59f2955933d664b
 ```
-
-### `rpm` package: `mpfr-3.1.6-1.el8.x86_64`
 
-Licenses (from `rpm --query`): LGPLv3+ and GPLv3+ and GFDL
+### `dpkg` source package: `libgpg-error=1.37-1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url mpfr-3.1.6-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/mpfr-3.1.6-1.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/mpfr-3.1.6-1.el8.src.rpm
-```
+- `libgpg-error0:amd64=1.37-1`
 
-### `rpm` package: `ncurses-6.1-9.20180224.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libgpg-error0/copyright`)
 
-Licenses (from `rpm --query`): MIT
+- `BSD-3-clause`
+- `GPL-3`
+- `GPL-3+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `g10-permissive`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url ncurses-6.1-9.20180224.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/ncurses-6.1-9.20180224.el8.src.rpm
+$ apt-get source -qq --print-uris libgpg-error=1.37-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.37-1.dsc' libgpg-error_1.37-1.dsc 2220 SHA256:e789ed6bf791c90e9ba28dc3923f54379862ca65bd286495942176dcfad5d8a7
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.37.orig.tar.bz2' libgpg-error_1.37.orig.tar.bz2 937282 SHA256:b32d6ff72a73cf79797f7f2d039e95e9c6f92f0c1450215410840ab62aea9763
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.37.orig.tar.bz2.asc' libgpg-error_1.37.orig.tar.bz2.asc 488 SHA256:394f0904c386f88e2b2db5042880a2a302cbc6e4ab902bacf3d338ded038066b
+'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgpg-error/libgpg-error_1.37-1.debian.tar.xz' libgpg-error_1.37-1.debian.tar.xz 17332 SHA256:09843b599726c1ab7b1fcd86ce617bd91d6378ff754c6da0b7e536ed1c3b6c16
 ```
 
-### `rpm` package: `ncurses-base-6.1-9.20180224.el8.noarch`
+### `dpkg` source package: `libidn2=2.2.0-2`
 
-Licenses (from `rpm --query`): MIT
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url ncurses-base-6.1-9.20180224.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/ncurses-6.1-9.20180224.el8.src.rpm
-```
+- `libidn2-0:amd64=2.2.0-2`
 
-### `rpm` package: `ncurses-libs-6.1-9.20180224.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libidn2-0/copyright`)
 
-Licenses (from `rpm --query`): MIT
+- `GPL-2`
+- `GPL-2+`
+- `GPL-3`
+- `GPL-3+`
+- `LGPL-3`
+- `LGPL-3+`
+- `Unicode`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url ncurses-libs-6.1-9.20180224.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/ncurses-6.1-9.20180224.el8.src.rpm
+$ apt-get source -qq --print-uris libidn2=2.2.0-2
+'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.2.0-2.dsc' libidn2_2.2.0-2.dsc 2436 SHA256:a5c5ece3748beaba9ce0a0b29cdab2fe9d861a965a7a96101a49f194acf759d6
+'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.2.0.orig.tar.gz' libidn2_2.2.0.orig.tar.gz 2110743 SHA256:fc734732b506d878753ec6606982bf7b936e868c25c30ddb0d83f7d7056381fe
+'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.2.0-2.debian.tar.xz' libidn2_2.2.0-2.debian.tar.xz 11184 SHA256:b38ce002d7eb1abbf2c870ac9570cd06a5087693f359b133defbf44b06f8784d
 ```
 
-### `rpm` package: `nettle-3.4.1-7.el8.x86_64`
+### `dpkg` source package: `libpng1.6=1.6.37-2`
 
-Licenses (from `rpm --query`): LGPLv3+ or GPLv2+
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url nettle-3.4.1-7.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/nettle-3.4.1-7.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/nettle-3.4.1-7.el8.src.rpm
-```
+- `libpng16-16:amd64=1.6.37-2`
 
-### `rpm` package: `npth-1.5-4.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libpng16-16/copyright`)
 
-Licenses (from `rpm --query`): LGPLv2+
+- `Apache-2.0`
+- `BSD-3-clause`
+- `BSD-like-with-advertising-clause`
+- `GPL-2`
+- `GPL-2+`
+- `expat`
+- `libpng`
+- `libpng OR Apache-2.0 OR BSD-3-clause`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url npth-1.5-4.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/npth-1.5-4.el8.src.rpm
+$ apt-get source -qq --print-uris libpng1.6=1.6.37-2
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpng1.6/libpng1.6_1.6.37-2.dsc' libpng1.6_1.6.37-2.dsc 2225 SHA256:4567a54b5804e068e61477e9cd78346557b85b72add10ef10f130a5be169662e
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpng1.6/libpng1.6_1.6.37.orig.tar.gz' libpng1.6_1.6.37.orig.tar.gz 1508805 SHA256:ca74a0dace179a8422187671aee97dd3892b53e168627145271cad5b5ac81307
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpng1.6/libpng1.6_1.6.37-2.debian.tar.xz' libpng1.6_1.6.37-2.debian.tar.xz 31844 SHA256:097cee0f0da4013d0231d37e090204ab3fa592b4fecdaaed3fca8d13affcaae8
 ```
-
-### `rpm` package: `openldap-2.4.46-18.el8.x86_64`
 
-Licenses (from `rpm --query`): OpenLDAP
+### `dpkg` source package: `libpsl=0.21.0-1ubuntu1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url openldap-2.4.46-18.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/openldap-2.4.46-18.el8.src.rpm
-```
+- `libpsl5:amd64=0.21.0-1ubuntu1`
 
-### `rpm` package: `openssh-8.0p1-10.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libpsl5/copyright`)
 
-Licenses (from `rpm --query`): BSD
+- `Chromium`
+- `MIT`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url openssh-8.0p1-10.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/openssh-8.0p1-10.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/openssh-8.0p1-10.el8.src.rpm
+$ apt-get source -qq --print-uris libpsl=0.21.0-1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0-1ubuntu1.dsc' libpsl_0.21.0-1ubuntu1.dsc 2383 SHA256:38d6cf06b8ac1929efe109ac3d5f37ea6e89ea82f7a5125db4dc7a7b5f3faf94
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0.orig.tar.gz' libpsl_0.21.0.orig.tar.gz 8598583 SHA256:055aa87ec166c7afb985d0816c07ff440e1eb899881a318c51c69a0aeea8e279
+'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0-1ubuntu1.debian.tar.xz' libpsl_0.21.0-1ubuntu1.debian.tar.xz 12476 SHA256:efd6c7ae8c244b582d6af943b5925d95a31a183abf695301f2fa49de9f694671
 ```
 
-### `rpm` package: `openssh-clients-8.0p1-10.el8.x86_64`
+### `dpkg` source package: `libseccomp=2.5.1-1ubuntu1~20.04.2`
 
-Licenses (from `rpm --query`): BSD
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url openssh-clients-8.0p1-10.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/openssh-8.0p1-10.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/openssh-8.0p1-10.el8.src.rpm
-```
+- `libseccomp2:amd64=2.5.1-1ubuntu1~20.04.2`
 
-### `rpm` package: `openssl-libs-1.1.1k-6.el8_5.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
-Licenses (from `rpm --query`): OpenSSL and ASL 2.0
+- `LGPL-2.1`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url openssl-libs-1.1.1k-6.el8_5
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/openssl-1.1.1k-6.el8_5.src.rpm
+$ apt-get source -qq --print-uris libseccomp=2.5.1-1ubuntu1~20.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.1-1ubuntu1%7e20.04.2.dsc' libseccomp_2.5.1-1ubuntu1~20.04.2.dsc 2578 SHA512:ea3e505f936011ea2d37eb5c9c10fb0f7ead4f699180679940c1e27936c1b28fc96b40f98d4e25e1e058466244d08d29c2d538fff85d726808c2cec45f914509
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.1.orig.tar.gz' libseccomp_2.5.1.orig.tar.gz 638811 SHA512:2be80a6323f9282dbeae8791724e5778b32e2382b2a3d1b0f77366371ec4072ea28128204f675cce101c091c0420d12c497e1a9ccbb7dc5bcbf61bfd777160af
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.1-1ubuntu1%7e20.04.2.debian.tar.xz' libseccomp_2.5.1-1ubuntu1~20.04.2.debian.tar.xz 21168 SHA512:77187efe846d46f3cff589b048cd446f13f1d0d60274b54fa464e337288b9fd3979e1f3b6f4999af00e12738232b9397e485e977a732f74cb89cfa5bf90a21be
 ```
 
-### `rpm` package: `oraclelinux-release-8.5-1.0.8.el8.x86_64`
+### `dpkg` source package: `libselinux=3.0-1build2`
 
-Licenses (from `rpm --query`): GPL
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url oraclelinux-release-8.5-1.0.8.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/oraclelinux-release-8.5-1.0.8.el8.src.rpm
-```
+- `libselinux1:amd64=3.0-1build2`
 
-### `rpm` package: `oraclelinux-release-el8-1.0-22.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libselinux1/copyright`)
 
-Licenses (from `rpm --query`): GPLv2
+- `GPL-2`
+- `LGPL-2.1`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url oraclelinux-release-el8-1.0-22.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/oraclelinux-release-el8-1.0-22.el8.src.rpm
+$ apt-get source -qq --print-uris libselinux=3.0-1build2
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.0-1build2.dsc' libselinux_3.0-1build2.dsc 2565 SHA256:9a8d6c354ed06350606c009d899d117e71fda20887792b2c25b38222d0190d93
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.0.orig.tar.gz' libselinux_3.0.orig.tar.gz 212096 SHA256:2ea2b30f671dae9d6b1391cbe8fb2ce5d36a3ee4fb1cd3c32f0d933c31b82433
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.0-1build2.debian.tar.xz' libselinux_3.0-1build2.debian.tar.xz 23720 SHA256:ed85da0fe5561205c95f0f622562425dc7d8dd61ffd213a7fa914d778fe8da71
 ```
-
-### `rpm` package: `p11-kit-0.23.22-1.el8.x86_64`
 
-Licenses (from `rpm --query`): BSD
+### `dpkg` source package: `libsemanage=3.0-1build2`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url p11-kit-0.23.22-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/p11-kit-0.23.22-1.el8.src.rpm
-```
+- `libsemanage-common=3.0-1build2`
+- `libsemanage1:amd64=3.0-1build2`
 
-### `rpm` package: `p11-kit-trust-0.23.22-1.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libsemanage-common/copyright`, `/usr/share/doc/libsemanage1/copyright`)
 
-Licenses (from `rpm --query`): BSD
+- `GPL`
+- `LGPL`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url p11-kit-trust-0.23.22-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/p11-kit-0.23.22-1.el8.src.rpm
+$ apt-get source -qq --print-uris libsemanage=3.0-1build2
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.0-1build2.dsc' libsemanage_3.0-1build2.dsc 2678 SHA256:6231f4b00991657fafef2595eb571b2bcbe437de4ec9dc9929c0e69187db5f33
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.0.orig.tar.gz' libsemanage_3.0.orig.tar.gz 180745 SHA256:a497b0720d54eac427f1f3f618eed417e50ed8f4e47ed0f7a1d391bd416e84cf
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.0-1build2.debian.tar.xz' libsemanage_3.0-1build2.debian.tar.xz 17176 SHA256:38a646f91532c920c8c15a695c3585397ddbf032ecf49c52eb89d53c8eac48fb
 ```
 
-### `rpm` package: `pam-1.3.1-15.el8.x86_64`
+### `dpkg` source package: `libsepol=3.0-1`
 
-Licenses (from `rpm --query`): BSD and GPLv2+
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url pam-1.3.1-15.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/pam-1.3.1-15.el8.src.rpm
-```
+- `libsepol1:amd64=3.0-1`
 
-### `rpm` package: `pcre-8.42-6.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libsepol1/copyright`)
 
-Licenses (from `rpm --query`): BSD
+- `GPL`
+- `LGPL`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url pcre-8.42-6.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/pcre-8.42-6.el8.src.rpm
+$ apt-get source -qq --print-uris libsepol=3.0-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0-1.dsc' libsepol_3.0-1.dsc 1770 SHA256:0073de5844605d380dd56f6630678ad91459496dc768fa9eb4d8cc7f693f5c1a
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0.orig.tar.gz' libsepol_3.0.orig.tar.gz 473864 SHA256:5b7ae1881909f1048b06f7a0c364c5c8a86ec12e0ec76e740fe9595a6033eb79
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0-1.debian.tar.xz' libsepol_3.0-1.debian.tar.xz 14224 SHA256:a16b5bc3c041e016d01794d1a1b9826ed4426862622c05526e93607c325ec328
 ```
 
-### `rpm` package: `pcre2-10.32-2.el8.x86_64`
+### `dpkg` source package: `libssh=0.9.3-2ubuntu2.2`
 
-Licenses (from `rpm --query`): BSD
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url pcre2-10.32-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/pcre2-10.32-2.el8.src.rpm
-```
+- `libssh-4:amd64=0.9.3-2ubuntu2.2`
 
-### `rpm` package: `perl-Carp-1.42-396.el8.noarch`
+Licenses: (parsed from: `/usr/share/doc/libssh-4/copyright`)
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+- `BSD-2-clause`
+- `BSD-3-clause`
+- `LGPL-2.1`
+- `LGPL-2.1+~OpenSSL`
+- `public-domain`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-Carp-1.42-396.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Carp-1.42-396.el8.src.rpm
+$ apt-get source -qq --print-uris libssh=0.9.3-2ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3-2ubuntu2.2.dsc' libssh_0.9.3-2ubuntu2.2.dsc 2538 SHA512:cede02f6296d5cfc401bbcded5278f9b07c7f450e2193d6bbd7ab5f562e7cee68a402855320776bfddf9769e8adbb9be3ffffe05a7202355d6afc7ddbe50088c
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3.orig.tar.xz' libssh_0.9.3.orig.tar.xz 500068 SHA512:6e59718565daeca6d224426cc1095a112deff9af8e0b021917e04f08bb7409263c35724de95f591f38e26f0fb3bbbbc69b679b6775edc21dec158d241b076c6f
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.3-2ubuntu2.2.debian.tar.xz' libssh_0.9.3-2ubuntu2.2.debian.tar.xz 30192 SHA512:a32781839e68eabcb17d4ccd446b4b3ec84e9891737d6df08e1dddc28ada65db677d2b0b1589cb1fe72b9256bb3d1b1dbed3fb3594afc723a223dcced73c75fe
 ```
 
-### `rpm` package: `perl-Encode-2.97-3.el8.x86_64`
+### `dpkg` source package: `libtasn1-6=4.16.0-2`
 
-Licenses (from `rpm --query`): (GPL+ or Artistic) and Artistic 2.0 and UCD
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url perl-Encode-2.97-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/perl-Encode-2.97-3.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Encode-2.97-3.el8.src.rpm
-```
+- `libtasn1-6:amd64=4.16.0-2`
 
-### `rpm` package: `perl-Errno-1.28-420.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+- `GFDL-1.3`
+- `GPL-3`
+- `LGPL`
+- `LGPL-2.1`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-Errno-1.28-420.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/perl-5.26.3-420.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-5.26.3-420.el8.src.rpm
+$ apt-get source -qq --print-uris libtasn1-6=4.16.0-2
+'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0-2.dsc' libtasn1-6_4.16.0-2.dsc 2586 SHA256:fd4a387c71f95c3eceb1072a3f42c7021d73128027ea41a18d6efc6cbfdd764a
+'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0.orig.tar.gz' libtasn1-6_4.16.0.orig.tar.gz 1812442 SHA256:0e0fb0903839117cb6e3b56e68222771bebf22ad7fc2295a0ed7d576e8d4329d
+'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0.orig.tar.gz.asc' libtasn1-6_4.16.0.orig.tar.gz.asc 488 SHA256:06c201e8c3b43c27465ed79294d4c4ec8dcd3e95e4a6176ecbf273229ee3e2d0
+'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0-2.debian.tar.xz' libtasn1-6_4.16.0-2.debian.tar.xz 17740 SHA256:c1a89b0bac0fb7c83ebac4eafbca0475c24350ade6ccaef31266424725610624
 ```
 
-### `rpm` package: `perl-Error-0.17025-2.el8.noarch`
+### `dpkg` source package: `libunistring=0.9.10-2`
 
-Licenses (from `rpm --query`): (GPL+ or Artistic) and MIT
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url perl-Error-0.17025-2.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/perl-Error-0.17025-2.el8.src.rpm
-```
+- `libunistring2:amd64=0.9.10-2`
 
-### `rpm` package: `perl-Exporter-5.72-396.el8.noarch`
+Licenses: (parsed from: `/usr/share/doc/libunistring2/copyright`)
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+- `FreeSoftware`
+- `GFDL-1.2`
+- `GFDL-1.2+`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-2+ with distribution exception`
+- `GPL-3`
+- `GPL-3+`
+- `LGPL-3`
+- `LGPL-3+`
+- `MIT`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-Exporter-5.72-396.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Exporter-5.72-396.el8.src.rpm
+$ apt-get source -qq --print-uris libunistring=0.9.10-2
+'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10-2.dsc' libunistring_0.9.10-2.dsc 2206 SHA256:c6faf64e2d978ec074ebf88264730121dfd03cc1639df94b5dc3eb05b1678532
+'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10.orig.tar.xz' libunistring_0.9.10.orig.tar.xz 2051320 SHA256:eb8fb2c3e4b6e2d336608377050892b54c3c983b646c561836550863003c05d7
+'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10.orig.tar.xz.asc' libunistring_0.9.10.orig.tar.xz.asc 1310 SHA256:e1606f691034fa21b00e08269622743547c16d21cca6c8a64156b4774a49e78e
+'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10-2.debian.tar.xz' libunistring_0.9.10-2.debian.tar.xz 40708 SHA256:5e291a1a15549d12c64575c72868a8c94586715d35062b5efb48fe9a9d09924e
 ```
-
-### `rpm` package: `perl-File-Path-2.15-2.el8.noarch`
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+### `dpkg` source package: `libx11=2:1.6.9-2ubuntu1.2`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url perl-File-Path-2.15-2.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-File-Path-2.15-2.el8.src.rpm
-```
+- `libx11-6:amd64=2:1.6.9-2ubuntu1.2`
+- `libx11-data=2:1.6.9-2ubuntu1.2`
 
-### `rpm` package: `perl-File-Temp-0.230.600-1.el8.noarch`
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
 
-Licenses (from `rpm --query`): GPL+ or Artistic
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-File-Temp-0.230.600-1.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-File-Temp-0.230.600-1.el8.src.rpm
+$ apt-get source -qq --print-uris libx11=2:1.6.9-2ubuntu1.2
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9-2ubuntu1.2.dsc' libx11_1.6.9-2ubuntu1.2.dsc 2671 SHA512:1468c2b4f7240b9e59dc7a5fa528383dab4787aec56fb9a0d6d4cbb182eb95e59c0f6478e37aa03ef45e1fffcb73e8b30cdf04b14a656f6edff2f3a6a2a18471
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9.orig.tar.gz' libx11_1.6.9.orig.tar.gz 2994329 SHA512:c79cf0924e920a2e8d2e9af45e73ed42b565dea79ac68d4c3889033738274694b29cedb62c057fec1aa7f7ad7dcf843334fccb43470bbae7922d42373c1c6045
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9.orig.tar.gz.asc' libx11_1.6.9.orig.tar.gz.asc 659 SHA512:56e53d1481be4e12f89af2fbcd297a3612996f5ca1eae39d6fe336f9b52832ea430ac0568e556b9e57291562c56590086871c08ec7ac046f15af4211f680adee
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9-2ubuntu1.2.diff.gz' libx11_1.6.9-2ubuntu1.2.diff.gz 67310 SHA512:f2f28664298eff341177a3bb5bc1f1290d2e0c94fa2c39771b51ec69d987a75b38cc03fbe0a0561a7807da9ac1e32c5b3c617dc7020922c6f2c1c0ca060f99de
 ```
 
-### `rpm` package: `perl-Getopt-Long-2.50-4.el8.noarch`
+### `dpkg` source package: `libxau=1:1.0.9-0ubuntu1`
 
-Licenses (from `rpm --query`): GPLv2+ or Artistic
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url perl-Getopt-Long-2.50-4.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Getopt-Long-2.50-4.el8.src.rpm
-```
+- `libxau6:amd64=1:1.0.9-0ubuntu1`
 
-### `rpm` package: `perl-Git-2.27.0-1.el8.noarch`
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
 
-Licenses (from `rpm --query`): GPLv2
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-Git-2.27.0-1.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/git-2.27.0-1.el8.src.rpm
+$ apt-get source -qq --print-uris libxau=1:1.0.9-0ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxau/libxau_1.0.9-0ubuntu1.dsc' libxau_1.0.9-0ubuntu1.dsc 1563 SHA256:b59509d1f8f6c0e21b8bbd46ac1dffcd7a21a635ff3ce9c0acf68ba60fcb5e11
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxau/libxau_1.0.9.orig.tar.gz' libxau_1.0.9.orig.tar.gz 394068 SHA256:1f123d8304b082ad63a9e89376400a3b1d4c29e67e3ea07b3f659cccca690eea
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxau/libxau_1.0.9-0ubuntu1.diff.gz' libxau_1.0.9-0ubuntu1.diff.gz 15142 SHA256:cf7e9d50c3b3b8dde3486ee6fcf9bb96585e2af32924e91c10c8612e48b5dce5
 ```
 
-### `rpm` package: `perl-HTTP-Tiny-0.074-1.el8.noarch`
+### `dpkg` source package: `libxcb=1.14-2`
 
-Licenses (from `rpm --query`): GPL+ or Artistic
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url perl-HTTP-Tiny-0.074-1.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-HTTP-Tiny-0.074-1.el8.src.rpm
-```
+- `libxcb1:amd64=1.14-2`
 
-### `rpm` package: `perl-IO-1.38-420.el8.x86_64`
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
 
-Licenses (from `rpm --query`): GPL+ or Artistic
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-IO-1.38-420.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/perl-5.26.3-420.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-5.26.3-420.el8.src.rpm
+$ apt-get source -qq --print-uris libxcb=1.14-2
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcb/libxcb_1.14-2.dsc' libxcb_1.14-2.dsc 5344 SHA256:997dfadefa35a243a7160b62d628bb25e45439f61687459d581502905bcf1fb2
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcb/libxcb_1.14.orig.tar.gz' libxcb_1.14.orig.tar.gz 640322 SHA256:2c7fcddd1da34d9b238c9caeda20d3bd7486456fc50b3cc6567185dbd5b0ad02
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcb/libxcb_1.14-2.diff.gz' libxcb_1.14-2.diff.gz 25716 SHA256:92d7e0a80c3c7f2a5b5afd0c0702183f1c483338d678d67d8d0e61fd8989ba85
 ```
-
-### `rpm` package: `perl-MIME-Base64-3.15-396.el8.x86_64`
 
-Licenses (from `rpm --query`): (GPL+ or Artistic) and MIT
+### `dpkg` source package: `libxcrypt=1:4.4.10-10ubuntu4`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url perl-MIME-Base64-3.15-396.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-MIME-Base64-3.15-396.el8.src.rpm
-```
+- `libcrypt1:amd64=1:4.4.10-10ubuntu4`
 
-### `rpm` package: `perl-PathTools-3.74-1.el8.x86_64`
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
 
-Licenses (from `rpm --query`): (GPL+ or Artistic) and BSD
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-PathTools-3.74-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-PathTools-3.74-1.el8.src.rpm
+$ apt-get source -qq --print-uris libxcrypt=1:4.4.10-10ubuntu4
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.10-10ubuntu4.dsc' libxcrypt_4.4.10-10ubuntu4.dsc 2216 SHA256:457576b36eaa34dcf28b19e942908221d0618e9e4a2c0b9e11ba9693770756a2
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.10.orig.tar.xz' libxcrypt_4.4.10.orig.tar.xz 372652 SHA256:f790a8eac4e4af3124d2844a24a7afb3a972368e4dff63d701599c2f2d065fd3
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.10-10ubuntu4.debian.tar.xz' libxcrypt_4.4.10-10ubuntu4.debian.tar.xz 5760 SHA256:b2e665b5224911d24dbcbddfc61b7a27428c3ecb744f29ceea1b2984496f2ffa
 ```
 
-### `rpm` package: `perl-Pod-Escapes-1.07-395.el8.noarch`
+### `dpkg` source package: `libxdmcp=1:1.1.3-0ubuntu1`
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url perl-Pod-Escapes-1.07-395.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Pod-Escapes-1.07-395.el8.src.rpm
-```
+- `libxdmcp6:amd64=1:1.1.3-0ubuntu1`
 
-### `rpm` package: `perl-Pod-Perldoc-3.28-396.el8.noarch`
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
 
-Licenses (from `rpm --query`): GPL+ or Artistic
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-Pod-Perldoc-3.28-396.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Pod-Perldoc-3.28-396.el8.src.rpm
+$ apt-get source -qq --print-uris libxdmcp=1:1.1.3-0ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxdmcp/libxdmcp_1.1.3-0ubuntu1.dsc' libxdmcp_1.1.3-0ubuntu1.dsc 1608 SHA256:3f98e3917b5de252eb517c55743bcc5682b43c9f70ead33231ac4318bbc816e1
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxdmcp/libxdmcp_1.1.3.orig.tar.gz' libxdmcp_1.1.3.orig.tar.gz 429668 SHA256:2ef9653d32e09d1bf1b837d0e0311024979653fe755ad3aaada8db1aa6ea180c
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxdmcp/libxdmcp_1.1.3-0ubuntu1.diff.gz' libxdmcp_1.1.3-0ubuntu1.diff.gz 18079 SHA256:3037a57202b724ecd7db70c21a601f58277c02ba89e7e5d999973e5baf6d05ca
 ```
 
-### `rpm` package: `perl-Pod-Simple-3.35-395.el8.noarch`
+### `dpkg` source package: `libxext=2:1.3.4-0ubuntu1`
 
-Licenses (from `rpm --query`): GPL+ or Artistic
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url perl-Pod-Simple-3.35-395.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Pod-Simple-3.35-395.el8.src.rpm
-```
+- `libxext6:amd64=2:1.3.4-0ubuntu1`
 
-### `rpm` package: `perl-Pod-Usage-1.69-395.el8.noarch`
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
 
-Licenses (from `rpm --query`): GPL+ or Artistic
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-Pod-Usage-1.69-395.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Pod-Usage-1.69-395.el8.src.rpm
+$ apt-get source -qq --print-uris libxext=2:1.3.4-0ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxext/libxext_1.3.4-0ubuntu1.dsc' libxext_1.3.4-0ubuntu1.dsc 1727 SHA256:8319de2750f28c78e01267a5593776f10afd3f863d4820abe72dbf855a3a77ae
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxext/libxext_1.3.4.orig.tar.gz' libxext_1.3.4.orig.tar.gz 494434 SHA256:8ef0789f282826661ff40a8eef22430378516ac580167da35cc948be9041aac1
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxext/libxext_1.3.4-0ubuntu1.diff.gz' libxext_1.3.4-0ubuntu1.diff.gz 20663 SHA256:87a4d23f1f9ff53f3a6cd7cc35252a1249dc63d274c566ea7e23b23585a86170
 ```
-
-### `rpm` package: `perl-Scalar-List-Utils-1.49-2.el8.x86_64`
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+### `dpkg` source package: `libxmu=2:1.1.3-0ubuntu1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url perl-Scalar-List-Utils-1.49-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Scalar-List-Utils-1.49-2.el8.src.rpm
-```
+- `libxmuu1:amd64=2:1.1.3-0ubuntu1`
 
-### `rpm` package: `perl-Socket-2.027-3.el8.x86_64`
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
 
-Licenses (from `rpm --query`): GPL+ or Artistic
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-Socket-2.027-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Socket-2.027-3.el8.src.rpm
+$ apt-get source -qq --print-uris libxmu=2:1.1.3-0ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxmu/libxmu_1.1.3-0ubuntu1.dsc' libxmu_1.1.3-0ubuntu1.dsc 1797 SHA256:ba64fdbc1b602eac436ae7ea58f57d72a45ee23b016eba542ce8b704508f717c
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxmu/libxmu_1.1.3.orig.tar.gz' libxmu_1.1.3.orig.tar.gz 497343 SHA256:5bd9d4ed1ceaac9ea023d86bf1c1632cd3b172dce4a193a72a94e1d9df87a62e
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxmu/libxmu_1.1.3-0ubuntu1.diff.gz' libxmu_1.1.3-0ubuntu1.diff.gz 6373 SHA256:7519cc7be957da29adc420426b57e1366228448c6205c5e4b89d04bfa948ffa7
 ```
 
-### `rpm` package: `perl-Storable-3.11-3.el8.x86_64`
+### `dpkg` source package: `libzstd=1.4.4+dfsg-3ubuntu0.1`
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+Binary Packages:
 
-Source:
-
-```console
-$ dnf --quiet download --source --url perl-Storable-3.11-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Storable-3.11-3.el8.src.rpm
-```
+- `libzstd1:amd64=1.4.4+dfsg-3ubuntu0.1`
 
-### `rpm` package: `perl-Term-ANSIColor-4.06-396.el8.noarch`
+Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+- `BSD-3-clause`
+- `Expat`
+- `GPL-2`
+- `GPL-2+`
+- `zlib`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-Term-ANSIColor-4.06-396.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Term-ANSIColor-4.06-396.el8.src.rpm
+$ apt-get source -qq --print-uris libzstd=1.4.4+dfsg-3ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4%2bdfsg-3ubuntu0.1.dsc' libzstd_1.4.4+dfsg-3ubuntu0.1.dsc 2381 SHA512:a135412be4afdea573f991d8e4822f9885dbd607c87fb22e72d2defa160cf64f85a6047a9c9120b6eda3b8927306407278779f9e7a6976d7b15fb08750f32f74
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4%2bdfsg.orig.tar.xz' libzstd_1.4.4+dfsg.orig.tar.xz 1357144 SHA512:85c64662303dda72d61fcbe41dfc6b310e63b20b043f41d4fb5a5ebc38ea83986c8c217fb259dfc2c024538ee8a519bb944914542a0b3a5c4dd988d5fdb248b7
+'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4%2bdfsg-3ubuntu0.1.debian.tar.xz' libzstd_1.4.4+dfsg-3ubuntu0.1.debian.tar.xz 17300 SHA512:0484891be5603d00bd57b799c708b9395fccbaa8c6c44f535377f6fa2c7ac22c01c8a3c1b45e1c1f3c30f19dc74d510626bf82067fcbfb53c39f1bcc2249affe
 ```
 
-### `rpm` package: `perl-Term-Cap-1.17-395.el8.noarch`
+### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
-Licenses (from `rpm --query`): GPL+ or Artistic
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url perl-Term-Cap-1.17-395.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Term-Cap-1.17-395.el8.src.rpm
-```
+- `lsb-base=11.1.0ubuntu2`
 
-### `rpm` package: `perl-TermReadKey-2.37-7.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/lsb-base/copyright`)
 
-Licenses (from `rpm --query`): (Copyright only) and (Artistic or GPL+)
+- `BSD-3-clause`
+- `GPL-2`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-TermReadKey-2.37-7.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/perl-TermReadKey-2.37-7.el8.src.rpm
+$ apt-get source -qq --print-uris lsb=11.1.0ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_11.1.0ubuntu2.dsc' lsb_11.1.0ubuntu2.dsc 2230 SHA256:983ff4ab1ab2b39af974e4b8f4373ab4028d0ee5a409e7cd40401fa8e6ecabde
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_11.1.0ubuntu2.tar.xz' lsb_11.1.0ubuntu2.tar.xz 46024 SHA256:c6ab63b6702dc633988690aacde8ece3e460f8acd8f1af8e6a67ab2fe0798f41
 ```
-
-### `rpm` package: `perl-Text-ParseWords-3.30-395.el8.noarch`
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+### `dpkg` source package: `lz4=1.9.2-2ubuntu0.20.04.1`
 
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url perl-Text-ParseWords-3.30-395.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Text-ParseWords-3.30-395.el8.src.rpm
-```
+- `liblz4-1:amd64=1.9.2-2ubuntu0.20.04.1`
 
-### `rpm` package: `perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch`
+Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 
-Licenses (from `rpm --query`): TTWL
+- `BSD-2-clause`
+- `GPL-2`
+- `GPL-2+`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-Text-Tabs+Wrap-2013.0523-395.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Text-Tabs+Wrap-2013.0523-395.el8.src.rpm
+$ apt-get source -qq --print-uris lz4=1.9.2-2ubuntu0.20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.2-2ubuntu0.20.04.1.dsc' lz4_1.9.2-2ubuntu0.20.04.1.dsc 2095 SHA512:249c1370a5e277575429a778fe2be185a997eb82eb77e88f83da38ddb271956ff1d2ae96403c599d430ed13a0f37e125b4410d21e3d42fe2d47a1a376bff70ad
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.2.orig.tar.gz' lz4_1.9.2.orig.tar.gz 305796 SHA512:ae714c61ec8e33ed91359b63f2896cfa102d66b730dce112b74696ec5850e59d88bd5527173e01e354a70fbe8f036557a47c767ee0766bc5f9c257978116c3c1
+'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.2-2ubuntu0.20.04.1.debian.tar.xz' lz4_1.9.2-2ubuntu0.20.04.1.debian.tar.xz 13228 SHA512:330f522c3afd0c9a36c6d8b882cfd59aa32258906ad6bbcab3a5bcd4a530ce226905d8108f384615dedd749dc5faaa45f320b0eda98effabee433e97124fabc0
 ```
 
-### `rpm` package: `perl-Time-Local-1.280-1.el8.noarch`
+### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
-Licenses (from `rpm --query`): GPL+ or Artistic
-
-Source:
+Binary Packages:
 
-```console
-$ dnf --quiet download --source --url perl-Time-Local-1.280-1.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Time-Local-1.280-1.el8.src.rpm
-```
+- `mawk=1.3.4.20200120-2`
 
-### `rpm` package: `perl-Unicode-Normalize-1.25-396.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+- `GPL-2`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-Unicode-Normalize-1.25-396.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-Unicode-Normalize-1.25-396.el8.src.rpm
+$ apt-get source -qq --print-uris mawk=1.3.4.20200120-2
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120-2.dsc' mawk_1.3.4.20200120-2.dsc 1915 SHA256:5069c46872ac74f5221250dfb88b31b1f2dbb8a2617c1e013f8f80cc34638c6d
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120.orig.tar.gz' mawk_1.3.4.20200120.orig.tar.gz 468855 SHA256:7fd4cd1e1fae9290fe089171181bbc6291dfd9bca939ca804f0ddb851c8b8237
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120-2.debian.tar.xz' mawk_1.3.4.20200120-2.debian.tar.xz 7504 SHA256:b772ed2f016b0286980c46cbc1f1f4ae62887ef2aa3dff6ef10cae638f923f26
 ```
+
+### `dpkg` source package: `ncurses=6.2-0ubuntu2`
 
-### `rpm` package: `perl-constant-1.33-396.el8.noarch`
+Binary Packages:
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+- `libncurses6:amd64=6.2-0ubuntu2`
+- `libncursesw6:amd64=6.2-0ubuntu2`
+- `libtinfo6:amd64=6.2-0ubuntu2`
+- `ncurses-base=6.2-0ubuntu2`
+- `ncurses-bin=6.2-0ubuntu2`
 
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-constant-1.33-396.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-constant-1.33-396.el8.src.rpm
+$ apt-get source -qq --print-uris ncurses=6.2-0ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2-0ubuntu2.dsc' ncurses_6.2-0ubuntu2.dsc 3831 SHA256:b580e8d50864a61bad0cedb17c8005ec6c24cd85d8ebbe472d1170552c8cd3bd
+'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2.orig.tar.gz' ncurses_6.2.orig.tar.gz 3425862 SHA256:30306e0c76e0f9f1f0de987cf1c82a5c21e1ce6568b9227f7da5b71cbea86c9d
+'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.2-0ubuntu2.debian.tar.xz' ncurses_6.2-0ubuntu2.debian.tar.xz 61192 SHA256:3377d203f2ab08b119ed22ac420152f3c28872201e35b25e62dfe07641ed750a
 ```
+
+### `dpkg` source package: `netbase=6.1`
 
-### `rpm` package: `perl-interpreter-5.26.3-420.el8.x86_64`
+Binary Packages:
 
-Licenses (from `rpm --query`): (GPL+ or Artistic) and (GPLv2+ or Artistic) and BSD and Public Domain and UCD
+- `netbase=6.1`
 
+Licenses: (parsed from: `/usr/share/doc/netbase/copyright`)
+
+- `GPL-2`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-interpreter-5.26.3-420.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/perl-5.26.3-420.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-5.26.3-420.el8.src.rpm
+$ apt-get source -qq --print-uris netbase=6.1
+'http://archive.ubuntu.com/ubuntu/pool/main/n/netbase/netbase_6.1.dsc' netbase_6.1.dsc 1480 SHA256:d3d24cf00001259d3311c0509b4e23ac150cffea27b546e3a204864f52824556
+'http://archive.ubuntu.com/ubuntu/pool/main/n/netbase/netbase_6.1.tar.xz' netbase_6.1.tar.xz 31984 SHA256:084d743bd84d4d9380bac4c71c51e57406dce44f5a69289bb823c903e9b035d8
 ```
+
+### `dpkg` source package: `nettle=3.5.1+really3.5.1-2ubuntu0.2`
 
-### `rpm` package: `perl-libs-5.26.3-420.el8.x86_64`
+Binary Packages:
 
-Licenses (from `rpm --query`): (GPL+ or Artistic) and HSRL and MIT and UCD
+- `libhogweed5:amd64=3.5.1+really3.5.1-2ubuntu0.2`
+- `libnettle7:amd64=3.5.1+really3.5.1-2ubuntu0.2`
 
+Licenses: (parsed from: `/usr/share/doc/libhogweed5/copyright`, `/usr/share/doc/libnettle7/copyright`)
+
+- `GAP`
+- `GPL`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-2+ with Autoconf exception`
+- `LGPL`
+- `LGPL-2`
+- `LGPL-2+`
+- `LGPL-2.1+`
+- `other`
+- `public-domain`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-libs-5.26.3-420.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/perl-5.26.3-420.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-5.26.3-420.el8.src.rpm
+$ apt-get source -qq --print-uris nettle=3.5.1+really3.5.1-2ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1%2breally3.5.1-2ubuntu0.2.dsc' nettle_3.5.1+really3.5.1-2ubuntu0.2.dsc 2490 SHA512:a5b45f1154e48fd7d6c48c57ae17cdcb7cd4a352d6b97bb408a49f5f4f3b40388d23bc12b09602fc9d0d6e91e8bc5525b12f98568ec64c18c4d6ca9fe5048c36
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1%2breally3.5.1.orig.tar.gz' nettle_3.5.1+really3.5.1.orig.tar.gz 1989593 SHA512:f738121b9091cbe79435fb5d46b45cf6f10912320c233829356908127bab1cac6946ca56e022a832380c44f2c10f21d2feef64cb0f4f41e3da4a681dc0131784
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1%2breally3.5.1.orig.tar.gz.asc' nettle_3.5.1+really3.5.1.orig.tar.gz.asc 573 SHA512:d8921622f2165fb4a05e7e75f75d82c0eabb816f265bae3f3267def20d81386b1da1a29ebfc52bbe26875b94b2050dd5493119d0efcb5143bc21e2f69b8449dd
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.5.1%2breally3.5.1-2ubuntu0.2.debian.tar.xz' nettle_3.5.1+really3.5.1-2ubuntu0.2.debian.tar.xz 27228 SHA512:389c303e679b6b6714f824f22bc8675c1ea4bdab0108b69e9514613109573d01592e3f80bf9a144866a159a9a09fa0f3218d62b9f6978bdfe5e95a18bcfe3a88
 ```
+
+### `dpkg` source package: `nghttp2=1.40.0-1build1`
 
-### `rpm` package: `perl-macros-5.26.3-420.el8.x86_64`
+Binary Packages:
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+- `libnghttp2-14:amd64=1.40.0-1build1`
 
+Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
+
+- `BSD-2-clause`
+- `Expat`
+- `GPL-3`
+- `GPL-3+ with autoconf exception`
+- `MIT`
+- `SIL-OFL-1.1`
+- `all-permissive`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-macros-5.26.3-420.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/perl-5.26.3-420.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-5.26.3-420.el8.src.rpm
+$ apt-get source -qq --print-uris nghttp2=1.40.0-1build1
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.40.0-1build1.dsc' nghttp2_1.40.0-1build1.dsc 2572 SHA256:2f945c4799485cae7ad8f0d1cf1720986bf13f6c65bab7582ef2ae51a48e3661
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.40.0.orig.tar.bz2' nghttp2_1.40.0.orig.tar.bz2 1937537 SHA256:82758e13727945f2408d0612762e4655180b039f058d5ff40d055fa1497bd94f
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.40.0-1build1.debian.tar.xz' nghttp2_1.40.0-1build1.debian.tar.xz 12772 SHA256:d71772f726b343c803954c0bccf3150b736d0e1a7c82a03dc7560fc8bd3a0189
 ```
+
+### `dpkg` source package: `openldap=2.4.49+dfsg-2ubuntu1.8`
 
-### `rpm` package: `perl-parent-0.237-1.el8.noarch`
+Binary Packages:
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+- `libldap-2.4-2:amd64=2.4.49+dfsg-2ubuntu1.8`
+- `libldap-common=2.4.49+dfsg-2ubuntu1.8`
 
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-parent-0.237-1.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-parent-0.237-1.el8.src.rpm
+$ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2ubuntu1.8
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49%2bdfsg-2ubuntu1.8.dsc' openldap_2.4.49+dfsg-2ubuntu1.8.dsc 3136 SHA512:fce0af3ba41daa23607c15ff9152277f27b185ec6e9ebfa8b1bfe1817cf13c6f00b86ad93b597a0c283ab2ea326194259aff83fb49fac99454b260dff317f350
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49%2bdfsg.orig.tar.gz' openldap_2.4.49+dfsg.orig.tar.gz 4844726 SHA512:c2096f6e37bae8e4d4dcc5cc8dad783996bc8677e7e62a06b9f55857f8950726ca3e3b0d8368563c8985123175f63625354ad5ac271db8b55d3ac62e8906d4c7
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49%2bdfsg-2ubuntu1.8.debian.tar.xz' openldap_2.4.49+dfsg-2ubuntu1.8.debian.tar.xz 187956 SHA512:918483e21af3233daa5a8b04da0c87fc010049ad5e66230d36a3737f511cd395f5f1f6753139f13520266f9fe86c07ae9c06c90128ca800680ecd3d23bc4b9a4
 ```
+
+### `dpkg` source package: `openssh=1:8.2p1-4ubuntu0.4`
 
-### `rpm` package: `perl-podlators-4.11-1.el8.noarch`
+Binary Packages:
 
-Licenses (from `rpm --query`): (GPL+ or Artistic) and FSFAP
+- `openssh-client=1:8.2p1-4ubuntu0.4`
 
+Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
+
+- `BSD-2-clause`
+- `BSD-3-clause`
+- `Beer-ware`
+- `Expat-with-advertising-restriction`
+- `Mazieres-BSD-style`
+- `OpenSSH`
+- `Powell-BSD-style`
+- `public-domain`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-podlators-4.11-1.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-podlators-4.11-1.el8.src.rpm
+$ apt-get source -qq --print-uris openssh=1:8.2p1-4ubuntu0.4
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.4.dsc' openssh_8.2p1-4ubuntu0.4.dsc 3098 SHA512:36f3eb577c244098cd45e302c91db6e967ab8e8f87cc88e2fd53a576ac62e8de4d06243aaa3af8b88a3021b732fe0fb14bda97653dd7688e4b79f2b07da2ccbf
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1.orig.tar.gz' openssh_8.2p1.orig.tar.gz 1701197 SHA512:c4db64e52a3a4c410de9de49f9cb104dd493b10250af3599b92457dd986277b3fd99a6f51cec94892fd1be5bd0369c5757262ea7805f0de464b245c3d34c120a
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.4.debian.tar.xz' openssh_8.2p1-4ubuntu0.4.debian.tar.xz 175556 SHA512:b500a0d00242fa2b4cc87705eb7547fa92fe67417c283b7f2ce67732e2f764f2ab10eab745bacfdfa5af55d7f6bb38050423325a9960c50d875cca5e6bedaf99
 ```
+
+### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.12`
 
-### `rpm` package: `perl-threads-2.21-2.el8.x86_64`
+Binary Packages:
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+- `libssl1.1:amd64=1.1.1f-1ubuntu2.12`
+- `openssl=1.1.1f-1ubuntu2.12`
 
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-threads-2.21-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-threads-2.21-2.el8.src.rpm
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.12
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.12.dsc' openssl_1.1.1f-1ubuntu2.12.dsc 2470 SHA512:d6439e1d598089b7115b55643f3042078d6440ff78b8f72db0abed892aa510873d2a456f1e92ff67fffaa541813149aa870e13c6557358dd4596c140f159b63f
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.12.debian.tar.xz' openssl_1.1.1f-1ubuntu2.12.debian.tar.xz 173140 SHA512:a265a6227dfc61d9dc9f3b32b522135df5bc3fa1adaa8aba90b4acba0710f245e435d50ffe5d3ef74dff1cc4ac52bfde9bc9cfd60b5b115e8d5d3abb2a29efec
 ```
+
+### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
 
-### `rpm` package: `perl-threads-shared-1.58-2.el8.x86_64`
+Binary Packages:
 
-Licenses (from `rpm --query`): GPL+ or Artistic
+- `libp11-kit0:amd64=0.23.20-1ubuntu0.1`
 
+Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
+
+- `BSD-3-Clause`
+- `ISC`
+- `ISC+IBM`
+- `permissive-like-automake-output`
+- `same-as-rest-of-p11kit`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url perl-threads-shared-1.58-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/perl-threads-shared-1.58-2.el8.src.rpm
+$ apt-get source -qq --print-uris p11-kit=0.23.20-1ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.20-1ubuntu0.1.dsc' p11-kit_0.23.20-1ubuntu0.1.dsc 2532 SHA512:8b315f15df7cd3a09d11046030baa864a0f61a3dfba80d97d708590f54a5fc5c31c81428ccc40bf04e9e769abda1204ef5cd4753a24e743e2728d38cdfe14803
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.20.orig.tar.xz' p11-kit_0.23.20.orig.tar.xz 822588 SHA512:1eb88773fdd49dd48c7e089744e9dbbf6c1033a4863f3bfe75a68d842804baa3c373cb1b28ee625dd69a6e16c89df4ac755e0928495dccf38c007c530f6cfa57
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.20.orig.tar.xz.asc' p11-kit_0.23.20.orig.tar.xz.asc 854 SHA512:9f0e0e690698637269b7d020aafd92ab3d487770196e13357ce0e5425fa02d5e279f9524b3858bce8bdb925e1e4d9fa2219a68e5888c06e48c3b085a77d329e9
+'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.20-1ubuntu0.1.debian.tar.xz' p11-kit_0.23.20-1ubuntu0.1.debian.tar.xz 24592 SHA512:b30c6640bb02f0651955447da65911942cd2e302bc5af0ab96787646e776486e317420682dd644079a47ac48d4e2732218545af56da7ec3d3af5fd0c7e55fb21
 ```
+
+### `dpkg` source package: `pam=1.3.1-5ubuntu4.3`
 
-### `rpm` package: `platform-python-3.6.8-41.0.1.el8.x86_64`
+Binary Packages:
 
-Licenses (from `rpm --query`): Python
+- `libpam-modules:amd64=1.3.1-5ubuntu4.3`
+- `libpam-modules-bin=1.3.1-5ubuntu4.3`
+- `libpam-runtime=1.3.1-5ubuntu4.3`
+- `libpam0g:amd64=1.3.1-5ubuntu4.3`
 
+Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/doc/libpam-modules-bin/copyright`, `/usr/share/doc/libpam-runtime/copyright`, `/usr/share/doc/libpam0g/copyright`)
+
+- `GPL`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url platform-python-3.6.8-41.0.1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/python3-3.6.8-41.0.1.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/python3-3.6.8-41.0.1.el8.src.rpm
+$ apt-get source -qq --print-uris pam=1.3.1-5ubuntu4.3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.3.dsc' pam_1.3.1-5ubuntu4.3.dsc 2761 SHA512:314394037f6006a11778f96aaac57c1a9997bc1b2b1c67224a46e670ea1707ae5d00e3c2d7ef42890e13f87d4edac16481050ae412b6092061e5fef27f6a80e4
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1.orig.tar.xz' pam_1.3.1.orig.tar.xz 912332 SHA512:6bc8e2a5b64686f0a23846221c5228c88418ba485b17c53b3a12f91262b5bb73566d6b6a5daa1f63bbae54310aee918b987e44a72ce809b4e7c668f0fadfe08e
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.3.debian.tar.xz' pam_1.3.1-5ubuntu4.3.debian.tar.xz 170884 SHA512:0d10c47ed3aa1a1ef040413a746543c833b9bef971e70586d053d59ac8de2ad480ca69a5ed1c56df5322e793675b2fd8f7e65ddde1b2ee8340bb05f77fea846e
 ```
+
+### `dpkg` source package: `patch=2.7.6-6`
 
-### `rpm` package: `platform-python-setuptools-39.2.0-6.el8.noarch`
+Binary Packages:
 
-Licenses (from `rpm --query`): MIT
+- `patch=2.7.6-6`
 
+Licenses: (parsed from: `/usr/share/doc/patch/copyright`)
+
+- `GPL`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url platform-python-setuptools-39.2.0-6.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/python-setuptools-39.2.0-6.el8.src.rpm
+$ apt-get source -qq --print-uris patch=2.7.6-6
+'http://archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.6-6.dsc' patch_2.7.6-6.dsc 1699 SHA256:ad31c243b982ad8dede14f7b4dfe5bb798bb1dc6d4e28c51a797c3af58477c13
+'http://archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.6.orig.tar.xz' patch_2.7.6.orig.tar.xz 783756 SHA256:ac610bda97abe0d9f6b7c963255a11dcb196c25e337c61f94e4778d632f1d8fd
+'http://archive.ubuntu.com/ubuntu/pool/main/p/patch/patch_2.7.6-6.debian.tar.xz' patch_2.7.6-6.debian.tar.xz 14464 SHA256:75ea94b265763b65005381f1eceeaf3351a70ec5c3243bc161d702776414db02
 ```
+
+### `dpkg` source package: `pcre2=10.34-7`
 
-### `rpm` package: `popt-1.18-1.el8.x86_64`
+Binary Packages:
 
-Licenses (from `rpm --query`): MIT
+- `libpcre2-8-0:amd64=10.34-7`
 
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url popt-1.18-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/popt-1.18-1.el8.src.rpm
+$ apt-get source -qq --print-uris pcre2=10.34-7
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre2/pcre2_10.34-7.dsc' pcre2_10.34-7.dsc 2286 SHA256:c3e2bfd8fabf594238b3f17074dc8ac483aaf80a9f12dbfe927b80a74558732e
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre2/pcre2_10.34.orig.tar.gz' pcre2_10.34.orig.tar.gz 2271533 SHA256:da6aba7ba2509e918e41f4f744a59fa41a2425c59a298a232e7fe85691e00379
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre2/pcre2_10.34-7.diff.gz' pcre2_10.34-7.diff.gz 7068 SHA256:7d44ac1b171ef7f7051213a3a8505b28f3809ed3e2fb348567a29fdf5f2b5fdf
 ```
+
+### `dpkg` source package: `pcre3=2:8.39-12build1`
 
-### `rpm` package: `publicsuffix-list-dafsa-20180723-1.el8.noarch`
+Binary Packages:
 
-Licenses (from `rpm --query`): MPLv2.0
+- `libpcre3:amd64=2:8.39-12build1`
 
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url publicsuffix-list-dafsa-20180723-1.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/publicsuffix-list-20180723-1.el8.src.rpm
+$ apt-get source -qq --print-uris pcre3=2:8.39-12build1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39-12build1.dsc' pcre3_8.39-12build1.dsc 2133 SHA256:e1dd0e352e5ba90aa89016dc3ad8b5990c1a8743c1550c613c7a9d9079a2da67
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39.orig.tar.bz2' pcre3_8.39.orig.tar.bz2 1560758 SHA256:b858099f82483031ee02092711689e7245586ada49e534a06e678b8ea9549e8b
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39-12build1.debian.tar.gz' pcre3_8.39-12build1.debian.tar.gz 26478 SHA256:8f92c016f9200aad9a9028bbd96eded68394c756b09df76db2c0a54e8a1802c6
 ```
+
+### `dpkg` source package: `perl=5.30.0-9ubuntu0.2`
 
-### `rpm` package: `python3-libs-3.6.8-41.0.1.el8.x86_64`
+Binary Packages:
 
-Licenses (from `rpm --query`): Python
+- `libperl5.30:amd64=5.30.0-9ubuntu0.2`
+- `perl=5.30.0-9ubuntu0.2`
+- `perl-base=5.30.0-9ubuntu0.2`
+- `perl-modules-5.30=5.30.0-9ubuntu0.2`
 
+Licenses: (parsed from: `/usr/share/doc/libperl5.30/copyright`, `/usr/share/doc/perl/copyright`, `/usr/share/doc/perl-base/copyright`, `/usr/share/doc/perl-modules-5.30/copyright`)
+
+- `Artistic`
+- `Artistic,`
+- `Artistic-2`
+- `Artistic-dist`
+- `BSD-3-clause`
+- `BSD-3-clause-GENERIC`
+- `BSD-3-clause-with-weird-numbering`
+- `BSD-4-clause-POWERDOG`
+- `BZIP`
+- `CC0-1.0`
+- `DONT-CHANGE-THE-GPL`
+- `Expat`
+- `GPL-1`
+- `GPL-1+`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-3+-WITH-BISON-EXCEPTION`
+- `HSIEH-BSD`
+- `HSIEH-DERIVATIVE`
+- `LGPL-2.1`
+- `REGCOMP`
+- `REGCOMP,`
+- `RRA-KEEP-THIS-NOTICE`
+- `SDBM-PUBLIC-DOMAIN`
+- `TEXT-TABS`
+- `Unicode`
+- `ZLIB`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url python3-libs-3.6.8-41.0.1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/python3-3.6.8-41.0.1.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/python3-3.6.8-41.0.1.el8.src.rpm
+$ apt-get source -qq --print-uris perl=5.30.0-9ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0-9ubuntu0.2.dsc' perl_5.30.0-9ubuntu0.2.dsc 2962 SHA512:497f54e6e2d142b7a03cdee4999ea8d861911e2aa8115bb6895c244c4f285a00648bd6e1038c56017b7370c9b4b474dbe212071a65054c7435dbab66d2cd0ed3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0.orig-regen-configure.tar.gz' perl_5.30.0.orig-regen-configure.tar.gz 833235 SHA512:ab977887b53249a2423708aa38ecbb8bdbfdb7ba533a795eaa20bac427b2eb326756b076ca11088036550a4db24418903c0565d168fe9641e18077a76d04274a
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0.orig.tar.xz' perl_5.30.0.orig.tar.xz 12419868 SHA512:68a295eccd64debd9d6a10f0d5577f872a19ad8c2d702798f6b0f45b8c3af6ab3230768056e2131e9e2e2506d1035b27cfd627c845e32263fe448649c4b98ae9
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0-9ubuntu0.2.debian.tar.xz' perl_5.30.0-9ubuntu0.2.debian.tar.xz 167248 SHA512:841504df745d755603b6a592484ff91a44e4346adc96b01a0c0bce09205f46d4250a6aafbb7462510a150d1d2904ef6889f014bd5d33efc5f18bafd71cef8bce
 ```
+
+### `dpkg` source package: `procps=2:3.3.16-1ubuntu2.3`
 
-### `rpm` package: `python3-pip-wheel-9.0.3-20.el8.noarch`
+Binary Packages:
 
-Licenses (from `rpm --query`): MIT and Python and ASL 2.0 and BSD and ISC and LGPLv2 and MPLv2.0 and (ASL 2.0 or BSD)
+- `libprocps8:amd64=2:3.3.16-1ubuntu2.3`
+- `procps=2:3.3.16-1ubuntu2.3`
 
+Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/procps/copyright`)
+
+- `GPL-2`
+- `GPL-2.0+`
+- `LGPL-2`
+- `LGPL-2.0+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url python3-pip-wheel-9.0.3-20.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/python-pip-9.0.3-20.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/python-pip-9.0.3-20.el8.src.rpm
+$ apt-get source -qq --print-uris procps=2:3.3.16-1ubuntu2.3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-1ubuntu2.3.dsc' procps_3.3.16-1ubuntu2.3.dsc 1897 SHA512:48d20e1d3d1b097f060b3d2d0eba35dc255498f9890e912cfde1a04434959f9af6ee794e5690a026cc19171dbff509e2814fceed6fbfa542971beed529cf685d
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16.orig.tar.xz' procps_3.3.16.orig.tar.xz 621892 SHA512:38db4f72fe40c2f027b23b18bbc8c29cfcdf6bcdb029199fe4bebede153943aa884157f56e792c399f9a4949cc514687500bb99a75a5e7ad7b9e878f52090304
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.16-1ubuntu2.3.debian.tar.xz' procps_3.3.16-1ubuntu2.3.debian.tar.xz 33972 SHA512:cbeb9513f4932d159eed653fbc568b4b26e61e92184f8d8e6fd4122cfdda62ff04a7e9dbba1914efff0fe7addfbd380a0def4b8cf1c61f4e91107b02b3b61064
 ```
+
+### `dpkg` source package: `rtmpdump=2.4+20151223.gitfa8646d.1-2build1`
+
+Binary Packages:
+
+- `librtmp1:amd64=2.4+20151223.gitfa8646d.1-2build1`
 
-### `rpm` package: `python3-setuptools-wheel-39.2.0-6.el8.noarch`
+Licenses: (parsed from: `/usr/share/doc/librtmp1/copyright`)
 
-Licenses (from `rpm --query`): MIT
+- `GPL-2`
+- `LGPL-2.1`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url python3-setuptools-wheel-39.2.0-6.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/python-setuptools-39.2.0-6.el8.src.rpm
+$ apt-get source -qq --print-uris rtmpdump=2.4+20151223.gitfa8646d.1-2build1
+'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4%2b20151223.gitfa8646d.1-2build1.dsc' rtmpdump_2.4+20151223.gitfa8646d.1-2build1.dsc 2439 SHA256:fd89213f2d41b00c212a411a945146c6b2e00fce1d1819a9ec380b0d91bd1077
+'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4%2b20151223.gitfa8646d.1.orig.tar.gz' rtmpdump_2.4+20151223.gitfa8646d.1.orig.tar.gz 142213 SHA256:5c032f5c8cc2937eb55a81a94effdfed3b0a0304b6376147b86f951e225e3ab5
+'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4%2b20151223.gitfa8646d.1-2build1.debian.tar.xz' rtmpdump_2.4+20151223.gitfa8646d.1-2build1.debian.tar.xz 8216 SHA256:b256cc2aa96c9b99918052c4badfab0339ba95a852eab5ae37aa8b53c259efd2
 ```
 
-### `rpm` package: `readline-7.0-10.el8.x86_64`
+### `dpkg` source package: `sed=4.7-1`
 
-Licenses (from `rpm --query`): GPLv3+
+Binary Packages:
 
+- `sed=4.7-1`
+
+Licenses: (parsed from: `/usr/share/doc/sed/copyright`)
+
+- `GPL-3`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url readline-7.0-10.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/readline-7.0-10.el8.src.rpm
+$ apt-get source -qq --print-uris sed=4.7-1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.7-1.dsc' sed_4.7-1.dsc 1880 SHA256:dd0e8daed987929920f7729771f9c7a5b48d094923aaf686efd2ab19db776108
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.7.orig.tar.xz' sed_4.7.orig.tar.xz 1298316 SHA256:2885768cd0a29ff8d58a6280a270ff161f6a3deb5690b2be6c49f46d4c67bd6a
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.7-1.debian.tar.xz' sed_4.7-1.debian.tar.xz 59824 SHA256:a2ab8d50807fd2242f86d6c6257399e790445ab6f8932f7f487d34361b4fc483
 ```
+
+### `dpkg` source package: `sensible-utils=0.0.12+nmu1`
+
+Binary Packages:
+
+- `sensible-utils=0.0.12+nmu1`
 
-### `rpm` package: `redhat-release-8.5-0.8.0.2.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/sensible-utils/copyright`)
 
-Licenses (from `rpm --query`): GPLv2
+- `All-permissive`
+- `GPL-2`
+- `GPL-2+`
+- `configure`
+- `installsh`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url redhat-release-8.5-0.8.0.2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/redhat-release-8.5-0.8.0.2.el8.src.rpm
+$ apt-get source -qq --print-uris sensible-utils=0.0.12+nmu1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.12%2bnmu1.dsc' sensible-utils_0.0.12+nmu1.dsc 1753 SHA256:68bcb3e542e29a8a0bf281d9145d0e4cd9def529af2ba0cfe0afee3c5af958bc
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.12%2bnmu1.tar.xz' sensible-utils_0.0.12+nmu1.tar.xz 61988 SHA256:53c6606facf083adbbf0da04e6d774b31ff3f46c7ba36a82d3f182779f4c3f5b
 ```
 
-### `rpm` package: `rpm-4.14.3-19.el8_5.2.x86_64`
+### `dpkg` source package: `shadow=1:4.8.1-1ubuntu5.20.04.1`
 
-Licenses (from `rpm --query`): GPLv2+
+Binary Packages:
 
+- `login=1:4.8.1-1ubuntu5.20.04.1`
+- `passwd=1:4.8.1-1ubuntu5.20.04.1`
+
+Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd/copyright`)
+
+- `GPL-2`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url rpm-4.14.3-19.el8_5.2
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/rpm-4.14.3-19.el8_5.2.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/rpm-4.14.3-19.el8_5.2.src.rpm
+$ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu5.20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.1.dsc' shadow_4.8.1-1ubuntu5.20.04.1.dsc 2377 SHA512:e82923df5238b076edab6dda322213e2231e156c0c571d404fde0e7a91e1ee3491948af13acb40f3405b54169935411357b4b878849dac04bee7d73e13a42bb8
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1.orig.tar.xz' shadow_4.8.1.orig.tar.xz 1611196 SHA512:780a983483d847ed3c91c82064a0fa902b6f4185225978241bc3bc03fcc3aa143975b46aee43151c6ba43efcfdb1819516b76ba7ad3d1d3c34fcc38ea42e917b
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.1.debian.tar.xz' shadow_4.8.1-1ubuntu5.20.04.1.debian.tar.xz 86252 SHA512:cd31ba719b2555f8465f36889253bd9fbe997e97010f2e1f40961d55cb4ff08a438e6b1a5e3560028e81e8616338af3888620a058743bb113e1464ec4c01949b
 ```
+
+### `dpkg` source package: `sqlite3=3.31.1-4ubuntu0.2`
+
+Binary Packages:
+
+- `libsqlite3-0:amd64=3.31.1-4ubuntu0.2`
 
-### `rpm` package: `rpm-libs-4.14.3-19.el8_5.2.x86_64`
+Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
-Licenses (from `rpm --query`): GPLv2+ and LGPLv2+ with exceptions
+- `GPL-2`
+- `GPL-2+`
+- `public-domain`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url rpm-libs-4.14.3-19.el8_5.2
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/rpm-4.14.3-19.el8_5.2.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/rpm-4.14.3-19.el8_5.2.src.rpm
+$ apt-get source -qq --print-uris sqlite3=3.31.1-4ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.2.dsc' sqlite3_3.31.1-4ubuntu0.2.dsc 2519 SHA512:d7adfe86e7996d2a45238bc3b782de6894a585bba1498b3747aacb15313160354bc072ab2e257a2a034ce44921bd07329b8a9172290428f753274b6d7b00326e
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig-www.tar.xz' sqlite3_3.31.1.orig-www.tar.xz 5764424 SHA512:a47adacd46c673cfd674cb64fb54b054e69560aed8c8c429773f0eccdcdbce4be538397506eca8e2d169f4b46d0d47442b273e12d82f8c87e1aadf3ade458db6
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig.tar.xz' sqlite3_3.31.1.orig.tar.xz 7108036 SHA512:67e1050efe2988fa3d0d7e4a87e147a8114c6ff9b6ca5307a068befb38e861930eaee0135048ff1abb1e6323b507cbc68a0aac3a8fe5f095d6fcea1547a7efaf
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.2.debian.tar.xz' sqlite3_3.31.1-4ubuntu0.2.debian.tar.xz 33492 SHA512:87cc51bce108d6306d815683a1825b43a6e7a7d8dc2bade8ce34d3850b8a4437034b1383f5e60b8d9c4569e8ab5bb3eb28febda7745f4a9db01b5e1b0b11d5ae
 ```
 
-### `rpm` package: `sed-4.5-2.el8.x86_64`
+### `dpkg` source package: `systemd=245.4-4ubuntu3.16`
 
-Licenses (from `rpm --query`): GPLv3+
+Binary Packages:
 
+- `libsystemd0:amd64=245.4-4ubuntu3.16`
+- `libudev1:amd64=245.4-4ubuntu3.16`
+
+Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
+
+- `CC0-1.0`
+- `Expat`
+- `GPL-2`
+- `GPL-2 with Linux-syscall-note exception`
+- `GPL-2+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `public-domain`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url sed-4.5-2.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/sed-4.5-2.el8.src.rpm
+$ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.16
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.16.dsc' systemd_245.4-4ubuntu3.16.dsc 5262 SHA512:15c9908fcefaffd7d6ad5fa47d5dd6f7049a64b86bd1d440d9d8e207486b660d206f62b53e6e26f62eda9a899f0259557cc0252f5f59dde63630829a70d3ebfb
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.16.debian.tar.xz' systemd_245.4-4ubuntu3.16.debian.tar.xz 275576 SHA512:070a7299594ec7ab0c36a005b42823f2a7db3d1612272b6e73ac034a96321b5d5f2ede3f6b1fc578105f9ad87223b96e490291da2b722fc9b6be4985258ee262
 ```
+
+### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
+
+Binary Packages:
+
+- `sysvinit-utils=2.96-2.1ubuntu1`
 
-### `rpm` package: `setup-2.12.2-6.el8.noarch`
+Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 
-Licenses (from `rpm --query`): Public Domain
+- `GPL-2`
+- `GPL-2+`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url setup-2.12.2-6.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/setup-2.12.2-6.el8.src.rpm
+$ apt-get source -qq --print-uris sysvinit=2.96-2.1ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96-2.1ubuntu1.dsc' sysvinit_2.96-2.1ubuntu1.dsc 2751 SHA256:c8b5f2ef86c4c1b8bf6b8a48408a4aa0815b0cf416df51dc0a9b6b8134f7e42c
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz' sysvinit_2.96.orig.tar.xz 122164 SHA256:2a2e26b72aa235a23ab1c8471005f890309ce1196c83fbc9413c57b9ab62b587
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96.orig.tar.xz.asc' sysvinit_2.96.orig.tar.xz.asc 313 SHA256:dfc184b95da12c8c888c8ae6b0f26fe8a23b07fbcdd240f6600a8a78b9439fa0
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96-2.1ubuntu1.debian.tar.xz' sysvinit_2.96-2.1ubuntu1.debian.tar.xz 128840 SHA256:528041e261c90a957d9794bddb07217c89484d9c76a0279da508baec9684c4e6
 ```
 
-### `rpm` package: `shadow-utils-4.6-14.el8.x86_64`
+### `dpkg` source package: `tar=1.30+dfsg-7ubuntu0.20.04.2`
 
-Licenses (from `rpm --query`): BSD and GPLv2+
+Binary Packages:
 
+- `tar=1.30+dfsg-7ubuntu0.20.04.2`
+
+Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
+
+- `GPL-2`
+- `GPL-3`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url shadow-utils-4.6-14.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/shadow-utils-4.6-14.el8.src.rpm
+$ apt-get source -qq --print-uris tar=1.30+dfsg-7ubuntu0.20.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.2.dsc' tar_1.30+dfsg-7ubuntu0.20.04.2.dsc 1816 SHA512:41897fe2364f5eccabb92f551efe0008be995b6651c951c1c0f9e8272b8e92563b5a5ae360d9bb566976a8d0c32e67187599cb262a835ebce432ddf4bf925158
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg.orig.tar.xz' tar_1.30+dfsg.orig.tar.xz 1883220 SHA512:f9b3843bd4da03f58d6f88de70ecb36b8ac29312714fd2120ff00f17c99e6d77cc82a8f9de348f4c2bdba9a6cc8e8c6c78039b6c14cdee15d68f2517000c36f2
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.2.debian.tar.xz' tar_1.30+dfsg-7ubuntu0.20.04.2.debian.tar.xz 23580 SHA512:2c9999bff0257251eb7d09a702898e42ce45b117d8e3595d68bf0a6ffdeb1d4a1d69202a2674d93a9193576f65dad4de4e094479228bfb4efc4a7931f00d3875
 ```
+
+### `dpkg` source package: `tzdata=2022a-0ubuntu0.20.04`
+
+Binary Packages:
+
+- `tzdata=2022a-0ubuntu0.20.04`
 
-### `rpm` package: `sqlite-libs-3.26.0-15.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
-Licenses (from `rpm --query`): Public Domain
+- `ICU`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url sqlite-libs-3.26.0-15.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/sqlite-3.26.0-15.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/sqlite-3.26.0-15.el8.src.rpm
+$ apt-get source -qq --print-uris tzdata=2022a-0ubuntu0.20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022a-0ubuntu0.20.04.dsc' tzdata_2022a-0ubuntu0.20.04.dsc 2109 SHA512:bc96329a1c0d62a8e4060d8bc6add8651db7f34c0aee6788230c2c87a1528287daeee1a8913db8e5623bc67a3a224a864a863e6895037990fbec15ed9fffdd30
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022a.orig.tar.gz' tzdata_2022a.orig.tar.gz 425833 SHA512:542e4559beac8fd8c4af7d08d816fd12cfe7ffcb6f20bba4ff1c20eba717749ef96e5cf599b2fe03b5b8469c0467f8cb1c893008160da281055a123dd9e810d9
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022a-0ubuntu0.20.04.debian.tar.xz' tzdata_2022a-0ubuntu0.20.04.debian.tar.xz 167756 SHA512:983d605613453304cc7c74162697d7d6064a402beaec08cfde47079d5054c953455c8588294948164e253661015929dc56fe4356db47761222e6601a05844dde
 ```
 
-### `rpm` package: `systemd-libs-239-51.0.1.el8_5.5.x86_64`
+### `dpkg` source package: `ubuntu-keyring=2020.02.11.4`
 
-Licenses (from `rpm --query`): LGPLv2+ and MIT
+Binary Packages:
 
+- `ubuntu-keyring=2020.02.11.4`
+
+Licenses: (parsed from: `/usr/share/doc/ubuntu-keyring/copyright`)
+
+- `GPL`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url systemd-libs-239-51.0.1.el8_5.5
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/systemd-239-51.0.1.el8_5.5.src.rpm
+$ apt-get source -qq --print-uris ubuntu-keyring=2020.02.11.4
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2020.02.11.4.dsc' ubuntu-keyring_2020.02.11.4.dsc 1863 SHA512:1232fc109f9afe7f4245f841cb992aeb7329ec1c3d310a174b837c0584005a7c46ce73f6d49a52a3e6c0eea03369ea5f308093c1a849e8f6597f6df792a87fb1
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2020.02.11.4.tar.gz' ubuntu-keyring_2020.02.11.4.tar.gz 39250 SHA512:318562b6892dad995e334ec44f08f065b4c6abed2d29c1f96f6ee0fa4d91a5cedc9b62a152c56cdf26a30c3ea97a58c1d037e892d155af5593a4e26b9a25a1ae
 ```
+
+### `dpkg` source package: `ucf=3.0038+nmu1`
+
+Binary Packages:
+
+- `ucf=3.0038+nmu1`
 
-### `rpm` package: `tar-1.30-5.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/ucf/copyright`)
 
-Licenses (from `rpm --query`): GPLv3+
+- `GPL-2`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url tar-1.30-5.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/tar-1.30-5.el8.src.rpm
+$ apt-get source -qq --print-uris ucf=3.0038+nmu1
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ucf/ucf_3.0038%2bnmu1.dsc' ucf_3.0038+nmu1.dsc 1420 SHA256:89b6f921a30e04a946f62e6996be7c16f2f7c383d20783cd4704b502c6d5b125
+'http://archive.ubuntu.com/ubuntu/pool/main/u/ucf/ucf_3.0038%2bnmu1.tar.xz' ucf_3.0038+nmu1.tar.xz 65860 SHA256:d00bc3dd8d2f91317f52b5352fe129023c72babad55bc0dd4ece7b34183c7436
 ```
 
-### `rpm` package: `tzdata-2022a-1.el8.noarch`
+### `dpkg` source package: `util-linux=2.34-0.1ubuntu9.3`
 
-Licenses (from `rpm --query`): Public Domain
+Binary Packages:
 
+- `bsdutils=1:2.34-0.1ubuntu9.3`
+- `fdisk=2.34-0.1ubuntu9.3`
+- `libblkid1:amd64=2.34-0.1ubuntu9.3`
+- `libfdisk1:amd64=2.34-0.1ubuntu9.3`
+- `libmount1:amd64=2.34-0.1ubuntu9.3`
+- `libsmartcols1:amd64=2.34-0.1ubuntu9.3`
+- `libuuid1:amd64=2.34-0.1ubuntu9.3`
+- `mount=2.34-0.1ubuntu9.3`
+- `util-linux=2.34-0.1ubuntu9.3`
+
+Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdisk/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libfdisk1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`)
+
+- `BSD-2-clause`
+- `BSD-3-clause`
+- `BSD-4-clause`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-3`
+- `GPL-3+`
+- `LGPL`
+- `LGPL-2`
+- `LGPL-2+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `LGPL-3`
+- `LGPL-3+`
+- `MIT`
+- `public-domain`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url tzdata-2022a-1.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/tzdata-2022a-1.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/tzdata-2022a-1.el8.src.rpm
+$ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu9.3
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.3.dsc' util-linux_2.34-0.1ubuntu9.3.dsc 4042 SHA512:e65684c641d175110008f865369c35adb734f8a80626c0eb3b3f3f47e05c1a6277c9f92b4032e30bb69711d67c2a5ad651adb3ec9ac4ef67d45a2858ce48cc6a
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34.orig.tar.xz' util-linux_2.34.orig.tar.xz 4974812 SHA512:2d0b76f63d32e7afb7acf61a83fabbfd58baa34ab78b3a331ce87f9c676a5fd71c56a493ded95039540d2c46b6048caaa38d7fb4491eb3d52d7b09dc54655cd7
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.3.debian.tar.xz' util-linux_2.34-0.1ubuntu9.3.debian.tar.xz 94976 SHA512:b6e55588aea32de6481dad01f194e6f71b8a859019e5c8d6d816c65f32c8b31821d1ab73f13ec34c5d3551311c43b7e24ac01c2af5878a85df72326293c3a71a
 ```
+
+### `dpkg` source package: `xauth=1:1.1-0ubuntu1`
+
+Binary Packages:
+
+- `xauth=1:1.1-0ubuntu1`
 
-### `rpm` package: `util-linux-2.32.1-28.el8.x86_64`
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
 
-Licenses (from `rpm --query`): GPLv2 and GPLv2+ and LGPLv2+ and BSD with advertising and Public Domain
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url util-linux-2.32.1-28.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/util-linux-2.32.1-28.el8.src.rpm
+$ apt-get source -qq --print-uris xauth=1:1.1-0ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xauth/xauth_1.1-0ubuntu1.dsc' xauth_1.1-0ubuntu1.dsc 1359 SHA256:1e2528d5258ff18cf8939dd0b8b66448aee8cfeb327a15ef5a447bcab7d99d5c
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xauth/xauth_1.1.orig.tar.gz' xauth_1.1.orig.tar.gz 204146 SHA256:e9fce796c8c5c9368594b9e8bbba237fb54b6615f5fd60e8d0a5b3c52a92c5ef
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xauth/xauth_1.1-0ubuntu1.diff.gz' xauth_1.1-0ubuntu1.diff.gz 7640 SHA256:56610712799d940bf8dc86c0408cb2a084cbea101a638d68445f32f8ac03114c
 ```
 
-### `rpm` package: `xz-libs-5.2.4-3.el8.x86_64`
+### `dpkg` source package: `xz-utils=5.2.4-1ubuntu1.1`
 
-Licenses (from `rpm --query`): Public Domain
+Binary Packages:
 
+- `liblzma5:amd64=5.2.4-1ubuntu1.1`
+
+Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
+
+- `Autoconf`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-3`
+- `LGPL-2`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `PD`
+- `PD-debian`
+- `config-h`
+- `noderivs`
+- `none`
+- `permissive-fsf`
+- `permissive-nowarranty`
+- `probably-PD`
+
 Source:
 
 ```console
-$ dnf --quiet download --source --url xz-libs-5.2.4-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/xz-5.2.4-3.el8.src.rpm
+$ apt-get source -qq --print-uris xz-utils=5.2.4-1ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.1.dsc' xz-utils_5.2.4-1ubuntu1.1.dsc 2604 SHA512:458e4bd7a0823dc7e5f1dcf11bd4d0653b5c3f2474835a8422918faa25ab5b5ad005aa42af70bb9a993480ae1fe4e787965b19bd2ba4bee2ddedcaa24c10376c
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz' xz-utils_5.2.4.orig.tar.xz 1053868 SHA512:00db7dd31a61541b1ce6946e0f21106f418dd1ac3f27cdb8682979cbc3bd777cd6dd1f04f9ba257a0a7e24041e15ca40d0dd5c130380dce62280af67a0beb97f
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz.asc' xz-utils_5.2.4.orig.tar.xz.asc 879 SHA512:dbfce0556bc85545ce3566a01c25e4876f560409fc2d48f2dc382b10fbd2538c61d8f2c3667d86fc7313aec86c05e53926015000320f19615e97875adae42450
+'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.1.debian.tar.xz' xz-utils_5.2.4-1ubuntu1.1.debian.tar.xz 136944 SHA512:627df70d2ff3b0227d6dd74137a660c5d722cce059ee36c1db8a50105ba6c236910bba5687290a7d88c9a53ead2a3b3ab00216f279f26a57d7e4020c6db23a24
 ```
+
+### `dpkg` source package: `zlib=1:1.2.11.dfsg-2ubuntu1.3`
+
+Binary Packages:
+
+- `zlib1g:amd64=1:1.2.11.dfsg-2ubuntu1.3`
 
-### `rpm` package: `zlib-1.2.11-17.el8.x86_64`
+Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
-Licenses (from `rpm --query`): zlib and Boost
+- `Zlib`
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url zlib-1.2.11-17.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/zlib-1.2.11-17.el8.src.rpm
+$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.3.dsc' zlib_1.2.11.dfsg-2ubuntu1.3.dsc 2953 SHA512:9502158754878cd6aa11c381f121b99da42815bd77f64c44c0b41f1dc22433a1996d7628072b552ba614f71f47e1a5e3df6c348c90b5a6a30c8e6b402926b749
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA512:92819807c0b8de655021bb2d5d182f9b6b381d3072d8c8dc1df34bbaa25d36bcba140c85f754a43cc466aac65850b7a7366aa0c93e804180e5b255e61d5748de
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.3.debian.tar.xz' zlib_1.2.11.dfsg-2ubuntu1.3.debian.tar.xz 54636 SHA512:14b53a8aaf4bb0cbc3ab844a338f091dfc89c245d967c85275ab6fe8da95738a5863217b98db28f85501e52f158bb6fefa9f8c354d112999e626de1191abb42b
 ```
