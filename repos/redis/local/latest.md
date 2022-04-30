@@ -1,10 +1,10 @@
-# `redis:6.2.6`
+# `redis:7.0.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3c3da61c4be0fb9e93fc84fb702b6a1e01d8c43ffae4d2ea88192803c2b44191`
-- Created: `2022-04-20T13:29:53.41875044Z`
-- Virtual Size: ~ 112.61 Mb  
+- Image ID: `sha256:a10f849e15406d538b9ce78699e32fe72140cac70569e3fbee56f734b1a62d69`
+- Created: `2022-04-27T22:35:12.279732739Z`
+- Virtual Size: ~ 116.78 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -12,9 +12,9 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `GOSU_VERSION=1.14`
-  - `REDIS_VERSION=6.2.6`
-  - `REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-6.2.6.tar.gz`
-  - `REDIS_DOWNLOAD_SHA=5b2b8b7a50111ef395bf1c1d5be11e6e167ac018125055daa8b5c2317ae131ab`
+  - `REDIS_VERSION=7.0.0`
+  - `REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.0.0.tar.gz`
+  - `REDIS_DOWNLOAD_SHA=284d8bd1fd85d6a55a05ee4e7c31c31977ad56cbf344ed83790beeb148baa720`
 
 ## `dpkg` (`.deb`-based packages)
 
