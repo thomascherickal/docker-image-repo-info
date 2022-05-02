@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d7f775c8bcca80e87794a854f47830a3e8d65af79681b1f8a68da053e19d9bac`
-- Created: `2022-04-21T11:28:37.64136565Z`
-- Virtual Size: ~ 607.55 Mb  
+- Image ID: `sha256:303e6de1011d725be58932b5d8f8c318078db1ae2f0de1c302417ac2e5c6a6b1`
+- Created: `2022-04-29T02:03:59.735018815Z`
+- Virtual Size: ~ 609.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `REDMINE_VERSION=4.2.5`
   - `REDMINE_DOWNLOAD_URL=https://www.redmine.org/releases/redmine-4.2.5.tar.gz`
   - `REDMINE_DOWNLOAD_SHA256=d97084b0eaad7266056814a0c0aec2737f4d23b8f67ce90c01a79b2eb5605984`
-  - `PASSENGER_VERSION=6.0.12`
+  - `PASSENGER_VERSION=6.0.13`
   - `PASSENGER_PID_FILE=tmp/pids/server.pid`
 
 ## `dpkg` (`.deb`-based packages)
