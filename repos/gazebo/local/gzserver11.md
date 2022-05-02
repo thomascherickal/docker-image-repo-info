@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c9c7268030911831575f4bb4e26730e3166aa7cd37401be651d4f41fbe242f29`
-- Created: `2022-04-22T02:25:24.9906375Z`
-- Virtual Size: ~ 814.21 Mb  
+- Image ID: `sha256:3dcb5504c25f090c962f0a7876c6cdcd8af38100a58610b8c36c815ef629ed1c`
+- Created: `2022-04-30T00:42:36.055175481Z`
+- Virtual Size: ~ 814.39 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -291,19 +291,24 @@ $ apt-get source -qq --print-uris base-passwd=3.5.47
 'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.47.tar.xz' base-passwd_3.5.47.tar.xz 53024 SHA256:9810ae0216e96bf9fc7ca6163d47ef8ec7d1677f533451af5911d8202a490a23
 ```
 
-### `dpkg` source package: `bash=5.0-6ubuntu1.1`
+### `dpkg` source package: `bash=5.0-6ubuntu1.2`
 
 Binary Packages:
 
-- `bash=5.0-6ubuntu1.1`
+- `bash=5.0-6ubuntu1.2`
 
 Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris bash=5.0-6ubuntu1.2
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.2.dsc' bash_5.0-6ubuntu1.2.dsc 2296 SHA512:d93b919ae7b8e67e3b4e31d205e13006a37aa2a42378744599c3214ecab6544084856a739b38aaeb06742524e2ea302c8147f7a88dbc738e1e7ac0a29be0c0b8
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0.orig.tar.xz' bash_5.0.orig.tar.xz 5554808 SHA512:f3a719997a8515bae7e84701afafc9b2cdd23c95d29533adb678000b08eba968450b93d5576c3cffbeccbdcd95b713db830e8efeda689258dcfe6f15f0c5dec4
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.2.debian.tar.xz' bash_5.0-6ubuntu1.2.debian.tar.xz 75200 SHA512:50de22a6cd140fcb95eca9172e9927a4eeddd90bfbd23072d5e209db1675f331716dfd54ef3281caa7020e3fa1aef9ca7caafc6a8d3067741b1ae41f7dff7724
+```
 
 ### `dpkg` source package: `boost1.71=1.71.0-6ubuntu6`
 
@@ -557,12 +562,12 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.7`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.10`
 
 Binary Packages:
 
-- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.7`
-- `libcurl4:amd64=7.68.0-1ubuntu2.7`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.10`
+- `libcurl4:amd64=7.68.0-1ubuntu2.10`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -576,10 +581,10 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.7
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.7.dsc' curl_7.68.0-1ubuntu2.7.dsc 2733 SHA512:e125a9af90ed2bc17af45f0b23b2c145820a1fb61e8836e0aae2c13c43a4b4fff66c65b7464df47ccd0d54addc8062197afa61fe8a62a03e0a4c43b338301537
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.10
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.10.dsc' curl_7.68.0-1ubuntu2.10.dsc 2737 SHA512:c7e59b48d6743b2c0bd9fcfa76605cb4b9693bb467df2e2aabf25e38b0349f4d28aa50136efc25535f971a70a9c252d053a88539b9b0f0fdc36302f6ed145c2c
 'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.7.debian.tar.xz' curl_7.68.0-1ubuntu2.7.debian.tar.xz 48080 SHA512:9312b57d9adee8f77462aa222ae403c87f38f4729b73929b1ca5444c8e7c42c19102753dccefccdf7bfbff96f475aac61cda3600b630989b0f1bd5de8aa68699
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.10.debian.tar.xz' curl_7.68.0-1ubuntu2.10.debian.tar.xz 52592 SHA512:2ed50fea6923e23c83b08a4c5eba4d1475f9d46308bd664804759a6bf8b187d9d649bcf59e171c853bbe65ab1b6403a4e00d29a3369bcf8fa21ca8a1d5275fe0
 ```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
@@ -755,19 +760,23 @@ $ apt-get source -qq --print-uris diffutils=1:3.7-3
 'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7-3.debian.tar.xz' diffutils_3.7-3.debian.tar.xz 11116 SHA256:a455228f12283b5f3c0165db4ab9b12071adc37fb9dd50dcb5e1b8851c524f1f
 ```
 
-### `dpkg` source package: `distro-info-data=0.43ubuntu1.9`
+### `dpkg` source package: `distro-info-data=0.43ubuntu1.10`
 
 Binary Packages:
 
-- `distro-info-data=0.43ubuntu1.9`
+- `distro-info-data=0.43ubuntu1.10`
 
 Licenses: (parsed from: `/usr/share/doc/distro-info-data/copyright`)
 
 - `ISC`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris distro-info-data=0.43ubuntu1.10
+'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.43ubuntu1.10.dsc' distro-info-data_0.43ubuntu1.10.dsc 1421 SHA512:254831fd04fd1151277e1a1c9ae17425b98138bb7a001d650e6b2c0a18912a1e19115ca10e30799ecb7be79bca945199b6a3d613360bd8eb001f1f76531ec595
+'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.43ubuntu1.10.tar.xz' distro-info-data_0.43ubuntu1.10.tar.xz 8864 SHA512:922ac38161c2461828825142eebbc7323a309936ce1757780046c1c85c48fcb89462ae008a2c653a3e7e42f259364513232e0adc8746772f0bff65dc1d3cd3f7
+```
 
 ### `dpkg` source package: `double-conversion=3.1.5-4ubuntu1`
 
@@ -5641,12 +5650,12 @@ $ apt-get source -qq --print-uris rubberband=1.8.2-1build1
 'http://archive.ubuntu.com/ubuntu/pool/universe/r/rubberband/rubberband_1.8.2-1build1.debian.tar.xz' rubberband_1.8.2-1build1.debian.tar.xz 9484 SHA256:d1c232d14fb6ceac8804d0de74e93b142d2e60b8c25949131f95ff5270885a41
 ```
 
-### `dpkg` source package: `sdformat9=9.7.0-1~focal`
+### `dpkg` source package: `sdformat9=9.8.0-1~focal`
 
 Binary Packages:
 
-- `libsdformat9:amd64=9.7.0-1~focal`
-- `sdformat9-sdf=9.7.0-1~focal`
+- `libsdformat9:amd64=9.8.0-1~focal`
+- `sdformat9-sdf=9.8.0-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc/sdformat9-sdf/copyright`)
 
@@ -5654,9 +5663,14 @@ Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc
 - `Apache-2.0`
 - `BSD-3-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris sdformat9=9.8.0-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.8.0-1%7efocal.dsc' sdformat9_9.8.0-1~focal.dsc 1376 SHA256:b6f9452abc529b7db70d07457ff9cc5e1fae3402af103b8b3708c324799756f6
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.8.0.orig.tar.bz2' sdformat9_9.8.0.orig.tar.bz2 706107 SHA256:909cfaaa5c5b988ad63b0be12db6f5d9908b6da8cc274a7d3a9ce3ea5cc3b4fb
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.8.0-1%7efocal.debian.tar.xz' sdformat9_9.8.0-1~focal.debian.tar.xz 3504 SHA256:d7898f5eb3392543ef5e6d96772b4f69dc4997273eec95a8d54aa6a8f2b09907
+```
 
 ### `dpkg` source package: `sed=4.7-1`
 

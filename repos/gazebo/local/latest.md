@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9e36ef7608b518bb4094b487c5ebbaf5c4536766c5cc668d2436766472994f5c`
-- Created: `2022-04-22T02:30:02.316395906Z`
-- Virtual Size: ~ 1.95 Gb  
+- Image ID: `sha256:8a1e840997ea181e17307aec812992820240aa1048592341879d1ff5557008c8`
+- Created: `2022-04-30T00:47:08.502792411Z`
+- Virtual Size: ~ 1.96 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -395,19 +395,24 @@ $ apt-get source -qq --print-uris base-passwd=3.5.47
 'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.47.tar.xz' base-passwd_3.5.47.tar.xz 53024 SHA256:9810ae0216e96bf9fc7ca6163d47ef8ec7d1677f533451af5911d8202a490a23
 ```
 
-### `dpkg` source package: `bash=5.0-6ubuntu1.1`
+### `dpkg` source package: `bash=5.0-6ubuntu1.2`
 
 Binary Packages:
 
-- `bash=5.0-6ubuntu1.1`
+- `bash=5.0-6ubuntu1.2`
 
 Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris bash=5.0-6ubuntu1.2
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.2.dsc' bash_5.0-6ubuntu1.2.dsc 2296 SHA512:d93b919ae7b8e67e3b4e31d205e13006a37aa2a42378744599c3214ecab6544084856a739b38aaeb06742524e2ea302c8147f7a88dbc738e1e7ac0a29be0c0b8
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0.orig.tar.xz' bash_5.0.orig.tar.xz 5554808 SHA512:f3a719997a8515bae7e84701afafc9b2cdd23c95d29533adb678000b08eba968450b93d5576c3cffbeccbdcd95b713db830e8efeda689258dcfe6f15f0c5dec4
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.2.debian.tar.xz' bash_5.0-6ubuntu1.2.debian.tar.xz 75200 SHA512:50de22a6cd140fcb95eca9172e9927a4eeddd90bfbd23072d5e209db1675f331716dfd54ef3281caa7020e3fa1aef9ca7caafc6a8d3067741b1ae41f7dff7724
+```
 
 ### `dpkg` source package: `binutils=2.34-6ubuntu1.3`
 
@@ -891,13 +896,13 @@ $ apt-get source -qq --print-uris cups=2.3.1-9ubuntu1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1-9ubuntu1.1.debian.tar.xz' cups_2.3.1-9ubuntu1.1.debian.tar.xz 356268 SHA512:376d76abe39fbec9a206cdb3544e71d8e4a3aa18188e175d4a996be7be05733be00487d0240e0cbbf21592ee657f686f3205384d98ee277fc5b548ac4642911e
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.7`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.10`
 
 Binary Packages:
 
-- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.7`
-- `libcurl4:amd64=7.68.0-1ubuntu2.7`
-- `libcurl4-openssl-dev:amd64=7.68.0-1ubuntu2.7`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.10`
+- `libcurl4:amd64=7.68.0-1ubuntu2.10`
+- `libcurl4-openssl-dev:amd64=7.68.0-1ubuntu2.10`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`, `/usr/share/doc/libcurl4-openssl-dev/copyright`)
 
@@ -911,10 +916,10 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.7
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.7.dsc' curl_7.68.0-1ubuntu2.7.dsc 2733 SHA512:e125a9af90ed2bc17af45f0b23b2c145820a1fb61e8836e0aae2c13c43a4b4fff66c65b7464df47ccd0d54addc8062197afa61fe8a62a03e0a4c43b338301537
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.10
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.10.dsc' curl_7.68.0-1ubuntu2.10.dsc 2737 SHA512:c7e59b48d6743b2c0bd9fcfa76605cb4b9693bb467df2e2aabf25e38b0349f4d28aa50136efc25535f971a70a9c252d053a88539b9b0f0fdc36302f6ed145c2c
 'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.7.debian.tar.xz' curl_7.68.0-1ubuntu2.7.debian.tar.xz 48080 SHA512:9312b57d9adee8f77462aa222ae403c87f38f4729b73929b1ca5444c8e7c42c19102753dccefccdf7bfbff96f475aac61cda3600b630989b0f1bd5de8aa68699
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.10.debian.tar.xz' curl_7.68.0-1ubuntu2.10.debian.tar.xz 52592 SHA512:2ed50fea6923e23c83b08a4c5eba4d1475f9d46308bd664804759a6bf8b187d9d649bcf59e171c853bbe65ab1b6403a4e00d29a3369bcf8fa21ca8a1d5275fe0
 ```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
@@ -1100,19 +1105,23 @@ $ apt-get source -qq --print-uris diffutils=1:3.7-3
 'http://archive.ubuntu.com/ubuntu/pool/main/d/diffutils/diffutils_3.7-3.debian.tar.xz' diffutils_3.7-3.debian.tar.xz 11116 SHA256:a455228f12283b5f3c0165db4ab9b12071adc37fb9dd50dcb5e1b8851c524f1f
 ```
 
-### `dpkg` source package: `distro-info-data=0.43ubuntu1.9`
+### `dpkg` source package: `distro-info-data=0.43ubuntu1.10`
 
 Binary Packages:
 
-- `distro-info-data=0.43ubuntu1.9`
+- `distro-info-data=0.43ubuntu1.10`
 
 Licenses: (parsed from: `/usr/share/doc/distro-info-data/copyright`)
 
 - `ISC`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris distro-info-data=0.43ubuntu1.10
+'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.43ubuntu1.10.dsc' distro-info-data_0.43ubuntu1.10.dsc 1421 SHA512:254831fd04fd1151277e1a1c9ae17425b98138bb7a001d650e6b2c0a18912a1e19115ca10e30799ecb7be79bca945199b6a3d613360bd8eb001f1f76531ec595
+'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.43ubuntu1.10.tar.xz' distro-info-data_0.43ubuntu1.10.tar.xz 8864 SHA512:922ac38161c2461828825142eebbc7323a309936ce1757780046c1c85c48fcb89462ae008a2c653a3e7e42f259364513232e0adc8746772f0bff65dc1d3cd3f7
+```
 
 ### `dpkg` source package: `double-conversion=3.1.5-4ubuntu1`
 
@@ -4186,12 +4195,12 @@ $ apt-get source -qq --print-uris libsemanage=3.0-1build2
 'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.0-1build2.debian.tar.xz' libsemanage_3.0-1build2.debian.tar.xz 17176 SHA256:38a646f91532c920c8c15a695c3585397ddbf032ecf49c52eb89d53c8eac48fb
 ```
 
-### `dpkg` source package: `libsepol=3.0-1`
+### `dpkg` source package: `libsepol=3.0-1ubuntu0.1`
 
 Binary Packages:
 
-- `libsepol1:amd64=3.0-1`
-- `libsepol1-dev:amd64=3.0-1`
+- `libsepol1:amd64=3.0-1ubuntu0.1`
+- `libsepol1-dev:amd64=3.0-1ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libsepol1/copyright`, `/usr/share/doc/libsepol1-dev/copyright`)
 
@@ -4201,10 +4210,10 @@ Licenses: (parsed from: `/usr/share/doc/libsepol1/copyright`, `/usr/share/doc/li
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libsepol=3.0-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0-1.dsc' libsepol_3.0-1.dsc 1770 SHA256:0073de5844605d380dd56f6630678ad91459496dc768fa9eb4d8cc7f693f5c1a
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0.orig.tar.gz' libsepol_3.0.orig.tar.gz 473864 SHA256:5b7ae1881909f1048b06f7a0c364c5c8a86ec12e0ec76e740fe9595a6033eb79
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0-1.debian.tar.xz' libsepol_3.0-1.debian.tar.xz 14224 SHA256:a16b5bc3c041e016d01794d1a1b9826ed4426862622c05526e93607c325ec328
+$ apt-get source -qq --print-uris libsepol=3.0-1ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0-1ubuntu0.1.dsc' libsepol_3.0-1ubuntu0.1.dsc 2084 SHA512:4fa31e95c4f00cdac984d0cd7ffdd4ca6d3a9be529723cc227316e9f4bb76b5910102f136aab505de422f9794c4641912720c8dffb10e6ae0523058fa96850d8
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0.orig.tar.gz' libsepol_3.0.orig.tar.gz 473864 SHA512:82a5bae0afd9ae53b55ddcfc9f6dd61724a55e45aef1d9cd0122d1814adf2abe63c816a7ac63b64b401f5c67acb910dd8e0574eec546bed04da7842ab6c3bb55
+'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.0-1ubuntu0.1.debian.tar.xz' libsepol_3.0-1ubuntu0.1.debian.tar.xz 16980 SHA512:eeade6f2ad6eb2aa2846e850516f56da34bdf6dab2e6024c94799c273e6815976a09509b999306337107e3e21cbb5243c29dc515b4c48bfb51d2dfe9c3ed0da6
 ```
 
 ### `dpkg` source package: `libsigsegv=2.12-2`
@@ -7180,13 +7189,13 @@ $ apt-get source -qq --print-uris rubygems-integration=1.16
 'http://archive.ubuntu.com/ubuntu/pool/main/r/rubygems-integration/rubygems-integration_1.16.tar.xz' rubygems-integration_1.16.tar.xz 5404 SHA256:c0de4ed5f4530168fb21bd40c092e734a432ef5a7273fde2e6208d6ce3f11150
 ```
 
-### `dpkg` source package: `sdformat9=9.7.0-1~focal`
+### `dpkg` source package: `sdformat9=9.8.0-1~focal`
 
 Binary Packages:
 
-- `libsdformat9:amd64=9.7.0-1~focal`
-- `libsdformat9-dev:amd64=9.7.0-1~focal`
-- `sdformat9-sdf=9.7.0-1~focal`
+- `libsdformat9:amd64=9.8.0-1~focal`
+- `libsdformat9-dev:amd64=9.8.0-1~focal`
+- `sdformat9-sdf=9.8.0-1~focal`
 
 Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc/libsdformat9-dev/copyright`, `/usr/share/doc/sdformat9-sdf/copyright`)
 
@@ -7194,9 +7203,14 @@ Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc
 - `Apache-2.0`
 - `BSD-3-clause`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris sdformat9=9.8.0-1~focal
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.8.0-1%7efocal.dsc' sdformat9_9.8.0-1~focal.dsc 1376 SHA256:b6f9452abc529b7db70d07457ff9cc5e1fae3402af103b8b3708c324799756f6
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.8.0.orig.tar.bz2' sdformat9_9.8.0.orig.tar.bz2 706107 SHA256:909cfaaa5c5b988ad63b0be12db6f5d9908b6da8cc274a7d3a9ce3ea5cc3b4fb
+'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.8.0-1%7efocal.debian.tar.xz' sdformat9_9.8.0-1~focal.debian.tar.xz 3504 SHA256:d7898f5eb3392543ef5e6d96772b4f69dc4997273eec95a8d54aa6a8f2b09907
+```
 
 ### `dpkg` source package: `sed=4.7-1`
 
