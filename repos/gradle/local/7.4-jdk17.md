@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9e7038d609f19afe621148fea7ec7592fcfb4f00a44fb1b683e5ac5000be62a5`
-- Created: `2022-04-27T18:47:19.230764646Z`
-- Virtual Size: ~ 779.35 Mb  
+- Image ID: `sha256:065fef47fab3a22268e39fa97e964cda8328d740465f4264dda40869d60d96cf`
+- Created: `2022-04-30T04:10:01.048236284Z`
+- Virtual Size: ~ 779.36 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -202,19 +202,24 @@ $ apt-get source -qq --print-uris base-passwd=3.5.47
 'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.47.tar.xz' base-passwd_3.5.47.tar.xz 53024 SHA256:9810ae0216e96bf9fc7ca6163d47ef8ec7d1677f533451af5911d8202a490a23
 ```
 
-### `dpkg` source package: `bash=5.0-6ubuntu1.1`
+### `dpkg` source package: `bash=5.0-6ubuntu1.2`
 
 Binary Packages:
 
-- `bash=5.0-6ubuntu1.1`
+- `bash=5.0-6ubuntu1.2`
 
 Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris bash=5.0-6ubuntu1.2
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.2.dsc' bash_5.0-6ubuntu1.2.dsc 2296 SHA512:d93b919ae7b8e67e3b4e31d205e13006a37aa2a42378744599c3214ecab6544084856a739b38aaeb06742524e2ea302c8147f7a88dbc738e1e7ac0a29be0c0b8
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0.orig.tar.xz' bash_5.0.orig.tar.xz 5554808 SHA512:f3a719997a8515bae7e84701afafc9b2cdd23c95d29533adb678000b08eba968450b93d5576c3cffbeccbdcd95b713db830e8efeda689258dcfe6f15f0c5dec4
+'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.0-6ubuntu1.2.debian.tar.xz' bash_5.0-6ubuntu1.2.debian.tar.xz 75200 SHA512:50de22a6cd140fcb95eca9172e9927a4eeddd90bfbd23072d5e209db1675f331716dfd54ef3281caa7020e3fa1aef9ca7caafc6a8d3067741b1ae41f7dff7724
+```
 
 ### `dpkg` source package: `binutils=2.34-6ubuntu1.3`
 
@@ -399,13 +404,13 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.7`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.10`
 
 Binary Packages:
 
-- `curl=7.68.0-1ubuntu2.7`
-- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.7`
-- `libcurl4:amd64=7.68.0-1ubuntu2.7`
+- `curl=7.68.0-1ubuntu2.10`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.10`
+- `libcurl4:amd64=7.68.0-1ubuntu2.10`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -416,9 +421,14 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.10
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.10.dsc' curl_7.68.0-1ubuntu2.10.dsc 2737 SHA512:c7e59b48d6743b2c0bd9fcfa76605cb4b9693bb467df2e2aabf25e38b0349f4d28aa50136efc25535f971a70a9c252d053a88539b9b0f0fdc36302f6ed145c2c
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.10.debian.tar.xz' curl_7.68.0-1ubuntu2.10.debian.tar.xz 52592 SHA512:2ed50fea6923e23c83b08a4c5eba4d1475f9d46308bd664804759a6bf8b187d9d649bcf59e171c853bbe65ab1b6403a4e00d29a3369bcf8fa21ca8a1d5275fe0
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
