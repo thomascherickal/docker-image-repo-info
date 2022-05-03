@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:528e44daaa326d877a9817e17d279443bbe6cc4c53f95e1167e1da453a2f8116`
-- Created: `2022-04-27T21:55:09.848425698Z`
+- Image ID: `sha256:c788c40ebcfaafef227171f4109bdd701be9a72bbdf64b15d42f29ce721a2f75`
+- Created: `2022-05-02T21:09:15.389393487Z`
 - Virtual Size: ~ 492.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -269,8 +269,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url glibc-2.28-164.0.5.el8_5.3
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
 ```
 
 ### `rpm` package: `glibc-common-2.28-164.0.5.el8_5.3.x86_64`
@@ -281,8 +281,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url glibc-common-2.28-164.0.5.el8_5.3
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
 ```
 
 ### `rpm` package: `glibc-minimal-langpack-2.28-164.0.5.el8_5.3.x86_64`
@@ -293,8 +293,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url glibc-minimal-langpack-2.28-164.0.5.el8_5.3
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-164.0.5.el8_5.3.src.rpm
 ```
 
 ### `rpm` package: `gmp-6.1.2-10.el8.x86_64`
@@ -994,8 +994,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url nettle-3.4.1-7.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/nettle-3.4.1-7.el8.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/nettle-3.4.1-7.el8.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/nettle-3.4.1-7.el8.src.rpm
 ```
 
 ### `rpm` package: `npth-1.5-4.el8.x86_64`
@@ -1255,13 +1255,13 @@ $ dnf --quiet download --source --url xz-libs-5.2.4-3.el8
 https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/xz-5.2.4-3.el8.src.rpm
 ```
 
-### `rpm` package: `zlib-1.2.11-17.el8.x86_64`
+### `rpm` package: `zlib-1.2.11-18.el8_5.x86_64`
 
 Licenses (from `rpm --query`): zlib and Boost
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url zlib-1.2.11-17.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/zlib-1.2.11-17.el8.src.rpm
+$ dnf --quiet download --source --url zlib-1.2.11-18.el8_5
+https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/zlib-1.2.11-18.el8_5.src.rpm
 ```
