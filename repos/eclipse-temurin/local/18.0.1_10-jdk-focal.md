@@ -1,10 +1,10 @@
-# `eclipse-temurin:18_36-jdk-focal`
+# `eclipse-temurin:18.0.1_10-jdk-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:825f0e4fc209134600cf081e4e55aa07057224d399853fd520572ded8bef89b8`
-- Created: `2022-04-30T00:25:03.869602671Z`
-- Virtual Size: ~ 459.96 Mb  
+- Image ID: `sha256:0c24ebb0c82fbf3a9844f4886e3fdaa43fccc6cd7d3faba9e832ce6b6e64df3a`
+- Created: `2022-05-04T18:22:08.712933172Z`
+- Virtual Size: ~ 460.19 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -13,7 +13,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-18+36`
+  - `JAVA_VERSION=jdk-18.0.1+10`
   - `JAVA_HOME=/opt/java/openjdk`
 
 ## `dpkg` (`.deb`-based packages)
@@ -1422,14 +1422,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.12
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.12.dsc' openssl_1.1.1f-1ubuntu2.12.dsc 2470 SHA512:d6439e1d598089b7115b55643f3042078d6440ff78b8f72db0abed892aa510873d2a456f1e92ff67fffaa541813149aa870e13c6557358dd4596c140f159b63f
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.12.debian.tar.xz' openssl_1.1.1f-1ubuntu2.12.debian.tar.xz 173140 SHA512:a265a6227dfc61d9dc9f3b32b522135df5bc3fa1adaa8aba90b4acba0710f245e435d50ffe5d3ef74dff1cc4ac52bfde9bc9cfd60b5b115e8d5d3abb2a29efec
-```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
 
