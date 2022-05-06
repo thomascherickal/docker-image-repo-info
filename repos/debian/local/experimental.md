@@ -415,20 +415,13 @@ Licenses: (parsed from: `/usr/share/doc/debianutils/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debianutils=5.7-0.1
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.7-0.1.dsc' debianutils_5.7-0.1.dsc 1542 SHA256:437dd4a5bae8a592ca1b844f98975605497009cd45fdca9325178c382d49bca1
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.7.orig.tar.gz' debianutils_5.7.orig.tar.gz 257231 SHA256:27ec9e0e7e44dc8ab611aa576330471bacb07e4491ffecf0d3aa6909c92f9022
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.7-0.1.debian.tar.xz' debianutils_5.7-0.1.debian.tar.xz 21564 SHA256:43e959668d0731072613ff910e4c9354164ee7c8df7d805505ca0e2604bea8c4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/debianutils/5.7-0.1/
 
-- https://sources.debian.net/src/debianutils/5.7-0.1/ (for browsing the source)
-- https://sources.debian.net/src/debianutils/5.7-0.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debianutils/5.7-0.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `diffutils=1:3.7-5`
 
