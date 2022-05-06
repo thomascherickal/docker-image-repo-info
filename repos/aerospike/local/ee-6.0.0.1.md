@@ -1,18 +1,18 @@
-# `aerospike:ee-6.0.0.0`
+# `aerospike:ee-6.0.0.1`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d84131006c6ce4656a2dbb1f186d9c30ba891fa7788aaac5e4e2b85b70a26d81`
-- Created: `2022-04-27T19:49:10.393157204Z`
-- Virtual Size: ~ 257.20 Mb  
+- Image ID: `sha256:f17869b631607a050f86f620603102689bc14dcee26f902773726bcd1833864f`
+- Created: `2022-05-05T18:19:41.615102425Z`
+- Virtual Size: ~ 257.22 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/bin/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","/entrypoint.sh"]`
 - Command: `["asd"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `AEROSPIKE_VERSION=6.0.0.0`
-  - `AEROSPIKE_SHA256=439bd7013edcded45b8d3ca0bfddf2551c523564480576f961de1e6088c04707`
+  - `AEROSPIKE_VERSION=6.0.0.1`
+  - `AEROSPIKE_SHA256=d470ca9717b563726e8084ab6fc89f2889aefd1f6aa8ef9145ac38e0b42945a1`
   - `AS_TINI_SHA256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940`
 
 ## `dpkg` (`.deb`-based packages)
@@ -70,11 +70,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.118/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.118/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `aerospike-server-enterprise=6.0.0.0-1`
+### `dpkg` source package: `aerospike-server-enterprise=6.0.0.1-1`
 
 Binary Packages:
 
-- `aerospike-server-enterprise=6.0.0.0-1`
+- `aerospike-server-enterprise=6.0.0.1-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
