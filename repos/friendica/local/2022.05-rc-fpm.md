@@ -1,13 +1,13 @@
-# `friendica:2022.03-fpm`
+# `friendica:2022.05-rc-fpm`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2927a5afc57842c35eb2c25a207a85358d54f29cb4e387b15c73ee9d0bddd0b2`
-- Created: `2022-05-06T02:42:05.625406789Z`
-- Virtual Size: ~ 639.84 Mb  
+- Image ID: `sha256:bc953089759ffca1c8f9299884347719db22c7a7b7abd2b7da37a2b7ebae3d23`
+- Created: `2022-05-06T02:42:33.198465622Z`
+- Virtual Size: ~ 552.77 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Entrypoint: `["/entrypoint.sh"]`
+- Entrypoint: `["/entrypoint-dev.sh"]`
 - Command: `["php-fpm"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
@@ -25,10 +25,8 @@
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `FRIENDICA_SYSLOG_FLAGS=39`
-  - `FRIENDICA_VERSION=2022.03`
-  - `FRIENDICA_ADDONS=2022.03`
-  - `FRIENDICA_DOWNLOAD_SHA256=f190dd05bdd2ecff753da108535dbc4e406b0fe291c0764e87f93d9510aae74e`
-  - `FRIENDICA_DOWNLOAD_ADDONS_SHA256=d6b95835724b9814aa7c1862f985cdaf8754e7527b41ce80ca58ee5378807936`
+  - `FRIENDICA_VERSION=2022.05-rc`
+  - `FRIENDICA_ADDONS=2022.05-rc`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1231,9 +1229,19 @@ Other potentially useful URLs:
 
 Binary Packages:
 
+- `dirmngr=2.2.27-2+deb11u1`
+- `gnupg=2.2.27-2+deb11u1`
+- `gnupg-l10n=2.2.27-2+deb11u1`
+- `gnupg-utils=2.2.27-2+deb11u1`
+- `gpg=2.2.27-2+deb11u1`
+- `gpg-agent=2.2.27-2+deb11u1`
+- `gpg-wks-client=2.2.27-2+deb11u1`
+- `gpg-wks-server=2.2.27-2+deb11u1`
+- `gpgconf=2.2.27-2+deb11u1`
+- `gpgsm=2.2.27-2+deb11u1`
 - `gpgv=2.2.27-2+deb11u1`
 
-Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
+Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnupg/copyright`, `/usr/share/doc/gnupg-l10n/copyright`, `/usr/share/doc/gnupg-utils/copyright`, `/usr/share/doc/gpg/copyright`, `/usr/share/doc/gpg-agent/copyright`, `/usr/share/doc/gpg-wks-client/copyright`, `/usr/share/doc/gpg-wks-server/copyright`, `/usr/share/doc/gpgconf/copyright`, `/usr/share/doc/gpgsm/copyright`, `/usr/share/doc/gpgv/copyright`)
 
 - `BSD-3-clause`
 - `CC0-1.0`
@@ -1658,6 +1666,42 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/lcms2/2.12~rc1-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/lcms2/2.12~rc1-2/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `libassuan=2.5.3-7.1`
+
+Binary Packages:
+
+- `libassuan0:amd64=2.5.3-7.1`
+
+Licenses: (parsed from: `/usr/share/doc/libassuan0/copyright`)
+
+- `GAP`
+- `GAP~FSF`
+- `GPL-2`
+- `GPL-2+`
+- `GPL-2+ with libtool exception`
+- `GPL-3`
+- `GPL-3+`
+- `LGPL-2.1`
+- `LGPL-2.1+`
+- `LGPL-3`
+- `LGPL-3+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libassuan=2.5.3-7.1
+'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3-7.1.dsc' libassuan_2.5.3-7.1.dsc 2627 SHA256:9e4cfaef54fee1b6c1fd32fdfe6fc90b2dde78755517ee0ff56859e69251fb07
+'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3.orig.tar.bz2' libassuan_2.5.3.orig.tar.bz2 572348 SHA256:91bcb0403866b4e7c4bc1cc52ed4c364a9b5414b3994f718c70303f7f765e702
+'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3.orig.tar.bz2.asc' libassuan_2.5.3.orig.tar.bz2.asc 952 SHA256:53b16a6619a2690b4f22da645a1d0c14b5664825c87b165ca5bd0de32607888a
+'http://deb.debian.org/debian/pool/main/liba/libassuan/libassuan_2.5.3-7.1.debian.tar.xz' libassuan_2.5.3-7.1.debian.tar.xz 13952 SHA256:c6783e12dc1fb65681c083274f52cb3286da18dcf8a5b38a6de10143003e0681
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libassuan/2.5.3-7.1/ (for browsing the source)
+- https://sources.debian.net/src/libassuan/2.5.3-7.1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libassuan/2.5.3-7.1/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `libbsd=0.11.3-1`
 
 Binary Packages:
@@ -1994,6 +2038,34 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libjpeg-turbo/1:2.0.6-4/ (for browsing the source)
 - https://sources.debian.net/src/libjpeg-turbo/1:2.0.6-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libjpeg-turbo/1:2.0.6-4/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `libksba=1.5.0-3`
+
+Binary Packages:
+
+- `libksba8:amd64=1.5.0-3`
+
+Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
+
+- `FSFUL`
+- `GPL-3`
+- `LGPL-2.1-or-later`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris libksba=1.5.0-3
+'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.5.0-3.dsc' libksba_1.5.0-3.dsc 2470 SHA256:6fd1995d38bd061c81b21ea28fb1f4127b610e18a7deec9214b2bd335bfa93ef
+'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.5.0.orig.tar.bz2' libksba_1.5.0.orig.tar.bz2 656518 SHA256:ae4af129216b2d7fdea0b5bf2a788cd458a79c983bb09a43f4d525cc87aba0ba
+'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.5.0.orig.tar.bz2.asc' libksba_1.5.0.orig.tar.bz2.asc 228 SHA256:41a9020381b8201f15b9d7fc2a1abdb90ab2723152d1af0b77a58b12b4884a0f
+'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.5.0-3.debian.tar.xz' libksba_1.5.0-3.debian.tar.xz 14300 SHA256:ac66ace2752bba3ce8ddfe4f464800da606dcc58862eea493ce88ed341815df4
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libksba/1.5.0-3/ (for browsing the source)
+- https://sources.debian.net/src/libksba/1.5.0-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libksba/1.5.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `liblqr=0.4.2-2.1`
 
@@ -3092,11 +3164,12 @@ Other potentially useful URLs:
 
 Binary Packages:
 
+- `libncursesw6:amd64=6.2+20201114-2`
 - `libtinfo6:amd64=6.2+20201114-2`
 - `ncurses-base=6.2+20201114-2`
 - `ncurses-bin=6.2+20201114-2`
 
-Licenses: (parsed from: `/usr/share/doc/libtinfo6/copyright`, `/usr/share/doc/ncurses-base/copyright`, `/usr/share/doc/ncurses-bin/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libncursesw6/copyright`, `/usr/share/doc/libtinfo6/copyright`, `/usr/share/doc/ncurses-base/copyright`, `/usr/share/doc/ncurses-bin/copyright`)
 
 - `BSD-3-clause`
 - `MIT/X11`
@@ -3185,6 +3258,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nghttp2/1.43.0-1/ (for browsing the source)
 - https://sources.debian.net/src/nghttp2/1.43.0-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nghttp2/1.43.0-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `npth=1.6-3`
+
+Binary Packages:
+
+- `libnpth0:amd64=1.6-3`
+
+Licenses: (parsed from: `/usr/share/doc/libnpth0/copyright`)
+
+- `LGPL-2.1`
+- `LGPL-2.1+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris npth=1.6-3
+'http://deb.debian.org/debian/pool/main/n/npth/npth_1.6-3.dsc' npth_1.6-3.dsc 1931 SHA256:002c2a7936d1499ebb5d72dbb9c7ca3e00ed5fe3b0aa48f20b7279fc90aa9e90
+'http://deb.debian.org/debian/pool/main/n/npth/npth_1.6.orig.tar.bz2' npth_1.6.orig.tar.bz2 300486 SHA256:1393abd9adcf0762d34798dc34fdcf4d0d22a8410721e76f1e3afcd1daa4e2d1
+'http://deb.debian.org/debian/pool/main/n/npth/npth_1.6-3.debian.tar.xz' npth_1.6-3.debian.tar.xz 10712 SHA256:efa188104de503add9c49c17bec7bec0df814f7d1db9fdc2017574a0af98155c
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/npth/1.6-3/ (for browsing the source)
+- https://sources.debian.net/src/npth/1.6-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/npth/1.6-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `numactl=2.0.12-1`
 
@@ -3484,6 +3583,36 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/perl/5.32.1-4+deb11u2/ (for browsing the source)
 - https://sources.debian.net/src/perl/5.32.1-4+deb11u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/perl/5.32.1-4+deb11u2/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `pinentry=1.1.0-4`
+
+Binary Packages:
+
+- `pinentry-curses=1.1.0-4`
+
+Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-3`
+- `LGPL-3+`
+- `X11`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris pinentry=1.1.0-4
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0-4.dsc' pinentry_1.1.0-4.dsc 2216 SHA256:81af8caf54fb2ddc6ac27d768999b3aa5d3bbeec7f2edac839b2c6792a3cf787
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0.orig.tar.bz2' pinentry_1.1.0.orig.tar.bz2 467702 SHA256:68076686fa724a290ea49cdf0d1c0c1500907d1b759a3bcbfbec0293e8f56570
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0.orig.tar.bz2.asc' pinentry_1.1.0.orig.tar.bz2.asc 488 SHA256:2e9ee3454f9e0be2f6cbc0e289fa5e0620d765e537286ff2c5c28b382f96106a
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.1.0-4.debian.tar.xz' pinentry_1.1.0-4.debian.tar.xz 17240 SHA256:b3e36d239219ab35f824c5f9b3dd0c335a4394c59b7628e845831794335b8a8e
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/pinentry/1.1.0-4/ (for browsing the source)
+- https://sources.debian.net/src/pinentry/1.1.0-4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/pinentry/1.1.0-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pkg-config=0.29.2-1`
 
