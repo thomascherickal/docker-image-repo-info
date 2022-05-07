@@ -427,13 +427,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.261
-'http://http.debian.net/debian/pool/main/c/cdebconf/cdebconf_0.261.dsc' cdebconf_0.261.dsc 2721 SHA256:a25f06a76b6a3aca915c9131a9915b04630fd1d845cb4a46906f3e44be26c477
-'http://http.debian.net/debian/pool/main/c/cdebconf/cdebconf_0.261.tar.xz' cdebconf_0.261.tar.xz 295304 SHA256:850bb82c279a868bb461ea604964fe71f86970127bcef7e7b6d22a73ec4b2e13
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/cdebconf/0.261/
+
 
 ### `dpkg` source package: `cluster=2.1.2-2`
 
@@ -520,21 +520,13 @@ Licenses: (parsed from: `/usr/share/doc/libcurl4/copyright`)
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.82.0-2
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.82.0-2.dsc' curl_7.82.0-2.dsc 2959 SHA256:24a96282104be5121b28374b16919ff0ad4dd2d05e471d322a1ad9cba43c6b60
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.82.0.orig.tar.gz' curl_7.82.0.orig.tar.gz 4106857 SHA256:910cc5fe279dc36e2cca534172c94364cf3fcf7d6494ba56e6c61a390881ddce
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.82.0.orig.tar.gz.asc' curl_7.82.0.orig.tar.gz.asc 488 SHA256:c1799877d4d45e733f2c88373d5b6399f169133551e8968f131bb8447e673004
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.82.0-2.debian.tar.xz' curl_7.82.0-2.debian.tar.xz 35712 SHA256:5c2a64a00bc251fb0755cb459fd2772ce0d81b39ccc21e4ed398a31331592ad2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.82.0-2/
 
-- https://sources.debian.net/src/curl/7.82.0-2/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.82.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.82.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-3`
 
@@ -1001,14 +993,13 @@ Licenses: (parsed from: `/usr/share/doc/cpp-11/copyright`, `/usr/share/doc/g++-1
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-11=11.2.0-20
-'http://http.debian.net/debian/pool/main/g/gcc-11/gcc-11_11.2.0-20.dsc' gcc-11_11.2.0-20.dsc 22381 SHA256:5e1ddd6cdfa07b82edf35f28c4c584b2f56a9ebfb57f09a500ffa3e4ce95a7e0
-'http://http.debian.net/debian/pool/main/g/gcc-11/gcc-11_11.2.0.orig.tar.gz' gcc-11_11.2.0.orig.tar.gz 83874319 SHA256:61bbc68194e52a9149a91571b5e1eb4db520017ed4bcdc021c175a1845605e47
-'http://http.debian.net/debian/pool/main/g/gcc-11/gcc-11_11.2.0-20.debian.tar.xz' gcc-11_11.2.0-20.debian.tar.xz 2187044 SHA256:1455f68dd213542f04a21ea66789d93a3887eaa85ac195ac20770c0988f78d7e
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/gcc-11/11.2.0-20/
+
 
 ### `dpkg` source package: `gcc-12=12-20220319-1`
 
@@ -1622,20 +1613,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-lattice/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lattice=0.20-45-1
-'http://deb.debian.org/debian/pool/main/l/lattice/lattice_0.20-45-1.dsc' lattice_0.20-45-1.dsc 1845 SHA256:91059569a3f5c48b5335b21d9327768917eae28074a9dde645814b9de4273b0a
-'http://deb.debian.org/debian/pool/main/l/lattice/lattice_0.20-45.orig.tar.gz' lattice_0.20-45.orig.tar.gz 399470 SHA256:22388d92bdb7d3959da84d7308d9026dd8226ef07580783729e8ad2f7d7507ad
-'http://deb.debian.org/debian/pool/main/l/lattice/lattice_0.20-45-1.debian.tar.xz' lattice_0.20-45-1.debian.tar.xz 5248 SHA256:812679c35b8b87c4f01427521703f08b01a499578e9a3d7582b1d6b59162434e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/lattice/0.20-45-1/
 
-- https://sources.debian.net/src/lattice/0.20-45-1/ (for browsing the source)
-- https://sources.debian.net/src/lattice/0.20-45-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/lattice/0.20-45-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `less=590-1`
 
@@ -2881,20 +2865,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-mgcv/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mgcv=1.8-39-1
-'http://deb.debian.org/debian/pool/main/m/mgcv/mgcv_1.8-39-1.dsc' mgcv_1.8-39-1.dsc 1833 SHA256:2a2007f718f183a600ccef6128df2be673a3d46f552e0e29873ba997b8a8ad1a
-'http://deb.debian.org/debian/pool/main/m/mgcv/mgcv_1.8-39.orig.tar.gz' mgcv_1.8-39.orig.tar.gz 1208343 SHA256:841baddf5041fe42d8bcf84fdd0bad08b72d88acc10cd189ef4823eb719a0196
-'http://deb.debian.org/debian/pool/main/m/mgcv/mgcv_1.8-39-1.debian.tar.xz' mgcv_1.8-39-1.debian.tar.xz 5428 SHA256:8e094b653773f6248628e2602f33dad55b1b954a84ec03dcaf25d9ccf8058eb1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mgcv/1.8-39-1/
 
-- https://sources.debian.net/src/mgcv/1.8-39-1/ (for browsing the source)
-- https://sources.debian.net/src/mgcv/1.8-39-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mgcv/1.8-39-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpclib3=1.2.1-2`
 
@@ -2965,15 +2942,13 @@ Licenses: (parsed from: `/usr/share/doc/libncurses-dev/copyright`, `/usr/share/d
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.3-2
-'http://http.debian.net/debian/pool/main/n/ncurses/ncurses_6.3-2.dsc' ncurses_6.3-2.dsc 4136 SHA256:a4e3cfede146d1b7bfc45ca93f029d8344e2c209a657a2fc09fbe90bbebd9c0b
-'http://http.debian.net/debian/pool/main/n/ncurses/ncurses_6.3.orig.tar.gz' ncurses_6.3.orig.tar.gz 3583550 SHA256:97fc51ac2b085d4cde31ef4d2c3122c21abc217e9090a43a30fc5ec21684e059
-'http://http.debian.net/debian/pool/main/n/ncurses/ncurses_6.3.orig.tar.gz.asc' ncurses_6.3.orig.tar.gz.asc 729 SHA256:37b9e80c11fa02fbd8caf42ab9573427f54f2c7212eb4aeec9f455b5d79dee14
-'http://http.debian.net/debian/pool/main/n/ncurses/ncurses_6.3-2.debian.tar.xz' ncurses_6.3-2.debian.tar.xz 54136 SHA256:d76896693ce0b05f294512328efeb5940b1e0cbf695b6c9b118b2dc18f27df22
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/ncurses/6.3-2/
+
 
 ### `dpkg` source package: `nettle=3.7.3-1`
 
@@ -3054,20 +3029,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-nlme/copyright`)
 - `GPL`
 - `GPL `
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nlme=3.1.155-1
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.155-1.dsc' nlme_3.1.155-1.dsc 1840 SHA256:99e9879ec36827d35e32dc48c4236807582a8afce7a9d0eefb4c74cee3b79d52
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.155.orig.tar.gz' nlme_3.1.155.orig.tar.gz 806854 SHA256:9f390f842852422921b5845130ea73c1f006d7bb5e988e82f728093a0cbdff4f
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.155-1.debian.tar.xz' nlme_3.1.155-1.debian.tar.xz 7188 SHA256:2ff006849d827550f008e782eb6d545b7515d7457586b00d7cec6d6091955e65
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nlme/3.1.155-1/
 
-- https://sources.debian.net/src/nlme/3.1.155-1/ (for browsing the source)
-- https://sources.debian.net/src/nlme/3.1.155-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nlme/3.1.155-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openblas=0.3.20+ds-1`
 
@@ -3237,16 +3205,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris pango1.0=1.50.6+ds-2
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.6%2bds-2.dsc' pango1.0_1.50.6+ds-2.dsc 3771 SHA256:df3cf5a96e1dea302897bf89d5bc34af9f0ccb96969493ed2bfc752c8bd44481
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.6%2bds.orig.tar.xz' pango1.0_1.50.6+ds.orig.tar.xz 2673480 SHA256:70f0323d6270ee12e8ae14a2959b7227088e3146801d09309558bebb1f2f9df7
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.6%2bds-2.debian.tar.xz' pango1.0_1.50.6+ds-2.debian.tar.xz 50280 SHA256:a469aac0ca9f30a41580975218fd81c318f0b2816bc1223ae28d0f9e7fff4f54
+'http://http.debian.net/debian/pool/main/p/pango1.0/pango1.0_1.50.6%2bds-2.dsc' pango1.0_1.50.6+ds-2.dsc 3771 SHA256:df3cf5a96e1dea302897bf89d5bc34af9f0ccb96969493ed2bfc752c8bd44481
+'http://http.debian.net/debian/pool/main/p/pango1.0/pango1.0_1.50.6%2bds.orig.tar.xz' pango1.0_1.50.6+ds.orig.tar.xz 2673480 SHA256:70f0323d6270ee12e8ae14a2959b7227088e3146801d09309558bebb1f2f9df7
+'http://http.debian.net/debian/pool/main/p/pango1.0/pango1.0_1.50.6%2bds-2.debian.tar.xz' pango1.0_1.50.6+ds-2.debian.tar.xz 50280 SHA256:a469aac0ca9f30a41580975218fd81c318f0b2816bc1223ae28d0f9e7fff4f54
 ```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/pango1.0/1.50.6+ds-2/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.50.6+ds-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.50.6+ds-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-7`
 
@@ -3524,20 +3486,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-mass/copyright`)
 - `GPL-2`
 - `GPL-2 | GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-cran-mass=7.3-56-1
-'http://deb.debian.org/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-56-1.dsc' r-cran-mass_7.3-56-1.dsc 1851 SHA256:3684651f65c39b7203921088fb53d22c936d23fb485ae09eca24ddb1a971abd3
-'http://deb.debian.org/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-56.orig.tar.gz' r-cran-mass_7.3-56.orig.tar.gz 508061 SHA256:9bdabd14e0b0b020791e20a8fbdfd3e0e634da2e2485ab31c9dda8554c2afb85
-'http://deb.debian.org/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-56-1.debian.tar.xz' r-cran-mass_7.3-56-1.debian.tar.xz 6400 SHA256:fb0092a1be997003672a00219d5a381e8e06e459bd8e7db71334d4f98626014c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/r-cran-mass/7.3-56-1/
 
-- https://sources.debian.net/src/r-cran-mass/7.3-56-1/ (for browsing the source)
-- https://sources.debian.net/src/r-cran-mass/7.3-56-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/r-cran-mass/7.3-56-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-nnet=7.3-17-1`
 
@@ -3631,20 +3586,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-matrix/copyright`)
 - `GPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris rmatrix=1.4-0-1
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.4-0-1.dsc' rmatrix_1.4-0-1.dsc 1860 SHA256:c1975150d340669e1f9174948833c81f958a8efc5567714d16cd88dc3b4b8cf0
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.4-0.orig.tar.gz' rmatrix_1.4-0.orig.tar.gz 2849865 SHA256:c2b463702e4051b621f5e2b091a33f883f1caa97703d65f7a52b78caf81206f6
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.4-0-1.debian.tar.xz' rmatrix_1.4-0-1.debian.tar.xz 5704 SHA256:30a9faccd02fabf48f992d7147fc31998cc93dbe5d8a59dad3fa75c684c552ec
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/rmatrix/1.4-0-1/
 
-- https://sources.debian.net/src/rmatrix/1.4-0-1/ (for browsing the source)
-- https://sources.debian.net/src/rmatrix/1.4-0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/rmatrix/1.4-0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rpart=4.1.16-1`
 
