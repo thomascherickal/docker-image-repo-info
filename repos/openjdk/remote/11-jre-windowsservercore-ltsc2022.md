@@ -1,80 +1,80 @@
 ## `openjdk:11-jre-windowsservercore-ltsc2022`
 
 ```console
-$ docker pull openjdk@sha256:c7a9368a16fd0f4c9d9927019519bde7efcc08e8ef63542237929f711ad0e3ce
+$ docker pull openjdk@sha256:30955eaab97aa9f88ea394dce37cdeaded466d331820c187039f637751fe6829
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms: 1
-	-	windows version 10.0.20348.643; amd64
+	-	windows version 10.0.20348.707; amd64
 
-### `openjdk:11-jre-windowsservercore-ltsc2022` - windows version 10.0.20348.643; amd64
+### `openjdk:11-jre-windowsservercore-ltsc2022` - windows version 10.0.20348.707; amd64
 
 ```console
-$ docker pull openjdk@sha256:38ac9adc7ea886db3a94097e3168a4d82b3a6604b5b1dd57e82cb21ab9ed94e0
+$ docker pull openjdk@sha256:05c61968635fca0ac2d20ce8ffafb41734db368b18a46a642b527564b5bab1d4
 ```
 
 -	Docker Version: 20.10.8
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.3 GB (2268204721 bytes)**  
+-	Total Size: **2.3 GB (2278713267 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:751e3c5bb97e3580594272a078cf734f69c16c46245cb9c47ada10e98733f0ad`
+-	Image ID: `sha256:38b3098a72d4dc35b35f723a94bd0da5831a793db0aeb957e1f4953eff1a7b5c`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
 ```dockerfile
-# Sat, 08 May 2021 09:40:24 GMT
-RUN Apply image 2022-RTM-amd64
-# Sun, 03 Apr 2022 05:50:25 GMT
-RUN Install update ltsc2022-amd64
-# Wed, 13 Apr 2022 02:27:58 GMT
+# Fri, 22 Apr 2022 01:12:09 GMT
+RUN Apply image 10.0.20348.643
+# Thu, 05 May 2022 03:02:27 GMT
+RUN Install update 10.0.20348.707
+# Tue, 10 May 2022 17:36:33 GMT
 SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
-# Wed, 13 Apr 2022 16:55:44 GMT
+# Wed, 11 May 2022 15:28:55 GMT
 RUN Write-Host 'Enabling TLS 1.2 (https://githubengineering.com/crypto-removal-notice/) ...'; 	$tls12RegBase = 'HKLM:\\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL\Protocols\TLS 1.2'; 	if (Test-Path $tls12RegBase) { throw ('"{0}" already exists!' -f $tls12RegBase) }; 	New-Item -Path ('{0}/Client' -f $tls12RegBase) -Force; 	New-Item -Path ('{0}/Server' -f $tls12RegBase) -Force; 	New-ItemProperty -Path ('{0}/Client' -f $tls12RegBase) -Name 'DisabledByDefault' -PropertyType DWORD -Value 0 -Force; 	New-ItemProperty -Path ('{0}/Client' -f $tls12RegBase) -Name 'Enabled' -PropertyType DWORD -Value 1 -Force; 	New-ItemProperty -Path ('{0}/Server' -f $tls12RegBase) -Name 'DisabledByDefault' -PropertyType DWORD -Value 0 -Force; 	New-ItemProperty -Path ('{0}/Server' -f $tls12RegBase) -Name 'Enabled' -PropertyType DWORD -Value 1 -Force; 	Write-Host 'Complete.'
-# Wed, 13 Apr 2022 17:11:01 GMT
+# Wed, 11 May 2022 15:39:18 GMT
 ENV JAVA_HOME=C:\openjdk-11
-# Wed, 13 Apr 2022 17:11:23 GMT
+# Wed, 11 May 2022 15:39:38 GMT
 RUN $newPath = ('{0}\bin;{1}' -f $env:JAVA_HOME, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	setx /M PATH $newPath; 	Write-Host 'Complete.'
-# Mon, 25 Apr 2022 18:27:39 GMT
+# Wed, 11 May 2022 15:39:38 GMT
 ENV JAVA_VERSION=11.0.15
-# Mon, 25 Apr 2022 18:31:05 GMT
+# Wed, 11 May 2022 15:43:52 GMT
 ENV JAVA_URL=https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.15%2B10/OpenJDK11u-jre_x64_windows_11.0.15_10.zip
-# Mon, 25 Apr 2022 18:31:47 GMT
+# Wed, 11 May 2022 15:44:24 GMT
 RUN Write-Host ('Downloading {0} ...' -f $env:JAVA_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:JAVA_URL -OutFile 'openjdk.zip'; 		Write-Host 'Expanding ...'; 	New-Item -ItemType Directory -Path C:\temp | Out-Null; 	Expand-Archive openjdk.zip -DestinationPath C:\temp; 	Move-Item -Path C:\temp\* -Destination $env:JAVA_HOME; 	Remove-Item C:\temp; 		Write-Host 'Removing ...'; 	Remove-Item openjdk.zip -Force; 		Write-Host 'Verifying install ...'; 	Write-Host '  java --version'; java --version; 		Write-Host 'Complete.'
 ```
 
 -	Layers:
-	-	`sha256:8f616e6e9eec767c425fd9346648807d1b658d20ff6097be1d955aac69c26642`  
-		Size: 1.3 GB (1251699055 bytes)  
+	-	`sha256:97f65a0ec59e643faf84024aa713a9be059322380315fda829756bbbd96d6258`  
+		Size: 1.4 GB (1436863614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.foreign.diff.tar.gzip
-	-	`sha256:dccd9e4d14d3d5a6e93f87350b903e117368ada32d711986f779b5a3ef8657cc`  
-		Size: 975.3 MB (975255801 bytes)  
+	-	`sha256:12fb50a031bdc8d2b65d86d694a4ed20e937852ed1bd3c433d8f2f60279cecc7`  
+		Size: 800.7 MB (800671635 bytes)  
 		MIME: application/vnd.docker.image.rootfs.foreign.diff.tar.gzip
-	-	`sha256:1ab01d498c34190a1e49e15239442a41312c6ea5904e18f186f84f90f11fc422`  
-		Last Modified: Wed, 13 Apr 2022 03:13:51 GMT  
-		Size: 1.4 KB (1418 bytes)  
+	-	`sha256:e88d40042c6dc2d74dace22d66dfa64aeebe4cd3eec90e5081400debd9281a35`  
+		Last Modified: Tue, 10 May 2022 18:16:13 GMT  
+		Size: 1.4 KB (1414 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c156288a763e09322f37d1214a5fcfaa1ebfbf8a108ee1351f5321537e137ef`  
-		Last Modified: Tue, 19 Apr 2022 00:49:30 GMT  
-		Size: 629.6 KB (629633 bytes)  
+	-	`sha256:7320671bb1ef07c493563d61e332d907b7a248c0d182698a877d84e65327b614`  
+		Last Modified: Wed, 11 May 2022 15:56:04 GMT  
+		Size: 607.9 KB (607907 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14570f98afbbd26047ba4240c4fbc7d318dafb1305f4fc74ff47a6d56ddf8db7`  
-		Last Modified: Tue, 19 Apr 2022 01:07:05 GMT  
-		Size: 1.3 KB (1318 bytes)  
+	-	`sha256:04bc3dd629c8dabeb6675daa622744876e81143659ca3ad17335cf7824a4bee6`  
+		Last Modified: Wed, 11 May 2022 16:15:40 GMT  
+		Size: 1.3 KB (1281 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a921e6feaf37907e9ca9b3b20d208d4a385093b5a66da6c8f9f7e2330057813`  
-		Last Modified: Tue, 19 Apr 2022 01:07:03 GMT  
-		Size: 559.9 KB (559854 bytes)  
+	-	`sha256:e8f3278ddbee756ab386c7c77b7c4249a04c5d69bb00423ba955f56d2d97fb03`  
+		Last Modified: Wed, 11 May 2022 16:15:37 GMT  
+		Size: 539.6 KB (539571 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ab36691fd2a01c0d96f08be815d7b18dc6f6820a153eb4bf1b5bf06411051910`  
-		Last Modified: Mon, 25 Apr 2022 20:29:48 GMT  
-		Size: 1.4 KB (1431 bytes)  
+	-	`sha256:48ab67dde272f710ce523240df9a73bcb488645dad7ff8d89bb7bd195caceb0f`  
+		Last Modified: Wed, 11 May 2022 16:15:37 GMT  
+		Size: 1.3 KB (1315 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cac4cd395bbca27f823701889395d5a972f6a80673003458d08b308330081d2b`  
-		Last Modified: Mon, 25 Apr 2022 20:34:57 GMT  
-		Size: 1.4 KB (1423 bytes)  
+	-	`sha256:1317eb33837f1e5e813277c53a8c551d9bc7e0b2a72702182c2563e0922fa33c`  
+		Last Modified: Wed, 11 May 2022 16:20:40 GMT  
+		Size: 1.3 KB (1287 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b9d56e74b4206732d4e65c847ce234e159b7398a31d46af9213da7bdc294c7a`  
-		Last Modified: Mon, 25 Apr 2022 20:35:45 GMT  
-		Size: 40.1 MB (40054788 bytes)  
+	-	`sha256:c8cf5d1b1c1c37cb762714669dfa4a5d5944423a12b464f75c68b2e194d5402c`  
+		Last Modified: Wed, 11 May 2022 16:21:24 GMT  
+		Size: 40.0 MB (40025243 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
