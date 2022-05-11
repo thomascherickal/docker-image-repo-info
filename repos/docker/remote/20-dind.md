@@ -1,7 +1,7 @@
 ## `docker:20-dind`
 
 ```console
-$ docker pull docker@sha256:7e631c025ee83a0017eca4c34edfb0d081c5773c7c6a0bcc293090ba0d8532e0
+$ docker pull docker@sha256:fb9cc626282893e4c7af33821af0ea7f6f8349d06955fef47efed35d6dbfc518
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull docker@sha256:7e631c025ee83a0017eca4c34edfb0d081c5773c7c6a0bcc2930
 ### `docker:20-dind` - linux; amd64
 
 ```console
-$ docker pull docker@sha256:46052e352d67a873ed9cc1c7ac0a2ff37a0332c5bc7d560d8834cb614304d0e2
+$ docker pull docker@sha256:bfba7b914767c3e037a040f1d9f85ad723a8c1fa52c596c6b233226f9614eb0b
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **77.0 MB (76986994 bytes)**  
+-	Total Size: **100.6 MB (100557649 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c89d806adeb8b44ee0adb32848b2e34cef28485b72f81a2b1b033df9ecd8a471`
+-	Image ID: `sha256:38003cc3a7ba9abd5e2a3f94c797f237f139118df6af1c0838a6d4ea021b0c6f`
 -	Entrypoint: `["dockerd-entrypoint.sh"]`
 -	Default Command: `[]`
 
@@ -36,35 +36,43 @@ RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
 ENV DOCKER_VERSION=20.10.15
 # Fri, 06 May 2022 01:19:31 GMT
 RUN set -eux; 		apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			url='https://download.docker.com/linux/static/stable/x86_64/docker-20.10.15.tgz'; 			;; 		'armhf') 			url='https://download.docker.com/linux/static/stable/armel/docker-20.10.15.tgz'; 			;; 		'armv7') 			url='https://download.docker.com/linux/static/stable/armhf/docker-20.10.15.tgz'; 			;; 		'aarch64') 			url='https://download.docker.com/linux/static/stable/aarch64/docker-20.10.15.tgz'; 			;; 		*) echo >&2 "error: unsupported architecture ($apkArch)"; exit 1 ;; 	esac; 		wget -O docker.tgz "$url"; 		tar --extract 		--file docker.tgz 		--strip-components 1 		--directory /usr/local/bin/ 	; 	rm docker.tgz; 		dockerd --version; 	docker --version
-# Fri, 06 May 2022 01:19:31 GMT
+# Wed, 11 May 2022 01:30:40 GMT
+ENV DOCKER_BUILDX_VERSION=0.8.2
+# Wed, 11 May 2022 01:30:42 GMT
+RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-amd64'; 			sha256='c64de4f3c30f7a73ff9db637660c7aa0f00234368105b0a09fa8e24eebe910c3'; 			;; 		'armhf') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-arm-v6'; 			sha256='d0e5d19cd67ea7a351e3bfe1de96f3d583a5b80f1bbadd61f7adcd61b147e5f5'; 			;; 		'armv7') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-arm-v7'; 			sha256='b5bb1e28e9413a75b2600955c486870aafd234f69953601eecc3664bd3af7463'; 			;; 		'aarch64') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-arm64'; 			sha256='304d3d9822c75f98ad9cf57f0c234bcf326bbb96d791d551728cadd72a7a377f'; 			;; 		'ppc64le') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-ppc64le'; 			sha256='32b317d86c700d920468f162f93ae2282777da556ee49b4329f6c72ee2b11b85'; 			;; 		'riscv64') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-riscv64'; 			sha256='76d5fcf92ffa31b3e470d8ec1ab11f7b6997729e5c94d543fec765ad79ad0630'; 			;; 		's390x') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-s390x'; 			sha256='ec4bb6f271f38dca5a377a70be24ee2108a85f6e6ba511ad3b805c4f1602a0d2'; 			;; 		*) echo >&2 "warning: unsupported buildx architecture ($apkArch); skipping"; exit 0 ;; 	esac; 	plugin='/usr/libexec/docker/cli-plugins/docker-buildx'; 	mkdir -p "$(dirname "$plugin")"; 	wget -O "$plugin" "$url"; 	echo "$sha256 *$plugin" | sha256sum -c -; 	chmod +x "$plugin"; 	docker buildx version
+# Wed, 11 May 2022 01:30:42 GMT
+ENV DOCKER_COMPOSE_VERSION=2.5.0
+# Wed, 11 May 2022 01:30:44 GMT
+RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64'; 			sha256='6296d17268c77a7159f57f04ed26dd2989f909c58cca4d44d1865f28bd27dd67'; 			;; 		'armhf') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-armv6'; 			sha256='92b423e2c4d0ca0a979d7b6a4fb13707612f8fa19b900bc6cd1c2cf83f2780c5'; 			;; 		'armv7') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-armv7'; 			sha256='d728dcbe5e20103e9b025efdbb6bfbca9ea9866851e669f7775fe3ebb7ab945c'; 			;; 		'aarch64') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-aarch64'; 			sha256='7efc61cc85fe712f14f04a6886d1481c96fe958be265f67482583b4b713b6a22'; 			;; 		'ppc64le') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-ppc64le'; 			sha256='e40af00a5f3ef87d31372f949134411b574042b8c055b2e5da12b92192405cb6'; 			;; 		's390x') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-s390x'; 			sha256='c36e48910f095d07d582b69363fb3f902bb6fab9e2bd3d5ed82a67d1b2279a39'; 			;; 		*) echo >&2 "warning: unsupported compose architecture ($apkArch); skipping"; exit 0 ;; 	esac; 	plugin='/usr/libexec/docker/cli-plugins/docker-compose'; 	mkdir -p "$(dirname "$plugin")"; 	wget -O "$plugin" "$url"; 	echo "$sha256 *$plugin" | sha256sum -c -; 	chmod +x "$plugin"; 	ln -sv "$plugin" /usr/local/bin/; 	docker-compose --version; 	docker compose version
+# Wed, 11 May 2022 01:30:45 GMT
 COPY file:abb137d24130e7fa2bdd38694af607361ecb688521e60965681e49460964a204 in /usr/local/bin/modprobe 
-# Fri, 06 May 2022 01:19:31 GMT
+# Wed, 11 May 2022 01:30:45 GMT
 COPY file:5b18768029dab8174c9d5957bb39560bde5ef6cba50fbbca222731a0059b449b in /usr/local/bin/ 
-# Fri, 06 May 2022 01:19:32 GMT
+# Wed, 11 May 2022 01:30:45 GMT
 ENV DOCKER_TLS_CERTDIR=/certs
-# Fri, 06 May 2022 01:19:32 GMT
+# Wed, 11 May 2022 01:30:45 GMT
 RUN mkdir /certs /certs/client && chmod 1777 /certs /certs/client
-# Fri, 06 May 2022 01:19:32 GMT
+# Wed, 11 May 2022 01:30:45 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 06 May 2022 01:19:32 GMT
+# Wed, 11 May 2022 01:30:46 GMT
 CMD ["sh"]
-# Fri, 06 May 2022 01:19:38 GMT
+# Wed, 11 May 2022 01:30:51 GMT
 RUN set -eux; 	apk add --no-cache 		btrfs-progs 		e2fsprogs 		e2fsprogs-extra 		ip6tables 		iptables 		openssl 		shadow-uidmap 		xfsprogs 		xz 		pigz 	; 	if zfs="$(apk info --no-cache --quiet zfs)" && [ -n "$zfs" ]; then 		apk add --no-cache zfs; 	fi
-# Fri, 06 May 2022 01:19:38 GMT
+# Wed, 11 May 2022 01:30:52 GMT
 RUN set -eux; 	addgroup -S dockremap; 	adduser -S -G dockremap dockremap; 	echo 'dockremap:165536:65536' >> /etc/subuid; 	echo 'dockremap:165536:65536' >> /etc/subgid
-# Fri, 06 May 2022 01:19:38 GMT
+# Wed, 11 May 2022 01:30:52 GMT
 ENV DIND_COMMIT=42b1175eda071c0e9121e1d64345928384a93df1
-# Fri, 06 May 2022 01:19:39 GMT
+# Wed, 11 May 2022 01:30:53 GMT
 RUN set -eux; 	wget -O /usr/local/bin/dind "https://raw.githubusercontent.com/docker/docker/${DIND_COMMIT}/hack/dind"; 	chmod +x /usr/local/bin/dind
-# Fri, 06 May 2022 01:19:39 GMT
+# Wed, 11 May 2022 01:30:53 GMT
 COPY file:45c7926c5d79023b457ad24274c893b1fc21f241bed46421dc901b8237045f17 in /usr/local/bin/ 
-# Fri, 06 May 2022 01:19:39 GMT
+# Wed, 11 May 2022 01:30:53 GMT
 VOLUME [/var/lib/docker]
-# Fri, 06 May 2022 01:19:39 GMT
+# Wed, 11 May 2022 01:30:53 GMT
 EXPOSE 2375 2376
-# Fri, 06 May 2022 01:19:39 GMT
+# Wed, 11 May 2022 01:30:53 GMT
 ENTRYPOINT ["dockerd-entrypoint.sh"]
-# Fri, 06 May 2022 01:19:40 GMT
+# Wed, 11 May 2022 01:30:53 GMT
 CMD []
 ```
 
@@ -85,46 +93,54 @@ CMD []
 		Last Modified: Fri, 06 May 2022 01:20:23 GMT  
 		Size: 65.5 MB (65461079 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6af8578cc8ce6f162e41363fa58a27e2ea94ceb0338b28937cf8cf46c8837cfa`  
-		Last Modified: Fri, 06 May 2022 01:20:12 GMT  
-		Size: 544.0 B  
+	-	`sha256:2220c12dac3441d27b5387a49fccc6b7f5af7ddc9aff8ed33606d0d7edfd8eaa`  
+		Last Modified: Wed, 11 May 2022 01:31:30 GMT  
+		Size: 14.5 MB (14454323 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5283cf8c93260401ac46d18e2eb011caef2ae194c86b7075b4e1688e223e6ea8`  
-		Last Modified: Fri, 06 May 2022 01:20:12 GMT  
-		Size: 1.0 KB (1017 bytes)  
+	-	`sha256:bc445e1e497c3b13a52a6d0a3d80ca2647800e00269b8a565d6bda861a29ace7`  
+		Last Modified: Wed, 11 May 2022 01:31:29 GMT  
+		Size: 9.1 MB (9114015 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71edd8471c75e1e7d0493c72d8b3c091cfdd766c4cff1e6feea6e4cfadc5f9b3`  
-		Last Modified: Fri, 06 May 2022 01:20:12 GMT  
+	-	`sha256:9dd7ed9cb253bc64e75aca8594cea35b4855c0dc0019b0deafc2129cb1654839`  
+		Last Modified: Wed, 11 May 2022 01:31:28 GMT  
+		Size: 548.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:dc3b84550078ef54a0f19b21faabcfbab4b0bee902667e27e99677b7823f5e7b`  
+		Last Modified: Wed, 11 May 2022 01:31:28 GMT  
+		Size: 1.0 KB (1021 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:09f2706e8f26ae6d1aeac1334e6877023ee32ac62243384effb1448afd5b2c8d`  
+		Last Modified: Wed, 11 May 2022 01:31:28 GMT  
 		Size: 150.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e0dd01251748cb6a73a0d30dfd3a25755f4685dbf76b29e64f8c2edd8c8698c3`  
-		Last Modified: Fri, 06 May 2022 01:20:42 GMT  
-		Size: 6.7 MB (6734897 bytes)  
+	-	`sha256:6b1d61b2da2cecaa5e21adefa8917ed7b2cb9dcf5b98a76806fc9a0f90957161`  
+		Last Modified: Wed, 11 May 2022 01:31:49 GMT  
+		Size: 6.7 MB (6737213 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:63a803df84e5a9b30a262c0af895bfe1cdea7d2d3bbc49e1412b70a4d523e8b5`  
-		Last Modified: Fri, 06 May 2022 01:20:41 GMT  
-		Size: 1.3 KB (1319 bytes)  
+	-	`sha256:f4e2bb1776af038787fb0139867e401b56118a1570400eded6f5f8f62a178d50`  
+		Last Modified: Wed, 11 May 2022 01:31:48 GMT  
+		Size: 1.3 KB (1318 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd9d9367a5acca1316016f056971aa65f58bb4069c850b557d741cc2ef54db7d`  
-		Last Modified: Fri, 06 May 2022 01:20:41 GMT  
-		Size: 958.0 B  
+	-	`sha256:f95cd43b09a63fd9c74d4e411be4c31cad9d8f04219b28b6d4c5b62fecae7f7a`  
+		Last Modified: Wed, 11 May 2022 01:31:48 GMT  
+		Size: 957.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6514e822dabf5af9c985b472d00207f4dd2682902d9dad66e415d08a12eee70e`  
-		Last Modified: Fri, 06 May 2022 01:20:41 GMT  
-		Size: 2.7 KB (2749 bytes)  
+	-	`sha256:b4f07cfe16f952028090e2c8fb742533364042619bc8dafa2cf4a0410770a352`  
+		Last Modified: Wed, 11 May 2022 01:31:48 GMT  
+		Size: 2.7 KB (2744 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `docker:20-dind` - linux; arm64 variant v8
 
 ```console
-$ docker pull docker@sha256:333ea2510abe899d7c9f57fbd47d94b4300e46ea1b9972beb14aa0c5867bba13
+$ docker pull docker@sha256:e5bc7537e92712bb526f60fed8a26a8f604275cd9991e86c16e2508946ccb7ad
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **71.3 MB (71251696 bytes)**  
+-	Total Size: **92.7 MB (92707025 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d62dcf8507f3db88fb2e57abaac240a09ea1c7157da93e46836b1d297b7f47a0`
+-	Image ID: `sha256:7cd1505f2e8cc2cb33bbd004024038a207d64bc164d0e4a02784dd6d4ddbd51b`
 -	Entrypoint: `["dockerd-entrypoint.sh"]`
 -	Default Command: `[]`
 
@@ -141,35 +157,43 @@ RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
 ENV DOCKER_VERSION=20.10.15
 # Fri, 06 May 2022 00:39:38 GMT
 RUN set -eux; 		apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			url='https://download.docker.com/linux/static/stable/x86_64/docker-20.10.15.tgz'; 			;; 		'armhf') 			url='https://download.docker.com/linux/static/stable/armel/docker-20.10.15.tgz'; 			;; 		'armv7') 			url='https://download.docker.com/linux/static/stable/armhf/docker-20.10.15.tgz'; 			;; 		'aarch64') 			url='https://download.docker.com/linux/static/stable/aarch64/docker-20.10.15.tgz'; 			;; 		*) echo >&2 "error: unsupported architecture ($apkArch)"; exit 1 ;; 	esac; 		wget -O docker.tgz "$url"; 		tar --extract 		--file docker.tgz 		--strip-components 1 		--directory /usr/local/bin/ 	; 	rm docker.tgz; 		dockerd --version; 	docker --version
-# Fri, 06 May 2022 00:39:39 GMT
+# Wed, 11 May 2022 00:42:54 GMT
+ENV DOCKER_BUILDX_VERSION=0.8.2
+# Wed, 11 May 2022 00:42:59 GMT
+RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-amd64'; 			sha256='c64de4f3c30f7a73ff9db637660c7aa0f00234368105b0a09fa8e24eebe910c3'; 			;; 		'armhf') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-arm-v6'; 			sha256='d0e5d19cd67ea7a351e3bfe1de96f3d583a5b80f1bbadd61f7adcd61b147e5f5'; 			;; 		'armv7') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-arm-v7'; 			sha256='b5bb1e28e9413a75b2600955c486870aafd234f69953601eecc3664bd3af7463'; 			;; 		'aarch64') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-arm64'; 			sha256='304d3d9822c75f98ad9cf57f0c234bcf326bbb96d791d551728cadd72a7a377f'; 			;; 		'ppc64le') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-ppc64le'; 			sha256='32b317d86c700d920468f162f93ae2282777da556ee49b4329f6c72ee2b11b85'; 			;; 		'riscv64') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-riscv64'; 			sha256='76d5fcf92ffa31b3e470d8ec1ab11f7b6997729e5c94d543fec765ad79ad0630'; 			;; 		's390x') 			url='https://github.com/docker/buildx/releases/download/v0.8.2/buildx-v0.8.2.linux-s390x'; 			sha256='ec4bb6f271f38dca5a377a70be24ee2108a85f6e6ba511ad3b805c4f1602a0d2'; 			;; 		*) echo >&2 "warning: unsupported buildx architecture ($apkArch); skipping"; exit 0 ;; 	esac; 	plugin='/usr/libexec/docker/cli-plugins/docker-buildx'; 	mkdir -p "$(dirname "$plugin")"; 	wget -O "$plugin" "$url"; 	echo "$sha256 *$plugin" | sha256sum -c -; 	chmod +x "$plugin"; 	docker buildx version
+# Wed, 11 May 2022 00:42:59 GMT
+ENV DOCKER_COMPOSE_VERSION=2.5.0
+# Wed, 11 May 2022 00:43:02 GMT
+RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-x86_64'; 			sha256='6296d17268c77a7159f57f04ed26dd2989f909c58cca4d44d1865f28bd27dd67'; 			;; 		'armhf') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-armv6'; 			sha256='92b423e2c4d0ca0a979d7b6a4fb13707612f8fa19b900bc6cd1c2cf83f2780c5'; 			;; 		'armv7') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-armv7'; 			sha256='d728dcbe5e20103e9b025efdbb6bfbca9ea9866851e669f7775fe3ebb7ab945c'; 			;; 		'aarch64') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-aarch64'; 			sha256='7efc61cc85fe712f14f04a6886d1481c96fe958be265f67482583b4b713b6a22'; 			;; 		'ppc64le') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-ppc64le'; 			sha256='e40af00a5f3ef87d31372f949134411b574042b8c055b2e5da12b92192405cb6'; 			;; 		's390x') 			url='https://github.com/docker/compose/releases/download/v2.5.0/docker-compose-linux-s390x'; 			sha256='c36e48910f095d07d582b69363fb3f902bb6fab9e2bd3d5ed82a67d1b2279a39'; 			;; 		*) echo >&2 "warning: unsupported compose architecture ($apkArch); skipping"; exit 0 ;; 	esac; 	plugin='/usr/libexec/docker/cli-plugins/docker-compose'; 	mkdir -p "$(dirname "$plugin")"; 	wget -O "$plugin" "$url"; 	echo "$sha256 *$plugin" | sha256sum -c -; 	chmod +x "$plugin"; 	ln -sv "$plugin" /usr/local/bin/; 	docker-compose --version; 	docker compose version
+# Wed, 11 May 2022 00:43:04 GMT
 COPY file:abb137d24130e7fa2bdd38694af607361ecb688521e60965681e49460964a204 in /usr/local/bin/modprobe 
-# Fri, 06 May 2022 00:39:40 GMT
+# Wed, 11 May 2022 00:43:05 GMT
 COPY file:5b18768029dab8174c9d5957bb39560bde5ef6cba50fbbca222731a0059b449b in /usr/local/bin/ 
-# Fri, 06 May 2022 00:39:40 GMT
+# Wed, 11 May 2022 00:43:05 GMT
 ENV DOCKER_TLS_CERTDIR=/certs
-# Fri, 06 May 2022 00:39:41 GMT
+# Wed, 11 May 2022 00:43:06 GMT
 RUN mkdir /certs /certs/client && chmod 1777 /certs /certs/client
-# Fri, 06 May 2022 00:39:42 GMT
+# Wed, 11 May 2022 00:43:07 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 06 May 2022 00:39:43 GMT
+# Wed, 11 May 2022 00:43:08 GMT
 CMD ["sh"]
-# Fri, 06 May 2022 00:39:53 GMT
+# Wed, 11 May 2022 00:43:19 GMT
 RUN set -eux; 	apk add --no-cache 		btrfs-progs 		e2fsprogs 		e2fsprogs-extra 		ip6tables 		iptables 		openssl 		shadow-uidmap 		xfsprogs 		xz 		pigz 	; 	if zfs="$(apk info --no-cache --quiet zfs)" && [ -n "$zfs" ]; then 		apk add --no-cache zfs; 	fi
-# Fri, 06 May 2022 00:39:53 GMT
+# Wed, 11 May 2022 00:43:20 GMT
 RUN set -eux; 	addgroup -S dockremap; 	adduser -S -G dockremap dockremap; 	echo 'dockremap:165536:65536' >> /etc/subuid; 	echo 'dockremap:165536:65536' >> /etc/subgid
-# Fri, 06 May 2022 00:39:54 GMT
+# Wed, 11 May 2022 00:43:21 GMT
 ENV DIND_COMMIT=42b1175eda071c0e9121e1d64345928384a93df1
-# Fri, 06 May 2022 00:39:55 GMT
+# Wed, 11 May 2022 00:43:22 GMT
 RUN set -eux; 	wget -O /usr/local/bin/dind "https://raw.githubusercontent.com/docker/docker/${DIND_COMMIT}/hack/dind"; 	chmod +x /usr/local/bin/dind
-# Fri, 06 May 2022 00:39:57 GMT
+# Wed, 11 May 2022 00:43:24 GMT
 COPY file:45c7926c5d79023b457ad24274c893b1fc21f241bed46421dc901b8237045f17 in /usr/local/bin/ 
-# Fri, 06 May 2022 00:39:57 GMT
+# Wed, 11 May 2022 00:43:24 GMT
 VOLUME [/var/lib/docker]
-# Fri, 06 May 2022 00:39:58 GMT
+# Wed, 11 May 2022 00:43:25 GMT
 EXPOSE 2375 2376
-# Fri, 06 May 2022 00:39:59 GMT
+# Wed, 11 May 2022 00:43:26 GMT
 ENTRYPOINT ["dockerd-entrypoint.sh"]
-# Fri, 06 May 2022 00:40:00 GMT
+# Wed, 11 May 2022 00:43:27 GMT
 CMD []
 ```
 
@@ -190,31 +214,39 @@ CMD []
 		Last Modified: Fri, 06 May 2022 00:41:14 GMT  
 		Size: 60.0 MB (59973422 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5c620ef89e70dfd8ee45478c40df37fa3978a3834d62e9caaf6ea8784f194223`  
-		Last Modified: Fri, 06 May 2022 00:41:04 GMT  
-		Size: 545.0 B  
+	-	`sha256:0d8b8a1b3f8ca4629fce0550d02a91d6faf92e020a1cfa050c4e73fbeecffd0f`  
+		Last Modified: Wed, 11 May 2022 00:44:37 GMT  
+		Size: 13.1 MB (13097921 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:932fe59f5c2c048a3fe96c5a302bbec8674ad62617d71cda26f29fb956b3df14`  
-		Last Modified: Fri, 06 May 2022 00:41:04 GMT  
-		Size: 1.0 KB (1018 bytes)  
+	-	`sha256:ddd73b57441486d29bba8adc690d019a81a58d55afb2144a0a0ee9f04c48b58b`  
+		Last Modified: Wed, 11 May 2022 00:44:36 GMT  
+		Size: 8.4 MB (8353176 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a5e4e555ced57a6c5995c7c6c1e13e86a169af3622bf5a764d4eee0bdd94d30b`  
-		Last Modified: Fri, 06 May 2022 00:41:04 GMT  
-		Size: 116.0 B  
+	-	`sha256:d1491e487ee15eff8d1484795137ca77e8c33cef424c8009f58efb98b55e498c`  
+		Last Modified: Wed, 11 May 2022 00:44:35 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:acc82fabc8945c86cefb751ae77c8dd196e1ae4c73a5aee9cce65621245b47ae`  
-		Last Modified: Fri, 06 May 2022 00:41:35 GMT  
-		Size: 6.6 MB (6616060 bytes)  
+	-	`sha256:b7428344a1d209df26c6007938ae720ca5314b7194aad26da9450b76c2fdfb3c`  
+		Last Modified: Wed, 11 May 2022 00:44:35 GMT  
+		Size: 1.0 KB (1020 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3820c41861a9c3a37250697cb7e7fdf4e4cc80f0bd9c178d745f027a8a0d131d`  
-		Last Modified: Fri, 06 May 2022 00:41:34 GMT  
+	-	`sha256:cf19d592fc22ab6b365349a62e52010658ab6d152e903ad319f7b2ac588820b7`  
+		Last Modified: Wed, 11 May 2022 00:44:35 GMT  
+		Size: 117.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7787c7635a670bb2a73df457b35cc7189fcb71df87fcebab6a587c6868c1eba9`  
+		Last Modified: Wed, 11 May 2022 00:44:59 GMT  
+		Size: 6.6 MB (6620287 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:9929242070a07212fa6187a6481abb7f4f2537de4ca5834dc672eb54aabe985e`  
+		Last Modified: Wed, 11 May 2022 00:44:58 GMT  
 		Size: 1.3 KB (1291 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a2f2535fcfc181880522bf4850c1225697df6558a460f38463f088d913c7e12a`  
-		Last Modified: Fri, 06 May 2022 00:41:34 GMT  
-		Size: 956.0 B  
+	-	`sha256:9ce59cda5df84ca4590a12f295c6e1bdae8b5ab886613f7cb21c8f9981f2ba2a`  
+		Last Modified: Wed, 11 May 2022 00:44:58 GMT  
+		Size: 957.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a955231fc6b6d87f1db4f6969d0124c7c4128ae1b6eb86f1a6ccacf5d45ecaa3`  
-		Last Modified: Fri, 06 May 2022 00:41:34 GMT  
-		Size: 2.7 KB (2745 bytes)  
+	-	`sha256:34fe15f5668d48ec3ac87bcfd1153c4f44d21b5932a5b0431b126f12ad38dbd7`  
+		Last Modified: Wed, 11 May 2022 00:44:58 GMT  
+		Size: 2.7 KB (2744 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
