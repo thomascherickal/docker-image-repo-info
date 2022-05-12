@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b9767c570e7ddb21e7592e9b5a520f675fe82966d39400a843e74ac7dad5832c`
-- Created: `2022-04-21T10:54:33.000822338Z`
+- Image ID: `sha256:77051b014c41b8700deeb6a269651789594232f8f2c597f2faad029db92f2a31`
+- Created: `2022-05-12T03:35:08.505780262Z`
 - Virtual Size: ~ 791.31 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1581,11 +1581,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/grep/3.6-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/grep/3.6-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gzip=1.10-4`
+### `dpkg` source package: `gzip=1.10-4+deb11u1`
 
 Binary Packages:
 
-- `gzip=1.10-4`
+- `gzip=1.10-4+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 
@@ -1598,17 +1598,17 @@ Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gzip=1.10-4
-'http://deb.debian.org/debian/pool/main/g/gzip/gzip_1.10-4.dsc' gzip_1.10-4.dsc 1780 SHA256:c2728d6a042bf41e43f8bf86f520682a312235f981cca26a60fc0745ff536459
-'http://deb.debian.org/debian/pool/main/g/gzip/gzip_1.10.orig.tar.gz' gzip_1.10.orig.tar.gz 1201421 SHA256:c91f74430bf7bc20402e1f657d0b252cb80aa66ba333a25704512af346633c68
-'http://deb.debian.org/debian/pool/main/g/gzip/gzip_1.10-4.debian.tar.xz' gzip_1.10-4.debian.tar.xz 19300 SHA256:f3e40d75fe3f695c76f028194b2031a2016a302b3c95d28ebc52b8538331a708
+$ apt-get source -qq --print-uris gzip=1.10-4+deb11u1
+'http://security.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.10-4%2bdeb11u1.dsc' gzip_1.10-4+deb11u1.dsc 1812 SHA256:0bcc813d124297ae741573b30db5faefec038aff92616d6ba014f859703f5acf
+'http://security.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.10.orig.tar.gz' gzip_1.10.orig.tar.gz 1201421 SHA256:c91f74430bf7bc20402e1f657d0b252cb80aa66ba333a25704512af346633c68
+'http://security.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.10-4%2bdeb11u1.debian.tar.xz' gzip_1.10-4+deb11u1.debian.tar.xz 22952 SHA256:183338e989ad327fca8c3281e8452c571bafed0c3cca0b6cea269a34b8dc19d2
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gzip/1.10-4/ (for browsing the source)
-- https://sources.debian.net/src/gzip/1.10-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gzip/1.10-4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gzip/1.10-4+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/gzip/1.10-4+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gzip/1.10-4+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `harfbuzz=2.7.4-1`
 
@@ -3153,11 +3153,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.106-1`
+### `dpkg` source package: `linux=5.10.113-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.106-1`
+- `linux-libc-dev:amd64=5.10.113-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3173,17 +3173,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.10.106-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.106-1.dsc' linux_5.10.106-1.dsc 197238 SHA256:96cfb5d5406b674bd8680af79c0dbeb6e2a4393f5aa2128da4200df2f7874777
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.106.orig.tar.xz' linux_5.10.106.orig.tar.xz 121690564 SHA256:3627e9d9780005bafc88a3d6328c8cb28595ead750a15a1dc91bd38bda5177f3
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.106-1.debian.tar.xz' linux_5.10.106-1.debian.tar.xz 1493304 SHA256:348d8afa319885537c57c0219f1683fcd9383f2a7f86a64be33a879ca4d0e874
+$ apt-get source -qq --print-uris linux=5.10.113-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.113-1.dsc' linux_5.10.113-1.dsc 197238 SHA256:cecc032cf2c4a28cc5aa07a23b84aa7c529b3a14f354f6fd301f8485d81e5b85
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.113.orig.tar.xz' linux_5.10.113.orig.tar.xz 121715384 SHA256:d0dfa3fa7f33ef5436b541dd8cb1dd4060bdbc85694e446838596d66f55ac558
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.113-1.debian.tar.xz' linux_5.10.113-1.debian.tar.xz 1501772 SHA256:c0dc070ef00d75d483334f1c6b23fb6dae47cd6a009e2a960457ebb5780b9864
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/5.10.106-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.106-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.106-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/5.10.113-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.113-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.113-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -4551,53 +4551,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/xxhash/0.8.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/xxhash/0.8.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `xz-utils=5.2.5-2`
-
-Binary Packages:
-
-- `liblzma5:amd64=5.2.5-2`
-
-Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
-
-- `Autoconf`
-- `GPL-2`
-- `GPL-2+`
-- `GPL-3`
-- `LGPL-2`
-- `LGPL-2.1`
-- `LGPL-2.1+`
-- `PD`
-- `PD-debian`
-- `config-h`
-- `noderivs`
-- `none`
-- `permissive-fsf`
-- `permissive-nowarranty`
-- `probably-PD`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris xz-utils=5.2.5-2
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5-2.dsc' xz-utils_5.2.5-2.dsc 2312 SHA256:fa2706f0c863bee4715460bc9103c6fb73ad2cbc12d8d6d7d5dced81ab349949
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5.orig.tar.xz' xz-utils_5.2.5.orig.tar.xz 1148824 SHA256:3e1e518ffc912f86608a8cb35e4bd41ad1aec210df2a47aaa1f95e7f5576ef56
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5.orig.tar.xz.asc' xz-utils_5.2.5.orig.tar.xz.asc 833 SHA256:6efc0075a58912e640119d2b52ef7d1518b260d8720fadc73df21ab7fc727624
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.5-2.debian.tar.xz' xz-utils_5.2.5-2.debian.tar.xz 33532 SHA256:7bf06a86c35cc6b21a7731df9e11d241f8d3c16b0fe6ed78d64506d1bc29b06e
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/xz-utils/5.2.5-2/ (for browsing the source)
-- https://sources.debian.net/src/xz-utils/5.2.5-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xz-utils/5.2.5-2/ (for access to the source package after it no longer exists in the archive)
-
 ### `dpkg` source package: `xz-utils=5.2.5-2.1~deb11u1`
 
 Binary Packages:
 
+- `liblzma5:amd64=5.2.5-2.1~deb11u1`
 - `xz-utils=5.2.5-2.1~deb11u1`
 
-Licenses: (parsed from: `/usr/share/doc/xz-utils/copyright`)
+Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`, `/usr/share/doc/xz-utils/copyright`)
 
 - `Autoconf`
 - `GPL-2`
