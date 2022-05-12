@@ -1,7 +1,7 @@
 ## `mongo:4-focal`
 
 ```console
-$ docker pull mongo@sha256:770ccf905beea490bcbf73d75db6f6fc4b0cd3600c759249297e4e9c2c717dc7
+$ docker pull mongo@sha256:1eba1a3e09c68c338f7ff7f5209a92a577323fefa811326d893563df5323fb08
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull mongo@sha256:770ccf905beea490bcbf73d75db6f6fc4b0cd3600c759249297e4
 ### `mongo:4-focal` - linux; amd64
 
 ```console
-$ docker pull mongo@sha256:d3dc662b9f0a50d5408bb7cb19c68d276a1cae88212e53c870953a910b4e483b
+$ docker pull mongo@sha256:5afa88fb1e377a5d4fc928ed0dc04d557a07f4b4e11fa67ec43cea837f1f6eb9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **171.7 MB (171671604 bytes)**  
+-	Total Size: **171.7 MB (171688726 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:aa61e4b09cef04db6fd5668e61085e5f458e51c80edafe42fa8e01b5d2a4e8ee`
+-	Image ID: `sha256:646907c48dbe8157c320a91fb360872fd48a2a6d43e3e0762338afacd1dffb5e`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mongod"]`
 
@@ -52,21 +52,21 @@ ENV MONGO_PACKAGE=mongodb-org MONGO_REPO=repo.mongodb.org
 ENV MONGO_MAJOR=4.4
 # Sat, 30 Apr 2022 01:27:36 GMT
 RUN echo "deb [ signed-by=/etc/apt/keyrings/mongodb.gpg ] http://$MONGO_REPO/apt/ubuntu focal/${MONGO_PACKAGE%-unstable}/$MONGO_MAJOR multiverse" | tee "/etc/apt/sources.list.d/${MONGO_PACKAGE%-unstable}.list"
-# Sat, 30 Apr 2022 01:27:37 GMT
-ENV MONGO_VERSION=4.4.13
-# Sat, 30 Apr 2022 01:27:57 GMT
+# Thu, 12 May 2022 19:53:46 GMT
+ENV MONGO_VERSION=4.4.14
+# Thu, 12 May 2022 19:54:11 GMT
 RUN set -x 	&& export DEBIAN_FRONTEND=noninteractive 	&& apt-get update 	&& ln -s /bin/true /usr/local/bin/systemctl 	&& apt-get install -y 		${MONGO_PACKAGE}=$MONGO_VERSION 		${MONGO_PACKAGE}-server=$MONGO_VERSION 		${MONGO_PACKAGE}-shell=$MONGO_VERSION 		${MONGO_PACKAGE}-mongos=$MONGO_VERSION 		${MONGO_PACKAGE}-tools=$MONGO_VERSION 	&& rm -f /usr/local/bin/systemctl 	&& rm -rf /var/lib/apt/lists/* 	&& rm -rf /var/lib/mongodb 	&& mv /etc/mongod.conf /etc/mongod.conf.orig
-# Sat, 30 Apr 2022 01:27:59 GMT
+# Thu, 12 May 2022 19:54:12 GMT
 RUN mkdir -p /data/db /data/configdb 	&& chown -R mongodb:mongodb /data/db /data/configdb
-# Sat, 30 Apr 2022 01:27:59 GMT
+# Thu, 12 May 2022 19:54:12 GMT
 VOLUME [/data/db /data/configdb]
-# Sat, 30 Apr 2022 01:27:59 GMT
+# Thu, 12 May 2022 19:54:13 GMT
 COPY file:ff519c7454e20e6f14c42932b8d6eaee066ed739bfbbd2a6e884d0a7ffeead38 in /usr/local/bin/ 
-# Sat, 30 Apr 2022 01:27:59 GMT
+# Thu, 12 May 2022 19:54:13 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Sat, 30 Apr 2022 01:27:59 GMT
+# Thu, 12 May 2022 19:54:13 GMT
 EXPOSE 27017
-# Sat, 30 Apr 2022 01:27:59 GMT
+# Thu, 12 May 2022 19:54:13 GMT
 CMD ["mongod"]
 ```
 
@@ -99,17 +99,17 @@ CMD ["mongod"]
 		Last Modified: Sat, 30 Apr 2022 01:31:07 GMT  
 		Size: 260.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d423d6a5a5160979ee8b7472488ee7a8b7ef0f0b36ba1808373189201e6070c`  
-		Last Modified: Sat, 30 Apr 2022 01:31:25 GMT  
-		Size: 133.5 MB (133526858 bytes)  
+	-	`sha256:df96c98eb592e5aaef3369c1d1a08539d5f617afbf2764a55ed77d1522d019d6`  
+		Last Modified: Thu, 12 May 2022 19:55:36 GMT  
+		Size: 133.5 MB (133543982 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29d157208b19c197efd2a376caa48ef90c45929f0d2f9b5c3f22ef5e665f7e80`  
-		Last Modified: Sat, 30 Apr 2022 01:31:07 GMT  
-		Size: 170.0 B  
+	-	`sha256:0ff3e0ea9483ae9497bd7337d5e9561a65d47f1350b7a11b70520990b850e882`  
+		Last Modified: Thu, 12 May 2022 19:55:18 GMT  
+		Size: 169.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19f347f45530925b9084dc66a36971739d6fd280bd3bf873afbff1a228d122b7`  
-		Last Modified: Sat, 30 Apr 2022 01:31:07 GMT  
-		Size: 4.9 KB (4945 bytes)  
+	-	`sha256:a346ed1bb7aa54767bdf9d28461bbc09a53b6eb52a8794090ee153ed546eb097`  
+		Last Modified: Thu, 12 May 2022 19:55:18 GMT  
+		Size: 4.9 KB (4944 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mongo:4-focal` - linux; arm64 variant v8
