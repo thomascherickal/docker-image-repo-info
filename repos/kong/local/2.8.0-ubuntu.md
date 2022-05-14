@@ -291,14 +291,9 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.10
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.10.dsc' curl_7.68.0-1ubuntu2.10.dsc 2737 SHA512:c7e59b48d6743b2c0bd9fcfa76605cb4b9693bb467df2e2aabf25e38b0349f4d28aa50136efc25535f971a70a9c252d053a88539b9b0f0fdc36302f6ed145c2c
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.10.debian.tar.xz' curl_7.68.0-1ubuntu2.10.debian.tar.xz 52592 SHA512:2ed50fea6923e23c83b08a4c5eba4d1475f9d46308bd664804759a6bf8b187d9d649bcf59e171c853bbe65ab1b6403a4e00d29a3369bcf8fa21ca8a1d5275fe0
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -1230,14 +1225,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.4.0-109.123
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-109.123.dsc' linux_5.4.0-109.123.dsc 6990 SHA512:54e8cda3ba363213e3e2be06fb4de48145eb99ff03234cd91455dd37f80938cf6dd6a83683924a0e7af3d5d75b349100ff5a1db3268c3c5d00e317165610c284
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-109.123.diff.gz' linux_5.4.0-109.123.diff.gz 9316079 SHA512:505f2a54fcffc9677da4e3b9979a4074be2dcbc0c2ad069b3a6c5224e2240b2a7145dcf6a6457eaa74731fc1e5361035bf275275b903554323e2f61395adf95a
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
