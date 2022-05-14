@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a4becf970bceae40db6357aded92a98ba76f220e6359f6e99ae5fb7a93dec08a`
-- Created: `2022-05-05T01:31:58.318592206Z`
-- Virtual Size: ~ 881.88 Mb  
+- Image ID: `sha256:9e98a82c0a7af5f3a6f93074193b468b0c76babde642e2720262b5a8b231187f`
+- Created: `2022-05-13T23:56:46.176032202Z`
+- Virtual Size: ~ 881.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -19,10 +19,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.18`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.18.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.18.tar.xz.asc`
-  - `PHP_SHA256=db161652cacae4b31c347fbf2e17b80656473cb365f2bb3460c4552f5647e2e7`
+  - `PHP_VERSION=8.0.19`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.19.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.19.tar.xz.asc`
+  - `PHP_SHA256=ba62219c4b0486cbb2a04f0796749a46b0ee1f5a142ed454212b4e2460cb0fab`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `NEXTCLOUD_VERSION=24.0.0`
@@ -1448,11 +1448,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/grep/3.6-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/grep/3.6-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gzip=1.10-4`
+### `dpkg` source package: `gzip=1.10-4+deb11u1`
 
 Binary Packages:
 
-- `gzip=1.10-4`
+- `gzip=1.10-4+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 
@@ -1465,17 +1465,17 @@ Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gzip=1.10-4
-'http://deb.debian.org/debian/pool/main/g/gzip/gzip_1.10-4.dsc' gzip_1.10-4.dsc 1780 SHA256:c2728d6a042bf41e43f8bf86f520682a312235f981cca26a60fc0745ff536459
-'http://deb.debian.org/debian/pool/main/g/gzip/gzip_1.10.orig.tar.gz' gzip_1.10.orig.tar.gz 1201421 SHA256:c91f74430bf7bc20402e1f657d0b252cb80aa66ba333a25704512af346633c68
-'http://deb.debian.org/debian/pool/main/g/gzip/gzip_1.10-4.debian.tar.xz' gzip_1.10-4.debian.tar.xz 19300 SHA256:f3e40d75fe3f695c76f028194b2031a2016a302b3c95d28ebc52b8538331a708
+$ apt-get source -qq --print-uris gzip=1.10-4+deb11u1
+'http://security.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.10-4%2bdeb11u1.dsc' gzip_1.10-4+deb11u1.dsc 1812 SHA256:0bcc813d124297ae741573b30db5faefec038aff92616d6ba014f859703f5acf
+'http://security.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.10.orig.tar.gz' gzip_1.10.orig.tar.gz 1201421 SHA256:c91f74430bf7bc20402e1f657d0b252cb80aa66ba333a25704512af346633c68
+'http://security.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.10-4%2bdeb11u1.debian.tar.xz' gzip_1.10-4+deb11u1.debian.tar.xz 22952 SHA256:183338e989ad327fca8c3281e8452c571bafed0c3cca0b6cea269a34b8dc19d2
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gzip/1.10-4/ (for browsing the source)
-- https://sources.debian.net/src/gzip/1.10-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gzip/1.10-4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gzip/1.10-4+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/gzip/1.10-4+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gzip/1.10-4+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `hostname=3.23`
 
@@ -2863,11 +2863,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.106-1`
+### `dpkg` source package: `linux=5.10.113-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.106-1`
+- `linux-libc-dev:amd64=5.10.113-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -2883,17 +2883,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.10.106-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.106-1.dsc' linux_5.10.106-1.dsc 197238 SHA256:96cfb5d5406b674bd8680af79c0dbeb6e2a4393f5aa2128da4200df2f7874777
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.106.orig.tar.xz' linux_5.10.106.orig.tar.xz 121690564 SHA256:3627e9d9780005bafc88a3d6328c8cb28595ead750a15a1dc91bd38bda5177f3
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.106-1.debian.tar.xz' linux_5.10.106-1.debian.tar.xz 1493304 SHA256:348d8afa319885537c57c0219f1683fcd9383f2a7f86a64be33a879ca4d0e874
+$ apt-get source -qq --print-uris linux=5.10.113-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.113-1.dsc' linux_5.10.113-1.dsc 197238 SHA256:cecc032cf2c4a28cc5aa07a23b84aa7c529b3a14f354f6fd301f8485d81e5b85
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.113.orig.tar.xz' linux_5.10.113.orig.tar.xz 121715384 SHA256:d0dfa3fa7f33ef5436b541dd8cb1dd4060bdbc85694e446838596d66f55ac558
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.113-1.debian.tar.xz' linux_5.10.113-1.debian.tar.xz 1501772 SHA256:c0dc070ef00d75d483334f1c6b23fb6dae47cd6a009e2a960457ebb5780b9864
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/5.10.106-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.106-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.106-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/5.10.113-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.113-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.113-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -3626,11 +3626,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/popt/1.18-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/popt/1.18-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-13=13.5-0+deb11u1`
+### `dpkg` source package: `postgresql-13=13.7-0+deb11u1`
 
 Binary Packages:
 
-- `libpq5:amd64=13.5-0+deb11u1`
+- `libpq5:amd64=13.7-0+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -3653,17 +3653,17 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-13=13.5-0+deb11u1
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.5-0%2bdeb11u1.dsc' postgresql-13_13.5-0+deb11u1.dsc 3696 SHA256:70481ab99d82417bef296378c69720657347c03b188d276e9b82f6587936d3be
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.5.orig.tar.bz2' postgresql-13_13.5.orig.tar.bz2 21186674 SHA256:9b81067a55edbaabc418aacef457dd8477642827499560b00615a6ea6c13f6b3
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.5-0%2bdeb11u1.debian.tar.xz' postgresql-13_13.5-0+deb11u1.debian.tar.xz 28796 SHA256:36f225fda1f0759d8892d42a99acf565e1693ad2572714aad91b807f03cb4c95
+$ apt-get source -qq --print-uris postgresql-13=13.7-0+deb11u1
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.7-0%2bdeb11u1.dsc' postgresql-13_13.7-0+deb11u1.dsc 3696 SHA256:02a07efd157ea960d301d1ac0be53415118bb3ee5a2e797e65cd170c22961782
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.7.orig.tar.bz2' postgresql-13_13.7.orig.tar.bz2 21364433 SHA256:1b905bf4f3d83614a393b3c51fd345910fd261e4f5124a68d9a1fdd3a2a46399
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.7-0%2bdeb11u1.debian.tar.xz' postgresql-13_13.7-0+deb11u1.debian.tar.xz 29364 SHA256:a05cfcf96856339962efcf78e236dab922cfb5889e13f2a34d9eb9fb4cb24b90
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/postgresql-13/13.5-0+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-13/13.5-0+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-13/13.5-0+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/postgresql-13/13.7-0+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-13/13.7-0+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-13/13.7-0+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.17-5`
 

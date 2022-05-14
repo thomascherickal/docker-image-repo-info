@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3381429c0fd41eec995a5527c84cf47c72cda9ea064ac5af126493228cfebe75`
-- Created: `2022-05-05T01:33:31.561337112Z`
-- Virtual Size: ~ 494.69 Mb  
+- Image ID: `sha256:a81d75dbf6edc8faebae9b320458ae07f73f4a87657a0f185f629c2982062941`
+- Created: `2022-05-12T22:08:59.996666256Z`
+- Virtual Size: ~ 498.33 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.18`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.18.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.18.tar.xz.asc`
-  - `PHP_SHA256=db161652cacae4b31c347fbf2e17b80656473cb365f2bb3460c4552f5647e2e7`
+  - `PHP_VERSION=8.0.19`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.19.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.19.tar.xz.asc`
+  - `PHP_SHA256=ba62219c4b0486cbb2a04f0796749a46b0ee1f5a142ed454212b4e2460cb0fab`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `NEXTCLOUD_VERSION=24.0.0`
@@ -217,16 +217,16 @@ MIT
 ### `apk` package: `freetype`
 
 ```console
-freetype-2.11.1-r0 description:
+freetype-2.11.1-r1 description:
 TrueType font rendering library
 
-freetype-2.11.1-r0 webpage:
+freetype-2.11.1-r1 webpage:
 https://www.freetype.org/
 
-freetype-2.11.1-r0 installed size:
+freetype-2.11.1-r1 installed size:
 748 KiB
 
-freetype-2.11.1-r0 license:
+freetype-2.11.1-r1 license:
 FTL GPL-2.0-or-later
 
 ```
@@ -404,16 +404,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1n-r0 description:
+libcrypto1.1-1.1.1o-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1n-r0 webpage:
+libcrypto1.1-1.1.1o-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1n-r0 installed size:
+libcrypto1.1-1.1.1o-r0 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1n-r0 license:
+libcrypto1.1-1.1.1o-r0 license:
 OpenSSL
 
 ```
@@ -421,16 +421,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.80.0-r0 description:
+libcurl-7.80.0-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.80.0-r0 webpage:
+libcurl-7.80.0-r1 webpage:
 https://curl.se/
 
-libcurl-7.80.0-r0 installed size:
+libcurl-7.80.0-r1 installed size:
 504 KiB
 
-libcurl-7.80.0-r0 license:
+libcurl-7.80.0-r1 license:
 MIT
 
 ```
@@ -642,16 +642,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1n-r0 description:
+libssl1.1-1.1.1o-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1n-r0 webpage:
+libssl1.1-1.1.1o-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1n-r0 installed size:
+libssl1.1-1.1.1o-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1n-r0 license:
+libssl1.1-1.1.1o-r0 license:
 OpenSSL
 
 ```
@@ -795,16 +795,16 @@ MIT
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.13-r0 description:
+libxml2-2.9.14-r0 description:
 XML parsing library, version 2
 
-libxml2-2.9.13-r0 webpage:
+libxml2-2.9.14-r0 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.13-r0 installed size:
+libxml2-2.9.14-r0 installed size:
 1200 KiB
 
-libxml2-2.9.13-r0 license:
+libxml2-2.9.14-r0 license:
 MIT
 
 ```
