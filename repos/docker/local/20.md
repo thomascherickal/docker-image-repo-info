@@ -1,17 +1,17 @@
-# `docker:20.10.15`
+# `docker:20.10.16`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6ea969625ebd2ada93d5e0cdeae98952b015d2a9521ecd793edf6a128939eab6`
-- Created: `2022-05-11T01:30:46.069962077Z`
-- Virtual Size: ~ 293.66 Mb  
+- Image ID: `sha256:6452e962280e8dbf51cf3c30175f89815f17c082b1f6c031533cb8f30553dbcf`
+- Created: `2022-05-12T19:19:40.992826589Z`
+- Virtual Size: ~ 293.81 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `DOCKER_VERSION=20.10.15`
+  - `DOCKER_VERSION=20.10.16`
   - `DOCKER_BUILDX_VERSION=0.8.2`
   - `DOCKER_COMPOSE_VERSION=2.5.0`
   - `DOCKER_TLS_CERTDIR=/certs`

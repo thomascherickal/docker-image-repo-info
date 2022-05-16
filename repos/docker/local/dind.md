@@ -1,16 +1,16 @@
-# `docker:20.10.15-dind`
+# `docker:20.10.16-dind`
 
 ## Docker Metadata
 
-- Image ID: `sha256:38003cc3a7ba9abd5e2a3f94c797f237f139118df6af1c0838a6d4ea021b0c6f`
-- Created: `2022-05-11T01:30:53.560094392Z`
-- Virtual Size: ~ 310.81 Mb  
+- Image ID: `sha256:9e4abd47de51fd416838034c407048ce77c0cfe4cece5a192ee9d20579b0a74c`
+- Created: `2022-05-12T19:19:49.930985457Z`
+- Virtual Size: ~ 310.96 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `DOCKER_VERSION=20.10.15`
+  - `DOCKER_VERSION=20.10.16`
   - `DOCKER_BUILDX_VERSION=0.8.2`
   - `DOCKER_COMPOSE_VERSION=2.5.0`
   - `DOCKER_TLS_CERTDIR=/certs`
@@ -701,16 +701,16 @@ BSD
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1n-r0 description:
+openssl-1.1.1o-r0 description:
 toolkit for transport layer security (TLS) - version 1.1
 
-openssl-1.1.1n-r0 webpage:
+openssl-1.1.1o-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1n-r0 installed size:
+openssl-1.1.1o-r0 installed size:
 664 KiB
 
-openssl-1.1.1n-r0 license:
+openssl-1.1.1o-r0 license:
 OpenSSL
 
 ```
