@@ -1,10 +1,10 @@
-# `drupal:9.3.12-php8.0-apache-bullseye`
+# `drupal:9.3.13-php8.0-apache-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c14f58e2d7f57c134e6f38c422193d98a683b70472fab3392fca6ea1ccce9a12`
-- Created: `2022-05-12T02:33:49.470178517Z`
-- Virtual Size: ~ 547.87 Mb  
+- Image ID: `sha256:55597bb03c7f2883999526ed0f4897a0fc581784281a0c5f2952fdb84e4d67a8`
+- Created: `2022-05-12T21:16:21.067730974Z`
+- Virtual Size: ~ 547.96 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -19,11 +19,11 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.18`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.18.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.18.tar.xz.asc`
-  - `PHP_SHA256=db161652cacae4b31c347fbf2e17b80656473cb365f2bb3460c4552f5647e2e7`
-  - `DRUPAL_VERSION=9.3.12`
+  - `PHP_VERSION=8.0.19`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.19.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.19.tar.xz.asc`
+  - `PHP_SHA256=ba62219c4b0486cbb2a04f0796749a46b0ee1f5a142ed454212b4e2460cb0fab`
+  - `DRUPAL_VERSION=9.3.13`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -2891,11 +2891,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pkg-config/0.29.2-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pkg-config/0.29.2-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-13=13.5-0+deb11u1`
+### `dpkg` source package: `postgresql-13=13.7-0+deb11u1`
 
 Binary Packages:
 
-- `libpq5:amd64=13.5-0+deb11u1`
+- `libpq5:amd64=13.7-0+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -2918,17 +2918,17 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-13=13.5-0+deb11u1
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.5-0%2bdeb11u1.dsc' postgresql-13_13.5-0+deb11u1.dsc 3696 SHA256:70481ab99d82417bef296378c69720657347c03b188d276e9b82f6587936d3be
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.5.orig.tar.bz2' postgresql-13_13.5.orig.tar.bz2 21186674 SHA256:9b81067a55edbaabc418aacef457dd8477642827499560b00615a6ea6c13f6b3
-'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.5-0%2bdeb11u1.debian.tar.xz' postgresql-13_13.5-0+deb11u1.debian.tar.xz 28796 SHA256:36f225fda1f0759d8892d42a99acf565e1693ad2572714aad91b807f03cb4c95
+$ apt-get source -qq --print-uris postgresql-13=13.7-0+deb11u1
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.7-0%2bdeb11u1.dsc' postgresql-13_13.7-0+deb11u1.dsc 3696 SHA256:02a07efd157ea960d301d1ac0be53415118bb3ee5a2e797e65cd170c22961782
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.7.orig.tar.bz2' postgresql-13_13.7.orig.tar.bz2 21364433 SHA256:1b905bf4f3d83614a393b3c51fd345910fd261e4f5124a68d9a1fdd3a2a46399
+'http://security.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.7-0%2bdeb11u1.debian.tar.xz' postgresql-13_13.7-0+deb11u1.debian.tar.xz 29364 SHA256:a05cfcf96856339962efcf78e236dab922cfb5889e13f2a34d9eb9fb4cb24b90
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/postgresql-13/13.5-0+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-13/13.5-0+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-13/13.5-0+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/postgresql-13/13.7-0+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-13/13.7-0+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-13/13.7-0+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.17-5`
 
