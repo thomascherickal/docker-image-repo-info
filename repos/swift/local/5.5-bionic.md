@@ -1928,14 +1928,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-176.185
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-176.185.dsc' linux_4.15.0-176.185.dsc 7426 SHA512:cff0725b7236c7eb0f751057878ce4f905a7b1ffdf5e23e7574741ac3e41ec4ea5625a112fc8d97d745c63ec86e84d6c684f35a91c4159e23540c148a590bf8f
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-176.185.diff.gz' linux_4.15.0-176.185.diff.gz 12988174 SHA512:5399789331f16a777ac3a0f093b651242cb39b7cbc8216f0f7b26ff8b0e0ab5537ffc245cb775cb6ac9600198c614954e495ac019858499d6bf3fe10a78fa330
-```
 
 ### `dpkg` source package: `lsb=9.20170808ubuntu1`
 
