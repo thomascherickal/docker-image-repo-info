@@ -1,19 +1,19 @@
-# `percona:8.0.27-18-centos`
+# `percona:8.0.28-19-centos`
 
 ## Docker Metadata
 
-- Image ID: `sha256:858c059ce9382f956bcd9694aec18593e7076157e8bed526399945b4c7af664b`
-- Created: `2022-05-02T21:19:39.791052237Z`
-- Virtual Size: ~ 1.00 Gb  
+- Image ID: `sha256:cffc2f9668de60ed3bc8144196024b06dbd9ba7a5f7665cb32e5f9836c5caab6`
+- Created: `2022-05-13T18:20:57.063226807Z`
+- Virtual Size: ~ 1.04 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["mysqld"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `PS_VERSION=8.0.27-18.1`
+  - `PS_VERSION=8.0.28-19.1`
   - `OS_VER=el8`
-  - `FULL_PERCONA_VERSION=8.0.27-18.1.el8`
+  - `FULL_PERCONA_VERSION=8.0.28-19.1.el8`
 - Labels:
   - `org.opencontainers.image.authors=info@percona.com`
 
@@ -1848,37 +1848,37 @@ Licenses (from `rpm --query`): GPL-3.0+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `percona-server-client-8.0.27-18.1.el8.x86_64`
+### `rpm` package: `percona-server-client-8.0.28-19.1.el8.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `percona-server-devel-8.0.27-18.1.el8.x86_64`
+### `rpm` package: `percona-server-devel-8.0.28-19.1.el8.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `percona-server-rocksdb-8.0.27-18.1.el8.x86_64`
+### `rpm` package: `percona-server-rocksdb-8.0.28-19.1.el8.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `percona-server-server-8.0.27-18.1.el8.x86_64`
+### `rpm` package: `percona-server-server-8.0.28-19.1.el8.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `percona-server-shared-8.0.27-18.1.el8.x86_64`
+### `rpm` package: `percona-server-shared-8.0.28-19.1.el8.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `percona-server-shared-compat-8.0.27-18.1.el8.x86_64`
+### `rpm` package: `percona-server-shared-compat-8.0.28-19.1.el8.x86_64`
 
 Licenses (from `rpm --query`): Copyright (c) 2000, 2018, Oracle and/or its affiliates. All rights reserved. Under GPLv2 license as shown in the Description field..
 
