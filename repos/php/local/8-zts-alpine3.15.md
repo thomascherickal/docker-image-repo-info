@@ -1,10 +1,10 @@
-# `php:8.1.5-zts-alpine3.15`
+# `php:8.1.6-zts-alpine3.15`
 
 ## Docker Metadata
 
-- Image ID: `sha256:55f592dc5f1a1f87a42a7422bd280110adcb52f5681f7e07a576268f9aef66a8`
-- Created: `2022-05-06T01:46:37.316325832Z`
-- Virtual Size: ~ 55.13 Mb  
+- Image ID: `sha256:d0fdcabca9ba12165d02396db3b524fab1182ff76c7a997429fd9a4132650be2`
+- Created: `2022-05-13T22:57:53.400455945Z`
+- Virtual Size: ~ 58.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.5`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.5.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.5.tar.xz.asc`
-  - `PHP_SHA256=7647734b4dcecd56b7e4bd0bc55e54322fa3518299abcdc68eb557a7464a2e8a`
+  - `PHP_VERSION=8.1.6`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.6.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.6.tar.xz.asc`
+  - `PHP_SHA256=da38d65bb0d5dd56f711cd478204f2b62a74a2c2b0d2d523a78d6eb865b2364c`
 
 ## `apk` (`.apk`-based packages)
 
@@ -231,16 +231,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1n-r0 description:
+libcrypto1.1-1.1.1o-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1n-r0 webpage:
+libcrypto1.1-1.1.1o-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1n-r0 installed size:
+libcrypto1.1-1.1.1o-r0 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1n-r0 license:
+libcrypto1.1-1.1.1o-r0 license:
 OpenSSL
 
 ```
@@ -316,16 +316,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1n-r0 description:
+libssl1.1-1.1.1o-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1n-r0 webpage:
+libssl1.1-1.1.1o-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1n-r0 installed size:
+libssl1.1-1.1.1o-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1n-r0 license:
+libssl1.1-1.1.1o-r0 license:
 OpenSSL
 
 ```
@@ -333,16 +333,16 @@ OpenSSL
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.13-r0 description:
+libxml2-2.9.14-r0 description:
 XML parsing library, version 2
 
-libxml2-2.9.13-r0 webpage:
+libxml2-2.9.14-r0 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.13-r0 installed size:
+libxml2-2.9.14-r0 installed size:
 1200 KiB
 
-libxml2-2.9.13-r0 license:
+libxml2-2.9.14-r0 license:
 MIT
 
 ```
