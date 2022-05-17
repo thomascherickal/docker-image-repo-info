@@ -82,20 +82,13 @@ Licenses: (parsed from: `/usr/share/doc/libaom3/copyright`)
 - `ISC`
 - `public-domain-md5`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris aom=3.3.0-1
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.3.0-1.dsc' aom_3.3.0-1.dsc 2190 SHA256:0f7bd721226f5d4423ad49f7b07fba6f055eeb9f99cc7182cafc627085a77115
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.3.0.orig.tar.gz' aom_3.3.0.orig.tar.gz 4768166 SHA256:298ced1f5aeed8f7c4e21138eeb646b19486e9c6e2d711640f4ae5822ad330c1
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.3.0-1.debian.tar.xz' aom_3.3.0-1.debian.tar.xz 12196 SHA256:c4a3f13a9296c8fb8946fa31dc67cac1d7aef614e6f27d6864d3a4dca67ffde2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/aom/3.3.0-1/
 
-- https://sources.debian.net/src/aom/3.3.0-1/ (for browsing the source)
-- https://sources.debian.net/src/aom/3.3.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/aom/3.3.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apr-util=1.6.1-5`
 
@@ -648,20 +641,13 @@ Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/l
 - `RSA-MD`
 - `SSLeay`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.28+dfsg-4
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg-4.dsc' cyrus-sasl2_2.1.28+dfsg-4.dsc 3212 SHA256:f1c1f6d94c192d22ad9c73bf3655497338910151948732fd44903d355fdbb58d
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg.orig.tar.xz' cyrus-sasl2_2.1.28+dfsg.orig.tar.xz 797472 SHA256:a15886d7da5958bd27f35b7c871dd872f6dc5b9917c9b6b15e3de014c7dab3d9
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg-4.debian.tar.xz' cyrus-sasl2_2.1.28+dfsg-4.debian.tar.xz 86508 SHA256:c0ec8e39eb2e89742ce0f39ef3c78b898d4e4d3e03d537167f18348e3fed1095
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cyrus-sasl2/2.1.28+dfsg-4/
 
-- https://sources.debian.net/src/cyrus-sasl2/2.1.28+dfsg-4/ (for browsing the source)
-- https://sources.debian.net/src/cyrus-sasl2/2.1.28+dfsg-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cyrus-sasl2/2.1.28+dfsg-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `dash=0.5.11+git20210903+057cd650a4ed-8`
 
@@ -758,20 +744,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris db5.3=5.3.28+dfsg1-0.8
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1-0.8.dsc' db5.3_5.3.28+dfsg1-0.8.dsc 3113 SHA256:5189bebd157e3b51c075804d1affebc87cdbfb782808c621e131660719c24374
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1.orig.tar.xz' db5.3_5.3.28+dfsg1.orig.tar.xz 19723860 SHA256:b19bf3dd8ce74b95a7b215be9a7c8489e8e8f18da60d64d6340a06e75f497749
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1-0.8.debian.tar.xz' db5.3_5.3.28+dfsg1-0.8.debian.tar.xz 30748 SHA256:073c0c87283bf5e606f3ce6d1814315b40b9685c943601ae3fd81e2da4e612d4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/db5.3/5.3.28+dfsg1-0.8/
 
-- https://sources.debian.net/src/db5.3/5.3.28+dfsg1-0.8/ (for browsing the source)
-- https://sources.debian.net/src/db5.3/5.3.28+dfsg1-0.8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/db5.3/5.3.28+dfsg1-0.8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debconf=1.5.79`
 
@@ -1178,24 +1157,13 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype-dev/copyright`, `/usr/share/
 - `Public-Domain`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris freetype=2.12.0+dfsg-1
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.12.0%2bdfsg-1.dsc' freetype_2.12.0+dfsg-1.dsc 3713 SHA256:b88947672d62730ea0e5090929ee4cbb5fe2f54572dc4297ca79e061c11deacd
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.12.0%2bdfsg.orig-ft2demos.tar.xz' freetype_2.12.0+dfsg.orig-ft2demos.tar.xz 263612 SHA256:dbc7ecaebc8c1658e4cc9e04e5978bba35375f664e87b857ca67451ab6b372d3
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.12.0%2bdfsg.orig-ft2demos.tar.xz.asc' freetype_2.12.0+dfsg.orig-ft2demos.tar.xz.asc 833 SHA256:e5eb33cf43f1d08c31d7399b960a32b02aea3e7951f22236c2604c81c1cc0901
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.12.0%2bdfsg.orig-ft2docs.tar.xz' freetype_2.12.0+dfsg.orig-ft2docs.tar.xz 2038684 SHA256:22cf273cba41da07b7414a82a3ae701df1239e29928f0b8c42d08c5ef98dc01d
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.12.0%2bdfsg.orig-ft2docs.tar.xz.asc' freetype_2.12.0+dfsg.orig-ft2docs.tar.xz.asc 833 SHA256:4daa2edc2703ae4a9d3990bac4be150a3fc28e70de9fa12a83a4b099e9856265
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.12.0%2bdfsg.orig.tar.xz' freetype_2.12.0+dfsg.orig.tar.xz 2057348 SHA256:fca2ecf7114dd755a8a79daad96138d48ed470b78b171f90225106b43dff75b3
-'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.12.0%2bdfsg-1.debian.tar.xz' freetype_2.12.0+dfsg-1.debian.tar.xz 43548 SHA256:d7bb5fa0eef83a40ba542218aa0528ba4c64f56db4cf01787509a790433746e1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/freetype/2.12.0+dfsg-1/
 
-- https://sources.debian.net/src/freetype/2.12.0+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/freetype/2.12.0+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/freetype/2.12.0+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `fribidi=1.0.8-2.1`
 
@@ -3995,19 +3963,13 @@ Licenses: (parsed from: `/usr/share/doc/media-types/copyright`)
 
 - `ad-hoc`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris media-types=7.1.0
-'http://deb.debian.org/debian/pool/main/m/media-types/media-types_7.1.0.dsc' media-types_7.1.0.dsc 1620 SHA256:8d8110acd113e705067c54c886506fd02dde593a546716f40739b14e8e29fa5f
-'http://deb.debian.org/debian/pool/main/m/media-types/media-types_7.1.0.tar.xz' media-types_7.1.0.tar.xz 56128 SHA256:43d68aefc414fdf501518715c3c7dea726d02c5ace362c4b41d7beffac152254
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/media-types/7.1.0/
 
-- https://sources.debian.net/src/media-types/7.1.0/ (for browsing the source)
-- https://sources.debian.net/src/media-types/7.1.0/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/media-types/7.1.0/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mercurial=6.1.1-1`
 
@@ -4946,20 +4908,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.10=3.10.4-3
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.4-3.dsc' python3.10_3.10.4-3.dsc 3609 SHA256:fea952c68ef0c2c4ee980af8261c4155fce65ac6a94046249c81177721f37910
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.4.orig.tar.xz' python3.10_3.10.4.orig.tar.xz 19342692 SHA256:80bf925f571da436b35210886cf79f6eb5fa5d6c571316b73568343451f77a19
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.4-3.debian.tar.xz' python3.10_3.10.4-3.debian.tar.xz 217284 SHA256:0735de0542876fcdb01ee138065fedca9607c31b4830e5408afa1c8321fa35f8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.10/3.10.4-3/
 
-- https://sources.debian.net/src/python3.10/3.10.4-3/ (for browsing the source)
-- https://sources.debian.net/src/python3.10/3.10.4-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.10/3.10.4-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.1.2-1.2`
 

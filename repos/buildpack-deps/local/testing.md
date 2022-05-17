@@ -4793,20 +4793,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-14=14.2-1
-'http://deb.debian.org/debian/pool/main/p/postgresql-14/postgresql-14_14.2-1.dsc' postgresql-14_14.2-1.dsc 3721 SHA256:8125854d2f2118c55c922ca0f638ddda47da7c154cd53a9a10d1717a90cc4740
-'http://deb.debian.org/debian/pool/main/p/postgresql-14/postgresql-14_14.2.orig.tar.bz2' postgresql-14_14.2.orig.tar.bz2 21964841 SHA256:2cf78b2e468912f8101d695db5340cf313c2e9f68a612fb71427524e8c9a977a
-'http://deb.debian.org/debian/pool/main/p/postgresql-14/postgresql-14_14.2-1.debian.tar.xz' postgresql-14_14.2-1.debian.tar.xz 23636 SHA256:b8f5f5f0361351bc21dfbdc87f025e842a6d0a2af1f3cc4dbc5e7fe03272a73d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-14/14.2-1/
 
-- https://sources.debian.net/src/postgresql-14/14.2-1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-14/14.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-14/14.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.17-7`
 

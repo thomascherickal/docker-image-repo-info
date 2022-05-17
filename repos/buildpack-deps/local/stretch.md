@@ -3692,20 +3692,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-2.2+deb9u6
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-2.2%2bdeb9u6.dsc' libxml2_2.9.4+dfsg1-2.2+deb9u6.dsc 2894 SHA256:5002f54c3f12aef19f932950c12cb92a6e1c00dcb085ac0e416088160a9e5c41
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1.orig.tar.gz' libxml2_2.9.4+dfsg1.orig.tar.gz 4067518 SHA256:57441479117cd4b3a3fbe1eda8028d578e3b2de7e745362f67669a0cf5fb3726
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-2.2%2bdeb9u6.debian.tar.xz' libxml2_2.9.4+dfsg1-2.2+deb9u6.debian.tar.xz 41540 SHA256:3edf83ed72cc8bfab3356f848a6ef7dce5dfd86524664dd83ab02574d65546e7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-2.2+deb9u6/
 
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u6/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-2.2+deb9u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxpm=1:3.5.12-1`
 
@@ -4554,21 +4547,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.0l-1~deb9u5
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1%7edeb9u5.dsc' openssl_1.1.0l-1~deb9u5.dsc 2611 SHA256:57c04ee99ebc08a12434d8375aa718f349bba3a2f80fc254ccd215425c4750e5
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz' openssl_1.1.0l.orig.tar.gz 5294857 SHA256:74a2f756c64fd7386a29184dc0344f4831192d61dc2481a93a4c5dd727f41148
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz.asc' openssl_1.1.0l.orig.tar.gz.asc 488 SHA256:afc83de9f9f1ef5f79ab8a31bbdeb26f9ac9a07cfdab7628a773267d31f85e42
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1%7edeb9u5.debian.tar.xz' openssl_1.1.0l-1~deb9u5.debian.tar.xz 87640 SHA256:cb269e31120981990e0976a62b91a378a296641b6d8b30025eceb4b4e641ed24
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u5/
 
-- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u5/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.3-2+deb9u1`
 
