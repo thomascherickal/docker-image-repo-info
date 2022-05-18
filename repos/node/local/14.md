@@ -2,17 +2,17 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2b6bf8cc3c4d1f0636492e8dcfb7687df5364e3c9754060977e987c9955d18af`
-- Created: `2022-05-11T05:21:27.771942794Z`
-- Virtual Size: ~ 945.48 Mb  
+- Image ID: `sha256:300fa90361ab92f00177fc4845c6c8b6cab30d88c30678b2e11c59ff7a770599`
+- Created: `2022-05-17T19:28:23.939254304Z`
+- Virtual Size: ~ 945.49 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["node"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=14.19.1`
-  - `YARN_VERSION=1.22.17`
+  - `NODE_VERSION=14.19.2`
+  - `YARN_VERSION=1.22.19`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -3695,20 +3695,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-2.2+deb9u6
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-2.2%2bdeb9u6.dsc' libxml2_2.9.4+dfsg1-2.2+deb9u6.dsc 2894 SHA256:5002f54c3f12aef19f932950c12cb92a6e1c00dcb085ac0e416088160a9e5c41
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1.orig.tar.gz' libxml2_2.9.4+dfsg1.orig.tar.gz 4067518 SHA256:57441479117cd4b3a3fbe1eda8028d578e3b2de7e745362f67669a0cf5fb3726
-'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-2.2%2bdeb9u6.debian.tar.xz' libxml2_2.9.4+dfsg1-2.2+deb9u6.debian.tar.xz 41540 SHA256:3edf83ed72cc8bfab3356f848a6ef7dce5dfd86524664dd83ab02574d65546e7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-2.2+deb9u6/
 
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u6/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-2.2+deb9u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-2.2+deb9u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxpm=1:3.5.12-1`
 
