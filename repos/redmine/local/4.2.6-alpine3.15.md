@@ -1,10 +1,10 @@
-# `redmine:4.2.5-alpine`
+# `redmine:4.2.6-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2ff3ec648e4fcfcc457b20ced270e29d29cf6aa2d9d3aa44ed376d3650fceedf`
-- Created: `2022-04-12T20:00:30.943782003Z`
-- Virtual Size: ~ 386.46 Mb  
+- Image ID: `sha256:24746ee1cc8b78569bd5062d711216595f8597c6525f801d458a6f1802c303ed`
+- Created: `2022-05-18T01:08:04.716021953Z`
+- Virtual Size: ~ 389.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -20,9 +20,9 @@
   - `BUNDLE_APP_CONFIG=/usr/local/bundle`
   - `RAILS_ENV=production`
   - `HOME=/home/redmine`
-  - `REDMINE_VERSION=4.2.5`
-  - `REDMINE_DOWNLOAD_URL=https://www.redmine.org/releases/redmine-4.2.5.tar.gz`
-  - `REDMINE_DOWNLOAD_SHA256=d97084b0eaad7266056814a0c0aec2737f4d23b8f67ce90c01a79b2eb5605984`
+  - `REDMINE_VERSION=4.2.6`
+  - `REDMINE_DOWNLOAD_URL=https://www.redmine.org/releases/redmine-4.2.6.tar.gz`
+  - `REDMINE_DOWNLOAD_SHA256=022cb2eee0f8823fd27e2e93373086a29b4bb11215ee6dc7012b5ef2a3bada4c`
   - `BUNDLE_FORCE_RUBY_PLATFORM=1`
 
 ## `apk` (`.apk`-based packages)
@@ -744,16 +744,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1n-r0 description:
+libcrypto1.1-1.1.1o-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1n-r0 webpage:
+libcrypto1.1-1.1.1o-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1n-r0 installed size:
+libcrypto1.1-1.1.1o-r0 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1n-r0 license:
+libcrypto1.1-1.1.1o-r0 license:
 OpenSSL
 
 ```
@@ -1016,16 +1016,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-14.2-r0 description:
+libpq-14.3-r0 description:
 PostgreSQL client library
 
-libpq-14.2-r0 webpage:
+libpq-14.3-r0 webpage:
 https://www.postgresql.org/
 
-libpq-14.2-r0 installed size:
+libpq-14.3-r0 installed size:
 328 KiB
 
-libpq-14.2-r0 license:
+libpq-14.3-r0 license:
 PostgreSQL
 
 ```
@@ -1101,16 +1101,16 @@ custom
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1n-r0 description:
+libssl1.1-1.1.1o-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1n-r0 webpage:
+libssl1.1-1.1.1o-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1n-r0 installed size:
+libssl1.1-1.1.1o-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1n-r0 license:
+libssl1.1-1.1.1o-r0 license:
 OpenSSL
 
 ```
