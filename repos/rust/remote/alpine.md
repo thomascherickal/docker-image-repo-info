@@ -1,7 +1,7 @@
 ## `rust:alpine`
 
 ```console
-$ docker pull rust@sha256:b38a9e55db25b29d9320c7e04f2ddd688ac68b8582adb3070230d3b7d2f183ae
+$ docker pull rust@sha256:7a917171c2fa060a2665b291820507bca0484efd25811a1c09073b0cfc5cb23d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -52,14 +52,14 @@ RUN set -eux;     apkArch="$(apk --print-arch)";     case "$apkArch" in         
 ### `rust:alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull rust@sha256:a0c2209ebdd56de13412aa13e9be891b645cbd6f54ff461e9cd3bd8cf3c33d79
+$ docker pull rust@sha256:526dfcfffac3021335f243aabe2b93bf32fd231fbb0e65103266980eedd1e8c2
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **237.2 MB (237211249 bytes)**  
+-	Total Size: **239.2 MB (239222115 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:95d6bed1cffcf14280f39437b2b804ccf42a557c7b99680062ca96708486467b`
+-	Image ID: `sha256:4049c483a2db267242fac510cf462f66964cbb5e25e512ea43f6648c8e072819`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
@@ -69,9 +69,9 @@ ADD file:90e56af13188c7f0283d244a0d70b853d8bef8587a41f1da8eac3a2aba8964ef in /
 CMD ["/bin/sh"]
 # Tue, 05 Apr 2022 07:18:36 GMT
 RUN apk add --no-cache         ca-certificates         gcc
-# Thu, 07 Apr 2022 20:42:49 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.60.0
-# Thu, 07 Apr 2022 20:43:03 GMT
+# Thu, 19 May 2022 17:59:27 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.61.0
+# Thu, 19 May 2022 17:59:40 GMT
 RUN set -eux;     apkArch="$(apk --print-arch)";     case "$apkArch" in         x86_64) rustArch='x86_64-unknown-linux-musl'; rustupSha256='bdf022eb7cba403d0285bb62cbc47211f610caec24589a72af70e1e900663be9' ;;         aarch64) rustArch='aarch64-unknown-linux-musl'; rustupSha256='89ce657fe41e83186f5a6cdca4e0fd40edab4fd41b0f9161ac6241d49fbdbbbe' ;;         *) echo >&2 "unsupported architecture: $apkArch"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.24.3/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -84,7 +84,7 @@ RUN set -eux;     apkArch="$(apk --print-arch)";     case "$apkArch" in         
 		Last Modified: Tue, 05 Apr 2022 07:21:11 GMT  
 		Size: 36.1 MB (36073695 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9a1353bcd7245c8ef962d5944d467ebba101b57e97a6e61d2e235294a2f39064`  
-		Last Modified: Thu, 07 Apr 2022 20:49:17 GMT  
-		Size: 198.4 MB (198421077 bytes)  
+	-	`sha256:9d80249e68d74cb54280b56279b2a423d8c0b7682f33bb9a362f716341403763`  
+		Last Modified: Thu, 19 May 2022 18:05:57 GMT  
+		Size: 200.4 MB (200431943 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
