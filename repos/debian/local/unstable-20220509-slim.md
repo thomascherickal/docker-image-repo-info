@@ -79,19 +79,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.4.5
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.4.5.dsc' apt_2.4.5.dsc 2797 SHA256:a42b9b55c9f387ced37cff433f1b167b2a633e6ff15f562fc1a720ecc116de6a
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.4.5.tar.xz' apt_2.4.5.tar.xz 2216252 SHA256:5552f175c3a3924f5cda0c079b821b30f68a2521959f2c30ab164d2ec7993ecf
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.4.5/
 
-- https://sources.debian.net/src/apt/2.4.5/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.4.5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.4.5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
