@@ -1,7 +1,7 @@
 ## `mysql:oracle`
 
 ```console
-$ docker pull mysql@sha256:2befebef0265220c2d6caed2599cd4fe6497c90408fc9f9925684ae26e92d769
+$ docker pull mysql@sha256:2b81252406891b6e71500dc932ff7f59ac4b50851b8fd83ec245fffe1c196d24
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull mysql@sha256:2befebef0265220c2d6caed2599cd4fe6497c90408fc9f9925684
 ### `mysql:oracle` - linux; amd64
 
 ```console
-$ docker pull mysql@sha256:8141c03377ac2ad7853c98833d620015590d76caa5c17d1d7599ef26baf44da4
+$ docker pull mysql@sha256:57f38c567c243b7184df89f6bdfbcc3fd2186ddabefe34b52826c1fe6b57942d
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **131.6 MB (131645641 bytes)**  
+-	Total Size: **131.6 MB (131645653 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:28bb00bfe52a2aae96a7ab476f324e2c37fab25dd52dd86ff436331e067b4696`
+-	Image ID: `sha256:affc35f7251ed9facc45a4d2a6bb365a4e371f8cbf7c6a3e6dc9e4b1031e9232`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -54,13 +54,13 @@ ENV MYSQL_SHELL_VERSION=8.0.29-1.el8
 RUN set -eux; 	microdnf install -y "mysql-shell-$MYSQL_SHELL_VERSION"; 	microdnf clean all; 		mysqlsh --version
 # Tue, 17 May 2022 23:11:40 GMT
 VOLUME [/var/lib/mysql]
-# Tue, 17 May 2022 23:11:40 GMT
-COPY file:e9a583a365264f0f565259ffd0f19e5199ef4351d098f75af32f633c0d6cbe73 in /usr/local/bin/ 
-# Tue, 17 May 2022 23:11:40 GMT
+# Fri, 20 May 2022 19:40:40 GMT
+COPY file:8245bb7ec0ba19a0b26df1f3a76eb35ff15083784071bf24358e434ce338e784 in /usr/local/bin/ 
+# Fri, 20 May 2022 19:40:40 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 17 May 2022 23:11:41 GMT
+# Fri, 20 May 2022 19:40:40 GMT
 EXPOSE 3306 33060
-# Tue, 17 May 2022 23:11:41 GMT
+# Fri, 20 May 2022 19:40:40 GMT
 CMD ["mysqld"]
 ```
 
@@ -101,22 +101,22 @@ CMD ["mysqld"]
 		Last Modified: Tue, 17 May 2022 23:12:31 GMT  
 		Size: 39.7 MB (39708291 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c240edbdbe67409f4ac9e83c9fc86c0cebf506ad3ebfd9d1ccdd29baa7a9e889`  
-		Last Modified: Tue, 17 May 2022 23:12:23 GMT  
-		Size: 5.1 KB (5142 bytes)  
+	-	`sha256:6bc20d78aca676273b4d19941bb3da6ae8e57d5525f66bfe0d0f601aff0f335c`  
+		Last Modified: Fri, 20 May 2022 19:41:17 GMT  
+		Size: 5.2 KB (5154 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mysql:oracle` - linux; arm64 variant v8
 
 ```console
-$ docker pull mysql@sha256:32019f5c8959fb725787a9873aeee9c28c8a4a054413e89263f37aa2007901c1
+$ docker pull mysql@sha256:acf7a87b1852b9934cdd8f553e5d161c7311b9bc735894bd72cc0abcb19e0095
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **138.6 MB (138552501 bytes)**  
+-	Total Size: **138.6 MB (138552506 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8e001f62601a11aea9a86873c2edf17d733c7a26cbd6d4ea0e05e0a73e9140e6`
+-	Image ID: `sha256:79322600d0f04e34df230bc6711bda0c7f369b80f167495f47cbba7d703979ba`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -151,13 +151,13 @@ ENV MYSQL_SHELL_VERSION=8.0.29-1.el8
 RUN set -eux; 	microdnf install -y "mysql-shell-$MYSQL_SHELL_VERSION"; 	microdnf clean all; 		mysqlsh --version
 # Tue, 17 May 2022 23:10:24 GMT
 VOLUME [/var/lib/mysql]
-# Tue, 17 May 2022 23:10:26 GMT
-COPY file:e9a583a365264f0f565259ffd0f19e5199ef4351d098f75af32f633c0d6cbe73 in /usr/local/bin/ 
-# Tue, 17 May 2022 23:10:26 GMT
+# Fri, 20 May 2022 20:11:39 GMT
+COPY file:8245bb7ec0ba19a0b26df1f3a76eb35ff15083784071bf24358e434ce338e784 in /usr/local/bin/ 
+# Fri, 20 May 2022 20:11:40 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 17 May 2022 23:10:27 GMT
+# Fri, 20 May 2022 20:11:40 GMT
 EXPOSE 3306 33060
-# Tue, 17 May 2022 23:10:28 GMT
+# Fri, 20 May 2022 20:11:41 GMT
 CMD ["mysqld"]
 ```
 
@@ -198,7 +198,7 @@ CMD ["mysqld"]
 		Last Modified: Tue, 17 May 2022 23:11:01 GMT  
 		Size: 42.0 MB (42030739 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7cd2e0c049de23bde6eb2d74d0ccebd69780e107d88608b72e6e229ea7c8bdf3`  
-		Last Modified: Tue, 17 May 2022 23:10:53 GMT  
-		Size: 5.1 KB (5142 bytes)  
+	-	`sha256:56127ed939b4ed1e651a3ceb810ca86e8ffa20dbd7a74baac3199acbb1699df2`  
+		Last Modified: Fri, 20 May 2022 20:11:59 GMT  
+		Size: 5.1 KB (5147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
