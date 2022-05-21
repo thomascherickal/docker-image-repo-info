@@ -1756,20 +1756,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u8
-'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44%2bdfsg-5%2bdeb9u8.dsc' openldap_2.4.44+dfsg-5+deb9u8.dsc 3017 SHA256:aa2bb5935871f2fa0a6207f8a8986b4977f97726678b63af0deedf2f60f55483
-'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44%2bdfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
-'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44%2bdfsg-5%2bdeb9u8.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u8.debian.tar.xz 173772 SHA256:fe52bd332837e8d9d766b7616a1df6a617fc80e594508f3f2e9f9366b2df8347
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u8/
 
-- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u8/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl1.0=1.0.2u-1~deb9u7`
 
