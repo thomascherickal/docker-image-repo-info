@@ -46,6 +46,10 @@
 -	[`postgres:14.3-alpine`](#postgres143-alpine)
 -	[`postgres:14.3-alpine3.15`](#postgres143-alpine315)
 -	[`postgres:14.3-bullseye`](#postgres143-bullseye)
+-	[`postgres:15beta1`](#postgres15beta1)
+-	[`postgres:15beta1-alpine`](#postgres15beta1-alpine)
+-	[`postgres:15beta1-alpine3.15`](#postgres15beta1-alpine315)
+-	[`postgres:15beta1-bullseye`](#postgres15beta1-bullseye)
 -	[`postgres:alpine`](#postgresalpine)
 -	[`postgres:alpine3.15`](#postgresalpine315)
 -	[`postgres:bullseye`](#postgresbullseye)
@@ -33926,6 +33930,22 @@ CMD ["postgres"]
 		Last Modified: Wed, 18 May 2022 02:22:41 GMT  
 		Size: 4.7 KB (4700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `postgres:15beta1`
+
+**does not exist** (yet?)
+
+## `postgres:15beta1-alpine`
+
+**does not exist** (yet?)
+
+## `postgres:15beta1-alpine3.15`
+
+**does not exist** (yet?)
+
+## `postgres:15beta1-bullseye`
+
+**does not exist** (yet?)
 
 ## `postgres:alpine`
 
