@@ -1,7 +1,7 @@
 ## `xwiki:14-postgres-tomcat`
 
 ```console
-$ docker pull xwiki@sha256:6c70074ef4588c885610c9baf80d339d6af33cadeb269cc303758da8c31acf55
+$ docker pull xwiki@sha256:10b19b8520858434358bd9ef8fa0891cc2538f33453985e87189ce77f47bea6e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull xwiki@sha256:6c70074ef4588c885610c9baf80d339d6af33cadeb269cc303758
 ### `xwiki:14-postgres-tomcat` - linux; amd64
 
 ```console
-$ docker pull xwiki@sha256:c57c1df846d68db8a8a47e76ce89a113fe300b1e91f37efb7c14dae33ab0b41d
+$ docker pull xwiki@sha256:b0574b9e87a3f8db80d46c592c777b083cb57fb548f16842be0562b1a5e54a67
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **632.5 MB (632463351 bytes)**  
+-	Total Size: **632.5 MB (632492569 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:14adcf7cbb9cdf66353058c73b381c41032543b804fcdc5205022f6a672c93d3`
+-	Image ID: `sha256:aa9382e6b37ac56517fa6ad923052c918357d37ec92070c33d2029abf5d6dc3c`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["xwiki"]`
 
@@ -90,29 +90,29 @@ LABEL org.opencontainers.image.vendor=xwiki.org
 LABEL org.opencontainers.image.licenses=LGPL-2.1
 # Wed, 18 May 2022 04:54:30 GMT
 RUN apt-get update &&   apt-get --no-install-recommends -y install     curl     libreoffice     unzip     procps     libpostgresql-jdbc-java &&   rm -rf /var/lib/apt/lists/*
-# Wed, 18 May 2022 04:54:31 GMT
-ENV XWIKI_VERSION=14.3.1
-# Wed, 18 May 2022 04:54:31 GMT
-ENV XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/14.3.1
-# Wed, 18 May 2022 04:54:31 GMT
-ENV XWIKI_DOWNLOAD_SHA256=48555f31d174709b5eb8486204fbbdfc51fbbda17cb28d8bf5ac8551f3f9820b
-# Wed, 18 May 2022 04:55:10 GMT
+# Tue, 24 May 2022 18:53:53 GMT
+ENV XWIKI_VERSION=14.4
+# Tue, 24 May 2022 18:53:53 GMT
+ENV XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/14.4
+# Tue, 24 May 2022 18:53:54 GMT
+ENV XWIKI_DOWNLOAD_SHA256=313983ea4e1c8f7f44058bedf150e61b9b57a0a9c00c99b3a6471a4f567010e3
+# Tue, 24 May 2022 18:54:32 GMT
 RUN rm -rf /usr/local/tomcat/webapps/* &&   mkdir -p /usr/local/tomcat/temp &&   mkdir -p /usr/local/xwiki/data &&   curl -fSL "${XWIKI_URL_PREFIX}/xwiki-platform-distribution-war-${XWIKI_VERSION}.war" -o xwiki.war &&   echo "$XWIKI_DOWNLOAD_SHA256 xwiki.war" | sha256sum -c - &&   unzip -d /usr/local/tomcat/webapps/ROOT xwiki.war &&   rm -f xwiki.war
-# Wed, 18 May 2022 04:55:11 GMT
+# Tue, 24 May 2022 18:54:33 GMT
 RUN cp /usr/share/java/postgresql-jdbc4.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
-# Wed, 18 May 2022 04:55:11 GMT
+# Tue, 24 May 2022 18:54:33 GMT
 COPY file:0a1be11e2eb610a1dbcd415404e3a592641110b93090030cb831e3a19a163017 in /usr/local/tomcat/bin/ 
-# Wed, 18 May 2022 04:55:11 GMT
+# Tue, 24 May 2022 18:54:33 GMT
 COPY file:4a923f484bb29a26630c19e1d617d3bf6aa6ae7c6c4a5561e97b037bcde0847c in /usr/local/tomcat/webapps/ROOT/WEB-INF/hibernate.cfg.xml 
-# Wed, 18 May 2022 04:55:12 GMT
+# Tue, 24 May 2022 18:54:34 GMT
 RUN sed -i 's/<id>org.xwiki.platform:xwiki-platform-distribution-war/<id>org.xwiki.platform:xwiki-platform-distribution-docker/'   /usr/local/tomcat/webapps/ROOT/META-INF/extension.xed
-# Wed, 18 May 2022 04:55:12 GMT
+# Tue, 24 May 2022 18:54:34 GMT
 COPY file:a47c4dcd87c9dad97aff38c49188357e6193bcad50757e516cfb08a60d4de611 in /usr/local/bin/docker-entrypoint.sh 
-# Wed, 18 May 2022 04:55:12 GMT
+# Tue, 24 May 2022 18:54:34 GMT
 VOLUME [/usr/local/xwiki]
-# Wed, 18 May 2022 04:55:12 GMT
+# Tue, 24 May 2022 18:54:34 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 18 May 2022 04:55:12 GMT
+# Tue, 24 May 2022 18:54:34 GMT
 CMD ["xwiki"]
 ```
 
@@ -161,42 +161,42 @@ CMD ["xwiki"]
 		Last Modified: Wed, 18 May 2022 05:00:42 GMT  
 		Size: 201.1 MB (201063135 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3765a7a8745d5a4d7b67da34001101f81666355173eab4c98ab0e0d1276940d`  
-		Last Modified: Wed, 18 May 2022 05:00:32 GMT  
-		Size: 291.9 MB (291936611 bytes)  
+	-	`sha256:159be59281376da682fea3fc39497f4235e6112f428a893ac5b0eb23a6dbd060`  
+		Last Modified: Tue, 24 May 2022 18:56:48 GMT  
+		Size: 292.0 MB (291965818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96d9172ca35714e820813947e379c8bbeb68bd3826194fc5dd7eb6ae542d9766`  
-		Last Modified: Wed, 18 May 2022 05:00:14 GMT  
-		Size: 846.2 KB (846204 bytes)  
+	-	`sha256:bf16990a18b72a9a6ce8533286aba4eb719979dfc345ff1aa72008c4f7009492`  
+		Last Modified: Tue, 24 May 2022 18:56:31 GMT  
+		Size: 846.2 KB (846207 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5580bd1fc2d2b84945efe4715ca4ce1fa59d2472b2659f27d5d07fd00a24cf8d`  
-		Last Modified: Wed, 18 May 2022 05:00:14 GMT  
-		Size: 1.3 KB (1344 bytes)  
+	-	`sha256:fe52ebd71c09f57af3fcf3ffffdfaa16295a7a6c119a24a8c40d656a5911d1d4`  
+		Last Modified: Tue, 24 May 2022 18:56:31 GMT  
+		Size: 1.3 KB (1343 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:88a0a6ed642cb2ce34cc56426d48a37c95f969a700aedaa52d2dd6b4e2df1316`  
-		Last Modified: Wed, 18 May 2022 05:00:14 GMT  
-		Size: 2.5 KB (2452 bytes)  
+	-	`sha256:6e2c369c442a6d1234b75aa844f229ede4152c3a614fd072db61caf7c5c9449e`  
+		Last Modified: Tue, 24 May 2022 18:56:31 GMT  
+		Size: 2.5 KB (2451 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae560fd6402785792eb425ed5f9fde349010a7f947e176e577f19973390e2fdf`  
-		Last Modified: Wed, 18 May 2022 05:00:14 GMT  
-		Size: 5.8 KB (5839 bytes)  
+	-	`sha256:ea8037953d8801458353ff21a513c00b47e4d05b369038dd881cfee3a74fd59d`  
+		Last Modified: Tue, 24 May 2022 18:56:31 GMT  
+		Size: 5.9 KB (5852 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:719c428691518744b5ad2a6ee15e8ac9f4308deb96583a3e06706f12015f491b`  
-		Last Modified: Wed, 18 May 2022 05:00:14 GMT  
-		Size: 2.5 KB (2503 bytes)  
+	-	`sha256:116f9a8d85979247a9beeee6a869f17e10023974eec9f93523dee934b4377c49`  
+		Last Modified: Tue, 24 May 2022 18:56:31 GMT  
+		Size: 2.5 KB (2500 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `xwiki:14-postgres-tomcat` - linux; arm64 variant v8
 
 ```console
-$ docker pull xwiki@sha256:3fb5ba0b90677753daf561b00f77fc5308da493a545f9d5a51a99dffc7952029
+$ docker pull xwiki@sha256:b0a3c1d128e33899a7ecb827d3307c73bb48eeed9545ad6f41b281b33e4fe427
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **624.7 MB (624715777 bytes)**  
+-	Total Size: **624.7 MB (624745209 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96226ba833253e30bad82ac8641f0c7967d03c60ca1c51df59803596e41caf8c`
+-	Image ID: `sha256:5ce2a27abdfe58835a91a6e1ad9e99f87b15427bdcf032eee82d7b3251ef0a82`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["xwiki"]`
 
@@ -267,29 +267,29 @@ LABEL org.opencontainers.image.vendor=xwiki.org
 LABEL org.opencontainers.image.licenses=LGPL-2.1
 # Wed, 18 May 2022 05:24:41 GMT
 RUN apt-get update &&   apt-get --no-install-recommends -y install     curl     libreoffice     unzip     procps     libpostgresql-jdbc-java &&   rm -rf /var/lib/apt/lists/*
-# Wed, 18 May 2022 05:24:42 GMT
-ENV XWIKI_VERSION=14.3.1
-# Wed, 18 May 2022 05:24:43 GMT
-ENV XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/14.3.1
-# Wed, 18 May 2022 05:24:43 GMT
-ENV XWIKI_DOWNLOAD_SHA256=48555f31d174709b5eb8486204fbbdfc51fbbda17cb28d8bf5ac8551f3f9820b
-# Wed, 18 May 2022 05:25:22 GMT
+# Tue, 24 May 2022 19:18:47 GMT
+ENV XWIKI_VERSION=14.4
+# Tue, 24 May 2022 19:18:48 GMT
+ENV XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/14.4
+# Tue, 24 May 2022 19:18:49 GMT
+ENV XWIKI_DOWNLOAD_SHA256=313983ea4e1c8f7f44058bedf150e61b9b57a0a9c00c99b3a6471a4f567010e3
+# Tue, 24 May 2022 19:19:21 GMT
 RUN rm -rf /usr/local/tomcat/webapps/* &&   mkdir -p /usr/local/tomcat/temp &&   mkdir -p /usr/local/xwiki/data &&   curl -fSL "${XWIKI_URL_PREFIX}/xwiki-platform-distribution-war-${XWIKI_VERSION}.war" -o xwiki.war &&   echo "$XWIKI_DOWNLOAD_SHA256 xwiki.war" | sha256sum -c - &&   unzip -d /usr/local/tomcat/webapps/ROOT xwiki.war &&   rm -f xwiki.war
-# Wed, 18 May 2022 05:25:24 GMT
+# Tue, 24 May 2022 19:19:22 GMT
 RUN cp /usr/share/java/postgresql-jdbc4.jar /usr/local/tomcat/webapps/ROOT/WEB-INF/lib/
-# Wed, 18 May 2022 05:25:25 GMT
+# Tue, 24 May 2022 19:19:24 GMT
 COPY file:0a1be11e2eb610a1dbcd415404e3a592641110b93090030cb831e3a19a163017 in /usr/local/tomcat/bin/ 
-# Wed, 18 May 2022 05:25:26 GMT
+# Tue, 24 May 2022 19:19:25 GMT
 COPY file:4a923f484bb29a26630c19e1d617d3bf6aa6ae7c6c4a5561e97b037bcde0847c in /usr/local/tomcat/webapps/ROOT/WEB-INF/hibernate.cfg.xml 
-# Wed, 18 May 2022 05:25:27 GMT
+# Tue, 24 May 2022 19:19:26 GMT
 RUN sed -i 's/<id>org.xwiki.platform:xwiki-platform-distribution-war/<id>org.xwiki.platform:xwiki-platform-distribution-docker/'   /usr/local/tomcat/webapps/ROOT/META-INF/extension.xed
-# Wed, 18 May 2022 05:25:28 GMT
+# Tue, 24 May 2022 19:19:27 GMT
 COPY file:a47c4dcd87c9dad97aff38c49188357e6193bcad50757e516cfb08a60d4de611 in /usr/local/bin/docker-entrypoint.sh 
-# Wed, 18 May 2022 05:25:29 GMT
+# Tue, 24 May 2022 19:19:27 GMT
 VOLUME [/usr/local/xwiki]
-# Wed, 18 May 2022 05:25:30 GMT
+# Tue, 24 May 2022 19:19:28 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 18 May 2022 05:25:30 GMT
+# Tue, 24 May 2022 19:19:29 GMT
 CMD ["xwiki"]
 ```
 
@@ -334,27 +334,27 @@ CMD ["xwiki"]
 		Last Modified: Wed, 18 May 2022 05:32:10 GMT  
 		Size: 196.1 MB (196101542 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3d6119cc9a89c897deca39e93ebf230bd582a6e3807d93df6bc62442fe107c90`  
-		Last Modified: Wed, 18 May 2022 05:32:06 GMT  
-		Size: 291.9 MB (291936636 bytes)  
+	-	`sha256:71dc2485c44a4b82a1ece289e8f92fe817f5ced7393531bfba7098be363e15f1`  
+		Last Modified: Tue, 24 May 2022 19:22:58 GMT  
+		Size: 292.0 MB (291966065 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:93fcf11b345e3afd7105fe9ed645722e51d06e8ce706680312c726d0571b7090`  
-		Last Modified: Wed, 18 May 2022 05:31:44 GMT  
-		Size: 846.2 KB (846209 bytes)  
+	-	`sha256:d8aec87a8de361cdda25b04e0ca26beb19d4bee80687e40c72978e1a5b0bbc68`  
+		Last Modified: Tue, 24 May 2022 19:22:36 GMT  
+		Size: 846.2 KB (846204 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bf667cedb94ffff8f1da53103799c26674b8c32296b1d8d191c7b6182640d6bf`  
-		Last Modified: Wed, 18 May 2022 05:31:43 GMT  
-		Size: 1.3 KB (1343 bytes)  
+	-	`sha256:c17f7df3ebd7c274343c33fbbf1c8a57bf785fce24dcb4c9057f0644f402beae`  
+		Last Modified: Tue, 24 May 2022 19:22:36 GMT  
+		Size: 1.3 KB (1346 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df48305c09c91a3d2ca2aa88191ef9e263465737684715b9fcb956190e810cde`  
-		Last Modified: Wed, 18 May 2022 05:31:43 GMT  
-		Size: 2.5 KB (2456 bytes)  
+	-	`sha256:19d21973ebf26645d71e2a43189f69f77267cebd150c6c1cd7d828a9a946a37c`  
+		Last Modified: Tue, 24 May 2022 19:22:36 GMT  
+		Size: 2.5 KB (2452 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9eea78b46c642ecceb3e5971c75d3191b528a4b734d0fb42bb40b3c7302cc38f`  
-		Last Modified: Wed, 18 May 2022 05:31:43 GMT  
-		Size: 5.8 KB (5840 bytes)  
+	-	`sha256:5618d289ee2931e84c44f8a6d93abb344e9fa003dc7e760f0d8ca0ca3ca12a07`  
+		Last Modified: Tue, 24 May 2022 19:22:36 GMT  
+		Size: 5.9 KB (5853 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:121ca7edcac8c2ffe97b74dce62cfbc593b204ad062cec8e9051c3a1f0271ab8`  
-		Last Modified: Wed, 18 May 2022 05:31:43 GMT  
-		Size: 2.5 KB (2506 bytes)  
+	-	`sha256:393c5cb3e01090bef9aab74de28175245677db45cc81b3f9279cccc29387cfd5`  
+		Last Modified: Tue, 24 May 2022 19:22:38 GMT  
+		Size: 2.5 KB (2502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
