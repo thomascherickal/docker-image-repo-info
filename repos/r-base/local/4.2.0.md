@@ -3012,21 +3012,13 @@ Licenses: (parsed from: `/usr/share/doc/ncurses-base/copyright`, `/usr/share/doc
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.3+20220423-1
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.3%2b20220423-1.dsc' ncurses_6.3+20220423-1.dsc 4200 SHA256:35c7a6fd8ce140cbcebde10eb0a349b94e3cf45ef2a1000785819feb1f5ff212
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.3%2b20220423.orig.tar.gz' ncurses_6.3+20220423.orig.tar.gz 3611993 SHA256:a6bdfe499ae98ee937fed4729de09ffea08201317a9d16ed5d0142ac8b8b30e1
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.3%2b20220423.orig.tar.gz.asc' ncurses_6.3+20220423.orig.tar.gz.asc 729 SHA256:6771460069f300048dd7c7a41027cd38250b4f28d5f1dcef9cf8edb9b5ca691c
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.3%2b20220423-1.debian.tar.xz' ncurses_6.3+20220423-1.debian.tar.xz 54400 SHA256:6a271687063b669ea9daaefc384a8babb7dc6e8dd2ef4ae5894bff3c39e1ce3a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ncurses/6.3+20220423-1/
 
-- https://sources.debian.net/src/ncurses/6.3+20220423-1/ (for browsing the source)
-- https://sources.debian.net/src/ncurses/6.3+20220423-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ncurses/6.3+20220423-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ncurses=6.3+20220423-2`
 
@@ -3161,20 +3153,13 @@ Licenses: (parsed from: `/usr/share/doc/libopenblas0-pthread/copyright`)
 - `BSD-3-clause`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openblas=0.3.20+ds-1
-'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.20%2bds-1.dsc' openblas_0.3.20+ds-1.dsc 5067 SHA256:637d3d742083952843912893d9055574d4f80a1fb019d2344f746559614676ca
-'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.20%2bds.orig.tar.xz' openblas_0.3.20+ds.orig.tar.xz 1816992 SHA256:1011e1f66c183cf483eeae7a65014b7730ad03e6324e0611c38f266fd2d06849
-'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.20%2bds-1.debian.tar.xz' openblas_0.3.20+ds-1.debian.tar.xz 23772 SHA256:a124cb72e2f0d06d6522cce0f2488b91c546cc7cb24e6e756bb7f46cd10851f8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openblas/0.3.20+ds-1/
 
-- https://sources.debian.net/src/openblas/0.3.20+ds-1/ (for browsing the source)
-- https://sources.debian.net/src/openblas/0.3.20+ds-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openblas/0.3.20+ds-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.5.11+dfsg-1`
 
@@ -4087,21 +4072,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.3.0-7
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.3.0-7.dsc' tiff_4.3.0-7.dsc 2417 SHA256:ed71ddf7c04884c4e5ed207d934d1101129bed0cf9348310b1c91949e40f39b3
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz' tiff_4.3.0.orig.tar.gz 2808254 SHA256:0e46e5acb087ce7d1ac53cf4f56a09b221537fc86dfc5daaad1c2e89e1b37ac8
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz.asc' tiff_4.3.0.orig.tar.gz.asc 488 SHA256:6e41d0a4c042d2903f28534eb696a16409ccde9aaa2d02d06b5daaabbfb94aa7
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.3.0-7.debian.tar.xz' tiff_4.3.0-7.debian.tar.xz 30864 SHA256:c05db4c99fc0ed40e0d9b45e13f6f0cfb16adbb971ade5841c03aa19677890eb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tiff/4.3.0-7/
 
-- https://sources.debian.net/src/tiff/4.3.0-7/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.3.0-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.3.0-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tk8.6=8.6.12-1`
 
