@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:27dd1be4bed1549027bb697b55f05920cd6d46f49f7c3cdb4d798523238fdec3`
-- Created: `2022-04-30T01:26:57.147515199Z`
-- Virtual Size: ~ 700.15 Mb  
+- Image ID: `sha256:96c85f49715a19320f201ed70f73f8ce67962200a3e798dec12111fac170b6da`
+- Created: `2022-05-23T23:32:01.311898648Z`
+- Virtual Size: ~ 690.18 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,6 +17,7 @@
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=5.0`
   - `MONGO_VERSION=5.0.8`
+  - `HOME=/data/db`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -275,11 +276,11 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.10`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.11`
 
 Binary Packages:
 
-- `libcurl4:amd64=7.68.0-1ubuntu2.10`
+- `libcurl4:amd64=7.68.0-1ubuntu2.11`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl4/copyright`)
 
@@ -290,9 +291,14 @@ Licenses: (parsed from: `/usr/share/doc/libcurl4/copyright`)
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.11
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.11.dsc' curl_7.68.0-1ubuntu2.11.dsc 2737 SHA512:0f8d4a00073bfb5ad72c692f56534b229883044c75b7fb90501b9f4ab7b4c7c5e8b4ebbc0ec6ad0f7760323426f6c6d03d6ef67702fffff5c9c2b2b2fb406331
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.11.debian.tar.xz' curl_7.68.0-1ubuntu2.11.debian.tar.xz 56048 SHA512:b7504d92d64b8fd8734614845fc125421cae0e64fd52afeaf233763b33d0dceaac0887b572a463ef3f3dfd0c1d5baf33eedb82c3bc6612668580c660c937b729
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -1271,11 +1277,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `mongodb-mongosh=1.3.1`
+### `dpkg` source package: `mongodb-mongosh=1.4.2`
 
 Binary Packages:
 
-- `mongodb-mongosh=1.3.1`
+- `mongodb-mongosh=1.4.2`
 
 Licenses: (parsed from: `/usr/share/doc/mongodb-mongosh/copyright`)
 
@@ -1426,35 +1432,45 @@ $ apt-get source -qq --print-uris numactl=2.0.12-1
 'http://archive.ubuntu.com/ubuntu/pool/main/n/numactl/numactl_2.0.12-1.debian.tar.xz' numactl_2.0.12-1.debian.tar.xz 6756 SHA256:966724cac8f309b33959ae9922b3e5ab58ea821e2e802d96425e1eaada639a33
 ```
 
-### `dpkg` source package: `openldap=2.4.49+dfsg-2ubuntu1.8`
+### `dpkg` source package: `openldap=2.4.49+dfsg-2ubuntu1.9`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.49+dfsg-2ubuntu1.8`
-- `libldap-common=2.4.49+dfsg-2ubuntu1.8`
+- `libldap-2.4-2:amd64=2.4.49+dfsg-2ubuntu1.9`
+- `libldap-common=2.4.49+dfsg-2ubuntu1.9`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2ubuntu1.9
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49%2bdfsg-2ubuntu1.9.dsc' openldap_2.4.49+dfsg-2ubuntu1.9.dsc 3136 SHA512:91045bb053dfa88d599f0481659aae3ace92fc9b6acd0dd9c43f67b1e02054acb24e39d5617628bf981bebf11355159e45fc4bd843da8e767c6a9b8841209da0
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49%2bdfsg.orig.tar.gz' openldap_2.4.49+dfsg.orig.tar.gz 4844726 SHA512:c2096f6e37bae8e4d4dcc5cc8dad783996bc8677e7e62a06b9f55857f8950726ca3e3b0d8368563c8985123175f63625354ad5ac271db8b55d3ac62e8906d4c7
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49%2bdfsg-2ubuntu1.9.debian.tar.xz' openldap_2.4.49+dfsg-2ubuntu1.9.debian.tar.xz 189676 SHA512:bf7e4ff9f710404704526a912932d7445fab4c6ce30a099dd890adc78b8afe740ac773596cb4fe409d495406e5bd103d186bd0b2993265cdafd3eb9a71d6a3b5
+```
 
-### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.12`
+### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.13`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1f-1ubuntu2.12`
-- `openssl=1.1.1f-1ubuntu2.12`
+- `libssl1.1:amd64=1.1.1f-1ubuntu2.13`
+- `openssl=1.1.1f-1ubuntu2.13`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.13
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.13.dsc' openssl_1.1.1f-1ubuntu2.13.dsc 2470 SHA512:123a6be01f4c4e9f282b4ec5851428f6271672489dab3cfcea0e38da9b680c032415be792877767818b93b1f82c0707d1afce8b72fc60c85587e13139881e0b9
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.13.debian.tar.xz' openssl_1.1.1f-1ubuntu2.13.debian.tar.xz 173700 SHA512:e074e6051de63add4a2e75dcc44f3adad949be90d2a6e36cccbb01d620e65a655667fb520e9c2e8ece2b96cfeb89a426157cfae43f67730bf08176e3f1deabd3
+```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
 
@@ -1751,11 +1767,11 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `sqlite3=3.31.1-4ubuntu0.2`
+### `dpkg` source package: `sqlite3=3.31.1-4ubuntu0.3`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.31.1-4ubuntu0.2`
+- `libsqlite3-0:amd64=3.31.1-4ubuntu0.3`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -1763,9 +1779,15 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris sqlite3=3.31.1-4ubuntu0.3
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.3.dsc' sqlite3_3.31.1-4ubuntu0.3.dsc 2397 SHA512:1455afcf567dac1762dfdbface1dcfd0e6e9cb185700fea66be92a6925173f6a597fac99ac137f9708e789bce783a4b17d35aab8a29a9f777516119c71e2ec0c
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig-www.tar.xz' sqlite3_3.31.1.orig-www.tar.xz 5764424 SHA512:a47adacd46c673cfd674cb64fb54b054e69560aed8c8c429773f0eccdcdbce4be538397506eca8e2d169f4b46d0d47442b273e12d82f8c87e1aadf3ade458db6
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig.tar.xz' sqlite3_3.31.1.orig.tar.xz 7108036 SHA512:67e1050efe2988fa3d0d7e4a87e147a8114c6ff9b6ca5307a068befb38e861930eaee0135048ff1abb1e6323b507cbc68a0aac3a8fe5f095d6fcea1547a7efaf
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.3.debian.tar.xz' sqlite3_3.31.1-4ubuntu0.3.debian.tar.xz 34124 SHA512:7ce6a2158cf794d25c34ffe1134356f1b8ccff2c818218cf2e37c5533455b1732f3e9462d9e0dadc0d9dc5a8e73cadcdeb1b91c813275bba4e4fbd320de494cc
+```
 
 ### `dpkg` source package: `systemd=245.4-4ubuntu3.16`
 
