@@ -6,10 +6,12 @@
 -	[`eclipse-temurin:11-alpine`](#eclipse-temurin11-alpine)
 -	[`eclipse-temurin:11-centos7`](#eclipse-temurin11-centos7)
 -	[`eclipse-temurin:11-focal`](#eclipse-temurin11-focal)
+-	[`eclipse-temurin:11-jammy`](#eclipse-temurin11-jammy)
 -	[`eclipse-temurin:11-jdk`](#eclipse-temurin11-jdk)
 -	[`eclipse-temurin:11-jdk-alpine`](#eclipse-temurin11-jdk-alpine)
 -	[`eclipse-temurin:11-jdk-centos7`](#eclipse-temurin11-jdk-centos7)
 -	[`eclipse-temurin:11-jdk-focal`](#eclipse-temurin11-jdk-focal)
+-	[`eclipse-temurin:11-jdk-jammy`](#eclipse-temurin11-jdk-jammy)
 -	[`eclipse-temurin:11-jdk-nanoserver`](#eclipse-temurin11-jdk-nanoserver)
 -	[`eclipse-temurin:11-jdk-nanoserver-1809`](#eclipse-temurin11-jdk-nanoserver-1809)
 -	[`eclipse-temurin:11-jdk-nanoserver-ltsc2022`](#eclipse-temurin11-jdk-nanoserver-ltsc2022)
@@ -20,6 +22,7 @@
 -	[`eclipse-temurin:11-jre-alpine`](#eclipse-temurin11-jre-alpine)
 -	[`eclipse-temurin:11-jre-centos7`](#eclipse-temurin11-jre-centos7)
 -	[`eclipse-temurin:11-jre-focal`](#eclipse-temurin11-jre-focal)
+-	[`eclipse-temurin:11-jre-jammy`](#eclipse-temurin11-jre-jammy)
 -	[`eclipse-temurin:11-jre-nanoserver`](#eclipse-temurin11-jre-nanoserver)
 -	[`eclipse-temurin:11-jre-nanoserver-1809`](#eclipse-temurin11-jre-nanoserver-1809)
 -	[`eclipse-temurin:11-jre-nanoserver-ltsc2022`](#eclipse-temurin11-jre-nanoserver-ltsc2022)
@@ -36,6 +39,7 @@
 -	[`eclipse-temurin:11.0.15_10-jdk-alpine`](#eclipse-temurin11015_10-jdk-alpine)
 -	[`eclipse-temurin:11.0.15_10-jdk-centos7`](#eclipse-temurin11015_10-jdk-centos7)
 -	[`eclipse-temurin:11.0.15_10-jdk-focal`](#eclipse-temurin11015_10-jdk-focal)
+-	[`eclipse-temurin:11.0.15_10-jdk-jammy`](#eclipse-temurin11015_10-jdk-jammy)
 -	[`eclipse-temurin:11.0.15_10-jdk-nanoserver`](#eclipse-temurin11015_10-jdk-nanoserver)
 -	[`eclipse-temurin:11.0.15_10-jdk-nanoserver-1809`](#eclipse-temurin11015_10-jdk-nanoserver-1809)
 -	[`eclipse-temurin:11.0.15_10-jdk-nanoserver-ltsc2022`](#eclipse-temurin11015_10-jdk-nanoserver-ltsc2022)
@@ -46,6 +50,7 @@
 -	[`eclipse-temurin:11.0.15_10-jre-alpine`](#eclipse-temurin11015_10-jre-alpine)
 -	[`eclipse-temurin:11.0.15_10-jre-centos7`](#eclipse-temurin11015_10-jre-centos7)
 -	[`eclipse-temurin:11.0.15_10-jre-focal`](#eclipse-temurin11015_10-jre-focal)
+-	[`eclipse-temurin:11.0.15_10-jre-jammy`](#eclipse-temurin11015_10-jre-jammy)
 -	[`eclipse-temurin:11.0.15_10-jre-nanoserver`](#eclipse-temurin11015_10-jre-nanoserver)
 -	[`eclipse-temurin:11.0.15_10-jre-nanoserver-1809`](#eclipse-temurin11015_10-jre-nanoserver-1809)
 -	[`eclipse-temurin:11.0.15_10-jre-nanoserver-ltsc2022`](#eclipse-temurin11015_10-jre-nanoserver-ltsc2022)
@@ -56,10 +61,12 @@
 -	[`eclipse-temurin:17-alpine`](#eclipse-temurin17-alpine)
 -	[`eclipse-temurin:17-centos7`](#eclipse-temurin17-centos7)
 -	[`eclipse-temurin:17-focal`](#eclipse-temurin17-focal)
+-	[`eclipse-temurin:17-jammy`](#eclipse-temurin17-jammy)
 -	[`eclipse-temurin:17-jdk`](#eclipse-temurin17-jdk)
 -	[`eclipse-temurin:17-jdk-alpine`](#eclipse-temurin17-jdk-alpine)
 -	[`eclipse-temurin:17-jdk-centos7`](#eclipse-temurin17-jdk-centos7)
 -	[`eclipse-temurin:17-jdk-focal`](#eclipse-temurin17-jdk-focal)
+-	[`eclipse-temurin:17-jdk-jammy`](#eclipse-temurin17-jdk-jammy)
 -	[`eclipse-temurin:17-jdk-nanoserver`](#eclipse-temurin17-jdk-nanoserver)
 -	[`eclipse-temurin:17-jdk-nanoserver-1809`](#eclipse-temurin17-jdk-nanoserver-1809)
 -	[`eclipse-temurin:17-jdk-nanoserver-ltsc2022`](#eclipse-temurin17-jdk-nanoserver-ltsc2022)
@@ -70,6 +77,7 @@
 -	[`eclipse-temurin:17-jre-alpine`](#eclipse-temurin17-jre-alpine)
 -	[`eclipse-temurin:17-jre-centos7`](#eclipse-temurin17-jre-centos7)
 -	[`eclipse-temurin:17-jre-focal`](#eclipse-temurin17-jre-focal)
+-	[`eclipse-temurin:17-jre-jammy`](#eclipse-temurin17-jre-jammy)
 -	[`eclipse-temurin:17-jre-nanoserver`](#eclipse-temurin17-jre-nanoserver)
 -	[`eclipse-temurin:17-jre-nanoserver-1809`](#eclipse-temurin17-jre-nanoserver-1809)
 -	[`eclipse-temurin:17-jre-nanoserver-ltsc2022`](#eclipse-temurin17-jre-nanoserver-ltsc2022)
@@ -86,6 +94,7 @@
 -	[`eclipse-temurin:17.0.3_7-jdk-alpine`](#eclipse-temurin1703_7-jdk-alpine)
 -	[`eclipse-temurin:17.0.3_7-jdk-centos7`](#eclipse-temurin1703_7-jdk-centos7)
 -	[`eclipse-temurin:17.0.3_7-jdk-focal`](#eclipse-temurin1703_7-jdk-focal)
+-	[`eclipse-temurin:17.0.3_7-jdk-jammy`](#eclipse-temurin1703_7-jdk-jammy)
 -	[`eclipse-temurin:17.0.3_7-jdk-nanoserver`](#eclipse-temurin1703_7-jdk-nanoserver)
 -	[`eclipse-temurin:17.0.3_7-jdk-nanoserver-1809`](#eclipse-temurin1703_7-jdk-nanoserver-1809)
 -	[`eclipse-temurin:17.0.3_7-jdk-nanoserver-ltsc2022`](#eclipse-temurin1703_7-jdk-nanoserver-ltsc2022)
@@ -96,6 +105,7 @@
 -	[`eclipse-temurin:17.0.3_7-jre-alpine`](#eclipse-temurin1703_7-jre-alpine)
 -	[`eclipse-temurin:17.0.3_7-jre-centos7`](#eclipse-temurin1703_7-jre-centos7)
 -	[`eclipse-temurin:17.0.3_7-jre-focal`](#eclipse-temurin1703_7-jre-focal)
+-	[`eclipse-temurin:17.0.3_7-jre-jammy`](#eclipse-temurin1703_7-jre-jammy)
 -	[`eclipse-temurin:17.0.3_7-jre-nanoserver`](#eclipse-temurin1703_7-jre-nanoserver)
 -	[`eclipse-temurin:17.0.3_7-jre-nanoserver-1809`](#eclipse-temurin1703_7-jre-nanoserver-1809)
 -	[`eclipse-temurin:17.0.3_7-jre-nanoserver-ltsc2022`](#eclipse-temurin1703_7-jre-nanoserver-ltsc2022)
@@ -106,10 +116,12 @@
 -	[`eclipse-temurin:18-alpine`](#eclipse-temurin18-alpine)
 -	[`eclipse-temurin:18-centos7`](#eclipse-temurin18-centos7)
 -	[`eclipse-temurin:18-focal`](#eclipse-temurin18-focal)
+-	[`eclipse-temurin:18-jammy`](#eclipse-temurin18-jammy)
 -	[`eclipse-temurin:18-jdk`](#eclipse-temurin18-jdk)
 -	[`eclipse-temurin:18-jdk-alpine`](#eclipse-temurin18-jdk-alpine)
 -	[`eclipse-temurin:18-jdk-centos7`](#eclipse-temurin18-jdk-centos7)
 -	[`eclipse-temurin:18-jdk-focal`](#eclipse-temurin18-jdk-focal)
+-	[`eclipse-temurin:18-jdk-jammy`](#eclipse-temurin18-jdk-jammy)
 -	[`eclipse-temurin:18-jdk-nanoserver`](#eclipse-temurin18-jdk-nanoserver)
 -	[`eclipse-temurin:18-jdk-nanoserver-1809`](#eclipse-temurin18-jdk-nanoserver-1809)
 -	[`eclipse-temurin:18-jdk-nanoserver-ltsc2022`](#eclipse-temurin18-jdk-nanoserver-ltsc2022)
@@ -120,6 +132,7 @@
 -	[`eclipse-temurin:18-jre-alpine`](#eclipse-temurin18-jre-alpine)
 -	[`eclipse-temurin:18-jre-centos7`](#eclipse-temurin18-jre-centos7)
 -	[`eclipse-temurin:18-jre-focal`](#eclipse-temurin18-jre-focal)
+-	[`eclipse-temurin:18-jre-jammy`](#eclipse-temurin18-jre-jammy)
 -	[`eclipse-temurin:18-jre-nanoserver`](#eclipse-temurin18-jre-nanoserver)
 -	[`eclipse-temurin:18-jre-nanoserver-1809`](#eclipse-temurin18-jre-nanoserver-1809)
 -	[`eclipse-temurin:18-jre-nanoserver-ltsc2022`](#eclipse-temurin18-jre-nanoserver-ltsc2022)
@@ -136,6 +149,7 @@
 -	[`eclipse-temurin:18.0.1_10-jdk-alpine`](#eclipse-temurin1801_10-jdk-alpine)
 -	[`eclipse-temurin:18.0.1_10-jdk-centos7`](#eclipse-temurin1801_10-jdk-centos7)
 -	[`eclipse-temurin:18.0.1_10-jdk-focal`](#eclipse-temurin1801_10-jdk-focal)
+-	[`eclipse-temurin:18.0.1_10-jdk-jammy`](#eclipse-temurin1801_10-jdk-jammy)
 -	[`eclipse-temurin:18.0.1_10-jdk-nanoserver`](#eclipse-temurin1801_10-jdk-nanoserver)
 -	[`eclipse-temurin:18.0.1_10-jdk-nanoserver-1809`](#eclipse-temurin1801_10-jdk-nanoserver-1809)
 -	[`eclipse-temurin:18.0.1_10-jdk-nanoserver-ltsc2022`](#eclipse-temurin1801_10-jdk-nanoserver-ltsc2022)
@@ -146,6 +160,7 @@
 -	[`eclipse-temurin:18.0.1_10-jre-alpine`](#eclipse-temurin1801_10-jre-alpine)
 -	[`eclipse-temurin:18.0.1_10-jre-centos7`](#eclipse-temurin1801_10-jre-centos7)
 -	[`eclipse-temurin:18.0.1_10-jre-focal`](#eclipse-temurin1801_10-jre-focal)
+-	[`eclipse-temurin:18.0.1_10-jre-jammy`](#eclipse-temurin1801_10-jre-jammy)
 -	[`eclipse-temurin:18.0.1_10-jre-nanoserver`](#eclipse-temurin1801_10-jre-nanoserver)
 -	[`eclipse-temurin:18.0.1_10-jre-nanoserver-1809`](#eclipse-temurin1801_10-jre-nanoserver-1809)
 -	[`eclipse-temurin:18.0.1_10-jre-nanoserver-ltsc2022`](#eclipse-temurin1801_10-jre-nanoserver-ltsc2022)
@@ -156,10 +171,12 @@
 -	[`eclipse-temurin:8-alpine`](#eclipse-temurin8-alpine)
 -	[`eclipse-temurin:8-centos7`](#eclipse-temurin8-centos7)
 -	[`eclipse-temurin:8-focal`](#eclipse-temurin8-focal)
+-	[`eclipse-temurin:8-jammy`](#eclipse-temurin8-jammy)
 -	[`eclipse-temurin:8-jdk`](#eclipse-temurin8-jdk)
 -	[`eclipse-temurin:8-jdk-alpine`](#eclipse-temurin8-jdk-alpine)
 -	[`eclipse-temurin:8-jdk-centos7`](#eclipse-temurin8-jdk-centos7)
 -	[`eclipse-temurin:8-jdk-focal`](#eclipse-temurin8-jdk-focal)
+-	[`eclipse-temurin:8-jdk-jammy`](#eclipse-temurin8-jdk-jammy)
 -	[`eclipse-temurin:8-jdk-nanoserver`](#eclipse-temurin8-jdk-nanoserver)
 -	[`eclipse-temurin:8-jdk-nanoserver-1809`](#eclipse-temurin8-jdk-nanoserver-1809)
 -	[`eclipse-temurin:8-jdk-nanoserver-ltsc2022`](#eclipse-temurin8-jdk-nanoserver-ltsc2022)
@@ -170,6 +187,7 @@
 -	[`eclipse-temurin:8-jre-alpine`](#eclipse-temurin8-jre-alpine)
 -	[`eclipse-temurin:8-jre-centos7`](#eclipse-temurin8-jre-centos7)
 -	[`eclipse-temurin:8-jre-focal`](#eclipse-temurin8-jre-focal)
+-	[`eclipse-temurin:8-jre-jammy`](#eclipse-temurin8-jre-jammy)
 -	[`eclipse-temurin:8-jre-nanoserver`](#eclipse-temurin8-jre-nanoserver)
 -	[`eclipse-temurin:8-jre-nanoserver-1809`](#eclipse-temurin8-jre-nanoserver-1809)
 -	[`eclipse-temurin:8-jre-nanoserver-ltsc2022`](#eclipse-temurin8-jre-nanoserver-ltsc2022)
@@ -186,6 +204,7 @@
 -	[`eclipse-temurin:8u332-b09-jdk-alpine`](#eclipse-temurin8u332-b09-jdk-alpine)
 -	[`eclipse-temurin:8u332-b09-jdk-centos7`](#eclipse-temurin8u332-b09-jdk-centos7)
 -	[`eclipse-temurin:8u332-b09-jdk-focal`](#eclipse-temurin8u332-b09-jdk-focal)
+-	[`eclipse-temurin:8u332-b09-jdk-jammy`](#eclipse-temurin8u332-b09-jdk-jammy)
 -	[`eclipse-temurin:8u332-b09-jdk-nanoserver`](#eclipse-temurin8u332-b09-jdk-nanoserver)
 -	[`eclipse-temurin:8u332-b09-jdk-nanoserver-1809`](#eclipse-temurin8u332-b09-jdk-nanoserver-1809)
 -	[`eclipse-temurin:8u332-b09-jdk-nanoserver-ltsc2022`](#eclipse-temurin8u332-b09-jdk-nanoserver-ltsc2022)
@@ -196,6 +215,7 @@
 -	[`eclipse-temurin:8u332-b09-jre-alpine`](#eclipse-temurin8u332-b09-jre-alpine)
 -	[`eclipse-temurin:8u332-b09-jre-centos7`](#eclipse-temurin8u332-b09-jre-centos7)
 -	[`eclipse-temurin:8u332-b09-jre-focal`](#eclipse-temurin8u332-b09-jre-focal)
+-	[`eclipse-temurin:8u332-b09-jre-jammy`](#eclipse-temurin8u332-b09-jre-jammy)
 -	[`eclipse-temurin:8u332-b09-jre-nanoserver`](#eclipse-temurin8u332-b09-jre-nanoserver)
 -	[`eclipse-temurin:8u332-b09-jre-nanoserver-1809`](#eclipse-temurin8u332-b09-jre-nanoserver-1809)
 -	[`eclipse-temurin:8u332-b09-jre-nanoserver-ltsc2022`](#eclipse-temurin8u332-b09-jre-nanoserver-ltsc2022)
@@ -1108,6 +1128,15 @@ CMD ["jshell"]
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `eclipse-temurin:11-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `eclipse-temurin:11-jdk`
 
 ```console
@@ -2011,6 +2040,15 @@ CMD ["jshell"]
 		Last Modified: Fri, 29 Apr 2022 23:25:25 GMT  
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `eclipse-temurin:11-jdk-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `eclipse-temurin:11-jdk-nanoserver`
 
@@ -3485,6 +3523,15 @@ RUN echo Verifying install ...     && echo java --version && java --version     
 		Last Modified: Fri, 29 Apr 2022 23:25:44 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `eclipse-temurin:11-jre-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `eclipse-temurin:11-jre-nanoserver`
 
@@ -5562,6 +5609,15 @@ CMD ["jshell"]
 		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `eclipse-temurin:11.0.15_10-jdk-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `eclipse-temurin:11.0.15_10-jdk-nanoserver`
 
 ```console
@@ -7036,6 +7092,15 @@ RUN echo Verifying install ...     && echo java --version && java --version     
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `eclipse-temurin:11.0.15_10-jre-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `eclipse-temurin:11.0.15_10-jre-nanoserver`
 
 ```console
@@ -8502,6 +8567,15 @@ CMD ["jshell"]
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `eclipse-temurin:17-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `eclipse-temurin:17-jdk`
 
 ```console
@@ -9405,6 +9479,15 @@ CMD ["jshell"]
 		Last Modified: Fri, 29 Apr 2022 23:25:54 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `eclipse-temurin:17-jdk-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `eclipse-temurin:17-jdk-nanoserver`
 
@@ -10879,6 +10962,15 @@ RUN echo Verifying install ...     && echo java --version && java --version     
 		Last Modified: Fri, 29 Apr 2022 23:26:14 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `eclipse-temurin:17-jre-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `eclipse-temurin:17-jre-nanoserver`
 
@@ -12956,6 +13048,15 @@ CMD ["jshell"]
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `eclipse-temurin:17.0.3_7-jdk-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `eclipse-temurin:17.0.3_7-jdk-nanoserver`
 
 ```console
@@ -14430,6 +14531,15 @@ RUN echo Verifying install ...     && echo java --version && java --version     
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `eclipse-temurin:17.0.3_7-jre-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `eclipse-temurin:17.0.3_7-jre-nanoserver`
 
 ```console
@@ -15896,6 +16006,15 @@ CMD ["jshell"]
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `eclipse-temurin:18-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `eclipse-temurin:18-jdk`
 
 ```console
@@ -16799,6 +16918,15 @@ CMD ["jshell"]
 		Last Modified: Wed, 04 May 2022 17:43:36 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `eclipse-temurin:18-jdk-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `eclipse-temurin:18-jdk-nanoserver`
 
@@ -18273,6 +18401,15 @@ RUN echo Verifying install ...     && echo java --version && java --version     
 		Last Modified: Wed, 04 May 2022 17:43:57 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `eclipse-temurin:18-jre-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `eclipse-temurin:18-jre-nanoserver`
 
@@ -20350,6 +20487,15 @@ CMD ["jshell"]
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `eclipse-temurin:18.0.1_10-jdk-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `eclipse-temurin:18.0.1_10-jdk-nanoserver`
 
 ```console
@@ -21824,6 +21970,15 @@ RUN echo Verifying install ...     && echo java --version && java --version     
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `eclipse-temurin:18.0.1_10-jre-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `eclipse-temurin:18.0.1_10-jre-nanoserver`
 
 ```console
@@ -23148,6 +23303,15 @@ RUN echo Verifying install ...     && echo javac -version && javac -version     
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `eclipse-temurin:8-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `eclipse-temurin:8-jdk`
 
 ```console
@@ -23909,6 +24073,15 @@ RUN echo Verifying install ...     && echo javac -version && javac -version     
 		Last Modified: Thu, 05 May 2022 18:23:34 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `eclipse-temurin:8-jdk-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `eclipse-temurin:8-jdk-nanoserver`
 
@@ -25233,6 +25406,15 @@ RUN echo Verifying install ...     && echo java -version && java -version     &&
 		Last Modified: Thu, 05 May 2022 18:24:32 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `eclipse-temurin:8-jre-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `eclipse-temurin:8-jre-nanoserver`
 
@@ -27120,6 +27302,15 @@ RUN echo Verifying install ...     && echo javac -version && javac -version     
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `eclipse-temurin:8u332-b09-jdk-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `eclipse-temurin:8u332-b09-jdk-nanoserver`
 
 ```console
@@ -28443,6 +28634,15 @@ RUN echo Verifying install ...     && echo java -version && java -version     &&
 		Last Modified: Thu, 05 May 2022 18:24:32 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `eclipse-temurin:8u332-b09-jre-jammy`
+
+```console
+$ docker pull eclipse-temurin@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `eclipse-temurin:8u332-b09-jre-nanoserver`
 
