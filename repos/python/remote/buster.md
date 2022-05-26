@@ -1,7 +1,7 @@
 ## `python:buster`
 
 ```console
-$ docker pull python@sha256:82f110dc4937de5ebb2e17c7277697c5cbdd392cbb911ae09c6b86fc69d6e20a
+$ docker pull python@sha256:007c3be968d7594d41cfa86ce9be807bb1ae15aebeb62ddf7353ae1de947fbf3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -202,14 +202,14 @@ CMD ["python3"]
 ### `python:buster` - linux; arm variant v7
 
 ```console
-$ docker pull python@sha256:a21525d03f40d054a4d36ec4c6176f94f4c6e02f5399f7629ace898275f0c89f
+$ docker pull python@sha256:46ab82e296795626abdcc2fb8d2b0c02184c5062529e42382c68c2c8d438db1d
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **306.4 MB (306374907 bytes)**  
+-	Total Size: **306.4 MB (306374857 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:74b3a816803ed7933691943bdf9ffae6119fb310e270e86d26eac590419452e8`
+-	Image ID: `sha256:a65aafb74b3111063aabebdfe0a40d1a2f6f3fbcf717567eafe02356050e39bf`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -243,13 +243,13 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.0.4
 # Thu, 12 May 2022 02:59:47 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=58.1.0
-# Wed, 18 May 2022 05:51:46 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/2d26a16e351a22108b46fa11507aa57a732d4074/public/get-pip.py
-# Wed, 18 May 2022 05:51:46 GMT
-ENV PYTHON_GET_PIP_SHA256=530e7077f9e31f0378b5ee7cc90c8d99b7aef832f3d4ea96b42c2072e322734e
-# Wed, 18 May 2022 05:52:00 GMT
+# Wed, 25 May 2022 22:04:20 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/a312303dbd516f6a692f2fee59852701bd828dd8/public/get-pip.py
+# Wed, 25 May 2022 22:04:20 GMT
+ENV PYTHON_GET_PIP_SHA256=8dd03e99645c19f49bbb629ce65c46b665ee92a1d94d246418bad6afade89f8d
+# Wed, 25 May 2022 22:04:35 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 18 May 2022 05:52:01 GMT
+# Wed, 25 May 2022 22:04:35 GMT
 CMD ["python3"]
 ```
 
@@ -286,22 +286,22 @@ CMD ["python3"]
 		Last Modified: Thu, 12 May 2022 07:44:14 GMT  
 		Size: 234.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:22da4274fc5f07b7ab7db5770afc081e55fa2d9ddc89736f548c552d9d11c91e`  
-		Last Modified: Wed, 18 May 2022 08:01:55 GMT  
-		Size: 2.9 MB (2872413 bytes)  
+	-	`sha256:d9705a28ca2f6f20a6f2c936ea4e3841b7f59f3e3f9991f62fbf7dfec57a0ebe`  
+		Last Modified: Wed, 25 May 2022 23:41:36 GMT  
+		Size: 2.9 MB (2872363 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:buster` - linux; arm64 variant v8
 
 ```console
-$ docker pull python@sha256:97b399da4e656cb439aafe2e86b3fd0e9129244acb2d532e086a1dd6ee52d0bc
+$ docker pull python@sha256:0da831fc104ade9404d253d8b54739b875e37d3209f96f976f479ba89d3fc593
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **331.9 MB (331891967 bytes)**  
+-	Total Size: **331.9 MB (331892042 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:efe5657a1317dbfb5812c71ccb579b3913df332c5c2065cbc8e2540c80ee7131`
+-	Image ID: `sha256:bb492615f10141269ef0145baeb49618f9bf259ff467d156217c8242034383bd`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -335,13 +335,13 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.0.4
 # Wed, 11 May 2022 10:23:56 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=58.1.0
-# Wed, 18 May 2022 04:06:29 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/2d26a16e351a22108b46fa11507aa57a732d4074/public/get-pip.py
-# Wed, 18 May 2022 04:06:30 GMT
-ENV PYTHON_GET_PIP_SHA256=530e7077f9e31f0378b5ee7cc90c8d99b7aef832f3d4ea96b42c2072e322734e
-# Wed, 18 May 2022 04:06:36 GMT
+# Wed, 25 May 2022 22:36:07 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/a312303dbd516f6a692f2fee59852701bd828dd8/public/get-pip.py
+# Wed, 25 May 2022 22:36:08 GMT
+ENV PYTHON_GET_PIP_SHA256=8dd03e99645c19f49bbb629ce65c46b665ee92a1d94d246418bad6afade89f8d
+# Wed, 25 May 2022 22:36:14 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 18 May 2022 04:06:38 GMT
+# Wed, 25 May 2022 22:36:15 GMT
 CMD ["python3"]
 ```
 
@@ -378,9 +378,9 @@ CMD ["python3"]
 		Last Modified: Wed, 11 May 2022 11:50:40 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e17709a3b2f701554e276ffbd9d5c81125fd3b4f7eb99f428c8d69692b56f41f`  
-		Last Modified: Wed, 18 May 2022 04:48:26 GMT  
-		Size: 2.9 MB (2871828 bytes)  
+	-	`sha256:da6c40e4854616e862b59621a193ea4d1901ff9d916a234a91c0cd9faf2240a0`  
+		Last Modified: Wed, 25 May 2022 23:25:22 GMT  
+		Size: 2.9 MB (2871903 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:buster` - linux; 386
@@ -570,14 +570,14 @@ CMD ["python3"]
 ### `python:buster` - linux; ppc64le
 
 ```console
-$ docker pull python@sha256:fe9966f8fd0ee77b000c24aafacfc514866c9dfc55a130ac20b79e991f79329f
+$ docker pull python@sha256:0da5e53aa06e577bbedb102d1ae14a29efe763ea64d6f096859727389bb7a1c9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **364.9 MB (364932048 bytes)**  
+-	Total Size: **364.9 MB (364932022 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3041e87d40893fc78773eaf883e8aa7815d1b0a863b902ea93202b37664f1bdb`
+-	Image ID: `sha256:d57f6243722423c9fb8775e97be5240201914f7a67fb06386f3fed26ca4c54de`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -611,13 +611,13 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.0.4
 # Wed, 11 May 2022 23:59:19 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=58.1.0
-# Wed, 18 May 2022 04:29:21 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/2d26a16e351a22108b46fa11507aa57a732d4074/public/get-pip.py
-# Wed, 18 May 2022 04:29:23 GMT
-ENV PYTHON_GET_PIP_SHA256=530e7077f9e31f0378b5ee7cc90c8d99b7aef832f3d4ea96b42c2072e322734e
-# Wed, 18 May 2022 04:29:56 GMT
+# Wed, 25 May 2022 22:35:17 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/a312303dbd516f6a692f2fee59852701bd828dd8/public/get-pip.py
+# Wed, 25 May 2022 22:35:21 GMT
+ENV PYTHON_GET_PIP_SHA256=8dd03e99645c19f49bbb629ce65c46b665ee92a1d94d246418bad6afade89f8d
+# Wed, 25 May 2022 22:35:49 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 18 May 2022 04:29:59 GMT
+# Wed, 25 May 2022 22:35:53 GMT
 CMD ["python3"]
 ```
 
@@ -654,22 +654,22 @@ CMD ["python3"]
 		Last Modified: Thu, 12 May 2022 04:12:43 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b9d9b7d8562acbd069c4ef08d4d415bb5cb1c0128aaa79cf7332e11838cb321`  
-		Last Modified: Wed, 18 May 2022 06:05:45 GMT  
-		Size: 2.9 MB (2872326 bytes)  
+	-	`sha256:24ef3d7fbe503abcf8b18f35ad22174f3169bb564c2ad2704dafb988d3fecca0`  
+		Last Modified: Wed, 25 May 2022 23:54:27 GMT  
+		Size: 2.9 MB (2872300 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:buster` - linux; s390x
 
 ```console
-$ docker pull python@sha256:46f0f7b45d18024b6f8cd9ab657a023599ded7690e388fb1f05e8ed9771eca45
+$ docker pull python@sha256:ed4f613714b763c2283fcfe66a42e6a9f0b8e8cd9c90739d21448981b261a6e5
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **323.8 MB (323815256 bytes)**  
+-	Total Size: **323.8 MB (323815262 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a106ef120b8b043a8f299be8dfe3434e74158fb34cb604f5abbc60cb4f8a6e8f`
+-	Image ID: `sha256:d20e5bb83d17767957d5dcebc07a98997298b99908d5d20f4093f349dd88b71c`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -703,13 +703,13 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.0.4
 # Wed, 11 May 2022 07:40:56 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=58.1.0
-# Wed, 18 May 2022 02:30:14 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/2d26a16e351a22108b46fa11507aa57a732d4074/public/get-pip.py
-# Wed, 18 May 2022 02:30:15 GMT
-ENV PYTHON_GET_PIP_SHA256=530e7077f9e31f0378b5ee7cc90c8d99b7aef832f3d4ea96b42c2072e322734e
-# Wed, 18 May 2022 02:30:28 GMT
+# Wed, 25 May 2022 22:18:25 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/a312303dbd516f6a692f2fee59852701bd828dd8/public/get-pip.py
+# Wed, 25 May 2022 22:18:26 GMT
+ENV PYTHON_GET_PIP_SHA256=8dd03e99645c19f49bbb629ce65c46b665ee92a1d94d246418bad6afade89f8d
+# Wed, 25 May 2022 22:18:35 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 18 May 2022 02:30:29 GMT
+# Wed, 25 May 2022 22:18:36 GMT
 CMD ["python3"]
 ```
 
@@ -746,7 +746,7 @@ CMD ["python3"]
 		Last Modified: Wed, 11 May 2022 08:56:56 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1feb8dd22e4fc780081e43f6ecdf6a88c0b6e9bf5ad14b264a5f3635e3801f26`  
-		Last Modified: Wed, 18 May 2022 03:11:09 GMT  
-		Size: 2.9 MB (2872343 bytes)  
+	-	`sha256:bfdc2c08733755df366eeeef07fd96ed6b57538ae8d1b9780917c3461cfd7dd2`  
+		Last Modified: Wed, 25 May 2022 23:09:53 GMT  
+		Size: 2.9 MB (2872349 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
