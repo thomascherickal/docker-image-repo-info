@@ -35,7 +35,12 @@ Licenses (from `rpm --query`): GPLv2+
 
 Licenses (from `rpm --query`): BSD
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url bzip2-1.0.8-2.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/bzip2-1.0.8-2.mga8.src.rpm
+```
 
 ### `rpm` package: `chkconfig-1.15-1.mga9.x86_64`
 
@@ -53,7 +58,12 @@ Licenses (from `rpm --query`): GPLv2+
 
 Licenses (from `rpm --query`): GPLv3+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url coreutils-8.32-2.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/coreutils-8.32-2.mga8.src.rpm
+```
 
 ### `rpm` package: `cpio-2.13-5.mga8.x86_64`
 
@@ -101,7 +111,12 @@ Licenses (from `rpm --query`): BSD
 
 Licenses (from `rpm --query`): GPLv2+ or AFL
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url dbus-1.13.18-3.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/dbus-1.13.18-3.mga8.src.rpm
+```
 
 ### `rpm` package: `deltarpm-3.6.2-4.mga9.x86_64`
 
@@ -149,13 +164,23 @@ Licenses (from `rpm --query`): BSD
 
 Licenses (from `rpm --query`): Public Domain
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url filesystem-2.1.9-34.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/filesystem-2.1.9-34.mga8.src.rpm
+```
 
 ### `rpm` package: `findutils-4.8.0-1.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPLv3
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url findutils-4.8.0-1.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/findutils-4.8.0-1.mga8.src.rpm
+```
 
 ### `rpm` package: `gawk-5.1.0-1.mga8.x86_64`
 
@@ -203,7 +228,12 @@ Licenses (from `rpm --query`): pubkey
 
 Licenses (from `rpm --query`): GPLv3
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url grep-3.6-2.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/grep-3.6-2.mga8.src.rpm
+```
 
 ### `rpm` package: `gzip-1.10-4.mga8.x86_64`
 
@@ -215,7 +245,12 @@ Licenses (from `rpm --query`): GPLv3+
 
 Licenses (from `rpm --query`): GPLv2+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url hostname-3.23-2.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/hostname-3.23-2.mga8.src.rpm
+```
 
 ### `rpm` package: `icu68-data-68.2-1.mga8.noarch`
 
@@ -227,13 +262,23 @@ Licenses (from `rpm --query`): Unicode
 
 Licenses (from `rpm --query`): GPLv2+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url ifmetric-0.3-19.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/ifmetric-0.3-19.mga8.src.rpm
+```
 
 ### `rpm` package: `ifplugd-0.28-23.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPL
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url ifplugd-0.28-23.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/ifplugd-0.28-23.mga8.src.rpm
+```
 
 ### `rpm` package: `initscripts-9.78-27.mga8.x86_64`
 
@@ -267,7 +312,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url kbd-2.4.0-1.mga8
-http://ftp5.gwdg.de/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/kbd-2.4.0-1.mga8.src.rpm
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/kbd-2.4.0-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `kmod-28-1.mga8.x86_64`
@@ -722,7 +767,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64pam_userpass1-1.0.2-15.mga8
-http://ftp5.gwdg.de/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/pam_userpass-1.0.2-15.mga8.src.rpm
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/pam_userpass-1.0.2-15.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64pcre1-8.44-1.mga8.x86_64`
@@ -987,7 +1032,12 @@ Licenses (from `rpm --query`): (GPLv2+ or LGPLv3+) and GPLv3+
 
 Licenses (from `rpm --query`): Public Domain
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url libselinux-3.2-0.rc1.5.mga9
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/libselinux-3.2-0.rc1.5.mga9.src.rpm
+```
 
 ### `rpm` package: `libstdc++6-10.3.0-0.RC.2.mga9.x86_64`
 
@@ -1005,13 +1055,23 @@ Licenses (from `rpm --query`): GPLv2
 
 Licenses (from `rpm --query`): LGPLv2+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url libuser-0.63-1.mga9
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/libuser-0.63-1.mga9.src.rpm
+```
 
 ### `rpm` package: `libutempter-1.2.1-1.mga8.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url libutempter-1.2.1-1.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/libutempter-1.2.1-1.mga8.src.rpm
+```
 
 ### `rpm` package: `locales-2.33-1.mga9.x86_64`
 
@@ -1059,7 +1119,12 @@ Licenses (from `rpm --query`): GPL
 
 Licenses (from `rpm --query`): MIT
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url mageia-repos-9-0.0.1.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/mageia-repos-9-0.0.1.mga8.src.rpm
+```
 
 ### `rpm` package: `mageia-repos-cauldron-9-0.0.1.mga8.x86_64`
 
@@ -1101,7 +1166,12 @@ Licenses (from `rpm --query`): MIT
 
 Licenses (from `rpm --query`): GPLv2+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url net-tools-2.0-0.20150915git.6.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/net-tools-2.0-0.20150915git.6.mga8.src.rpm
+```
 
 ### `rpm` package: `nss-myhostname-248-2.mga9.x86_64`
 
@@ -1149,7 +1219,12 @@ Licenses (from `rpm --query`): BSD or GPL+
 
 Licenses (from `rpm --query`): BSD
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url passwd-0.80-2.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/passwd-0.80-2.mga8.src.rpm
+```
 
 ### `rpm` package: `perl-5.32.1-4.mga9.x86_64`
 
@@ -1275,13 +1350,23 @@ Licenses (from `rpm --query`): MIT
 
 Licenses (from `rpm --query`): GPLv2+ and LGPLv2+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url procps-ng-3.3.17-1.mga9
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/procps-ng-3.3.17-1.mga9.src.rpm
+```
 
 ### `rpm` package: `psmisc-23.4-1.mga9.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url psmisc-23.4-1.mga9
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/psmisc-23.4-1.mga9.src.rpm
+```
 
 ### `rpm` package: `publicsuffix-list-dafsa-20201130-1.mga8.noarch`
 
@@ -1425,19 +1510,34 @@ Licenses (from `rpm --query`): GPLv2+
 
 Licenses (from `rpm --query`): GPLv2+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url run-parts-4.8.4-3.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/run-parts-4.8.4-3.mga8.src.rpm
+```
 
 ### `rpm` package: `sash-3.8-9.mga8.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url sash-3.8-9.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/sash-3.8-9.mga8.src.rpm
+```
 
 ### `rpm` package: `sed-4.8-3.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPL
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url sed-4.8-3.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/sed-4.8-3.mga8.src.rpm
+```
 
 ### `rpm` package: `setup-2.7.25-1.mga8.noarch`
 
@@ -1459,7 +1559,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url shared-mime-info-2.1-2.mga8
-http://ftp5.gwdg.de/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/shared-mime-info-2.1-2.mga8.src.rpm
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/shared-mime-info-2.1-2.mga8.src.rpm
 ```
 
 ### `rpm` package: `systemd-248-2.mga9.x86_64`
@@ -1476,7 +1576,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url tar-1.34-1.mga9
-http://ftp5.gwdg.de/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/tar-1.34-1.mga9.src.rpm
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/tar-1.34-1.mga9.src.rpm
 ```
 
 ### `rpm` package: `tcb-1.1-12.mga8.x86_64`
@@ -1489,7 +1589,12 @@ Licenses (from `rpm --query`): BSD or GPL+
 
 Licenses (from `rpm --query`): GPLv2+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url time-1.9-4.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/time-1.9-4.mga8.src.rpm
+```
 
 ### `rpm` package: `timezone-2021a-1.mga8.x86_64`
 
@@ -1501,7 +1606,12 @@ Licenses (from `rpm --query`): GPL
 
 Licenses (from `rpm --query`): GPLv2+
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url traceroute-2.1.0-3.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/traceroute-2.1.0-3.mga8.src.rpm
+```
 
 ### `rpm` package: `urpmi-8.125-1.mga8.noarch`
 
@@ -1525,13 +1635,23 @@ Licenses (from `rpm --query`): Charityware
 
 Licenses (from `rpm --query`): GPLv3
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url which-2.21-6.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/which-2.21-6.mga8.src.rpm
+```
 
 ### `rpm` package: `xz-5.2.5-2.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+ and Public Domain
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url xz-5.2.5-2.mga8
+http://ftp.fi.muni.cz/pub/linux/mageia/distrib/cauldron/SRPMS/core/release/xz-5.2.5-2.mga8.src.rpm
+```
 
 ### `rpm` package: `zstd-1.4.9-1.mga9.x86_64`
 
