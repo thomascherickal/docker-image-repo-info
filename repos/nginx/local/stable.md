@@ -1,18 +1,18 @@
-# `nginx:1.20.2`
+# `nginx:1.22.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0584b370e957bf9d09e10f424859a02ab0fda255103f75b3f8c7d410a4e96ed5`
-- Created: `2022-05-17T22:37:17.011072851Z`
-- Virtual Size: ~ 141.48 Mb  
+- Image ID: `sha256:ae3149f43818854f4b96a1274eabb218129b4a6f336d582faa2e27631ad5b786`
+- Created: `2022-05-25T18:39:13.762455289Z`
+- Virtual Size: ~ 141.50 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["nginx","-g","daemon off;"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NGINX_VERSION=1.20.2`
-  - `NJS_VERSION=0.7.3`
+  - `NGINX_VERSION=1.22.0`
+  - `NJS_VERSION=0.7.4`
   - `PKG_RELEASE=1~bullseye`
 - Labels:
   - `maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>`
@@ -2024,11 +2024,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libxdmcp/1:1.1.2-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libxdmcp/1:1.1.2-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libxml2=2.9.10+dfsg-6.7+deb11u1`
+### `dpkg` source package: `libxml2=2.9.10+dfsg-6.7+deb11u2`
 
 Binary Packages:
 
-- `libxml2:amd64=2.9.10+dfsg-6.7+deb11u1`
+- `libxml2:amd64=2.9.10+dfsg-6.7+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 
@@ -2038,17 +2038,17 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libxml2=2.9.10+dfsg-6.7+deb11u1
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u1.dsc' libxml2_2.9.10+dfsg-6.7+deb11u1.dsc 2859 SHA256:48ff26e6dc163adb7ce30b8c0a6c261568e3806d6deaaf860fd11abb64afea1c
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg.orig.tar.xz' libxml2_2.9.10+dfsg.orig.tar.xz 2503560 SHA256:65ee7a2f5e100c64ddf7beb92297c9b2a30b994a76cd1fab67470cf22db6b7d0
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u1.debian.tar.xz' libxml2_2.9.10+dfsg-6.7+deb11u1.debian.tar.xz 34092 SHA256:405c16306e60f1ad32ebe884dd294bf1f17cd0f3b89dacf7f52faff53af1c7a0
+$ apt-get source -qq --print-uris libxml2=2.9.10+dfsg-6.7+deb11u2
+'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u2.dsc' libxml2_2.9.10+dfsg-6.7+deb11u2.dsc 2859 SHA256:f80a2929c91dc06cfa84e7e555d5d76c9b9df848d9b3e561e59f1338417feba3
+'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.10%2bdfsg.orig.tar.xz' libxml2_2.9.10+dfsg.orig.tar.xz 2503560 SHA256:65ee7a2f5e100c64ddf7beb92297c9b2a30b994a76cd1fab67470cf22db6b7d0
+'http://security.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u2.debian.tar.xz' libxml2_2.9.10+dfsg-6.7+deb11u2.debian.tar.xz 36368 SHA256:76bb4df309fbb02b26a6d5ab1bc32e158c709f0e7fb255ec734be5efe3cb78d5
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.7+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.7+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.10+dfsg-6.7+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.7+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.7+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libxml2/2.9.10+dfsg-6.7+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxpm=1:3.5.12-1`
 
@@ -2304,11 +2304,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nghttp2/1.43.0-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nghttp2/1.43.0-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `nginx-module-geoip=1.20.2-1~bullseye`
+### `dpkg` source package: `nginx-module-geoip=1.22.0-1~bullseye`
 
 Binary Packages:
 
-- `nginx-module-geoip=1.20.2-1~bullseye`
+- `nginx-module-geoip=1.22.0-1~bullseye`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2318,11 +2318,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `nginx-module-image-filter=1.20.2-1~bullseye`
+### `dpkg` source package: `nginx-module-image-filter=1.22.0-1~bullseye`
 
 Binary Packages:
 
-- `nginx-module-image-filter=1.20.2-1~bullseye`
+- `nginx-module-image-filter=1.22.0-1~bullseye`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2332,11 +2332,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `nginx-module-njs=1.20.2+0.7.3-1~bullseye`
+### `dpkg` source package: `nginx-module-njs=1.22.0+0.7.4-1~bullseye`
 
 Binary Packages:
 
-- `nginx-module-njs=1.20.2+0.7.3-1~bullseye`
+- `nginx-module-njs=1.22.0+0.7.4-1~bullseye`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2346,11 +2346,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `nginx-module-xslt=1.20.2-1~bullseye`
+### `dpkg` source package: `nginx-module-xslt=1.22.0-1~bullseye`
 
 Binary Packages:
 
-- `nginx-module-xslt=1.20.2-1~bullseye`
+- `nginx-module-xslt=1.22.0-1~bullseye`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2360,11 +2360,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `nginx=1.20.2-1~bullseye`
+### `dpkg` source package: `nginx=1.22.0-1~bullseye`
 
 Binary Packages:
 
-- `nginx=1.20.2-1~bullseye`
+- `nginx=1.22.0-1~bullseye`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2374,11 +2374,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `openldap=2.4.57+dfsg-3`
+### `dpkg` source package: `openldap=2.4.57+dfsg-3+deb11u1`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.57+dfsg-3`
+- `libldap-2.4-2:amd64=2.4.57+dfsg-3+deb11u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2387,17 +2387,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openldap=2.4.57+dfsg-3
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.57%2bdfsg-3.dsc' openldap_2.4.57+dfsg-3.dsc 3061 SHA256:e51b6c564567aca61508b0bfc6dd53c39564f5b4284155ac51c436abb6ff7496
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.57%2bdfsg.orig.tar.gz' openldap_2.4.57+dfsg.orig.tar.gz 5054318 SHA256:009cc88733eaf41a21607e073a19bce53d7d6ed90a5c280e80880978c4e91db7
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.57%2bdfsg-3.debian.tar.xz' openldap_2.4.57+dfsg-3.debian.tar.xz 168536 SHA256:68e93e3c0a2167196f730d44fba31c5408930223c6900ca5a4e57e09bd5884c6
+$ apt-get source -qq --print-uris openldap=2.4.57+dfsg-3+deb11u1
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.57%2bdfsg-3%2bdeb11u1.dsc' openldap_2.4.57+dfsg-3+deb11u1.dsc 3227 SHA256:835471a38dd93cfc2c0cb6f3726a022e0a5ed47dc2759dbd811cec6df5c9e0d4
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.57%2bdfsg.orig.tar.gz' openldap_2.4.57+dfsg.orig.tar.gz 5054318 SHA256:009cc88733eaf41a21607e073a19bce53d7d6ed90a5c280e80880978c4e91db7
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.57%2bdfsg-3%2bdeb11u1.debian.tar.xz' openldap_2.4.57+dfsg-3+deb11u1.debian.tar.xz 170324 SHA256:2c1cbc8431c570ece2b8e6e0e13936c2f65a270e6473ecf5374ae5ba67147835
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openldap/2.4.57+dfsg-3/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.57+dfsg-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.57+dfsg-3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openldap/2.4.57+dfsg-3+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.57+dfsg-3+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.57+dfsg-3+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1n-0+deb11u1`
 
