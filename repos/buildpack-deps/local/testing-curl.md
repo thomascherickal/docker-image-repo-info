@@ -1592,21 +1592,13 @@ Licenses: (parsed from: `/usr/share/doc/libncursesw6/copyright`, `/usr/share/doc
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.3+20220423-1
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.3%2b20220423-1.dsc' ncurses_6.3+20220423-1.dsc 4200 SHA256:35c7a6fd8ce140cbcebde10eb0a349b94e3cf45ef2a1000785819feb1f5ff212
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.3%2b20220423.orig.tar.gz' ncurses_6.3+20220423.orig.tar.gz 3611993 SHA256:a6bdfe499ae98ee937fed4729de09ffea08201317a9d16ed5d0142ac8b8b30e1
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.3%2b20220423.orig.tar.gz.asc' ncurses_6.3+20220423.orig.tar.gz.asc 729 SHA256:6771460069f300048dd7c7a41027cd38250b4f28d5f1dcef9cf8edb9b5ca691c
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.3%2b20220423-1.debian.tar.xz' ncurses_6.3+20220423-1.debian.tar.xz 54400 SHA256:6a271687063b669ea9daaefc384a8babb7dc6e8dd2ef4ae5894bff3c39e1ce3a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ncurses/6.3+20220423-1/
 
-- https://sources.debian.net/src/ncurses/6.3+20220423-1/ (for browsing the source)
-- https://sources.debian.net/src/ncurses/6.3+20220423-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ncurses/6.3+20220423-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=6.3`
 

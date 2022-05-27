@@ -568,15 +568,13 @@ Licenses: (parsed from: `/usr/share/doc/libdav1d5/copyright`)
 - `ISC`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dav1d=0.9.2-1
-'http://archive.ubuntu.com/ubuntu/pool/universe/d/dav1d/dav1d_0.9.2-1.dsc' dav1d_0.9.2-1.dsc 2332 SHA512:90c914fb2e059d442b921460fe742b2050e27896be0578337becb4a8a6fc3d5c8cbe0bb40c85800b082f35eae73e2f0cd23a80546875320ee884a5f4c4b775b6
-'http://archive.ubuntu.com/ubuntu/pool/universe/d/dav1d/dav1d_0.9.2.orig.tar.xz' dav1d_0.9.2.orig.tar.xz 713352 SHA512:87026f8b14e408ff50fc8f137ec2ede4b14c5f69687e615d2359d0f718ae5cb5176522490786d9ae1f7838182f82615c2674f7c2961b6dcec83f1ee587c3af7c
-'http://archive.ubuntu.com/ubuntu/pool/universe/d/dav1d/dav1d_0.9.2.orig.tar.xz.asc' dav1d_0.9.2.orig.tar.xz.asc 195 SHA512:04c367dcc3f2fb2e44cfa94653c2ca86e9fd9647959bfdd62ceb0007ad968e39550a90cb8fdc4ab9d330e5ef918200f91e186f3c6263ebf8295a8b076738b7d6
-'http://archive.ubuntu.com/ubuntu/pool/universe/d/dav1d/dav1d_0.9.2-1.debian.tar.xz' dav1d_0.9.2-1.debian.tar.xz 7896 SHA512:6f3d8793c945f7392ffd29f5728fdd615bb4156a72ec993c1af8f4874ab6f5c28daaff86d99d19ea3d8adc13475c2e12da528cbf8375f5b355559094d50a52a9
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/dav1d/0.9.2-1/
+
 
 ### `dpkg` source package: `db-defaults=1:5.3.21~exp1ubuntu4`
 
@@ -1533,13 +1531,13 @@ Licenses: (parsed from: `/usr/share/doc/init-system-helpers/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris init-system-helpers=1.62
-'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.62.dsc' init-system-helpers_1.62.dsc 1993 SHA512:f706cf5841877ccabe6f5a8e62d44ce5b312c09776d7fb7fd841f39c2d841b3f7f19bcb63cf94073f853165ae44def8f171a0abce658d05c76a48bf1e91697eb
-'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.62.tar.xz' init-system-helpers_1.62.tar.xz 42144 SHA512:d90f12e642d086bd0d560ece87d119079c164b90ddbb77b2f804979540095b655715febbc2a5b0d50d7f94434d1ff7c0f4044d5d5411916fbca8300f3f88da7f
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/init-system-helpers/1.62/
+
 
 ### `dpkg` source package: `isl=0.24-2build1`
 
@@ -2058,14 +2056,9 @@ Licenses: (parsed from: `/usr/share/doc/libheif1/copyright`)
 - `LGPL-3+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libheif=1.12.0-2build1
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.12.0-2build1.dsc' libheif_1.12.0-2build1.dsc 2423 SHA512:62cc515cbcea9f009ebcbc65860fb6e7971d42b983fb55c716a764c57a8835706757f125eb57c2b787d9e78b216aad085d946d30f192122ec0775fa9e04e3262
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.12.0.orig.tar.gz' libheif_1.12.0.orig.tar.gz 1684355 SHA512:9e6f74dd52841a33b6021a1581ab28c56123d927caa7972acd284444e90888bbdae983b6d847d20eac7651dacea2193d27eb8df45928cb0774229ef8eea23294
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.12.0-2build1.debian.tar.xz' libheif_1.12.0-2build1.debian.tar.xz 7120 SHA512:0a12dea34fbbfef0d715635eac72e5fde0e6101a11d926f0aeddcc50878b3b97c74d4efb1b5c231eac7abca1fffc6ec7f7b5a544c622a9f3cd9caebee279ed1c
-```
 
 ### `dpkg` source package: `libice=2:1.0.10-1build2`
 
@@ -4099,14 +4092,9 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.8.1-2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-2ubuntu2.dsc' shadow_4.8.1-2ubuntu2.dsc 2348 SHA512:05c707ca159ebdb4bf19731cdd2d1095b90943956058d81105e1bdb64a677e23ada91e619a30c82ce6a7963296085c2ffc63f50c2d45dbdf3f2a952e3b71bd0f
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1.orig.tar.xz' shadow_4.8.1.orig.tar.xz 1611196 SHA512:780a983483d847ed3c91c82064a0fa902b6f4185225978241bc3bc03fcc3aa143975b46aee43151c6ba43efcfdb1819516b76ba7ad3d1d3c34fcc38ea42e917b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-2ubuntu2.debian.tar.xz' shadow_4.8.1-2ubuntu2.debian.tar.xz 86604 SHA512:a3165c2df5848aebee7263b6d113dd0470cc07984e67602984b2f4c97fe97b0e141284ef02bd66a159acb34922b2d09fe999b1c6969a915423e8f421a7cb8d9f
-```
 
 ### `dpkg` source package: `shared-mime-info=2.2-1`
 

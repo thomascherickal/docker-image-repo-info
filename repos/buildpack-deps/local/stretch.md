@@ -643,21 +643,13 @@ Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`)
 - `LGPL-2.0 with AOSDL exception`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cups=2.2.1-8+deb9u7
-'http://security.debian.org/debian-security/pool/updates/main/c/cups/cups_2.2.1-8%2bdeb9u7.dsc' cups_2.2.1-8+deb9u7.dsc 3757 SHA256:4767b250db6e44a4539a845f5839d3af3423d5598252066b7e18bd6dc227be73
-'http://security.debian.org/debian-security/pool/updates/main/c/cups/cups_2.2.1.orig.tar.gz' cups_2.2.1.orig.tar.gz 9486635 SHA256:83b8730aa977cc055e7410df6a3a682548994c113994ca630a16513017e419d5
-'http://security.debian.org/debian-security/pool/updates/main/c/cups/cups_2.2.1.orig.tar.gz.asc' cups_2.2.1.orig.tar.gz.asc 797 SHA256:37c2e6215b2794c33864e543bc0caf6aefa724844e41b4c9659c87f28d125c2a
-'http://security.debian.org/debian-security/pool/updates/main/c/cups/cups_2.2.1-8%2bdeb9u7.debian.tar.xz' cups_2.2.1-8+deb9u7.debian.tar.xz 368828 SHA256:5a605593b299daed74b5f0e5824e290a82d10d0d98b33df6e6c60e2e0476a524
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cups/2.2.1-8+deb9u7/
 
-- https://sources.debian.net/src/cups/2.2.1-8+deb9u7/ (for browsing the source)
-- https://sources.debian.net/src/cups/2.2.1-8+deb9u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cups/2.2.1-8+deb9u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `curl=7.52.1-5+deb9u16`
 

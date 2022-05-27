@@ -702,21 +702,13 @@ Licenses: (parsed from: `/usr/share/doc/libdav1d5/copyright`)
 - `ISC`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dav1d=0.9.2-1
-'http://deb.debian.org/debian/pool/main/d/dav1d/dav1d_0.9.2-1.dsc' dav1d_0.9.2-1.dsc 2332 SHA256:c368585f17b1d1b598b4f5cfedbaefe740fa721033a567b61435caf4adcb6fbb
-'http://deb.debian.org/debian/pool/main/d/dav1d/dav1d_0.9.2.orig.tar.xz' dav1d_0.9.2.orig.tar.xz 713352 SHA256:e3235ab6c43c0135b0db1d131e1923fad4c84db9d85683e30b91b33a52d61c71
-'http://deb.debian.org/debian/pool/main/d/dav1d/dav1d_0.9.2.orig.tar.xz.asc' dav1d_0.9.2.orig.tar.xz.asc 195 SHA256:4eb1d0dfa39bef5634005064d44939be9e5278bf606eb67a06be33a47998b019
-'http://deb.debian.org/debian/pool/main/d/dav1d/dav1d_0.9.2-1.debian.tar.xz' dav1d_0.9.2-1.debian.tar.xz 7896 SHA256:e0f958cda906b439c12633aa7c35e718803e3a2103f8f1d82333ef2acaed3b6b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dav1d/0.9.2-1/
 
-- https://sources.debian.net/src/dav1d/0.9.2-1/ (for browsing the source)
-- https://sources.debian.net/src/dav1d/0.9.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dav1d/0.9.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `db-defaults=5.3.1+nmu1`
 
@@ -1909,19 +1901,13 @@ Licenses: (parsed from: `/usr/share/doc/init-system-helpers/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris init-system-helpers=1.62
-'http://deb.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.62.dsc' init-system-helpers_1.62.dsc 1993 SHA256:98b0149e9d8f9b75b604ac2cedeef32f40e7f18f64f02b1ec819d4dd49b249a1
-'http://deb.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.62.tar.xz' init-system-helpers_1.62.tar.xz 42144 SHA256:195db496bc40fe5a37bcdab26c275643cd119edfceb0551cacf6206ba36447e6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/init-system-helpers/1.62/
 
-- https://sources.debian.net/src/init-system-helpers/1.62/ (for browsing the source)
-- https://sources.debian.net/src/init-system-helpers/1.62/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/init-system-helpers/1.62/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `isl=0.24-2`
 

@@ -3968,15 +3968,9 @@ Licenses: (parsed from: `/usr/share/doc/libsvn1/copyright`, `/usr/share/doc/subv
 - `Unicode`
 - `Utfwidth`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris subversion=1.13.0-3ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.13.0-3ubuntu0.1.dsc' subversion_1.13.0-3ubuntu0.1.dsc 3185 SHA512:756cc84e3de5e17ec8a6c6b78c76528bc5be1d237c8808d208cda8900ad581328aa35a8be4bdb611e3e8637ecf08f10fcdc0c13e1c26e137a8a2e8587d903e2f
-'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.13.0.orig.tar.gz' subversion_1.13.0.orig.tar.gz 11544359 SHA512:4d3f05f3379f4fe1eb81464173d5dcd4a90f7b9478c84288fec380dafdd67445735e14f517d635fed4f88e7b0c1ed45c4a5658ff53fe3ba000aefa0666df5694
-'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.13.0.orig.tar.gz.asc' subversion_1.13.0.orig.tar.gz.asc 2954 SHA512:0efec732e8576ff32f83c7d64041e5a9dc6b3fd399f76ab5bcbb83c790c9116f6554612f2265619a40c996e12ccf4f6ac4207604870cff9d7d5b1a1c44d9ecc7
-'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.13.0-3ubuntu0.1.debian.tar.xz' subversion_1.13.0-3ubuntu0.1.debian.tar.xz 423272 SHA512:6fae7c4b57530899af0f0cfb32a9dc2e61d7b89e8b77ed8bac49d713bdb6a305056f8f08769b18580c18d14d72774e3fd3ade87c7ba011075f77d8fb3a6b8bd1
-```
 
 ### `dpkg` source package: `systemd=245.4-4ubuntu3.16`
 
