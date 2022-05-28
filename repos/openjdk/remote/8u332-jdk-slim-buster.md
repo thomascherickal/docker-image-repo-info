@@ -1,7 +1,7 @@
 ## `openjdk:8u332-jdk-slim-buster`
 
 ```console
-$ docker pull openjdk@sha256:07fd62d74ac6b2d8d3c4d1a875cc09df045a1d506a327cfc145c590670fadeec
+$ docker pull openjdk@sha256:97c70287ff2dde34d24b6f97f4bc9ecfcee3e59fe207b0c3cf6699278b1dfb54
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -64,51 +64,51 @@ RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64')
 ### `openjdk:8u332-jdk-slim-buster` - linux; arm64 variant v8
 
 ```console
-$ docker pull openjdk@sha256:cafb065d4c50c849724262617e929e3c987132b53b21736441f0759019545e6a
+$ docker pull openjdk@sha256:765bec70e92a72013442901b931e08b463b6211e173c2ec8a477aa77c36a0121
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **134.0 MB (134019537 bytes)**  
+-	Total Size: **134.0 MB (134024830 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:19064bfad21d5ff74e95f893acb8ba3d68407d587e6ea10927344a75b07c4c61`
+-	Image ID: `sha256:1fad1212f0ae1f1579a6a7509ed04b8528f74de1c634975b16108273efafef35`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 11 May 2022 00:47:26 GMT
-ADD file:2536146c773d09db1a8fbbff00933acc459d8929feb3cff5b93ca4c23b577845 in / 
-# Wed, 11 May 2022 00:47:26 GMT
+# Sat, 28 May 2022 00:41:05 GMT
+ADD file:d0e42d603f275c040783ec7b6c051200815492fc35b73110234dfcd584e6cdec in / 
+# Sat, 28 May 2022 00:41:05 GMT
 CMD ["bash"]
-# Wed, 11 May 2022 14:16:56 GMT
+# Sat, 28 May 2022 01:38:01 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 11 May 2022 14:24:47 GMT
+# Sat, 28 May 2022 01:43:52 GMT
 ENV JAVA_HOME=/usr/local/openjdk-8
-# Wed, 11 May 2022 14:24:48 GMT
+# Sat, 28 May 2022 01:43:53 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ] # backwards compatibility
-# Wed, 11 May 2022 14:24:49 GMT
+# Sat, 28 May 2022 01:43:54 GMT
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 11 May 2022 14:24:50 GMT
+# Sat, 28 May 2022 01:43:55 GMT
 ENV LANG=C.UTF-8
-# Wed, 11 May 2022 14:24:51 GMT
+# Sat, 28 May 2022 01:43:56 GMT
 ENV JAVA_VERSION=8u332
-# Wed, 11 May 2022 14:25:09 GMT
+# Sat, 28 May 2022 01:44:15 GMT
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dirmngr 		gnupg 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
 ```
 
 -	Layers:
-	-	`sha256:383d573fdcf2c6da56fdb61e120549d7bc200471208ca4c7c6605c57a0a87ef6`  
-		Last Modified: Wed, 11 May 2022 00:54:36 GMT  
-		Size: 25.9 MB (25909014 bytes)  
+	-	`sha256:4931fb8ba4223cb35034141162105ee5482122692b2931eb69eec912ce64606d`  
+		Last Modified: Sat, 28 May 2022 00:48:26 GMT  
+		Size: 25.9 MB (25914033 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a9ef35bf9af0d08f4a170567ffeb4f2374230da90c85eec67344eb6c8994306b`  
-		Last Modified: Wed, 11 May 2022 14:35:37 GMT  
-		Size: 3.1 MB (3125755 bytes)  
+	-	`sha256:48fd49b058d9314bede6d26981edcf8cfa5f28eebce620889117829184769a12`  
+		Last Modified: Sat, 28 May 2022 01:56:24 GMT  
+		Size: 3.1 MB (3126023 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:777a7e3fa67935f91d06bb351b927b9247a404b923d7502d051bb5af98fa1a77`  
-		Last Modified: Wed, 11 May 2022 14:46:58 GMT  
-		Size: 209.0 B  
+	-	`sha256:96556ba78de34115f1382d311d0b34b208450b8f104f03fd8eb7431cae357a7c`  
+		Last Modified: Sat, 28 May 2022 02:03:47 GMT  
+		Size: 210.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5dbcdfb8398dddee646e2a6cc78ff1a5a196b70f94deef467e0321b40d6b9b`  
-		Last Modified: Wed, 11 May 2022 14:47:09 GMT  
-		Size: 105.0 MB (104984559 bytes)  
+	-	`sha256:7ff62379c1e6e2bcde6aa7075f05dfe29d11e39f8fe3b9fc1efbb1392eb21e54`  
+		Last Modified: Sat, 28 May 2022 02:03:57 GMT  
+		Size: 105.0 MB (104984564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
