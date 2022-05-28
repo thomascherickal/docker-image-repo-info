@@ -19,12 +19,7 @@
 
 Licenses (from `rpm --query`): GPLv2
 
-Source:
-
-```console
-$ dnf --quiet download --source --url amazon-linux-extras-2.0.1-1.amzn2.noarch
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/9477c9704ca99071f0371ac4eccbfc529c83fca01ef5baecc511a8b6bb6b4e54/../../../../../blobstore/33255f7ce6624faa700abeb045a4534458b38aeac853d4b9c7c01eead702856a/amazon-linux-extras-2.0.1-1.amzn2.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `basesystem-10.0-7.amzn2.0.1.noarch`
 
