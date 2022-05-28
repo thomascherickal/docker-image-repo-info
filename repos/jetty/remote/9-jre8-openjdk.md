@@ -1,7 +1,7 @@
 ## `jetty:9-jre8-openjdk`
 
 ```console
-$ docker pull jetty@sha256:353161d74bfb24dacbcb2ccf7c803d9e673f4f8bbb53fd358f90910487702971
+$ docker pull jetty@sha256:55af655ac3294de7101c207a93267876738fedf784a144893d92b6c2e4569d37
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -113,100 +113,100 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ### `jetty:9-jre8-openjdk` - linux; arm64 variant v8
 
 ```console
-$ docker pull jetty@sha256:2278410e951ba46df3e5537d3c99f99a30535644b49e0df96a4d228edeb585f6
+$ docker pull jetty@sha256:3883c4b163980e3ac81e83e394aa79d1bcb9e923145573220eb4bc4c376d45c4
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **125.5 MB (125453356 bytes)**  
+-	Total Size: **125.5 MB (125516305 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ddcfcf43c3935a64dc13d1bceb8f1d0e1988ec66473b8fe7390b17b8535eb22c`
+-	Image ID: `sha256:0b22305c72f96c8bf6dcb158b8002b01e588167cd708340d2b7a5636750bcc07`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
 ```dockerfile
-# Wed, 11 May 2022 00:46:44 GMT
-ADD file:239aa42118877a929b2fbfc0d5793fee7815289280affa5286de2459385c0679 in / 
-# Wed, 11 May 2022 00:46:44 GMT
+# Sat, 28 May 2022 00:40:23 GMT
+ADD file:a78273677555ebe8bac187f491203093eec62fa1c4f65f00ba2cf0cc2230992f in / 
+# Sat, 28 May 2022 00:40:24 GMT
 CMD ["bash"]
-# Wed, 11 May 2022 01:25:24 GMT
+# Sat, 28 May 2022 11:05:20 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 11 May 2022 01:25:29 GMT
+# Sat, 28 May 2022 11:05:26 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Wed, 11 May 2022 14:22:10 GMT
+# Sat, 28 May 2022 16:50:23 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		unzip 		xz-utils 				fontconfig libfreetype6 				ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 11 May 2022 14:25:15 GMT
+# Sat, 28 May 2022 16:52:26 GMT
 ENV JAVA_HOME=/usr/local/openjdk-8
-# Wed, 11 May 2022 14:25:16 GMT
+# Sat, 28 May 2022 16:52:27 GMT
 RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-home && chmod +x /usr/local/bin/docker-java-home && [ "$JAVA_HOME" = "$(docker-java-home)" ] # backwards compatibility
-# Wed, 11 May 2022 14:25:17 GMT
+# Sat, 28 May 2022 16:52:28 GMT
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 11 May 2022 14:25:18 GMT
+# Sat, 28 May 2022 16:52:29 GMT
 ENV LANG=C.UTF-8
-# Wed, 11 May 2022 14:25:19 GMT
+# Sat, 28 May 2022 16:52:30 GMT
 ENV JAVA_VERSION=8u332
-# Wed, 11 May 2022 14:25:26 GMT
+# Sat, 28 May 2022 16:52:37 GMT
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jre_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jre_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -version
-# Thu, 12 May 2022 01:26:41 GMT
+# Sat, 28 May 2022 17:54:27 GMT
 ENV JETTY_VERSION=9.4.46.v20220331
-# Thu, 12 May 2022 01:26:42 GMT
+# Sat, 28 May 2022 17:54:28 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Thu, 12 May 2022 01:26:43 GMT
+# Sat, 28 May 2022 17:54:29 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Thu, 12 May 2022 01:26:44 GMT
+# Sat, 28 May 2022 17:54:30 GMT
 ENV TMPDIR=/tmp/jetty
-# Thu, 12 May 2022 01:26:45 GMT
+# Sat, 28 May 2022 17:54:31 GMT
 ENV PATH=/usr/local/jetty/bin:/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 12 May 2022 01:26:46 GMT
+# Sat, 28 May 2022 17:54:32 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.46.v20220331/jetty-home-9.4.46.v20220331.tar.gz
-# Thu, 12 May 2022 01:26:47 GMT
+# Sat, 28 May 2022 17:54:33 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Thu, 12 May 2022 01:26:57 GMT
+# Sat, 28 May 2022 17:54:43 GMT
 RUN set -xe ; 	mkdir -p $TMPDIR ; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Thu, 12 May 2022 01:26:58 GMT
+# Sat, 28 May 2022 17:54:43 GMT
 WORKDIR /var/lib/jetty
-# Thu, 12 May 2022 01:27:00 GMT
+# Sat, 28 May 2022 17:54:45 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Thu, 12 May 2022 01:27:00 GMT
+# Sat, 28 May 2022 17:54:45 GMT
 USER jetty
-# Thu, 12 May 2022 01:27:01 GMT
+# Sat, 28 May 2022 17:54:46 GMT
 EXPOSE 8080
-# Thu, 12 May 2022 01:27:02 GMT
+# Sat, 28 May 2022 17:54:47 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 12 May 2022 01:27:03 GMT
+# Sat, 28 May 2022 17:54:48 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
 -	Layers:
-	-	`sha256:3a36574378e6cece2dd3a839e1c0220eaccc4063b61d7481d1a19d3990c1f2c2`  
-		Last Modified: Wed, 11 May 2022 00:53:15 GMT  
-		Size: 53.6 MB (53634337 bytes)  
+	-	`sha256:d794814721d57f8aaec06ab3652e90212cc3beccf5ff5c87f6ecf8375784bcc8`  
+		Last Modified: Sat, 28 May 2022 00:47:04 GMT  
+		Size: 53.7 MB (53696947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a61d3345afba43846f3e638752cce2f0d1d47b21cc667ba08b00db10767a4702`  
-		Last Modified: Wed, 11 May 2022 01:35:45 GMT  
-		Size: 4.9 MB (4938615 bytes)  
+	-	`sha256:bf62ee63325dbbad699d6845f68c2391db3bf158f60373849c2d1cb6bb479788`  
+		Last Modified: Sat, 28 May 2022 11:17:05 GMT  
+		Size: 4.9 MB (4938744 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3e267d6aa58f93a513352a3b46c7addbf9335d7d43bfa4f1df4026d21785181c`  
-		Last Modified: Wed, 11 May 2022 01:35:46 GMT  
-		Size: 10.7 MB (10656992 bytes)  
+	-	`sha256:29e37b4c58dd1db7ead6f3c2cdf757f490b4e29c958d2a70559c313e9a03a5ef`  
+		Last Modified: Sat, 28 May 2022 11:17:06 GMT  
+		Size: 10.7 MB (10657073 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5439fd20344c5c55f97bb56a04aa465872f8e2580137cb005195d35936950f75`  
-		Last Modified: Wed, 11 May 2022 14:43:42 GMT  
-		Size: 5.6 MB (5649585 bytes)  
+	-	`sha256:29312e2f0b2d2423a19b1e65da0020d22da272698007d994eb022cafc68c98dc`  
+		Last Modified: Sat, 28 May 2022 17:06:29 GMT  
+		Size: 5.6 MB (5649779 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c02fa3ea132f8fd4fe860ce0d2afa81fa32b4f4dcb4c01fb58f96f0f8e59f21`  
-		Last Modified: Wed, 11 May 2022 14:47:26 GMT  
-		Size: 210.0 B  
+	-	`sha256:e19e7746c6e90474872ec5be85df08b653cd2bdac1ada365c689b6170991983b`  
+		Last Modified: Sat, 28 May 2022 17:08:32 GMT  
+		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:86fee2296916be283ff203043114f275b10c1e2ee8d096588c48620a4819bf9e`  
-		Last Modified: Wed, 11 May 2022 14:47:31 GMT  
-		Size: 40.7 MB (40664995 bytes)  
+	-	`sha256:e4f891a8416b71c72bf9759a240d929eacfb0e4c3323cdbd74ffe2d4b62457d2`  
+		Last Modified: Sat, 28 May 2022 17:08:37 GMT  
+		Size: 40.7 MB (40664901 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ba3a33221439460b3b28aa7753eb2d9f5edff196d3ffb96915a27eb4b96fe27`  
-		Last Modified: Thu, 12 May 2022 01:41:33 GMT  
-		Size: 9.9 MB (9907183 bytes)  
+	-	`sha256:c68a622cf0342b236a595250f4f13b6fbd190a1bbf56a837797f0cc9a144cfaa`  
+		Last Modified: Sat, 28 May 2022 18:09:27 GMT  
+		Size: 9.9 MB (9907210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e5c90e0dfa426f8518bb798a2bdd4d918af7902b64f035f01740aa3ac2d18e6`  
-		Last Modified: Thu, 12 May 2022 01:41:32 GMT  
-		Size: 1.4 KB (1439 bytes)  
+	-	`sha256:672a39c0d49ca295767d4c273a24d23a5461c02624386846fb4b8769babdbd4d`  
+		Last Modified: Sat, 28 May 2022 18:09:25 GMT  
+		Size: 1.4 KB (1440 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
