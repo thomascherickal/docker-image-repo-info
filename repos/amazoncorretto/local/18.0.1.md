@@ -19,13 +19,23 @@
 
 Licenses (from `rpm --query`): GPLv2
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url amazon-linux-extras-2.0.1-1.amzn2.noarch
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/9477c9704ca99071f0371ac4eccbfc529c83fca01ef5baecc511a8b6bb6b4e54/../../../../../blobstore/33255f7ce6624faa700abeb045a4534458b38aeac853d4b9c7c01eead702856a/amazon-linux-extras-2.0.1-1.amzn2.src.rpm
+```
 
 ### `rpm` package: `basesystem-10.0-7.amzn2.0.1.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
-**WARNING:** unable to find source (`dnf download` failed or returned no results)!
+Source:
+
+```console
+$ dnf --quiet download --source --url basesystem-10.0-7.amzn2.0.1.noarch
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/9477c9704ca99071f0371ac4eccbfc529c83fca01ef5baecc511a8b6bb6b4e54/../../../../../blobstore/303ffc769b33bd06f7d3c5d0a1999079ad5afb6d205448dd607a8b6a5cbc3551/basesystem-10.0-7.amzn2.0.1.src.rpm
+```
 
 ### `rpm` package: `bash-4.2.46-34.amzn2.x86_64`
 
