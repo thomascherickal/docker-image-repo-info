@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:fa842afb25a652a694e26bc3449120a778aafa1f141284c386eb6c39c394da06`
-- Created: `2022-05-11T20:32:37.202890626Z`
-- Virtual Size: ~ 867.06 Mb  
+- Image ID: `sha256:0e70d4a6331c36256b173331169a1c8abf44094c3e427e0485cefb34926fd511`
+- Created: `2022-05-29T01:33:45.762779892Z`
+- Virtual Size: ~ 867.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -657,12 +657,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/diffutils/1:3.5-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/diffutils/1:3.5-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `dpkg=1.18.25`
+### `dpkg` source package: `dpkg=1.18.26`
 
 Binary Packages:
 
-- `dpkg=1.18.25`
-- `libdpkg-perl=1.18.25`
+- `dpkg=1.18.26`
+- `libdpkg-perl=1.18.26`
 
 Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`, `/usr/share/doc/libdpkg-perl/copyright`)
 
@@ -675,16 +675,16 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`, `/usr/share/doc/libdpkg
 Source:
 
 ```console
-$ apt-get source -qq --print-uris dpkg=1.18.25
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.18.25.dsc' dpkg_1.18.25.dsc 2048 SHA256:5cf6ac260dc3adae91516b777f9e3b6fcb783d867f811fa8fd0787f570a059a6
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.18.25.tar.xz' dpkg_1.18.25.tar.xz 4541640 SHA256:c49c371953aea03f543814dcae37c069e86069333fb2e24e9252e76647663492
+$ apt-get source -qq --print-uris dpkg=1.18.26
+'http://security.debian.org/debian-security/pool/updates/main/d/dpkg/dpkg_1.18.26.dsc' dpkg_1.18.26.dsc 2048 SHA256:263e1dfe67164601ae0416d3361cc3aad5ab93a8280fc9175a01059ca807442c
+'http://security.debian.org/debian-security/pool/updates/main/d/dpkg/dpkg_1.18.26.tar.xz' dpkg_1.18.26.tar.xz 4529136 SHA256:a72d6bf530bd8fd17c011187aa34c8c01de8ff1eea2b47b377d09a39988d08d4
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/dpkg/1.18.25/ (for browsing the source)
-- https://sources.debian.net/src/dpkg/1.18.25/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dpkg/1.18.25/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/dpkg/1.18.26/ (for browsing the source)
+- https://sources.debian.net/src/dpkg/1.18.26/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/dpkg/1.18.26/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `e2fsprogs=1.43.4-2+deb9u2`
 
@@ -2303,24 +2303,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u8`
+### `dpkg` source package: `openldap=2.4.44+dfsg-5+deb9u9`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u8`
-- `libldap-common=2.4.44+dfsg-5+deb9u8`
+- `libldap-2.4-2:amd64=2.4.44+dfsg-5+deb9u9`
+- `libldap-common=2.4.44+dfsg-5+deb9u9`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openldap=2.4.44+dfsg-5+deb9u9
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44%2bdfsg-5%2bdeb9u9.dsc' openldap_2.4.44+dfsg-5+deb9u9.dsc 2452 SHA256:0942f85c96a9c4d7fe66776ab007353af00e73e5d9fad70c74c073ab008fcaf1
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44%2bdfsg.orig.tar.gz' openldap_2.4.44+dfsg.orig.tar.gz 4826590 SHA256:d5187c229bec163c5d97845846e1b87917755f85b04f444c08836384f4bd7ffe
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.44%2bdfsg-5%2bdeb9u9.debian.tar.xz' openldap_2.4.44+dfsg-5+deb9u9.debian.tar.xz 175392 SHA256:58b91f6f73be4eeea080f6c70898400a253a9a7bd0d7dee0ae930068401d0b13
+```
 
-- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u8/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u9/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.44+dfsg-5+deb9u9/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.44+dfsg-5+deb9u9/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:7.4p1-10+deb9u7`
 
@@ -2380,24 +2387,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openssl1.0/1.0.2u-1~deb9u7/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openssl1.0/1.0.2u-1~deb9u7/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.0l-1~deb9u5`
+### `dpkg` source package: `openssl=1.1.0l-1~deb9u6`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.0l-1~deb9u5`
-- `openssl=1.1.0l-1~deb9u5`
+- `libssl1.1:amd64=1.1.0l-1~deb9u6`
+- `openssl=1.1.0l-1~deb9u6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openssl=1.1.0l-1~deb9u6
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1%7edeb9u6.dsc' openssl_1.1.0l-1~deb9u6.dsc 2034 SHA256:de1b5154b6f25c377c1b15535f8ac0d24349c1a2e78bc31244f3b01b16972129
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz' openssl_1.1.0l.orig.tar.gz 5294857 SHA256:74a2f756c64fd7386a29184dc0344f4831192d61dc2481a93a4c5dd727f41148
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l.orig.tar.gz.asc' openssl_1.1.0l.orig.tar.gz.asc 488 SHA256:afc83de9f9f1ef5f79ab8a31bbdeb26f9ac9a07cfdab7628a773267d31f85e42
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.0l-1%7edeb9u6.debian.tar.xz' openssl_1.1.0l-1~deb9u6.debian.tar.xz 88068 SHA256:bfd0b20117f5e682bf85a82229071854821667b9f4b9c26dfc2cfed2867ba0a1
+```
 
-- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u6/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.0l-1~deb9u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.0l-1~deb9u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.3-2+deb9u1`
 
