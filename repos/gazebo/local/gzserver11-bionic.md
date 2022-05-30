@@ -732,13 +732,9 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.19.0.5ubuntu2.3
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.0.5ubuntu2.3.dsc' dpkg_1.19.0.5ubuntu2.3.dsc 2144 SHA512:b788b94a2e602ab43a7fdf734f518ea8f43fd0d6ccc11a5be01d3e18d5917db1224c266a1790336093fc06a976efa390fd99d81e380f3abe291ba4686c131579
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dpkg/dpkg_1.19.0.5ubuntu2.3.tar.xz' dpkg_1.19.0.5ubuntu2.3.tar.xz 4571256 SHA512:f9dc03714fee11a8bb62b3d1a556853329ab3b41dd996914cb47f38432e6b46c939433282f9039575811cb0e57508e9fbd2a5259eca7d9134d4760c636c3ec91
-```
 
 ### `dpkg` source package: `e2fsprogs=1.44.1-1ubuntu1.3`
 
@@ -1161,14 +1157,9 @@ Licenses: (parsed from: `/usr/share/doc/gazebo11/copyright`, `/usr/share/doc/gaz
 - `LGPL-3+`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gazebo11=11.10.2-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.2-1%7ebionic.dsc' gazebo11_11.10.2-1~bionic.dsc 2361 SHA256:c3ed1382f48c940cd8a06e4fbe61c3c33f3d9d6e22a0236be66e090f2527f0df
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.2.orig.tar.bz2' gazebo11_11.10.2.orig.tar.bz2 56496495 SHA256:f6c4ea8cd8730c90b14760b3f84d4f362d3786b510fb43a0b77b2c06b8bdd2b6
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/g/gazebo11/gazebo11_11.10.2-1%7ebionic.debian.tar.xz' gazebo11_11.10.2-1~bionic.debian.tar.xz 6852 SHA256:3fdf52f4182d9dfcbe769dd1afda58fdf804d2d68e71f175381bf7c1d1d4a483
-```
 
 ### `dpkg` source package: `gcc-7=7.5.0-3ubuntu1~18.04`
 
