@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8436a9c82d74596745f407c5bdf776cb609530453b3db4b1acf3f1fb1cd37c41`
-- Created: `2022-05-11T10:06:02.66225029Z`
+- Image ID: `sha256:f2b64a0beed441d3db2a683632858a879fe7ad1df1244094e2cd4cdcde7153b6`
+- Created: `2022-05-28T05:37:04.232273087Z`
 - Virtual Size: ~ 133.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -474,11 +474,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/diffutils/1:3.7-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/diffutils/1:3.7-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `dpkg=1.19.7`
+### `dpkg` source package: `dpkg=1.19.8`
 
 Binary Packages:
 
-- `dpkg=1.19.7`
+- `dpkg=1.19.8`
 
 Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 
@@ -491,16 +491,16 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris dpkg=1.19.7
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.19.7.dsc' dpkg_1.19.7.dsc 2103 SHA256:098b285d5fc7add8972e5b2b3678027bba3f3fe01962e5176db2fbff33bbd8e3
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.19.7.tar.xz' dpkg_1.19.7.tar.xz 4716724 SHA256:4c27fededf620c0aa522fff1a48577ba08144445341257502e7730f2b1a296e8
+$ apt-get source -qq --print-uris dpkg=1.19.8
+'http://security.debian.org/debian-security/pool/updates/main/d/dpkg/dpkg_1.19.8.dsc' dpkg_1.19.8.dsc 2103 SHA256:3b0220b111044754f8620ce53b1ba67cad9458cab6dde39d299dbb2f27c5528d
+'http://security.debian.org/debian-security/pool/updates/main/d/dpkg/dpkg_1.19.8.tar.xz' dpkg_1.19.8.tar.xz 4701260 SHA256:2632c00b0cf0ea19ed7bd6700e6ec5faca93f0045af629d356dc03ad74ae6f10
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/dpkg/1.19.7/ (for browsing the source)
-- https://sources.debian.net/src/dpkg/1.19.7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dpkg/1.19.7/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/dpkg/1.19.8/ (for browsing the source)
+- https://sources.debian.net/src/dpkg/1.19.8/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/dpkg/1.19.8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `e2fsprogs=1.44.5-1+deb10u3`
 
@@ -1608,12 +1608,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.6-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.6-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u6`
+### `dpkg` source package: `openldap=2.4.47+dfsg-3+deb10u7`
 
 Binary Packages:
 
-- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u6`
-- `libldap-common=2.4.47+dfsg-3+deb10u6`
+- `libldap-2.4-2:amd64=2.4.47+dfsg-3+deb10u7`
+- `libldap-common=2.4.47+dfsg-3+deb10u7`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1622,17 +1622,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u6
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47%2bdfsg-3%2bdeb10u6.dsc' openldap_2.4.47+dfsg-3+deb10u6.dsc 3022 SHA256:14f48c8d0ffddaaf51edf064d9abe90d6f7466c710d6e78c520db48998eaebb0
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47%2bdfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.4.47%2bdfsg-3%2bdeb10u6.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u6.debian.tar.xz 173600 SHA256:d21ccc7d2fc3b38dd68e8f4dd73bcff51d377e4ad47e6372ea4f806729856b79
+$ apt-get source -qq --print-uris openldap=2.4.47+dfsg-3+deb10u7
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47%2bdfsg-3%2bdeb10u7.dsc' openldap_2.4.47+dfsg-3+deb10u7.dsc 3022 SHA256:f933987a3a26983fd52eeb83fc4975102af9d211412efec53bd5c5919028eba0
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47%2bdfsg.orig.tar.gz' openldap_2.4.47+dfsg.orig.tar.gz 4872293 SHA256:8f1ac7a4be7dd8ef158361efbfe16509756d3d9b396f5f378c3cf5c727807651
+'http://security.debian.org/debian-security/pool/updates/main/o/openldap/openldap_2.4.47%2bdfsg-3%2bdeb10u7.debian.tar.xz' openldap_2.4.47+dfsg-3+deb10u7.debian.tar.xz 175312 SHA256:445a6c0d9e52193c35c456dbf79318eea9f09b230c6eade3be531633d0b93e9d
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u6/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u6/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u7/ (for browsing the source)
+- https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.15-2+deb10u1`
 
