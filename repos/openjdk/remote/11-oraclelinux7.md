@@ -1,7 +1,7 @@
 ## `openjdk:11-oraclelinux7`
 
 ```console
-$ docker pull openjdk@sha256:57c3991e2b37177c60ea09f9e799d20586e0a2ff8565510d14fd58f9fb3bad12
+$ docker pull openjdk@sha256:dc26d7d95aca7ae04a3f18ec5634e7b313598e6229462c8ae03a4da52dd5f174
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -60,47 +60,47 @@ CMD ["jshell"]
 ### `openjdk:11-oraclelinux7` - linux; arm64 variant v8
 
 ```console
-$ docker pull openjdk@sha256:f9160f7677f1aae7b4acb701dd286371a665d4fbceae42279158628b06f21c4f
+$ docker pull openjdk@sha256:6d68533223a1908f94354a01525b6e819ce7055a83938d37b42e6cb6ebcfe98d
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **266.5 MB (266499925 bytes)**  
+-	Total Size: **266.5 MB (266499397 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:11155cf6abe81311bf849024f37011c558e00662b22f94cba88d22b90b6d385b`
+-	Image ID: `sha256:d373810877afa34a9644ebd202058fa3eb41cd156557215cb9dea732e09c0e50`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
-# Thu, 19 May 2022 17:55:42 GMT
-ADD file:3d80a0730bc69825f18f411b67d8e8a6eb5b2450223ab171cf3f4f7f8b43d021 in / 
-# Thu, 19 May 2022 17:55:44 GMT
+# Wed, 01 Jun 2022 17:42:45 GMT
+ADD file:38edee0c3395726e7b6c49418111c57515fb5158f2d9007df25b1126becbe835 in / 
+# Wed, 01 Jun 2022 17:42:45 GMT
 CMD ["/bin/bash"]
-# Thu, 19 May 2022 19:04:26 GMT
+# Wed, 01 Jun 2022 18:06:10 GMT
 RUN set -eux; 	yum install -y 		gzip 		tar 				binutils 		freetype fontconfig 	; 	rm -rf /var/cache/yum
-# Thu, 19 May 2022 19:06:56 GMT
+# Wed, 01 Jun 2022 18:08:42 GMT
 ENV JAVA_HOME=/usr/java/openjdk-11
-# Thu, 19 May 2022 19:06:57 GMT
+# Wed, 01 Jun 2022 18:08:43 GMT
 ENV PATH=/usr/java/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 19 May 2022 19:06:58 GMT
+# Wed, 01 Jun 2022 18:08:44 GMT
 ENV LANG=en_US.UTF-8
-# Thu, 19 May 2022 19:06:59 GMT
+# Wed, 01 Jun 2022 18:08:45 GMT
 ENV JAVA_VERSION=11.0.15
-# Thu, 19 May 2022 19:07:19 GMT
+# Wed, 01 Jun 2022 18:09:07 GMT
 RUN set -eux; 		arch="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		'i386:x86-64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.15%2B10/OpenJDK11U-jdk_x64_linux_11.0.15_10.tar.gz'; 			;; 		'aarch64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.15%2B10/OpenJDK11U-jdk_aarch64_linux_11.0.15_10.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	curl -fL -o openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Thu, 19 May 2022 19:07:19 GMT
+# Wed, 01 Jun 2022 18:09:07 GMT
 CMD ["jshell"]
 ```
 
 -	Layers:
-	-	`sha256:9932f90ce40726b220e1a83ec69eaecb5ceec5409d33a736f6189de512eac36e`  
-		Last Modified: Thu, 19 May 2022 17:56:42 GMT  
-		Size: 49.3 MB (49337178 bytes)  
+	-	`sha256:f32f2fa821eee2ec9063a1b4319bd010b81853e0530a69451b35606e68be303b`  
+		Last Modified: Wed, 01 Jun 2022 17:45:48 GMT  
+		Size: 49.3 MB (49342882 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8aa262ef1f7aae5da5cd2e580c02388ffbd2dc26b81fb14478c79b9074c22a3`  
-		Last Modified: Thu, 19 May 2022 19:16:45 GMT  
-		Size: 15.3 MB (15268963 bytes)  
+	-	`sha256:b7422ac4472668232f731f99e0cfcf6637faa083e23675a9b4fd3259163ebff4`  
+		Last Modified: Wed, 01 Jun 2022 18:19:08 GMT  
+		Size: 15.3 MB (15264563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6aa653dff8fd2b5ec0b8d4f491b3e726589c6b52db322ed6d85e274faad4ddb6`  
-		Last Modified: Thu, 19 May 2022 19:19:55 GMT  
-		Size: 201.9 MB (201893784 bytes)  
+	-	`sha256:e7d12acc8328b6ee1af69901d771cb0cbe606f83c282e1912702d6c1e5d44c1e`  
+		Last Modified: Wed, 01 Jun 2022 18:23:12 GMT  
+		Size: 201.9 MB (201891952 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
