@@ -580,15 +580,9 @@ Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 - `TinySCHEME`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnupg2=2.2.4-1ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4-1ubuntu1.4.dsc' gnupg2_2.2.4-1ubuntu1.4.dsc 3816 SHA512:91f9bcbf3149df9f2627f934d760965b2012b7d4374b269837ae86d79f2db8aef8f2d26829f478c7535a287ad7d8d5b08ce775662f45046e4a91734817fb4992
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4.orig.tar.bz2' gnupg2_2.2.4.orig.tar.bz2 6571487 SHA512:3d5c93b7662433103e9549d066a6b1a0c09d595851fab712d2ee844a55157e952a8a2dd5deff70fa8dd6817481f81c3fe5135603bca03206857310d04c1067a8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4.orig.tar.bz2.asc' gnupg2_2.2.4.orig.tar.bz2.asc 952 SHA512:85c60b8ff5f7d307d5b741e446915ea067804ad27b4a4b779fbafc11800b0cfb2a94d956b502164a3781b5ad2807434215a3413b913ce22d656838163dc1dabb
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.4-1ubuntu1.4.debian.tar.bz2' gnupg2_2.2.4-1ubuntu1.4.debian.tar.bz2 86485 SHA512:0021eeedf7c624f0b1bf4633ad7c314856002ee269f46845a2221fc75b7832431e5aff10930fdfb7c573482f56a1a5fffb81fe46bd03d9867a6826ac46630733
-```
 
 ### `dpkg` source package: `gnutls28=3.5.18-1ubuntu1.5`
 
