@@ -1,7 +1,7 @@
 ## `python:slim-buster`
 
 ```console
-$ docker pull python@sha256:7e650ceb3f81bf42a01cf1fadaee58692d8ee32ff54ad67bb09fbbbe31913e74
+$ docker pull python@sha256:7cd0684b33c3dfeba68f8e3ad84fd53821b663882bfd50bd49e07c560fcc3512
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -290,14 +290,14 @@ CMD ["python3"]
 ### `python:slim-buster` - linux; 386
 
 ```console
-$ docker pull python@sha256:24c36b5177d0d8f9fb258c08af6827616c1bd2320f99eef12514f0bb6a366a42
+$ docker pull python@sha256:fb95bf0660f3dc54dd5b132e512910c313d8320e8fde8043c63cec68b5ef9fc0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **45.3 MB (45332671 bytes)**  
+-	Total Size: **45.3 MB (45332695 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2243a69827a3610606033ac5abc5afd697ea29a0e4142e381a0a935e07c13b13`
+-	Image ID: `sha256:10256f021f6724311af7c600a97e9aea0dd665daa074eeaace1af3d00517df7b`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -323,13 +323,13 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.0.4
 # Sat, 28 May 2022 10:21:49 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=58.1.0
-# Sat, 28 May 2022 10:21:50 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/a312303dbd516f6a692f2fee59852701bd828dd8/public/get-pip.py
-# Sat, 28 May 2022 10:21:51 GMT
-ENV PYTHON_GET_PIP_SHA256=8dd03e99645c19f49bbb629ce65c46b665ee92a1d94d246418bad6afade89f8d
-# Sat, 28 May 2022 10:22:05 GMT
+# Thu, 02 Jun 2022 19:46:58 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/6ce3639da143c5d79b44f94b04080abf2531fd6e/public/get-pip.py
+# Thu, 02 Jun 2022 19:46:58 GMT
+ENV PYTHON_GET_PIP_SHA256=ba3ab8267d91fd41c58dbce08f76db99f747f716d85ce1865813842bb035524d
+# Thu, 02 Jun 2022 19:47:12 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Sat, 28 May 2022 10:22:05 GMT
+# Thu, 02 Jun 2022 19:47:12 GMT
 CMD ["python3"]
 ```
 
@@ -350,9 +350,9 @@ CMD ["python3"]
 		Last Modified: Sat, 28 May 2022 11:40:05 GMT  
 		Size: 232.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d765e4dd3dc3a578b2ac42a809085d146c63fed04e7cd4732f6cd0522bec7cb`  
-		Last Modified: Sat, 28 May 2022 11:40:05 GMT  
-		Size: 2.9 MB (2947234 bytes)  
+	-	`sha256:26b1df5acef84358326cc92f6e5dcb01eb31c73456a10322616821e452ae0187`  
+		Last Modified: Thu, 02 Jun 2022 20:06:58 GMT  
+		Size: 2.9 MB (2947258 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:slim-buster` - linux; mips64le
