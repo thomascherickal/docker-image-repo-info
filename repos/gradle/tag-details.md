@@ -4,74 +4,148 @@
 
 -	[`gradle:6`](#gradle6)
 -	[`gradle:6-alpine`](#gradle6-alpine)
+-	[`gradle:6-focal`](#gradle6-focal)
+-	[`gradle:6-jammy`](#gradle6-jammy)
 -	[`gradle:6-jdk`](#gradle6-jdk)
 -	[`gradle:6-jdk-alpine`](#gradle6-jdk-alpine)
+-	[`gradle:6-jdk-focal`](#gradle6-jdk-focal)
+-	[`gradle:6-jdk-jammy`](#gradle6-jdk-jammy)
 -	[`gradle:6-jdk11`](#gradle6-jdk11)
 -	[`gradle:6-jdk11-alpine`](#gradle6-jdk11-alpine)
+-	[`gradle:6-jdk11-focal`](#gradle6-jdk11-focal)
+-	[`gradle:6-jdk11-jammy`](#gradle6-jdk11-jammy)
 -	[`gradle:6-jdk17`](#gradle6-jdk17)
 -	[`gradle:6-jdk17-alpine`](#gradle6-jdk17-alpine)
+-	[`gradle:6-jdk17-focal`](#gradle6-jdk17-focal)
+-	[`gradle:6-jdk17-jammy`](#gradle6-jdk17-jammy)
 -	[`gradle:6-jdk8`](#gradle6-jdk8)
+-	[`gradle:6-jdk8-focal`](#gradle6-jdk8-focal)
+-	[`gradle:6-jdk8-jammy`](#gradle6-jdk8-jammy)
 -	[`gradle:6.9`](#gradle69)
 -	[`gradle:6.9-alpine`](#gradle69-alpine)
+-	[`gradle:6.9-focal`](#gradle69-focal)
+-	[`gradle:6.9-jammy`](#gradle69-jammy)
 -	[`gradle:6.9-jdk`](#gradle69-jdk)
 -	[`gradle:6.9-jdk-alpine`](#gradle69-jdk-alpine)
+-	[`gradle:6.9-jdk-focal`](#gradle69-jdk-focal)
+-	[`gradle:6.9-jdk-jammy`](#gradle69-jdk-jammy)
 -	[`gradle:6.9-jdk11`](#gradle69-jdk11)
 -	[`gradle:6.9-jdk11-alpine`](#gradle69-jdk11-alpine)
+-	[`gradle:6.9-jdk11-focal`](#gradle69-jdk11-focal)
+-	[`gradle:6.9-jdk11-jammy`](#gradle69-jdk11-jammy)
 -	[`gradle:6.9-jdk17`](#gradle69-jdk17)
 -	[`gradle:6.9-jdk17-alpine`](#gradle69-jdk17-alpine)
+-	[`gradle:6.9-jdk17-focal`](#gradle69-jdk17-focal)
+-	[`gradle:6.9-jdk17-jammy`](#gradle69-jdk17-jammy)
 -	[`gradle:6.9-jdk8`](#gradle69-jdk8)
+-	[`gradle:6.9-jdk8-focal`](#gradle69-jdk8-focal)
+-	[`gradle:6.9-jdk8-jammy`](#gradle69-jdk8-jammy)
 -	[`gradle:6.9.2`](#gradle692)
 -	[`gradle:6.9.2-alpine`](#gradle692-alpine)
+-	[`gradle:6.9.2-focal`](#gradle692-focal)
+-	[`gradle:6.9.2-jammy`](#gradle692-jammy)
 -	[`gradle:6.9.2-jdk`](#gradle692-jdk)
 -	[`gradle:6.9.2-jdk-alpine`](#gradle692-jdk-alpine)
+-	[`gradle:6.9.2-jdk-focal`](#gradle692-jdk-focal)
+-	[`gradle:6.9.2-jdk-jammy`](#gradle692-jdk-jammy)
 -	[`gradle:6.9.2-jdk11`](#gradle692-jdk11)
 -	[`gradle:6.9.2-jdk11-alpine`](#gradle692-jdk11-alpine)
+-	[`gradle:6.9.2-jdk11-focal`](#gradle692-jdk11-focal)
+-	[`gradle:6.9.2-jdk11-jammy`](#gradle692-jdk11-jammy)
 -	[`gradle:6.9.2-jdk17`](#gradle692-jdk17)
 -	[`gradle:6.9.2-jdk17-alpine`](#gradle692-jdk17-alpine)
+-	[`gradle:6.9.2-jdk17-focal`](#gradle692-jdk17-focal)
+-	[`gradle:6.9.2-jdk17-jammy`](#gradle692-jdk17-jammy)
 -	[`gradle:6.9.2-jdk8`](#gradle692-jdk8)
+-	[`gradle:6.9.2-jdk8-focal`](#gradle692-jdk8-focal)
+-	[`gradle:6.9.2-jdk8-jammy`](#gradle692-jdk8-jammy)
 -	[`gradle:7`](#gradle7)
 -	[`gradle:7-alpine`](#gradle7-alpine)
+-	[`gradle:7-focal`](#gradle7-focal)
+-	[`gradle:7-jammy`](#gradle7-jammy)
 -	[`gradle:7-jdk`](#gradle7-jdk)
 -	[`gradle:7-jdk-alpine`](#gradle7-jdk-alpine)
+-	[`gradle:7-jdk-focal`](#gradle7-jdk-focal)
+-	[`gradle:7-jdk-jammy`](#gradle7-jdk-jammy)
 -	[`gradle:7-jdk11`](#gradle7-jdk11)
 -	[`gradle:7-jdk11-alpine`](#gradle7-jdk11-alpine)
+-	[`gradle:7-jdk11-jammy`](#gradle7-jdk11-jammy)
 -	[`gradle:7-jdk17`](#gradle7-jdk17)
 -	[`gradle:7-jdk17-alpine`](#gradle7-jdk17-alpine)
+-	[`gradle:7-jdk17-focal`](#gradle7-jdk17-focal)
+-	[`gradle:7-jdk17-jammy`](#gradle7-jdk17-jammy)
 -	[`gradle:7-jdk18`](#gradle7-jdk18)
 -	[`gradle:7-jdk18-alpine`](#gradle7-jdk18-alpine)
+-	[`gradle:7-jdk18-focal`](#gradle7-jdk18-focal)
+-	[`gradle:7-jdk18-jammy`](#gradle7-jdk18-jammy)
 -	[`gradle:7-jdk8`](#gradle7-jdk8)
+-	[`gradle:7-jdk8-focal`](#gradle7-jdk8-focal)
+-	[`gradle:7-jdk8-jammy`](#gradle7-jdk8-jammy)
 -	[`gradle:7.4`](#gradle74)
 -	[`gradle:7.4-alpine`](#gradle74-alpine)
+-	[`gradle:7.4-focal`](#gradle74-focal)
+-	[`gradle:7.4-jammy`](#gradle74-jammy)
 -	[`gradle:7.4-jdk`](#gradle74-jdk)
 -	[`gradle:7.4-jdk-alpine`](#gradle74-jdk-alpine)
+-	[`gradle:7.4-jdk-focal`](#gradle74-jdk-focal)
+-	[`gradle:7.4-jdk-jammy`](#gradle74-jdk-jammy)
 -	[`gradle:7.4-jdk11`](#gradle74-jdk11)
 -	[`gradle:7.4-jdk11-alpine`](#gradle74-jdk11-alpine)
+-	[`gradle:7.4-jdk11-jammy`](#gradle74-jdk11-jammy)
 -	[`gradle:7.4-jdk17`](#gradle74-jdk17)
 -	[`gradle:7.4-jdk17-alpine`](#gradle74-jdk17-alpine)
+-	[`gradle:7.4-jdk17-focal`](#gradle74-jdk17-focal)
+-	[`gradle:7.4-jdk17-jammy`](#gradle74-jdk17-jammy)
 -	[`gradle:7.4-jdk18`](#gradle74-jdk18)
 -	[`gradle:7.4-jdk18-alpine`](#gradle74-jdk18-alpine)
+-	[`gradle:7.4-jdk18-focal`](#gradle74-jdk18-focal)
+-	[`gradle:7.4-jdk18-jammy`](#gradle74-jdk18-jammy)
 -	[`gradle:7.4-jdk8`](#gradle74-jdk8)
+-	[`gradle:7.4-jdk8-focal`](#gradle74-jdk8-focal)
+-	[`gradle:7.4-jdk8-jammy`](#gradle74-jdk8-jammy)
 -	[`gradle:7.4.2`](#gradle742)
 -	[`gradle:7.4.2-alpine`](#gradle742-alpine)
+-	[`gradle:7.4.2-focal`](#gradle742-focal)
+-	[`gradle:7.4.2-jammy`](#gradle742-jammy)
 -	[`gradle:7.4.2-jdk`](#gradle742-jdk)
 -	[`gradle:7.4.2-jdk-alpine`](#gradle742-jdk-alpine)
+-	[`gradle:7.4.2-jdk-focal`](#gradle742-jdk-focal)
+-	[`gradle:7.4.2-jdk-jammy`](#gradle742-jdk-jammy)
 -	[`gradle:7.4.2-jdk11`](#gradle742-jdk11)
 -	[`gradle:7.4.2-jdk11-alpine`](#gradle742-jdk11-alpine)
+-	[`gradle:7.4.2-jdk11-jammy`](#gradle742-jdk11-jammy)
 -	[`gradle:7.4.2-jdk17`](#gradle742-jdk17)
 -	[`gradle:7.4.2-jdk17-alpine`](#gradle742-jdk17-alpine)
+-	[`gradle:7.4.2-jdk17-focal`](#gradle742-jdk17-focal)
+-	[`gradle:7.4.2-jdk17-jammy`](#gradle742-jdk17-jammy)
 -	[`gradle:7.4.2-jdk18`](#gradle742-jdk18)
 -	[`gradle:7.4.2-jdk18-alpine`](#gradle742-jdk18-alpine)
+-	[`gradle:7.4.2-jdk18-focal`](#gradle742-jdk18-focal)
+-	[`gradle:7.4.2-jdk18-jammy`](#gradle742-jdk18-jammy)
 -	[`gradle:7.4.2-jdk8`](#gradle742-jdk8)
+-	[`gradle:7.4.2-jdk8-focal`](#gradle742-jdk8-focal)
+-	[`gradle:7.4.2-jdk8-jammy`](#gradle742-jdk8-jammy)
 -	[`gradle:alpine`](#gradlealpine)
+-	[`gradle:focal`](#gradlefocal)
+-	[`gradle:jammy`](#gradlejammy)
 -	[`gradle:jdk`](#gradlejdk)
 -	[`gradle:jdk-alpine`](#gradlejdk-alpine)
+-	[`gradle:jdk-focal`](#gradlejdk-focal)
+-	[`gradle:jdk-jammy`](#gradlejdk-jammy)
 -	[`gradle:jdk11`](#gradlejdk11)
 -	[`gradle:jdk11-alpine`](#gradlejdk11-alpine)
+-	[`gradle:jdk11-jammy`](#gradlejdk11-jammy)
 -	[`gradle:jdk17`](#gradlejdk17)
 -	[`gradle:jdk17-alpine`](#gradlejdk17-alpine)
+-	[`gradle:jdk17-focal`](#gradlejdk17-focal)
+-	[`gradle:jdk17-jammy`](#gradlejdk17-jammy)
 -	[`gradle:jdk18`](#gradlejdk18)
 -	[`gradle:jdk18-alpine`](#gradlejdk18-alpine)
+-	[`gradle:jdk18-focal`](#gradlejdk18-focal)
+-	[`gradle:jdk18-jammy`](#gradlejdk18-jammy)
 -	[`gradle:jdk8`](#gradlejdk8)
+-	[`gradle:jdk8-focal`](#gradlejdk8-focal)
+-	[`gradle:jdk8-jammy`](#gradlejdk8-jammy)
 -	[`gradle:latest`](#gradlelatest)
 
 ## `gradle:6`
@@ -596,6 +670,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 107.7 MB (107690348 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:6-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:6-jdk`
 
 ```console
@@ -1117,6 +1209,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:53:11 GMT  
 		Size: 107.7 MB (107690348 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:6-jdk-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6-jdk-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:6-jdk11`
 
@@ -1640,6 +1750,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 107.7 MB (107690367 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:6-jdk11-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6-jdk11-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:6-jdk17`
 
 ```console
@@ -2162,6 +2290,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 107.7 MB (107690348 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:6-jdk17-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6-jdk17-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:6-jdk8`
 
 ```console
@@ -2498,6 +2644,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Thu, 05 May 2022 18:48:37 GMT  
 		Size: 107.7 MB (107690398 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:6-jdk8-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6-jdk8-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:6.9`
 
@@ -3021,6 +3185,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 107.7 MB (107690348 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:6.9-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6.9-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:6.9-jdk`
 
 ```console
@@ -3542,6 +3724,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:53:11 GMT  
 		Size: 107.7 MB (107690348 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:6.9-jdk-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6.9-jdk-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:6.9-jdk11`
 
@@ -4065,6 +4265,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 107.7 MB (107690367 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:6.9-jdk11-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6.9-jdk11-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:6.9-jdk17`
 
 ```console
@@ -4587,6 +4805,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 107.7 MB (107690348 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:6.9-jdk17-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6.9-jdk17-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:6.9-jdk8`
 
 ```console
@@ -4923,6 +5159,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Thu, 05 May 2022 18:48:37 GMT  
 		Size: 107.7 MB (107690398 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:6.9-jdk8-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6.9-jdk8-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:6.9.2`
 
@@ -5446,6 +5700,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 107.7 MB (107690348 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:6.9.2-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6.9.2-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:6.9.2-jdk`
 
 ```console
@@ -5967,6 +6239,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:53:11 GMT  
 		Size: 107.7 MB (107690348 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:6.9.2-jdk-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6.9.2-jdk-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:6.9.2-jdk11`
 
@@ -6490,6 +6780,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 107.7 MB (107690367 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:6.9.2-jdk11-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6.9.2-jdk11-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:6.9.2-jdk17`
 
 ```console
@@ -7012,6 +7320,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 107.7 MB (107690348 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:6.9.2-jdk17-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6.9.2-jdk17-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:6.9.2-jdk8`
 
 ```console
@@ -7348,6 +7674,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Thu, 05 May 2022 18:48:37 GMT  
 		Size: 107.7 MB (107690398 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:6.9.2-jdk8-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:6.9.2-jdk8-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:7`
 
@@ -7871,6 +8215,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:7-jdk`
 
 ```console
@@ -8392,6 +8754,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:51:12 GMT  
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:7-jdk-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7-jdk-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:7-jdk11`
 
@@ -8915,6 +9295,15 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866983 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7-jdk11-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:7-jdk17`
 
 ```console
@@ -9436,6 +9825,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:51:12 GMT  
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:7-jdk17-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7-jdk17-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:7-jdk18`
 
@@ -9959,6 +10366,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866976 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7-jdk18-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7-jdk18-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:7-jdk8`
 
 ```console
@@ -10295,6 +10720,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Thu, 05 May 2022 18:47:45 GMT  
 		Size: 115.9 MB (115866959 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:7-jdk8-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7-jdk8-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:7.4`
 
@@ -10818,6 +11261,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7.4-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7.4-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:7.4-jdk`
 
 ```console
@@ -11339,6 +11800,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:51:12 GMT  
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:7.4-jdk-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7.4-jdk-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:7.4-jdk11`
 
@@ -11862,6 +12341,15 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866983 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7.4-jdk11-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:7.4-jdk17`
 
 ```console
@@ -12383,6 +12871,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:51:12 GMT  
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:7.4-jdk17-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7.4-jdk17-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:7.4-jdk18`
 
@@ -12906,6 +13412,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866976 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7.4-jdk18-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7.4-jdk18-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:7.4-jdk8`
 
 ```console
@@ -13242,6 +13766,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Thu, 05 May 2022 18:47:45 GMT  
 		Size: 115.9 MB (115866959 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:7.4-jdk8-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7.4-jdk8-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:7.4.2`
 
@@ -13765,6 +14307,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7.4.2-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7.4.2-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:7.4.2-jdk`
 
 ```console
@@ -14286,6 +14846,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:51:12 GMT  
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:7.4.2-jdk-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7.4.2-jdk-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:7.4.2-jdk11`
 
@@ -14809,6 +15387,15 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866983 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7.4.2-jdk11-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:7.4.2-jdk17`
 
 ```console
@@ -15330,6 +15917,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:51:12 GMT  
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:7.4.2-jdk17-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7.4.2-jdk17-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:7.4.2-jdk18`
 
@@ -15853,6 +16458,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866976 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7.4.2-jdk18-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7.4.2-jdk18-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:7.4.2-jdk8`
 
 ```console
@@ -16190,6 +16813,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866959 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7.4.2-jdk8-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:7.4.2-jdk8-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:alpine`
 
 ```console
@@ -16282,6 +16923,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:51:12 GMT  
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:jdk`
 
@@ -16805,6 +17464,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:jdk-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:jdk-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:jdk11`
 
 ```console
@@ -17326,6 +18003,15 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:50:00 GMT  
 		Size: 115.9 MB (115866983 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:jdk11-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:jdk17`
 
@@ -17849,6 +18535,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866898 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:jdk17-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:jdk17-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:jdk18`
 
 ```console
@@ -18371,6 +19075,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866976 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:jdk18-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:jdk18-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:jdk8`
 
 ```console
@@ -18707,6 +19429,24 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Thu, 05 May 2022 18:47:45 GMT  
 		Size: 115.9 MB (115866959 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:jdk8-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `gradle:jdk8-jammy`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:latest`
 
