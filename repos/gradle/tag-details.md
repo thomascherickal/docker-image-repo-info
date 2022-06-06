@@ -69,6 +69,7 @@
 -	[`gradle:7-jdk-jammy`](#gradle7-jdk-jammy)
 -	[`gradle:7-jdk11`](#gradle7-jdk11)
 -	[`gradle:7-jdk11-alpine`](#gradle7-jdk11-alpine)
+-	[`gradle:7-jdk11-focal`](#gradle7-jdk11-focal)
 -	[`gradle:7-jdk11-jammy`](#gradle7-jdk11-jammy)
 -	[`gradle:7-jdk17`](#gradle7-jdk17)
 -	[`gradle:7-jdk17-alpine`](#gradle7-jdk17-alpine)
@@ -91,6 +92,7 @@
 -	[`gradle:7.4-jdk-jammy`](#gradle74-jdk-jammy)
 -	[`gradle:7.4-jdk11`](#gradle74-jdk11)
 -	[`gradle:7.4-jdk11-alpine`](#gradle74-jdk11-alpine)
+-	[`gradle:7.4-jdk11-focal`](#gradle74-jdk11-focal)
 -	[`gradle:7.4-jdk11-jammy`](#gradle74-jdk11-jammy)
 -	[`gradle:7.4-jdk17`](#gradle74-jdk17)
 -	[`gradle:7.4-jdk17-alpine`](#gradle74-jdk17-alpine)
@@ -113,6 +115,7 @@
 -	[`gradle:7.4.2-jdk-jammy`](#gradle742-jdk-jammy)
 -	[`gradle:7.4.2-jdk11`](#gradle742-jdk11)
 -	[`gradle:7.4.2-jdk11-alpine`](#gradle742-jdk11-alpine)
+-	[`gradle:7.4.2-jdk11-focal`](#gradle742-jdk11-focal)
 -	[`gradle:7.4.2-jdk11-jammy`](#gradle742-jdk11-jammy)
 -	[`gradle:7.4.2-jdk17`](#gradle742-jdk17)
 -	[`gradle:7.4.2-jdk17-alpine`](#gradle742-jdk17-alpine)
@@ -134,6 +137,7 @@
 -	[`gradle:jdk-jammy`](#gradlejdk-jammy)
 -	[`gradle:jdk11`](#gradlejdk11)
 -	[`gradle:jdk11-alpine`](#gradlejdk11-alpine)
+-	[`gradle:jdk11-focal`](#gradlejdk11-focal)
 -	[`gradle:jdk11-jammy`](#gradlejdk11-jammy)
 -	[`gradle:jdk17`](#gradlejdk17)
 -	[`gradle:jdk17-alpine`](#gradlejdk17-alpine)
@@ -22855,6 +22859,15 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866983 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7-jdk11-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:7-jdk11-jammy`
 
 ```console
@@ -29834,6 +29847,15 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:50:00 GMT  
 		Size: 115.9 MB (115866983 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:7.4-jdk11-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:7.4-jdk11-jammy`
 
@@ -36815,6 +36837,15 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Size: 115.9 MB (115866983 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `gradle:7.4.2-jdk11-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
 ## `gradle:7.4.2-jdk11-jammy`
 
 ```console
@@ -43365,6 +43396,15 @@ RUN set -o errexit -o nounset     && echo "Downloading Gradle"     && wget --no-
 		Last Modified: Wed, 27 Apr 2022 18:50:00 GMT  
 		Size: 115.9 MB (115866983 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `gradle:jdk11-focal`
+
+```console
+$ docker pull gradle@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `gradle:jdk11-jammy`
 
