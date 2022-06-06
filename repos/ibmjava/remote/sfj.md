@@ -1,7 +1,7 @@
 ## `ibmjava:sfj`
 
 ```console
-$ docker pull ibmjava@sha256:d4779fe0093a80e4e067d15324b65a987eeb409676539fc5f4697068b1b50041
+$ docker pull ibmjava@sha256:5c192c399634a51be9f3fcbbea891f37cf861e5cc67c7718ee68093f9c210bb6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -58,45 +58,45 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/
 ### `ibmjava:sfj` - linux; 386
 
 ```console
-$ docker pull ibmjava@sha256:08facdd3af99354f17adcdeadeb6564bdc80bb0478fa3c3291d19410831236e1
+$ docker pull ibmjava@sha256:dffcaf37d821253295f5ff201c753bbdb8d9c79e7a45ca5d780f927aa10f2abd
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.4 MB (94385713 bytes)**  
+-	Total Size: **94.4 MB (94387494 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8813b4a8da1ea73677945d5e92fa22bb788f3bd6c0bc260a2c82f2861cdc6436`
+-	Image ID: `sha256:10024b4aa7b8040093eb9424f8c33303d3599d22bd9c12861cf7c3d425fb26c4`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 29 Apr 2022 22:46:47 GMT
-ADD file:bcce1e9e400660e474d54b70b67bc484a7976aff4e980b58d10ddcb4daa58a7f in / 
-# Fri, 29 Apr 2022 22:46:47 GMT
+# Mon, 06 Jun 2022 21:18:54 GMT
+ADD file:c1118975f50d6835777043d4b807b4fcf30db0151d1e7659e077e9e33c4ea7c7 in / 
+# Mon, 06 Jun 2022 21:18:54 GMT
 CMD ["bash"]
-# Fri, 29 Apr 2022 23:10:08 GMT
+# Mon, 06 Jun 2022 21:52:30 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Fri, 29 Apr 2022 23:10:15 GMT
+# Mon, 06 Jun 2022 21:52:36 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Wed, 01 Jun 2022 15:38:41 GMT
+# Mon, 06 Jun 2022 21:52:37 GMT
 ENV JAVA_VERSION=8.0.7.10
-# Wed, 01 Jun 2022 15:39:57 GMT
+# Mon, 06 Jun 2022 21:53:51 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='c1fb549eed0be5462a9a52099fcb46bb451654b1815f27d1a71ae799daabb527';          YML_FILE='8.0/sfj/linux/x86_64/index.yml';          ;;        i386)          ESUM='415565deb6b0fa26d84ccad928d91c22274dc23f50f10d11d1e7ee686da1588d';          YML_FILE='8.0/sfj/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='b37ac95d0e91bf04dce30139abfe49c9054fefc89c7d47227d579912cd2843c6';          YML_FILE='8.0/sfj/linux/ppc64le/index.yml';          ;;        s390)          ESUM='8a719a3e5b9e0648c5d309701fbe4d4583aacaef0b3a01c6d29bb6d7cfef328a';          YML_FILE='8.0/sfj/linux/s390/index.yml';          ;;        s390x)          ESUM='de4fbb36bd46cffd88bdc6bd5734aaa4ad4c09f4adefdf66fb8bb9e58ca47639';          YML_FILE='8.0/sfj/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Wed, 01 Jun 2022 15:39:57 GMT
+# Mon, 06 Jun 2022 21:53:51 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:14c49d5e021ef38e29480c34c86df22d89b9b63fe1a57ec4dd970f56497edf9a`  
-		Last Modified: Fri, 29 Apr 2022 22:47:32 GMT  
-		Size: 27.2 MB (27164138 bytes)  
+	-	`sha256:1408ae6e2634d0ef0a2f110363deef0fdf35ee2958852f9d20b92b57495a9fb7`  
+		Last Modified: Mon, 06 Jun 2022 21:19:41 GMT  
+		Size: 27.2 MB (27165461 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08de056e8ffee8045cf535785282f3b64d4f5516108a6e75d5024df24973f981`  
-		Last Modified: Fri, 29 Apr 2022 23:12:51 GMT  
-		Size: 3.0 MB (2988554 bytes)  
+	-	`sha256:2544d5d24f04fcdb404016e3858b5878b2ee1182436bb2acb9f0b694ad952bb2`  
+		Last Modified: Mon, 06 Jun 2022 21:55:15 GMT  
+		Size: 3.0 MB (2989000 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:51ef49d109952c74ce2804d02acfa5c09edf47d814e3e1e5b6fd96b43bb832af`  
-		Last Modified: Wed, 01 Jun 2022 15:42:44 GMT  
-		Size: 64.2 MB (64233021 bytes)  
+	-	`sha256:73baac6899e9acd48f2a164459c75f8ed1df88f9c4862a6fe585b6bd4fec6387`  
+		Last Modified: Mon, 06 Jun 2022 21:55:50 GMT  
+		Size: 64.2 MB (64233033 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ibmjava:sfj` - linux; ppc64le
