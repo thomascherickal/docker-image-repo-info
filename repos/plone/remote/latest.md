@@ -1,7 +1,7 @@
 ## `plone:latest`
 
 ```console
-$ docker pull plone@sha256:cdd2f23ccb9cf8c37e13bab4da55e022ff214d98a5a02ad74bdcdf80a52a417e
+$ docker pull plone@sha256:d5e4e18ca3d07ff258dc4dab9ac54982e9c8563e0cf184d0d01242f7f53b4386
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull plone@sha256:cdd2f23ccb9cf8c37e13bab4da55e022ff214d98a5a02ad74bdcd
 ### `plone:latest` - linux; amd64
 
 ```console
-$ docker pull plone@sha256:ea0cd8c58ded4ea792af07130d3ec33769bd6ece6a910d81a62871b8eaa914e1
+$ docker pull plone@sha256:72820c95a8851ea51a96120654de7e5d2f8fddd2d988d1eed88d70be65878023
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **244.4 MB (244373466 bytes)**  
+-	Total Size: **244.4 MB (244374511 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:790ede24accb86d5c3ccd92ec482af145a0e0a7b7aa253221ec4d6e33193533d`
+-	Image ID: `sha256:e62ac753257551fa1810f8b3f3ada6f35eceb9a2afd02f9378c8e8f9ba16ae15`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["start"]`
 
@@ -45,35 +45,35 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.0.4
 # Sat, 28 May 2022 14:44:01 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=57.5.0
-# Sat, 28 May 2022 14:44:01 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/a312303dbd516f6a692f2fee59852701bd828dd8/public/get-pip.py
-# Sat, 28 May 2022 14:44:01 GMT
-ENV PYTHON_GET_PIP_SHA256=8dd03e99645c19f49bbb629ce65c46b665ee92a1d94d246418bad6afade89f8d
-# Sat, 28 May 2022 14:44:14 GMT
+# Thu, 02 Jun 2022 20:17:21 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/6ce3639da143c5d79b44f94b04080abf2531fd6e/public/get-pip.py
+# Thu, 02 Jun 2022 20:17:22 GMT
+ENV PYTHON_GET_PIP_SHA256=ba3ab8267d91fd41c58dbce08f76db99f747f716d85ce1865813842bb035524d
+# Thu, 02 Jun 2022 20:17:34 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Sat, 28 May 2022 14:44:14 GMT
+# Thu, 02 Jun 2022 20:17:34 GMT
 CMD ["python3"]
-# Sun, 29 May 2022 04:46:28 GMT
+# Tue, 07 Jun 2022 20:01:57 GMT
 ENV PIP=21.0.1 ZC_BUILDOUT=2.13.5 SETUPTOOLS=51.3.3 WHEEL=0.36.2 PLONE_MAJOR=5.2 PLONE_VERSION=5.2.7 PLONE_VERSION_RELEASE=Plone-5.2.7-UnifiedInstaller-1.0 PLONE_MD5=c180d7ce3170b1871a7e8d53938096b1
-# Sun, 29 May 2022 04:46:29 GMT
+# Tue, 07 Jun 2022 20:01:57 GMT
 RUN useradd --system -m -d /plone -U -u 500 plone  && mkdir -p /plone/instance/ /data/filestorage /data/blobstorage
-# Sun, 29 May 2022 04:46:29 GMT
+# Tue, 07 Jun 2022 20:01:57 GMT
 COPY file:7b22c8ff5914ecee959543c0622bbb71de3b59961836e6f0bad3c41c35197e25 in /plone/instance/ 
-# Sun, 29 May 2022 04:51:21 GMT
+# Tue, 07 Jun 2022 20:07:15 GMT
 RUN buildDeps="default-libmysqlclient-dev dpkg-dev gcc libbz2-dev libc6-dev libffi-dev libjpeg62-turbo-dev libldap2-dev libopenjp2-7-dev libpcre3-dev libpq-dev libsasl2-dev libssl-dev libtiff5-dev libxml2-dev libxslt1-dev wget zlib1g-dev"  && runDeps="default-libmysqlclient-dev git gosu libjpeg62 libopenjp2-7 libpq5 libtiff5 libxml2 libxslt1.1 lynx netcat poppler-utils rsync wv"  && apt-get update  && apt-get install -y --no-install-recommends $buildDeps  && wget -O Plone.tgz https://launchpad.net/plone/$PLONE_MAJOR/$PLONE_VERSION/+download/$PLONE_VERSION_RELEASE.tgz  && echo "$PLONE_MD5 Plone.tgz" | md5sum -c -  && tar -xzf Plone.tgz  && cp -rv ./$PLONE_VERSION_RELEASE/base_skeleton/* /plone/instance/  && cp -v ./$PLONE_VERSION_RELEASE/buildout_templates/buildout.cfg /plone/instance/buildout-base.cfg  && pip install pip==$PIP setuptools==$SETUPTOOLS zc.buildout==$ZC_BUILDOUT wheel==$WHEEL  && cd /plone/instance  && buildout  && ln -s /data/filestorage/ /plone/instance/var/filestorage  && ln -s /data/blobstorage /plone/instance/var/blobstorage  && find /data  -not -user plone -exec chown plone:plone {} \+  && find /plone -not -user plone -exec chown plone:plone {} \+  && rm -rf /Plone*  && apt-get purge -y --auto-remove $buildDeps  && apt-get install -y --no-install-recommends $runDeps  && rm -rf /var/lib/apt/lists/*  && rm -rf /plone/buildout-cache/downloads/*
-# Sun, 29 May 2022 04:51:24 GMT
+# Tue, 07 Jun 2022 20:07:18 GMT
 VOLUME [/data]
-# Sun, 29 May 2022 04:51:24 GMT
+# Tue, 07 Jun 2022 20:07:18 GMT
 COPY multi:fb30eb2e09be8af3f02c6ae43c3107721065efb27e2804bf29977286bb96d490 in / 
-# Sun, 29 May 2022 04:51:24 GMT
+# Tue, 07 Jun 2022 20:07:18 GMT
 EXPOSE 8080
-# Sun, 29 May 2022 04:51:25 GMT
+# Tue, 07 Jun 2022 20:07:18 GMT
 WORKDIR /plone/instance
-# Sun, 29 May 2022 04:51:25 GMT
+# Tue, 07 Jun 2022 20:07:18 GMT
 HEALTHCHECK &{["CMD-SHELL" "nc -z -w5 127.0.0.1 8080 || exit 1"] "1m0s" "5s" "1m0s" '\x00'}
-# Sun, 29 May 2022 04:51:25 GMT
+# Tue, 07 Jun 2022 20:07:18 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Sun, 29 May 2022 04:51:25 GMT
+# Tue, 07 Jun 2022 20:07:18 GMT
 CMD ["start"]
 ```
 
@@ -94,23 +94,23 @@ CMD ["start"]
 		Last Modified: Sat, 28 May 2022 15:18:23 GMT  
 		Size: 232.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4d539669bb02c2d6d2b115d242fba6906c773be34fb345b5861af37154511b1`  
-		Last Modified: Sat, 28 May 2022 15:18:24 GMT  
-		Size: 3.2 MB (3166379 bytes)  
+	-	`sha256:b8f658b1c309098be5a86c123a9afcbbc8042b57a69318471c7ba4c49b0bf4f5`  
+		Last Modified: Thu, 02 Jun 2022 20:25:40 GMT  
+		Size: 3.2 MB (3166543 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dd708ec337439e0ad1639075c1198c298c61b127a830ddcd7387429dfcc41a64`  
-		Last Modified: Sun, 29 May 2022 04:51:46 GMT  
-		Size: 4.0 KB (3951 bytes)  
+	-	`sha256:7cdf958ebc0170ddd7a741a5d8e158c1cc34b81a6a2348f906c354c39579be72`  
+		Last Modified: Tue, 07 Jun 2022 20:07:45 GMT  
+		Size: 3.9 KB (3949 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:71f279e6299a2c48072450f3b40cd987d2d5d6c1edbfd05b5ae96fd1b364080f`  
-		Last Modified: Sun, 29 May 2022 04:51:46 GMT  
+	-	`sha256:c1126307e62b4facfb698612b3129c798f34585858da425f9d1d427dccbfa705`  
+		Last Modified: Tue, 07 Jun 2022 20:07:45 GMT  
 		Size: 1.3 KB (1257 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa569902dbe5e02cb84be594a5fcd0635cc354782bbba71d07969dd5de150c3b`  
-		Last Modified: Sun, 29 May 2022 04:52:16 GMT  
-		Size: 200.0 MB (199985685 bytes)  
+	-	`sha256:0f7012ae99a9b911a668a03bec38ca4f82ab8d9c9ea5846b5be21e21a8e23590`  
+		Last Modified: Tue, 07 Jun 2022 20:08:15 GMT  
+		Size: 200.0 MB (199986569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c5c1e11894c747843ca74e1c9cc335fbb547d12a4556cd38ef0f32013b83dce1`  
-		Last Modified: Sun, 29 May 2022 04:51:46 GMT  
-		Size: 4.0 KB (4025 bytes)  
+	-	`sha256:befbed292a2d215563f3d632f144a1d474712efbb672e83cfd08a0926ec320e7`  
+		Last Modified: Tue, 07 Jun 2022 20:07:46 GMT  
+		Size: 4.0 KB (4024 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
