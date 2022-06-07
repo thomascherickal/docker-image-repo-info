@@ -2997,20 +2997,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-rsvg-2.0/copyright`, `/usr/share/
 - `Unlicense,`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris librsvg=2.52.5+dfsg-3
-'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.52.5%2bdfsg-3.dsc' librsvg_2.52.5+dfsg-3.dsc 2972 SHA256:b681a5671985805db0ee916058b22d27213a2b66da218194142c46fe259b3afc
-'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.52.5%2bdfsg.orig.tar.xz' librsvg_2.52.5+dfsg.orig.tar.xz 20813024 SHA256:66d01957678559bec1c23404aa5eab90d68f034ba0826a2bd48dd5fd106d86a4
-'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.52.5%2bdfsg-3.debian.tar.xz' librsvg_2.52.5+dfsg-3.debian.tar.xz 33800 SHA256:345797fd34520d0a6e723fe93a6c5cbcf4950779a09804dcd810f00e3bec78e9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/librsvg/2.52.5+dfsg-3/
 
-- https://sources.debian.net/src/librsvg/2.52.5+dfsg-3/ (for browsing the source)
-- https://sources.debian.net/src/librsvg/2.52.5+dfsg-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/librsvg/2.52.5+dfsg-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libseccomp=2.5.4-1`
 
@@ -5323,20 +5316,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.4.0~rc1-1
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.4.0%7erc1-1.dsc' tiff_4.4.0~rc1-1.dsc 2213 SHA256:a0b2afcd90ce1270358f6707fee5001d23e04a05133d4c4d1883e13c93633b67
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.4.0%7erc1.orig.tar.bz2' tiff_4.4.0~rc1.orig.tar.bz2 2072932 SHA256:c49d14cf555121dd5021325c4a6d9dfdeb56edb35e49903a3427927c639c8b31
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.4.0%7erc1-1.debian.tar.xz' tiff_4.4.0~rc1-1.debian.tar.xz 20896 SHA256:1c32f3102baeab337d578ac4d5d3462f7fee916f7c8221c2bf03dd28e4f86ef1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tiff/4.4.0~rc1-1/
 
-- https://sources.debian.net/src/tiff/4.4.0~rc1-1/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.4.0~rc1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.4.0~rc1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2022a-1`
 
