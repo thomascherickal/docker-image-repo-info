@@ -1,7 +1,7 @@
 ## `mediawiki:stable`
 
 ```console
-$ docker pull mediawiki@sha256:af668ac9069b07a2549b801f5c52b404cabcbd15f82b2d23dbdcd6cec30b2fb2
+$ docker pull mediawiki@sha256:da9df6a5760987953a1f1576e9832f526a90faa263d658970d789241b2b6d0de
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -195,14 +195,14 @@ CMD ["apache2-foreground"]
 ### `mediawiki:stable` - linux; arm variant v5
 
 ```console
-$ docker pull mediawiki@sha256:db84fdc10bb017b83e63300a34b1e5ecd7b7cfd4f968675bd16969956cb25426
+$ docker pull mediawiki@sha256:52d0abf20e16243907781fc7fa94ad064c1b90cf3ca5715c11bb400b7a29e212
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **233.2 MB (233242075 bytes)**  
+-	Total Size: **236.9 MB (236869947 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3e5a43ff462f90494a30712009caf3a93c836f726b9ac9753c5a3d7d87debefc`
+-	Image ID: `sha256:e8ce24749bfa699ae3e8dad6b51892ea1ed895327426f0f7d82cb74ad30d1955`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -279,13 +279,13 @@ RUN sed -i "s/<\/VirtualHost>/\tAllowEncodedSlashes NoDecode\n<\/VirtualHost>/" 
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=60'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
 # Sun, 29 May 2022 12:16:36 GMT
 RUN set -eux; 	mkdir -p /var/www/data; 	chown -R www-data:www-data /var/www/data
-# Sun, 29 May 2022 12:16:36 GMT
-ENV MEDIAWIKI_MAJOR_VERSION=1.37
-# Sun, 29 May 2022 12:16:37 GMT
-ENV MEDIAWIKI_VERSION=1.37.2
-# Sun, 29 May 2022 12:17:37 GMT
+# Wed, 08 Jun 2022 17:48:42 GMT
+ENV MEDIAWIKI_MAJOR_VERSION=1.38
+# Wed, 08 Jun 2022 17:48:42 GMT
+ENV MEDIAWIKI_VERSION=1.38.1
+# Wed, 08 Jun 2022 17:49:44 GMT
 RUN set -eux; 	fetchDeps=" 		gnupg 		dirmngr 	"; 	apt-get update; 	apt-get install -y --no-install-recommends $fetchDeps; 		curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 		441276E9CCD15F44F6D97D18C119E1A64D70938E 		F7F780D82EBFB8A56556E7EE82403E59F9F8CD79 		1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 	; 	gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; 	tar -x --strip-components=1 -f mediawiki.tar.gz; 	gpgconf --kill all; 	rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; 	chown -R www-data:www-data extensions skins cache images; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Sun, 29 May 2022 12:17:40 GMT
+# Wed, 08 Jun 2022 17:49:45 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -366,9 +366,9 @@ CMD ["apache2-foreground"]
 		Last Modified: Sun, 29 May 2022 12:29:00 GMT  
 		Size: 169.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6090cfd019a5e6b59361998dbfd3195f8868ed47a5fcdbcd25c33537c192b945`  
-		Last Modified: Sun, 29 May 2022 12:29:57 GMT  
-		Size: 51.8 MB (51830582 bytes)  
+	-	`sha256:efb3a359a3ddc379535daf520dc9d0ea0a5322ae1bd8f8ed1bd2c932449b4e9a`  
+		Last Modified: Wed, 08 Jun 2022 17:54:38 GMT  
+		Size: 55.5 MB (55458454 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mediawiki:stable` - linux; arm variant v7
