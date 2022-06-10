@@ -1,10 +1,10 @@
-# `python:3.10.4-bullseye`
+# `python:3.10.5-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e4ccc57bca82c939feef1c83c8d78416f22e24b0c076316e0801c3318630f674`
-- Created: `2022-06-02T20:14:22.15017594Z`
-- Virtual Size: ~ 919.75 Mb  
+- Image ID: `sha256:6bb8bdb609b697dfbb897199c2869bc47fcc9fbf7a7370494c42458e15244df9`
+- Created: `2022-06-07T18:41:21.530307429Z`
+- Virtual Size: ~ 919.68 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["python3"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D`
-  - `PYTHON_VERSION=3.10.4`
+  - `PYTHON_VERSION=3.10.5`
   - `PYTHON_PIP_VERSION=22.0.4`
   - `PYTHON_SETUPTOOLS_VERSION=58.1.0`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/6ce3639da143c5d79b44f94b04080abf2531fd6e/public/get-pip.py`
