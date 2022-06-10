@@ -750,15 +750,9 @@ Licenses: (parsed from: `/usr/share/doc/comerr-dev/copyright`, `/usr/share/doc/e
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.46.5-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.5-2ubuntu1.dsc' e2fsprogs_1.46.5-2ubuntu1.dsc 3103 SHA512:9fd85f269a28246c9b878ab1b61753f4b42f5f23e7e3d7a560dd5124d67ad9e27fc2d76720d5670f39f47dfae93edf21472203d577a613097241dc9905c11341
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.5.orig.tar.gz' e2fsprogs_1.46.5.orig.tar.gz 9530158 SHA512:1a3496cb6ac575c7a5c523cc4eede39bc77c313a6d1fea2d303fc967792d75d94e42d7821e1a61b7513509320aae4a7170506decf5753ddbd1dda9d304cc392e
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.5.orig.tar.gz.asc' e2fsprogs_1.46.5.orig.tar.gz.asc 488 SHA512:b288fa2418a85750673743cb58faf10537e2c79a5c2ec8b0d59435316f00006424195556ccf78fa023b67b05a29cd85bf9d96c14c166847d71a1d79b189c1d05
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.5-2ubuntu1.debian.tar.xz' e2fsprogs_1.46.5-2ubuntu1.debian.tar.xz 85096 SHA512:721aa2ceb80c9eb99eef514bbdf081d0f87dbbad0e0dd58f165d2659ce353918169ae26c96d9be8fe6a2062bb4c0788b3189002bf6f8543c2faab44341ec0cb3
-```
 
 ### `dpkg` source package: `elfutils=0.187-1`
 
@@ -2459,14 +2453,9 @@ Licenses: (parsed from: `/usr/share/doc/libselinux1/copyright`, `/usr/share/doc/
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libselinux=3.3-1build2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.3-1build2.dsc' libselinux_3.3-1build2.dsc 2644 SHA512:e6f6744aeef21f3acf9c36fc6251515e6be8caf1b4953ed20d2346897c72bc919ae7e26ab8dfd0c2cf24029bd39da073e57ea19df15af106ce86ab4537c691aa
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.3.orig.tar.gz' libselinux_3.3.orig.tar.gz 206826 SHA512:9a89c05ea4b17453168a985ece93ba6d6c4127916e657c46d4135eb59a1f6408faa0802cc2e49187defbde5247d659037beee089877affbab3eab6af3433696c
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libselinux/libselinux_3.3-1build2.debian.tar.xz' libselinux_3.3-1build2.debian.tar.xz 24052 SHA512:75e344ef0d123659105774a0fe941f5821d230bd3f4db0453918407325f6c08246db2cd609ec0ba51090b2942cd1a9a1865245a18834fa1b234d730103799c0c
-```
 
 ### `dpkg` source package: `libsemanage=3.3-1build2`
 
@@ -2480,14 +2469,9 @@ Licenses: (parsed from: `/usr/share/doc/libsemanage-common/copyright`, `/usr/sha
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libsemanage=3.3-1build2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.3-1build2.dsc' libsemanage_3.3-1build2.dsc 2690 SHA512:6337e23938be6ebe18321ce9e67802ceaa2637e37bdc0940c4a4501e73f25235c662de1ec85807062327d2d5c5e7078ad0fb20d660e075710726cd0ede51e2fc
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.3.orig.tar.gz' libsemanage_3.3.orig.tar.gz 178890 SHA512:6026d9773c0886436ad801bc0c8beac888b6fb62034edeb863192dea4b6ef34a88e080758820fe635a20e048ac666beee505a0f946258f18571709cca5228aad
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsemanage/libsemanage_3.3-1build2.debian.tar.xz' libsemanage_3.3-1build2.debian.tar.xz 17920 SHA512:b23e000956a6fc96c7609a749d1974874834b6a463b0f5b42b3e4bde75f560789f7ef7f385a3a7297e97f7c610cd0c2899986b3a228671a57e051310441b0c90
-```
 
 ### `dpkg` source package: `libsepol=3.4-1`
 
@@ -3199,15 +3183,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=6.1.2-1
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_6.1.2-1.dsc' mercurial_6.1.2-1.dsc 2799 SHA512:f6b64abe1aca9c645926fdcfda1c016a4370e78436dceb0efc85f970abe4ef965849deb143dd5ff0baf717645584fb2408d1ddb19eeb2771b40a92f17303478d
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_6.1.2.orig.tar.gz' mercurial_6.1.2.orig.tar.gz 8066147 SHA512:4adb8299747601d4c38b5ee83105f83810348357e244b6380b063c5ab25ea2ea2756fb0caf7f980d7cc707c27dee709b206894417aab9e6aee0818ddfe3aaf2b
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_6.1.2.orig.tar.gz.asc' mercurial_6.1.2.orig.tar.gz.asc 659 SHA512:73625242540a449c844c9caa32e45c37ad1402fda70dc3aa76db42b958988cff31d4c4d083b71968d9811b1b35bd1bd88aa309df621abc2fbc14aaed269f55ea
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_6.1.2-1.debian.tar.xz' mercurial_6.1.2-1.debian.tar.xz 73832 SHA512:82b63fdca8c07f0c3b347a9313a0d11046ba1b5f3ff02a71f40fb1d349d834863b8e30930aae3dbac86789c6bc691a9876070689014e33edc3f2b59c18e4acec
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/mercurial/6.1.2-1/
+
 
 ### `dpkg` source package: `mpclib3=1.2.1-2build1`
 
@@ -3291,14 +3273,9 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient-dev/copyright`, `/usr/sha
 - `public-domain`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mysql-8.0=8.0.28-0ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.28-0ubuntu4.dsc' mysql-8.0_8.0.28-0ubuntu4.dsc 3485 SHA512:c125ee3f3e97b544f8d1c2bf9e98daecd43a8b284d272ec2d2e4397461e228d0dd8e409e704a8c4a8b1010118197ddf2c2777bfdec0cb25d38c1a4ffb0dce834
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.28.orig.tar.gz' mysql-8.0_8.0.28.orig.tar.gz 298044027 SHA512:4473678619a03a6c1349ce7330127f03d2da70b5b598375015abe871a0591171fc206f6e248b20085b46a0f465c52408bcadcb732ff72a737c012364d1e46297
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.28-0ubuntu4.debian.tar.xz' mysql-8.0_8.0.28-0ubuntu4.debian.tar.xz 161768 SHA512:cf900d3366d2fed5b9303258a56e425ce3dae2f08e891a45a6230764504a442ac1ae88e2f6305b200fd3d03799efa4db9afd47e2c24157d532dc19f83fac6632
-```
 
 ### `dpkg` source package: `mysql-defaults=1.0.8`
 
@@ -3523,14 +3500,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.5.11+dfsg-1~exp1ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.11%2bdfsg-1%7eexp1ubuntu3.dsc' openldap_2.5.11+dfsg-1~exp1ubuntu3.dsc 3298 SHA512:728ad98af8644cb3a41e762343935acc3897191b58a5ab2f6861d46f23d98340defe434c65aa67b5f97c461f6bfadd9ff2041cc4e6f4702b882cd03fab11f482
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.11%2bdfsg.orig.tar.gz' openldap_2.5.11+dfsg.orig.tar.gz 5609424 SHA512:a728d66c8a6bfa34d8e80eab86c2612685cab1358008cc10f9d9862a03aff46a5a19cd6487732131222efae6b86c27d5446fd829e89a4cadeb79161fd9ed437c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.11%2bdfsg-1%7eexp1ubuntu3.debian.tar.xz' openldap_2.5.11+dfsg-1~exp1ubuntu3.debian.tar.xz 170932 SHA512:2dc8db44e01d3a1a884faa70c7c461d77319f890dd022f52861c87ec8dc007e7d772bdcac6296d9d25687aa53adcdb7f86d64dc86518227d0afefa709fe68bdf
-```
 
 ### `dpkg` source package: `openssh=1:9.0p1-1`
 
@@ -3573,14 +3545,9 @@ Licenses: (parsed from: `/usr/share/doc/libssl-dev/copyright`, `/usr/share/doc/l
 - `GPL-1`
 - `GPL-1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=3.0.3-5ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.3-5ubuntu2.dsc' openssl_3.0.3-5ubuntu2.dsc 2300 SHA512:0f8050364617976a016e4e8398dcb994b2d2340d2e22ecd85cd0cdfd2f3a491780bf70ad18fdb4ee5cb13a26097e7d91fc04d0b2cc174772892a21dfd951d13f
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.3.orig.tar.gz' openssl_3.0.3.orig.tar.gz 15058905 SHA512:949472025211fabdaf2564122f0a9a3baef0facb6373e90cf6c4485164a50898050b179722d0b358c4d8cf1787384ea30d5fd03b98757634631d3e8978509b1a
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.3-5ubuntu2.debian.tar.xz' openssl_3.0.3-5ubuntu2.debian.tar.xz 114332 SHA512:c3880bd1f54baed2bd88fbb81e564f817facfcd156cc113f391120c9c686f6a43156d2cb2d0e369bb0658ceb9573b8fd3fa3da9d8fea04e057541a985c369f49
-```
 
 ### `dpkg` source package: `p11-kit=0.24.1-1`
 
@@ -3982,14 +3949,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.10=3.10.4-4
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4-4.dsc' python3.10_3.10.4-4.dsc 3609 SHA512:7b512945cddb0bdd7c11b27967c380ac5e2803d4d2330b80d37f63233e7715c11aad173b11bf23be666a07bb39b441168c3f64923735d4085d1867a5b5c6a4c9
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4.orig.tar.xz' python3.10_3.10.4.orig.tar.xz 19342692 SHA512:6c9aeecddc55c7896b2e8527fca131c7b2b6127d56ce1a001ccedfebf590334e0c0bb7c517ed3cf1da3c1910e002552b56aa7e03eeb672f42ff0bd8150799113
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4-4.debian.tar.xz' python3.10_3.10.4-4.debian.tar.xz 217696 SHA512:5c6cfa6b24b4eb288fa39d9060e57a3a0887b6e6d4e3c32261ec38dfbcdefbd286772a91bc3372d005ece027da0cb94e205fe551bd00a8f8cfd9836c6a4914be
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/python3.10/3.10.4-4/
+
 
 ### `dpkg` source package: `readline=8.1.2-1.2`
 
@@ -4239,14 +4205,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=249.11-0ubuntu3.1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.1.dsc' systemd_249.11-0ubuntu3.1.dsc 5689 SHA512:1ce957e885284a8ecf1ff3f3f9f6d9dfdef0eb8ca88a8651c8aea569a42f43e8498d754dd8d2ac6eee24b98d82908944163d30b97d9314192ebe27cc59b3e863
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11.orig.tar.gz' systemd_249.11.orig.tar.gz 10622702 SHA512:fed7f81933648945a4bfac9fb12150ecd84d32181f79be0e14e0b3a789343a87569f868670e0b8dfc2801fab39f7490f95ee8c29ba831d7611f78c14ace5ddd8
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.1.debian.tar.xz' systemd_249.11-0ubuntu3.1.debian.tar.xz 228196 SHA512:d66283a614bc9c529e1288da89758547ca8ac94e78aa62146cb37a9ea9f51343c97b6579cce77366209e04d9b16859280115fb620aaf4646ed295167cff2f0b2
-```
 
 ### `dpkg` source package: `sysvinit=3.01-1ubuntu1`
 

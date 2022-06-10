@@ -412,13 +412,9 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ca-certificates=20210119~20.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20210119%7e20.04.2.dsc' ca-certificates_20210119~20.04.2.dsc 1917 SHA512:f7cebf760482ea3514303154a40f0a143ab1d97b0fe4d2e360c325115e2b5148e387be271060238e3e4133733316bb02cb161f42c2606dbf72d2493cce0667f9
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20210119%7e20.04.2.tar.xz' ca-certificates_20210119~20.04.2.tar.xz 232956 SHA512:03740922fcc051a5252129de3e973293de1e5f5833c08b58264362fed2d5d67b53c05f71f426ff56805a8fb8a6ffe35ef4e1556006a3e09471e8424d02ff099e
-```
 
 ### `dpkg` source package: `cairo=1.16.0-4ubuntu1`
 
@@ -2824,14 +2820,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.4.0-113.127
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-113.127.dsc' linux_5.4.0-113.127.dsc 7335 SHA512:dc23ac9660d32d51710a70446890c602dfb981033047543fb723e81d6f9f1a802dc9c45c20c40baad5b6ba4aca7dc4c4f4d02f904df52468ccd150fb4ca4822b
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-113.127.diff.gz' linux_5.4.0-113.127.diff.gz 9360252 SHA512:01bc04eea795323efbb84bdff51560c6ab9ce98a62a963bf41119f4c296ba0dabed77f21726dbab71cd212c8f5c5892cf205b12dbbb5d36323a1b7d56dbcaadf
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
 

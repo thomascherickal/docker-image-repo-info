@@ -4938,20 +4938,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.10=3.10.4-4
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.4-4.dsc' python3.10_3.10.4-4.dsc 3609 SHA256:42d2b36f6261fc9c85fc6c930b6c13b50cdeae5ae4ce88b8dda03f261c3cee2d
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.4.orig.tar.xz' python3.10_3.10.4.orig.tar.xz 19342692 SHA256:80bf925f571da436b35210886cf79f6eb5fa5d6c571316b73568343451f77a19
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.4-4.debian.tar.xz' python3.10_3.10.4-4.debian.tar.xz 217696 SHA256:9e1306ae69558959d447f01d107a32a8b809a9cce423fc0d83b3c3ef2a19d3f6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.10/3.10.4-4/
 
-- https://sources.debian.net/src/python3.10/3.10.4-4/ (for browsing the source)
-- https://sources.debian.net/src/python3.10/3.10.4-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.10/3.10.4-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.1.2-1.2`
 
