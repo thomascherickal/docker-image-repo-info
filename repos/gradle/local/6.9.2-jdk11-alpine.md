@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5c59f788848ba7b8b204724c48c5c9869245f9005a5ee3886371478f9beacdb1`
-- Created: `2022-04-27T18:48:01.459414494Z`
+- Image ID: `sha256:d0ff50d94df978321e72dd247d0159a2b1cbc57e67f8d0722a6c9f84016a1a63`
+- Created: `2022-06-08T19:11:42.701056404Z`
 - Virtual Size: ~ 546.49 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -74,16 +74,16 @@ GPL-2.0-only
 ### `apk` package: `apr`
 
 ```console
-apr-1.7.0-r0 description:
+apr-1.7.0-r1 description:
 The Apache Portable Runtime
 
-apr-1.7.0-r0 webpage:
+apr-1.7.0-r1 webpage:
 http://apr.apache.org/
 
-apr-1.7.0-r0 installed size:
+apr-1.7.0-r1 installed size:
 220 KiB
 
-apr-1.7.0-r0 license:
+apr-1.7.0-r1 license:
 Apache-2.0
 
 ```
@@ -227,16 +227,16 @@ GPL-2.0-or-later
 ### `apk` package: `git-lfs`
 
 ```console
-git-lfs-3.0.2-r1 description:
+git-lfs-3.0.2-r2 description:
 Git extension for versioning large files
 
-git-lfs-3.0.2-r1 webpage:
+git-lfs-3.0.2-r2 webpage:
 https://git-lfs.github.io/
 
-git-lfs-3.0.2-r1 installed size:
+git-lfs-3.0.2-r2 installed size:
 9 MiB
 
-git-lfs-3.0.2-r1 license:
+git-lfs-3.0.2-r2 license:
 MIT
 
 ```
