@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:34a98130b7b31133d96fada1f7a3cf662172adad29850ac27b286b9da4a21501`
-- Created: `2022-05-20T21:35:19.769721952Z`
-- Virtual Size: ~ 497.07 Mb  
+- Image ID: `sha256:d86e2720033fb6b2455cd706731143d937685ca2b1cbf4a5264c3bdf6e345421`
+- Created: `2022-06-10T03:40:13.158517343Z`
+- Virtual Size: ~ 497.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.19`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.19.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.19.tar.xz.asc`
-  - `PHP_SHA256=ba62219c4b0486cbb2a04f0796749a46b0ee1f5a142ed454212b4e2460cb0fab`
+  - `PHP_VERSION=8.0.20`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.20.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.20.tar.xz.asc`
+  - `PHP_SHA256=973fec765336ee01f47536a5db1c2eee98df9d34a41522b7b6c760159bf0a77b`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `NEXTCLOUD_VERSION=24.0.1`
@@ -217,16 +217,16 @@ MIT
 ### `apk` package: `freetype`
 
 ```console
-freetype-2.11.1-r1 description:
+freetype-2.11.1-r2 description:
 TrueType font rendering library
 
-freetype-2.11.1-r1 webpage:
+freetype-2.11.1-r2 webpage:
 https://www.freetype.org/
 
-freetype-2.11.1-r1 installed size:
+freetype-2.11.1-r2 installed size:
 748 KiB
 
-freetype-2.11.1-r1 license:
+freetype-2.11.1-r2 license:
 FTL GPL-2.0-or-later
 
 ```
@@ -489,16 +489,16 @@ BSD-3-Clause IJG Zlib
 ### `apk` package: `libldap`
 
 ```console
-libldap-2.6.0-r0 description:
+libldap-2.6.2-r0 description:
 OpenLDAP libraries
 
-libldap-2.6.0-r0 webpage:
+libldap-2.6.2-r0 webpage:
 https://www.openldap.org/
 
-libldap-2.6.0-r0 installed size:
+libldap-2.6.2-r0 installed size:
 400 KiB
 
-libldap-2.6.0-r0 license:
+libldap-2.6.2-r0 license:
 OLDAP-2.8
 
 ```
@@ -574,16 +574,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-14.2-r0 description:
+libpq-14.3-r0 description:
 PostgreSQL client library
 
-libpq-14.2-r0 webpage:
+libpq-14.3-r0 webpage:
 https://www.postgresql.org/
 
-libpq-14.2-r0 installed size:
+libpq-14.3-r0 installed size:
 328 KiB
 
-libpq-14.2-r0 license:
+libpq-14.3-r0 license:
 PostgreSQL
 
 ```
