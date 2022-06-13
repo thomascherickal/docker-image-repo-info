@@ -1,7 +1,7 @@
 ## `mongo:5-focal`
 
 ```console
-$ docker pull mongo@sha256:04647a72547ac05a4375ebae5c0208bf6201755d2cd64c39561cc6250c7ca1fd
+$ docker pull mongo@sha256:58daba83eaf917d1bd671b2f6be1ef7da99a2963b48ba5bb9d36aba9b46356a2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull mongo@sha256:04647a72547ac05a4375ebae5c0208bf6201755d2cd64c39561cc
 ### `mongo:5-focal` - linux; amd64
 
 ```console
-$ docker pull mongo@sha256:f548240f5a61d1ecfe4c16cc73c8a12c1701bf9d47d0121f110dd5655ebefd55
+$ docker pull mongo@sha256:4b58442ec48034662c5581405a24755bdd80730535ccb98e262b6f5ed76c7017
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **245.3 MB (245306167 bytes)**  
+-	Total Size: **248.8 MB (248776855 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1d3f6d5230f67503df7a474bc704166b0fb52792ed4d054f95297541778f30f0`
+-	Image ID: `sha256:c8b57c4bf7e3a88daf948d5d17bc7145db05771e928b3b3095ca4590719b5469`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mongod"]`
 
@@ -54,19 +54,19 @@ ENV MONGO_MAJOR=5.0
 RUN echo "deb [ signed-by=/etc/apt/keyrings/mongodb.gpg ] http://$MONGO_REPO/apt/ubuntu focal/${MONGO_PACKAGE%-unstable}/$MONGO_MAJOR multiverse" | tee "/etc/apt/sources.list.d/${MONGO_PACKAGE%-unstable}.list"
 # Tue, 07 Jun 2022 00:32:46 GMT
 ENV MONGO_VERSION=5.0.9
-# Tue, 07 Jun 2022 00:33:10 GMT
-RUN set -x 	&& export DEBIAN_FRONTEND=noninteractive 	&& apt-get update 	&& ln -s /bin/true /usr/local/bin/systemctl 	&& apt-get install -y 		${MONGO_PACKAGE}=$MONGO_VERSION 		${MONGO_PACKAGE}-server=$MONGO_VERSION 		${MONGO_PACKAGE}-shell=$MONGO_VERSION 		${MONGO_PACKAGE}-mongos=$MONGO_VERSION 		${MONGO_PACKAGE}-tools=$MONGO_VERSION 	&& rm -f /usr/local/bin/systemctl 	&& rm -rf /var/lib/apt/lists/* 	&& rm -rf /var/lib/mongodb 	&& mv /etc/mongod.conf /etc/mongod.conf.orig
-# Tue, 07 Jun 2022 00:33:12 GMT
+# Mon, 13 Jun 2022 22:08:49 GMT
+RUN set -x 	&& export DEBIAN_FRONTEND=noninteractive 	&& apt-get update 	&& apt-get install -y 		${MONGO_PACKAGE}=$MONGO_VERSION 		${MONGO_PACKAGE}-server=$MONGO_VERSION 		${MONGO_PACKAGE}-shell=$MONGO_VERSION 		${MONGO_PACKAGE}-mongos=$MONGO_VERSION 		${MONGO_PACKAGE}-tools=$MONGO_VERSION 	&& rm -rf /var/lib/apt/lists/* 	&& rm -rf /var/lib/mongodb 	&& mv /etc/mongod.conf /etc/mongod.conf.orig
+# Mon, 13 Jun 2022 22:08:51 GMT
 VOLUME [/data/db /data/configdb]
-# Tue, 07 Jun 2022 00:33:12 GMT
+# Mon, 13 Jun 2022 22:08:51 GMT
 ENV HOME=/data/db
-# Tue, 07 Jun 2022 00:33:12 GMT
-COPY file:ff519c7454e20e6f14c42932b8d6eaee066ed739bfbbd2a6e884d0a7ffeead38 in /usr/local/bin/ 
-# Tue, 07 Jun 2022 00:33:12 GMT
+# Mon, 13 Jun 2022 22:08:51 GMT
+COPY file:b7b44e96082c97da2e7f6248f8bbb2edd837542169af52bcc3f53a0cf8b74b7e in /usr/local/bin/ 
+# Mon, 13 Jun 2022 22:08:51 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 07 Jun 2022 00:33:12 GMT
+# Mon, 13 Jun 2022 22:08:51 GMT
 EXPOSE 27017
-# Tue, 07 Jun 2022 00:33:13 GMT
+# Mon, 13 Jun 2022 22:08:51 GMT
 CMD ["mongod"]
 ```
 
@@ -99,13 +99,13 @@ CMD ["mongod"]
 		Last Modified: Tue, 07 Jun 2022 00:34:53 GMT  
 		Size: 257.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd6085016f3a0c6b14cdd29d6287e1745c48e6d43332da6be34795c6b8beb607`  
-		Last Modified: Tue, 07 Jun 2022 00:35:22 GMT  
-		Size: 207.2 MB (207154539 bytes)  
+	-	`sha256:be887b845d3f0adc9ace3d1852d22e933f4a077aef258370261499f37673d4c1`  
+		Last Modified: Mon, 13 Jun 2022 22:12:03 GMT  
+		Size: 210.6 MB (210625220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e8109db46fca75b5f8e57f37f43d411a16dd24993d858e7153e451bd252bafa`  
-		Last Modified: Tue, 07 Jun 2022 00:34:53 GMT  
-		Size: 4.9 KB (4945 bytes)  
+	-	`sha256:e5543880b18352cc12aea3ccd1062e9cd7a4f859998e86338142f182715238d8`  
+		Last Modified: Mon, 13 Jun 2022 22:11:35 GMT  
+		Size: 5.0 KB (4952 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mongo:5-focal` - linux; arm64 variant v8
