@@ -1,10 +1,10 @@
-# `openjdk:19-ea-25-jdk-bullseye`
+# `openjdk:19-ea-26-jdk-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6c366b09a7fef6db99ede552f4065a331c430fe1837e35065f4d762eccaba1cb`
-- Created: `2022-06-06T19:44:30.786535531Z`
-- Virtual Size: ~ 680.57 Mb  
+- Image ID: `sha256:5511238c61e25561fc2f0fb93db8772b3e5c561147714fce923b8f1e1e35cb19`
+- Created: `2022-06-13T19:53:03.910661553Z`
+- Virtual Size: ~ 681.28 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-19`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=19-ea+25`
+  - `JAVA_VERSION=19-ea+26`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -3068,21 +3068,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u3
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u3.dsc' tzdata_2021a-1+deb11u3.dsc 2269 SHA256:446f7e859e69214cb3b9a642eedcf61851e60039cc9a6d0ada01eaee49bf4c1d
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u3.debian.tar.xz' tzdata_2021a-1+deb11u3.debian.tar.xz 109824 SHA256:ec7e4c4b3d2063b82b7cd25975f4fa94d68109d325fdf921d256b033f9be3d82
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u3/
 
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u3/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 

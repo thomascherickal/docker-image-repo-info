@@ -269,8 +269,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url glibc-2.28-189.1.0.1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-189.1.0.1.el8.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-189.1.0.1.el8.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-189.1.0.1.el8.src.rpm
 ```
 
 ### `rpm` package: `glibc-common-2.28-189.1.0.1.el8.x86_64`
@@ -281,8 +281,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url glibc-common-2.28-189.1.0.1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-189.1.0.1.el8.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-189.1.0.1.el8.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-189.1.0.1.el8.src.rpm
 ```
 
 ### `rpm` package: `glibc-minimal-langpack-2.28-189.1.0.1.el8.x86_64`
@@ -293,8 +293,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url glibc-minimal-langpack-2.28-189.1.0.1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-189.1.0.1.el8.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/glibc-2.28-189.1.0.1.el8.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/glibc-2.28-189.1.0.1.el8.src.rpm
 ```
 
 ### `rpm` package: `gmp-6.1.2-10.el8.x86_64`
@@ -327,8 +327,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url gnutls-3.6.16-4.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gnutls-3.6.16-4.el8.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/gnutls-3.6.16-4.el8.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/gnutls-3.6.16-4.el8.src.rpm
 ```
 
 ### `rpm` package: `gobject-introspection-1.56.1-1.el8.x86_64`
@@ -402,8 +402,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url json-c-0.13.1-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/json-c-0.13.1-3.el8.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/json-c-0.13.1-3.el8.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/json-c-0.13.1-3.el8.src.rpm
 ```
 
 ### `rpm` package: `keyutils-libs-1.5.10-9.el8.x86_64`
@@ -616,8 +616,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libidn2-2.2.0-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libidn2-2.2.0-1.el8.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libidn2-2.2.0-1.el8.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libidn2-2.2.0-1.el8.src.rpm
 ```
 
 ### `rpm` package: `libksba-1.3.5-7.el8.x86_64`
@@ -823,8 +823,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libtasn1-4.13-3.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libtasn1-4.13-3.el8.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/libtasn1-4.13-3.el8.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/libtasn1-4.13-3.el8.src.rpm
 ```
 
 ### `rpm` package: `libunistring-0.9.9-3.el8.x86_64`
@@ -960,8 +960,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url mpfr-3.1.6-1.el8
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/mpfr-3.1.6-1.el8.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/mpfr-3.1.6-1.el8.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/mpfr-3.1.6-1.el8.src.rpm
 ```
 
 ### `rpm` package: `ncurses-base-6.1-9.20180224.el8.noarch`
