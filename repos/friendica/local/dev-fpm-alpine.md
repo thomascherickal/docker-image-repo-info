@@ -1,9 +1,9 @@
-# `friendica:2022.05-dev-fpm-alpine`
+# `friendica:2022.09-dev-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0f4dd187d4f27b07f7fdb60028b3c0b21d8f01820080c830b45cbebf3f7cece9`
-- Created: `2022-06-10T04:23:42.624908463Z`
+- Image ID: `sha256:94ce30f91fea4417857cd32ff4ca24061ae42778708126d5c92ab8e7e899c717`
+- Created: `2022-06-13T17:54:54.026577258Z`
 - Virtual Size: ~ 108.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -25,8 +25,8 @@
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `FRIENDICA_SYSLOG_FLAGS=39`
-  - `FRIENDICA_VERSION=2022.05-dev`
-  - `FRIENDICA_ADDONS=2022.05-dev`
+  - `FRIENDICA_VERSION=2022.09-dev`
+  - `FRIENDICA_ADDONS=2022.09-dev`
 
 ## `apk` (`.apk`-based packages)
 
@@ -305,16 +305,16 @@ LGPL-2.1-or-later
 ### `apk` package: `gnupg`
 
 ```console
-gnupg-2.2.35-r2 description:
+gnupg-2.2.35-r3 description:
 GNU Privacy Guard 2 - meta package for full GnuPG suite
 
-gnupg-2.2.35-r2 webpage:
+gnupg-2.2.35-r3 webpage:
 https://www.gnupg.org/
 
-gnupg-2.2.35-r2 installed size:
+gnupg-2.2.35-r3 installed size:
 4096 B
 
-gnupg-2.2.35-r2 license:
+gnupg-2.2.35-r3 license:
 GPL-3.0-or-later
 
 ```
@@ -322,16 +322,16 @@ GPL-3.0-or-later
 ### `apk` package: `gnupg-dirmngr`
 
 ```console
-gnupg-dirmngr-2.2.35-r2 description:
+gnupg-dirmngr-2.2.35-r3 description:
 GNU Privacy Guard 2 - network certificate management service
 
-gnupg-dirmngr-2.2.35-r2 webpage:
+gnupg-dirmngr-2.2.35-r3 webpage:
 https://www.gnupg.org/
 
-gnupg-dirmngr-2.2.35-r2 installed size:
+gnupg-dirmngr-2.2.35-r3 installed size:
 668 KiB
 
-gnupg-dirmngr-2.2.35-r2 license:
+gnupg-dirmngr-2.2.35-r3 license:
 GPL-3.0-or-later
 
 ```
@@ -339,16 +339,16 @@ GPL-3.0-or-later
 ### `apk` package: `gnupg-gpgconf`
 
 ```console
-gnupg-gpgconf-2.2.35-r2 description:
+gnupg-gpgconf-2.2.35-r3 description:
 GNU Privacy Guard 2 - core configuration utilities
 
-gnupg-gpgconf-2.2.35-r2 webpage:
+gnupg-gpgconf-2.2.35-r3 webpage:
 https://www.gnupg.org/
 
-gnupg-gpgconf-2.2.35-r2 installed size:
+gnupg-gpgconf-2.2.35-r3 installed size:
 300 KiB
 
-gnupg-gpgconf-2.2.35-r2 license:
+gnupg-gpgconf-2.2.35-r3 license:
 GPL-3.0-or-later
 
 ```
@@ -356,16 +356,16 @@ GPL-3.0-or-later
 ### `apk` package: `gnupg-utils`
 
 ```console
-gnupg-utils-2.2.35-r2 description:
+gnupg-utils-2.2.35-r3 description:
 GNU Privacy Guard 2 - utility programs
 
-gnupg-utils-2.2.35-r2 webpage:
+gnupg-utils-2.2.35-r3 webpage:
 https://www.gnupg.org/
 
-gnupg-utils-2.2.35-r2 installed size:
+gnupg-utils-2.2.35-r3 installed size:
 404 KiB
 
-gnupg-utils-2.2.35-r2 license:
+gnupg-utils-2.2.35-r3 license:
 GPL-3.0-or-later
 
 ```
@@ -373,16 +373,16 @@ GPL-3.0-or-later
 ### `apk` package: `gnupg-wks-client`
 
 ```console
-gnupg-wks-client-2.2.35-r2 description:
+gnupg-wks-client-2.2.35-r3 description:
 GNU Privacy Guard 2 - Web Key Service client
 
-gnupg-wks-client-2.2.35-r2 webpage:
+gnupg-wks-client-2.2.35-r3 webpage:
 https://www.gnupg.org/
 
-gnupg-wks-client-2.2.35-r2 installed size:
+gnupg-wks-client-2.2.35-r3 installed size:
 192 KiB
 
-gnupg-wks-client-2.2.35-r2 license:
+gnupg-wks-client-2.2.35-r3 license:
 GPL-3.0-or-later
 
 ```
@@ -407,16 +407,16 @@ LGPL-2.1-or-later
 ### `apk` package: `gpg`
 
 ```console
-gpg-2.2.35-r2 description:
+gpg-2.2.35-r3 description:
 GNU Privacy Guard 2 - public key operations only
 
-gpg-2.2.35-r2 webpage:
+gpg-2.2.35-r3 webpage:
 https://www.gnupg.org/
 
-gpg-2.2.35-r2 installed size:
+gpg-2.2.35-r3 installed size:
 900 KiB
 
-gpg-2.2.35-r2 license:
+gpg-2.2.35-r3 license:
 GPL-3.0-or-later
 
 ```
@@ -424,16 +424,16 @@ GPL-3.0-or-later
 ### `apk` package: `gpg-agent`
 
 ```console
-gpg-agent-2.2.35-r2 description:
+gpg-agent-2.2.35-r3 description:
 GNU Privacy Guard 2 - cryptographic agent
 
-gpg-agent-2.2.35-r2 webpage:
+gpg-agent-2.2.35-r3 webpage:
 https://www.gnupg.org/
 
-gpg-agent-2.2.35-r2 installed size:
+gpg-agent-2.2.35-r3 installed size:
 740 KiB
 
-gpg-agent-2.2.35-r2 license:
+gpg-agent-2.2.35-r3 license:
 GPL-3.0-or-later
 
 ```
@@ -441,16 +441,16 @@ GPL-3.0-or-later
 ### `apk` package: `gpg-wks-server`
 
 ```console
-gpg-wks-server-2.2.35-r2 description:
+gpg-wks-server-2.2.35-r3 description:
 GNU Privacy Guard 2 - Web Key Service server
 
-gpg-wks-server-2.2.35-r2 webpage:
+gpg-wks-server-2.2.35-r3 webpage:
 https://www.gnupg.org/
 
-gpg-wks-server-2.2.35-r2 installed size:
+gpg-wks-server-2.2.35-r3 installed size:
 180 KiB
 
-gpg-wks-server-2.2.35-r2 license:
+gpg-wks-server-2.2.35-r3 license:
 GPL-3.0-or-later
 
 ```
@@ -458,16 +458,16 @@ GPL-3.0-or-later
 ### `apk` package: `gpgsm`
 
 ```console
-gpgsm-2.2.35-r2 description:
+gpgsm-2.2.35-r3 description:
 GNU Privacy Guard 2 - S/MIME version
 
-gpgsm-2.2.35-r2 webpage:
+gpgsm-2.2.35-r3 webpage:
 https://www.gnupg.org/
 
-gpgsm-2.2.35-r2 installed size:
+gpgsm-2.2.35-r3 installed size:
 444 KiB
 
-gpgsm-2.2.35-r2 license:
+gpgsm-2.2.35-r3 license:
 GPL-3.0-or-later
 
 ```
@@ -475,16 +475,16 @@ GPL-3.0-or-later
 ### `apk` package: `gpgv`
 
 ```console
-gpgv-2.2.35-r2 description:
+gpgv-2.2.35-r3 description:
 GNU Privacy Guard 2 - signature verification only
 
-gpgv-2.2.35-r2 webpage:
+gpgv-2.2.35-r3 webpage:
 https://www.gnupg.org/
 
-gpgv-2.2.35-r2 installed size:
+gpgv-2.2.35-r3 installed size:
 388 KiB
 
-gpgv-2.2.35-r2 license:
+gpgv-2.2.35-r3 license:
 GPL-3.0-or-later
 
 ```

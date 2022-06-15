@@ -1,10 +1,10 @@
-# `friendica:2022.03-fpm-alpine`
+# `friendica:2022.06-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b011bd8329b52d22ffdfa6d021aaa54c4942527edd3d36ce3771154dd8b1dcea`
-- Created: `2022-06-10T04:22:58.7970102Z`
-- Virtual Size: ~ 213.71 Mb  
+- Image ID: `sha256:5e5ecbfbbf297237b7e502a50dd6e7e44adc6463de671cbf1ef3148c88c6118c`
+- Created: `2022-06-13T17:54:28.385670191Z`
+- Virtual Size: ~ 214.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -25,10 +25,10 @@
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `FRIENDICA_SYSLOG_FLAGS=39`
-  - `FRIENDICA_VERSION=2022.03`
-  - `FRIENDICA_ADDONS=2022.03`
-  - `FRIENDICA_DOWNLOAD_SHA256=f190dd05bdd2ecff753da108535dbc4e406b0fe291c0764e87f93d9510aae74e`
-  - `FRIENDICA_DOWNLOAD_ADDONS_SHA256=d6b95835724b9814aa7c1862f985cdaf8754e7527b41ce80ca58ee5378807936`
+  - `FRIENDICA_VERSION=2022.06`
+  - `FRIENDICA_ADDONS=2022.06`
+  - `FRIENDICA_DOWNLOAD_SHA256=05a43d9ec085c06d3bde8b637286dd5fb397d9bdd75e30359e710bcba73082a9`
+  - `FRIENDICA_DOWNLOAD_ADDONS_SHA256=3f7ee1ee6591a0183de99b994c25e55e34ac966ba58f7a98f6323d48cee9969d`
 
 ## `apk` (`.apk`-based packages)
 

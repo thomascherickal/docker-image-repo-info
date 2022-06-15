@@ -1,10 +1,10 @@
-# `friendica:2022.03-apache`
+# `friendica:2022.06-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:9cc67173ff269c82e9b98090da074e0270c18765e7210dec101b5d0fbabfef13`
-- Created: `2022-06-10T05:49:06.376949783Z`
-- Virtual Size: ~ 649.23 Mb  
+- Image ID: `sha256:2f44e4bbfbb75248c078f4943cbd4df3bef64f24410b81bf6394171bcbeae17b`
+- Created: `2022-06-13T17:53:33.670796907Z`
+- Virtual Size: ~ 649.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -27,10 +27,10 @@
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `FRIENDICA_SYSLOG_FLAGS=39`
-  - `FRIENDICA_VERSION=2022.03`
-  - `FRIENDICA_ADDONS=2022.03`
-  - `FRIENDICA_DOWNLOAD_SHA256=f190dd05bdd2ecff753da108535dbc4e406b0fe291c0764e87f93d9510aae74e`
-  - `FRIENDICA_DOWNLOAD_ADDONS_SHA256=d6b95835724b9814aa7c1862f985cdaf8754e7527b41ce80ca58ee5378807936`
+  - `FRIENDICA_VERSION=2022.06`
+  - `FRIENDICA_ADDONS=2022.06`
+  - `FRIENDICA_DOWNLOAD_SHA256=05a43d9ec085c06d3bde8b637286dd5fb397d9bdd75e30359e710bcba73082a9`
+  - `FRIENDICA_DOWNLOAD_ADDONS_SHA256=3f7ee1ee6591a0183de99b994c25e55e34ac966ba58f7a98f6323d48cee9969d`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -4153,21 +4153,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u3
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u3.dsc' tzdata_2021a-1+deb11u3.dsc 2269 SHA256:446f7e859e69214cb3b9a642eedcf61851e60039cc9a6d0ada01eaee49bf4c1d
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u3.debian.tar.xz' tzdata_2021a-1+deb11u3.debian.tar.xz 109824 SHA256:ec7e4c4b3d2063b82b7cd25975f4fa94d68109d325fdf921d256b033f9be3d82
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u3/
 
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u3/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 

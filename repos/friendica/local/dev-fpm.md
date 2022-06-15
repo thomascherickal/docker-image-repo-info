@@ -1,10 +1,10 @@
-# `friendica:2022.05-dev-fpm`
+# `friendica:2022.09-dev-fpm`
 
 ## Docker Metadata
 
-- Image ID: `sha256:420205c339ab12c7efc83ae6b30fb8ba9d3bfd288c54372b58983e5fed2b4623`
-- Created: `2022-06-01T02:41:28.371057106Z`
-- Virtual Size: ~ 552.62 Mb  
+- Image ID: `sha256:9874272538ba0309fc439275a59b2499e581dc8917bf80cd5210e9950ce6690b`
+- Created: `2022-06-13T17:54:49.55432269Z`
+- Virtual Size: ~ 552.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -17,16 +17,16 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.29`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.29.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.29.tar.xz.asc`
-  - `PHP_SHA256=7d0f07869f33311ff3fe1138dc0d6c0d673c37fcb737eaed2c6c10a949f1aed6`
+  - `PHP_VERSION=7.4.30`
+  - `PHP_URL=https://www.php.net/distributions/php-7.4.30.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.30.tar.xz.asc`
+  - `PHP_SHA256=ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d`
   - `GOSU_VERSION=1.14`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `FRIENDICA_SYSLOG_FLAGS=39`
-  - `FRIENDICA_VERSION=2022.05-dev`
-  - `FRIENDICA_ADDONS=2022.05-dev`
+  - `FRIENDICA_VERSION=2022.09-dev`
+  - `FRIENDICA_ADDONS=2022.09-dev`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -4027,21 +4027,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u3
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u3.dsc' tzdata_2021a-1+deb11u3.dsc 2269 SHA256:446f7e859e69214cb3b9a642eedcf61851e60039cc9a6d0ada01eaee49bf4c1d
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u3.debian.tar.xz' tzdata_2021a-1+deb11u3.debian.tar.xz 109824 SHA256:ec7e4c4b3d2063b82b7cd25975f4fa94d68109d325fdf921d256b033f9be3d82
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u3/
 
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u3/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
