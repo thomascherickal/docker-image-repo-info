@@ -1,7 +1,7 @@
 ## `clojure:temurin-18-lein-focal`
 
 ```console
-$ docker pull clojure@sha256:c6bebbee719e868a5794df55c6b706617c8f12233f8da18fdb938244c297b989
+$ docker pull clojure@sha256:3e4084c12f3be44a3aa064bb6eb94bda7cbb71a0d0accc1b03e8b789a900e225
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull clojure@sha256:c6bebbee719e868a5794df55c6b706617c8f12233f8da18fdb9
 ### `clojure:temurin-18-lein-focal` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:ef8efa37c82dc99477df9d93d3aed28ae7d120c8ec6d18631b1e5a74870c941e
+$ docker pull clojure@sha256:3f85d5baec96ff3a1dbc694344bbc5e570608272ee129311d279552c7d0b6446
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **258.1 MB (258144056 bytes)**  
+-	Total Size: **258.3 MB (258328752 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2153289d708ffc05bbbf7324ec12f9c95e818e95b2a62f3771dbf5094ecf90d9`
+-	Image ID: `sha256:a683dad6de3ea9a4ad6111428cab733ad96088994f24dbad861e3aeeb26a5603`
 -	Entrypoint: `["entrypoint"]`
 -	Default Command: `["repl"]`
 
@@ -54,13 +54,13 @@ RUN set -eux; apt-get update && apt-get install -y make gnupg wget && rm -rf /va
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
 # Tue, 07 Jun 2022 04:46:17 GMT
 ENV LEIN_ROOT=1
-# Tue, 07 Jun 2022 04:46:21 GMT
-RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.3"]])' > project.clj   && lein deps && rm project.clj
-# Tue, 07 Jun 2022 04:46:21 GMT
+# Wed, 15 Jun 2022 20:25:01 GMT
+RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.11.1"]])' > project.clj   && lein deps && rm project.clj
+# Wed, 15 Jun 2022 20:25:01 GMT
 COPY file:cf90f595e38d932dff3bdcd4221efe7c65fb3432787490053b55b6917f06e4cd in /usr/local/bin/entrypoint 
-# Tue, 07 Jun 2022 04:46:21 GMT
+# Wed, 15 Jun 2022 20:25:01 GMT
 ENTRYPOINT ["entrypoint"]
-# Tue, 07 Jun 2022 04:46:21 GMT
+# Wed, 15 Jun 2022 20:25:01 GMT
 CMD ["repl"]
 ```
 
@@ -85,26 +85,26 @@ CMD ["repl"]
 		Last Modified: Tue, 07 Jun 2022 04:50:17 GMT  
 		Size: 12.0 MB (12045574 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f64fe604be7d09fa21bd9d2575e6920efac201d9ff5a03f97e962779e307b2a4`  
-		Last Modified: Tue, 07 Jun 2022 04:50:16 GMT  
-		Size: 4.2 MB (4207226 bytes)  
+	-	`sha256:d19df6d7370413fbce30299587b202645a46d4f8249f2d416ecb9b74f4d566ae`  
+		Last Modified: Wed, 15 Jun 2022 20:32:55 GMT  
+		Size: 4.4 MB (4391922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a9125d36aa58a7e68718a96956f4977b078de17c6618c276c61f8e24e6500412`  
-		Last Modified: Tue, 07 Jun 2022 04:50:16 GMT  
+	-	`sha256:94c37762957947dfe571b37bc6b861dc5aa492845b58ae9c25250bed56ad6b9b`  
+		Last Modified: Wed, 15 Jun 2022 20:32:55 GMT  
 		Size: 401.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:temurin-18-lein-focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:7cca583901ba849fa0767704316cd69507ad83381d5ff5ac812a6dad7f2dfe7f
+$ docker pull clojure@sha256:2f218d002d8cace69842fa370f33321caa47604e2f58a39a7133ca9536c1f3b8
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **256.1 MB (256084542 bytes)**  
+-	Total Size: **256.3 MB (256269200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9186251461b950d893bc8cd51c73a4e5be486fcab810ced9731df81c8ee8e9a0`
+-	Image ID: `sha256:86244a8e7991573eb3a2e309e173eae702700654b3205557eaab83053a583894`
 -	Entrypoint: `["entrypoint"]`
 -	Default Command: `["repl"]`
 
@@ -139,13 +139,13 @@ RUN set -eux; apt-get update && apt-get install -y make gnupg wget && rm -rf /va
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
 # Tue, 07 Jun 2022 10:11:01 GMT
 ENV LEIN_ROOT=1
-# Tue, 07 Jun 2022 10:11:04 GMT
-RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.3"]])' > project.clj   && lein deps && rm project.clj
-# Tue, 07 Jun 2022 10:11:06 GMT
+# Wed, 15 Jun 2022 20:46:31 GMT
+RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.11.1"]])' > project.clj   && lein deps && rm project.clj
+# Wed, 15 Jun 2022 20:46:33 GMT
 COPY file:cf90f595e38d932dff3bdcd4221efe7c65fb3432787490053b55b6917f06e4cd in /usr/local/bin/entrypoint 
-# Tue, 07 Jun 2022 10:11:06 GMT
+# Wed, 15 Jun 2022 20:46:33 GMT
 ENTRYPOINT ["entrypoint"]
-# Tue, 07 Jun 2022 10:11:07 GMT
+# Wed, 15 Jun 2022 20:46:34 GMT
 CMD ["repl"]
 ```
 
@@ -170,11 +170,11 @@ CMD ["repl"]
 		Last Modified: Tue, 07 Jun 2022 10:16:53 GMT  
 		Size: 11.8 MB (11806848 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6800aed663b458483a5f99dec7fdd611298297005cd6c8a97fca4cd96179caa7`  
-		Last Modified: Tue, 07 Jun 2022 10:16:53 GMT  
-		Size: 4.2 MB (4207116 bytes)  
+	-	`sha256:f2f3b40f0936cefec6e172ef5700e7fbb1d4a24cd1bdb3e96308a524eb16d17f`  
+		Last Modified: Wed, 15 Jun 2022 20:55:35 GMT  
+		Size: 4.4 MB (4391774 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9557c3f44a789d2fdb386fceb387caa482c7675f9d62ea59b81122eb7be002ee`  
-		Last Modified: Tue, 07 Jun 2022 10:16:52 GMT  
+	-	`sha256:a12369e5e97a6779a4897f4216e4633b0b3a0bc2d40fbffe1ea6072bae97fa0a`  
+		Last Modified: Wed, 15 Jun 2022 20:55:34 GMT  
 		Size: 401.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip

@@ -1,7 +1,7 @@
 ## `clojure:temurin-17-lein-alpine`
 
 ```console
-$ docker pull clojure@sha256:d6a40b68a23c9b9595d6d6987666598b560469e873748e2df8fe67284f928b06
+$ docker pull clojure@sha256:37d0f7f0782bd623f07900dccd390accc2b8e0cbbf6fe0bb12b5380a85e875a9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull clojure@sha256:d6a40b68a23c9b9595d6d6987666598b560469e873748e2df8f
 ### `clojure:temurin-17-lein-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:4633d203a93d55dedb20cd2ce474dc147c9f2c255e407aedd2fcd851c46da555
+$ docker pull clojure@sha256:1ae2f72c1759cc2da4ccdac991715a96795cb53d96edaa1c0d5d216a4196bdb4
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **211.8 MB (211805148 bytes)**  
+-	Total Size: **212.0 MB (211989839 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:be69fd775b97068b09748ab5b1f779773c47c9a01a398ae47745dbdd85ce1944`
+-	Image ID: `sha256:37f885cd247b2ae6ac185a422f09715b5e83322fdd7da79f6e13844bd38d3be3`
 -	Entrypoint: `["entrypoint"]`
 -	Default Command: `["repl"]`
 
@@ -53,13 +53,13 @@ RUN set -eux; apk add --no-cache ca-certificates bash tar openssl gnupg && mkdir
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
 # Wed, 08 Jun 2022 19:04:42 GMT
 ENV LEIN_ROOT=1
-# Wed, 08 Jun 2022 19:04:46 GMT
-RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.10.3"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 08 Jun 2022 19:04:46 GMT
+# Wed, 15 Jun 2022 20:24:04 GMT
+RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.11.1"]])' > project.clj   && lein deps && rm project.clj
+# Wed, 15 Jun 2022 20:24:04 GMT
 COPY file:cf90f595e38d932dff3bdcd4221efe7c65fb3432787490053b55b6917f06e4cd in /usr/local/bin/entrypoint 
-# Wed, 08 Jun 2022 19:04:46 GMT
+# Wed, 15 Jun 2022 20:24:04 GMT
 ENTRYPOINT ["entrypoint"]
-# Wed, 08 Jun 2022 19:04:46 GMT
+# Wed, 15 Jun 2022 20:24:04 GMT
 CMD ["repl"]
 ```
 
@@ -84,11 +84,11 @@ CMD ["repl"]
 		Last Modified: Wed, 08 Jun 2022 19:08:35 GMT  
 		Size: 12.5 MB (12543159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5580ae9de2680306e7e97433e516ffe3080d5a162dfee6081630ed6af8528c5e`  
-		Last Modified: Wed, 08 Jun 2022 19:08:35 GMT  
-		Size: 4.2 MB (4207218 bytes)  
+	-	`sha256:0988eaa0c1df6fdb824def87ba5ef7a172db6f4449b54a0c49af103162d5693c`  
+		Last Modified: Wed, 15 Jun 2022 20:31:25 GMT  
+		Size: 4.4 MB (4391904 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fcab72b79eb47beec557ca07e08009c142b77b4cbc3f1fe1f2746e67153c597a`  
-		Last Modified: Wed, 08 Jun 2022 19:08:34 GMT  
-		Size: 404.0 B  
+	-	`sha256:4997f206a2eb7e8a6f120434292a7e0a24f314abb417c7a684e23a4a1da7de70`  
+		Last Modified: Wed, 15 Jun 2022 20:31:25 GMT  
+		Size: 409.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
