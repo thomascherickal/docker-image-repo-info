@@ -367,21 +367,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.83.0-1
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.83.0-1.dsc' curl_7.83.0-1.dsc 2959 SHA256:0e797893ae93c544b30b06e6b04ca7ae5bf32339e4b194906225d2bb5115fc62
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.83.0.orig.tar.gz' curl_7.83.0.orig.tar.gz 4162166 SHA256:c0e64302a33d2fb79e0fc4e674260a22941e92ee2f11b894bf94d32b8f5531af
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.83.0.orig.tar.gz.asc' curl_7.83.0.orig.tar.gz.asc 488 SHA256:f6ca16283d7713e38a4210044c9dc06ba6ac1d924a7ed4f47abcf95d626ba365
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.83.0-1.debian.tar.xz' curl_7.83.0-1.debian.tar.xz 35460 SHA256:beab6cdce7bc9dfe3bbc05810188abc93309b7e84eade72f54189017bc4882eb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.83.0-1/
 
-- https://sources.debian.net/src/curl/7.83.0-1/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.83.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.83.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-4`
 
@@ -412,20 +404,13 @@ Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/l
 - `RSA-MD`
 - `SSLeay`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.28+dfsg-4
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg-4.dsc' cyrus-sasl2_2.1.28+dfsg-4.dsc 3212 SHA256:f1c1f6d94c192d22ad9c73bf3655497338910151948732fd44903d355fdbb58d
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg.orig.tar.xz' cyrus-sasl2_2.1.28+dfsg.orig.tar.xz 797472 SHA256:a15886d7da5958bd27f35b7c871dd872f6dc5b9917c9b6b15e3de014c7dab3d9
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg-4.debian.tar.xz' cyrus-sasl2_2.1.28+dfsg-4.debian.tar.xz 86508 SHA256:c0ec8e39eb2e89742ce0f39ef3c78b898d4e4d3e03d537167f18348e3fed1095
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cyrus-sasl2/2.1.28+dfsg-4/
 
-- https://sources.debian.net/src/cyrus-sasl2/2.1.28+dfsg-4/ (for browsing the source)
-- https://sources.debian.net/src/cyrus-sasl2/2.1.28+dfsg-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cyrus-sasl2/2.1.28+dfsg-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `dash=0.5.11+git20210903+057cd650a4ed-8`
 

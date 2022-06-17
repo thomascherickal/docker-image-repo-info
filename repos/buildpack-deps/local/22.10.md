@@ -1154,14 +1154,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.72.1-1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.72.1-1.dsc' glib2.0_2.72.1-1.dsc 3365 SHA512:0d73bf55d202948080dd3d9cea35d6a59b75b698deb74a3c2ce7dc62516401cd6d99b12e2889a43a1446b15c8e5502f8c69681c111ff2d5bfd151dc815dcbae0
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.72.1.orig.tar.xz' glib2.0_2.72.1.orig.tar.xz 4890672 SHA512:341acc91b4bed7a980b396888a0ab504337b6870422a708ea3e178598c028bc230457a328c35db469d92b0067ce8ec35d08dbcfe6d5af3340b574d41c0131913
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.72.1-1.debian.tar.xz' glib2.0_2.72.1-1.debian.tar.xz 103952 SHA512:b6e905cf39b7f1ce502afca69f846958a0cf5bd80a558189cb3dc4c1cf0923c61b0953ecdfbaf5bcc9dedfd0772ae4b4105be8ba90b63de914beb33cbb10ed8a
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/glib2.0/2.72.1-1/
+
 
 ### `dpkg` source package: `glibc=2.35-0ubuntu3`
 
@@ -1617,14 +1616,9 @@ Licenses: (parsed from: `/usr/share/doc/libkeyutils1/copyright`)
 - `LGPL-2`
 - `LGPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris keyutils=1.6.1-2ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6.1-2ubuntu3.dsc' keyutils_1.6.1-2ubuntu3.dsc 2203 SHA512:7e9c3266bf707b3553758ab89f815542edca6d7ed0ca069986bee3dda75b534f5b275b786e246232b3234c6ccbaf4c67ff60f68bba73b0a3e2ec1bbfa00b295e
-'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6.1.orig.tar.bz2' keyutils_1.6.1.orig.tar.bz2 97232 SHA512:ea6e20b2594234c7f51581eef2b8fd19c109fa9eacaaef8dfbb4f237bd1d6fdf071ec23b4ff334cb22a46461d09d17cf499987fd1f00e66f27506888876961e1
-'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6.1-2ubuntu3.debian.tar.xz' keyutils_1.6.1-2ubuntu3.debian.tar.xz 18936 SHA512:16f390f0fc3154a77c8ca3666d44881a6ca2f0d11cfe0398cd82b57b6f552af85c156de358d0b87e39f301331897d72de058050e3cb53720a76b5b5ebf07aa3d
-```
 
 ### `dpkg` source package: `krb5=1.19.2-2`
 
@@ -2485,15 +2479,13 @@ Licenses: (parsed from: `/usr/share/doc/libsepol-dev/copyright`, `/usr/share/doc
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libsepol=3.4-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.4-1.dsc' libsepol_3.4-1.dsc 2005 SHA512:7fe76fc2dc435e267511e571cedcd1dd75d565a0517ab02725f1bd608e40f1d248654464d8fbf366daf811deb7edb63ee01edbac107b72b7f9531a5dabeb4dcd
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.4.orig.tar.gz' libsepol_3.4.orig.tar.gz 490628 SHA512:5e47e6ac626f2bfc10a9f2f24c2e66c4d7f291ca778ebd81c7d565326e036e821d3eb92e5d7540517b1c715466232a7d7da895ab48811d037ad92d423ed934b6
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.4.orig.tar.gz.asc' libsepol_3.4.orig.tar.gz.asc 833 SHA512:df3631f5f5b27e5893cfb14080089bd5a662d909257045c4b0cfe95e2abbb86d108f954248acd73121a65d9ab5fce771836e1aba4d3003c327ae9eecffefe791
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libsepol/libsepol_3.4-1.debian.tar.xz' libsepol_3.4-1.debian.tar.xz 20448 SHA512:41e10e39e2011e0416ea5f016065000f9ce0b7e9fb23f313d35c4c8863f62726cabe3b42fd0efe61a8097738fb161d8a55a8e63fa7f28bd5f901d465927361bb
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libsepol/3.4-1/
+
 
 ### `dpkg` source package: `libsigsegv=2.13-1ubuntu3`
 

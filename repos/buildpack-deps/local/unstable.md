@@ -420,20 +420,13 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.38-4
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.38-4.dsc' binutils_2.38-4.dsc 11276 SHA256:b87e5c78f73473ca6d28dd3ceec500179bb7f493cafcc8f9fbaf360c048c0aa5
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.38.orig.tar.xz' binutils_2.38.orig.tar.xz 25179376 SHA256:60e3b30c13fe244db23e4beee848f89596241250d4b5cb3ff28a403ed3f28ef3
-'http://deb.debian.org/debian/pool/main/b/binutils/binutils_2.38-4.debian.tar.xz' binutils_2.38-4.debian.tar.xz 273624 SHA256:f331fceb16096d611c6f3ad2235476bf845727c65fdbf6a89693e3c68404fbb1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/binutils/2.38-4/
 
-- https://sources.debian.net/src/binutils/2.38-4/ (for browsing the source)
-- https://sources.debian.net/src/binutils/2.38-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/binutils/2.38-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `brotli=1.0.9-2`
 
@@ -611,21 +604,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.83.1-1
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.83.1-1.dsc' curl_7.83.1-1.dsc 2959 SHA256:dfcfd0faaa0828ed44e32512e2ce3343de5e82ddeb1ac90e448b11cddc98fc49
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.83.1.orig.tar.gz' curl_7.83.1.orig.tar.gz 4162207 SHA256:93fb2cd4b880656b4e8589c912a9fd092750166d555166370247f09d18f5d0c0
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.83.1.orig.tar.gz.asc' curl_7.83.1.orig.tar.gz.asc 488 SHA256:b8bd927f15bd02cb0bd831ce6d7c9f7406a1b6d8fb2d1bd1c10f16144d8491c4
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.83.1-1.debian.tar.xz' curl_7.83.1-1.debian.tar.xz 35592 SHA256:583fe1667fb6374d32923ec8cc43b775cec4461f2201cec9e512a1136240bdeb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.83.1-1/
 
-- https://sources.debian.net/src/curl/7.83.1-1/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.83.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.83.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-6`
 
