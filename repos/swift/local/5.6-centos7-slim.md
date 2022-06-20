@@ -1,9 +1,9 @@
-# `swift:5.6.1-centos7-slim`
+# `swift:5.6.2-centos7-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:efc819aed8296bd2333f1af6a985109e39b2f7e8cd9bf258aa510995a243fc48`
-- Created: `2022-04-11T19:43:32.835617339Z`
+- Image ID: `sha256:7defceabd127a87495cff91d1ed56f1d3bdfd63e9aa9571ee287e50ca7e6b1ea`
+- Created: `2022-06-16T17:27:14.984863335Z`
 - Virtual Size: ~ 452.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=centos7`
-  - `SWIFT_BRANCH=swift-5.6.1-release`
-  - `SWIFT_VERSION=swift-5.6.1-RELEASE`
+  - `SWIFT_BRANCH=swift-5.6.2-release`
+  - `SWIFT_VERSION=swift-5.6.2-RELEASE`
   - `SWIFT_WEBROOT=https://download.swift.org`
 - Labels:
   - `description=Docker Container for the Swift programming language`
@@ -952,8 +952,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libxml2-2.9.1-6.el7.5
-http://vault.centos.org/centos/7/os/Source/SPackages/libxml2-2.9.1-6.el7.5.src.rpm
 http://vault.centos.org/centos/7/updates/Source/SPackages/libxml2-2.9.1-6.el7.5.src.rpm
+http://vault.centos.org/centos/7/os/Source/SPackages/libxml2-2.9.1-6.el7.5.src.rpm
 ```
 
 ### `rpm` package: `libxml2-python-2.9.1-6.el7.5.x86_64`
@@ -964,8 +964,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libxml2-python-2.9.1-6.el7.5
-http://vault.centos.org/centos/7/os/Source/SPackages/libxml2-2.9.1-6.el7.5.src.rpm
 http://vault.centos.org/centos/7/updates/Source/SPackages/libxml2-2.9.1-6.el7.5.src.rpm
+http://vault.centos.org/centos/7/os/Source/SPackages/libxml2-2.9.1-6.el7.5.src.rpm
 ```
 
 ### `rpm` package: `lua-5.1.4-15.el7.x86_64`
