@@ -1787,15 +1787,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1l-1ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1l-1ubuntu1.3.dsc' openssl_1.1.1l-1ubuntu1.3.dsc 2745 SHA512:a718ce269139c485c257d8e622d446b52bd91a1bee54ccc30d297be9de410fe599f393ce020061e72fbb90688225181089a0da44fe78282327da4e1724a0d235
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1l.orig.tar.gz' openssl_1.1.1l.orig.tar.gz 9834044 SHA512:d9611f393e37577cca05004531388d3e0ebbf714894cab9f95f4903909cd4f45c214faab664c0cbc3ad3cca309d500b9e6d0ecbf9a0a0588d1677dc6b047f9e0
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1l.orig.tar.gz.asc' openssl_1.1.1l.orig.tar.gz.asc 488 SHA512:22f58aa49cec9e9678e56817113cccb5e1999b3148b1b3c40cf57c217d29b6bf3c7d8a4ed85b2dc865a1560095350902f7a3c78f6d4bb36ca2968740a8407aaf
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1l-1ubuntu1.3.debian.tar.xz' openssl_1.1.1l-1ubuntu1.3.debian.tar.xz 149576 SHA512:bea3091d2fdb3d6b0d74b67347a88b01e0cc94aa421a2eafaba8444757e9f934c10ae8f6afe46f53d8432819f7a0ca413ed016b1fdd7794bdadbeb2764fb19b3
-```
 
 ### `dpkg` source package: `p11-kit=0.23.22-1build1`
 
