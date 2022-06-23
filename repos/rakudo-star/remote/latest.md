@@ -1,7 +1,7 @@
 ## `rakudo-star:latest`
 
 ```console
-$ docker pull rakudo-star@sha256:7d891598adc9aab5deb157d9318717d655c2d2882257a34440aff614aa398473
+$ docker pull rakudo-star@sha256:92ade6b21f6ef1053d6059b1c44b2bc6a424f03d396132c778628d77d7e3e8a9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -78,65 +78,65 @@ CMD ["raku"]
 ### `rakudo-star:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull rakudo-star@sha256:784d2b102720c5c2121af378d5abb080bbccd67b2d4aa1625e4c7bb5684d4b9e
+$ docker pull rakudo-star@sha256:e1c71cba81dc997a1d8d8e79dcf693f2c9812d96831a02e9ee65af02fd746606
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **160.2 MB (160210420 bytes)**  
+-	Total Size: **160.2 MB (160208674 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:662dfd64cf1e5b9b0333ccd6ebbd528c4b3d7a6734d07a6b0db746450eee2cfe`
+-	Image ID: `sha256:976dce0b320a6874672f7726ebf5c72c7f431cc6fb3627675eadb18e0cda96ee`
 -	Default Command: `["raku"]`
 
 ```dockerfile
-# Sat, 28 May 2022 00:40:49 GMT
-ADD file:af879be34a7eccc177a3000eb8c45d5207bfbec108caf9be9d11c1a6620c376c in / 
-# Sat, 28 May 2022 00:40:51 GMT
+# Thu, 23 Jun 2022 00:40:54 GMT
+ADD file:a5e3c0ffa9f9754a6d77fafd8288e699a70f7f6ff7c5912a065f1c69f1393e99 in / 
+# Thu, 23 Jun 2022 00:40:55 GMT
 CMD ["bash"]
-# Sat, 28 May 2022 11:07:17 GMT
+# Thu, 23 Jun 2022 01:12:47 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 28 May 2022 11:07:24 GMT
+# Thu, 23 Jun 2022 01:12:52 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Sat, 28 May 2022 11:07:44 GMT
+# Thu, 23 Jun 2022 01:13:09 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Sun, 29 May 2022 00:54:07 GMT
+# Thu, 23 Jun 2022 19:57:13 GMT
 MAINTAINER Rob Hoelz
-# Sun, 29 May 2022 00:54:08 GMT
+# Thu, 23 Jun 2022 19:57:14 GMT
 RUN groupadd -r raku && useradd -m -r -g raku raku
-# Sun, 29 May 2022 00:54:08 GMT
+# Thu, 23 Jun 2022 19:57:14 GMT
 ARG rakudo_version=2021.04
-# Sun, 29 May 2022 00:54:09 GMT
+# Thu, 23 Jun 2022 19:57:15 GMT
 ENV rakudo_version=2021.04
-# Sun, 29 May 2022 01:05:11 GMT
+# Thu, 23 Jun 2022 20:07:19 GMT
 RUN buildDeps='         gcc         libc6-dev         make     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyserver='ha.pool.sks-keyservers.net'     keyfp='B6F697742EFCAF5F23CE51D5031D65902E840821'     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir"     && apt-get update     && apt-get install -y --no-install-recommends $buildDeps     && rm -rf /var/lib/apt/lists/*     && mkdir ${tmpdir}/rakudo         && curl -fsSL ${url}.asc -o ${tmpdir}/rakudo.tar.gz.asc     && curl -fsSL $url -o ${tmpdir}/rakudo.tar.gz     && gpg --batch --keyserver $keyserver --recv-keys $keyfp     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apt-get purge -y --auto-remove $buildDeps
-# Sun, 29 May 2022 01:05:11 GMT
+# Thu, 23 Jun 2022 20:07:19 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
-# Sun, 29 May 2022 01:05:12 GMT
+# Thu, 23 Jun 2022 20:07:20 GMT
 CMD ["raku"]
 ```
 
 -	Layers:
-	-	`sha256:fadbed17b01e84815ca3018d3dc42670c3add65c67e7cc74d6bc477ae8425934`  
-		Last Modified: Sat, 28 May 2022 00:47:58 GMT  
-		Size: 49.2 MB (49229054 bytes)  
+	-	`sha256:8d6f1451981514e25c21542f5c7ee9bb90052b8856b484ce47294cbf1fd5a234`  
+		Last Modified: Thu, 23 Jun 2022 00:47:46 GMT  
+		Size: 49.2 MB (49229092 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5795076bf6e9bf96da71f2e31cbe91d3c49a17f211c5b0d33e032e095c5564a5`  
-		Last Modified: Sat, 28 May 2022 11:18:22 GMT  
-		Size: 7.7 MB (7719823 bytes)  
+	-	`sha256:8ccc9fb4baf6e7f2e6ee18ed689c8ee1171c6751c8bbd317d580a193da27a5f1`  
+		Last Modified: Thu, 23 Jun 2022 01:23:09 GMT  
+		Size: 7.7 MB (7719858 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1eda3e266fa432ba8ae8ba25a5ad2fa4c5349ef2aa244612c89f990704c5b25`  
-		Last Modified: Sat, 28 May 2022 11:18:22 GMT  
+	-	`sha256:620d55693ed5943ab298346d9ccafefdd6d6f33994e6820a857737df89b65f3a`  
+		Last Modified: Thu, 23 Jun 2022 01:23:08 GMT  
 		Size: 9.8 MB (9767307 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:64dfac45ba23f255c176d3688a882854cfc56b2e822c56e0eb0d91ecc8bad25f`  
-		Last Modified: Sat, 28 May 2022 11:18:40 GMT  
-		Size: 52.2 MB (52174936 bytes)  
+	-	`sha256:82dcb0fa2b6020cd95c3972ec0fe03da38862f57574fe03a49360713d6f415d6`  
+		Last Modified: Thu, 23 Jun 2022 01:23:28 GMT  
+		Size: 52.2 MB (52174988 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:53c92dd1cb0b604b1ce60f0a7c2935eb21344d4e968fa45b33e326305d459ba8`  
-		Last Modified: Sun, 29 May 2022 01:05:38 GMT  
-		Size: 4.0 KB (4010 bytes)  
+	-	`sha256:6700afd1728f8155a040ac511292139ac9702e3ca452727192c612924a2c5c34`  
+		Last Modified: Thu, 23 Jun 2022 20:07:47 GMT  
+		Size: 4.0 KB (4011 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b7b5fe31868472a40ee3e11b467079d4370cae80ddaa916418146237868452e7`  
-		Last Modified: Sun, 29 May 2022 01:05:46 GMT  
-		Size: 41.3 MB (41315290 bytes)  
+	-	`sha256:41fc5228b751a20451cea24a18b790c087eab31527100e11c143f2a1349788da`  
+		Last Modified: Thu, 23 Jun 2022 20:07:55 GMT  
+		Size: 41.3 MB (41313418 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
