@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1a5b51061f3bdeb25fd28aca96ad7cdf6f128802593055961c985622592f8e9b`
-- Created: `2022-06-15T20:25:28.704404653Z`
+- Image ID: `sha256:6b3b263db8f54db2c91b6dc59b7972ff2a187387f1fb9a74b80405caeb9f61d9`
+- Created: `2022-06-22T20:27:15.543627962Z`
 - Virtual Size: ~ 605.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -16,7 +16,7 @@
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-18.0.1+10`
   - `JAVA_HOME=/opt/java/openjdk`
-  - `CLOJURE_VERSION=1.11.1.1129`
+  - `CLOJURE_VERSION=1.11.1.1149`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1862,14 +1862,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.13
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.13.dsc' openssl_1.1.1f-1ubuntu2.13.dsc 2470 SHA512:123a6be01f4c4e9f282b4ec5851428f6271672489dab3cfcea0e38da9b680c032415be792877767818b93b1f82c0707d1afce8b72fc60c85587e13139881e0b9
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.13.debian.tar.xz' openssl_1.1.1f-1ubuntu2.13.debian.tar.xz 173700 SHA512:e074e6051de63add4a2e75dcc44f3adad949be90d2a6e36cccbb01d620e65a655667fb520e9c2e8ece2b96cfeb89a426157cfae43f67730bf08176e3f1deabd3
-```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
 
