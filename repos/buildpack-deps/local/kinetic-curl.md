@@ -344,14 +344,9 @@ Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dash=0.5.11+git20210903+057cd650a4ed-3build1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-3build1.dsc' dash_0.5.11+git20210903+057cd650a4ed-3build1.dsc 1834 SHA512:380a677ef7fcd2060f7806e4e552891393adb43bfba82498d143cd2ed4fa0cc7681e573a27bcb0991025a8323f6eb8b113aa1519cf455645556fad968cd26232
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed.orig.tar.xz' dash_0.5.11+git20210903+057cd650a4ed.orig.tar.xz 133320 SHA512:eced6bc60ca6ba4394a2ee65d8c6b88eca729c43e47053fc01dec5500ebe002a12f536c128c3fd821a2eb61b97e92c8a0be6d4532926479ce4b7d986be109cb7
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-3build1.debian.tar.xz' dash_0.5.11+git20210903+057cd650a4ed-3build1.debian.tar.xz 42744 SHA512:7dd5b1bcaf76d8de19ad1647862e1140de59822c25d9ab1b42423f16de1e4c606ea393adac12f16a2ce9498d8f9553b8787fc31e5f93feefe36ab84b83402e1e
-```
 
 ### `dpkg` source package: `db5.3=5.3.28+dfsg1-0.9`
 
@@ -621,15 +616,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.7.4-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.4-2ubuntu1.dsc' gnutls28_3.7.4-2ubuntu1.dsc 3549 SHA512:c737d150ace002ad9d9db31376c7ed6964812fb588f51cb6a15a2aaa6114a87434aaac586e474f3eb862ac8a35dad18fb2dc3974a0a76ef5f192e43ccb3211ae
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.4.orig.tar.xz' gnutls28_3.7.4.orig.tar.xz 6131772 SHA512:38b488ca1223d9aa8fc25756df08db6f29aaf76fb5816fdeaa14bd89fb431a2e1c495fefc64094f726337d5b89e198146ec7dc22e9a1bca6841a9d881b0d99e6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.4.orig.tar.xz.asc' gnutls28_3.7.4.orig.tar.xz.asc 996 SHA512:65920e3f2ae7b17133ab9c77ac5d62e3cbe2a5c8814a604c11012a6e2d4c98042000dea34e40bf87f1e6f75f0e2ea6ff7eeb1521f54d93202bc126c1cc719384
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.4-2ubuntu1.debian.tar.xz' gnutls28_3.7.4-2ubuntu1.debian.tar.xz 68680 SHA512:9d914e7e00a044f3ce1e0ee982a879730e775ecdc03f2d55f2da7d69a0e375a6b5f31000106f669b939959219e02a85de1c5493c6ad15f367c8991e7ef49a96c
-```
 
 ### `dpkg` source package: `grep=3.7-1build1`
 

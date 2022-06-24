@@ -538,14 +538,9 @@ Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dash=0.5.11+git20210903+057cd650a4ed-3build1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-3build1.dsc' dash_0.5.11+git20210903+057cd650a4ed-3build1.dsc 1834 SHA512:380a677ef7fcd2060f7806e4e552891393adb43bfba82498d143cd2ed4fa0cc7681e573a27bcb0991025a8323f6eb8b113aa1519cf455645556fad968cd26232
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed.orig.tar.xz' dash_0.5.11+git20210903+057cd650a4ed.orig.tar.xz 133320 SHA512:eced6bc60ca6ba4394a2ee65d8c6b88eca729c43e47053fc01dec5500ebe002a12f536c128c3fd821a2eb61b97e92c8a0be6d4532926479ce4b7d986be109cb7
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-3build1.debian.tar.xz' dash_0.5.11+git20210903+057cd650a4ed-3build1.debian.tar.xz 42744 SHA512:7dd5b1bcaf76d8de19ad1647862e1140de59822c25d9ab1b42423f16de1e4c606ea393adac12f16a2ce9498d8f9553b8787fc31e5f93feefe36ab84b83402e1e
-```
 
 ### `dpkg` source package: `dav1d=1.0.0-2`
 
@@ -921,18 +916,13 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype-dev/copyright`, `/usr/share/
 - `Public-Domain`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris freetype=2.12.1+dfsg-2
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg-2.dsc' freetype_2.12.1+dfsg-2.dsc 3713 SHA512:8b35a74909bb225a4c1136b8070615344b23eb82ec5198a7a8ef24cec5c57ebb3c9014302e18fc6c0e0129d873f3c5ff3599130286ff64216c9a23b9973132c1
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg.orig-ft2demos.tar.xz' freetype_2.12.1+dfsg.orig-ft2demos.tar.xz 263656 SHA512:cd9356152a64d807c75b797d005ca1dd0bde69cc2fadedec101d125cb54b2aaff1f7afa2f20839caba7db66325df7c11ed4883b7e906110356b28d9900caaae7
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg.orig-ft2demos.tar.xz.asc' freetype_2.12.1+dfsg.orig-ft2demos.tar.xz.asc 833 SHA512:7e21a0136aef896f400099c80ce40ae61f226cdd1c807915bf4d856707b79ef0a1ea15a66539a4aeb55d2d1f12ba0706bd2f205d6f7545d8abb0c5c1298e9310
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg.orig-ft2docs.tar.xz' freetype_2.12.1+dfsg.orig-ft2docs.tar.xz 2038632 SHA512:276b91b93e375096bc0f9fa76408a6ea9fa89d4d06e9c9179f88d27d41df3f3bc0ce6939ea7a3fd7c93cb694e78fd6bfb154e969188279e2bca82dcc3afd108d
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg.orig-ft2docs.tar.xz.asc' freetype_2.12.1+dfsg.orig-ft2docs.tar.xz.asc 833 SHA512:39ccd90fde04074f30029a1a92b09c0d5a1bae7e2fbd965d02591e2cccda80c11588679fb0a9541a6307f120f5c8e386ba50375dc27fbd9e5c5cc3cdee5f2d82
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg.orig.tar.xz' freetype_2.12.1+dfsg.orig.tar.xz 2188492 SHA512:0f7e7522508c716d90e0051d255904039fc548378489bc20531268d738e2deb196b81f521e31552de42fde3c955c22745585f3c5324b6968c7de6b029ce4bc92
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg-2.debian.tar.xz' freetype_2.12.1+dfsg-2.debian.tar.xz 43072 SHA512:448ef358f749558f102f27756aff6a1e1981b41f31cd709e9539f066c38b45d1c9277eb04a3fc8385ef7010a8237a1776cf4e81b1c6a41324b5fb987b07beb1a
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/freetype/2.12.1+dfsg-2/
+
 
 ### `dpkg` source package: `fribidi=1.0.8-2ubuntu3.1`
 
@@ -1841,14 +1831,13 @@ Licenses: (parsed from: `/usr/share/doc/libdeflate-dev/copyright`, `/usr/share/d
 
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libdeflate=1.10-2
-'http://archive.ubuntu.com/ubuntu/pool/main/libd/libdeflate/libdeflate_1.10-2.dsc' libdeflate_1.10-2.dsc 2206 SHA512:5c2fd7116bd061a5940481924c3a35e632e178050319c5e29aab2833a2ec27378444a6db767cff1bdd7b9bada10332a975e082ce02eab1fc43f8408a54dfcf52
-'http://archive.ubuntu.com/ubuntu/pool/main/libd/libdeflate/libdeflate_1.10.orig.tar.gz' libdeflate_1.10.orig.tar.gz 158379 SHA512:2b59cc170c7fb3bb13bd3c6853070ea24fb9e6844dde4d08e43a8a5f8745ecbf844952390ff758070c6fc4f17d9eec8c4d2a729922bf84e2eaa9e74f1424e241
-'http://archive.ubuntu.com/ubuntu/pool/main/libd/libdeflate/libdeflate_1.10-2.debian.tar.xz' libdeflate_1.10-2.debian.tar.xz 4584 SHA512:faa6fad75528e1f7fa02dd5464bf88d7921563103aee922feade71323229e0c6758cb788545ca6b627aabae58bb7f524d775431fc821f4611713dec6069571c8
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libdeflate/1.10-2/
+
 
 ### `dpkg` source package: `libedit=3.1-20210910-1build1`
 
