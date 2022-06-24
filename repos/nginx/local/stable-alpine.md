@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4341472ddfe83ff143ed1ad71965dffd8b343dfbdb0bfda0b325cf177fe64f64`
-- Created: `2022-05-25T18:39:50.058349795Z`
-- Virtual Size: ~ 23.42 Mb  
+- Image ID: `sha256:c232c77bc4b8d1fb5de3ec24e0e3119e61988879698d7c0de1bfd526baadaa56`
+- Created: `2022-06-22T19:22:10.584737812Z`
+- Virtual Size: ~ 23.44 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `NGINX_VERSION=1.22.0`
-  - `NJS_VERSION=0.7.4`
+  - `NJS_VERSION=0.7.5`
   - `PKG_RELEASE=1`
 - Labels:
   - `maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>`
@@ -600,16 +600,16 @@ nginx-module-image-filter-1.22.0-r1 license:
 ### `apk` package: `nginx-module-njs`
 
 ```console
-nginx-module-njs-1.22.0.0.7.4-r1 description:
+nginx-module-njs-1.22.0.0.7.5-r1 description:
 nginx njs dynamic modules
 
-nginx-module-njs-1.22.0.0.7.4-r1 webpage:
+nginx-module-njs-1.22.0.0.7.5-r1 webpage:
 https://nginx.org/
 
-nginx-module-njs-1.22.0.0.7.4-r1 installed size:
+nginx-module-njs-1.22.0.0.7.5-r1 installed size:
 3812 KiB
 
-nginx-module-njs-1.22.0.0.7.4-r1 license:
+nginx-module-njs-1.22.0.0.7.5-r1 license:
 2-clause BSD-like license
 
 ```
@@ -634,16 +634,16 @@ nginx-module-xslt-1.22.0-r1 license:
 ### `apk` package: `pcre2`
 
 ```console
-pcre2-10.39-r0 description:
+pcre2-10.40-r0 description:
 Perl-compatible regular expression library
 
-pcre2-10.39-r0 webpage:
+pcre2-10.40-r0 webpage:
 https://pcre.org/
 
-pcre2-10.39-r0 installed size:
-656 KiB
+pcre2-10.40-r0 installed size:
+672 KiB
 
-pcre2-10.39-r0 license:
+pcre2-10.40-r0 license:
 BSD-3-Clause
 
 ```

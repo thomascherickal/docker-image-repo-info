@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:54479bfce836ffba5af215adacc09bd894b4b56b447d7b936b4910b6ac0a9fe5`
-- Created: `2022-05-28T05:42:18.631717451Z`
-- Virtual Size: ~ 187.61 Mb  
+- Image ID: `sha256:0b26ebf24738009cfa87d172327a6daf789abe1787519a98e4895a0c69cfcf1b`
+- Created: `2022-06-23T04:14:40.799605564Z`
+- Virtual Size: ~ 187.60 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `NGINX_VERSION=1.22.0`
-  - `NJS_VERSION=0.7.4`
+  - `NJS_VERSION=0.7.5`
   - `PKG_RELEASE=1~bullseye`
 - Labels:
   - `maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>`
@@ -2363,11 +2363,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `nginx-module-njs=1.22.0+0.7.4-1~bullseye`
+### `dpkg` source package: `nginx-module-njs=1.22.0+0.7.5-1~bullseye`
 
 Binary Packages:
 
-- `nginx-module-njs=1.22.0+0.7.4-1~bullseye`
+- `nginx-module-njs=1.22.0+0.7.5-1~bullseye`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2877,23 +2877,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tiff/4.2.0-1+deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-1+deb11u3`
+### `dpkg` source package: `tzdata=2021a-1+deb11u4`
 
 Binary Packages:
 
-- `tzdata=2021a-1+deb11u3`
+- `tzdata=2021a-1+deb11u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u4
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u4.dsc' tzdata_2021a-1+deb11u4.dsc 2269 SHA256:262fe47d76853b76746349142ab5b48afb5b8ce550169f0a26528d471dd8bbbf
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u4.debian.tar.xz' tzdata_2021a-1+deb11u4.debian.tar.xz 110028 SHA256:173fe592560f904c1ba664c3e513c5b0a1ffa7575473c0a4615bc05f8fb6c50e
+```
 
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u4/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
