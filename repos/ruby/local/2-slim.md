@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cc0ee15a28f0f26c26309d4c93ac64cfe70128716d24da8a26bfe2ea38fa1d27`
-- Created: `2022-05-28T11:03:09.060274571Z`
+- Image ID: `sha256:19668bf76ec6671645757197560aaa41fa823a084955acabc03ebf346dbb9d2b`
+- Created: `2022-06-23T14:14:47.277789212Z`
 - Virtual Size: ~ 145.74 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1431,11 +1431,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.113-1`
+### `dpkg` source package: `linux=5.10.120-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.113-1`
+- `linux-libc-dev:amd64=5.10.120-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1451,17 +1451,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.10.113-1
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.113-1.dsc' linux_5.10.113-1.dsc 197238 SHA256:cecc032cf2c4a28cc5aa07a23b84aa7c529b3a14f354f6fd301f8485d81e5b85
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.113.orig.tar.xz' linux_5.10.113.orig.tar.xz 121715384 SHA256:d0dfa3fa7f33ef5436b541dd8cb1dd4060bdbc85694e446838596d66f55ac558
-'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.113-1.debian.tar.xz' linux_5.10.113-1.debian.tar.xz 1501772 SHA256:c0dc070ef00d75d483334f1c6b23fb6dae47cd6a009e2a960457ebb5780b9864
+$ apt-get source -qq --print-uris linux=5.10.120-1
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.120-1.dsc' linux_5.10.120-1.dsc 197238 SHA256:3b6266370e311ae267aba3032ebaf4648939dd44d80c7b48cd6e0892e130383b
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.120.orig.tar.xz' linux_5.10.120.orig.tar.xz 121713740 SHA256:9ae857e7cbd7e1a878cf89b44e4d3f0aa97f205fbe089df2d8b16b87e9aa9de2
+'http://security.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.120-1.debian.tar.xz' linux_5.10.120-1.debian.tar.xz 1507604 SHA256:cde1e57fd8ad5c20ca6cd2767a5147e73567ca10bac607dd67c7a6d53eee66b2
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/5.10.113-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.113-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.113-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/5.10.120-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.120-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.120-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -1991,23 +1991,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.34+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.34+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-1+deb11u3`
+### `dpkg` source package: `tzdata=2021a-1+deb11u4`
 
 Binary Packages:
 
-- `tzdata=2021a-1+deb11u3`
+- `tzdata=2021a-1+deb11u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u4
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u4.dsc' tzdata_2021a-1+deb11u4.dsc 2269 SHA256:262fe47d76853b76746349142ab5b48afb5b8ce550169f0a26528d471dd8bbbf
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u4.debian.tar.xz' tzdata_2021a-1+deb11u4.debian.tar.xz 110028 SHA256:173fe592560f904c1ba664c3e513c5b0a1ffa7575473c0a4615bc05f8fb6c50e
+```
 
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u4/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.36.1-8+deb11u1`
 
