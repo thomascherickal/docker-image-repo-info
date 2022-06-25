@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cbe52dc30fe81c912859c8dba6812cc29ac88a1b51076225883a337bf1fc0bef`
-- Created: `2022-05-28T05:58:48.160538151Z`
+- Image ID: `sha256:d37405515d28e135dcadfd1a3f0c76ef3c933fc033cd1cc57eb8079cef3d4b95`
+- Created: `2022-06-23T04:32:40.794245829Z`
 - Virtual Size: ~ 169.33 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1245,23 +1245,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.29b-1.1+deb9u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.29b-1.1+deb9u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-0+deb9u3`
+### `dpkg` source package: `tzdata=2021a-0+deb9u4`
 
 Binary Packages:
 
-- `tzdata=2021a-0+deb9u3`
+- `tzdata=2021a-0+deb9u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-0+deb9u4
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb9u4.dsc' tzdata_2021a-0+deb9u4.dsc 2029 SHA256:e4117835c21c65b0c4527770a2518085fad326f5513838819613d64c458f08e9
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://security.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb9u4.debian.tar.xz' tzdata_2021a-0+deb9u4.debian.tar.xz 107952 SHA256:ac1ba438b78485a77b91ca4c6628eb32ba085c44d7dd70ac1b9f709bdf6fe2dd
+```
 
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb9u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-0+deb9u4/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-0+deb9u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb9u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ustr=1.0.4-6`
 
