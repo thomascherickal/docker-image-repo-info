@@ -1,10 +1,10 @@
-# `openjdk:20-ea-2-jdk-bullseye`
+# `openjdk:20-ea-3-jdk-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6f1526db753d8e6870f9db9194b29a785b1b88f7b7ad0a71c25eb5136b7fcad0`
-- Created: `2022-06-23T04:53:43.102705759Z`
-- Virtual Size: ~ 682.58 Mb  
+- Image ID: `sha256:d696e7a720d0a89e38c0d8508193d1c242093dfba9ed019217c9a4c62368d2b2`
+- Created: `2022-06-28T00:28:04.646342906Z`
+- Virtual Size: ~ 682.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/openjdk-20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-20`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=20-ea+2`
+  - `JAVA_VERSION=20-ea+3`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -2442,21 +2442,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1n-0+deb11u2
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb11u2.dsc' openssl_1.1.1n-0+deb11u2.dsc 2652 SHA256:d2d4680d901c8678ea9a99bd05850f7a81f9d2ee7c4d1c6626faccd309f67701
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz' openssl_1.1.1n.orig.tar.gz 9850712 SHA256:40dceb51a4f6a5275bde0e6bf20ef4b91bfc32ed57c0552e2e8e15463372b17a
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz.asc' openssl_1.1.1n.orig.tar.gz.asc 488 SHA256:e0e89e9467102880ee6f2ee8c1413933eb1268969afb97b9bec61e2190a62fd0
-'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb11u2.debian.tar.xz' openssl_1.1.1n-0+deb11u2.debian.tar.xz 85408 SHA256:2983ba19dc9f923161d171fe7a52fddc75f1c4503cb104bce5a6aee529791b85
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openssl/1.1.1n-0+deb11u2/
 
-- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u2/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1n-0+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.22-1`
 
