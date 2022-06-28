@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1c76a73dae1778cb4a75d2d4333263bf0adadcb4cc9da1495691bc92535b0557`
-- Created: `2022-06-07T08:46:47.548452606Z`
-- Virtual Size: ~ 660.02 Mb  
+- Image ID: `sha256:6f872be9f8b4420d278886b5963874282c7dc17cfac3c6ee03fd56ef4b27bf35`
+- Created: `2022-06-27T18:22:36.364422965Z`
+- Virtual Size: ~ 656.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/ol/helpers/runtime/docker-server.sh"]`
@@ -26,12 +26,12 @@
 - Labels:
   - `org.opencontainers.image.authors=Chris Potter, Leo Christy Jesuraj, Melissa Lee`
   - `org.opencontainers.image.description=This image contains the Open Liberty beta runtime with IBM Semeru Runtime Open Edition OpenJDK 17 with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image`
-  - `org.opencontainers.image.revision=cl220520220425-0301`
+  - `org.opencontainers.image.revision=cl220620220523-1607`
   - `org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker`
   - `org.opencontainers.image.title=Open Liberty Beta`
   - `org.opencontainers.image.url=https://openliberty.io/`
   - `org.opencontainers.image.vendor=Open Liberty`
-  - `org.opencontainers.image.version=22.0.0.6-beta`
+  - `org.opencontainers.image.version=22.0.0.7-beta`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -302,14 +302,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.11
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.11.dsc' curl_7.68.0-1ubuntu2.11.dsc 2737 SHA512:0f8d4a00073bfb5ad72c692f56534b229883044c75b7fb90501b9f4ab7b4c7c5e8b4ebbc0ec6ad0f7760323426f6c6d03d6ef67702fffff5c9c2b2b2fb406331
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.11.debian.tar.xz' curl_7.68.0-1ubuntu2.11.debian.tar.xz 56048 SHA512:b7504d92d64b8fd8734614845fc125421cae0e64fd52afeaf233763b33d0dceaac0887b572a463ef3f3dfd0c1d5baf33eedb82c3bc6612668580c660c937b729
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -1399,7 +1394,6 @@ $ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2ubuntu1.9
 Binary Packages:
 
 - `libssl1.1:amd64=1.1.1f-1ubuntu2.13`
-- `openssl=1.1.1f-1ubuntu2.13`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1408,6 +1402,25 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 **WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
 This is *usually* due to a new package version being released and the old version being removed.
 
+
+### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.15`
+
+Binary Packages:
+
+- `openssl=1.1.1f-1ubuntu2.15`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.15
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.15.dsc' openssl_1.1.1f-1ubuntu2.15.dsc 2470 SHA512:1c7169d47d42f2bf4f704b37c1bd9c2a759fe6b0789f44a1ffbba1a0483713882b9cecc6a2b5827f23abca9e070c8a781dc16544a54b6fe439da174a0a60e268
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.15.debian.tar.xz' openssl_1.1.1f-1ubuntu2.15.debian.tar.xz 208040 SHA512:4ac96c708df486e762ba568f1f7f98b03dd678e1f470c8ab175e71586c7ab3c5c5f3dc608b434b28e8b04e30db248e0dea9d9b1c4323c5d6b43d77845627dcb8
+```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
 
