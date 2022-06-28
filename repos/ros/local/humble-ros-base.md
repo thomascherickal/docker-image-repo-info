@@ -503,15 +503,9 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.81.0-1ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.2.dsc' curl_7.81.0-1ubuntu1.2.dsc 3139 SHA512:03a70501c1c0450fb6835569342fd135ddeda00dbe649c795113b8f9c00a7e8ae43459cd6c1be78747e57d376c072697eb15300e796c6887df4be370e553e482
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz' curl_7.81.0.orig.tar.gz 4188040 SHA512:e3084f0fa083f7f93eac923edbfdddb5fd0a372b94673ba9d4427a2b95508898c15ecdf63b99a1c1f6cf3215e27b06cbaa2b7073df038d43b362e586f92495d3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz.asc' curl_7.81.0.orig.tar.gz.asc 488 SHA512:92bc5ede831551285d67b03abe8400c609ad31c9d33e324ee5c41b92dd5c2a0245a09a396bd76807b3e44bcfef944b1e16ac266264f7b85d27cc1c072a6e82bd
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.2.debian.tar.xz' curl_7.81.0-1ubuntu1.2.debian.tar.xz 46384 SHA512:e95582c3ca2a36302c019f5517885416d443734e204f219f493222c8e1dc0002607a470ced45669ad2ee5d87ed65b872dffe3b345967205b78c8e82ff6351348
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg2-3ubuntu1`
 
@@ -4554,14 +4548,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-rosdep-modules=0.21.0-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep-modules/python3-rosdep-modules_0.21.0-1.debian.tar.xz' python3-rosdep-modules_0.21.0-1.debian.tar.xz 2064 SHA512:d7c63e69c11c84478ac8461a37493b47cb8720ddc74f2c9eb13bf64a8ca9db6731dbb03f0cb5a921210313738d4e94354601ce604d17df6b88d9c0a8ef71817f
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep-modules/python3-rosdep-modules_0.21.0-1.dsc' python3-rosdep-modules_0.21.0-1.dsc 997 SHA512:fbc7deadb772bfa5c482c867e87e6146c3d0db6bdbcf5b50c71fb78eeeb1984ebbf4dfa065af5e82cad0a388ddcbb2581f1ddb26999647f9cd8030f225e0fc7d
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep-modules/python3-rosdep-modules_0.21.0.orig.tar.gz' python3-rosdep-modules_0.21.0.orig.tar.gz 90044 SHA512:c3ec2896afa1b9617a9c66e7053334e8ce3324e3c41b305f6623fa117728688826e7107ed5b2239b1b55c845b67f1e5c926d543bf866191ec152d3f81d8af98a
-```
 
 ### `dpkg` source package: `python3-rosdep=0.21.0-1`
 
@@ -4573,14 +4562,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-rosdep=0.21.0-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep/python3-rosdep_0.21.0-1.debian.tar.xz' python3-rosdep_0.21.0-1.debian.tar.xz 2012 SHA512:fbef44632a55e90671a05f686f0ff8567af9ef99c5608b1807c360f101cfbc8b99e0b059fe564b2275020ed0fd4a2758d8a8af05f32dc670bdd1bcd45680b06d
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep/python3-rosdep_0.21.0-1.dsc' python3-rosdep_0.21.0-1.dsc 925 SHA512:69fd963abefce0468a7b54c0b96ce6ed6fcde141fbb8703a037c09a7e5802777162662df266152c06e2faadc23c40e8f1dfb264bdeee587c6807c61886eb9caa
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep/python3-rosdep_0.21.0.orig.tar.gz' python3-rosdep_0.21.0.orig.tar.gz 32255 SHA512:884b89d8de336a7c2d8db0707c97197517cb4fdb57dbeb819ea964bbeaa506ed7af3b04d83ca998de57e7efaf22322f78c30c80fe0ca838bb863631349b3603e
-```
 
 ### `dpkg` source package: `python3-rosdistro-modules=0.8.3-1`
 

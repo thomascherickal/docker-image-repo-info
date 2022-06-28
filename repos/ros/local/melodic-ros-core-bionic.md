@@ -532,14 +532,9 @@ Licenses: (parsed from: `/usr/share/doc/libcurl4/copyright`)
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.58.0-2ubuntu3.18
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.18.dsc' curl_7.58.0-2ubuntu3.18.dsc 2781 SHA512:5572956c5665df9060465ec168aad39c7813c19afbd93f900fea5c54477cb0edd629b0b8386422315dc19b6f14a59e282326bd04fb64bcad96f4cc8688baa121
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0.orig.tar.gz' curl_7.58.0.orig.tar.gz 3879728 SHA512:7b12b79107558bb266672d6e128615fe5a8149c37f4ae540197e3298f5d312beb2d78fbb23e3ea84ea7afc41549898a1e5cd38509f0388b11707b48d5efb8ca3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.18.debian.tar.xz' curl_7.58.0-2ubuntu3.18.debian.tar.xz 71844 SHA512:296f47afff237b6c330cd8c5248cd0662988e4a0a5c8aa064053a4fefab67e658a5a778367e23abe3a8191b6324df63ff6481a5b00b6a216d4f606e29311ef65
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3ubuntu2.4`
 
@@ -3163,14 +3158,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-rosdep-modules=0.21.0-1
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.21.0-1.debian.tar.xz' python-rosdep-modules_0.21.0-1.debian.tar.xz 2068 SHA512:3bb395cf1ac696913325ebfea28d8ff49530f0c01ab947f7652bfb32b86722ceb2479c4a245f4b4f5117def4c0682ad6629071c553fcdfd43006161a66a265d5
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.21.0-1.dsc' python-rosdep-modules_0.21.0-1.dsc 1010 SHA512:e1cfcfeef269825dabcd76b6002e75aa1a77b28d514058982bbc80fc3ca48b2662100a7e42f0ad9e9811d28ac4242bdaa8454e36451e644009fcf3f818d67c34
-'http://packages.ros.org/ros/ubuntu/pool/main/p/python-rosdep-modules/python-rosdep-modules_0.21.0.orig.tar.gz' python-rosdep-modules_0.21.0.orig.tar.gz 89976 SHA512:02188baccc3d6b66734b794157666decd2e7b0f739611541778729ae9cff3853bea58e7e38d85c8bd5e250abbb29c122d1160dc66f7e28ff87ff01b5c8c6eda1
-```
 
 ### `dpkg` source package: `python-rosdistro-modules=0.8.3-1`
 
