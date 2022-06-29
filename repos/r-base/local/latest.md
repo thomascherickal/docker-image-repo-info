@@ -1878,20 +1878,13 @@ Licenses: (parsed from: `/usr/share/doc/libdeflate0/copyright`)
 
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libdeflate=1.10-2
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.10-2.dsc' libdeflate_1.10-2.dsc 2206 SHA256:6a95997089f007d7ef3aabc77f3fa9cbe7123fcc375f4d6f7c678b3c4fa6c9ca
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.10.orig.tar.gz' libdeflate_1.10.orig.tar.gz 158379 SHA256:5c1f75c285cd87202226f4de49985dcb75732f527eefba2b3ddd70a8865f2533
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.10-2.debian.tar.xz' libdeflate_1.10-2.debian.tar.xz 4584 SHA256:8d82ef22c43bb846893fb305b56a1ddd67d79db30b28d928f9f7304a144f664a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libdeflate/1.10-2/
 
-- https://sources.debian.net/src/libdeflate/1.10-2/ (for browsing the source)
-- https://sources.debian.net/src/libdeflate/1.10-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libdeflate/1.10-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.4.2-4`
 
@@ -3995,20 +3988,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=251.2-5
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.2-5.dsc' systemd_251.2-5.dsc 6082 SHA256:23413c8c7f99176729713cd6da7170a6431f44b81acb0d79ccdbe372ff2a26bb
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.2.orig.tar.gz' systemd_251.2.orig.tar.gz 11434645 SHA256:5b371e824fe3e3128f2338b8db8cd37171f8e249eea88077eea468f73d833545
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.2-5.debian.tar.xz' systemd_251.2-5.debian.tar.xz 170568 SHA256:b91af2d2881a8a30cfd3d44234fcbadd4f2c8fe6aafe06138a5abb081aaf6713
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/251.2-5/
 
-- https://sources.debian.net/src/systemd/251.2-5/ (for browsing the source)
-- https://sources.debian.net/src/systemd/251.2-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/251.2-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.03-1`
 
