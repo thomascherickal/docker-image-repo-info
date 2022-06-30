@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f19b3d18c4a01f69bdb995e46233fcdcc66c1ef84bc8d28396e981c020e395ee`
-- Created: `2022-06-16T01:39:31.287664113Z`
-- Virtual Size: ~ 426.95 Mb  
+- Image ID: `sha256:5958a947375b1e5db8071ec2f5332b72526229a8a0699d64078c3f7baf60687b`
+- Created: `2022-06-28T00:22:57.193733588Z`
+- Virtual Size: ~ 428.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -49,6 +49,17 @@ Source:
 ```console
 $ dnf --quiet download --source --url bash-4.2.46-35.el7_9
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/bash-4.2.46-35.el7_9.src.rpm
+```
+
+### `rpm` package: `bzip2-1.0.6-13.el7.x86_64`
+
+Licenses (from `rpm --query`): BSD
+
+Source:
+
+```console
+$ dnf --quiet download --source --url bzip2-1.0.6-13.el7
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/bzip2-1.0.6-13.el7.src.rpm
 ```
 
 ### `rpm` package: `bzip2-libs-1.0.6-13.el7.x86_64`
@@ -851,6 +862,17 @@ $ dnf --quiet download --source --url openssl-libs-1.0.2k-25.el7_9
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/openssl-1.0.2k-25.el7_9.src.rpm
 ```
 
+### `rpm` package: `oracle-epel-release-el7-1.0-4.el7.x86_64`
+
+Licenses (from `rpm --query`): GPLv2
+
+Source:
+
+```console
+$ dnf --quiet download --source --url oracle-epel-release-el7-1.0-4.el7
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/oracle-epel-release-el7-1.0-4.el7.src.rpm
+```
+
 ### `rpm` package: `oraclelinux-release-7.9-1.0.9.el7.x86_64`
 
 Licenses (from `rpm --query`): GPL
@@ -1278,4 +1300,15 @@ Source:
 ```console
 $ dnf --quiet download --source --url zlib-1.2.7-20.el7_9
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/zlib-1.2.7-20.el7_9.src.rpm
+```
+
+### `rpm` package: `zstd-1.5.2-1.el7.x86_64`
+
+Licenses (from `rpm --query`): BSD and GPLv2
+
+Source:
+
+```console
+$ dnf --quiet download --source --url zstd-1.5.2-1.el7
+https://yum.oracle.com/repo/OracleLinux/OL7/developer_EPEL/x86_64/getPackageSource/zstd-1.5.2-1.el7.src.rpm
 ```

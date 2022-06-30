@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:968083d5be3605e3b447838e3688ba43cfc297f9a6dec9c708389cfcfc36a080`
-- Created: `2022-06-23T04:06:09.29240278Z`
-- Virtual Size: ~ 523.98 Mb  
+- Image ID: `sha256:0ef9083d9892db139e2b7c81fd133836e7aa32db2b5f1d5702e2593100fa1417`
+- Created: `2022-06-28T00:21:54.600048376Z`
+- Virtual Size: ~ 524.06 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -231,9 +231,10 @@ Other potentially useful URLs:
 
 Binary Packages:
 
+- `bzip2=1.0.6-9.2~deb10u1`
 - `libbz2-1.0:amd64=1.0.6-9.2~deb10u1`
 
-Licenses: (parsed from: `/usr/share/doc/libbz2-1.0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/bzip2/copyright`, `/usr/share/doc/libbz2-1.0/copyright`)
 
 - `BSD-variant`
 - `GPL-2`
