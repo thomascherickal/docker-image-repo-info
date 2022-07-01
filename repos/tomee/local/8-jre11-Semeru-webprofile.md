@@ -1,10 +1,10 @@
-# `tomee:8.0.11-jre11-Semeru-ubuntu-webprofile`
+# `tomee:8.0.12-jre11-Semeru-ubuntu-webprofile`
 
 ## Docker Metadata
 
-- Image ID: `sha256:157e52514cb4a4981d471ed8cad1ecd491135f65aae95601cfc855381b81bab6`
-- Created: `2022-06-07T05:15:59.695307361Z`
-- Virtual Size: ~ 337.83 Mb  
+- Image ID: `sha256:7266e8a19c0dac60ca1a4a73a5e35cd99e019f359536f8ef814f28addf5986f3`
+- Created: `2022-06-28T23:30:21.092081424Z`
+- Virtual Size: ~ 337.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk-11.0.15+10_openj9-0.32.0`
   - `JAVA_HOME=/opt/java/openjdk`
   - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal`
-  - `TOMEE_VER=8.0.11`
+  - `TOMEE_VER=8.0.12`
   - `TOMEE_BUILD=webprofile`
 
 ## `dpkg` (`.deb`-based packages)

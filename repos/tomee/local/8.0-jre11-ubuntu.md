@@ -1,10 +1,10 @@
-# `tomee:8.0.11-jre11-Temurin-ubuntu-webprofile`
+# `tomee:8.0.12-jre11-Temurin-ubuntu-webprofile`
 
 ## Docker Metadata
 
-- Image ID: `sha256:9e1f6c1504bc1dedfad43820daebaf3827c0db404a6ba871dca99f670d985993`
-- Created: `2022-06-07T05:12:18.953176624Z`
-- Virtual Size: ~ 307.29 Mb  
+- Image ID: `sha256:805fadce5a004c8cadb57baf26a8642186614658ce61a50c863b5eae45b5995e`
+- Created: `2022-06-28T23:26:17.986364215Z`
+- Virtual Size: ~ 307.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -15,7 +15,7 @@
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-11.0.15+10`
   - `JAVA_HOME=/opt/java/openjdk`
-  - `TOMEE_VER=8.0.11`
+  - `TOMEE_VER=8.0.12`
   - `TOMEE_BUILD=webprofile`
 
 ## `dpkg` (`.deb`-based packages)
