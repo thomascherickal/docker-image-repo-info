@@ -1,10 +1,10 @@
-# `mediawiki:1.35.6-fpm-alpine`
+# `mediawiki:1.35.7-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:7e4fddb72bf72b09f70dda03789383f9a153e8a4fefe75835772a86aa989e908`
-- Created: `2022-06-10T04:32:38.166227606Z`
-- Virtual Size: ~ 495.54 Mb  
+- Image ID: `sha256:508a7e4f6f8f638809a8471cc3f4ed5760c109a6d57978f524600398817f2ea8`
+- Created: `2022-07-01T18:22:57.454481073Z`
+- Virtual Size: ~ 496.50 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -22,7 +22,7 @@
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.30.tar.xz.asc`
   - `PHP_SHA256=ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d`
   - `MEDIAWIKI_MAJOR_VERSION=1.35`
-  - `MEDIAWIKI_VERSION=1.35.6`
+  - `MEDIAWIKI_VERSION=1.35.7`
 
 ## `apk` (`.apk`-based packages)
 
