@@ -336,20 +336,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris db5.3=5.3.28+dfsg1-0.9
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1-0.9.dsc' db5.3_5.3.28+dfsg1-0.9.dsc 2628 SHA256:d16ec4b8865f99463f842c166f963652b4d223f219a15d795bad2d1be956ea70
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1.orig.tar.xz' db5.3_5.3.28+dfsg1.orig.tar.xz 19723860 SHA256:b19bf3dd8ce74b95a7b215be9a7c8489e8e8f18da60d64d6340a06e75f497749
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1-0.9.debian.tar.xz' db5.3_5.3.28+dfsg1-0.9.debian.tar.xz 31576 SHA256:b04cbf93cb332e32807dcbd1af8f09aceea3594df7106d847df2d0b71bc9c9b0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/db5.3/5.3.28+dfsg1-0.9/
 
-- https://sources.debian.net/src/db5.3/5.3.28+dfsg1-0.9/ (for browsing the source)
-- https://sources.debian.net/src/db5.3/5.3.28+dfsg1-0.9/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/db5.3/5.3.28+dfsg1-0.9/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debconf=1.5.79`
 
@@ -781,19 +774,13 @@ Licenses: (parsed from: `/usr/share/doc/init-system-helpers/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris init-system-helpers=1.63
-'http://deb.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.63.dsc' init-system-helpers_1.63.dsc 1968 SHA256:336e0a6a71f9e8f899c6a5aa9bb41c1c3595259c1f8671f6bd88eed320637107
-'http://deb.debian.org/debian/pool/main/i/init-system-helpers/init-system-helpers_1.63.tar.xz' init-system-helpers_1.63.tar.xz 43204 SHA256:c2205c593389ad0d0ff93e01448877422b6dcbf94c063634255a3d1716530dbf
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/init-system-helpers/1.63/
 
-- https://sources.debian.net/src/init-system-helpers/1.63/ (for browsing the source)
-- https://sources.debian.net/src/init-system-helpers/1.63/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/init-system-helpers/1.63/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libcap-ng=0.7.9-2.2`
 
@@ -1468,21 +1455,13 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.34.0-4
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.34.0-4.dsc' perl_5.34.0-4.dsc 2886 SHA256:c4cb10ae7f5c29099d32bde13dddbdcd0a5b142d50d120c0003215d424b4a5cb
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.34.0.orig-regen-configure.tar.xz' perl_5.34.0.orig-regen-configure.tar.xz 415412 SHA256:b168f566401fdccc13d0616c258854c1e1a461276922babca617097cd9dfd85b
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.34.0.orig.tar.xz' perl_5.34.0.orig.tar.xz 12881416 SHA256:82c2e5e5c71b0e10487a80d79140469ab1f8056349ca8545140a224dbbed7ded
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.34.0-4.debian.tar.xz' perl_5.34.0-4.debian.tar.xz 167176 SHA256:e2203e068a09da9ceb72f8a18d6d66bd9a8cd6509cf58a32471efb590a224792
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/perl/5.34.0-4/
 
-- https://sources.debian.net/src/perl/5.34.0-4/ (for browsing the source)
-- https://sources.debian.net/src/perl/5.34.0-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/perl/5.34.0-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sed=4.8-1`
 
