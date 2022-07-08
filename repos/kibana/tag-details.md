@@ -362,12 +362,13 @@ RUN USER kibana
 ## `kibana:8.3.2`
 
 ```console
-$ docker pull kibana@sha256:7ef846a74375c57b2a749b0fa3be8a168631e2c4b5f7adfc9bf10119b6e22553
+$ docker pull kibana@sha256:ff347cdf68c8a15273ea81b435beab45fa84a2262ca0fbc18760b6e6839181f1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Platforms: 2
 	-	linux; amd64
+	-	linux; arm64 variant v8
 
 ### `kibana:8.3.2` - linux; amd64
 
@@ -491,4 +492,128 @@ RUN USER kibana
 	-	`sha256:ac2c0f991cf539646a3e2bfde3804de5cb7c0ae9bb47381eb8c73e18927c97ab`  
 		Last Modified: Thu, 07 Jul 2022 21:23:18 GMT  
 		Size: 1.8 KB (1820 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `kibana:8.3.2` - linux; arm64 variant v8
+
+```console
+$ docker pull kibana@sha256:451fcb4da2e6937faceadaf579b9f8306ec0060893f8a7aefa7680fd7ff64b96
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **345.9 MB (345905958 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:360ead7595b839831a38cd12c206551abd636f3eaf43ff76537d6d4da55cd33e`
+-	Entrypoint: `["\/bin\/tini","--"]`
+-	Default Command: `["\/usr\/local\/bin\/kibana-docker"]`
+
+```dockerfile
+# Tue, 07 Jun 2022 01:25:15 GMT
+ADD file:8bb0809a8ac8e978274cf731cff7529372088d22c5b0233a28f01ef414aefbca in / 
+# Tue, 07 Jun 2022 01:25:16 GMT
+CMD ["bash"]
+# Wed, 06 Jul 2022 14:00:01 GMT
+RUN EXPOSE map[5601/tcp:{}]
+# Wed, 06 Jul 2022 14:00:01 GMT
+RUN RUN /bin/sh -c for iter in {1..10}; do       export DEBIAN_FRONTEND=noninteractive &&       apt-get update  &&       apt-get upgrade -y  &&       apt-get install -y --no-install-recommends        fontconfig fonts-liberation libnss3 libfontconfig1 ca-certificates curl &&       apt-get clean &&       rm -rf /var/lib/apt/lists/* && exit_code=0 && break || exit_code=$? && echo "apt-get error: retry $iter in 10s" &&       sleep 10;     done;     (exit $exit_code) # buildkit
+# Wed, 06 Jul 2022 14:00:03 GMT
+RUN RUN /bin/sh -c set -e ;     TINI_BIN="" ;     case "$(arch)" in         aarch64)             TINI_BIN='tini-arm64' ;             ;;         x86_64)             TINI_BIN='tini-amd64' ;             ;;         *) echo >&2 "Unsupported architecture $(arch)" ; exit 1 ;;     esac ;   TINI_VERSION='v0.19.0' ;   curl --retry 8 -S -L -O "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/${TINI_BIN}" ;   curl --retry 8 -S -L -O "https://github.com/krallin/tini/releases/download/${TINI_VERSION}/${TINI_BIN}.sha256sum" ;   sha256sum -c "${TINI_BIN}.sha256sum" ;   rm "${TINI_BIN}.sha256sum" ;   mv "${TINI_BIN}" /bin/tini ;   chmod +x /bin/tini # buildkit
+# Wed, 06 Jul 2022 14:00:03 GMT
+RUN RUN /bin/sh -c mkdir /usr/share/fonts/local # buildkit
+# Wed, 06 Jul 2022 14:00:06 GMT
+RUN RUN /bin/sh -c curl --retry 8 -S -L -o /usr/share/fonts/local/NotoSansCJK-Regular.ttc https://github.com/googlefonts/noto-cjk/raw/NotoSansV2.001/NotoSansCJK-Regular.ttc # buildkit
+# Wed, 06 Jul 2022 14:00:06 GMT
+RUN RUN /bin/sh -c echo "5dcd1c336cc9344cb77c03a0cd8982ca8a7dc97d620fd6c9c434e02dcb1ceeb3  /usr/share/fonts/local/NotoSansCJK-Regular.ttc" | sha256sum -c - # buildkit
+# Wed, 06 Jul 2022 14:00:07 GMT
+RUN RUN /bin/sh -c fc-cache -v # buildkit
+# Wed, 06 Jul 2022 14:01:08 GMT
+RUN COPY /usr/share/kibana /usr/share/kibana # buildkit
+# Wed, 06 Jul 2022 14:01:08 GMT
+RUN WORKDIR /usr/share/kibana
+# Wed, 06 Jul 2022 14:01:08 GMT
+RUN RUN /bin/sh -c ln -s /usr/share/kibana /opt/kibana # buildkit
+# Wed, 06 Jul 2022 14:01:08 GMT
+RUN ENV ELASTIC_CONTAINER=true
+# Wed, 06 Jul 2022 14:01:08 GMT
+RUN ENV PATH=/usr/share/kibana/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Wed, 06 Jul 2022 14:01:08 GMT
+RUN COPY config/kibana.yml /usr/share/kibana/config/kibana.yml # buildkit
+# Wed, 06 Jul 2022 14:01:08 GMT
+RUN COPY bin/kibana-docker /usr/local/bin/ # buildkit
+# Wed, 06 Jul 2022 14:01:09 GMT
+RUN RUN /bin/sh -c chmod g+ws /usr/share/kibana &&     find /usr/share/kibana -gid 0 -and -not -perm /g+w -exec chmod g+w {} \; # buildkit
+# Wed, 06 Jul 2022 14:01:10 GMT
+RUN RUN /bin/sh -c find / -xdev -perm -4000 -exec chmod u-s {} + # buildkit
+# Wed, 06 Jul 2022 14:01:10 GMT
+RUN RUN /bin/sh -c groupadd --gid 1000 kibana &&     useradd --uid 1000 --gid 1000 -G 0       --home-dir /usr/share/kibana --no-create-home       kibana # buildkit
+# Wed, 06 Jul 2022 14:01:10 GMT
+RUN LABEL org.label-schema.build-date=2022-07-06T13:32:18.168Z org.label-schema.license=Elastic License org.label-schema.name=Kibana org.label-schema.schema-version=1.0 org.label-schema.url=https://www.elastic.co/products/kibana org.label-schema.usage=https://www.elastic.co/guide/en/kibana/reference/index.html org.label-schema.vcs-ref=12341eba941264b1d015dc6394ec3f006b13b1af org.label-schema.vcs-url=https://github.com/elastic/kibana org.label-schema.vendor=Elastic org.label-schema.version=8.3.2 org.opencontainers.image.created=2022-07-06T13:32:18.168Z org.opencontainers.image.documentation=https://www.elastic.co/guide/en/kibana/reference/index.html org.opencontainers.image.licenses=Elastic License org.opencontainers.image.revision=12341eba941264b1d015dc6394ec3f006b13b1af org.opencontainers.image.source=https://github.com/elastic/kibana org.opencontainers.image.title=Kibana org.opencontainers.image.url=https://www.elastic.co/products/kibana org.opencontainers.image.vendor=Elastic org.opencontainers.image.version=8.3.2
+# Wed, 06 Jul 2022 14:01:10 GMT
+RUN ENTRYPOINT ["/bin/tini" "--"]
+# Wed, 06 Jul 2022 14:01:10 GMT
+RUN CMD ["/usr/local/bin/kibana-docker"]
+# Wed, 06 Jul 2022 14:01:10 GMT
+RUN USER kibana
+```
+
+-	Layers:
+	-	`sha256:11e23ac719b33170b39b7e30b8027dc09c9cbad6b503b2b6b3ebbd9d33f4adad`  
+		Last Modified: Thu, 02 Jun 2022 08:33:07 GMT  
+		Size: 27.2 MB (27191210 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f7530fd26db9301b2de564a1754c5111c335eda662c449aa918c5b83fa57637a`  
+		Last Modified: Fri, 08 Jul 2022 00:19:50 GMT  
+		Size: 12.8 MB (12809005 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5c7b0fa21e943c6527de6396f3f70f7279843f751676e14afae395a3b00409e4`  
+		Last Modified: Fri, 08 Jul 2022 00:19:48 GMT  
+		Size: 9.1 KB (9097 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cd78475ab27951936b00c3f6632126ff86e22b86b2f458b81e44e71cbe50fc85`  
+		Last Modified: Fri, 08 Jul 2022 00:19:46 GMT  
+		Size: 160.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:98c1e2a6a3b3b3a05cc539ce7d12cde31b03dcb928ba76ff2181250604f3fda6`  
+		Last Modified: Fri, 08 Jul 2022 00:19:47 GMT  
+		Size: 16.5 MB (16460485 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1`  
+		Last Modified: Tue, 07 Mar 2017 15:01:14 GMT  
+		Size: 32.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:34be4fc321e23579e286e8e58a3cd978bbbea1b172cae3ad603660e95711f8a3`  
+		Last Modified: Fri, 08 Jul 2022 00:19:46 GMT  
+		Size: 5.3 KB (5304 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b5c3eb4b9621f402ebfe668702b0a2d37a9caa45c14ac02ec533f1a892cd52bd`  
+		Last Modified: Fri, 08 Jul 2022 00:20:22 GMT  
+		Size: 289.2 MB (289240100 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4f4fb700ef54461cfa02571ae0db9a0dc1e0cdb5577484a6d75e68dc38e8acc1`  
+		Last Modified: Tue, 07 Mar 2017 15:01:14 GMT  
+		Size: 32.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e76c69bf3e546b09e809f2879e8766ca5e3abe02ada81e57ff6ac8ffb80f37e8`  
+		Last Modified: Fri, 08 Jul 2022 00:19:45 GMT  
+		Size: 133.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b4cd9ee9555f308076dcde5677b06c212e191cebde90e46739d1961d9719bbb2`  
+		Last Modified: Fri, 08 Jul 2022 00:19:43 GMT  
+		Size: 394.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6da5d73a9f04ab47afa379e05dc406b94e92030975436460c650d0b48ab0b621`  
+		Last Modified: Fri, 08 Jul 2022 00:19:42 GMT  
+		Size: 4.4 KB (4391 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:34ff679a5f95cfc957b6545937f055e4c2a7e6644cae66ba53d80204b1588d0c`  
+		Last Modified: Fri, 08 Jul 2022 00:19:42 GMT  
+		Size: 397.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4745ec8bd3028a5ce9c33087836273a775782e4400fd8860536478400e0ebb53`  
+		Last Modified: Fri, 08 Jul 2022 00:19:43 GMT  
+		Size: 183.4 KB (183395 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d2d5b557379b0d37d3d7420f9bff5be29369067cf07cafcc2341ef74d99b1e1f`  
+		Last Modified: Fri, 08 Jul 2022 00:19:42 GMT  
+		Size: 1.8 KB (1823 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
