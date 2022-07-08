@@ -1,10 +1,10 @@
-# `php:8.1.7-zts-bullseye`
+# `php:8.1.8-zts-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ac99be61e6b0f9775887e58b537e81353138eeaaa2cdd2a345958aebc7a98d66`
-- Created: `2022-06-23T08:01:54.186335113Z`
-- Virtual Size: ~ 446.09 Mb  
+- Image ID: `sha256:ac416051fdf0d6568767be224de6d20087fc6090e780aab8a401fe9f3804f8b5`
+- Created: `2022-07-07T22:31:14.38040796Z`
+- Virtual Size: ~ 451.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.7`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.7.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.7.tar.xz.asc`
-  - `PHP_SHA256=f042322f1b5a9f7c2decb84b7086ef676896c2f7178739b9672afafa964ed0e5`
+  - `PHP_VERSION=8.1.8`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.8.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.8.tar.xz.asc`
+  - `PHP_SHA256=04c065515bc347bc68e0bb1ac7182669a98a731e4a17727e5731650ad3d8de4c`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1014,11 +1014,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gmp/2:6.2.1+dfsg-1+deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gmp/2:6.2.1+dfsg-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gnupg2=2.2.27-2+deb11u1`
+### `dpkg` source package: `gnupg2=2.2.27-2+deb11u2`
 
 Binary Packages:
 
-- `gpgv=2.2.27-2+deb11u1`
+- `gpgv=2.2.27-2+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 
@@ -1038,18 +1038,18 @@ Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gnupg2=2.2.27-2+deb11u1
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.27-2%2bdeb11u1.dsc' gnupg2_2.2.27-2+deb11u1.dsc 3322 SHA256:851827956ba7268a14f2043c5af8f00d833f77f238fa4f02410215d36aa6327b
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.27.orig.tar.bz2' gnupg2_2.2.27.orig.tar.bz2 7191555 SHA256:34e60009014ea16402069136e0a5f63d9b65f90096244975db5cea74b3d02399
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.27.orig.tar.bz2.asc' gnupg2_2.2.27.orig.tar.bz2.asc 119 SHA256:2b44fd82da223cb629062b9c8840d92698c003be8531fc393c38f97b28cae2a4
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.27-2%2bdeb11u1.debian.tar.xz' gnupg2_2.2.27-2+deb11u1.debian.tar.xz 63404 SHA256:8b7117b6ea0efebd36e96b9501e03715d0954032234378c4051dfd99ca86e69d
+$ apt-get source -qq --print-uris gnupg2=2.2.27-2+deb11u2
+'http://security.debian.org/debian-security/pool/updates/main/g/gnupg2/gnupg2_2.2.27-2%2bdeb11u2.dsc' gnupg2_2.2.27-2+deb11u2.dsc 3322 SHA256:a334ffaa6c078907e64d990c469873ec883abcbbc2ca3911e4f3072c50d33eb8
+'http://security.debian.org/debian-security/pool/updates/main/g/gnupg2/gnupg2_2.2.27.orig.tar.bz2' gnupg2_2.2.27.orig.tar.bz2 7191555 SHA256:34e60009014ea16402069136e0a5f63d9b65f90096244975db5cea74b3d02399
+'http://security.debian.org/debian-security/pool/updates/main/g/gnupg2/gnupg2_2.2.27.orig.tar.bz2.asc' gnupg2_2.2.27.orig.tar.bz2.asc 119 SHA256:2b44fd82da223cb629062b9c8840d92698c003be8531fc393c38f97b28cae2a4
+'http://security.debian.org/debian-security/pool/updates/main/g/gnupg2/gnupg2_2.2.27-2%2bdeb11u2.debian.tar.xz' gnupg2_2.2.27-2+deb11u2.debian.tar.xz 63960 SHA256:b35c6a717d7f79cfd1a7468436721ca9c9211f70d10216e22523478094670a7b
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gnupg2/2.2.27-2+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/gnupg2/2.2.27-2+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnupg2/2.2.27-2+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gnupg2/2.2.27-2+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/gnupg2/2.2.27-2+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gnupg2/2.2.27-2+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnutls28=3.7.1-5`
 
@@ -2249,7 +2249,6 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1n-0+deb11u2`
 - `openssl=1.1.1n-0+deb11u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -2263,6 +2262,32 @@ The source package *may* still be available for download from:
 
 - http://snapshot.debian.org/package/openssl/1.1.1n-0+deb11u2/
 
+
+### `dpkg` source package: `openssl=1.1.1n-0+deb11u3`
+
+Binary Packages:
+
+- `libssl1.1:amd64=1.1.1n-0+deb11u3`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1n-0+deb11u3
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb11u3.dsc' openssl_1.1.1n-0+deb11u3.dsc 2655 SHA256:cbf06993d1dc8c4e59e2f7f0456cc07a005c17274a33eb29135e9fdd7f6b2941
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz' openssl_1.1.1n.orig.tar.gz 9850712 SHA256:40dceb51a4f6a5275bde0e6bf20ef4b91bfc32ed57c0552e2e8e15463372b17a
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz.asc' openssl_1.1.1n.orig.tar.gz.asc 488 SHA256:e0e89e9467102880ee6f2ee8c1413933eb1268969afb97b9bec61e2190a62fd0
+'http://security.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb11u3.debian.tar.xz' openssl_1.1.1n-0+deb11u3.debian.tar.xz 118952 SHA256:0eed2dc1f8d472291511f386fc0a3c5fe70ec50440b1c252fd99934bf2cddd4a
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u3/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.1n-0+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.22-1`
 
