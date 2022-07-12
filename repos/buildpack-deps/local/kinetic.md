@@ -961,14 +961,9 @@ Licenses: (parsed from: `/usr/share/doc/cpp-11/copyright`, `/usr/share/doc/g++-1
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-11=11.3.0-3ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.3.0-3ubuntu1.dsc' gcc-11_11.3.0-3ubuntu1.dsc 22812 SHA512:2b50ca612a54f664d3ea7a78ab9d73936e25e9f111a24a4e2822380bf44d6958de0f55f4d5eff8d250a4bfe15e34aab64bb28c64056e7481fa8985232177fce1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.3.0.orig.tar.gz' gcc-11_11.3.0.orig.tar.gz 88114483 SHA512:ab276f0a908187b3c1ad89e169f16822a6cf6bd245465510b94b7649eb1698e79e7be9d89c817ffbaefce373d3015be07512bf19960e74f9ebfdd8505ff547e2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-11/gcc-11_11.3.0-3ubuntu1.debian.tar.xz' gcc-11_11.3.0-3ubuntu1.debian.tar.xz 592132 SHA512:1b8d44174f23e3e1216f210f9ae92b4e688a0b1a124a92906ac4b3160cecbae63376c169f817b804c405bd9d5a6ae6b95fc98ec72483b134a5a1a05dc498d886
-```
 
 ### `dpkg` source package: `gcc-12=12.1.0-2ubuntu1`
 
@@ -2219,15 +2214,9 @@ Licenses: (parsed from: `/usr/share/doc/libmd0/copyright`)
 - `public-domain-md5`
 - `public-domain-sha1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libmd=1.0.4-1build1
-'http://archive.ubuntu.com/ubuntu/pool/main/libm/libmd/libmd_1.0.4-1build1.dsc' libmd_1.0.4-1build1.dsc 2380 SHA512:778b562e6b3860fe6a6d5ddf4d7cce381126be77d151ac7c2a619d57737080f2adc07ff8e01fcafd98b3ace157fc72ab77a572362b56e79e5abb79a99fdacd6c
-'http://archive.ubuntu.com/ubuntu/pool/main/libm/libmd/libmd_1.0.4.orig.tar.xz' libmd_1.0.4.orig.tar.xz 264472 SHA512:731553ecc5e0e1eb228cced8fccd531fe31fb5c7627ca30013d287e1aeb8222959cf7498fbb7414bbabb967b25d4e8b0edd54fc47f6ccf55fc91087db0725ce3
-'http://archive.ubuntu.com/ubuntu/pool/main/libm/libmd/libmd_1.0.4.orig.tar.xz.asc' libmd_1.0.4.orig.tar.xz.asc 833 SHA512:ec4b60a721da1f315fad73daa8ee620f44a53f17a30506c4d63b154b3abde19bb248b2ce6b83b989589e2a9184ebbe1b870e83181e18a4147d75617579d10504
-'http://archive.ubuntu.com/ubuntu/pool/main/libm/libmd/libmd_1.0.4-1build1.debian.tar.xz' libmd_1.0.4-1build1.debian.tar.xz 10264 SHA512:0e287498326a5aa3bc95cb0c576df7d0bb289bfb9db3a1f812d0e202c61af9dc78ecfa4b6b26c2dee3c5ccbefad877919f44ec849b3300f0f30878080eb5cb13
-```
 
 ### `dpkg` source package: `libnsl=1.3.0-2build2`
 
