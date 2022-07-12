@@ -1,7 +1,7 @@
 ## `debian:sid-slim`
 
 ```console
-$ docker pull debian@sha256:a9e7f8afd36f82ee773da45532083eae22e306d1d9e55ce7ab0b5416777dc07c
+$ docker pull debian@sha256:5fb707c657fb4eb7fbd03576f9841cf0238bd4246ccbd200e37fa9c100260392
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -149,27 +149,27 @@ CMD ["bash"]
 ### `debian:sid-slim` - linux; mips64le
 
 ```console
-$ docker pull debian@sha256:fc4483bcf310760982d7c96885b7662e2b03a4c002e5933c348f3c2db9ec3357
+$ docker pull debian@sha256:e8328cbdf0d4e3cd2e670d919875c047e9514bf0549db14bd265ddfeae7a28da
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **28.8 MB (28774280 bytes)**  
+-	Total Size: **28.8 MB (28810619 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6bd74a34730659dab3b827b90f65841fbac0e21442d73dfcaa003301e3aebc46`
+-	Image ID: `sha256:456760095f397b46328d3307e9acabbac0c5afdc2b75eecf16217de306dbbce1`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Thu, 23 Jun 2022 01:13:28 GMT
-ADD file:98ba147b28b8e6e2add72571fb750f24d5baea80a803128af79c3e97fe16e299 in / 
-# Thu, 23 Jun 2022 01:13:32 GMT
+# Tue, 12 Jul 2022 04:44:31 GMT
+ADD file:d87354081270f15a203a1db8151ce7da88aecfa2497a68c21aed7c4766813897 in / 
+# Tue, 12 Jul 2022 04:44:36 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:690d203efc5e141aa0b09caffe974f09bb1477d4f85c7cf2645b011ca81dcf7c`  
-		Last Modified: Thu, 23 Jun 2022 01:24:13 GMT  
-		Size: 28.8 MB (28774280 bytes)  
+	-	`sha256:1ba8ee40a40b0ef0fa032867f12988730a6736778df8ebc92368922021a97699`  
+		Last Modified: Tue, 12 Jul 2022 04:55:28 GMT  
+		Size: 28.8 MB (28810619 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:sid-slim` - linux; ppc64le
