@@ -1,7 +1,7 @@
 ## `ros:melodic-ros-core`
 
 ```console
-$ docker pull ros@sha256:f09675c8557699d34a88fb872ede235023e792d8f28339ad3e539b35efd17f4d
+$ docker pull ros@sha256:92af3964c5334af2d6aea141097038850b9276cfd9b4ea40053c21306cc512f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,14 +13,14 @@ $ docker pull ros@sha256:f09675c8557699d34a88fb872ede235023e792d8f28339ad3e539b3
 ### `ros:melodic-ros-core` - linux; amd64
 
 ```console
-$ docker pull ros@sha256:267a888978939abcdbac2d6ba61a46f65eec89b5559bf3771a0fdf70d2acfeeb
+$ docker pull ros@sha256:e3ee821aeed11aeb0a1a63693628a644495e59b14ae523708368b9d5b7477975
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **291.9 MB (291880606 bytes)**  
+-	Total Size: **291.9 MB (291880607 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:be875ec2a73878f10985c35bc23cf15a0e9be149c2f5d4a2098ee00368953ed1`
+-	Image ID: `sha256:44adb1a480b20103502b25452400ee639d20a66d259ce82afb25de443a242a03`
 -	Entrypoint: `["\/ros_entrypoint.sh"]`
 -	Default Command: `["bash"]`
 
@@ -45,11 +45,11 @@ ENV LC_ALL=C.UTF-8
 ENV ROS_DISTRO=melodic
 # Tue, 07 Jun 2022 01:02:23 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-melodic-ros-core=1.4.1-0*     && rm -rf /var/lib/apt/lists/*
-# Tue, 07 Jun 2022 01:02:27 GMT
-COPY file:cbbaa0f5d6a276512315f5b4d7347e94a120cefbda9058ebb0d678847ff4837f in / 
-# Tue, 07 Jun 2022 01:02:27 GMT
+# Mon, 11 Jul 2022 23:20:39 GMT
+COPY file:b48a3fff5008212a0bcdc238d0e8be930aa89d2336e357e1f628c98db523efeb in / 
+# Mon, 11 Jul 2022 23:20:40 GMT
 ENTRYPOINT ["/ros_entrypoint.sh"]
-# Tue, 07 Jun 2022 01:02:27 GMT
+# Mon, 11 Jul 2022 23:20:40 GMT
 CMD ["bash"]
 ```
 
@@ -78,22 +78,22 @@ CMD ["bash"]
 		Last Modified: Tue, 07 Jun 2022 01:45:33 GMT  
 		Size: 259.5 MB (259452207 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad9573725ebd5e712abd6f511e5ab7e0c71c4de8f3b5772bbe4b825f95eb98de`  
-		Last Modified: Tue, 07 Jun 2022 01:44:57 GMT  
-		Size: 195.0 B  
+	-	`sha256:8fe2d37b87377dee7c843db3a155a2d081b3473cff3fe50f3bf934b59683bd64`  
+		Last Modified: Tue, 12 Jul 2022 00:00:40 GMT  
+		Size: 196.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ros:melodic-ros-core` - linux; arm variant v7
 
 ```console
-$ docker pull ros@sha256:2e5e7e61d3e85599678a37593d8d28a7f6ae7d2fbbc4205a08b38f4ab2e0434b
+$ docker pull ros@sha256:d4a0131748a7ffb924a003845b10921ddd3f5d963a6cf71d497c3851b7e94fc0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **266.2 MB (266181332 bytes)**  
+-	Total Size: **266.2 MB (266181333 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f12379e4d0b5ee9ff52ed6f223b819f8e7db6e58b18ae809377d5932f9da119c`
+-	Image ID: `sha256:f444660baa7a35fb7cadcf6ccdcea8d9e4436dbba5c800cf8304c755244cd158`
 -	Entrypoint: `["\/ros_entrypoint.sh"]`
 -	Default Command: `["bash"]`
 
@@ -118,11 +118,11 @@ ENV LC_ALL=C.UTF-8
 ENV ROS_DISTRO=melodic
 # Tue, 07 Jun 2022 10:11:25 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-melodic-ros-core=1.4.1-0*     && rm -rf /var/lib/apt/lists/*
-# Tue, 07 Jun 2022 10:11:28 GMT
-COPY file:cbbaa0f5d6a276512315f5b4d7347e94a120cefbda9058ebb0d678847ff4837f in / 
-# Tue, 07 Jun 2022 10:11:29 GMT
+# Mon, 11 Jul 2022 22:58:15 GMT
+COPY file:b48a3fff5008212a0bcdc238d0e8be930aa89d2336e357e1f628c98db523efeb in / 
+# Mon, 11 Jul 2022 22:58:15 GMT
 ENTRYPOINT ["/ros_entrypoint.sh"]
-# Tue, 07 Jun 2022 10:11:29 GMT
+# Mon, 11 Jul 2022 22:58:16 GMT
 CMD ["bash"]
 ```
 
@@ -151,22 +151,22 @@ CMD ["bash"]
 		Last Modified: Tue, 07 Jun 2022 10:34:31 GMT  
 		Size: 238.9 MB (238943066 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:18374d7a96f4a689496a4283a3609e1d0238b5cf7b80d726dcfe9f3c21438945`  
-		Last Modified: Tue, 07 Jun 2022 10:31:58 GMT  
-		Size: 195.0 B  
+	-	`sha256:6affb1b3206339bc5b43342d1c9945b174998df8674effb3cfb95da2c03bd8f9`  
+		Last Modified: Mon, 11 Jul 2022 23:15:06 GMT  
+		Size: 196.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ros:melodic-ros-core` - linux; arm64 variant v8
 
 ```console
-$ docker pull ros@sha256:f983915fa697b4b5c4f95aaf5d42d94c7bf4d19c3d322ab5533cf19c92c4ff56
+$ docker pull ros@sha256:c328dc0017ebf84de901c8af6dc983fcd8836e90337a60bd939ce59d23423fac
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **281.2 MB (281232232 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:57a8e19427a1a3b0b9921cdff089573ba277646ad583c5a9b90762ea0df2cca8`
+-	Image ID: `sha256:be79d1120f2efaf731e5b68ac3a5faa39387620497b18f9e806d0ec0694f276c`
 -	Entrypoint: `["\/ros_entrypoint.sh"]`
 -	Default Command: `["bash"]`
 
@@ -191,11 +191,11 @@ ENV LC_ALL=C.UTF-8
 ENV ROS_DISTRO=melodic
 # Tue, 07 Jun 2022 05:49:25 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-melodic-ros-core=1.4.1-0*     && rm -rf /var/lib/apt/lists/*
-# Tue, 07 Jun 2022 05:49:28 GMT
-COPY file:cbbaa0f5d6a276512315f5b4d7347e94a120cefbda9058ebb0d678847ff4837f in / 
-# Tue, 07 Jun 2022 05:49:29 GMT
+# Mon, 11 Jul 2022 23:44:07 GMT
+COPY file:b48a3fff5008212a0bcdc238d0e8be930aa89d2336e357e1f628c98db523efeb in / 
+# Mon, 11 Jul 2022 23:44:08 GMT
 ENTRYPOINT ["/ros_entrypoint.sh"]
-# Tue, 07 Jun 2022 05:49:30 GMT
+# Mon, 11 Jul 2022 23:44:09 GMT
 CMD ["bash"]
 ```
 
@@ -224,7 +224,7 @@ CMD ["bash"]
 		Last Modified: Tue, 07 Jun 2022 06:16:14 GMT  
 		Size: 252.4 MB (252387652 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ba45e675ef36970c7566157a82c9773fec38abb8e1dc9c1ab5228c5c333d1b6`  
-		Last Modified: Tue, 07 Jun 2022 06:15:40 GMT  
+	-	`sha256:8ec0035a4765f4a1f16c48462fac335ce0511ec4e712ab4bb067d948b16ea7d8`  
+		Last Modified: Tue, 12 Jul 2022 00:10:39 GMT  
 		Size: 195.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
