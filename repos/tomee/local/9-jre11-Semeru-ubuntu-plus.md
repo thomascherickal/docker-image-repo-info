@@ -1,10 +1,10 @@
-# `tomee:9.0.0-M7-jre11-Semeru-ubuntu-plus`
+# `tomee:9.0.0-M8-jre11-Semeru-ubuntu-plus`
 
 ## Docker Metadata
 
-- Image ID: `sha256:456107405f259ece34b2a9126045c7913ad824ca6e4ec4775a73715427b774f1`
-- Created: `2022-06-07T05:20:23.655124968Z`
-- Virtual Size: ~ 364.46 Mb  
+- Image ID: `sha256:83045b8239be31a3ef5dfd0228febf9df604ebdcf8338e57893ee09bc26365a8`
+- Created: `2022-07-11T22:33:05.895688116Z`
+- Virtual Size: ~ 365.23 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk-11.0.15+10_openj9-0.32.0`
   - `JAVA_HOME=/opt/java/openjdk`
   - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal`
-  - `TOMEE_VER=9.0.0-M7`
+  - `TOMEE_VER=9.0.0-M8`
   - `TOMEE_BUILD=plus`
 
 ## `dpkg` (`.deb`-based packages)

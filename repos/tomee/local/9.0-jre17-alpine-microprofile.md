@@ -1,10 +1,10 @@
-# `tomee:9.0.0-M7-jre17-Temurin-alpine-microprofile`
+# `tomee:9.0.0-M8-jre17-Temurin-alpine-microprofile`
 
 ## Docker Metadata
 
-- Image ID: `sha256:55377968c44e6252a11de1a47a57c7e8338d4cfdb96b8faf8d5915844e5e81c1`
-- Created: `2022-06-21T21:38:19.102550845Z`
-- Virtual Size: ~ 236.88 Mb  
+- Image ID: `sha256:e3ce75053aefaff83cca7972fa62fa46e538798f37748903bb3fa971cc9fb276`
+- Created: `2022-07-11T22:29:28.187527215Z`
+- Virtual Size: ~ 236.23 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -15,7 +15,7 @@
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-17.0.3+7`
   - `JAVA_HOME=/opt/java/openjdk`
-  - `TOMEE_VER=9.0.0-M7`
+  - `TOMEE_VER=9.0.0-M8`
   - `TOMEE_BUILD=microprofile`
 
 ## `apk` (`.apk`-based packages)
