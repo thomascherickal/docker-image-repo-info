@@ -1,7 +1,7 @@
 ## `redis:alpine`
 
 ```console
-$ docker pull redis@sha256:9b91219c69d28a79c442dc8f0914f0c30d257f3cb7fc71d0ce94ecf8f3d72734
+$ docker pull redis@sha256:c861ce6ecba1e035aa38acc3ce398bfc87b7360b2d37233ca65775a864003003
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -163,14 +163,14 @@ CMD ["redis-server"]
 ### `redis:alpine` - linux; arm variant v7
 
 ```console
-$ docker pull redis@sha256:17d22e198917b5e5ca8c37477170c35ad41f23a899d7674dbb922dea05bc7917
+$ docker pull redis@sha256:5d08f4a962866a69252841d13b1c8da684b82439a89b57f6e97a5d130634e775
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **11.5 MB (11450238 bytes)**  
+-	Total Size: **12.6 MB (12616759 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fd1107be21b2e5371b64eaad759e20a58941238c28876958ae3a2f4956e5af1c`
+-	Image ID: `sha256:2f41993696afec913455cf54b5b6ddd537ab47d7b8edc3547eb2b61a6304a6af`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["redis-server"]`
 
@@ -183,27 +183,27 @@ CMD ["/bin/sh"]
 RUN addgroup -S -g 1000 redis && adduser -S -G redis -u 999 redis
 # Thu, 26 May 2022 01:06:35 GMT
 RUN apk add --no-cache 		'su-exec>=0.2' 		tzdata
-# Mon, 13 Jun 2022 19:14:32 GMT
-ENV REDIS_VERSION=7.0.2
-# Mon, 13 Jun 2022 19:14:33 GMT
-ENV REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.0.2.tar.gz
-# Mon, 13 Jun 2022 19:14:33 GMT
-ENV REDIS_DOWNLOAD_SHA=5e57eafe7d4ac5ecb6a7d64d6b61db775616dbf903293b3fcc660716dbda5eeb
-# Mon, 13 Jun 2022 19:15:55 GMT
+# Tue, 12 Jul 2022 02:48:51 GMT
+ENV REDIS_VERSION=7.0.3
+# Tue, 12 Jul 2022 02:48:52 GMT
+ENV REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.0.3.tar.gz
+# Tue, 12 Jul 2022 02:48:52 GMT
+ENV REDIS_DOWNLOAD_SHA=2cde7d17214ffe305953da9fff12333e8a72caa57fd4923e4872f6362a208e73
+# Tue, 12 Jul 2022 02:50:15 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		dpkg-dev dpkg 		gcc 		linux-headers 		make 		musl-dev 		openssl-dev 		wget 	; 		wget -O redis.tar.gz "$REDIS_DOWNLOAD_URL"; 	echo "$REDIS_DOWNLOAD_SHA *redis.tar.gz" | sha256sum -c -; 	mkdir -p /usr/src/redis; 	tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1; 	rm redis.tar.gz; 		grep -E '^ *createBoolConfig[(]"protected-mode",.*, *1 *,.*[)],$' /usr/src/redis/src/config.c; 	sed -ri 's!^( *createBoolConfig[(]"protected-mode",.*, *)1( *,.*[)],)$!\10\2!' /usr/src/redis/src/config.c; 	grep -E '^ *createBoolConfig[(]"protected-mode",.*, *0 *,.*[)],$' /usr/src/redis/src/config.c; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	extraJemallocConfigureFlags="--build=$gnuArch"; 	dpkgArch="$(dpkg --print-architecture)"; 	case "${dpkgArch##*-}" in 		amd64 | i386 | x32) extraJemallocConfigureFlags="$extraJemallocConfigureFlags --with-lg-page=12" ;; 		*) extraJemallocConfigureFlags="$extraJemallocConfigureFlags --with-lg-page=16" ;; 	esac; 	extraJemallocConfigureFlags="$extraJemallocConfigureFlags --with-lg-hugepage=21"; 	grep -F 'cd jemalloc && ./configure ' /usr/src/redis/deps/Makefile; 	sed -ri 's!cd jemalloc && ./configure !&'"$extraJemallocConfigureFlags"' !' /usr/src/redis/deps/Makefile; 	grep -F "cd jemalloc && ./configure $extraJemallocConfigureFlags " /usr/src/redis/deps/Makefile; 		export BUILD_TLS=yes; 	make -C /usr/src/redis -j "$(nproc)" all; 	make -C /usr/src/redis install; 		serverMd5="$(md5sum /usr/local/bin/redis-server | cut -d' ' -f1)"; export serverMd5; 	find /usr/local/bin/redis* -maxdepth 0 		-type f -not -name redis-server 		-exec sh -eux -c ' 			md5="$(md5sum "$1" | cut -d" " -f1)"; 			test "$md5" = "$serverMd5"; 		' -- '{}' ';' 		-exec ln -svfT 'redis-server' '{}' ';' 	; 		rm -r /usr/src/redis; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .redis-rundeps $runDeps; 	apk del --no-network .build-deps; 		redis-cli --version; 	redis-server --version
-# Mon, 13 Jun 2022 19:15:57 GMT
+# Tue, 12 Jul 2022 02:50:17 GMT
 RUN mkdir /data && chown redis:redis /data
-# Mon, 13 Jun 2022 19:15:57 GMT
+# Tue, 12 Jul 2022 02:50:17 GMT
 VOLUME [/data]
-# Mon, 13 Jun 2022 19:15:58 GMT
+# Tue, 12 Jul 2022 02:50:18 GMT
 WORKDIR /data
-# Mon, 13 Jun 2022 19:15:58 GMT
+# Tue, 12 Jul 2022 02:50:18 GMT
 COPY file:a9e7249f657e2eec627bb4be492ad18aae3e5e1f0e47d22644eaf1ef2138c0ce in /usr/local/bin/ 
-# Mon, 13 Jun 2022 19:15:59 GMT
+# Tue, 12 Jul 2022 02:50:18 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 13 Jun 2022 19:15:59 GMT
+# Tue, 12 Jul 2022 02:50:19 GMT
 EXPOSE 6379
-# Mon, 13 Jun 2022 19:16:00 GMT
+# Tue, 12 Jul 2022 02:50:19 GMT
 CMD ["redis-server"]
 ```
 
@@ -220,17 +220,17 @@ CMD ["redis-server"]
 		Last Modified: Thu, 26 May 2022 01:17:44 GMT  
 		Size: 404.1 KB (404098 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:17c3c590f7722f2964ab1fe06081edb07a9ddbd5c5dc97b815026c51e0ea9771`  
-		Last Modified: Mon, 13 Jun 2022 19:21:39 GMT  
-		Size: 8.6 MB (8632506 bytes)  
+	-	`sha256:fd0100b8d484f022c62197f11413301456338b0681dc40de3ba994e4b8de75ee`  
+		Last Modified: Tue, 12 Jul 2022 03:01:10 GMT  
+		Size: 9.8 MB (9799030 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f51d43db54ec0eca3f8b1b7caeee1787e7956af6ccbd718d88463214096af9f7`  
-		Last Modified: Mon, 13 Jun 2022 19:21:34 GMT  
-		Size: 136.0 B  
+	-	`sha256:ff9f9d41b6e51ceaf0296ca38569ee333c91855323c4892b04f3299c04a557ee`  
+		Last Modified: Tue, 12 Jul 2022 03:01:05 GMT  
+		Size: 135.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8ac0dbc9ba5b2b18a9fe73e7cda9d36bdc672391fc7b232d02d468e63b71b659`  
-		Last Modified: Mon, 13 Jun 2022 19:21:34 GMT  
-		Size: 580.0 B  
+	-	`sha256:24173f8476d106e80f97170749a8f70193fa293efd53d9d5c76b8c9230766ad0`  
+		Last Modified: Tue, 12 Jul 2022 03:01:05 GMT  
+		Size: 578.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `redis:alpine` - linux; arm64 variant v8
