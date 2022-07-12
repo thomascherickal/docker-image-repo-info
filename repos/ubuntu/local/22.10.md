@@ -583,13 +583,13 @@ Licenses: (parsed from: `/usr/share/doc/init-system-helpers/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris init-system-helpers=1.63
-'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.63.dsc' init-system-helpers_1.63.dsc 1968 SHA512:e07f44691e0d73532aa8708f1a2f42448812da711f60aef403c53e839bda380b6219f83008df0060ff17262398c03dd5ccb0de74b1ee01ce253ecdcfc40a06fc
-'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.63.tar.xz' init-system-helpers_1.63.tar.xz 43204 SHA512:75accd229a1a2ae50e1b51cd43e36dd7cb2a5712e1aab8992da00fe3061a7d27cbe1396a68bb62771902afaf6f3467fc7888d66df3285946d4cea216c5fef3e1
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/init-system-helpers/1.63/
+
 
 ### `dpkg` source package: `libcap-ng=0.7.9-2.2build3`
 
