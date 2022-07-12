@@ -1,7 +1,7 @@
 ## `redmine:4-passenger`
 
 ```console
-$ docker pull redmine@sha256:17a6bebb39bf4612d3a0d4ae65873b3e6b56361807989346ddc1b0680e8ce8a0
+$ docker pull redmine@sha256:f13a94c6e9298f4a0869f773f0a8891ac9a663553a38f8b859264e70de8b7a73
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull redmine@sha256:17a6bebb39bf4612d3a0d4ae65873b3e6b56361807989346ddc
 ### `redmine:4-passenger` - linux; amd64
 
 ```console
-$ docker pull redmine@sha256:c10099644f34ff3287f8e995e393335f04bd11bfe90d17b8b98270d88d6a5103
+$ docker pull redmine@sha256:bfaedbd4737008e106826d87e68882131c8ff8b02b88509a52fd81116c777310
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **233.7 MB (233662259 bytes)**  
+-	Total Size: **233.7 MB (233662396 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:57a494960e78aab61ba90d7a616eab5e35cde0659eb100269d1b8bd63239e319`
+-	Image ID: `sha256:755c651f86ccd870f3e4fb16b3808550c9e9fbcc5a405e5ead6a70304f1cab22`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["passenger","start"]`
 
@@ -75,23 +75,23 @@ RUN set -eux; 	curl -fL -o redmine.tar.gz "$REDMINE_DOWNLOAD_URL"; 	echo "$REDMI
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		default-libmysqlclient-dev 		freetds-dev 		gcc 		libpq-dev 		libsqlite3-dev 		make 		patch 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		gosu redmine bundle config --local without 'development test'; 	puma="$(grep -E "^[[:space:]]*gem [:'\"]puma['\",[:space:]].*\$" Gemfile)"; 	{ echo; echo "$puma"; } | sed -re 's/^[[:space:]]+//' >> Gemfile; 	echo '# the following entries only exist to force `bundle install` to pre-install all database adapter dependencies -- they can be safely removed/ignored' > ./config/database.yml; 	for adapter in mysql2 postgresql sqlserver sqlite3; do 		echo "$adapter:" >> ./config/database.yml; 		echo "  adapter: $adapter" >> ./config/database.yml; 	done; 	gosu redmine bundle install --jobs "$(nproc)"; 	rm ./config/database.yml; 	chmod -R ugo=rwX Gemfile.lock "$GEM_HOME"; 	rm -rf ~redmine/.bundle; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| grep -v '^/usr/local/' 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
 # Fri, 24 Jun 2022 03:01:10 GMT
 VOLUME [/usr/src/redmine/files]
-# Fri, 24 Jun 2022 03:01:11 GMT
-COPY file:2c807aca5f34a9ab8acfef3c517816547300ed2b18590f703a1c783bdc707ba8 in / 
-# Fri, 24 Jun 2022 03:01:11 GMT
+# Tue, 12 Jul 2022 02:38:18 GMT
+COPY file:5ad924c6f87c91325ac6781766e5ad56444f0bea5780e13e8bed5000ee3cfc38 in / 
+# Tue, 12 Jul 2022 02:38:18 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 24 Jun 2022 03:01:11 GMT
+# Tue, 12 Jul 2022 02:38:18 GMT
 EXPOSE 3000
-# Fri, 24 Jun 2022 03:01:11 GMT
+# Tue, 12 Jul 2022 02:38:18 GMT
 CMD ["rails" "server" "-b" "0.0.0.0"]
-# Fri, 24 Jun 2022 03:01:20 GMT
+# Tue, 12 Jul 2022 02:38:22 GMT
 ENV PASSENGER_VERSION=6.0.14
-# Fri, 24 Jun 2022 03:01:37 GMT
+# Tue, 12 Jul 2022 02:38:40 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gcc 		make 	; 	rm -rf /var/lib/apt/lists/*; 		gem install passenger --version "$PASSENGER_VERSION"; 	passenger-config build-native-support; 	if [ -n "$(passenger-config build-native-support 2>&1)" ]; then cat /tmp/passenger_native_support-*.log; false; fi; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Fri, 24 Jun 2022 03:01:38 GMT
+# Tue, 12 Jul 2022 02:38:42 GMT
 RUN set -eux; 	passenger-config install-agent; 	passenger-config download-nginx-engine
-# Fri, 24 Jun 2022 03:01:38 GMT
+# Tue, 12 Jul 2022 02:38:42 GMT
 ENV PASSENGER_PID_FILE=tmp/pids/server.pid
-# Fri, 24 Jun 2022 03:01:39 GMT
+# Tue, 12 Jul 2022 02:38:42 GMT
 CMD ["passenger" "start"]
 ```
 
@@ -140,15 +140,15 @@ CMD ["passenger" "start"]
 		Last Modified: Fri, 24 Jun 2022 03:03:11 GMT  
 		Size: 45.3 MB (45306386 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1135b28718e408983041c3e2cff078b0467ba1f17b58e26fd183d2cd70921609`  
-		Last Modified: Fri, 24 Jun 2022 03:03:06 GMT  
-		Size: 1.8 KB (1796 bytes)  
+	-	`sha256:433b189e2a1250f9d5a8dad816907db6ff50cbbd2143319a22e3a92253d806f4`  
+		Last Modified: Tue, 12 Jul 2022 02:43:15 GMT  
+		Size: 1.9 KB (1859 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b37f9dc3c8ee58fb6db2f950884fcb4444bfb5981c711714a62ec2144e8afd15`  
-		Last Modified: Fri, 24 Jun 2022 03:03:51 GMT  
-		Size: 21.8 MB (21800264 bytes)  
+	-	`sha256:c8c683b9c530aa2b9f558d90f15357b0077471380a0fc5c908484c7bc4a7e906`  
+		Last Modified: Tue, 12 Jul 2022 02:43:40 GMT  
+		Size: 21.8 MB (21800334 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8553989bc3ac1e5bdd8d07d2253a2cd70e796bc05f9845c5a65330d38267799f`  
-		Last Modified: Fri, 24 Jun 2022 03:03:49 GMT  
-		Size: 5.5 MB (5544415 bytes)  
+	-	`sha256:dafc9b824de5e5f45a5407dbd5dd52d7e94491c9690b436a1ef85af62dcc0e4f`  
+		Last Modified: Tue, 12 Jul 2022 02:43:38 GMT  
+		Size: 5.5 MB (5544419 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
