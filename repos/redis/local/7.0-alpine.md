@@ -1,19 +1,19 @@
-# `redis:7.0.2-alpine`
+# `redis:7.0.3-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f934e82c14d178bda705b7c6363b065f3fc49bcbaf7914c181b117c65c566a1e`
-- Created: `2022-06-13T20:09:20.363274018Z`
-- Virtual Size: ~ 28.43 Mb  
+- Image ID: `sha256:4733b14e6f4cedc8f3a5069939351055aa4faa6c9e0e8d3add0e641c7617d18e`
+- Created: `2022-07-12T02:28:55.901459373Z`
+- Virtual Size: ~ 31.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["redis-server"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `REDIS_VERSION=7.0.2`
-  - `REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.0.2.tar.gz`
-  - `REDIS_DOWNLOAD_SHA=5e57eafe7d4ac5ecb6a7d64d6b61db775616dbf903293b3fcc660716dbda5eeb`
+  - `REDIS_VERSION=7.0.3`
+  - `REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.0.3.tar.gz`
+  - `REDIS_DOWNLOAD_SHA=2cde7d17214ffe305953da9fff12333e8a72caa57fd4923e4872f6362a208e73`
 
 ## `apk` (`.apk`-based packages)
 
@@ -139,16 +139,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1o-r0 description:
+libcrypto1.1-1.1.1q-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1o-r0 webpage:
+libcrypto1.1-1.1.1q-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1o-r0 installed size:
+libcrypto1.1-1.1.1q-r0 installed size:
 2708 KiB
 
-libcrypto1.1-1.1.1o-r0 license:
+libcrypto1.1-1.1.1q-r0 license:
 OpenSSL
 
 ```
@@ -156,16 +156,16 @@ OpenSSL
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1o-r0 description:
+libssl1.1-1.1.1q-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1o-r0 webpage:
+libssl1.1-1.1.1q-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1o-r0 installed size:
+libssl1.1-1.1.1q-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1o-r0 license:
+libssl1.1-1.1.1q-r0 license:
 OpenSSL
 
 ```
