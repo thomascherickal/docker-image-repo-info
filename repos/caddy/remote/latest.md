@@ -1,7 +1,7 @@
 ## `caddy:latest`
 
 ```console
-$ docker pull caddy@sha256:815c9f0957b2d2cb484e1447e3c4ab8c63b95720fb31f24549c2a4a77d96e2a2
+$ docker pull caddy@sha256:343a268d45b94fb60575c5a477f4cf3a62b24e1c1dc6c63a25488c4871c98c69
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -182,82 +182,82 @@ CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 ### `caddy:latest` - linux; arm variant v7
 
 ```console
-$ docker pull caddy@sha256:2e61a3ed70ad9a4784ff95cf49efa7ec58255c5263c3faba6a5270a847542a41
+$ docker pull caddy@sha256:b1db5af09e7e93ccc64f39d2aefa6438f3346a62fff17d5f006eef3bf5541424
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **15.8 MB (15835582 bytes)**  
+-	Total Size: **16.1 MB (16056157 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:93c6db987e0721fcd4f557ec160b55012a73d2f69de7198fac316514b27ed58f`
+-	Image ID: `sha256:9e3d980491df522f57fa63138e24e8c6be022acb10104bab97857a4eab9d04f5`
 -	Default Command: `["caddy","run","--config","\/etc\/caddy\/Caddyfile","--adapter","caddyfile"]`
 
 ```dockerfile
-# Mon, 04 Apr 2022 23:57:34 GMT
-ADD file:20f8cdddc53a4a8bd78945fc32fe08e9f80ab3b16dc20a9aa4ba73b79f2bc71c in / 
-# Mon, 04 Apr 2022 23:57:35 GMT
+# Mon, 23 May 2022 18:57:46 GMT
+ADD file:72698cc08524b911ebaacf992490707e5a951ddd2fe6edb3fb598e9dc7155049 in / 
+# Mon, 23 May 2022 18:57:47 GMT
 CMD ["/bin/sh"]
-# Tue, 05 Apr 2022 06:33:05 GMT
+# Thu, 14 Jul 2022 04:50:40 GMT
 RUN apk add --no-cache ca-certificates mailcap
-# Fri, 06 May 2022 19:57:32 GMT
-RUN set -eux; 	mkdir -p 		/config/caddy 		/data/caddy 		/etc/caddy 		/usr/share/caddy 	; 	wget -O /etc/caddy/Caddyfile "https://github.com/caddyserver/dist/raw/69bb1c539b3ee03fc91271a71653a77ca1e9d131/config/Caddyfile"; 	wget -O /usr/share/caddy/index.html "https://github.com/caddyserver/dist/raw/69bb1c539b3ee03fc91271a71653a77ca1e9d131/welcome/index.html"
-# Fri, 06 May 2022 19:57:32 GMT
-ENV CADDY_VERSION=v2.5.1
-# Fri, 06 May 2022 19:57:37 GMT
-RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		x86_64)  binArch='amd64'; checksum='2e4903c04f1918710566d5bca2b7b7ed6e8319aa925275040a9d9af87198cbc202b1f76b8ce0282f4423da9afb8634a14b59dd420879a188d024c5cbcf32b771' ;; 		armhf)   binArch='armv6'; checksum='93648db05fabddb8b284d952895be26700908bcd3d3a4102529dc8ca9365c11e942672b9b19b64a4ed0b08880410b388f4c89276bf83e5dd77a7c4c5049c1619' ;; 		armv7)   binArch='armv7'; checksum='ada8f06d71c088e8f6cf872c427710ae236a44cb8f18c4b0ba58663f49db8beb7a5caee18d0b23bd67a8db94fd839e5273ff9cd1b928576b4748072279cfb335' ;; 		aarch64) binArch='arm64'; checksum='33421b53b12d642f2439321cd6bb6b72e93a5585601febad051b461cfe5cac09a983ce8b2f60bc8b045ee2a583e53ce1d595123f14f4bf6ea07c5c4da07b6465' ;; 		ppc64el|ppc64le) binArch='ppc64le'; checksum='bcd738433a37d5f5a47ed668ae517adbef5cb3aa406d1e449d6ea7eb077de4c85bfb199490929d97fb3c5d1edef40d49d1a7f080f8972e5a606f783362facb24' ;; 		s390x)   binArch='s390x'; checksum='bbeb8f6e6f9dadb306e4d73f85ada7cc2c2e1d3e29ef6db16b19bef915681c83f145bf96cd9ac2f1c4d551b7a25be5c9b9c642b59136ecdb08d77b2a3a081f37' ;; 		*) echo >&2 "error: unsupported architecture ($apkArch)"; exit 1 ;;	esac; 	wget -O /tmp/caddy.tar.gz "https://github.com/caddyserver/caddy/releases/download/v2.5.1/caddy_2.5.1_linux_${binArch}.tar.gz"; 	echo "$checksum  /tmp/caddy.tar.gz" | sha512sum -c; 	tar x -z -f /tmp/caddy.tar.gz -C /usr/bin caddy; 	rm -f /tmp/caddy.tar.gz; 	chmod +x /usr/bin/caddy; 	caddy version
-# Fri, 06 May 2022 19:57:38 GMT
+# Thu, 14 Jul 2022 04:50:42 GMT
+RUN set -eux; 	mkdir -p 		/config/caddy 		/data/caddy 		/etc/caddy 		/usr/share/caddy 	; 	wget -O /etc/caddy/Caddyfile "https://github.com/caddyserver/dist/raw/979e498d6d01e1fe7c22db848a3e3bc65369183f/config/Caddyfile"; 	wget -O /usr/share/caddy/index.html "https://github.com/caddyserver/dist/raw/979e498d6d01e1fe7c22db848a3e3bc65369183f/welcome/index.html"
+# Thu, 14 Jul 2022 04:50:42 GMT
+ENV CADDY_VERSION=v2.5.2
+# Thu, 14 Jul 2022 04:50:48 GMT
+RUN set -eux; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		x86_64)  binArch='amd64'; checksum='b19eb832e341f7bdb1c6fec2333564745a38f9aa814a14e7843a1b20468e0cdc6547977d3ae5a63d687dd7b9a68f90792e228020bf2481f916d9982322361632' ;; 		armhf)   binArch='armv6'; checksum='de401bdf04f67647df89439292726c3a37d833edd7313a72fe47d45aa18c93aa6ef5b8718ffc8accb70cd356c0e62fc1a18808cd4e2de2357e80d44aef168d19' ;; 		armv7)   binArch='armv7'; checksum='3fda191727748eb23805e0e765b5794333a31c265879d7d54af6ddaa94cef14534c8ea993a231cbf94855c388a9c9a613be64260e2a8add6cc8ae230c218c59e' ;; 		aarch64) binArch='arm64'; checksum='b71a6c7961b4b7acda6ec71b70db2e8695572196a283a56eb910d3da08867e6f298c6cf34c12ebc35235f3de3bc833109596b56a3560b03ca1c3bcdb53b59372' ;; 		ppc64el|ppc64le) binArch='ppc64le'; checksum='5c98c82b64dab878fdbd158d7b162c2bdb36ea9606b1c06b0c04ee2060e6a42f169c876c70eb3558acd37e25395c3ed1764c5753ede79a9e05dbf03cef69d410' ;; 		s390x)   binArch='s390x'; checksum='7c86521e8d3e75899f91106863e46a43be3cd76b5ae63be81e735ad849182b0c08a98b7f8cdd3d975aed9b4e741ed02b42fa8435ca95d893bb00850a53b78a5c' ;; 		*) echo >&2 "error: unsupported architecture ($apkArch)"; exit 1 ;;	esac; 	wget -O /tmp/caddy.tar.gz "https://github.com/caddyserver/caddy/releases/download/v2.5.2/caddy_2.5.2_linux_${binArch}.tar.gz"; 	echo "$checksum  /tmp/caddy.tar.gz" | sha512sum -c; 	tar x -z -f /tmp/caddy.tar.gz -C /usr/bin caddy; 	rm -f /tmp/caddy.tar.gz; 	chmod +x /usr/bin/caddy; 	caddy version
+# Thu, 14 Jul 2022 04:50:49 GMT
 RUN [ ! -e /etc/nsswitch.conf ] && echo 'hosts: files dns' > /etc/nsswitch.conf
-# Fri, 06 May 2022 19:57:39 GMT
+# Thu, 14 Jul 2022 04:50:50 GMT
 ENV XDG_CONFIG_HOME=/config
-# Fri, 06 May 2022 19:57:39 GMT
+# Thu, 14 Jul 2022 04:50:50 GMT
 ENV XDG_DATA_HOME=/data
-# Fri, 06 May 2022 19:57:40 GMT
-LABEL org.opencontainers.image.version=v2.5.1
-# Fri, 06 May 2022 19:57:40 GMT
+# Thu, 14 Jul 2022 04:50:51 GMT
+LABEL org.opencontainers.image.version=v2.5.2
+# Thu, 14 Jul 2022 04:50:51 GMT
 LABEL org.opencontainers.image.title=Caddy
-# Fri, 06 May 2022 19:57:40 GMT
+# Thu, 14 Jul 2022 04:50:52 GMT
 LABEL org.opencontainers.image.description=a powerful, enterprise-ready, open source web server with automatic HTTPS written in Go
-# Fri, 06 May 2022 19:57:41 GMT
+# Thu, 14 Jul 2022 04:50:52 GMT
 LABEL org.opencontainers.image.url=https://caddyserver.com
-# Fri, 06 May 2022 19:57:41 GMT
+# Thu, 14 Jul 2022 04:50:52 GMT
 LABEL org.opencontainers.image.documentation=https://caddyserver.com/docs
-# Fri, 06 May 2022 19:57:42 GMT
+# Thu, 14 Jul 2022 04:50:53 GMT
 LABEL org.opencontainers.image.vendor=Light Code Labs
-# Fri, 06 May 2022 19:57:42 GMT
+# Thu, 14 Jul 2022 04:50:53 GMT
 LABEL org.opencontainers.image.licenses=Apache-2.0
-# Fri, 06 May 2022 19:57:42 GMT
+# Thu, 14 Jul 2022 04:50:53 GMT
 LABEL org.opencontainers.image.source=https://github.com/caddyserver/caddy-docker
-# Fri, 06 May 2022 19:57:43 GMT
+# Thu, 14 Jul 2022 04:50:54 GMT
 EXPOSE 80
-# Fri, 06 May 2022 19:57:43 GMT
+# Thu, 14 Jul 2022 04:50:54 GMT
 EXPOSE 443
-# Fri, 06 May 2022 19:57:44 GMT
+# Thu, 14 Jul 2022 04:50:55 GMT
 EXPOSE 2019
-# Fri, 06 May 2022 19:57:44 GMT
+# Thu, 14 Jul 2022 04:50:55 GMT
 WORKDIR /srv
-# Fri, 06 May 2022 19:57:44 GMT
+# Thu, 14 Jul 2022 04:50:55 GMT
 CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 ```
 
 -	Layers:
-	-	`sha256:57fb4b5f1a47c953ca5703f0f81ce14e5d01cf23aa79558b5adb961cc526e320`  
-		Last Modified: Mon, 04 Apr 2022 19:09:36 GMT  
-		Size: 2.4 MB (2424323 bytes)  
+	-	`sha256:6366ba92f08e2418e90171f1e34bd86ecd50fdc95953b3f33b8943c143518eca`  
+		Last Modified: Mon, 23 May 2022 18:59:17 GMT  
+		Size: 2.4 MB (2411648 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:03203881a2568530a735b6e0e7a40ebb79adedc5193a675807b04eeb92cc6ed1`  
-		Last Modified: Tue, 05 Apr 2022 06:35:07 GMT  
-		Size: 290.7 KB (290668 bytes)  
+	-	`sha256:7a2d2eab8b066328ae05bd108fd3d593cfea00c0c5b4a920788ae29400dfa4fc`  
+		Last Modified: Thu, 14 Jul 2022 04:52:18 GMT  
+		Size: 290.8 KB (290762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:507adf96fcab6911303d2b3d14aeb43223c106ee9901b3e31f30668a4dbd5ffb`  
-		Last Modified: Fri, 06 May 2022 19:59:02 GMT  
-		Size: 5.8 KB (5827 bytes)  
+	-	`sha256:e007f0123b4d81f10149eb27d05581180511d1b2884e9f286496e20935f56453`  
+		Last Modified: Thu, 14 Jul 2022 04:52:18 GMT  
+		Size: 5.8 KB (5835 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23435dc592c99e66d2e9f715136b809e73116ee6725847ed8fd158135e3283be`  
-		Last Modified: Fri, 06 May 2022 19:59:11 GMT  
-		Size: 13.1 MB (13114610 bytes)  
+	-	`sha256:eca35e23b17501f974f98785b56b4286fedfcb3e968b0564292daec9ecd9451e`  
+		Last Modified: Thu, 14 Jul 2022 04:52:27 GMT  
+		Size: 13.3 MB (13347758 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e55b7a8b43f4fdfecf61cea01ddddc80930ed485d9aafc41c26f84380f858f3`  
-		Last Modified: Fri, 06 May 2022 19:59:03 GMT  
+	-	`sha256:cafbc25b5d1376069d3e359ea4fb05678d63a4a0d20fdce60afc005cfbf344e9`  
+		Last Modified: Thu, 14 Jul 2022 04:52:18 GMT  
 		Size: 154.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
