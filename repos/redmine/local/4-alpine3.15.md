@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0d362221f4a9a5fa727eea3a5b16f547edff36c79e8944523328b786a8dd620c`
-- Created: `2022-06-22T02:04:53.82332527Z`
-- Virtual Size: ~ 389.97 Mb  
+- Image ID: `sha256:54f078964d84fb1dda15df6aa40976b86af9960d0eea6ce0161b456fd5775a22`
+- Created: `2022-07-12T02:41:13.004504607Z`
+- Virtual Size: ~ 390.33 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -98,16 +98,16 @@ GPL-2.0-only
 ### `apk` package: `apr`
 
 ```console
-apr-1.7.0-r0 description:
+apr-1.7.0-r1 description:
 The Apache Portable Runtime
 
-apr-1.7.0-r0 webpage:
+apr-1.7.0-r1 webpage:
 http://apr.apache.org/
 
-apr-1.7.0-r0 installed size:
+apr-1.7.0-r1 installed size:
 220 KiB
 
-apr-1.7.0-r0 license:
+apr-1.7.0-r1 license:
 Apache-2.0
 
 ```
@@ -268,16 +268,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `cairo`
 
 ```console
-cairo-1.16.0-r3 description:
+cairo-1.16.0-r5 description:
 A vector graphics library
 
-cairo-1.16.0-r3 webpage:
+cairo-1.16.0-r5 webpage:
 https://cairographics.org/
 
-cairo-1.16.0-r3 installed size:
+cairo-1.16.0-r5 installed size:
 1136 KiB
 
-cairo-1.16.0-r3 license:
+cairo-1.16.0-r5 license:
 LGPL-2.0-or-later MPL-1.1
 
 ```
@@ -285,16 +285,16 @@ LGPL-2.0-or-later MPL-1.1
 ### `apk` package: `cairo-gobject`
 
 ```console
-cairo-gobject-1.16.0-r3 description:
+cairo-gobject-1.16.0-r5 description:
 A vector graphics library (gobject bindings)
 
-cairo-gobject-1.16.0-r3 webpage:
+cairo-gobject-1.16.0-r5 webpage:
 https://cairographics.org/
 
-cairo-gobject-1.16.0-r3 installed size:
+cairo-gobject-1.16.0-r5 installed size:
 84 KiB
 
-cairo-gobject-1.16.0-r3 license:
+cairo-gobject-1.16.0-r5 license:
 LGPL-2.0-or-later MPL-1.1
 
 ```
@@ -302,16 +302,16 @@ LGPL-2.0-or-later MPL-1.1
 ### `apk` package: `cups-libs`
 
 ```console
-cups-libs-2.3.3-r5 description:
+cups-libs-2.3.3-r6 description:
 CUPS libraries
 
-cups-libs-2.3.3-r5 webpage:
+cups-libs-2.3.3-r6 webpage:
 https://www.cups.org/
 
-cups-libs-2.3.3-r5 installed size:
+cups-libs-2.3.3-r6 installed size:
 564 KiB
 
-cups-libs-2.3.3-r5 license:
+cups-libs-2.3.3-r6 license:
 GPL-2.0-only
 
 ```
@@ -347,6 +347,23 @@ expat-2.4.7-r0 installed size:
 
 expat-2.4.7-r0 license:
 MIT
+
+```
+
+### `apk` package: `findutils`
+
+```console
+findutils-4.8.0-r1 description:
+GNU utilities for finding files
+
+findutils-4.8.0-r1 webpage:
+https://www.gnu.org/software/findutils/
+
+findutils-4.8.0-r1 installed size:
+332 KiB
+
+findutils-4.8.0-r1 license:
+GPL-3.0-or-later
 
 ```
 
@@ -387,16 +404,16 @@ GPL-2.0-or-later OR LGPL-2.0-or-later
 ### `apk` package: `freetype`
 
 ```console
-freetype-2.11.1-r0 description:
+freetype-2.11.1-r2 description:
 TrueType font rendering library
 
-freetype-2.11.1-r0 webpage:
+freetype-2.11.1-r2 webpage:
 https://www.freetype.org/
 
-freetype-2.11.1-r0 installed size:
+freetype-2.11.1-r2 installed size:
 748 KiB
 
-freetype-2.11.1-r0 license:
+freetype-2.11.1-r2 license:
 FTL GPL-2.0-or-later
 
 ```
@@ -438,16 +455,16 @@ GPL-3.0-or-later
 ### `apk` package: `gdk-pixbuf`
 
 ```console
-gdk-pixbuf-2.42.6-r0 description:
+gdk-pixbuf-2.42.8-r0 description:
 GTK+ image loading library
 
-gdk-pixbuf-2.42.6-r0 webpage:
+gdk-pixbuf-2.42.8-r0 webpage:
 https://wiki.gnome.org/Projects/GdkPixbuf
 
-gdk-pixbuf-2.42.6-r0 installed size:
+gdk-pixbuf-2.42.8-r0 installed size:
 528 KiB
 
-gdk-pixbuf-2.42.6-r0 license:
+gdk-pixbuf-2.42.8-r0 license:
 LGPL-2.0-or-later
 
 ```
@@ -489,16 +506,16 @@ GPL
 ### `apk` package: `git`
 
 ```console
-git-2.34.1-r0 description:
+git-2.34.2-r0 description:
 Distributed version control system
 
-git-2.34.1-r0 webpage:
+git-2.34.2-r0 webpage:
 https://www.git-scm.com/
 
-git-2.34.1-r0 installed size:
+git-2.34.2-r0 installed size:
 10 MiB
 
-git-2.34.1-r0 license:
+git-2.34.2-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -744,16 +761,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1o-r0 description:
+libcrypto1.1-1.1.1q-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1o-r0 webpage:
+libcrypto1.1-1.1.1q-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1o-r0 installed size:
+libcrypto1.1-1.1.1q-r0 installed size:
 2676 KiB
 
-libcrypto1.1-1.1.1o-r0 license:
+libcrypto1.1-1.1.1q-r0 license:
 OpenSSL
 
 ```
@@ -761,16 +778,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.80.0-r0 description:
+libcurl-7.80.0-r2 description:
 The multiprotocol file transfer library
 
-libcurl-7.80.0-r0 webpage:
+libcurl-7.80.0-r2 webpage:
 https://curl.se/
 
-libcurl-7.80.0-r0 installed size:
+libcurl-7.80.0-r2 installed size:
 504 KiB
 
-libcurl-7.80.0-r0 license:
+libcurl-7.80.0-r2 license:
 MIT
 
 ```
@@ -778,16 +795,16 @@ MIT
 ### `apk` package: `libde265`
 
 ```console
-libde265-1.0.8-r1 description:
+libde265-1.0.8-r2 description:
 Open h.265 video codec implementation
 
-libde265-1.0.8-r1 webpage:
+libde265-1.0.8-r2 webpage:
 https://github.com/strukturag/libde265
 
-libde265-1.0.8-r1 installed size:
+libde265-1.0.8-r2 installed size:
 788 KiB
 
-libde265-1.0.8-r1 license:
+libde265-1.0.8-r2 license:
 LGPL-3.0-or-later
 
 ```
@@ -1101,16 +1118,16 @@ custom
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1o-r0 description:
+libssl1.1-1.1.1q-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1o-r0 webpage:
+libssl1.1-1.1.1q-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1o-r0 installed size:
+libssl1.1-1.1.1q-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1o-r0 license:
+libssl1.1-1.1.1q-r0 license:
 OpenSSL
 
 ```
@@ -1305,16 +1322,16 @@ MIT
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.13-r0 description:
+libxml2-2.9.14-r0 description:
 XML parsing library, version 2
 
-libxml2-2.9.13-r0 webpage:
+libxml2-2.9.14-r0 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.13-r0 installed size:
+libxml2-2.9.14-r0 installed size:
 1200 KiB
 
-libxml2-2.9.13-r0 license:
+libxml2-2.9.14-r0 license:
 MIT
 
 ```
@@ -1628,16 +1645,16 @@ BSD-3-Clause
 ### `apk` package: `pcre2`
 
 ```console
-pcre2-10.39-r0 description:
+pcre2-10.40-r0 description:
 Perl-compatible regular expression library
 
-pcre2-10.39-r0 webpage:
+pcre2-10.40-r0 webpage:
 https://pcre.org/
 
-pcre2-10.39-r0 installed size:
-652 KiB
+pcre2-10.40-r0 installed size:
+664 KiB
 
-pcre2-10.39-r0 license:
+pcre2-10.40-r0 license:
 BSD-3-Clause
 
 ```
@@ -1968,16 +1985,16 @@ Apache-2.0 BSD
 ### `apk` package: `tiff`
 
 ```console
-tiff-4.3.0-r0 description:
+tiff-4.3.0-r1 description:
 Provides support for the Tag Image File Format or TIFF
 
-tiff-4.3.0-r0 webpage:
+tiff-4.3.0-r1 webpage:
 https://gitlab.com/libtiff/libtiff
 
-tiff-4.3.0-r0 installed size:
+tiff-4.3.0-r1 installed size:
 472 KiB
 
-tiff-4.3.0-r0 license:
+tiff-4.3.0-r1 license:
 libtiff
 
 ```
