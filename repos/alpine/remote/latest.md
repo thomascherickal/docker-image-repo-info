@@ -1,7 +1,7 @@
 ## `alpine:latest`
 
 ```console
-$ docker pull alpine@sha256:afb1adf03c8e455310fe52844312457bc242d3f0fae4cf545a3cb523e6d193aa
+$ docker pull alpine@sha256:2cfdd8c4485d922251d4ef6158e80a8d5d4e6f242c167f3220900c62a2bbe275
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17,27 +17,27 @@ $ docker pull alpine@sha256:afb1adf03c8e455310fe52844312457bc242d3f0fae4cf545a3c
 ### `alpine:latest` - linux; amd64
 
 ```console
-$ docker pull alpine@sha256:4ff3ca91275773af45cb4b0834e12b7eb47d1c18f770a0b151381cd227f4c253
+$ docker pull alpine@sha256:9b2a28eb47540823042a2ba401386845089bb7b62a9637d55816132c4c3c36eb
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.8 MB (2798889 bytes)**  
+-	Total Size: **2.8 MB (2798806 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e66264b98777e12192600bf9b4d663655c98a090072e1bab49e233d7531d1294`
+-	Image ID: `sha256:d7d3d98c851ff3a95dbcb70ce09d186c9aaf7e25d48d55c0f99aae360aecfd53`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Mon, 23 May 2022 19:19:30 GMT
-ADD file:8e81116368669ed3dd361bc898d61bff249f524139a239fdaf3ec46869a39921 in / 
-# Mon, 23 May 2022 19:19:31 GMT
+# Mon, 18 Jul 2022 21:00:15 GMT
+ADD file:a2648378045615c3785c752423b1afc8dc1c2b213393344f4d0ca17e7255c1cb in / 
+# Mon, 18 Jul 2022 21:00:15 GMT
 CMD ["/bin/sh"]
 ```
 
 -	Layers:
-	-	`sha256:2408cc74d12b6cd092bb8b516ba7d5e290f485d3eb9672efc00f0583730179e8`  
-		Last Modified: Mon, 23 May 2022 19:09:38 GMT  
-		Size: 2.8 MB (2798889 bytes)  
+	-	`sha256:530afca65e2ea04227630ae746e0c85b2bd1a179379cbf2b6501b49c4cab2ccc`  
+		Last Modified: Mon, 18 Jul 2022 19:09:35 GMT  
+		Size: 2.8 MB (2798806 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `alpine:latest` - linux; arm variant v6
@@ -121,27 +121,27 @@ CMD ["/bin/sh"]
 ### `alpine:latest` - linux; 386
 
 ```console
-$ docker pull alpine@sha256:72af6266bafde8c78d5f20a2a85d0576533ce1ecd6ed8bcf7baf62a743f3b24d
+$ docker pull alpine@sha256:46182ff9ace07d20688dc0202a78a4587eaa9c43bc904b13bf44d51a4c831b04
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.8 MB (2801887 bytes)**  
+-	Total Size: **2.8 MB (2802334 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a9cf34276208f96ac1b1df0261e9b57cd830dce0d69baacc06d9734b16e9b0af`
+-	Image ID: `sha256:8eec60684cf43b278a147d142e3f654ff2a4c15d88e97352dc6efffdf0a69d39`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Mon, 23 May 2022 19:38:20 GMT
-ADD file:1750ccfabfe93636015070d51a6e824cbd738056223421c69d8aaabc38041b18 in / 
-# Mon, 23 May 2022 19:38:20 GMT
+# Mon, 18 Jul 2022 20:38:19 GMT
+ADD file:be69b7550bf861d8fb12bdbe1edf3a0d2519a6a4da61bd04858b6258ffbf48a7 in / 
+# Mon, 18 Jul 2022 20:38:19 GMT
 CMD ["/bin/sh"]
 ```
 
 -	Layers:
-	-	`sha256:bb638a3869eed698f88775c7a48f36f8e22e7c6bbaa98fa1d5678966b619b859`  
-		Last Modified: Mon, 23 May 2022 19:09:25 GMT  
-		Size: 2.8 MB (2801887 bytes)  
+	-	`sha256:5d7f927419794ebb7496ac38b0659686317b2d2fac7252a4a0d40d43d5fdd662`  
+		Last Modified: Mon, 18 Jul 2022 19:09:22 GMT  
+		Size: 2.8 MB (2802334 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `alpine:latest` - linux; ppc64le
@@ -173,25 +173,25 @@ CMD ["/bin/sh"]
 ### `alpine:latest` - linux; s390x
 
 ```console
-$ docker pull alpine@sha256:83167bc8418071fc178d191ed604f44792c94ad3c3ac26350c29d2445f6a9644
+$ docker pull alpine@sha256:e9c5c561a656253e9ed0a148ad1150e3424afff416f85c1bbea2b1701ba04896
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.6 MB (2580494 bytes)**  
+-	Total Size: **2.6 MB (2580798 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:167aa1543edcfc961f880fb6092f1e97d6bc6d071e3452235989f02d162e3a42`
+-	Image ID: `sha256:29839258e1f9ea053ebf93eb119d1dc43dc18025de3801c2d6b0e596bacbe629`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Mon, 23 May 2022 19:41:59 GMT
-ADD file:e1852d8ef555a0d3ef6d0b74a898720c82bb9f491430b06a0dd0499497ce118e in / 
-# Mon, 23 May 2022 19:42:10 GMT
+# Mon, 18 Jul 2022 20:41:35 GMT
+ADD file:deaa573cd61e07709846a5300fb627a8610e9754129c085ed483ff8897d0c002 in / 
+# Mon, 18 Jul 2022 20:41:36 GMT
 CMD ["/bin/sh"]
 ```
 
 -	Layers:
-	-	`sha256:af1ac1a73384e058591d04d19bc05a06781cc32d52d4593b468d6cb95eda9858`  
-		Last Modified: Mon, 23 May 2022 19:43:36 GMT  
-		Size: 2.6 MB (2580494 bytes)  
+	-	`sha256:5f1840d5bacf4162a87f497e22d94bce946e660bdfce8eeefcbf7bd0beb193f3`  
+		Last Modified: Mon, 18 Jul 2022 20:42:36 GMT  
+		Size: 2.6 MB (2580798 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
