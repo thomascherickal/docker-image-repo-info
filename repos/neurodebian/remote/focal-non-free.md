@@ -1,7 +1,7 @@
 ## `neurodebian:focal-non-free`
 
 ```console
-$ docker pull neurodebian@sha256:7ae6f8dff41c0235b6d27fe78cf4eee3d754c98a9c9821f36e77236dc925f552
+$ docker pull neurodebian@sha256:2d3ad18734a302f3f3815be177ae676f958160c28924d33c5a205de2b946c4e1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull neurodebian@sha256:7ae6f8dff41c0235b6d27fe78cf4eee3d754c98a9c9821f
 ### `neurodebian:focal-non-free` - linux; amd64
 
 ```console
-$ docker pull neurodebian@sha256:108c69cf6392b3d1b949af39953aacd1021687c93fcc3d623c3bd99e152e1dc0
+$ docker pull neurodebian@sha256:d6f739b05d164ca5be2b2511cf60e25bcb23efd5a78ce26d1bb3319b9ffcc34c
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **34.3 MB (34302386 bytes)**  
+-	Total Size: **34.3 MB (34302389 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3a3385e084c1283d64781c31064f68f3d3d259a6048ea0f3ae14b523fc4abcde`
+-	Image ID: `sha256:803fee17c7f05ad599180d58ebbab9433e04965c63754c3ec599aa7976d94324`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -34,8 +34,8 @@ RUN set -x 	&& export GNUPGHOME="$(mktemp -d)" 	&& gpg --batch --keyserver keyse
 RUN { 	echo 'deb http://neuro.debian.net/debian focal main'; 	echo 'deb http://neuro.debian.net/debian data main'; 	echo '#deb-src http://neuro.debian.net/debian-devel focal main'; } > /etc/apt/sources.list.d/neurodebian.sources.list
 # Tue, 07 Jun 2022 00:37:42 GMT
 RUN set -x 	&& apt-get update 	&& apt-get install -y --no-install-recommends neurodebian-freeze eatmydata 	&& ln -s /usr/bin/eatmydata /usr/local/bin/apt-get 	&& rm -rf /var/lib/apt/lists/*
-# Tue, 07 Jun 2022 00:37:45 GMT
-RUN sed -i -e 's,main *$,main contrib non-free,g' /etc/apt/sources.list.d/neurodebian.sources.list; grep -q 'deb .* multiverse$' /etc/apt/sources.list || sed -i -e 's,universe *$,universe multiverse,g' /etc/apt/sources.list
+# Tue, 19 Jul 2022 19:53:47 GMT
+RUN [ -e /etc/apt/sources.list.d/debian.sources ] && srcs=/etc/apt/sources.list.d/debian.sources || srcs=/etc/apt/sources.list; sed -i -e 's,main *$,main contrib non-free,g' /etc/apt/sources.list.d/neurodebian.sources.list; grep -q 'deb .* multiverse$' $srcs || sed -i -e 's,universe *$,universe multiverse,g' $srcs
 ```
 
 -	Layers:
@@ -59,7 +59,7 @@ RUN sed -i -e 's,main *$,main contrib non-free,g' /etc/apt/sources.list.d/neurod
 		Last Modified: Tue, 07 Jun 2022 00:39:46 GMT  
 		Size: 238.5 KB (238469 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:22c25ef9a1e3a54caf76ffdf6eae063350a823350aed154a1ef78ae1b1fd8eea`  
-		Last Modified: Tue, 07 Jun 2022 00:39:56 GMT  
-		Size: 255.0 B  
+	-	`sha256:d0d6f776983a53733357056b8c3f0bb3d8c88233ac5bcdd066f235654248c921`  
+		Last Modified: Tue, 19 Jul 2022 19:56:52 GMT  
+		Size: 258.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
