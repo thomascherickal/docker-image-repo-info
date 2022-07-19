@@ -1,10 +1,10 @@
-# `gradle:7.4.2-jdk11-focal`
+# `gradle:7.5.0-jdk11-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:eac159c463a94ef8a4430e3d09d3bbab6fa0d99b66c232058525a07290818bd5`
-- Created: `2022-06-07T04:19:57.559527018Z`
-- Virtual Size: ~ 758.99 Mb  
+- Image ID: `sha256:4b75487e513f08089801c84d2c1990b612726266dcabd6342d38a68f23d869b9`
+- Created: `2022-07-15T16:21:17.194194946Z`
+- Virtual Size: ~ 764.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk-11.0.15+10`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GRADLE_HOME=/opt/gradle`
-  - `GRADLE_VERSION=7.4.2`
+  - `GRADLE_VERSION=7.5`
 
 ## `dpkg` (`.deb`-based packages)
 

@@ -1,10 +1,10 @@
-# `gradle:7.4.2-jdk18-alpine`
+# `gradle:7.5.0-jdk18-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:130ee9fc259e468649745d3223e1d5ce6df152d7ab87c5f7c0dd7c74f197e92a`
-- Created: `2022-06-21T20:52:58.382813358Z`
-- Virtual Size: ~ 564.49 Mb  
+- Image ID: `sha256:dd5f7c5db68c82b9bf901132658630c824241c9f2048c9b8a4aa26039c8e4094`
+- Created: `2022-07-19T05:00:52.049262514Z`
+- Virtual Size: ~ 569.57 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -16,23 +16,23 @@
   - `JAVA_VERSION=jdk-18.0.1+10`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GRADLE_HOME=/opt/gradle`
-  - `GRADLE_VERSION=7.4.2`
+  - `GRADLE_VERSION=7.5`
 
 ## `apk` (`.apk`-based packages)
 
 ### `apk` package: `alpine-baselayout`
 
 ```console
-alpine-baselayout-3.2.0-r20 description:
+alpine-baselayout-3.2.0-r22 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-3.2.0-r20 webpage:
+alpine-baselayout-3.2.0-r22 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-3.2.0-r20 installed size:
+alpine-baselayout-3.2.0-r22 installed size:
 340 KiB
 
-alpine-baselayout-3.2.0-r20 license:
+alpine-baselayout-3.2.0-r22 license:
 GPL-2.0-only
 
 ```
@@ -40,16 +40,16 @@ GPL-2.0-only
 ### `apk` package: `alpine-baselayout-data`
 
 ```console
-alpine-baselayout-data-3.2.0-r20 description:
+alpine-baselayout-data-3.2.0-r22 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-data-3.2.0-r20 webpage:
+alpine-baselayout-data-3.2.0-r22 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-data-3.2.0-r20 installed size:
+alpine-baselayout-data-3.2.0-r22 installed size:
 72 KiB
 
-alpine-baselayout-data-3.2.0-r20 license:
+alpine-baselayout-data-3.2.0-r22 license:
 GPL-2.0-only
 
 ```
@@ -142,16 +142,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.35.0-r13 description:
+busybox-1.35.0-r15 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.35.0-r13 webpage:
+busybox-1.35.0-r15 webpage:
 https://busybox.net/
 
-busybox-1.35.0-r13 installed size:
+busybox-1.35.0-r15 installed size:
 936 KiB
 
-busybox-1.35.0-r13 license:
+busybox-1.35.0-r15 license:
 GPL-2.0-only
 
 ```
@@ -227,16 +227,16 @@ GPL-3.0-or-later
 ### `apk` package: `git`
 
 ```console
-git-2.36.1-r0 description:
+git-2.36.2-r0 description:
 Distributed version control system
 
-git-2.36.1-r0 webpage:
+git-2.36.2-r0 webpage:
 https://www.git-scm.com/
 
-git-2.36.1-r0 installed size:
+git-2.36.2-r0 installed size:
 10 MiB
 
-git-2.36.1-r0 license:
+git-2.36.2-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -295,16 +295,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1o-r0 description:
+libcrypto1.1-1.1.1q-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1o-r0 webpage:
+libcrypto1.1-1.1.1q-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1o-r0 installed size:
+libcrypto1.1-1.1.1q-r0 installed size:
 2708 KiB
 
-libcrypto1.1-1.1.1o-r0 license:
+libcrypto1.1-1.1.1q-r0 license:
 OpenSSL
 
 ```
@@ -312,16 +312,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r1 description:
+libcurl-7.83.1-r2 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r1 webpage:
+libcurl-7.83.1-r2 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r1 installed size:
-508 KiB
+libcurl-7.83.1-r2 installed size:
+512 KiB
 
-libcurl-7.83.1-r1 license:
+libcurl-7.83.1-r2 license:
 curl
 
 ```
@@ -397,16 +397,16 @@ custom
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1o-r0 description:
+libssl1.1-1.1.1q-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1o-r0 webpage:
+libssl1.1-1.1.1q-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1o-r0 installed size:
+libssl1.1-1.1.1q-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1o-r0 license:
+libssl1.1-1.1.1q-r0 license:
 OpenSSL
 
 ```
@@ -720,16 +720,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.35.0-r13 description:
+ssl_client-1.35.0-r15 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.35.0-r13 webpage:
+ssl_client-1.35.0-r15 webpage:
 https://busybox.net/
 
-ssl_client-1.35.0-r13 installed size:
+ssl_client-1.35.0-r15 installed size:
 28 KiB
 
-ssl_client-1.35.0-r13 license:
+ssl_client-1.35.0-r15 license:
 GPL-2.0-only
 
 ```

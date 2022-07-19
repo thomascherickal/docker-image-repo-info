@@ -1,10 +1,10 @@
-# `gradle:7.4.2-jdk17`
+# `gradle:7.5.0-jdk17`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8f353b28631ebda262f46c6af6f33f2a22620c5ed1a2dfdd98df9b01cd350cd5`
-- Created: `2022-06-07T04:20:24.202120942Z`
-- Virtual Size: ~ 742.43 Mb  
+- Image ID: `sha256:e5fa4fb86cdbd1217c342abcfe49af853f2b544e2844398b5e3062526fab616c`
+- Created: `2022-07-15T16:21:46.885728179Z`
+- Virtual Size: ~ 747.51 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk-17.0.3+7`
   - `JAVA_HOME=/opt/java/openjdk`
   - `GRADLE_HOME=/opt/gradle`
-  - `GRADLE_VERSION=7.4.2`
+  - `GRADLE_VERSION=7.5`
 
 ## `dpkg` (`.deb`-based packages)
 
