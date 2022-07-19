@@ -1,7 +1,7 @@
 ## `registry:latest`
 
 ```console
-$ docker pull registry@sha256:ebc53f9f14ed43adb80d177bb822b27d93fe8b649ca554f00cce77342ab332d2
+$ docker pull registry@sha256:08315bc56c3abc8ab22e5cfec3e9efaeb19ee90fc2acc83ac9bc1d0cfcebea53
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -252,59 +252,59 @@ CMD ["/etc/docker/registry/config.yml"]
 ### `registry:latest` - linux; ppc64le
 
 ```console
-$ docker pull registry@sha256:65c58d886bec80f756a35fafda7db3125d15c637f668d47241c52d4f121c0bac
+$ docker pull registry@sha256:dc18f6c9556da6972aba43f3b89726695fad9ee5d86fc6fa5928cbf3428987e0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **8.4 MB (8379833 bytes)**  
+-	Total Size: **8.4 MB (8380028 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bb72baeec00ca7a92e86d101e0fd7897e0ecc41585ac4601856bb237b703395f`
+-	Image ID: `sha256:f3f56c0e101edf5d945dbfc91160993a67a2c1e1fc2613ed0d9bef8b2b29ad57`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["\/etc\/docker\/registry\/config.yml"]`
 
 ```dockerfile
-# Mon, 23 May 2022 19:16:51 GMT
-ADD file:6a5450c8a7cee3ceda59e7cb350c54df4139b0f7b7cf49c8b31bb9c01646c3cd in / 
-# Mon, 23 May 2022 19:16:53 GMT
+# Mon, 18 Jul 2022 21:29:30 GMT
+ADD file:69e4080f15f54e2d8f8aa25fdcba9c01dde149d43592edd5023106675e54a769 in / 
+# Mon, 18 Jul 2022 21:29:31 GMT
 CMD ["/bin/sh"]
-# Wed, 25 May 2022 00:17:40 GMT
+# Tue, 19 Jul 2022 01:03:26 GMT
 RUN apk add --no-cache ca-certificates
-# Thu, 26 May 2022 21:30:29 GMT
+# Tue, 19 Jul 2022 08:42:40 GMT
 RUN set -eux; 	version='2.8.1'; 	apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		x86_64)  arch='amd64';   sha256='f1a376964912a5fd7d588107ebe5185da77803244e15476d483c945959347ee2' ;; 		aarch64) arch='arm64';   sha256='4c588c8e62c9a84f1eecfba4c842fe363b91be87fd42e3b5dac45148a2f46c52' ;; 		armhf)   arch='armv6';   sha256='d711b3b6e77f3acc7c89fad9310413ef145751ac702627dc1fa89991bf3b6104' ;; 		armv7)   arch='armv7';   sha256='d2f2180c1a847056f9c5dcfd1d6fda4c6086d126204541e0ed047c04f30a0f91' ;; 		ppc64le) arch='ppc64le'; sha256='ca77cdfb7b1415869558c118b5e783bb9d695a74d8426a0bd8d8a39beb23fb85' ;; 		s390x)   arch='s390x';   sha256='3e505af15c562870869441d5d1f79988c3c666b9a4370894ecf2f064860b48ba' ;; 		*) echo >&2 "error: unsupported architecture: $apkArch"; exit 1 ;; 	esac; 	wget -O registry.tar.gz "https://github.com/distribution/distribution/releases/download/v${version}/registry_${version}_linux_${arch}.tar.gz"; 	echo "$sha256 *registry.tar.gz" | sha256sum -c -; 	tar --extract --verbose --file registry.tar.gz --directory /bin/ registry; 	rm registry.tar.gz; 	registry --version
-# Thu, 26 May 2022 21:30:31 GMT
+# Tue, 19 Jul 2022 08:42:41 GMT
 COPY file:4544cc1555469403b322faecc1cf1ca584667c43a6a60b17300f97840c04196e in /etc/docker/registry/config.yml 
-# Thu, 26 May 2022 21:30:35 GMT
+# Tue, 19 Jul 2022 08:42:43 GMT
 VOLUME [/var/lib/registry]
-# Thu, 26 May 2022 21:30:38 GMT
+# Tue, 19 Jul 2022 08:42:45 GMT
 EXPOSE 5000
-# Thu, 26 May 2022 21:30:41 GMT
+# Tue, 19 Jul 2022 08:42:46 GMT
 COPY file:507caa54f88c1f3862e5876e09a108b2083630ba24c57ad124e356a2de861d62 in /entrypoint.sh 
-# Thu, 26 May 2022 21:30:43 GMT
+# Tue, 19 Jul 2022 08:42:47 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 26 May 2022 21:30:47 GMT
+# Tue, 19 Jul 2022 08:42:50 GMT
 CMD ["/etc/docker/registry/config.yml"]
 ```
 
 -	Layers:
-	-	`sha256:d3deabf2a506ef6f5fa7c2a68bf27047574cef9908b30a97ff2d01ae539b089a`  
-		Last Modified: Mon, 23 May 2022 19:09:13 GMT  
-		Size: 2.8 MB (2789745 bytes)  
+	-	`sha256:602896d442490cd3fbb6599f0f862d3673b7cd58eca3ac842b8e09bf8d012443`  
+		Last Modified: Mon, 18 Jul 2022 19:09:09 GMT  
+		Size: 2.8 MB (2789923 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:211c1f83aeafafff903bb460e7e24594fe138ebceeb1b56e898cf0158ea3daaf`  
-		Last Modified: Wed, 25 May 2022 00:27:59 GMT  
-		Size: 274.2 KB (274180 bytes)  
+	-	`sha256:5dcda94049ea115f72169a8fd00bff1a129fc315d792187450fb9b211ed81f56`  
+		Last Modified: Tue, 19 Jul 2022 01:16:34 GMT  
+		Size: 274.2 KB (274196 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9b1926b73161fa2aede0ca1a5c8f92af3be254e02f7ba196e2516fdc56ca52a0`  
-		Last Modified: Thu, 26 May 2022 21:31:10 GMT  
-		Size: 5.3 MB (5315295 bytes)  
+	-	`sha256:640a18ddeed25f43afc2225c0dea4636b684bc60365050b2dacfe40758e83c0c`  
+		Last Modified: Tue, 19 Jul 2022 08:43:14 GMT  
+		Size: 5.3 MB (5315296 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6f8fc1cc84308b80491c18a2ed88c621451fedeac5dc6b9eacefd9cb70a5ccfd`  
-		Last Modified: Thu, 26 May 2022 21:31:09 GMT  
+	-	`sha256:698006f4a7f2f14e31184a0d5301a3b0d0a180620e0ea963feee723263b1ac58`  
+		Last Modified: Tue, 19 Jul 2022 08:43:13 GMT  
 		Size: 399.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05720f6f9b55b022c9479dd7740a7b7ece91061448bbbf16f74b2328165519dd`  
-		Last Modified: Thu, 26 May 2022 21:31:09 GMT  
+	-	`sha256:140b89acc7fd65e50ba65bea305203310e9fddb5e7fcdd5a512f19eb11d93f6e`  
+		Last Modified: Tue, 19 Jul 2022 08:43:13 GMT  
 		Size: 214.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
