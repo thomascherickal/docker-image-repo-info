@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3c6900495e5ec0505ec766fafa701833ef4c9c896bf6c071ccb2f3dbd61d32ef`
-- Created: `2022-07-08T01:46:15.213551219Z`
-- Virtual Size: ~ 204.92 Mb  
+- Image ID: `sha256:0fceff2f1f6941f14859457b4c6aa44d431643c61da4756d71e38429baf3d619`
+- Created: `2022-07-19T05:25:31.20789986Z`
+- Virtual Size: ~ 199.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -183,16 +183,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.35.0-r14 description:
+busybox-1.35.0-r15 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.35.0-r14 webpage:
+busybox-1.35.0-r15 webpage:
 https://busybox.net/
 
-busybox-1.35.0-r14 installed size:
+busybox-1.35.0-r15 installed size:
 936 KiB
 
-busybox-1.35.0-r14 license:
+busybox-1.35.0-r15 license:
 GPL-2.0-only
 
 ```
@@ -302,16 +302,16 @@ GPL-3.0-or-later
 ### `apk` package: `git`
 
 ```console
-git-2.36.1-r0 description:
+git-2.36.2-r0 description:
 Distributed version control system
 
-git-2.36.1-r0 webpage:
+git-2.36.2-r0 webpage:
 https://www.git-scm.com/
 
-git-2.36.1-r0 installed size:
+git-2.36.2-r0 installed size:
 10 MiB
 
-git-2.36.1-r0 license:
+git-2.36.2-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -1016,16 +1016,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.35.0-r14 description:
+ssl_client-1.35.0-r15 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.35.0-r14 webpage:
+ssl_client-1.35.0-r15 webpage:
 https://busybox.net/
 
-ssl_client-1.35.0-r14 installed size:
+ssl_client-1.35.0-r15 installed size:
 28 KiB
 
-ssl_client-1.35.0-r14 license:
+ssl_client-1.35.0-r15 license:
 GPL-2.0-only
 
 ```
