@@ -1,12 +1,13 @@
 ## `neurodebian:focal-non-free`
 
 ```console
-$ docker pull neurodebian@sha256:2d3ad18734a302f3f3815be177ae676f958160c28924d33c5a205de2b946c4e1
+$ docker pull neurodebian@sha256:b60119dbbbdcb9505f7bfd30c904f7a7bfba07d62a060d14a837d1ffd32775c5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Platforms: 2
 	-	linux; amd64
+	-	linux; arm64 variant v8
 
 ### `neurodebian:focal-non-free` - linux; amd64
 
@@ -62,4 +63,60 @@ RUN [ -e /etc/apt/sources.list.d/debian.sources ] && srcs=/etc/apt/sources.list.
 	-	`sha256:d0d6f776983a53733357056b8c3f0bb3d8c88233ac5bcdd066f235654248c921`  
 		Last Modified: Tue, 19 Jul 2022 19:56:52 GMT  
 		Size: 258.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `neurodebian:focal-non-free` - linux; arm64 variant v8
+
+```console
+$ docker pull neurodebian@sha256:ef6cd21d38c396404545c518b84b7402f8ca6d5d8427357b722249e3e583a720
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **32.9 MB (32851140 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:7d488aa8e612b81c5c22c14a2466d8a0ff0bcddab07784011aabeaa1fc0015f4`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Tue, 07 Jun 2022 01:25:15 GMT
+ADD file:8bb0809a8ac8e978274cf731cff7529372088d22c5b0233a28f01ef414aefbca in / 
+# Tue, 07 Jun 2022 01:25:16 GMT
+CMD ["bash"]
+# Tue, 19 Jul 2022 20:04:11 GMT
+RUN set -x 	&& apt-get update 	&& { 		which gpg 		|| apt-get install -y --no-install-recommends gnupg 	; } 	&& { 		gpg --version | grep -q '^gpg (GnuPG) 1\.' 		|| apt-get install -y --no-install-recommends dirmngr 	; } 	&& rm -rf /var/lib/apt/lists/*
+# Tue, 19 Jul 2022 20:04:12 GMT
+RUN set -x 	&& export GNUPGHOME="$(mktemp -d)" 	&& gpg --batch --keyserver keyserver.ubuntu.com --recv-keys DD95CC430502E37EF840ACEEA5D32F012649A5A9 	&& gpg --batch --export DD95CC430502E37EF840ACEEA5D32F012649A5A9 > /etc/apt/trusted.gpg.d/neurodebian.gpg 	&& rm -rf "$GNUPGHOME" 	&& apt-key list | grep neurodebian
+# Tue, 19 Jul 2022 20:04:13 GMT
+RUN { 	echo 'deb http://neuro.debian.net/debian focal main'; 	echo 'deb http://neuro.debian.net/debian data main'; 	echo '#deb-src http://neuro.debian.net/debian-devel focal main'; } > /etc/apt/sources.list.d/neurodebian.sources.list
+# Tue, 19 Jul 2022 21:49:17 GMT
+RUN set -x 	&& apt-get update 	&& apt-get install -y --no-install-recommends neurodebian-freeze eatmydata 	&& ln -s /usr/bin/eatmydata /usr/local/bin/apt-get 	&& rm -rf /var/lib/apt/lists/*
+# Tue, 19 Jul 2022 21:49:24 GMT
+RUN [ -e /etc/apt/sources.list.d/debian.sources ] && srcs=/etc/apt/sources.list.d/debian.sources || srcs=/etc/apt/sources.list; sed -i -e 's,main *$,main contrib non-free,g' /etc/apt/sources.list.d/neurodebian.sources.list; grep -q 'deb .* multiverse$' $srcs || sed -i -e 's,universe *$,universe multiverse,g' $srcs
+```
+
+-	Layers:
+	-	`sha256:11e23ac719b33170b39b7e30b8027dc09c9cbad6b503b2b6b3ebbd9d33f4adad`  
+		Last Modified: Thu, 02 Jun 2022 08:33:07 GMT  
+		Size: 27.2 MB (27191210 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7f844bb99aa2e4fa579437799b295770ff82b7fb5797667cf1beb0a6cca92852`  
+		Last Modified: Tue, 19 Jul 2022 21:52:10 GMT  
+		Size: 5.6 MB (5552474 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fd8cad31e15b623727fdfb71d15359869974fc95f5b05fb03824ecba13eb48c6`  
+		Last Modified: Tue, 19 Jul 2022 21:52:09 GMT  
+		Size: 1.7 KB (1746 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:79973221c34a49459944b984499ec335871d2f94197eadd35121751d139844fc`  
+		Last Modified: Tue, 19 Jul 2022 21:52:09 GMT  
+		Size: 244.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:45dc50b9011c6f0af0f8e8dcbc76083f289067c5c6f3dab5572dd6c19822f898`  
+		Last Modified: Tue, 19 Jul 2022 21:52:09 GMT  
+		Size: 105.2 KB (105210 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:385a3e9f10cee0e57fa5ab54c857c70e8857576e2e4fe7edc5bfc58a354d047d`  
+		Last Modified: Tue, 19 Jul 2022 21:52:20 GMT  
+		Size: 256.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
