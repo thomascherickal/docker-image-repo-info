@@ -1536,19 +1536,9 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
 - `Public-Domain`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris freetype=2.10.1-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1-2ubuntu0.1.dsc' freetype_2.10.1-2ubuntu0.1.dsc 3556 SHA512:dc45a1f920cdee10c2b2a6d400d05d089b8467f1f9fa6eca5be61e75567acd58b17c7e2ac1d6faec9ff5edee38cb3489323709231506264bc6d1a9f4a20fe2ac
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2demos.tar.gz' freetype_2.10.1.orig-ft2demos.tar.gz 305328 SHA512:67b9dc1c03ca5588a53edd8b9cb7f27e5b52a5730add6887e6af776176ab66099bfe4a9e69d036511d32ae2f96e822a71a3c9213f1adfcc6fa45be81adf56f77
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2demos.tar.gz.asc' freetype_2.10.1.orig-ft2demos.tar.gz.asc 195 SHA512:8279e9e7ea4da030db388ac5960808d652553b97dc65bc517ebcae90834188d75101fbe29d334a0e2b0a17a723c7121ac28b1f14bab0bf29ec4c9c6df6575a67
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2docs.tar.gz' freetype_2.10.1.orig-ft2docs.tar.gz 2123885 SHA512:05dbe26c291d3fa39c167f3aa5d8da0f3d3992f8e7ec74e936547b3feb17c1a59753a111fc33b2edce12ed991c61161c0ef7084b91c770d73c4679b62edd5b2f
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig-ft2docs.tar.gz.asc' freetype_2.10.1.orig-ft2docs.tar.gz.asc 195 SHA512:48e283c72d808901b9754bb20242d493628610326f3492c6d1aa35fcdffffd4ec320f589d18442735cfc6cda7238399f4f339d58e4a536da46e2b5a13864972e
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig.tar.gz' freetype_2.10.1.orig.tar.gz 3478158 SHA512:346c682744bcf06ca9d71265c108a242ad7d78443eff20142454b72eef47ba6d76671a6e931ed4c4c9091dd8f8515ebdd71202d94b073d77931345ff93cfeaa7
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1.orig.tar.gz.asc' freetype_2.10.1.orig.tar.gz.asc 195 SHA512:2a2750605d0fd11fbfe4f76d47ccd8e300473c3043b28a5c46f4f628e1da2c2f2308ee4f1b1b585daaf2c4b408718ee68eab6c5411e993ad9f95b08c35248178
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.10.1-2ubuntu0.1.debian.tar.xz' freetype_2.10.1-2ubuntu0.1.debian.tar.xz 115576 SHA512:c24138956061abdb0c22ade45eb5ef4daa24f798310691701525face08fe372d3e32d5000cc1f078acc733da40623cc061a7ab84dab64c649f484c840b110593
-```
 
 ### `dpkg` source package: `freexl=1.0.5-3`
 
@@ -2406,14 +2396,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-msgs5/copyright`, `/usr/shar
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-msgs5=5.9.0-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.9.0-1%7efocal.dsc' ignition-msgs5_5.9.0-1~focal.dsc 1305 SHA256:7ac56d239d74691d21a3d0a2bfabe066314d011f23876ba9188d6d714ca94adc
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.9.0.orig.tar.bz2' ignition-msgs5_5.9.0.orig.tar.bz2 266225 SHA256:42f7cb0afa62130f0e1a45a0bf8be7b633594152257fc8dfa72d6d5dd13770f4
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.9.0-1%7efocal.debian.tar.xz' ignition-msgs5_5.9.0-1~focal.debian.tar.xz 2060 SHA256:982f24c21afd68c4dffa06595f46e305a9d5a959f8c0f29c47038b895c5f01fd
-```
 
 ### `dpkg` source package: `ignition-tools=1.4.1-1~focal`
 

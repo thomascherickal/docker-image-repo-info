@@ -1347,14 +1347,9 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
 - `GZip`
 - `OpenGroup-BSD-like`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris freetype=2.8.1-2ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.8.1-2ubuntu2.1.dsc' freetype_2.8.1-2ubuntu2.1.dsc 1951 SHA512:90e7186c8550b7daceb1adfa35059ea8c08672d01a65f800a63edeabc328fb9f74d66e8d330288c7f97c2751862dc23e5c9cb7a62299a1463d8541a7ae2eafab
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.8.1.orig.tar.gz' freetype_2.8.1.orig.tar.gz 4242784 SHA512:60164caefc506c096142a05e4b578f48d65350fca3082527cd421ed5d0b9671c1123c2303b50ea09dc204288d6d4cbb548a761f67bd8260220f2c83b8f144d42
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.8.1-2ubuntu2.1.diff.gz' freetype_2.8.1-2ubuntu2.1.diff.gz 44970 SHA512:f3906b19118934019b61afa47f7be110fa56815cebe3d08fc82990c6eb9228e2ed43f0767bdb38d313a1e04217fe5d543f7efc7539437d197666e80462332525
-```
 
 ### `dpkg` source package: `freexl=1.0.5-1`
 
@@ -2220,14 +2215,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-msgs5/copyright`, `/usr/shar
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-msgs5=5.9.0-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.9.0-1%7ebionic.dsc' ignition-msgs5_5.9.0-1~bionic.dsc 1309 SHA256:c7a8b570f540f246570283ca5c03320f75455642f9874b4a318fe4f29b13e572
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.9.0.orig.tar.bz2' ignition-msgs5_5.9.0.orig.tar.bz2 266225 SHA256:42f7cb0afa62130f0e1a45a0bf8be7b633594152257fc8dfa72d6d5dd13770f4
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.9.0-1%7ebionic.debian.tar.xz' ignition-msgs5_5.9.0-1~bionic.debian.tar.xz 2160 SHA256:6fffb9967f07d264d92dad5d8d9969f1b6950e490c3eb6b208342b4fd2a88fdb
-```
 
 ### `dpkg` source package: `ignition-tools=1.4.1-1~bionic`
 
