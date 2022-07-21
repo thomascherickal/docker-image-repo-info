@@ -2,20 +2,18 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7e0519e0206c827d5a39eae8e1d079b05224036ea9eef4932fb96d1ac9fdce23`
-- Created: `2022-07-12T17:01:03.051668498Z`
-- Virtual Size: ~ 581.37 Mb  
+- Image ID: `sha256:a13c3aeb2f91c6f25ae6e259ab233b649b7a52b7b76e031d84acb3b337ef641a`
+- Created: `2022-07-19T16:57:47.359621212Z`
+- Virtual Size: ~ 556.51 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","-g","--","/startup/docker-entrypoint.sh"]`
 - Command: `["neo4j"]`
 - Environment:
-  - `PATH=/var/lib/neo4j/bin:/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `JAVA_HOME=/usr/local/openjdk-11`
-  - `LANG=C.UTF-8`
-  - `JAVA_VERSION=11.0.15`
-  - `NEO4J_SHA256=34c8ce7edc2ab9f63a204f74f37621cac3427f12b0aef4c6ef47eaf4c2b90d66`
-  - `NEO4J_TARBALL=neo4j-community-4.4.8-unix.tar.gz`
+  - `PATH=/var/lib/neo4j/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `JAVA_HOME=/opt/java/openjdk`
+  - `NEO4J_SHA256=4ee12a98d2dd819d6f08408429014b65264097a812ba5978c14836d6bbccb4a0`
+  - `NEO4J_TARBALL=neo4j-community-4.4.9-unix.tar.gz`
   - `NEO4J_EDITION=community`
   - `NEO4J_HOME=/var/lib/neo4j`
 
@@ -1650,10 +1648,8 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libp11-kit0:amd64=0.23.22-1`
-- `p11-kit=0.23.22-1`
-- `p11-kit-modules:amd64=0.23.22-1`
 
-Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`, `/usr/share/doc/p11-kit/copyright`, `/usr/share/doc/p11-kit-modules/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 
 - `BSD-3-Clause`
 - `ISC`
