@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e4763f90a405bf63daed0435933c43c39b39f71793a896d5ed656d45e8fb9242`
-- Created: `2022-03-16T17:27:29.189011909Z`
+- Image ID: `sha256:034c4860f282209b4ea6a5dfd24af70a0307b7664484b8a5bb97070973e934e1`
+- Created: `2022-07-19T19:53:37.675398437Z`
 - Virtual Size: ~ 135.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -975,13 +975,9 @@ Licenses: (parsed from: `/usr/share/doc/neurodebian-freeze/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris neurodebian=0.41.0~nd16.04+1
-'http://neuro.debian.net/debian/pool/main/n/neurodebian/neurodebian_0.41.0%7end16.04%2b1.dsc' neurodebian_0.41.0~nd16.04+1.dsc 1543 SHA256:0096cb37f37dcc48093e12d2de4f367efc2ac9846a3cc97ea97c0adcdf64360f
-'http://neuro.debian.net/debian/pool/main/n/neurodebian/neurodebian_0.41.0%7end16.04%2b1.tar.xz' neurodebian_0.41.0~nd16.04+1.tar.xz 8313680 SHA256:eace85dec11e7545bde9fc074c8c6fa27f705c35928cf20f4f9b80eb374588f4
-```
 
 ### `dpkg` source package: `pam=1.1.8-3.2ubuntu2.3`
 

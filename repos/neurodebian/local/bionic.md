@@ -1104,13 +1104,9 @@ Licenses: (parsed from: `/usr/share/doc/neurodebian-freeze/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris neurodebian=0.41.0~nd18.04+1
-'http://neuro.debian.net/debian/pool/main/n/neurodebian/neurodebian_0.41.0%7end18.04%2b1.dsc' neurodebian_0.41.0~nd18.04+1.dsc 1543 SHA256:898d738fe595b420c83c02772a7be6d2ececdd7de2fca04d7640c006801eb842
-'http://neuro.debian.net/debian/pool/main/n/neurodebian/neurodebian_0.41.0%7end18.04%2b1.tar.xz' neurodebian_0.41.0~nd18.04+1.tar.xz 8318188 SHA256:f57b4356b941817fda27a98e868011ac5cbca33e616eadeff791f7295a914f1b
-```
 
 ### `dpkg` source package: `npth=1.5-3`
 
