@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8692e0489e2588f30e5493d082f9c4e7e97582b9aaf905571e9dc2169563fc27`
-- Created: `2022-07-18T23:44:15.718948566Z`
-- Virtual Size: ~ 58.45 Mb  
+- Image ID: `sha256:b063f47b927f0cfb23639c7c5849850542a817ebd5aa1bf6a4611061b5083da1`
+- Created: `2022-07-19T19:22:09.189154586Z`
+- Virtual Size: ~ 58.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `NGINX_VERSION=1.22.0`
-  - `NJS_VERSION=0.7.5`
+  - `NJS_VERSION=0.7.6`
   - `PKG_RELEASE=1`
 - Labels:
   - `maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>`
@@ -600,16 +600,16 @@ nginx-module-image-filter-1.22.0-r1 license:
 ### `apk` package: `nginx-module-njs`
 
 ```console
-nginx-module-njs-1.22.0.0.7.5-r1 description:
+nginx-module-njs-1.22.0.0.7.6-r1 description:
 nginx njs dynamic modules
 
-nginx-module-njs-1.22.0.0.7.5-r1 webpage:
+nginx-module-njs-1.22.0.0.7.6-r1 webpage:
 https://nginx.org/
 
-nginx-module-njs-1.22.0.0.7.5-r1 installed size:
-3812 KiB
+nginx-module-njs-1.22.0.0.7.6-r1 installed size:
+3840 KiB
 
-nginx-module-njs-1.22.0.0.7.5-r1 license:
+nginx-module-njs-1.22.0.0.7.6-r1 license:
 2-clause BSD-like license
 
 ```
