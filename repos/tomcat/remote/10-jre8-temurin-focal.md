@@ -1,7 +1,7 @@
 ## `tomcat:10-jre8-temurin-focal`
 
 ```console
-$ docker pull tomcat@sha256:27abd902b81fd875ace89006ced8ee668031726792f6ce74ac34d8a4f18f2c5b
+$ docker pull tomcat@sha256:1123972612397a5dfdb2891f87815512795310f7e1ebdc8b4501761ab6e46bee
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -110,14 +110,14 @@ CMD ["catalina.sh" "run"]
 ### `tomcat:10-jre8-temurin-focal` - linux; arm variant v7
 
 ```console
-$ docker pull tomcat@sha256:610792bd0e78b6116231ec3716ed8d5f9b602c63b9279c0740ccd8562a017cba
+$ docker pull tomcat@sha256:1bdd9de077ee36e8cc93a4bb2de9b5da30faff319a71b501bc0315fb9fb490f8
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **92.0 MB (91993721 bytes)**  
+-	Total Size: **93.5 MB (93540625 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3c296139f29263bced0695ead25b2e22fffb272361d490d865566e1bf191eee6`
+-	Image ID: `sha256:21f3458df1ebe59a92dbf78a2e6c24bf7f997ca2a2f1e041246d76e661e632d3`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -157,15 +157,15 @@ ENV TOMCAT_MAJOR=10
 ENV TOMCAT_VERSION=10.0.22
 # Mon, 13 Jun 2022 21:48:27 GMT
 ENV TOMCAT_SHA512=fe46db8794f066882b30e7a94bd8d3dbcf29e8e8ffaf67c1355846755745a7c9eafd124819283f218bcf410921a485b44b57b56fd6251fb99d67d95f3dd36826
-# Mon, 13 Jun 2022 21:48:29 GMT
-COPY dir:25789304e880a546483ba92a4233b5e49d94276971fb1657fd3ffe81d1a352a9 in /usr/local/tomcat 
-# Mon, 13 Jun 2022 21:48:40 GMT
+# Fri, 22 Jul 2022 05:13:55 GMT
+COPY dir:8b676c6820c210d529db77314d8b294d191f91467ee24acf57ba27f23eaa4a99 in /usr/local/tomcat 
+# Fri, 22 Jul 2022 05:14:07 GMT
 RUN set -eux; 	apt-get update; 	xargs -rt apt-get install -y --no-install-recommends < "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt"; 	rm -rf /var/lib/apt/lists/*
-# Mon, 13 Jun 2022 21:48:43 GMT
+# Fri, 22 Jul 2022 05:14:11 GMT
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Mon, 13 Jun 2022 21:48:43 GMT
+# Fri, 22 Jul 2022 05:14:11 GMT
 EXPOSE 8080
-# Mon, 13 Jun 2022 21:48:44 GMT
+# Fri, 22 Jul 2022 05:14:12 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -190,17 +190,17 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 07 Jun 2022 14:33:36 GMT  
 		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f8951101aa6916894148447539c6066d3373accfb335e30fbaf0c2ad5f8d43d2`  
-		Last Modified: Mon, 13 Jun 2022 22:11:33 GMT  
-		Size: 12.5 MB (12545523 bytes)  
+	-	`sha256:c04ec0e7c3dcaa39b03845b8510f8546d5202c87a47d171f156d26048657adf8`  
+		Last Modified: Fri, 22 Jul 2022 06:13:13 GMT  
+		Size: 12.5 MB (12545453 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:125c91ded6f73a701c83432caf4253e9d0e88f5e4787c9b179e8364f5ca1b834`  
-		Last Modified: Mon, 13 Jun 2022 22:11:28 GMT  
-		Size: 423.1 KB (423076 bytes)  
+	-	`sha256:5eddbecb239ff3b1280fb682875302f59bcb4e1c54a249e37bb62613b8f81b30`  
+		Last Modified: Fri, 22 Jul 2022 06:13:09 GMT  
+		Size: 2.0 MB (1970049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e191de6b849bb4598a9a980e3c7a20ad5f501a932e8b42fb6b3a5fea22cd291`  
-		Last Modified: Mon, 13 Jun 2022 22:11:28 GMT  
-		Size: 130.0 B  
+	-	`sha256:4f7dbac426f7672b05b502ae7911c764aca87af86ff7ce0d0e31fb6365cf2015`  
+		Last Modified: Fri, 22 Jul 2022 06:13:08 GMT  
+		Size: 131.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `tomcat:10-jre8-temurin-focal` - linux; arm64 variant v8
@@ -298,14 +298,14 @@ CMD ["catalina.sh" "run"]
 ### `tomcat:10-jre8-temurin-focal` - linux; ppc64le
 
 ```console
-$ docker pull tomcat@sha256:b43df3fc151c3f3ed72162898927da2d70e3db41862ef974f6f343708a7b46eb
+$ docker pull tomcat@sha256:17a41352529c76a3d21251cd0d8a438d668fb7a2d36c8134bdc801a39e70dd23
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **104.8 MB (104812198 bytes)**  
+-	Total Size: **106.9 MB (106888947 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5e8b2ed67b2213deee6aeca58c6734f6a0038c9b27f32399692f0e3fcc6577d2`
+-	Image ID: `sha256:fc4d9091fe137fd268eb1d61aefefa03225ee85a0346e16382ad3d0b23d1a384`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -345,15 +345,15 @@ ENV TOMCAT_MAJOR=10
 ENV TOMCAT_VERSION=10.0.22
 # Mon, 13 Jun 2022 22:20:23 GMT
 ENV TOMCAT_SHA512=fe46db8794f066882b30e7a94bd8d3dbcf29e8e8ffaf67c1355846755745a7c9eafd124819283f218bcf410921a485b44b57b56fd6251fb99d67d95f3dd36826
-# Mon, 13 Jun 2022 22:20:25 GMT
-COPY dir:add92d6f7c68a836576b7163d00356b3703fff919fd0c1444b19bd693430cb91 in /usr/local/tomcat 
-# Mon, 13 Jun 2022 22:20:43 GMT
+# Fri, 22 Jul 2022 05:21:26 GMT
+COPY dir:a38c0723bc3aa8e3a5ae8152a01171f922fdd73d824257b61d95591ffe79f400 in /usr/local/tomcat 
+# Fri, 22 Jul 2022 05:22:06 GMT
 RUN set -eux; 	apt-get update; 	xargs -rt apt-get install -y --no-install-recommends < "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt"; 	rm -rf /var/lib/apt/lists/*
-# Mon, 13 Jun 2022 22:21:06 GMT
+# Fri, 22 Jul 2022 05:22:37 GMT
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Mon, 13 Jun 2022 22:21:10 GMT
+# Fri, 22 Jul 2022 05:22:42 GMT
 EXPOSE 8080
-# Mon, 13 Jun 2022 22:21:13 GMT
+# Fri, 22 Jul 2022 05:22:47 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -378,15 +378,15 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Fri, 10 Jun 2022 03:42:45 GMT  
 		Size: 173.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b809066518118b8872295dbda1d6c052928b317c38d87fd8566535d52ee6d094`  
-		Last Modified: Mon, 13 Jun 2022 22:49:16 GMT  
-		Size: 12.6 MB (12636758 bytes)  
+	-	`sha256:ab077e41765f7cbceb40d31b9dd0c512a36ac95ad29d729e286676131a2f5937`  
+		Last Modified: Fri, 22 Jul 2022 06:12:54 GMT  
+		Size: 12.6 MB (12636894 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eefc1e2c4c1a4ac334121770175f05fcf085caf408f05f43a8168c93b7c8dc9d`  
-		Last Modified: Mon, 13 Jun 2022 22:49:15 GMT  
-		Size: 471.1 KB (471107 bytes)  
+	-	`sha256:a431c16379de69b9f8387679e46987d0efd6202459edf3e853592b8ec2463f00`  
+		Last Modified: Fri, 22 Jul 2022 06:12:53 GMT  
+		Size: 2.5 MB (2547721 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62dbeaababc5583d217f4051e0268edf64fd231431268f87c5ad34acce2a27cd`  
-		Last Modified: Mon, 13 Jun 2022 22:49:15 GMT  
-		Size: 132.0 B  
+	-	`sha256:144f45fc241b237543fa47bbf6e2f00e7083e450ac6f28fb9e50d654bcb044b7`  
+		Last Modified: Fri, 22 Jul 2022 06:12:53 GMT  
+		Size: 131.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
