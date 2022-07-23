@@ -1,10 +1,10 @@
-# `tomcat:9.0.64-jdk8-temurin-jammy`
+# `tomcat:9.0.65-jdk8-temurin-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:73eded3c44b965c3d9a89b2d15a38e2148949521cf23c4a6ea9c5d2ff46d4e3e`
-- Created: `2022-06-28T01:03:22.684704541Z`
-- Virtual Size: ~ 343.67 Mb  
+- Image ID: `sha256:429c814ec6eca57d43d3665de873266824c0acee7b48adffac12456d0f689b3c`
+- Created: `2022-07-22T03:05:17.079920293Z`
+- Virtual Size: ~ 343.98 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -20,8 +20,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=48F8E69F6390C9F25CFEDCD268248959359E722B A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.64`
-  - `TOMCAT_SHA512=38392b651fabe706fb0524c52849601299494178010bb8077af383232c20bbbda1aec4ab8898adb2cc37c07583ff0e9d3c7038ce55a22bc68c3641641b47fd1a`
+  - `TOMCAT_VERSION=9.0.65`
+  - `TOMCAT_SHA512=2ae846848b8436856be11cfa18d9c62caa06ca7d3134012b2e10cbf6078753c4af20cc5d37f7dc75f1779f5c59d7c033850b8626534c3ce7e389641a67963cf6`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -705,11 +705,11 @@ $ apt-get source -qq --print-uris gmp=2:6.2.1+dfsg-3ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.1%2bdfsg-3ubuntu1.debian.tar.xz' gmp_6.2.1+dfsg-3ubuntu1.debian.tar.xz 40996 SHA512:d7e0a1165a42b11a26a0f9232193db41ce2e7b1f5ea50d258e156fc9d80f9a74b6739491ec73cc1e909a3d09e029f90c3be1460c993690c5081ef8c6a169a4c3
 ```
 
-### `dpkg` source package: `gnupg2=2.2.27-3ubuntu2`
+### `dpkg` source package: `gnupg2=2.2.27-3ubuntu2.1`
 
 Binary Packages:
 
-- `gpgv=2.2.27-3ubuntu2`
+- `gpgv=2.2.27-3ubuntu2.1`
 
 Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 
@@ -729,10 +729,10 @@ Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gnupg2=2.2.27-3ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27-3ubuntu2.dsc' gnupg2_2.2.27-3ubuntu2.dsc 3373 SHA512:fbe7a583145d47a71228fa102a687f46f0506a03fc7a77ff3a73dd7c850f3e1d53cafb164ea0299bc82f93cb95774b95c1d71b4e6bdeaabde19caba87ab46175
+$ apt-get source -qq --print-uris gnupg2=2.2.27-3ubuntu2.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27-3ubuntu2.1.dsc' gnupg2_2.2.27-3ubuntu2.1.dsc 3726 SHA512:ed001ea6507654af663bfb1bfc051cd8a2deb9b8bb5b16273f7c3aa82141bdbc1cb2e85bf0cb61a26ea474f0df43e9a34c687722f757ed99bbd86b9a08866744
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27.orig.tar.bz2' gnupg2_2.2.27.orig.tar.bz2 7191555 SHA512:cf336962116c9c08ac80b1299654b94948033ef51d6d5e7f54c2f07bbf7d92c7b0bddb606ceee2cdd837063f519b8d59af5a82816b840a0fc47d90c07b0e95ab
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27-3ubuntu2.debian.tar.xz' gnupg2_2.2.27-3ubuntu2.debian.tar.xz 66056 SHA512:84dcd0406f9ee7d890c18736dfe674aa3719ccda93288fdbcc36de9969f7fcca4bd3e54a347a37b85d0537fbbd8e5f9218da9a2a01c9bab3de64408cf7743491
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27-3ubuntu2.1.debian.tar.xz' gnupg2_2.2.27-3ubuntu2.1.debian.tar.xz 66676 SHA512:6f8aea12b515ef1b8558ac925bb84ae6f1743739c0edfc64e02952479d4a1271f8f6ee8fc23461164116f3f8396376009ed1ea609c55a59e4936f7d02b1f828a
 ```
 
 ### `dpkg` source package: `gnutls28=3.7.3-4ubuntu1`
@@ -1508,11 +1508,11 @@ Licenses: (parsed from: `/usr/share/doc/openssl/copyright`)
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `openssl=3.0.2-0ubuntu1.5`
+### `dpkg` source package: `openssl=3.0.2-0ubuntu1.6`
 
 Binary Packages:
 
-- `libssl3:amd64=3.0.2-0ubuntu1.5`
+- `libssl3:amd64=3.0.2-0ubuntu1.6`
 
 Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`)
 
@@ -1521,9 +1521,15 @@ Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`)
 - `GPL-1`
 - `GPL-1+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssl=3.0.2-0ubuntu1.6
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.6.dsc' openssl_3.0.2-0ubuntu1.6.dsc 2726 SHA512:5c1bc449ca7882cd82a516673b27a6730ba0d9cb0d651d84b6681536a0e4e55096da3ba11d76dd9f53882140a1d09665b037c2cd3f0a11099943f75d81b62f72
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2.orig.tar.gz' openssl_3.0.2.orig.tar.gz 15038141 SHA512:f986850d5be908b4d6b5fd7091bc4652d7378c9bccebfbc5becd7753843c04c1eb61a1749c432139d263dfac33df0b1f6c773664b485cad47542266823a4eb03
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2.orig.tar.gz.asc' openssl_3.0.2.orig.tar.gz.asc 488 SHA512:4303391a58107c76ad9b05510f5bfc95f687f4cb2f9ff5b03fb262ba99b573423ab83f0437471199954496799b343191b889ad9ef8fabdd7ee4ec3ec9b5f1d81
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.6.debian.tar.xz' openssl_3.0.2-0ubuntu1.6.debian.tar.xz 160832 SHA512:df88acffbf79b95729d69d96abaece01040b20de352c3d81cf3f165fbe73271be0eae0da0fce655c4f42d89b829f4b0a1b5bfbb750d5aff40b1a008380d23db3
+```
 
 ### `dpkg` source package: `p11-kit=0.24.0-6build1`
 
