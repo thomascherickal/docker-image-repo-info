@@ -1,7 +1,7 @@
 ## `clojure:openjdk-8-lein-2.9.8-bullseye`
 
 ```console
-$ docker pull clojure@sha256:4c7203e8b8956bbad438ff9344bd680f789979e6776b18e0e123ea7863bc5393
+$ docker pull clojure@sha256:88f1caf8ad71fd7bafcd1e5b061c4a4b4a945448e2b9410e7ae8fb02ab0b9e27
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull clojure@sha256:4c7203e8b8956bbad438ff9344bd680f789979e6776b18e0e12
 ### `clojure:openjdk-8-lein-2.9.8-bullseye` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:3b1387cccca467d15f1a75ddb8c0dcdc83dcc47d8da2d4f6a796418c5d89378c
+$ docker pull clojure@sha256:6568ac31c79252ecd33bb852b8ba824b2bd0653bd103f7dcc730a6cac6254d10
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **254.0 MB (253959424 bytes)**  
+-	Total Size: **253.9 MB (253933398 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:771f171ea548a8fc431ae7320b7a036ee5533e760e2792b6515118a3f20dfd2b`
+-	Image ID: `sha256:0c4a12984131ab0a33416aa7e1b254a27eb42c94c86a22bdab898eca99a51f3b`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -43,25 +43,25 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Tue, 12 Jul 2022 15:48:07 GMT
 ENV LANG=C.UTF-8
-# Tue, 12 Jul 2022 15:48:07 GMT
-ENV JAVA_VERSION=8u332
-# Tue, 12 Jul 2022 15:48:18 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Tue, 12 Jul 2022 16:07:22 GMT
+# Mon, 25 Jul 2022 20:29:34 GMT
+ENV JAVA_VERSION=8u342
+# Mon, 25 Jul 2022 20:29:42 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u342-b07/OpenJDK8U-jdk_x64_linux_8u342b07.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u342-b07/OpenJDK8U-jdk_aarch64_linux_8u342b07.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Mon, 25 Jul 2022 21:08:25 GMT
 ENV LEIN_VERSION=2.9.8
-# Tue, 12 Jul 2022 16:07:22 GMT
+# Mon, 25 Jul 2022 21:08:25 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Tue, 12 Jul 2022 16:07:22 GMT
+# Mon, 25 Jul 2022 21:08:25 GMT
 WORKDIR /tmp
-# Tue, 12 Jul 2022 16:07:30 GMT
+# Mon, 25 Jul 2022 21:08:33 GMT
 RUN set -eux; apt-get update && apt-get install -y make gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "9952cba539cc6454c3b7385ebce57577087bf2b9001c3ab5c55d668d0aeff6e9 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && export GNUPGHOME="$(mktemp -d)" && export FILENAME_EXT=jar && if printf '%s\n%s\n' "2.9.7" "$LEIN_VERSION" | sort -cV; then               gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys 6A2D483DB59437EBB97D09B1040193357D0606ED;             else               gpg --batch --keyserver hkps://keyserver.ubuntu.com --recv-keys 20242BACBBE95ADA22D0AFD7808A33D379C806C3;               FILENAME_EXT=zip;             fi && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT && gpgconf --kill all && rm -rf "$GNUPGHOME" leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Tue, 12 Jul 2022 16:07:30 GMT
+# Mon, 25 Jul 2022 21:08:33 GMT
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Tue, 12 Jul 2022 16:07:30 GMT
+# Mon, 25 Jul 2022 21:08:33 GMT
 ENV LEIN_ROOT=1
-# Tue, 12 Jul 2022 16:07:33 GMT
+# Mon, 25 Jul 2022 21:08:36 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.11.1"]])' > project.clj   && lein deps && rm project.clj
-# Tue, 12 Jul 2022 16:07:33 GMT
+# Mon, 25 Jul 2022 21:08:36 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -90,30 +90,30 @@ CMD ["lein" "repl"]
 		Last Modified: Tue, 12 Jul 2022 16:00:55 GMT  
 		Size: 212.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c6b37f12466861413be9af59da7fd80fd1c6308b4ab4eec692731369292f2bde`  
-		Last Modified: Tue, 12 Jul 2022 16:01:05 GMT  
-		Size: 105.9 MB (105943503 bytes)  
+	-	`sha256:66510270247798e8f220a37e12f1c9dff385210435b47cf517bbef36d3905e26`  
+		Last Modified: Mon, 25 Jul 2022 20:47:39 GMT  
+		Size: 105.9 MB (105917467 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fec3c86da6601aa1203c75d3ea3d0d993d1a3e338fcb0b9ec0cf6e4b9c228e39`  
-		Last Modified: Tue, 12 Jul 2022 16:16:32 GMT  
-		Size: 12.6 MB (12592016 bytes)  
+	-	`sha256:bea8a950f021727b49f4129b503382772cfc4f5671880298c2f582e98c0cecb5`  
+		Last Modified: Mon, 25 Jul 2022 21:17:52 GMT  
+		Size: 12.6 MB (12592010 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9acc4cebda0d7258e19dac01fb6b4b922d90230c1f8c77cb21cc81edfe41d21`  
-		Last Modified: Tue, 12 Jul 2022 16:16:31 GMT  
-		Size: 4.4 MB (4391902 bytes)  
+	-	`sha256:2031e1bd29b60d898d8ad68e66c2ce60b3410bb339b60b30aec6e4ab595c8f8b`  
+		Last Modified: Mon, 25 Jul 2022 21:17:52 GMT  
+		Size: 4.4 MB (4391918 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:openjdk-8-lein-2.9.8-bullseye` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:30e400b406575a8868253db4a59e475af7e64313bf0a10780df9a74e1a20f57f
+$ docker pull clojure@sha256:629b9b32d06e32fe719ef0f26dcfb5623f341ec6824d5d5cce733608b2d6250d
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **251.2 MB (251240338 bytes)**  
+-	Total Size: **251.3 MB (251254983 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cbbbe85542b38de26cf0d1e3db839a61d5fbc26fae44d3aa6d64af2100797dd3`
+-	Image ID: `sha256:d443c18670fc79d3817a9300d1b410f0ee167f087dc182fede421dbd5e6bb0f9`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -137,25 +137,25 @@ RUN { echo '#/bin/sh'; echo 'echo "$JAVA_HOME"'; } > /usr/local/bin/docker-java-
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Tue, 12 Jul 2022 16:46:24 GMT
 ENV LANG=C.UTF-8
-# Tue, 12 Jul 2022 16:46:25 GMT
-ENV JAVA_VERSION=8u332
-# Tue, 12 Jul 2022 16:46:35 GMT
-RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_x64_linux_8u332b09.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u332-b09/OpenJDK8U-jdk_aarch64_linux_8u332b09.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
-# Tue, 12 Jul 2022 17:12:24 GMT
+# Mon, 25 Jul 2022 20:56:59 GMT
+ENV JAVA_VERSION=8u342
+# Mon, 25 Jul 2022 20:57:06 GMT
+RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u342-b07/OpenJDK8U-jdk_x64_linux_8u342b07.tar.gz'; 			;; 		'arm64') 			downloadUrl='https://github.com/AdoptOpenJDK/openjdk8-upstream-binaries/releases/download/jdk8u342-b07/OpenJDK8U-jdk_aarch64_linux_8u342b07.tar.gz'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	wget --progress=dot:giga -O openjdk.tgz.asc "$downloadUrl.sign"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys EAC843EBD3EFDB98CC772FADA5CD6035332FA671; 	gpg --batch --keyserver keyserver.ubuntu.com --keyserver-options no-self-sigs-only --recv-keys CA5F11C6CE22644D42C6AC4492EF8D39DC13168F; 	gpg --batch --list-sigs --keyid-format 0xLONG CA5F11C6CE22644D42C6AC4492EF8D39DC13168F 		| tee /dev/stderr 		| grep '0xA5CD6035332FA671' 		| grep 'Andrew Haley'; 	gpg --batch --verify openjdk.tgz.asc openjdk.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/jre/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		javac -version; 	java -version
+# Mon, 25 Jul 2022 21:37:53 GMT
 ENV LEIN_VERSION=2.9.8
-# Tue, 12 Jul 2022 17:12:25 GMT
+# Mon, 25 Jul 2022 21:37:53 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Tue, 12 Jul 2022 17:12:26 GMT
+# Mon, 25 Jul 2022 21:37:54 GMT
 WORKDIR /tmp
-# Tue, 12 Jul 2022 17:12:33 GMT
+# Mon, 25 Jul 2022 21:38:02 GMT
 RUN set -eux; apt-get update && apt-get install -y make gnupg && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://raw.githubusercontent.com/technomancy/leiningen/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "9952cba539cc6454c3b7385ebce57577087bf2b9001c3ab5c55d668d0aeff6e9 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && export GNUPGHOME="$(mktemp -d)" && export FILENAME_EXT=jar && if printf '%s\n%s\n' "2.9.7" "$LEIN_VERSION" | sort -cV; then               gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys 6A2D483DB59437EBB97D09B1040193357D0606ED;             else               gpg --batch --keyserver hkps://keyserver.ubuntu.com --recv-keys 20242BACBBE95ADA22D0AFD7808A33D379C806C3;               FILENAME_EXT=zip;             fi && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT && wget -q https://github.com/technomancy/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT && gpgconf --kill all && rm -rf "$GNUPGHOME" leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg
-# Tue, 12 Jul 2022 17:12:34 GMT
+# Mon, 25 Jul 2022 21:38:03 GMT
 ENV PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Tue, 12 Jul 2022 17:12:35 GMT
+# Mon, 25 Jul 2022 21:38:04 GMT
 ENV LEIN_ROOT=1
-# Tue, 12 Jul 2022 17:12:39 GMT
+# Mon, 25 Jul 2022 21:38:08 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.11.1"]])' > project.clj   && lein deps && rm project.clj
-# Tue, 12 Jul 2022 17:12:39 GMT
+# Mon, 25 Jul 2022 21:38:08 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -184,15 +184,15 @@ CMD ["lein" "repl"]
 		Last Modified: Tue, 12 Jul 2022 17:05:50 GMT  
 		Size: 211.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8fa965a64e33da55a18acfd9e8e17e4d2cf4e0d15fbd81f5b88e943a53eee932`  
-		Last Modified: Tue, 12 Jul 2022 17:06:01 GMT  
-		Size: 104.9 MB (104919809 bytes)  
+	-	`sha256:d5c82e6112acc8feb2c9cdee37c74411a48eb4dc8fedccc3c390383f5a9e9088`  
+		Last Modified: Mon, 25 Jul 2022 21:16:31 GMT  
+		Size: 104.9 MB (104934472 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:398142691ce275eba7bf40f64ab609069eb317995bf672375d5eb99ff448a58f`  
-		Last Modified: Tue, 12 Jul 2022 17:24:54 GMT  
-		Size: 12.4 MB (12350678 bytes)  
+	-	`sha256:55c3cf4cd4ac720c2e40c803c4c2740f6f76256d7a0cee7a33f3e91814ac2afa`  
+		Last Modified: Mon, 25 Jul 2022 21:50:28 GMT  
+		Size: 12.4 MB (12350667 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:41ee60565e0a70e447cb5a23e695a752f65bf63d05a41160d69acfe30e9b915e`  
-		Last Modified: Tue, 12 Jul 2022 17:24:53 GMT  
-		Size: 4.4 MB (4391801 bytes)  
+	-	`sha256:50836bfb78b851253bad6f4cfefee5d6bf315e75c09aa31d2d2250cb6d90200d`  
+		Last Modified: Mon, 25 Jul 2022 21:50:27 GMT  
+		Size: 4.4 MB (4391794 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
