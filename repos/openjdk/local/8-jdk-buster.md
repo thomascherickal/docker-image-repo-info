@@ -1,10 +1,10 @@
-# `openjdk:8u332-jdk-buster`
+# `openjdk:8u342-jdk-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b28af378ba08e1a5ecfee929b414b5222dbe97b6f7856f9ac0d4f04aa449316e`
-- Created: `2022-07-12T15:48:33.684861701Z`
-- Virtual Size: ~ 513.99 Mb  
+- Image ID: `sha256:120b9b6c7738e7eb1c65788ae9ae546dad5e38af75ccddbb39da31456aa5f77f`
+- Created: `2022-07-25T20:30:11.747535956Z`
+- Virtual Size: ~ 513.97 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/openjdk-8/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-8`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=8u332`
+  - `JAVA_VERSION=8u342`
 
 ## `dpkg` (`.deb`-based packages)
 

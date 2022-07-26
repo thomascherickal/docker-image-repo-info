@@ -1,10 +1,10 @@
-# `openjdk:11.0.15-jdk-bullseye`
+# `openjdk:11.0.16-jdk-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1e59e1185014c590f29c451267f430c1287597d5262fe2f2621108825b392dec`
-- Created: `2022-07-12T15:46:47.723368711Z`
-- Virtual Size: ~ 659.72 Mb  
+- Image ID: `sha256:6927c2556235b3260ce4de2bf8a2b0020f05617ef836b77a027de0032e79145a`
+- Created: `2022-07-25T20:26:54.860779703Z`
+- Virtual Size: ~ 654.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/openjdk-11/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-11`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=11.0.15`
+  - `JAVA_VERSION=11.0.16`
 
 ## `dpkg` (`.deb`-based packages)
 
