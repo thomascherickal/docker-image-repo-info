@@ -1606,14 +1606,9 @@ Licenses: (parsed from: `/usr/share/doc/liblcms2-2/copyright`, `/usr/share/doc/l
 - `GPL-3 (GPL-3 for the fast_float plugin only)`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lcms2=2.12~rc1-2build2
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lcms2/lcms2_2.12%7erc1-2build2.dsc' lcms2_2.12~rc1-2build2.dsc 2120 SHA512:589b8926590d9158a85ad4641920e1f9700fb864b13ec0f2e44292bd0530cc639ecbcbe216405b7a528ecc512902a79456b30985b5c5a278a5c4692f8fc4bc9f
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lcms2/lcms2_2.12%7erc1.orig.tar.gz' lcms2_2.12~rc1.orig.tar.gz 7417767 SHA512:1d27e6f91911053b79f2a46c6c16943e25fce2f0501bb7d97f49507522a8a0f911d60f20726fc31727fee5242c6d452c86cdc28735f8f88c3aa9676fd35fdec6
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lcms2/lcms2_2.12%7erc1-2build2.debian.tar.xz' lcms2_2.12~rc1-2build2.debian.tar.xz 10616 SHA512:250e0245e300fff7be06a43a30621bff920cbb606e51197177d3d43acc1b50ad0db8988f7c05b6b4365073bf0c952d93dcb79364228698fcd8fbc6b093d4f843
-```
 
 ### `dpkg` source package: `libassuan=2.5.5-3`
 

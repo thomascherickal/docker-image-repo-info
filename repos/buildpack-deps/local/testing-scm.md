@@ -1148,21 +1148,13 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.19.2-2
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.19.2-2.dsc' krb5_1.19.2-2.dsc 3170 SHA256:1332e77708c493968ba744f48438c5a83c2b4c08c4d90e03c01d84b6bb0a506f
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.19.2.orig.tar.gz' krb5_1.19.2.orig.tar.gz 8741053 SHA256:10453fee4e3a8f8ce6129059e5c050b8a65dab1c257df68b99b3112eaa0cdf6a
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.19.2.orig.tar.gz.asc' krb5_1.19.2.orig.tar.gz.asc 833 SHA256:afaa581a1551eba22c1f193c04f913193785e2dce12677ff2aed80503a99a8f8
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.19.2-2.debian.tar.xz' krb5_1.19.2-2.debian.tar.xz 106876 SHA256:1118a2525352c4f5b5e15b38f9b2ac1b3ef773ef9001abac694af3b09fa4b4ac
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/krb5/1.19.2-2/
 
-- https://sources.debian.net/src/krb5/1.19.2-2/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.19.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.19.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libassuan=2.5.5-4`
 
@@ -2166,20 +2158,13 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 - `SIL-OFL-1.1`
 - `all-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nghttp2=1.47.0-1
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.47.0-1.dsc' nghttp2_1.47.0-1.dsc 2548 SHA256:a87546b20aba08304a8cadebf7a3f1b28904efb2b1080f29c1b86a42fa2789f9
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.47.0.orig.tar.bz2' nghttp2_1.47.0.orig.tar.bz2 4586866 SHA256:07c89947438f0254c2f4300a884813431d678cfb2e699d9aacddc28c23e2a685
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.47.0-1.debian.tar.xz' nghttp2_1.47.0-1.debian.tar.xz 16032 SHA256:a73798f459cbd5c3673dfc82175054cae9e65f71fb70a9fbabbb84f1cd4d6290
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nghttp2/1.47.0-1/
 
-- https://sources.debian.net/src/nghttp2/1.47.0-1/ (for browsing the source)
-- https://sources.debian.net/src/nghttp2/1.47.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nghttp2/1.47.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `npth=1.6-3`
 
@@ -2533,19 +2518,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-defaults=3.10.4-1
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.10.4-1.dsc' python3-defaults_3.10.4-1.dsc 2885 SHA256:c58e154aebf55f8affe928323ccddbeb5b6b2e2738ba2baa64ec8b872cb2d5ab
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.10.4-1.tar.gz' python3-defaults_3.10.4-1.tar.gz 145046 SHA256:905c879f3c54a791d4e56c7a430469005b4508e209cf482f7b372de77ad4112d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-defaults/3.10.4-1/
 
-- https://sources.debian.net/src/python3-defaults/3.10.4-1/ (for browsing the source)
-- https://sources.debian.net/src/python3-defaults/3.10.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-defaults/3.10.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3.10=3.10.5-1`
 
