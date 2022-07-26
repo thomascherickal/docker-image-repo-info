@@ -1,10 +1,10 @@
-# `composer:2.3.9`
+# `composer:2.3.10`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0fceff2f1f6941f14859457b4c6aa44d431643c61da4756d71e38429baf3d619`
-- Created: `2022-07-19T05:25:31.20789986Z`
-- Virtual Size: ~ 199.17 Mb  
+- Image ID: `sha256:2cddfda63e966ad25e41d51afd08dcbabcbf0903c6f3034a8c78563d73bdfd22`
+- Created: `2022-07-25T18:24:51.490327145Z`
+- Virtual Size: ~ 242.23 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=04c065515bc347bc68e0bb1ac7182669a98a731e4a17727e5731650ad3d8de4c`
   - `COMPOSER_ALLOW_SUPERUSER=1`
   - `COMPOSER_HOME=/tmp`
-  - `COMPOSER_VERSION=2.3.9`
+  - `COMPOSER_VERSION=2.3.10`
 
 ## `apk` (`.apk`-based packages)
 
@@ -914,16 +914,16 @@ BSD-3-Clause
 ### `apk` package: `python3`
 
 ```console
-python3-3.10.4-r0 description:
+python3-3.10.5-r0 description:
 A high-level scripting language
 
-python3-3.10.4-r0 webpage:
+python3-3.10.5-r0 webpage:
 https://www.python.org/
 
-python3-3.10.4-r0 installed size:
+python3-3.10.5-r0 installed size:
 47 MiB
 
-python3-3.10.4-r0 license:
+python3-3.10.5-r0 license:
 PSF-2.0
 
 ```
