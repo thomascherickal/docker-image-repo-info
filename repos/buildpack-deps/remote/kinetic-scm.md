@@ -1,14 +1,15 @@
 ## `buildpack-deps:kinetic-scm`
 
 ```console
-$ docker pull buildpack-deps@sha256:12ce564f6028e35633e28ecfd60c635997dc481ff71c1e9295f7792aa4400954
+$ docker pull buildpack-deps@sha256:a88ba8dc2622feae755f0887d1915e3b6c9d25027a86a64bc771f49889d7961b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 5
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; ppc64le
 	-	linux; riscv64
 	-	linux; s390x
 
@@ -142,6 +143,50 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 	-	`sha256:9c30bcdd1e505f330a7f17fd74ff65634b9629d0717b77343612f914970a3d8e`  
 		Last Modified: Tue, 07 Jun 2022 04:58:45 GMT  
 		Size: 39.5 MB (39546321 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `buildpack-deps:kinetic-scm` - linux; ppc64le
+
+```console
+$ docker pull buildpack-deps@sha256:a8a9443045b57b3b2a775fb838ced9658440769f24c8be045285cbe51dc6c4a5
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **92.1 MB (92116091 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:602b1719d289f9803a2586a134f720ab997692be5b85bcacf6ed4f1569bd3ddd`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Tue, 07 Jun 2022 05:47:11 GMT
+ADD file:94cf6534c6b66a46a13144239fd0bba4180772804f5826d12fd030c1199457bb in / 
+# Tue, 07 Jun 2022 05:47:14 GMT
+CMD ["bash"]
+# Tue, 26 Jul 2022 23:25:48 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
+# Tue, 26 Jul 2022 23:26:17 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+# Tue, 26 Jul 2022 23:28:11 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+```
+
+-	Layers:
+	-	`sha256:d9ce8aa65c6465c42b081a5642262f289b2db6cfd58b6e49f7f2c24742205c2c`  
+		Last Modified: Tue, 07 Jun 2022 05:50:20 GMT  
+		Size: 32.1 MB (32131305 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:28a03c5d4a4a30095b5986889adae05bbb0933ce7e48e115e1b7fd75ae323e8e`  
+		Last Modified: Tue, 26 Jul 2022 23:58:38 GMT  
+		Size: 7.8 MB (7802631 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:afe96d280d0e21317e7cdab167420493ea718b004c6e2a490a3e7e242cb0db32`  
+		Last Modified: Tue, 26 Jul 2022 23:58:38 GMT  
+		Size: 5.5 MB (5529202 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:1f751ab6988cdaf74b065930f90fcb1067e074a2299e6a7164d90731e2f7af76`  
+		Last Modified: Tue, 26 Jul 2022 23:59:03 GMT  
+		Size: 46.7 MB (46652953 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:kinetic-scm` - linux; riscv64
