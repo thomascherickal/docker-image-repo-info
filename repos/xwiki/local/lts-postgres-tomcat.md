@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:191c12b317dc845df4b8b07dc8a87489692c03a5adcd6947c9a3c7bb030ad93b`
-- Created: `2022-07-26T00:57:38.5921922Z`
+- Image ID: `sha256:f222033d6f0594ced4c32e1dfef351b151f72ed69f0b43c99ce08e5f05e8420c`
+- Created: `2022-07-27T18:47:48.652827003Z`
 - Virtual Size: ~ 1.22 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -21,9 +21,9 @@
   - `TOMCAT_MAJOR=9`
   - `TOMCAT_VERSION=9.0.65`
   - `TOMCAT_SHA512=2ae846848b8436856be11cfa18d9c62caa06ca7d3134012b2e10cbf6078753c4af20cc5d37f7dc75f1779f5c59d7c033850b8626534c3ce7e389641a67963cf6`
-  - `XWIKI_VERSION=13.10.7`
-  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/13.10.7`
-  - `XWIKI_DOWNLOAD_SHA256=b886e886ed34e8d7bea8feb2e74e94edb3fb88030f90ab68c7bbc87dcf453d00`
+  - `XWIKI_VERSION=13.10.8`
+  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/13.10.8`
+  - `XWIKI_DOWNLOAD_SHA256=d6da0bdfb5e0c9e5acccd13a9ff2d40a5bda2a3f9db4426f58fe8f47c262f4b7`
 - Labels:
   - `org.opencontainers.image.authors=XWiki Development Team <committers@xwiki.org>`
   - `org.opencontainers.image.documentation=https://hub.docker.com/_/xwiki`
