@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f5902e430e91cd477ae50b088bede51e9ed5d790d53308b860aea5cb66867a51`
-- Created: `2022-07-12T04:14:56.980967718Z`
+- Image ID: `sha256:b43f3b0a76f76db5265f15fb90970079c2ef59ea9139060949c557c8dd20bdfc`
+- Created: `2022-07-28T16:33:09.205516281Z`
 - Virtual Size: ~ 2.86 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -4011,9 +4011,10 @@ Other potentially useful URLs:
 
 Binary Packages:
 
+- `libnuma-dev:amd64=2.0.12-1`
 - `libnuma1:amd64=2.0.12-1`
 
-Licenses: (parsed from: `/usr/share/doc/libnuma1/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libnuma-dev/copyright`, `/usr/share/doc/libnuma1/copyright`)
 
 - `GPL`
 - `LGPL`
