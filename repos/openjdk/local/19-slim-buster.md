@@ -1,9 +1,9 @@
-# `openjdk:19-ea-32-jdk-slim-buster`
+# `openjdk:19-ea-33-jdk-slim-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e354d60e3eacd3c6473f6aac0c5dee657190d0ca4c2da3e205ac29194ad995fc`
-- Created: `2022-07-21T23:24:36.928849117Z`
+- Image ID: `sha256:40bbfe128a66867f5a0630ca1785121ce9ed9b7da74c781f6e9edb57d970e66a`
+- Created: `2022-07-29T02:06:13.014821759Z`
 - Virtual Size: ~ 417.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-19`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=19-ea+32`
+  - `JAVA_VERSION=19-ea+33`
 
 ## `dpkg` (`.deb`-based packages)
 
