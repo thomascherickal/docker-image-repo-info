@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0d10ff7b4b2c307d89cfb5c76fcada97e13f4f80108331d9416850809d5fc974`
-- Created: `2022-07-25T19:24:24.68782508Z`
-- Virtual Size: ~ 110.32 Mb  
+- Image ID: `sha256:7cb5fe08aeff2cc44fe54c3ef071fcf64a9842138c92d025c5933930ec1e610c`
+- Created: `2022-07-27T02:19:10.930652668Z`
+- Virtual Size: ~ 110.34 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -16,8 +16,8 @@
   - `PYTHON_VERSION=3.10.5`
   - `PYTHON_PIP_VERSION=22.0.4`
   - `PYTHON_SETUPTOOLS_VERSION=58.1.0`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/6ce3639da143c5d79b44f94b04080abf2531fd6e/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=ba3ab8267d91fd41c58dbce08f76db99f747f716d85ce1865813842bb035524d`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/49ca29908cfd49683da12f2d5a4fa5689539f9d9/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=d077d469ce4c0beaf9cc97b73f8164ad20e68e0519f14dd886ce35d053721501`
   - `SATOSA_VERSION=8.1.1`
 
 ## `apk` (`.apk`-based packages)
