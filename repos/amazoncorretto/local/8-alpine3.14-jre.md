@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f90ac42d146b449d5f97925d155903780ebbacd694d062a2915b57c84bce1150`
-- Created: `2022-07-22T18:20:24.162949055Z`
+- Image ID: `sha256:02989e6ecba993a6252bbb82594487d542389cf1b7e5848015ff4f6d63531f63`
+- Created: `2022-07-29T20:20:24.524010797Z`
 - Virtual Size: ~ 110.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -52,16 +52,16 @@ MIT
 ### `apk` package: `amazon-corretto-8-jre`
 
 ```console
-amazon-corretto-8-jre-8.342.07.3-r0 description:
+amazon-corretto-8-jre-8.342.07.4-r0 description:
 Amazon Corretto 8 Java Runtime
 
-amazon-corretto-8-jre-8.342.07.3-r0 webpage:
+amazon-corretto-8-jre-8.342.07.4-r0 webpage:
 https://github.com/corretto/corretto-8
 
-amazon-corretto-8-jre-8.342.07.3-r0 installed size:
+amazon-corretto-8-jre-8.342.07.4-r0 installed size:
 99 MiB
 
-amazon-corretto-8-jre-8.342.07.3-r0 license:
+amazon-corretto-8-jre-8.342.07.4-r0 license:
 https://github.com/corretto/corretto-8/blob/develop/LICENSE
 
 ```
