@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0ef41086a3988ce9e15223e33dfc638fce47d4d8834b4364dd0f4ab142c56192`
-- Created: `2022-06-15T18:21:22.141877248Z`
-- Virtual Size: ~ 535.21 Mb  
+- Image ID: `sha256:54887d00489530469ddbbf56a5e31e10067bf52d6aacfb19eb03d8490b6d100e`
+- Created: `2022-07-28T18:59:55.576852465Z`
+- Virtual Size: ~ 534.72 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.3+7`
+  - `JAVA_VERSION=jdk-17.0.4+8`
   - `JAVA_HOME=/opt/java/openjdk`
   - `MAVEN_HOME=/usr/share/maven`
   - `MAVEN_CONFIG=/root/.m2`
@@ -137,13 +137,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=12ubuntu4.1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_12ubuntu4.1.dsc' base-files_12ubuntu4.1.dsc 1277 SHA512:565061fbc9a6565a15ae571d3c378fcb377a00324a09b4926d8a290c46b57cd36993c8da649a143f425028c2cccd80beda1d893f6cd7fb14065cf4f3fed769a4
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_12ubuntu4.1.tar.xz' base-files_12ubuntu4.1.tar.xz 81772 SHA512:2076b8b9baab0eea592bb52486269daa748892068aa059441da027e5cf986de29cbd88410466615654eb270e248edf95318939badfe0b72758ae31f2d78bee91
-```
 
 ### `dpkg` source package: `base-passwd=3.5.52build1`
 
@@ -311,10 +307,9 @@ $ apt-get source -qq --print-uris coreutils=8.32-4.1ubuntu1
 Binary Packages:
 
 - `curl=7.81.0-1ubuntu1.2`
-- `libcurl3-gnutls:amd64=7.81.0-1ubuntu1.2`
 - `libcurl4:amd64=7.81.0-1ubuntu1.2`
 
-Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
+Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
 - `BSD-3-Clause`
 - `BSD-4-Clause`
@@ -326,6 +321,31 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 **WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
 This is *usually* due to a new package version being released and the old version being removed.
 
+
+### `dpkg` source package: `curl=7.81.0-1ubuntu1.3`
+
+Binary Packages:
+
+- `libcurl3-gnutls:amd64=7.81.0-1ubuntu1.3`
+
+Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`)
+
+- `BSD-3-Clause`
+- `BSD-4-Clause`
+- `ISC`
+- `curl`
+- `other`
+- `public-domain`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris curl=7.81.0-1ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.3.dsc' curl_7.81.0-1ubuntu1.3.dsc 3139 SHA512:71317249af787a0cbb7e25ec4670a19572a4fafb8195bc8b4e1d68855fe044c5558b7b7294bde5a22af7031db1a7a03eff4e23a7f2cbef9cdcfd32449cc7a8a8
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz' curl_7.81.0.orig.tar.gz 4188040 SHA512:e3084f0fa083f7f93eac923edbfdddb5fd0a372b94673ba9d4427a2b95508898c15ecdf63b99a1c1f6cf3215e27b06cbaa2b7073df038d43b362e586f92495d3
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz.asc' curl_7.81.0.orig.tar.gz.asc 488 SHA512:92bc5ede831551285d67b03abe8400c609ad31c9d33e324ee5c41b92dd5c2a0245a09a396bd76807b3e44bcfef944b1e16ac266264f7b85d27cc1c072a6e82bd
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.3.debian.tar.xz' curl_7.81.0-1ubuntu1.3.debian.tar.xz 50984 SHA512:9e3294c374f5fcca421ce8053a86794a1056053cd5a14d9e2f760478dc19e6b0eeccacac485c5f5dda797857b6235cece735376d7471ff89ef3c8e5771ec989e
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg2-3ubuntu1`
 
@@ -681,12 +701,12 @@ $ apt-get source -qq --print-uris gdbm=1.23-1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.23-1.debian.tar.xz' gdbm_1.23-1.debian.tar.xz 18484 SHA512:e7ca0a608da94e5b5bc5949e27b794c87e032202eb09359ad55f6c1a7a6e895f01126781a4e0fbfdb8fef3de7c4a312b9d5a653aaf55ce8c5afbceb945945253
 ```
 
-### `dpkg` source package: `git=1:2.34.1-1ubuntu1.2`
+### `dpkg` source package: `git=1:2.34.1-1ubuntu1.4`
 
 Binary Packages:
 
-- `git=1:2.34.1-1ubuntu1.2`
-- `git-man=1:2.34.1-1ubuntu1.2`
+- `git=1:2.34.1-1ubuntu1.4`
+- `git-man=1:2.34.1-1ubuntu1.4`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -708,9 +728,14 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris git=1:2.34.1-1ubuntu1.4
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.4.dsc' git_2.34.1-1ubuntu1.4.dsc 2927 SHA512:a5cafdf105caeb9cd109c87d0a416464d734bb994a2689ff424da74913c4dcb4e5243b58649a4faf1faeda4067edd4f0425573d8ea22c4cf78062550052e020a
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1.orig.tar.xz' git_2.34.1.orig.tar.xz 6623760 SHA512:a1a8e9e6f64b1da25508fbd2f783564dcdbe181fb5ff1ebab3bdac6db6094e18acc334479a1abf22ac17ce4f733cc3e10a664db9ab234cd523735a3f027b42db
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.4.debian.tar.xz' git_2.34.1-1ubuntu1.4.debian.tar.xz 716400 SHA512:652965092b6079306a70215f16df7e52278a2bd166821d6876fb847d4c5bae29649f91791b48f1b91113b2da9a4c1f971d3be78cb02135d543fec4206c6c11e6
+```
 
 ### `dpkg` source package: `glibc=2.35-0ubuntu3`
 
