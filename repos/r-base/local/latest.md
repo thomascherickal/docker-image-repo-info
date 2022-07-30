@@ -61,19 +61,13 @@ Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris adduser=3.121
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.121.dsc' adduser_3.121.dsc 1683 SHA256:3ee2ea47fea02391edaf14d47325f2b24ca108ca2141d03a5cc10166472ac73b
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.121.tar.xz' adduser_3.121.tar.xz 215848 SHA256:e68cee9900b1070d91c18a883b4356923267f222899bfa7f753c011de8661f6a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/adduser/3.121/
 
-- https://sources.debian.net/src/adduser/3.121/ (for browsing the source)
-- https://sources.debian.net/src/adduser/3.121/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/adduser/3.121/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apt=2.5.1`
 
@@ -1620,15 +1614,13 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.19.2-2
-'http://http.debian.net/debian/pool/main/k/krb5/krb5_1.19.2-2.dsc' krb5_1.19.2-2.dsc 3170 SHA256:1332e77708c493968ba744f48438c5a83c2b4c08c4d90e03c01d84b6bb0a506f
-'http://http.debian.net/debian/pool/main/k/krb5/krb5_1.19.2.orig.tar.gz' krb5_1.19.2.orig.tar.gz 8741053 SHA256:10453fee4e3a8f8ce6129059e5c050b8a65dab1c257df68b99b3112eaa0cdf6a
-'http://http.debian.net/debian/pool/main/k/krb5/krb5_1.19.2.orig.tar.gz.asc' krb5_1.19.2.orig.tar.gz.asc 833 SHA256:afaa581a1551eba22c1f193c04f913193785e2dce12677ff2aed80503a99a8f8
-'http://http.debian.net/debian/pool/main/k/krb5/krb5_1.19.2-2.debian.tar.xz' krb5_1.19.2-2.debian.tar.xz 106876 SHA256:1118a2525352c4f5b5e15b38f9b2ac1b3ef773ef9001abac694af3b09fa4b4ac
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/krb5/1.19.2-2/
+
 
 ### `dpkg` source package: `lapack=3.10.1-2`
 
@@ -3112,14 +3104,13 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 - `SIL-OFL-1.1`
 - `all-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nghttp2=1.47.0-1
-'http://http.debian.net/debian/pool/main/n/nghttp2/nghttp2_1.47.0-1.dsc' nghttp2_1.47.0-1.dsc 2548 SHA256:a87546b20aba08304a8cadebf7a3f1b28904efb2b1080f29c1b86a42fa2789f9
-'http://http.debian.net/debian/pool/main/n/nghttp2/nghttp2_1.47.0.orig.tar.bz2' nghttp2_1.47.0.orig.tar.bz2 4586866 SHA256:07c89947438f0254c2f4300a884813431d678cfb2e699d9aacddc28c23e2a685
-'http://http.debian.net/debian/pool/main/n/nghttp2/nghttp2_1.47.0-1.debian.tar.xz' nghttp2_1.47.0-1.debian.tar.xz 16032 SHA256:a73798f459cbd5c3673dfc82175054cae9e65f71fb70a9fbabbb84f1cd4d6290
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/nghttp2/1.47.0-1/
+
 
 ### `dpkg` source package: `nlme=3.1.158-1`
 
