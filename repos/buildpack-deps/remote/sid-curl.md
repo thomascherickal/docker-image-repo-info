@@ -1,7 +1,7 @@
 ## `buildpack-deps:sid-curl`
 
 ```console
-$ docker pull buildpack-deps@sha256:c11f46d55cfd5f187ec2016ba4edb2e53bc76ccaedac8f7000d7f9647f1c6293
+$ docker pull buildpack-deps@sha256:10f1ceec530db7b66dabace1ef10a0f5539bf387a178d1bdff6147889c95f3af
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -19,39 +19,39 @@ $ docker pull buildpack-deps@sha256:c11f46d55cfd5f187ec2016ba4edb2e53bc76ccaedac
 ### `buildpack-deps:sid-curl` - linux; amd64
 
 ```console
-$ docker pull buildpack-deps@sha256:d34c812f68b7964a89e7850a891757b7c471ea95398ef2d7e27df1cb0d274450
+$ docker pull buildpack-deps@sha256:6f236c8191a9698c9ae04e4c0058f22537f55f4e2cde67e1ef9bc7b0a3ca8b83
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.8 MB (73793751 bytes)**  
+-	Total Size: **73.8 MB (73809467 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b63bd1a814d6810f02fe1200b850c86355c0102c19a7823ec67fc2d457b29c34`
+-	Image ID: `sha256:3bcbbb457890e1d373f7954b7353e609e2600449c290f6ff351c10273d577d0b`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 12 Jul 2022 01:21:07 GMT
-ADD file:0aaeb8a0c7fde9f030dc2ab67a03f21f44e9eecad9e4cf1f360dc5f768292460 in / 
-# Tue, 12 Jul 2022 01:21:07 GMT
+# Tue, 02 Aug 2022 01:20:52 GMT
+ADD file:8f3d1b2e7474fdc04cd1135312dce29db677e5567ff094e59c8338f5bd2465c5 in / 
+# Tue, 02 Aug 2022 01:20:52 GMT
 CMD ["bash"]
-# Tue, 12 Jul 2022 02:50:55 GMT
+# Tue, 02 Aug 2022 01:49:46 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Jul 2022 02:51:01 GMT
+# Tue, 02 Aug 2022 01:49:52 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
 ```
 
 -	Layers:
-	-	`sha256:4a81bc091a3ce5ccc3c89ef56e710ee1854c5ff9fd3d7f148e87cb956b5b78c7`  
-		Last Modified: Tue, 12 Jul 2022 01:26:19 GMT  
-		Size: 53.2 MB (53226349 bytes)  
+	-	`sha256:180517453f08358cf15a4972d7eafc4c2c649be2333940572c68856727b63bdc`  
+		Last Modified: Tue, 02 Aug 2022 01:25:57 GMT  
+		Size: 53.2 MB (53231560 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b567a2d645b715cf7eced5f75816db7c980c3416be39e599e6e4b0bbc82f9eb8`  
-		Last Modified: Tue, 12 Jul 2022 02:57:17 GMT  
-		Size: 9.3 MB (9295637 bytes)  
+	-	`sha256:67ea3bb192fc1a2203afc9f801c7c8a19b9753282603b3c8a634578bb887beef`  
+		Last Modified: Tue, 02 Aug 2022 02:20:42 GMT  
+		Size: 9.3 MB (9305398 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:303c4db152401668239f15446f8107b320fcfdc241030fd93f94783340b469ca`  
-		Last Modified: Tue, 12 Jul 2022 02:57:17 GMT  
-		Size: 11.3 MB (11271765 bytes)  
+	-	`sha256:cd36f037efbbab2cd1fcf04b9f87ba901b2835ba77678dbf9521f200b225fadf`  
+		Last Modified: Tue, 02 Aug 2022 02:20:42 GMT  
+		Size: 11.3 MB (11272509 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:sid-curl` - linux; arm variant v5
@@ -209,39 +209,39 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 ### `buildpack-deps:sid-curl` - linux; mips64le
 
 ```console
-$ docker pull buildpack-deps@sha256:43e16309cb69f315fa86449937b420a80740c59ce60c263656a94d8f08232b92
+$ docker pull buildpack-deps@sha256:a066927b5ec09a3c745cdb27319b860af8d276f3d23efc2b091f4a9a10370066
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **72.0 MB (72044413 bytes)**  
+-	Total Size: **73.0 MB (73007477 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5ea28265acbcd742b4955516d063ff0dfcac5c8b9c6156eb7fa5bea60e53cd7e`
+-	Image ID: `sha256:87b88a966c0901785dc7b8096d2394d610676b405eebe695aac588ab352de1cb`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 12 Jul 2022 04:44:00 GMT
-ADD file:f6825f1dd59126d26ef0dba330a1d0eff37f6b9d56fe4a1bf2669774a6a7c74b in / 
-# Tue, 12 Jul 2022 04:44:06 GMT
+# Tue, 02 Aug 2022 01:13:16 GMT
+ADD file:6165703835b4dbffafda027e272e21bf37cfc276085814fa1d03c1db0162e605 in / 
+# Tue, 02 Aug 2022 01:13:21 GMT
 CMD ["bash"]
-# Tue, 12 Jul 2022 06:27:54 GMT
+# Tue, 02 Aug 2022 02:11:26 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 12 Jul 2022 06:28:31 GMT
+# Tue, 02 Aug 2022 02:11:59 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
 ```
 
 -	Layers:
-	-	`sha256:043042ab5eb51d2e5fe9f7bf85b86a91823ebf404e02b09bd9d96e29066acc7b`  
-		Last Modified: Tue, 12 Jul 2022 04:54:59 GMT  
-		Size: 52.3 MB (52346196 bytes)  
+	-	`sha256:71112f7b4dfd928d54aaa23ee1023fef50d2dc747bf6e2168afe69932ce8aa1a`  
+		Last Modified: Tue, 02 Aug 2022 01:24:23 GMT  
+		Size: 53.3 MB (53305987 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:78102f519b643046757a9cd4f6d008518ddaf7e24f82322dba5336a7bff1dd7a`  
-		Last Modified: Tue, 12 Jul 2022 06:46:55 GMT  
-		Size: 8.7 MB (8664834 bytes)  
+	-	`sha256:523353756f561bdc5914e25ea1cfeda5bc330e894285664b88d8ce11aa594a29`  
+		Last Modified: Tue, 02 Aug 2022 02:30:34 GMT  
+		Size: 8.7 MB (8659688 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ddf3efe7ae97a67b5d9d9a2fd74d9d6407dc893ffcf6df03128e98d57bb34138`  
-		Last Modified: Tue, 12 Jul 2022 06:46:55 GMT  
-		Size: 11.0 MB (11033383 bytes)  
+	-	`sha256:2258650534e83b3efae8fb3f1ce269322b09b63e553775a7c0b8c8104b2451b0`  
+		Last Modified: Tue, 02 Aug 2022 02:30:34 GMT  
+		Size: 11.0 MB (11041802 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:sid-curl` - linux; ppc64le
