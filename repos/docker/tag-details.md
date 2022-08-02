@@ -3,6 +3,7 @@
 # Tags of `docker`
 
 -	[`docker:20`](#docker20)
+-	[`docker:20-cli`](#docker20-cli)
 -	[`docker:20-dind`](#docker20-dind)
 -	[`docker:20-dind-rootless`](#docker20-dind-rootless)
 -	[`docker:20-git`](#docker20-git)
@@ -10,6 +11,7 @@
 -	[`docker:20-windowsservercore-1809`](#docker20-windowsservercore-1809)
 -	[`docker:20-windowsservercore-ltsc2022`](#docker20-windowsservercore-ltsc2022)
 -	[`docker:20.10`](#docker2010)
+-	[`docker:20.10-cli`](#docker2010-cli)
 -	[`docker:20.10-dind`](#docker2010-dind)
 -	[`docker:20.10-dind-rootless`](#docker2010-dind-rootless)
 -	[`docker:20.10-git`](#docker2010-git)
@@ -18,6 +20,8 @@
 -	[`docker:20.10-windowsservercore-ltsc2022`](#docker2010-windowsservercore-ltsc2022)
 -	[`docker:20.10.17`](#docker201017)
 -	[`docker:20.10.17-alpine3.16`](#docker201017-alpine316)
+-	[`docker:20.10.17-cli`](#docker201017-cli)
+-	[`docker:20.10.17-cli-alpine3.16`](#docker201017-cli-alpine316)
 -	[`docker:20.10.17-dind`](#docker201017-dind)
 -	[`docker:20.10.17-dind-alpine3.16`](#docker201017-dind-alpine316)
 -	[`docker:20.10.17-dind-rootless`](#docker201017-dind-rootless)
@@ -26,6 +30,7 @@
 -	[`docker:20.10.17-windowsservercore-1809`](#docker201017-windowsservercore-1809)
 -	[`docker:20.10.17-windowsservercore-ltsc2022`](#docker201017-windowsservercore-ltsc2022)
 -	[`docker:22.06-rc`](#docker2206-rc)
+-	[`docker:22.06-rc-cli`](#docker2206-rc-cli)
 -	[`docker:22.06-rc-dind`](#docker2206-rc-dind)
 -	[`docker:22.06-rc-dind-rootless`](#docker2206-rc-dind-rootless)
 -	[`docker:22.06-rc-git`](#docker2206-rc-git)
@@ -34,6 +39,8 @@
 -	[`docker:22.06-rc-windowsservercore-ltsc2022`](#docker2206-rc-windowsservercore-ltsc2022)
 -	[`docker:22.06.0-beta.0`](#docker22060-beta0)
 -	[`docker:22.06.0-beta.0-alpine3.16`](#docker22060-beta0-alpine316)
+-	[`docker:22.06.0-beta.0-cli`](#docker22060-beta0-cli)
+-	[`docker:22.06.0-beta.0-cli-alpine3.16`](#docker22060-beta0-cli-alpine316)
 -	[`docker:22.06.0-beta.0-dind`](#docker22060-beta0-dind)
 -	[`docker:22.06.0-beta.0-dind-alpine3.16`](#docker22060-beta0-dind-alpine316)
 -	[`docker:22.06.0-beta.0-dind-rootless`](#docker22060-beta0-dind-rootless)
@@ -41,11 +48,13 @@
 -	[`docker:22.06.0-beta.0-windowsservercore`](#docker22060-beta0-windowsservercore)
 -	[`docker:22.06.0-beta.0-windowsservercore-1809`](#docker22060-beta0-windowsservercore-1809)
 -	[`docker:22.06.0-beta.0-windowsservercore-ltsc2022`](#docker22060-beta0-windowsservercore-ltsc2022)
+-	[`docker:cli`](#dockercli)
 -	[`docker:dind`](#dockerdind)
 -	[`docker:dind-rootless`](#dockerdind-rootless)
 -	[`docker:git`](#dockergit)
 -	[`docker:latest`](#dockerlatest)
 -	[`docker:rc`](#dockerrc)
+-	[`docker:rc-cli`](#dockerrc-cli)
 -	[`docker:rc-dind`](#dockerrc-dind)
 -	[`docker:rc-dind-rootless`](#dockerrc-dind-rootless)
 -	[`docker:rc-git`](#dockerrc-git)
@@ -240,6 +249,10 @@ CMD ["sh"]
 		Last Modified: Wed, 20 Jul 2022 23:53:34 GMT  
 		Size: 117.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `docker:20-cli`
+
+**does not exist** (yet?)
 
 ## `docker:20-dind`
 
@@ -1463,6 +1476,10 @@ CMD ["sh"]
 		Last Modified: Wed, 20 Jul 2022 23:53:34 GMT  
 		Size: 117.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `docker:20.10-cli`
+
+**does not exist** (yet?)
 
 ## `docker:20.10-dind`
 
@@ -2871,6 +2888,14 @@ CMD ["sh"]
 		Last Modified: Wed, 20 Jul 2022 23:53:34 GMT  
 		Size: 117.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `docker:20.10.17-cli`
+
+**does not exist** (yet?)
+
+## `docker:20.10.17-cli-alpine3.16`
+
+**does not exist** (yet?)
 
 ## `docker:20.10.17-dind`
 
@@ -4348,6 +4373,10 @@ CMD ["sh"]
 		Size: 116.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `docker:22.06-rc-cli`
+
+**does not exist** (yet?)
+
 ## `docker:22.06-rc-dind`
 
 ```console
@@ -5756,6 +5785,14 @@ CMD ["sh"]
 		Size: 116.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `docker:22.06.0-beta.0-cli`
+
+**does not exist** (yet?)
+
+## `docker:22.06.0-beta.0-cli-alpine3.16`
+
+**does not exist** (yet?)
+
 ## `docker:22.06.0-beta.0-dind`
 
 ```console
@@ -7047,6 +7084,10 @@ RUN Write-Host ('Downloading {0} ...' -f $env:DOCKER_URL); 	Invoke-WebRequest -U
 		Size: 9.8 MB (9765370 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `docker:cli`
+
+**does not exist** (yet?)
+
 ## `docker:dind`
 
 ```console
@@ -8187,6 +8228,10 @@ CMD ["sh"]
 		Last Modified: Wed, 20 Jul 2022 23:52:20 GMT  
 		Size: 116.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `docker:rc-cli`
+
+**does not exist** (yet?)
 
 ## `docker:rc-dind`
 
