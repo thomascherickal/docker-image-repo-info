@@ -1,15 +1,16 @@
 ## `bash:devel-20220726-alpine3.15`
 
 ```console
-$ docker pull bash@sha256:c7825fe8c07b7118e05a1a3c9fd707e1ee56327acbb6964dc0d5689ee4c1f8a4
+$ docker pull bash@sha256:dfc57794f18402e9b982e0c889bf135774719bb752bee8e1f5993714e63dba9b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 5
+-	Platforms: 6
 	-	linux; amd64
 	-	linux; arm variant v6
 	-	linux; arm64 variant v8
 	-	linux; 386
+	-	linux; ppc64le
 	-	linux; s390x
 
 ### `bash:devel-20220726-alpine3.15` - linux; amd64
@@ -198,6 +199,53 @@ CMD ["bash"]
 	-	`sha256:e80d955c8e5c1da547ff8a7f2ae87e47b78c098a7587932728ed7e7e83a89a25`  
 		Last Modified: Tue, 02 Aug 2022 22:48:13 GMT  
 		Size: 340.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `bash:devel-20220726-alpine3.15` - linux; ppc64le
+
+```console
+$ docker pull bash@sha256:a44dda56061dbb0059d5c41bbd4c5cd68bd746b29383c623042c1287cc58f7a0
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **5.8 MB (5813449 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:9358b1538d7f54e78afe84c73407e9362064460be6d646856f6e780eaad6da1e`
+-	Entrypoint: `["docker-entrypoint.sh"]`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Tue, 19 Jul 2022 22:26:26 GMT
+ADD file:fee9d1c50a43d2072ff528133302b3e4d565d1853e14a7d56be9f4532a330841 in / 
+# Tue, 19 Jul 2022 22:26:28 GMT
+CMD ["/bin/sh"]
+# Wed, 03 Aug 2022 17:28:47 GMT
+ENV _BASH_COMMIT=e9e3e4fea56f9459705542ac39884650fb4c6007
+# Wed, 03 Aug 2022 17:28:47 GMT
+ENV _BASH_VERSION=devel-20220726
+# Wed, 03 Aug 2022 17:31:01 GMT
+RUN set -eux; 		apk add --no-cache --virtual .build-deps 		bison 		coreutils 		dpkg-dev dpkg 		gcc 		libc-dev 		make 		ncurses-dev 		tar 	; 		wget -O bash.tar.gz "https://git.savannah.gnu.org/cgit/bash.git/snapshot/bash-$_BASH_COMMIT.tar.gz"; 		mkdir -p /usr/src/bash; 	tar 		--extract 		--file=bash.tar.gz 		--strip-components=1 		--directory=/usr/src/bash 	; 	rm bash.tar.gz; 		if [ -d bash-patches ]; then 		apk add --no-cache --virtual .patch-deps patch; 		for p in bash-patches/*; do 			patch 				--directory=/usr/src/bash 				--input="$(readlink -f "$p")" 				--strip=0 			; 			rm "$p"; 		done; 		rmdir bash-patches; 		apk del --no-network .patch-deps; 	fi; 		cd /usr/src/bash; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--enable-readline 		--with-curses 		--without-bash-malloc 	|| { 		cat >&2 config.log; 		false; 	}; 	make -j "$(nproc)"; 	make install; 	cd /; 	rm -r /usr/src/bash; 		rm -rf 		/usr/local/share/doc/bash/*.html 		/usr/local/share/info 		/usr/local/share/locale 		/usr/local/share/man 	; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .bash-rundeps $runDeps; 	apk del --no-network .build-deps; 		[ "$(which bash)" = '/usr/local/bin/bash' ]; 	bash --version; 	bash -c 'help' > /dev/null
+# Wed, 03 Aug 2022 17:31:02 GMT
+COPY file:651b3bebeba8be9162c56b3eb561199905235f3e1c7811232b6c9f48ac333651 in /usr/local/bin/ 
+# Wed, 03 Aug 2022 17:31:02 GMT
+ENTRYPOINT ["docker-entrypoint.sh"]
+# Wed, 03 Aug 2022 17:31:03 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:a340aa0651fe455d7a9f4dba0b2b8048ef90ce173a72ac17cf04b9b6af34a2a9`  
+		Last Modified: Tue, 19 Jul 2022 22:27:55 GMT  
+		Size: 2.8 MB (2811642 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7e1b2c7cbf46b6fd05daf0b12e9b62eb199f665c66a095a2f750c934b543d739`  
+		Last Modified: Wed, 03 Aug 2022 17:34:32 GMT  
+		Size: 3.0 MB (3001464 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f28c6d9c68be495d0bd8e4bbce1ad00602f8af982ef3a0ad6a6b790b7d2f1de3`  
+		Last Modified: Wed, 03 Aug 2022 17:34:31 GMT  
+		Size: 343.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `bash:devel-20220726-alpine3.15` - linux; s390x
