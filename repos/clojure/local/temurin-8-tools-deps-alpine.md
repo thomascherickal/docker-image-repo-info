@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:323e0b4250d907ac3bacf9827885b2a6b233d477907cf01c6bd35e43fb3ce91a`
-- Created: `2022-07-26T22:23:52.279590074Z`
-- Virtual Size: ~ 250.49 Mb  
+- Image ID: `sha256:c3cfc38a7d9d838540430213dee402ee600f0ca64532d74787924d51ca48058c`
+- Created: `2022-08-03T12:13:03.453290683Z`
+- Virtual Size: ~ 271.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["clj"]`
@@ -13,7 +13,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk8u332-b09`
+  - `JAVA_VERSION=jdk8u342-b07`
   - `JAVA_HOME=/opt/java/openjdk`
   - `CLOJURE_VERSION=1.11.1.1149`
 
@@ -141,16 +141,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20211220-r0 description:
+ca-certificates-20220614-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20211220-r0 webpage:
+ca-certificates-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20211220-r0 installed size:
-656 KiB
+ca-certificates-20220614-r0 installed size:
+688 KiB
 
-ca-certificates-20211220-r0 license:
+ca-certificates-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -172,6 +172,23 @@ MPL-2.0 AND MIT
 
 ```
 
+### `apk` package: `encodings`
+
+```console
+encodings-1.0.5-r0 description:
+X.org font encoding files
+
+encodings-1.0.5-r0 webpage:
+http://xorg.freedesktop.org/
+
+encodings-1.0.5-r0 installed size:
+788 KiB
+
+encodings-1.0.5-r0 license:
+custom
+
+```
+
 ### `apk` package: `expat`
 
 ```console
@@ -189,6 +206,40 @@ MIT
 
 ```
 
+### `apk` package: `fontconfig`
+
+```console
+fontconfig-2.14.0-r0 description:
+Library for configuring and customizing font access
+
+fontconfig-2.14.0-r0 webpage:
+https://www.freedesktop.org/wiki/Software/fontconfig
+
+fontconfig-2.14.0-r0 installed size:
+708 KiB
+
+fontconfig-2.14.0-r0 license:
+MIT
+
+```
+
+### `apk` package: `freetype`
+
+```console
+freetype-2.12.1-r0 description:
+TrueType font rendering library
+
+freetype-2.12.1-r0 webpage:
+https://www.freetype.org/
+
+freetype-2.12.1-r0 installed size:
+752 KiB
+
+freetype-2.12.1-r0 license:
+FTL GPL-2.0-or-later
+
+```
+
 ### `apk` package: `git`
 
 ```console
@@ -203,6 +254,23 @@ git-2.36.2-r0 installed size:
 
 git-2.36.2-r0 license:
 GPL-2.0-or-later
+
+```
+
+### `apk` package: `libbz2`
+
+```console
+libbz2-1.0.8-r1 description:
+Shared library for bz2
+
+libbz2-1.0.8-r1 webpage:
+http://sources.redhat.com/bzip2
+
+libbz2-1.0.8-r1 installed size:
+72 KiB
+
+libbz2-1.0.8-r1 license:
+bzip2-1.0.6
 
 ```
 
@@ -257,6 +325,40 @@ curl
 
 ```
 
+### `apk` package: `libfontenc`
+
+```console
+libfontenc-1.1.4-r0 description:
+X11 font encoding library
+
+libfontenc-1.1.4-r0 webpage:
+http://xorg.freedesktop.org/
+
+libfontenc-1.1.4-r0 installed size:
+48 KiB
+
+libfontenc-1.1.4-r0 license:
+MIT
+
+```
+
+### `apk` package: `libpng`
+
+```console
+libpng-1.6.37-r1 description:
+Portable Network Graphics library
+
+libpng-1.6.37-r1 webpage:
+http://www.libpng.org
+
+libpng-1.6.37-r1 installed size:
+204 KiB
+
+libpng-1.6.37-r1 license:
+Libpng
+
+```
+
 ### `apk` package: `libretls`
 
 ```console
@@ -305,6 +407,23 @@ make-4.3-r0 installed size:
 
 make-4.3-r0 license:
 GPL-3.0-or-later
+
+```
+
+### `apk` package: `mkfontscale`
+
+```console
+mkfontscale-1.2.2-r0 description:
+Scalable font index generator for X
+
+mkfontscale-1.2.2-r0 webpage:
+http://xorg.freedesktop.org
+
+mkfontscale-1.2.2-r0 installed size:
+56 KiB
+
+mkfontscale-1.2.2-r0 license:
+MIT
 
 ```
 
@@ -492,6 +611,23 @@ ssl_client-1.35.0-r15 installed size:
 
 ssl_client-1.35.0-r15 license:
 GPL-2.0-only
+
+```
+
+### `apk` package: `ttf-dejavu`
+
+```console
+ttf-dejavu-2.37-r1 description:
+Font family based on the Bitstream Vera Fonts with a wider range of characters
+
+ttf-dejavu-2.37-r1 webpage:
+https://dejavu-fonts.github.io/
+
+ttf-dejavu-2.37-r1 installed size:
+17 MiB
+
+ttf-dejavu-2.37-r1 license:
+custom
 
 ```
 
