@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2cddfda63e966ad25e41d51afd08dcbabcbf0903c6f3034a8c78563d73bdfd22`
-- Created: `2022-07-25T18:24:51.490327145Z`
-- Virtual Size: ~ 242.23 Mb  
+- Image ID: `sha256:a3334ea31dd0d7e038555704ec2fb9412705a5f2c98bce898e08135aaedf7e27`
+- Created: `2022-08-04T23:25:57.17836434Z`
+- Virtual Size: ~ 200.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.8`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.8.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.8.tar.xz.asc`
-  - `PHP_SHA256=04c065515bc347bc68e0bb1ac7182669a98a731e4a17727e5731650ad3d8de4c`
+  - `PHP_VERSION=8.1.9`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.9.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.9.tar.xz.asc`
+  - `PHP_SHA256=53477e73e6254dc942b68913a58d815ffdbf6946baf61a1f8ef854de524c27bf`
   - `COMPOSER_ALLOW_SUPERUSER=1`
   - `COMPOSER_HOME=/tmp`
   - `COMPOSER_VERSION=2.3.10`
@@ -183,16 +183,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.35.0-r15 description:
+busybox-1.35.0-r17 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.35.0-r15 webpage:
+busybox-1.35.0-r17 webpage:
 https://busybox.net/
 
-busybox-1.35.0-r15 installed size:
-936 KiB
+busybox-1.35.0-r17 installed size:
+940 KiB
 
-busybox-1.35.0-r15 license:
+busybox-1.35.0-r17 license:
 GPL-2.0-only
 
 ```
@@ -200,16 +200,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20211220-r0 description:
+ca-certificates-20220614-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20211220-r0 webpage:
+ca-certificates-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20211220-r0 installed size:
-656 KiB
+ca-certificates-20220614-r0 installed size:
+688 KiB
 
-ca-certificates-20211220-r0 license:
+ca-certificates-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -217,16 +217,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20211220-r0 description:
+ca-certificates-bundle-20220614-r0 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20211220-r0 webpage:
+ca-certificates-bundle-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20211220-r0 installed size:
-216 KiB
+ca-certificates-bundle-20220614-r0 installed size:
+228 KiB
 
-ca-certificates-bundle-20211220-r0 license:
+ca-certificates-bundle-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -795,16 +795,16 @@ BSD-2-Clause
 ### `apk` package: `openssh-client-common`
 
 ```console
-openssh-client-common-9.0_p1-r1 description:
+openssh-client-common-9.0_p1-r2 description:
 OpenBSD's SSH client common files
 
-openssh-client-common-9.0_p1-r1 webpage:
+openssh-client-common-9.0_p1-r2 webpage:
 https://www.openssh.com/portable.html
 
-openssh-client-common-9.0_p1-r1 installed size:
+openssh-client-common-9.0_p1-r2 installed size:
 2688 KiB
 
-openssh-client-common-9.0_p1-r1 license:
+openssh-client-common-9.0_p1-r2 license:
 BSD
 
 ```
@@ -812,16 +812,16 @@ BSD
 ### `apk` package: `openssh-client-default`
 
 ```console
-openssh-client-default-9.0_p1-r1 description:
+openssh-client-default-9.0_p1-r2 description:
 OpenBSD's SSH client
 
-openssh-client-default-9.0_p1-r1 webpage:
+openssh-client-default-9.0_p1-r2 webpage:
 https://www.openssh.com/portable.html
 
-openssh-client-default-9.0_p1-r1 installed size:
+openssh-client-default-9.0_p1-r2 installed size:
 896 KiB
 
-openssh-client-default-9.0_p1-r1 license:
+openssh-client-default-9.0_p1-r2 license:
 BSD
 
 ```
@@ -829,16 +829,16 @@ BSD
 ### `apk` package: `openssh-keygen`
 
 ```console
-openssh-keygen-9.0_p1-r1 description:
+openssh-keygen-9.0_p1-r2 description:
 ssh helper program for generating keys
 
-openssh-keygen-9.0_p1-r1 webpage:
+openssh-keygen-9.0_p1-r2 webpage:
 https://www.openssh.com/portable.html
 
-openssh-keygen-9.0_p1-r1 installed size:
+openssh-keygen-9.0_p1-r2 installed size:
 540 KiB
 
-openssh-keygen-9.0_p1-r1 license:
+openssh-keygen-9.0_p1-r2 license:
 BSD
 
 ```
@@ -1016,16 +1016,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.35.0-r15 description:
+ssl_client-1.35.0-r17 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.35.0-r15 webpage:
+ssl_client-1.35.0-r17 webpage:
 https://busybox.net/
 
-ssl_client-1.35.0-r15 installed size:
+ssl_client-1.35.0-r17 installed size:
 28 KiB
 
-ssl_client-1.35.0-r15 license:
+ssl_client-1.35.0-r17 license:
 GPL-2.0-only
 
 ```
