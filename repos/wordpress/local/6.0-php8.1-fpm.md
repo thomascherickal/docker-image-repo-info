@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9a2400c73e9da8c6146172ec659a5dca492f01b2edf0dd80be1b154064596bda`
-- Created: `2022-07-13T03:11:32.162561079Z`
-- Virtual Size: ~ 605.93 Mb  
+- Image ID: `sha256:c75e40280ef2a3c4fb865a99c47fa12a7c1096e8975e8d7ddb8ff25f69fe2c6d`
+- Created: `2022-08-03T09:40:15.200905403Z`
+- Virtual Size: ~ 605.94 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -552,12 +552,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/cups/2.3.3op2-3+deb11u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/cups/2.3.3op2-3+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.74.0-1.3+deb11u1`
+### `dpkg` source package: `curl=7.74.0-1.3+deb11u2`
 
 Binary Packages:
 
-- `curl=7.74.0-1.3+deb11u1`
-- `libcurl4:amd64=7.74.0-1.3+deb11u1`
+- `curl=7.74.0-1.3+deb11u2`
+- `libcurl4:amd64=7.74.0-1.3+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -571,17 +571,17 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.74.0-1.3+deb11u1
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3%2bdeb11u1.dsc' curl_7.74.0-1.3+deb11u1.dsc 2699 SHA256:7983845054585d56348bc262cee1f4fff96866fe23ca864db3c9d43e829139fc
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3%2bdeb11u1.debian.tar.xz' curl_7.74.0-1.3+deb11u1.debian.tar.xz 37024 SHA256:eac5deff2b2511443ba4995daa8afe8985aaa5f62a24d672e9715fcabe0069b2
+$ apt-get source -qq --print-uris curl=7.74.0-1.3+deb11u2
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u2.dsc' curl_7.74.0-1.3+deb11u2.dsc 2850 SHA256:3399df07e4d03f86229f9d24a1119fdd14c11651fbd48d9d5f5a111e8b4253a6
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u2.debian.tar.xz' curl_7.74.0-1.3+deb11u2.debian.tar.xz 56456 SHA256:dd4151f63e97989e260c60ab2bf8b2e84bd9eea73686b6b2b12ff48e967ebe8e
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2.1+deb11u1`
 
@@ -2956,11 +2956,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.127-1`
+### `dpkg` source package: `linux=5.10.127-2`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.127-1`
+- `linux-libc-dev:amd64=5.10.127-2`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -2976,17 +2976,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.10.127-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.127-1.dsc' linux_5.10.127-1.dsc 197238 SHA256:19690274cafdf0c0aab607579654a6bf027dddd3991c32eaa76d27a64b512005
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.127.orig.tar.xz' linux_5.10.127.orig.tar.xz 121727816 SHA256:488af1775ba0402293482346589d1b19462c236201c6c873f6d297707074c19d
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.127-1.debian.tar.xz' linux_5.10.127-1.debian.tar.xz 1518552 SHA256:907e49dd2f6ea189fe8b7d03b95ae20b642833811a03a7b024b38c86f4387e43
+$ apt-get source -qq --print-uris linux=5.10.127-2
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.127-2.dsc' linux_5.10.127-2.dsc 197083 SHA256:3dad248c5d2bb2e2c6d15bc6085d2b0fd6080be0c6ecf1300f4693f57f157df3
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.127.orig.tar.xz' linux_5.10.127.orig.tar.xz 121727816 SHA256:488af1775ba0402293482346589d1b19462c236201c6c873f6d297707074c19d
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.127-2.debian.tar.xz' linux_5.10.127-2.debian.tar.xz 3450468 SHA256:8b89a32daf57c1c9326db0228c26122338d958ccf1ab4098f2587f26d240dacb
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/5.10.127-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.127-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.127-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/5.10.127-2/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.127-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.127-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
