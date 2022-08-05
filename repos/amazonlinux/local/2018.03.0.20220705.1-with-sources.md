@@ -1,10 +1,10 @@
-# `amazonlinux:2018.03.0.20220609.0-with-sources`
+# `amazonlinux:2018.03.0.20220705.1-with-sources`
 
 ## Docker Metadata
 
-- Image ID: `sha256:98bea2ab30f386fa0269d2414b6c2045299fdfbaec499f6e68966d83a99dfe86`
-- Created: `2022-06-22T20:20:31.51419938Z`
-- Virtual Size: ~ 620.16 Mb  
+- Image ID: `sha256:1862d4c5d4530382c100d0ad62b44402dd8056ca13a22de7b6c7b0928fc06538`
+- Created: `2022-08-04T00:20:11.418946972Z`
+- Virtual Size: ~ 620.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -31,7 +31,7 @@ Licenses (from `rpm --query`): BSD
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `ca-certificates-2018.2.22-65.1.26.amzn1.noarch`
+### `rpm` package: `ca-certificates-2018.2.22-65.1.27.amzn1.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
@@ -79,7 +79,7 @@ Licenses (from `rpm --query`): GPLv2+ or LGPLv3+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `expat-2.1.0-12.28.amzn1.x86_64`
+### `rpm` package: `expat-2.1.0-14.31.amzn1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -403,7 +403,7 @@ Licenses (from `rpm --query`): OpenLDAP
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `openssl-1.0.2k-16.156.amzn1.x86_64`
+### `rpm` package: `openssl-1.0.2k-16.158.amzn1.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
 
@@ -595,7 +595,7 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `yum-3.4.3-150.72.amzn1.noarch`
+### `rpm` package: `yum-3.4.3-150.73.amzn1.noarch`
 
 Licenses (from `rpm --query`): GPLv2+
 
@@ -625,7 +625,7 @@ Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `zlib-1.2.8-7.18.amzn1.x86_64`
+### `rpm` package: `zlib-1.2.8-7.19.amzn1.x86_64`
 
 Licenses (from `rpm --query`): zlib and Boost
 
