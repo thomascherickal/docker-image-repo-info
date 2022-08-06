@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c3c88ac7ed2491679a4e110cef8671ec703dcc116d879c6895be46c57da9a365`
-- Created: `2022-07-19T04:02:59.381884817Z`
-- Virtual Size: ~ 224.73 Mb  
+- Image ID: `sha256:9ffd958c26dc1499c48ae568f810c37f863c5473cb69873ee36bfb2282eb3794`
+- Created: `2022-08-03T07:36:37.871927867Z`
+- Virtual Size: ~ 245.89 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk8u332-b09`
+  - `JAVA_VERSION=jdk8u342-b07`
   - `JAVA_HOME=/opt/java/openjdk`
   - `MAVEN_HOME=/usr/share/maven`
   - `MAVEN_CONFIG=/root/.m2`
@@ -143,16 +143,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20211220-r0 description:
+ca-certificates-20220614-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20211220-r0 webpage:
+ca-certificates-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20211220-r0 installed size:
-656 KiB
+ca-certificates-20220614-r0 installed size:
+688 KiB
 
-ca-certificates-20211220-r0 license:
+ca-certificates-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -191,6 +191,74 @@ curl
 
 ```
 
+### `apk` package: `encodings`
+
+```console
+encodings-1.0.5-r0 description:
+X.org font encoding files
+
+encodings-1.0.5-r0 webpage:
+http://xorg.freedesktop.org/
+
+encodings-1.0.5-r0 installed size:
+788 KiB
+
+encodings-1.0.5-r0 license:
+custom
+
+```
+
+### `apk` package: `expat`
+
+```console
+expat-2.4.8-r0 description:
+XML Parser library written in C
+
+expat-2.4.8-r0 webpage:
+https://libexpat.github.io/
+
+expat-2.4.8-r0 installed size:
+192 KiB
+
+expat-2.4.8-r0 license:
+MIT
+
+```
+
+### `apk` package: `fontconfig`
+
+```console
+fontconfig-2.14.0-r0 description:
+Library for configuring and customizing font access
+
+fontconfig-2.14.0-r0 webpage:
+https://www.freedesktop.org/wiki/Software/fontconfig
+
+fontconfig-2.14.0-r0 installed size:
+708 KiB
+
+fontconfig-2.14.0-r0 license:
+MIT
+
+```
+
+### `apk` package: `freetype`
+
+```console
+freetype-2.12.1-r0 description:
+TrueType font rendering library
+
+freetype-2.12.1-r0 webpage:
+https://www.freetype.org/
+
+freetype-2.12.1-r0 installed size:
+752 KiB
+
+freetype-2.12.1-r0 license:
+FTL GPL-2.0-or-later
+
+```
+
 ### `apk` package: `libacl`
 
 ```console
@@ -205,6 +273,23 @@ libacl-2.3.1-r0 installed size:
 
 libacl-2.3.1-r0 license:
 LGPL-2.1-or-later AND GPL-2.0-or-later
+
+```
+
+### `apk` package: `libbz2`
+
+```console
+libbz2-1.0.8-r1 description:
+Shared library for bz2
+
+libbz2-1.0.8-r1 webpage:
+http://sources.redhat.com/bzip2
+
+libbz2-1.0.8-r1 installed size:
+72 KiB
+
+libbz2-1.0.8-r1 license:
+bzip2-1.0.6
 
 ```
 
@@ -259,6 +344,23 @@ curl
 
 ```
 
+### `apk` package: `libfontenc`
+
+```console
+libfontenc-1.1.4-r0 description:
+X11 font encoding library
+
+libfontenc-1.1.4-r0 webpage:
+http://xorg.freedesktop.org/
+
+libfontenc-1.1.4-r0 installed size:
+48 KiB
+
+libfontenc-1.1.4-r0 license:
+MIT
+
+```
+
 ### `apk` package: `libintl`
 
 ```console
@@ -273,6 +375,23 @@ libintl-0.21-r2 installed size:
 
 libintl-0.21-r2 license:
 LGPL-2.1-or-later
+
+```
+
+### `apk` package: `libpng`
+
+```console
+libpng-1.6.37-r1 description:
+Portable Network Graphics library
+
+libpng-1.6.37-r1 webpage:
+http://www.libpng.org
+
+libpng-1.6.37-r1 installed size:
+204 KiB
+
+libpng-1.6.37-r1 license:
+Libpng
 
 ```
 
@@ -324,6 +443,23 @@ libssl1.1-1.1.1q-r0 installed size:
 
 libssl1.1-1.1.1q-r0 license:
 OpenSSL
+
+```
+
+### `apk` package: `mkfontscale`
+
+```console
+mkfontscale-1.2.2-r0 description:
+Scalable font index generator for X
+
+mkfontscale-1.2.2-r0 webpage:
+http://xorg.freedesktop.org
+
+mkfontscale-1.2.2-r0 installed size:
+56 KiB
+
+mkfontscale-1.2.2-r0 license:
+MIT
 
 ```
 
@@ -528,6 +664,23 @@ tar-1.34-r0 installed size:
 
 tar-1.34-r0 license:
 GPL-3.0-or-later
+
+```
+
+### `apk` package: `ttf-dejavu`
+
+```console
+ttf-dejavu-2.37-r1 description:
+Font family based on the Bitstream Vera Fonts with a wider range of characters
+
+ttf-dejavu-2.37-r1 webpage:
+https://dejavu-fonts.github.io/
+
+ttf-dejavu-2.37-r1 installed size:
+17 MiB
+
+ttf-dejavu-2.37-r1 license:
+custom
 
 ```
 
