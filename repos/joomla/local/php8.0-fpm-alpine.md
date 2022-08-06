@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:482ad3793f4c12cf417ae193dd4601475e7396455e28815bc6326871cbaa78a9`
-- Created: `2022-07-19T06:16:40.974074871Z`
+- Image ID: `sha256:1cdd8ee53a93b02fc2630d80343d9371bd226e5e9a05a589300e02b41b686960`
+- Created: `2022-08-05T00:20:53.749923067Z`
 - Virtual Size: ~ 312.83 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.21`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.21.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.21.tar.xz.asc`
-  - `PHP_SHA256=e87a598f157e0cf0606e64382bb91c8b30c47d4a0fc96b2c17ad547a27869b3b`
+  - `PHP_VERSION=8.0.22`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.22.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.22.tar.xz.asc`
+  - `PHP_SHA256=130937c0fa3050cd33d6c415402f6ccbf0682ae83eb8d39c91164224ddfe57f1`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
   - `JOOMLA_VERSION=4.1.5`
   - `JOOMLA_SHA512=81edf13386640f358aec8d4facc4bda53bca401632d796a0b2137e5cdcb6635dc91d6abeb10e06545881a7a011dbe55ab8e07d670044cf563927467149f2cd2e`
@@ -491,16 +491,16 @@ LGPL-2.1-or-later
 ### `apk` package: `gnutls`
 
 ```console
-gnutls-3.7.6-r0 description:
+gnutls-3.7.7-r0 description:
 TLS protocol implementation
 
-gnutls-3.7.6-r0 webpage:
+gnutls-3.7.7-r0 webpage:
 https://www.gnutls.org/
 
-gnutls-3.7.6-r0 installed size:
+gnutls-3.7.7-r0 installed size:
 1904 KiB
 
-gnutls-3.7.6-r0 license:
+gnutls-3.7.7-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -967,16 +967,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-14.4-r0 description:
+libpq-14.4-r1 description:
 PostgreSQL client library
 
-libpq-14.4-r0 webpage:
+libpq-14.4-r1 webpage:
 https://www.postgresql.org/
 
-libpq-14.4-r0 installed size:
+libpq-14.4-r1 installed size:
 328 KiB
 
-libpq-14.4-r0 license:
+libpq-14.4-r1 license:
 PostgreSQL
 
 ```
