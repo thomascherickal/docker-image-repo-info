@@ -1,9 +1,9 @@
-# `openjdk:19-ea-33-jdk-oraclelinux7`
+# `openjdk:19-ea-34-jdk-oraclelinux7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:00a576b8aff72bb0116af1a3f8c425de165aff8b8ce5559c3992d70e1f184278`
-- Created: `2022-07-29T02:05:07.982190509Z`
+- Image ID: `sha256:4a46890da48d6065a1511eacd69d94b77024f01f90e05f52bc734ec3828e754c`
+- Created: `2022-08-08T22:53:34.563103071Z`
 - Virtual Size: ~ 510.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-19/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/java/openjdk-19`
   - `LANG=en_US.UTF-8`
-  - `JAVA_VERSION=19-ea+33`
+  - `JAVA_VERSION=19-ea+34`
 
 ## `rpm` (`.rpm`-based packages)
 
