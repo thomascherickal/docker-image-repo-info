@@ -1,7 +1,7 @@
 ## `nats-streaming:scratch`
 
 ```console
-$ docker pull nats-streaming@sha256:33caf6415a6bccf5d7cb28a520ea38b6c028ca88b2837a0a2d8a5c484263f26e
+$ docker pull nats-streaming@sha256:22e739ecf1bf440e8cdd70eb4697bd00118f307ad7ba05da1f5d46113000d96d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -45,25 +45,25 @@ CMD ["-m" "8222"]
 ### `nats-streaming:scratch` - linux; arm variant v6
 
 ```console
-$ docker pull nats-streaming@sha256:216b5f0964cd7471ebf0037fa3126f199e1292ff46d4069b9f3cece4c475dfc9
+$ docker pull nats-streaming@sha256:01b1e6b1844269a3244839a7e783f5636257112bc4ea31ec292c30a867d48ae2
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **6.7 MB (6671918 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7e22671d6d6f173c32a87a982bf9342f90f9857aec21e12fb5d0d8c3415671e5`
+-	Image ID: `sha256:70144c73cb5394e4554f992f11ed714cad02f59e927edcd1f397ff78050b3e8f`
 -	Entrypoint: `["\/nats-streaming-server"]`
 -	Default Command: `["-m","8222"]`
 
 ```dockerfile
-# Thu, 05 May 2022 00:50:08 GMT
+# Tue, 09 Aug 2022 19:26:26 GMT
 COPY file:e97502b8a5ae65f8937a0a1aeb1aa614b9bb861a96043a968de2c0cf17a937f1 in /nats-streaming-server 
-# Thu, 05 May 2022 00:50:09 GMT
+# Tue, 09 Aug 2022 19:26:26 GMT
 EXPOSE 4222 8222
-# Thu, 05 May 2022 00:50:09 GMT
+# Tue, 09 Aug 2022 19:26:26 GMT
 ENTRYPOINT ["/nats-streaming-server"]
-# Thu, 05 May 2022 00:50:10 GMT
+# Tue, 09 Aug 2022 19:26:26 GMT
 CMD ["-m" "8222"]
 ```
 
