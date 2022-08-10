@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8cca9733b7054461108d38cc25e3c7aee022a3086c8a8f26265bf4f297cda688`
-- Created: `2022-07-19T22:50:37.238989334Z`
-- Virtual Size: ~ 17.17 Mb  
+- Image ID: `sha256:a2557517f85256294702dafbd88e3fb62c567277548bffe6ff868eb4ba657a36`
+- Created: `2022-08-09T17:47:41.954767409Z`
+- Virtual Size: ~ 17.18 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -87,16 +87,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20211220-r0 description:
+ca-certificates-bundle-20220614-r0 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20211220-r0 webpage:
+ca-certificates-bundle-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20211220-r0 installed size:
-216 KiB
+ca-certificates-bundle-20220614-r0 installed size:
+228 KiB
 
-ca-certificates-bundle-20211220-r0 license:
+ca-certificates-bundle-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -291,16 +291,16 @@ GPL-3.0-or-later WITH OpenSSL-Exception
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.12-r1 description:
+zlib-1.2.12-r3 description:
 A compression/decompression Library
 
-zlib-1.2.12-r1 webpage:
+zlib-1.2.12-r3 webpage:
 https://zlib.net/
 
-zlib-1.2.12-r1 installed size:
+zlib-1.2.12-r3 installed size:
 108 KiB
 
-zlib-1.2.12-r1 license:
+zlib-1.2.12-r3 license:
 Zlib
 
 ```
