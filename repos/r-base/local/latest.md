@@ -1091,19 +1091,13 @@ Licenses: (parsed from: `/usr/share/doc/cpp/copyright`, `/usr/share/doc/g++/copy
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-defaults=1.194
-'http://deb.debian.org/debian/pool/main/g/gcc-defaults/gcc-defaults_1.194.dsc' gcc-defaults_1.194.dsc 12639 SHA256:e98726befd3c6b7f32fd863dd0cfd87e19163f208e2983e13df30f4f62f8d415
-'http://deb.debian.org/debian/pool/main/g/gcc-defaults/gcc-defaults_1.194.tar.xz' gcc-defaults_1.194.tar.xz 45200 SHA256:ef25edf2ad31a51abdcc0bc5237233daedc8cc6ed2a7194e49d83150dde2a445
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-defaults/1.194/
 
-- https://sources.debian.net/src/gcc-defaults/1.194/ (for browsing the source)
-- https://sources.debian.net/src/gcc-defaults/1.194/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-defaults/1.194/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gdbm=1.23-1`
 
@@ -2405,20 +2399,13 @@ Licenses: (parsed from: `/usr/share/doc/libtirpc-common/copyright`, `/usr/share/
 - `PERMISSIVE`
 - `__AUTO_PERMISSIVE__`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libtirpc=1.3.2-2
-'http://deb.debian.org/debian/pool/main/libt/libtirpc/libtirpc_1.3.2-2.dsc' libtirpc_1.3.2-2.dsc 2111 SHA256:830223f0db2a95266185d18cc75691d37ba1ae001616df7f11a42cd1e9dd3394
-'http://deb.debian.org/debian/pool/main/libt/libtirpc/libtirpc_1.3.2.orig.tar.bz2' libtirpc_1.3.2.orig.tar.bz2 513151 SHA256:e24eb88b8ce7db3b7ca6eb80115dd1284abc5ec32a8deccfed2224fc2532b9fd
-'http://deb.debian.org/debian/pool/main/libt/libtirpc/libtirpc_1.3.2-2.debian.tar.xz' libtirpc_1.3.2-2.debian.tar.xz 10996 SHA256:ad8da93212dae510e8568f242abb4aef2694981aab45a6c0357d73d5f9d2d517
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libtirpc/1.3.2-2/
 
-- https://sources.debian.net/src/libtirpc/1.3.2-2/ (for browsing the source)
-- https://sources.debian.net/src/libtirpc/1.3.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libtirpc/1.3.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libunistring=1.0-1`
 
@@ -2491,21 +2478,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libx11=2:1.7.5-1
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.5-1.dsc' libx11_1.7.5-1.dsc 2539 SHA256:16d5e5853b2fc80f058049c0c13aeeaaf2e02bc31b4b0846359ab9cfede4ab70
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.5.orig.tar.gz' libx11_1.7.5.orig.tar.gz 3170022 SHA256:78992abcd2bfdebe657699203ad8914e7ae77025175460e04a1045387192a978
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.5.orig.tar.gz.asc' libx11_1.7.5.orig.tar.gz.asc 358 SHA256:8332442d1675118c43e341630bf62aeb93972254d139bb865cc047006ca7e8d6
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.5-1.diff.gz' libx11_1.7.5-1.diff.gz 94094 SHA256:4fe3a677ed76cf216eeec0004e66e225fd4e15c9a46c45e98cb2432ed66c34fb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libx11/2:1.7.5-1/
 
-- https://sources.debian.net/src/libx11/2:1.7.5-1/ (for browsing the source)
-- https://sources.debian.net/src/libx11/2:1.7.5-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libx11/2:1.7.5-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.9-1`
 
@@ -3946,20 +3925,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=3.03-1
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.03-1.dsc' sysvinit_3.03-1.dsc 2367 SHA256:4e5a05e554bf124636a9dbf86707c7197df920ceb65318b4688433914eb6128e
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.03.orig.tar.gz' sysvinit_3.03.orig.tar.gz 464919 SHA256:eeedaec3ec8f928b0cdcf7639834f0e177afe5012a4c523b4b3286c8e341a0ac
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.03-1.debian.tar.xz' sysvinit_3.03-1.debian.tar.xz 127984 SHA256:55e0a2b43678ebc7010301c4c0d7f83aa7081c89cc0f0d975e7667c23303ffe4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/3.03-1/
 
-- https://sources.debian.net/src/sysvinit/3.03-1/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/3.03-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/3.03-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1`
 
@@ -4140,20 +4112,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris unzip=6.0-26
-'http://deb.debian.org/debian/pool/main/u/unzip/unzip_6.0-26.dsc' unzip_6.0-26.dsc 1351 SHA256:403c8373da48b2976144569c1f44d065e6bb4ba874d9637c5497dcc34de618b5
-'http://deb.debian.org/debian/pool/main/u/unzip/unzip_6.0.orig.tar.gz' unzip_6.0.orig.tar.gz 1376845 SHA256:036d96991646d0449ed0aa952e4fbe21b476ce994abc276e49d30e686708bd37
-'http://deb.debian.org/debian/pool/main/u/unzip/unzip_6.0-26.debian.tar.xz' unzip_6.0-26.debian.tar.xz 23708 SHA256:88cb7c0f1fd13252b662dfd224b64b352f9e75cd86389557fcb23fa6d2638599
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/unzip/6.0-26/
 
-- https://sources.debian.net/src/unzip/6.0-26/ (for browsing the source)
-- https://sources.debian.net/src/unzip/6.0-26/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/unzip/6.0-26/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.38-4`
 
@@ -4230,20 +4195,13 @@ Licenses: (parsed from: `/usr/share/doc/vim-common/copyright`, `/usr/share/doc/v
 - `XPM`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris vim=2:8.2.4793-1
-'http://deb.debian.org/debian/pool/main/v/vim/vim_8.2.4793-1.dsc' vim_8.2.4793-1.dsc 3168 SHA256:3f7e3084b678d7a70a4e28c9b80052c021705872777488a89a123a813cdd461e
-'http://deb.debian.org/debian/pool/main/v/vim/vim_8.2.4793.orig.tar.xz' vim_8.2.4793.orig.tar.xz 10670252 SHA256:ea4bd9d6f6f8c6d3a1b416101d87f91ff45b06b9d0c1873628549a759d7f4566
-'http://deb.debian.org/debian/pool/main/v/vim/vim_8.2.4793-1.debian.tar.xz' vim_8.2.4793-1.debian.tar.xz 231620 SHA256:01a5c857a207461fa8bc6b34ae3a84c7de3eae85177d620ac2df8d5197263ca9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/vim/2:8.2.4793-1/
 
-- https://sources.debian.net/src/vim/2:8.2.4793-1/ (for browsing the source)
-- https://sources.debian.net/src/vim/2:8.2.4793-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/vim/2:8.2.4793-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `wget=1.21.3-1`
 
