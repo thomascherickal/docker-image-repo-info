@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:af411581b19d6e03c7df7af3b18e3dc7de8deda60ef5650151d17138a978dec0`
-- Created: `2022-07-20T02:29:56.138906754Z`
-- Virtual Size: ~ 146.90 Mb  
+- Image ID: `sha256:1bb0c4c47d940e8c197d5796c0026be1f818ded4657a226d0628ddc4bbbfeea6`
+- Created: `2022-08-11T18:28:58.282972984Z`
+- Virtual Size: ~ 146.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-varnish-entrypoint"]`
@@ -102,16 +102,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20211220-r0 description:
+ca-certificates-bundle-20220614-r0 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20211220-r0 webpage:
+ca-certificates-bundle-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20211220-r0 installed size:
-216 KiB
+ca-certificates-bundle-20220614-r0 installed size:
+228 KiB
 
-ca-certificates-bundle-20211220-r0 license:
+ca-certificates-bundle-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -561,16 +561,16 @@ GPL-2.0-only
 ### `apk` package: `varnish`
 
 ```console
-varnish-7.0.2-r1 description:
+varnish-7.0.3-r1 description:
 High-performance HTTP accelerator
 
-varnish-7.0.2-r1 webpage:
+varnish-7.0.3-r1 webpage:
 http://www.varnish-cache.org/
 
-varnish-7.0.2-r1 installed size:
+varnish-7.0.3-r1 installed size:
 2284 KiB
 
-varnish-7.0.2-r1 license:
+varnish-7.0.3-r1 license:
 BSD
 
 ```
@@ -578,16 +578,16 @@ BSD
 ### `apk` package: `varnish-dbg`
 
 ```console
-varnish-dbg-7.0.2-r1 description:
+varnish-dbg-7.0.3-r1 description:
 High-performance HTTP accelerator (debug symbols)
 
-varnish-dbg-7.0.2-r1 webpage:
+varnish-dbg-7.0.3-r1 webpage:
 http://www.varnish-cache.org/
 
-varnish-dbg-7.0.2-r1 installed size:
+varnish-dbg-7.0.3-r1 installed size:
 6188 KiB
 
-varnish-dbg-7.0.2-r1 license:
+varnish-dbg-7.0.3-r1 license:
 BSD
 
 ```
@@ -595,16 +595,16 @@ BSD
 ### `apk` package: `varnish-dev`
 
 ```console
-varnish-dev-7.0.2-r1 description:
+varnish-dev-7.0.3-r1 description:
 High-performance HTTP accelerator (development files)
 
-varnish-dev-7.0.2-r1 webpage:
+varnish-dev-7.0.3-r1 webpage:
 http://www.varnish-cache.org/
 
-varnish-dev-7.0.2-r1 installed size:
+varnish-dev-7.0.3-r1 installed size:
 648 KiB
 
-varnish-dev-7.0.2-r1 license:
+varnish-dev-7.0.3-r1 license:
 BSD
 
 ```
@@ -612,16 +612,16 @@ BSD
 ### `apk` package: `varnish-doc`
 
 ```console
-varnish-doc-7.0.2-r1 description:
+varnish-doc-7.0.3-r1 description:
 High-performance HTTP accelerator (documentation)
 
-varnish-doc-7.0.2-r1 webpage:
+varnish-doc-7.0.3-r1 webpage:
 http://www.varnish-cache.org/
 
-varnish-doc-7.0.2-r1 installed size:
+varnish-doc-7.0.3-r1 installed size:
 228 KiB
 
-varnish-doc-7.0.2-r1 license:
+varnish-doc-7.0.3-r1 license:
 BSD
 
 ```
@@ -629,16 +629,16 @@ BSD
 ### `apk` package: `varnish-libs`
 
 ```console
-varnish-libs-7.0.2-r1 description:
+varnish-libs-7.0.3-r1 description:
 High-performance HTTP accelerator (libraries)
 
-varnish-libs-7.0.2-r1 webpage:
+varnish-libs-7.0.3-r1 webpage:
 http://www.varnish-cache.org/
 
-varnish-libs-7.0.2-r1 installed size:
+varnish-libs-7.0.3-r1 installed size:
 204 KiB
 
-varnish-libs-7.0.2-r1 license:
+varnish-libs-7.0.3-r1 license:
 BSD
 
 ```
@@ -663,16 +663,16 @@ GPL-2.0-or-later AND Public-Domain AND LGPL-2.1-or-later
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.12-r1 description:
+zlib-1.2.12-r3 description:
 A compression/decompression Library
 
-zlib-1.2.12-r1 webpage:
+zlib-1.2.12-r3 webpage:
 https://zlib.net/
 
-zlib-1.2.12-r1 installed size:
+zlib-1.2.12-r3 installed size:
 108 KiB
 
-zlib-1.2.12-r1 license:
+zlib-1.2.12-r3 license:
 Zlib
 
 ```
