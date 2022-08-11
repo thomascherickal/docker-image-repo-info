@@ -1,7 +1,7 @@
 ## `tomee:8-jre17-alpine-microprofile`
 
 ```console
-$ docker pull tomee@sha256:4d3679f6792538bde3ce510f67c5158e9f7231d2ab02cae60cf2d6374d2e3288
+$ docker pull tomee@sha256:67fceb56ba7be7fe233e2a9546b21bcd7969edc3d6ed923968395001f627ef77
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull tomee@sha256:4d3679f6792538bde3ce510f67c5158e9f7231d2ab02cae60cf2d
 ### `tomee:8-jre17-alpine-microprofile` - linux; amd64
 
 ```console
-$ docker pull tomee@sha256:a2bd92c099fb06ef7d0151af9ca738599d65094b6b5224eec0aafbd39e42b462
+$ docker pull tomee@sha256:fc2bdb1a0efb3c7df95f46e2790768678c1e88f1ba88e0b438c287f5051827ab
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **132.9 MB (132919861 bytes)**  
+-	Total Size: **132.9 MB (132919967 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0b0d684dbf7562e56d12d79a5333442363fcf1776601131adbefce7970ed55ed`
+-	Image ID: `sha256:3332ae5a63f33c4292a54551c600238968f0c2979cf97cc4f99f37a33248c4ea`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -26,37 +26,39 @@ $ docker pull tomee@sha256:a2bd92c099fb06ef7d0151af9ca738599d65094b6b5224eec0aaf
 ADD file:2a949686d9886ac7c10582a6c29116fd29d3077d02755e87e111870d63607725 in / 
 # Tue, 09 Aug 2022 17:19:53 GMT
 CMD ["/bin/sh"]
-# Wed, 10 Aug 2022 01:30:24 GMT
+# Thu, 11 Aug 2022 19:19:38 GMT
+ENV JAVA_HOME=/opt/java/openjdk
+# Thu, 11 Aug 2022 19:19:38 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Thu, 11 Aug 2022 19:19:38 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Wed, 10 Aug 2022 01:30:26 GMT
+# Thu, 11 Aug 2022 19:19:40 GMT
 RUN apk add --no-cache fontconfig libretls musl-locales musl-locales-lang ttf-dejavu tzdata zlib     && rm -rf /var/cache/apk/*
-# Wed, 10 Aug 2022 01:32:12 GMT
+# Thu, 11 Aug 2022 19:23:40 GMT
 ENV JAVA_VERSION=jdk-17.0.4+8
-# Wed, 10 Aug 2022 01:32:44 GMT
-RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='9d5a1fc83b3e74efb25d1ec3767aa6d29e9439c46e5855cfbd59eff3e9978529';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.4%2B8/OpenJDK17U-jre_x64_alpine-linux_hotspot_17.0.4_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p /opt/java/openjdk; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory /opt/java/openjdk 	      --strip-components 1 	      --no-same-owner 	  ;     rm -rf /tmp/openjdk.tar.gz;
-# Wed, 10 Aug 2022 01:32:44 GMT
-ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 10 Aug 2022 01:32:45 GMT
-RUN echo Verifying install ...     && echo java --version && java --version     && echo Complete.
-# Wed, 10 Aug 2022 03:30:15 GMT
+# Thu, 11 Aug 2022 19:26:00 GMT
+RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='9d5a1fc83b3e74efb25d1ec3767aa6d29e9439c46e5855cfbd59eff3e9978529';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.4%2B8/OpenJDK17U-jre_x64_alpine-linux_hotspot_17.0.4_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;
+# Thu, 11 Aug 2022 19:26:00 GMT
+RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
+# Thu, 11 Aug 2022 22:16:45 GMT
 ENV PATH=/usr/local/tomee/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 10 Aug 2022 03:30:15 GMT
+# Thu, 11 Aug 2022 22:16:46 GMT
 RUN mkdir -p /usr/local/tomee
-# Wed, 10 Aug 2022 03:30:15 GMT
+# Thu, 11 Aug 2022 22:16:46 GMT
 WORKDIR /usr/local/tomee
-# Wed, 10 Aug 2022 03:30:43 GMT
+# Thu, 11 Aug 2022 22:17:13 GMT
 RUN apk add --no-cache gpg gpg-agent gpg-agent dirmngr curl   && rm -rf /var/cache/apk/*
-# Wed, 10 Aug 2022 03:30:54 GMT
+# Thu, 11 Aug 2022 22:17:23 GMT
 RUN set -xe;   for key in   9056B710F1E332780DE7AF34CBAEBE39A46C4CA1   F067B8140F5DD80E1D3B5D92318242FE9A0B1183   223D3A74B068ECA354DC385CE126833F9CF64915   DBCCD103B8B24F86FFAAB025C8BB472CD297D428   7A2744A8A9AAF063C23EB7868EBE7DBE8D050EEF   B8B301E6105DF628076BD92C5483E55897ABD9B9   FAA603D58B1BA4EDF65896D0ED340E0E6D545F97   A57DAF81C1B69921F4BA8723A8DE0A4DB863A7C1   82D8419BA697F0E7FB85916EE91287822FDB81B1   B7574789F5018690043E6DD9C212662E12F3E1DD   C23A3F6F595EBD0F960270CC997C8F1A5BE6E4C1   678F2D98F1FD9643811639FB622B8F2D043F71D8   BDD0BBEB753192957EFC5F896A62FC8EF17D8FEF   D11DF12CC2CA4894BDE638B967C1227A2678363C   C92604B0DEC5C62CFF5801E73D4683C24EDC64D1   626C542EDA7C113814B77AF09C04914D63645D20   3948829384B269D333CC5B98358807C52B4B0E23   B83D15E72253ED1104EB4FBBDAB472F0E5B8A431   ; do     gpg --batch --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys "$key" ||     gpg --batch --keyserver hkp://pgp.mit.edu:80 --recv-keys "$key" ;   done
-# Wed, 10 Aug 2022 03:30:54 GMT
+# Thu, 11 Aug 2022 22:17:23 GMT
 ENV TOMEE_VER=8.0.12
-# Wed, 10 Aug 2022 03:30:54 GMT
+# Thu, 11 Aug 2022 22:17:23 GMT
 ENV TOMEE_BUILD=microprofile
-# Wed, 10 Aug 2022 03:31:02 GMT
+# Thu, 11 Aug 2022 22:17:31 GMT
 RUN set -x   && curl -fSL https://dist.apache.org/repos/dist/release/tomee/tomee-${TOMEE_VER}/apache-tomee-${TOMEE_VER}-${TOMEE_BUILD}.tar.gz.asc -o tomee.tar.gz.asc   && curl -fSL https://dist.apache.org/repos/dist/release/tomee/tomee-${TOMEE_VER}/apache-tomee-${TOMEE_VER}-${TOMEE_BUILD}.tar.gz.sha512 -o tomee.tar.gz.sha512   && curl -fSL https://dist.apache.org/repos/dist/release/tomee/tomee-${TOMEE_VER}/apache-tomee-${TOMEE_VER}-${TOMEE_BUILD}.tar.gz -o apache-tomee-${TOMEE_VER}-${TOMEE_BUILD}.tar.gz   && gpg --batch --verify tomee.tar.gz.asc apache-tomee-${TOMEE_VER}-${TOMEE_BUILD}.tar.gz   && sha512sum -c tomee.tar.gz.sha512   && tar -zxf apache-tomee-${TOMEE_VER}-${TOMEE_BUILD}.tar.gz   && mv apache-tomee-${TOMEE_BUILD}-${TOMEE_VER}/* /usr/local/tomee   && rm apache-tomee-${TOMEE_VER}-${TOMEE_BUILD}.tar.gz   && rm -Rf apache-tomee-${TOMEE_BUILD}-${TOMEE_VER}   && rm bin/*.bat   && rm bin/*.exe   && rm bin/*.tar.gz*   && rm tomee.tar.gz.asc   && rm tomee.tar.gz*
-# Wed, 10 Aug 2022 03:31:02 GMT
+# Thu, 11 Aug 2022 22:17:31 GMT
 EXPOSE 8080
-# Wed, 10 Aug 2022 03:31:02 GMT
+# Thu, 11 Aug 2022 22:17:31 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -65,31 +67,31 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 09 Aug 2022 14:25:13 GMT  
 		Size: 2.8 MB (2806054 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:878a9af9475f057a355a16521c6da6195d134a78707eb526021019fe67b702b5`  
-		Last Modified: Wed, 10 Aug 2022 01:35:31 GMT  
-		Size: 12.1 MB (12050079 bytes)  
+	-	`sha256:107abfa4a9656cc98051eebaf02de090526191f4d53ab3733605b34f84513224`  
+		Last Modified: Thu, 11 Aug 2022 19:29:52 GMT  
+		Size: 12.1 MB (12050073 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:095f3f23072a8a11f0401aa5df0ae20d481f380b13dbb569beff4c91999c2572`  
-		Last Modified: Wed, 10 Aug 2022 01:37:41 GMT  
-		Size: 46.5 MB (46547232 bytes)  
+	-	`sha256:c8f127726bf905aed1f0f8297227279c204ab5080f653afc455f8ec8be006b45`  
+		Last Modified: Thu, 11 Aug 2022 19:37:03 GMT  
+		Size: 46.5 MB (46547195 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5be06bd440954d58eeeb66710a41c5fe31688cfc083e4862de5714c6ddd8848b`  
-		Last Modified: Wed, 10 Aug 2022 01:37:34 GMT  
-		Size: 159.0 B  
+	-	`sha256:e4f3b10fa9a03d701630bb562fbd1bd97ecf50dff48a15f169c6b7213273b5bc`  
+		Last Modified: Thu, 11 Aug 2022 19:36:56 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3276a561c3e86d9d064ecccf739488da565ec8413b21b3f0d6e580eca0076b79`  
-		Last Modified: Wed, 10 Aug 2022 03:54:48 GMT  
-		Size: 169.0 B  
+	-	`sha256:9c80a829d0513a71790eb0e2577a2c790a7067efa801f8fd2a1f0b0b338ada59`  
+		Last Modified: Thu, 11 Aug 2022 22:36:03 GMT  
+		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6db47e094054d8880b08e1f5b256fbcdcfc276e15ce73dcb74a87da6125d3e56`  
-		Last Modified: Wed, 10 Aug 2022 03:56:19 GMT  
-		Size: 6.4 MB (6446093 bytes)  
+	-	`sha256:ed0eea21655a05d0ecfda9db4f88d0b535f1f10ef2c806f9c5576ae858869e9e`  
+		Last Modified: Thu, 11 Aug 2022 22:37:33 GMT  
+		Size: 6.4 MB (6446092 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9a6bb429b48bfc75c8340581eb6f3a07087f4c733d7727d8da2b2fb1f995f2a3`  
-		Last Modified: Wed, 10 Aug 2022 03:56:18 GMT  
-		Size: 62.9 KB (62935 bytes)  
+	-	`sha256:3cd93b507172d9b94a1f21df566d104d2b8cea6db158bdbb89fe6268e33db4b8`  
+		Last Modified: Thu, 11 Aug 2022 22:37:32 GMT  
+		Size: 62.9 KB (62927 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b5fca37fd346ce282ced516449e6e981f78ad67fa6740a46f040ba07bbf07370`  
-		Last Modified: Wed, 10 Aug 2022 03:56:22 GMT  
-		Size: 65.0 MB (65007140 bytes)  
+	-	`sha256:e0fc4fc9441ec844bcdaa1648a2b43ff362ebe028b032004dbddf96fc0aeed1d`  
+		Last Modified: Thu, 11 Aug 2022 22:37:36 GMT  
+		Size: 65.0 MB (65007296 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
