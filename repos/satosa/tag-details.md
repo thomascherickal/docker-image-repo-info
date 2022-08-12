@@ -22,7 +22,7 @@
 ## `satosa:8`
 
 ```console
-$ docker pull satosa@sha256:f89ba048c24f928ba865d4411632f76cc775de3129153e08b97af185047ec9d6
+$ docker pull satosa@sha256:b6d41d066234dab9abb6254db4c15a28d018bb996739e90861157639dc2b245b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -249,14 +249,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:1eb7ef57547ada8079868ad16a792df4e4cbc8571c4b2beb50d5682d1bc6250f
+$ docker pull satosa@sha256:db02241bb620507b106897fe292711ade77bf20f969f077a61f8372643b52348
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **202.4 MB (202351243 bytes)**  
+-	Total Size: **213.3 MB (213270070 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:194a9b56fc0cc44a0542e47df53c65db1e4f7a579b5a8624e2b202e21462c73d`
+-	Image ID: `sha256:e434874fe3d535b0e5575c272ec31e0e42eaf52e40840386a71e87b3024f90e4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -283,33 +283,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 03 Aug 2022 06:52:10 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:53:50 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:50 GMT
 CMD ["python3"]
-# Thu, 04 Aug 2022 13:20:49 GMT
+# Fri, 12 Aug 2022 11:03:42 GMT
 RUN set -eux; 	groupadd -g 1000 satosa; 	useradd -g 1000 -u 1000 satosa; 	apt-get update; 	apt-get install -y --no-install-recommends 		jq 		libxml2-utils 		xmlsec1 	; 	rm -rf /var/lib/apt/lists/*; 	pip install --no-cache-dir 		yq 	;
-# Thu, 04 Aug 2022 13:20:50 GMT
+# Fri, 12 Aug 2022 11:03:43 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 04 Aug 2022 13:26:43 GMT
+# Fri, 12 Aug 2022 11:08:06 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		cargo 		dpkg-dev 		gcc 		gnupg dirmngr 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		python3-dev 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 WORKDIR /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 EXPOSE 8080
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 USER satosa:satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -330,25 +330,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Wed, 03 Aug 2022 11:21:15 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b75c71e6575f11c76771634448c2e1c7e6988853591c1422d979aaf3dfa73569`  
-		Last Modified: Wed, 03 Aug 2022 11:21:17 GMT  
-		Size: 3.3 MB (3335656 bytes)  
+	-	`sha256:1a7acd435bd10e965ae7e968ebc8339b1d63e058b5e65274c78dcbdc8550944b`  
+		Last Modified: Fri, 12 Aug 2022 10:05:12 GMT  
+		Size: 3.3 MB (3335728 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08d5ac04f9c39c2ba1d884f419e586ede32f2779ea0bbb6a7033e0f70c79d670`  
-		Last Modified: Thu, 04 Aug 2022 13:31:15 GMT  
-		Size: 20.9 MB (20949533 bytes)  
+	-	`sha256:c7dfb8762b7c5dd8e540fa0627e53d190882f78c194a2790f222adecf33654b3`  
+		Last Modified: Fri, 12 Aug 2022 11:13:01 GMT  
+		Size: 21.0 MB (20964878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65844885dbff2fac2bccf9e5a7b69d9c423352d19d5ffb5eeca720f5e2a10886`  
-		Last Modified: Thu, 04 Aug 2022 13:31:26 GMT  
-		Size: 139.2 MB (139246702 bytes)  
+	-	`sha256:e2398f5b660ea3cd71ac18c9e9b31fc12df08ef3d5abafe8cff2117024e6db2c`  
+		Last Modified: Fri, 12 Aug 2022 11:13:11 GMT  
+		Size: 150.2 MB (150150113 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c53ebddc2eb90a987a1bae1b3a245f2d88ae7ea81a35f85f6bfdf10891217d58`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 9.4 KB (9442 bytes)  
+	-	`sha256:f7f0b89d1bf6d605889478c5763557562578fa8d6169e8be97908cb3b6efad20`  
+		Last Modified: Fri, 12 Aug 2022 11:12:58 GMT  
+		Size: 9.4 KB (9443 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa39e50e9a3812f026202131476b98a06e4a65a16a21fee180aeb54d979e2cb8`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 2.1 KB (2114 bytes)  
+	-	`sha256:9a5938012bf6d398dbc0bb20d7572c7696a966ef8d65fb60271638a84baebe57`  
+		Last Modified: Fri, 12 Aug 2022 11:12:57 GMT  
+		Size: 2.1 KB (2112 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8` - linux; arm64 variant v8
@@ -879,7 +879,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:8-alpine`
 
 ```console
-$ docker pull satosa@sha256:52dc527acde8a75e8c3a64cc53e0f49a9a9bf34cad78aacb5e85ede8a02660e5
+$ docker pull satosa@sha256:91efe72387341b9b629a9326189bc9523ba85e98e88619c02791d721a4e65b44
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1104,14 +1104,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:2471876741a43e43640051344b2a3773e2b7d873496626639e841cdc9d26ec14
+$ docker pull satosa@sha256:bfd55d2910e033f95af6225f96e8140a525fd2d0f20ac508439c2b701c17fbc9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **172.4 MB (172383905 bytes)**  
+-	Total Size: **174.3 MB (174270319 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b22ce2a06ce729925ec58b4eeb4e8eb5462fe88f969e2f706672309c0b89aec9`
+-	Image ID: `sha256:38d79d322799cd764de19cac9a0f304ed531faefaf0ae82508a31cdc18feb302`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -1138,33 +1138,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 10 Aug 2022 22:01:14 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:54:35 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:35 GMT
 CMD ["python3"]
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 RUN set -eux; 	addgroup --gid 1000 satosa; 	adduser -D -G satosa --uid 1000 satosa; 	apk add --no-cache 		bash 		jq 		libxml2-utils 		openssl 		xmlsec 	; 	pip install --no-cache-dir 		yq 	;
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 11 Aug 2022 06:54:36 GMT
+# Fri, 12 Aug 2022 11:11:59 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bluez-dev 		bzip2-dev 		cargo 		coreutils 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		musl-dev 		ncurses-dev 		openssl-dev 		pax-utils 		python3-dev 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| fgrep -v libgcc_s- 		| xargs -rt apk add --no-network --virtual .satosa-rundeps 	; 	apk del --no-network .build-deps; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 WORKDIR /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 EXPOSE 8080
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 USER satosa:satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -1185,25 +1185,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Thu, 11 Aug 2022 02:12:59 GMT  
 		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:597235afafe454d473519f47c8de89a21801940e0745eef4e44facb0f1079d63`  
-		Last Modified: Thu, 11 Aug 2022 02:13:01 GMT  
-		Size: 3.0 MB (3043673 bytes)  
+	-	`sha256:5fbe2eb7a6e500fd4864106e7e0cf0b8f3490a2a4858eec337b6883625f47841`  
+		Last Modified: Fri, 12 Aug 2022 10:06:21 GMT  
+		Size: 3.0 MB (3043667 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6bdb5937fdce62cd39580f375408285019e078407beb361132184a1c66b30834`  
-		Last Modified: Thu, 11 Aug 2022 06:55:37 GMT  
-		Size: 8.0 MB (8029753 bytes)  
+	-	`sha256:10547872027cb10330b8ab2ea08038af4dcc6aadcf4f88a7b3ca2ddf57753603`  
+		Last Modified: Fri, 12 Aug 2022 11:13:31 GMT  
+		Size: 8.0 MB (8046186 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b886ebcd23a47f62593655c3eda16811444dd16d7f84ba4d436c3178532e9644`  
-		Last Modified: Thu, 11 Aug 2022 06:55:48 GMT  
-		Size: 146.6 MB (146644162 bytes)  
+	-	`sha256:520f1b9716045701ca9caeed18342a0b877f6736c5d4152a79c7cafc3a4c2d5a`  
+		Last Modified: Fri, 12 Aug 2022 11:13:44 GMT  
+		Size: 148.5 MB (148514147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d788a4d079f6390f93330f3983083c72cb903c41734581de52e06c5d1d56a208`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 9.4 KB (9438 bytes)  
+	-	`sha256:c1055809568182d4edaab588e6109a8ba69790cf4ef25848507c19738d245adb`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 9.4 KB (9441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a733929025c16a268c162a5399b3db9be55c7a4abc64872f7b00c28fdc34a125`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 2.1 KB (2117 bytes)  
+	-	`sha256:aabf72c80e9ac82642b443c9378b5913b06f8f04ae845817fe307415e6c5f034`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 2.1 KB (2116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8-alpine` - linux; arm64 variant v8
@@ -1524,7 +1524,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:8-alpine3.16`
 
 ```console
-$ docker pull satosa@sha256:52dc527acde8a75e8c3a64cc53e0f49a9a9bf34cad78aacb5e85ede8a02660e5
+$ docker pull satosa@sha256:91efe72387341b9b629a9326189bc9523ba85e98e88619c02791d721a4e65b44
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1749,14 +1749,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8-alpine3.16` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:2471876741a43e43640051344b2a3773e2b7d873496626639e841cdc9d26ec14
+$ docker pull satosa@sha256:bfd55d2910e033f95af6225f96e8140a525fd2d0f20ac508439c2b701c17fbc9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **172.4 MB (172383905 bytes)**  
+-	Total Size: **174.3 MB (174270319 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b22ce2a06ce729925ec58b4eeb4e8eb5462fe88f969e2f706672309c0b89aec9`
+-	Image ID: `sha256:38d79d322799cd764de19cac9a0f304ed531faefaf0ae82508a31cdc18feb302`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -1783,33 +1783,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 10 Aug 2022 22:01:14 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:54:35 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:35 GMT
 CMD ["python3"]
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 RUN set -eux; 	addgroup --gid 1000 satosa; 	adduser -D -G satosa --uid 1000 satosa; 	apk add --no-cache 		bash 		jq 		libxml2-utils 		openssl 		xmlsec 	; 	pip install --no-cache-dir 		yq 	;
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 11 Aug 2022 06:54:36 GMT
+# Fri, 12 Aug 2022 11:11:59 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bluez-dev 		bzip2-dev 		cargo 		coreutils 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		musl-dev 		ncurses-dev 		openssl-dev 		pax-utils 		python3-dev 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| fgrep -v libgcc_s- 		| xargs -rt apk add --no-network --virtual .satosa-rundeps 	; 	apk del --no-network .build-deps; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 WORKDIR /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 EXPOSE 8080
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 USER satosa:satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -1830,25 +1830,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Thu, 11 Aug 2022 02:12:59 GMT  
 		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:597235afafe454d473519f47c8de89a21801940e0745eef4e44facb0f1079d63`  
-		Last Modified: Thu, 11 Aug 2022 02:13:01 GMT  
-		Size: 3.0 MB (3043673 bytes)  
+	-	`sha256:5fbe2eb7a6e500fd4864106e7e0cf0b8f3490a2a4858eec337b6883625f47841`  
+		Last Modified: Fri, 12 Aug 2022 10:06:21 GMT  
+		Size: 3.0 MB (3043667 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6bdb5937fdce62cd39580f375408285019e078407beb361132184a1c66b30834`  
-		Last Modified: Thu, 11 Aug 2022 06:55:37 GMT  
-		Size: 8.0 MB (8029753 bytes)  
+	-	`sha256:10547872027cb10330b8ab2ea08038af4dcc6aadcf4f88a7b3ca2ddf57753603`  
+		Last Modified: Fri, 12 Aug 2022 11:13:31 GMT  
+		Size: 8.0 MB (8046186 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b886ebcd23a47f62593655c3eda16811444dd16d7f84ba4d436c3178532e9644`  
-		Last Modified: Thu, 11 Aug 2022 06:55:48 GMT  
-		Size: 146.6 MB (146644162 bytes)  
+	-	`sha256:520f1b9716045701ca9caeed18342a0b877f6736c5d4152a79c7cafc3a4c2d5a`  
+		Last Modified: Fri, 12 Aug 2022 11:13:44 GMT  
+		Size: 148.5 MB (148514147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d788a4d079f6390f93330f3983083c72cb903c41734581de52e06c5d1d56a208`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 9.4 KB (9438 bytes)  
+	-	`sha256:c1055809568182d4edaab588e6109a8ba69790cf4ef25848507c19738d245adb`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 9.4 KB (9441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a733929025c16a268c162a5399b3db9be55c7a4abc64872f7b00c28fdc34a125`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 2.1 KB (2117 bytes)  
+	-	`sha256:aabf72c80e9ac82642b443c9378b5913b06f8f04ae845817fe307415e6c5f034`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 2.1 KB (2116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8-alpine3.16` - linux; arm64 variant v8
@@ -2169,7 +2169,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:8-bullseye`
 
 ```console
-$ docker pull satosa@sha256:f89ba048c24f928ba865d4411632f76cc775de3129153e08b97af185047ec9d6
+$ docker pull satosa@sha256:b6d41d066234dab9abb6254db4c15a28d018bb996739e90861157639dc2b245b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2396,14 +2396,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8-bullseye` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:1eb7ef57547ada8079868ad16a792df4e4cbc8571c4b2beb50d5682d1bc6250f
+$ docker pull satosa@sha256:db02241bb620507b106897fe292711ade77bf20f969f077a61f8372643b52348
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **202.4 MB (202351243 bytes)**  
+-	Total Size: **213.3 MB (213270070 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:194a9b56fc0cc44a0542e47df53c65db1e4f7a579b5a8624e2b202e21462c73d`
+-	Image ID: `sha256:e434874fe3d535b0e5575c272ec31e0e42eaf52e40840386a71e87b3024f90e4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -2430,33 +2430,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 03 Aug 2022 06:52:10 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:53:50 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:50 GMT
 CMD ["python3"]
-# Thu, 04 Aug 2022 13:20:49 GMT
+# Fri, 12 Aug 2022 11:03:42 GMT
 RUN set -eux; 	groupadd -g 1000 satosa; 	useradd -g 1000 -u 1000 satosa; 	apt-get update; 	apt-get install -y --no-install-recommends 		jq 		libxml2-utils 		xmlsec1 	; 	rm -rf /var/lib/apt/lists/*; 	pip install --no-cache-dir 		yq 	;
-# Thu, 04 Aug 2022 13:20:50 GMT
+# Fri, 12 Aug 2022 11:03:43 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 04 Aug 2022 13:26:43 GMT
+# Fri, 12 Aug 2022 11:08:06 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		cargo 		dpkg-dev 		gcc 		gnupg dirmngr 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		python3-dev 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 WORKDIR /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 EXPOSE 8080
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 USER satosa:satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -2477,25 +2477,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Wed, 03 Aug 2022 11:21:15 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b75c71e6575f11c76771634448c2e1c7e6988853591c1422d979aaf3dfa73569`  
-		Last Modified: Wed, 03 Aug 2022 11:21:17 GMT  
-		Size: 3.3 MB (3335656 bytes)  
+	-	`sha256:1a7acd435bd10e965ae7e968ebc8339b1d63e058b5e65274c78dcbdc8550944b`  
+		Last Modified: Fri, 12 Aug 2022 10:05:12 GMT  
+		Size: 3.3 MB (3335728 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08d5ac04f9c39c2ba1d884f419e586ede32f2779ea0bbb6a7033e0f70c79d670`  
-		Last Modified: Thu, 04 Aug 2022 13:31:15 GMT  
-		Size: 20.9 MB (20949533 bytes)  
+	-	`sha256:c7dfb8762b7c5dd8e540fa0627e53d190882f78c194a2790f222adecf33654b3`  
+		Last Modified: Fri, 12 Aug 2022 11:13:01 GMT  
+		Size: 21.0 MB (20964878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65844885dbff2fac2bccf9e5a7b69d9c423352d19d5ffb5eeca720f5e2a10886`  
-		Last Modified: Thu, 04 Aug 2022 13:31:26 GMT  
-		Size: 139.2 MB (139246702 bytes)  
+	-	`sha256:e2398f5b660ea3cd71ac18c9e9b31fc12df08ef3d5abafe8cff2117024e6db2c`  
+		Last Modified: Fri, 12 Aug 2022 11:13:11 GMT  
+		Size: 150.2 MB (150150113 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c53ebddc2eb90a987a1bae1b3a245f2d88ae7ea81a35f85f6bfdf10891217d58`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 9.4 KB (9442 bytes)  
+	-	`sha256:f7f0b89d1bf6d605889478c5763557562578fa8d6169e8be97908cb3b6efad20`  
+		Last Modified: Fri, 12 Aug 2022 11:12:58 GMT  
+		Size: 9.4 KB (9443 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa39e50e9a3812f026202131476b98a06e4a65a16a21fee180aeb54d979e2cb8`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 2.1 KB (2114 bytes)  
+	-	`sha256:9a5938012bf6d398dbc0bb20d7572c7696a966ef8d65fb60271638a84baebe57`  
+		Last Modified: Fri, 12 Aug 2022 11:12:57 GMT  
+		Size: 2.1 KB (2112 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8-bullseye` - linux; arm64 variant v8
@@ -3026,7 +3026,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:8.1`
 
 ```console
-$ docker pull satosa@sha256:f89ba048c24f928ba865d4411632f76cc775de3129153e08b97af185047ec9d6
+$ docker pull satosa@sha256:b6d41d066234dab9abb6254db4c15a28d018bb996739e90861157639dc2b245b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3253,14 +3253,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8.1` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:1eb7ef57547ada8079868ad16a792df4e4cbc8571c4b2beb50d5682d1bc6250f
+$ docker pull satosa@sha256:db02241bb620507b106897fe292711ade77bf20f969f077a61f8372643b52348
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **202.4 MB (202351243 bytes)**  
+-	Total Size: **213.3 MB (213270070 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:194a9b56fc0cc44a0542e47df53c65db1e4f7a579b5a8624e2b202e21462c73d`
+-	Image ID: `sha256:e434874fe3d535b0e5575c272ec31e0e42eaf52e40840386a71e87b3024f90e4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -3287,33 +3287,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 03 Aug 2022 06:52:10 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:53:50 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:50 GMT
 CMD ["python3"]
-# Thu, 04 Aug 2022 13:20:49 GMT
+# Fri, 12 Aug 2022 11:03:42 GMT
 RUN set -eux; 	groupadd -g 1000 satosa; 	useradd -g 1000 -u 1000 satosa; 	apt-get update; 	apt-get install -y --no-install-recommends 		jq 		libxml2-utils 		xmlsec1 	; 	rm -rf /var/lib/apt/lists/*; 	pip install --no-cache-dir 		yq 	;
-# Thu, 04 Aug 2022 13:20:50 GMT
+# Fri, 12 Aug 2022 11:03:43 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 04 Aug 2022 13:26:43 GMT
+# Fri, 12 Aug 2022 11:08:06 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		cargo 		dpkg-dev 		gcc 		gnupg dirmngr 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		python3-dev 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 WORKDIR /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 EXPOSE 8080
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 USER satosa:satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -3334,25 +3334,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Wed, 03 Aug 2022 11:21:15 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b75c71e6575f11c76771634448c2e1c7e6988853591c1422d979aaf3dfa73569`  
-		Last Modified: Wed, 03 Aug 2022 11:21:17 GMT  
-		Size: 3.3 MB (3335656 bytes)  
+	-	`sha256:1a7acd435bd10e965ae7e968ebc8339b1d63e058b5e65274c78dcbdc8550944b`  
+		Last Modified: Fri, 12 Aug 2022 10:05:12 GMT  
+		Size: 3.3 MB (3335728 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08d5ac04f9c39c2ba1d884f419e586ede32f2779ea0bbb6a7033e0f70c79d670`  
-		Last Modified: Thu, 04 Aug 2022 13:31:15 GMT  
-		Size: 20.9 MB (20949533 bytes)  
+	-	`sha256:c7dfb8762b7c5dd8e540fa0627e53d190882f78c194a2790f222adecf33654b3`  
+		Last Modified: Fri, 12 Aug 2022 11:13:01 GMT  
+		Size: 21.0 MB (20964878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65844885dbff2fac2bccf9e5a7b69d9c423352d19d5ffb5eeca720f5e2a10886`  
-		Last Modified: Thu, 04 Aug 2022 13:31:26 GMT  
-		Size: 139.2 MB (139246702 bytes)  
+	-	`sha256:e2398f5b660ea3cd71ac18c9e9b31fc12df08ef3d5abafe8cff2117024e6db2c`  
+		Last Modified: Fri, 12 Aug 2022 11:13:11 GMT  
+		Size: 150.2 MB (150150113 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c53ebddc2eb90a987a1bae1b3a245f2d88ae7ea81a35f85f6bfdf10891217d58`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 9.4 KB (9442 bytes)  
+	-	`sha256:f7f0b89d1bf6d605889478c5763557562578fa8d6169e8be97908cb3b6efad20`  
+		Last Modified: Fri, 12 Aug 2022 11:12:58 GMT  
+		Size: 9.4 KB (9443 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa39e50e9a3812f026202131476b98a06e4a65a16a21fee180aeb54d979e2cb8`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 2.1 KB (2114 bytes)  
+	-	`sha256:9a5938012bf6d398dbc0bb20d7572c7696a966ef8d65fb60271638a84baebe57`  
+		Last Modified: Fri, 12 Aug 2022 11:12:57 GMT  
+		Size: 2.1 KB (2112 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8.1` - linux; arm64 variant v8
@@ -3883,7 +3883,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:8.1-alpine`
 
 ```console
-$ docker pull satosa@sha256:52dc527acde8a75e8c3a64cc53e0f49a9a9bf34cad78aacb5e85ede8a02660e5
+$ docker pull satosa@sha256:91efe72387341b9b629a9326189bc9523ba85e98e88619c02791d721a4e65b44
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4108,14 +4108,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8.1-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:2471876741a43e43640051344b2a3773e2b7d873496626639e841cdc9d26ec14
+$ docker pull satosa@sha256:bfd55d2910e033f95af6225f96e8140a525fd2d0f20ac508439c2b701c17fbc9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **172.4 MB (172383905 bytes)**  
+-	Total Size: **174.3 MB (174270319 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b22ce2a06ce729925ec58b4eeb4e8eb5462fe88f969e2f706672309c0b89aec9`
+-	Image ID: `sha256:38d79d322799cd764de19cac9a0f304ed531faefaf0ae82508a31cdc18feb302`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -4142,33 +4142,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 10 Aug 2022 22:01:14 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:54:35 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:35 GMT
 CMD ["python3"]
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 RUN set -eux; 	addgroup --gid 1000 satosa; 	adduser -D -G satosa --uid 1000 satosa; 	apk add --no-cache 		bash 		jq 		libxml2-utils 		openssl 		xmlsec 	; 	pip install --no-cache-dir 		yq 	;
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 11 Aug 2022 06:54:36 GMT
+# Fri, 12 Aug 2022 11:11:59 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bluez-dev 		bzip2-dev 		cargo 		coreutils 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		musl-dev 		ncurses-dev 		openssl-dev 		pax-utils 		python3-dev 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| fgrep -v libgcc_s- 		| xargs -rt apk add --no-network --virtual .satosa-rundeps 	; 	apk del --no-network .build-deps; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 WORKDIR /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 EXPOSE 8080
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 USER satosa:satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -4189,25 +4189,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Thu, 11 Aug 2022 02:12:59 GMT  
 		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:597235afafe454d473519f47c8de89a21801940e0745eef4e44facb0f1079d63`  
-		Last Modified: Thu, 11 Aug 2022 02:13:01 GMT  
-		Size: 3.0 MB (3043673 bytes)  
+	-	`sha256:5fbe2eb7a6e500fd4864106e7e0cf0b8f3490a2a4858eec337b6883625f47841`  
+		Last Modified: Fri, 12 Aug 2022 10:06:21 GMT  
+		Size: 3.0 MB (3043667 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6bdb5937fdce62cd39580f375408285019e078407beb361132184a1c66b30834`  
-		Last Modified: Thu, 11 Aug 2022 06:55:37 GMT  
-		Size: 8.0 MB (8029753 bytes)  
+	-	`sha256:10547872027cb10330b8ab2ea08038af4dcc6aadcf4f88a7b3ca2ddf57753603`  
+		Last Modified: Fri, 12 Aug 2022 11:13:31 GMT  
+		Size: 8.0 MB (8046186 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b886ebcd23a47f62593655c3eda16811444dd16d7f84ba4d436c3178532e9644`  
-		Last Modified: Thu, 11 Aug 2022 06:55:48 GMT  
-		Size: 146.6 MB (146644162 bytes)  
+	-	`sha256:520f1b9716045701ca9caeed18342a0b877f6736c5d4152a79c7cafc3a4c2d5a`  
+		Last Modified: Fri, 12 Aug 2022 11:13:44 GMT  
+		Size: 148.5 MB (148514147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d788a4d079f6390f93330f3983083c72cb903c41734581de52e06c5d1d56a208`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 9.4 KB (9438 bytes)  
+	-	`sha256:c1055809568182d4edaab588e6109a8ba69790cf4ef25848507c19738d245adb`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 9.4 KB (9441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a733929025c16a268c162a5399b3db9be55c7a4abc64872f7b00c28fdc34a125`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 2.1 KB (2117 bytes)  
+	-	`sha256:aabf72c80e9ac82642b443c9378b5913b06f8f04ae845817fe307415e6c5f034`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 2.1 KB (2116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8.1-alpine` - linux; arm64 variant v8
@@ -4528,7 +4528,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:8.1-alpine3.16`
 
 ```console
-$ docker pull satosa@sha256:52dc527acde8a75e8c3a64cc53e0f49a9a9bf34cad78aacb5e85ede8a02660e5
+$ docker pull satosa@sha256:91efe72387341b9b629a9326189bc9523ba85e98e88619c02791d721a4e65b44
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4753,14 +4753,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8.1-alpine3.16` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:2471876741a43e43640051344b2a3773e2b7d873496626639e841cdc9d26ec14
+$ docker pull satosa@sha256:bfd55d2910e033f95af6225f96e8140a525fd2d0f20ac508439c2b701c17fbc9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **172.4 MB (172383905 bytes)**  
+-	Total Size: **174.3 MB (174270319 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b22ce2a06ce729925ec58b4eeb4e8eb5462fe88f969e2f706672309c0b89aec9`
+-	Image ID: `sha256:38d79d322799cd764de19cac9a0f304ed531faefaf0ae82508a31cdc18feb302`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -4787,33 +4787,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 10 Aug 2022 22:01:14 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:54:35 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:35 GMT
 CMD ["python3"]
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 RUN set -eux; 	addgroup --gid 1000 satosa; 	adduser -D -G satosa --uid 1000 satosa; 	apk add --no-cache 		bash 		jq 		libxml2-utils 		openssl 		xmlsec 	; 	pip install --no-cache-dir 		yq 	;
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 11 Aug 2022 06:54:36 GMT
+# Fri, 12 Aug 2022 11:11:59 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bluez-dev 		bzip2-dev 		cargo 		coreutils 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		musl-dev 		ncurses-dev 		openssl-dev 		pax-utils 		python3-dev 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| fgrep -v libgcc_s- 		| xargs -rt apk add --no-network --virtual .satosa-rundeps 	; 	apk del --no-network .build-deps; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 WORKDIR /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 EXPOSE 8080
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 USER satosa:satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -4834,25 +4834,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Thu, 11 Aug 2022 02:12:59 GMT  
 		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:597235afafe454d473519f47c8de89a21801940e0745eef4e44facb0f1079d63`  
-		Last Modified: Thu, 11 Aug 2022 02:13:01 GMT  
-		Size: 3.0 MB (3043673 bytes)  
+	-	`sha256:5fbe2eb7a6e500fd4864106e7e0cf0b8f3490a2a4858eec337b6883625f47841`  
+		Last Modified: Fri, 12 Aug 2022 10:06:21 GMT  
+		Size: 3.0 MB (3043667 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6bdb5937fdce62cd39580f375408285019e078407beb361132184a1c66b30834`  
-		Last Modified: Thu, 11 Aug 2022 06:55:37 GMT  
-		Size: 8.0 MB (8029753 bytes)  
+	-	`sha256:10547872027cb10330b8ab2ea08038af4dcc6aadcf4f88a7b3ca2ddf57753603`  
+		Last Modified: Fri, 12 Aug 2022 11:13:31 GMT  
+		Size: 8.0 MB (8046186 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b886ebcd23a47f62593655c3eda16811444dd16d7f84ba4d436c3178532e9644`  
-		Last Modified: Thu, 11 Aug 2022 06:55:48 GMT  
-		Size: 146.6 MB (146644162 bytes)  
+	-	`sha256:520f1b9716045701ca9caeed18342a0b877f6736c5d4152a79c7cafc3a4c2d5a`  
+		Last Modified: Fri, 12 Aug 2022 11:13:44 GMT  
+		Size: 148.5 MB (148514147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d788a4d079f6390f93330f3983083c72cb903c41734581de52e06c5d1d56a208`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 9.4 KB (9438 bytes)  
+	-	`sha256:c1055809568182d4edaab588e6109a8ba69790cf4ef25848507c19738d245adb`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 9.4 KB (9441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a733929025c16a268c162a5399b3db9be55c7a4abc64872f7b00c28fdc34a125`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 2.1 KB (2117 bytes)  
+	-	`sha256:aabf72c80e9ac82642b443c9378b5913b06f8f04ae845817fe307415e6c5f034`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 2.1 KB (2116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8.1-alpine3.16` - linux; arm64 variant v8
@@ -5173,7 +5173,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:8.1-bullseye`
 
 ```console
-$ docker pull satosa@sha256:f89ba048c24f928ba865d4411632f76cc775de3129153e08b97af185047ec9d6
+$ docker pull satosa@sha256:b6d41d066234dab9abb6254db4c15a28d018bb996739e90861157639dc2b245b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5400,14 +5400,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8.1-bullseye` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:1eb7ef57547ada8079868ad16a792df4e4cbc8571c4b2beb50d5682d1bc6250f
+$ docker pull satosa@sha256:db02241bb620507b106897fe292711ade77bf20f969f077a61f8372643b52348
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **202.4 MB (202351243 bytes)**  
+-	Total Size: **213.3 MB (213270070 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:194a9b56fc0cc44a0542e47df53c65db1e4f7a579b5a8624e2b202e21462c73d`
+-	Image ID: `sha256:e434874fe3d535b0e5575c272ec31e0e42eaf52e40840386a71e87b3024f90e4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -5434,33 +5434,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 03 Aug 2022 06:52:10 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:53:50 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:50 GMT
 CMD ["python3"]
-# Thu, 04 Aug 2022 13:20:49 GMT
+# Fri, 12 Aug 2022 11:03:42 GMT
 RUN set -eux; 	groupadd -g 1000 satosa; 	useradd -g 1000 -u 1000 satosa; 	apt-get update; 	apt-get install -y --no-install-recommends 		jq 		libxml2-utils 		xmlsec1 	; 	rm -rf /var/lib/apt/lists/*; 	pip install --no-cache-dir 		yq 	;
-# Thu, 04 Aug 2022 13:20:50 GMT
+# Fri, 12 Aug 2022 11:03:43 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 04 Aug 2022 13:26:43 GMT
+# Fri, 12 Aug 2022 11:08:06 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		cargo 		dpkg-dev 		gcc 		gnupg dirmngr 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		python3-dev 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 WORKDIR /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 EXPOSE 8080
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 USER satosa:satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -5481,25 +5481,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Wed, 03 Aug 2022 11:21:15 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b75c71e6575f11c76771634448c2e1c7e6988853591c1422d979aaf3dfa73569`  
-		Last Modified: Wed, 03 Aug 2022 11:21:17 GMT  
-		Size: 3.3 MB (3335656 bytes)  
+	-	`sha256:1a7acd435bd10e965ae7e968ebc8339b1d63e058b5e65274c78dcbdc8550944b`  
+		Last Modified: Fri, 12 Aug 2022 10:05:12 GMT  
+		Size: 3.3 MB (3335728 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08d5ac04f9c39c2ba1d884f419e586ede32f2779ea0bbb6a7033e0f70c79d670`  
-		Last Modified: Thu, 04 Aug 2022 13:31:15 GMT  
-		Size: 20.9 MB (20949533 bytes)  
+	-	`sha256:c7dfb8762b7c5dd8e540fa0627e53d190882f78c194a2790f222adecf33654b3`  
+		Last Modified: Fri, 12 Aug 2022 11:13:01 GMT  
+		Size: 21.0 MB (20964878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65844885dbff2fac2bccf9e5a7b69d9c423352d19d5ffb5eeca720f5e2a10886`  
-		Last Modified: Thu, 04 Aug 2022 13:31:26 GMT  
-		Size: 139.2 MB (139246702 bytes)  
+	-	`sha256:e2398f5b660ea3cd71ac18c9e9b31fc12df08ef3d5abafe8cff2117024e6db2c`  
+		Last Modified: Fri, 12 Aug 2022 11:13:11 GMT  
+		Size: 150.2 MB (150150113 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c53ebddc2eb90a987a1bae1b3a245f2d88ae7ea81a35f85f6bfdf10891217d58`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 9.4 KB (9442 bytes)  
+	-	`sha256:f7f0b89d1bf6d605889478c5763557562578fa8d6169e8be97908cb3b6efad20`  
+		Last Modified: Fri, 12 Aug 2022 11:12:58 GMT  
+		Size: 9.4 KB (9443 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa39e50e9a3812f026202131476b98a06e4a65a16a21fee180aeb54d979e2cb8`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 2.1 KB (2114 bytes)  
+	-	`sha256:9a5938012bf6d398dbc0bb20d7572c7696a966ef8d65fb60271638a84baebe57`  
+		Last Modified: Fri, 12 Aug 2022 11:12:57 GMT  
+		Size: 2.1 KB (2112 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8.1-bullseye` - linux; arm64 variant v8
@@ -6030,7 +6030,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:8.1.1`
 
 ```console
-$ docker pull satosa@sha256:f89ba048c24f928ba865d4411632f76cc775de3129153e08b97af185047ec9d6
+$ docker pull satosa@sha256:b6d41d066234dab9abb6254db4c15a28d018bb996739e90861157639dc2b245b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6257,14 +6257,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8.1.1` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:1eb7ef57547ada8079868ad16a792df4e4cbc8571c4b2beb50d5682d1bc6250f
+$ docker pull satosa@sha256:db02241bb620507b106897fe292711ade77bf20f969f077a61f8372643b52348
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **202.4 MB (202351243 bytes)**  
+-	Total Size: **213.3 MB (213270070 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:194a9b56fc0cc44a0542e47df53c65db1e4f7a579b5a8624e2b202e21462c73d`
+-	Image ID: `sha256:e434874fe3d535b0e5575c272ec31e0e42eaf52e40840386a71e87b3024f90e4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -6291,33 +6291,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 03 Aug 2022 06:52:10 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:53:50 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:50 GMT
 CMD ["python3"]
-# Thu, 04 Aug 2022 13:20:49 GMT
+# Fri, 12 Aug 2022 11:03:42 GMT
 RUN set -eux; 	groupadd -g 1000 satosa; 	useradd -g 1000 -u 1000 satosa; 	apt-get update; 	apt-get install -y --no-install-recommends 		jq 		libxml2-utils 		xmlsec1 	; 	rm -rf /var/lib/apt/lists/*; 	pip install --no-cache-dir 		yq 	;
-# Thu, 04 Aug 2022 13:20:50 GMT
+# Fri, 12 Aug 2022 11:03:43 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 04 Aug 2022 13:26:43 GMT
+# Fri, 12 Aug 2022 11:08:06 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		cargo 		dpkg-dev 		gcc 		gnupg dirmngr 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		python3-dev 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 WORKDIR /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 EXPOSE 8080
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 USER satosa:satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -6338,25 +6338,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Wed, 03 Aug 2022 11:21:15 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b75c71e6575f11c76771634448c2e1c7e6988853591c1422d979aaf3dfa73569`  
-		Last Modified: Wed, 03 Aug 2022 11:21:17 GMT  
-		Size: 3.3 MB (3335656 bytes)  
+	-	`sha256:1a7acd435bd10e965ae7e968ebc8339b1d63e058b5e65274c78dcbdc8550944b`  
+		Last Modified: Fri, 12 Aug 2022 10:05:12 GMT  
+		Size: 3.3 MB (3335728 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08d5ac04f9c39c2ba1d884f419e586ede32f2779ea0bbb6a7033e0f70c79d670`  
-		Last Modified: Thu, 04 Aug 2022 13:31:15 GMT  
-		Size: 20.9 MB (20949533 bytes)  
+	-	`sha256:c7dfb8762b7c5dd8e540fa0627e53d190882f78c194a2790f222adecf33654b3`  
+		Last Modified: Fri, 12 Aug 2022 11:13:01 GMT  
+		Size: 21.0 MB (20964878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65844885dbff2fac2bccf9e5a7b69d9c423352d19d5ffb5eeca720f5e2a10886`  
-		Last Modified: Thu, 04 Aug 2022 13:31:26 GMT  
-		Size: 139.2 MB (139246702 bytes)  
+	-	`sha256:e2398f5b660ea3cd71ac18c9e9b31fc12df08ef3d5abafe8cff2117024e6db2c`  
+		Last Modified: Fri, 12 Aug 2022 11:13:11 GMT  
+		Size: 150.2 MB (150150113 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c53ebddc2eb90a987a1bae1b3a245f2d88ae7ea81a35f85f6bfdf10891217d58`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 9.4 KB (9442 bytes)  
+	-	`sha256:f7f0b89d1bf6d605889478c5763557562578fa8d6169e8be97908cb3b6efad20`  
+		Last Modified: Fri, 12 Aug 2022 11:12:58 GMT  
+		Size: 9.4 KB (9443 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa39e50e9a3812f026202131476b98a06e4a65a16a21fee180aeb54d979e2cb8`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 2.1 KB (2114 bytes)  
+	-	`sha256:9a5938012bf6d398dbc0bb20d7572c7696a966ef8d65fb60271638a84baebe57`  
+		Last Modified: Fri, 12 Aug 2022 11:12:57 GMT  
+		Size: 2.1 KB (2112 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8.1.1` - linux; arm64 variant v8
@@ -6887,7 +6887,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:8.1.1-alpine`
 
 ```console
-$ docker pull satosa@sha256:52dc527acde8a75e8c3a64cc53e0f49a9a9bf34cad78aacb5e85ede8a02660e5
+$ docker pull satosa@sha256:91efe72387341b9b629a9326189bc9523ba85e98e88619c02791d721a4e65b44
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7112,14 +7112,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8.1.1-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:2471876741a43e43640051344b2a3773e2b7d873496626639e841cdc9d26ec14
+$ docker pull satosa@sha256:bfd55d2910e033f95af6225f96e8140a525fd2d0f20ac508439c2b701c17fbc9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **172.4 MB (172383905 bytes)**  
+-	Total Size: **174.3 MB (174270319 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b22ce2a06ce729925ec58b4eeb4e8eb5462fe88f969e2f706672309c0b89aec9`
+-	Image ID: `sha256:38d79d322799cd764de19cac9a0f304ed531faefaf0ae82508a31cdc18feb302`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -7146,33 +7146,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 10 Aug 2022 22:01:14 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:54:35 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:35 GMT
 CMD ["python3"]
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 RUN set -eux; 	addgroup --gid 1000 satosa; 	adduser -D -G satosa --uid 1000 satosa; 	apk add --no-cache 		bash 		jq 		libxml2-utils 		openssl 		xmlsec 	; 	pip install --no-cache-dir 		yq 	;
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 11 Aug 2022 06:54:36 GMT
+# Fri, 12 Aug 2022 11:11:59 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bluez-dev 		bzip2-dev 		cargo 		coreutils 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		musl-dev 		ncurses-dev 		openssl-dev 		pax-utils 		python3-dev 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| fgrep -v libgcc_s- 		| xargs -rt apk add --no-network --virtual .satosa-rundeps 	; 	apk del --no-network .build-deps; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 WORKDIR /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 EXPOSE 8080
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 USER satosa:satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -7193,25 +7193,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Thu, 11 Aug 2022 02:12:59 GMT  
 		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:597235afafe454d473519f47c8de89a21801940e0745eef4e44facb0f1079d63`  
-		Last Modified: Thu, 11 Aug 2022 02:13:01 GMT  
-		Size: 3.0 MB (3043673 bytes)  
+	-	`sha256:5fbe2eb7a6e500fd4864106e7e0cf0b8f3490a2a4858eec337b6883625f47841`  
+		Last Modified: Fri, 12 Aug 2022 10:06:21 GMT  
+		Size: 3.0 MB (3043667 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6bdb5937fdce62cd39580f375408285019e078407beb361132184a1c66b30834`  
-		Last Modified: Thu, 11 Aug 2022 06:55:37 GMT  
-		Size: 8.0 MB (8029753 bytes)  
+	-	`sha256:10547872027cb10330b8ab2ea08038af4dcc6aadcf4f88a7b3ca2ddf57753603`  
+		Last Modified: Fri, 12 Aug 2022 11:13:31 GMT  
+		Size: 8.0 MB (8046186 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b886ebcd23a47f62593655c3eda16811444dd16d7f84ba4d436c3178532e9644`  
-		Last Modified: Thu, 11 Aug 2022 06:55:48 GMT  
-		Size: 146.6 MB (146644162 bytes)  
+	-	`sha256:520f1b9716045701ca9caeed18342a0b877f6736c5d4152a79c7cafc3a4c2d5a`  
+		Last Modified: Fri, 12 Aug 2022 11:13:44 GMT  
+		Size: 148.5 MB (148514147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d788a4d079f6390f93330f3983083c72cb903c41734581de52e06c5d1d56a208`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 9.4 KB (9438 bytes)  
+	-	`sha256:c1055809568182d4edaab588e6109a8ba69790cf4ef25848507c19738d245adb`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 9.4 KB (9441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a733929025c16a268c162a5399b3db9be55c7a4abc64872f7b00c28fdc34a125`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 2.1 KB (2117 bytes)  
+	-	`sha256:aabf72c80e9ac82642b443c9378b5913b06f8f04ae845817fe307415e6c5f034`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 2.1 KB (2116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8.1.1-alpine` - linux; arm64 variant v8
@@ -7532,7 +7532,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:8.1.1-alpine3.16`
 
 ```console
-$ docker pull satosa@sha256:52dc527acde8a75e8c3a64cc53e0f49a9a9bf34cad78aacb5e85ede8a02660e5
+$ docker pull satosa@sha256:91efe72387341b9b629a9326189bc9523ba85e98e88619c02791d721a4e65b44
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7757,14 +7757,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8.1.1-alpine3.16` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:2471876741a43e43640051344b2a3773e2b7d873496626639e841cdc9d26ec14
+$ docker pull satosa@sha256:bfd55d2910e033f95af6225f96e8140a525fd2d0f20ac508439c2b701c17fbc9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **172.4 MB (172383905 bytes)**  
+-	Total Size: **174.3 MB (174270319 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b22ce2a06ce729925ec58b4eeb4e8eb5462fe88f969e2f706672309c0b89aec9`
+-	Image ID: `sha256:38d79d322799cd764de19cac9a0f304ed531faefaf0ae82508a31cdc18feb302`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -7791,33 +7791,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 10 Aug 2022 22:01:14 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:54:35 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:35 GMT
 CMD ["python3"]
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 RUN set -eux; 	addgroup --gid 1000 satosa; 	adduser -D -G satosa --uid 1000 satosa; 	apk add --no-cache 		bash 		jq 		libxml2-utils 		openssl 		xmlsec 	; 	pip install --no-cache-dir 		yq 	;
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 11 Aug 2022 06:54:36 GMT
+# Fri, 12 Aug 2022 11:11:59 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bluez-dev 		bzip2-dev 		cargo 		coreutils 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		musl-dev 		ncurses-dev 		openssl-dev 		pax-utils 		python3-dev 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| fgrep -v libgcc_s- 		| xargs -rt apk add --no-network --virtual .satosa-rundeps 	; 	apk del --no-network .build-deps; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 WORKDIR /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 EXPOSE 8080
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 USER satosa:satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -7838,25 +7838,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Thu, 11 Aug 2022 02:12:59 GMT  
 		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:597235afafe454d473519f47c8de89a21801940e0745eef4e44facb0f1079d63`  
-		Last Modified: Thu, 11 Aug 2022 02:13:01 GMT  
-		Size: 3.0 MB (3043673 bytes)  
+	-	`sha256:5fbe2eb7a6e500fd4864106e7e0cf0b8f3490a2a4858eec337b6883625f47841`  
+		Last Modified: Fri, 12 Aug 2022 10:06:21 GMT  
+		Size: 3.0 MB (3043667 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6bdb5937fdce62cd39580f375408285019e078407beb361132184a1c66b30834`  
-		Last Modified: Thu, 11 Aug 2022 06:55:37 GMT  
-		Size: 8.0 MB (8029753 bytes)  
+	-	`sha256:10547872027cb10330b8ab2ea08038af4dcc6aadcf4f88a7b3ca2ddf57753603`  
+		Last Modified: Fri, 12 Aug 2022 11:13:31 GMT  
+		Size: 8.0 MB (8046186 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b886ebcd23a47f62593655c3eda16811444dd16d7f84ba4d436c3178532e9644`  
-		Last Modified: Thu, 11 Aug 2022 06:55:48 GMT  
-		Size: 146.6 MB (146644162 bytes)  
+	-	`sha256:520f1b9716045701ca9caeed18342a0b877f6736c5d4152a79c7cafc3a4c2d5a`  
+		Last Modified: Fri, 12 Aug 2022 11:13:44 GMT  
+		Size: 148.5 MB (148514147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d788a4d079f6390f93330f3983083c72cb903c41734581de52e06c5d1d56a208`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 9.4 KB (9438 bytes)  
+	-	`sha256:c1055809568182d4edaab588e6109a8ba69790cf4ef25848507c19738d245adb`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 9.4 KB (9441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a733929025c16a268c162a5399b3db9be55c7a4abc64872f7b00c28fdc34a125`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 2.1 KB (2117 bytes)  
+	-	`sha256:aabf72c80e9ac82642b443c9378b5913b06f8f04ae845817fe307415e6c5f034`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 2.1 KB (2116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8.1.1-alpine3.16` - linux; arm64 variant v8
@@ -8177,7 +8177,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:8.1.1-bullseye`
 
 ```console
-$ docker pull satosa@sha256:f89ba048c24f928ba865d4411632f76cc775de3129153e08b97af185047ec9d6
+$ docker pull satosa@sha256:b6d41d066234dab9abb6254db4c15a28d018bb996739e90861157639dc2b245b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8404,14 +8404,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:8.1.1-bullseye` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:1eb7ef57547ada8079868ad16a792df4e4cbc8571c4b2beb50d5682d1bc6250f
+$ docker pull satosa@sha256:db02241bb620507b106897fe292711ade77bf20f969f077a61f8372643b52348
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **202.4 MB (202351243 bytes)**  
+-	Total Size: **213.3 MB (213270070 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:194a9b56fc0cc44a0542e47df53c65db1e4f7a579b5a8624e2b202e21462c73d`
+-	Image ID: `sha256:e434874fe3d535b0e5575c272ec31e0e42eaf52e40840386a71e87b3024f90e4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -8438,33 +8438,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 03 Aug 2022 06:52:10 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:53:50 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:50 GMT
 CMD ["python3"]
-# Thu, 04 Aug 2022 13:20:49 GMT
+# Fri, 12 Aug 2022 11:03:42 GMT
 RUN set -eux; 	groupadd -g 1000 satosa; 	useradd -g 1000 -u 1000 satosa; 	apt-get update; 	apt-get install -y --no-install-recommends 		jq 		libxml2-utils 		xmlsec1 	; 	rm -rf /var/lib/apt/lists/*; 	pip install --no-cache-dir 		yq 	;
-# Thu, 04 Aug 2022 13:20:50 GMT
+# Fri, 12 Aug 2022 11:03:43 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 04 Aug 2022 13:26:43 GMT
+# Fri, 12 Aug 2022 11:08:06 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		cargo 		dpkg-dev 		gcc 		gnupg dirmngr 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		python3-dev 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 WORKDIR /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 EXPOSE 8080
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 USER satosa:satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -8485,25 +8485,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Wed, 03 Aug 2022 11:21:15 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b75c71e6575f11c76771634448c2e1c7e6988853591c1422d979aaf3dfa73569`  
-		Last Modified: Wed, 03 Aug 2022 11:21:17 GMT  
-		Size: 3.3 MB (3335656 bytes)  
+	-	`sha256:1a7acd435bd10e965ae7e968ebc8339b1d63e058b5e65274c78dcbdc8550944b`  
+		Last Modified: Fri, 12 Aug 2022 10:05:12 GMT  
+		Size: 3.3 MB (3335728 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08d5ac04f9c39c2ba1d884f419e586ede32f2779ea0bbb6a7033e0f70c79d670`  
-		Last Modified: Thu, 04 Aug 2022 13:31:15 GMT  
-		Size: 20.9 MB (20949533 bytes)  
+	-	`sha256:c7dfb8762b7c5dd8e540fa0627e53d190882f78c194a2790f222adecf33654b3`  
+		Last Modified: Fri, 12 Aug 2022 11:13:01 GMT  
+		Size: 21.0 MB (20964878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65844885dbff2fac2bccf9e5a7b69d9c423352d19d5ffb5eeca720f5e2a10886`  
-		Last Modified: Thu, 04 Aug 2022 13:31:26 GMT  
-		Size: 139.2 MB (139246702 bytes)  
+	-	`sha256:e2398f5b660ea3cd71ac18c9e9b31fc12df08ef3d5abafe8cff2117024e6db2c`  
+		Last Modified: Fri, 12 Aug 2022 11:13:11 GMT  
+		Size: 150.2 MB (150150113 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c53ebddc2eb90a987a1bae1b3a245f2d88ae7ea81a35f85f6bfdf10891217d58`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 9.4 KB (9442 bytes)  
+	-	`sha256:f7f0b89d1bf6d605889478c5763557562578fa8d6169e8be97908cb3b6efad20`  
+		Last Modified: Fri, 12 Aug 2022 11:12:58 GMT  
+		Size: 9.4 KB (9443 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa39e50e9a3812f026202131476b98a06e4a65a16a21fee180aeb54d979e2cb8`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 2.1 KB (2114 bytes)  
+	-	`sha256:9a5938012bf6d398dbc0bb20d7572c7696a966ef8d65fb60271638a84baebe57`  
+		Last Modified: Fri, 12 Aug 2022 11:12:57 GMT  
+		Size: 2.1 KB (2112 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:8.1.1-bullseye` - linux; arm64 variant v8
@@ -9034,7 +9034,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:alpine`
 
 ```console
-$ docker pull satosa@sha256:52dc527acde8a75e8c3a64cc53e0f49a9a9bf34cad78aacb5e85ede8a02660e5
+$ docker pull satosa@sha256:91efe72387341b9b629a9326189bc9523ba85e98e88619c02791d721a4e65b44
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9259,14 +9259,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:alpine` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:2471876741a43e43640051344b2a3773e2b7d873496626639e841cdc9d26ec14
+$ docker pull satosa@sha256:bfd55d2910e033f95af6225f96e8140a525fd2d0f20ac508439c2b701c17fbc9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **172.4 MB (172383905 bytes)**  
+-	Total Size: **174.3 MB (174270319 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b22ce2a06ce729925ec58b4eeb4e8eb5462fe88f969e2f706672309c0b89aec9`
+-	Image ID: `sha256:38d79d322799cd764de19cac9a0f304ed531faefaf0ae82508a31cdc18feb302`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -9293,33 +9293,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 10 Aug 2022 22:01:14 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:54:35 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:35 GMT
 CMD ["python3"]
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 RUN set -eux; 	addgroup --gid 1000 satosa; 	adduser -D -G satosa --uid 1000 satosa; 	apk add --no-cache 		bash 		jq 		libxml2-utils 		openssl 		xmlsec 	; 	pip install --no-cache-dir 		yq 	;
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 11 Aug 2022 06:54:36 GMT
+# Fri, 12 Aug 2022 11:11:59 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bluez-dev 		bzip2-dev 		cargo 		coreutils 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		musl-dev 		ncurses-dev 		openssl-dev 		pax-utils 		python3-dev 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| fgrep -v libgcc_s- 		| xargs -rt apk add --no-network --virtual .satosa-rundeps 	; 	apk del --no-network .build-deps; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 WORKDIR /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 EXPOSE 8080
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 USER satosa:satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -9340,25 +9340,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Thu, 11 Aug 2022 02:12:59 GMT  
 		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:597235afafe454d473519f47c8de89a21801940e0745eef4e44facb0f1079d63`  
-		Last Modified: Thu, 11 Aug 2022 02:13:01 GMT  
-		Size: 3.0 MB (3043673 bytes)  
+	-	`sha256:5fbe2eb7a6e500fd4864106e7e0cf0b8f3490a2a4858eec337b6883625f47841`  
+		Last Modified: Fri, 12 Aug 2022 10:06:21 GMT  
+		Size: 3.0 MB (3043667 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6bdb5937fdce62cd39580f375408285019e078407beb361132184a1c66b30834`  
-		Last Modified: Thu, 11 Aug 2022 06:55:37 GMT  
-		Size: 8.0 MB (8029753 bytes)  
+	-	`sha256:10547872027cb10330b8ab2ea08038af4dcc6aadcf4f88a7b3ca2ddf57753603`  
+		Last Modified: Fri, 12 Aug 2022 11:13:31 GMT  
+		Size: 8.0 MB (8046186 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b886ebcd23a47f62593655c3eda16811444dd16d7f84ba4d436c3178532e9644`  
-		Last Modified: Thu, 11 Aug 2022 06:55:48 GMT  
-		Size: 146.6 MB (146644162 bytes)  
+	-	`sha256:520f1b9716045701ca9caeed18342a0b877f6736c5d4152a79c7cafc3a4c2d5a`  
+		Last Modified: Fri, 12 Aug 2022 11:13:44 GMT  
+		Size: 148.5 MB (148514147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d788a4d079f6390f93330f3983083c72cb903c41734581de52e06c5d1d56a208`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 9.4 KB (9438 bytes)  
+	-	`sha256:c1055809568182d4edaab588e6109a8ba69790cf4ef25848507c19738d245adb`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 9.4 KB (9441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a733929025c16a268c162a5399b3db9be55c7a4abc64872f7b00c28fdc34a125`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 2.1 KB (2117 bytes)  
+	-	`sha256:aabf72c80e9ac82642b443c9378b5913b06f8f04ae845817fe307415e6c5f034`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 2.1 KB (2116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:alpine` - linux; arm64 variant v8
@@ -9679,7 +9679,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:alpine3.16`
 
 ```console
-$ docker pull satosa@sha256:52dc527acde8a75e8c3a64cc53e0f49a9a9bf34cad78aacb5e85ede8a02660e5
+$ docker pull satosa@sha256:91efe72387341b9b629a9326189bc9523ba85e98e88619c02791d721a4e65b44
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9904,14 +9904,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:alpine3.16` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:2471876741a43e43640051344b2a3773e2b7d873496626639e841cdc9d26ec14
+$ docker pull satosa@sha256:bfd55d2910e033f95af6225f96e8140a525fd2d0f20ac508439c2b701c17fbc9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **172.4 MB (172383905 bytes)**  
+-	Total Size: **174.3 MB (174270319 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b22ce2a06ce729925ec58b4eeb4e8eb5462fe88f969e2f706672309c0b89aec9`
+-	Image ID: `sha256:38d79d322799cd764de19cac9a0f304ed531faefaf0ae82508a31cdc18feb302`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -9938,33 +9938,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 10 Aug 2022 22:01:14 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 10 Aug 2022 22:01:15 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:54:29 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:54:35 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 10 Aug 2022 22:01:21 GMT
+# Fri, 12 Aug 2022 06:54:35 GMT
 CMD ["python3"]
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 RUN set -eux; 	addgroup --gid 1000 satosa; 	adduser -D -G satosa --uid 1000 satosa; 	apk add --no-cache 		bash 		jq 		libxml2-utils 		openssl 		xmlsec 	; 	pip install --no-cache-dir 		yq 	;
-# Thu, 11 Aug 2022 06:51:11 GMT
+# Fri, 12 Aug 2022 11:08:34 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 11 Aug 2022 06:54:36 GMT
+# Fri, 12 Aug 2022 11:11:59 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		bluez-dev 		bzip2-dev 		cargo 		coreutils 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		musl-dev 		ncurses-dev 		openssl-dev 		pax-utils 		python3-dev 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| fgrep -v libgcc_s- 		| xargs -rt apk add --no-network --virtual .satosa-rundeps 	; 	apk del --no-network .build-deps; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 WORKDIR /etc/satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:01 GMT
 EXPOSE 8080
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 USER satosa:satosa
-# Thu, 11 Aug 2022 06:54:38 GMT
+# Fri, 12 Aug 2022 11:12:02 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -9985,25 +9985,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Thu, 11 Aug 2022 02:12:59 GMT  
 		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:597235afafe454d473519f47c8de89a21801940e0745eef4e44facb0f1079d63`  
-		Last Modified: Thu, 11 Aug 2022 02:13:01 GMT  
-		Size: 3.0 MB (3043673 bytes)  
+	-	`sha256:5fbe2eb7a6e500fd4864106e7e0cf0b8f3490a2a4858eec337b6883625f47841`  
+		Last Modified: Fri, 12 Aug 2022 10:06:21 GMT  
+		Size: 3.0 MB (3043667 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6bdb5937fdce62cd39580f375408285019e078407beb361132184a1c66b30834`  
-		Last Modified: Thu, 11 Aug 2022 06:55:37 GMT  
-		Size: 8.0 MB (8029753 bytes)  
+	-	`sha256:10547872027cb10330b8ab2ea08038af4dcc6aadcf4f88a7b3ca2ddf57753603`  
+		Last Modified: Fri, 12 Aug 2022 11:13:31 GMT  
+		Size: 8.0 MB (8046186 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b886ebcd23a47f62593655c3eda16811444dd16d7f84ba4d436c3178532e9644`  
-		Last Modified: Thu, 11 Aug 2022 06:55:48 GMT  
-		Size: 146.6 MB (146644162 bytes)  
+	-	`sha256:520f1b9716045701ca9caeed18342a0b877f6736c5d4152a79c7cafc3a4c2d5a`  
+		Last Modified: Fri, 12 Aug 2022 11:13:44 GMT  
+		Size: 148.5 MB (148514147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d788a4d079f6390f93330f3983083c72cb903c41734581de52e06c5d1d56a208`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 9.4 KB (9438 bytes)  
+	-	`sha256:c1055809568182d4edaab588e6109a8ba69790cf4ef25848507c19738d245adb`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 9.4 KB (9441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a733929025c16a268c162a5399b3db9be55c7a4abc64872f7b00c28fdc34a125`  
-		Last Modified: Thu, 11 Aug 2022 06:55:35 GMT  
-		Size: 2.1 KB (2117 bytes)  
+	-	`sha256:aabf72c80e9ac82642b443c9378b5913b06f8f04ae845817fe307415e6c5f034`  
+		Last Modified: Fri, 12 Aug 2022 11:13:30 GMT  
+		Size: 2.1 KB (2116 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:alpine3.16` - linux; arm64 variant v8
@@ -10324,7 +10324,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:bullseye`
 
 ```console
-$ docker pull satosa@sha256:f89ba048c24f928ba865d4411632f76cc775de3129153e08b97af185047ec9d6
+$ docker pull satosa@sha256:b6d41d066234dab9abb6254db4c15a28d018bb996739e90861157639dc2b245b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10551,14 +10551,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:bullseye` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:1eb7ef57547ada8079868ad16a792df4e4cbc8571c4b2beb50d5682d1bc6250f
+$ docker pull satosa@sha256:db02241bb620507b106897fe292711ade77bf20f969f077a61f8372643b52348
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **202.4 MB (202351243 bytes)**  
+-	Total Size: **213.3 MB (213270070 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:194a9b56fc0cc44a0542e47df53c65db1e4f7a579b5a8624e2b202e21462c73d`
+-	Image ID: `sha256:e434874fe3d535b0e5575c272ec31e0e42eaf52e40840386a71e87b3024f90e4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -10585,33 +10585,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 03 Aug 2022 06:52:10 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:53:50 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:50 GMT
 CMD ["python3"]
-# Thu, 04 Aug 2022 13:20:49 GMT
+# Fri, 12 Aug 2022 11:03:42 GMT
 RUN set -eux; 	groupadd -g 1000 satosa; 	useradd -g 1000 -u 1000 satosa; 	apt-get update; 	apt-get install -y --no-install-recommends 		jq 		libxml2-utils 		xmlsec1 	; 	rm -rf /var/lib/apt/lists/*; 	pip install --no-cache-dir 		yq 	;
-# Thu, 04 Aug 2022 13:20:50 GMT
+# Fri, 12 Aug 2022 11:03:43 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 04 Aug 2022 13:26:43 GMT
+# Fri, 12 Aug 2022 11:08:06 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		cargo 		dpkg-dev 		gcc 		gnupg dirmngr 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		python3-dev 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 WORKDIR /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 EXPOSE 8080
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 USER satosa:satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -10632,25 +10632,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Wed, 03 Aug 2022 11:21:15 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b75c71e6575f11c76771634448c2e1c7e6988853591c1422d979aaf3dfa73569`  
-		Last Modified: Wed, 03 Aug 2022 11:21:17 GMT  
-		Size: 3.3 MB (3335656 bytes)  
+	-	`sha256:1a7acd435bd10e965ae7e968ebc8339b1d63e058b5e65274c78dcbdc8550944b`  
+		Last Modified: Fri, 12 Aug 2022 10:05:12 GMT  
+		Size: 3.3 MB (3335728 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08d5ac04f9c39c2ba1d884f419e586ede32f2779ea0bbb6a7033e0f70c79d670`  
-		Last Modified: Thu, 04 Aug 2022 13:31:15 GMT  
-		Size: 20.9 MB (20949533 bytes)  
+	-	`sha256:c7dfb8762b7c5dd8e540fa0627e53d190882f78c194a2790f222adecf33654b3`  
+		Last Modified: Fri, 12 Aug 2022 11:13:01 GMT  
+		Size: 21.0 MB (20964878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65844885dbff2fac2bccf9e5a7b69d9c423352d19d5ffb5eeca720f5e2a10886`  
-		Last Modified: Thu, 04 Aug 2022 13:31:26 GMT  
-		Size: 139.2 MB (139246702 bytes)  
+	-	`sha256:e2398f5b660ea3cd71ac18c9e9b31fc12df08ef3d5abafe8cff2117024e6db2c`  
+		Last Modified: Fri, 12 Aug 2022 11:13:11 GMT  
+		Size: 150.2 MB (150150113 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c53ebddc2eb90a987a1bae1b3a245f2d88ae7ea81a35f85f6bfdf10891217d58`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 9.4 KB (9442 bytes)  
+	-	`sha256:f7f0b89d1bf6d605889478c5763557562578fa8d6169e8be97908cb3b6efad20`  
+		Last Modified: Fri, 12 Aug 2022 11:12:58 GMT  
+		Size: 9.4 KB (9443 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa39e50e9a3812f026202131476b98a06e4a65a16a21fee180aeb54d979e2cb8`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 2.1 KB (2114 bytes)  
+	-	`sha256:9a5938012bf6d398dbc0bb20d7572c7696a966ef8d65fb60271638a84baebe57`  
+		Last Modified: Fri, 12 Aug 2022 11:12:57 GMT  
+		Size: 2.1 KB (2112 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:bullseye` - linux; arm64 variant v8
@@ -11181,7 +11181,7 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ## `satosa:latest`
 
 ```console
-$ docker pull satosa@sha256:f89ba048c24f928ba865d4411632f76cc775de3129153e08b97af185047ec9d6
+$ docker pull satosa@sha256:b6d41d066234dab9abb6254db4c15a28d018bb996739e90861157639dc2b245b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11408,14 +11408,14 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:latest` - linux; arm variant v7
 
 ```console
-$ docker pull satosa@sha256:1eb7ef57547ada8079868ad16a792df4e4cbc8571c4b2beb50d5682d1bc6250f
+$ docker pull satosa@sha256:db02241bb620507b106897fe292711ade77bf20f969f077a61f8372643b52348
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **202.4 MB (202351243 bytes)**  
+-	Total Size: **213.3 MB (213270070 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:194a9b56fc0cc44a0542e47df53c65db1e4f7a579b5a8624e2b202e21462c73d`
+-	Image ID: `sha256:e434874fe3d535b0e5575c272ec31e0e42eaf52e40840386a71e87b3024f90e4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
@@ -11442,33 +11442,33 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.1
 # Wed, 03 Aug 2022 06:52:10 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py
-# Wed, 03 Aug 2022 06:52:10 GMT
-ENV PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py
+# Fri, 12 Aug 2022 06:53:38 GMT
+ENV PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4
+# Fri, 12 Aug 2022 06:53:50 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 03 Aug 2022 06:52:24 GMT
+# Fri, 12 Aug 2022 06:53:50 GMT
 CMD ["python3"]
-# Thu, 04 Aug 2022 13:20:49 GMT
+# Fri, 12 Aug 2022 11:03:42 GMT
 RUN set -eux; 	groupadd -g 1000 satosa; 	useradd -g 1000 -u 1000 satosa; 	apt-get update; 	apt-get install -y --no-install-recommends 		jq 		libxml2-utils 		xmlsec1 	; 	rm -rf /var/lib/apt/lists/*; 	pip install --no-cache-dir 		yq 	;
-# Thu, 04 Aug 2022 13:20:50 GMT
+# Fri, 12 Aug 2022 11:03:43 GMT
 ENV SATOSA_VERSION=8.1.1
-# Thu, 04 Aug 2022 13:26:43 GMT
+# Fri, 12 Aug 2022 11:08:06 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		cargo 		dpkg-dev 		gcc 		gnupg dirmngr 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		python3-dev 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 WORKDIR /etc/satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 COPY file:052229d57447119afa18a76253b740426943fcd4cf1c553c23df3445a5ed9f32 in /usr/local/bin/ 
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 EXPOSE 8080
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 USER satosa:satosa
-# Thu, 04 Aug 2022 13:26:45 GMT
+# Fri, 12 Aug 2022 11:08:08 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
@@ -11489,25 +11489,25 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 		Last Modified: Wed, 03 Aug 2022 11:21:15 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b75c71e6575f11c76771634448c2e1c7e6988853591c1422d979aaf3dfa73569`  
-		Last Modified: Wed, 03 Aug 2022 11:21:17 GMT  
-		Size: 3.3 MB (3335656 bytes)  
+	-	`sha256:1a7acd435bd10e965ae7e968ebc8339b1d63e058b5e65274c78dcbdc8550944b`  
+		Last Modified: Fri, 12 Aug 2022 10:05:12 GMT  
+		Size: 3.3 MB (3335728 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08d5ac04f9c39c2ba1d884f419e586ede32f2779ea0bbb6a7033e0f70c79d670`  
-		Last Modified: Thu, 04 Aug 2022 13:31:15 GMT  
-		Size: 20.9 MB (20949533 bytes)  
+	-	`sha256:c7dfb8762b7c5dd8e540fa0627e53d190882f78c194a2790f222adecf33654b3`  
+		Last Modified: Fri, 12 Aug 2022 11:13:01 GMT  
+		Size: 21.0 MB (20964878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65844885dbff2fac2bccf9e5a7b69d9c423352d19d5ffb5eeca720f5e2a10886`  
-		Last Modified: Thu, 04 Aug 2022 13:31:26 GMT  
-		Size: 139.2 MB (139246702 bytes)  
+	-	`sha256:e2398f5b660ea3cd71ac18c9e9b31fc12df08ef3d5abafe8cff2117024e6db2c`  
+		Last Modified: Fri, 12 Aug 2022 11:13:11 GMT  
+		Size: 150.2 MB (150150113 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c53ebddc2eb90a987a1bae1b3a245f2d88ae7ea81a35f85f6bfdf10891217d58`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 9.4 KB (9442 bytes)  
+	-	`sha256:f7f0b89d1bf6d605889478c5763557562578fa8d6169e8be97908cb3b6efad20`  
+		Last Modified: Fri, 12 Aug 2022 11:12:58 GMT  
+		Size: 9.4 KB (9443 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa39e50e9a3812f026202131476b98a06e4a65a16a21fee180aeb54d979e2cb8`  
-		Last Modified: Thu, 04 Aug 2022 13:31:10 GMT  
-		Size: 2.1 KB (2114 bytes)  
+	-	`sha256:9a5938012bf6d398dbc0bb20d7572c7696a966ef8d65fb60271638a84baebe57`  
+		Last Modified: Fri, 12 Aug 2022 11:12:57 GMT  
+		Size: 2.1 KB (2112 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:latest` - linux; arm64 variant v8
