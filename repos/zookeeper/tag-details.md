@@ -3,13 +3,21 @@
 # Tags of `zookeeper`
 
 -	[`zookeeper:3.5`](#zookeeper35)
+-	[`zookeeper:3.5-temurin`](#zookeeper35-temurin)
 -	[`zookeeper:3.5.9`](#zookeeper359)
+-	[`zookeeper:3.5.9-temurin`](#zookeeper359-temurin)
 -	[`zookeeper:3.6`](#zookeeper36)
+-	[`zookeeper:3.6-temurin`](#zookeeper36-temurin)
 -	[`zookeeper:3.6.3`](#zookeeper363)
+-	[`zookeeper:3.6.3-temurin`](#zookeeper363-temurin)
 -	[`zookeeper:3.7`](#zookeeper37)
+-	[`zookeeper:3.7-temurin`](#zookeeper37-temurin)
 -	[`zookeeper:3.7.1`](#zookeeper371)
+-	[`zookeeper:3.7.1-temurin`](#zookeeper371-temurin)
 -	[`zookeeper:3.8`](#zookeeper38)
+-	[`zookeeper:3.8-temurin`](#zookeeper38-temurin)
 -	[`zookeeper:3.8.0`](#zookeeper380)
+-	[`zookeeper:3.8.0-temurin`](#zookeeper380-temurin)
 -	[`zookeeper:latest`](#zookeeperlatest)
 
 ## `zookeeper:3.5`
@@ -219,6 +227,10 @@ CMD ["zkServer.sh" "start-foreground"]
 		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `zookeeper:3.5-temurin`
+
+**does not exist** (yet?)
+
 ## `zookeeper:3.5.9`
 
 ```console
@@ -425,6 +437,10 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Thu, 11 Aug 2022 22:31:20 GMT  
 		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `zookeeper:3.5.9-temurin`
+
+**does not exist** (yet?)
 
 ## `zookeeper:3.6`
 
@@ -633,6 +649,10 @@ CMD ["zkServer.sh" "start-foreground"]
 		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `zookeeper:3.6-temurin`
+
+**does not exist** (yet?)
+
 ## `zookeeper:3.6.3`
 
 ```console
@@ -839,6 +859,10 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Thu, 11 Aug 2022 22:31:32 GMT  
 		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `zookeeper:3.6.3-temurin`
+
+**does not exist** (yet?)
 
 ## `zookeeper:3.7`
 
@@ -1047,6 +1071,10 @@ CMD ["zkServer.sh" "start-foreground"]
 		Size: 774.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `zookeeper:3.7-temurin`
+
+**does not exist** (yet?)
+
 ## `zookeeper:3.7.1`
 
 ```console
@@ -1253,6 +1281,10 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Thu, 11 Aug 2022 22:31:45 GMT  
 		Size: 774.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `zookeeper:3.7.1-temurin`
+
+**does not exist** (yet?)
 
 ## `zookeeper:3.8`
 
@@ -1461,6 +1493,10 @@ CMD ["zkServer.sh" "start-foreground"]
 		Size: 774.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `zookeeper:3.8-temurin`
+
+**does not exist** (yet?)
+
 ## `zookeeper:3.8.0`
 
 ```console
@@ -1667,6 +1703,10 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Thu, 11 Aug 2022 22:31:56 GMT  
 		Size: 774.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `zookeeper:3.8.0-temurin`
+
+**does not exist** (yet?)
 
 ## `zookeeper:latest`
 
