@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:30d21f60b23004b741775a5fc97f3028321469db4c0307fbbdee19f1c7a29905`
-- Created: `2022-07-20T02:13:04.244639829Z`
-- Virtual Size: ~ 68.31 Mb  
+- Image ID: `sha256:bf4f40e92c42844496e91fafccbdc54fde0b4ee8a4e0baaab036910548e11bfc`
+- Created: `2022-08-10T02:08:02.250439381Z`
+- Virtual Size: ~ 68.34 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["irb"]`
@@ -108,16 +108,16 @@ bzip2-1.0.6
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20211220-r0 description:
+ca-certificates-20220614-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20211220-r0 webpage:
+ca-certificates-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20211220-r0 installed size:
-656 KiB
+ca-certificates-20220614-r0 installed size:
+688 KiB
 
-ca-certificates-20211220-r0 license:
+ca-certificates-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -125,16 +125,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20211220-r0 description:
+ca-certificates-bundle-20220614-r0 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20211220-r0 webpage:
+ca-certificates-bundle-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20211220-r0 installed size:
-216 KiB
+ca-certificates-bundle-20220614-r0 installed size:
+228 KiB
 
-ca-certificates-bundle-20211220-r0 license:
+ca-certificates-bundle-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -567,16 +567,16 @@ MIT
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.12-r1 description:
+zlib-1.2.12-r3 description:
 A compression/decompression Library
 
-zlib-1.2.12-r1 webpage:
+zlib-1.2.12-r3 webpage:
 https://zlib.net/
 
-zlib-1.2.12-r1 installed size:
+zlib-1.2.12-r3 installed size:
 108 KiB
 
-zlib-1.2.12-r1 license:
+zlib-1.2.12-r3 license:
 Zlib
 
 ```
@@ -584,16 +584,16 @@ Zlib
 ### `apk` package: `zlib-dev`
 
 ```console
-zlib-dev-1.2.12-r1 description:
+zlib-dev-1.2.12-r3 description:
 A compression/decompression Library (development files)
 
-zlib-dev-1.2.12-r1 webpage:
+zlib-dev-1.2.12-r3 webpage:
 https://zlib.net/
 
-zlib-dev-1.2.12-r1 installed size:
+zlib-dev-1.2.12-r3 installed size:
 140 KiB
 
-zlib-dev-1.2.12-r1 license:
+zlib-dev-1.2.12-r3 license:
 Zlib
 
 ```
