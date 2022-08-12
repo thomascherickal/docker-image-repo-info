@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ad03b752d6c1fc95e1324a2869111a97e748a2073ff393deff17ae67879010a9`
-- Created: `2022-08-04T00:57:27.012416048Z`
-- Virtual Size: ~ 704.44 Mb  
+- Image ID: `sha256:59237d77159ddd72c1e2b0e7858bb380fd69b745fa6b275a9a9e14fbdf769f2b`
+- Created: `2022-08-11T00:33:31.563971731Z`
+- Virtual Size: ~ 704.49 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/ibm/helpers/runtime/docker-server.sh"]`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.15+10_openj9-0.32.0`
+  - `JAVA_VERSION=jdk-11.0.16+8_openj9-0.33.0`
   - `JAVA_HOME=/opt/java/openjdk`
   - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal`
   - `LIBERTY_VERSION=22.0.0_08`
