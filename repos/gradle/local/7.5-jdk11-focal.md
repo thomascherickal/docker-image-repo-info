@@ -2,19 +2,19 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:486c210dbc4f4cf2cd0eacdf19fee807e4060d13dc148217875d662c346bf0ec`
-- Created: `2022-08-08T19:27:32.676660695Z`
-- Virtual Size: ~ 764.96 Mb  
+- Image ID: `sha256:52ead30527d75a434fc44f78017b37cf4c791c84fd247739293d9f0cb4589baf`
+- Created: `2022-08-11T20:27:06.202725344Z`
+- Virtual Size: ~ 775.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `JAVA_HOME=/opt/java/openjdk`
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-11.0.16+8`
-  - `JAVA_HOME=/opt/java/openjdk`
   - `GRADLE_HOME=/opt/gradle`
   - `GRADLE_VERSION=7.5.1`
 
@@ -382,11 +382,9 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 
 Binary Packages:
 
-- `curl=7.68.0-1ubuntu2.12`
 - `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.12`
-- `libcurl4:amd64=7.68.0-1ubuntu2.12`
 
-Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`)
 
 - `BSD-3-Clause`
 - `BSD-4-Clause`

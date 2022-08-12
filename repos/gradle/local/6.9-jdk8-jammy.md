@@ -2,19 +2,19 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:249678d2beba86749faf68d1b78fbd446fc4af5cad7f591af4ffec94bc8c0b3d`
-- Created: `2022-08-03T12:36:38.649379844Z`
-- Virtual Size: ~ 596.80 Mb  
+- Image ID: `sha256:d4b51f3cba8d18ce651296945792bcc6ebcf65855de81f6b118bc81dcf9e77ea`
+- Created: `2022-08-11T20:30:03.029974835Z`
+- Virtual Size: ~ 595.80 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `JAVA_HOME=/opt/java/openjdk`
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk8u342-b07`
-  - `JAVA_HOME=/opt/java/openjdk`
+  - `JAVA_VERSION=jdk8u345-b01`
   - `GRADLE_HOME=/opt/gradle`
   - `GRADLE_VERSION=6.9.2`
 
@@ -112,13 +112,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.4.6
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.6.dsc' apt_2.4.6.dsc 2805 SHA512:079d2bb56c058c713640624082e151a10649ec9013e8df0aa85a1f681ad831ca73f973ba33741507840cd92f45180513f1016ba0029456eadeb7b2cff2a41dc2
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.6.tar.xz' apt_2.4.6.tar.xz 2217752 SHA512:b107c2f39c5e31aa25c5e826a84a3d187e38cd0b3c449bc7fe90b075bd568785c2d6f7f8f93a946e9a9d92c864e7cfa2bdf93a42146a05e7080344a7d3d49aa4
-```
 
 ### `dpkg` source package: `attr=1:2.5.1-1build1`
 
@@ -382,11 +378,9 @@ $ apt-get source -qq --print-uris coreutils=8.32-4.1ubuntu1
 
 Binary Packages:
 
-- `curl=7.81.0-1ubuntu1.3`
 - `libcurl3-gnutls:amd64=7.81.0-1ubuntu1.3`
-- `libcurl4:amd64=7.81.0-1ubuntu1.3`
 
-Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`)
 
 - `BSD-3-Clause`
 - `BSD-4-Clause`
