@@ -1,7 +1,7 @@
 ## `postgres:14-alpine3.16`
 
 ```console
-$ docker pull postgres@sha256:7dda915b8c0d323ccf4c4efcb87eb54f0942622a1cd68a9afaae28db326f7141
+$ docker pull postgres@sha256:322e9d80bbe0d19df45a2cfa262b50947683b4da283afdb6bee8e549aea87bf3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -462,14 +462,14 @@ CMD ["postgres"]
 ### `postgres:14-alpine3.16` - linux; ppc64le
 
 ```console
-$ docker pull postgres@sha256:61126756818127d7de700728c480baec6159dd523ff0ac041a7c65faad4231fc
+$ docker pull postgres@sha256:648b07230f88141348f8f0e243ccd7403461bcdffdfcc6312f67eef39e9257e0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **90.9 MB (90939707 bytes)**  
+-	Total Size: **90.9 MB (90948771 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5537f75b048b3b7beec1d2b6421d3268576a196c81a3ae26964e8c2c9f4fa2a5`
+-	Image ID: `sha256:8c9a12b1e8fbd89ae4fc93a25885bd131f04973b9402cc84f12e613da456b47e`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
@@ -486,31 +486,31 @@ ENV LANG=en_US.utf8
 RUN mkdir /docker-entrypoint-initdb.d
 # Tue, 09 Aug 2022 22:15:47 GMT
 ENV PG_MAJOR=14
-# Tue, 09 Aug 2022 22:15:47 GMT
-ENV PG_VERSION=14.4
-# Tue, 09 Aug 2022 22:15:48 GMT
-ENV PG_SHA256=c23b6237c5231c791511bdc79098617d6852e9e3bdf360efd8b5d15a1a3d8f6a
-# Tue, 09 Aug 2022 22:20:09 GMT
+# Fri, 12 Aug 2022 04:48:29 GMT
+ENV PG_VERSION=14.5
+# Fri, 12 Aug 2022 04:48:29 GMT
+ENV PG_SHA256=d4f72cb5fb857c9a9f75ec8cf091a1771272802f2178f0b2e65b7b6ff64f4a30
+# Fri, 12 Aug 2022 04:52:48 GMT
 RUN set -eux; 		wget -O postgresql.tar.bz2 "https://ftp.postgresql.org/pub/source/v$PG_VERSION/postgresql-$PG_VERSION.tar.bz2"; 	echo "$PG_SHA256 *postgresql.tar.bz2" | sha256sum -c -; 	mkdir -p /usr/src/postgresql; 	tar 		--extract 		--file postgresql.tar.bz2 		--directory /usr/src/postgresql 		--strip-components 1 	; 	rm postgresql.tar.bz2; 		apk add --no-cache --virtual .build-deps 		bison 		coreutils 		dpkg-dev dpkg 		flex 		gcc 		krb5-dev 		libc-dev 		libedit-dev 		libxml2-dev 		libxslt-dev 		linux-headers 		llvm-dev clang g++ 		make 		openldap-dev 		openssl-dev 		perl-dev 		perl-ipc-run 		perl-utils 		python3-dev 		tcl-dev 		util-linux-dev 		zlib-dev 		icu-dev 		lz4-dev 	; 		cd /usr/src/postgresql; 	awk '$1 == "#define" && $2 == "DEFAULT_PGSOCKET_DIR" && $3 == "\"/tmp\"" { $3 = "\"/var/run/postgresql\""; print; next } { print }' src/include/pg_config_manual.h > src/include/pg_config_manual.h.new; 	grep '/var/run/postgresql' src/include/pg_config_manual.h.new; 	mv src/include/pg_config_manual.h.new src/include/pg_config_manual.h; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	wget -O config/config.guess 'https://git.savannah.gnu.org/cgit/config.git/plain/config.guess?id=7d3d27baf8107b630586c962c057e22149653deb'; 	wget -O config/config.sub 'https://git.savannah.gnu.org/cgit/config.git/plain/config.sub?id=7d3d27baf8107b630586c962c057e22149653deb'; 	./configure 		--build="$gnuArch" 		--enable-integer-datetimes 		--enable-thread-safety 		--enable-tap-tests 		--disable-rpath 		--with-uuid=e2fs 		--with-gnu-ld 		--with-pgport=5432 		--with-system-tzdata=/usr/share/zoneinfo 		--prefix=/usr/local 		--with-includes=/usr/local/include 		--with-libraries=/usr/local/lib 		--with-krb5 		--with-gssapi 		--with-ldap 		--with-tcl 		--with-perl 		--with-python 		--with-openssl 		--with-libxml 		--with-libxslt 		--with-icu 		--with-llvm 		--with-lz4 	; 	make -j "$(nproc)" world; 	make install-world; 	make -C contrib install; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 			| grep -v -e perl -e python -e tcl 	)"; 	apk add --no-cache --virtual .postgresql-rundeps 		$runDeps 		bash 		su-exec 		tzdata 		zstd 		icu-data-full 	; 	apk del --no-network .build-deps; 	cd /; 	rm -rf 		/usr/src/postgresql 		/usr/local/share/doc 		/usr/local/share/man 	; 		postgres --version
-# Tue, 09 Aug 2022 22:20:12 GMT
+# Fri, 12 Aug 2022 04:52:52 GMT
 RUN set -eux; 	cp -v /usr/local/share/postgresql/postgresql.conf.sample /usr/local/share/postgresql/postgresql.conf.sample.orig; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/local/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/local/share/postgresql/postgresql.conf.sample
-# Tue, 09 Aug 2022 22:20:13 GMT
+# Fri, 12 Aug 2022 04:52:54 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 09 Aug 2022 22:20:14 GMT
+# Fri, 12 Aug 2022 04:52:54 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 09 Aug 2022 22:20:15 GMT
+# Fri, 12 Aug 2022 04:52:55 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 09 Aug 2022 22:20:15 GMT
+# Fri, 12 Aug 2022 04:52:55 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 09 Aug 2022 22:20:15 GMT
+# Fri, 12 Aug 2022 04:52:56 GMT
 COPY file:232dce6cf487afb0c0cc43d38932ff29614a74b57cd04557dc7398e6d2b93b8f in /usr/local/bin/ 
-# Tue, 09 Aug 2022 22:20:16 GMT
+# Fri, 12 Aug 2022 04:52:56 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 09 Aug 2022 22:20:16 GMT
+# Fri, 12 Aug 2022 04:52:56 GMT
 STOPSIGNAL SIGINT
-# Tue, 09 Aug 2022 22:20:16 GMT
+# Fri, 12 Aug 2022 04:52:57 GMT
 EXPOSE 5432
-# Tue, 09 Aug 2022 22:20:17 GMT
+# Fri, 12 Aug 2022 04:52:57 GMT
 CMD ["postgres"]
 ```
 
@@ -527,25 +527,25 @@ CMD ["postgres"]
 		Last Modified: Tue, 09 Aug 2022 22:39:37 GMT  
 		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:93ca4665aa52b8de7b5939f88c1156f523c15e0178c8f0a060878c4d9a494b79`  
-		Last Modified: Tue, 09 Aug 2022 22:40:32 GMT  
-		Size: 88.1 MB (88120684 bytes)  
+	-	`sha256:21eddb83cfe1ca8bd88c9747bbc779c0e0ad891aa6f06e3abd636d842cb0a4f1`  
+		Last Modified: Fri, 12 Aug 2022 05:17:45 GMT  
+		Size: 88.1 MB (88129746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34b813ebd86611913d210cb036c5ac0e0baf7c8d558db7e10e8d7254a94f9b13`  
-		Last Modified: Tue, 09 Aug 2022 22:40:12 GMT  
-		Size: 9.2 KB (9204 bytes)  
+	-	`sha256:ae9cb4311931d7b0ffbe58418acf6d69953711022972c28db3b2c507f279eb74`  
+		Last Modified: Fri, 12 Aug 2022 05:17:25 GMT  
+		Size: 9.2 KB (9207 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d3a84579ae302838f0daef892e1532dc43b36249cc4ac216c94dd8e8e9e969d4`  
-		Last Modified: Tue, 09 Aug 2022 22:40:12 GMT  
-		Size: 163.0 B  
+	-	`sha256:c628a29cf524b7cfbec31125b8e286ce53b3847ae41e22a36c232c82fc221f81`  
+		Last Modified: Fri, 12 Aug 2022 05:17:25 GMT  
+		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f4d25f79d2f43ecfe64da99173c48faa9b0c3da5d4312e35f4282d9f5dfe62c`  
-		Last Modified: Tue, 09 Aug 2022 22:40:12 GMT  
+	-	`sha256:afe932fafae2caee3742576293199f9d2924880f8fd94c02c851ebab79dad5a3`  
+		Last Modified: Fri, 12 Aug 2022 05:17:25 GMT  
 		Size: 196.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:409b273cccfce58c030830b9769d78e4db3dce938cf031c60c18525d798fffa5`  
-		Last Modified: Tue, 09 Aug 2022 22:40:12 GMT  
-		Size: 4.7 KB (4705 bytes)  
+	-	`sha256:d4ea2037a3f6e320477f759be625c9662a306693912ef07a26873e99b381576f`  
+		Last Modified: Fri, 12 Aug 2022 05:17:25 GMT  
+		Size: 4.7 KB (4706 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postgres:14-alpine3.16` - linux; s390x
