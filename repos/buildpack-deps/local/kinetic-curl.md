@@ -289,15 +289,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.83.1-2
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.83.1-2.dsc' curl_7.83.1-2.dsc 2959 SHA512:d647294ba5ec46c90ed8acc7f5ef0285ae35e59d8c672a829a3b538022620eccf0070ece5c953025c48c6e7c9e33ba7343ad4d8a6637b10733e714c9bf56ac37
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.83.1.orig.tar.gz' curl_7.83.1.orig.tar.gz 4162207 SHA512:0b909b7ed55f9a9789584fd9d2033d5838dcf29e33adf6657258e97ebe7c91b26282007687a729c8385594fd8220bd718fd008154926b87b8da254d586fab3c7
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.83.1.orig.tar.gz.asc' curl_7.83.1.orig.tar.gz.asc 488 SHA512:4aee6744667b84d7d00efcd184e0b25ffe8c0c43361c4e0320b34a98a3a7679a513ed1df4093c0aa5e968c9b2e8b89f90ead254ad5ae59b5aaa1b101a0d88fb5
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.83.1-2.debian.tar.xz' curl_7.83.1-2.debian.tar.xz 38500 SHA512:2e9f01935a7a70434a33ba31feb7783cd47543c79fe872872616a9c11dcf34d80206c2fe12b9e7666dfa8d45167d2083320ada925f4bb9732087db795a03671b
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/curl/7.83.1-2/
+
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-6ubuntu1`
 
@@ -650,15 +648,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.7.6-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.6-2ubuntu1.dsc' gnutls28_3.7.6-2ubuntu1.dsc 3549 SHA512:bf3dc17da48ab359c35c2003253878dbcc7a1bd9948a86936f86d2bbaefa0df2960baefac5ed542f195e8df9b0aa74903348bbc322f2f15fab80c16c548300e2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.6.orig.tar.xz' gnutls28_3.7.6.orig.tar.xz 6338276 SHA512:f872339df80ec31d292821ff00eaafbe50e0bd4cdbb86e21e4f78541cd0a26d843596d5e69c91de4db8ce7d027fc639ae6462b57d89fb116162ae63c5a97486a
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.6.orig.tar.xz.asc' gnutls28_3.7.6.orig.tar.xz.asc 996 SHA512:9bc54b6418d10341a2dea774599a85783fd242eb33058e013598632ca3389f3ffdb7eaf0cf2d26c6cb7079a0baed5d5b87046203d1ac945f33eded89d8f87fec
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.6-2ubuntu1.debian.tar.xz' gnutls28_3.7.6-2ubuntu1.debian.tar.xz 68880 SHA512:6edfc6492ba656cceb88ba0b6591ae67942ec219ee108e04a5045e83bcf98b928f564de9f520c54d387ef5a6085bd313f6cfceaf2a0b3c11226ecd1a54472bec
-```
 
 ### `dpkg` source package: `grep=3.7-1build1`
 

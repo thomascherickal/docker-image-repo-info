@@ -2639,14 +2639,9 @@ Licenses: (parsed from: `/usr/share/doc/libtirpc-common/copyright`, `/usr/share/
 - `PERMISSIVE`
 - `__AUTO_PERMISSIVE__`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libtirpc=1.3.2-2build1
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtirpc/libtirpc_1.3.2-2build1.dsc' libtirpc_1.3.2-2build1.dsc 2218 SHA512:66c3164c69601f450b2105b7ac755354b0ab7afb1dbc8625b3b8cfee324dfe74662f494bbd1f70fb3c708d1e159a7de02d90fa7f322af7168bbaa98b28cb441d
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtirpc/libtirpc_1.3.2.orig.tar.bz2' libtirpc_1.3.2.orig.tar.bz2 513151 SHA512:8664d5c4f842ee5acf83b9c1cadb7871f17b8157a7c4500e2236dcfb3a25768cab39f7c5123758dcd7381e30eb028ddfa26a28f458283f2dcea3426c9878c255
-'http://archive.ubuntu.com/ubuntu/pool/main/libt/libtirpc/libtirpc_1.3.2-2build1.debian.tar.xz' libtirpc_1.3.2-2build1.debian.tar.xz 11124 SHA512:5a8e662fe01745b0e608d51de0567d71d3ccbdee6f437730192662615cb4df8a853aead7ee358c4a57cc64b768ff5f5517d45a07b7169aa643a869fb31d453c9
-```
 
 ### `dpkg` source package: `libtool=2.4.7-4`
 
@@ -4304,14 +4299,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.4.0~rc1-1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.4.0%7erc1-1.dsc' tiff_4.4.0~rc1-1.dsc 2213 SHA512:f8f2ad84e4ce68f9d6853cc24366d5a84e89b96848d1e78847b3abda697fd61e69fc47b4ff897ebcd5e5efb0f632193ab8bd3bafdea4a08327cdff3864b12d77
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.4.0%7erc1.orig.tar.bz2' tiff_4.4.0~rc1.orig.tar.bz2 2072932 SHA512:cfeac51bfefaab27600131872d460760beaf2e3c8b7308750880f92c7236fbaedf289a53b85a694b108500cbb1a3984944c64c8f23fa318a6dd7802fc6744d04
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.4.0%7erc1-1.debian.tar.xz' tiff_4.4.0~rc1-1.debian.tar.xz 20896 SHA512:9fd60cede295672f0ee6822818ed651b3a6757fe0ca6688ff5d761a7776f7a4be1655c32acf52d7f50ba81aaa4d98910b435c342a672b97940be675b83a9b26c
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/tiff/4.4.0~rc1-1/
+
 
 ### `dpkg` source package: `tzdata=2022a-0ubuntu1`
 
