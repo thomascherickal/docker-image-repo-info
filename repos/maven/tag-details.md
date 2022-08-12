@@ -600,7 +600,7 @@ CMD ["mvn"]
 ## `maven:3-amazoncorretto`
 
 ```console
-$ docker pull maven@sha256:f697f0e3d8fd8deb801c45228a17078cd25ba2eb61ab299cbe5f366ef46fe98a
+$ docker pull maven@sha256:c22a91c657ce48920f321f1b5155195b2b699b53667c67b54a45f066aa90d2b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -611,82 +611,82 @@ $ docker pull maven@sha256:f697f0e3d8fd8deb801c45228a17078cd25ba2eb61ab299cbe5f3
 ### `maven:3-amazoncorretto` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:c9555cfcd6f45ba7d18f478735e29d78f760b0208f416d15a0280e6f439497d4
+$ docker pull maven@sha256:87f8c71892c47981219f64a3ccc3971850ae25b470a2128f151343ec9cf05189
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **222.1 MB (222095841 bytes)**  
+-	Total Size: **222.1 MB (222131200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2fe5a2deb76b120db5188ba45d0fe62a54bb605a844de65824c1b2f005d95908`
+-	Image ID: `sha256:09e7268be6d4548adc1c6840a4ba9268e67fac9d3a3a0ea8345f5ec53f667005`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Tue, 21 Jun 2022 23:19:41 GMT
-ADD file:e6c6bb016423b24a28b273cc76e9fbbf81934b77a0ede797ccfd0eeac465c8a4 in / 
-# Tue, 21 Jun 2022 23:19:42 GMT
+# Fri, 12 Aug 2022 00:20:15 GMT
+ADD file:56a385790046ac5dfb85932009eb1e99c8593221e306b937274c477c05cc9886 in / 
+# Fri, 12 Aug 2022 00:20:15 GMT
 CMD ["/bin/bash"]
-# Tue, 19 Jul 2022 22:37:37 GMT
+# Fri, 12 Aug 2022 03:00:00 GMT
 ARG version=11.0.16.8-1
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:34 GMT
 # ARGS: version=11.0.16.8-1
 RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.key https://yum.corretto.aws/corretto.key     && gpg --batch --import corretto.key     && gpg --batch --export --armor '6DC3636DAE534049C8B94623A122542AB04F24E3' > corretto.key     && rpm --import corretto.key     && rm -r "$GNUPGHOME" corretto.key     && curl -fL -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo     && grep -q '^gpgcheck=1' /etc/yum.repos.d/corretto.repo     && echo "priority=9" >> /etc/yum.repos.d/corretto.repo     && yum install -y java-11-amazon-corretto-devel-$version     && (find /usr/lib/jvm/java-11-amazon-corretto -name src.zip -delete || true)     && yum install -y fontconfig     && yum clean all
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:35 GMT
 ENV LANG=C.UTF-8
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:35 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto
-# Wed, 20 Jul 2022 04:32:17 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 RUN yum install -y tar which gzip   && rm -rf /var/cache/yum/*   && yum clean all
-# Wed, 20 Jul 2022 04:32:17 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG MAVEN_VERSION=3.8.6
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG USER_HOME_DIR=/root
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:22 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries MAVEN_VERSION=3.8.6 SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Wed, 20 Jul 2022 04:32:27 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:017c82d6391f0bf122516eac436a6e8d77ac13282fdd13dde7e7e47dc71d447e`  
-		Last Modified: Wed, 15 Jun 2022 22:09:36 GMT  
-		Size: 62.3 MB (62294977 bytes)  
+	-	`sha256:5e0be87f98fb0e8a6ecddb6b717178ddc6555638e6e89d39929d47654b79739d`  
+		Last Modified: Mon, 01 Aug 2022 22:09:03 GMT  
+		Size: 62.3 MB (62316216 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4712239a1032c328a07309204db2016251c95e1dbd455fa075c3356be0c1002`  
-		Last Modified: Tue, 19 Jul 2022 22:44:32 GMT  
-		Size: 147.4 MB (147434786 bytes)  
+	-	`sha256:03998099518a939dc747f777d8e43d6794e0162d7c78e4ce8345302f79532756`  
+		Last Modified: Fri, 12 Aug 2022 03:04:21 GMT  
+		Size: 147.4 MB (147435999 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8812779aea8de8a52ed8b74b1af2bd80362bf213068fe204624955fd2878278f`  
-		Last Modified: Wed, 20 Jul 2022 04:35:04 GMT  
-		Size: 3.6 MB (3625361 bytes)  
+	-	`sha256:f121a7238bb485305a07bf4ea621c0b3912516ec66c2876d38e1dc27a63cef56`  
+		Last Modified: Fri, 12 Aug 2022 04:16:50 GMT  
+		Size: 3.6 MB (3638271 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0df6de0103af8ed24ddf41518f5fa5b78473c4f0d01ab4f804215a6bce9d4e0e`  
-		Last Modified: Wed, 20 Jul 2022 04:35:04 GMT  
-		Size: 8.7 MB (8739503 bytes)  
+	-	`sha256:52089529603fc66771fcff0c5418f1eedd7596b34407f716de216bc5b7314412`  
+		Last Modified: Fri, 12 Aug 2022 04:16:51 GMT  
+		Size: 8.7 MB (8739497 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7bce66b599e05fe3a29475903394cee93bc1e5df02bb9ee510241c4ce14f10c4`  
-		Last Modified: Wed, 20 Jul 2022 04:35:03 GMT  
-		Size: 853.0 B  
+	-	`sha256:4bedbfad61d59f6256abd88b622ace8b59cfb40d809e535c775741a3f614392a`  
+		Last Modified: Fri, 12 Aug 2022 04:16:49 GMT  
+		Size: 855.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:820914e8c14f5ce3271f0b168b7d458c0907e104058174ea10900bf2616b7bc7`  
-		Last Modified: Wed, 20 Jul 2022 04:35:03 GMT  
-		Size: 361.0 B  
+	-	`sha256:0831f35d99d8eb170fe780502518fb62813e290b9a78756a0ee45fd13a98ab1f`  
+		Last Modified: Fri, 12 Aug 2022 04:16:49 GMT  
+		Size: 362.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3-amazoncorretto` - linux; arm64 variant v8
@@ -773,7 +773,7 @@ CMD ["mvn"]
 ## `maven:3-amazoncorretto-11`
 
 ```console
-$ docker pull maven@sha256:f697f0e3d8fd8deb801c45228a17078cd25ba2eb61ab299cbe5f366ef46fe98a
+$ docker pull maven@sha256:c22a91c657ce48920f321f1b5155195b2b699b53667c67b54a45f066aa90d2b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -784,82 +784,82 @@ $ docker pull maven@sha256:f697f0e3d8fd8deb801c45228a17078cd25ba2eb61ab299cbe5f3
 ### `maven:3-amazoncorretto-11` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:c9555cfcd6f45ba7d18f478735e29d78f760b0208f416d15a0280e6f439497d4
+$ docker pull maven@sha256:87f8c71892c47981219f64a3ccc3971850ae25b470a2128f151343ec9cf05189
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **222.1 MB (222095841 bytes)**  
+-	Total Size: **222.1 MB (222131200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2fe5a2deb76b120db5188ba45d0fe62a54bb605a844de65824c1b2f005d95908`
+-	Image ID: `sha256:09e7268be6d4548adc1c6840a4ba9268e67fac9d3a3a0ea8345f5ec53f667005`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Tue, 21 Jun 2022 23:19:41 GMT
-ADD file:e6c6bb016423b24a28b273cc76e9fbbf81934b77a0ede797ccfd0eeac465c8a4 in / 
-# Tue, 21 Jun 2022 23:19:42 GMT
+# Fri, 12 Aug 2022 00:20:15 GMT
+ADD file:56a385790046ac5dfb85932009eb1e99c8593221e306b937274c477c05cc9886 in / 
+# Fri, 12 Aug 2022 00:20:15 GMT
 CMD ["/bin/bash"]
-# Tue, 19 Jul 2022 22:37:37 GMT
+# Fri, 12 Aug 2022 03:00:00 GMT
 ARG version=11.0.16.8-1
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:34 GMT
 # ARGS: version=11.0.16.8-1
 RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.key https://yum.corretto.aws/corretto.key     && gpg --batch --import corretto.key     && gpg --batch --export --armor '6DC3636DAE534049C8B94623A122542AB04F24E3' > corretto.key     && rpm --import corretto.key     && rm -r "$GNUPGHOME" corretto.key     && curl -fL -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo     && grep -q '^gpgcheck=1' /etc/yum.repos.d/corretto.repo     && echo "priority=9" >> /etc/yum.repos.d/corretto.repo     && yum install -y java-11-amazon-corretto-devel-$version     && (find /usr/lib/jvm/java-11-amazon-corretto -name src.zip -delete || true)     && yum install -y fontconfig     && yum clean all
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:35 GMT
 ENV LANG=C.UTF-8
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:35 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto
-# Wed, 20 Jul 2022 04:32:17 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 RUN yum install -y tar which gzip   && rm -rf /var/cache/yum/*   && yum clean all
-# Wed, 20 Jul 2022 04:32:17 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG MAVEN_VERSION=3.8.6
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG USER_HOME_DIR=/root
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:22 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries MAVEN_VERSION=3.8.6 SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Wed, 20 Jul 2022 04:32:27 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:017c82d6391f0bf122516eac436a6e8d77ac13282fdd13dde7e7e47dc71d447e`  
-		Last Modified: Wed, 15 Jun 2022 22:09:36 GMT  
-		Size: 62.3 MB (62294977 bytes)  
+	-	`sha256:5e0be87f98fb0e8a6ecddb6b717178ddc6555638e6e89d39929d47654b79739d`  
+		Last Modified: Mon, 01 Aug 2022 22:09:03 GMT  
+		Size: 62.3 MB (62316216 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4712239a1032c328a07309204db2016251c95e1dbd455fa075c3356be0c1002`  
-		Last Modified: Tue, 19 Jul 2022 22:44:32 GMT  
-		Size: 147.4 MB (147434786 bytes)  
+	-	`sha256:03998099518a939dc747f777d8e43d6794e0162d7c78e4ce8345302f79532756`  
+		Last Modified: Fri, 12 Aug 2022 03:04:21 GMT  
+		Size: 147.4 MB (147435999 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8812779aea8de8a52ed8b74b1af2bd80362bf213068fe204624955fd2878278f`  
-		Last Modified: Wed, 20 Jul 2022 04:35:04 GMT  
-		Size: 3.6 MB (3625361 bytes)  
+	-	`sha256:f121a7238bb485305a07bf4ea621c0b3912516ec66c2876d38e1dc27a63cef56`  
+		Last Modified: Fri, 12 Aug 2022 04:16:50 GMT  
+		Size: 3.6 MB (3638271 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0df6de0103af8ed24ddf41518f5fa5b78473c4f0d01ab4f804215a6bce9d4e0e`  
-		Last Modified: Wed, 20 Jul 2022 04:35:04 GMT  
-		Size: 8.7 MB (8739503 bytes)  
+	-	`sha256:52089529603fc66771fcff0c5418f1eedd7596b34407f716de216bc5b7314412`  
+		Last Modified: Fri, 12 Aug 2022 04:16:51 GMT  
+		Size: 8.7 MB (8739497 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7bce66b599e05fe3a29475903394cee93bc1e5df02bb9ee510241c4ce14f10c4`  
-		Last Modified: Wed, 20 Jul 2022 04:35:03 GMT  
-		Size: 853.0 B  
+	-	`sha256:4bedbfad61d59f6256abd88b622ace8b59cfb40d809e535c775741a3f614392a`  
+		Last Modified: Fri, 12 Aug 2022 04:16:49 GMT  
+		Size: 855.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:820914e8c14f5ce3271f0b168b7d458c0907e104058174ea10900bf2616b7bc7`  
-		Last Modified: Wed, 20 Jul 2022 04:35:03 GMT  
-		Size: 361.0 B  
+	-	`sha256:0831f35d99d8eb170fe780502518fb62813e290b9a78756a0ee45fd13a98ab1f`  
+		Last Modified: Fri, 12 Aug 2022 04:16:49 GMT  
+		Size: 362.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3-amazoncorretto-11` - linux; arm64 variant v8
@@ -946,7 +946,7 @@ CMD ["mvn"]
 ## `maven:3-amazoncorretto-17`
 
 ```console
-$ docker pull maven@sha256:b437aca8b97eee12217b45dde8f1d77ad4210c73c4ebb596b8f8fa839bd704ce
+$ docker pull maven@sha256:198bcb5364d38c5bc75bb021b81f52acade80e6fcb67d4529124a14cd3109e31
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -957,82 +957,82 @@ $ docker pull maven@sha256:b437aca8b97eee12217b45dde8f1d77ad4210c73c4ebb596b8f8f
 ### `maven:3-amazoncorretto-17` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:0dd0f31546b397b99ea4db13455c27c8a38f1fc37dcb265646e940ee4d4470a6
+$ docker pull maven@sha256:d53f054ea845662544f599fa8728f526f77c8b3cc445eddf4a996297d76bf131
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **226.3 MB (226302057 bytes)**  
+-	Total Size: **226.3 MB (226331838 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2e8e8b5e9465e5e4dfefba81bf8b3611245e7331cf0ce78285a2cb23d8d0d582`
+-	Image ID: `sha256:7a4103b6ecd8716cb004a9494eefcdbee0cd3075f9e9c26faf48465110cd7ae7`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Tue, 21 Jun 2022 23:19:41 GMT
-ADD file:e6c6bb016423b24a28b273cc76e9fbbf81934b77a0ede797ccfd0eeac465c8a4 in / 
-# Tue, 21 Jun 2022 23:19:42 GMT
+# Fri, 12 Aug 2022 00:20:15 GMT
+ADD file:56a385790046ac5dfb85932009eb1e99c8593221e306b937274c477c05cc9886 in / 
+# Fri, 12 Aug 2022 00:20:15 GMT
 CMD ["/bin/bash"]
-# Tue, 19 Jul 2022 22:38:35 GMT
+# Fri, 12 Aug 2022 03:00:47 GMT
 ARG version=17.0.4.8-1
-# Tue, 19 Jul 2022 22:38:58 GMT
+# Fri, 12 Aug 2022 03:01:18 GMT
 # ARGS: version=17.0.4.8-1
 RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.key https://yum.corretto.aws/corretto.key     && gpg --batch --import corretto.key     && gpg --batch --export --armor '6DC3636DAE534049C8B94623A122542AB04F24E3' > corretto.key     && rpm --import corretto.key     && rm -r "$GNUPGHOME" corretto.key     && curl -fL -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo     && grep -q '^gpgcheck=1' /etc/yum.repos.d/corretto.repo     && echo "priority=9" >> /etc/yum.repos.d/corretto.repo     && yum install -y java-17-amazon-corretto-devel-$version     && (find /usr/lib/jvm/java-17-amazon-corretto -name src.zip -delete || true)     && yum install -y fontconfig     && yum clean all
-# Tue, 19 Jul 2022 22:38:58 GMT
+# Fri, 12 Aug 2022 03:01:19 GMT
 ENV LANG=C.UTF-8
-# Tue, 19 Jul 2022 22:38:58 GMT
+# Fri, 12 Aug 2022 03:01:19 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto
-# Wed, 20 Jul 2022 04:32:41 GMT
+# Fri, 12 Aug 2022 04:14:36 GMT
 RUN yum install -y tar which gzip   && rm -rf /var/cache/yum/*   && yum clean all
-# Wed, 20 Jul 2022 04:32:41 GMT
+# Fri, 12 Aug 2022 04:14:36 GMT
 ARG MAVEN_VERSION=3.8.6
-# Wed, 20 Jul 2022 04:32:41 GMT
+# Fri, 12 Aug 2022 04:14:36 GMT
 ARG USER_HOME_DIR=/root
-# Wed, 20 Jul 2022 04:32:41 GMT
+# Fri, 12 Aug 2022 04:14:36 GMT
 ARG SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26
-# Wed, 20 Jul 2022 04:32:41 GMT
+# Fri, 12 Aug 2022 04:14:36 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries
-# Wed, 20 Jul 2022 04:32:43 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries MAVEN_VERSION=3.8.6 SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Wed, 20 Jul 2022 04:32:43 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Wed, 20 Jul 2022 04:32:43 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Wed, 20 Jul 2022 04:32:43 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Wed, 20 Jul 2022 04:32:44 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Wed, 20 Jul 2022 04:32:44 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Wed, 20 Jul 2022 04:32:44 GMT
+# Fri, 12 Aug 2022 04:14:39 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:017c82d6391f0bf122516eac436a6e8d77ac13282fdd13dde7e7e47dc71d447e`  
-		Last Modified: Wed, 15 Jun 2022 22:09:36 GMT  
-		Size: 62.3 MB (62294977 bytes)  
+	-	`sha256:5e0be87f98fb0e8a6ecddb6b717178ddc6555638e6e89d39929d47654b79739d`  
+		Last Modified: Mon, 01 Aug 2022 22:09:03 GMT  
+		Size: 62.3 MB (62316216 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c297b4544f77e61a5ef202b51c7b35066efeb505d0980b8fb71af85f3a0cfb4`  
-		Last Modified: Tue, 19 Jul 2022 22:46:36 GMT  
-		Size: 151.6 MB (151642501 bytes)  
+	-	`sha256:d314fc0177b889b2b09cd5a692e76f4221ebeaf1859cba4e048dc70d63e4933e`  
+		Last Modified: Fri, 12 Aug 2022 03:04:57 GMT  
+		Size: 151.7 MB (151650674 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b47e45a470a975e57178c12faf1f4d6a1fb0a45d581e7471c33b3e175002d88`  
-		Last Modified: Wed, 20 Jul 2022 04:35:26 GMT  
-		Size: 3.6 MB (3623869 bytes)  
+	-	`sha256:0a4c9229b1d8ec33e76480422ca25f9a94d6d190eae93a5e4196ba3b1830e50c`  
+		Last Modified: Fri, 12 Aug 2022 04:17:14 GMT  
+		Size: 3.6 MB (3624249 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8f17e4cee6290282fd1b3c229c4e9ca6dcdfd2b2e1db433104d4ab5efb224e0a`  
-		Last Modified: Wed, 20 Jul 2022 04:35:26 GMT  
-		Size: 8.7 MB (8739498 bytes)  
+	-	`sha256:1ac1cff4c2fdc4afdfbf190d866afc18ca7cbcb33e93d1e6666d065119b4d94d`  
+		Last Modified: Fri, 12 Aug 2022 04:17:14 GMT  
+		Size: 8.7 MB (8739482 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:114ad61d2624871341f753cd1f18b8649584e748d883dff72f1950bc2526fed4`  
-		Last Modified: Wed, 20 Jul 2022 04:35:26 GMT  
-		Size: 852.0 B  
+	-	`sha256:b4b85ecd844ff21f94332bdf538835719000f3d28e7010daf7cf78e548b30501`  
+		Last Modified: Fri, 12 Aug 2022 04:17:13 GMT  
+		Size: 856.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3234856ce11b1c066ee246322681b07f8ce551e7f17962c001ad3f552339da57`  
-		Last Modified: Wed, 20 Jul 2022 04:35:26 GMT  
-		Size: 360.0 B  
+	-	`sha256:ee25491cbc099fb8363845452159c5d1d7d09f6b1b193d47a7f28b23c330e824`  
+		Last Modified: Fri, 12 Aug 2022 04:17:13 GMT  
+		Size: 361.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3-amazoncorretto-17` - linux; arm64 variant v8
@@ -1119,7 +1119,7 @@ CMD ["mvn"]
 ## `maven:3-amazoncorretto-18`
 
 ```console
-$ docker pull maven@sha256:ccf9bebb4e6fa36a304bec086647a674abcf38a92cd2cb96d15cdde073294143
+$ docker pull maven@sha256:460e712416c459b41b9ce9a28b23e8b4df22550d73564a08bc37c141910aeb91
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1130,82 +1130,82 @@ $ docker pull maven@sha256:ccf9bebb4e6fa36a304bec086647a674abcf38a92cd2cb96d15cd
 ### `maven:3-amazoncorretto-18` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:9818b470099b92e22b7b7aa8432a0cfbd4aae145caf65ea628a64e21e4a58b3a
+$ docker pull maven@sha256:fe31c5d7e26b909c1467b953ec5fc3294d015af2a9690e93e2ae27002a5941d0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **227.4 MB (227353290 bytes)**  
+-	Total Size: **227.4 MB (227379774 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6ddf65cd6b82b78160f64b1aade03e0f8f57b1491485767a19f68f75e7728904`
+-	Image ID: `sha256:722d2ddadd4f08e3a6381653e64db9ac04475a27faa3ecd1e2fd71cb2ea4eba9`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Tue, 21 Jun 2022 23:19:41 GMT
-ADD file:e6c6bb016423b24a28b273cc76e9fbbf81934b77a0ede797ccfd0eeac465c8a4 in / 
-# Tue, 21 Jun 2022 23:19:42 GMT
+# Fri, 12 Aug 2022 00:20:15 GMT
+ADD file:56a385790046ac5dfb85932009eb1e99c8593221e306b937274c477c05cc9886 in / 
+# Fri, 12 Aug 2022 00:20:15 GMT
 CMD ["/bin/bash"]
-# Tue, 19 Jul 2022 22:39:33 GMT
+# Fri, 12 Aug 2022 03:01:29 GMT
 ARG version=18.0.2.9-1
-# Tue, 19 Jul 2022 22:39:57 GMT
+# Fri, 12 Aug 2022 03:01:55 GMT
 # ARGS: version=18.0.2.9-1
 RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.key https://yum.corretto.aws/corretto.key     && gpg --batch --import corretto.key     && gpg --batch --export --armor '6DC3636DAE534049C8B94623A122542AB04F24E3' > corretto.key     && rpm --import corretto.key     && rm -r "$GNUPGHOME" corretto.key     && curl -fL -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo     && grep -q '^gpgcheck=1' /etc/yum.repos.d/corretto.repo     && echo "priority=9" >> /etc/yum.repos.d/corretto.repo     && yum install -y java-18-amazon-corretto-devel-$version     && (find /usr/lib/jvm/java-18-amazon-corretto -name src.zip -delete || true)     && yum install -y fontconfig     && yum clean all
-# Tue, 19 Jul 2022 22:39:57 GMT
+# Fri, 12 Aug 2022 03:01:56 GMT
 ENV LANG=C.UTF-8
-# Tue, 19 Jul 2022 22:39:57 GMT
+# Fri, 12 Aug 2022 03:01:56 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-18-amazon-corretto
-# Thu, 21 Jul 2022 16:21:05 GMT
+# Fri, 12 Aug 2022 04:14:52 GMT
 RUN yum install -y tar which gzip   && rm -rf /var/cache/yum/*   && yum clean all
-# Thu, 21 Jul 2022 16:21:05 GMT
+# Fri, 12 Aug 2022 04:14:52 GMT
 ARG MAVEN_VERSION=3.8.6
-# Thu, 21 Jul 2022 16:21:05 GMT
+# Fri, 12 Aug 2022 04:14:52 GMT
 ARG USER_HOME_DIR=/root
-# Thu, 21 Jul 2022 16:21:05 GMT
+# Fri, 12 Aug 2022 04:14:52 GMT
 ARG SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26
-# Thu, 21 Jul 2022 16:21:05 GMT
+# Fri, 12 Aug 2022 04:14:53 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:56 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries MAVEN_VERSION=3.8.6 SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:56 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:56 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:56 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:57 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:57 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:57 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:017c82d6391f0bf122516eac436a6e8d77ac13282fdd13dde7e7e47dc71d447e`  
-		Last Modified: Wed, 15 Jun 2022 22:09:36 GMT  
-		Size: 62.3 MB (62294977 bytes)  
+	-	`sha256:5e0be87f98fb0e8a6ecddb6b717178ddc6555638e6e89d39929d47654b79739d`  
+		Last Modified: Mon, 01 Aug 2022 22:09:03 GMT  
+		Size: 62.3 MB (62316216 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a32db96ef93c32222a831a4d995125c262049b1b21da93de9caa8a18b2a7da26`  
-		Last Modified: Tue, 19 Jul 2022 22:48:39 GMT  
-		Size: 152.7 MB (152693605 bytes)  
+	-	`sha256:188a28cedc43dd2a2fb4b59c6bc7b5a07186690557cfb49f2750f1378654b259`  
+		Last Modified: Fri, 12 Aug 2022 03:05:34 GMT  
+		Size: 152.7 MB (152698531 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:44ca32988110f16217ce5288fbf65c5cd387ffd785b40f78b731dd4d3b76ac2a`  
-		Last Modified: Thu, 21 Jul 2022 16:23:25 GMT  
-		Size: 3.6 MB (3623995 bytes)  
+	-	`sha256:4f4ca0faafcd263e4489dcba618bce153844907cdbca4584bdbd6412b94ec0cc`  
+		Last Modified: Fri, 12 Aug 2022 04:17:26 GMT  
+		Size: 3.6 MB (3624326 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2e5cc9fb85d58bf8437a56cfb60ab75cbf03dd97feea9e59934660b5bd50b56`  
-		Last Modified: Thu, 21 Jul 2022 16:23:25 GMT  
-		Size: 8.7 MB (8739498 bytes)  
+	-	`sha256:81fd568edd4dc84cd51f5ff2d12f02a9d2b58739319d5d446b2d9f44f32670ed`  
+		Last Modified: Fri, 12 Aug 2022 04:17:27 GMT  
+		Size: 8.7 MB (8739488 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:585ceaea40425ca2fd196391e967eeb5a3485b2f13f6635c21f115f41049e28a`  
-		Last Modified: Thu, 21 Jul 2022 16:23:24 GMT  
-		Size: 853.0 B  
+	-	`sha256:787ff1a102cd8011583eed093a85f62da9e380000e263627b7048ab32de81909`  
+		Last Modified: Fri, 12 Aug 2022 04:17:26 GMT  
+		Size: 854.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8754bebf5517428792e4e882ce49118cb244688ccde159e2cd301763ccaecb9e`  
-		Last Modified: Thu, 21 Jul 2022 16:23:24 GMT  
-		Size: 362.0 B  
+	-	`sha256:cc8e896181ca41a050e49dd94cde5505215af3980c0c692a5fb560023cbb7c41`  
+		Last Modified: Fri, 12 Aug 2022 04:17:26 GMT  
+		Size: 359.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3-amazoncorretto-18` - linux; arm64 variant v8
@@ -1292,7 +1292,7 @@ CMD ["mvn"]
 ## `maven:3-amazoncorretto-8`
 
 ```console
-$ docker pull maven@sha256:1303d996e7963d124897a90ea625b17a693bb217dbc69f8b6dce1006f4b26159
+$ docker pull maven@sha256:5856d35051a0715899b2d2dc98449567d8937940b0e62b83fa6ba5ecd22d47b7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1303,84 +1303,84 @@ $ docker pull maven@sha256:1303d996e7963d124897a90ea625b17a693bb217dbc69f8b6dce1
 ### `maven:3-amazoncorretto-8` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:1c24e4eabf8d15872771637c8d643dada3598be008f6ea717b98c06715ad1942
+$ docker pull maven@sha256:3b61f0b5af2ebf64454a43f1405c59dc287048d3e8f35390fc8cea34afd10032
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **150.2 MB (150241743 bytes)**  
+-	Total Size: **150.3 MB (150260686 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:59e165e54aa96abf2b38e4e2c15645d83d48196b75343567782a38efb0b251d0`
+-	Image ID: `sha256:8732570bef447dd6621ca2259b5179dde7dcd908c6c142890ce6ac60b2d03b09`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Tue, 21 Jun 2022 23:19:41 GMT
-ADD file:e6c6bb016423b24a28b273cc76e9fbbf81934b77a0ede797ccfd0eeac465c8a4 in / 
-# Tue, 21 Jun 2022 23:19:42 GMT
+# Fri, 12 Aug 2022 00:20:15 GMT
+ADD file:56a385790046ac5dfb85932009eb1e99c8593221e306b937274c477c05cc9886 in / 
+# Fri, 12 Aug 2022 00:20:15 GMT
 CMD ["/bin/bash"]
-# Fri, 29 Jul 2022 20:19:32 GMT
+# Fri, 12 Aug 2022 02:59:13 GMT
 ARG version=1.8.0_342.b07-4
-# Fri, 29 Jul 2022 20:19:55 GMT
+# Fri, 12 Aug 2022 02:59:39 GMT
 # ARGS: version=1.8.0_342.b07-4
 RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.key https://yum.corretto.aws/corretto.key     && gpg --batch --import corretto.key     && gpg --batch --export --armor '6DC3636DAE534049C8B94623A122542AB04F24E3' > corretto.key     && rpm --import corretto.key     && rm -r "$GNUPGHOME" corretto.key     && curl -fL -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo     && grep -q '^gpgcheck=1' /etc/yum.repos.d/corretto.repo     && echo "priority=9" >> /etc/yum.repos.d/corretto.repo     && yum install -y java-1.8.0-amazon-corretto-devel-$version     && (find /usr/lib/jvm/java-1.8.0-amazon-corretto -name src.zip -delete || true)     && yum install -y fontconfig     && yum clean all
-# Fri, 29 Jul 2022 20:19:56 GMT
+# Fri, 12 Aug 2022 02:59:39 GMT
 ENV LANG=C.UTF-8
-# Fri, 29 Jul 2022 20:19:56 GMT
+# Fri, 12 Aug 2022 02:59:40 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-amazon-corretto
-# Fri, 29 Jul 2022 20:49:11 GMT
+# Fri, 12 Aug 2022 04:15:09 GMT
 RUN yum install -y tar which gzip   && rm -rf /var/cache/yum/*   && yum clean all
-# Fri, 29 Jul 2022 20:49:11 GMT
+# Fri, 12 Aug 2022 04:15:09 GMT
 ARG MAVEN_VERSION=3.8.6
-# Fri, 29 Jul 2022 20:49:11 GMT
+# Fri, 12 Aug 2022 04:15:09 GMT
 ARG USER_HOME_DIR=/root
-# Fri, 29 Jul 2022 20:49:12 GMT
+# Fri, 12 Aug 2022 04:15:10 GMT
 ARG SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26
-# Fri, 29 Jul 2022 20:49:12 GMT
+# Fri, 12 Aug 2022 04:15:10 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries
-# Fri, 29 Jul 2022 20:49:16 GMT
+# Fri, 12 Aug 2022 04:15:11 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries MAVEN_VERSION=3.8.6 SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-amazon-corretto
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:017c82d6391f0bf122516eac436a6e8d77ac13282fdd13dde7e7e47dc71d447e`  
-		Last Modified: Wed, 15 Jun 2022 22:09:36 GMT  
-		Size: 62.3 MB (62294977 bytes)  
+	-	`sha256:5e0be87f98fb0e8a6ecddb6b717178ddc6555638e6e89d39929d47654b79739d`  
+		Last Modified: Mon, 01 Aug 2022 22:09:03 GMT  
+		Size: 62.3 MB (62316216 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3df111cff0efc5b8037bba3b2548dd3c1f4e0366a4ee44ea1dc8f635d0f59743`  
-		Last Modified: Fri, 29 Jul 2022 20:22:41 GMT  
-		Size: 75.6 MB (75575846 bytes)  
+	-	`sha256:af2ed3f8d08aa74e8f95ecdbb438976bc6be9725b4cfd8226c0951916bad35f2`  
+		Last Modified: Fri, 12 Aug 2022 03:03:40 GMT  
+		Size: 75.6 MB (75573752 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d9bc8fc55cfe7d6a91e4cc0f54d6138e7683ff74795f19c89625a2f814ae76b`  
-		Last Modified: Fri, 29 Jul 2022 20:51:39 GMT  
-		Size: 3.6 MB (3630204 bytes)  
+	-	`sha256:3624505671e77b9757a8ac39c82052ed0b6d679abbe472209a97fa1b666cf0e6`  
+		Last Modified: Fri, 12 Aug 2022 04:17:39 GMT  
+		Size: 3.6 MB (3630001 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d9e3672671b9dae18638904e694987f49d48a8259e7991965f5e426c0c0cd40`  
-		Last Modified: Fri, 29 Jul 2022 20:51:39 GMT  
-		Size: 8.7 MB (8739503 bytes)  
+	-	`sha256:14475c36265b162a62a5e3516c229e4b08aebc9c6f83eae58c4ad01e0d326c41`  
+		Last Modified: Fri, 12 Aug 2022 04:17:39 GMT  
+		Size: 8.7 MB (8739501 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fba525052c6ab3bf8ee92cd4750803e283f15740d5358663db73d65318b0f521`  
-		Last Modified: Fri, 29 Jul 2022 20:51:38 GMT  
-		Size: 851.0 B  
+	-	`sha256:d404139306e59c00a64184b816e131d7d9178929b8a05bab5fd794961ee529fc`  
+		Last Modified: Fri, 12 Aug 2022 04:17:39 GMT  
+		Size: 856.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e4a9e8abefe8601e10a74e0e27d9167c0e361368b9cf09cdc9dd4f1d8ecfca6`  
-		Last Modified: Fri, 29 Jul 2022 20:51:38 GMT  
-		Size: 362.0 B  
+	-	`sha256:6f0ba330b0d124d5d719e7d95faab5a7c34676af7fc60c11c5913dbe2849b56a`  
+		Last Modified: Fri, 12 Aug 2022 04:17:39 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3-amazoncorretto-8` - linux; arm64 variant v8
@@ -9917,7 +9917,7 @@ CMD ["mvn"]
 ## `maven:3.8-amazoncorretto`
 
 ```console
-$ docker pull maven@sha256:f697f0e3d8fd8deb801c45228a17078cd25ba2eb61ab299cbe5f366ef46fe98a
+$ docker pull maven@sha256:c22a91c657ce48920f321f1b5155195b2b699b53667c67b54a45f066aa90d2b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9928,82 +9928,82 @@ $ docker pull maven@sha256:f697f0e3d8fd8deb801c45228a17078cd25ba2eb61ab299cbe5f3
 ### `maven:3.8-amazoncorretto` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:c9555cfcd6f45ba7d18f478735e29d78f760b0208f416d15a0280e6f439497d4
+$ docker pull maven@sha256:87f8c71892c47981219f64a3ccc3971850ae25b470a2128f151343ec9cf05189
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **222.1 MB (222095841 bytes)**  
+-	Total Size: **222.1 MB (222131200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2fe5a2deb76b120db5188ba45d0fe62a54bb605a844de65824c1b2f005d95908`
+-	Image ID: `sha256:09e7268be6d4548adc1c6840a4ba9268e67fac9d3a3a0ea8345f5ec53f667005`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Tue, 21 Jun 2022 23:19:41 GMT
-ADD file:e6c6bb016423b24a28b273cc76e9fbbf81934b77a0ede797ccfd0eeac465c8a4 in / 
-# Tue, 21 Jun 2022 23:19:42 GMT
+# Fri, 12 Aug 2022 00:20:15 GMT
+ADD file:56a385790046ac5dfb85932009eb1e99c8593221e306b937274c477c05cc9886 in / 
+# Fri, 12 Aug 2022 00:20:15 GMT
 CMD ["/bin/bash"]
-# Tue, 19 Jul 2022 22:37:37 GMT
+# Fri, 12 Aug 2022 03:00:00 GMT
 ARG version=11.0.16.8-1
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:34 GMT
 # ARGS: version=11.0.16.8-1
 RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.key https://yum.corretto.aws/corretto.key     && gpg --batch --import corretto.key     && gpg --batch --export --armor '6DC3636DAE534049C8B94623A122542AB04F24E3' > corretto.key     && rpm --import corretto.key     && rm -r "$GNUPGHOME" corretto.key     && curl -fL -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo     && grep -q '^gpgcheck=1' /etc/yum.repos.d/corretto.repo     && echo "priority=9" >> /etc/yum.repos.d/corretto.repo     && yum install -y java-11-amazon-corretto-devel-$version     && (find /usr/lib/jvm/java-11-amazon-corretto -name src.zip -delete || true)     && yum install -y fontconfig     && yum clean all
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:35 GMT
 ENV LANG=C.UTF-8
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:35 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto
-# Wed, 20 Jul 2022 04:32:17 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 RUN yum install -y tar which gzip   && rm -rf /var/cache/yum/*   && yum clean all
-# Wed, 20 Jul 2022 04:32:17 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG MAVEN_VERSION=3.8.6
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG USER_HOME_DIR=/root
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:22 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries MAVEN_VERSION=3.8.6 SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Wed, 20 Jul 2022 04:32:27 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:017c82d6391f0bf122516eac436a6e8d77ac13282fdd13dde7e7e47dc71d447e`  
-		Last Modified: Wed, 15 Jun 2022 22:09:36 GMT  
-		Size: 62.3 MB (62294977 bytes)  
+	-	`sha256:5e0be87f98fb0e8a6ecddb6b717178ddc6555638e6e89d39929d47654b79739d`  
+		Last Modified: Mon, 01 Aug 2022 22:09:03 GMT  
+		Size: 62.3 MB (62316216 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4712239a1032c328a07309204db2016251c95e1dbd455fa075c3356be0c1002`  
-		Last Modified: Tue, 19 Jul 2022 22:44:32 GMT  
-		Size: 147.4 MB (147434786 bytes)  
+	-	`sha256:03998099518a939dc747f777d8e43d6794e0162d7c78e4ce8345302f79532756`  
+		Last Modified: Fri, 12 Aug 2022 03:04:21 GMT  
+		Size: 147.4 MB (147435999 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8812779aea8de8a52ed8b74b1af2bd80362bf213068fe204624955fd2878278f`  
-		Last Modified: Wed, 20 Jul 2022 04:35:04 GMT  
-		Size: 3.6 MB (3625361 bytes)  
+	-	`sha256:f121a7238bb485305a07bf4ea621c0b3912516ec66c2876d38e1dc27a63cef56`  
+		Last Modified: Fri, 12 Aug 2022 04:16:50 GMT  
+		Size: 3.6 MB (3638271 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0df6de0103af8ed24ddf41518f5fa5b78473c4f0d01ab4f804215a6bce9d4e0e`  
-		Last Modified: Wed, 20 Jul 2022 04:35:04 GMT  
-		Size: 8.7 MB (8739503 bytes)  
+	-	`sha256:52089529603fc66771fcff0c5418f1eedd7596b34407f716de216bc5b7314412`  
+		Last Modified: Fri, 12 Aug 2022 04:16:51 GMT  
+		Size: 8.7 MB (8739497 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7bce66b599e05fe3a29475903394cee93bc1e5df02bb9ee510241c4ce14f10c4`  
-		Last Modified: Wed, 20 Jul 2022 04:35:03 GMT  
-		Size: 853.0 B  
+	-	`sha256:4bedbfad61d59f6256abd88b622ace8b59cfb40d809e535c775741a3f614392a`  
+		Last Modified: Fri, 12 Aug 2022 04:16:49 GMT  
+		Size: 855.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:820914e8c14f5ce3271f0b168b7d458c0907e104058174ea10900bf2616b7bc7`  
-		Last Modified: Wed, 20 Jul 2022 04:35:03 GMT  
-		Size: 361.0 B  
+	-	`sha256:0831f35d99d8eb170fe780502518fb62813e290b9a78756a0ee45fd13a98ab1f`  
+		Last Modified: Fri, 12 Aug 2022 04:16:49 GMT  
+		Size: 362.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3.8-amazoncorretto` - linux; arm64 variant v8
@@ -10090,7 +10090,7 @@ CMD ["mvn"]
 ## `maven:3.8-amazoncorretto-11`
 
 ```console
-$ docker pull maven@sha256:f697f0e3d8fd8deb801c45228a17078cd25ba2eb61ab299cbe5f366ef46fe98a
+$ docker pull maven@sha256:c22a91c657ce48920f321f1b5155195b2b699b53667c67b54a45f066aa90d2b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10101,82 +10101,82 @@ $ docker pull maven@sha256:f697f0e3d8fd8deb801c45228a17078cd25ba2eb61ab299cbe5f3
 ### `maven:3.8-amazoncorretto-11` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:c9555cfcd6f45ba7d18f478735e29d78f760b0208f416d15a0280e6f439497d4
+$ docker pull maven@sha256:87f8c71892c47981219f64a3ccc3971850ae25b470a2128f151343ec9cf05189
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **222.1 MB (222095841 bytes)**  
+-	Total Size: **222.1 MB (222131200 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2fe5a2deb76b120db5188ba45d0fe62a54bb605a844de65824c1b2f005d95908`
+-	Image ID: `sha256:09e7268be6d4548adc1c6840a4ba9268e67fac9d3a3a0ea8345f5ec53f667005`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Tue, 21 Jun 2022 23:19:41 GMT
-ADD file:e6c6bb016423b24a28b273cc76e9fbbf81934b77a0ede797ccfd0eeac465c8a4 in / 
-# Tue, 21 Jun 2022 23:19:42 GMT
+# Fri, 12 Aug 2022 00:20:15 GMT
+ADD file:56a385790046ac5dfb85932009eb1e99c8593221e306b937274c477c05cc9886 in / 
+# Fri, 12 Aug 2022 00:20:15 GMT
 CMD ["/bin/bash"]
-# Tue, 19 Jul 2022 22:37:37 GMT
+# Fri, 12 Aug 2022 03:00:00 GMT
 ARG version=11.0.16.8-1
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:34 GMT
 # ARGS: version=11.0.16.8-1
 RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.key https://yum.corretto.aws/corretto.key     && gpg --batch --import corretto.key     && gpg --batch --export --armor '6DC3636DAE534049C8B94623A122542AB04F24E3' > corretto.key     && rpm --import corretto.key     && rm -r "$GNUPGHOME" corretto.key     && curl -fL -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo     && grep -q '^gpgcheck=1' /etc/yum.repos.d/corretto.repo     && echo "priority=9" >> /etc/yum.repos.d/corretto.repo     && yum install -y java-11-amazon-corretto-devel-$version     && (find /usr/lib/jvm/java-11-amazon-corretto -name src.zip -delete || true)     && yum install -y fontconfig     && yum clean all
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:35 GMT
 ENV LANG=C.UTF-8
-# Tue, 19 Jul 2022 22:38:00 GMT
+# Fri, 12 Aug 2022 03:00:35 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto
-# Wed, 20 Jul 2022 04:32:17 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 RUN yum install -y tar which gzip   && rm -rf /var/cache/yum/*   && yum clean all
-# Wed, 20 Jul 2022 04:32:17 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG MAVEN_VERSION=3.8.6
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG USER_HOME_DIR=/root
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26
-# Wed, 20 Jul 2022 04:32:18 GMT
+# Fri, 12 Aug 2022 04:14:16 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:22 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries MAVEN_VERSION=3.8.6 SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Wed, 20 Jul 2022 04:32:26 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Wed, 20 Jul 2022 04:32:27 GMT
+# Fri, 12 Aug 2022 04:14:23 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:017c82d6391f0bf122516eac436a6e8d77ac13282fdd13dde7e7e47dc71d447e`  
-		Last Modified: Wed, 15 Jun 2022 22:09:36 GMT  
-		Size: 62.3 MB (62294977 bytes)  
+	-	`sha256:5e0be87f98fb0e8a6ecddb6b717178ddc6555638e6e89d39929d47654b79739d`  
+		Last Modified: Mon, 01 Aug 2022 22:09:03 GMT  
+		Size: 62.3 MB (62316216 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4712239a1032c328a07309204db2016251c95e1dbd455fa075c3356be0c1002`  
-		Last Modified: Tue, 19 Jul 2022 22:44:32 GMT  
-		Size: 147.4 MB (147434786 bytes)  
+	-	`sha256:03998099518a939dc747f777d8e43d6794e0162d7c78e4ce8345302f79532756`  
+		Last Modified: Fri, 12 Aug 2022 03:04:21 GMT  
+		Size: 147.4 MB (147435999 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8812779aea8de8a52ed8b74b1af2bd80362bf213068fe204624955fd2878278f`  
-		Last Modified: Wed, 20 Jul 2022 04:35:04 GMT  
-		Size: 3.6 MB (3625361 bytes)  
+	-	`sha256:f121a7238bb485305a07bf4ea621c0b3912516ec66c2876d38e1dc27a63cef56`  
+		Last Modified: Fri, 12 Aug 2022 04:16:50 GMT  
+		Size: 3.6 MB (3638271 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0df6de0103af8ed24ddf41518f5fa5b78473c4f0d01ab4f804215a6bce9d4e0e`  
-		Last Modified: Wed, 20 Jul 2022 04:35:04 GMT  
-		Size: 8.7 MB (8739503 bytes)  
+	-	`sha256:52089529603fc66771fcff0c5418f1eedd7596b34407f716de216bc5b7314412`  
+		Last Modified: Fri, 12 Aug 2022 04:16:51 GMT  
+		Size: 8.7 MB (8739497 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7bce66b599e05fe3a29475903394cee93bc1e5df02bb9ee510241c4ce14f10c4`  
-		Last Modified: Wed, 20 Jul 2022 04:35:03 GMT  
-		Size: 853.0 B  
+	-	`sha256:4bedbfad61d59f6256abd88b622ace8b59cfb40d809e535c775741a3f614392a`  
+		Last Modified: Fri, 12 Aug 2022 04:16:49 GMT  
+		Size: 855.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:820914e8c14f5ce3271f0b168b7d458c0907e104058174ea10900bf2616b7bc7`  
-		Last Modified: Wed, 20 Jul 2022 04:35:03 GMT  
-		Size: 361.0 B  
+	-	`sha256:0831f35d99d8eb170fe780502518fb62813e290b9a78756a0ee45fd13a98ab1f`  
+		Last Modified: Fri, 12 Aug 2022 04:16:49 GMT  
+		Size: 362.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3.8-amazoncorretto-11` - linux; arm64 variant v8
@@ -10263,7 +10263,7 @@ CMD ["mvn"]
 ## `maven:3.8-amazoncorretto-17`
 
 ```console
-$ docker pull maven@sha256:b437aca8b97eee12217b45dde8f1d77ad4210c73c4ebb596b8f8fa839bd704ce
+$ docker pull maven@sha256:198bcb5364d38c5bc75bb021b81f52acade80e6fcb67d4529124a14cd3109e31
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10274,82 +10274,82 @@ $ docker pull maven@sha256:b437aca8b97eee12217b45dde8f1d77ad4210c73c4ebb596b8f8f
 ### `maven:3.8-amazoncorretto-17` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:0dd0f31546b397b99ea4db13455c27c8a38f1fc37dcb265646e940ee4d4470a6
+$ docker pull maven@sha256:d53f054ea845662544f599fa8728f526f77c8b3cc445eddf4a996297d76bf131
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **226.3 MB (226302057 bytes)**  
+-	Total Size: **226.3 MB (226331838 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2e8e8b5e9465e5e4dfefba81bf8b3611245e7331cf0ce78285a2cb23d8d0d582`
+-	Image ID: `sha256:7a4103b6ecd8716cb004a9494eefcdbee0cd3075f9e9c26faf48465110cd7ae7`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Tue, 21 Jun 2022 23:19:41 GMT
-ADD file:e6c6bb016423b24a28b273cc76e9fbbf81934b77a0ede797ccfd0eeac465c8a4 in / 
-# Tue, 21 Jun 2022 23:19:42 GMT
+# Fri, 12 Aug 2022 00:20:15 GMT
+ADD file:56a385790046ac5dfb85932009eb1e99c8593221e306b937274c477c05cc9886 in / 
+# Fri, 12 Aug 2022 00:20:15 GMT
 CMD ["/bin/bash"]
-# Tue, 19 Jul 2022 22:38:35 GMT
+# Fri, 12 Aug 2022 03:00:47 GMT
 ARG version=17.0.4.8-1
-# Tue, 19 Jul 2022 22:38:58 GMT
+# Fri, 12 Aug 2022 03:01:18 GMT
 # ARGS: version=17.0.4.8-1
 RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.key https://yum.corretto.aws/corretto.key     && gpg --batch --import corretto.key     && gpg --batch --export --armor '6DC3636DAE534049C8B94623A122542AB04F24E3' > corretto.key     && rpm --import corretto.key     && rm -r "$GNUPGHOME" corretto.key     && curl -fL -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo     && grep -q '^gpgcheck=1' /etc/yum.repos.d/corretto.repo     && echo "priority=9" >> /etc/yum.repos.d/corretto.repo     && yum install -y java-17-amazon-corretto-devel-$version     && (find /usr/lib/jvm/java-17-amazon-corretto -name src.zip -delete || true)     && yum install -y fontconfig     && yum clean all
-# Tue, 19 Jul 2022 22:38:58 GMT
+# Fri, 12 Aug 2022 03:01:19 GMT
 ENV LANG=C.UTF-8
-# Tue, 19 Jul 2022 22:38:58 GMT
+# Fri, 12 Aug 2022 03:01:19 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto
-# Wed, 20 Jul 2022 04:32:41 GMT
+# Fri, 12 Aug 2022 04:14:36 GMT
 RUN yum install -y tar which gzip   && rm -rf /var/cache/yum/*   && yum clean all
-# Wed, 20 Jul 2022 04:32:41 GMT
+# Fri, 12 Aug 2022 04:14:36 GMT
 ARG MAVEN_VERSION=3.8.6
-# Wed, 20 Jul 2022 04:32:41 GMT
+# Fri, 12 Aug 2022 04:14:36 GMT
 ARG USER_HOME_DIR=/root
-# Wed, 20 Jul 2022 04:32:41 GMT
+# Fri, 12 Aug 2022 04:14:36 GMT
 ARG SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26
-# Wed, 20 Jul 2022 04:32:41 GMT
+# Fri, 12 Aug 2022 04:14:36 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries
-# Wed, 20 Jul 2022 04:32:43 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries MAVEN_VERSION=3.8.6 SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Wed, 20 Jul 2022 04:32:43 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Wed, 20 Jul 2022 04:32:43 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Wed, 20 Jul 2022 04:32:43 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Wed, 20 Jul 2022 04:32:44 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Wed, 20 Jul 2022 04:32:44 GMT
+# Fri, 12 Aug 2022 04:14:38 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Wed, 20 Jul 2022 04:32:44 GMT
+# Fri, 12 Aug 2022 04:14:39 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:017c82d6391f0bf122516eac436a6e8d77ac13282fdd13dde7e7e47dc71d447e`  
-		Last Modified: Wed, 15 Jun 2022 22:09:36 GMT  
-		Size: 62.3 MB (62294977 bytes)  
+	-	`sha256:5e0be87f98fb0e8a6ecddb6b717178ddc6555638e6e89d39929d47654b79739d`  
+		Last Modified: Mon, 01 Aug 2022 22:09:03 GMT  
+		Size: 62.3 MB (62316216 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c297b4544f77e61a5ef202b51c7b35066efeb505d0980b8fb71af85f3a0cfb4`  
-		Last Modified: Tue, 19 Jul 2022 22:46:36 GMT  
-		Size: 151.6 MB (151642501 bytes)  
+	-	`sha256:d314fc0177b889b2b09cd5a692e76f4221ebeaf1859cba4e048dc70d63e4933e`  
+		Last Modified: Fri, 12 Aug 2022 03:04:57 GMT  
+		Size: 151.7 MB (151650674 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b47e45a470a975e57178c12faf1f4d6a1fb0a45d581e7471c33b3e175002d88`  
-		Last Modified: Wed, 20 Jul 2022 04:35:26 GMT  
-		Size: 3.6 MB (3623869 bytes)  
+	-	`sha256:0a4c9229b1d8ec33e76480422ca25f9a94d6d190eae93a5e4196ba3b1830e50c`  
+		Last Modified: Fri, 12 Aug 2022 04:17:14 GMT  
+		Size: 3.6 MB (3624249 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8f17e4cee6290282fd1b3c229c4e9ca6dcdfd2b2e1db433104d4ab5efb224e0a`  
-		Last Modified: Wed, 20 Jul 2022 04:35:26 GMT  
-		Size: 8.7 MB (8739498 bytes)  
+	-	`sha256:1ac1cff4c2fdc4afdfbf190d866afc18ca7cbcb33e93d1e6666d065119b4d94d`  
+		Last Modified: Fri, 12 Aug 2022 04:17:14 GMT  
+		Size: 8.7 MB (8739482 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:114ad61d2624871341f753cd1f18b8649584e748d883dff72f1950bc2526fed4`  
-		Last Modified: Wed, 20 Jul 2022 04:35:26 GMT  
-		Size: 852.0 B  
+	-	`sha256:b4b85ecd844ff21f94332bdf538835719000f3d28e7010daf7cf78e548b30501`  
+		Last Modified: Fri, 12 Aug 2022 04:17:13 GMT  
+		Size: 856.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3234856ce11b1c066ee246322681b07f8ce551e7f17962c001ad3f552339da57`  
-		Last Modified: Wed, 20 Jul 2022 04:35:26 GMT  
-		Size: 360.0 B  
+	-	`sha256:ee25491cbc099fb8363845452159c5d1d7d09f6b1b193d47a7f28b23c330e824`  
+		Last Modified: Fri, 12 Aug 2022 04:17:13 GMT  
+		Size: 361.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3.8-amazoncorretto-17` - linux; arm64 variant v8
@@ -10436,7 +10436,7 @@ CMD ["mvn"]
 ## `maven:3.8-amazoncorretto-18`
 
 ```console
-$ docker pull maven@sha256:ccf9bebb4e6fa36a304bec086647a674abcf38a92cd2cb96d15cdde073294143
+$ docker pull maven@sha256:460e712416c459b41b9ce9a28b23e8b4df22550d73564a08bc37c141910aeb91
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10447,82 +10447,82 @@ $ docker pull maven@sha256:ccf9bebb4e6fa36a304bec086647a674abcf38a92cd2cb96d15cd
 ### `maven:3.8-amazoncorretto-18` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:9818b470099b92e22b7b7aa8432a0cfbd4aae145caf65ea628a64e21e4a58b3a
+$ docker pull maven@sha256:fe31c5d7e26b909c1467b953ec5fc3294d015af2a9690e93e2ae27002a5941d0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **227.4 MB (227353290 bytes)**  
+-	Total Size: **227.4 MB (227379774 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6ddf65cd6b82b78160f64b1aade03e0f8f57b1491485767a19f68f75e7728904`
+-	Image ID: `sha256:722d2ddadd4f08e3a6381653e64db9ac04475a27faa3ecd1e2fd71cb2ea4eba9`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Tue, 21 Jun 2022 23:19:41 GMT
-ADD file:e6c6bb016423b24a28b273cc76e9fbbf81934b77a0ede797ccfd0eeac465c8a4 in / 
-# Tue, 21 Jun 2022 23:19:42 GMT
+# Fri, 12 Aug 2022 00:20:15 GMT
+ADD file:56a385790046ac5dfb85932009eb1e99c8593221e306b937274c477c05cc9886 in / 
+# Fri, 12 Aug 2022 00:20:15 GMT
 CMD ["/bin/bash"]
-# Tue, 19 Jul 2022 22:39:33 GMT
+# Fri, 12 Aug 2022 03:01:29 GMT
 ARG version=18.0.2.9-1
-# Tue, 19 Jul 2022 22:39:57 GMT
+# Fri, 12 Aug 2022 03:01:55 GMT
 # ARGS: version=18.0.2.9-1
 RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.key https://yum.corretto.aws/corretto.key     && gpg --batch --import corretto.key     && gpg --batch --export --armor '6DC3636DAE534049C8B94623A122542AB04F24E3' > corretto.key     && rpm --import corretto.key     && rm -r "$GNUPGHOME" corretto.key     && curl -fL -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo     && grep -q '^gpgcheck=1' /etc/yum.repos.d/corretto.repo     && echo "priority=9" >> /etc/yum.repos.d/corretto.repo     && yum install -y java-18-amazon-corretto-devel-$version     && (find /usr/lib/jvm/java-18-amazon-corretto -name src.zip -delete || true)     && yum install -y fontconfig     && yum clean all
-# Tue, 19 Jul 2022 22:39:57 GMT
+# Fri, 12 Aug 2022 03:01:56 GMT
 ENV LANG=C.UTF-8
-# Tue, 19 Jul 2022 22:39:57 GMT
+# Fri, 12 Aug 2022 03:01:56 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-18-amazon-corretto
-# Thu, 21 Jul 2022 16:21:05 GMT
+# Fri, 12 Aug 2022 04:14:52 GMT
 RUN yum install -y tar which gzip   && rm -rf /var/cache/yum/*   && yum clean all
-# Thu, 21 Jul 2022 16:21:05 GMT
+# Fri, 12 Aug 2022 04:14:52 GMT
 ARG MAVEN_VERSION=3.8.6
-# Thu, 21 Jul 2022 16:21:05 GMT
+# Fri, 12 Aug 2022 04:14:52 GMT
 ARG USER_HOME_DIR=/root
-# Thu, 21 Jul 2022 16:21:05 GMT
+# Fri, 12 Aug 2022 04:14:52 GMT
 ARG SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26
-# Thu, 21 Jul 2022 16:21:05 GMT
+# Fri, 12 Aug 2022 04:14:53 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:56 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries MAVEN_VERSION=3.8.6 SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:56 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:56 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:56 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:57 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:57 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Thu, 21 Jul 2022 16:21:07 GMT
+# Fri, 12 Aug 2022 04:14:57 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:017c82d6391f0bf122516eac436a6e8d77ac13282fdd13dde7e7e47dc71d447e`  
-		Last Modified: Wed, 15 Jun 2022 22:09:36 GMT  
-		Size: 62.3 MB (62294977 bytes)  
+	-	`sha256:5e0be87f98fb0e8a6ecddb6b717178ddc6555638e6e89d39929d47654b79739d`  
+		Last Modified: Mon, 01 Aug 2022 22:09:03 GMT  
+		Size: 62.3 MB (62316216 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a32db96ef93c32222a831a4d995125c262049b1b21da93de9caa8a18b2a7da26`  
-		Last Modified: Tue, 19 Jul 2022 22:48:39 GMT  
-		Size: 152.7 MB (152693605 bytes)  
+	-	`sha256:188a28cedc43dd2a2fb4b59c6bc7b5a07186690557cfb49f2750f1378654b259`  
+		Last Modified: Fri, 12 Aug 2022 03:05:34 GMT  
+		Size: 152.7 MB (152698531 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:44ca32988110f16217ce5288fbf65c5cd387ffd785b40f78b731dd4d3b76ac2a`  
-		Last Modified: Thu, 21 Jul 2022 16:23:25 GMT  
-		Size: 3.6 MB (3623995 bytes)  
+	-	`sha256:4f4ca0faafcd263e4489dcba618bce153844907cdbca4584bdbd6412b94ec0cc`  
+		Last Modified: Fri, 12 Aug 2022 04:17:26 GMT  
+		Size: 3.6 MB (3624326 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2e5cc9fb85d58bf8437a56cfb60ab75cbf03dd97feea9e59934660b5bd50b56`  
-		Last Modified: Thu, 21 Jul 2022 16:23:25 GMT  
-		Size: 8.7 MB (8739498 bytes)  
+	-	`sha256:81fd568edd4dc84cd51f5ff2d12f02a9d2b58739319d5d446b2d9f44f32670ed`  
+		Last Modified: Fri, 12 Aug 2022 04:17:27 GMT  
+		Size: 8.7 MB (8739488 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:585ceaea40425ca2fd196391e967eeb5a3485b2f13f6635c21f115f41049e28a`  
-		Last Modified: Thu, 21 Jul 2022 16:23:24 GMT  
-		Size: 853.0 B  
+	-	`sha256:787ff1a102cd8011583eed093a85f62da9e380000e263627b7048ab32de81909`  
+		Last Modified: Fri, 12 Aug 2022 04:17:26 GMT  
+		Size: 854.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8754bebf5517428792e4e882ce49118cb244688ccde159e2cd301763ccaecb9e`  
-		Last Modified: Thu, 21 Jul 2022 16:23:24 GMT  
-		Size: 362.0 B  
+	-	`sha256:cc8e896181ca41a050e49dd94cde5505215af3980c0c692a5fb560023cbb7c41`  
+		Last Modified: Fri, 12 Aug 2022 04:17:26 GMT  
+		Size: 359.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3.8-amazoncorretto-18` - linux; arm64 variant v8
@@ -10609,7 +10609,7 @@ CMD ["mvn"]
 ## `maven:3.8-amazoncorretto-8`
 
 ```console
-$ docker pull maven@sha256:1303d996e7963d124897a90ea625b17a693bb217dbc69f8b6dce1006f4b26159
+$ docker pull maven@sha256:5856d35051a0715899b2d2dc98449567d8937940b0e62b83fa6ba5ecd22d47b7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10620,84 +10620,84 @@ $ docker pull maven@sha256:1303d996e7963d124897a90ea625b17a693bb217dbc69f8b6dce1
 ### `maven:3.8-amazoncorretto-8` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:1c24e4eabf8d15872771637c8d643dada3598be008f6ea717b98c06715ad1942
+$ docker pull maven@sha256:3b61f0b5af2ebf64454a43f1405c59dc287048d3e8f35390fc8cea34afd10032
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **150.2 MB (150241743 bytes)**  
+-	Total Size: **150.3 MB (150260686 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:59e165e54aa96abf2b38e4e2c15645d83d48196b75343567782a38efb0b251d0`
+-	Image ID: `sha256:8732570bef447dd6621ca2259b5179dde7dcd908c6c142890ce6ac60b2d03b09`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
 ```dockerfile
-# Tue, 21 Jun 2022 23:19:41 GMT
-ADD file:e6c6bb016423b24a28b273cc76e9fbbf81934b77a0ede797ccfd0eeac465c8a4 in / 
-# Tue, 21 Jun 2022 23:19:42 GMT
+# Fri, 12 Aug 2022 00:20:15 GMT
+ADD file:56a385790046ac5dfb85932009eb1e99c8593221e306b937274c477c05cc9886 in / 
+# Fri, 12 Aug 2022 00:20:15 GMT
 CMD ["/bin/bash"]
-# Fri, 29 Jul 2022 20:19:32 GMT
+# Fri, 12 Aug 2022 02:59:13 GMT
 ARG version=1.8.0_342.b07-4
-# Fri, 29 Jul 2022 20:19:55 GMT
+# Fri, 12 Aug 2022 02:59:39 GMT
 # ARGS: version=1.8.0_342.b07-4
 RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.key https://yum.corretto.aws/corretto.key     && gpg --batch --import corretto.key     && gpg --batch --export --armor '6DC3636DAE534049C8B94623A122542AB04F24E3' > corretto.key     && rpm --import corretto.key     && rm -r "$GNUPGHOME" corretto.key     && curl -fL -o /etc/yum.repos.d/corretto.repo https://yum.corretto.aws/corretto.repo     && grep -q '^gpgcheck=1' /etc/yum.repos.d/corretto.repo     && echo "priority=9" >> /etc/yum.repos.d/corretto.repo     && yum install -y java-1.8.0-amazon-corretto-devel-$version     && (find /usr/lib/jvm/java-1.8.0-amazon-corretto -name src.zip -delete || true)     && yum install -y fontconfig     && yum clean all
-# Fri, 29 Jul 2022 20:19:56 GMT
+# Fri, 12 Aug 2022 02:59:39 GMT
 ENV LANG=C.UTF-8
-# Fri, 29 Jul 2022 20:19:56 GMT
+# Fri, 12 Aug 2022 02:59:40 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-amazon-corretto
-# Fri, 29 Jul 2022 20:49:11 GMT
+# Fri, 12 Aug 2022 04:15:09 GMT
 RUN yum install -y tar which gzip   && rm -rf /var/cache/yum/*   && yum clean all
-# Fri, 29 Jul 2022 20:49:11 GMT
+# Fri, 12 Aug 2022 04:15:09 GMT
 ARG MAVEN_VERSION=3.8.6
-# Fri, 29 Jul 2022 20:49:11 GMT
+# Fri, 12 Aug 2022 04:15:09 GMT
 ARG USER_HOME_DIR=/root
-# Fri, 29 Jul 2022 20:49:12 GMT
+# Fri, 12 Aug 2022 04:15:10 GMT
 ARG SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26
-# Fri, 29 Jul 2022 20:49:12 GMT
+# Fri, 12 Aug 2022 04:15:10 GMT
 ARG BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries
-# Fri, 29 Jul 2022 20:49:16 GMT
+# Fri, 12 Aug 2022 04:15:11 GMT
 # ARGS: BASE_URL=https://apache.osuosl.org/maven/maven-3/3.8.6/binaries MAVEN_VERSION=3.8.6 SHA=f790857f3b1f90ae8d16281f902c689e4f136ebe584aba45e4b1fa66c80cba826d3e0e52fdd04ed44b4c66f6d3fe3584a057c26dfcac544a60b301e6d0f91c26 USER_HOME_DIR=/root
 RUN mkdir -p /usr/share/maven /usr/share/maven/ref   && curl -fsSL -o /tmp/apache-maven.tar.gz ${BASE_URL}/apache-maven-${MAVEN_VERSION}-bin.tar.gz   && echo "${SHA}  /tmp/apache-maven.tar.gz" | sha512sum -c -   && tar -xzf /tmp/apache-maven.tar.gz -C /usr/share/maven --strip-components=1   && rm -f /tmp/apache-maven.tar.gz   && ln -s /usr/share/maven/bin/mvn /usr/bin/mvn
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-1.8.0-amazon-corretto
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 COPY file:1b3da5c58894f705e7387946301c0c52edb6271761ea3cd80b86a848847a64cd in /usr/local/bin/mvn-entrypoint.sh 
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 COPY file:2bbb488dd73c55d658b91943cfdf9c26975a320ceafc45dda94c95b03e518ad3 in /usr/share/maven/ref/ 
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Fri, 29 Jul 2022 20:49:17 GMT
+# Fri, 12 Aug 2022 04:15:12 GMT
 CMD ["mvn"]
 ```
 
 -	Layers:
-	-	`sha256:017c82d6391f0bf122516eac436a6e8d77ac13282fdd13dde7e7e47dc71d447e`  
-		Last Modified: Wed, 15 Jun 2022 22:09:36 GMT  
-		Size: 62.3 MB (62294977 bytes)  
+	-	`sha256:5e0be87f98fb0e8a6ecddb6b717178ddc6555638e6e89d39929d47654b79739d`  
+		Last Modified: Mon, 01 Aug 2022 22:09:03 GMT  
+		Size: 62.3 MB (62316216 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3df111cff0efc5b8037bba3b2548dd3c1f4e0366a4ee44ea1dc8f635d0f59743`  
-		Last Modified: Fri, 29 Jul 2022 20:22:41 GMT  
-		Size: 75.6 MB (75575846 bytes)  
+	-	`sha256:af2ed3f8d08aa74e8f95ecdbb438976bc6be9725b4cfd8226c0951916bad35f2`  
+		Last Modified: Fri, 12 Aug 2022 03:03:40 GMT  
+		Size: 75.6 MB (75573752 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d9bc8fc55cfe7d6a91e4cc0f54d6138e7683ff74795f19c89625a2f814ae76b`  
-		Last Modified: Fri, 29 Jul 2022 20:51:39 GMT  
-		Size: 3.6 MB (3630204 bytes)  
+	-	`sha256:3624505671e77b9757a8ac39c82052ed0b6d679abbe472209a97fa1b666cf0e6`  
+		Last Modified: Fri, 12 Aug 2022 04:17:39 GMT  
+		Size: 3.6 MB (3630001 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d9e3672671b9dae18638904e694987f49d48a8259e7991965f5e426c0c0cd40`  
-		Last Modified: Fri, 29 Jul 2022 20:51:39 GMT  
-		Size: 8.7 MB (8739503 bytes)  
+	-	`sha256:14475c36265b162a62a5e3516c229e4b08aebc9c6f83eae58c4ad01e0d326c41`  
+		Last Modified: Fri, 12 Aug 2022 04:17:39 GMT  
+		Size: 8.7 MB (8739501 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fba525052c6ab3bf8ee92cd4750803e283f15740d5358663db73d65318b0f521`  
-		Last Modified: Fri, 29 Jul 2022 20:51:38 GMT  
-		Size: 851.0 B  
+	-	`sha256:d404139306e59c00a64184b816e131d7d9178929b8a05bab5fd794961ee529fc`  
+		Last Modified: Fri, 12 Aug 2022 04:17:39 GMT  
+		Size: 856.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e4a9e8abefe8601e10a74e0e27d9167c0e361368b9cf09cdc9dd4f1d8ecfca6`  
-		Last Modified: Fri, 29 Jul 2022 20:51:38 GMT  
-		Size: 362.0 B  
+	-	`sha256:6f0ba330b0d124d5d719e7d95faab5a7c34676af7fc60c11c5913dbe2849b56a`  
+		Last Modified: Fri, 12 Aug 2022 04:17:39 GMT  
+		Size: 360.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `maven:3.8-amazoncorretto-8` - linux; arm64 variant v8
