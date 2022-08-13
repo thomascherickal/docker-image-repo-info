@@ -1,10 +1,10 @@
-# `nextcloud:23.0.7-fpm-alpine`
+# `nextcloud:23.0.8-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0985596544852ffe7685f329bc41b200687538fcbe8785eff7717981417e31c4`
-- Created: `2022-08-05T00:54:36.531241234Z`
-- Virtual Size: ~ 540.83 Mb  
+- Image ID: `sha256:fe7e1ba31e7db125d9fd4a254c6f21d7b5b8cf7a18bda208fb81d4b2c830182b`
+- Created: `2022-08-12T22:29:33.570805679Z`
+- Virtual Size: ~ 541.96 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=130937c0fa3050cd33d6c415402f6ccbf0682ae83eb8d39c91164224ddfe57f1`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
-  - `NEXTCLOUD_VERSION=23.0.7`
+  - `NEXTCLOUD_VERSION=23.0.8`
 
 ## `apk` (`.apk`-based packages)
 
@@ -132,16 +132,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.35.0-r15 description:
+busybox-1.35.0-r17 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.35.0-r15 webpage:
+busybox-1.35.0-r17 webpage:
 https://busybox.net/
 
-busybox-1.35.0-r15 installed size:
-936 KiB
+busybox-1.35.0-r17 installed size:
+940 KiB
 
-busybox-1.35.0-r15 license:
+busybox-1.35.0-r17 license:
 GPL-2.0-only
 
 ```
@@ -149,16 +149,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20211220-r0 description:
+ca-certificates-20220614-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20211220-r0 webpage:
+ca-certificates-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20211220-r0 installed size:
-656 KiB
+ca-certificates-20220614-r0 installed size:
+688 KiB
 
-ca-certificates-20211220-r0 license:
+ca-certificates-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -166,16 +166,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20211220-r0 description:
+ca-certificates-bundle-20220614-r0 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20211220-r0 webpage:
+ca-certificates-bundle-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20211220-r0 installed size:
-216 KiB
+ca-certificates-bundle-20220614-r0 installed size:
+228 KiB
 
-ca-certificates-bundle-20211220-r0 license:
+ca-certificates-bundle-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -965,16 +965,16 @@ GPL-2.0-or-later
 ### `apk` package: `rsync`
 
 ```console
-rsync-3.2.4-r1 description:
+rsync-3.2.4-r2 description:
 A file transfer program to keep remote files in sync
 
-rsync-3.2.4-r1 webpage:
+rsync-3.2.4-r2 webpage:
 https://rsync.samba.org/
 
-rsync-3.2.4-r1 installed size:
+rsync-3.2.4-r2 installed size:
 436 KiB
 
-rsync-3.2.4-r1 license:
+rsync-3.2.4-r2 license:
 GPL-3.0-or-later
 
 ```
@@ -1016,16 +1016,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.35.0-r15 description:
+ssl_client-1.35.0-r17 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.35.0-r15 webpage:
+ssl_client-1.35.0-r17 webpage:
 https://busybox.net/
 
-ssl_client-1.35.0-r15 installed size:
+ssl_client-1.35.0-r17 installed size:
 28 KiB
 
-ssl_client-1.35.0-r15 license:
+ssl_client-1.35.0-r17 license:
 GPL-2.0-only
 
 ```
@@ -1084,16 +1084,16 @@ GPL-2.0-or-later AND Public-Domain AND LGPL-2.1-or-later
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.12-r1 description:
+zlib-1.2.12-r3 description:
 A compression/decompression Library
 
-zlib-1.2.12-r1 webpage:
+zlib-1.2.12-r3 webpage:
 https://zlib.net/
 
-zlib-1.2.12-r1 installed size:
+zlib-1.2.12-r3 installed size:
 108 KiB
 
-zlib-1.2.12-r1 license:
+zlib-1.2.12-r3 license:
 Zlib
 
 ```
