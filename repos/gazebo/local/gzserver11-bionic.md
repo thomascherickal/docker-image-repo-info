@@ -1724,14 +1724,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`)
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-math6=6.12.0-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0-1%7ebionic.dsc' ignition-math6_6.12.0-1~bionic.dsc 1488 SHA256:f355abb9a628267ee2d949709eec8bfec8dd1cc5be7b250b850b9f05d4402d0b
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0.orig.tar.bz2' ignition-math6_6.12.0.orig.tar.bz2 509879 SHA256:827f323504786f36eea38cc3f70eb7e00dc370ca4f89d7e070ea127b1da2e603
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0-1%7ebionic.debian.tar.xz' ignition-math6_6.12.0-1~bionic.debian.tar.xz 4324 SHA256:ad2f94877c14f10b298f75e8ba2d849527802049fe999470e930fa7e8d56bca7
-```
 
 ### `dpkg` source package: `ignition-msgs5=5.10.0-2~bionic`
 
@@ -1744,14 +1739,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-msgs5/copyright`)
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-msgs5=5.10.0-2~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0-2%7ebionic.dsc' ignition-msgs5_5.10.0-2~bionic.dsc 1316 SHA256:d594ea251000412fbbf0e27489fc45c20041fa69f66ab0d65edad417d0e82ce5
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0.orig.tar.bz2' ignition-msgs5_5.10.0.orig.tar.bz2 269931 SHA256:4d83468ba00c9a3a7a01b1dfa6924873d2e0c7c6ccbe0311660965d0aee5cde5
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0-2%7ebionic.debian.tar.xz' ignition-msgs5_5.10.0-2~bionic.debian.tar.xz 2228 SHA256:bdcac5c47365efb436666b2919ccc108240fb9af45466eee52b93344753ea1bf
-```
 
 ### `dpkg` source package: `ignition-transport8=8.3.0-1~bionic`
 

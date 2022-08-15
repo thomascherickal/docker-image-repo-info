@@ -2148,14 +2148,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-cmake2-dev/copyright`)
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-cmake2=2.14.0-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-cmake2/ignition-cmake2_2.14.0-1%7ebionic.dsc' ignition-cmake2_2.14.0-1~bionic.dsc 1095 SHA256:0742f6792851c07afaa751bcf69f4240439d26d549d5a7419374eb33e50a60f6
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-cmake2/ignition-cmake2_2.14.0.orig.tar.bz2' ignition-cmake2_2.14.0.orig.tar.bz2 199069 SHA256:5a9719ebba067c98f4df4f713c17f96e4444c945fee570ee8ef664cde998d63e
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-cmake2/ignition-cmake2_2.14.0-1%7ebionic.debian.tar.xz' ignition-cmake2_2.14.0-1~bionic.debian.tar.xz 1996 SHA256:937e8082477085966bc12356ffbb3832f9cb45d2194a9a9c5138c005cfe48a81
-```
 
 ### `dpkg` source package: `ignition-common3=3.14.1-1~bionic`
 
@@ -2220,14 +2215,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`, `/usr/shar
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-math6=6.12.0-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0-1%7ebionic.dsc' ignition-math6_6.12.0-1~bionic.dsc 1488 SHA256:f355abb9a628267ee2d949709eec8bfec8dd1cc5be7b250b850b9f05d4402d0b
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0.orig.tar.bz2' ignition-math6_6.12.0.orig.tar.bz2 509879 SHA256:827f323504786f36eea38cc3f70eb7e00dc370ca4f89d7e070ea127b1da2e603
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0-1%7ebionic.debian.tar.xz' ignition-math6_6.12.0-1~bionic.debian.tar.xz 4324 SHA256:ad2f94877c14f10b298f75e8ba2d849527802049fe999470e930fa7e8d56bca7
-```
 
 ### `dpkg` source package: `ignition-msgs5=5.10.0-2~bionic`
 
@@ -2241,14 +2231,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-msgs5/copyright`, `/usr/shar
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-msgs5=5.10.0-2~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0-2%7ebionic.dsc' ignition-msgs5_5.10.0-2~bionic.dsc 1316 SHA256:d594ea251000412fbbf0e27489fc45c20041fa69f66ab0d65edad417d0e82ce5
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0.orig.tar.bz2' ignition-msgs5_5.10.0.orig.tar.bz2 269931 SHA256:4d83468ba00c9a3a7a01b1dfa6924873d2e0c7c6ccbe0311660965d0aee5cde5
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0-2%7ebionic.debian.tar.xz' ignition-msgs5_5.10.0-2~bionic.debian.tar.xz 2228 SHA256:bdcac5c47365efb436666b2919ccc108240fb9af45466eee52b93344753ea1bf
-```
 
 ### `dpkg` source package: `ignition-tools=1.4.1-1~bionic`
 
@@ -2262,13 +2247,9 @@ Licenses: (parsed from: `/usr/share/doc/ignition-tools/copyright`, `/usr/share/d
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-tools=1.4.1-1~bionic
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.4.1-1%7ebionic.dsc' ignition-tools_1.4.1-1~bionic.dsc 891 SHA256:560edd71bed3b6853d906d2d52d98a27449fb91f63cb41e23d1a0fda66ff6157
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.4.1-1%7ebionic.tar.xz' ignition-tools_1.4.1-1~bionic.tar.xz 86972 SHA256:fe1a8abdf47e0ef192335864a9b93ea628c0126c008553adfbd437b8f900e5d2
-```
 
 ### `dpkg` source package: `ignition-transport8=8.3.0-1~bionic`
 

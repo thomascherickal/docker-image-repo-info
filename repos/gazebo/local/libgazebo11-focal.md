@@ -2327,14 +2327,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-cmake2-dev/copyright`)
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-cmake2=2.14.0-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-cmake2/ignition-cmake2_2.14.0-1%7efocal.dsc' ignition-cmake2_2.14.0-1~focal.dsc 1091 SHA256:6b1d36723e5d64f847fd60ba2dafa873a650e8ed43807746a901cdfa3b7c9bc2
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-cmake2/ignition-cmake2_2.14.0.orig.tar.bz2' ignition-cmake2_2.14.0.orig.tar.bz2 199069 SHA256:5a9719ebba067c98f4df4f713c17f96e4444c945fee570ee8ef664cde998d63e
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-cmake2/ignition-cmake2_2.14.0-1%7efocal.debian.tar.xz' ignition-cmake2_2.14.0-1~focal.debian.tar.xz 1780 SHA256:74b141282189f364595c88b5027865cdfe091b23e0d61feb334df6ff8b639b89
-```
 
 ### `dpkg` source package: `ignition-common3=3.14.1-1~focal`
 
@@ -2399,14 +2394,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`, `/usr/shar
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-math6=6.12.0-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0-1%7efocal.dsc' ignition-math6_6.12.0-1~focal.dsc 1659 SHA256:7c6edf7ddbeef5472d3e05597bee8f09a995c827747c079286a0c676013593ab
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0.orig.tar.bz2' ignition-math6_6.12.0.orig.tar.bz2 509879 SHA256:827f323504786f36eea38cc3f70eb7e00dc370ca4f89d7e070ea127b1da2e603
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0-1%7efocal.debian.tar.xz' ignition-math6_6.12.0-1~focal.debian.tar.xz 4452 SHA256:36c25a8dc0c11e91b6323628aff30ebba2dcb086e5a1ef9d98da0b6fd451e76c
-```
 
 ### `dpkg` source package: `ignition-msgs5=5.10.0-2~focal`
 
@@ -2420,14 +2410,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-msgs5/copyright`, `/usr/shar
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-msgs5=5.10.0-2~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0-2%7efocal.dsc' ignition-msgs5_5.10.0-2~focal.dsc 1312 SHA256:a60b0df97997bd38b5f34528b7c06dca409e4fb193a2279107531a422ffc1c4e
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0.orig.tar.bz2' ignition-msgs5_5.10.0.orig.tar.bz2 269931 SHA256:4d83468ba00c9a3a7a01b1dfa6924873d2e0c7c6ccbe0311660965d0aee5cde5
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0-2%7efocal.debian.tar.xz' ignition-msgs5_5.10.0-2~focal.debian.tar.xz 2128 SHA256:cbb593319bd276fe28d73b5a40576ea21b2d5d833cde6cbf66df1315124173f2
-```
 
 ### `dpkg` source package: `ignition-tools=1.4.1-1~focal`
 
@@ -2441,13 +2426,9 @@ Licenses: (parsed from: `/usr/share/doc/ignition-tools/copyright`, `/usr/share/d
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-tools=1.4.1-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.4.1-1%7efocal.dsc' ignition-tools_1.4.1-1~focal.dsc 908 SHA256:13999785fd1f7a86eb920b7e6a8e61b49d68b93133a0ba77b2f555e75a37dabf
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-tools/ignition-tools_1.4.1-1%7efocal.tar.xz' ignition-tools_1.4.1-1~focal.tar.xz 86768 SHA256:15d20c8d88c47f55f11b111b72020de7c92c127a2dbd25f360585d95040357e4
-```
 
 ### `dpkg` source package: `ignition-transport8=8.3.0-1~focal`
 

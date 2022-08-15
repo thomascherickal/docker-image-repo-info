@@ -1803,14 +1803,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-math6/copyright`)
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-math6=6.12.0-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0-1%7efocal.dsc' ignition-math6_6.12.0-1~focal.dsc 1659 SHA256:7c6edf7ddbeef5472d3e05597bee8f09a995c827747c079286a0c676013593ab
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0.orig.tar.bz2' ignition-math6_6.12.0.orig.tar.bz2 509879 SHA256:827f323504786f36eea38cc3f70eb7e00dc370ca4f89d7e070ea127b1da2e603
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-math6/ignition-math6_6.12.0-1%7efocal.debian.tar.xz' ignition-math6_6.12.0-1~focal.debian.tar.xz 4452 SHA256:36c25a8dc0c11e91b6323628aff30ebba2dcb086e5a1ef9d98da0b6fd451e76c
-```
 
 ### `dpkg` source package: `ignition-msgs5=5.10.0-2~focal`
 
@@ -1823,14 +1818,9 @@ Licenses: (parsed from: `/usr/share/doc/libignition-msgs5/copyright`)
 - `Apache`
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ignition-msgs5=5.10.0-2~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0-2%7efocal.dsc' ignition-msgs5_5.10.0-2~focal.dsc 1312 SHA256:a60b0df97997bd38b5f34528b7c06dca409e4fb193a2279107531a422ffc1c4e
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0.orig.tar.bz2' ignition-msgs5_5.10.0.orig.tar.bz2 269931 SHA256:4d83468ba00c9a3a7a01b1dfa6924873d2e0c7c6ccbe0311660965d0aee5cde5
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/i/ignition-msgs5/ignition-msgs5_5.10.0-2%7efocal.debian.tar.xz' ignition-msgs5_5.10.0-2~focal.debian.tar.xz 2128 SHA256:cbb593319bd276fe28d73b5a40576ea21b2d5d833cde6cbf66df1315124173f2
-```
 
 ### `dpkg` source package: `ignition-transport8=8.3.0-1~focal`
 
