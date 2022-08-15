@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4a46ef4932fe2949cb6612f048282bf39dc0e5a7b3ff032cc442063697ac3b10`
-- Created: `2022-08-08T19:55:24.082761685Z`
-- Virtual Size: ~ 770.98 Mb  
+- Image ID: `sha256:b2b69d8edac5c656d44b407adbbc1bf59e32eea2ba5868411ac85e4f73fa1b8b`
+- Created: `2022-08-12T03:52:57.657614229Z`
+- Virtual Size: ~ 772.84 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -16,8 +16,8 @@
   - `PYTHON_VERSION=3.8.13`
   - `PYTHON_PIP_VERSION=22.0.4`
   - `PYTHON_SETUPTOOLS_VERSION=57.5.0`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/aeca83c7ba7f9cdfd681103c4dcbf0214f6d742e/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=d0b5909f3ab32dae9d115aa68a4b763529823ad5589c56af15cf816fca2773d6`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/5eaac1050023df1f5c98b173b248c260023f2278/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=5aefe6ade911d997af080b315ebcb7f882212d070465df544e1175ac2be519b4`
   - `PIP=22.2.2`
   - `ZC_BUILDOUT=2.13.7`
   - `SETUPTOOLS=51.3.3`
@@ -1006,15 +1006,15 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gnupg2/2.2.12-1+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gnupg2/2.2.12-1+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gnutls28=3.6.7-4+deb10u7`
+### `dpkg` source package: `gnutls28=3.6.7-4+deb10u9`
 
 Binary Packages:
 
-- `libgnutls-dane0:amd64=3.6.7-4+deb10u7`
-- `libgnutls-openssl27:amd64=3.6.7-4+deb10u7`
-- `libgnutls28-dev:amd64=3.6.7-4+deb10u7`
-- `libgnutls30:amd64=3.6.7-4+deb10u7`
-- `libgnutlsxx28:amd64=3.6.7-4+deb10u7`
+- `libgnutls-dane0:amd64=3.6.7-4+deb10u9`
+- `libgnutls-openssl27:amd64=3.6.7-4+deb10u9`
+- `libgnutls28-dev:amd64=3.6.7-4+deb10u9`
+- `libgnutls30:amd64=3.6.7-4+deb10u9`
+- `libgnutlsxx28:amd64=3.6.7-4+deb10u9`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls-dane0/copyright`, `/usr/share/doc/libgnutls-openssl27/copyright`, `/usr/share/doc/libgnutls28-dev/copyright`, `/usr/share/doc/libgnutls30/copyright`, `/usr/share/doc/libgnutlsxx28/copyright`)
 
@@ -1033,18 +1033,18 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls-dane0/copyright`, `/usr/share/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gnutls28=3.6.7-4+deb10u7
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4%2bdeb10u7.dsc' gnutls28_3.6.7-4+deb10u7.dsc 3354 SHA256:dac5aff80109fa5e05f4ab1cb5d402ee9caeefebaa12daf034bcdd7e614af6b2
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz' gnutls28_3.6.7.orig.tar.xz 8153728 SHA256:5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz.asc' gnutls28_3.6.7.orig.tar.xz.asc 534 SHA256:a14d0a7b9295b65ae797a70f8e765024a2e363dca03d008bfce0aec2b3f292b0
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.6.7-4%2bdeb10u7.debian.tar.xz' gnutls28_3.6.7-4+deb10u7.debian.tar.xz 94000 SHA256:4f399badd85387e1dd42c811e16d10c4c22196e57142a7325ec44c52b3c6a168
+$ apt-get source -qq --print-uris gnutls28=3.6.7-4+deb10u9
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7-4%2bdeb10u9.dsc' gnutls28_3.6.7-4+deb10u9.dsc 3357 SHA256:bc4954d8b78c14bf78547265d89e573b17435d22395573d619fa544f19917fee
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz' gnutls28_3.6.7.orig.tar.xz 8153728 SHA256:5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz.asc' gnutls28_3.6.7.orig.tar.xz.asc 534 SHA256:a14d0a7b9295b65ae797a70f8e765024a2e363dca03d008bfce0aec2b3f292b0
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7-4%2bdeb10u9.debian.tar.xz' gnutls28_3.6.7-4+deb10u9.debian.tar.xz 101608 SHA256:671898a1a3def18fd4d6b06944a53b8d77f4ec3bd620e3c8538070351f2308cd
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u7/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u7/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u9/ (for browsing the source)
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u9/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u9/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gosu=1.10-1`
 
@@ -2917,11 +2917,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/popt/1.16-12/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/popt/1.16-12/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-11=11.16-0+deb10u1`
+### `dpkg` source package: `postgresql-11=11.17-0+deb10u1`
 
 Binary Packages:
 
-- `libpq5:amd64=11.16-0+deb10u1`
+- `libpq5:amd64=11.17-0+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -2944,17 +2944,17 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris postgresql-11=11.16-0+deb10u1
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.16-0%2bdeb10u1.dsc' postgresql-11_11.16-0+deb10u1.dsc 3745 SHA256:a5260ef4b2622d0c2c1ea8bcadade0c03824f5455fe2475db713edb80f522e5a
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.16.orig.tar.bz2' postgresql-11_11.16.orig.tar.bz2 20347100 SHA256:2dd9e111f0a5949ee7cacc065cea0fb21092929bae310ce05bf01b4ffc5103a5
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.16-0%2bdeb10u1.debian.tar.xz' postgresql-11_11.16-0+deb10u1.debian.tar.xz 28300 SHA256:7fcd14f517983bea39a6f97dcd99333e359be6c6f2985e12aa7ccf637c6c504b
+$ apt-get source -qq --print-uris postgresql-11=11.17-0+deb10u1
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.17-0%2bdeb10u1.dsc' postgresql-11_11.17-0+deb10u1.dsc 3745 SHA256:49d55b7a6e529bf4f7c14c114af2429af8fb1d7656481300e39e892c1668a100
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.17.orig.tar.bz2' postgresql-11_11.17.orig.tar.bz2 20385599 SHA256:6e984963ae0765e61577995103a7e6594db0f0bd01528ac123e0de4a6a4cb4c4
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.17-0%2bdeb10u1.debian.tar.xz' postgresql-11_11.17-0+deb10u1.debian.tar.xz 28484 SHA256:2e21624784f0991aa3e1b0bd09861848a637a7311938634c70bc8f6743e9fad3
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/postgresql-11/11.16-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-11/11.16-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-11/11.16-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/postgresql-11/11.17-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-11/11.17-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-11/11.17-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=7.0-5`
 
