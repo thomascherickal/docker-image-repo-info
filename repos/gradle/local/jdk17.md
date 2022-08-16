@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ff6a16ff229387d2d58b7e5f248bae0bde4abbbc2e75ea948b0b53a3af72ee6a`
-- Created: `2022-08-11T20:27:47.409288965Z`
-- Virtual Size: ~ 746.13 Mb  
+- Image ID: `sha256:227a50c5c1afe24ac38dd976ebdde2c3058123ea455f296b9a3f373d103939a6`
+- Created: `2022-08-12T18:17:47.26880929Z`
+- Virtual Size: ~ 747.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -404,9 +404,11 @@ $ apt-get source -qq --print-uris coreutils=8.32-4.1ubuntu1
 
 Binary Packages:
 
+- `curl=7.81.0-1ubuntu1.3`
 - `libcurl3-gnutls:amd64=7.81.0-1ubuntu1.3`
+- `libcurl4:amd64=7.81.0-1ubuntu1.3`
 
-Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`)
+Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
 - `BSD-3-Clause`
 - `BSD-4-Clause`
