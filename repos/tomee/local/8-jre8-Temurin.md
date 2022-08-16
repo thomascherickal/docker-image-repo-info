@@ -2,19 +2,19 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d1f2d1075e25dba2ec9017ff39a11aaac1f1b6d60e7c844699234b705a9e3a4f`
-- Created: `2022-08-03T06:14:26.736942601Z`
-- Virtual Size: ~ 287.77 Mb  
+- Image ID: `sha256:4572e9e04d816058ca4474dd45b118bd6c9c74c403808694a9b79f048958ce10`
+- Created: `2022-08-12T19:00:48.03393165Z`
+- Virtual Size: ~ 288.43 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
 - Environment:
   - `PATH=/usr/local/tomee/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `JAVA_HOME=/opt/java/openjdk`
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk8u342-b07`
-  - `JAVA_HOME=/opt/java/openjdk`
+  - `JAVA_VERSION=jdk8u345-b01`
   - `TOMEE_VER=8.0.12`
   - `TOMEE_BUILD=webprofile`
 
@@ -1946,6 +1946,27 @@ $ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu9.3
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.3.dsc' util-linux_2.34-0.1ubuntu9.3.dsc 4042 SHA512:e65684c641d175110008f865369c35adb734f8a80626c0eb3b3f3f47e05c1a6277c9f92b4032e30bb69711d67c2a5ad651adb3ec9ac4ef67d45a2858ce48cc6a
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34.orig.tar.xz' util-linux_2.34.orig.tar.xz 4974812 SHA512:2d0b76f63d32e7afb7acf61a83fabbfd58baa34ab78b3a331ce87f9c676a5fd71c56a493ded95039540d2c46b6048caaa38d7fb4491eb3d52d7b09dc54655cd7
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.3.debian.tar.xz' util-linux_2.34-0.1ubuntu9.3.debian.tar.xz 94976 SHA512:b6e55588aea32de6481dad01f194e6f71b8a859019e5c8d6d816c65f32c8b31821d1ab73f13ec34c5d3551311c43b7e24ac01c2af5878a85df72326293c3a71a
+```
+
+### `dpkg` source package: `wget=1.20.3-1ubuntu2`
+
+Binary Packages:
+
+- `wget=1.20.3-1ubuntu2`
+
+Licenses: (parsed from: `/usr/share/doc/wget/copyright`)
+
+- `GFDL-1.2`
+- `GPL-3`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris wget=1.20.3-1ubuntu2
+'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.20.3-1ubuntu2.dsc' wget_1.20.3-1ubuntu2.dsc 2272 SHA512:acf0dc7618adda63d4579b6bb110bcad5ade7e4ed9474695a37397aeebf0d882c279c5318c15581630ddf7b2c2d7b665c241853e5922d39cf469d7439d4bc9aa
+'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.20.3.orig.tar.gz' wget_1.20.3.orig.tar.gz 4489249 SHA512:e8b82b40e270296228094a78d47f81580bdbdea9e6b93fd61b37dccb39430aeb9bda5397dc53a31c952a61629383c7e2a8c8abf414c8a4dd369af6ecf2717e6c
+'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.20.3.orig.tar.gz.asc' wget_1.20.3.orig.tar.gz.asc 833 SHA512:40e1bb87dba49e9b8a1e3a6e9ffb95e97933508cd8fef4aac9545b74073800e2945b80bab749e57d4ddc8260a612d784160bec45a6c9c057954d22960c8dd170
+'http://archive.ubuntu.com/ubuntu/pool/main/w/wget/wget_1.20.3-1ubuntu2.debian.tar.xz' wget_1.20.3-1ubuntu2.debian.tar.xz 64192 SHA512:39bcd9010374f8f99778e12cee5df9af16c734c14229b96c4d74de222207966c99448ff539257f8a642d92b67e7656618bd1b29a29ed1ac2c58df68ce1496af4
 ```
 
 ### `dpkg` source package: `xz-utils=5.2.4-1ubuntu1.1`
