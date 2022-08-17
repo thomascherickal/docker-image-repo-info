@@ -1,7 +1,7 @@
 ## `clojure:temurin-11-tools-deps-focal`
 
 ```console
-$ docker pull clojure@sha256:e139a3573f80e8b752a8961afb078ae0bba0dba39c47be4865bf3f0298a8c4d9
+$ docker pull clojure@sha256:ac2a244336e37922751562fe6f3d58c923c03b3d30e0e1864020bf7acf7105e1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -84,14 +84,14 @@ CMD ["clj"]
 ### `clojure:temurin-11-tools-deps-focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:72cc92cf147a997991faa7dffeda2c7eccd7ef69376e9c4b8c85b475ec7c3e82
+$ docker pull clojure@sha256:94cc87f56d4ab55db27f97ec989ccbc9775f1608ecd9cf657cf125aa03d00080
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **301.0 MB (300954195 bytes)**  
+-	Total Size: **301.2 MB (301180335 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a9129d88a084a8cf211ce27fc27d6182f31c6eaab9a18c05219720f6338c4ed0`
+-	Image ID: `sha256:5daae955cd6841fc652e4668db37c476ce57650ce0d60360f23835ee90f71ca8`
 -	Default Command: `["clj"]`
 
 ```dockerfile
@@ -115,15 +115,15 @@ RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in    
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
 # Fri, 12 Aug 2022 17:42:32 GMT
 CMD ["jshell"]
-# Fri, 12 Aug 2022 18:27:11 GMT
-ENV CLOJURE_VERSION=1.11.1.1149
-# Fri, 12 Aug 2022 18:27:12 GMT
+# Wed, 17 Aug 2022 02:00:20 GMT
+ENV CLOJURE_VERSION=1.11.1.1155
+# Wed, 17 Aug 2022 02:00:20 GMT
 WORKDIR /tmp
-# Fri, 12 Aug 2022 18:27:33 GMT
-RUN apt-get update && apt-get install -y make git rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "9aadc1a1840a458517a6efb111eba72be93c17bbdc874c833ef781e77aacc55e *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove wget
-# Fri, 12 Aug 2022 18:27:34 GMT
+# Wed, 17 Aug 2022 02:00:42 GMT
+RUN apt-get update && apt-get install -y make git rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "7eb9aa2ecc6c0abfdb1578d4b99ca7c2055111aafa38524a12a6fb76fe01f30b *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove wget
+# Wed, 17 Aug 2022 02:00:43 GMT
 COPY file:b0aef3ea203de7b5c2ea645debf58c8231445a2e3070b72749b54614f4a89b82 in /usr/local/bin/rlwrap 
-# Fri, 12 Aug 2022 18:27:34 GMT
+# Wed, 17 Aug 2022 02:00:43 GMT
 CMD ["clj"]
 ```
 
@@ -144,11 +144,11 @@ CMD ["clj"]
 		Last Modified: Fri, 12 Aug 2022 17:53:04 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad9098bc737f47d32a628d0670c4e7e11d9c6bb586f83b7d3cbcdbb7a2b47292`  
-		Last Modified: Fri, 12 Aug 2022 18:40:16 GMT  
-		Size: 62.7 MB (62653263 bytes)  
+	-	`sha256:c457e67ac9ca1415f05fe8cd42b1405b93d80ce82a76efc162bcbb194f1dec22`  
+		Last Modified: Wed, 17 Aug 2022 02:11:26 GMT  
+		Size: 62.9 MB (62879404 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f0e998e67153bc19316ac51e94786c3dec8c06492a415a728029b8a54d1da014`  
-		Last Modified: Fri, 12 Aug 2022 18:40:07 GMT  
-		Size: 620.0 B  
+	-	`sha256:70a14e04da4ea3c96c8f5e418b84117b37d3847e185afaa601ebcf6e3dfd9fd1`  
+		Last Modified: Wed, 17 Aug 2022 02:11:18 GMT  
+		Size: 619.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
