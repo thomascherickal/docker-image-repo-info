@@ -3075,20 +3075,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-nlme/copyright`)
 - `GPL`
 - `GPL `
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nlme=3.1.158-1
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.158-1.dsc' nlme_3.1.158-1.dsc 1840 SHA256:b08a099c5a5597c734a9bec4084258216c56b36b9d169fa87c14f478cb8dc0ff
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.158.orig.tar.gz' nlme_3.1.158.orig.tar.gz 845427 SHA256:a55bb401c2ba2706763d1f40283780699eb812b0d090b3d1903fae8aa956bf23
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.158-1.debian.tar.xz' nlme_3.1.158-1.debian.tar.xz 7212 SHA256:3a864cfb148f60757cfc18bf540a3a391a834ce2482568a560a32bfd92c1463c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nlme/3.1.158-1/
 
-- https://sources.debian.net/src/nlme/3.1.158-1/ (for browsing the source)
-- https://sources.debian.net/src/nlme/3.1.158-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nlme/3.1.158-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openblas=0.3.20+ds-2`
 
@@ -3272,20 +3265,13 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 - `TCL`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pango1.0=1.50.7+ds-1
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.7%2bds-1.dsc' pango1.0_1.50.7+ds-1.dsc 3857 SHA256:a932df579e273d8ec75331208e0a361a863a18af69e2f91b42964b0b71caad3b
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.7%2bds.orig.tar.xz' pango1.0_1.50.7+ds.orig.tar.xz 2673928 SHA256:f5ab7af0330fed70b67680dc52cfd596a09e9e5187a8732c212a8db53f146ea0
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.7%2bds-1.debian.tar.xz' pango1.0_1.50.7+ds-1.debian.tar.xz 50324 SHA256:8c8b1010d5e98409af5df430e36cf5e65ebf4d2b303c3b460adee03efb4baaed
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pango1.0/1.50.7+ds-1/
 
-- https://sources.debian.net/src/pango1.0/1.50.7+ds-1/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.50.7+ds-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.50.7+ds-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-7`
 
@@ -3866,20 +3852,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-survival/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris survival=3.3-1-1
-'http://deb.debian.org/debian/pool/main/s/survival/survival_3.3-1-1.dsc' survival_3.3-1-1.dsc 1861 SHA256:d3e0dceeb28c3aab627d495a8c3d821321298da6060914ddb37a4ffcacf1ec0e
-'http://deb.debian.org/debian/pool/main/s/survival/survival_3.3-1.orig.tar.gz' survival_3.3-1.orig.tar.gz 6577371 SHA256:14878705cd0c7edcfead79011444aa84f680759293bde8634721c49f37cb4dc7
-'http://deb.debian.org/debian/pool/main/s/survival/survival_3.3-1-1.debian.tar.xz' survival_3.3-1-1.debian.tar.xz 6180 SHA256:f1de0e572449a3776931f9a2d051b29b026f20656ad0436b3bd36dce447a30d6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/survival/3.3-1-1/
 
-- https://sources.debian.net/src/survival/3.3-1-1/ (for browsing the source)
-- https://sources.debian.net/src/survival/3.3-1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/survival/3.3-1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=251.2-7`
 
@@ -4055,21 +4034,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022a-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022a-1.dsc' tzdata_2022a-1.dsc 2205 SHA256:f316f1b551570c26c7001c8ee18396838289e709993d6b0e9f1a18a5378c514b
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022a.orig.tar.gz' tzdata_2022a.orig.tar.gz 425833 SHA256:ef7fffd9f4f50f4f58328b35022a32a5a056b245c5cb3d6791dddb342f871664
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022a.orig.tar.gz.asc' tzdata_2022a.orig.tar.gz.asc 833 SHA256:f8180c9943426d5e53ada60ebb44114c8f1763034c4cc8fc87ba5d493ab39a92
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022a-1.debian.tar.xz' tzdata_2022a-1.debian.tar.xz 111804 SHA256:83f21a59c4f4dd773de30b044f0f68911594e23d374ca14a5eb2edd254b5578e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2022a-1/
 
-- https://sources.debian.net/src/tzdata/2022a-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2022a-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2022a-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
