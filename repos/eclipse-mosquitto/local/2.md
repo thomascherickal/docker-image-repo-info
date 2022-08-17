@@ -1,18 +1,18 @@
-# `eclipse-mosquitto:2.0.14`
+# `eclipse-mosquitto:2.0.15`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e9f5cf5f8c5262bc1be28531c428929212b95a99449c8ac26d628cfa83234643`
-- Created: `2022-08-09T18:26:24.30435658Z`
-- Virtual Size: ~ 11.80 Mb  
+- Image ID: `sha256:429daab969ade61752657517ef0c357c10c163cfaa76abed1a7a6065ef8e18ad`
+- Created: `2022-08-16T23:28:46.654410653Z`
+- Virtual Size: ~ 11.87 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["/usr/sbin/mosquitto","-c","/mosquitto/config/mosquitto.conf"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `VERSION=2.0.14`
-  - `DOWNLOAD_SHA256=d0dde8fdb12caf6e2426b4f28081919a2fce3448773bdb8af0d3cd5fe5776925`
+  - `VERSION=2.0.15`
+  - `DOWNLOAD_SHA256=4735b1d32e3f91c7a8896741d88a3022e89730a1ee897946decfa0df27039ac6`
   - `GPG_KEYS=A0D6EEA1DCAE49A635A3B2F0779B22DFB3E717B7`
   - `LWS_VERSION=4.2.1`
   - `LWS_SHA256=842da21f73ccba2be59e680de10a8cce7928313048750eb6ad73b6fa50763c51`
@@ -25,16 +25,33 @@
 ### `apk` package: `alpine-baselayout`
 
 ```console
-alpine-baselayout-3.2.0-r16 description:
+alpine-baselayout-3.2.0-r22 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-3.2.0-r16 webpage:
+alpine-baselayout-3.2.0-r22 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-3.2.0-r16 installed size:
-404 KiB
+alpine-baselayout-3.2.0-r22 installed size:
+340 KiB
 
-alpine-baselayout-3.2.0-r16 license:
+alpine-baselayout-3.2.0-r22 license:
+GPL-2.0-only
+
+```
+
+### `apk` package: `alpine-baselayout-data`
+
+```console
+alpine-baselayout-data-3.2.0-r22 description:
+Alpine base dir structure and init scripts
+
+alpine-baselayout-data-3.2.0-r22 webpage:
+https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
+
+alpine-baselayout-data-3.2.0-r22 installed size:
+72 KiB
+
+alpine-baselayout-data-3.2.0-r22 license:
 GPL-2.0-only
 
 ```
@@ -42,16 +59,16 @@ GPL-2.0-only
 ### `apk` package: `alpine-keys`
 
 ```console
-alpine-keys-2.4-r0 description:
+alpine-keys-2.4-r1 description:
 Public keys for Alpine Linux packages
 
-alpine-keys-2.4-r0 webpage:
+alpine-keys-2.4-r1 webpage:
 https://alpinelinux.org
 
-alpine-keys-2.4-r0 installed size:
+alpine-keys-2.4-r1 installed size:
 156 KiB
 
-alpine-keys-2.4-r0 license:
+alpine-keys-2.4-r1 license:
 MIT
 
 ```
@@ -59,16 +76,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.12.7-r0 description:
+apk-tools-2.12.9-r3 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.12.7-r0 webpage:
+apk-tools-2.12.9-r3 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.12.7-r0 installed size:
-304 KiB
+apk-tools-2.12.9-r3 installed size:
+300 KiB
 
-apk-tools-2.12.7-r0 license:
+apk-tools-2.12.9-r3 license:
 GPL-2.0-only
 
 ```
@@ -76,16 +93,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.33.1-r8 description:
+busybox-1.35.0-r17 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.33.1-r8 webpage:
+busybox-1.35.0-r17 webpage:
 https://busybox.net/
 
-busybox-1.33.1-r8 installed size:
-928 KiB
+busybox-1.35.0-r17 installed size:
+940 KiB
 
-busybox-1.33.1-r8 license:
+busybox-1.35.0-r17 license:
 GPL-2.0-only
 
 ```
@@ -100,7 +117,7 @@ ca-certificates-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
 ca-certificates-20220614-r0 installed size:
-684 KiB
+688 KiB
 
 ca-certificates-20220614-r0 license:
 MPL-2.0 AND MIT
@@ -127,16 +144,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `cjson`
 
 ```console
-cjson-1.7.14-r1 description:
+cjson-1.7.15-r3 description:
 Lighweight JSON parser in C
 
-cjson-1.7.14-r1 webpage:
+cjson-1.7.15-r3 webpage:
 https://github.com/DaveGamble/cJSON
 
-cjson-1.7.14-r1 installed size:
+cjson-1.7.15-r3 installed size:
 44 KiB
 
-cjson-1.7.14-r1 license:
+cjson-1.7.15-r3 license:
 MIT
 
 ```
@@ -168,7 +185,7 @@ libcrypto1.1-1.1.1q-r0 webpage:
 https://www.openssl.org/
 
 libcrypto1.1-1.1.1q-r0 installed size:
-2704 KiB
+2708 KiB
 
 libcrypto1.1-1.1.1q-r0 license:
 OpenSSL
@@ -178,85 +195,68 @@ OpenSSL
 ### `apk` package: `libressl`
 
 ```console
-libressl-3.3.6-r0 description:
+libressl-3.5.3-r0 description:
 Version of the TLS/crypto stack forked from OpenSSL
 
-libressl-3.3.6-r0 webpage:
+libressl-3.5.3-r0 webpage:
 https://www.libressl.org/
 
-libressl-3.3.6-r0 installed size:
-552 KiB
+libressl-3.5.3-r0 installed size:
+584 KiB
 
-libressl-3.3.6-r0 license:
+libressl-3.5.3-r0 license:
 custom
 
 ```
 
-### `apk` package: `libressl3.3-libcrypto`
+### `apk` package: `libressl3.5-libcrypto`
 
 ```console
-libressl3.3-libcrypto-3.3.6-r0 description:
+libressl3.5-libcrypto-3.5.3-r0 description:
 libressl libcrypto library
 
-libressl3.3-libcrypto-3.3.6-r0 webpage:
+libressl3.5-libcrypto-3.5.3-r0 webpage:
 https://www.libressl.org/
 
-libressl3.3-libcrypto-3.3.6-r0 installed size:
-1844 KiB
+libressl3.5-libcrypto-3.5.3-r0 installed size:
+1908 KiB
 
-libressl3.3-libcrypto-3.3.6-r0 license:
+libressl3.5-libcrypto-3.5.3-r0 license:
 custom
 
 ```
 
-### `apk` package: `libressl3.3-libssl`
+### `apk` package: `libressl3.5-libssl`
 
 ```console
-libressl3.3-libssl-3.3.6-r0 description:
+libressl3.5-libssl-3.5.3-r0 description:
 libressl libssl library
 
-libressl3.3-libssl-3.3.6-r0 webpage:
+libressl3.5-libssl-3.5.3-r0 webpage:
 https://www.libressl.org/
 
-libressl3.3-libssl-3.3.6-r0 installed size:
-364 KiB
+libressl3.5-libssl-3.5.3-r0 installed size:
+356 KiB
 
-libressl3.3-libssl-3.3.6-r0 license:
+libressl3.5-libssl-3.5.3-r0 license:
 custom
 
 ```
 
-### `apk` package: `libressl3.3-libtls`
+### `apk` package: `libressl3.5-libtls`
 
 ```console
-libressl3.3-libtls-3.3.6-r0 description:
+libressl3.5-libtls-3.5.3-r0 description:
 libressl libtls library
 
-libressl3.3-libtls-3.3.6-r0 webpage:
+libressl3.5-libtls-3.5.3-r0 webpage:
 https://www.libressl.org/
 
-libressl3.3-libtls-3.3.6-r0 installed size:
-1872 KiB
+libressl3.5-libtls-3.5.3-r0 installed size:
+1908 KiB
 
-libressl3.3-libtls-3.3.6-r0 license:
+libressl3.5-libtls-3.5.3-r0 license:
 custom
-
-```
-
-### `apk` package: `libretls`
-
-```console
-libretls-3.3.3p1-r3 description:
-port of libtls from libressl to openssl
-
-libretls-3.3.3p1-r3 webpage:
-https://git.causal.agency/libretls/
-
-libretls-3.3.3p1-r3 installed size:
-84 KiB
-
-libretls-3.3.3p1-r3 license:
-ISC AND (BSD-3-Clause OR MIT)
 
 ```
 
@@ -280,16 +280,16 @@ OpenSSL
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.2-r3 description:
+musl-1.2.3-r0 description:
 the musl c library (libc) implementation
 
-musl-1.2.2-r3 webpage:
+musl-1.2.3-r0 webpage:
 https://musl.libc.org/
 
-musl-1.2.2-r3 installed size:
+musl-1.2.3-r0 installed size:
 608 KiB
 
-musl-1.2.2-r3 license:
+musl-1.2.3-r0 license:
 MIT
 
 ```
@@ -297,16 +297,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.2-r3 description:
+musl-utils-1.2.3-r0 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.2-r3 webpage:
+musl-utils-1.2.3-r0 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.2-r3 installed size:
-144 KiB
+musl-utils-1.2.3-r0 installed size:
+132 KiB
 
-musl-utils-1.2.2-r3 license:
+musl-utils-1.2.3-r0 license:
 MIT BSD GPL2+
 
 ```
@@ -314,16 +314,16 @@ MIT BSD GPL2+
 ### `apk` package: `scanelf`
 
 ```console
-scanelf-1.3.2-r0 description:
+scanelf-1.3.4-r0 description:
 Scan ELF binaries for stuff
 
-scanelf-1.3.2-r0 webpage:
+scanelf-1.3.4-r0 webpage:
 https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
 
-scanelf-1.3.2-r0 installed size:
+scanelf-1.3.4-r0 installed size:
 92 KiB
 
-scanelf-1.3.2-r0 license:
+scanelf-1.3.4-r0 license:
 GPL-2.0-only
 
 ```
@@ -331,16 +331,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.33.1-r8 description:
+ssl_client-1.35.0-r17 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.33.1-r8 webpage:
+ssl_client-1.35.0-r17 webpage:
 https://busybox.net/
 
-ssl_client-1.33.1-r8 installed size:
+ssl_client-1.35.0-r17 installed size:
 28 KiB
 
-ssl_client-1.33.1-r8 license:
+ssl_client-1.35.0-r17 license:
 GPL-2.0-only
 
 ```
