@@ -1,18 +1,18 @@
-# `aerospike:ee-6.0.0.2`
+# `aerospike:ee-6.0.0.3`
 
 ## Docker Metadata
 
-- Image ID: `sha256:feed9166d180f4376acd3cf8adce94783a684a16053806193d15387efc3099be`
-- Created: `2022-08-02T01:43:53.857254789Z`
-- Virtual Size: ~ 257.22 Mb  
+- Image ID: `sha256:7364e7040efed5fe31857d90a8e0a441b316f593a0cf5abe2a8ddf972a95c3af`
+- Created: `2022-08-16T22:19:41.855730717Z`
+- Virtual Size: ~ 294.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/bin/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","/entrypoint.sh"]`
 - Command: `["asd"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `AEROSPIKE_VERSION=6.0.0.2`
-  - `AEROSPIKE_SHA256=0b067053c3919cc41b90f519e4ea164ad1ed4d8bca934a877085ff0067469a65`
+  - `AEROSPIKE_VERSION=6.0.0.3`
+  - `AEROSPIKE_SHA256=ad2ecced7bd1a62af43788c2a31d27c3521c48b9065cdb2234d6ead8aa8c0422`
   - `AS_TINI_SHA256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940`
 
 ## `dpkg` (`.deb`-based packages)
@@ -70,11 +70,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.118/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.118/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `aerospike-server-enterprise=6.0.0.2-1`
+### `dpkg` source package: `aerospike-server-enterprise=6.0.0.3-1`
 
 Binary Packages:
 
-- `aerospike-server-enterprise=6.0.0.2-1`
+- `aerospike-server-enterprise=6.0.0.3-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -84,11 +84,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `aerospike-tools=7.0.3`
+### `dpkg` source package: `aerospike-tools=7.0.5`
 
 Binary Packages:
 
-- `aerospike-tools=7.0.3`
+- `aerospike-tools=7.0.5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2523,21 +2523,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u5
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0%2bdeb10u5.dsc' tzdata_2021a-0+deb10u5.dsc 2264 SHA256:a994b9adbb5623bbee257dcdbbd9494ec732d508e857fb38cc6a966447d9d20b
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0%2bdeb10u5.debian.tar.xz' tzdata_2021a-0+deb10u5.debian.tar.xz 110812 SHA256:3e75987d349081fc6bf76e46404e6aded0ff96ee0ffd5bed5dca0bfb8fcf7fa3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u5/
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u5/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.33.1-0.1`
 
