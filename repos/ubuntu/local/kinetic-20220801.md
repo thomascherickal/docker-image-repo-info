@@ -149,13 +149,9 @@ Licenses: (parsed from: `/usr/share/doc/base-passwd/copyright`)
 - `GPL-2`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-passwd=3.5.52build1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.52build1.dsc' base-passwd_3.5.52build1.dsc 1320 SHA512:2071171adf14d276664526662fab08d34a45a259ebcdbee7ae57bb004d3d12793e629006a37b649f16c0f04856e9f7bb79fb92fe304525167f48e73dec0cc4fd
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.5.52build1.tar.xz' base-passwd_3.5.52build1.tar.xz 54252 SHA512:699ffe50f4a7fbdea2c0b25d3b2452d538598870cf39b84668d9b7efa20ec41284c331513e89c966e7248732b1ec1abdfdb871e31f8e9efa026c691e89236ffe
-```
 
 ### `dpkg` source package: `bash=5.1-6ubuntu1`
 
@@ -506,14 +502,9 @@ Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 - `TinySCHEME`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnupg2=2.2.27-3ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27-3ubuntu3.dsc' gnupg2_2.2.27-3ubuntu3.dsc 3718 SHA512:b2d2e8986b0553d5a96be18d625e7296eeae61c148e85a337554cb5b1b33e8489b7ce9308171d802ce91b5186e595bc5e2043810b4ea6e5ff92c8c2a58d68832
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27.orig.tar.bz2' gnupg2_2.2.27.orig.tar.bz2 7191555 SHA512:cf336962116c9c08ac80b1299654b94948033ef51d6d5e7f54c2f07bbf7d92c7b0bddb606ceee2cdd837063f519b8d59af5a82816b840a0fc47d90c07b0e95ab
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27-3ubuntu3.debian.tar.xz' gnupg2_2.2.27-3ubuntu3.debian.tar.xz 66660 SHA512:526cd5c06f089a17a1b86fee217af61bb74f5217866347b5963af4df7fc07eee94d0b2236a7c26ba6b31d8fe008498dc1d2c48f21f7d900b6e37f6a4fe4defcf
-```
 
 ### `dpkg` source package: `gnutls28=3.7.6-2ubuntu1`
 
@@ -576,15 +567,9 @@ Licenses: (parsed from: `/usr/share/doc/gzip/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gzip=1.10-4ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-4ubuntu4.dsc' gzip_1.10-4ubuntu4.dsc 2269 SHA512:65ca7a283eb955a928afbb3586234a77a06d7468af69f273a203ebddcb629cbb77f1a3e3b80573bd7968dc1ecb9cc3cd9b95c0948a6b941be06fccf27aa2203c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10.orig.tar.gz' gzip_1.10.orig.tar.gz 1201421 SHA512:7939043e74554ced0c1c05d354ab4eb36cd6dce89ad79d02ccdc5ed6b7ee390759689b2d47c07227b9b44a62851afe7c76c4cae9f92527d999f3f1b4df1cccff
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10.orig.tar.gz.asc' gzip_1.10.orig.tar.gz.asc 833 SHA512:74727fb3a8b64f81b4dd2d941fa750a789c482d7ae604d0ecfbe5ec623780efc7c5f0e51d65e7b99c2f097c5cd6585cc3a0f1b31abb03306156e0d410d9f0186
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-4ubuntu4.debian.tar.xz' gzip_1.10-4ubuntu4.debian.tar.xz 39072 SHA512:faac8029bc9632865b0a8f2ddd42cce4cb63cb56df2aae6720fa37d28286775cab81c3193800e2350fbefb1a4ecea061f7943efb1385f5821fd0a47cd54efd8d
-```
 
 ### `dpkg` source package: `hostname=3.23ubuntu2`
 
@@ -1045,14 +1030,9 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.7.3-1build2
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.7.3-1build2.dsc' nettle_3.7.3-1build2.dsc 2165 SHA512:3f774011dd48205720ac7e6aa9a44b5afa64c24fce825d6583b58c02f3c8f500ecafa265d18d5deb1ab65d6e938dd76a7917f1d5c3dab0aea28148d531fa26cd
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.7.3.orig.tar.gz' nettle_3.7.3.orig.tar.gz 2383985 SHA512:9901eba305421adff6d551ac7f478dff3f68a339d444c776724ab0b977fe6be792b1d2950c8705acbe76bd924fd6d898a65eded546777884be3b436d0e052437
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.7.3-1build2.debian.tar.xz' nettle_3.7.3-1build2.debian.tar.xz 22100 SHA512:c1935d35e9f04798273053ab92c7405ec225a5d72ba6c2869b0f2bf54b459ac428e113bc149796e91834a8b56082f8bbfbb906a6cd6787142b8932bd1dd83cec
-```
 
 ### `dpkg` source package: `p11-kit=0.24.1-1`
 
@@ -1501,11 +1481,6 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2ubuntu9
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu9.dsc' zlib_1.2.11.dfsg-2ubuntu9.dsc 2945 SHA512:26d5a0dc49615cce718e898f384f5f4d4ca2d37e76bb68b4e4feadf64b197a42ce0a85c1e96baa3d8d5c2c8d0a115ba109bf31d735eca49897bf3b9d3b3bad04
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA512:92819807c0b8de655021bb2d5d182f9b6b381d3072d8c8dc1df34bbaa25d36bcba140c85f754a43cc466aac65850b7a7366aa0c93e804180e5b255e61d5748de
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu9.debian.tar.xz' zlib_1.2.11.dfsg-2ubuntu9.debian.tar.xz 58360 SHA512:e81d458faa4a79d02620a6a07c25c2838dedb7baa11155523184642d561269b8c9677ba96b571b31be429606b9572469871a99ee48f54d95c729efffb6af8563
-```
