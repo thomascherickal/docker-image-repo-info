@@ -1,10 +1,10 @@
-# `julia:1.7.3-buster`
+# `julia:1.8.0-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1a07fab9f4cba9ea5df59d32288228d4320be3414c2f831c7d136cc440b620f8`
-- Created: `2022-08-02T04:39:47.273049056Z`
-- Virtual Size: ~ 518.90 Mb  
+- Image ID: `sha256:dab3485bd21a5316fd823a32e687db27e5234b1b3a1777ff03c0903e8465d8c5`
+- Created: `2022-08-19T00:29:21.399032189Z`
+- Virtual Size: ~ 567.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["julia"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/julia/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JULIA_PATH=/usr/local/julia`
   - `JULIA_GPG=3673DF529D9049477F76B37566E3C7DC03D6E495`
-  - `JULIA_VERSION=1.7.3`
+  - `JULIA_VERSION=1.8.0`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1860,21 +1860,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u5
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0%2bdeb10u5.dsc' tzdata_2021a-0+deb10u5.dsc 2264 SHA256:a994b9adbb5623bbee257dcdbbd9494ec732d508e857fb38cc6a966447d9d20b
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0%2bdeb10u5.debian.tar.xz' tzdata_2021a-0+deb10u5.debian.tar.xz 110812 SHA256:3e75987d349081fc6bf76e46404e6aded0ff96ee0ffd5bed5dca0bfb8fcf7fa3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u5/
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u5/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.33.1-0.1`
 
