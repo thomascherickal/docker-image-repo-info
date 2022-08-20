@@ -1628,11 +1628,6 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-0ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-0ubuntu2.1.dsc' zlib_1.2.11.dfsg-0ubuntu2.1.dsc 2716 SHA512:bfcf85417e5430b1728e4c1f40ad7726a6c401aff6027e7a26d31f59b04957c820a3e98c47a538516c13b0ee76c86c8b50af8af1aa68dab699fa0d3e4ec36ed3
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.xz' zlib_1.2.11.dfsg.orig.tar.xz 287216 SHA512:ffa49436c80fc94555a36a1f2f1f025b223055e02e43f297a572dd5df56d88421dfc36fcbbf0825fbdad876cb0c104f1846af51cca66cac57bbfe698c4365731
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-0ubuntu2.1.debian.tar.xz' zlib_1.2.11.dfsg-0ubuntu2.1.debian.tar.xz 22448 SHA512:19a2517f7cddcbfa813a91756ddb5b52606496c7bd07cc86ae09a190701cc44c1caca602f49b8ce870e6c544e468fe08329548f20448efdf42c17510e32bf2fa
-```
