@@ -1,10 +1,10 @@
-# `composer:2.4.0`
+# `composer:2.4.1`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3f147ea032e7f04014f0922edb214754b49b0c80358089a258bbc86ff9f73e2d`
-- Created: `2022-08-17T21:19:50.211845221Z`
-- Virtual Size: ~ 199.37 Mb  
+- Image ID: `sha256:0d0ac70c51b152d3310f88e1ec0c2dea147773db8919c11d5a9b69ad9efdb9d0`
+- Created: `2022-08-22T19:23:09.887862848Z`
+- Virtual Size: ~ 200.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=53477e73e6254dc942b68913a58d815ffdbf6946baf61a1f8ef854de524c27bf`
   - `COMPOSER_ALLOW_SUPERUSER=1`
   - `COMPOSER_HOME=/tmp`
-  - `COMPOSER_VERSION=2.4.0`
+  - `COMPOSER_VERSION=2.4.1`
 
 ## `apk` (`.apk`-based packages)
 
@@ -591,16 +591,16 @@ GPL-3.0-or-later AND GPL-2.0-or-later AND GPL-2.0-only AND
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.14-r0 description:
+libxml2-2.9.14-r1 description:
 XML parsing library, version 2
 
-libxml2-2.9.14-r0 webpage:
+libxml2-2.9.14-r1 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.14-r0 installed size:
+libxml2-2.9.14-r1 installed size:
 1200 KiB
 
-libxml2-2.9.14-r0 license:
+libxml2-2.9.14-r1 license:
 MIT
 
 ```
