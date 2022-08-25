@@ -1,9 +1,9 @@
-# `eclipse-temurin:11.0.16_8-jdk-focal`
+# `eclipse-temurin:11.0.16.1_1-jdk-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d9962b061f51e7783d5809dd7958f9d6bbe3559d60fc9c6680fadaa182d3e3a9`
-- Created: `2022-08-12T17:22:06.822601514Z`
+- Image ID: `sha256:5d9b6808f4b9d38aa12648f33b1767dfc4b737f8d5619484de1f11cbbc5ee0de`
+- Created: `2022-08-24T19:20:33.465364447Z`
 - Virtual Size: ~ 451.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.16+8`
+  - `JAVA_VERSION=jdk-11.0.16.1+1`
 
 ## `dpkg` (`.deb`-based packages)
 
