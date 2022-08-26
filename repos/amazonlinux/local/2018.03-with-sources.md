@@ -1,10 +1,10 @@
-# `amazonlinux:2018.03.0.20220705.1-with-sources`
+# `amazonlinux:2018.03.0.20220802.0-with-sources`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1862d4c5d4530382c100d0ad62b44402dd8056ca13a22de7b6c7b0928fc06538`
-- Created: `2022-08-04T00:20:11.418946972Z`
-- Virtual Size: ~ 620.13 Mb  
+- Image ID: `sha256:232eb238b33b7e870dd055314fe8ca6e936ad5f353e199a4f203ec82ca7fe5de`
+- Created: `2022-08-25T18:20:10.966080439Z`
+- Virtual Size: ~ 620.10 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -403,7 +403,7 @@ Licenses (from `rpm --query`): OpenLDAP
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `openssl-1.0.2k-16.158.amzn1.x86_64`
+### `rpm` package: `openssl-1.0.2k-16.159.amzn1.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
 
