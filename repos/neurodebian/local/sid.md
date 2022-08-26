@@ -203,20 +203,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.1-6.1
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-6.1.dsc' bash_5.1-6.1.dsc 2279 SHA256:01eabdef2dfbb323ff1bf475b5fb9176456de2d5210dbc83b5e85c40afd10105
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA256:d5eeee4f953c09826409d572e2e8996a2140d67eb8f382ce1f3a9d23883ad696
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-6.1.debian.tar.xz' bash_5.1-6.1.debian.tar.xz 93472 SHA256:241906d63ddde94eadadaff6c0e50cea1cc3736d00e521709a02b547737e713f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.1-6.1/
 
-- https://sources.debian.net/src/bash/5.1-6.1/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.1-6.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.1-6.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bzip2=1.0.8-5`
 
@@ -1792,20 +1785,13 @@ Licenses: (parsed from: `/usr/share/doc/libreadline8/copyright`, `/usr/share/doc
 - `GFDL`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris readline=8.1.2-1.2
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1.2-1.2.dsc' readline_8.1.2-1.2.dsc 2638 SHA256:152ddc26da8f512ecffc84c959621d3541147d0018f8aee509e8c272b7b246c1
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1.2.orig.tar.gz' readline_8.1.2.orig.tar.gz 2993073 SHA256:7589a2381a8419e68654a47623ce7dfcb756815c8fee726b98f90bf668af7bc6
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1.2-1.2.debian.tar.xz' readline_8.1.2-1.2.debian.tar.xz 29600 SHA256:b42398b7b36a0203b487d49d0810042da46622d3b453e9eb73abbbede882f9e2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/readline/8.1.2-1.2/
 
-- https://sources.debian.net/src/readline/8.1.2-1.2/ (for browsing the source)
-- https://sources.debian.net/src/readline/8.1.2-1.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/readline/8.1.2-1.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sed=4.8-1`
 
