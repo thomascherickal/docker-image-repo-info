@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:227a50c5c1afe24ac38dd976ebdde2c3058123ea455f296b9a3f373d103939a6`
-- Created: `2022-08-12T18:17:47.26880929Z`
+- Image ID: `sha256:f9e2d946ce92ea2cfeca624eb20d4ac05bb146dad5e820cfeef91c552686b231`
+- Created: `2022-08-24T19:51:36.41182969Z`
 - Virtual Size: ~ 747.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.4+8`
+  - `JAVA_VERSION=jdk-17.0.4.1+1`
   - `GRADLE_HOME=/opt/gradle`
   - `GRADLE_VERSION=7.5.1`
 
