@@ -409,13 +409,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=11ubuntu5.5
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.5.dsc' base-files_11ubuntu5.5.dsc 1676 SHA512:a96414af9c3a120ce23f854ab5e80807319d820825ae9027b0ff6f5be621c6aff2941eb31b7f05523b5015d6702d973e628a6e70cb17bf9312b6cf5256b98962
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.5.tar.xz' base-files_11ubuntu5.5.tar.xz 80616 SHA512:682851e1d0001fd0d79a4d61357a6ce8de8d46367259619c5c66b289fc471901d70eb47d64289a8ad63d6b784ecad912f92ef005421f732ad9d3a3ddc97a0e74
-```
 
 ### `dpkg` source package: `base-passwd=3.5.47`
 
@@ -3150,13 +3146,9 @@ Licenses: (parsed from: `/usr/share/doc/language-pack-en-base/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris language-pack-en-base=1:20.04+20220211
-'http://archive.ubuntu.com/ubuntu/pool/main/l/language-pack-en-base/language-pack-en-base_20.04%2b20220211.dsc' language-pack-en-base_20.04+20220211.dsc 1555 SHA512:2004f2fa1303c3b8c2b918dcf2cbdd4418fec598c1fcb14a4180b4bd1a4429bde6a8805b51b2a7e15432e5323f0c1d3e18b94b93ae2ea78ca0572362cf1a681d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/language-pack-en-base/language-pack-en-base_20.04%2b20220211.tar.xz' language-pack-en-base_20.04+20220211.tar.xz 1605184 SHA512:05edeaf8c9eaa8539574672bdb41914a1fdb6a9d954e91f90865d76c92cc7b68d3a17b1871a9e720f06e67aca5482c52ed5e019dba1cb919df19c0a7ed83d7e6
-```
 
 ### `dpkg` source package: `language-pack-en=1:20.04+20220211`
 
@@ -3168,13 +3160,9 @@ Licenses: (parsed from: `/usr/share/doc/language-pack-en/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris language-pack-en=1:20.04+20220211
-'http://archive.ubuntu.com/ubuntu/pool/main/l/language-pack-en/language-pack-en_20.04%2b20220211.dsc' language-pack-en_20.04+20220211.dsc 1516 SHA512:bb08d60a093dd20ee3f3cffa735e45f00e382087fc445c4025fddbfa3d345448ae7b9a1272c60aeb6f4e608b4aae30ef1c149be8037fb18ec9ee28a43949a7fe
-'http://archive.ubuntu.com/ubuntu/pool/main/l/language-pack-en/language-pack-en_20.04%2b20220211.tar.xz' language-pack-en_20.04+20220211.tar.xz 8092 SHA512:c3abba4c6ac43f006ca530f15f53b8bbb9d52006924d0250248738cc0e63bcb96abec369529aae002ca44c2cee43b89a911b84483a32597751481ae86fa7e761
-```
 
 ### `dpkg` source package: `language-pack-fr-base=1:20.04+20220211`
 
@@ -3186,13 +3174,9 @@ Licenses: (parsed from: `/usr/share/doc/language-pack-fr-base/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris language-pack-fr-base=1:20.04+20220211
-'http://archive.ubuntu.com/ubuntu/pool/main/l/language-pack-fr-base/language-pack-fr-base_20.04%2b20220211.dsc' language-pack-fr-base_20.04+20220211.dsc 1555 SHA512:8ab3b216749924690e11671d13e18d423d29f4e13210a6c5711a174bf5a042b55bcaca69034a2d9ff16f38feb632bf6d70acb537b111ecb9cb9f5eec2717ef41
-'http://archive.ubuntu.com/ubuntu/pool/main/l/language-pack-fr-base/language-pack-fr-base_20.04%2b20220211.tar.xz' language-pack-fr-base_20.04+20220211.tar.xz 3704148 SHA512:7eeab2f31ec5b1134a401690e1d562e0a60392bbc1c0d08c3a0a440ba890c28c4d082e258edc162a61262fcf1b4ff83a5f1c1accadf742dfb251942cfe7058f1
-```
 
 ### `dpkg` source package: `language-pack-fr=1:20.04+20220211`
 
@@ -3204,13 +3188,9 @@ Licenses: (parsed from: `/usr/share/doc/language-pack-fr/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris language-pack-fr=1:20.04+20220211
-'http://archive.ubuntu.com/ubuntu/pool/main/l/language-pack-fr/language-pack-fr_20.04%2b20220211.dsc' language-pack-fr_20.04+20220211.dsc 1516 SHA512:2abfc9e0f32f5f3a192d6c107b1c0fed8c7ef41a35a2778d8203f083942cbf8ee7d58c848d88d936a792fc9649a0695c22dfc0397a0bc453d4927d490c266796
-'http://archive.ubuntu.com/ubuntu/pool/main/l/language-pack-fr/language-pack-fr_20.04%2b20220211.tar.xz' language-pack-fr_20.04+20220211.tar.xz 8096 SHA512:9a660b0983786f9982046d3b448708d2a0e2fddca8ea5eb112b80bf95723fe7195e1f1c25f836196b352e10fad687ba5c58236a36c5710024334783d6ffdc5df
-```
 
 ### `dpkg` source package: `lcms2=2.9-4`
 
