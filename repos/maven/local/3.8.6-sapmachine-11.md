@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9bfe27df61f41a32975f7210457b761c47f1602995280a6bf24feb2ebbe5554f`
-- Created: `2022-08-03T07:38:24.182271314Z`
-- Virtual Size: ~ 521.55 Mb  
+- Image ID: `sha256:1a760ae82e24c7c3d274fe6d08788aa7fb5c918665612f3760442c4e9565d5b7`
+- Created: `2022-08-25T18:48:15.832608403Z`
+- Virtual Size: ~ 522.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
@@ -154,13 +154,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=11ubuntu5.5
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.5.dsc' base-files_11ubuntu5.5.dsc 1676 SHA512:a96414af9c3a120ce23f854ab5e80807319d820825ae9027b0ff6f5be621c6aff2941eb31b7f05523b5015d6702d973e628a6e70cb17bf9312b6cf5256b98962
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_11ubuntu5.5.tar.xz' base-files_11ubuntu5.5.tar.xz 80616 SHA512:682851e1d0001fd0d79a4d61357a6ce8de8d46367259619c5c66b289fc471901d70eb47d64289a8ad63d6b784ecad912f92ef005421f732ad9d3a3ddc97a0e74
-```
 
 ### `dpkg` source package: `base-passwd=3.5.47`
 
@@ -2219,11 +2215,11 @@ $ apt-get source -qq --print-uris rtmpdump=2.4+20151223.gitfa8646d.1-2build1
 'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4%2b20151223.gitfa8646d.1-2build1.debian.tar.xz' rtmpdump_2.4+20151223.gitfa8646d.1-2build1.debian.tar.xz 8216 SHA256:b256cc2aa96c9b99918052c4badfab0339ba95a852eab5ae37aa8b53c259efd2
 ```
 
-### `dpkg` source package: `sapmachine-11-jdk=11.0.16`
+### `dpkg` source package: `sapmachine-11-jdk=11.0.16.1`
 
 Binary Packages:
 
-- `sapmachine-11-jdk=11.0.16`
+- `sapmachine-11-jdk=11.0.16.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.

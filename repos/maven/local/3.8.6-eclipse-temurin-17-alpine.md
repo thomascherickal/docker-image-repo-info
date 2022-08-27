@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:dec28c5fd58e50bbf123f9b5c803abe0851b725f824dd6af896e177101a89997`
-- Created: `2022-08-11T21:12:43.782820036Z`
+- Image ID: `sha256:b87d1d3c160997cc6a40d1e3362a5e1ab5b363a04d6ccbced255f4ddd777d336`
+- Created: `2022-08-24T22:36:24.963864398Z`
 - Virtual Size: ~ 371.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -15,7 +15,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.4+8`
+  - `JAVA_VERSION=jdk-17.0.4.1+1`
   - `MAVEN_HOME=/usr/share/maven`
   - `MAVEN_CONFIG=/root/.m2`
 
