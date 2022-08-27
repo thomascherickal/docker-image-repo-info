@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0002748869c762e5a9d0bfe4c0e1907eb92361bb3a32562af9153b1dc5d0180f`
-- Created: `2022-08-12T20:08:58.516093559Z`
+- Image ID: `sha256:9251bd91600cdc04d9846c04ea8df5db5e8a8e6631b5c0e170239499495b7ebe`
+- Created: `2022-08-24T20:43:33.174945084Z`
 - Virtual Size: ~ 536.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -15,7 +15,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.4+8`
+  - `JAVA_VERSION=jdk-17.0.4.1+1`
   - `SOLR_USER=solr`
   - `SOLR_UID=8983`
   - `SOLR_GROUP=solr`
