@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:061f9e21aaf9e182aff8962e9ef3f9b342e4a26378bac0a3f2b3d6e2b4d6caa0`
-- Created: `2022-08-13T01:20:49.825355852Z`
-- Virtual Size: ~ 37.02 Mb  
+- Image ID: `sha256:8adbe6fe514f43fafa21954043e2864c972b6f7e53ec36588cf4a4806a9804eb`
+- Created: `2022-08-26T22:26:12.631702816Z`
+- Virtual Size: ~ 37.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20220812`
+  - `build-date=20220826`
   - `name=Photon OS x86_64/4.0 Base Image`
   - `vendor=VMware`
 
@@ -59,7 +59,7 @@ Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `elfutils-libelf-0.181-5.ph4.x86_64`
+### `rpm` package: `elfutils-libelf-0.181-6.ph4.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+ or LGPLv3+
 
@@ -185,7 +185,7 @@ Licenses (from `rpm --query`): GPLv3+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `rpm-libs-4.16.1.3-10.ph4.x86_64`
+### `rpm` package: `rpm-libs-4.16.1.3-11.ph4.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
@@ -221,13 +221,13 @@ Licenses (from `rpm --query`): GPLv2+ and GPLv3+ and LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `zlib-1.2.11-3.ph4.x86_64`
+### `rpm` package: `zlib-1.2.11-4.ph4.x86_64`
 
 Licenses (from `rpm --query`): zlib
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `zstd-libs-1.4.5-2.ph4.x86_64`
+### `rpm` package: `zstd-libs-1.5.2-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): BSD and GPLv2
 
