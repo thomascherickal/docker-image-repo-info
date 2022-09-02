@@ -1,7 +1,7 @@
 ## `drupal:9-php8.1-apache-buster`
 
 ```console
-$ docker pull drupal@sha256:31450a59212b20c4a1e5a892a02f3a18a438316b4cc61c64cc2be5ba9a1d8191
+$ docker pull drupal@sha256:b7a8326140ce8d5b87edef62a119e08b7628bc1743d06ebab787a5958a0995e4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -179,14 +179,14 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/drupa
 ### `drupal:9-php8.1-apache-buster` - linux; arm variant v7
 
 ```console
-$ docker pull drupal@sha256:7c573cce73279050b5b7fde735681ad08f868979672ef09edadbaf421fbe6df3
+$ docker pull drupal@sha256:a6c4956dd64b670510e48e2d920e5a49edf251fda38bb543a00f06962432f6ae
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **145.4 MB (145428901 bytes)**  
+-	Total Size: **145.7 MB (145739877 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3598bfa3a7d0a04b800b3d79db45c527bd5643bb796528de096934570254c3f7`
+-	Image ID: `sha256:1af5835df376f61e1f8370bca668a92be718211a0d99c005bf1544388313ea4e`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -223,47 +223,47 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Tue, 23 Aug 2022 03:46:45 GMT
 ENV GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD
-# Tue, 23 Aug 2022 04:53:47 GMT
-ENV PHP_VERSION=8.1.9
-# Tue, 23 Aug 2022 04:53:47 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-8.1.9.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.1.9.tar.xz.asc
-# Tue, 23 Aug 2022 04:53:47 GMT
-ENV PHP_SHA256=53477e73e6254dc942b68913a58d815ffdbf6946baf61a1f8ef854de524c27bf
-# Tue, 23 Aug 2022 04:54:00 GMT
+# Fri, 02 Sep 2022 01:48:18 GMT
+ENV PHP_VERSION=8.1.10
+# Fri, 02 Sep 2022 01:48:18 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-8.1.10.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.1.10.tar.xz.asc
+# Fri, 02 Sep 2022 01:48:19 GMT
+ENV PHP_SHA256=90e7120c77ee83630e6ac928d23bc6396603d62d83a3cf5df8a450d2e3070162
+# Fri, 02 Sep 2022 01:48:34 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Tue, 23 Aug 2022 04:54:00 GMT
+# Fri, 02 Sep 2022 01:48:34 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Tue, 23 Aug 2022 05:02:09 GMT
+# Fri, 02 Sep 2022 02:00:52 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		apache2-dev 		libargon2-dev 		libcurl4-openssl-dev 		libonig-dev 		libreadline-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 	; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-iconv 		--with-openssl 		--with-readline 		--with-zlib 				--disable-phpdbg 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				--disable-cgi 				--with-apxs2 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find 		/usr/local 		-type f 		-perm '/0111' 		-exec sh -euxc ' 			strip --strip-all "$@" || : 		' -- '{}' + 	; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 23 Aug 2022 05:02:09 GMT
+# Fri, 02 Sep 2022 02:00:53 GMT
 COPY multi:e11221d43af7136e4dbad5a74e659bcfa753214a9e615c3daf357f1633d9d3d1 in /usr/local/bin/ 
-# Tue, 23 Aug 2022 05:02:10 GMT
+# Fri, 02 Sep 2022 02:00:54 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 23 Aug 2022 05:02:10 GMT
+# Fri, 02 Sep 2022 02:00:54 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 23 Aug 2022 05:02:10 GMT
+# Fri, 02 Sep 2022 02:00:54 GMT
 STOPSIGNAL SIGWINCH
-# Tue, 23 Aug 2022 05:02:10 GMT
+# Fri, 02 Sep 2022 02:00:54 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Tue, 23 Aug 2022 05:02:10 GMT
+# Fri, 02 Sep 2022 02:00:55 GMT
 WORKDIR /var/www/html
-# Tue, 23 Aug 2022 05:02:10 GMT
+# Fri, 02 Sep 2022 02:00:55 GMT
 EXPOSE 80
-# Tue, 23 Aug 2022 05:02:10 GMT
+# Fri, 02 Sep 2022 02:00:55 GMT
 CMD ["apache2-foreground"]
-# Tue, 23 Aug 2022 09:12:51 GMT
+# Fri, 02 Sep 2022 06:37:56 GMT
 RUN set -eux; 		if command -v a2enmod; then 		a2enmod rewrite; 	fi; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libjpeg-dev 		libpng-dev 		libpq-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg=/usr 		--with-webp 	; 		docker-php-ext-install -j "$(nproc)" 		gd 		opcache 		pdo_mysql 		pdo_pgsql 		zip 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Tue, 23 Aug 2022 09:12:51 GMT
+# Fri, 02 Sep 2022 06:37:56 GMT
 RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=60'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Tue, 23 Aug 2022 09:12:52 GMT
+# Fri, 02 Sep 2022 06:37:56 GMT
 COPY file:4d0825f63a9e599415e16f45e6edd9174543d5a1499166c8c1dd3050562baaf5 in /usr/local/bin/ 
-# Tue, 23 Aug 2022 09:17:14 GMT
+# Fri, 02 Sep 2022 06:42:55 GMT
 ENV DRUPAL_VERSION=9.4.5
-# Tue, 23 Aug 2022 09:17:14 GMT
+# Fri, 02 Sep 2022 06:42:55 GMT
 WORKDIR /opt/drupal
-# Tue, 23 Aug 2022 09:17:46 GMT
+# Fri, 02 Sep 2022 06:43:37 GMT
 RUN set -eux; 	export COMPOSER_HOME="$(mktemp -d)"; 	composer create-project --no-interaction "drupal/recommended-project:$DRUPAL_VERSION" ./; 	chown -R www-data:www-data web/sites web/modules web/themes; 	rmdir /var/www/html; 	ln -sf /opt/drupal/web /var/www/html; 	rm -rf "$COMPOSER_HOME"
-# Tue, 23 Aug 2022 09:17:47 GMT
+# Fri, 02 Sep 2022 06:43:38 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/drupal/vendor/bin
 ```
 
@@ -296,49 +296,49 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/drupa
 		Last Modified: Tue, 23 Aug 2022 08:44:02 GMT  
 		Size: 514.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e3b3c1db3e25eeba76615e481cd1d12ac930ed474bc23e88f4955900560550db`  
-		Last Modified: Tue, 23 Aug 2022 08:52:49 GMT  
-		Size: 12.1 MB (12124644 bytes)  
+	-	`sha256:a7494a6086c701531622c2a31311e7fa6b2fcd9706033a74feec79d68b58339d`  
+		Last Modified: Fri, 02 Sep 2022 05:28:11 GMT  
+		Size: 12.1 MB (12072298 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4166b143f9b7e9ed3bca689b9745d76abc6b8542691ee10b8f28e7ffc5b4dcee`  
-		Last Modified: Tue, 23 Aug 2022 08:52:45 GMT  
-		Size: 491.0 B  
+	-	`sha256:da6ee0987484a5539fc34e6eb606b70f4af6e77d18f033f9ca6ca1623fd26d80`  
+		Last Modified: Fri, 02 Sep 2022 05:28:08 GMT  
+		Size: 494.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bea3667564786edc576a70f326ab565fc9f52f42ef399908273ede0ab4820ee7`  
-		Last Modified: Tue, 23 Aug 2022 08:52:48 GMT  
-		Size: 9.5 MB (9496306 bytes)  
+	-	`sha256:6cd7e13fdc12eba7665d61cc196fbd4d0812bb8afa2b7d0517506982d078000b`  
+		Last Modified: Fri, 02 Sep 2022 05:28:10 GMT  
+		Size: 9.9 MB (9858700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:04b8f3740b7092b9c8ed9f769d5d83c8f183361b6a05494aeb1257fd52cf08b6`  
-		Last Modified: Tue, 23 Aug 2022 08:52:45 GMT  
+	-	`sha256:d45b824132b2fa20f03946d41fd176986b8f6fc641a6c219cdc11bb96d53c314`  
+		Last Modified: Fri, 02 Sep 2022 05:28:08 GMT  
 		Size: 2.5 KB (2461 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffb24cf98d4df7477e93bdb92614fd6dbb0f714a0e0e3ccf96fb9566a73b782d`  
-		Last Modified: Tue, 23 Aug 2022 08:52:45 GMT  
-		Size: 245.0 B  
+	-	`sha256:17b0f97022345029338ba5562e2edb065e056d763c1a5f71fbf519023a4c4e46`  
+		Last Modified: Fri, 02 Sep 2022 05:28:08 GMT  
+		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cef44c457baeed8abed3ef98c9fdec76209d22838beac989cff651897e4364fa`  
-		Last Modified: Tue, 23 Aug 2022 08:52:45 GMT  
-		Size: 894.0 B  
+	-	`sha256:078059344154ba3f0b5af7970364661a7809330e480a88c0e524f2f4631c8399`  
+		Last Modified: Fri, 02 Sep 2022 05:28:08 GMT  
+		Size: 896.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bae7d0d54a5e413658de1187c8618ee0dd1c0adc99b42f98b6847d802fcc0082`  
-		Last Modified: Tue, 23 Aug 2022 10:01:29 GMT  
-		Size: 1.5 MB (1479498 bytes)  
+	-	`sha256:f8b263082d202beb641ac1d6509a09388b585181a848066f93d0c51d6b2e29d4`  
+		Last Modified: Fri, 02 Sep 2022 07:16:32 GMT  
+		Size: 1.5 MB (1479681 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:525df95fb14fab4d2bbab2621e099f91020789b671e45d16bcc047552e241ab8`  
-		Last Modified: Tue, 23 Aug 2022 10:01:28 GMT  
-		Size: 324.0 B  
+	-	`sha256:e418c58eb4ce56dba743284f6c842151f9e30ffee2908d511f1c534b2308a96b`  
+		Last Modified: Fri, 02 Sep 2022 07:16:31 GMT  
+		Size: 327.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc6339d0296885e659dcbd9efa7b837fa9f4f1bd86a4d8faec3a32b4cc721797`  
-		Last Modified: Tue, 23 Aug 2022 10:01:28 GMT  
-		Size: 692.0 KB (692046 bytes)  
+	-	`sha256:6937f3c8dade4ce7a32b00a5377fe115e57ca9a2ae7e43bcf0871994da5b86fc`  
+		Last Modified: Fri, 02 Sep 2022 07:16:32 GMT  
+		Size: 692.0 KB (692041 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0c2f6ed5c4d075662e55b2b5698ead170ca2ae3fdf5dc65d015bff573a027e0f`  
-		Last Modified: Tue, 23 Aug 2022 10:05:14 GMT  
+	-	`sha256:3b5804f8d099ccb69e19344dcc51be29087cb2d2485012e8c97f29ecd36fe1d6`  
+		Last Modified: Fri, 02 Sep 2022 07:21:27 GMT  
 		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0bea1d59bb27c181a232c6568ed77ae43e4ae19fab46affac80f3a3e069415e6`  
-		Last Modified: Tue, 23 Aug 2022 10:05:28 GMT  
-		Size: 21.9 MB (21865013 bytes)  
+	-	`sha256:04328684f7cb32d688c66b3bf4eadd73f2dea0ee22f021801b369a368ba8404d`  
+		Last Modified: Fri, 02 Sep 2022 07:21:40 GMT  
+		Size: 21.9 MB (21865752 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `drupal:9-php8.1-apache-buster` - linux; arm64 variant v8
