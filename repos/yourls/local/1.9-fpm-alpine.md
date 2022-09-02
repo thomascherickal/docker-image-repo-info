@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:077438e7e260d3ddb98a25e84a04ce7017c06a5854fc56290766801ed189bfcc`
-- Created: `2022-08-10T05:29:13.662874626Z`
-- Virtual Size: ~ 84.46 Mb  
+- Image ID: `sha256:f3d573b19d7a16be49aebc03df8de8406589a980e75edbfdb82429df267d814a`
+- Created: `2022-09-01T23:52:03.904830665Z`
+- Virtual Size: ~ 84.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.9`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.9.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.9.tar.xz.asc`
-  - `PHP_SHA256=53477e73e6254dc942b68913a58d815ffdbf6946baf61a1f8ef854de524c27bf`
+  - `PHP_VERSION=8.1.10`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.10.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.10.tar.xz.asc`
+  - `PHP_SHA256=90e7120c77ee83630e6ac928d23bc6396603d62d83a3cf5df8a450d2e3070162`
   - `YOURLS_VERSION=1.9.1`
   - `YOURLS_SHA256=0bf53290e8f86ea2e0121aac70f7c64d70d3dfb54823acb9dcc343dd7c5f455a`
 - Labels:
@@ -294,16 +294,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r2 description:
+libcurl-7.83.1-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r2 webpage:
+libcurl-7.83.1-r3 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r2 installed size:
-512 KiB
+libcurl-7.83.1-r3 installed size:
+516 KiB
 
-libcurl-7.83.1-r2 license:
+libcurl-7.83.1-r3 license:
 curl
 
 ```
@@ -362,16 +362,16 @@ OpenSSL
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.14-r0 description:
+libxml2-2.9.14-r1 description:
 XML parsing library, version 2
 
-libxml2-2.9.14-r0 webpage:
+libxml2-2.9.14-r1 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.14-r0 installed size:
+libxml2-2.9.14-r1 installed size:
 1200 KiB
 
-libxml2-2.9.14-r0 license:
+libxml2-2.9.14-r1 license:
 MIT
 
 ```
