@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0d0ac70c51b152d3310f88e1ec0c2dea147773db8919c11d5a9b69ad9efdb9d0`
-- Created: `2022-08-22T19:23:09.887862848Z`
-- Virtual Size: ~ 200.58 Mb  
+- Image ID: `sha256:7c7139e3be9438ab7d70589e57e19e75a20d8f9604d4e2bef1a6705427901a89`
+- Created: `2022-09-01T23:54:14.198658402Z`
+- Virtual Size: ~ 200.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.9`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.9.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.9.tar.xz.asc`
-  - `PHP_SHA256=53477e73e6254dc942b68913a58d815ffdbf6946baf61a1f8ef854de524c27bf`
+  - `PHP_VERSION=8.1.10`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.10.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.10.tar.xz.asc`
+  - `PHP_SHA256=90e7120c77ee83630e6ac928d23bc6396603d62d83a3cf5df8a450d2e3070162`
   - `COMPOSER_ALLOW_SUPERUSER=1`
   - `COMPOSER_HOME=/tmp`
   - `COMPOSER_VERSION=2.4.1`
@@ -251,16 +251,16 @@ GPL-3.0-or-later
 ### `apk` package: `curl`
 
 ```console
-curl-7.83.1-r2 description:
+curl-7.83.1-r3 description:
 URL retrival utility and library
 
-curl-7.83.1-r2 webpage:
+curl-7.83.1-r3 webpage:
 https://curl.se/
 
-curl-7.83.1-r2 installed size:
+curl-7.83.1-r3 installed size:
 256 KiB
 
-curl-7.83.1-r2 license:
+curl-7.83.1-r3 license:
 curl
 
 ```
@@ -438,16 +438,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r2 description:
+libcurl-7.83.1-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r2 webpage:
+libcurl-7.83.1-r3 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r2 installed size:
-512 KiB
+libcurl-7.83.1-r3 installed size:
+516 KiB
 
-libcurl-7.83.1-r2 license:
+libcurl-7.83.1-r3 license:
 curl
 
 ```
