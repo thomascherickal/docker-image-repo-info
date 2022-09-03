@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7d4ec315b749bdcf3f93a8f30e173f402a11bad7941f11df5c7e602d357b7458`
-- Created: `2022-08-10T05:40:50.237698959Z`
-- Virtual Size: ~ 312.87 Mb  
+- Image ID: `sha256:f5114abdface2742ce8e21b62795042f5b8dca2334358a21c482d0450aeafec1`
+- Created: `2022-09-02T00:11:19.997312077Z`
+- Virtual Size: ~ 313.46 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.22`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.22.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.22.tar.xz.asc`
-  - `PHP_SHA256=130937c0fa3050cd33d6c415402f6ccbf0682ae83eb8d39c91164224ddfe57f1`
+  - `PHP_VERSION=8.0.23`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.23.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.23.tar.xz.asc`
+  - `PHP_SHA256=65e474b6bd8cfc9d4a8a56268a755e2f9d3e7499e1687e6401a9f2b047600f87`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
   - `JOOMLA_VERSION=4.1.5`
   - `JOOMLA_SHA512=81edf13386640f358aec8d4facc4bda53bca401632d796a0b2137e5cdcb6635dc91d6abeb10e06545881a7a011dbe55ab8e07d670044cf563927467149f2cd2e`
@@ -729,16 +729,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r2 description:
+libcurl-7.83.1-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r2 webpage:
+libcurl-7.83.1-r3 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r2 installed size:
-512 KiB
+libcurl-7.83.1-r3 installed size:
+516 KiB
 
-libcurl-7.83.1-r2 license:
+libcurl-7.83.1-r3 license:
 curl
 
 ```
@@ -967,16 +967,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-14.4-r1 description:
+libpq-14.5-r0 description:
 PostgreSQL client library
 
-libpq-14.4-r1 webpage:
+libpq-14.5-r0 webpage:
 https://www.postgresql.org/
 
-libpq-14.4-r1 installed size:
+libpq-14.5-r0 installed size:
 328 KiB
 
-libpq-14.4-r1 license:
+libpq-14.5-r0 license:
 PostgreSQL
 
 ```
@@ -1222,16 +1222,16 @@ MIT
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.14-r0 description:
+libxml2-2.9.14-r1 description:
 XML parsing library, version 2
 
-libxml2-2.9.14-r0 webpage:
+libxml2-2.9.14-r1 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.14-r0 installed size:
+libxml2-2.9.14-r1 installed size:
 1200 KiB
 
-libxml2-2.9.14-r0 license:
+libxml2-2.9.14-r1 license:
 MIT
 
 ```

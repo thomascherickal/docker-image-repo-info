@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4c1eb8c0116bca649a29d63932fe6aa15ed39e0e62abc5d371dbc2ee8b7fd994`
-- Created: `2022-08-23T22:40:42.406468802Z`
-- Virtual Size: ~ 624.68 Mb  
+- Image ID: `sha256:58b5d5f667a7e427b26dfd48c4d16bd474c0df5e2d4e1eec276eba8db8ee1a46`
+- Created: `2022-09-02T00:08:54.078868867Z`
+- Virtual Size: ~ 624.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -19,10 +19,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.22`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.22.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.22.tar.xz.asc`
-  - `PHP_SHA256=130937c0fa3050cd33d6c415402f6ccbf0682ae83eb8d39c91164224ddfe57f1`
+  - `PHP_VERSION=8.0.23`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.23.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.23.tar.xz.asc`
+  - `PHP_SHA256=65e474b6bd8cfc9d4a8a56268a755e2f9d3e7499e1687e6401a9f2b047600f87`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
   - `JOOMLA_VERSION=4.1.5`
   - `JOOMLA_SHA512=81edf13386640f358aec8d4facc4bda53bca401632d796a0b2137e5cdcb6635dc91d6abeb10e06545881a7a011dbe55ab8e07d670044cf563927467149f2cd2e`
@@ -4443,11 +4443,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/xz-utils/5.2.5-2.1~deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/xz-utils/5.2.5-2.1~deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `zlib=1:1.2.11.dfsg-2+deb11u1`
+### `dpkg` source package: `zlib=1:1.2.11.dfsg-2+deb11u2`
 
 Binary Packages:
 
-- `zlib1g:amd64=1:1.2.11.dfsg-2+deb11u1`
+- `zlib1g:amd64=1:1.2.11.dfsg-2+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
@@ -4456,14 +4456,14 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2+deb11u1
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-2%2bdeb11u1.dsc' zlib_1.2.11.dfsg-2+deb11u1.dsc 2905 SHA256:4be50e6655d32da16f6fa663946838a7c60d68e3421510e64ab77067d1eb6e54
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-2%2bdeb11u1.debian.tar.xz' zlib_1.2.11.dfsg-2+deb11u1.debian.tar.xz 23356 SHA256:7380daff57172ae036210c74dabef77dbab7489ff24eb68eb1b770445eb28dc6
+$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2+deb11u2
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-2%2bdeb11u2.dsc' zlib_1.2.11.dfsg-2+deb11u2.dsc 2905 SHA256:ec2ee2fc4dfd1f799dfa6a95133ebccbd7531886de38b0a8e3e58b66706a6dc7
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-2%2bdeb11u2.debian.tar.xz' zlib_1.2.11.dfsg-2+deb11u2.debian.tar.xz 23984 SHA256:c19794df214f0c2571b19f7dea853c066410232abe9f0ddad77231fabccde0da
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-2+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-2+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-2+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-2+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-2+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-2+deb11u2/ (for access to the source package after it no longer exists in the archive)
