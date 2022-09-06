@@ -2,15 +2,15 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0ce17ec8cd808074c0b242c463275fec3b0882f6e530f6697c7c144b944d365d`
-- Created: `2022-08-10T02:26:07.797408577Z`
-- Virtual Size: ~ 344.53 Mb  
+- Image ID: `sha256:a613f2306c18908a90e4e6f721dd6da4fc2ea19bc34e1a74ab10d1fd88853222`
+- Created: `2022-09-06T19:53:03.051543233Z`
+- Virtual Size: ~ 344.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/sh"]`
 - Environment:
   - `PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `GOLANG_VERSION=1.18.5`
+  - `GOLANG_VERSION=1.18.6`
   - `GOPATH=/go`
   - `XCADDY_VERSION=v0.3.0`
   - `CADDY_VERSION=v2.5.2`
@@ -225,16 +225,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r2 description:
+libcurl-7.83.1-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r2 webpage:
+libcurl-7.83.1-r3 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r2 installed size:
-512 KiB
+libcurl-7.83.1-r3 installed size:
+516 KiB
 
-libcurl-7.83.1-r2 license:
+libcurl-7.83.1-r3 license:
 curl
 
 ```
