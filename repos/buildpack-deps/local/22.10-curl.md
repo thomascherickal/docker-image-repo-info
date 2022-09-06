@@ -167,14 +167,9 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.1-6ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.dsc' bash_5.1-6ubuntu1.dsc 2426 SHA512:9c808b5b8a281e01c5a4a503eca84fca8b21a2153dc4e7abbedda21346ae4005c806ffe7afd689b7ff66af8d431b9b4bebf2f1324745c01ed5f3ee219a515a88
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA512:95d3acc542231cb893e1347c7d9dd66687f68cd347a0e9e126fde2d14e68c5b5530d1a5866eafa781e88aa013fcf72b4ad56d2e484c2ac7a69bd90bb149a9b86
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.debian.tar.xz' bash_5.1-6ubuntu1.debian.tar.xz 99652 SHA512:da77655882d0977656b75c750589307c54c7d5dd28b1cfc357d4a474ebf26399a91cfa19c4ba381e0a59a8f115f8381d432e82f2e659cb9bcbebf3fa0cd77bc1
-```
 
 ### `dpkg` source package: `brotli=1.0.9-2build6`
 
@@ -289,15 +284,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.84.0-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.84.0-2ubuntu1.dsc' curl_7.84.0-2ubuntu1.dsc 3066 SHA512:4a16f7e2194e1af19f82a8bcfe38ba5b851b1fe8c58d47ffc26b517000e11d223ed8b1a945272bb530a9a08f450e79752262e8d5b605972e712d8ed2158dea85
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.84.0.orig.tar.gz' curl_7.84.0.orig.tar.gz 4173236 SHA512:8133baf48dfd93531ce0a226b54cb153fd58bb0c1ffe8159cee0c0aa23ce210192c572e8ee01f3d75a87b609a580e76929df1e66635be59c177b0cb8076043b2
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.84.0.orig.tar.gz.asc' curl_7.84.0.orig.tar.gz.asc 488 SHA512:143cbb7aab4077fba0527e88e672790b63d6299eb4a472ce5c9c0d8da0d0128f7c242e8b9e78f2cf94fb2229d11a5b6e3d4d1acd6af6fa29aa912b526ed2f986
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.84.0-2ubuntu1.debian.tar.xz' curl_7.84.0-2ubuntu1.debian.tar.xz 36580 SHA512:c55aeb9e8f644c15f828981f0c4ecbe8653dd58ac5a6fdd97863c5af56fe6dad3e134d769d284085375a58ad13160c228f623eae496a9bfc60033a55ab18f737
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-6ubuntu2`
 
@@ -1393,14 +1382,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.5.12+dfsg-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.12%2bdfsg-2ubuntu1.dsc' openldap_2.5.12+dfsg-2ubuntu1.dsc 3278 SHA512:cebe7662ca7d4a70ce7eadd38c7a5f4cf7796f2966687761f74a01e875c3483e987aa9f4d5a5c5d8f95053a975d2fe0f082a430c6bd1e37788155c8264aa8427
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.12%2bdfsg.orig.tar.gz' openldap_2.5.12+dfsg.orig.tar.gz 5612581 SHA512:d93347477049e061758a625d9c386dbbc32db22f83e86afd5bfd3ca242216d2158412cf8e37038db3a80f21db5424f0014d79107735146225d85482533b81212
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.12%2bdfsg-2ubuntu1.debian.tar.xz' openldap_2.5.12+dfsg-2ubuntu1.debian.tar.xz 171176 SHA512:a4c12aa38918927823772fc6be63e4c30a1d29bea75b404073a4ec47517bfbe5bfcc927878898bb8af86d8f52962892754274c1d6a5b0bec7b4d6949267d050b
-```
 
 ### `dpkg` source package: `openssl=3.0.5-2ubuntu1`
 
@@ -1774,14 +1758,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=251.4-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_251.4-1ubuntu1.dsc' systemd_251.4-1ubuntu1.dsc 6439 SHA512:8ad313feaf6e4daf0ab8d6cad1b32977063d7c3cbb677502b90140a4c45b6055e7e8b4e90c40273c0d776d592edd36bd1401be204ad51784d7acced786e44fa3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_251.4.orig.tar.gz' systemd_251.4.orig.tar.gz 11440203 SHA512:7bbfadd80b88a4c3510a5e4e3572e4eab71dafbf6289da038e552988e09ee8da16da3c9bb8a4fbbde6c6236e0e3c352b0a33f9ee0b84f10241f3499383387738
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_251.4-1ubuntu1.debian.tar.xz' systemd_251.4-1ubuntu1.debian.tar.xz 224028 SHA512:1ba6734a0574364567d4b839c96dcbbaad5a177f68c8a042427e8fba2ed6d334632c35aa6592c3a1bccebff939bd7844b44eae2c9c57f4cc5ca05fb35633580e
-```
 
 ### `dpkg` source package: `sysvinit=3.04-1ubuntu1`
 

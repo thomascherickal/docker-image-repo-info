@@ -309,14 +309,9 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.1-6ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.dsc' bash_5.1-6ubuntu1.dsc 2426 SHA512:9c808b5b8a281e01c5a4a503eca84fca8b21a2153dc4e7abbedda21346ae4005c806ffe7afd689b7ff66af8d431b9b4bebf2f1324745c01ed5f3ee219a515a88
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA512:95d3acc542231cb893e1347c7d9dd66687f68cd347a0e9e126fde2d14e68c5b5530d1a5866eafa781e88aa013fcf72b4ad56d2e484c2ac7a69bd90bb149a9b86
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.debian.tar.xz' bash_5.1-6ubuntu1.debian.tar.xz 99652 SHA512:da77655882d0977656b75c750589307c54c7d5dd28b1cfc357d4a474ebf26399a91cfa19c4ba381e0a59a8f115f8381d432e82f2e659cb9bcbebf3fa0cd77bc1
-```
 
 ### `dpkg` source package: `binutils=2.39-1ubuntu1`
 
@@ -485,15 +480,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.84.0-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.84.0-2ubuntu1.dsc' curl_7.84.0-2ubuntu1.dsc 3066 SHA512:4a16f7e2194e1af19f82a8bcfe38ba5b851b1fe8c58d47ffc26b517000e11d223ed8b1a945272bb530a9a08f450e79752262e8d5b605972e712d8ed2158dea85
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.84.0.orig.tar.gz' curl_7.84.0.orig.tar.gz 4173236 SHA512:8133baf48dfd93531ce0a226b54cb153fd58bb0c1ffe8159cee0c0aa23ce210192c572e8ee01f3d75a87b609a580e76929df1e66635be59c177b0cb8076043b2
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.84.0.orig.tar.gz.asc' curl_7.84.0.orig.tar.gz.asc 488 SHA512:143cbb7aab4077fba0527e88e672790b63d6299eb4a472ce5c9c0d8da0d0128f7c242e8b9e78f2cf94fb2229d11a5b6e3d4d1acd6af6fa29aa912b526ed2f986
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.84.0-2ubuntu1.debian.tar.xz' curl_7.84.0-2ubuntu1.debian.tar.xz 36580 SHA512:c55aeb9e8f644c15f828981f0c4ecbe8653dd58ac5a6fdd97863c5af56fe6dad3e134d769d284085375a58ad13160c228f623eae496a9bfc60033a55ab18f737
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-6ubuntu2`
 
@@ -770,14 +759,13 @@ Licenses: (parsed from: `/usr/share/doc/libelf1/copyright`)
 - `GPL-3`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris elfutils=0.187-1
-'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.187-1.dsc' elfutils_0.187-1.dsc 3218 SHA512:334bf178060b8d32b27519bfc8169d467c93d34eddbbbd519fb0e21b9b7717f122a539c284600179be2fd8ad91f24dc3cdbd0619b5a98353170ae142d00b9f95
-'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.187.orig.tar.bz2' elfutils_0.187.orig.tar.bz2 9240221 SHA512:a9b9e32b503b8b50a62d4e4001097ed2721d3475232a6380e6b9853bd1647aec016440c0ca7ceb950daf1144f8db9814ab43cf33cc0ebef7fc91e9e775c9e874
-'http://archive.ubuntu.com/ubuntu/pool/main/e/elfutils/elfutils_0.187-1.debian.tar.xz' elfutils_0.187-1.debian.tar.xz 37944 SHA512:bb5205ef1df968bdfbeb9bd6ccbd7c72e9a5a48b728cc8ec8ebe1bd15a403a5f4a5d9f2b6ee49828ae704c519ffdd936da767fc9e450add854581f08e7254a71
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/elfutils/0.187-1/
+
 
 ### `dpkg` source package: `expat=2.4.8-1`
 
@@ -1514,15 +1502,9 @@ Licenses: (parsed from: `/usr/share/doc/libimath-3-1-29/copyright`, `/usr/share/
 
 - `imath`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris imath=3.1.5-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imath/imath_3.1.5-1ubuntu1.dsc' imath_3.1.5-1ubuntu1.dsc 2649 SHA512:75fd13364e753d8de2a0cd1170256fb8e0c4e7154bf53726c7241d2ab53668792287d11ca8c3284470dbd75105c1e56bc1cb019bf64d7f7a6c8762b17a5922b3
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imath/imath_3.1.5.orig.tar.gz' imath_3.1.5.orig.tar.gz 570875 SHA512:8344e42c75d8e4bb21facb837535f0c9e4a9489d9edebcc25d5d3c6063535f2bf54e4517d8fca3fedada248457aa07c9bd77d6e843a9d115278fc154de2cdc9d
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imath/imath_3.1.5.orig.tar.gz.asc' imath_3.1.5.orig.tar.gz.asc 287 SHA512:9b3978e44b531429aba42b9cc4969a470898d9d74652e3809edb0273ba9b127c471aec6570b5d352be738f59810091c0df2c70d39c16d2c32833d173b270f72c
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imath/imath_3.1.5-1ubuntu1.debian.tar.xz' imath_3.1.5-1ubuntu1.debian.tar.xz 9040 SHA512:1ba1f2c5cb3c65d967ac1dcb194d488c12b63fb9953a53f189544f5b9f204ea90b7f37180f3cff36e410ebffd5b2c4c97938ea9634fa8f9119a2295aecc7b67b
-```
 
 ### `dpkg` source package: `init-system-helpers=1.64`
 
@@ -2997,14 +2979,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.15.0-27.28
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-27.28.dsc' linux_5.15.0-27.28.dsc 7228 SHA512:aac822f21ca50f5df9be71f6a463956d04555294ac158c89bc1b70c41a73172eb79b86d8a9c7e3c0212c621d2e37576d55f86bc6df1beb1239f500a220f527b6
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-27.28.diff.gz' linux_5.15.0-27.28.diff.gz 5796913 SHA512:edb6ec3f2847403964bc7221b4d00a399885d34849343424a9922e4f7048e9946d806031a54d739622d5aa9a64365519442f272751ee0e99fef89c2a56a9c4d3
-```
 
 ### `dpkg` source package: `lsb=11.2ubuntu1`
 
@@ -3175,15 +3152,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=6.2-1
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_6.2-1.dsc' mercurial_6.2-1.dsc 2779 SHA512:1dd90ed9140c1846b1bf5128fc9c270f5d1781574c40c82c4125b3268480d8a046dcb678f779ca020cec45e9757c57adcbdf56597c66b03fe73a25d329b676b8
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_6.2.orig.tar.gz' mercurial_6.2.orig.tar.gz 8053713 SHA512:0c988a558e60ba456196420dcf720558f6ce63fcc42bf43a8f6af16289b5f2a81738a4c038a620040394215e3e57ba254ee56fa072962f7bd0b3b191d8334fef
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_6.2.orig.tar.gz.asc' mercurial_6.2.orig.tar.gz.asc 659 SHA512:8542865cc1ac11878ae1e282cd7e94a6889047b453a9ef0a937665830a93bc345a4aaa8fb039e7ad6767b7a4f3f07ae2e0aff7f2a6ed3284395a34e9fdd76e96
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mercurial/mercurial_6.2-1.debian.tar.xz' mercurial_6.2-1.debian.tar.xz 69968 SHA512:e950367b0dcbdd41819fb88ac97523fc2615d2f39215f02682532610a408c3f3b8a0028108b671f23e6fe5c8a1c309da7c89fa866ddd0b6b964035778586369e
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/mercurial/6.2-1/
+
 
 ### `dpkg` source package: `mpclib3=1.2.1-2build1`
 
@@ -3500,14 +3475,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.5.12+dfsg-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.12%2bdfsg-2ubuntu1.dsc' openldap_2.5.12+dfsg-2ubuntu1.dsc 3278 SHA512:cebe7662ca7d4a70ce7eadd38c7a5f4cf7796f2966687761f74a01e875c3483e987aa9f4d5a5c5d8f95053a975d2fe0f082a430c6bd1e37788155c8264aa8427
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.12%2bdfsg.orig.tar.gz' openldap_2.5.12+dfsg.orig.tar.gz 5612581 SHA512:d93347477049e061758a625d9c386dbbc32db22f83e86afd5bfd3ca242216d2158412cf8e37038db3a80f21db5424f0014d79107735146225d85482533b81212
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.12%2bdfsg-2ubuntu1.debian.tar.xz' openldap_2.5.12+dfsg-2ubuntu1.debian.tar.xz 171176 SHA512:a4c12aa38918927823772fc6be63e4c30a1d29bea75b404073a4ec47517bfbe5bfcc927878898bb8af86d8f52962892754274c1d6a5b0bec7b4d6949267d050b
-```
 
 ### `dpkg` source package: `openssh=1:9.0p1-1ubuntu3`
 
@@ -4238,14 +4208,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=251.4-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_251.4-1ubuntu1.dsc' systemd_251.4-1ubuntu1.dsc 6439 SHA512:8ad313feaf6e4daf0ab8d6cad1b32977063d7c3cbb677502b90140a4c45b6055e7e8b4e90c40273c0d776d592edd36bd1401be204ad51784d7acced786e44fa3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_251.4.orig.tar.gz' systemd_251.4.orig.tar.gz 11440203 SHA512:7bbfadd80b88a4c3510a5e4e3572e4eab71dafbf6289da038e552988e09ee8da16da3c9bb8a4fbbde6c6236e0e3c352b0a33f9ee0b84f10241f3499383387738
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_251.4-1ubuntu1.debian.tar.xz' systemd_251.4-1ubuntu1.debian.tar.xz 224028 SHA512:1ba6734a0574364567d4b839c96dcbbaad5a177f68c8a042427e8fba2ed6d334632c35aa6592c3a1bccebff939bd7844b44eae2c9c57f4cc5ca05fb35633580e
-```
 
 ### `dpkg` source package: `sysvinit=3.04-1ubuntu1`
 

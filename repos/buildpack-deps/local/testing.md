@@ -376,20 +376,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.1-6.1
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-6.1.dsc' bash_5.1-6.1.dsc 2279 SHA256:01eabdef2dfbb323ff1bf475b5fb9176456de2d5210dbc83b5e85c40afd10105
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA256:d5eeee4f953c09826409d572e2e8996a2140d67eb8f382ce1f3a9d23883ad696
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-6.1.debian.tar.xz' bash_5.1-6.1.debian.tar.xz 93472 SHA256:241906d63ddde94eadadaff6c0e50cea1cc3736d00e521709a02b547737e713f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.1-6.1/
 
-- https://sources.debian.net/src/bash/5.1-6.1/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.1-6.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.1-6.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `binutils=2.38.90.20220713-2`
 
@@ -677,20 +670,13 @@ Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dash=0.5.11+git20210903+057cd650a4ed-8
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-8.dsc' dash_0.5.11+git20210903+057cd650a4ed-8.dsc 1720 SHA256:3432b00a30ea7860062ff02c87ae7488be0d8aea11e6f5fe24f2c3b1016d5dec
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed.orig.tar.xz' dash_0.5.11+git20210903+057cd650a4ed.orig.tar.xz 133320 SHA256:4fb06697f33f14fcd6b96cd4dfdd5b343c848a4bb69b7c04f1717767e4a117d3
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-8.debian.tar.xz' dash_0.5.11+git20210903+057cd650a4ed-8.debian.tar.xz 35576 SHA256:2813dc4d6a369c016c518edb241504bf1a03e247dfe6effb9acd1ffd4cd5abaf
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dash/0.5.11+git20210903+057cd650a4ed-8/
 
-- https://sources.debian.net/src/dash/0.5.11+git20210903+057cd650a4ed-8/ (for browsing the source)
-- https://sources.debian.net/src/dash/0.5.11+git20210903+057cd650a4ed-8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dash/0.5.11+git20210903+057cd650a4ed-8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `dav1d=1.0.0-2`
 
@@ -1607,20 +1593,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-freedesktop/copyright`, `/usr/sha
 - `LGPL-2+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gobject-introspection=1.72.0-1
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.72.0-1.dsc' gobject-introspection_1.72.0-1.dsc 3197 SHA256:a8667574d4aa19da6eae5eb35578e2ca6ad75a0d2baae922467ab71c5309bc00
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.72.0.orig.tar.xz' gobject-introspection_1.72.0.orig.tar.xz 1040936 SHA256:02fe8e590861d88f83060dd39cda5ccaa60b2da1d21d0f95499301b186beaabc
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.72.0-1.debian.tar.xz' gobject-introspection_1.72.0-1.debian.tar.xz 25752 SHA256:aceb2c5e23f504af03eeaa2eef0007cfdca388f64dbef3642af20e038da5fb88
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gobject-introspection/1.72.0-1/
 
-- https://sources.debian.net/src/gobject-introspection/1.72.0-1/ (for browsing the source)
-- https://sources.debian.net/src/gobject-introspection/1.72.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gobject-introspection/1.72.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `graphite2=1.3.14-1`
 

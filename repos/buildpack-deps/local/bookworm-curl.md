@@ -1986,20 +1986,13 @@ Licenses: (parsed from: `/usr/share/doc/libreadline8/copyright`, `/usr/share/doc
 - `GFDL`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris readline=8.1.2-1.2
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1.2-1.2.dsc' readline_8.1.2-1.2.dsc 2638 SHA256:152ddc26da8f512ecffc84c959621d3541147d0018f8aee509e8c272b7b246c1
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1.2.orig.tar.gz' readline_8.1.2.orig.tar.gz 2993073 SHA256:7589a2381a8419e68654a47623ce7dfcb756815c8fee726b98f90bf668af7bc6
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1.2-1.2.debian.tar.xz' readline_8.1.2-1.2.debian.tar.xz 29600 SHA256:b42398b7b36a0203b487d49d0810042da46622d3b453e9eb73abbbede882f9e2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/readline/8.1.2-1.2/
 
-- https://sources.debian.net/src/readline/8.1.2-1.2/ (for browsing the source)
-- https://sources.debian.net/src/readline/8.1.2-1.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/readline/8.1.2-1.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rtmpdump=2.4+20151223.gitfa8646d.1-2`
 
@@ -2154,20 +2147,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=251.3-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.3-1.dsc' systemd_251.3-1.dsc 6150 SHA256:5949b8d8ac21f1b6e520c7ece331d16d110dcdd25e7e27018c66c3cafc185b3b
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.3.orig.tar.gz' systemd_251.3.orig.tar.gz 11435458 SHA256:11c9c3fcc13d689615dd2ea79161d1b992087cf1e2a23856d7d7ade0efbddc54
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.3-1.debian.tar.xz' systemd_251.3-1.debian.tar.xz 171480 SHA256:77061874027328ccd7972e39c4f13e66f3eec7bb84323d9d946f57c19405a976
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/251.3-1/
 
-- https://sources.debian.net/src/systemd/251.3-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/251.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/251.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.04-1`
 

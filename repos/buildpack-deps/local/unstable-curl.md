@@ -431,20 +431,13 @@ Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dash=0.5.11+git20210903+057cd650a4ed-8
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-8.dsc' dash_0.5.11+git20210903+057cd650a4ed-8.dsc 1720 SHA256:3432b00a30ea7860062ff02c87ae7488be0d8aea11e6f5fe24f2c3b1016d5dec
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed.orig.tar.xz' dash_0.5.11+git20210903+057cd650a4ed.orig.tar.xz 133320 SHA256:4fb06697f33f14fcd6b96cd4dfdd5b343c848a4bb69b7c04f1717767e4a117d3
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-8.debian.tar.xz' dash_0.5.11+git20210903+057cd650a4ed-8.debian.tar.xz 35576 SHA256:2813dc4d6a369c016c518edb241504bf1a03e247dfe6effb9acd1ffd4cd5abaf
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dash/0.5.11+git20210903+057cd650a4ed-8/
 
-- https://sources.debian.net/src/dash/0.5.11+git20210903+057cd650a4ed-8/ (for browsing the source)
-- https://sources.debian.net/src/dash/0.5.11+git20210903+057cd650a4ed-8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dash/0.5.11+git20210903+057cd650a4ed-8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `db5.3=5.3.28+dfsg1-0.10`
 
