@@ -1,7 +1,7 @@
 ## `caddy:2-alpine`
 
 ```console
-$ docker pull caddy@sha256:02ec8dc7991f3d5f63a8e14ad01c15302bf784f6df1f02543ae7a145b27c88f9
+$ docker pull caddy@sha256:b31ff95e98737b849d6af1fb9d9cb54a66ba3684564b3310541f60b12b1dd619
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16,14 +16,14 @@ $ docker pull caddy@sha256:02ec8dc7991f3d5f63a8e14ad01c15302bf784f6df1f02543ae7a
 ### `caddy:2-alpine` - linux; amd64
 
 ```console
-$ docker pull caddy@sha256:710992e6e6b73e93f20b620991f7ad024ea43772a899cfef30380bb9802233bd
+$ docker pull caddy@sha256:cfa7d94aa1f0c68a167b147a8573711283df2cd6fc285d220387f20206ff4874
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **17.0 MB (17033438 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:743ed904eb393b6d33d22912502e905e4b46e1685fb61d94a4a60c90bf238bf4`
+-	Image ID: `sha256:d83af79bf9e25fcac6c74f9e4862c41808daae08fc9693798b23edb747e6e938`
 -	Default Command: `["caddy","run","--config","\/etc\/caddy\/Caddyfile","--adapter","caddyfile"]`
 
 ```dockerfile
@@ -65,11 +65,13 @@ LABEL org.opencontainers.image.source=https://github.com/caddyserver/caddy-docke
 EXPOSE 80
 # Wed, 10 Aug 2022 02:26:01 GMT
 EXPOSE 443
-# Wed, 10 Aug 2022 02:26:01 GMT
+# Wed, 07 Sep 2022 21:19:22 GMT
+EXPOSE 443/udp
+# Wed, 07 Sep 2022 21:19:22 GMT
 EXPOSE 2019
-# Wed, 10 Aug 2022 02:26:01 GMT
+# Wed, 07 Sep 2022 21:19:22 GMT
 WORKDIR /srv
-# Wed, 10 Aug 2022 02:26:01 GMT
+# Wed, 07 Sep 2022 21:19:22 GMT
 CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 ```
 
@@ -350,14 +352,14 @@ CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 ### `caddy:2-alpine` - linux; ppc64le
 
 ```console
-$ docker pull caddy@sha256:bf7667d542a7f55a0f6c6f0f8a523c944f34bbf661068697e61dc23672573bc2
+$ docker pull caddy@sha256:c98b27fc9159cf13c479d2052080ca25cfcbe5546cfe258c1a6f70827801f6e1
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **15.4 MB (15425336 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fdc24d4466b7ad1dc55d7eff8335992e5031fe433446a2fe6470133606dedfae`
+-	Image ID: `sha256:00d851d72b6e66e7190c29af3b6f08ff07e0372c054fbc46ae13ad4f38f9554e`
 -	Default Command: `["caddy","run","--config","\/etc\/caddy\/Caddyfile","--adapter","caddyfile"]`
 
 ```dockerfile
@@ -399,11 +401,13 @@ LABEL org.opencontainers.image.source=https://github.com/caddyserver/caddy-docke
 EXPOSE 80
 # Tue, 09 Aug 2022 18:01:04 GMT
 EXPOSE 443
-# Tue, 09 Aug 2022 18:01:04 GMT
+# Wed, 07 Sep 2022 21:16:23 GMT
+EXPOSE 443/udp
+# Wed, 07 Sep 2022 21:16:23 GMT
 EXPOSE 2019
-# Tue, 09 Aug 2022 18:01:04 GMT
+# Wed, 07 Sep 2022 21:16:23 GMT
 WORKDIR /srv
-# Tue, 09 Aug 2022 18:01:05 GMT
+# Wed, 07 Sep 2022 21:16:24 GMT
 CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 ```
 
