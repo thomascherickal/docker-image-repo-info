@@ -197,20 +197,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.1-6.1
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-6.1.dsc' bash_5.1-6.1.dsc 2279 SHA256:01eabdef2dfbb323ff1bf475b5fb9176456de2d5210dbc83b5e85c40afd10105
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA256:d5eeee4f953c09826409d572e2e8996a2140d67eb8f382ce1f3a9d23883ad696
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.1-6.1.debian.tar.xz' bash_5.1-6.1.debian.tar.xz 93472 SHA256:241906d63ddde94eadadaff6c0e50cea1cc3736d00e521709a02b547737e713f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.1-6.1/
 
-- https://sources.debian.net/src/bash/5.1-6.1/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.1-6.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.1-6.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `brotli=1.0.9-2`
 
@@ -355,21 +348,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.84.0-2
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.84.0-2.dsc' curl_7.84.0-2.dsc 2959 SHA256:f222c5e81b572689741f3a20854692cabb7445a34fa058c11c4894ae3d9b1b7b
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.84.0.orig.tar.gz' curl_7.84.0.orig.tar.gz 4173236 SHA256:3c6893d38d054d4e378267166858698899e9d87258e8ff1419d020c395384535
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.84.0.orig.tar.gz.asc' curl_7.84.0.orig.tar.gz.asc 488 SHA256:68c7f4ff72aaceb2a3d2bb6790f66af081a33172f915de1ba2e26d46b63eb71d
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.84.0-2.debian.tar.xz' curl_7.84.0-2.debian.tar.xz 36164 SHA256:701ca4ce3122be35875bfef7f2ca7501fb1ff8c92d9655613e2352c6f4581c20
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.84.0-2/
 
-- https://sources.debian.net/src/curl/7.84.0-2/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.84.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.84.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-7`
 
@@ -400,20 +385,13 @@ Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/l
 - `RSA-MD`
 - `SSLeay`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.28+dfsg-7
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg-7.dsc' cyrus-sasl2_2.1.28+dfsg-7.dsc 3313 SHA256:72ac6327b01131766434486d5e5608aad20bd2827e812dba38910916615427e9
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg.orig.tar.xz' cyrus-sasl2_2.1.28+dfsg.orig.tar.xz 797472 SHA256:a15886d7da5958bd27f35b7c871dd872f6dc5b9917c9b6b15e3de014c7dab3d9
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg-7.debian.tar.xz' cyrus-sasl2_2.1.28+dfsg-7.debian.tar.xz 94272 SHA256:7156de1bf3a3ed57d991f16ddd5d2786687bec372d68d962e4a9bf4bc070ed7c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cyrus-sasl2/2.1.28+dfsg-7/
 
-- https://sources.debian.net/src/cyrus-sasl2/2.1.28+dfsg-7/ (for browsing the source)
-- https://sources.debian.net/src/cyrus-sasl2/2.1.28+dfsg-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cyrus-sasl2/2.1.28+dfsg-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `dash=0.5.11+git20210903+057cd650a4ed-8`
 
@@ -432,20 +410,13 @@ Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dash=0.5.11+git20210903+057cd650a4ed-8
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-8.dsc' dash_0.5.11+git20210903+057cd650a4ed-8.dsc 1720 SHA256:3432b00a30ea7860062ff02c87ae7488be0d8aea11e6f5fe24f2c3b1016d5dec
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed.orig.tar.xz' dash_0.5.11+git20210903+057cd650a4ed.orig.tar.xz 133320 SHA256:4fb06697f33f14fcd6b96cd4dfdd5b343c848a4bb69b7c04f1717767e4a117d3
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-8.debian.tar.xz' dash_0.5.11+git20210903+057cd650a4ed-8.debian.tar.xz 35576 SHA256:2813dc4d6a369c016c518edb241504bf1a03e247dfe6effb9acd1ffd4cd5abaf
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dash/0.5.11+git20210903+057cd650a4ed-8/
 
-- https://sources.debian.net/src/dash/0.5.11+git20210903+057cd650a4ed-8/ (for browsing the source)
-- https://sources.debian.net/src/dash/0.5.11+git20210903+057cd650a4ed-8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dash/0.5.11+git20210903+057cd650a4ed-8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `db5.3=5.3.28+dfsg1-0.10`
 
@@ -789,21 +760,13 @@ Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnup
 - `TinySCHEME`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnupg2=2.2.35-3
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.35-3.dsc' gnupg2_2.2.35-3.dsc 3219 SHA256:107fa3b78c2a7a23ffda6f6ef9fa2023f09f9d83ed5ed82f9a92f57114b6b532
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.35.orig.tar.bz2' gnupg2_2.2.35.orig.tar.bz2 7262687 SHA256:340bc255938971e6e729b3d9956fa2ef4db8215d77693bf300df2bb302498690
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.35.orig.tar.bz2.asc' gnupg2_2.2.35.orig.tar.bz2.asc 228 SHA256:433176d7c36c03fcef5888248fed9209ebe87246b996e263c3b0f923ba99e137
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.35-3.debian.tar.xz' gnupg2_2.2.35-3.debian.tar.xz 62416 SHA256:ede72827e0acafafd67f9adef995d2917ee107253729cdfae6b825f4f5302085
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnupg2/2.2.35-3/
 
-- https://sources.debian.net/src/gnupg2/2.2.35-3/ (for browsing the source)
-- https://sources.debian.net/src/gnupg2/2.2.35-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnupg2/2.2.35-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnutls28=3.7.7-2`
 

@@ -1492,21 +1492,13 @@ Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnup
 - `TinySCHEME`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnupg2=2.2.35-3
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.35-3.dsc' gnupg2_2.2.35-3.dsc 3219 SHA256:107fa3b78c2a7a23ffda6f6ef9fa2023f09f9d83ed5ed82f9a92f57114b6b532
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.35.orig.tar.bz2' gnupg2_2.2.35.orig.tar.bz2 7262687 SHA256:340bc255938971e6e729b3d9956fa2ef4db8215d77693bf300df2bb302498690
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.35.orig.tar.bz2.asc' gnupg2_2.2.35.orig.tar.bz2.asc 228 SHA256:433176d7c36c03fcef5888248fed9209ebe87246b996e263c3b0f923ba99e137
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.35-3.debian.tar.xz' gnupg2_2.2.35-3.debian.tar.xz 62416 SHA256:ede72827e0acafafd67f9adef995d2917ee107253729cdfae6b825f4f5302085
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnupg2/2.2.35-3/
 
-- https://sources.debian.net/src/gnupg2/2.2.35-3/ (for browsing the source)
-- https://sources.debian.net/src/gnupg2/2.2.35-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnupg2/2.2.35-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnutls28=3.7.7-2`
 
@@ -1616,21 +1608,13 @@ Licenses: (parsed from: `/usr/share/doc/grep/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris grep=3.7-1
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.7-1.dsc' grep_3.7-1.dsc 1644 SHA256:f1fbf4f6d2362e6057bae9e09d6672d221f9efec41dade6ec3c294c6dd8e99e9
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.7.orig.tar.xz' grep_3.7.orig.tar.xz 1641196 SHA256:5c10da312460aec721984d5d83246d24520ec438dd48d7ab5a05dbc0d6d6823c
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.7.orig.tar.xz.asc' grep_3.7.orig.tar.xz.asc 833 SHA256:d79a0137eb803938ff47dc366825d05d1a042457f74acc264a361a84428a5de7
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.7-1.debian.tar.xz' grep_3.7-1.debian.tar.xz 18104 SHA256:064cfebccc2f5a66978f72ea0b601fa9e5d59588b6e9ff86bf2b4ea7f303ca3f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/grep/3.7-1/
 
-- https://sources.debian.net/src/grep/3.7-1/ (for browsing the source)
-- https://sources.debian.net/src/grep/3.7-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/grep/3.7-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gzip=1.12-1`
 
@@ -4197,20 +4181,13 @@ Licenses: (parsed from: `/usr/share/doc/libnuma1/copyright`)
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris numactl=2.0.14-3
-'http://deb.debian.org/debian/pool/main/n/numactl/numactl_2.0.14-3.dsc' numactl_2.0.14-3.dsc 1974 SHA256:912fbd67b2a0e555d3af71aa40d0d86518943a752fc9946d0bdbee57b4db28e2
-'http://deb.debian.org/debian/pool/main/n/numactl/numactl_2.0.14.orig.tar.gz' numactl_2.0.14.orig.tar.gz 107593 SHA256:159799e9101faf123454bc0193c8c941b4c676552bc8178e5e8a3d68691e1020
-'http://deb.debian.org/debian/pool/main/n/numactl/numactl_2.0.14-3.debian.tar.xz' numactl_2.0.14-3.debian.tar.xz 6992 SHA256:1cbe8d7a5cba6f42ef3c4c116ebed1313dc5b4df7220f2b420dc7bf16a4b3327
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/numactl/2.0.14-3/
 
-- https://sources.debian.net/src/numactl/2.0.14-3/ (for browsing the source)
-- https://sources.debian.net/src/numactl/2.0.14-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/numactl/2.0.14-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openexr=3.1.5-4`
 
@@ -4846,20 +4823,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.10=3.10.6-1
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.6-1.dsc' python3.10_3.10.6-1.dsc 3639 SHA256:39d0abe62c698c58ff34662a947d0605de860f10ceac878267e5056fd6e106cd
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.6.orig.tar.xz' python3.10_3.10.6.orig.tar.xz 19600672 SHA256:f795ff87d11d4b0c7c33bc8851b0c28648d8a4583aa2100a98c22b4326b6d3f3
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.6-1.debian.tar.xz' python3.10_3.10.6-1.debian.tar.xz 219472 SHA256:eb89828e0273113e38e4557864b2befaecb53f61b0504cea2a965d8a9be5e3a2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.10/3.10.6-1/
 
-- https://sources.debian.net/src/python3.10/3.10.6-1/ (for browsing the source)
-- https://sources.debian.net/src/python3.10/3.10.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.10/3.10.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.1.2-1.2`
 

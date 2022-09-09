@@ -2398,13 +2398,9 @@ Licenses: (parsed from: `/usr/share/doc/usrmerge/copyright`)
 - `GPL-2`
 - `later (please see /usr/share/common-licenses/GPL-2)`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris usrmerge=29ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_29ubuntu1.dsc' usrmerge_29ubuntu1.dsc 1674 SHA512:7374983270ea2d034c68b48b209bb405aa703654e5b4c430fac3c71a2daa303d8312316bcff3b6a6f69afa9f66d2c48487cfa5f0c9b9d5aa1531e9ef7a206a09
-'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_29ubuntu1.tar.xz' usrmerge_29ubuntu1.tar.xz 13276 SHA512:a0cf9d4a6a1df3881096eb3d177d915ef5467f90300f71614cafe3116659af8ae0c7c2872d3d2b1f19c9a331fe1cf620379de079b25c9f088e60c388c1feb063
-```
 
 ### `dpkg` source package: `utf8proc=2.7.0-3`
 

@@ -1122,14 +1122,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.72.3-1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.72.3-1.dsc' glib2.0_2.72.3-1.dsc 3399 SHA512:dc6880afad6686d97cde6471447ed82dc9ed651c95b10cd97d60613e99320d16bc74cfc19fd2a36b6305c63342f4d404e2e1cc2c3ff77bab2800f32b9c8fbac8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.72.3.orig.tar.xz' glib2.0_2.72.3.orig.tar.xz 4893484 SHA512:8834ab7498577c2f659d135b87c27b34e1157be27f6c1fe5af0d64a94654f78cbe6a87e6868966849674c34e88a9d51d2de8d89f78f86aa1e1af3482761f0638
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.72.3-1.debian.tar.xz' glib2.0_2.72.3-1.debian.tar.xz 104228 SHA512:66cc300504a2fd64e4f9a60726fc3933ecdfbea3bb0cfb57f1f638dc76fca7458c6efc06523d0057281293999a56022dcc380e2c06e9f005cf931f09478af274
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/glib2.0/2.72.3-1/
+
 
 ### `dpkg` source package: `glibc=2.36-0ubuntu2`
 
@@ -1273,14 +1272,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-freedesktop/copyright`, `/usr/sha
 - `LGPL-2+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gobject-introspection=1.72.0-1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gobject-introspection/gobject-introspection_1.72.0-1.dsc' gobject-introspection_1.72.0-1.dsc 3197 SHA512:5ab663d2ffbd50e238c970808f8893c5d9de42b47d9b56c46e424135f85e6bbb43aab7a1e3a8737bea71e38c946cea469c482f148e96c236a6a784bcf76626a7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gobject-introspection/gobject-introspection_1.72.0.orig.tar.xz' gobject-introspection_1.72.0.orig.tar.xz 1040936 SHA512:b8fba2bd12e93776c55228acf3487bef36ee40b1abdc7f681b827780ac94a8bfa1f59b0c30d60fa5a1fea2f610de78b9e52029f411128067808f17eb6374cdc5
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gobject-introspection/gobject-introspection_1.72.0-1.debian.tar.xz' gobject-introspection_1.72.0-1.debian.tar.xz 25752 SHA512:ea95a4876d73e31b87ebd869b7a1a12029f6c7205448b46b6452a0731338a1b5fe5adc724675dad8e57bca94e4b04a9a497b0a4ebe49dc9686ed1ab02c4a33ec
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/gobject-introspection/1.72.0-1/
+
 
 ### `dpkg` source package: `graphite2=1.3.14-1build2`
 
@@ -2071,14 +2069,9 @@ Licenses: (parsed from: `/usr/share/doc/libheif1/copyright`)
 - `LGPL-3+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libheif=1.12.0-2build3
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.12.0-2build3.dsc' libheif_1.12.0-2build3.dsc 2386 SHA512:63c1db149dc1c477a181771ec4572e9683961e3d2f78743384a1bae64a0b5a10f1eda65839e7c8556f10b0cb1aaf44d672f4f2ac33f83e81faa4800ec294084e
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.12.0.orig.tar.gz' libheif_1.12.0.orig.tar.gz 1684355 SHA512:9e6f74dd52841a33b6021a1581ab28c56123d927caa7972acd284444e90888bbdae983b6d847d20eac7651dacea2193d27eb8df45928cb0774229ef8eea23294
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.12.0-2build3.debian.tar.xz' libheif_1.12.0-2build3.debian.tar.xz 7196 SHA512:572063dad4f77a1002d64dcf5b96edf62d3dbfe88f98df5ff726217e72408dac5d3f8960fca7b29d44ddcaa98641e252064f4ff16223ed543cab1f10cdcd25ca
-```
 
 ### `dpkg` source package: `libice=2:1.0.10-1build2`
 
@@ -4360,13 +4353,9 @@ Licenses: (parsed from: `/usr/share/doc/usrmerge/copyright`)
 - `GPL-2`
 - `later (please see /usr/share/common-licenses/GPL-2)`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris usrmerge=29ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_29ubuntu1.dsc' usrmerge_29ubuntu1.dsc 1674 SHA512:7374983270ea2d034c68b48b209bb405aa703654e5b4c430fac3c71a2daa303d8312316bcff3b6a6f69afa9f66d2c48487cfa5f0c9b9d5aa1531e9ef7a206a09
-'http://archive.ubuntu.com/ubuntu/pool/main/u/usrmerge/usrmerge_29ubuntu1.tar.xz' usrmerge_29ubuntu1.tar.xz 13276 SHA512:a0cf9d4a6a1df3881096eb3d177d915ef5467f90300f71614cafe3116659af8ae0c7c2872d3d2b1f19c9a331fe1cf620379de079b25c9f088e60c388c1feb063
-```
 
 ### `dpkg` source package: `utf8proc=2.7.0-3`
 
