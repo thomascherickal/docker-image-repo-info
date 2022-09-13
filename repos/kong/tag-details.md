@@ -22,6 +22,11 @@
 -	[`kong:2.8.1`](#kong281)
 -	[`kong:2.8.1-alpine`](#kong281-alpine)
 -	[`kong:2.8.1-ubuntu`](#kong281-ubuntu)
+-	[`kong:3.0`](#kong30)
+-	[`kong:3.0-ubuntu`](#kong30-ubuntu)
+-	[`kong:3.0.0`](#kong300)
+-	[`kong:3.0.0-alpine`](#kong300-alpine)
+-	[`kong:3.0.0-ubuntu`](#kong300-ubuntu)
 -	[`kong:alpine`](#kongalpine)
 -	[`kong:latest`](#konglatest)
 -	[`kong:ubuntu`](#kongubuntu)
@@ -3173,6 +3178,26 @@ CMD ["kong" "docker-start"]
 		Last Modified: Fri, 02 Sep 2022 06:50:14 GMT  
 		Size: 879.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `kong:3.0`
+
+**does not exist** (yet?)
+
+## `kong:3.0-ubuntu`
+
+**does not exist** (yet?)
+
+## `kong:3.0.0`
+
+**does not exist** (yet?)
+
+## `kong:3.0.0-alpine`
+
+**does not exist** (yet?)
+
+## `kong:3.0.0-ubuntu`
+
+**does not exist** (yet?)
 
 ## `kong:alpine`
 
