@@ -984,14 +984,9 @@ Licenses: (parsed from: `/usr/share/doc/cpp-12/copyright`, `/usr/share/doc/g++-1
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-12=12.2.0-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.2.0-1ubuntu1.dsc' gcc-12_12.2.0-1ubuntu1.dsc 27735 SHA512:0c2f466f668cb8bee1c3548cc67ffb0b43d1090a9bf5f86ea5cc621759933bb9e37932ae40d0e9347f5acda2905fefba31315b4a38f1af4234c8f8032a66fd7f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.2.0.orig.tar.gz' gcc-12_12.2.0.orig.tar.gz 91338630 SHA512:f614d673deaf6d586993be859052930db80dbbb030bc0a14d3e3517788262db8ad1ff3e992a68198195b3b283207d96720e2196d3556cf1f4788ed106f62e48e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.2.0-1ubuntu1.debian.tar.xz' gcc-12_12.2.0-1ubuntu1.debian.tar.xz 564464 SHA512:542cf0b34007908ed8d9460aadbdf0c661c8c5ee4adae1d5183b49d78a40dc5ea2faba888117d38c17eb65a02b3fcfebd09d237e5b8a9eb09f4b2013538776d6
-```
 
 ### `dpkg` source package: `gcc-defaults=1.201ubuntu1`
 
@@ -2394,14 +2389,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-rsvg-2.0/copyright`, `/usr/share/
 - `Unlicense,`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris librsvg=2.52.5+dfsg-3
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.52.5%2bdfsg-3.dsc' librsvg_2.52.5+dfsg-3.dsc 2972 SHA512:c4c32b9b8a82ccd35bf667dbb1ab69c39bfc0ad98bff820c291f1f19bd477d73895550dfec48b3d19013f76b4a740366e70ae499cbf8bdd4f6869cce7f4f889d
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.52.5%2bdfsg.orig.tar.xz' librsvg_2.52.5+dfsg.orig.tar.xz 20813024 SHA512:641dcd149ce0d5117947e3fcb04efd41591812953ec4b12ba350ce9950ed4bcb26726a78df9d317e6bd557e6fd463867476205b5e6720a9a15bd1bcfcb6f7ffe
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.52.5%2bdfsg-3.debian.tar.xz' librsvg_2.52.5+dfsg-3.debian.tar.xz 33800 SHA512:15923a453df7730a666722fe64eee6aeb282013d6e66c69418c7b6b931a6acb4a906620e9aab8f8fc8dabb855664511cd3b19f5fac7733e47803d5e974fa22d4
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/librsvg/2.52.5+dfsg-3/
+
 
 ### `dpkg` source package: `libseccomp=2.5.4-1ubuntu1`
 
@@ -3923,14 +3917,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.10=3.10.6-1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1.dsc' python3.10_3.10.6-1.dsc 3639 SHA512:7cab1558e52e9f40a5d019681c850c666099d6ad4868ca6fb6f3b6d08da8b9d96ff0485d8831af6313a6976cf09c04fff45ee1822e017844d9d9fd745d4b5c02
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6.orig.tar.xz' python3.10_3.10.6.orig.tar.xz 19600672 SHA512:f2bf424bf4f4caa524ee1248b431e8e06d0745c3fc3ba457710d75f3698e653733feb4b059cd124f1de2a9e851c30d847f567aa47abef12898c9dc8a6507b476
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1.debian.tar.xz' python3.10_3.10.6-1.debian.tar.xz 219472 SHA512:f0d3cb5e93b790dc18e59aa26d09031883c26e9832b6d0c09431a4e2cbe4426aaf8f49b3d0bb22d91525052ddc7db057f5a66ff61dd1061114db3e17ccf6b128
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/python3.10/3.10.6-1/
+
 
 ### `dpkg` source package: `readline=8.2~rc2-2`
 

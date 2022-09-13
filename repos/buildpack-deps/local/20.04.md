@@ -1094,14 +1094,9 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-gdkpixbuf-2.0/copyright`, `/usr/s
 - `LGPL-2+`
 - `MPL-1.1-or-LGPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gdk-pixbuf=2.40.0+dfsg-3ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0%2bdfsg-3ubuntu0.3.dsc' gdk-pixbuf_2.40.0+dfsg-3ubuntu0.3.dsc 3062 SHA512:35fd87ecf83c87fe5f4a87d1a3716f028627e5536e8be59536e7a231b9e274fb0ae79bbad573519eb691a231bd5eb94030b2fd492a216563e2940a59da889c88
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0%2bdfsg.orig.tar.xz' gdk-pixbuf_2.40.0+dfsg.orig.tar.xz 5626144 SHA512:bb8a9d1837bffdc5f50307dba1a1e6f1ac015e6e670ea6cae6d0bc997afa106ff0d928cb847d76848c480a06e1ad3945274b4913eaa4d9a8074797fc82bb7c1f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0%2bdfsg-3ubuntu0.3.debian.tar.xz' gdk-pixbuf_2.40.0+dfsg-3ubuntu0.3.debian.tar.xz 19552 SHA512:c1c29f1513255ba8e14bd3a3cc519488cd854c6fd07216b4fb2d3b8a7cbdb0ab1bd420e8b6bd0ff1fc268b44c0a26440394ea0f75a91e2d81a5efde2ecc06fb1
-```
 
 ### `dpkg` source package: `git=1:2.25.1-1ubuntu3.5`
 
@@ -4113,14 +4108,9 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2ubuntu0.20.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.3.dsc' tiff_4.1.0+git191117-2ubuntu0.20.04.3.dsc 2259 SHA512:d9384c8e0d9952a8903f3ee410c04b367477eb03558a86ef9fa78b69247927f02956bb9255c0348392bf7f1854b08b97dc7b1b58b0bfe1d0c23cacd7add53fdf
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA512:25b4bc4522fc2e7f3ca6857b87acd4481d8643566b1120c755020afc8b48949238ee2078bc43dd3ba7407eaa4e36b1b712d7056f101ddaf60f94dab8607870b8
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.3.debian.tar.xz' tiff_4.1.0+git191117-2ubuntu0.20.04.3.debian.tar.xz 25400 SHA512:712ec68b3170b9b3fe2965a43508a0859322fdcb23840d4404cb1186b4b6134da664893226ce4343af41712d3e72aa19b7b94b27bbdc3cf0aae6a9af81746137
-```
 
 ### `dpkg` source package: `tzdata=2022c-0ubuntu0.20.04.0`
 

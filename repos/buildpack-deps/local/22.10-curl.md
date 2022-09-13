@@ -524,14 +524,9 @@ Licenses: (parsed from: `/usr/share/doc/gcc-12-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-12=12.2.0-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.2.0-1ubuntu1.dsc' gcc-12_12.2.0-1ubuntu1.dsc 27735 SHA512:0c2f466f668cb8bee1c3548cc67ffb0b43d1090a9bf5f86ea5cc621759933bb9e37932ae40d0e9347f5acda2905fefba31315b4a38f1af4234c8f8032a66fd7f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.2.0.orig.tar.gz' gcc-12_12.2.0.orig.tar.gz 91338630 SHA512:f614d673deaf6d586993be859052930db80dbbb030bc0a14d3e3517788262db8ad1ff3e992a68198195b3b283207d96720e2196d3556cf1f4788ed106f62e48e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.2.0-1ubuntu1.debian.tar.xz' gcc-12_12.2.0-1ubuntu1.debian.tar.xz 564464 SHA512:542cf0b34007908ed8d9460aadbdf0c661c8c5ee4adae1d5183b49d78a40dc5ea2faba888117d38c17eb65a02b3fcfebd09d237e5b8a9eb09f4b2013538776d6
-```
 
 ### `dpkg` source package: `glibc=2.36-0ubuntu2`
 
