@@ -1,10 +1,10 @@
-# `debian:buster-slim`
+# `debian:oldstable-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6d8fb53a1e626648781dc72e6c0923bc076e6a75681171214f2af01b431e8032`
-- Created: `2022-08-23T00:21:10.797099936Z`
-- Virtual Size: ~ 69.24 Mb  
+- Image ID: `sha256:336c972ba0a184ae678fdedc7a65d4b233679f546cf0155124a78fc4bf518f47`
+- Created: `2022-09-13T00:57:08.402198213Z`
+- Virtual Size: ~ 69.23 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -149,11 +149,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:2.8.4-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:2.8.4-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u12`
+### `dpkg` source package: `base-files=10.3+deb10u13`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u12`
+- `base-files=10.3+deb10u13`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
@@ -162,16 +162,16 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris base-files=10.3+deb10u12
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u12.dsc' base-files_10.3+deb10u12.dsc 1107 SHA256:d1ce16a740b7ed807c4dfaa65283cef7355faeee5ca7a755ee7da7b05e3ebb48
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u12.tar.xz' base-files_10.3+deb10u12.tar.xz 65448 SHA256:b31f9c0cd0acbea65e153bf2f243acf09bcc0f6159158a8f720dd432e77aee54
+$ apt-get source -qq --print-uris base-files=10.3+deb10u13
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u13.dsc' base-files_10.3+deb10u13.dsc 1107 SHA256:039bdc39a6d18a0cc8ef84f4c60b06cee4bf9dcf22e22f10813d8e39652abbc6
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u13.tar.xz' base-files_10.3+deb10u13.tar.xz 65540 SHA256:e2620ba4503b46342d4168d2092419c4051e696910c8bb28cb262e5368301bac
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/base-files/10.3+deb10u12/ (for browsing the source)
-- https://sources.debian.net/src/base-files/10.3+deb10u12/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/10.3+deb10u12/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/base-files/10.3+deb10u13/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u13/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u13/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -464,8 +464,8 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris dpkg=1.19.8
-'http://deb.debian.org/debian-security/pool/updates/main/d/dpkg/dpkg_1.19.8.dsc' dpkg_1.19.8.dsc 2103 SHA256:3b0220b111044754f8620ce53b1ba67cad9458cab6dde39d299dbb2f27c5528d
-'http://deb.debian.org/debian-security/pool/updates/main/d/dpkg/dpkg_1.19.8.tar.xz' dpkg_1.19.8.tar.xz 4701260 SHA256:2632c00b0cf0ea19ed7bd6700e6ec5faca93f0045af629d356dc03ad74ae6f10
+'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.19.8.dsc' dpkg_1.19.8.dsc 2103 SHA256:3b0220b111044754f8620ce53b1ba67cad9458cab6dde39d299dbb2f27c5528d
+'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.19.8.tar.xz' dpkg_1.19.8.tar.xz 4701260 SHA256:2632c00b0cf0ea19ed7bd6700e6ec5faca93f0045af629d356dc03ad74ae6f10
 ```
 
 Other potentially useful URLs:
@@ -642,10 +642,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris gnupg2=2.2.12-1+deb10u2
-'http://deb.debian.org/debian-security/pool/updates/main/g/gnupg2/gnupg2_2.2.12-1%2bdeb10u2.dsc' gnupg2_2.2.12-1+deb10u2.dsc 3258 SHA256:63c9e0edbfd5772bc19eb722278445818f77e6506191def7a88748ffbd5226eb
-'http://deb.debian.org/debian-security/pool/updates/main/g/gnupg2/gnupg2_2.2.12.orig.tar.bz2' gnupg2_2.2.12.orig.tar.bz2 6682303 SHA256:db030f8b4c98640e91300d36d516f1f4f8fe09514a94ea9fc7411ee1a34082cb
-'http://deb.debian.org/debian-security/pool/updates/main/g/gnupg2/gnupg2_2.2.12.orig.tar.bz2.asc' gnupg2_2.2.12.orig.tar.bz2.asc 3204 SHA256:97c8dc25c4c2fe9a39b2ffd81b65b6f3dc4ad359c9a81ca4bb9b4bdeb6167c60
-'http://deb.debian.org/debian-security/pool/updates/main/g/gnupg2/gnupg2_2.2.12-1%2bdeb10u2.debian.tar.xz' gnupg2_2.2.12-1+deb10u2.debian.tar.xz 123852 SHA256:e4959380382661227462a88c5f56b2b3b1fbb36717e32f1be6fc3187e6234c22
+'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.12-1%2bdeb10u2.dsc' gnupg2_2.2.12-1+deb10u2.dsc 3258 SHA256:63c9e0edbfd5772bc19eb722278445818f77e6506191def7a88748ffbd5226eb
+'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.12.orig.tar.bz2' gnupg2_2.2.12.orig.tar.bz2 6682303 SHA256:db030f8b4c98640e91300d36d516f1f4f8fe09514a94ea9fc7411ee1a34082cb
+'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.12.orig.tar.bz2.asc' gnupg2_2.2.12.orig.tar.bz2.asc 3204 SHA256:97c8dc25c4c2fe9a39b2ffd81b65b6f3dc4ad359c9a81ca4bb9b4bdeb6167c60
+'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.12-1%2bdeb10u2.debian.tar.xz' gnupg2_2.2.12-1+deb10u2.debian.tar.xz 123852 SHA256:e4959380382661227462a88c5f56b2b3b1fbb36717e32f1be6fc3187e6234c22
 ```
 
 Other potentially useful URLs:
@@ -730,9 +730,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris gzip=1.9-3+deb10u1
-'http://deb.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.9-3%2bdeb10u1.dsc' gzip_1.9-3+deb10u1.dsc 1842 SHA256:9d59e20581097941df44eff5cafb2ed8f3fd416278fbd08723048f6020ccc052
-'http://deb.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.9.orig.tar.gz' gzip_1.9.orig.tar.gz 1181937 SHA256:5d2d3a3432ef32f24cdb060d278834507b481a75adeca18850c73592f778f6ad
-'http://deb.debian.org/debian-security/pool/updates/main/g/gzip/gzip_1.9-3%2bdeb10u1.debian.tar.xz' gzip_1.9-3+deb10u1.debian.tar.xz 17984 SHA256:47e692e16f5e1d950fc7a259dc1418c7988dd33f659109e59af90a3384ec01ae
+'http://deb.debian.org/debian/pool/main/g/gzip/gzip_1.9-3%2bdeb10u1.dsc' gzip_1.9-3+deb10u1.dsc 1842 SHA256:9d59e20581097941df44eff5cafb2ed8f3fd416278fbd08723048f6020ccc052
+'http://deb.debian.org/debian/pool/main/g/gzip/gzip_1.9.orig.tar.gz' gzip_1.9.orig.tar.gz 1181937 SHA256:5d2d3a3432ef32f24cdb060d278834507b481a75adeca18850c73592f778f6ad
+'http://deb.debian.org/debian/pool/main/g/gzip/gzip_1.9-3%2bdeb10u1.debian.tar.xz' gzip_1.9-3+deb10u1.debian.tar.xz 17984 SHA256:47e692e16f5e1d950fc7a259dc1418c7988dd33f659109e59af90a3384ec01ae
 ```
 
 Other potentially useful URLs:
@@ -1622,9 +1622,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris xz-utils=5.2.4-1+deb10u1
-'http://deb.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.4-1%2bdeb10u1.dsc' xz-utils_5.2.4-1+deb10u1.dsc 2429 SHA256:6da82f913d22a8385837b3bb4fb9a89a34a07dea21ea6e73d22b9e225a5c895f
-'http://deb.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz' xz-utils_5.2.4.orig.tar.xz 1053868 SHA256:9717ae363760dedf573dad241420c5fea86256b65bc21d2cf71b2b12f0544f4b
-'http://deb.debian.org/debian-security/pool/updates/main/x/xz-utils/xz-utils_5.2.4-1%2bdeb10u1.debian.tar.xz' xz-utils_5.2.4-1+deb10u1.debian.tar.xz 136768 SHA256:fcf83de6468a928427734bca3a39d3813b6f0b6b5beeffaede35bba7f18e3746
+'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.4-1%2bdeb10u1.dsc' xz-utils_5.2.4-1+deb10u1.dsc 2429 SHA256:6da82f913d22a8385837b3bb4fb9a89a34a07dea21ea6e73d22b9e225a5c895f
+'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.4.orig.tar.xz' xz-utils_5.2.4.orig.tar.xz 1053868 SHA256:9717ae363760dedf573dad241420c5fea86256b65bc21d2cf71b2b12f0544f4b
+'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.4-1%2bdeb10u1.debian.tar.xz' xz-utils_5.2.4-1+deb10u1.debian.tar.xz 136768 SHA256:fcf83de6468a928427734bca3a39d3813b6f0b6b5beeffaede35bba7f18e3746
 ```
 
 Other potentially useful URLs:
@@ -1647,9 +1647,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-1+deb10u1
-'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.dsc' zlib_1.2.11.dfsg-1+deb10u1.dsc 2774 SHA256:3eddd036f314f8a7717c41fe7d3c935653afeb6b7f7bf6d9ad80c10ef1c4bdc3
-'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
-'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.debian.tar.xz' zlib_1.2.11.dfsg-1+deb10u1.debian.tar.xz 23092 SHA256:eb26660e5b8a39f945a4fe1284e29b0279ded3513327e3cbd51c51921758f13f
+'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.dsc' zlib_1.2.11.dfsg-1+deb10u1.dsc 2774 SHA256:3eddd036f314f8a7717c41fe7d3c935653afeb6b7f7bf6d9ad80c10ef1c4bdc3
+'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
+'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.debian.tar.xz' zlib_1.2.11.dfsg-1+deb10u1.debian.tar.xz 23092 SHA256:eb26660e5b8a39f945a4fe1284e29b0279ded3513327e3cbd51c51921758f13f
 ```
 
 Other potentially useful URLs:
