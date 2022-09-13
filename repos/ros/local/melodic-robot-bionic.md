@@ -7262,14 +7262,9 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.0.9-5ubuntu0.5
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.0.9-5ubuntu0.5.dsc' tiff_4.0.9-5ubuntu0.5.dsc 2177 SHA512:7f7a37be4434207b11a6526c7cca61be7519da62f3054ffc021ed644555505909f5a4325cc2b26a94278e7d09416550d0c18a736722afccd8ee72ea5080a3e35
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.0.9.orig.tar.gz' tiff_4.0.9.orig.tar.gz 2305681 SHA512:04f3d5eefccf9c1a0393659fe27f3dddd31108c401ba0dc587bca152a1c1f6bc844ba41622ff5572da8cc278593eff8c402b44e7af0a0090e91d326c2d79f6cd
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.0.9-5ubuntu0.5.debian.tar.xz' tiff_4.0.9-5ubuntu0.5.debian.tar.xz 37028 SHA512:cfb2a63ca9aa6c876db38ca80adca1c06f29724cd4663c26d8c611cf2f63490efc3f837bfba571f0e597434e691f61b1d4d07bb96c0e3b8a90acdf91c2ed2cf9
-```
 
 ### `dpkg` source package: `tinyxml2=6.0.0+dfsg-1`
 

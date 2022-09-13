@@ -8813,14 +8813,9 @@ Licenses: (parsed from: `/usr/share/doc/libqt5concurrent5/copyright`, `/usr/shar
 - `libpng`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris qtbase-opensource-src=5.15.3+dfsg-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/universe/q/qtbase-opensource-src/qtbase-opensource-src_5.15.3%2bdfsg-2ubuntu0.1.dsc' qtbase-opensource-src_5.15.3+dfsg-2ubuntu0.1.dsc 5511 SHA512:560dbc22360c61eeaa150b9ff6da1f54a3ba4bc5b2b39eeff8a9cc1a37e56edb583fb7e8aeb5feff2cd97ed6b0157d49b94750b8678b6d3126d71a8bc1456ec3
-'http://archive.ubuntu.com/ubuntu/pool/universe/q/qtbase-opensource-src/qtbase-opensource-src_5.15.3%2bdfsg.orig.tar.xz' qtbase-opensource-src_5.15.3+dfsg.orig.tar.xz 48080448 SHA512:b1712271dd2e7caf51552ca1f3c49e07b5814458ccc28ec5357f1765e4cc60572c49b5a689c36476fb13d0156eb9adfe961f3b0cfb40fd576272c5b41ac72a4f
-'http://archive.ubuntu.com/ubuntu/pool/universe/q/qtbase-opensource-src/qtbase-opensource-src_5.15.3%2bdfsg-2ubuntu0.1.debian.tar.xz' qtbase-opensource-src_5.15.3+dfsg-2ubuntu0.1.debian.tar.xz 271360 SHA512:7c5a7446d8e1a7dd80eb7b6069f1756b6cb987a08df2e20b7d242d7d124ee504e5a03b2ba350af883e6be8bbc20599b2989cf2931238a190b11b0619f2c050e7
-```
 
 ### `dpkg` source package: `qtchooser=66-2build1`
 

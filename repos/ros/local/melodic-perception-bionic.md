@@ -6632,14 +6632,9 @@ Licenses: (parsed from: `/usr/share/doc/libpoppler-dev/copyright`, `/usr/share/d
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris poppler=0.62.0-2ubuntu2.12
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.62.0-2ubuntu2.12.dsc' poppler_0.62.0-2ubuntu2.12.dsc 3374 SHA512:436174eb93e59a21382d301662f438bdff8dea3b317eeb1ace4b6bc3a5bd5faa8c4b0812952e1d27d024874e3b0ec02f27d0c6c831074913d5c31f3e7b37587a
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.62.0.orig.tar.xz' poppler_0.62.0.orig.tar.xz 1423372 SHA512:91f7eae7b05965ae97a34e658bed2a676be8a6e4d34f82148ece6eb58932632dcf9a34d50c66412f93f560ce575abf5c608ed6b1e5184604b96024801886c706
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.62.0-2ubuntu2.12.debian.tar.xz' poppler_0.62.0-2ubuntu2.12.debian.tar.xz 45412 SHA512:7fc4e1e17c6e2239521f9e70e3b0fa0c84595e396ce96a0e2b95185bf09f77a88f0e72e641f42410c480665a9d922867244a57edaeb148f3d3d31958729c09bc
-```
 
 ### `dpkg` source package: `postgresql-10=10.22-0ubuntu0.18.04.1`
 
@@ -10317,14 +10312,9 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.0.9-5ubuntu0.5
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.0.9-5ubuntu0.5.dsc' tiff_4.0.9-5ubuntu0.5.dsc 2177 SHA512:7f7a37be4434207b11a6526c7cca61be7519da62f3054ffc021ed644555505909f5a4325cc2b26a94278e7d09416550d0c18a736722afccd8ee72ea5080a3e35
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.0.9.orig.tar.gz' tiff_4.0.9.orig.tar.gz 2305681 SHA512:04f3d5eefccf9c1a0393659fe27f3dddd31108c401ba0dc587bca152a1c1f6bc844ba41622ff5572da8cc278593eff8c402b44e7af0a0090e91d326c2d79f6cd
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.0.9-5ubuntu0.5.debian.tar.xz' tiff_4.0.9-5ubuntu0.5.debian.tar.xz 37028 SHA512:cfb2a63ca9aa6c876db38ca80adca1c06f29724cd4663c26d8c611cf2f63490efc3f837bfba571f0e597434e691f61b1d4d07bb96c0e3b8a90acdf91c2ed2cf9
-```
 
 ### `dpkg` source package: `tinyxml2=6.0.0+dfsg-1`
 
