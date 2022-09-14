@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8f8572ee52585cbd253408765ba4c2ce964a2b0c819f004fa144bbb345b8d9d2`
-- Created: `2022-09-06T19:20:28.254541961Z`
-- Virtual Size: ~ 934.35 Mb  
+- Image ID: `sha256:b87d16c02fec4cb4c39af27e89ca40a8a27d7c5c9f580b0984124021f2afd6c1`
+- Created: `2022-09-13T16:03:05.257421072Z`
+- Virtual Size: ~ 934.36 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -203,23 +203,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:2.8.4-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:2.8.4-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u12`
+### `dpkg` source package: `base-files=10.3+deb10u13`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u12`
+- `base-files=10.3+deb10u13`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=10.3+deb10u13
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u13.dsc' base-files_10.3+deb10u13.dsc 1107 SHA256:039bdc39a6d18a0cc8ef84f4c60b06cee4bf9dcf22e22f10813d8e39652abbc6
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u13.tar.xz' base-files_10.3+deb10u13.tar.xz 65540 SHA256:e2620ba4503b46342d4168d2092419c4051e696910c8bb28cb262e5368301bac
+```
 
-- http://snapshot.debian.org/package/base-files/10.3+deb10u12/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/10.3+deb10u13/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u13/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u13/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -402,13 +408,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.30-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.30-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.64.0-4+deb10u2`
+### `dpkg` source package: `curl=7.64.0-4+deb10u3`
 
 Binary Packages:
 
-- `curl=7.64.0-4+deb10u2`
-- `libcurl3-gnutls:amd64=7.64.0-4+deb10u2`
-- `libcurl4:amd64=7.64.0-4+deb10u2`
+- `curl=7.64.0-4+deb10u3`
+- `libcurl3-gnutls:amd64=7.64.0-4+deb10u3`
+- `libcurl4:amd64=7.64.0-4+deb10u3`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -422,17 +428,17 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u2
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0-4%2bdeb10u2.dsc' curl_7.64.0-4+deb10u2.dsc 2719 SHA256:3cc585f4c22c0c001527f5f26f5a6154a86d1df9752aa118bf7d8e892ec4fac2
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0-4%2bdeb10u2.debian.tar.xz' curl_7.64.0-4+deb10u2.debian.tar.xz 43572 SHA256:6b7f793e0cd41e2ccb49301ad4e58c83282f46be7c9415c9280164834efd0e52
+$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u3
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u3.dsc' curl_7.64.0-4+deb10u3.dsc 2845 SHA256:a3290e63b54991d6261f982c87230d36898b858b2f9bfe5f08e67a07d8c817ad
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u3.debian.tar.xz' curl_7.64.0-4+deb10u3.debian.tar.xz 54192 SHA256:e102815f3a4901e4e5c884a419bbecc35e45bfbddd9741a61106d187677680e6
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u2`
 
@@ -1298,26 +1304,33 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/keyutils/1.6-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/keyutils/1.6-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `krb5=1.17-3+deb10u3`
+### `dpkg` source package: `krb5=1.17-3+deb10u4`
 
 Binary Packages:
 
-- `libgssapi-krb5-2:amd64=1.17-3+deb10u3`
-- `libk5crypto3:amd64=1.17-3+deb10u3`
-- `libkrb5-3:amd64=1.17-3+deb10u3`
-- `libkrb5support0:amd64=1.17-3+deb10u3`
+- `libgssapi-krb5-2:amd64=1.17-3+deb10u4`
+- `libk5crypto3:amd64=1.17-3+deb10u4`
+- `libkrb5-3:amd64=1.17-3+deb10u4`
+- `libkrb5support0:amd64=1.17-3+deb10u4`
 
 Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris krb5=1.17-3+deb10u4
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3%2bdeb10u4.dsc' krb5_1.17-3+deb10u4.dsc 2968 SHA256:7b2d47d17563e72841d353010442ff56b9ec87a8f83ac0e0aef68dff23c5da9d
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3%2bdeb10u4.debian.tar.xz' krb5_1.17-3+deb10u4.debian.tar.xz 104736 SHA256:69e9f59958fc0c2d7aa7540e93280b67a2e2377efbfd7b3c0c8411b8994df181
+```
 
-- http://snapshot.debian.org/package/krb5/1.17-3+deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/krb5/1.17-3+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/krb5/1.17-3+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libassuan=2.5.2-1`
 
