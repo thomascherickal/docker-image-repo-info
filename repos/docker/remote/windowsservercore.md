@@ -1,42 +1,42 @@
 ## `docker:windowsservercore`
 
 ```console
-$ docker pull docker@sha256:8a0475c2d9722bd49ec6baa23fdd2c8b953e9eb1a44604dd20da116b55364531
+$ docker pull docker@sha256:2e56673109170f38a9ea23b63e4520cccd59182eb26b7c3e3f7a9f6232d2ea6b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms: 2
-	-	windows version 10.0.20348.887; amd64
-	-	windows version 10.0.17763.3287; amd64
+	-	windows version 10.0.20348.1006; amd64
+	-	windows version 10.0.17763.3406; amd64
 
-### `docker:windowsservercore` - windows version 10.0.20348.887; amd64
+### `docker:windowsservercore` - windows version 10.0.20348.1006; amd64
 
 ```console
-$ docker pull docker@sha256:563f72bba4b3447e891e9174152d3fb0b775b034782930e583b565b850c0eff6
+$ docker pull docker@sha256:885c7dd83ae73d5516ae58d8f81c06ba2f09de35af42e231fd7f410fd5dc67ce
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.4 GB (2372200414 bytes)**  
+-	Total Size: **2.4 GB (2402183352 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2dd85fd96499fb932f4298347820c3f9cd1a7a0b644a634124189903823e3ac9`
+-	Image ID: `sha256:afcb440f5315a166071ed008913ce12108f7399c981f6795b54c736d97b57ecf`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
 ```dockerfile
 # Fri, 22 Apr 2022 01:12:09 GMT
 RUN Apply image 10.0.20348.643
-# Sat, 06 Aug 2022 02:59:35 GMT
-RUN Install update 10.0.20348.887
-# Wed, 10 Aug 2022 12:11:45 GMT
+# Thu, 08 Sep 2022 20:30:55 GMT
+RUN Install update 10.0.20348.1006
+# Wed, 14 Sep 2022 12:09:34 GMT
 SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
-# Wed, 10 Aug 2022 19:15:35 GMT
+# Wed, 14 Sep 2022 19:33:19 GMT
 RUN $newPath = ('{0}\docker;{1}' -f $env:ProgramFiles, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Mon, 12 Sep 2022 22:15:07 GMT
+# Wed, 14 Sep 2022 19:36:25 GMT
 ENV DOCKER_VERSION=20.10.18
-# Mon, 12 Sep 2022 22:15:08 GMT
+# Wed, 14 Sep 2022 19:36:26 GMT
 ENV DOCKER_URL=https://download.docker.com/win/static/stable/x86_64/docker-20.10.18.zip
-# Mon, 12 Sep 2022 22:15:58 GMT
+# Wed, 14 Sep 2022 19:36:57 GMT
 RUN Write-Host ('Downloading {0} ...' -f $env:DOCKER_URL); 	Invoke-WebRequest -Uri $env:DOCKER_URL -OutFile 'docker.zip'; 		Write-Host 'Expanding ...'; 	Expand-Archive docker.zip -DestinationPath $env:ProgramFiles; 		Write-Host 'Removing ...'; 	Remove-Item @( 			'docker.zip', 			('{0}\docker\dockerd.exe' -f $env:ProgramFiles) 		) -Force; 		Write-Host 'Verifying install ("docker --version") ...'; 	docker --version; 		Write-Host 'Complete.';
 ```
 
@@ -44,58 +44,58 @@ RUN Write-Host ('Downloading {0} ...' -f $env:DOCKER_URL); 	Invoke-WebRequest -U
 	-	`sha256:97f65a0ec59e643faf84024aa713a9be059322380315fda829756bbbd96d6258`  
 		Size: 1.4 GB (1436863614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.foreign.diff.tar.gzip
-	-	`sha256:97b25a378238b615dc51216c4d87ce17fd3cc3dca9db458e8705d1a4c17e3bb7`  
-		Size: 880.0 MB (880025531 bytes)  
+	-	`sha256:4486102fd3820ed9527fa3e7bfefa8305c2f054e65b46dffe9675755e3d8f288`  
+		Size: 910.1 MB (910085953 bytes)  
 		MIME: application/vnd.docker.image.rootfs.foreign.diff.tar.gzip
-	-	`sha256:4a5e3787c778295a5877e0381020b02273a985f7db2dd483ddff586869546e4c`  
-		Last Modified: Wed, 10 Aug 2022 12:42:34 GMT  
-		Size: 1.4 KB (1428 bytes)  
+	-	`sha256:c5da8902b0918fe9bb0d466157622ccaf8209e4becbdd188ec41ecb563c068e6`  
+		Last Modified: Wed, 14 Sep 2022 12:41:36 GMT  
+		Size: 1.4 KB (1437 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e53d970c61010f2b55c869d8c51b4f9c6e6156fb44d5da363e0e4cb4ab747bba`  
-		Last Modified: Wed, 17 Aug 2022 01:15:43 GMT  
-		Size: 622.4 KB (622449 bytes)  
+	-	`sha256:334c776d6184fec7acdb5027a6d95b32539f4d420e4b1abe401347adb7cc7377`  
+		Last Modified: Wed, 14 Sep 2022 19:39:00 GMT  
+		Size: 591.0 KB (591032 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bec94a5cb0dc71e7bf6fbb63cdb2034f2a4e7a88c063790e82ad90cd977e12c7`  
-		Last Modified: Mon, 12 Sep 2022 22:18:06 GMT  
-		Size: 1.4 KB (1436 bytes)  
+	-	`sha256:a96865f35f15e88cdd5f10fd3cc53ea7c002e278df70ebc4e3a2da24bf3e4670`  
+		Last Modified: Wed, 14 Sep 2022 19:39:27 GMT  
+		Size: 1.4 KB (1445 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8a1710107c20a322bf45e6917994c522f0ded8024e5a8475d2de967302eb1d2f`  
-		Last Modified: Mon, 12 Sep 2022 22:18:05 GMT  
-		Size: 1.4 KB (1426 bytes)  
+	-	`sha256:4d650896bb96a5e18321c44ec07c8d0fc1d6351eb59b98e3dbc6bada76cb3152`  
+		Last Modified: Wed, 14 Sep 2022 19:39:27 GMT  
+		Size: 1.4 KB (1432 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e644fdc713caa9806557109bb4913fc3e6085e42f7e814e588ba273420e1b673`  
-		Last Modified: Mon, 12 Sep 2022 22:18:15 GMT  
-		Size: 54.7 MB (54684530 bytes)  
+	-	`sha256:4c65a9e8fb0af2a97486c3cbf3a394ed6065f82267beca94b98ddd043c97ff10`  
+		Last Modified: Wed, 14 Sep 2022 19:39:37 GMT  
+		Size: 54.6 MB (54638439 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `docker:windowsservercore` - windows version 10.0.17763.3287; amd64
+### `docker:windowsservercore` - windows version 10.0.17763.3406; amd64
 
 ```console
-$ docker pull docker@sha256:84a09fa3eb6a69283a4b03871f44e707c93f7af8146b7dd50bbcc9292f890ca7
+$ docker pull docker@sha256:33d0c4b2cafcf75dba7ac318dd6c542cdbc73a9f559a5e0c73dd513648ecd7e1
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.7 GB (2732517655 bytes)**  
+-	Total Size: **2.8 GB (2758343788 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:26cb46aef60682056686cb2d6681e79d1722d2528a9a885d22548fd8c4a07d87`
+-	Image ID: `sha256:4cbe673467cc5eb962c5825c329436099c334c25058580a80e1c6a1ce1165109`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
 ```dockerfile
 # Fri, 22 Apr 2022 01:27:13 GMT
 RUN Apply image 10.0.17763.2803
-# Sat, 06 Aug 2022 18:30:32 GMT
-RUN Install update 10.0.17763.3287
-# Wed, 10 Aug 2022 12:16:16 GMT
+# Fri, 09 Sep 2022 22:43:02 GMT
+RUN Install update 10.0.17763.3406
+# Tue, 13 Sep 2022 18:21:27 GMT
 SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
-# Wed, 10 Aug 2022 19:17:16 GMT
+# Wed, 14 Sep 2022 19:35:00 GMT
 RUN $newPath = ('{0}\docker;{1}' -f $env:ProgramFiles, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Mon, 12 Sep 2022 22:16:09 GMT
+# Wed, 14 Sep 2022 19:37:04 GMT
 ENV DOCKER_VERSION=20.10.18
-# Mon, 12 Sep 2022 22:16:10 GMT
+# Wed, 14 Sep 2022 19:37:04 GMT
 ENV DOCKER_URL=https://download.docker.com/win/static/stable/x86_64/docker-20.10.18.zip
-# Mon, 12 Sep 2022 22:17:26 GMT
+# Wed, 14 Sep 2022 19:38:13 GMT
 RUN Write-Host ('Downloading {0} ...' -f $env:DOCKER_URL); 	Invoke-WebRequest -Uri $env:DOCKER_URL -OutFile 'docker.zip'; 		Write-Host 'Expanding ...'; 	Expand-Archive docker.zip -DestinationPath $env:ProgramFiles; 		Write-Host 'Removing ...'; 	Remove-Item @( 			'docker.zip', 			('{0}\docker\dockerd.exe' -f $env:ProgramFiles) 		) -Force; 		Write-Host 'Verifying install ("docker --version") ...'; 	docker --version; 		Write-Host 'Complete.';
 ```
 
@@ -103,26 +103,26 @@ RUN Write-Host ('Downloading {0} ...' -f $env:DOCKER_URL); 	Invoke-WebRequest -U
 	-	`sha256:b111c3320c949bea81612bf4554f1b6592c2f504920b5bf57ba340a1d4d52c93`  
 		Size: 1.9 GB (1877166088 bytes)  
 		MIME: application/vnd.docker.image.rootfs.foreign.diff.tar.gzip
-	-	`sha256:294d77ac553d7210b662d07674ef9e39a6c2e88dc15b9d2788d51e509bc8b54e`  
-		Size: 800.5 MB (800546641 bytes)  
+	-	`sha256:cee64bf279e2ca8e924884a10ecb98bfa79c7f0cc8d25e73039b9aeb940815b6`  
+		Size: 826.4 MB (826398623 bytes)  
 		MIME: application/vnd.docker.image.rootfs.foreign.diff.tar.gzip
-	-	`sha256:d64f32398ff5e4ac4cbab317ffed87a2fbf4e4a37210284dba19f2929d631a95`  
-		Last Modified: Wed, 10 Aug 2022 12:42:57 GMT  
+	-	`sha256:2bc395c8c47e61e593d2e905e0e051d40e7d25e4aeac7dbe08d3ec57acd0e68f`  
+		Last Modified: Tue, 13 Sep 2022 18:25:24 GMT  
 		Size: 1.4 KB (1430 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5010c9f2d7e0951353d9bb92cce15eefcafc02a982074caebc0cd7f103e7b33c`  
-		Last Modified: Wed, 17 Aug 2022 01:15:58 GMT  
-		Size: 344.6 KB (344642 bytes)  
+	-	`sha256:6729738068cf65fb2e7df0b27735fcc08b65d92d97627f2644e0d90821247e52`  
+		Last Modified: Wed, 14 Sep 2022 19:39:14 GMT  
+		Size: 345.9 KB (345922 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a13f1e3ef2b0f111b8d346be72aeb3beeace6251c5ab44d8d8a23c1bcecb2cc2`  
-		Last Modified: Mon, 12 Sep 2022 22:18:29 GMT  
-		Size: 1.4 KB (1393 bytes)  
+	-	`sha256:1cd3ae578b4f31ecd9c27bbe3ccdc4d3fd6cb765480e973de4cb87bff28406b5`  
+		Last Modified: Wed, 14 Sep 2022 19:39:51 GMT  
+		Size: 1.4 KB (1370 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0dfbb799a6ab4dd129a9d44874a23a4045a228b5a77f9f2ad1c056246bd6bd4`  
-		Last Modified: Mon, 12 Sep 2022 22:18:29 GMT  
-		Size: 1.4 KB (1404 bytes)  
+	-	`sha256:afbdefbb6a211f6970380dffd709e9339443c674d2b35f3924fbac9c7080dbaf`  
+		Last Modified: Wed, 14 Sep 2022 19:39:51 GMT  
+		Size: 1.4 KB (1413 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b51e11cf9dcfaf772e7e33dfea73e63b161ee6a362d07e4b07c518ad897f328d`  
-		Last Modified: Mon, 12 Sep 2022 22:18:39 GMT  
-		Size: 54.5 MB (54456057 bytes)  
+	-	`sha256:dc42b1e9222f1818e6868d67c6e772757cab99f6ff9e365e848793b7da7d7c4f`  
+		Last Modified: Wed, 14 Sep 2022 19:40:00 GMT  
+		Size: 54.4 MB (54428942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
