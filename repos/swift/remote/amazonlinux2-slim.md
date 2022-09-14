@@ -1,7 +1,7 @@
 ## `swift:amazonlinux2-slim`
 
 ```console
-$ docker pull swift@sha256:1377f489864c63515e795e29b85730f462e08c8e1986b7d6260e2162dfe20217
+$ docker pull swift@sha256:b9741e7e258bca7b81b7fd268ad8ea1addf4f3b54c3f34fbfcb7c515160a7bde
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull swift@sha256:1377f489864c63515e795e29b85730f462e08c8e1986b7d6260e2
 ### `swift:amazonlinux2-slim` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:cfe6e71ab9fb221108c875b18a9ac711659752ad2dc84b0990fcd403c085bdeb
+$ docker pull swift@sha256:182edda51ad60452fa5b8ee879ddce63b2cd7bfbdad76a59c6f8810ff85ff8c1
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **281.4 MB (281362833 bytes)**  
+-	Total Size: **287.3 MB (287252484 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:812bd4a8f65df4521bb168bfd62886348958f9ba1947c612605996b518bc0593`
+-	Image ID: `sha256:1564a5e47ebafa052e48427e0d77b316c8ecd061d499de4219339d9f861420ee`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -35,15 +35,15 @@ LABEL description=Docker Container for the Swift programming language
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
 # Fri, 26 Aug 2022 01:38:29 GMT
 ARG SWIFT_PLATFORM=amazonlinux2
-# Mon, 12 Sep 2022 18:28:13 GMT
-ARG SWIFT_BRANCH=swift-5.6.3-release
-# Mon, 12 Sep 2022 18:28:14 GMT
-ARG SWIFT_VERSION=swift-5.6.3-RELEASE
-# Mon, 12 Sep 2022 18:28:14 GMT
+# Wed, 14 Sep 2022 00:35:42 GMT
+ARG SWIFT_BRANCH=swift-5.7-release
+# Wed, 14 Sep 2022 00:35:42 GMT
+ARG SWIFT_VERSION=swift-5.7-RELEASE
+# Wed, 14 Sep 2022 00:35:43 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Mon, 12 Sep 2022 18:28:14 GMT
-ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=amazonlinux2 SWIFT_BRANCH=swift-5.6.3-release SWIFT_VERSION=swift-5.6.3-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Mon, 12 Sep 2022 18:28:49 GMT
+# Wed, 14 Sep 2022 00:35:43 GMT
+ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=amazonlinux2 SWIFT_BRANCH=swift-5.7-release SWIFT_VERSION=swift-5.7-RELEASE SWIFT_WEBROOT=https://download.swift.org
+# Wed, 14 Sep 2022 00:36:22 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1 $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/lib/swift/linux     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz     && yum autoremove -y tar gzip
 ```
 
@@ -52,9 +52,9 @@ RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH
 		Last Modified: Mon, 22 Aug 2022 22:09:44 GMT  
 		Size: 62.3 MB (62326701 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc13d508ebd9dfcbd2c015867fdefde9b2c9f87660d5bf520d0687c533317222`  
-		Last Modified: Mon, 12 Sep 2022 18:43:47 GMT  
-		Size: 219.0 MB (219036132 bytes)  
+	-	`sha256:c5429f2a08c401a2095555dcfa964b861214f288d4eff367b1647d8dcebcf017`  
+		Last Modified: Wed, 14 Sep 2022 00:55:05 GMT  
+		Size: 224.9 MB (224925783 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swift:amazonlinux2-slim` - linux; arm64 variant v8
