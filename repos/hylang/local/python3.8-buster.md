@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:94e76661fba69d8200c15d5ca96f0f2b586c747322b4f1293abad4f779f49cd2`
-- Created: `2022-09-08T01:29:06.643812328Z`
-- Virtual Size: ~ 125.98 Mb  
+- Image ID: `sha256:228ce0953aad509e7757c7f8d2397fba62ecab178befde3e4ed5a66d2ec300b8`
+- Created: `2022-09-13T02:46:27.114777652Z`
+- Virtual Size: ~ 126.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -158,23 +158,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:2.8.4-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:2.8.4-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u12`
+### `dpkg` source package: `base-files=10.3+deb10u13`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u12`
+- `base-files=10.3+deb10u13`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=10.3+deb10u13
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u13.dsc' base-files_10.3+deb10u13.dsc 1107 SHA256:039bdc39a6d18a0cc8ef84f4c60b06cee4bf9dcf22e22f10813d8e39652abbc6
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u13.tar.xz' base-files_10.3+deb10u13.tar.xz 65540 SHA256:e2620ba4503b46342d4168d2092419c4051e696910c8bb28cb262e5368301bac
+```
 
-- http://snapshot.debian.org/package/base-files/10.3+deb10u12/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/10.3+deb10u13/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u13/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u13/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -1823,11 +1829,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/xz-utils/5.2.4-1+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/xz-utils/5.2.4-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `zlib=1:1.2.11.dfsg-1+deb10u1`
+### `dpkg` source package: `zlib=1:1.2.11.dfsg-1+deb10u2`
 
 Binary Packages:
 
-- `zlib1g:amd64=1:1.2.11.dfsg-1+deb10u1`
+- `zlib1g:amd64=1:1.2.11.dfsg-1+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
@@ -1836,14 +1842,14 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-1+deb10u1
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.dsc' zlib_1.2.11.dfsg-1+deb10u1.dsc 2774 SHA256:3eddd036f314f8a7717c41fe7d3c935653afeb6b7f7bf6d9ad80c10ef1c4bdc3
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.debian.tar.xz' zlib_1.2.11.dfsg-1+deb10u1.debian.tar.xz 23092 SHA256:eb26660e5b8a39f945a4fe1284e29b0279ded3513327e3cbd51c51921758f13f
+$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-1+deb10u2
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u2.dsc' zlib_1.2.11.dfsg-1+deb10u2.dsc 2619 SHA256:6166bc693b849b1547e0870b91186c43c9cc5187c9a6eb0b44f9b293d687efd9
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u2.debian.tar.xz' zlib_1.2.11.dfsg-1+deb10u2.debian.tar.xz 23772 SHA256:dd1c6fa2c25e23499713ac7e891d4c1218676240855c8d24604b9ae7c8eea2cf
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-1+deb10u2/ (for access to the source package after it no longer exists in the archive)

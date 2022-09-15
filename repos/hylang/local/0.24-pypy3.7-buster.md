@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:fc17bfadf60972d6b7281eaa31fc8831674e0f5fe40dbac0207c17b51534827e`
-- Created: `2022-08-23T21:16:42.333374863Z`
-- Virtual Size: ~ 236.55 Mb  
+- Image ID: `sha256:5bb9dfdc360b1e9d65d2e6e53b29cce9a9b535c3f8600e56102ac50c0bfce9c7`
+- Created: `2022-09-13T15:34:49.547747024Z`
+- Virtual Size: ~ 236.53 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -155,23 +155,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:2.8.4-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:2.8.4-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u12`
+### `dpkg` source package: `base-files=10.3+deb10u13`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u12`
+- `base-files=10.3+deb10u13`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=10.3+deb10u13
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u13.dsc' base-files_10.3+deb10u13.dsc 1107 SHA256:039bdc39a6d18a0cc8ef84f4c60b06cee4bf9dcf22e22f10813d8e39652abbc6
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u13.tar.xz' base-files_10.3+deb10u13.tar.xz 65540 SHA256:e2620ba4503b46342d4168d2092419c4051e696910c8bb28cb262e5368301bac
+```
 
-- http://snapshot.debian.org/package/base-files/10.3+deb10u12/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/10.3+deb10u13/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u13/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u13/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
