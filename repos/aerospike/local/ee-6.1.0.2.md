@@ -1,18 +1,18 @@
-# `aerospike:ee-6.1.0.1`
+# `aerospike:ee-6.1.0.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:749170bfa1b7dd551e00d01c8f23f83f1f88cf67381c1e855491d88201264a07`
-- Created: `2022-09-13T03:39:37.031240487Z`
-- Virtual Size: ~ 343.69 Mb  
+- Image ID: `sha256:57f4ea818b9dbb111d689562a310ab1bd1e41b2b889749de03961ff6eab104d2`
+- Created: `2022-09-15T17:19:54.219803442Z`
+- Virtual Size: ~ 343.70 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/bin/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","/entrypoint.sh"]`
 - Command: `["asd"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `AEROSPIKE_VERSION=6.1.0.1`
-  - `AEROSPIKE_SHA256=fc699a0d6458efdc61d7cb1db7ee14f882dd9356bc6d07d5387ce4cdf0f453e9`
+  - `AEROSPIKE_VERSION=6.1.0.2`
+  - `AEROSPIKE_SHA256=efd49204813876c5b3b3064b875efccfd49fa2a7e4840161e411988fc87f012f`
   - `AS_TINI_SHA256=d1f6826dd70cdd88dde3d5a20d8ed248883a3bc2caba3071c8a3a9b0e0de5940`
 
 ## `dpkg` (`.deb`-based packages)
@@ -70,11 +70,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.118/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.118/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `aerospike-server-enterprise=6.1.0.1-1`
+### `dpkg` source package: `aerospike-server-enterprise=6.1.0.2-1`
 
 Binary Packages:
 
-- `aerospike-server-enterprise=6.1.0.1-1`
+- `aerospike-server-enterprise=6.1.0.2-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -84,11 +84,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `aerospike-tools=7.2.0`
+### `dpkg` source package: `aerospike-tools=7.2.1`
 
 Binary Packages:
 
-- `aerospike-tools=7.2.0`
+- `aerospike-tools=7.2.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2400,11 +2400,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/shadow/1:4.5-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/shadow/1:4.5-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `sqlite3=3.27.2-3+deb10u1`
+### `dpkg` source package: `sqlite3=3.27.2-3+deb10u2`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.27.2-3+deb10u1`
+- `libsqlite3-0:amd64=3.27.2-3+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -2415,18 +2415,18 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris sqlite3=3.27.2-3+deb10u1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2-3%2bdeb10u1.dsc' sqlite3_3.27.2-3+deb10u1.dsc 2430 SHA256:6faf359c70d0618558056d6dee9f05ea810ff57aebb141ac28129c17e685cf1b
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2.orig-www.tar.xz' sqlite3_3.27.2.orig-www.tar.xz 5602752 SHA256:b50bea0e1974b33bcb2cec4c29fcdeecd8f960020ce0310b15fb123938844bee
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2.orig.tar.xz' sqlite3_3.27.2.orig.tar.xz 6844832 SHA256:6cb1606bbc38270739d256b5ab1cf94dccf5b2a3b4cbceb0545aac76f6ef40f2
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.27.2-3%2bdeb10u1.debian.tar.xz' sqlite3_3.27.2-3+deb10u1.debian.tar.xz 38844 SHA256:ccabd6cc3d05887f2dd239065f3c3063f766e9e187804a89f04cbcbdb49a6b7e
+$ apt-get source -qq --print-uris sqlite3=3.27.2-3+deb10u2
+'http://deb.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.27.2-3%2bdeb10u2.dsc' sqlite3_3.27.2-3+deb10u2.dsc 2430 SHA256:3632c99c503d9e62c373b4fa186b388e8a47034ffebc9a8b45d49358ec8fa67a
+'http://deb.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.27.2.orig-www.tar.xz' sqlite3_3.27.2.orig-www.tar.xz 5602752 SHA256:b50bea0e1974b33bcb2cec4c29fcdeecd8f960020ce0310b15fb123938844bee
+'http://deb.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.27.2.orig.tar.xz' sqlite3_3.27.2.orig.tar.xz 6844832 SHA256:6cb1606bbc38270739d256b5ab1cf94dccf5b2a3b4cbceb0545aac76f6ef40f2
+'http://deb.debian.org/debian-security/pool/updates/main/s/sqlite3/sqlite3_3.27.2-3%2bdeb10u2.debian.tar.xz' sqlite3_3.27.2-3+deb10u2.debian.tar.xz 39712 SHA256:b5b83dc80049e944e7a534edecf53480551259324d1a0efd67da791f71593199
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/sqlite3/3.27.2-3+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.27.2-3+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.27.2-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/sqlite3/3.27.2-3+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/sqlite3/3.27.2-3+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sqlite3/3.27.2-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=241-7~deb10u8`
 
