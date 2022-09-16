@@ -2049,14 +2049,9 @@ Licenses: (parsed from: `/usr/share/doc/libgdk-pixbuf2.0-0/copyright`, `/usr/sha
 - `LGPL-2+`
 - `MPL-1.1-or-LGPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gdk-pixbuf=2.40.0+dfsg-3ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0%2bdfsg-3ubuntu0.3.dsc' gdk-pixbuf_2.40.0+dfsg-3ubuntu0.3.dsc 3062 SHA512:35fd87ecf83c87fe5f4a87d1a3716f028627e5536e8be59536e7a231b9e274fb0ae79bbad573519eb691a231bd5eb94030b2fd492a216563e2940a59da889c88
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0%2bdfsg.orig.tar.xz' gdk-pixbuf_2.40.0+dfsg.orig.tar.xz 5626144 SHA512:bb8a9d1837bffdc5f50307dba1a1e6f1ac015e6e670ea6cae6d0bc997afa106ff0d928cb847d76848c480a06e1ad3945274b4913eaa4d9a8074797fc82bb7c1f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.40.0%2bdfsg-3ubuntu0.3.debian.tar.xz' gdk-pixbuf_2.40.0+dfsg-3ubuntu0.3.debian.tar.xz 19552 SHA512:c1c29f1513255ba8e14bd3a3cc519488cd854c6fd07216b4fb2d3b8a7cbdb0ab1bd420e8b6bd0ff1fc268b44c0a26440394ea0f75a91e2d81a5efde2ecc06fb1
-```
 
 ### `dpkg` source package: `geos=3.8.0-1build1`
 
@@ -10394,15 +10389,9 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.31.1-4ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.3.dsc' sqlite3_3.31.1-4ubuntu0.3.dsc 2397 SHA512:1455afcf567dac1762dfdbface1dcfd0e6e9cb185700fea66be92a6925173f6a597fac99ac137f9708e789bce783a4b17d35aab8a29a9f777516119c71e2ec0c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig-www.tar.xz' sqlite3_3.31.1.orig-www.tar.xz 5764424 SHA512:a47adacd46c673cfd674cb64fb54b054e69560aed8c8c429773f0eccdcdbce4be538397506eca8e2d169f4b46d0d47442b273e12d82f8c87e1aadf3ade458db6
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig.tar.xz' sqlite3_3.31.1.orig.tar.xz 7108036 SHA512:67e1050efe2988fa3d0d7e4a87e147a8114c6ff9b6ca5307a068befb38e861930eaee0135048ff1abb1e6323b507cbc68a0aac3a8fe5f095d6fcea1547a7efaf
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.3.debian.tar.xz' sqlite3_3.31.1-4ubuntu0.3.debian.tar.xz 34124 SHA512:7ce6a2158cf794d25c34ffe1134356f1b8ccff2c818218cf2e37c5533455b1732f3e9462d9e0dadc0d9dc5a8e73cadcdeb1b91c813275bba4e4fbd320de494cc
-```
 
 ### `dpkg` source package: `sudo=1.8.31-1ubuntu1.2`
 

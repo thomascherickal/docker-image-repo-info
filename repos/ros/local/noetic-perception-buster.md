@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9934f52c622a20cac28951203d192a341dc6bf5ca1390702b2c22c818448c29c`
-- Created: `2022-08-23T11:15:20.501476754Z`
+- Image ID: `sha256:75f090d05eba0fb28699b40d196195f431baec9ffbca0c154f4fee492ca5a173`
+- Created: `2022-09-13T12:26:19.867740877Z`
 - Virtual Size: ~ 2.89 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -641,23 +641,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/avahi/0.7-4+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/avahi/0.7-4+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=10.3+deb10u12`
+### `dpkg` source package: `base-files=10.3+deb10u13`
 
 Binary Packages:
 
-- `base-files=10.3+deb10u12`
+- `base-files=10.3+deb10u13`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=10.3+deb10u13
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u13.dsc' base-files_10.3+deb10u13.dsc 1107 SHA256:039bdc39a6d18a0cc8ef84f4c60b06cee4bf9dcf22e22f10813d8e39652abbc6
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_10.3%2bdeb10u13.tar.xz' base-files_10.3+deb10u13.tar.xz 65540 SHA256:e2620ba4503b46342d4168d2092419c4051e696910c8bb28cb262e5368301bac
+```
 
-- http://snapshot.debian.org/package/base-files/10.3+deb10u12/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/10.3+deb10u13/ (for browsing the source)
+- https://sources.debian.net/src/base-files/10.3+deb10u13/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/10.3+deb10u13/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.46`
 
@@ -1414,13 +1420,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/cups/2.2.10-6+deb10u6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/cups/2.2.10-6+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.64.0-4+deb10u2`
+### `dpkg` source package: `curl=7.64.0-4+deb10u3`
 
 Binary Packages:
 
-- `libcurl3-gnutls:amd64=7.64.0-4+deb10u2`
-- `libcurl4:amd64=7.64.0-4+deb10u2`
-- `libcurl4-gnutls-dev:amd64=7.64.0-4+deb10u2`
+- `libcurl3-gnutls:amd64=7.64.0-4+deb10u3`
+- `libcurl4:amd64=7.64.0-4+deb10u3`
+- `libcurl4-gnutls-dev:amd64=7.64.0-4+deb10u3`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`, `/usr/share/doc/libcurl4-gnutls-dev/copyright`)
 
@@ -1434,17 +1440,17 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u2
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0-4%2bdeb10u2.dsc' curl_7.64.0-4+deb10u2.dsc 2719 SHA256:3cc585f4c22c0c001527f5f26f5a6154a86d1df9752aa118bf7d8e892ec4fac2
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.64.0-4%2bdeb10u2.debian.tar.xz' curl_7.64.0-4+deb10u2.debian.tar.xz 43572 SHA256:6b7f793e0cd41e2ccb49301ad4e58c83282f46be7c9415c9280164834efd0e52
+$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u3
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u3.dsc' curl_7.64.0-4+deb10u3.dsc 2845 SHA256:a3290e63b54991d6261f982c87230d36898b858b2f9bfe5f08e67a07d8c817ad
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u3.debian.tar.xz' curl_7.64.0-4+deb10u3.debian.tar.xz 54192 SHA256:e102815f3a4901e4e5c884a419bbecc35e45bfbddd9741a61106d187677680e6
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u2`
 
@@ -1760,23 +1766,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/diffutils/1:3.7-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/diffutils/1:3.7-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `distro-info-data=0.41+deb10u4`
+### `dpkg` source package: `distro-info-data=0.41+deb10u5`
 
 Binary Packages:
 
-- `distro-info-data=0.41+deb10u4`
+- `distro-info-data=0.41+deb10u5`
 
 Licenses: (parsed from: `/usr/share/doc/distro-info-data/copyright`)
 
 - `ISC`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris distro-info-data=0.41+deb10u5
+'http://deb.debian.org/debian/pool/main/d/distro-info-data/distro-info-data_0.41%2bdeb10u5.dsc' distro-info-data_0.41+deb10u5.dsc 1070 SHA256:3656bed3f0afb167484d6f8b4dc71d2686fdf0446edfbb09deac7263f072fb83
+'http://deb.debian.org/debian/pool/main/d/distro-info-data/distro-info-data_0.41%2bdeb10u5.tar.xz' distro-info-data_0.41+deb10u5.tar.xz 7432 SHA256:e53d36ea43ed9fbb7b25c03c9bd3ac8620ccba36819ebf8ca3f4a810bce5cab3
+```
 
-- http://snapshot.debian.org/package/distro-info-data/0.41+deb10u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/distro-info-data/0.41+deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/distro-info-data/0.41+deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/distro-info-data/0.41+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `double-conversion=3.1.0-3`
 
@@ -2137,12 +2149,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/fonts-dejavu/2.37-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/fonts-dejavu/2.37-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `freetype=2.9.1-3+deb10u2`
+### `dpkg` source package: `freetype=2.9.1-3+deb10u3`
 
 Binary Packages:
 
-- `libfreetype6:amd64=2.9.1-3+deb10u2`
-- `libfreetype6-dev:amd64=2.9.1-3+deb10u2`
+- `libfreetype6:amd64=2.9.1-3+deb10u3`
+- `libfreetype6-dev:amd64=2.9.1-3+deb10u3`
 
 Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`, `/usr/share/doc/libfreetype6-dev/copyright`)
 
@@ -2164,22 +2176,22 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`, `/usr/share/doc
 Source:
 
 ```console
-$ apt-get source -qq --print-uris freetype=2.9.1-3+deb10u2
-'http://deb.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1-3%2bdeb10u2.dsc' freetype_2.9.1-3+deb10u2.dsc 3845 SHA256:374330a49a699ec8dc4fff06b3270ae4d236d5b68a1258d60512f6edc9ddd1d1
-'http://deb.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz' freetype_2.9.1.orig-ft2demos.tar.gz 294850 SHA256:3d440aad3481285c7455f1593577e375c9d5792c800bbaba68d46fd75130fab9
-'http://deb.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz.asc' freetype_2.9.1.orig-ft2demos.tar.gz.asc 359 SHA256:665b8357378dc715fbac964d05cdcc2a2f7fd1e9d7918a27bf50f4d0a17f0d30
-'http://deb.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz' freetype_2.9.1.orig-ft2docs.tar.gz 2123920 SHA256:f57c1297f5ad2ad4764f491317fa0f548bd307c4513185d4a0602412e83b1dc9
-'http://deb.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz.asc' freetype_2.9.1.orig-ft2docs.tar.gz.asc 359 SHA256:c4c674db43603f719018716970569d1722d0de46fa94757eb7f39266d72cdbd1
-'http://deb.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig.tar.gz' freetype_2.9.1.orig.tar.gz 2533956 SHA256:ec391504e55498adceb30baceebd147a6e963f636eb617424bcfc47a169898ce
-'http://deb.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1.orig.tar.gz.asc' freetype_2.9.1.orig.tar.gz.asc 359 SHA256:2c2c5ae3b3838053b94366639e802b18bc4761003ea15ce73402d276baec424d
-'http://deb.debian.org/debian-security/pool/updates/main/f/freetype/freetype_2.9.1-3%2bdeb10u2.debian.tar.xz' freetype_2.9.1-3+deb10u2.debian.tar.xz 112652 SHA256:0fdd4dc35e232a9dc09450fc0b961e0642c6a54135abea53be64991f26d31cc6
+$ apt-get source -qq --print-uris freetype=2.9.1-3+deb10u3
+'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1-3%2bdeb10u3.dsc' freetype_2.9.1-3+deb10u3.dsc 3727 SHA256:675d49d0380f727f46118aca35ee640ae051cd676985c5dd65de0d7792c23979
+'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz' freetype_2.9.1.orig-ft2demos.tar.gz 294850 SHA256:3d440aad3481285c7455f1593577e375c9d5792c800bbaba68d46fd75130fab9
+'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2demos.tar.gz.asc' freetype_2.9.1.orig-ft2demos.tar.gz.asc 359 SHA256:665b8357378dc715fbac964d05cdcc2a2f7fd1e9d7918a27bf50f4d0a17f0d30
+'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz' freetype_2.9.1.orig-ft2docs.tar.gz 2123920 SHA256:f57c1297f5ad2ad4764f491317fa0f548bd307c4513185d4a0602412e83b1dc9
+'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig-ft2docs.tar.gz.asc' freetype_2.9.1.orig-ft2docs.tar.gz.asc 359 SHA256:c4c674db43603f719018716970569d1722d0de46fa94757eb7f39266d72cdbd1
+'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig.tar.gz' freetype_2.9.1.orig.tar.gz 2533956 SHA256:ec391504e55498adceb30baceebd147a6e963f636eb617424bcfc47a169898ce
+'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1.orig.tar.gz.asc' freetype_2.9.1.orig.tar.gz.asc 359 SHA256:2c2c5ae3b3838053b94366639e802b18bc4761003ea15ce73402d276baec424d
+'http://deb.debian.org/debian/pool/main/f/freetype/freetype_2.9.1-3%2bdeb10u3.debian.tar.xz' freetype_2.9.1-3+deb10u3.debian.tar.xz 113432 SHA256:dfcfbff8b44f769a6937c779a17eac038a4e987ebdb3004c659e801158ca3d52
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/freetype/2.9.1-3+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/freetype/2.9.1-3+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/freetype/2.9.1-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/freetype/2.9.1-3+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/freetype/2.9.1-3+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/freetype/2.9.1-3+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `freexl=1.0.5-3`
 
@@ -2218,11 +2230,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/freexl/1.0.5-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/freexl/1.0.5-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `fribidi=1.0.5-3.1+deb10u1`
+### `dpkg` source package: `fribidi=1.0.5-3.1+deb10u2`
 
 Binary Packages:
 
-- `libfribidi0:amd64=1.0.5-3.1+deb10u1`
+- `libfribidi0:amd64=1.0.5-3.1+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libfribidi0/copyright`)
 
@@ -2232,17 +2244,17 @@ Licenses: (parsed from: `/usr/share/doc/libfribidi0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris fribidi=1.0.5-3.1+deb10u1
-'http://deb.debian.org/debian-security/pool/updates/main/f/fribidi/fribidi_1.0.5-3.1%2bdeb10u1.dsc' fribidi_1.0.5-3.1+deb10u1.dsc 2476 SHA256:671fc5877218b7b86e1243fc38051f1e0290dd084fec76e23c67be86458be2ab
-'http://deb.debian.org/debian-security/pool/updates/main/f/fribidi/fribidi_1.0.5.orig.tar.bz2' fribidi_1.0.5.orig.tar.bz2 2082617 SHA256:6a64f2a687f5c4f203a46fa659f43dd43d1f8b845df8d723107e8a7e6158e4ce
-'http://deb.debian.org/debian-security/pool/updates/main/f/fribidi/fribidi_1.0.5-3.1%2bdeb10u1.debian.tar.xz' fribidi_1.0.5-3.1+deb10u1.debian.tar.xz 9656 SHA256:6db937390812dcfe3c929999accfd376a310b67af9c4fdb7949f14c1cc62040d
+$ apt-get source -qq --print-uris fribidi=1.0.5-3.1+deb10u2
+'http://deb.debian.org/debian/pool/main/f/fribidi/fribidi_1.0.5-3.1%2bdeb10u2.dsc' fribidi_1.0.5-3.1+deb10u2.dsc 2483 SHA256:05af0ac7fee456f2c3762578ad207555e99d97fee90ddbe8a8bbff2b7a8066af
+'http://deb.debian.org/debian/pool/main/f/fribidi/fribidi_1.0.5.orig.tar.bz2' fribidi_1.0.5.orig.tar.bz2 2082617 SHA256:6a64f2a687f5c4f203a46fa659f43dd43d1f8b845df8d723107e8a7e6158e4ce
+'http://deb.debian.org/debian/pool/main/f/fribidi/fribidi_1.0.5-3.1%2bdeb10u2.debian.tar.xz' fribidi_1.0.5-3.1+deb10u2.debian.tar.xz 10964 SHA256:e6cc7ca3c7658e7ca105b80e4eeea31ef6bebb292d01df9c04b6e39148e4b119
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/fribidi/1.0.5-3.1+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/fribidi/1.0.5-3.1+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/fribidi/1.0.5-3.1+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/fribidi/1.0.5-3.1+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/fribidi/1.0.5-3.1+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/fribidi/1.0.5-3.1+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `fyba=4.1.1-6`
 
@@ -3808,26 +3820,33 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/kmod/26-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/kmod/26-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `krb5=1.17-3+deb10u3`
+### `dpkg` source package: `krb5=1.17-3+deb10u4`
 
 Binary Packages:
 
-- `libgssapi-krb5-2:amd64=1.17-3+deb10u3`
-- `libk5crypto3:amd64=1.17-3+deb10u3`
-- `libkrb5-3:amd64=1.17-3+deb10u3`
-- `libkrb5support0:amd64=1.17-3+deb10u3`
+- `libgssapi-krb5-2:amd64=1.17-3+deb10u4`
+- `libk5crypto3:amd64=1.17-3+deb10u4`
+- `libkrb5-3:amd64=1.17-3+deb10u4`
+- `libkrb5support0:amd64=1.17-3+deb10u4`
 
 Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris krb5=1.17-3+deb10u4
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3%2bdeb10u4.dsc' krb5_1.17-3+deb10u4.dsc 2968 SHA256:7b2d47d17563e72841d353010442ff56b9ec87a8f83ac0e0aef68dff23c5da9d
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
+'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3%2bdeb10u4.debian.tar.xz' krb5_1.17-3+deb10u4.debian.tar.xz 104736 SHA256:69e9f59958fc0c2d7aa7540e93280b67a2e2377efbfd7b3c0c8411b8994df181
+```
 
-- http://snapshot.debian.org/package/krb5/1.17-3+deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/krb5/1.17-3+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/krb5/1.17-3+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lame=3.100-2`
 
@@ -5482,12 +5501,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/librest/0.8.1-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/librest/0.8.1-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `librsvg=2.44.10-2.1`
+### `dpkg` source package: `librsvg=2.44.10-2.1+deb10u3`
 
 Binary Packages:
 
-- `librsvg2-2:amd64=2.44.10-2.1`
-- `librsvg2-common:amd64=2.44.10-2.1`
+- `librsvg2-2:amd64=2.44.10-2.1+deb10u3`
+- `librsvg2-common:amd64=2.44.10-2.1+deb10u3`
 
 Licenses: (parsed from: `/usr/share/doc/librsvg2-2/copyright`, `/usr/share/doc/librsvg2-common/copyright`)
 
@@ -5505,17 +5524,17 @@ Licenses: (parsed from: `/usr/share/doc/librsvg2-2/copyright`, `/usr/share/doc/l
 Source:
 
 ```console
-$ apt-get source -qq --print-uris librsvg=2.44.10-2.1
-'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.44.10-2.1.dsc' librsvg_2.44.10-2.1.dsc 2875 SHA256:b68ca39d7603da41a363a9667184cfe46c1a0f804362829fe953a3f3a2e21e59
+$ apt-get source -qq --print-uris librsvg=2.44.10-2.1+deb10u3
+'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.44.10-2.1%2bdeb10u3.dsc' librsvg_2.44.10-2.1+deb10u3.dsc 2907 SHA256:c96b68a9ac50c78af91afa70f15564b0a630a7c5a1993bf62025ab06bfdf5da0
 'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.44.10.orig.tar.xz' librsvg_2.44.10.orig.tar.xz 9874524 SHA256:175bb677837d5ab3596c3287e3d40f9bb60469271fd3055f2e2d1b54aeaa4f5d
-'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.44.10-2.1.debian.tar.xz' librsvg_2.44.10-2.1.debian.tar.xz 23972 SHA256:106c4e4ecdca6a845957830d6e0135ed01dcf5e63cfc57669754bb80cba50d3f
+'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.44.10-2.1%2bdeb10u3.debian.tar.xz' librsvg_2.44.10-2.1+deb10u3.debian.tar.xz 39620 SHA256:8f6fb15e2608c1e89532b4511b0cc534fea46c057e6b9c31a0d6949a9f381310
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/librsvg/2.44.10-2.1/ (for browsing the source)
-- https://sources.debian.net/src/librsvg/2.44.10-2.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/librsvg/2.44.10-2.1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/librsvg/2.44.10-2.1+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/librsvg/2.44.10-2.1+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/librsvg/2.44.10-2.1+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libseccomp=2.3.3-4`
 
@@ -6703,11 +6722,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libxshmfence/1.3-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libxshmfence/1.3-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libxslt=1.1.32-2.2~deb10u1`
+### `dpkg` source package: `libxslt=1.1.32-2.2~deb10u2`
 
 Binary Packages:
 
-- `libxslt1.1:amd64=1.1.32-2.2~deb10u1`
+- `libxslt1.1:amd64=1.1.32-2.2~deb10u2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -6716,18 +6735,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libxslt=1.1.32-2.2~deb10u1
-'http://deb.debian.org/debian/pool/main/libx/libxslt/libxslt_1.1.32-2.2%7edeb10u1.dsc' libxslt_1.1.32-2.2~deb10u1.dsc 2781 SHA256:ae3c135ea738ba088bda7dc76fb63cb68920a1fac0514aa5ff8761182d48b1f3
-'http://deb.debian.org/debian/pool/main/libx/libxslt/libxslt_1.1.32.orig.tar.gz' libxslt_1.1.32.orig.tar.gz 3440715 SHA256:526ecd0abaf4a7789041622c3950c0e7f2c4c8835471515fd77eec684a355460
-'http://deb.debian.org/debian/pool/main/libx/libxslt/libxslt_1.1.32.orig.tar.gz.asc' libxslt_1.1.32.orig.tar.gz.asc 455 SHA256:68b374a73747c57a17d62f0ccc1e9714f68a292e700fe4c88e3c2d9dcba71871
-'http://deb.debian.org/debian/pool/main/libx/libxslt/libxslt_1.1.32-2.2%7edeb10u1.debian.tar.xz' libxslt_1.1.32-2.2~deb10u1.debian.tar.xz 34232 SHA256:1ac65664ec024a34da9c4180778073198868fb4ce78fb9bc936564dd61cc57e5
+$ apt-get source -qq --print-uris libxslt=1.1.32-2.2~deb10u2
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libxslt/libxslt_1.1.32-2.2%7edeb10u2.dsc' libxslt_1.1.32-2.2~deb10u2.dsc 2626 SHA256:3c0337b8a133dfaa154ee89b8b94d80c739d9f89f1db71a0731ecfc4d7573647
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libxslt/libxslt_1.1.32.orig.tar.gz' libxslt_1.1.32.orig.tar.gz 3440715 SHA256:526ecd0abaf4a7789041622c3950c0e7f2c4c8835471515fd77eec684a355460
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libxslt/libxslt_1.1.32.orig.tar.gz.asc' libxslt_1.1.32.orig.tar.gz.asc 455 SHA256:68b374a73747c57a17d62f0ccc1e9714f68a292e700fe4c88e3c2d9dcba71871
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libxslt/libxslt_1.1.32-2.2%7edeb10u2.debian.tar.xz' libxslt_1.1.32-2.2~deb10u2.debian.tar.xz 36732 SHA256:be4616f8433ced836bb4e66fdbec6cfe92b406e06019b73ccaf1fe431b54004d
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libxslt/1.1.32-2.2~deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/libxslt/1.1.32-2.2~deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxslt/1.1.32-2.2~deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libxslt/1.1.32-2.2~deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/libxslt/1.1.32-2.2~deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libxslt/1.1.32-2.2~deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxss=1:1.2.3-1`
 
@@ -8429,11 +8448,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pango1.0/1.42.4-8~deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pango1.0/1.42.4-8~deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `paramiko=2.4.2-0.1`
+### `dpkg` source package: `paramiko=2.4.2-0.1+deb10u1`
 
 Binary Packages:
 
-- `python3-paramiko=2.4.2-0.1`
+- `python3-paramiko=2.4.2-0.1+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/python3-paramiko/copyright`)
 
@@ -8442,18 +8461,17 @@ Licenses: (parsed from: `/usr/share/doc/python3-paramiko/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris paramiko=2.4.2-0.1
-'http://deb.debian.org/debian/pool/main/p/paramiko/paramiko_2.4.2-0.1.dsc' paramiko_2.4.2-0.1.dsc 2397 SHA256:d1f70c364d5ddae1508f47669ad21bfc94dcee7bd756ae99bcfe32abc370f8ff
-'http://deb.debian.org/debian/pool/main/p/paramiko/paramiko_2.4.2.orig.tar.gz' paramiko_2.4.2.orig.tar.gz 1207299 SHA256:a8975a7df3560c9f1e2b43dc54ebd40fd00a7017392ca5445ce7df409f900fcb
-'http://deb.debian.org/debian/pool/main/p/paramiko/paramiko_2.4.2.orig.tar.gz.asc' paramiko_2.4.2.orig.tar.gz.asc 455 SHA256:572a99af43a17cbd53bf5a56e1ab1cbeef2ea46a71e04d544282f96d69cd3f31
-'http://deb.debian.org/debian/pool/main/p/paramiko/paramiko_2.4.2-0.1.debian.tar.xz' paramiko_2.4.2-0.1.debian.tar.xz 7516 SHA256:6d3580171c81829593c5dee45310c6e87d2a5b239f46fe0aa124efbebc6a947f
+$ apt-get source -qq --print-uris paramiko=2.4.2-0.1+deb10u1
+'http://deb.debian.org/debian-security/pool/updates/main/p/paramiko/paramiko_2.4.2-0.1%2bdeb10u1.dsc' paramiko_2.4.2-0.1+deb10u1.dsc 2554 SHA256:d4f800d651dcfd7bdb7dfff81f02c915245bbeb0dbd7072119c644c8efcb56ea
+'http://deb.debian.org/debian-security/pool/updates/main/p/paramiko/paramiko_2.4.2.orig.tar.gz' paramiko_2.4.2.orig.tar.gz 1207299 SHA256:a8975a7df3560c9f1e2b43dc54ebd40fd00a7017392ca5445ce7df409f900fcb
+'http://deb.debian.org/debian-security/pool/updates/main/p/paramiko/paramiko_2.4.2-0.1%2bdeb10u1.debian.tar.xz' paramiko_2.4.2-0.1+deb10u1.debian.tar.xz 9436 SHA256:99c90f0eb89f9cdfe72302f442431f96cbcfdc3bc97917ea9d69b7029488230a
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/paramiko/2.4.2-0.1/ (for browsing the source)
-- https://sources.debian.net/src/paramiko/2.4.2-0.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/paramiko/2.4.2-0.1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/paramiko/2.4.2-0.1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/paramiko/2.4.2-0.1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/paramiko/2.4.2-0.1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-3+deb10u1`
 
@@ -10046,27 +10064,27 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/qhull/2015.2-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/qhull/2015.2-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `qtbase-opensource-src=5.11.3+dfsg1-1+deb10u4`
+### `dpkg` source package: `qtbase-opensource-src=5.11.3+dfsg1-1+deb10u5`
 
 Binary Packages:
 
-- `libqt5concurrent5:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5core5a:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5dbus5:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5gui5:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5network5:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5opengl5:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5opengl5-dev:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5printsupport5:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5sql5:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5sql5-sqlite:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5test5:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5widgets5:amd64=5.11.3+dfsg1-1+deb10u4`
-- `libqt5xml5:amd64=5.11.3+dfsg1-1+deb10u4`
-- `qt5-qmake:amd64=5.11.3+dfsg1-1+deb10u4`
-- `qt5-qmake-bin=5.11.3+dfsg1-1+deb10u4`
-- `qtbase5-dev:amd64=5.11.3+dfsg1-1+deb10u4`
-- `qtbase5-dev-tools=5.11.3+dfsg1-1+deb10u4`
+- `libqt5concurrent5:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5core5a:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5dbus5:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5gui5:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5network5:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5opengl5:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5opengl5-dev:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5printsupport5:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5sql5:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5sql5-sqlite:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5test5:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5widgets5:amd64=5.11.3+dfsg1-1+deb10u5`
+- `libqt5xml5:amd64=5.11.3+dfsg1-1+deb10u5`
+- `qt5-qmake:amd64=5.11.3+dfsg1-1+deb10u5`
+- `qt5-qmake-bin=5.11.3+dfsg1-1+deb10u5`
+- `qtbase5-dev:amd64=5.11.3+dfsg1-1+deb10u5`
+- `qtbase5-dev-tools=5.11.3+dfsg1-1+deb10u5`
 
 Licenses: (parsed from: `/usr/share/doc/libqt5concurrent5/copyright`, `/usr/share/doc/libqt5core5a/copyright`, `/usr/share/doc/libqt5dbus5/copyright`, `/usr/share/doc/libqt5gui5/copyright`, `/usr/share/doc/libqt5network5/copyright`, `/usr/share/doc/libqt5opengl5/copyright`, `/usr/share/doc/libqt5opengl5-dev/copyright`, `/usr/share/doc/libqt5printsupport5/copyright`, `/usr/share/doc/libqt5sql5/copyright`, `/usr/share/doc/libqt5sql5-sqlite/copyright`, `/usr/share/doc/libqt5test5/copyright`, `/usr/share/doc/libqt5widgets5/copyright`, `/usr/share/doc/libqt5xml5/copyright`, `/usr/share/doc/qt5-qmake/copyright`, `/usr/share/doc/qt5-qmake-bin/copyright`, `/usr/share/doc/qtbase5-dev/copyright`, `/usr/share/doc/qtbase5-dev-tools/copyright`)
 
@@ -10092,13 +10110,20 @@ Licenses: (parsed from: `/usr/share/doc/libqt5concurrent5/copyright`, `/usr/shar
 - `libpng`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris qtbase-opensource-src=5.11.3+dfsg1-1+deb10u5
+'http://deb.debian.org/debian/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.11.3%2bdfsg1-1%2bdeb10u5.dsc' qtbase-opensource-src_5.11.3+dfsg1-1+deb10u5.dsc 5206 SHA256:6b711df3b6c2a6efa7d5655fb8dbb35f69485ff4d43c179ac9b28d4b1ad7131a
+'http://deb.debian.org/debian/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.11.3%2bdfsg1.orig.tar.xz' qtbase-opensource-src_5.11.3+dfsg1.orig.tar.xz 45155472 SHA256:fb6707c7f9f65b7160879d3bf6d05b3a9a796172c1fc47962b79f5a45c375a22
+'http://deb.debian.org/debian/pool/main/q/qtbase-opensource-src/qtbase-opensource-src_5.11.3%2bdfsg1-1%2bdeb10u5.debian.tar.xz' qtbase-opensource-src_5.11.3+dfsg1-1+deb10u5.debian.tar.xz 245720 SHA256:9fe6338b9397f22eaac1d727abf9826b09b9e226713ac385588c4c23929c069a
+```
 
-- http://snapshot.debian.org/package/qtbase-opensource-src/5.11.3+dfsg1-1+deb10u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/qtbase-opensource-src/5.11.3+dfsg1-1+deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/qtbase-opensource-src/5.11.3+dfsg1-1+deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/qtbase-opensource-src/5.11.3+dfsg1-1+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `qtchooser=66-2`
 
@@ -12999,24 +13024,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tk8.6/8.6.9-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tk8.6/8.6.9-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `twisted=18.9.0-3`
+### `dpkg` source package: `twisted=18.9.0-3+deb10u1`
 
 Binary Packages:
 
-- `python3-twisted=18.9.0-3`
-- `python3-twisted-bin:amd64=18.9.0-3`
+- `python3-twisted=18.9.0-3+deb10u1`
+- `python3-twisted-bin:amd64=18.9.0-3+deb10u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris twisted=18.9.0-3+deb10u1
+'http://deb.debian.org/debian/pool/main/t/twisted/twisted_18.9.0-3%2bdeb10u1.dsc' twisted_18.9.0-3+deb10u1.dsc 3007 SHA256:cfcdc1a6ff8c46407ba2c355db16b39e085391d1775f956401dae4b51844be5b
+'http://deb.debian.org/debian/pool/main/t/twisted/twisted_18.9.0.orig.tar.bz2' twisted_18.9.0.orig.tar.bz2 3088398 SHA256:294be2c6bf84ae776df2fc98e7af7d6537e1c5e60a46d33c3ce2a197677da395
+'http://deb.debian.org/debian/pool/main/t/twisted/twisted_18.9.0-3%2bdeb10u1.debian.tar.xz' twisted_18.9.0-3+deb10u1.debian.tar.xz 52252 SHA256:d8f9a768dc53473d396886ac967d3fb68493400da59d2efe02c52cad51be0602
+```
 
-- http://snapshot.debian.org/package/twisted/18.9.0-3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/twisted/18.9.0-3+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/twisted/18.9.0-3+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/twisted/18.9.0-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `twolame=0.3.13-4`
 
@@ -13999,12 +14031,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/yaml-cpp/0.6.2-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/yaml-cpp/0.6.2-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `zlib=1:1.2.11.dfsg-1+deb10u1`
+### `dpkg` source package: `zlib=1:1.2.11.dfsg-1+deb10u2`
 
 Binary Packages:
 
-- `zlib1g:amd64=1:1.2.11.dfsg-1+deb10u1`
-- `zlib1g-dev:amd64=1:1.2.11.dfsg-1+deb10u1`
+- `zlib1g:amd64=1:1.2.11.dfsg-1+deb10u2`
+- `zlib1g-dev:amd64=1:1.2.11.dfsg-1+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`, `/usr/share/doc/zlib1g-dev/copyright`)
 
@@ -14013,17 +14045,17 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`, `/usr/share/doc/zlib1
 Source:
 
 ```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-1+deb10u1
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.dsc' zlib_1.2.11.dfsg-1+deb10u1.dsc 2774 SHA256:3eddd036f314f8a7717c41fe7d3c935653afeb6b7f7bf6d9ad80c10ef1c4bdc3
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.debian.tar.xz' zlib_1.2.11.dfsg-1+deb10u1.debian.tar.xz 23092 SHA256:eb26660e5b8a39f945a4fe1284e29b0279ded3513327e3cbd51c51921758f13f
+$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-1+deb10u2
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u2.dsc' zlib_1.2.11.dfsg-1+deb10u2.dsc 2619 SHA256:6166bc693b849b1547e0870b91186c43c9cc5187c9a6eb0b44f9b293d687efd9
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u2.debian.tar.xz' zlib_1.2.11.dfsg-1+deb10u2.debian.tar.xz 23772 SHA256:dd1c6fa2c25e23499713ac7e891d4c1218676240855c8d24604b9ae7c8eea2cf
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-1+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `zope.interface=4.3.2-1`
 
