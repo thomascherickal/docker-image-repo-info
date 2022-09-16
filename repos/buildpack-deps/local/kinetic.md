@@ -1825,14 +1825,13 @@ Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 - `public-domain-1`
 - `public-domain-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libde265=1.0.8-1
-'http://archive.ubuntu.com/ubuntu/pool/universe/libd/libde265/libde265_1.0.8-1.dsc' libde265_1.0.8-1.dsc 2216 SHA512:75e5ac4bb507cce9a95585e2b1916b65a1995b9389ec81615ed5c86d3cd0ce28a4cdc83a9055b6412dd1db559065ee2e1530ca238f6994b4559b8e91e7e4f338
-'http://archive.ubuntu.com/ubuntu/pool/universe/libd/libde265/libde265_1.0.8.orig.tar.gz' libde265_1.0.8.orig.tar.gz 837878 SHA512:bcb33493cbc337d29047c6765189aaba523b20c138aa4fd5c264b3c6aea64cd174cbe14ca2d88c76319e0a8bd5d2e6269f300f056876d2962217eea7934172da
-'http://archive.ubuntu.com/ubuntu/pool/universe/libd/libde265/libde265_1.0.8-1.debian.tar.xz' libde265_1.0.8-1.debian.tar.xz 8184 SHA512:717f3a2912412222bab2572245dba20b37ac186c19a348bf8b140a9221b8d55fcb6a34a0550a508332f60330b959d73319628a1c26ee4de9fe99f6d1303c116a
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libde265/1.0.8-1/
+
 
 ### `dpkg` source package: `libdeflate=1.12-1`
 
@@ -3879,14 +3878,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-stdlib-extensions=3.10.6-1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.10.6-1.dsc' python3-stdlib-extensions_3.10.6-1.dsc 2575 SHA512:8f34086b07c978ce04ff1d7fc94803874230774e8501240ccecf60bb4d62e7909684843f6f281aaa93890a6969ae5cc9c57728de02205fafa9355afeb88e34e9
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.10.6.orig.tar.xz' python3-stdlib-extensions_3.10.6.orig.tar.xz 1087948 SHA512:f7b54ed10a3d43626340a57b5368bf4e94a23759d91ca759da8f7045151944a89c4259286cccbfbc139106dfe92fefc498e8ce47051d05f7a55d671bd69b094c
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.10.6-1.debian.tar.xz' python3-stdlib-extensions_3.10.6-1.debian.tar.xz 25748 SHA512:cf52c38ddf51aedff93d7cc23d5be2626f0ed3bd7d2b7b39feb3a807bd1bae7d3183246a373515d742fcbbb1d6dbb39d6b2c95acc78318af745e092392552f34
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/python3-stdlib-extensions/3.10.6-1/
+
 
 ### `dpkg` source package: `python3.10=3.10.6-1`
 

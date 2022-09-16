@@ -1990,15 +1990,9 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.22.0-1ubuntu0.5
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.5.dsc' sqlite3_3.22.0-1ubuntu0.5.dsc 2390 SHA512:d3e0f49122dcaaaecb37309b2e116d582a6409f5b1edf6cbdb544c94b8e260ddaa3cf354c0fbd2adc5403557674412c8a367d5c5ab6dd6f9d5ea164fd450a2f6
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0.orig-www.tar.xz' sqlite3_3.22.0.orig-www.tar.xz 3564688 SHA512:e469878137ec3d06886fe096c4325451e8c9b73f6841d28fac9bed45e698bdc1222739570abf2ce456e0853b0c6876b1c79ca0896826295f64d27b276541c1f8
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0.orig.tar.xz' sqlite3_3.22.0.orig.tar.xz 6019648 SHA512:ce3b05cb9f75a5c7a5e8562b70e72e23c043222fd61995f795cbcc40f3f8efcac2660e57b588a15bfdce28c8eb644745bb73af35f5b98ba956dd77457d661dfa
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.22.0-1ubuntu0.5.debian.tar.xz' sqlite3_3.22.0-1ubuntu0.5.debian.tar.xz 48200 SHA512:3c73310fa7b9ebf5176e2c112d6d227c53ff559a75fdc18821023b471d191c6b73b8fd1b65cfb17e82ed371b44ab57f80b89c5e2a374590464ab5cef0afa3dd1
-```
 
 ### `dpkg` source package: `subversion=1.9.7-4ubuntu1.1`
 
@@ -2039,14 +2033,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=237-3ubuntu10.53
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.53.dsc' systemd_237-3ubuntu10.53.dsc 5187 SHA512:67bec5ef899046e4dac8d004d456a4320acf2865b66c697040f54f7e04ce1dd31d4abb331b77f5beffdcf4281a4b44eb29746d68b796be4e55c7865afbbf5c9f
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237.orig.tar.gz' systemd_237.orig.tar.gz 6871350 SHA512:15ef4b92815a6dd9a6c51672dbc00fd7cd0f08068ef0cbeaca574f68d330b28bc67ba1946f24f75ef3d9e7b63843a73eea700db54688061dbf5c9f8470394c3b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_237-3ubuntu10.53.debian.tar.xz' systemd_237-3ubuntu10.53.debian.tar.xz 302640 SHA512:5b2fbb5ec3ca3030e64326af2281b42aedad040edc44595d41f7ea2d06c91a1fdee6e2e4c1bc6c513332ddae6d89bbbc2ff4584e6c59c20e43e2ee0ed27d64bd
-```
 
 ### `dpkg` source package: `sysvinit=2.88dsf-59.10ubuntu1`
 

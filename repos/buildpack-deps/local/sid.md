@@ -82,20 +82,13 @@ Licenses: (parsed from: `/usr/share/doc/libaom3/copyright`)
 - `ISC`
 - `public-domain-md5`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris aom=3.4.0-1
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.4.0-1.dsc' aom_3.4.0-1.dsc 2207 SHA256:dbb01b8c33ba782b6b773687bdc0b239e5886e7adf8639522781dc3a138eced8
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.4.0.orig.tar.xz' aom_3.4.0.orig.tar.xz 3662848 SHA256:94fcfaca096fc4b0b5a23d64b8bf621ab1b8673449275d132d7d9c93d5f530a0
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.4.0-1.debian.tar.xz' aom_3.4.0-1.debian.tar.xz 12352 SHA256:f24b7e6ddaff844ab39650c85815d1c3cd4cb1b7286083b7f04528e27fb631d8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/aom/3.4.0-1/
 
-- https://sources.debian.net/src/aom/3.4.0-1/ (for browsing the source)
-- https://sources.debian.net/src/aom/3.4.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/aom/3.4.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apr-util=1.6.1-5`
 

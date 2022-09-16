@@ -642,21 +642,13 @@ Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/li
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.46.5-2
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.5-2.dsc' e2fsprogs_1.46.5-2.dsc 2846 SHA256:6be9066b5b608aeb053e9c25bfd69c11123d8a945d191ff12657e73efb3480c3
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.5.orig.tar.gz' e2fsprogs_1.46.5.orig.tar.gz 9530158 SHA256:b7430d1e6b7b5817ce8e36d7c8c7c3249b3051d0808a96ffd6e5c398e4e2fbb9
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.5.orig.tar.gz.asc' e2fsprogs_1.46.5.orig.tar.gz.asc 488 SHA256:b1e248ed73d4d67ac0cf7760e780e0a5cd2db85bbb9a5dcc235538b596128916
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.5-2.debian.tar.xz' e2fsprogs_1.46.5-2.debian.tar.xz 83972 SHA256:0d635367a58eead808e5c780003a63d00fd37aaa20a3270d5f2ec796fe3f22ee
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/e2fsprogs/1.46.5-2/
 
-- https://sources.debian.net/src/e2fsprogs/1.46.5-2/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.46.5-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.46.5-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.9.0-3`
 
@@ -729,13 +721,20 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris glibc=2.34-8
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.34-8.dsc' glibc_2.34-8.dsc 9682 SHA256:1c03c57d3ffb285642966900c1a15166b97189ff6f914950a4a0f6535a421a01
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.34.orig.tar.xz' glibc_2.34.orig.tar.xz 17949940 SHA256:cc13047c7d42748108fc18cf1a4de8ca92f9e5c9bfcee09d6fada21d9a479878
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.34-8.debian.tar.xz' glibc_2.34-8.debian.tar.xz 1000880 SHA256:91fde9acd48db895f6face4bbe72ecb56e234dbea79dd0b1e390b4d1e7236321
+```
 
-- http://snapshot.debian.org/package/glibc/2.34-8/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/glibc/2.34-8/ (for browsing the source)
+- https://sources.debian.net/src/glibc/2.34-8/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/glibc/2.34-8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg1-1`
 
@@ -864,21 +863,13 @@ Licenses: (parsed from: `/usr/share/doc/grep/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris grep=3.8-1
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8-1.dsc' grep_3.8-1.dsc 1608 SHA256:37b796b17e4697989e59500b10e9d5d5ca6f2cd3b8cf5ad3e1da44973d9fceff
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8.orig.tar.xz' grep_3.8.orig.tar.xz 1709536 SHA256:498d7cc1b4fb081904d87343febb73475cf771e424fb7e6141aff66013abc382
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8.orig.tar.xz.asc' grep_3.8.orig.tar.xz.asc 833 SHA256:347aec924499df3fa41a0d782f3cd3e4a51a15de98b44eaab04084cd34060cd0
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8-1.debian.tar.xz' grep_3.8-1.debian.tar.xz 17984 SHA256:c9c1276394cadba165aa634c2374f05d79963f6438edbc5894357d87e263d723
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/grep/3.8-1/
 
-- https://sources.debian.net/src/grep/3.8-1/ (for browsing the source)
-- https://sources.debian.net/src/grep/3.8-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/grep/3.8-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gzip=1.12-1`
 
@@ -1425,13 +1416,21 @@ Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 - `LGPL`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libtasn1-6=4.19.0-2
+'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.19.0-2.dsc' libtasn1-6_4.19.0-2.dsc 2662 SHA256:cbecbd9b784af6dedde9ca685a4cc13e1ead027ea051150ff8186af57c547109
+'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.19.0.orig.tar.gz' libtasn1-6_4.19.0.orig.tar.gz 1786576 SHA256:1613f0ac1cf484d6ec0ce3b8c06d56263cc7242f1c23b30d82d23de345a63f7a
+'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.19.0.orig.tar.gz.asc' libtasn1-6_4.19.0.orig.tar.gz.asc 228 SHA256:8410c0c004f3509c218a98b276b3308b9c46f48068e8b1a6d9ebfd61ea9f357a
+'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.19.0-2.debian.tar.xz' libtasn1-6_4.19.0-2.debian.tar.xz 22012 SHA256:21fe6b16fb27cca47b51893708964ddfe04ea5227d1608560b4988e6fca74ae9
+```
 
-- http://snapshot.debian.org/package/libtasn1-6/4.19.0-2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libtasn1-6/4.19.0-2/ (for browsing the source)
+- https://sources.debian.net/src/libtasn1-6/4.19.0-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libtasn1-6/4.19.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libunistring=1.0-1`
 
@@ -2204,19 +2203,13 @@ Licenses: (parsed from: `/usr/share/doc/usr-is-merged/copyright`)
 - `GPL-2`
 - `later (please see /usr/share/common-licenses/GPL-2)`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris usrmerge=29
-'http://deb.debian.org/debian/pool/main/u/usrmerge/usrmerge_29.dsc' usrmerge_29.dsc 938 SHA256:22b1ecaf78e426deec34d74d4597687130111bc912dba58228ccf78d4041d4a7
-'http://deb.debian.org/debian/pool/main/u/usrmerge/usrmerge_29.tar.xz' usrmerge_29.tar.xz 12680 SHA256:a1276993476bbeaf2573a17123e7f8ea76c518eaa78eb0154bae132c42eb3baf
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/usrmerge/29/
 
-- https://sources.debian.net/src/usrmerge/29/ (for browsing the source)
-- https://sources.debian.net/src/usrmerge/29/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/usrmerge/29/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.38.1-1`
 
