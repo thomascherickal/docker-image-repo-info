@@ -65,6 +65,27 @@
 -	[`amazoncorretto:18.0.2-alpine3.13`](#amazoncorretto1802-alpine313)
 -	[`amazoncorretto:18.0.2-alpine3.14`](#amazoncorretto1802-alpine314)
 -	[`amazoncorretto:18.0.2-alpine3.15`](#amazoncorretto1802-alpine315)
+-	[`amazoncorretto:19`](#amazoncorretto19)
+-	[`amazoncorretto:19-al2-full`](#amazoncorretto19-al2-full)
+-	[`amazoncorretto:19-al2-jdk`](#amazoncorretto19-al2-jdk)
+-	[`amazoncorretto:19-alpine`](#amazoncorretto19-alpine)
+-	[`amazoncorretto:19-alpine-full`](#amazoncorretto19-alpine-full)
+-	[`amazoncorretto:19-alpine-jdk`](#amazoncorretto19-alpine-jdk)
+-	[`amazoncorretto:19-alpine3.13`](#amazoncorretto19-alpine313)
+-	[`amazoncorretto:19-alpine3.13-full`](#amazoncorretto19-alpine313-full)
+-	[`amazoncorretto:19-alpine3.13-jdk`](#amazoncorretto19-alpine313-jdk)
+-	[`amazoncorretto:19-alpine3.14`](#amazoncorretto19-alpine314)
+-	[`amazoncorretto:19-alpine3.14-full`](#amazoncorretto19-alpine314-full)
+-	[`amazoncorretto:19-alpine3.14-jdk`](#amazoncorretto19-alpine314-jdk)
+-	[`amazoncorretto:19-alpine3.15`](#amazoncorretto19-alpine315)
+-	[`amazoncorretto:19-alpine3.15-full`](#amazoncorretto19-alpine315-full)
+-	[`amazoncorretto:19-alpine3.15-jdk`](#amazoncorretto19-alpine315-jdk)
+-	[`amazoncorretto:19.0.0`](#amazoncorretto1900)
+-	[`amazoncorretto:19.0.0-al2`](#amazoncorretto1900-al2)
+-	[`amazoncorretto:19.0.0-alpine`](#amazoncorretto1900-alpine)
+-	[`amazoncorretto:19.0.0-alpine3.13`](#amazoncorretto1900-alpine313)
+-	[`amazoncorretto:19.0.0-alpine3.14`](#amazoncorretto1900-alpine314)
+-	[`amazoncorretto:19.0.0-alpine3.15`](#amazoncorretto1900-alpine315)
 -	[`amazoncorretto:8`](#amazoncorretto8)
 -	[`amazoncorretto:8-al2-full`](#amazoncorretto8-al2-full)
 -	[`amazoncorretto:8-al2-jdk`](#amazoncorretto8-al2-jdk)
@@ -3878,6 +3899,90 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/j
 		Last Modified: Tue, 09 Aug 2022 17:47:11 GMT  
 		Size: 192.9 MB (192861039 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `amazoncorretto:19`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-al2-full`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-al2-jdk`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine-full`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine-jdk`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine3.13`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine3.13-full`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine3.13-jdk`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine3.14`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine3.14-full`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine3.14-jdk`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine3.15`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine3.15-full`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19-alpine3.15-jdk`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19.0.0`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19.0.0-al2`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19.0.0-alpine`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19.0.0-alpine3.13`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19.0.0-alpine3.14`
+
+**does not exist** (yet?)
+
+## `amazoncorretto:19.0.0-alpine3.15`
+
+**does not exist** (yet?)
 
 ## `amazoncorretto:8`
 
