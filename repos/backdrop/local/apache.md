@@ -1,10 +1,10 @@
-# `backdrop:1.21.4`
+# `backdrop:1.23.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0e2812d05a710ea0d0a4abcd5b33b62a5a85d1c9ba012205da8e42a8a5ad406e`
-- Created: `2022-09-13T18:22:55.776469412Z`
-- Virtual Size: ~ 492.64 Mb  
+- Image ID: `sha256:79452f4ea96a52c7ca70824e7804012baab31b5613800d98473d4dd6ac031b36`
+- Created: `2022-09-20T20:19:30.036285194Z`
+- Virtual Size: ~ 492.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -23,8 +23,8 @@
   - `PHP_URL=https://www.php.net/distributions/php-7.4.30.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.30.tar.xz.asc`
   - `PHP_SHA256=ea72a34f32c67e79ac2da7dfe96177f3c451c3eefae5810ba13312ed398ba70d`
-  - `BACKDROP_VERSION=1.21.4`
-  - `BACKDROP_MD5=1540d9a42f429e29acc2e6a41cb4897c`
+  - `BACKDROP_VERSION=1.23.0`
+  - `BACKDROP_MD5=68c4caabd52535896009e0d6d26e1040`
 
 ## `dpkg` (`.deb`-based packages)
 
