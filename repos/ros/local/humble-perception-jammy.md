@@ -5761,14 +5761,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.15.0-47.51
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-47.51.dsc' linux_5.15.0-47.51.dsc 7645 SHA512:7624054f97eadc0682401a90ee9278c6df5c69b5fb665223953ab0799f838450ff2847aa1949cc369a99da75ca0ba339d8fd40e0ca5f90453a4d86f61bfd8413
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-47.51.diff.gz' linux_5.15.0-47.51.diff.gz 7388280 SHA512:7b3bce8b998c52fcec79fa8f54a3c3f116403362e11e09516ec88422687797c9b8422996f465dfca1d46eea2e6e89f8f7e740d32e042f30edda61b5f7dfeb8c5
-```
 
 ### `dpkg` source package: `llvm-toolchain-13=1:13.0.1-2ubuntu2.1`
 
@@ -8713,9 +8708,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris python3.10=3.10.4-3ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4-3ubuntu0.1.dsc' python3.10_3.10.4-3ubuntu0.1.dsc 3704 SHA512:da635e036b2c7e88dd95e8e09402ebebdf2d8ba6061511853ae75570a136e9af6f0ef3ee114270783307c816bc79e9e041972b218c4ec5cfe34973c5fd2d9574
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4.orig.tar.xz' python3.10_3.10.4.orig.tar.xz 19342692 SHA512:6c9aeecddc55c7896b2e8527fca131c7b2b6127d56ce1a001ccedfebf590334e0c0bb7c517ed3cf1da3c1910e002552b56aa7e03eeb672f42ff0bd8150799113
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4-3ubuntu0.1.debian.tar.xz' python3.10_3.10.4-3ubuntu0.1.debian.tar.xz 219136 SHA512:b80eb1291c0aef65c6c313e780d7dcf13b874743cde6c16c4a4e0f6683670d54a23c58115270d49781c25d543b7efe273c89466a04f505850adf66c45dba5bea
+'http://security.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4-3ubuntu0.1.dsc' python3.10_3.10.4-3ubuntu0.1.dsc 3704 SHA512:da635e036b2c7e88dd95e8e09402ebebdf2d8ba6061511853ae75570a136e9af6f0ef3ee114270783307c816bc79e9e041972b218c4ec5cfe34973c5fd2d9574
+'http://security.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4.orig.tar.xz' python3.10_3.10.4.orig.tar.xz 19342692 SHA512:6c9aeecddc55c7896b2e8527fca131c7b2b6127d56ce1a001ccedfebf590334e0c0bb7c517ed3cf1da3c1910e002552b56aa7e03eeb672f42ff0bd8150799113
+'http://security.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4-3ubuntu0.1.debian.tar.xz' python3.10_3.10.4-3ubuntu0.1.debian.tar.xz 219136 SHA512:b80eb1291c0aef65c6c313e780d7dcf13b874743cde6c16c4a4e0f6683670d54a23c58115270d49781c25d543b7efe273c89466a04f505850adf66c45dba5bea
 ```
 
 ### `dpkg` source package: `pyyaml=5.4.1-1ubuntu1`
@@ -12645,14 +12640,9 @@ Licenses: (parsed from: `/usr/share/doc/libpam-systemd/copyright`, `/usr/share/d
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=249.11-0ubuntu3.4
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.4.dsc' systemd_249.11-0ubuntu3.4.dsc 5773 SHA512:2bff116d7ad6150709d16f213b3bd92c3461ecf29508f4c780fb07b80b28a1be2551248a2940bcd2923bacee14e456bc78e2662f8422172ced391b5ea8bb6cd5
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11.orig.tar.gz' systemd_249.11.orig.tar.gz 10622702 SHA512:fed7f81933648945a4bfac9fb12150ecd84d32181f79be0e14e0b3a789343a87569f868670e0b8dfc2801fab39f7490f95ee8c29ba831d7611f78c14ace5ddd8
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.4.debian.tar.xz' systemd_249.11-0ubuntu3.4.debian.tar.xz 230480 SHA512:d7fbd173d8f0fc0e4cb9bf138ab672a4f13684add99844c0d033b4dce1fcbd76745439814cb63fa0b07aeeb92307e2c4c1f2e0af2e721c0bbd17476a7691a190
-```
 
 ### `dpkg` source package: `sysvinit=3.01-1ubuntu1`
 
