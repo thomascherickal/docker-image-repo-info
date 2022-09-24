@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9334228bb59ed1d5d15b28a265eb7b8a2cceb9dbc6854df7abd9a9680e2233f7`
-- Created: `2022-08-26T02:05:26.312948999Z`
-- Virtual Size: ~ 463.78 Mb  
+- Image ID: `sha256:ca082cb19977653afbba8201dfb9f4a517782bd45fd27cfbcf733f4e25a6e54c`
+- Created: `2022-09-22T20:11:51.701659726Z`
+- Virtual Size: ~ 463.70 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -334,15 +334,15 @@ $ dnf --quiet download --source --url gmp-6.0.0-15.amzn2.0.2
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/712fffd161eb394310f7fe5f7d41ae2aae07cdcce27ca119bf04c6f056eb2b4d/gmp-6.0.0-15.amzn2.0.2.src.rpm
 ```
 
-### `rpm` package: `gnupg2-2.0.22-5.amzn2.0.4.x86_64`
+### `rpm` package: `gnupg2-2.0.22-5.amzn2.0.5.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url gnupg2-2.0.22-5.amzn2.0.4
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/cf2f89347d3eba84fb17d1d713b4a18aa7b15bfaace0b19464780208135b493f/gnupg2-2.0.22-5.amzn2.0.4.src.rpm
+$ dnf --quiet download --source --url gnupg2-2.0.22-5.amzn2.0.5
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/189e1bdc950a8e13918173d73835981842c90ee3b3cef07c116152a00b8b8a59/gnupg2-2.0.22-5.amzn2.0.5.src.rpm
 ```
 
 ### `rpm` package: `gpg-pubkey-b04f24e3-5de94a19`
@@ -1144,15 +1144,15 @@ $ dnf --quiet download --source --url system-release-2-14.amzn2
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/f8291de4fb74f8128b183c912b52af7d376f9c08892cd663841193ebcc9e4496/system-release-2-14.amzn2.src.rpm
 ```
 
-### `rpm` package: `tzdata-2022a-1.amzn2.noarch`
+### `rpm` package: `tzdata-2022c-1.amzn2.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url tzdata-2022a-1.amzn2.noarch
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/ac94a1337e773c270cfa386b3909ad6699e9a1e2a1e9e2432780730f69eb88df/tzdata-2022a-1.amzn2.src.rpm
+$ dnf --quiet download --source --url tzdata-2022c-1.amzn2.noarch
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/14b81045d5eec87fcacd8cba1ceea4f7f4c378e029c3c4a2645e503bd7bcbbb4/tzdata-2022c-1.amzn2.src.rpm
 ```
 
 ### `rpm` package: `vim-data-8.2.5172-1.amzn2.0.1.noarch`
