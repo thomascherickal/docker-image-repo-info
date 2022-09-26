@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:331ec7a0558f5a411c7ea5f8f48e994eb211a6e02fa03af21ed1d494ef2d6fb4`
-- Created: `2022-09-14T00:35:40.45264407Z`
+- Image ID: `sha256:29b38b1ddcf0d91f72dbc7f1ff20d49965ac25e39cd1ff735fcb8b73bab0b0a3`
+- Created: `2022-09-22T19:38:17.92639669Z`
 - Virtual Size: ~ 2.55 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -538,15 +538,15 @@ $ dnf --quiet download --source --url gmp-6.0.0-15.amzn2.0.2
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/712fffd161eb394310f7fe5f7d41ae2aae07cdcce27ca119bf04c6f056eb2b4d/gmp-6.0.0-15.amzn2.0.2.src.rpm
 ```
 
-### `rpm` package: `gnupg2-2.0.22-5.amzn2.0.4.x86_64`
+### `rpm` package: `gnupg2-2.0.22-5.amzn2.0.5.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url gnupg2-2.0.22-5.amzn2.0.4
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/cf2f89347d3eba84fb17d1d713b4a18aa7b15bfaace0b19464780208135b493f/gnupg2-2.0.22-5.amzn2.0.4.src.rpm
+$ dnf --quiet download --source --url gnupg2-2.0.22-5.amzn2.0.5
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/189e1bdc950a8e13918173d73835981842c90ee3b3cef07c116152a00b8b8a59/gnupg2-2.0.22-5.amzn2.0.5.src.rpm
 ```
 
 ### `rpm` package: `gpg-pubkey-c87f5b1a-593863f8`
@@ -610,15 +610,15 @@ $ dnf --quiet download --source --url info-5.1-5.amzn2
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/968c079ef8a8a2efee76ff59cd99e06dd242b8813960171d0f5c23f4a6eb0bb2/texinfo-5.1-5.amzn2.src.rpm
 ```
 
-### `rpm` package: `kernel-headers-4.14.290-217.505.amzn2.x86_64`
+### `rpm` package: `kernel-headers-4.14.291-218.527.amzn2.x86_64`
 
 Licenses (from `rpm --query`): GPLv2 and Redistributable, no modification permitted
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url kernel-headers-4.14.290-217.505.amzn2
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/d4c5165184b6452222df100cdbefaa2d7ddbe0f96dfe6366ca9112f0d777a425/kernel-4.14.290-217.505.amzn2.src.rpm
+$ dnf --quiet download --source --url kernel-headers-4.14.291-218.527.amzn2
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3dce9064d9888df589c0eefade782e4ead797577203288ab4854b4638a77ebbe/../../../../../blobstore/e7a7c3e84ee75b6f4fe06de120d317caa67212e9e18ba60c7d773c54ea4759f4/kernel-4.14.291-218.527.amzn2.src.rpm
 ```
 
 ### `rpm` package: `keyutils-libs-1.5.8-3.amzn2.0.2.x86_64`
