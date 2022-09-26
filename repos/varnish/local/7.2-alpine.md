@@ -2,15 +2,15 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7fac30dc1fd6914f554db55eccfbd5a4f705f454135bfc9631e77ece17cb7597`
-- Created: `2022-09-16T00:24:36.590614498Z`
+- Image ID: `sha256:1eeb723f9b60b4f8a8193cee3acac5b67c7c56bd4d94875e13befcb3e39c7015`
+- Created: `2022-09-23T19:37:17.638383738Z`
 - Virtual Size: ~ 148.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-varnish-entrypoint"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `VMOD_DEPS=automake curl gcc libtool make pkgconfig py3-sphinx`
+  - `VMOD_DEPS=automake curl libtool make pkgconfig py3-sphinx`
   - `VARNISH_SIZE=100M`
 
 ## `apk` (`.apk`-based packages)
