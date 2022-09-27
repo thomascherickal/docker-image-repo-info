@@ -1,10 +1,10 @@
-# `rabbitmq:3.10.7-management`
+# `rabbitmq:3.11.0-management`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6b94498c1b2fd7e920fffb22e85bc4520057ff5f187340b212bdc21b3ad34246`
-- Created: `2022-09-02T04:14:33.318951473Z`
-- Virtual Size: ~ 261.77 Mb  
+- Image ID: `sha256:7edc94eb6c4a7451ee5b2660767a6b478e55dc6a5dd21bfaedeb9ac1cbdd9d34`
+- Created: `2022-09-27T01:32:28.336985587Z`
+- Virtual Size: ~ 262.80 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,10 +14,10 @@
   - `OPENSSL_VERSION=1.1.1q`
   - `OPENSSL_SOURCE_SHA256=d7939ce614029cdff0b6c20f0e2e5703158a489a72b2507b8bd51bf8c8fd10ca`
   - `OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D`
-  - `OTP_VERSION=25.0.4`
-  - `OTP_SOURCE_SHA256=8fc707f92a124b2aeb0f65dcf9ac8e27b2a305e7bcc4cc1b2fdf770eec0165bf`
+  - `OTP_VERSION=25.1`
+  - `OTP_SOURCE_SHA256=a5ea27c1e07511a84bdd869c37f5e254f198c1cecf68ee9c8fedd23010750c31`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
-  - `RABBITMQ_VERSION=3.10.7`
+  - `RABBITMQ_VERSION=3.11.0`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
   - `RABBITMQ_HOME=/opt/rabbitmq`
   - `HOME=/var/lib/rabbitmq`
@@ -1436,11 +1436,11 @@ $ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu5.20.04.2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.2.debian.tar.xz' shadow_4.8.1-1ubuntu5.20.04.2.debian.tar.xz 86308 SHA512:927d5e25c5fc2a35f0994069783b94a45d2635d0358eccfc6ef5b7761fe3479ba62d093b2f7ddae26c935bdf77bfff648b68f3e4184420cb0eb200a17cb3a3b2
 ```
 
-### `dpkg` source package: `sqlite3=3.31.1-4ubuntu0.3`
+### `dpkg` source package: `sqlite3=3.31.1-4ubuntu0.4`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.31.1-4ubuntu0.3`
+- `libsqlite3-0:amd64=3.31.1-4ubuntu0.4`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -1448,9 +1448,15 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris sqlite3=3.31.1-4ubuntu0.4
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.4.dsc' sqlite3_3.31.1-4ubuntu0.4.dsc 2519 SHA512:63501762b9e3d411213f88c158653246350e4f5d537fd868f57b1468f62ed270906b4f767bf7e70c8422d0ada35409a86ef8e98022f66f291dcad1d957ee6b46
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig-www.tar.xz' sqlite3_3.31.1.orig-www.tar.xz 5764424 SHA512:a47adacd46c673cfd674cb64fb54b054e69560aed8c8c429773f0eccdcdbce4be538397506eca8e2d169f4b46d0d47442b273e12d82f8c87e1aadf3ade458db6
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig.tar.xz' sqlite3_3.31.1.orig.tar.xz 7108036 SHA512:67e1050efe2988fa3d0d7e4a87e147a8114c6ff9b6ca5307a068befb38e861930eaee0135048ff1abb1e6323b507cbc68a0aac3a8fe5f095d6fcea1547a7efaf
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.4.debian.tar.xz' sqlite3_3.31.1-4ubuntu0.4.debian.tar.xz 35468 SHA512:a4974f917c0f94142472bbaee2590be3baf9e5881db6df598ca4267bb823bd9934d5af30ea2e4b513044ab465ad9ebca2d1d7ae47cb41080edbd963a0a1fd227
+```
 
 ### `dpkg` source package: `systemd=245.4-4ubuntu3.17`
 
