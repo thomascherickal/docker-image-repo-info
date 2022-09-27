@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:98e78699e845c6c4b21eb863e4b7c6013f5e1baaf05a0b66cbd77f47b012821e`
-- Created: `2022-09-02T12:18:15.78047787Z`
+- Image ID: `sha256:0d6a8c6c43ce0ee40f1f73605389f4b8b551e7558d049cf021b0c76667fb42ce`
+- Created: `2022-09-27T02:14:10.046022225Z`
 - Virtual Size: ~ 1.15 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -21,8 +21,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=48F8E69F6390C9F25CFEDCD268248959359E722B A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.65`
-  - `TOMCAT_SHA512=2ae846848b8436856be11cfa18d9c62caa06ca7d3134012b2e10cbf6078753c4af20cc5d37f7dc75f1779f5c59d7c033850b8626534c3ce7e389641a67963cf6`
+  - `TOMCAT_VERSION=9.0.67`
+  - `TOMCAT_SHA512=f3c4841754640a21842de9d8ec4674b1a072d42f3ba9d1accea143a61ac4f77b06c789fbcc395c23ed2154ec7e7cd76e6d39743e544f7c6f2022967e8a2334d5`
   - `XWIKI_VERSION=14.7`
   - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/14.7`
   - `XWIKI_DOWNLOAD_SHA256=3de00089af3af64929ccb39f5f36486d44dbb0e1181c42dc046f6db19c8a20f5`
@@ -2124,32 +2124,32 @@ $ apt-get source -qq --print-uris libpsl=0.21.0-1.2build2
 'http://archive.ubuntu.com/ubuntu/pool/main/libp/libpsl/libpsl_0.21.0-1.2build2.debian.tar.xz' libpsl_0.21.0-1.2build2.debian.tar.xz 12896 SHA512:9d8c7130bee8c521e4f1ab1e13edfe2ed2fec538bda9133662d4120e8f5303595e6f27f466f30b07e61b94e138dd2787e17af91b8cc29275b5b4d2e098133eee
 ```
 
-### `dpkg` source package: `libreoffice=1:7.3.5-0ubuntu0.22.04.1`
+### `dpkg` source package: `libreoffice=1:7.3.6-0ubuntu0.22.04.1`
 
 Binary Packages:
 
-- `fonts-opensymbol=2:102.12+LibO7.3.5-0ubuntu0.22.04.1`
-- `libreoffice=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-base=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-base-core=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-base-drivers=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-calc=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-common=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-core=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-draw=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-impress=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-math=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-report-builder-bin=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-style-colibre=1:7.3.5-0ubuntu0.22.04.1`
-- `libreoffice-writer=1:7.3.5-0ubuntu0.22.04.1`
-- `libuno-cppu3=1:7.3.5-0ubuntu0.22.04.1`
-- `libuno-cppuhelpergcc3-3=1:7.3.5-0ubuntu0.22.04.1`
-- `libuno-purpenvhelpergcc3-3=1:7.3.5-0ubuntu0.22.04.1`
-- `libuno-sal3=1:7.3.5-0ubuntu0.22.04.1`
-- `libuno-salhelpergcc3-3=1:7.3.5-0ubuntu0.22.04.1`
-- `python3-uno=1:7.3.5-0ubuntu0.22.04.1`
-- `uno-libs-private=1:7.3.5-0ubuntu0.22.04.1`
-- `ure=1:7.3.5-0ubuntu0.22.04.1`
+- `fonts-opensymbol=2:102.12+LibO7.3.6-0ubuntu0.22.04.1`
+- `libreoffice=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-base=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-base-core=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-base-drivers=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-calc=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-common=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-core=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-draw=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-impress=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-math=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-report-builder-bin=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-style-colibre=1:7.3.6-0ubuntu0.22.04.1`
+- `libreoffice-writer=1:7.3.6-0ubuntu0.22.04.1`
+- `libuno-cppu3=1:7.3.6-0ubuntu0.22.04.1`
+- `libuno-cppuhelpergcc3-3=1:7.3.6-0ubuntu0.22.04.1`
+- `libuno-purpenvhelpergcc3-3=1:7.3.6-0ubuntu0.22.04.1`
+- `libuno-sal3=1:7.3.6-0ubuntu0.22.04.1`
+- `libuno-salhelpergcc3-3=1:7.3.6-0ubuntu0.22.04.1`
+- `python3-uno=1:7.3.6-0ubuntu0.22.04.1`
+- `uno-libs-private=1:7.3.6-0ubuntu0.22.04.1`
+- `ure=1:7.3.6-0ubuntu0.22.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/fonts-opensymbol/copyright`, `/usr/share/doc/libreoffice/copyright`, `/usr/share/doc/libreoffice-base/copyright`, `/usr/share/doc/libreoffice-base-core/copyright`, `/usr/share/doc/libreoffice-base-drivers/copyright`, `/usr/share/doc/libreoffice-calc/copyright`, `/usr/share/doc/libreoffice-common/copyright`, `/usr/share/doc/libreoffice-core/copyright`, `/usr/share/doc/libreoffice-draw/copyright`, `/usr/share/doc/libreoffice-impress/copyright`, `/usr/share/doc/libreoffice-math/copyright`, `/usr/share/doc/libreoffice-report-builder-bin/copyright`, `/usr/share/doc/libreoffice-style-colibre/copyright`, `/usr/share/doc/libreoffice-writer/copyright`, `/usr/share/doc/libuno-cppu3/copyright`, `/usr/share/doc/libuno-cppuhelpergcc3-3/copyright`, `/usr/share/doc/libuno-purpenvhelpergcc3-3/copyright`, `/usr/share/doc/libuno-sal3/copyright`, `/usr/share/doc/libuno-salhelpergcc3-3/copyright`, `/usr/share/doc/python3-uno/copyright`, `/usr/share/doc/uno-libs-private/copyright`, `/usr/share/doc/ure/copyright`)
 
@@ -2170,9 +2170,19 @@ Licenses: (parsed from: `/usr/share/doc/fonts-opensymbol/copyright`, `/usr/share
 - `MPL_2.0`
 - `other`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libreoffice=1:7.3.6-0ubuntu0.22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_7.3.6-0ubuntu0.22.04.1.dsc' libreoffice_7.3.6-0ubuntu0.22.04.1.dsc 25800 SHA512:306674b71f21e20cfdbe586cab671072d2821bee624d93f0cfaeadae4ef75bfe7b265cb9bded87aaa121ee8445134b58202a1630a9723b07991a69a185e07250
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_7.3.6.orig-helpcontent2.tar.xz' libreoffice_7.3.6.orig-helpcontent2.tar.xz 112068756 SHA512:5fa090f97f9325e1a17584c0ec9a8ccc7ee5de2deaa20b0cff7d6562dfeeb00966ab48b3e39366a078c823eae240a19f3d48b2b47f5c6961bec8603a093b8d05
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_7.3.6.orig-tarballs.tar.xz' libreoffice_7.3.6.orig-tarballs.tar.xz 324889000 SHA512:519630627f8a25fd915dce41d1447268fef531e8ee5375da21298b6db122539986359c64bfa8a60137e86c384be58828549fe6077a6a1d19b85d4cfe17219418
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_7.3.6.orig-translations.tar.xz' libreoffice_7.3.6.orig-translations.tar.xz 208770080 SHA512:60b15b743b850ea7c9f30444da0c18d74ebb9c8ac1f2fe0ab70e8aeed948dadf5d3c6028f525dcfed3f29d7947265de5dd16dd4f389b54c064675cffc5a6caf1
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_7.3.6.orig-yaru.tar.xz' libreoffice_7.3.6.orig-yaru.tar.xz 19257720 SHA512:0f58e9f43f10546df77c1420ca68232699b8540e8a7aa5a57d8f09b95adb9147c95d2c79b87f89730ad9bfe4d70aa5e8d847045eee53f9bfe08765f550385daf
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_7.3.6.orig.tar.xz' libreoffice_7.3.6.orig.tar.xz 256616324 SHA512:8f61e9c09b344cf120bc6f9463344b28644e52738360ddeb1a29d9d2294d24132b070902a089531869e11487f5a7153fc4752e6636af7ef57269d23c8187ec86
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_7.3.6.orig.tar.xz.asc' libreoffice_7.3.6.orig.tar.xz.asc 833 SHA512:746c42d7aa614675f8bc40660cb94afb73fcd32ce3a411f2c42ad000d6fe292053ccb718b2e17e959cea2da0b06cb02fb90f665b4b01f01ec09baf5b75327b6f
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_7.3.6-0ubuntu0.22.04.1.debian.tar.xz' libreoffice_7.3.6-0ubuntu0.22.04.1.debian.tar.xz 2385624 SHA512:67dfb3b4039345987adf32f6ad88a8a06a1f4963038b3e60cb6b32100ed50c652cc27e58c37d0acbefcbed53baff953766036690e329cfbe01ccb72c9e1efa89
+```
 
 ### `dpkg` source package: `librevenge=0.0.4-6ubuntu7`
 
@@ -3346,11 +3356,11 @@ $ apt-get source -qq --print-uris pixman=0.40.0-1build4
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pixman/pixman_0.40.0-1build4.diff.gz' pixman_0.40.0-1build4.diff.gz 327140 SHA512:1e27c3ca21d9e31640dfefe5576fa3d191890e47b0369c101d724aa95dd68bd9fc97d56b4b8ed700b68cc895a196e2ab3ceb5f77ed8c2e00655cfd20281edd92
 ```
 
-### `dpkg` source package: `poppler=22.02.0-2`
+### `dpkg` source package: `poppler=22.02.0-2ubuntu0.1`
 
 Binary Packages:
 
-- `libpoppler118:amd64=22.02.0-2`
+- `libpoppler118:amd64=22.02.0-2ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpoppler118/copyright`)
 
@@ -3361,10 +3371,10 @@ Licenses: (parsed from: `/usr/share/doc/libpoppler118/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris poppler=22.02.0-2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_22.02.0-2.dsc' poppler_22.02.0-2.dsc 3245 SHA512:22a413513e3bf05fa33bd91484f88c84e77867b281202773caa5d4c3cc4db8e55478a91af26487a2eb32b2bbe8e222a492743512ae98a38293f08ae4c6dcb775
+$ apt-get source -qq --print-uris poppler=22.02.0-2ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_22.02.0-2ubuntu0.1.dsc' poppler_22.02.0-2ubuntu0.1.dsc 3360 SHA512:9ecd3f4802eeb0adb0f4921ce93cb3aafa379428e40c04dd4401e0ab13d42b8dcb2a2f0a0694badc030e4d3764354e7ce2b9df8a8afb57f63c5cb05505c4f93d
 'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_22.02.0.orig.tar.xz' poppler_22.02.0.orig.tar.xz 1807024 SHA512:61867241d6d076dae554d654a8ad3b1a073079bad31f45170516b886fabb4c238ff2d49705924da219e128eb4052ac6337121967347600e54f61790dd0eed487
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_22.02.0-2.debian.tar.xz' poppler_22.02.0-2.debian.tar.xz 36876 SHA512:6e9f6f7b68063ffb204de200cd44f70c653186152f4b79505562a94d4d2b1d7175b53b0d83aa115e9cc557d4f87442dc0997ccc7634cf73ab07d8265e14839aa
+'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_22.02.0-2ubuntu0.1.debian.tar.xz' poppler_22.02.0-2ubuntu0.1.debian.tar.xz 37464 SHA512:3819d635163e905da0af2704207f72b7b4af0df46a4f909e42e4f04a19f644cecfcc1a6f2f9af22520a36b8c6720b5c5806227de5f72c999aa506d88622353c6
 ```
 
 ### `dpkg` source package: `procps=2:3.3.17-6ubuntu2`
@@ -3392,13 +3402,13 @@ $ apt-get source -qq --print-uris procps=2:3.3.17-6ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.17-6ubuntu2.debian.tar.xz' procps_3.3.17-6ubuntu2.debian.tar.xz 34228 SHA512:68ba4678fde89a5f7fce8b04e5ea0b24f9addc7c15b949b01f908cb9a179d68eb8313fc108a99f260d3cb5dff9fd5c9d33f678d3d8bfdd0cba02bcdd9b0bd3c5
 ```
 
-### `dpkg` source package: `python3-defaults=3.10.4-0ubuntu2`
+### `dpkg` source package: `python3-defaults=3.10.6-1~22.04`
 
 Binary Packages:
 
-- `libpython3-stdlib:amd64=3.10.4-0ubuntu2`
-- `python3=3.10.4-0ubuntu2`
-- `python3-minimal=3.10.4-0ubuntu2`
+- `libpython3-stdlib:amd64=3.10.6-1~22.04`
+- `python3=3.10.6-1~22.04`
+- `python3-minimal=3.10.6-1~22.04`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -3407,20 +3417,20 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python3-defaults=3.10.4-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.10.4-0ubuntu2.dsc' python3-defaults_3.10.4-0ubuntu2.dsc 3051 SHA512:7439bf4c899f2911807954de0828214124205a37db8d21549a6835011ef6e2926bb8695bf104b541e5ef6ae78a9261121063c14012c00af39896d72665fa18e1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.10.4-0ubuntu2.tar.gz' python3-defaults_3.10.4-0ubuntu2.tar.gz 145230 SHA512:e7d652225cbd08c8cdf367948c479cc2315883032d34c68ce5b688908ba535345d18e66bd124a4eba3828d37ce4c6efd6b8764f0bbc6518740e70bc5e3eef521
+$ apt-get source -qq --print-uris python3-defaults=3.10.6-1~22.04
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.10.6-1%7e22.04.dsc' python3-defaults_3.10.6-1~22.04.dsc 2968 SHA512:1bf2e1b114f7cce5068554c0fda5a165a03caea0621c08968f7e8ab59190060c25a1da78843e5a399475b774c8e1b7f8f8b73117b977fcfc26da72bbdf907f2a
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.10.6-1%7e22.04.tar.gz' python3-defaults_3.10.6-1~22.04.tar.gz 145325 SHA512:4dce1fcadb47a3fbd72e489e78c6543aa4b35a0480eb4e10617b3afd223cdd244e97f79db55f2abf28367848658ae46a3cda895d3d9dcf21c530149207f080dd
 ```
 
-### `dpkg` source package: `python3.10=3.10.4-3ubuntu0.1`
+### `dpkg` source package: `python3.10=3.10.6-1~22.04`
 
 Binary Packages:
 
-- `libpython3.10:amd64=3.10.4-3ubuntu0.1`
-- `libpython3.10-minimal:amd64=3.10.4-3ubuntu0.1`
-- `libpython3.10-stdlib:amd64=3.10.4-3ubuntu0.1`
-- `python3.10=3.10.4-3ubuntu0.1`
-- `python3.10-minimal=3.10.4-3ubuntu0.1`
+- `libpython3.10:amd64=3.10.6-1~22.04`
+- `libpython3.10-minimal:amd64=3.10.6-1~22.04`
+- `libpython3.10-stdlib:amd64=3.10.6-1~22.04`
+- `python3.10=3.10.6-1~22.04`
+- `python3.10-minimal=3.10.6-1~22.04`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.10/copyright`, `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/share/doc/libpython3.10-stdlib/copyright`, `/usr/share/doc/python3.10/copyright`, `/usr/share/doc/python3.10-minimal/copyright`)
 
@@ -3445,10 +3455,10 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10/copyright`, `/usr/share/do
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python3.10=3.10.4-3ubuntu0.1
-'http://security.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4-3ubuntu0.1.dsc' python3.10_3.10.4-3ubuntu0.1.dsc 3704 SHA512:da635e036b2c7e88dd95e8e09402ebebdf2d8ba6061511853ae75570a136e9af6f0ef3ee114270783307c816bc79e9e041972b218c4ec5cfe34973c5fd2d9574
-'http://security.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4.orig.tar.xz' python3.10_3.10.4.orig.tar.xz 19342692 SHA512:6c9aeecddc55c7896b2e8527fca131c7b2b6127d56ce1a001ccedfebf590334e0c0bb7c517ed3cf1da3c1910e002552b56aa7e03eeb672f42ff0bd8150799113
-'http://security.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.4-3ubuntu0.1.debian.tar.xz' python3.10_3.10.4-3ubuntu0.1.debian.tar.xz 219136 SHA512:b80eb1291c0aef65c6c313e780d7dcf13b874743cde6c16c4a4e0f6683670d54a23c58115270d49781c25d543b7efe273c89466a04f505850adf66c45dba5bea
+$ apt-get source -qq --print-uris python3.10=3.10.6-1~22.04
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.dsc' python3.10_3.10.6-1~22.04.dsc 3663 SHA512:67f3e04c57a3b3d9cdc77ec29c4bf667d0d9d261ef5c19a0cb89dfbade2a49340dd6f2362bb6d9909301570ea7384e1af27873a1bc1c2acd8cf420b6ea638e3b
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6.orig.tar.xz' python3.10_3.10.6.orig.tar.xz 19600672 SHA512:f2bf424bf4f4caa524ee1248b431e8e06d0745c3fc3ba457710d75f3698e653733feb4b059cd124f1de2a9e851c30d847f567aa47abef12898c9dc8a6507b476
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.debian.tar.xz' python3.10_3.10.6-1~22.04.debian.tar.xz 219560 SHA512:d9a70157945aff96227ac822c0dedb1d0216bd65c05b786ddea0f5c0bd7060cf55c243efae3a727ca37d366e499337dc6986acb6fa5dd87fa19890c3afbf3e4f
 ```
 
 ### `dpkg` source package: `raptor2=2.0.15-0ubuntu4`
@@ -3737,11 +3747,11 @@ $ apt-get source -qq --print-uris tar=1.34+dfsg-1build3
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1build3.debian.tar.xz' tar_1.34+dfsg-1build3.debian.tar.xz 19416 SHA512:3fbe7b908963df828585139f884762b698c14a2fc37618dcf3adb90819b160c8ea7aaa2e9dc9470abf40bd5100710dd1292f666cb77865ef3c558729dd313521
 ```
 
-### `dpkg` source package: `tiff=4.3.0-6`
+### `dpkg` source package: `tiff=4.3.0-6ubuntu0.1`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.3.0-6`
+- `libtiff5:amd64=4.3.0-6ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
@@ -3750,11 +3760,11 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tiff=4.3.0-6
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6.dsc' tiff_4.3.0-6.dsc 2417 SHA512:273c02e707f689d8c9e0695ada2e47d8da7d5cc328b33261341c1a94b5aef14696506c353e16ae81ea2fa04b230ffd9080b04c0ce8a100fbdf5a17d34ae3fba8
+$ apt-get source -qq --print-uris tiff=4.3.0-6ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6ubuntu0.1.dsc' tiff_4.3.0-6ubuntu0.1.dsc 2402 SHA512:18e0269ec10e1b491600a721c0f6193f08058b140eabf796184cd46ec789e04296221a9035d2fb7ef6ec2be9bacccaa34d853a0e0afdc60a0a357d4cd9e22208
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz' tiff_4.3.0.orig.tar.gz 2808254 SHA512:e04a4a6c542e58a174c1e9516af3908acf1d3d3e1096648c5514f4963f73e7af27387a76b0fbabe43cf867a18874088f963796a7cd6e45deb998692e3e235493
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz.asc' tiff_4.3.0.orig.tar.gz.asc 488 SHA512:115a4c5714b52d0fbea800c494d83c8a96b70b2c9ce84a8df03205d9afc517faa17963f5f9508c013d7d3e2be6675b84b594a771a829406473234c4bd85e469e
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6.debian.tar.xz' tiff_4.3.0-6.debian.tar.xz 25112 SHA512:4413e7f605668ba776eff01950ad98f1c2e216f78f892ec2084ee436fd3743574aafbcb007a442007fa70d3793d72cda3df1fbde643c7c632cf14fe8320bea6d
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6ubuntu0.1.debian.tar.xz' tiff_4.3.0-6ubuntu0.1.debian.tar.xz 28016 SHA512:67039c9ceb9b6190ef3b9f003833d97502a8acf452e9b26c6ab9a686f75b726cda2a0c470c9dc81929629ef7eb2d8d20c684cd5bbee700b92e7e1112a63655d1
 ```
 
 ### `dpkg` source package: `tzdata=2022c-0ubuntu0.22.04.0`
