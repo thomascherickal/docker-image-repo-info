@@ -1,7 +1,7 @@
 ## `ghost:latest`
 
 ```console
-$ docker pull ghost@sha256:13aa79722328d55a9d90adb3604d30e41ce42c5fb53cf0ccafadb520571aebf5
+$ docker pull ghost@sha256:24b88a79ceeb98d4afae962375fa894f6fe79c4e56a282fa15ba1876d4c82dde
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,14 +15,14 @@ $ docker pull ghost@sha256:13aa79722328d55a9d90adb3604d30e41ce42c5fb53cf0ccafadb
 ### `ghost:latest` - linux; amd64
 
 ```console
-$ docker pull ghost@sha256:fc9d9c7b302f6c287be576639fed0146193fe8a24692052fff85afaf4914f995
+$ docker pull ghost@sha256:591875683fa6cf7c23e12a88226d109ee8d4ba95dca60a7bad21e1d9c322e48a
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **145.6 MB (145598177 bytes)**  
+-	Total Size: **159.0 MB (158951341 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:03735b793da4675061f7fa4ce9c9d9c326f110cec0cdf075af3c1556bf4ca6b7`
+-	Image ID: `sha256:85a077156792a373d5a9d36fcf5919cd170c06010995b91d19de1009b804ded1`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -61,21 +61,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Mon, 26 Sep 2022 17:55:00 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Mon, 26 Sep 2022 17:55:00 GMT
-ENV GHOST_VERSION=5.14.2
-# Mon, 26 Sep 2022 17:55:57 GMT
+# Wed, 28 Sep 2022 01:56:55 GMT
+ENV GHOST_VERSION=5.16.2
+# Wed, 28 Sep 2022 01:58:33 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		savedAptMark="$(apt-mark showmanual)"; 	aptPurge=; 		installCmd='gosu node ghost install "$GHOST_VERSION" --db mysql --dbhost mysql --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"'; 	if ! eval "$installCmd"; then 		aptPurge=1; 		apt-get update; 		apt-get install -y --no-install-recommends g++ make python3; 		eval "$installCmd"; 	fi; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --no-prompt --ip '::' --port 2368 --url 'http://localhost:2368'; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	packages="$(node -p ' 		var ghost = require("./package.json"); 		var transform = require("./node_modules/@tryghost/image-transform/package.json"); 		[ 			"sharp@" + transform.optionalDependencies["sharp"], 			"sqlite3@" + ghost.optionalDependencies["sqlite3"], 		].join(" ") 	')"; 	if echo "$packages" | grep 'undefined'; then exit 1; fi; 	for package in $packages; do 		installCmd='gosu node yarn add "$package" --force'; 		if ! eval "$installCmd"; then 			aptPurge=1; 			apt-get update; 			apt-get install -y --no-install-recommends g++ make python3; 			case "$package" in 				sharp@*) echo >&2 "sorry: libvips 8.10 in Debian bullseye is not new enough (8.12.2+) for sharp 0.30 😞"; continue ;; 			esac; 						eval "$installCmd --build-from-source"; 		fi; 	done; 		if [ -n "$aptPurge" ]; then 		apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 		rm -rf /var/lib/apt/lists/*; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Mon, 26 Sep 2022 17:55:59 GMT
+# Wed, 28 Sep 2022 01:58:37 GMT
 WORKDIR /var/lib/ghost
-# Mon, 26 Sep 2022 17:55:59 GMT
+# Wed, 28 Sep 2022 01:58:37 GMT
 VOLUME [/var/lib/ghost/content]
-# Mon, 26 Sep 2022 17:55:59 GMT
+# Wed, 28 Sep 2022 01:58:37 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Mon, 26 Sep 2022 17:55:59 GMT
+# Wed, 28 Sep 2022 01:58:37 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 26 Sep 2022 17:55:59 GMT
+# Wed, 28 Sep 2022 01:58:37 GMT
 EXPOSE 2368
-# Mon, 26 Sep 2022 17:55:59 GMT
+# Wed, 28 Sep 2022 01:58:37 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -108,26 +108,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Mon, 26 Sep 2022 18:01:38 GMT  
 		Size: 10.8 MB (10799009 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:828ecfea4daef0c19a1d4821210f0e9c8023620c2938ed0f28fbcdf40daa88ea`  
-		Last Modified: Mon, 26 Sep 2022 18:01:47 GMT  
-		Size: 63.8 MB (63818048 bytes)  
+	-	`sha256:357faeada506ad2a27989aa7d85d2443bd19b82a130e6f92aa57ee0cfa76d66c`  
+		Last Modified: Wed, 28 Sep 2022 02:01:16 GMT  
+		Size: 77.2 MB (77171211 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:059af4e00c8379eaeea08af58f3e5cbade35509f6ef71d36e11620dc86c7d911`  
-		Last Modified: Mon, 26 Sep 2022 18:01:35 GMT  
-		Size: 547.0 B  
+	-	`sha256:8ac02c95ae8c2fddeaed8334b1bb68a7b2d3f1184ceef146db69ee66f4951277`  
+		Last Modified: Wed, 28 Sep 2022 02:01:00 GMT  
+		Size: 548.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:latest` - linux; arm variant v7
 
 ```console
-$ docker pull ghost@sha256:f01dc930a355941370428af6173072154da2ae2fb14bedf3e94742b69c189a89
+$ docker pull ghost@sha256:a9a9de87945026aae117ddde9eb0fba8c049ed2d2dc20e295df3108015071510
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **149.8 MB (149812857 bytes)**  
+-	Total Size: **163.2 MB (163162641 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ce8fbf42ef512cc17f21bcd429c79bc28b09d4160b939a502252020deb50777f`
+-	Image ID: `sha256:1457ce989a56720f0055107bb4631c8afbd4c7b7a30f79014a4be1269938ba58`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -166,21 +166,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Tue, 27 Sep 2022 17:22:57 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Tue, 27 Sep 2022 17:22:57 GMT
-ENV GHOST_VERSION=5.14.2
-# Tue, 27 Sep 2022 17:27:46 GMT
+# Wed, 28 Sep 2022 01:47:18 GMT
+ENV GHOST_VERSION=5.16.2
+# Wed, 28 Sep 2022 01:55:42 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		savedAptMark="$(apt-mark showmanual)"; 	aptPurge=; 		installCmd='gosu node ghost install "$GHOST_VERSION" --db mysql --dbhost mysql --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"'; 	if ! eval "$installCmd"; then 		aptPurge=1; 		apt-get update; 		apt-get install -y --no-install-recommends g++ make python3; 		eval "$installCmd"; 	fi; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --no-prompt --ip '::' --port 2368 --url 'http://localhost:2368'; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	packages="$(node -p ' 		var ghost = require("./package.json"); 		var transform = require("./node_modules/@tryghost/image-transform/package.json"); 		[ 			"sharp@" + transform.optionalDependencies["sharp"], 			"sqlite3@" + ghost.optionalDependencies["sqlite3"], 		].join(" ") 	')"; 	if echo "$packages" | grep 'undefined'; then exit 1; fi; 	for package in $packages; do 		installCmd='gosu node yarn add "$package" --force'; 		if ! eval "$installCmd"; then 			aptPurge=1; 			apt-get update; 			apt-get install -y --no-install-recommends g++ make python3; 			case "$package" in 				sharp@*) echo >&2 "sorry: libvips 8.10 in Debian bullseye is not new enough (8.12.2+) for sharp 0.30 😞"; continue ;; 			esac; 						eval "$installCmd --build-from-source"; 		fi; 	done; 		if [ -n "$aptPurge" ]; then 		apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 		rm -rf /var/lib/apt/lists/*; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Tue, 27 Sep 2022 17:27:47 GMT
+# Wed, 28 Sep 2022 01:55:45 GMT
 WORKDIR /var/lib/ghost
-# Tue, 27 Sep 2022 17:27:48 GMT
+# Wed, 28 Sep 2022 01:55:45 GMT
 VOLUME [/var/lib/ghost/content]
-# Tue, 27 Sep 2022 17:27:48 GMT
+# Wed, 28 Sep 2022 01:55:46 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Tue, 27 Sep 2022 17:27:48 GMT
+# Wed, 28 Sep 2022 01:55:46 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 27 Sep 2022 17:27:48 GMT
+# Wed, 28 Sep 2022 01:55:46 GMT
 EXPOSE 2368
-# Tue, 27 Sep 2022 17:27:48 GMT
+# Wed, 28 Sep 2022 01:55:46 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -213,26 +213,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Tue, 27 Sep 2022 17:46:20 GMT  
 		Size: 10.8 MB (10799673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13e7d6057b4cd6d90080bbaa79de6e3248d0af26b2082e78b493b8a10c7cddbe`  
-		Last Modified: Tue, 27 Sep 2022 17:46:40 GMT  
-		Size: 75.7 MB (75700614 bytes)  
+	-	`sha256:3961c26ffde3df47483f7c233a6e2e96e788949a32ab1b00505613edd6399b48`  
+		Last Modified: Wed, 28 Sep 2022 02:07:32 GMT  
+		Size: 89.1 MB (89050399 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:912a51382fdbc8f65e9cfc8d2381c54dbec083e4569d470e895efeb024480a3a`  
-		Last Modified: Tue, 27 Sep 2022 17:46:10 GMT  
-		Size: 548.0 B  
+	-	`sha256:d74bec075811a5a276c5ea0ec719a7c7b37e94b558464dddd02e366a97508f37`  
+		Last Modified: Wed, 28 Sep 2022 02:06:35 GMT  
+		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull ghost@sha256:7a1d181a0d039867a4c1d8e0d6618a09e8e95e5fd712fd7b5bbc38270e35314b
+$ docker pull ghost@sha256:1b8874b9bce171435ebf75ce1d9d297208612c2b4d347bbccdbd1e6d48056678
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **152.8 MB (152812331 bytes)**  
+-	Total Size: **166.2 MB (166156516 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:65bc34f56e950ea5f44980e68cd8ed3e5b5fec43b9c76d35d4f2234fafdfaefc`
+-	Image ID: `sha256:0f6417b5abec43f71685b34e8e3b67cef54f8c42964283eb0751de6b7f27b1e8`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -271,21 +271,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Mon, 26 Sep 2022 21:14:06 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Mon, 26 Sep 2022 21:14:07 GMT
-ENV GHOST_VERSION=5.14.2
-# Mon, 26 Sep 2022 21:17:38 GMT
+# Wed, 28 Sep 2022 01:21:15 GMT
+ENV GHOST_VERSION=5.16.2
+# Wed, 28 Sep 2022 01:25:33 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		savedAptMark="$(apt-mark showmanual)"; 	aptPurge=; 		installCmd='gosu node ghost install "$GHOST_VERSION" --db mysql --dbhost mysql --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"'; 	if ! eval "$installCmd"; then 		aptPurge=1; 		apt-get update; 		apt-get install -y --no-install-recommends g++ make python3; 		eval "$installCmd"; 	fi; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --no-prompt --ip '::' --port 2368 --url 'http://localhost:2368'; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	packages="$(node -p ' 		var ghost = require("./package.json"); 		var transform = require("./node_modules/@tryghost/image-transform/package.json"); 		[ 			"sharp@" + transform.optionalDependencies["sharp"], 			"sqlite3@" + ghost.optionalDependencies["sqlite3"], 		].join(" ") 	')"; 	if echo "$packages" | grep 'undefined'; then exit 1; fi; 	for package in $packages; do 		installCmd='gosu node yarn add "$package" --force'; 		if ! eval "$installCmd"; then 			aptPurge=1; 			apt-get update; 			apt-get install -y --no-install-recommends g++ make python3; 			case "$package" in 				sharp@*) echo >&2 "sorry: libvips 8.10 in Debian bullseye is not new enough (8.12.2+) for sharp 0.30 😞"; continue ;; 			esac; 						eval "$installCmd --build-from-source"; 		fi; 	done; 		if [ -n "$aptPurge" ]; then 		apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 		rm -rf /var/lib/apt/lists/*; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Mon, 26 Sep 2022 21:17:41 GMT
+# Wed, 28 Sep 2022 01:25:39 GMT
 WORKDIR /var/lib/ghost
-# Mon, 26 Sep 2022 21:17:44 GMT
+# Wed, 28 Sep 2022 01:25:43 GMT
 VOLUME [/var/lib/ghost/content]
-# Mon, 26 Sep 2022 21:17:46 GMT
+# Wed, 28 Sep 2022 01:25:47 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Mon, 26 Sep 2022 21:17:49 GMT
+# Wed, 28 Sep 2022 01:25:52 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 26 Sep 2022 21:17:51 GMT
+# Wed, 28 Sep 2022 01:25:56 GMT
 EXPOSE 2368
-# Mon, 26 Sep 2022 21:17:54 GMT
+# Wed, 28 Sep 2022 01:26:00 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -318,26 +318,26 @@ CMD ["node" "current/index.js"]
 		Last Modified: Mon, 26 Sep 2022 21:28:23 GMT  
 		Size: 10.8 MB (10796740 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5427c476493779ae53eae61800e70a377ea57d20891ad8b0ca37eec7aca6b672`  
-		Last Modified: Mon, 26 Sep 2022 21:28:34 GMT  
-		Size: 72.3 MB (72304169 bytes)  
+	-	`sha256:d8155c441358befb0d418d554dc1660625c6039af00546d57c01152b7e2c4662`  
+		Last Modified: Wed, 28 Sep 2022 01:33:20 GMT  
+		Size: 85.6 MB (85648354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:97dacb3876b3af1c4c260e466eb5505a53d5b56e35cf274ee31abd1df7b36c3f`  
-		Last Modified: Mon, 26 Sep 2022 21:28:19 GMT  
+	-	`sha256:39cd239dd46b52e7d268d8205ece167f94990ab594bad4582decc9e3a6812644`  
+		Last Modified: Wed, 28 Sep 2022 01:33:00 GMT  
 		Size: 549.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:latest` - linux; ppc64le
 
 ```console
-$ docker pull ghost@sha256:54a57475ab114f771ccc561a83930fef6d9d862227e3cae36a2a9311c66619c5
+$ docker pull ghost@sha256:f6d1d0c53801dff645f75a56ac724c5dfd1a3e8a6746f6059ba53ccde174cbb6
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **149.4 MB (149391426 bytes)**  
+-	Total Size: **162.7 MB (162749918 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1106b784ef8b1a4c5b528de4e4b70f9c2c1889bea62c817004589ff2d9afb1b7`
+-	Image ID: `sha256:3f8c5a71a4cb60f9f4e9eb35996357858495aae85883429a0ddb5dd764f06e6b`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["node","current\/index.js"]`
 
@@ -376,21 +376,21 @@ RUN set -eux; 	npm install -g "ghost-cli@$GHOST_CLI_VERSION"; 	npm cache clean -
 ENV GHOST_INSTALL=/var/lib/ghost
 # Mon, 26 Sep 2022 20:04:14 GMT
 ENV GHOST_CONTENT=/var/lib/ghost/content
-# Mon, 26 Sep 2022 20:04:14 GMT
-ENV GHOST_VERSION=5.14.2
-# Mon, 26 Sep 2022 20:12:45 GMT
+# Wed, 28 Sep 2022 01:37:56 GMT
+ENV GHOST_VERSION=5.16.2
+# Wed, 28 Sep 2022 01:48:03 GMT
 RUN set -eux; 	mkdir -p "$GHOST_INSTALL"; 	chown node:node "$GHOST_INSTALL"; 		savedAptMark="$(apt-mark showmanual)"; 	aptPurge=; 		installCmd='gosu node ghost install "$GHOST_VERSION" --db mysql --dbhost mysql --no-prompt --no-stack --no-setup --dir "$GHOST_INSTALL"'; 	if ! eval "$installCmd"; then 		aptPurge=1; 		apt-get update; 		apt-get install -y --no-install-recommends g++ make python3; 		eval "$installCmd"; 	fi; 		cd "$GHOST_INSTALL"; 	gosu node ghost config --no-prompt --ip '::' --port 2368 --url 'http://localhost:2368'; 	gosu node ghost config paths.contentPath "$GHOST_CONTENT"; 		gosu node ln -s config.production.json "$GHOST_INSTALL/config.development.json"; 	readlink -f "$GHOST_INSTALL/config.development.json"; 		mv "$GHOST_CONTENT" "$GHOST_INSTALL/content.orig"; 	mkdir -p "$GHOST_CONTENT"; 	chown node:node "$GHOST_CONTENT"; 	chmod 1777 "$GHOST_CONTENT"; 		cd "$GHOST_INSTALL/current"; 	packages="$(node -p ' 		var ghost = require("./package.json"); 		var transform = require("./node_modules/@tryghost/image-transform/package.json"); 		[ 			"sharp@" + transform.optionalDependencies["sharp"], 			"sqlite3@" + ghost.optionalDependencies["sqlite3"], 		].join(" ") 	')"; 	if echo "$packages" | grep 'undefined'; then exit 1; fi; 	for package in $packages; do 		installCmd='gosu node yarn add "$package" --force'; 		if ! eval "$installCmd"; then 			aptPurge=1; 			apt-get update; 			apt-get install -y --no-install-recommends g++ make python3; 			case "$package" in 				sharp@*) echo >&2 "sorry: libvips 8.10 in Debian bullseye is not new enough (8.12.2+) for sharp 0.30 😞"; continue ;; 			esac; 						eval "$installCmd --build-from-source"; 		fi; 	done; 		if [ -n "$aptPurge" ]; then 		apt-mark showmanual | xargs apt-mark auto > /dev/null; 		[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 		apt-get purge -y --auto-remove; 		rm -rf /var/lib/apt/lists/*; 	fi; 		gosu node yarn cache clean; 	gosu node npm cache clean --force; 	npm cache clean --force; 	rm -rv /tmp/yarn* /tmp/v8*
-# Mon, 26 Sep 2022 20:12:53 GMT
+# Wed, 28 Sep 2022 01:48:14 GMT
 WORKDIR /var/lib/ghost
-# Mon, 26 Sep 2022 20:12:53 GMT
+# Wed, 28 Sep 2022 01:48:15 GMT
 VOLUME [/var/lib/ghost/content]
-# Mon, 26 Sep 2022 20:12:54 GMT
+# Wed, 28 Sep 2022 01:48:15 GMT
 COPY file:303989b132b5193e832753e2c7236a4050fdc0fe60a54dc1f0c4a44422a2d1ca in /usr/local/bin 
-# Mon, 26 Sep 2022 20:12:54 GMT
+# Wed, 28 Sep 2022 01:48:16 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 26 Sep 2022 20:12:54 GMT
+# Wed, 28 Sep 2022 01:48:16 GMT
 EXPOSE 2368
-# Mon, 26 Sep 2022 20:12:55 GMT
+# Wed, 28 Sep 2022 01:48:16 GMT
 CMD ["node" "current/index.js"]
 ```
 
@@ -423,13 +423,13 @@ CMD ["node" "current/index.js"]
 		Last Modified: Mon, 26 Sep 2022 20:21:38 GMT  
 		Size: 10.8 MB (10799878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d7e44b3339289d7870884495a6f2510e0fa5c0a80ee36e9c1a0eff6661a4e977`  
-		Last Modified: Mon, 26 Sep 2022 20:21:56 GMT  
-		Size: 61.8 MB (61752225 bytes)  
+	-	`sha256:c0db194c652ff9e356cdf5dad76347a292278c079239240f5700c0135cd43b44`  
+		Last Modified: Wed, 28 Sep 2022 01:49:15 GMT  
+		Size: 75.1 MB (75110716 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a29e102bd984c032789c6184d6085f493f8963c2691c6ecf263912841064ea3`  
-		Last Modified: Mon, 26 Sep 2022 20:21:33 GMT  
-		Size: 548.0 B  
+	-	`sha256:6c59a128f394724d6ace619f8fd6c85184b7316a28ebf9179389e3b15f44157a`  
+		Last Modified: Wed, 28 Sep 2022 01:48:45 GMT  
+		Size: 549.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ghost:latest` - linux; s390x
