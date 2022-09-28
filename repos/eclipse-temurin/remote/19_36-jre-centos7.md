@@ -1,7 +1,7 @@
 ## `eclipse-temurin:19_36-jre-centos7`
 
 ```console
-$ docker pull eclipse-temurin@sha256:1e4615cdccfeb44394f724d5bf9de934c5ff202251f272dc47093e147cd43e21
+$ docker pull eclipse-temurin@sha256:c975c933aa20dcfeb118e275e3a18c9daa082835aea8063da36f791db71fc921
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -66,14 +66,14 @@ RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(S
 ### `eclipse-temurin:19_36-jre-centos7` - linux; arm64 variant v8
 
 ```console
-$ docker pull eclipse-temurin@sha256:339ec7b4c06f79a911d7fb61155132a3cc8098f27d605c497c524a962e8ca18f
+$ docker pull eclipse-temurin@sha256:793a389f86446aa3c586452c478393744d1573f59b5df72c78a4de1c929eb250
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **175.5 MB (175467436 bytes)**  
+-	Total Size: **175.5 MB (175467477 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:aad706ca6fc186fdcfd5d334ed2d576f590be49c4abce953c3244c6f3ebc890a`
+-	Image ID: `sha256:700b41034bc3ee2ede5f3bcb3b418b287645063af1482d7f49986f2cfb7a4421`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -93,9 +93,9 @@ ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 RUN yum install -y tzdata openssl curl wget ca-certificates fontconfig gzip tar binutils     && yum clean all
 # Mon, 26 Sep 2022 22:42:02 GMT
 ENV JAVA_VERSION=jdk-19+36
-# Mon, 26 Sep 2022 22:42:56 GMT
-RUN set -eux;     ARCH="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')";     case "${ARCH}" in        aarch64|arm64)          ESUM='da77060192d3021a2e06eb51a91acdfacb0b993fc75a3b4cafe9c39c6132cc51';          BINARY_URL='https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19%2B36/OpenJDK19U-jre_aarch64_linux_hotspot_19_36.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ef2caf3221cb3d209ba7662d9542f23e25b3b97696de3103264c5a519aad30b6';          BINARY_URL='https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19%2B36/OpenJDK19U-jre_x64_linux_hotspot_19_36.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;
-# Mon, 26 Sep 2022 22:42:57 GMT
+# Wed, 28 Sep 2022 16:44:52 GMT
+RUN set -eux;     ARCH="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')";     case "${ARCH}" in        aarch64|arm64)          ESUM='da77060192d3021a2e06eb51a91acdfacb0b993fc75a3b4cafe9c39c6132cc51';          BINARY_URL='https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19%2B36/OpenJDK19U-jre_aarch64_linux_hotspot_19_36.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='3ab0b2320d5bb0f2fef9fd831338fd51170e6b8db887af23bc26dfc51bdf338c';          BINARY_URL='https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19%2B36/OpenJDK19U-jre_ppc64le_linux_hotspot_19_36.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ef2caf3221cb3d209ba7662d9542f23e25b3b97696de3103264c5a519aad30b6';          BINARY_URL='https://github.com/adoptium/temurin19-binaries/releases/download/jdk-19%2B36/OpenJDK19U-jre_x64_linux_hotspot_19_36.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;
+# Wed, 28 Sep 2022 16:44:53 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
 ```
 
@@ -108,11 +108,11 @@ RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(S
 		Last Modified: Fri, 12 Aug 2022 17:56:36 GMT  
 		Size: 18.3 MB (18329548 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4752fbe6c93641de72485bd0ba7870dedd5285f3fb89d8f15a7ba8001dc45bd`  
-		Last Modified: Mon, 26 Sep 2022 22:48:01 GMT  
-		Size: 48.8 MB (48762815 bytes)  
+	-	`sha256:4f59162a699416244b5a6c954e6f9573be3ce63d6ae63ca639900e4246ec8c5a`  
+		Last Modified: Wed, 28 Sep 2022 16:50:13 GMT  
+		Size: 48.8 MB (48762856 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fa3e651965df34bb36f2d77ca143aa842f1f7f5a19d6ec4a7f4f59cc38c72d08`  
-		Last Modified: Mon, 26 Sep 2022 22:47:54 GMT  
+	-	`sha256:8f649051b9efc1d43f096025d16bbfb2e4ecad35e34218a3c622075ef0d71e68`  
+		Last Modified: Wed, 28 Sep 2022 16:50:06 GMT  
 		Size: 128.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
