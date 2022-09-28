@@ -1,10 +1,10 @@
-# `tomcat:9.0.65-jdk17-temurin-jammy`
+# `tomcat:9.0.67-jdk17-temurin-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d4488b7f8c9b73c0f2e91f5e37990905ae3d34d55ea893b5e70b76fc7a2db1b7`
-- Created: `2022-09-02T10:41:31.786916993Z`
-- Virtual Size: ~ 475.14 Mb  
+- Image ID: `sha256:8835bf4a8548302c30691fba4f68ad75fe6d1b9cc9e346277516b566d192c121`
+- Created: `2022-09-27T00:44:45.234546609Z`
+- Virtual Size: ~ 478.16 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -20,8 +20,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=48F8E69F6390C9F25CFEDCD268248959359E722B A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.65`
-  - `TOMCAT_SHA512=2ae846848b8436856be11cfa18d9c62caa06ca7d3134012b2e10cbf6078753c4af20cc5d37f7dc75f1779f5c59d7c033850b8626534c3ce7e389641a67963cf6`
+  - `TOMCAT_VERSION=9.0.67`
+  - `TOMCAT_SHA512=f3c4841754640a21842de9d8ec4674b1a072d42f3ba9d1accea143a61ac4f77b06c789fbcc395c23ed2154ec7e7cd76e6d39743e544f7c6f2022967e8a2334d5`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -659,13 +659,13 @@ $ apt-get source -qq --print-uris freetype=2.11.1+dfsg-1ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.11.1%2bdfsg-1ubuntu0.1.debian.tar.xz' freetype_2.11.1+dfsg-1ubuntu0.1.debian.tar.xz 41556 SHA512:8a815e90c643b0d8f347509661a6422f16b3b9bce36838d5bfc5e1bb6aaa49f31391deb253b1b935da33c6818aebff6bdac6f4e0bfd6801302bdece4091b2f26
 ```
 
-### `dpkg` source package: `gcc-12=12-20220319-1ubuntu1`
+### `dpkg` source package: `gcc-12=12.1.0-2ubuntu1~22.04`
 
 Binary Packages:
 
-- `gcc-12-base:amd64=12-20220319-1ubuntu1`
-- `libgcc-s1:amd64=12-20220319-1ubuntu1`
-- `libstdc++6:amd64=12-20220319-1ubuntu1`
+- `gcc-12-base:amd64=12.1.0-2ubuntu1~22.04`
+- `libgcc-s1:amd64=12.1.0-2ubuntu1~22.04`
+- `libstdc++6:amd64=12.1.0-2ubuntu1~22.04`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-12-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -679,10 +679,10 @@ Licenses: (parsed from: `/usr/share/doc/gcc-12-base/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gcc-12=12-20220319-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12-20220319-1ubuntu1.dsc' gcc-12_12-20220319-1ubuntu1.dsc 27778 SHA512:60d5989ee29208d95c3b2902b21d5f3ec2d6e6ad7f6c9a78083397eda357bdc965722f0aacec50634fc3e44f41ad19006ebd409254caaf03f9181c2399e7e67c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12-20220319.orig.tar.gz' gcc-12_12-20220319.orig.tar.gz 84604185 SHA512:090ab091f2af0a57fb1aab0bd7dcedb078bca0761f8e6751a1f333a5795b463a246f90bf77feb32dfe3f10fefacb62c7f513debd7d4ddebcd712d39f7fa60240
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12-20220319-1ubuntu1.debian.tar.xz' gcc-12_12-20220319-1ubuntu1.debian.tar.xz 560848 SHA512:6ab7a94c6657ecd8604eef98809f950d2bb8d6cc2ab53dbfff7d88eb288ee1a10e10eac62e25e7a4f16a941c9a662b3f5568b6b4f11caacd8ab8d803d211213b
+$ apt-get source -qq --print-uris gcc-12=12.1.0-2ubuntu1~22.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.1.0-2ubuntu1%7e22.04.dsc' gcc-12_12.1.0-2ubuntu1~22.04.dsc 27770 SHA512:9aaf720a29cf2b0d98a445c2d0ee693176972735f97b03de46e1d6c7f50b8380e7ddcc2127658727492e9b5098cd0bddf1dedb5662e1adc6c82de9d5ab22b079
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.1.0.orig.tar.gz' gcc-12_12.1.0.orig.tar.gz 89394971 SHA512:9132ef095fcc5d683c71b9dc1b77b3af0f4f09b4b00d0e1f6ae1a46d5a4f7faf9e1112967722b6e3fcf72b6692326d036b1d370103b5362a7e19cd430b1ad18d
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.1.0-2ubuntu1%7e22.04.debian.tar.xz' gcc-12_12.1.0-2ubuntu1~22.04.debian.tar.xz 1660876 SHA512:488d7b5e080c0d6e2d4e16b8a88e0376da76912a68af3f5ce9ef69bbe787650a353a8a25004f861b9424317191a445567e38d838fbcbe5e3c5c0f5339bf454fa
 ```
 
 ### `dpkg` source package: `glibc=2.35-0ubuntu3.1`
