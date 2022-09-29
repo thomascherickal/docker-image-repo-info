@@ -1,24 +1,24 @@
-# `ghost:5.14.2`
+# `ghost:5.16.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f0ea389763a5ea56eab8edbb913e1daae4f4e8b7475b6170adae696a431f6845`
-- Created: `2022-09-19T23:20:52.365696452Z`
-- Virtual Size: ~ 471.16 Mb  
+- Image ID: `sha256:85a077156792a373d5a9d36fcf5919cd170c06010995b91d19de1009b804ded1`
+- Created: `2022-09-28T01:58:37.537096886Z`
+- Virtual Size: ~ 554.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["node","current/index.js"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=16.17.0`
+  - `NODE_VERSION=16.17.1`
   - `YARN_VERSION=1.22.19`
   - `GOSU_VERSION=1.12`
   - `NODE_ENV=production`
   - `GHOST_CLI_VERSION=1.23.0`
   - `GHOST_INSTALL=/var/lib/ghost`
   - `GHOST_CONTENT=/var/lib/ghost/content`
-  - `GHOST_VERSION=5.14.2`
+  - `GHOST_VERSION=5.16.2`
 
 ## `dpkg` (`.deb`-based packages)
 
