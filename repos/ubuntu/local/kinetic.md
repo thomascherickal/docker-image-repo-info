@@ -439,15 +439,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.36-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36-0ubuntu2.dsc' glibc_2.36-0ubuntu2.dsc 8876 SHA512:70183e2b5e292cefa3c18dd323a121962027dcd8ca21483c601496bb33c22533dc2d7bf3ca862bddbafc0746ea14419ceda8e9d16cb130d33b03e3a91353b167
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36.orig.tar.xz' glibc_2.36.orig.tar.xz 18610836 SHA512:9ea0bbda32f83a85b7da0c34f169607fb8a102f0a11a914e6bf531be47d1bef4f5307128286cffa1e2dc5879f0e6ccaef527dd353486883fa332a0b44bde8b3e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36.orig.tar.xz.asc' glibc_2.36.orig.tar.xz.asc 833 SHA512:b6999ebc4067e08950207e9c67f5172c6d43144e6680677bf3d93093c2270cb4c6e75f9ad37a60e7fec243141fd64b4348782c5794fcf03be363adf0b4543d53
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36-0ubuntu2.debian.tar.xz' glibc_2.36-0ubuntu2.debian.tar.xz 886284 SHA512:dee6657f10a91b648d1c0a5aed314a298847e7b0dc949a65fe2b1499427c1bbfe0ae910dd28880c3e0fdfe66e4e3b9625f2e6535ebffe17e082907780c50a438
-```
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg1-1ubuntu2`
 
