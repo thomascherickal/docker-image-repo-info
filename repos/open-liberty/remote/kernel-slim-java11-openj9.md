@@ -1,7 +1,7 @@
 ## `open-liberty:kernel-slim-java11-openj9`
 
 ```console
-$ docker pull open-liberty@sha256:a9fa01d70cdd502f33114a315fa2040bd0a5dcfaecbc100a71b7320fffa946a2
+$ docker pull open-liberty@sha256:8b25151185eb7a906db2629344e06ff56a3cfde545548286cf1c925b05277aaa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,14 +13,14 @@ $ docker pull open-liberty@sha256:a9fa01d70cdd502f33114a315fa2040bd0a5dcfaecbc10
 ### `open-liberty:kernel-slim-java11-openj9` - linux; amd64
 
 ```console
-$ docker pull open-liberty@sha256:c25d621014b5cf226bbfa5c4bbddebe420ea4f825a4ccfa148a67b41a118b9ee
+$ docker pull open-liberty@sha256:66d9fa67c508d5a108c0b4670c9aa4ba32551f71e1a949866fe8aed3c08a745f
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **111.2 MB (111212301 bytes)**  
+-	Total Size: **111.1 MB (111129890 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9c1bdea0801230f1a19cf8087b2a72d802bce0804dc2b0fd8c36d9c6a1bbee29`
+-	Image ID: `sha256:62fb4179a9df24feee9d9ec534ce35e836b0a945f03dc2b5239c14a26ec023b9`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -43,51 +43,51 @@ ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal
 # Fri, 02 Sep 2022 03:21:50 GMT
 RUN set -eux;     unset OPENJ9_JAVA_OPTIONS;     SCC_SIZE="50m";     DOWNLOAD_PATH_TOMCAT=/tmp/tomcat;     INSTALL_PATH_TOMCAT=/opt/tomcat-home;     TOMCAT_CHECKSUM="0db27185d9fc3174f2c670f814df3dda8a008b89d1a38a5d96cbbe119767ebfb1cf0bce956b27954aee9be19c4a7b91f2579d967932207976322033a86075f98";     TOMCAT_DWNLD_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz";         mkdir -p "${DOWNLOAD_PATH_TOMCAT}" "${INSTALL_PATH_TOMCAT}";     curl -LfsSo "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz "${TOMCAT_DWNLD_URL}";     echo "${TOMCAT_CHECKSUM} *${DOWNLOAD_PATH_TOMCAT}/tomcat.tar.gz" | sha512sum -c -;     tar -xf "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz -C "${INSTALL_PATH_TOMCAT}" --strip-components=1;     rm -rf "${DOWNLOAD_PATH_TOMCAT}";         java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 15;     FULL=$( (java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     DST_CACHE=$(java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,destroy 2>&1 || true);     SCC_SIZE=$(echo $SCC_SIZE | sed 's/.$//');     SCC_SIZE=$(awk "BEGIN {print int($SCC_SIZE * $FULL / 100.0)}");     [ "${SCC_SIZE}" -eq 0 ] && SCC_SIZE=1;     SCC_SIZE="${SCC_SIZE}m";     java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     unset OPENJ9_JAVA_OPTIONS;         export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 5;     FULL=$( (java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     echo "SCC layer is $FULL% full.";     rm -rf "${INSTALL_PATH_TOMCAT}";     if [ -d "/opt/java/.scc" ]; then           chmod -R 0777 /opt/java/.scc;     fi;         echo "SCC generation phase completed";
-# Fri, 02 Sep 2022 20:43:02 GMT
-ARG LIBERTY_VERSION=22.0.0.9
-# Fri, 02 Sep 2022 20:43:02 GMT
-ARG LIBERTY_SHA=80de22e9301db3711a725303b2de2349784fd2f2
-# Fri, 02 Sep 2022 20:43:02 GMT
-ARG LIBERTY_BUILD_LABEL=cl220920220815-1900
-# Fri, 02 Sep 2022 20:43:02 GMT
-ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.9/openliberty-kernel-22.0.0.9.zip
-# Fri, 02 Sep 2022 20:43:02 GMT
+# Fri, 30 Sep 2022 01:22:53 GMT
+ARG LIBERTY_VERSION=22.0.0.10
+# Fri, 30 Sep 2022 01:22:53 GMT
+ARG LIBERTY_SHA=dc6302b187ba75f6ef7a4a1b786316c4b6e10437
+# Fri, 30 Sep 2022 01:22:53 GMT
+ARG LIBERTY_BUILD_LABEL=cl221020220912-1100
+# Fri, 30 Sep 2022 01:22:53 GMT
+ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.10/openliberty-kernel-22.0.0.10.zip
+# Fri, 30 Sep 2022 01:22:53 GMT
 ARG LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE
-# Fri, 02 Sep 2022 20:43:02 GMT
+# Fri, 30 Sep 2022 01:22:54 GMT
 ARG LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7
-# Fri, 02 Sep 2022 20:43:02 GMT
+# Fri, 30 Sep 2022 01:22:54 GMT
 ARG OPENJ9_SCC=true
-# Fri, 02 Sep 2022 20:43:02 GMT
+# Fri, 30 Sep 2022 01:22:54 GMT
 ARG VERBOSE=false
-# Fri, 02 Sep 2022 20:43:02 GMT
-LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter, Leo Christy Jesuraj org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl220920220815-1900 org.opencontainers.image.description=This image contains the Open Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=22.0.0.9
-# Fri, 02 Sep 2022 20:43:03 GMT
+# Fri, 30 Sep 2022 01:22:54 GMT
+LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter, Leo Christy Jesuraj org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl221020220912-1100 org.opencontainers.image.description=This image contains the Open Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=22.0.0.10
+# Fri, 30 Sep 2022 01:22:54 GMT
 COPY dir:dea07490d51f53c887a4a2d6ade59fdcb72993a025bee3d76672fb9870bb0ef2 in /opt/ol/helpers 
-# Fri, 02 Sep 2022 20:43:03 GMT
+# Fri, 30 Sep 2022 01:22:54 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Fri, 02 Sep 2022 20:43:08 GMT
-# ARGS: LIBERTY_BUILD_LABEL=cl220920220815-1900 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.9/openliberty-kernel-22.0.0.9.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=80de22e9301db3711a725303b2de2349784fd2f2 LIBERTY_VERSION=22.0.0.9 OPENJ9_SCC=true VERBOSE=false
+# Fri, 30 Sep 2022 01:22:59 GMT
+# ARGS: LIBERTY_BUILD_LABEL=cl221020220912-1100 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.10/openliberty-kernel-22.0.0.10.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=dc6302b187ba75f6ef7a4a1b786316c4b6e10437 LIBERTY_VERSION=22.0.0.10 OPENJ9_SCC=true VERBOSE=false
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && mkdir -p /licenses     && wget -q $LIBERTY_LICENSE_URL -O /licenses/LICENSE     && echo "$LIBERTY_LICENSE_SHA /licenses/LICENSE" | sha1sum -c --strict --check     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Fri, 02 Sep 2022 20:43:08 GMT
+# Fri, 30 Sep 2022 01:22:59 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Fri, 02 Sep 2022 20:43:09 GMT
-# ARGS: LIBERTY_BUILD_LABEL=cl220920220815-1900 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.9/openliberty-kernel-22.0.0.9.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=80de22e9301db3711a725303b2de2349784fd2f2 LIBERTY_VERSION=22.0.0.9 VERBOSE=false
+# Fri, 30 Sep 2022 01:23:00 GMT
+# ARGS: LIBERTY_BUILD_LABEL=cl221020220912-1100 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.10/openliberty-kernel-22.0.0.10.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=dc6302b187ba75f6ef7a4a1b786316c4b6e10437 LIBERTY_VERSION=22.0.0.10 VERBOSE=false
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Fri, 02 Sep 2022 20:43:09 GMT
-# ARGS: LIBERTY_BUILD_LABEL=cl220920220815-1900 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.9/openliberty-kernel-22.0.0.9.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=80de22e9301db3711a725303b2de2349784fd2f2 LIBERTY_VERSION=22.0.0.9 VERBOSE=false
+# Fri, 30 Sep 2022 01:23:01 GMT
+# ARGS: LIBERTY_BUILD_LABEL=cl221020220912-1100 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.10/openliberty-kernel-22.0.0.10.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=dc6302b187ba75f6ef7a4a1b786316c4b6e10437 LIBERTY_VERSION=22.0.0.10 VERBOSE=false
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Fri, 02 Sep 2022 20:43:16 GMT
-# ARGS: LIBERTY_BUILD_LABEL=cl220920220815-1900 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.9/openliberty-kernel-22.0.0.9.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=80de22e9301db3711a725303b2de2349784fd2f2 LIBERTY_VERSION=22.0.0.9 VERBOSE=false
+# Fri, 30 Sep 2022 01:23:08 GMT
+# ARGS: LIBERTY_BUILD_LABEL=cl221020220912-1100 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.10/openliberty-kernel-22.0.0.10.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=dc6302b187ba75f6ef7a4a1b786316c4b6e10437 LIBERTY_VERSION=22.0.0.10 VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache /output/workarea     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Fri, 02 Sep 2022 20:43:16 GMT
+# Fri, 30 Sep 2022 01:23:08 GMT
 ENV RANDFILE=/tmp/.rnd OPENJ9_JAVA_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal -Dosgi.checkConfiguration=false
-# Fri, 02 Sep 2022 20:43:17 GMT
+# Fri, 30 Sep 2022 01:23:08 GMT
 USER 1001
-# Fri, 02 Sep 2022 20:43:17 GMT
+# Fri, 30 Sep 2022 01:23:08 GMT
 EXPOSE 9080 9443
-# Fri, 02 Sep 2022 20:43:17 GMT
+# Fri, 30 Sep 2022 01:23:08 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Fri, 02 Sep 2022 20:43:17 GMT
+# Fri, 30 Sep 2022 01:23:08 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ```
 
@@ -108,29 +108,29 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Fri, 02 Sep 2022 03:29:59 GMT  
 		Size: 4.2 MB (4239524 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:43899d7be9a70c2a08d42cfa93a681f6106eb0a9e3b86e73c0e456227f1a188f`  
-		Last Modified: Fri, 02 Sep 2022 20:48:16 GMT  
-		Size: 8.1 KB (8114 bytes)  
+	-	`sha256:1533ce9b02de6a3a7b245c1addca5e097edf3b6bb6c05761d3609383e050c1f8`  
+		Last Modified: Fri, 30 Sep 2022 01:28:27 GMT  
+		Size: 8.1 KB (8109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dff62a4504b13623b16d9a34db38efea6fef8ff7a77d49143ae7fc1e22d31340`  
-		Last Modified: Fri, 02 Sep 2022 20:48:14 GMT  
-		Size: 267.0 B  
+	-	`sha256:ef5ae37407f03f498829fad7b7a059f2b49f13ebbc54e2b4c74f79e1a4907a95`  
+		Last Modified: Fri, 30 Sep 2022 01:28:25 GMT  
+		Size: 265.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20a9eb42e73bce98708747d77f682904e20ce161a7fe873ab284b565828f1297`  
-		Last Modified: Fri, 02 Sep 2022 20:48:15 GMT  
-		Size: 11.7 MB (11732401 bytes)  
+	-	`sha256:a44ed01fffb93b72d0ea881f8d829686dd38f8c060e4c05874390b95b895318a`  
+		Last Modified: Fri, 30 Sep 2022 01:28:26 GMT  
+		Size: 11.7 MB (11747005 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75b4c65ec3b0e869fe528fe38a7136147774264c3163b34270c41ebb55ed9c03`  
-		Last Modified: Fri, 02 Sep 2022 20:48:14 GMT  
-		Size: 930.0 B  
+	-	`sha256:bd94c8e0593a446ab03bd72cf626b92f572f6cfda8895fe685f6f52a880ab8bf`  
+		Last Modified: Fri, 30 Sep 2022 01:28:25 GMT  
+		Size: 923.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2e4c2d4e9ec0568c1f43f0c8847387003424eed46d02dd0a5e7868476e282cf`  
-		Last Modified: Fri, 02 Sep 2022 20:48:14 GMT  
-		Size: 9.2 KB (9215 bytes)  
+	-	`sha256:d8ce0a9b6640e42284040c291a8946a00fc3dc115009058ea1185a4f1cc859d9`  
+		Last Modified: Fri, 30 Sep 2022 01:28:25 GMT  
+		Size: 9.2 KB (9223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a9957d19a8368867b5e94904a0628f2d6d2e9abd155cabd9d252086efa51419`  
-		Last Modified: Fri, 02 Sep 2022 20:48:14 GMT  
-		Size: 2.6 MB (2604372 bytes)  
+	-	`sha256:5ed7fca9268684807caaf1341ee887786e3bde22b7899266236c7f662f48a8f9`  
+		Last Modified: Fri, 30 Sep 2022 01:28:25 GMT  
+		Size: 2.5 MB (2507363 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `open-liberty:kernel-slim-java11-openj9` - linux; ppc64le
@@ -259,14 +259,14 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ### `open-liberty:kernel-slim-java11-openj9` - linux; s390x
 
 ```console
-$ docker pull open-liberty@sha256:f8d442edffe8611f6d9b2115f75f0fea38894e51edaddd8f04573395ada93a94
+$ docker pull open-liberty@sha256:bfc627b822ec7caed3de9c779027bd0d2d2f21c3fcfd96ef26ebdb95ba7baf5a
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.0 MB (109045259 bytes)**  
+-	Total Size: **109.1 MB (109053216 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:527386682864cfbad42a6a7b1b759e2737d4ac485cd7ee901e1130a558c37c78`
+-	Image ID: `sha256:45739ab29211538c2857096bb6c085168bae542163e82624abd7f7a1957d40c5`
 -	Entrypoint: `["\/opt\/ol\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ol\/wlp\/bin\/server","run","defaultServer"]`
 
@@ -289,51 +289,51 @@ ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal
 # Fri, 02 Sep 2022 01:40:25 GMT
 RUN set -eux;     unset OPENJ9_JAVA_OPTIONS;     SCC_SIZE="50m";     DOWNLOAD_PATH_TOMCAT=/tmp/tomcat;     INSTALL_PATH_TOMCAT=/opt/tomcat-home;     TOMCAT_CHECKSUM="0db27185d9fc3174f2c670f814df3dda8a008b89d1a38a5d96cbbe119767ebfb1cf0bce956b27954aee9be19c4a7b91f2579d967932207976322033a86075f98";     TOMCAT_DWNLD_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz";         mkdir -p "${DOWNLOAD_PATH_TOMCAT}" "${INSTALL_PATH_TOMCAT}";     curl -LfsSo "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz "${TOMCAT_DWNLD_URL}";     echo "${TOMCAT_CHECKSUM} *${DOWNLOAD_PATH_TOMCAT}/tomcat.tar.gz" | sha512sum -c -;     tar -xf "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz -C "${INSTALL_PATH_TOMCAT}" --strip-components=1;     rm -rf "${DOWNLOAD_PATH_TOMCAT}";         java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 15;     FULL=$( (java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     DST_CACHE=$(java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,destroy 2>&1 || true);     SCC_SIZE=$(echo $SCC_SIZE | sed 's/.$//');     SCC_SIZE=$(awk "BEGIN {print int($SCC_SIZE * $FULL / 100.0)}");     [ "${SCC_SIZE}" -eq 0 ] && SCC_SIZE=1;     SCC_SIZE="${SCC_SIZE}m";     java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     unset OPENJ9_JAVA_OPTIONS;         export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 5;     FULL=$( (java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     echo "SCC layer is $FULL% full.";     rm -rf "${INSTALL_PATH_TOMCAT}";     if [ -d "/opt/java/.scc" ]; then           chmod -R 0777 /opt/java/.scc;     fi;         echo "SCC generation phase completed";
-# Fri, 02 Sep 2022 21:04:02 GMT
-ARG LIBERTY_VERSION=22.0.0.9
-# Fri, 02 Sep 2022 21:04:03 GMT
-ARG LIBERTY_SHA=80de22e9301db3711a725303b2de2349784fd2f2
-# Fri, 02 Sep 2022 21:04:04 GMT
-ARG LIBERTY_BUILD_LABEL=cl220920220815-1900
-# Fri, 02 Sep 2022 21:04:04 GMT
-ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.9/openliberty-kernel-22.0.0.9.zip
-# Fri, 02 Sep 2022 21:04:05 GMT
+# Fri, 30 Sep 2022 01:00:35 GMT
+ARG LIBERTY_VERSION=22.0.0.10
+# Fri, 30 Sep 2022 01:00:36 GMT
+ARG LIBERTY_SHA=dc6302b187ba75f6ef7a4a1b786316c4b6e10437
+# Fri, 30 Sep 2022 01:00:36 GMT
+ARG LIBERTY_BUILD_LABEL=cl221020220912-1100
+# Fri, 30 Sep 2022 01:00:36 GMT
+ARG LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.10/openliberty-kernel-22.0.0.10.zip
+# Fri, 30 Sep 2022 01:00:37 GMT
 ARG LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE
-# Fri, 02 Sep 2022 21:04:06 GMT
+# Fri, 30 Sep 2022 01:00:37 GMT
 ARG LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7
-# Fri, 02 Sep 2022 21:04:07 GMT
+# Fri, 30 Sep 2022 01:00:37 GMT
 ARG OPENJ9_SCC=true
-# Fri, 02 Sep 2022 21:04:08 GMT
+# Fri, 30 Sep 2022 01:00:37 GMT
 ARG VERBOSE=false
-# Fri, 02 Sep 2022 21:04:09 GMT
-LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter, Leo Christy Jesuraj org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl220920220815-1900 org.opencontainers.image.description=This image contains the Open Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=22.0.0.9
-# Fri, 02 Sep 2022 21:04:09 GMT
+# Fri, 30 Sep 2022 01:00:38 GMT
+LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter, Leo Christy Jesuraj org.opencontainers.image.vendor=Open Liberty org.opencontainers.image.url=https://openliberty.io/ org.opencontainers.image.source=https://github.com/OpenLiberty/ci.docker org.opencontainers.image.revision=cl221020220912-1100 org.opencontainers.image.description=This image contains the Open Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/OpenLiberty/ci.docker#building-an-application-image org.opencontainers.image.title=Open Liberty org.opencontainers.image.version=22.0.0.10
+# Fri, 30 Sep 2022 01:00:38 GMT
 COPY dir:dea07490d51f53c887a4a2d6ade59fdcb72993a025bee3d76672fb9870bb0ef2 in /opt/ol/helpers 
-# Fri, 02 Sep 2022 21:04:10 GMT
+# Fri, 30 Sep 2022 01:00:38 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ol/fixes/ 
-# Fri, 02 Sep 2022 21:04:21 GMT
-# ARGS: LIBERTY_BUILD_LABEL=cl220920220815-1900 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.9/openliberty-kernel-22.0.0.9.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=80de22e9301db3711a725303b2de2349784fd2f2 LIBERTY_VERSION=22.0.0.9 OPENJ9_SCC=true VERBOSE=false
+# Fri, 30 Sep 2022 01:00:44 GMT
+# ARGS: LIBERTY_BUILD_LABEL=cl221020220912-1100 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.10/openliberty-kernel-22.0.0.10.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=dc6302b187ba75f6ef7a4a1b786316c4b6e10437 LIBERTY_VERSION=22.0.0.10 OPENJ9_SCC=true VERBOSE=false
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip openssl wget     && rm -rf /var/lib/apt/lists/*     && wget -q $LIBERTY_DOWNLOAD_URL -U UA-Open-Liberty-Docker -O /tmp/wlp.zip     && echo "$LIBERTY_SHA  /tmp/wlp.zip" > /tmp/wlp.zip.sha1     && sha1sum -c /tmp/wlp.zip.sha1     && unzip -q /tmp/wlp.zip -d /opt/ol     && rm /tmp/wlp.zip     && rm /tmp/wlp.zip.sha1     && mkdir -p /licenses     && wget -q $LIBERTY_LICENSE_URL -O /licenses/LICENSE     && echo "$LIBERTY_LICENSE_SHA /licenses/LICENSE" | sha1sum -c --strict --check     && apt-get remove -y unzip     && apt-get remove -y wget     && rm -rf /var/lib/apt/lists/*     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && chown -R 1001:0 /opt/ol/wlp     && chmod -R g+rw /opt/ol/wlp
-# Fri, 02 Sep 2022 21:04:23 GMT
+# Fri, 30 Sep 2022 01:00:46 GMT
 ENV PATH=/opt/ol/wlp/bin:/opt/ol/docker/:/opt/ol/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ol/wlp/output WLP_SKIP_MAXPERMSIZE=true OPENJ9_SCC=true
-# Fri, 02 Sep 2022 21:04:25 GMT
-# ARGS: LIBERTY_BUILD_LABEL=cl220920220815-1900 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.9/openliberty-kernel-22.0.0.9.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=80de22e9301db3711a725303b2de2349784fd2f2 LIBERTY_VERSION=22.0.0.9 VERBOSE=false
+# Fri, 30 Sep 2022 01:00:47 GMT
+# ARGS: LIBERTY_BUILD_LABEL=cl221020220912-1100 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.10/openliberty-kernel-22.0.0.10.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=dc6302b187ba75f6ef7a4a1b786316c4b6e10437 LIBERTY_VERSION=22.0.0.10 VERBOSE=false
 RUN /opt/ol/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Fri, 02 Sep 2022 21:04:28 GMT
-# ARGS: LIBERTY_BUILD_LABEL=cl220920220815-1900 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.9/openliberty-kernel-22.0.0.9.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=80de22e9301db3711a725303b2de2349784fd2f2 LIBERTY_VERSION=22.0.0.9 VERBOSE=false
+# Fri, 30 Sep 2022 01:00:49 GMT
+# ARGS: LIBERTY_BUILD_LABEL=cl221020220912-1100 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.10/openliberty-kernel-22.0.0.10.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=dc6302b187ba75f6ef7a4a1b786316c4b6e10437 LIBERTY_VERSION=22.0.0.10 VERBOSE=false
 RUN mkdir /logs     && mkdir -p /opt/ol/wlp/usr/shared/resources/lib.index.cache     && ln -s /opt/ol/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p $WLP_OUTPUT_DIR/defaultServer     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ol/wlp/usr/servers/defaultServer /config     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && ln -s /opt/ol/wlp /liberty     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /opt/ol/wlp/usr     && chmod -R g+rw /opt/ol/wlp/usr     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rw /opt/ol/wlp/output     && chown -R 1001:0 /opt/ol/helpers     && chmod -R g+rw /opt/ol/helpers     && chown -R 1001:0 /opt/ol/fixes     && chmod -R g+rwx /opt/ol/fixes     && mkdir /etc/wlp     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && echo "<server description=\"Default Server\"><httpEndpoint id=\"defaultHttpEndpoint\" host=\"*\" /></server>" > /config/configDropins/defaults/open-default-port.xml
-# Fri, 02 Sep 2022 21:04:41 GMT
-# ARGS: LIBERTY_BUILD_LABEL=cl220920220815-1900 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.9/openliberty-kernel-22.0.0.9.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=80de22e9301db3711a725303b2de2349784fd2f2 LIBERTY_VERSION=22.0.0.9 VERBOSE=false
+# Fri, 30 Sep 2022 01:00:58 GMT
+# ARGS: LIBERTY_BUILD_LABEL=cl221020220912-1100 LIBERTY_DOWNLOAD_URL=https://repo1.maven.org/maven2/io/openliberty/openliberty-kernel/22.0.0.10/openliberty-kernel-22.0.0.10.zip LIBERTY_LICENSE_SHA=84f00503d6516c91190de866e78d6010899673b7 LIBERTY_LICENSE_URL=https://raw.githubusercontent.com/OpenLiberty/open-liberty/master/LICENSE LIBERTY_SHA=dc6302b187ba75f6ef7a4a1b786316c4b6e10437 LIBERTY_VERSION=22.0.0.10 VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache /output/workarea     && chown -R 1001:0 /opt/ol/wlp/output     && chmod -R g+rwx /opt/ol/wlp/output
-# Fri, 02 Sep 2022 21:04:42 GMT
+# Fri, 30 Sep 2022 01:00:59 GMT
 ENV RANDFILE=/tmp/.rnd OPENJ9_JAVA_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal -Dosgi.checkConfiguration=false
-# Fri, 02 Sep 2022 21:04:43 GMT
+# Fri, 30 Sep 2022 01:00:59 GMT
 USER 1001
-# Fri, 02 Sep 2022 21:04:43 GMT
+# Fri, 30 Sep 2022 01:00:59 GMT
 EXPOSE 9080 9443
-# Fri, 02 Sep 2022 21:04:44 GMT
+# Fri, 30 Sep 2022 01:00:59 GMT
 ENTRYPOINT ["/opt/ol/helpers/runtime/docker-server.sh"]
-# Fri, 02 Sep 2022 21:04:45 GMT
+# Fri, 30 Sep 2022 01:00:59 GMT
 CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 ```
 
@@ -354,27 +354,27 @@ CMD ["/opt/ol/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Fri, 02 Sep 2022 01:48:15 GMT  
 		Size: 4.3 MB (4327290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:84c03602a995c6f2a0a1ac2617b77a834f867865e3e1f31213b377604bad793d`  
-		Last Modified: Fri, 02 Sep 2022 21:16:45 GMT  
-		Size: 8.1 KB (8108 bytes)  
+	-	`sha256:cd0bf782099b32c8b2746010fbf88eed8efff741005c3e67f459382d7afad76d`  
+		Last Modified: Fri, 30 Sep 2022 01:11:20 GMT  
+		Size: 8.1 KB (8114 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b2827955503a936149d49f4264bf767ae5d69beb7c90c52b3c12b9e9d7df158`  
-		Last Modified: Fri, 02 Sep 2022 21:16:44 GMT  
-		Size: 268.0 B  
+	-	`sha256:cb35e6722741e5b9d5878b8829516242588771a412480d27eb9c2cbe729ab173`  
+		Last Modified: Fri, 30 Sep 2022 01:11:19 GMT  
+		Size: 266.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dfc79f4b9e735af0b9ca5d731d265ecce6cd1d82be0825d5724a0cbd2ab0736f`  
-		Last Modified: Fri, 02 Sep 2022 21:16:44 GMT  
-		Size: 11.7 MB (11732610 bytes)  
+	-	`sha256:6da859eabb0ead96956ad86515464e73ad76a6b3882b122fe867c6eea8e4b2df`  
+		Last Modified: Fri, 30 Sep 2022 01:11:20 GMT  
+		Size: 11.7 MB (11747232 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8ed2b8c03eaf51a3a2921800e32d94604b3836d1151199eba6971f61ed95a050`  
-		Last Modified: Fri, 02 Sep 2022 21:16:44 GMT  
-		Size: 928.0 B  
+	-	`sha256:b585d595724a84c8e29c6dda9762ea301193f7d277f19fba8846621b2a81ad12`  
+		Last Modified: Fri, 30 Sep 2022 01:11:19 GMT  
+		Size: 930.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea833a0133e67fc2e2c1b01817c59e12ea8a8dd9e3551302d512b9c94fd49d6e`  
-		Last Modified: Fri, 02 Sep 2022 21:16:44 GMT  
-		Size: 9.2 KB (9230 bytes)  
+	-	`sha256:0ce951faee09d12296759b61567163b11d9bb528a07bf6249bd5b4c6950e46d8`  
+		Last Modified: Fri, 30 Sep 2022 01:11:18 GMT  
+		Size: 9.2 KB (9217 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b0700896af85e7c8a2c3922cc008ec8ccf5f27154433158216bd9bd227ab573f`  
-		Last Modified: Fri, 02 Sep 2022 21:16:44 GMT  
-		Size: 2.6 MB (2617881 bytes)  
+	-	`sha256:eaa503f68f1f3d695798e8fd7f37ce8027512150165a2c2a8552f264c0b1332d`  
+		Last Modified: Fri, 30 Sep 2022 01:11:19 GMT  
+		Size: 2.6 MB (2611223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
