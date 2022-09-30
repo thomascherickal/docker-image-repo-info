@@ -79,19 +79,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.5.2
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.5.2.dsc' apt_2.5.2.dsc 2933 SHA256:5bc7d3737d6e281a32ca59c785747cc9f23eafaa5b71ee2d9016b7290f2c54fe
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.5.2.tar.xz' apt_2.5.2.tar.xz 2252960 SHA256:cc5c374c2831c9e390d9c5f08029a81c3ca2b778abc0dd1426c81c657628fe9d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.5.2/
 
-- https://sources.debian.net/src/apt/2.5.2/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.5.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.5.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -196,20 +190,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.2~rc2-2
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2%7erc2-2.dsc' bash_5.2~rc2-2.dsc 2324 SHA256:61e6d4775fc8944e526c1fa534efc8665f744d2822685032d35e43b1091ac939
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2%7erc2.orig.tar.xz' bash_5.2~rc2.orig.tar.xz 5881656 SHA256:763ff1906505b6ac19c1155123cfe7772665a52a3ab2b2a38b1ff73813a69b5e
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2%7erc2-2.debian.tar.xz' bash_5.2~rc2-2.debian.tar.xz 85856 SHA256:3adbe653ae8bfef1a7df7787323f37095682748771e9ea25d280ff75faa2c32f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.2~rc2-2/
 
-- https://sources.debian.net/src/bash/5.2~rc2-2/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.2~rc2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.2~rc2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bzip2=1.0.8-5`
 
