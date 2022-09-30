@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:50bc65a1c7b42c71df976adce9b87512a75386879b8eb00bcbb080158092a126`
-- Created: `2022-09-13T19:41:33.773985652Z`
-- Virtual Size: ~ 692.14 Mb  
+- Image ID: `sha256:42921577c96aeea139559e226ac374f8345dc0837934bb8664246e2fc23c62db`
+- Created: `2022-09-29T20:38:30.091034486Z`
+- Virtual Size: ~ 692.59 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/entrypoint.sh"]`
@@ -19,10 +19,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.10`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.10.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.10.tar.xz.asc`
-  - `PHP_SHA256=90e7120c77ee83630e6ac928d23bc6396603d62d83a3cf5df8a450d2e3070162`
+  - `PHP_VERSION=8.1.11`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.11.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.11.tar.xz.asc`
+  - `PHP_SHA256=3005198d7303f87ab31bc30695de76e8ad62783f806b6ab9744da59fe41cc5bd`
   - `PHP_OPCACHE_VALIDATE_TIMESTAMPS=0`
   - `PHP_OPCACHE_MAX_ACCELERATED_FILES=20000`
   - `PHP_OPCACHE_MEMORY_CONSUMPTION=192`
@@ -875,11 +875,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.46.2-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.46.2-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `expat=2.2.10-2+deb11u3`
+### `dpkg` source package: `expat=2.2.10-2+deb11u4`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.10-2+deb11u3`
+- `libexpat1:amd64=2.2.10-2+deb11u4`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
@@ -888,17 +888,17 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris expat=2.2.10-2+deb11u3
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10-2%2bdeb11u3.dsc' expat_2.2.10-2+deb11u3.dsc 2175 SHA256:bf66d8eca15055af1961c95703204fb71f48c0bfbb9db7b2a7eccce19e444555
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10.orig.tar.gz' expat_2.2.10.orig.tar.gz 8276395 SHA256:62e280f5fd29a5b70973f623e20a7412c3e3912c2684cb0e462e2c881be129e1
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10-2%2bdeb11u3.debian.tar.xz' expat_2.2.10-2+deb11u3.debian.tar.xz 27188 SHA256:03a961cdbe42a5ebee68e072090821995730502cb3822fb59f0c642688fb9f51
+$ apt-get source -qq --print-uris expat=2.2.10-2+deb11u4
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10-2%2bdeb11u4.dsc' expat_2.2.10-2+deb11u4.dsc 2020 SHA256:a86fa66526a76b784044975e978a070d5b17154c0b76e264fda802811ca7ec74
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10.orig.tar.gz' expat_2.2.10.orig.tar.gz 8276395 SHA256:62e280f5fd29a5b70973f623e20a7412c3e3912c2684cb0e462e2c881be129e1
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10-2%2bdeb11u4.debian.tar.xz' expat_2.2.10-2+deb11u4.debian.tar.xz 28500 SHA256:54ecdf492d5c77cefe6aab7ea5cff6e448f073a258fc7031cafe2c76fd699d09
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/expat/2.2.10-2+deb11u3/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.2.10-2+deb11u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.2.10-2+deb11u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/expat/2.2.10-2+deb11u4/ (for browsing the source)
+- https://sources.debian.net/src/expat/2.2.10-2+deb11u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/expat/2.2.10-2+deb11u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `file=1:5.39-3`
 
