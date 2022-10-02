@@ -1,10 +1,10 @@
-# `mongo:4.4.16-focal`
+# `mongo:4.4.17-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ef85efd58fcae440bc9cb5ee123504f4b9efec5448aaae2ed72ab61af7760b3d`
-- Created: `2022-09-02T03:54:45.103907731Z`
-- Virtual Size: ~ 437.56 Mb  
+- Image ID: `sha256:1bfc933017699eda23d3f56a592b565de3368cd8caf4a3d56f8dbbb8f8247959`
+- Created: `2022-09-29T21:20:57.207972055Z`
+- Virtual Size: ~ 437.67 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -16,7 +16,7 @@
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=4.4`
-  - `MONGO_VERSION=4.4.16`
+  - `MONGO_VERSION=4.4.17`
   - `HOME=/data/db`
 
 ## `dpkg` (`.deb`-based packages)
@@ -1281,16 +1281,16 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `mongodb-org=4.4.16`
+### `dpkg` source package: `mongodb-org=4.4.17`
 
 Binary Packages:
 
-- `mongodb-org=4.4.16`
-- `mongodb-org-database-tools-extra=4.4.16`
-- `mongodb-org-mongos=4.4.16`
-- `mongodb-org-server=4.4.16`
-- `mongodb-org-shell=4.4.16`
-- `mongodb-org-tools=4.4.16`
+- `mongodb-org=4.4.17`
+- `mongodb-org-database-tools-extra=4.4.17`
+- `mongodb-org-mongos=4.4.17`
+- `mongodb-org-server=4.4.17`
+- `mongodb-org-shell=4.4.17`
+- `mongodb-org-tools=4.4.17`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
