@@ -1,7 +1,7 @@
 ## `almalinux:8-minimal`
 
 ```console
-$ docker pull almalinux@sha256:433d702ae8a6566d3fff8f002068268a75869967ed151c9280ffe037fab2d886
+$ docker pull almalinux@sha256:c4543f78bc9ddfb0d1b686410fd8f858a408d53c93b66bb893c78c34926ae9d3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,103 +14,103 @@ $ docker pull almalinux@sha256:433d702ae8a6566d3fff8f002068268a75869967ed151c928
 ### `almalinux:8-minimal` - linux; amd64
 
 ```console
-$ docker pull almalinux@sha256:bd2349757b2fc1f00b382ef0cf5ec0aae6b2e379237417a03c7637ced5f03cae
+$ docker pull almalinux@sha256:3425f8a5c9a8a16b33f005978906b6fa937edacf142e794cba141b1457fcadee
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **36.5 MB (36516634 bytes)**  
+-	Total Size: **37.6 MB (37587356 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0fd482d41dd690dc424b451978f614914a3638290d0bb9eeaf26c13bcb906f2a`
+-	Image ID: `sha256:19badaa24b64f7c287922b51099a183d645107c692d046a8a085a34c6d640c54`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Thu, 01 Sep 2022 23:10:50 GMT
-ADD file:2bfd1e92a176e0d58ceda2d35c4bf3361a21525f62f94ae7b5c5be1d8d8e6ba2 in / 
-# Thu, 01 Sep 2022 23:10:51 GMT
+# Mon, 03 Oct 2022 21:23:55 GMT
+ADD file:9f8a2c7355b3bd2fd481f851bb7e1803e510f41e684943115b0c129396c835d3 in / 
+# Mon, 03 Oct 2022 21:23:56 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:5901bd832ddfdfaee1f441f5c33ad631bba87fa88f6d8b236469da736ec65209`  
-		Last Modified: Thu, 01 Sep 2022 23:12:11 GMT  
-		Size: 36.5 MB (36516634 bytes)  
+	-	`sha256:a755b8f2afabd2f8f2e71e1a0bbe4ac9bdac8a9b10a2a592265666b0280bdc4d`  
+		Last Modified: Mon, 03 Oct 2022 21:25:15 GMT  
+		Size: 37.6 MB (37587356 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `almalinux:8-minimal` - linux; arm64 variant v8
 
 ```console
-$ docker pull almalinux@sha256:2f43d8a13563dd4d1a74b7af2fa28f03a7acb480e8ee930ed73715128a33b5e7
+$ docker pull almalinux@sha256:85e205240efeb627cb4fd9f517082776cc0b3920b5b03265a2b0aa331da0e16e
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **35.1 MB (35135543 bytes)**  
+-	Total Size: **36.2 MB (36215797 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e5920bcaa13cf6b21661cded3afec2d23333ffd7cbed730ff229b96914ab3152`
+-	Image ID: `sha256:6802406424c6af8468b1a49b25caaff90489de5093d2de632f6ecf11aad2030b`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Fri, 02 Sep 2022 00:19:26 GMT
-ADD file:9f02eab749a90eb28b445bbe52a24cdcc75456d0c27b324a092dd51dcdc4864d in / 
-# Fri, 02 Sep 2022 00:19:27 GMT
+# Mon, 03 Oct 2022 21:40:02 GMT
+ADD file:82db29ce6e4ac8e7ee3332e94a1b41902dff71e5496d32feb5c17db7954f7e2c in / 
+# Mon, 03 Oct 2022 21:40:02 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:177a3ee2a7781fe544ed76d75435fdd027ee80fed7deb339068930930a9031a4`  
-		Last Modified: Fri, 02 Sep 2022 00:21:08 GMT  
-		Size: 35.1 MB (35135543 bytes)  
+	-	`sha256:dfd31455afcda84171e45a7a29c83e77be21fbf3363d88022ea6d172bea59055`  
+		Last Modified: Mon, 03 Oct 2022 21:41:42 GMT  
+		Size: 36.2 MB (36215797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `almalinux:8-minimal` - linux; ppc64le
 
 ```console
-$ docker pull almalinux@sha256:13557f85ca24ce2856231a0464d969980492cf86e9aef459acd4e14cbd310272
+$ docker pull almalinux@sha256:094099668424c876400e3360a7df6d7a1de7c143375362109d62fb5c70734afa
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **41.2 MB (41213492 bytes)**  
+-	Total Size: **42.3 MB (42295005 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:41ad18eba7b9963a3fb6e66a204ab21303240bf7f2985bfcfffa2a88ab201f1b`
+-	Image ID: `sha256:c7b577ea952f902da0165aa16ed52b88218734b983f49a202cabf49bf2067895`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Thu, 01 Sep 2022 23:08:24 GMT
-ADD file:ffa04d7ad9cd675d095a91d1995dbb1e472de0cc7d323d8deba4c6b020f01b32 in / 
-# Thu, 01 Sep 2022 23:08:27 GMT
+# Mon, 03 Oct 2022 21:17:35 GMT
+ADD file:633483f9a03b164840fd5cf8ac5ddfddc3f96a516b011994c6ac8749341d4edc in / 
+# Mon, 03 Oct 2022 21:17:38 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:3f58ddbbcd72f8e784aba427aa37ecb2a0ca621aee28130ef8bd965fe74bb824`  
-		Last Modified: Thu, 01 Sep 2022 23:11:51 GMT  
-		Size: 41.2 MB (41213492 bytes)  
+	-	`sha256:0b207c1a3d5dde37a98dd4b2b0c790f554d9d1305d28a8025315f1e6a37adccb`  
+		Last Modified: Mon, 03 Oct 2022 21:20:07 GMT  
+		Size: 42.3 MB (42295005 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `almalinux:8-minimal` - linux; s390x
 
 ```console
-$ docker pull almalinux@sha256:bbac237dff1b19ab26d59be3af7f792f5bc3d21664b1637b8aa983c77c091dbf
+$ docker pull almalinux@sha256:45aa9fa8caa948bb9f4ffc360406102310515552b77b77411162a387b62b588c
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **34.8 MB (34770811 bytes)**  
+-	Total Size: **35.9 MB (35854462 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4d002830da1dcc75506e60ff7a3e2c3ba9b7ac8979d922bed482ca1e8b4dff5d`
+-	Image ID: `sha256:3e08e4ac2aae4c181c790c1fb49e2e93c543bae882b9a95a686e075f13d7b4e5`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Thu, 01 Sep 2022 22:43:43 GMT
-ADD file:81bc834cfbddfba7fe37bcd0817370ade2455ff2c2c428119855ddc7097db77c in / 
-# Thu, 01 Sep 2022 22:43:49 GMT
+# Mon, 03 Oct 2022 21:42:25 GMT
+ADD file:4dcab7cce01354b18bd166ad6b89e459267a56f4472e43578cab188796aa397c in / 
+# Mon, 03 Oct 2022 21:42:32 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:8b7c7f822787406a7c29ce8db6aa8067c91240e9760955f31e01a12ececcbd34`  
-		Last Modified: Thu, 01 Sep 2022 22:45:35 GMT  
-		Size: 34.8 MB (34770811 bytes)  
+	-	`sha256:daa44097aba2fc39e29c2049788be099a1d2fb6abaf8334825d5ff93c2e4d441`  
+		Last Modified: Mon, 03 Oct 2022 21:44:38 GMT  
+		Size: 35.9 MB (35854462 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
