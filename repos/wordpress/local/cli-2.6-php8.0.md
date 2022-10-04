@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:bce31434fc0378a8b286c06fb5b6fc5112664c59dba4768cd0bcdfe990aa9a49`
-- Created: `2022-09-02T01:01:04.918265854Z`
-- Virtual Size: ~ 150.27 Mb  
+- Image ID: `sha256:4eff9a3b434bd59232d4eff49413d8d4af2d46750f670c57a672b42211667ad9`
+- Created: `2022-10-01T02:33:24.738043965Z`
+- Virtual Size: ~ 150.31 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.23`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.23.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.23.tar.xz.asc`
-  - `PHP_SHA256=65e474b6bd8cfc9d4a8a56268a755e2f9d3e7499e1687e6401a9f2b047600f87`
+  - `PHP_VERSION=8.0.24`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.24.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.24.tar.xz.asc`
+  - `PHP_SHA256=8e6a63ac9cdabe4c345b32a54b18f348d9e50a1decda217faf2d61278d22f08b`
   - `WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06`
   - `WORDPRESS_CLI_VERSION=2.6.0`
   - `WORDPRESS_CLI_SHA512=d73f9161a1f03b8ecaac7b196b6051fe847b3c402b9c92b1f6f3acbe5b1cf91f7260c0e499b8947bab75920ecec918b39533ca65fa5a1fd3eb6ce7b8e2c58e7d`
@@ -217,16 +217,16 @@ curl
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.8-r0 description:
+expat-2.4.9-r0 description:
 XML Parser library written in C
 
-expat-2.4.8-r0 webpage:
+expat-2.4.9-r0 webpage:
 https://libexpat.github.io/
 
-expat-2.4.8-r0 installed size:
+expat-2.4.9-r0 installed size:
 192 KiB
 
-expat-2.4.8-r0 license:
+expat-2.4.9-r0 license:
 MIT
 
 ```
