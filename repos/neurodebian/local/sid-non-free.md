@@ -147,19 +147,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=12.2
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_12.2.dsc' base-files_12.2.dsc 1078 SHA256:bce25568b596e80923f764c1a2ecfb5022ccee0c4387e8e4785598250852ea7f
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_12.2.tar.xz' base-files_12.2.tar.xz 65760 SHA256:ed45674c39c6051591d6037aac3fb7e97e3ef868c51d3112e8b3234d2e275ac6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/12.2/
 
-- https://sources.debian.net/src/base-files/12.2/ (for browsing the source)
-- https://sources.debian.net/src/base-files/12.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/12.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.6.0`
 
@@ -1243,20 +1237,13 @@ Licenses: (parsed from: `/usr/share/doc/libunistring2/copyright`)
 - `LGPL-3+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libunistring=1.0-1
-'http://deb.debian.org/debian/pool/main/libu/libunistring/libunistring_1.0-1.dsc' libunistring_1.0-1.dsc 1928 SHA256:d93859cde749a30f55404ea1ef0ed4f02e58d2475a7c7e088b264d4df0626061
-'http://deb.debian.org/debian/pool/main/libu/libunistring/libunistring_1.0.orig.tar.xz' libunistring_1.0.orig.tar.xz 2367800 SHA256:5bab55b49f75d77ed26b257997e919b693f29fd4a1bc22e0e6e024c246c72741
-'http://deb.debian.org/debian/pool/main/libu/libunistring/libunistring_1.0-1.debian.tar.xz' libunistring_1.0-1.debian.tar.xz 42004 SHA256:7cf35dfd1de973ee3944930d215750c7de27ececd91616ad129ac5a238b1538f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libunistring/1.0-1/
 
-- https://sources.debian.net/src/libunistring/1.0-1/ (for browsing the source)
-- https://sources.debian.net/src/libunistring/1.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libunistring/1.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxcrypt=1:4.4.28-2`
 
@@ -1768,21 +1755,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.39.3-1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.39.3-1.dsc' sqlite3_3.39.3-1.dsc 2487 SHA256:2521e6daba1fb3075d4f6eb354a0b292f52ba522c71af683055056ec58169ff6
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.39.3.orig-www.tar.xz' sqlite3_3.39.3.orig-www.tar.xz 5562996 SHA256:0d93a9a666196eca0a4210413ef4db89b3136849aa3ad25181b19de4574fbf8d
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.39.3.orig.tar.xz' sqlite3_3.39.3.orig.tar.xz 7819740 SHA256:f54a13b6fc597efb6fd6f5ec1a59964b4517a81269a5c3a1135cfa1f5eb1faee
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.39.3-1.debian.tar.xz' sqlite3_3.39.3-1.debian.tar.xz 29528 SHA256:b8be05deee6230131f3b0dc7fb5f7a21c2902ef360c7e1f90585bb0faa69de27
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.39.3-1/
 
-- https://sources.debian.net/src/sqlite3/3.39.3-1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.39.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.39.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=251.4-3`
 
