@@ -1,7 +1,7 @@
 ## `eclipse-temurin:8u345-b01-jre-focal`
 
 ```console
-$ docker pull eclipse-temurin@sha256:d3a9410e59ed829a6036290f19cd75ea97044a460b693355574f4401dfaba2c9
+$ docker pull eclipse-temurin@sha256:96d27aa4b00febad57f966822f16664d506a7404972da4ea234c3e15af9bb8d9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -170,51 +170,51 @@ RUN echo Verifying install ...     && echo java -version && java -version     &&
 ### `eclipse-temurin:8u345-b01-jre-focal` - linux; ppc64le
 
 ```console
-$ docker pull eclipse-temurin@sha256:d5d32a8cd1188a8a81d4b34affdbd6f2167579cc4c14741dea918d728a0029fa
+$ docker pull eclipse-temurin@sha256:52f1aa10b17d463818b6123767cce5c35f96afcbaee064da1c3436b9f13fd372
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **92.1 MB (92082122 bytes)**  
+-	Total Size: **92.1 MB (92082777 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:77b8a10214e02d0a8ac7144f06568dc71ab6ce189041b70eb530b846a6e1072c`
+-	Image ID: `sha256:3ff370c38d8051ff0bbe195fb89bcfc2a099d9e8fe069885e29b55e6c3140bbc`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Thu, 01 Sep 2022 23:49:54 GMT
-ADD file:eb82827919ea73f9595d7b0b70fe9aa5ff23e16ea6a87f7f9ef4e1905857b789 in / 
-# Thu, 01 Sep 2022 23:49:56 GMT
+# Wed, 05 Oct 2022 10:52:08 GMT
+ADD file:75224b75d955b3021df8214497d6835e1aff42b5ce83f96b779b63c4a8e15faf in / 
+# Wed, 05 Oct 2022 10:52:10 GMT
 CMD ["bash"]
-# Fri, 02 Sep 2022 04:00:54 GMT
+# Wed, 05 Oct 2022 19:57:41 GMT
 ENV JAVA_HOME=/opt/java/openjdk
-# Fri, 02 Sep 2022 04:00:54 GMT
+# Wed, 05 Oct 2022 19:57:41 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 02 Sep 2022 04:00:55 GMT
+# Wed, 05 Oct 2022 19:57:42 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Fri, 02 Sep 2022 04:01:21 GMT
+# Wed, 05 Oct 2022 19:58:21 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 02 Sep 2022 04:01:23 GMT
+# Wed, 05 Oct 2022 19:58:23 GMT
 ENV JAVA_VERSION=jdk8u345-b01
-# Fri, 02 Sep 2022 04:02:46 GMT
+# Wed, 05 Oct 2022 19:59:55 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 02 Sep 2022 04:02:48 GMT
+# Wed, 05 Oct 2022 19:59:57 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
 ```
 
 -	Layers:
-	-	`sha256:891f6400ce611ee5975f04ad6d2c68305c76a8628b846df1b1f9ac7c45b1311c`  
-		Last Modified: Thu, 01 Sep 2022 23:52:11 GMT  
-		Size: 33.3 MB (33295624 bytes)  
+	-	`sha256:ecaa0fe591301d50850e37b61a6fac5429c04a3c39272da2f7b748eaed7f5c52`  
+		Last Modified: Wed, 05 Oct 2022 10:54:26 GMT  
+		Size: 33.3 MB (33296076 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a1ac4dd8cb9b2b85d5f08f192b8d22024b1e070f6a40bb2e3220d3911ba9d39`  
-		Last Modified: Fri, 02 Sep 2022 04:12:41 GMT  
-		Size: 17.6 MB (17591088 bytes)  
+	-	`sha256:1231f16afe1ccf89e36d1e55903168c95a55078bc7ebeddfd61d4e2dfb4772b9`  
+		Last Modified: Wed, 05 Oct 2022 20:10:10 GMT  
+		Size: 17.6 MB (17591263 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1fe7e836dd4dbd4606b163cafa9d05d98a4ca6cbf314f40ca251424606d88871`  
-		Last Modified: Fri, 02 Sep 2022 04:13:41 GMT  
-		Size: 41.2 MB (41195250 bytes)  
+	-	`sha256:58e5cc57e8fcbbc33359c95ca72a89ab816ebf3a59fb05011b58c17c041cf000`  
+		Last Modified: Wed, 05 Oct 2022 20:11:16 GMT  
+		Size: 41.2 MB (41195276 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e65a23c54dbeab253496fe4334fdab22eda0e617f259214222b23a7cab058652`  
-		Last Modified: Fri, 02 Sep 2022 04:13:33 GMT  
-		Size: 160.0 B  
+	-	`sha256:f6714d87e92386d61252aabd5f68a20d084ec2e62a02d57cc3f451fa60fa5161`  
+		Last Modified: Wed, 05 Oct 2022 20:11:08 GMT  
+		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
