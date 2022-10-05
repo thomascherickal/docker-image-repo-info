@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:223937044b8508ffc39fbc2ab8d34e63efb68069fd6a10e8e447df51eb7cf003`
-- Created: `2022-09-20T20:38:48.353379712Z`
-- Virtual Size: ~ 467.48 Mb  
+- Image ID: `sha256:f0821b7e9b4c5ff7ac4a1d25e6f7f3cd623fadeecc76fc7945cf40f00420dbfc`
+- Created: `2022-10-01T02:16:16.383115792Z`
+- Virtual Size: ~ 467.52 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
-  - `PHP_VERSION=8.0.23`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.23.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.23.tar.xz.asc`
-  - `PHP_SHA256=65e474b6bd8cfc9d4a8a56268a755e2f9d3e7499e1687e6401a9f2b047600f87`
+  - `PHP_VERSION=8.0.24`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.24.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.24.tar.xz.asc`
+  - `PHP_SHA256=8e6a63ac9cdabe4c345b32a54b18f348d9e50a1decda217faf2d61278d22f08b`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `NEXTCLOUD_VERSION=24.0.5`
@@ -200,16 +200,16 @@ curl
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.8-r0 description:
+expat-2.4.9-r0 description:
 XML Parser library written in C
 
-expat-2.4.8-r0 webpage:
+expat-2.4.9-r0 webpage:
 https://libexpat.github.io/
 
-expat-2.4.8-r0 installed size:
+expat-2.4.9-r0 installed size:
 192 KiB
 
-expat-2.4.8-r0 license:
+expat-2.4.9-r0 license:
 MIT
 
 ```
@@ -965,16 +965,16 @@ GPL-2.0-or-later
 ### `apk` package: `rsync`
 
 ```console
-rsync-3.2.4-r2 description:
+rsync-3.2.5-r0 description:
 A file transfer program to keep remote files in sync
 
-rsync-3.2.4-r2 webpage:
+rsync-3.2.5-r0 webpage:
 https://rsync.samba.org/
 
-rsync-3.2.4-r2 installed size:
+rsync-3.2.5-r0 installed size:
 436 KiB
 
-rsync-3.2.4-r2 license:
+rsync-3.2.5-r0 license:
 GPL-3.0-or-later
 
 ```
