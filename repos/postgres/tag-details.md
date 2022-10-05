@@ -1412,7 +1412,7 @@ CMD ["postgres"]
 ## `postgres:10-bullseye`
 
 ```console
-$ docker pull postgres@sha256:f301f26624dba4f4d08fa1a8d9911be1458a3c3eade993225c7ed637f67b1989
+$ docker pull postgres@sha256:0297270c27df28af0a2ad225515d45c7d35c2079eea2478ca465c1d54765b58f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2318,127 +2318,127 @@ CMD ["postgres"]
 ### `postgres:10-bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:8d0a928da3a7b910563ea53134245ff0a260d54effd539f79725ba05102195ad
+$ docker pull postgres@sha256:7fa2d1d097f16e9240df830680864a01bb5ab019047f71adac92c02b0c6377e1
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **83.7 MB (83735602 bytes)**  
+-	Total Size: **83.8 MB (83751533 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ecf43438f7096673a0813006136f2e06651d9427bf0b60421d276c7a5edf9924`
+-	Image ID: `sha256:d7c319f91b9562bbd4be92e4f1975e0c61c44e96a88199c00805d04490255241`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 05:11:12 GMT
+# Wed, 05 Oct 2022 05:42:51 GMT
 ENV PG_MAJOR=10
-# Tue, 13 Sep 2022 05:11:12 GMT
+# Wed, 05 Oct 2022 05:42:51 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/10/bin
-# Tue, 13 Sep 2022 05:11:12 GMT
+# Wed, 05 Oct 2022 05:42:51 GMT
 ENV PG_VERSION=10.22-1.pgdg110+1
-# Tue, 13 Sep 2022 05:18:02 GMT
+# Wed, 05 Oct 2022 05:49:02 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 05:18:05 GMT
+# Wed, 05 Oct 2022 05:49:04 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 05:18:05 GMT
+# Wed, 05 Oct 2022 05:49:05 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 05:18:05 GMT
+# Wed, 05 Oct 2022 05:49:05 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 05:18:06 GMT
+# Wed, 05 Oct 2022 05:49:06 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 05:18:06 GMT
+# Wed, 05 Oct 2022 05:49:06 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 05:18:06 GMT
+# Wed, 05 Oct 2022 05:49:06 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 05:18:07 GMT
+# Wed, 05 Oct 2022 05:49:07 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
-# Tue, 13 Sep 2022 05:18:07 GMT
+# Wed, 05 Oct 2022 05:49:07 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 05:18:07 GMT
+# Wed, 05 Oct 2022 05:49:07 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 05:18:07 GMT
+# Wed, 05 Oct 2022 05:49:07 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 05:18:07 GMT
+# Wed, 05 Oct 2022 05:49:07 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d02ba22b09d36cab363d3b55a716bb62a2d0afd586bfda5bc525ecf7035bb6c8`  
-		Last Modified: Tue, 13 Sep 2022 05:21:22 GMT  
-		Size: 39.1 MB (39061435 bytes)  
+	-	`sha256:23eb59d88a41c51d7dc16054e32666281f0cb2038bc13adfa7ecb8c6d90791d3`  
+		Last Modified: Wed, 05 Oct 2022 05:52:46 GMT  
+		Size: 39.1 MB (39061444 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55c291b89e14d2b02306e74b2ebe6db593b38b2718c763601b65addd642bb710`  
-		Last Modified: Tue, 13 Sep 2022 05:21:15 GMT  
-		Size: 8.1 KB (8076 bytes)  
+	-	`sha256:ae270f349509b869a82e7a7392ad7c142b21d7b709de2580e6a12ebc9ebe9cbd`  
+		Last Modified: Wed, 05 Oct 2022 05:52:40 GMT  
+		Size: 8.1 KB (8077 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4cbe2a959a4910ea00651d674c2fe6f1616301f9d304d85ccde330ec7eaaa4f6`  
-		Last Modified: Tue, 13 Sep 2022 05:21:15 GMT  
-		Size: 129.0 B  
+	-	`sha256:0d3e5f088e70f0288b67890c60742b425104f41a6149f5d2e2061aaf57640ad2`  
+		Last Modified: Wed, 05 Oct 2022 05:52:40 GMT  
+		Size: 128.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:32c8d15553f6bd1ea5babb388b167ac420f811fcdb5017a53ec5dde5f2009581`  
-		Last Modified: Tue, 13 Sep 2022 05:21:15 GMT  
-		Size: 199.0 B  
+	-	`sha256:fff3e743e06004ed6a5d74fce898db14dfeb4ccdb5fd6c5765f86b6a43e833c9`  
+		Last Modified: Wed, 05 Oct 2022 05:52:40 GMT  
+		Size: 201.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2aab864a1dfdf28bb6ca69f6ab496707dcf431fbe9ad03d01af09c088c598764`  
-		Last Modified: Tue, 13 Sep 2022 05:21:15 GMT  
-		Size: 4.7 KB (4703 bytes)  
+	-	`sha256:fdd318403f55f09973fc33dbc1cd7b03df23335ed95ec2698c185c48830dcf00`  
+		Last Modified: Wed, 05 Oct 2022 05:52:40 GMT  
+		Size: 4.7 KB (4698 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8777a09b7790278878b672dc7bc9e887e3fb885e42dd14e557f92914ec2d245`  
-		Last Modified: Tue, 13 Sep 2022 05:21:15 GMT  
+	-	`sha256:9e2711afbc2542384613e97fc685c6786c11cff88ebc308acd12db6f57e30fa3`  
+		Last Modified: Wed, 05 Oct 2022 05:52:40 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -3807,7 +3807,7 @@ CMD ["postgres"]
 ## `postgres:10.22-bullseye`
 
 ```console
-$ docker pull postgres@sha256:f301f26624dba4f4d08fa1a8d9911be1458a3c3eade993225c7ed637f67b1989
+$ docker pull postgres@sha256:0297270c27df28af0a2ad225515d45c7d35c2079eea2478ca465c1d54765b58f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4713,127 +4713,127 @@ CMD ["postgres"]
 ### `postgres:10.22-bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:8d0a928da3a7b910563ea53134245ff0a260d54effd539f79725ba05102195ad
+$ docker pull postgres@sha256:7fa2d1d097f16e9240df830680864a01bb5ab019047f71adac92c02b0c6377e1
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **83.7 MB (83735602 bytes)**  
+-	Total Size: **83.8 MB (83751533 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ecf43438f7096673a0813006136f2e06651d9427bf0b60421d276c7a5edf9924`
+-	Image ID: `sha256:d7c319f91b9562bbd4be92e4f1975e0c61c44e96a88199c00805d04490255241`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 05:11:12 GMT
+# Wed, 05 Oct 2022 05:42:51 GMT
 ENV PG_MAJOR=10
-# Tue, 13 Sep 2022 05:11:12 GMT
+# Wed, 05 Oct 2022 05:42:51 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/10/bin
-# Tue, 13 Sep 2022 05:11:12 GMT
+# Wed, 05 Oct 2022 05:42:51 GMT
 ENV PG_VERSION=10.22-1.pgdg110+1
-# Tue, 13 Sep 2022 05:18:02 GMT
+# Wed, 05 Oct 2022 05:49:02 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 05:18:05 GMT
+# Wed, 05 Oct 2022 05:49:04 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 05:18:05 GMT
+# Wed, 05 Oct 2022 05:49:05 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 05:18:05 GMT
+# Wed, 05 Oct 2022 05:49:05 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 05:18:06 GMT
+# Wed, 05 Oct 2022 05:49:06 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 05:18:06 GMT
+# Wed, 05 Oct 2022 05:49:06 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 05:18:06 GMT
+# Wed, 05 Oct 2022 05:49:06 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 05:18:07 GMT
+# Wed, 05 Oct 2022 05:49:07 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
-# Tue, 13 Sep 2022 05:18:07 GMT
+# Wed, 05 Oct 2022 05:49:07 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 05:18:07 GMT
+# Wed, 05 Oct 2022 05:49:07 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 05:18:07 GMT
+# Wed, 05 Oct 2022 05:49:07 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 05:18:07 GMT
+# Wed, 05 Oct 2022 05:49:07 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d02ba22b09d36cab363d3b55a716bb62a2d0afd586bfda5bc525ecf7035bb6c8`  
-		Last Modified: Tue, 13 Sep 2022 05:21:22 GMT  
-		Size: 39.1 MB (39061435 bytes)  
+	-	`sha256:23eb59d88a41c51d7dc16054e32666281f0cb2038bc13adfa7ecb8c6d90791d3`  
+		Last Modified: Wed, 05 Oct 2022 05:52:46 GMT  
+		Size: 39.1 MB (39061444 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55c291b89e14d2b02306e74b2ebe6db593b38b2718c763601b65addd642bb710`  
-		Last Modified: Tue, 13 Sep 2022 05:21:15 GMT  
-		Size: 8.1 KB (8076 bytes)  
+	-	`sha256:ae270f349509b869a82e7a7392ad7c142b21d7b709de2580e6a12ebc9ebe9cbd`  
+		Last Modified: Wed, 05 Oct 2022 05:52:40 GMT  
+		Size: 8.1 KB (8077 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4cbe2a959a4910ea00651d674c2fe6f1616301f9d304d85ccde330ec7eaaa4f6`  
-		Last Modified: Tue, 13 Sep 2022 05:21:15 GMT  
-		Size: 129.0 B  
+	-	`sha256:0d3e5f088e70f0288b67890c60742b425104f41a6149f5d2e2061aaf57640ad2`  
+		Last Modified: Wed, 05 Oct 2022 05:52:40 GMT  
+		Size: 128.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:32c8d15553f6bd1ea5babb388b167ac420f811fcdb5017a53ec5dde5f2009581`  
-		Last Modified: Tue, 13 Sep 2022 05:21:15 GMT  
-		Size: 199.0 B  
+	-	`sha256:fff3e743e06004ed6a5d74fce898db14dfeb4ccdb5fd6c5765f86b6a43e833c9`  
+		Last Modified: Wed, 05 Oct 2022 05:52:40 GMT  
+		Size: 201.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2aab864a1dfdf28bb6ca69f6ab496707dcf431fbe9ad03d01af09c088c598764`  
-		Last Modified: Tue, 13 Sep 2022 05:21:15 GMT  
-		Size: 4.7 KB (4703 bytes)  
+	-	`sha256:fdd318403f55f09973fc33dbc1cd7b03df23335ed95ec2698c185c48830dcf00`  
+		Last Modified: Wed, 05 Oct 2022 05:52:40 GMT  
+		Size: 4.7 KB (4698 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8777a09b7790278878b672dc7bc9e887e3fb885e42dd14e557f92914ec2d245`  
-		Last Modified: Tue, 13 Sep 2022 05:21:15 GMT  
+	-	`sha256:9e2711afbc2542384613e97fc685c6786c11cff88ebc308acd12db6f57e30fa3`  
+		Last Modified: Wed, 05 Oct 2022 05:52:40 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -6118,7 +6118,7 @@ CMD ["postgres"]
 ## `postgres:11-bullseye`
 
 ```console
-$ docker pull postgres@sha256:9da2d144305174cbf690926e8a1725f1a4beda913727212832ecd08d6dbb534b
+$ docker pull postgres@sha256:a1e07d628d7ee2edc235e2f6470a5476ac1ddf26ee9ba4ad0e1765f3d5667579
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6982,122 +6982,122 @@ CMD ["postgres"]
 ### `postgres:11-bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:f67b456e2e9b263aa6ef00d717fd2f5aa9ba34eeaee972290f7c257bccd3e367
+$ docker pull postgres@sha256:f45787037373b83f32af2a35751b72b007c1872c3709a5ea40096e1871fbf6f9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **138.9 MB (138872126 bytes)**  
+-	Total Size: **138.9 MB (138888084 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2ff3a8143ea0ea9eed3d3a1f844e80d28d83f02f9058f3b8016ab6a3a2e0339a`
+-	Image ID: `sha256:91f62fef5f5ae1ec5e13980b82895640e7e4359619c6a20845fe2086bfbb0e18`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 05:01:37 GMT
+# Wed, 05 Oct 2022 05:33:47 GMT
 ENV PG_MAJOR=11
-# Tue, 13 Sep 2022 05:01:37 GMT
+# Wed, 05 Oct 2022 05:33:47 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/11/bin
-# Tue, 13 Sep 2022 05:01:37 GMT
+# Wed, 05 Oct 2022 05:33:47 GMT
 ENV PG_VERSION=11.17-1.pgdg110+1
-# Tue, 13 Sep 2022 05:10:39 GMT
+# Wed, 05 Oct 2022 05:42:23 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 05:10:45 GMT
+# Wed, 05 Oct 2022 05:42:28 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 05:10:45 GMT
+# Wed, 05 Oct 2022 05:42:28 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 05:10:45 GMT
+# Wed, 05 Oct 2022 05:42:28 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 05:10:46 GMT
+# Wed, 05 Oct 2022 05:42:29 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 05:10:46 GMT
+# Wed, 05 Oct 2022 05:42:29 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 05:10:46 GMT
+# Wed, 05 Oct 2022 05:42:29 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 05:10:46 GMT
+# Wed, 05 Oct 2022 05:42:29 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 05:10:46 GMT
+# Wed, 05 Oct 2022 05:42:30 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 05:10:47 GMT
+# Wed, 05 Oct 2022 05:42:30 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 05:10:47 GMT
+# Wed, 05 Oct 2022 05:42:30 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5965d90c58a5eecfb38f6a3525160fee6557767041497d7507823b3a9cf9be9c`  
-		Last Modified: Tue, 13 Sep 2022 05:21:04 GMT  
-		Size: 94.2 MB (94197826 bytes)  
+	-	`sha256:62fbeba38c6cac79ee87e127e8231d3c2de9d17fa0abb2e40bdc91ceaeb972b1`  
+		Last Modified: Wed, 05 Oct 2022 05:52:30 GMT  
+		Size: 94.2 MB (94197855 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2f2552ecff7a95f9f4cb365021f1558cabd481fa6f133ee083a7f2329314abb7`  
-		Last Modified: Tue, 13 Sep 2022 05:20:53 GMT  
-		Size: 8.3 KB (8333 bytes)  
+	-	`sha256:e93f713e6f399eb17f51facecb869e80fe78f36617afba70486edd4a3ac411c2`  
+		Last Modified: Wed, 05 Oct 2022 05:52:18 GMT  
+		Size: 8.3 KB (8332 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bfca2e08405c9ba2993cb1389dbaa75a7f4b27278d571c2ec8f74f65227389fb`  
-		Last Modified: Tue, 13 Sep 2022 05:20:53 GMT  
-		Size: 128.0 B  
+	-	`sha256:1a3205f8124686ece34c3d04085c83631d71e19cbf9f04ead6b375cdd84f7853`  
+		Last Modified: Wed, 05 Oct 2022 05:52:18 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1711724db7ed347f7b0bc70c59814eaf94f84de38be52e0b78df8b953721a77c`  
-		Last Modified: Tue, 13 Sep 2022 05:20:53 GMT  
-		Size: 200.0 B  
+	-	`sha256:2ef4c2f4e794a847ac7ec3f26032b891749724bc6537a068e96e77207b2e2a2d`  
+		Last Modified: Wed, 05 Oct 2022 05:52:18 GMT  
+		Size: 201.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3da63e31f823e281c2c4374eb3ad179223cf27992304cdd304eb1e2a5032f341`  
-		Last Modified: Tue, 13 Sep 2022 05:20:53 GMT  
-		Size: 4.7 KB (4700 bytes)  
+	-	`sha256:b72d6fcde576904d56cf6b4d0c9e4d4e0fb1ee073436bee7bab10bc1b987f29f`  
+		Last Modified: Wed, 05 Oct 2022 05:52:18 GMT  
+		Size: 4.7 KB (4703 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:11.17-alpine`
@@ -8381,7 +8381,7 @@ CMD ["postgres"]
 ## `postgres:11.17-bullseye`
 
 ```console
-$ docker pull postgres@sha256:9da2d144305174cbf690926e8a1725f1a4beda913727212832ecd08d6dbb534b
+$ docker pull postgres@sha256:a1e07d628d7ee2edc235e2f6470a5476ac1ddf26ee9ba4ad0e1765f3d5667579
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9245,128 +9245,128 @@ CMD ["postgres"]
 ### `postgres:11.17-bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:f67b456e2e9b263aa6ef00d717fd2f5aa9ba34eeaee972290f7c257bccd3e367
+$ docker pull postgres@sha256:f45787037373b83f32af2a35751b72b007c1872c3709a5ea40096e1871fbf6f9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **138.9 MB (138872126 bytes)**  
+-	Total Size: **138.9 MB (138888084 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2ff3a8143ea0ea9eed3d3a1f844e80d28d83f02f9058f3b8016ab6a3a2e0339a`
+-	Image ID: `sha256:91f62fef5f5ae1ec5e13980b82895640e7e4359619c6a20845fe2086bfbb0e18`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 05:01:37 GMT
+# Wed, 05 Oct 2022 05:33:47 GMT
 ENV PG_MAJOR=11
-# Tue, 13 Sep 2022 05:01:37 GMT
+# Wed, 05 Oct 2022 05:33:47 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/11/bin
-# Tue, 13 Sep 2022 05:01:37 GMT
+# Wed, 05 Oct 2022 05:33:47 GMT
 ENV PG_VERSION=11.17-1.pgdg110+1
-# Tue, 13 Sep 2022 05:10:39 GMT
+# Wed, 05 Oct 2022 05:42:23 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 05:10:45 GMT
+# Wed, 05 Oct 2022 05:42:28 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 05:10:45 GMT
+# Wed, 05 Oct 2022 05:42:28 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 05:10:45 GMT
+# Wed, 05 Oct 2022 05:42:28 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 05:10:46 GMT
+# Wed, 05 Oct 2022 05:42:29 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 05:10:46 GMT
+# Wed, 05 Oct 2022 05:42:29 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 05:10:46 GMT
+# Wed, 05 Oct 2022 05:42:29 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 05:10:46 GMT
+# Wed, 05 Oct 2022 05:42:29 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 05:10:46 GMT
+# Wed, 05 Oct 2022 05:42:30 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 05:10:47 GMT
+# Wed, 05 Oct 2022 05:42:30 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 05:10:47 GMT
+# Wed, 05 Oct 2022 05:42:30 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5965d90c58a5eecfb38f6a3525160fee6557767041497d7507823b3a9cf9be9c`  
-		Last Modified: Tue, 13 Sep 2022 05:21:04 GMT  
-		Size: 94.2 MB (94197826 bytes)  
+	-	`sha256:62fbeba38c6cac79ee87e127e8231d3c2de9d17fa0abb2e40bdc91ceaeb972b1`  
+		Last Modified: Wed, 05 Oct 2022 05:52:30 GMT  
+		Size: 94.2 MB (94197855 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2f2552ecff7a95f9f4cb365021f1558cabd481fa6f133ee083a7f2329314abb7`  
-		Last Modified: Tue, 13 Sep 2022 05:20:53 GMT  
-		Size: 8.3 KB (8333 bytes)  
+	-	`sha256:e93f713e6f399eb17f51facecb869e80fe78f36617afba70486edd4a3ac411c2`  
+		Last Modified: Wed, 05 Oct 2022 05:52:18 GMT  
+		Size: 8.3 KB (8332 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bfca2e08405c9ba2993cb1389dbaa75a7f4b27278d571c2ec8f74f65227389fb`  
-		Last Modified: Tue, 13 Sep 2022 05:20:53 GMT  
-		Size: 128.0 B  
+	-	`sha256:1a3205f8124686ece34c3d04085c83631d71e19cbf9f04ead6b375cdd84f7853`  
+		Last Modified: Wed, 05 Oct 2022 05:52:18 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1711724db7ed347f7b0bc70c59814eaf94f84de38be52e0b78df8b953721a77c`  
-		Last Modified: Tue, 13 Sep 2022 05:20:53 GMT  
-		Size: 200.0 B  
+	-	`sha256:2ef4c2f4e794a847ac7ec3f26032b891749724bc6537a068e96e77207b2e2a2d`  
+		Last Modified: Wed, 05 Oct 2022 05:52:18 GMT  
+		Size: 201.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3da63e31f823e281c2c4374eb3ad179223cf27992304cdd304eb1e2a5032f341`  
-		Last Modified: Tue, 13 Sep 2022 05:20:53 GMT  
-		Size: 4.7 KB (4700 bytes)  
+	-	`sha256:b72d6fcde576904d56cf6b4d0c9e4d4e0fb1ee073436bee7bab10bc1b987f29f`  
+		Last Modified: Wed, 05 Oct 2022 05:52:18 GMT  
+		Size: 4.7 KB (4703 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:12`
 
 ```console
-$ docker pull postgres@sha256:2cd608fae0d72c7eed8f15fdc1e80a9064c3ddb915c1a7b872e5384e0017e35a
+$ docker pull postgres@sha256:e8b6a2fc1e77d634771ff35f1730898769d0b2069318a8027a6ce0c8afafa8a3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10230,122 +10230,122 @@ CMD ["postgres"]
 ### `postgres:12` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:429c57f9ae8f379601df6df7448b0c2c8df4da23d7ba2cb57fee8da8f262eda0
+$ docker pull postgres@sha256:d5433064852277f3187a591e02780d377c253f69bfbe3ca66c4cf3d58be83996
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **145.4 MB (145387754 bytes)**  
+-	Total Size: **139.9 MB (139939029 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6bf1b141f0945e4144bfc6c100068ecc55b6b6158dc0b276e76795b00a3a577`
+-	Image ID: `sha256:56ca18884ddae00d4081d3478e0ab9ac4cf3a3efba53f3f5002eb7edcf9ff935`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 23 Aug 2022 00:54:01 GMT
-ADD file:7e494cf2e639edf0f0ce27e06887b8488570da37c5fce0a889687622d8cd443e in / 
-# Tue, 23 Aug 2022 00:54:03 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 23 Aug 2022 12:09:35 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 23 Aug 2022 12:09:35 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 23 Aug 2022 12:09:36 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 23 Aug 2022 12:09:42 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 23 Aug 2022 12:09:47 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 23 Aug 2022 12:09:47 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 23 Aug 2022 12:09:51 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 23 Aug 2022 12:09:51 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 23 Aug 2022 12:09:52 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:22 GMT
 ENV PG_MAJOR=12
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:23 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/12/bin
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:23 GMT
 ENV PG_VERSION=12.12-1.pgdg110+1
-# Mon, 12 Sep 2022 23:13:02 GMT
+# Wed, 05 Oct 2022 05:33:13 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Mon, 12 Sep 2022 23:13:08 GMT
+# Wed, 05 Oct 2022 05:33:20 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:21 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:22 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:22 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 VOLUME [/var/lib/postgresql/data]
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 STOPSIGNAL SIGINT
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 EXPOSE 5432
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:1c2e5a5a3305e50395bba8974e6c201849f83c07fb0ad036111055f59157c7ff`  
-		Last Modified: Tue, 23 Aug 2022 01:04:36 GMT  
-		Size: 29.7 MB (29650094 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:acaae8b3f3177b2e7f1cc1c2bdc2f58e2e757e009afcb4b2f05a8eb4ca15932f`  
-		Last Modified: Tue, 23 Aug 2022 12:52:03 GMT  
-		Size: 4.3 MB (4302282 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aeb5658447e2cfe1a26d6f27aac5cf8d1f6bc4f22a7555f67e44689a3e4d4308`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 1.8 KB (1804 bytes)  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9595ad34963d694bd3856090b77885ea8a2614f15e453893eb6fb3e15ce02187`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 1.4 MB (1381590 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2887f3dc6cbb5fedc56c945f6768541dab332b2cff0bbe74e8202025238609`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 8.1 MB (8099117 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a7cd1b5b2e3c167091b0c1006900c9204fe71d8949f3eacf3c2a6b64f85a9d30`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
-		Size: 1.2 MB (1237911 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e57daa6420a8621fc69b4a2e30b3fd238f291b8bfaf2e779044314629c5cf22`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
 		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31d443c42a103c71b47d721d7013fe9198019c49b1a1358d7b5d129b4daf6ac1`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
-		Size: 3.2 KB (3194 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfe91422bc2d773cea18f491ca1891a0313fd8f83ac9f21fca333a151505a230`  
-		Last Modified: Mon, 12 Sep 2022 23:16:13 GMT  
-		Size: 100.7 MB (100697548 bytes)  
+	-	`sha256:4b7557f7e82e15de3ded57c816dcff0d874c3b9f41481120e3022f5d6a2c4dd2`  
+		Last Modified: Wed, 05 Oct 2022 05:52:05 GMT  
+		Size: 95.2 MB (95248107 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e08ed989481b3df01b5e5d8e79dcfd7807938d822e69a15da3782c2824772991`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 9.0 KB (9036 bytes)  
+	-	`sha256:eb28b43f773ca90505fc6f4e4a9657d7e038ae5f952f2a66c842b1a8b1848168`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
+		Size: 9.0 KB (9029 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62a513ca1cdd542a58c748558b016defca9d726ed47ef06de9f271b0b82b8eb`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 130.0 B  
+	-	`sha256:b59cb05f5a6754816a47519db7d8d27f6670aeb1d38e7625d0a45a79bd20570e`  
+		Last Modified: Wed, 05 Oct 2022 05:51:54 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1f11052fcdc00fb9ab7adbfa983cae0e7afef77536b22f85a25b106b9bfb252b`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
+	-	`sha256:30e19b1c720bfbee3b03ad013b325a46c883cd1a66cd9a11e8ec5f52100a99e5`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a4a8c236b9a93bedc55b9909d4b8d94cce54bc6eda3d1f5eb9a4dde4ffe8e11b`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 4.7 KB (4699 bytes)  
+	-	`sha256:733917de088aff70ba1610b98549ef4fbcf50d8f3525f93878781fea8df42648`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
+		Size: 4.7 KB (4700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:12-alpine`
@@ -11629,7 +11629,7 @@ CMD ["postgres"]
 ## `postgres:12-bullseye`
 
 ```console
-$ docker pull postgres@sha256:2cd608fae0d72c7eed8f15fdc1e80a9064c3ddb915c1a7b872e5384e0017e35a
+$ docker pull postgres@sha256:e8b6a2fc1e77d634771ff35f1730898769d0b2069318a8027a6ce0c8afafa8a3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12493,128 +12493,128 @@ CMD ["postgres"]
 ### `postgres:12-bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:429c57f9ae8f379601df6df7448b0c2c8df4da23d7ba2cb57fee8da8f262eda0
+$ docker pull postgres@sha256:d5433064852277f3187a591e02780d377c253f69bfbe3ca66c4cf3d58be83996
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **145.4 MB (145387754 bytes)**  
+-	Total Size: **139.9 MB (139939029 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6bf1b141f0945e4144bfc6c100068ecc55b6b6158dc0b276e76795b00a3a577`
+-	Image ID: `sha256:56ca18884ddae00d4081d3478e0ab9ac4cf3a3efba53f3f5002eb7edcf9ff935`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 23 Aug 2022 00:54:01 GMT
-ADD file:7e494cf2e639edf0f0ce27e06887b8488570da37c5fce0a889687622d8cd443e in / 
-# Tue, 23 Aug 2022 00:54:03 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 23 Aug 2022 12:09:35 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 23 Aug 2022 12:09:35 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 23 Aug 2022 12:09:36 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 23 Aug 2022 12:09:42 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 23 Aug 2022 12:09:47 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 23 Aug 2022 12:09:47 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 23 Aug 2022 12:09:51 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 23 Aug 2022 12:09:51 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 23 Aug 2022 12:09:52 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:22 GMT
 ENV PG_MAJOR=12
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:23 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/12/bin
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:23 GMT
 ENV PG_VERSION=12.12-1.pgdg110+1
-# Mon, 12 Sep 2022 23:13:02 GMT
+# Wed, 05 Oct 2022 05:33:13 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Mon, 12 Sep 2022 23:13:08 GMT
+# Wed, 05 Oct 2022 05:33:20 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:21 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:22 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:22 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 VOLUME [/var/lib/postgresql/data]
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 STOPSIGNAL SIGINT
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 EXPOSE 5432
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:1c2e5a5a3305e50395bba8974e6c201849f83c07fb0ad036111055f59157c7ff`  
-		Last Modified: Tue, 23 Aug 2022 01:04:36 GMT  
-		Size: 29.7 MB (29650094 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:acaae8b3f3177b2e7f1cc1c2bdc2f58e2e757e009afcb4b2f05a8eb4ca15932f`  
-		Last Modified: Tue, 23 Aug 2022 12:52:03 GMT  
-		Size: 4.3 MB (4302282 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aeb5658447e2cfe1a26d6f27aac5cf8d1f6bc4f22a7555f67e44689a3e4d4308`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 1.8 KB (1804 bytes)  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9595ad34963d694bd3856090b77885ea8a2614f15e453893eb6fb3e15ce02187`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 1.4 MB (1381590 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2887f3dc6cbb5fedc56c945f6768541dab332b2cff0bbe74e8202025238609`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 8.1 MB (8099117 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a7cd1b5b2e3c167091b0c1006900c9204fe71d8949f3eacf3c2a6b64f85a9d30`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
-		Size: 1.2 MB (1237911 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e57daa6420a8621fc69b4a2e30b3fd238f291b8bfaf2e779044314629c5cf22`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
 		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31d443c42a103c71b47d721d7013fe9198019c49b1a1358d7b5d129b4daf6ac1`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
-		Size: 3.2 KB (3194 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfe91422bc2d773cea18f491ca1891a0313fd8f83ac9f21fca333a151505a230`  
-		Last Modified: Mon, 12 Sep 2022 23:16:13 GMT  
-		Size: 100.7 MB (100697548 bytes)  
+	-	`sha256:4b7557f7e82e15de3ded57c816dcff0d874c3b9f41481120e3022f5d6a2c4dd2`  
+		Last Modified: Wed, 05 Oct 2022 05:52:05 GMT  
+		Size: 95.2 MB (95248107 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e08ed989481b3df01b5e5d8e79dcfd7807938d822e69a15da3782c2824772991`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 9.0 KB (9036 bytes)  
+	-	`sha256:eb28b43f773ca90505fc6f4e4a9657d7e038ae5f952f2a66c842b1a8b1848168`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
+		Size: 9.0 KB (9029 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62a513ca1cdd542a58c748558b016defca9d726ed47ef06de9f271b0b82b8eb`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 130.0 B  
+	-	`sha256:b59cb05f5a6754816a47519db7d8d27f6670aeb1d38e7625d0a45a79bd20570e`  
+		Last Modified: Wed, 05 Oct 2022 05:51:54 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1f11052fcdc00fb9ab7adbfa983cae0e7afef77536b22f85a25b106b9bfb252b`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
+	-	`sha256:30e19b1c720bfbee3b03ad013b325a46c883cd1a66cd9a11e8ec5f52100a99e5`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a4a8c236b9a93bedc55b9909d4b8d94cce54bc6eda3d1f5eb9a4dde4ffe8e11b`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 4.7 KB (4699 bytes)  
+	-	`sha256:733917de088aff70ba1610b98549ef4fbcf50d8f3525f93878781fea8df42648`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
+		Size: 4.7 KB (4700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:12.12`
 
 ```console
-$ docker pull postgres@sha256:2cd608fae0d72c7eed8f15fdc1e80a9064c3ddb915c1a7b872e5384e0017e35a
+$ docker pull postgres@sha256:e8b6a2fc1e77d634771ff35f1730898769d0b2069318a8027a6ce0c8afafa8a3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13478,122 +13478,122 @@ CMD ["postgres"]
 ### `postgres:12.12` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:429c57f9ae8f379601df6df7448b0c2c8df4da23d7ba2cb57fee8da8f262eda0
+$ docker pull postgres@sha256:d5433064852277f3187a591e02780d377c253f69bfbe3ca66c4cf3d58be83996
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **145.4 MB (145387754 bytes)**  
+-	Total Size: **139.9 MB (139939029 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6bf1b141f0945e4144bfc6c100068ecc55b6b6158dc0b276e76795b00a3a577`
+-	Image ID: `sha256:56ca18884ddae00d4081d3478e0ab9ac4cf3a3efba53f3f5002eb7edcf9ff935`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 23 Aug 2022 00:54:01 GMT
-ADD file:7e494cf2e639edf0f0ce27e06887b8488570da37c5fce0a889687622d8cd443e in / 
-# Tue, 23 Aug 2022 00:54:03 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 23 Aug 2022 12:09:35 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 23 Aug 2022 12:09:35 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 23 Aug 2022 12:09:36 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 23 Aug 2022 12:09:42 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 23 Aug 2022 12:09:47 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 23 Aug 2022 12:09:47 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 23 Aug 2022 12:09:51 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 23 Aug 2022 12:09:51 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 23 Aug 2022 12:09:52 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:22 GMT
 ENV PG_MAJOR=12
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:23 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/12/bin
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:23 GMT
 ENV PG_VERSION=12.12-1.pgdg110+1
-# Mon, 12 Sep 2022 23:13:02 GMT
+# Wed, 05 Oct 2022 05:33:13 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Mon, 12 Sep 2022 23:13:08 GMT
+# Wed, 05 Oct 2022 05:33:20 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:21 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:22 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:22 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 VOLUME [/var/lib/postgresql/data]
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 STOPSIGNAL SIGINT
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 EXPOSE 5432
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:1c2e5a5a3305e50395bba8974e6c201849f83c07fb0ad036111055f59157c7ff`  
-		Last Modified: Tue, 23 Aug 2022 01:04:36 GMT  
-		Size: 29.7 MB (29650094 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:acaae8b3f3177b2e7f1cc1c2bdc2f58e2e757e009afcb4b2f05a8eb4ca15932f`  
-		Last Modified: Tue, 23 Aug 2022 12:52:03 GMT  
-		Size: 4.3 MB (4302282 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aeb5658447e2cfe1a26d6f27aac5cf8d1f6bc4f22a7555f67e44689a3e4d4308`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 1.8 KB (1804 bytes)  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9595ad34963d694bd3856090b77885ea8a2614f15e453893eb6fb3e15ce02187`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 1.4 MB (1381590 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2887f3dc6cbb5fedc56c945f6768541dab332b2cff0bbe74e8202025238609`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 8.1 MB (8099117 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a7cd1b5b2e3c167091b0c1006900c9204fe71d8949f3eacf3c2a6b64f85a9d30`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
-		Size: 1.2 MB (1237911 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e57daa6420a8621fc69b4a2e30b3fd238f291b8bfaf2e779044314629c5cf22`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
 		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31d443c42a103c71b47d721d7013fe9198019c49b1a1358d7b5d129b4daf6ac1`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
-		Size: 3.2 KB (3194 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfe91422bc2d773cea18f491ca1891a0313fd8f83ac9f21fca333a151505a230`  
-		Last Modified: Mon, 12 Sep 2022 23:16:13 GMT  
-		Size: 100.7 MB (100697548 bytes)  
+	-	`sha256:4b7557f7e82e15de3ded57c816dcff0d874c3b9f41481120e3022f5d6a2c4dd2`  
+		Last Modified: Wed, 05 Oct 2022 05:52:05 GMT  
+		Size: 95.2 MB (95248107 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e08ed989481b3df01b5e5d8e79dcfd7807938d822e69a15da3782c2824772991`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 9.0 KB (9036 bytes)  
+	-	`sha256:eb28b43f773ca90505fc6f4e4a9657d7e038ae5f952f2a66c842b1a8b1848168`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
+		Size: 9.0 KB (9029 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62a513ca1cdd542a58c748558b016defca9d726ed47ef06de9f271b0b82b8eb`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 130.0 B  
+	-	`sha256:b59cb05f5a6754816a47519db7d8d27f6670aeb1d38e7625d0a45a79bd20570e`  
+		Last Modified: Wed, 05 Oct 2022 05:51:54 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1f11052fcdc00fb9ab7adbfa983cae0e7afef77536b22f85a25b106b9bfb252b`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
+	-	`sha256:30e19b1c720bfbee3b03ad013b325a46c883cd1a66cd9a11e8ec5f52100a99e5`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a4a8c236b9a93bedc55b9909d4b8d94cce54bc6eda3d1f5eb9a4dde4ffe8e11b`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 4.7 KB (4699 bytes)  
+	-	`sha256:733917de088aff70ba1610b98549ef4fbcf50d8f3525f93878781fea8df42648`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
+		Size: 4.7 KB (4700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:12.12-alpine`
@@ -14877,7 +14877,7 @@ CMD ["postgres"]
 ## `postgres:12.12-bullseye`
 
 ```console
-$ docker pull postgres@sha256:2cd608fae0d72c7eed8f15fdc1e80a9064c3ddb915c1a7b872e5384e0017e35a
+$ docker pull postgres@sha256:e8b6a2fc1e77d634771ff35f1730898769d0b2069318a8027a6ce0c8afafa8a3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15741,128 +15741,128 @@ CMD ["postgres"]
 ### `postgres:12.12-bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:429c57f9ae8f379601df6df7448b0c2c8df4da23d7ba2cb57fee8da8f262eda0
+$ docker pull postgres@sha256:d5433064852277f3187a591e02780d377c253f69bfbe3ca66c4cf3d58be83996
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **145.4 MB (145387754 bytes)**  
+-	Total Size: **139.9 MB (139939029 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6bf1b141f0945e4144bfc6c100068ecc55b6b6158dc0b276e76795b00a3a577`
+-	Image ID: `sha256:56ca18884ddae00d4081d3478e0ab9ac4cf3a3efba53f3f5002eb7edcf9ff935`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 23 Aug 2022 00:54:01 GMT
-ADD file:7e494cf2e639edf0f0ce27e06887b8488570da37c5fce0a889687622d8cd443e in / 
-# Tue, 23 Aug 2022 00:54:03 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 23 Aug 2022 12:09:35 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 23 Aug 2022 12:09:35 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 23 Aug 2022 12:09:36 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 23 Aug 2022 12:09:42 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 23 Aug 2022 12:09:47 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 23 Aug 2022 12:09:47 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 23 Aug 2022 12:09:51 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 23 Aug 2022 12:09:51 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 23 Aug 2022 12:09:52 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:22 GMT
 ENV PG_MAJOR=12
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:23 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/12/bin
-# Mon, 12 Sep 2022 23:03:34 GMT
+# Wed, 05 Oct 2022 05:23:23 GMT
 ENV PG_VERSION=12.12-1.pgdg110+1
-# Mon, 12 Sep 2022 23:13:02 GMT
+# Wed, 05 Oct 2022 05:33:13 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Mon, 12 Sep 2022 23:13:08 GMT
+# Wed, 05 Oct 2022 05:33:20 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:21 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:22 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:22 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 VOLUME [/var/lib/postgresql/data]
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Mon, 12 Sep 2022 23:13:09 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 STOPSIGNAL SIGINT
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 EXPOSE 5432
-# Mon, 12 Sep 2022 23:13:10 GMT
+# Wed, 05 Oct 2022 05:33:23 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:1c2e5a5a3305e50395bba8974e6c201849f83c07fb0ad036111055f59157c7ff`  
-		Last Modified: Tue, 23 Aug 2022 01:04:36 GMT  
-		Size: 29.7 MB (29650094 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:acaae8b3f3177b2e7f1cc1c2bdc2f58e2e757e009afcb4b2f05a8eb4ca15932f`  
-		Last Modified: Tue, 23 Aug 2022 12:52:03 GMT  
-		Size: 4.3 MB (4302282 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aeb5658447e2cfe1a26d6f27aac5cf8d1f6bc4f22a7555f67e44689a3e4d4308`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 1.8 KB (1804 bytes)  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9595ad34963d694bd3856090b77885ea8a2614f15e453893eb6fb3e15ce02187`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 1.4 MB (1381590 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2887f3dc6cbb5fedc56c945f6768541dab332b2cff0bbe74e8202025238609`  
-		Last Modified: Tue, 23 Aug 2022 12:52:02 GMT  
-		Size: 8.1 MB (8099117 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a7cd1b5b2e3c167091b0c1006900c9204fe71d8949f3eacf3c2a6b64f85a9d30`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
-		Size: 1.2 MB (1237911 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e57daa6420a8621fc69b4a2e30b3fd238f291b8bfaf2e779044314629c5cf22`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
 		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31d443c42a103c71b47d721d7013fe9198019c49b1a1358d7b5d129b4daf6ac1`  
-		Last Modified: Tue, 23 Aug 2022 12:52:01 GMT  
-		Size: 3.2 KB (3194 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfe91422bc2d773cea18f491ca1891a0313fd8f83ac9f21fca333a151505a230`  
-		Last Modified: Mon, 12 Sep 2022 23:16:13 GMT  
-		Size: 100.7 MB (100697548 bytes)  
+	-	`sha256:4b7557f7e82e15de3ded57c816dcff0d874c3b9f41481120e3022f5d6a2c4dd2`  
+		Last Modified: Wed, 05 Oct 2022 05:52:05 GMT  
+		Size: 95.2 MB (95248107 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e08ed989481b3df01b5e5d8e79dcfd7807938d822e69a15da3782c2824772991`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 9.0 KB (9036 bytes)  
+	-	`sha256:eb28b43f773ca90505fc6f4e4a9657d7e038ae5f952f2a66c842b1a8b1848168`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
+		Size: 9.0 KB (9029 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d62a513ca1cdd542a58c748558b016defca9d726ed47ef06de9f271b0b82b8eb`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 130.0 B  
+	-	`sha256:b59cb05f5a6754816a47519db7d8d27f6670aeb1d38e7625d0a45a79bd20570e`  
+		Last Modified: Wed, 05 Oct 2022 05:51:54 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1f11052fcdc00fb9ab7adbfa983cae0e7afef77536b22f85a25b106b9bfb252b`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
+	-	`sha256:30e19b1c720bfbee3b03ad013b325a46c883cd1a66cd9a11e8ec5f52100a99e5`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a4a8c236b9a93bedc55b9909d4b8d94cce54bc6eda3d1f5eb9a4dde4ffe8e11b`  
-		Last Modified: Mon, 12 Sep 2022 23:16:00 GMT  
-		Size: 4.7 KB (4699 bytes)  
+	-	`sha256:733917de088aff70ba1610b98549ef4fbcf50d8f3525f93878781fea8df42648`  
+		Last Modified: Wed, 05 Oct 2022 05:51:53 GMT  
+		Size: 4.7 KB (4700 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:13`
 
 ```console
-$ docker pull postgres@sha256:9490bca05a8a1a8641d2c94616994a34c79bd855f3db763619d8dde01001eb85
+$ docker pull postgres@sha256:37b60a5b5351c75a833082e59332653cf33feace57431838787a48fe0d43ec95
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16726,121 +16726,121 @@ CMD ["postgres"]
 ### `postgres:13` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:29bff0789ed8beabb63d04f77d07162f06c2708ebb709c7c8eee1b79c02e5e07
+$ docker pull postgres@sha256:a3ee926339ba85b7f7b78bae6a70a2e1c289d7022c08ff672a128abb02442353
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **140.3 MB (140279998 bytes)**  
+-	Total Size: **140.3 MB (140299539 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:55530180960f283cd685b58c169aeab8baf1028ef15531d6dfed50b66288be86`
+-	Image ID: `sha256:cb7e96f1789708ea206d7251406cc2bd7cbf53c1f72b593e4693d53ea523a400`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PG_MAJOR=13
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/13/bin
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PG_VERSION=13.8-1.pgdg110+1
-# Tue, 13 Sep 2022 04:59:11 GMT
+# Wed, 05 Oct 2022 05:22:53 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			DEBIAN_FRONTEND=noninteractive 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 04:59:16 GMT
+# Wed, 05 Oct 2022 05:22:58 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:22:59 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:22:59 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:01 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2fb9638d2bd021f43b4b9fb6c9c96890c919e3f1e54c4cc2d21e8a23dcb3ccb`  
-		Last Modified: Tue, 13 Sep 2022 05:20:35 GMT  
-		Size: 95.6 MB (95604664 bytes)  
+	-	`sha256:397926c7ac32ba160fce9b5c67b7d67bb9fd0190135bef9252430bbd681eb8b6`  
+		Last Modified: Wed, 05 Oct 2022 05:51:38 GMT  
+		Size: 95.6 MB (95608280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73aadea438da6729ef0469de5afcee74e324ca320c70afc41fa8000a6a4a9501`  
-		Last Modified: Tue, 13 Sep 2022 05:20:24 GMT  
-		Size: 9.4 KB (9365 bytes)  
+	-	`sha256:c3b10f14b29ed813151498c7dcab29fc820981e1d1ee60949c4a36f378333258`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
+		Size: 9.4 KB (9362 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:035fb605dda8f054095935c4d6fa48ec117c031cc2679a0d1449b52e800b6fcb`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
+	-	`sha256:e97667c59247bb33ba75c268ffa72a95365acc7eb3306554ab377f45a297b622`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
 		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ffb884cacde8c0195c821fc129b6b3fd5fc1ec98d2d0fdd6cf649ec221548de`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
-		Size: 198.0 B  
+	-	`sha256:0ebc8159c9944e738dcc9d5a1eb4b7d2da3835140d83ed1d9e511d6fcdcf54c8`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
+		Size: 201.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d1b8550cd576b2057036b01dc309e9869fc8e5ad4195431f18a57cb41a41f5b`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
+	-	`sha256:d24b3c1a408ffcb7b7d94418ae4ef3dc7da90da9c0dcdb22d7e3e18d4a9407b9`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
 		Size: 4.7 KB (4703 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -18125,7 +18125,7 @@ CMD ["postgres"]
 ## `postgres:13-bullseye`
 
 ```console
-$ docker pull postgres@sha256:9490bca05a8a1a8641d2c94616994a34c79bd855f3db763619d8dde01001eb85
+$ docker pull postgres@sha256:37b60a5b5351c75a833082e59332653cf33feace57431838787a48fe0d43ec95
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18989,128 +18989,128 @@ CMD ["postgres"]
 ### `postgres:13-bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:29bff0789ed8beabb63d04f77d07162f06c2708ebb709c7c8eee1b79c02e5e07
+$ docker pull postgres@sha256:a3ee926339ba85b7f7b78bae6a70a2e1c289d7022c08ff672a128abb02442353
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **140.3 MB (140279998 bytes)**  
+-	Total Size: **140.3 MB (140299539 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:55530180960f283cd685b58c169aeab8baf1028ef15531d6dfed50b66288be86`
+-	Image ID: `sha256:cb7e96f1789708ea206d7251406cc2bd7cbf53c1f72b593e4693d53ea523a400`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PG_MAJOR=13
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/13/bin
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PG_VERSION=13.8-1.pgdg110+1
-# Tue, 13 Sep 2022 04:59:11 GMT
+# Wed, 05 Oct 2022 05:22:53 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			DEBIAN_FRONTEND=noninteractive 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 04:59:16 GMT
+# Wed, 05 Oct 2022 05:22:58 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:22:59 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:22:59 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:01 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2fb9638d2bd021f43b4b9fb6c9c96890c919e3f1e54c4cc2d21e8a23dcb3ccb`  
-		Last Modified: Tue, 13 Sep 2022 05:20:35 GMT  
-		Size: 95.6 MB (95604664 bytes)  
+	-	`sha256:397926c7ac32ba160fce9b5c67b7d67bb9fd0190135bef9252430bbd681eb8b6`  
+		Last Modified: Wed, 05 Oct 2022 05:51:38 GMT  
+		Size: 95.6 MB (95608280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73aadea438da6729ef0469de5afcee74e324ca320c70afc41fa8000a6a4a9501`  
-		Last Modified: Tue, 13 Sep 2022 05:20:24 GMT  
-		Size: 9.4 KB (9365 bytes)  
+	-	`sha256:c3b10f14b29ed813151498c7dcab29fc820981e1d1ee60949c4a36f378333258`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
+		Size: 9.4 KB (9362 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:035fb605dda8f054095935c4d6fa48ec117c031cc2679a0d1449b52e800b6fcb`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
+	-	`sha256:e97667c59247bb33ba75c268ffa72a95365acc7eb3306554ab377f45a297b622`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
 		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ffb884cacde8c0195c821fc129b6b3fd5fc1ec98d2d0fdd6cf649ec221548de`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
-		Size: 198.0 B  
+	-	`sha256:0ebc8159c9944e738dcc9d5a1eb4b7d2da3835140d83ed1d9e511d6fcdcf54c8`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
+		Size: 201.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d1b8550cd576b2057036b01dc309e9869fc8e5ad4195431f18a57cb41a41f5b`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
+	-	`sha256:d24b3c1a408ffcb7b7d94418ae4ef3dc7da90da9c0dcdb22d7e3e18d4a9407b9`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
 		Size: 4.7 KB (4703 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:13.8`
 
 ```console
-$ docker pull postgres@sha256:9490bca05a8a1a8641d2c94616994a34c79bd855f3db763619d8dde01001eb85
+$ docker pull postgres@sha256:37b60a5b5351c75a833082e59332653cf33feace57431838787a48fe0d43ec95
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -19974,121 +19974,121 @@ CMD ["postgres"]
 ### `postgres:13.8` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:29bff0789ed8beabb63d04f77d07162f06c2708ebb709c7c8eee1b79c02e5e07
+$ docker pull postgres@sha256:a3ee926339ba85b7f7b78bae6a70a2e1c289d7022c08ff672a128abb02442353
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **140.3 MB (140279998 bytes)**  
+-	Total Size: **140.3 MB (140299539 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:55530180960f283cd685b58c169aeab8baf1028ef15531d6dfed50b66288be86`
+-	Image ID: `sha256:cb7e96f1789708ea206d7251406cc2bd7cbf53c1f72b593e4693d53ea523a400`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PG_MAJOR=13
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/13/bin
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PG_VERSION=13.8-1.pgdg110+1
-# Tue, 13 Sep 2022 04:59:11 GMT
+# Wed, 05 Oct 2022 05:22:53 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			DEBIAN_FRONTEND=noninteractive 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 04:59:16 GMT
+# Wed, 05 Oct 2022 05:22:58 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:22:59 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:22:59 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:01 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2fb9638d2bd021f43b4b9fb6c9c96890c919e3f1e54c4cc2d21e8a23dcb3ccb`  
-		Last Modified: Tue, 13 Sep 2022 05:20:35 GMT  
-		Size: 95.6 MB (95604664 bytes)  
+	-	`sha256:397926c7ac32ba160fce9b5c67b7d67bb9fd0190135bef9252430bbd681eb8b6`  
+		Last Modified: Wed, 05 Oct 2022 05:51:38 GMT  
+		Size: 95.6 MB (95608280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73aadea438da6729ef0469de5afcee74e324ca320c70afc41fa8000a6a4a9501`  
-		Last Modified: Tue, 13 Sep 2022 05:20:24 GMT  
-		Size: 9.4 KB (9365 bytes)  
+	-	`sha256:c3b10f14b29ed813151498c7dcab29fc820981e1d1ee60949c4a36f378333258`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
+		Size: 9.4 KB (9362 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:035fb605dda8f054095935c4d6fa48ec117c031cc2679a0d1449b52e800b6fcb`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
+	-	`sha256:e97667c59247bb33ba75c268ffa72a95365acc7eb3306554ab377f45a297b622`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
 		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ffb884cacde8c0195c821fc129b6b3fd5fc1ec98d2d0fdd6cf649ec221548de`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
-		Size: 198.0 B  
+	-	`sha256:0ebc8159c9944e738dcc9d5a1eb4b7d2da3835140d83ed1d9e511d6fcdcf54c8`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
+		Size: 201.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d1b8550cd576b2057036b01dc309e9869fc8e5ad4195431f18a57cb41a41f5b`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
+	-	`sha256:d24b3c1a408ffcb7b7d94418ae4ef3dc7da90da9c0dcdb22d7e3e18d4a9407b9`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
 		Size: 4.7 KB (4703 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -21373,7 +21373,7 @@ CMD ["postgres"]
 ## `postgres:13.8-bullseye`
 
 ```console
-$ docker pull postgres@sha256:9490bca05a8a1a8641d2c94616994a34c79bd855f3db763619d8dde01001eb85
+$ docker pull postgres@sha256:37b60a5b5351c75a833082e59332653cf33feace57431838787a48fe0d43ec95
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -22237,128 +22237,128 @@ CMD ["postgres"]
 ### `postgres:13.8-bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:29bff0789ed8beabb63d04f77d07162f06c2708ebb709c7c8eee1b79c02e5e07
+$ docker pull postgres@sha256:a3ee926339ba85b7f7b78bae6a70a2e1c289d7022c08ff672a128abb02442353
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **140.3 MB (140279998 bytes)**  
+-	Total Size: **140.3 MB (140299539 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:55530180960f283cd685b58c169aeab8baf1028ef15531d6dfed50b66288be86`
+-	Image ID: `sha256:cb7e96f1789708ea206d7251406cc2bd7cbf53c1f72b593e4693d53ea523a400`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PG_MAJOR=13
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/13/bin
-# Tue, 13 Sep 2022 04:49:49 GMT
+# Wed, 05 Oct 2022 05:13:47 GMT
 ENV PG_VERSION=13.8-1.pgdg110+1
-# Tue, 13 Sep 2022 04:59:11 GMT
+# Wed, 05 Oct 2022 05:22:53 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			DEBIAN_FRONTEND=noninteractive 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 04:59:16 GMT
+# Wed, 05 Oct 2022 05:22:58 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:22:59 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:22:59 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 04:59:17 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:00 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 04:59:18 GMT
+# Wed, 05 Oct 2022 05:23:01 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2fb9638d2bd021f43b4b9fb6c9c96890c919e3f1e54c4cc2d21e8a23dcb3ccb`  
-		Last Modified: Tue, 13 Sep 2022 05:20:35 GMT  
-		Size: 95.6 MB (95604664 bytes)  
+	-	`sha256:397926c7ac32ba160fce9b5c67b7d67bb9fd0190135bef9252430bbd681eb8b6`  
+		Last Modified: Wed, 05 Oct 2022 05:51:38 GMT  
+		Size: 95.6 MB (95608280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73aadea438da6729ef0469de5afcee74e324ca320c70afc41fa8000a6a4a9501`  
-		Last Modified: Tue, 13 Sep 2022 05:20:24 GMT  
-		Size: 9.4 KB (9365 bytes)  
+	-	`sha256:c3b10f14b29ed813151498c7dcab29fc820981e1d1ee60949c4a36f378333258`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
+		Size: 9.4 KB (9362 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:035fb605dda8f054095935c4d6fa48ec117c031cc2679a0d1449b52e800b6fcb`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
+	-	`sha256:e97667c59247bb33ba75c268ffa72a95365acc7eb3306554ab377f45a297b622`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
 		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ffb884cacde8c0195c821fc129b6b3fd5fc1ec98d2d0fdd6cf649ec221548de`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
-		Size: 198.0 B  
+	-	`sha256:0ebc8159c9944e738dcc9d5a1eb4b7d2da3835140d83ed1d9e511d6fcdcf54c8`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
+		Size: 201.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d1b8550cd576b2057036b01dc309e9869fc8e5ad4195431f18a57cb41a41f5b`  
-		Last Modified: Tue, 13 Sep 2022 05:20:23 GMT  
+	-	`sha256:d24b3c1a408ffcb7b7d94418ae4ef3dc7da90da9c0dcdb22d7e3e18d4a9407b9`  
+		Last Modified: Wed, 05 Oct 2022 05:51:27 GMT  
 		Size: 4.7 KB (4703 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:14`
 
 ```console
-$ docker pull postgres@sha256:289b3e7e2ab43654249188a5d0f85995e3c4a3ad8de7ec178740a997c29675fb
+$ docker pull postgres@sha256:6b6c23c13848900c48cdbdeea9a5e4d3a6f1e117bf9ddc03816d35c83c5eeee2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -23222,122 +23222,122 @@ CMD ["postgres"]
 ### `postgres:14` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:7cb7d58052c286df1b73d24c785649a8c4a1b830da292ccc6a8934d7847494be
+$ docker pull postgres@sha256:fb91ef41adfeb736d6596a949485eaa4de934b9a2a55dba4a0c89be4493a9637
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **85.2 MB (85150052 bytes)**  
+-	Total Size: **85.2 MB (85166045 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:31de9913c49fa7e6b329d44038a05d400f15d6ef0b4086280a28266f8df55594`
+-	Image ID: `sha256:d8038790be810af569bf34bbfa91424a1783d1dc97d1650b00f4e1c3547b3821`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_MAJOR=14
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/14/bin
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_VERSION=14.5-1.pgdg110+1
-# Tue, 13 Sep 2022 04:49:20 GMT
+# Wed, 05 Oct 2022 05:13:25 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:28 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f0d7124e2d122d4544dbf6b8f008f89ab6396b2d27a702ad734de4c10bc560e8`  
-		Last Modified: Tue, 13 Sep 2022 05:20:03 GMT  
-		Size: 40.5 MB (40474546 bytes)  
+	-	`sha256:54b4907c31fbf5f3e074d4716c3d852438e343aa8895c973ace8fa920c425c84`  
+		Last Modified: Wed, 05 Oct 2022 05:51:07 GMT  
+		Size: 40.5 MB (40474614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d49d13b5dc87250727509d69ca4faf4e848529f9335006b15848c4437b50b2c`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 9.5 KB (9538 bytes)  
+	-	`sha256:73ffcd0d3f353fb6474ee30f9872713cc4d7682fad18feb51e25496cdff29190`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 9.5 KB (9536 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee3c7bab3d9f27c14bed4e5351aa0cf1bce8888a82b1772ca86ef55f920ee803`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:9c189791f7f2d782592b545ba429d3e544eba9a054805593ff6aaac6e8610260`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7beb9ea6f3f9b0d637663fd6eb3cbb1eac495ea512cc674b2aa270e947e24cf7`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:14ee9846957bcb130bf2786edd2cef25dd18f74d328f1ace6313855ec0aaa696`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:15c22746a65b21c0904c195104bcebe06973ddba4cf30bdff35e5ca83a61a683`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 4.7 KB (4700 bytes)  
+	-	`sha256:291427baef9cc42cd381d3ed84a35a1c1e8cef70c086bd141ab8a5fb9acf9634`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 4.7 KB (4702 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:14-alpine`
@@ -24621,7 +24621,7 @@ CMD ["postgres"]
 ## `postgres:14-bullseye`
 
 ```console
-$ docker pull postgres@sha256:289b3e7e2ab43654249188a5d0f85995e3c4a3ad8de7ec178740a997c29675fb
+$ docker pull postgres@sha256:6b6c23c13848900c48cdbdeea9a5e4d3a6f1e117bf9ddc03816d35c83c5eeee2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -25485,128 +25485,128 @@ CMD ["postgres"]
 ### `postgres:14-bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:7cb7d58052c286df1b73d24c785649a8c4a1b830da292ccc6a8934d7847494be
+$ docker pull postgres@sha256:fb91ef41adfeb736d6596a949485eaa4de934b9a2a55dba4a0c89be4493a9637
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **85.2 MB (85150052 bytes)**  
+-	Total Size: **85.2 MB (85166045 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:31de9913c49fa7e6b329d44038a05d400f15d6ef0b4086280a28266f8df55594`
+-	Image ID: `sha256:d8038790be810af569bf34bbfa91424a1783d1dc97d1650b00f4e1c3547b3821`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_MAJOR=14
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/14/bin
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_VERSION=14.5-1.pgdg110+1
-# Tue, 13 Sep 2022 04:49:20 GMT
+# Wed, 05 Oct 2022 05:13:25 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:28 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f0d7124e2d122d4544dbf6b8f008f89ab6396b2d27a702ad734de4c10bc560e8`  
-		Last Modified: Tue, 13 Sep 2022 05:20:03 GMT  
-		Size: 40.5 MB (40474546 bytes)  
+	-	`sha256:54b4907c31fbf5f3e074d4716c3d852438e343aa8895c973ace8fa920c425c84`  
+		Last Modified: Wed, 05 Oct 2022 05:51:07 GMT  
+		Size: 40.5 MB (40474614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d49d13b5dc87250727509d69ca4faf4e848529f9335006b15848c4437b50b2c`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 9.5 KB (9538 bytes)  
+	-	`sha256:73ffcd0d3f353fb6474ee30f9872713cc4d7682fad18feb51e25496cdff29190`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 9.5 KB (9536 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee3c7bab3d9f27c14bed4e5351aa0cf1bce8888a82b1772ca86ef55f920ee803`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:9c189791f7f2d782592b545ba429d3e544eba9a054805593ff6aaac6e8610260`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7beb9ea6f3f9b0d637663fd6eb3cbb1eac495ea512cc674b2aa270e947e24cf7`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:14ee9846957bcb130bf2786edd2cef25dd18f74d328f1ace6313855ec0aaa696`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:15c22746a65b21c0904c195104bcebe06973ddba4cf30bdff35e5ca83a61a683`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 4.7 KB (4700 bytes)  
+	-	`sha256:291427baef9cc42cd381d3ed84a35a1c1e8cef70c086bd141ab8a5fb9acf9634`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 4.7 KB (4702 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:14.5`
 
 ```console
-$ docker pull postgres@sha256:289b3e7e2ab43654249188a5d0f85995e3c4a3ad8de7ec178740a997c29675fb
+$ docker pull postgres@sha256:6b6c23c13848900c48cdbdeea9a5e4d3a6f1e117bf9ddc03816d35c83c5eeee2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -26470,122 +26470,122 @@ CMD ["postgres"]
 ### `postgres:14.5` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:7cb7d58052c286df1b73d24c785649a8c4a1b830da292ccc6a8934d7847494be
+$ docker pull postgres@sha256:fb91ef41adfeb736d6596a949485eaa4de934b9a2a55dba4a0c89be4493a9637
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **85.2 MB (85150052 bytes)**  
+-	Total Size: **85.2 MB (85166045 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:31de9913c49fa7e6b329d44038a05d400f15d6ef0b4086280a28266f8df55594`
+-	Image ID: `sha256:d8038790be810af569bf34bbfa91424a1783d1dc97d1650b00f4e1c3547b3821`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_MAJOR=14
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/14/bin
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_VERSION=14.5-1.pgdg110+1
-# Tue, 13 Sep 2022 04:49:20 GMT
+# Wed, 05 Oct 2022 05:13:25 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:28 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f0d7124e2d122d4544dbf6b8f008f89ab6396b2d27a702ad734de4c10bc560e8`  
-		Last Modified: Tue, 13 Sep 2022 05:20:03 GMT  
-		Size: 40.5 MB (40474546 bytes)  
+	-	`sha256:54b4907c31fbf5f3e074d4716c3d852438e343aa8895c973ace8fa920c425c84`  
+		Last Modified: Wed, 05 Oct 2022 05:51:07 GMT  
+		Size: 40.5 MB (40474614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d49d13b5dc87250727509d69ca4faf4e848529f9335006b15848c4437b50b2c`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 9.5 KB (9538 bytes)  
+	-	`sha256:73ffcd0d3f353fb6474ee30f9872713cc4d7682fad18feb51e25496cdff29190`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 9.5 KB (9536 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee3c7bab3d9f27c14bed4e5351aa0cf1bce8888a82b1772ca86ef55f920ee803`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:9c189791f7f2d782592b545ba429d3e544eba9a054805593ff6aaac6e8610260`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7beb9ea6f3f9b0d637663fd6eb3cbb1eac495ea512cc674b2aa270e947e24cf7`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:14ee9846957bcb130bf2786edd2cef25dd18f74d328f1ace6313855ec0aaa696`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:15c22746a65b21c0904c195104bcebe06973ddba4cf30bdff35e5ca83a61a683`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 4.7 KB (4700 bytes)  
+	-	`sha256:291427baef9cc42cd381d3ed84a35a1c1e8cef70c086bd141ab8a5fb9acf9634`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 4.7 KB (4702 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:14.5-alpine`
@@ -27869,7 +27869,7 @@ CMD ["postgres"]
 ## `postgres:14.5-bullseye`
 
 ```console
-$ docker pull postgres@sha256:289b3e7e2ab43654249188a5d0f85995e3c4a3ad8de7ec178740a997c29675fb
+$ docker pull postgres@sha256:6b6c23c13848900c48cdbdeea9a5e4d3a6f1e117bf9ddc03816d35c83c5eeee2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -28733,128 +28733,128 @@ CMD ["postgres"]
 ### `postgres:14.5-bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:7cb7d58052c286df1b73d24c785649a8c4a1b830da292ccc6a8934d7847494be
+$ docker pull postgres@sha256:fb91ef41adfeb736d6596a949485eaa4de934b9a2a55dba4a0c89be4493a9637
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **85.2 MB (85150052 bytes)**  
+-	Total Size: **85.2 MB (85166045 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:31de9913c49fa7e6b329d44038a05d400f15d6ef0b4086280a28266f8df55594`
+-	Image ID: `sha256:d8038790be810af569bf34bbfa91424a1783d1dc97d1650b00f4e1c3547b3821`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_MAJOR=14
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/14/bin
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_VERSION=14.5-1.pgdg110+1
-# Tue, 13 Sep 2022 04:49:20 GMT
+# Wed, 05 Oct 2022 05:13:25 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:28 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f0d7124e2d122d4544dbf6b8f008f89ab6396b2d27a702ad734de4c10bc560e8`  
-		Last Modified: Tue, 13 Sep 2022 05:20:03 GMT  
-		Size: 40.5 MB (40474546 bytes)  
+	-	`sha256:54b4907c31fbf5f3e074d4716c3d852438e343aa8895c973ace8fa920c425c84`  
+		Last Modified: Wed, 05 Oct 2022 05:51:07 GMT  
+		Size: 40.5 MB (40474614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d49d13b5dc87250727509d69ca4faf4e848529f9335006b15848c4437b50b2c`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 9.5 KB (9538 bytes)  
+	-	`sha256:73ffcd0d3f353fb6474ee30f9872713cc4d7682fad18feb51e25496cdff29190`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 9.5 KB (9536 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee3c7bab3d9f27c14bed4e5351aa0cf1bce8888a82b1772ca86ef55f920ee803`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:9c189791f7f2d782592b545ba429d3e544eba9a054805593ff6aaac6e8610260`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7beb9ea6f3f9b0d637663fd6eb3cbb1eac495ea512cc674b2aa270e947e24cf7`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:14ee9846957bcb130bf2786edd2cef25dd18f74d328f1ace6313855ec0aaa696`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:15c22746a65b21c0904c195104bcebe06973ddba4cf30bdff35e5ca83a61a683`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 4.7 KB (4700 bytes)  
+	-	`sha256:291427baef9cc42cd381d3ed84a35a1c1e8cef70c086bd141ab8a5fb9acf9634`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 4.7 KB (4702 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:15rc1`
 
 ```console
-$ docker pull postgres@sha256:62f8aa5ee887818c5136cb4ad729b5d8b2d9bdb0dac2b3c660952318f1f9fce0
+$ docker pull postgres@sha256:b8f778d2a497f5af4954f6910f6ba7b87e6cdb4468695ae2cdb832d474ba4732
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -29718,121 +29718,121 @@ CMD ["postgres"]
 ### `postgres:15rc1` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:ea0423c5b8076cde000d96d20c72bab5934ff549a0c70a788e25c73f36ac19b0
+$ docker pull postgres@sha256:12606e2ce6a5b161d4d8392f088faf2615ba7d266bb959cd61705eef63f9d856
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **85.2 MB (85207324 bytes)**  
+-	Total Size: **85.2 MB (85223230 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:90ab8b3dc8b2fc0ffd6cbc7b35f2ed84b8c868a8c7fc5639e210dc6929a3b897`
+-	Image ID: `sha256:dea4cdd68c4852913553b521d1b5e4eaefc7f4eb17ee13ff2ced81b9f818fd60`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:56 GMT
 ENV PG_MAJOR=15
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:56 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/15/bin
-# Fri, 30 Sep 2022 18:42:00 GMT
+# Wed, 05 Oct 2022 04:56:56 GMT
 ENV PG_VERSION=15~rc1-1.pgdg110+1
-# Fri, 30 Sep 2022 18:48:58 GMT
+# Wed, 05 Oct 2022 05:06:10 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Fri, 30 Sep 2022 18:49:00 GMT
+# Wed, 05 Oct 2022 05:06:13 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Fri, 30 Sep 2022 18:49:01 GMT
+# Wed, 05 Oct 2022 05:06:13 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Fri, 30 Sep 2022 18:49:01 GMT
+# Wed, 05 Oct 2022 05:06:14 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Fri, 30 Sep 2022 18:49:01 GMT
+# Wed, 05 Oct 2022 05:06:14 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Fri, 30 Sep 2022 18:49:01 GMT
+# Wed, 05 Oct 2022 05:06:14 GMT
 VOLUME [/var/lib/postgresql/data]
-# Fri, 30 Sep 2022 18:49:01 GMT
+# Wed, 05 Oct 2022 05:06:14 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Fri, 30 Sep 2022 18:49:02 GMT
+# Wed, 05 Oct 2022 05:06:15 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 30 Sep 2022 18:49:02 GMT
+# Wed, 05 Oct 2022 05:06:15 GMT
 STOPSIGNAL SIGINT
-# Fri, 30 Sep 2022 18:49:02 GMT
+# Wed, 05 Oct 2022 05:06:15 GMT
 EXPOSE 5432
-# Fri, 30 Sep 2022 18:49:02 GMT
+# Wed, 05 Oct 2022 05:06:15 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6802b6ec71aea0c07225c297f58bfcdf9ddf5569fded5b71622ad4737b6e2757`  
-		Last Modified: Fri, 30 Sep 2022 18:56:37 GMT  
-		Size: 40.5 MB (40531548 bytes)  
+	-	`sha256:2e56651746b71ca431e284c9379645246308736e1a668c645a9c837b578ee66c`  
+		Last Modified: Wed, 05 Oct 2022 05:50:53 GMT  
+		Size: 40.5 MB (40531532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8789368f67075d4bead650c57c26267987c2227fddafe8ed8cea0f24f1eb02b8`  
-		Last Modified: Fri, 30 Sep 2022 18:56:32 GMT  
-		Size: 9.8 KB (9804 bytes)  
+	-	`sha256:6858d150b8e7acd783b1fba5194302cd1593bde854b2fc3f0b9f20b77199c155`  
+		Last Modified: Wed, 05 Oct 2022 05:50:47 GMT  
+		Size: 9.8 KB (9800 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e413016ee8d2a13941974bd8649a36d798690fa4fd8793ea8bc369ea3ebfcdc`  
-		Last Modified: Fri, 30 Sep 2022 18:56:32 GMT  
-		Size: 129.0 B  
+	-	`sha256:9a1c1c603251016e441825b50e85bac939f584dfa8948aca94dd919ee28e62f1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:47 GMT  
+		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9cfed62e6facd8633cc0a827f877e774e5791c4eaf873b78a72aff2d89123ea`  
-		Last Modified: Fri, 30 Sep 2022 18:56:32 GMT  
+	-	`sha256:ecbca8af6bb900f62765de0551cce5c49bc033a39f7364bb5da88846d0d666ff`  
+		Last Modified: Wed, 05 Oct 2022 05:50:47 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e18e692b79ef4f20cb3886e5ce4f9e2386bffa7552e5b756c4b7930acceddd6`  
-		Last Modified: Fri, 30 Sep 2022 18:56:32 GMT  
+	-	`sha256:3c08f63d621e2a1f15ece732b191d803d1eed323c51c2d2e97e6a4dc53a8a4d3`  
+		Last Modified: Wed, 05 Oct 2022 05:50:47 GMT  
 		Size: 4.7 KB (4704 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -31117,7 +31117,7 @@ CMD ["postgres"]
 ## `postgres:15rc1-bullseye`
 
 ```console
-$ docker pull postgres@sha256:62f8aa5ee887818c5136cb4ad729b5d8b2d9bdb0dac2b3c660952318f1f9fce0
+$ docker pull postgres@sha256:b8f778d2a497f5af4954f6910f6ba7b87e6cdb4468695ae2cdb832d474ba4732
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -31981,121 +31981,121 @@ CMD ["postgres"]
 ### `postgres:15rc1-bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:ea0423c5b8076cde000d96d20c72bab5934ff549a0c70a788e25c73f36ac19b0
+$ docker pull postgres@sha256:12606e2ce6a5b161d4d8392f088faf2615ba7d266bb959cd61705eef63f9d856
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **85.2 MB (85207324 bytes)**  
+-	Total Size: **85.2 MB (85223230 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:90ab8b3dc8b2fc0ffd6cbc7b35f2ed84b8c868a8c7fc5639e210dc6929a3b897`
+-	Image ID: `sha256:dea4cdd68c4852913553b521d1b5e4eaefc7f4eb17ee13ff2ced81b9f818fd60`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:56 GMT
 ENV PG_MAJOR=15
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:56 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/15/bin
-# Fri, 30 Sep 2022 18:42:00 GMT
+# Wed, 05 Oct 2022 04:56:56 GMT
 ENV PG_VERSION=15~rc1-1.pgdg110+1
-# Fri, 30 Sep 2022 18:48:58 GMT
+# Wed, 05 Oct 2022 05:06:10 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Fri, 30 Sep 2022 18:49:00 GMT
+# Wed, 05 Oct 2022 05:06:13 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Fri, 30 Sep 2022 18:49:01 GMT
+# Wed, 05 Oct 2022 05:06:13 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Fri, 30 Sep 2022 18:49:01 GMT
+# Wed, 05 Oct 2022 05:06:14 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Fri, 30 Sep 2022 18:49:01 GMT
+# Wed, 05 Oct 2022 05:06:14 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Fri, 30 Sep 2022 18:49:01 GMT
+# Wed, 05 Oct 2022 05:06:14 GMT
 VOLUME [/var/lib/postgresql/data]
-# Fri, 30 Sep 2022 18:49:01 GMT
+# Wed, 05 Oct 2022 05:06:14 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Fri, 30 Sep 2022 18:49:02 GMT
+# Wed, 05 Oct 2022 05:06:15 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 30 Sep 2022 18:49:02 GMT
+# Wed, 05 Oct 2022 05:06:15 GMT
 STOPSIGNAL SIGINT
-# Fri, 30 Sep 2022 18:49:02 GMT
+# Wed, 05 Oct 2022 05:06:15 GMT
 EXPOSE 5432
-# Fri, 30 Sep 2022 18:49:02 GMT
+# Wed, 05 Oct 2022 05:06:15 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6802b6ec71aea0c07225c297f58bfcdf9ddf5569fded5b71622ad4737b6e2757`  
-		Last Modified: Fri, 30 Sep 2022 18:56:37 GMT  
-		Size: 40.5 MB (40531548 bytes)  
+	-	`sha256:2e56651746b71ca431e284c9379645246308736e1a668c645a9c837b578ee66c`  
+		Last Modified: Wed, 05 Oct 2022 05:50:53 GMT  
+		Size: 40.5 MB (40531532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8789368f67075d4bead650c57c26267987c2227fddafe8ed8cea0f24f1eb02b8`  
-		Last Modified: Fri, 30 Sep 2022 18:56:32 GMT  
-		Size: 9.8 KB (9804 bytes)  
+	-	`sha256:6858d150b8e7acd783b1fba5194302cd1593bde854b2fc3f0b9f20b77199c155`  
+		Last Modified: Wed, 05 Oct 2022 05:50:47 GMT  
+		Size: 9.8 KB (9800 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e413016ee8d2a13941974bd8649a36d798690fa4fd8793ea8bc369ea3ebfcdc`  
-		Last Modified: Fri, 30 Sep 2022 18:56:32 GMT  
-		Size: 129.0 B  
+	-	`sha256:9a1c1c603251016e441825b50e85bac939f584dfa8948aca94dd919ee28e62f1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:47 GMT  
+		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9cfed62e6facd8633cc0a827f877e774e5791c4eaf873b78a72aff2d89123ea`  
-		Last Modified: Fri, 30 Sep 2022 18:56:32 GMT  
+	-	`sha256:ecbca8af6bb900f62765de0551cce5c49bc033a39f7364bb5da88846d0d666ff`  
+		Last Modified: Wed, 05 Oct 2022 05:50:47 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e18e692b79ef4f20cb3886e5ce4f9e2386bffa7552e5b756c4b7930acceddd6`  
-		Last Modified: Fri, 30 Sep 2022 18:56:32 GMT  
+	-	`sha256:3c08f63d621e2a1f15ece732b191d803d1eed323c51c2d2e97e6a4dc53a8a4d3`  
+		Last Modified: Wed, 05 Oct 2022 05:50:47 GMT  
 		Size: 4.7 KB (4704 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -33380,7 +33380,7 @@ CMD ["postgres"]
 ## `postgres:bullseye`
 
 ```console
-$ docker pull postgres@sha256:289b3e7e2ab43654249188a5d0f85995e3c4a3ad8de7ec178740a997c29675fb
+$ docker pull postgres@sha256:6b6c23c13848900c48cdbdeea9a5e4d3a6f1e117bf9ddc03816d35c83c5eeee2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -34244,128 +34244,128 @@ CMD ["postgres"]
 ### `postgres:bullseye` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:7cb7d58052c286df1b73d24c785649a8c4a1b830da292ccc6a8934d7847494be
+$ docker pull postgres@sha256:fb91ef41adfeb736d6596a949485eaa4de934b9a2a55dba4a0c89be4493a9637
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **85.2 MB (85150052 bytes)**  
+-	Total Size: **85.2 MB (85166045 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:31de9913c49fa7e6b329d44038a05d400f15d6ef0b4086280a28266f8df55594`
+-	Image ID: `sha256:d8038790be810af569bf34bbfa91424a1783d1dc97d1650b00f4e1c3547b3821`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_MAJOR=14
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/14/bin
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_VERSION=14.5-1.pgdg110+1
-# Tue, 13 Sep 2022 04:49:20 GMT
+# Wed, 05 Oct 2022 05:13:25 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:28 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f0d7124e2d122d4544dbf6b8f008f89ab6396b2d27a702ad734de4c10bc560e8`  
-		Last Modified: Tue, 13 Sep 2022 05:20:03 GMT  
-		Size: 40.5 MB (40474546 bytes)  
+	-	`sha256:54b4907c31fbf5f3e074d4716c3d852438e343aa8895c973ace8fa920c425c84`  
+		Last Modified: Wed, 05 Oct 2022 05:51:07 GMT  
+		Size: 40.5 MB (40474614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d49d13b5dc87250727509d69ca4faf4e848529f9335006b15848c4437b50b2c`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 9.5 KB (9538 bytes)  
+	-	`sha256:73ffcd0d3f353fb6474ee30f9872713cc4d7682fad18feb51e25496cdff29190`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 9.5 KB (9536 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee3c7bab3d9f27c14bed4e5351aa0cf1bce8888a82b1772ca86ef55f920ee803`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:9c189791f7f2d782592b545ba429d3e544eba9a054805593ff6aaac6e8610260`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7beb9ea6f3f9b0d637663fd6eb3cbb1eac495ea512cc674b2aa270e947e24cf7`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:14ee9846957bcb130bf2786edd2cef25dd18f74d328f1ace6313855ec0aaa696`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:15c22746a65b21c0904c195104bcebe06973ddba4cf30bdff35e5ca83a61a683`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 4.7 KB (4700 bytes)  
+	-	`sha256:291427baef9cc42cd381d3ed84a35a1c1e8cef70c086bd141ab8a5fb9acf9634`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 4.7 KB (4702 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `postgres:latest`
 
 ```console
-$ docker pull postgres@sha256:289b3e7e2ab43654249188a5d0f85995e3c4a3ad8de7ec178740a997c29675fb
+$ docker pull postgres@sha256:6b6c23c13848900c48cdbdeea9a5e4d3a6f1e117bf9ddc03816d35c83c5eeee2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -35229,120 +35229,120 @@ CMD ["postgres"]
 ### `postgres:latest` - linux; s390x
 
 ```console
-$ docker pull postgres@sha256:7cb7d58052c286df1b73d24c785649a8c4a1b830da292ccc6a8934d7847494be
+$ docker pull postgres@sha256:fb91ef41adfeb736d6596a949485eaa4de934b9a2a55dba4a0c89be4493a9637
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **85.2 MB (85150052 bytes)**  
+-	Total Size: **85.2 MB (85166045 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:31de9913c49fa7e6b329d44038a05d400f15d6ef0b4086280a28266f8df55594`
+-	Image ID: `sha256:d8038790be810af569bf34bbfa91424a1783d1dc97d1650b00f4e1c3547b3821`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
 ```dockerfile
-# Tue, 13 Sep 2022 00:48:07 GMT
-ADD file:e8a6c2e8be5d9d1f83c1e280419014489438391a9feb7c77b6c21adbf0ec062b in / 
-# Tue, 13 Sep 2022 00:48:08 GMT
+# Tue, 04 Oct 2022 23:42:42 GMT
+ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
+# Tue, 04 Oct 2022 23:42:43 GMT
 CMD ["bash"]
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:22 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:25 GMT
 RUN set -eux; 	groupadd -r postgres --gid=999; 	useradd -r -g postgres --uid=999 --home-dir=/var/lib/postgresql --shell=/bin/bash postgres; 	mkdir -p /var/lib/postgresql; 	chown -R postgres:postgres /var/lib/postgresql
-# Tue, 13 Sep 2022 04:33:47 GMT
+# Wed, 05 Oct 2022 04:56:26 GMT
 ENV GOSU_VERSION=1.14
-# Tue, 13 Sep 2022 04:33:54 GMT
+# Wed, 05 Oct 2022 04:56:37 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	rm -rf /var/lib/apt/lists/*; 	dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Tue, 13 Sep 2022 04:33:59 GMT
+# Wed, 05 Oct 2022 04:56:47 GMT
 RUN set -eux; 	if [ -f /etc/dpkg/dpkg.cfg.d/docker ]; then 		grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 		sed -ri '/\/usr\/share\/locale/d' /etc/dpkg/dpkg.cfg.d/docker; 		! grep -q '/usr/share/locale' /etc/dpkg/dpkg.cfg.d/docker; 	fi; 	apt-get update; apt-get install -y --no-install-recommends locales; rm -rf /var/lib/apt/lists/*; 	localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
-# Tue, 13 Sep 2022 04:34:00 GMT
+# Wed, 05 Oct 2022 04:56:48 GMT
 ENV LANG=en_US.utf8
-# Tue, 13 Sep 2022 04:34:03 GMT
+# Wed, 05 Oct 2022 04:56:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		libnss-wrapper 		xz-utils 		zstd 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Sep 2022 04:34:04 GMT
+# Wed, 05 Oct 2022 04:56:54 GMT
 RUN mkdir /docker-entrypoint-initdb.d
-# Tue, 13 Sep 2022 04:34:05 GMT
+# Wed, 05 Oct 2022 04:56:55 GMT
 RUN set -ex; 	key='B97B0AFCAA1A47F044F244A07FCC7D46ACCC4CF8'; 	export GNUPGHOME="$(mktemp -d)"; 	mkdir -p /usr/local/share/keyrings/; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	gpg --batch --export --armor "$key" > /usr/local/share/keyrings/postgres.gpg.asc; 	command -v gpgconf > /dev/null && gpgconf --kill all; 	rm -rf "$GNUPGHOME"
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_MAJOR=14
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/lib/postgresql/14/bin
-# Tue, 13 Sep 2022 04:42:00 GMT
+# Wed, 05 Oct 2022 05:06:30 GMT
 ENV PG_VERSION=14.5-1.pgdg110+1
-# Tue, 13 Sep 2022 04:49:20 GMT
+# Wed, 05 Oct 2022 05:13:25 GMT
 RUN set -ex; 		export PYTHONDONTWRITEBYTECODE=1; 		dpkgArch="$(dpkg --print-architecture)"; 	aptRepo="[ signed-by=/usr/local/share/keyrings/postgres.gpg.asc ] http://apt.postgresql.org/pub/repos/apt/ bullseye-pgdg main $PG_MAJOR"; 	case "$dpkgArch" in 		amd64 | arm64 | ppc64el) 			echo "deb $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 			apt-get update; 			;; 		*) 			echo "deb-src $aptRepo" > /etc/apt/sources.list.d/pgdg.list; 						savedAptMark="$(apt-mark showmanual)"; 						tempDir="$(mktemp -d)"; 			cd "$tempDir"; 						apt-get update; 			apt-get install -y --no-install-recommends dpkg-dev; 			echo "deb [ trusted=yes ] file://$tempDir ./" > /etc/apt/sources.list.d/temp.list; 			_update_repo() { 				dpkg-scanpackages . > Packages; 				apt-get -o Acquire::GzipIndexes=false update; 			}; 			_update_repo; 						nproc="$(nproc)"; 			export DEB_BUILD_OPTIONS="nocheck parallel=$nproc"; 			apt-get build-dep -y postgresql-common pgdg-keyring; 			apt-get source --compile postgresql-common pgdg-keyring; 			_update_repo; 			apt-get build-dep -y "postgresql-$PG_MAJOR=$PG_VERSION"; 			apt-get source --compile "postgresql-$PG_MAJOR=$PG_VERSION"; 									apt-mark showmanual | xargs apt-mark auto > /dev/null; 			apt-mark manual $savedAptMark; 						ls -lAFh; 			_update_repo; 			grep '^Package: ' Packages; 			cd /; 			;; 	esac; 		apt-get install -y --no-install-recommends postgresql-common; 	sed -ri 's/#(create_main_cluster) .*$/\1 = false/' /etc/postgresql-common/createcluster.conf; 	apt-get install -y --no-install-recommends 		"postgresql-$PG_MAJOR=$PG_VERSION" 	; 		rm -rf /var/lib/apt/lists/*; 		if [ -n "$tempDir" ]; then 		apt-get purge -y --auto-remove; 		rm -rf "$tempDir" /etc/apt/sources.list.d/temp.list; 	fi; 		find /usr -name '*.pyc' -type f -exec bash -c 'for pyc; do dpkg -S "$pyc" &> /dev/null || rm -vf "$pyc"; done' -- '{}' +; 		postgres --version
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:28 GMT
 RUN set -eux; 	dpkg-divert --add --rename --divert "/usr/share/postgresql/postgresql.conf.sample.dpkg" "/usr/share/postgresql/$PG_MAJOR/postgresql.conf.sample"; 	cp -v /usr/share/postgresql/postgresql.conf.sample.dpkg /usr/share/postgresql/postgresql.conf.sample; 	ln -sv ../postgresql.conf.sample "/usr/share/postgresql/$PG_MAJOR/"; 	sed -ri "s!^#?(listen_addresses)\s*=\s*\S+.*!\1 = '*'!" /usr/share/postgresql/postgresql.conf.sample; 	grep -F "listen_addresses = '*'" /usr/share/postgresql/postgresql.conf.sample
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p /var/run/postgresql && chown -R postgres:postgres /var/run/postgresql && chmod 2777 /var/run/postgresql
-# Tue, 13 Sep 2022 04:49:23 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 ENV PGDATA=/var/lib/postgresql/data
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:29 GMT
 VOLUME [/var/lib/postgresql/data]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 COPY file:925d466681c8349f58385c00a8caa567c76b695158aa04bf4ad2ac92604e11c7 in /usr/local/bin/ 
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 13 Sep 2022 04:49:24 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 STOPSIGNAL SIGINT
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 EXPOSE 5432
-# Tue, 13 Sep 2022 04:49:25 GMT
+# Wed, 05 Oct 2022 05:13:30 GMT
 CMD ["postgres"]
 ```
 
 -	Layers:
-	-	`sha256:c64715e5ebd39975a39b5cf2535772544c27713cbed678b0a21e73680fffaf72`  
-		Last Modified: Tue, 13 Sep 2022 00:52:39 GMT  
-		Size: 29.6 MB (29635080 bytes)  
+	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
+		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
+		Size: 29.7 MB (29650719 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54a2068830ae611a283597929af8437a2aa35d8b999846f9a4e2304ee7f2d042`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 4.3 MB (4302222 bytes)  
+	-	`sha256:8cd26a6e6912a1624abd8eb670dbbdb9a7c71cbe16cf45f1e46c57d2a04e191b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 4.3 MB (4302302 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a990ac96165d07d23730e03b4d82364440c24000d67be76c265dddbcc935fa2`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
+	-	`sha256:012700687f028298c4ea39429539770e33d518e9e8fd77025e1f2b70b59aceb1`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
 		Size: 1.8 KB (1803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4491edcdeaca0a18f0823080d7b4aaba011f8d16ba9f10bcbe92f616076dd05`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 1.4 MB (1381522 bytes)  
+	-	`sha256:b6290d1d7380431c40e223181ec1e8270604bd4f335472260b30011aeddcc95e`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 1.4 MB (1381539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8b776fb53c2e35f5a6d0ce3b54d0c4d27f588892d0322bbdff2afd8dc36f95a`  
-		Last Modified: Tue, 13 Sep 2022 05:19:44 GMT  
-		Size: 8.1 MB (8099067 bytes)  
+	-	`sha256:f1f230c0ec574d4d8ba31e022abb60f706fd7ccfc54a205c68b7a9b871aaded7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:49 GMT  
+		Size: 8.1 MB (8099223 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdbe99d062f06821ee92e324d42fe30cc662d5ff9d0a4c7b0870a606fb7cf945`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 1.2 MB (1237896 bytes)  
+	-	`sha256:464bd6f3112bdfa4a26dda30f7e1fe8136423f68c9cbf0e6b4da199b3e8f5d7b`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 1.2 MB (1237929 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:75c5e2d9f401fb21fddb497b067bbad8c03a6290f2b1a741a03f36fcce2de833`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 146.0 B  
+	-	`sha256:9893d976182eb153e87ca5e426edae1d2adf8533943a21b98ac674f9f49c43a7`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f2b78a4b02e740d86d6d28a0732d2135ca780504d5b03effa18a2ada281fa75`  
-		Last Modified: Tue, 13 Sep 2022 05:19:42 GMT  
-		Size: 3.2 KB (3203 bytes)  
+	-	`sha256:bbcdda9c682631274775089d662832e4713b5f140af4fa111f038f310139a075`  
+		Last Modified: Wed, 05 Oct 2022 05:50:48 GMT  
+		Size: 3.2 KB (3200 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f0d7124e2d122d4544dbf6b8f008f89ab6396b2d27a702ad734de4c10bc560e8`  
-		Last Modified: Tue, 13 Sep 2022 05:20:03 GMT  
-		Size: 40.5 MB (40474546 bytes)  
+	-	`sha256:54b4907c31fbf5f3e074d4716c3d852438e343aa8895c973ace8fa920c425c84`  
+		Last Modified: Wed, 05 Oct 2022 05:51:07 GMT  
+		Size: 40.5 MB (40474614 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d49d13b5dc87250727509d69ca4faf4e848529f9335006b15848c4437b50b2c`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 9.5 KB (9538 bytes)  
+	-	`sha256:73ffcd0d3f353fb6474ee30f9872713cc4d7682fad18feb51e25496cdff29190`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 9.5 KB (9536 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee3c7bab3d9f27c14bed4e5351aa0cf1bce8888a82b1772ca86ef55f920ee803`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:9c189791f7f2d782592b545ba429d3e544eba9a054805593ff6aaac6e8610260`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7beb9ea6f3f9b0d637663fd6eb3cbb1eac495ea512cc674b2aa270e947e24cf7`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
+	-	`sha256:14ee9846957bcb130bf2786edd2cef25dd18f74d328f1ace6313855ec0aaa696`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:15c22746a65b21c0904c195104bcebe06973ddba4cf30bdff35e5ca83a61a683`  
-		Last Modified: Tue, 13 Sep 2022 05:19:56 GMT  
-		Size: 4.7 KB (4700 bytes)  
+	-	`sha256:291427baef9cc42cd381d3ed84a35a1c1e8cef70c086bd141ab8a5fb9acf9634`  
+		Last Modified: Wed, 05 Oct 2022 05:51:02 GMT  
+		Size: 4.7 KB (4702 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
