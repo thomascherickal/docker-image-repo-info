@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2d7b1431e8708aa69be3ab6a38aa9a7fbf091408a858c5dab49f0f0db18f3634`
-- Created: `2022-09-13T06:08:53.732856615Z`
-- Virtual Size: ~ 169.67 Mb  
+- Image ID: `sha256:d527f60d93d54762986cae22b527791861f7b1584ab0298a550917a7f29bad58`
+- Created: `2022-10-05T04:12:17.628399859Z`
+- Virtual Size: ~ 169.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["irssi"]`
@@ -1308,11 +1308,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libdatetime-perl/2:1.54-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libdatetime-perl/2:1.54-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libdatetime-timezone-perl=1:2.47-1+2022b`
+### `dpkg` source package: `libdatetime-timezone-perl=1:2.47-1+2022d`
 
 Binary Packages:
 
-- `libdatetime-timezone-perl=1:2.47-1+2022b`
+- `libdatetime-timezone-perl=1:2.47-1+2022d`
 
 Licenses: (parsed from: `/usr/share/doc/libdatetime-timezone-perl/copyright`)
 
@@ -1323,17 +1323,17 @@ Licenses: (parsed from: `/usr/share/doc/libdatetime-timezone-perl/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libdatetime-timezone-perl=1:2.47-1+2022b
-'http://deb.debian.org/debian/pool/main/libd/libdatetime-timezone-perl/libdatetime-timezone-perl_2.47-1%2b2022b.dsc' libdatetime-timezone-perl_2.47-1+2022b.dsc 2914 SHA256:bc6a6adf71fe24dad96b154aacadd8d0f86790e9ed6ea170241e213e384cae89
+$ apt-get source -qq --print-uris libdatetime-timezone-perl=1:2.47-1+2022d
+'http://deb.debian.org/debian/pool/main/libd/libdatetime-timezone-perl/libdatetime-timezone-perl_2.47-1%2b2022d.dsc' libdatetime-timezone-perl_2.47-1+2022d.dsc 2914 SHA256:bc29de3f3515d2f5f5ea12923218c9201ec5a577c18df4f1fdaca391474de48c
 'http://deb.debian.org/debian/pool/main/libd/libdatetime-timezone-perl/libdatetime-timezone-perl_2.47.orig.tar.gz' libdatetime-timezone-perl_2.47.orig.tar.gz 1006477 SHA256:41617138dbb5e255fe5ac3cab6f1cc8e09f934bc95906b8cd7077192a21ef2b9
-'http://deb.debian.org/debian/pool/main/libd/libdatetime-timezone-perl/libdatetime-timezone-perl_2.47-1%2b2022b.debian.tar.xz' libdatetime-timezone-perl_2.47-1+2022b.debian.tar.xz 64788 SHA256:9da3f11286002e37cbf11b085ab9bafe5a1f5f955096da53111d2c2cd0ba8afc
+'http://deb.debian.org/debian/pool/main/libd/libdatetime-timezone-perl/libdatetime-timezone-perl_2.47-1%2b2022d.debian.tar.xz' libdatetime-timezone-perl_2.47-1+2022d.debian.tar.xz 68504 SHA256:33fccd7e91dcf2dd023f83c7c0ee65251e646c98261cc8d326ca57a625c8148c
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libdatetime-timezone-perl/1:2.47-1+2022b/ (for browsing the source)
-- https://sources.debian.net/src/libdatetime-timezone-perl/1:2.47-1+2022b/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libdatetime-timezone-perl/1:2.47-1+2022b/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libdatetime-timezone-perl/1:2.47-1+2022d/ (for browsing the source)
+- https://sources.debian.net/src/libdatetime-timezone-perl/1:2.47-1+2022d/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libdatetime-timezone-perl/1:2.47-1+2022d/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libdevel-callchecker-perl=0.008-1`
 
@@ -3514,11 +3514,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.34+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.34+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-1+deb11u5`
+### `dpkg` source package: `tzdata=2021a-1+deb11u6`
 
 Binary Packages:
 
-- `tzdata=2021a-1+deb11u5`
+- `tzdata=2021a-1+deb11u6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -3527,18 +3527,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u5
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u5.dsc' tzdata_2021a-1+deb11u5.dsc 2269 SHA256:90144991fdbc0676acbb2f09730b754df24ebb8a422e041b70a614871425afeb
+$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u6
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u6.dsc' tzdata_2021a-1+deb11u6.dsc 2269 SHA256:2d3bf44d3a46c6d7af2dead664360f0e05835c83a6c0475851c2fd6ee2923c85
 'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
 'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u5.debian.tar.xz' tzdata_2021a-1+deb11u5.debian.tar.xz 112384 SHA256:92e9016c42002bfe242cb91cdd6cef7163a15f2998767e67bb2f8390bd13de45
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u6.debian.tar.xz' tzdata_2021a-1+deb11u6.debian.tar.xz 113564 SHA256:1d4e96a91bea03a87b99cc90a7e5b378f2ccc6a976966ceb3dcb80c9109e65cc
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u5/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u5/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u6/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.36.1-8+deb11u1`
 
