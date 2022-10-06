@@ -1,7 +1,7 @@
 ## `joomla:4-php8.1-fpm-alpine`
 
 ```console
-$ docker pull joomla@sha256:2e84c62492a8af9389032d7248bcf00d8e277a634c055fef8b0aa8c3f0e63959
+$ docker pull joomla@sha256:7f9e8c9357b9e429ac2ee1cf9fc955a196207e799251f189cb71665374b99d7d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -347,14 +347,14 @@ CMD ["php-fpm"]
 ### `joomla:4-php8.1-fpm-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull joomla@sha256:b9fcd7afdfd74f24b73223b4adf506ff6f724de92f90387fc5c83e6fef52a319
+$ docker pull joomla@sha256:79881a2d790d5dac989f29cbe6b97fb08fecaa5f53878b2f89262a2684c105d1
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **97.6 MB (97585463 bytes)**  
+-	Total Size: **97.6 MB (97585148 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a00e8d744b1d103dde525fd0609fbc59364eb5f725ed415e0fca1b8c073aaa9a`
+-	Image ID: `sha256:d27d52791d0ebe06bbe20bb9f1a8f55b4801652abb5e2c14725cea788dfdd443`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -409,33 +409,33 @@ STOPSIGNAL SIGQUIT
 EXPOSE 9000
 # Thu, 29 Sep 2022 19:52:40 GMT
 CMD ["php-fpm"]
-# Fri, 30 Sep 2022 04:46:36 GMT
+# Thu, 06 Oct 2022 20:03:05 GMT
 LABEL maintainer=Llewellyn van der Merwe <llewellyn.van-der-merwe@community.joomla.org> (@Llewellynvdm), Harald Leithner <harald.leithner@community.joomla.org> (@HLeithner)
-# Fri, 30 Sep 2022 04:46:36 GMT
+# Thu, 06 Oct 2022 20:03:05 GMT
 ENV JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1
-# Fri, 30 Sep 2022 04:46:43 GMT
+# Thu, 06 Oct 2022 20:03:12 GMT
 RUN set -eux; 	apk add --no-cache 		bash 		ghostscript 		imagemagick 	;
-# Fri, 30 Sep 2022 04:49:08 GMT
+# Thu, 06 Oct 2022 20:06:14 GMT
 RUN set -ex; 		apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		autoconf 		bzip2-dev 		gmp-dev 		icu-dev 		freetype-dev 		imagemagick-dev 		libjpeg-turbo-dev 		libmemcached-dev 		libpng-dev 		libwebp-dev 		libzip-dev 		openldap-dev 		pcre-dev 		postgresql-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-configure ldap; 	docker-php-ext-install -j "$(nproc)" 		bz2 		bcmath 		exif 		gd 		gmp 		intl 		ldap 		mysqli 		pdo_mysql 		pdo_pgsql 		pgsql 		zip 	; 	pecl install imagick-3.6.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		out="$(php -r 'exit(0);')"; 	[ -z "$out" ]; 	err="$(php -r 'exit(0);' 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]; 		extDir="$(php -r 'echo ini_get("extension_dir");')"; 	[ -d "$extDir" ]; 		pecl install APCu-5.1.21; 	pecl install memcached-3.2.0; 	pecl install redis-5.3.7; 		docker-php-ext-enable 		apcu 		memcached 		redis 	; 	rm -r /tmp/pear; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive "$extDir" 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .joomla-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps; 		! { ldd "$extDir"/*.so | grep 'not found'; }; 	err="$(php --version 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]
-# Fri, 30 Sep 2022 04:49:09 GMT
+# Thu, 06 Oct 2022 20:06:15 GMT
 RUN set -eux; 	docker-php-ext-enable opcache; 	{ 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 		echo 'opcache.fast_shutdown=1'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Fri, 30 Sep 2022 04:49:09 GMT
+# Thu, 06 Oct 2022 20:06:15 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Fri, 30 Sep 2022 04:49:09 GMT
+# Thu, 06 Oct 2022 20:06:15 GMT
 VOLUME [/var/www/html]
-# Fri, 30 Sep 2022 04:49:09 GMT
+# Thu, 06 Oct 2022 20:06:15 GMT
 ENV JOOMLA_VERSION=4.2.2
-# Fri, 30 Sep 2022 04:49:09 GMT
+# Thu, 06 Oct 2022 20:06:16 GMT
 ENV JOOMLA_SHA512=388e91bacee7ff1e07d7fc02df9fb8b5728f960fb4eb8f75679891b029d27ecb7f692b420259bae107e212ca88cecc4804ae0f61a1e771c7b6dd0208cdb04d7b
-# Fri, 30 Sep 2022 04:49:18 GMT
+# Thu, 06 Oct 2022 20:06:26 GMT
 RUN set -ex; 	curl -o joomla.tar.bz2 -SL https://github.com/joomla/joomla-cms/releases/download/4.2.2/Joomla_4.2.2-Stable-Full_Package.tar.bz2; 	echo "$JOOMLA_SHA512 *joomla.tar.bz2" | sha512sum -c -; 	mkdir /usr/src/joomla; 	tar -xf joomla.tar.bz2 -C /usr/src/joomla; 	rm joomla.tar.bz2; 	chown -R www-data:www-data /usr/src/joomla
-# Fri, 30 Sep 2022 04:49:19 GMT
+# Thu, 06 Oct 2022 20:06:26 GMT
 COPY file:0606560d4086c1b747df5afb8b84de5e317d50368eb37b8af3407cb091e8cae8 in /entrypoint.sh 
-# Fri, 30 Sep 2022 04:49:19 GMT
+# Thu, 06 Oct 2022 20:06:27 GMT
 COPY file:5a85d779aaae74cfa3ab6228df0f24236d4d5ad9097e2a1b277e3daea0d6d3dc in /makedb.php 
-# Fri, 30 Sep 2022 04:49:19 GMT
+# Thu, 06 Oct 2022 20:06:27 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Fri, 30 Sep 2022 04:49:19 GMT
+# Thu, 06 Oct 2022 20:06:27 GMT
 CMD ["php-fpm"]
 ```
 
@@ -480,33 +480,33 @@ CMD ["php-fpm"]
 		Last Modified: Thu, 29 Sep 2022 21:30:24 GMT  
 		Size: 8.6 KB (8622 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9bd1e0c60d63773ba9161d6bc39c63c3e998e882fe866fea3962cc9466a964c2`  
-		Last Modified: Fri, 30 Sep 2022 05:04:03 GMT  
-		Size: 41.2 MB (41240457 bytes)  
+	-	`sha256:c2fe15da0cf14127ab216bf3a14049a2b95aa39efb40d1c1f1bf5280d961cc72`  
+		Last Modified: Thu, 06 Oct 2022 20:27:23 GMT  
+		Size: 41.2 MB (41240538 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ee1a44bb1e7896382e504e256f96a0b7c99cf38edb3cb226e09578618a17803b`  
-		Last Modified: Fri, 30 Sep 2022 05:03:56 GMT  
-		Size: 6.0 MB (5960372 bytes)  
+	-	`sha256:7898b229551f6a5befb94e8e36daf455b61c2a1f31233b5d9429a8c7c295c7b9`  
+		Last Modified: Thu, 06 Oct 2022 20:27:17 GMT  
+		Size: 6.0 MB (5959956 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12259f909d8841f20a08ec2990368a91d6d91f5d1cd623d7d281c5fdd6b59a25`  
-		Last Modified: Fri, 30 Sep 2022 05:03:51 GMT  
-		Size: 67.3 KB (67287 bytes)  
+	-	`sha256:034c682a46056069367ba3ddccdc045c4c1b6ffc2fcb38f38ae11fc6741da1e3`  
+		Last Modified: Thu, 06 Oct 2022 20:27:11 GMT  
+		Size: 67.3 KB (67283 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:51404ce39e7485156991f51dc472eb526425ab368b68a7f3c4afe7a2cc3c2ce9`  
-		Last Modified: Fri, 30 Sep 2022 05:03:51 GMT  
-		Size: 390.0 B  
+	-	`sha256:bb30ac852c66ea34fb948704ac83f386057fc1a530a9c886735ba299e8ad2e45`  
+		Last Modified: Thu, 06 Oct 2022 20:27:11 GMT  
+		Size: 393.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:021d5c8b6f59af8f799af139da38892f3bb246d897424d0047605c4640711077`  
-		Last Modified: Fri, 30 Sep 2022 05:04:01 GMT  
-		Size: 23.7 MB (23699353 bytes)  
+	-	`sha256:1a0b7b9e0d9c6a0106c70da9d6436510b051dea1a4c57f793d4be7f63ada1ad8`  
+		Last Modified: Thu, 06 Oct 2022 20:27:23 GMT  
+		Size: 23.7 MB (23699374 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbbb8b009f1e8bb3740fb34f2e25cf731c45d558a46f2fb95c762bba371aae9a`  
-		Last Modified: Fri, 30 Sep 2022 05:03:51 GMT  
-		Size: 1.8 KB (1827 bytes)  
+	-	`sha256:c8222dbb4e85dbb92762b994bde67e154e7a119d3471c0143159c65888314889`  
+		Last Modified: Thu, 06 Oct 2022 20:27:11 GMT  
+		Size: 1.8 KB (1828 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9b78fe492f09aa679507f5cdb3d1de27ef0e2364ec3a845a9b077011ef9a8e0d`  
-		Last Modified: Fri, 30 Sep 2022 05:03:51 GMT  
-		Size: 614.0 B  
+	-	`sha256:9beb482d928c6c82c2e943548320e21009f48e25d3603723e14c95e5e878bc83`  
+		Last Modified: Thu, 06 Oct 2022 20:27:11 GMT  
+		Size: 613.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `joomla:4-php8.1-fpm-alpine` - linux; arm64 variant v8
