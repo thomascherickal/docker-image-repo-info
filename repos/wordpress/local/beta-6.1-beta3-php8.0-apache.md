@@ -1,10 +1,10 @@
-# `wordpress:beta-6.1-beta2-apache`
+# `wordpress:beta-6.1-beta3-php8.0-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3138730d3248e75e60adeb6a20103003ed691a4482302bbf98eb30aefd8bac95`
-- Created: `2022-09-29T16:26:37.301599215Z`
-- Virtual Size: ~ 614.20 Mb  
+- Image ID: `sha256:182fe835c32d08909b6e325a7e5f5e954f761cc87f00930421d0cc496bd1421b`
+- Created: `2022-10-06T02:03:59.174786245Z`
+- Virtual Size: ~ 616.68 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -18,11 +18,11 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.32`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.32.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.32.tar.xz.asc`
-  - `PHP_SHA256=323332c991e8ef30b1d219cb10f5e30f11b5f319ce4c6642a5470d75ade7864a`
+  - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F`
+  - `PHP_VERSION=8.0.24`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.24.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.24.tar.xz.asc`
+  - `PHP_SHA256=8e6a63ac9cdabe4c345b32a54b18f348d9e50a1decda217faf2d61278d22f08b`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -4176,11 +4176,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tiff/4.2.0-1+deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-1+deb11u5`
+### `dpkg` source package: `tzdata=2021a-1+deb11u6`
 
 Binary Packages:
 
-- `tzdata=2021a-1+deb11u5`
+- `tzdata=2021a-1+deb11u6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -4189,18 +4189,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u5
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u5.dsc' tzdata_2021a-1+deb11u5.dsc 2269 SHA256:90144991fdbc0676acbb2f09730b754df24ebb8a422e041b70a614871425afeb
+$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u6
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u6.dsc' tzdata_2021a-1+deb11u6.dsc 2269 SHA256:2d3bf44d3a46c6d7af2dead664360f0e05835c83a6c0475851c2fd6ee2923c85
 'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
 'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u5.debian.tar.xz' tzdata_2021a-1+deb11u5.debian.tar.xz 112384 SHA256:92e9016c42002bfe242cb91cdd6cef7163a15f2998767e67bb2f8390bd13de45
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u6.debian.tar.xz' tzdata_2021a-1+deb11u6.debian.tar.xz 113564 SHA256:1d4e96a91bea03a87b99cc90a7e5b378f2ccc6a976966ceb3dcb80c9109e65cc
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u5/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u5/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u6/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
