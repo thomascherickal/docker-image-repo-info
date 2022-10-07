@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2de12e61fafd1d77dce6f0d007a083bd58e048736b61b614748b30b1bb6e4be3`
-- Created: `2022-09-13T13:48:22.949389833Z`
+- Image ID: `sha256:9641e63149aae2b7aca327625269ee2b22d89961373915971480757243d82409`
+- Created: `2022-10-05T09:42:51.646351043Z`
 - Virtual Size: ~ 1.10 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -232,11 +232,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/bash/5.0-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/bash/5.0-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `bzip2=1.0.6-9.2~deb10u1`
+### `dpkg` source package: `bzip2=1.0.6-9.2~deb10u2`
 
 Binary Packages:
 
-- `libbz2-1.0:amd64=1.0.6-9.2~deb10u1`
+- `libbz2-1.0:amd64=1.0.6-9.2~deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libbz2-1.0/copyright`)
 
@@ -246,17 +246,17 @@ Licenses: (parsed from: `/usr/share/doc/libbz2-1.0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris bzip2=1.0.6-9.2~deb10u1
-'http://deb.debian.org/debian/pool/main/b/bzip2/bzip2_1.0.6-9.2%7edeb10u1.dsc' bzip2_1.0.6-9.2~deb10u1.dsc 2380 SHA256:f518d7c599e1028002a739bd9123fa23767d74e1c5cf1d05f36eb7de9fc25b5c
-'http://deb.debian.org/debian/pool/main/b/bzip2/bzip2_1.0.6.orig.tar.bz2' bzip2_1.0.6.orig.tar.bz2 708737 SHA256:d70a9ccd8bdf47e302d96c69fecd54925f45d9c7b966bb4ef5f56b770960afa7
-'http://deb.debian.org/debian/pool/main/b/bzip2/bzip2_1.0.6-9.2%7edeb10u1.debian.tar.bz2' bzip2_1.0.6-9.2~deb10u1.debian.tar.bz2 27542 SHA256:44900f7371503fe35ea7d3aa5b8ab8c677300be9b0d5277838d0c874be9c8541
+$ apt-get source -qq --print-uris bzip2=1.0.6-9.2~deb10u2
+'http://deb.debian.org/debian-security/pool/updates/main/b/bzip2/bzip2_1.0.6-9.2%7edeb10u2.dsc' bzip2_1.0.6-9.2~deb10u2.dsc 2225 SHA256:ebc297b875639162712a3e2fe09218566b0955441e7211a7f211211889b69727
+'http://deb.debian.org/debian-security/pool/updates/main/b/bzip2/bzip2_1.0.6.orig.tar.bz2' bzip2_1.0.6.orig.tar.bz2 708737 SHA256:d70a9ccd8bdf47e302d96c69fecd54925f45d9c7b966bb4ef5f56b770960afa7
+'http://deb.debian.org/debian-security/pool/updates/main/b/bzip2/bzip2_1.0.6-9.2%7edeb10u2.debian.tar.bz2' bzip2_1.0.6-9.2~deb10u2.debian.tar.bz2 27749 SHA256:cec354e1a9f9251ec4cd02897e6557dd3cb84941da250f2ee095687728558b62
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/bzip2/1.0.6-9.2~deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/bzip2/1.0.6-9.2~deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bzip2/1.0.6-9.2~deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/bzip2/1.0.6-9.2~deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/bzip2/1.0.6-9.2~deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/bzip2/1.0.6-9.2~deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cdebconf=0.249`
 
@@ -513,11 +513,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.44.5-1+deb10u3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.44.5-1+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `expat=2.2.6-2+deb10u4`
+### `dpkg` source package: `expat=2.2.6-2+deb10u5`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.6-2+deb10u4`
+- `libexpat1:amd64=2.2.6-2+deb10u5`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
@@ -526,17 +526,17 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris expat=2.2.6-2+deb10u4
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.6-2%2bdeb10u4.dsc' expat_2.2.6-2+deb10u4.dsc 2136 SHA256:1c675fb1b3fcde011eef35e8a96c5ceddcf7d89ccfeffe79b4e3e4ca166732c5
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.6.orig.tar.gz' expat_2.2.6.orig.tar.gz 8275473 SHA256:574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.6-2%2bdeb10u4.debian.tar.xz' expat_2.2.6-2+deb10u4.debian.tar.xz 27016 SHA256:f24d5eee71174ad5c21620e7f3374ee742be93007f6db68ba898523220405b8f
+$ apt-get source -qq --print-uris expat=2.2.6-2+deb10u5
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u5.dsc' expat_2.2.6-2+deb10u5.dsc 2140 SHA256:2eee1ea4da8668417e03851c3934773e7b39bacd3f2c4da35644a8b7f472b6da
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6.orig.tar.gz' expat_2.2.6.orig.tar.gz 8275473 SHA256:574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u5.debian.tar.xz' expat_2.2.6-2+deb10u5.debian.tar.xz 28464 SHA256:102e9c7195796b831942b8b380b6396906a49b54426c5082baea4602dd07ef4c
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/expat/2.2.6-2+deb10u4/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.2.6-2+deb10u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/expat/2.2.6-2+deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/expat/2.2.6-2+deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.6.0+git+20190209-2`
 
@@ -1736,11 +1736,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-0+deb10u6`
+### `dpkg` source package: `tzdata=2021a-0+deb10u7`
 
 Binary Packages:
 
-- `tzdata=2021a-0+deb10u6`
+- `tzdata=2021a-0+deb10u7`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1749,18 +1749,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u6
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0%2bdeb10u6.dsc' tzdata_2021a-0+deb10u6.dsc 2264 SHA256:47d6349b328572d8fd0a8cc199d2ba51f426cbd9de50802af219cb115669ad22
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-0%2bdeb10u6.debian.tar.xz' tzdata_2021a-0+deb10u6.debian.tar.xz 113208 SHA256:6424cf192b1fbb327a976c9d9713c363371c6065f5bfb23bdb79c11dbc2e4868
+$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u7
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u7.dsc' tzdata_2021a-0+deb10u7.dsc 2023 SHA256:c7464bc7872aa0b43653a38c1f131d31531bbb18d7ed3e34e3a47b2b62dc0801
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u7.debian.tar.xz' tzdata_2021a-0+deb10u7.debian.tar.xz 114484 SHA256:808028fadf6f8a2e3349c29c761ea3063571e1f286ac4e27460b0fbe87bd27a4
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u6/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u6/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u7/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
@@ -1873,11 +1872,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/xz-utils/5.2.4-1+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/xz-utils/5.2.4-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `zlib=1:1.2.11.dfsg-1+deb10u1`
+### `dpkg` source package: `zlib=1:1.2.11.dfsg-1+deb10u2`
 
 Binary Packages:
 
-- `zlib1g:amd64=1:1.2.11.dfsg-1+deb10u1`
+- `zlib1g:amd64=1:1.2.11.dfsg-1+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
@@ -1886,14 +1885,14 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-1+deb10u1
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.dsc' zlib_1.2.11.dfsg-1+deb10u1.dsc 2774 SHA256:3eddd036f314f8a7717c41fe7d3c935653afeb6b7f7bf6d9ad80c10ef1c4bdc3
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u1.debian.tar.xz' zlib_1.2.11.dfsg-1+deb10u1.debian.tar.xz 23092 SHA256:eb26660e5b8a39f945a4fe1284e29b0279ded3513327e3cbd51c51921758f13f
+$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-1+deb10u2
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u2.dsc' zlib_1.2.11.dfsg-1+deb10u2.dsc 2619 SHA256:6166bc693b849b1547e0870b91186c43c9cc5187c9a6eb0b44f9b293d687efd9
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
+'http://deb.debian.org/debian-security/pool/updates/main/z/zlib/zlib_1.2.11.dfsg-1%2bdeb10u2.debian.tar.xz' zlib_1.2.11.dfsg-1+deb10u2.debian.tar.xz 23772 SHA256:dd1c6fa2c25e23499713ac7e891d4c1218676240855c8d24604b9ae7c8eea2cf
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-1+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-1+deb10u2/ (for access to the source package after it no longer exists in the archive)
