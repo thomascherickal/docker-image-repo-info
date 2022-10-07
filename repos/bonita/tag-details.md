@@ -1797,11 +1797,777 @@ CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
 
 ## `bonita:2022.2`
 
-**does not exist** (yet?)
+```console
+$ docker pull bonita@sha256:9326157dd76ba4fafc97e8380d64228cd53dfe369465e872e6d616c7a257b927
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 3
+	-	linux; amd64
+	-	linux; arm64 variant v8
+	-	linux; ppc64le
+
+### `bonita:2022.2` - linux; amd64
+
+```console
+$ docker pull bonita@sha256:96beb319839334dd24cf8b6cc849e68533fad89cf5aca869e1cc4ebc039d0f65
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **183.2 MB (183206256 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:09da6c720099e834ec57a16315d0defea6cc1a1518380a596ffd3a868a9fdb59`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:19:53 GMT
+ADD file:2a949686d9886ac7c10582a6c29116fd29d3077d02755e87e111870d63607725 in / 
+# Tue, 09 Aug 2022 17:19:53 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:19:35 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:19:39 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:19:39 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:19:40 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:19:41 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:19:42 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:19:42 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:19:50 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:19:50 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:19:52 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:19:52 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:19:52 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49`  
+		Last Modified: Tue, 09 Aug 2022 14:25:13 GMT  
+		Size: 2.8 MB (2806054 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f5705f95d901e9d31f362e998a2c059acf47627969b042b4e7aaa72b533530e0`  
+		Last Modified: Fri, 07 Oct 2022 19:20:29 GMT  
+		Size: 61.2 MB (61197146 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:76059907474246c43b72aae8948b443645cfd4ab27e255f2555ba7a1f133806f`  
+		Last Modified: Fri, 07 Oct 2022 19:20:22 GMT  
+		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:022b3528f0c93c13aeb319e8037b590351d556f7513d476a1da5d77734de820a`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 1.3 KB (1264 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:479c21d4b689cde4c6b32704ec260ace9395c580c5fd4403ec9691e367c6f91c`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 148.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:af35cb2d6152fd421952af9e5bce9d544b5dd30338842f1d40c610fa142e2592`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 3.0 KB (3048 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f202ed4e518b9784b3e9b2db17c26afe1be89539f86cea9362694f65fc089d70`  
+		Last Modified: Fri, 07 Oct 2022 19:20:26 GMT  
+		Size: 119.2 MB (119193019 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e72bf2b5af323e9cc69f227a7c46ffdb4dd88609ecedc45a1a807120aa39fe89`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 5.4 KB (5422 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `bonita:2022.2` - linux; arm64 variant v8
+
+```console
+$ docker pull bonita@sha256:678134bdb94e4f63cf83093514b25b71dfe9b347c97625e9a786aadd96ef6138
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **182.3 MB (182348091 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:60ce03089f322a258cae18ca28497bd1fa0fb756aae2b79915561d63c521a728`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:39:41 GMT
+ADD file:960fd469d48cf79ba14bbda71f3192074ed860c112e30e0bc92bff3440cb45ab in / 
+# Tue, 09 Aug 2022 17:39:42 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:39:43 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:39:47 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:39:48 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:39:49 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:39:50 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:39:51 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:39:52 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:39:53 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:39:54 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:39:55 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:39:56 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:39:57 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:39:58 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:39:59 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:40:00 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:40:01 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:40:03 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:40:11 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:40:11 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:40:12 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:40:13 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:40:14 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:40:15 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:40:16 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:40:17 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:40:18 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:40:19 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:40:20 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:40:21 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:40:22 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:40:23 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:40:25 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:40:25 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:40:26 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:40:27 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:9b18e9b68314027565b90ff6189d65942c0f7986da80df008b8431276885218e`  
+		Last Modified: Tue, 09 Aug 2022 17:40:38 GMT  
+		Size: 2.7 MB (2707663 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c497bd0e996de2d902f26a3023b901109ea46ec8d01ca2f527040175722bd069`  
+		Last Modified: Fri, 07 Oct 2022 19:41:24 GMT  
+		Size: 60.4 MB (60439220 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7fe10e617bb9fab6e845f6c0feb39e110610ab11115ba462991c612f7a410fb4`  
+		Last Modified: Fri, 07 Oct 2022 19:41:16 GMT  
+		Size: 119.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d5a7bd7e5925381829a64c85fde46c63063cde25fe1a409cede494629ebbddb4`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 1.2 KB (1233 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8354d92c69b70dd6748ac85796528746adb07c9665e0686c52eeca5926e56a71`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 111.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f17a0dcd655da714128f4233e36d2c2686818f3b524642fc1a4bd4ac143f735e`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 3.0 KB (3011 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d141b4d5dcee5ce2546270c1002d4a83d7458f062a52b9b7b41a3f75fb6276f`  
+		Last Modified: Fri, 07 Oct 2022 19:41:27 GMT  
+		Size: 119.2 MB (119191347 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ce674d50db2ba300dc2c6d26d93908e4c56432fa7f6d8047cd64999bf1dfe939`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 5.4 KB (5387 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `bonita:2022.2` - linux; ppc64le
+
+```console
+$ docker pull bonita@sha256:2c3128dbea0d3d5d8a63712d1db500fdecbc8b9d2995a695c37b4ebb80b5ef48
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **179.3 MB (179326996 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:1e3838b00163be847a672d409b30519320813b30bf0947292136a897403f4be7`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:17:09 GMT
+ADD file:66b351666e41834033d334aeb3dc6998dea77aa22e8e254028c923fee67a41a8 in / 
+# Tue, 09 Aug 2022 17:17:10 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:16:36 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:16:45 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:16:48 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:16:49 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:16:49 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:16:53 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:16:54 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:17:11 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:17:12 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:17:16 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:17:16 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:17:16 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:17:17 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:17:17 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:17:17 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:c79e5d1a8c89b87020a754c8a5c8370faaa37bfb5bca1d8af66770d522ef1caf`  
+		Last Modified: Tue, 09 Aug 2022 17:18:26 GMT  
+		Size: 2.8 MB (2803320 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3c61989a45cdf74208e16d4c9fef94cee3d8eb10602f7ac45e023fb053dbf4e7`  
+		Last Modified: Fri, 07 Oct 2022 19:18:27 GMT  
+		Size: 57.3 MB (57320650 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fbd3fc5ec26c7a10b790182e0bc521d1c16847666abf323733fe17fb228c1839`  
+		Last Modified: Fri, 07 Oct 2022 19:18:13 GMT  
+		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2817209af0ad99735a5596f59d738933e465b7ef11feeaa492e45b842fb1a4cc`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 1.3 KB (1263 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d550240e348d5a213ea1a0d93c6108eb6c1d9a1936d7579c893c4cf91024ba1`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 148.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddd7105d16280bde13de94b8d7829efa1a960a706fae2772e49d24c0b8c0bad2`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 3.0 KB (3043 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:01c5f0b41531d404e2a3e56f2983347537cec2d7cc8d0266e17897e3ef247be3`  
+		Last Modified: Fri, 07 Oct 2022 19:18:22 GMT  
+		Size: 119.2 MB (119192998 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7377eb804f8177040817c5380de0d04576a7b288322ff9c5a3ee7305720e5313`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 5.4 KB (5419 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `bonita:2022.2-u0`
 
-**does not exist** (yet?)
+```console
+$ docker pull bonita@sha256:9326157dd76ba4fafc97e8380d64228cd53dfe369465e872e6d616c7a257b927
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 3
+	-	linux; amd64
+	-	linux; arm64 variant v8
+	-	linux; ppc64le
+
+### `bonita:2022.2-u0` - linux; amd64
+
+```console
+$ docker pull bonita@sha256:96beb319839334dd24cf8b6cc849e68533fad89cf5aca869e1cc4ebc039d0f65
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **183.2 MB (183206256 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:09da6c720099e834ec57a16315d0defea6cc1a1518380a596ffd3a868a9fdb59`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:19:53 GMT
+ADD file:2a949686d9886ac7c10582a6c29116fd29d3077d02755e87e111870d63607725 in / 
+# Tue, 09 Aug 2022 17:19:53 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:19:35 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:19:39 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:19:39 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:19:40 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:19:41 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:19:42 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:19:42 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:19:50 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:19:50 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:19:52 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:19:52 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:19:52 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49`  
+		Last Modified: Tue, 09 Aug 2022 14:25:13 GMT  
+		Size: 2.8 MB (2806054 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f5705f95d901e9d31f362e998a2c059acf47627969b042b4e7aaa72b533530e0`  
+		Last Modified: Fri, 07 Oct 2022 19:20:29 GMT  
+		Size: 61.2 MB (61197146 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:76059907474246c43b72aae8948b443645cfd4ab27e255f2555ba7a1f133806f`  
+		Last Modified: Fri, 07 Oct 2022 19:20:22 GMT  
+		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:022b3528f0c93c13aeb319e8037b590351d556f7513d476a1da5d77734de820a`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 1.3 KB (1264 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:479c21d4b689cde4c6b32704ec260ace9395c580c5fd4403ec9691e367c6f91c`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 148.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:af35cb2d6152fd421952af9e5bce9d544b5dd30338842f1d40c610fa142e2592`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 3.0 KB (3048 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f202ed4e518b9784b3e9b2db17c26afe1be89539f86cea9362694f65fc089d70`  
+		Last Modified: Fri, 07 Oct 2022 19:20:26 GMT  
+		Size: 119.2 MB (119193019 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e72bf2b5af323e9cc69f227a7c46ffdb4dd88609ecedc45a1a807120aa39fe89`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 5.4 KB (5422 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `bonita:2022.2-u0` - linux; arm64 variant v8
+
+```console
+$ docker pull bonita@sha256:678134bdb94e4f63cf83093514b25b71dfe9b347c97625e9a786aadd96ef6138
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **182.3 MB (182348091 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:60ce03089f322a258cae18ca28497bd1fa0fb756aae2b79915561d63c521a728`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:39:41 GMT
+ADD file:960fd469d48cf79ba14bbda71f3192074ed860c112e30e0bc92bff3440cb45ab in / 
+# Tue, 09 Aug 2022 17:39:42 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:39:43 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:39:47 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:39:48 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:39:49 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:39:50 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:39:51 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:39:52 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:39:53 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:39:54 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:39:55 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:39:56 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:39:57 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:39:58 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:39:59 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:40:00 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:40:01 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:40:03 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:40:11 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:40:11 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:40:12 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:40:13 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:40:14 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:40:15 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:40:16 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:40:17 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:40:18 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:40:19 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:40:20 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:40:21 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:40:22 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:40:23 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:40:25 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:40:25 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:40:26 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:40:27 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:9b18e9b68314027565b90ff6189d65942c0f7986da80df008b8431276885218e`  
+		Last Modified: Tue, 09 Aug 2022 17:40:38 GMT  
+		Size: 2.7 MB (2707663 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c497bd0e996de2d902f26a3023b901109ea46ec8d01ca2f527040175722bd069`  
+		Last Modified: Fri, 07 Oct 2022 19:41:24 GMT  
+		Size: 60.4 MB (60439220 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7fe10e617bb9fab6e845f6c0feb39e110610ab11115ba462991c612f7a410fb4`  
+		Last Modified: Fri, 07 Oct 2022 19:41:16 GMT  
+		Size: 119.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d5a7bd7e5925381829a64c85fde46c63063cde25fe1a409cede494629ebbddb4`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 1.2 KB (1233 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8354d92c69b70dd6748ac85796528746adb07c9665e0686c52eeca5926e56a71`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 111.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f17a0dcd655da714128f4233e36d2c2686818f3b524642fc1a4bd4ac143f735e`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 3.0 KB (3011 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d141b4d5dcee5ce2546270c1002d4a83d7458f062a52b9b7b41a3f75fb6276f`  
+		Last Modified: Fri, 07 Oct 2022 19:41:27 GMT  
+		Size: 119.2 MB (119191347 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ce674d50db2ba300dc2c6d26d93908e4c56432fa7f6d8047cd64999bf1dfe939`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 5.4 KB (5387 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `bonita:2022.2-u0` - linux; ppc64le
+
+```console
+$ docker pull bonita@sha256:2c3128dbea0d3d5d8a63712d1db500fdecbc8b9d2995a695c37b4ebb80b5ef48
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **179.3 MB (179326996 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:1e3838b00163be847a672d409b30519320813b30bf0947292136a897403f4be7`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:17:09 GMT
+ADD file:66b351666e41834033d334aeb3dc6998dea77aa22e8e254028c923fee67a41a8 in / 
+# Tue, 09 Aug 2022 17:17:10 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:16:36 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:16:45 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:16:48 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:16:49 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:16:49 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:16:53 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:16:54 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:17:11 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:17:12 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:17:16 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:17:16 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:17:16 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:17:17 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:17:17 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:17:17 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:c79e5d1a8c89b87020a754c8a5c8370faaa37bfb5bca1d8af66770d522ef1caf`  
+		Last Modified: Tue, 09 Aug 2022 17:18:26 GMT  
+		Size: 2.8 MB (2803320 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3c61989a45cdf74208e16d4c9fef94cee3d8eb10602f7ac45e023fb053dbf4e7`  
+		Last Modified: Fri, 07 Oct 2022 19:18:27 GMT  
+		Size: 57.3 MB (57320650 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fbd3fc5ec26c7a10b790182e0bc521d1c16847666abf323733fe17fb228c1839`  
+		Last Modified: Fri, 07 Oct 2022 19:18:13 GMT  
+		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2817209af0ad99735a5596f59d738933e465b7ef11feeaa492e45b842fb1a4cc`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 1.3 KB (1263 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d550240e348d5a213ea1a0d93c6108eb6c1d9a1936d7579c893c4cf91024ba1`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 148.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddd7105d16280bde13de94b8d7829efa1a960a706fae2772e49d24c0b8c0bad2`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 3.0 KB (3043 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:01c5f0b41531d404e2a3e56f2983347537cec2d7cc8d0266e17897e3ef247be3`  
+		Last Modified: Fri, 07 Oct 2022 19:18:22 GMT  
+		Size: 119.2 MB (119192998 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7377eb804f8177040817c5380de0d04576a7b288322ff9c5a3ee7305720e5313`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 5.4 KB (5419 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `bonita:7.12`
 
@@ -3923,16 +4689,782 @@ CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
 
 ## `bonita:7.15`
 
-**does not exist** (yet?)
+```console
+$ docker pull bonita@sha256:9326157dd76ba4fafc97e8380d64228cd53dfe369465e872e6d616c7a257b927
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 3
+	-	linux; amd64
+	-	linux; arm64 variant v8
+	-	linux; ppc64le
+
+### `bonita:7.15` - linux; amd64
+
+```console
+$ docker pull bonita@sha256:96beb319839334dd24cf8b6cc849e68533fad89cf5aca869e1cc4ebc039d0f65
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **183.2 MB (183206256 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:09da6c720099e834ec57a16315d0defea6cc1a1518380a596ffd3a868a9fdb59`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:19:53 GMT
+ADD file:2a949686d9886ac7c10582a6c29116fd29d3077d02755e87e111870d63607725 in / 
+# Tue, 09 Aug 2022 17:19:53 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:19:35 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:19:39 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:19:39 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:19:40 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:19:41 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:19:42 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:19:42 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:19:50 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:19:50 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:19:52 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:19:52 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:19:52 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49`  
+		Last Modified: Tue, 09 Aug 2022 14:25:13 GMT  
+		Size: 2.8 MB (2806054 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f5705f95d901e9d31f362e998a2c059acf47627969b042b4e7aaa72b533530e0`  
+		Last Modified: Fri, 07 Oct 2022 19:20:29 GMT  
+		Size: 61.2 MB (61197146 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:76059907474246c43b72aae8948b443645cfd4ab27e255f2555ba7a1f133806f`  
+		Last Modified: Fri, 07 Oct 2022 19:20:22 GMT  
+		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:022b3528f0c93c13aeb319e8037b590351d556f7513d476a1da5d77734de820a`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 1.3 KB (1264 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:479c21d4b689cde4c6b32704ec260ace9395c580c5fd4403ec9691e367c6f91c`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 148.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:af35cb2d6152fd421952af9e5bce9d544b5dd30338842f1d40c610fa142e2592`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 3.0 KB (3048 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f202ed4e518b9784b3e9b2db17c26afe1be89539f86cea9362694f65fc089d70`  
+		Last Modified: Fri, 07 Oct 2022 19:20:26 GMT  
+		Size: 119.2 MB (119193019 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e72bf2b5af323e9cc69f227a7c46ffdb4dd88609ecedc45a1a807120aa39fe89`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 5.4 KB (5422 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `bonita:7.15` - linux; arm64 variant v8
+
+```console
+$ docker pull bonita@sha256:678134bdb94e4f63cf83093514b25b71dfe9b347c97625e9a786aadd96ef6138
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **182.3 MB (182348091 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:60ce03089f322a258cae18ca28497bd1fa0fb756aae2b79915561d63c521a728`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:39:41 GMT
+ADD file:960fd469d48cf79ba14bbda71f3192074ed860c112e30e0bc92bff3440cb45ab in / 
+# Tue, 09 Aug 2022 17:39:42 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:39:43 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:39:47 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:39:48 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:39:49 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:39:50 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:39:51 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:39:52 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:39:53 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:39:54 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:39:55 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:39:56 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:39:57 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:39:58 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:39:59 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:40:00 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:40:01 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:40:03 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:40:11 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:40:11 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:40:12 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:40:13 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:40:14 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:40:15 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:40:16 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:40:17 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:40:18 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:40:19 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:40:20 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:40:21 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:40:22 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:40:23 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:40:25 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:40:25 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:40:26 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:40:27 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:9b18e9b68314027565b90ff6189d65942c0f7986da80df008b8431276885218e`  
+		Last Modified: Tue, 09 Aug 2022 17:40:38 GMT  
+		Size: 2.7 MB (2707663 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c497bd0e996de2d902f26a3023b901109ea46ec8d01ca2f527040175722bd069`  
+		Last Modified: Fri, 07 Oct 2022 19:41:24 GMT  
+		Size: 60.4 MB (60439220 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7fe10e617bb9fab6e845f6c0feb39e110610ab11115ba462991c612f7a410fb4`  
+		Last Modified: Fri, 07 Oct 2022 19:41:16 GMT  
+		Size: 119.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d5a7bd7e5925381829a64c85fde46c63063cde25fe1a409cede494629ebbddb4`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 1.2 KB (1233 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8354d92c69b70dd6748ac85796528746adb07c9665e0686c52eeca5926e56a71`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 111.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f17a0dcd655da714128f4233e36d2c2686818f3b524642fc1a4bd4ac143f735e`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 3.0 KB (3011 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d141b4d5dcee5ce2546270c1002d4a83d7458f062a52b9b7b41a3f75fb6276f`  
+		Last Modified: Fri, 07 Oct 2022 19:41:27 GMT  
+		Size: 119.2 MB (119191347 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ce674d50db2ba300dc2c6d26d93908e4c56432fa7f6d8047cd64999bf1dfe939`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 5.4 KB (5387 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `bonita:7.15` - linux; ppc64le
+
+```console
+$ docker pull bonita@sha256:2c3128dbea0d3d5d8a63712d1db500fdecbc8b9d2995a695c37b4ebb80b5ef48
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **179.3 MB (179326996 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:1e3838b00163be847a672d409b30519320813b30bf0947292136a897403f4be7`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:17:09 GMT
+ADD file:66b351666e41834033d334aeb3dc6998dea77aa22e8e254028c923fee67a41a8 in / 
+# Tue, 09 Aug 2022 17:17:10 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:16:36 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:16:45 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:16:48 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:16:49 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:16:49 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:16:53 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:16:54 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:17:11 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:17:12 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:17:16 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:17:16 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:17:16 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:17:17 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:17:17 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:17:17 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:c79e5d1a8c89b87020a754c8a5c8370faaa37bfb5bca1d8af66770d522ef1caf`  
+		Last Modified: Tue, 09 Aug 2022 17:18:26 GMT  
+		Size: 2.8 MB (2803320 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3c61989a45cdf74208e16d4c9fef94cee3d8eb10602f7ac45e023fb053dbf4e7`  
+		Last Modified: Fri, 07 Oct 2022 19:18:27 GMT  
+		Size: 57.3 MB (57320650 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fbd3fc5ec26c7a10b790182e0bc521d1c16847666abf323733fe17fb228c1839`  
+		Last Modified: Fri, 07 Oct 2022 19:18:13 GMT  
+		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2817209af0ad99735a5596f59d738933e465b7ef11feeaa492e45b842fb1a4cc`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 1.3 KB (1263 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d550240e348d5a213ea1a0d93c6108eb6c1d9a1936d7579c893c4cf91024ba1`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 148.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddd7105d16280bde13de94b8d7829efa1a960a706fae2772e49d24c0b8c0bad2`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 3.0 KB (3043 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:01c5f0b41531d404e2a3e56f2983347537cec2d7cc8d0266e17897e3ef247be3`  
+		Last Modified: Fri, 07 Oct 2022 19:18:22 GMT  
+		Size: 119.2 MB (119192998 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7377eb804f8177040817c5380de0d04576a7b288322ff9c5a3ee7305720e5313`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 5.4 KB (5419 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `bonita:7.15.0`
 
-**does not exist** (yet?)
+```console
+$ docker pull bonita@sha256:9326157dd76ba4fafc97e8380d64228cd53dfe369465e872e6d616c7a257b927
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 3
+	-	linux; amd64
+	-	linux; arm64 variant v8
+	-	linux; ppc64le
+
+### `bonita:7.15.0` - linux; amd64
+
+```console
+$ docker pull bonita@sha256:96beb319839334dd24cf8b6cc849e68533fad89cf5aca869e1cc4ebc039d0f65
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **183.2 MB (183206256 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:09da6c720099e834ec57a16315d0defea6cc1a1518380a596ffd3a868a9fdb59`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:19:53 GMT
+ADD file:2a949686d9886ac7c10582a6c29116fd29d3077d02755e87e111870d63607725 in / 
+# Tue, 09 Aug 2022 17:19:53 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:19:35 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:19:39 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:19:39 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:19:40 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:19:40 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:19:41 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:19:42 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:19:42 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:19:50 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:19:50 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:19:51 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:19:52 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:19:52 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:19:52 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:19:52 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49`  
+		Last Modified: Tue, 09 Aug 2022 14:25:13 GMT  
+		Size: 2.8 MB (2806054 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f5705f95d901e9d31f362e998a2c059acf47627969b042b4e7aaa72b533530e0`  
+		Last Modified: Fri, 07 Oct 2022 19:20:29 GMT  
+		Size: 61.2 MB (61197146 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:76059907474246c43b72aae8948b443645cfd4ab27e255f2555ba7a1f133806f`  
+		Last Modified: Fri, 07 Oct 2022 19:20:22 GMT  
+		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:022b3528f0c93c13aeb319e8037b590351d556f7513d476a1da5d77734de820a`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 1.3 KB (1264 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:479c21d4b689cde4c6b32704ec260ace9395c580c5fd4403ec9691e367c6f91c`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 148.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:af35cb2d6152fd421952af9e5bce9d544b5dd30338842f1d40c610fa142e2592`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 3.0 KB (3048 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f202ed4e518b9784b3e9b2db17c26afe1be89539f86cea9362694f65fc089d70`  
+		Last Modified: Fri, 07 Oct 2022 19:20:26 GMT  
+		Size: 119.2 MB (119193019 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e72bf2b5af323e9cc69f227a7c46ffdb4dd88609ecedc45a1a807120aa39fe89`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 5.4 KB (5422 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `bonita:7.15.0` - linux; arm64 variant v8
+
+```console
+$ docker pull bonita@sha256:678134bdb94e4f63cf83093514b25b71dfe9b347c97625e9a786aadd96ef6138
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **182.3 MB (182348091 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:60ce03089f322a258cae18ca28497bd1fa0fb756aae2b79915561d63c521a728`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:39:41 GMT
+ADD file:960fd469d48cf79ba14bbda71f3192074ed860c112e30e0bc92bff3440cb45ab in / 
+# Tue, 09 Aug 2022 17:39:42 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:39:43 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:39:47 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:39:48 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:39:49 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:39:50 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:39:51 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:39:52 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:39:53 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:39:54 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:39:55 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:39:56 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:39:57 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:39:58 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:39:59 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:40:00 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:40:01 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:40:03 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:40:11 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:40:11 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:40:12 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:40:13 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:40:14 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:40:15 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:40:16 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:40:17 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:40:18 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:40:19 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:40:20 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:40:21 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:40:22 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:40:23 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:40:25 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:40:25 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:40:26 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:40:27 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:9b18e9b68314027565b90ff6189d65942c0f7986da80df008b8431276885218e`  
+		Last Modified: Tue, 09 Aug 2022 17:40:38 GMT  
+		Size: 2.7 MB (2707663 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c497bd0e996de2d902f26a3023b901109ea46ec8d01ca2f527040175722bd069`  
+		Last Modified: Fri, 07 Oct 2022 19:41:24 GMT  
+		Size: 60.4 MB (60439220 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7fe10e617bb9fab6e845f6c0feb39e110610ab11115ba462991c612f7a410fb4`  
+		Last Modified: Fri, 07 Oct 2022 19:41:16 GMT  
+		Size: 119.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d5a7bd7e5925381829a64c85fde46c63063cde25fe1a409cede494629ebbddb4`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 1.2 KB (1233 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8354d92c69b70dd6748ac85796528746adb07c9665e0686c52eeca5926e56a71`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 111.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f17a0dcd655da714128f4233e36d2c2686818f3b524642fc1a4bd4ac143f735e`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 3.0 KB (3011 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d141b4d5dcee5ce2546270c1002d4a83d7458f062a52b9b7b41a3f75fb6276f`  
+		Last Modified: Fri, 07 Oct 2022 19:41:27 GMT  
+		Size: 119.2 MB (119191347 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ce674d50db2ba300dc2c6d26d93908e4c56432fa7f6d8047cd64999bf1dfe939`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 5.4 KB (5387 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `bonita:7.15.0` - linux; ppc64le
+
+```console
+$ docker pull bonita@sha256:2c3128dbea0d3d5d8a63712d1db500fdecbc8b9d2995a695c37b4ebb80b5ef48
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **179.3 MB (179326996 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:1e3838b00163be847a672d409b30519320813b30bf0947292136a897403f4be7`
+-	Entrypoint: `["\/opt\/files\/startup.sh"]`
+-	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
+
+```dockerfile
+# Tue, 09 Aug 2022 17:17:09 GMT
+ADD file:66b351666e41834033d334aeb3dc6998dea77aa22e8e254028c923fee67a41a8 in / 
+# Tue, 09 Aug 2022 17:17:10 GMT
+CMD ["/bin/sh"]
+# Fri, 07 Oct 2022 19:16:36 GMT
+LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
+# Fri, 07 Oct 2022 19:16:45 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:16:48 GMT
+RUN mkdir /opt/custom-init.d/
+# Fri, 07 Oct 2022 19:16:49 GMT
+RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
+# Fri, 07 Oct 2022 19:16:49 GMT
+ARG BONITA_VERSION
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BRANDING_VERSION
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BONITA_SHA256
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BASE_URL
+# Fri, 07 Oct 2022 19:16:50 GMT
+ARG BONITA_URL
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:16:53 GMT
+RUN mkdir /opt/files
+# Fri, 07 Oct 2022 19:16:54 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:17:11 GMT
+RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
+# Fri, 07 Oct 2022 19:17:12 GMT
+ENV HTTP_API=false
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV HTTP_API_USERNAME=http-api
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV HTTP_API_PASSWORD=
+# Fri, 07 Oct 2022 19:17:13 GMT
+ENV MONITORING_USERNAME=monitoring
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV JMX_REMOTE_ACCESS=false
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV REMOTE_IP_VALVE_ENABLED=false
+# Fri, 07 Oct 2022 19:17:14 GMT
+ENV ACCESSLOGS_STDOUT_ENABLED=false
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_FILES_ENABLED=false
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_PATH=/opt/bonita/logs
+# Fri, 07 Oct 2022 19:17:15 GMT
+ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
+# Fri, 07 Oct 2022 19:17:16 GMT
+ENV ACCESSLOGS_MAX_DAYS=30
+# Fri, 07 Oct 2022 19:17:16 GMT
+ENV HTTP_MAX_THREADS=20
+# Fri, 07 Oct 2022 19:17:16 GMT
+COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
+# Fri, 07 Oct 2022 19:17:17 GMT
+EXPOSE 8080 9000
+# Fri, 07 Oct 2022 19:17:17 GMT
+ENTRYPOINT ["/opt/files/startup.sh"]
+# Fri, 07 Oct 2022 19:17:17 GMT
+CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:c79e5d1a8c89b87020a754c8a5c8370faaa37bfb5bca1d8af66770d522ef1caf`  
+		Last Modified: Tue, 09 Aug 2022 17:18:26 GMT  
+		Size: 2.8 MB (2803320 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3c61989a45cdf74208e16d4c9fef94cee3d8eb10602f7ac45e023fb053dbf4e7`  
+		Last Modified: Fri, 07 Oct 2022 19:18:27 GMT  
+		Size: 57.3 MB (57320650 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fbd3fc5ec26c7a10b790182e0bc521d1c16847666abf323733fe17fb228c1839`  
+		Last Modified: Fri, 07 Oct 2022 19:18:13 GMT  
+		Size: 155.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2817209af0ad99735a5596f59d738933e465b7ef11feeaa492e45b842fb1a4cc`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 1.3 KB (1263 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d550240e348d5a213ea1a0d93c6108eb6c1d9a1936d7579c893c4cf91024ba1`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 148.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ddd7105d16280bde13de94b8d7829efa1a960a706fae2772e49d24c0b8c0bad2`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 3.0 KB (3043 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:01c5f0b41531d404e2a3e56f2983347537cec2d7cc8d0266e17897e3ef247be3`  
+		Last Modified: Fri, 07 Oct 2022 19:18:22 GMT  
+		Size: 119.2 MB (119192998 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7377eb804f8177040817c5380de0d04576a7b288322ff9c5a3ee7305720e5313`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 5.4 KB (5419 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `bonita:latest`
 
 ```console
-$ docker pull bonita@sha256:f9e3cf341d6c539317a09231e40cb9ea7aa57b422d4d7a03ce4bb455226d240c
+$ docker pull bonita@sha256:9326157dd76ba4fafc97e8380d64228cd53dfe369465e872e6d616c7a257b927
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3944,374 +5476,374 @@ $ docker pull bonita@sha256:f9e3cf341d6c539317a09231e40cb9ea7aa57b422d4d7a03ce4b
 ### `bonita:latest` - linux; amd64
 
 ```console
-$ docker pull bonita@sha256:862fefb5c63bd62f0d955db355c2f3f4f22e193522753d8eedc527cd683c6d9e
+$ docker pull bonita@sha256:96beb319839334dd24cf8b6cc849e68533fad89cf5aca869e1cc4ebc039d0f65
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **180.3 MB (180333199 bytes)**  
+-	Total Size: **183.2 MB (183206256 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5bff25d56fe4420a99127f674a2df8588fc8fdf9319915429e3416e6f76dc008`
+-	Image ID: `sha256:09da6c720099e834ec57a16315d0defea6cc1a1518380a596ffd3a868a9fdb59`
 -	Entrypoint: `["\/opt\/files\/startup.sh"]`
 -	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
 
 ```dockerfile
-# Tue, 09 Aug 2022 17:20:00 GMT
-ADD file:f77e3f51f020890d22997e6c2ca98968b75b8bc8c463341a2010ff0655d4c88f in / 
-# Tue, 09 Aug 2022 17:20:01 GMT
+# Tue, 09 Aug 2022 17:19:53 GMT
+ADD file:2a949686d9886ac7c10582a6c29116fd29d3077d02755e87e111870d63607725 in / 
+# Tue, 09 Aug 2022 17:19:53 GMT
 CMD ["/bin/sh"]
-# Thu, 06 Oct 2022 20:14:09 GMT
+# Fri, 07 Oct 2022 19:19:35 GMT
 LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
-# Thu, 06 Oct 2022 20:14:13 GMT
-RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre-headless
-# Thu, 06 Oct 2022 20:14:14 GMT
+# Fri, 07 Oct 2022 19:19:39 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:19:39 GMT
 RUN mkdir /opt/custom-init.d/
-# Thu, 06 Oct 2022 20:14:14 GMT
+# Fri, 07 Oct 2022 19:19:40 GMT
 RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
-# Thu, 06 Oct 2022 20:14:14 GMT
+# Fri, 07 Oct 2022 19:19:40 GMT
 ARG BONITA_VERSION
-# Thu, 06 Oct 2022 20:14:14 GMT
+# Fri, 07 Oct 2022 19:19:40 GMT
 ARG BRANDING_VERSION
-# Thu, 06 Oct 2022 20:14:15 GMT
+# Fri, 07 Oct 2022 19:19:40 GMT
 ARG BONITA_SHA256
-# Thu, 06 Oct 2022 20:14:15 GMT
+# Fri, 07 Oct 2022 19:19:40 GMT
 ARG BASE_URL
-# Thu, 06 Oct 2022 20:14:15 GMT
+# Fri, 07 Oct 2022 19:19:41 GMT
 ARG BONITA_URL
-# Thu, 06 Oct 2022 20:14:15 GMT
-ENV BONITA_VERSION=7.14.0
-# Thu, 06 Oct 2022 20:14:15 GMT
-ENV BRANDING_VERSION=2022.1-u0
-# Thu, 06 Oct 2022 20:14:15 GMT
-ENV BONITA_SHA256=a88b3f4368bd68dda4eccf4680a71b7e523678811b6b3bcd61cd85e67e9b9aeb
-# Thu, 06 Oct 2022 20:14:15 GMT
-ENV ZIP_FILE=BonitaCommunity-2022.1-u0.zip
-# Thu, 06 Oct 2022 20:14:15 GMT
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:19:41 GMT
 ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
-# Thu, 06 Oct 2022 20:14:15 GMT
-ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.1-u0/BonitaCommunity-2022.1-u0.zip
-# Thu, 06 Oct 2022 20:14:16 GMT
+# Fri, 07 Oct 2022 19:19:41 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:19:42 GMT
 RUN mkdir /opt/files
-# Thu, 06 Oct 2022 20:14:16 GMT
-COPY dir:55abb36f42ed7e3d3197415cf20ab2abe54eeefc3accbc7bc3be8dbd2d0f8d41 in /opt/files 
-# Thu, 06 Oct 2022 20:14:30 GMT
+# Fri, 07 Oct 2022 19:19:42 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:19:50 GMT
 RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
-# Thu, 06 Oct 2022 20:14:31 GMT
+# Fri, 07 Oct 2022 19:19:50 GMT
 ENV HTTP_API=false
-# Thu, 06 Oct 2022 20:14:31 GMT
+# Fri, 07 Oct 2022 19:19:51 GMT
 ENV HTTP_API_USERNAME=http-api
-# Thu, 06 Oct 2022 20:14:31 GMT
+# Fri, 07 Oct 2022 19:19:51 GMT
 ENV HTTP_API_PASSWORD=
-# Thu, 06 Oct 2022 20:14:31 GMT
+# Fri, 07 Oct 2022 19:19:51 GMT
 ENV MONITORING_USERNAME=monitoring
-# Thu, 06 Oct 2022 20:14:31 GMT
+# Fri, 07 Oct 2022 19:19:51 GMT
 ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
-# Thu, 06 Oct 2022 20:14:31 GMT
+# Fri, 07 Oct 2022 19:19:51 GMT
 ENV JMX_REMOTE_ACCESS=false
-# Thu, 06 Oct 2022 20:14:31 GMT
+# Fri, 07 Oct 2022 19:19:51 GMT
 ENV REMOTE_IP_VALVE_ENABLED=false
-# Thu, 06 Oct 2022 20:14:31 GMT
+# Fri, 07 Oct 2022 19:19:51 GMT
 ENV ACCESSLOGS_STDOUT_ENABLED=false
-# Thu, 06 Oct 2022 20:14:31 GMT
+# Fri, 07 Oct 2022 19:19:51 GMT
 ENV ACCESSLOGS_FILES_ENABLED=false
-# Thu, 06 Oct 2022 20:14:32 GMT
+# Fri, 07 Oct 2022 19:19:51 GMT
 ENV ACCESSLOGS_PATH=/opt/bonita/logs
-# Thu, 06 Oct 2022 20:14:32 GMT
+# Fri, 07 Oct 2022 19:19:51 GMT
 ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
-# Thu, 06 Oct 2022 20:14:32 GMT
+# Fri, 07 Oct 2022 19:19:52 GMT
 ENV ACCESSLOGS_MAX_DAYS=30
-# Thu, 06 Oct 2022 20:14:32 GMT
+# Fri, 07 Oct 2022 19:19:52 GMT
 ENV HTTP_MAX_THREADS=20
-# Thu, 06 Oct 2022 20:14:32 GMT
+# Fri, 07 Oct 2022 19:19:52 GMT
 COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
-# Thu, 06 Oct 2022 20:14:32 GMT
+# Fri, 07 Oct 2022 19:19:52 GMT
 EXPOSE 8080 9000
-# Thu, 06 Oct 2022 20:14:32 GMT
+# Fri, 07 Oct 2022 19:19:52 GMT
 ENTRYPOINT ["/opt/files/startup.sh"]
-# Thu, 06 Oct 2022 20:14:32 GMT
+# Fri, 07 Oct 2022 19:19:52 GMT
 CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
 ```
 
 -	Layers:
-	-	`sha256:9621f1afde84053b2f9b6ff34fc7f7460712247c01cbab483c5fa7132cf782ca`  
-		Last Modified: Tue, 09 Aug 2022 17:20:52 GMT  
-		Size: 2.8 MB (2823512 bytes)  
+	-	`sha256:213ec9aee27d8be045c6a92b7eac22c9a64b44558193775a1a7f626352392b49`  
+		Last Modified: Tue, 09 Aug 2022 14:25:13 GMT  
+		Size: 2.8 MB (2806054 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5ede2860654ad6d68046410f9ebec3dd9b9dca61c6fd599f0045a6f5741bf9d6`  
-		Last Modified: Thu, 06 Oct 2022 20:15:08 GMT  
-		Size: 60.8 MB (60808866 bytes)  
+	-	`sha256:f5705f95d901e9d31f362e998a2c059acf47627969b042b4e7aaa72b533530e0`  
+		Last Modified: Fri, 07 Oct 2022 19:20:29 GMT  
+		Size: 61.2 MB (61197146 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9ce69fcdc27b67a89739ff4629aa93b1c46f792c65d81f096c0f8a7d81a47728`  
-		Last Modified: Thu, 06 Oct 2022 20:15:00 GMT  
-		Size: 156.0 B  
+	-	`sha256:76059907474246c43b72aae8948b443645cfd4ab27e255f2555ba7a1f133806f`  
+		Last Modified: Fri, 07 Oct 2022 19:20:22 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4af59dcbbf223b0ac4dc3fd0d01996906c078459ddaae9684440c4cea484b89c`  
-		Last Modified: Thu, 06 Oct 2022 20:14:58 GMT  
-		Size: 1.3 KB (1260 bytes)  
+	-	`sha256:022b3528f0c93c13aeb319e8037b590351d556f7513d476a1da5d77734de820a`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 1.3 KB (1264 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b2805f0e33650a409f35745444bc7f23d5e82f697438025abb67df81ec03caf4`  
-		Last Modified: Thu, 06 Oct 2022 20:14:58 GMT  
+	-	`sha256:479c21d4b689cde4c6b32704ec260ace9395c580c5fd4403ec9691e367c6f91c`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
 		Size: 148.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:173969905ee8acb031228953620f4d6f959d48886d22214974e9764c2d27e28a`  
-		Last Modified: Thu, 06 Oct 2022 20:14:58 GMT  
-		Size: 3.0 KB (3031 bytes)  
+	-	`sha256:af35cb2d6152fd421952af9e5bce9d544b5dd30338842f1d40c610fa142e2592`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
+		Size: 3.0 KB (3048 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:afce6ae14f1b5883093c182f12ce1d593988cae499bb4372256b0301c1b00e9e`  
-		Last Modified: Thu, 06 Oct 2022 20:15:05 GMT  
-		Size: 116.7 MB (116690804 bytes)  
+	-	`sha256:f202ed4e518b9784b3e9b2db17c26afe1be89539f86cea9362694f65fc089d70`  
+		Last Modified: Fri, 07 Oct 2022 19:20:26 GMT  
+		Size: 119.2 MB (119193019 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f98acc053b219affe2080f6ddfad206474004eda9666c5b092bf9fc90aa31659`  
-		Last Modified: Thu, 06 Oct 2022 20:14:58 GMT  
+	-	`sha256:e72bf2b5af323e9cc69f227a7c46ffdb4dd88609ecedc45a1a807120aa39fe89`  
+		Last Modified: Fri, 07 Oct 2022 19:20:18 GMT  
 		Size: 5.4 KB (5422 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `bonita:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull bonita@sha256:67e41d4134c19e4a1966b0c0193542c4afc452996461d1c55d4c41e3617dc4b3
+$ docker pull bonita@sha256:678134bdb94e4f63cf83093514b25b71dfe9b347c97625e9a786aadd96ef6138
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **179.5 MB (179546828 bytes)**  
+-	Total Size: **182.3 MB (182348091 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:94fe400a159423f451be8962b98c0ad9a8b2864f91e161025fa32a0cfe37e25d`
+-	Image ID: `sha256:60ce03089f322a258cae18ca28497bd1fa0fb756aae2b79915561d63c521a728`
 -	Entrypoint: `["\/opt\/files\/startup.sh"]`
 -	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
 
 ```dockerfile
-# Tue, 09 Aug 2022 17:39:51 GMT
-ADD file:4b51a9d40f20d2beb29d0759b161d2b9403493453beb509de4e86a5d98513f16 in / 
-# Tue, 09 Aug 2022 17:39:51 GMT
+# Tue, 09 Aug 2022 17:39:41 GMT
+ADD file:960fd469d48cf79ba14bbda71f3192074ed860c112e30e0bc92bff3440cb45ab in / 
+# Tue, 09 Aug 2022 17:39:42 GMT
 CMD ["/bin/sh"]
-# Thu, 06 Oct 2022 19:52:48 GMT
+# Fri, 07 Oct 2022 19:39:43 GMT
 LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
-# Thu, 06 Oct 2022 19:52:52 GMT
-RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre-headless
-# Thu, 06 Oct 2022 19:52:53 GMT
+# Fri, 07 Oct 2022 19:39:47 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:39:48 GMT
 RUN mkdir /opt/custom-init.d/
-# Thu, 06 Oct 2022 19:52:54 GMT
+# Fri, 07 Oct 2022 19:39:49 GMT
 RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
-# Thu, 06 Oct 2022 19:52:55 GMT
+# Fri, 07 Oct 2022 19:39:50 GMT
 ARG BONITA_VERSION
-# Thu, 06 Oct 2022 19:52:56 GMT
+# Fri, 07 Oct 2022 19:39:51 GMT
 ARG BRANDING_VERSION
-# Thu, 06 Oct 2022 19:52:57 GMT
+# Fri, 07 Oct 2022 19:39:52 GMT
 ARG BONITA_SHA256
-# Thu, 06 Oct 2022 19:52:58 GMT
+# Fri, 07 Oct 2022 19:39:53 GMT
 ARG BASE_URL
-# Thu, 06 Oct 2022 19:52:59 GMT
+# Fri, 07 Oct 2022 19:39:54 GMT
 ARG BONITA_URL
-# Thu, 06 Oct 2022 19:53:00 GMT
-ENV BONITA_VERSION=7.14.0
-# Thu, 06 Oct 2022 19:53:01 GMT
-ENV BRANDING_VERSION=2022.1-u0
-# Thu, 06 Oct 2022 19:53:02 GMT
-ENV BONITA_SHA256=a88b3f4368bd68dda4eccf4680a71b7e523678811b6b3bcd61cd85e67e9b9aeb
-# Thu, 06 Oct 2022 19:53:03 GMT
-ENV ZIP_FILE=BonitaCommunity-2022.1-u0.zip
-# Thu, 06 Oct 2022 19:53:04 GMT
+# Fri, 07 Oct 2022 19:39:55 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:39:56 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:39:57 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:39:58 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:39:59 GMT
 ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
-# Thu, 06 Oct 2022 19:53:05 GMT
-ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.1-u0/BonitaCommunity-2022.1-u0.zip
-# Thu, 06 Oct 2022 19:53:06 GMT
+# Fri, 07 Oct 2022 19:40:00 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:40:01 GMT
 RUN mkdir /opt/files
-# Thu, 06 Oct 2022 19:53:08 GMT
-COPY dir:55abb36f42ed7e3d3197415cf20ab2abe54eeefc3accbc7bc3be8dbd2d0f8d41 in /opt/files 
-# Thu, 06 Oct 2022 19:53:16 GMT
+# Fri, 07 Oct 2022 19:40:03 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:40:11 GMT
 RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
-# Thu, 06 Oct 2022 19:53:16 GMT
+# Fri, 07 Oct 2022 19:40:11 GMT
 ENV HTTP_API=false
-# Thu, 06 Oct 2022 19:53:17 GMT
+# Fri, 07 Oct 2022 19:40:12 GMT
 ENV HTTP_API_USERNAME=http-api
-# Thu, 06 Oct 2022 19:53:18 GMT
+# Fri, 07 Oct 2022 19:40:13 GMT
 ENV HTTP_API_PASSWORD=
-# Thu, 06 Oct 2022 19:53:19 GMT
+# Fri, 07 Oct 2022 19:40:14 GMT
 ENV MONITORING_USERNAME=monitoring
-# Thu, 06 Oct 2022 19:53:20 GMT
+# Fri, 07 Oct 2022 19:40:15 GMT
 ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
-# Thu, 06 Oct 2022 19:53:21 GMT
+# Fri, 07 Oct 2022 19:40:16 GMT
 ENV JMX_REMOTE_ACCESS=false
-# Thu, 06 Oct 2022 19:53:22 GMT
+# Fri, 07 Oct 2022 19:40:17 GMT
 ENV REMOTE_IP_VALVE_ENABLED=false
-# Thu, 06 Oct 2022 19:53:23 GMT
+# Fri, 07 Oct 2022 19:40:18 GMT
 ENV ACCESSLOGS_STDOUT_ENABLED=false
-# Thu, 06 Oct 2022 19:53:24 GMT
+# Fri, 07 Oct 2022 19:40:19 GMT
 ENV ACCESSLOGS_FILES_ENABLED=false
-# Thu, 06 Oct 2022 19:53:25 GMT
+# Fri, 07 Oct 2022 19:40:20 GMT
 ENV ACCESSLOGS_PATH=/opt/bonita/logs
-# Thu, 06 Oct 2022 19:53:26 GMT
+# Fri, 07 Oct 2022 19:40:21 GMT
 ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
-# Thu, 06 Oct 2022 19:53:27 GMT
+# Fri, 07 Oct 2022 19:40:22 GMT
 ENV ACCESSLOGS_MAX_DAYS=30
-# Thu, 06 Oct 2022 19:53:28 GMT
+# Fri, 07 Oct 2022 19:40:23 GMT
 ENV HTTP_MAX_THREADS=20
-# Thu, 06 Oct 2022 19:53:30 GMT
+# Fri, 07 Oct 2022 19:40:25 GMT
 COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
-# Thu, 06 Oct 2022 19:53:30 GMT
+# Fri, 07 Oct 2022 19:40:25 GMT
 EXPOSE 8080 9000
-# Thu, 06 Oct 2022 19:53:31 GMT
+# Fri, 07 Oct 2022 19:40:26 GMT
 ENTRYPOINT ["/opt/files/startup.sh"]
-# Thu, 06 Oct 2022 19:53:32 GMT
+# Fri, 07 Oct 2022 19:40:27 GMT
 CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
 ```
 
 -	Layers:
-	-	`sha256:47517142f6ba87eca6b7bdca1e0df160b74671c81e4b9605dad38c1862a43be3`  
-		Last Modified: Tue, 09 Aug 2022 17:40:55 GMT  
-		Size: 2.7 MB (2718439 bytes)  
+	-	`sha256:9b18e9b68314027565b90ff6189d65942c0f7986da80df008b8431276885218e`  
+		Last Modified: Tue, 09 Aug 2022 17:40:38 GMT  
+		Size: 2.7 MB (2707663 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:616a72dcffd05869e5d752c06042ca884a4a8b1cc5e45920f2091bf0074f91a1`  
-		Last Modified: Thu, 06 Oct 2022 19:54:26 GMT  
-		Size: 60.1 MB (60129767 bytes)  
+	-	`sha256:c497bd0e996de2d902f26a3023b901109ea46ec8d01ca2f527040175722bd069`  
+		Last Modified: Fri, 07 Oct 2022 19:41:24 GMT  
+		Size: 60.4 MB (60439220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:56c53dea9976f27698da497a98de6604659903be074da8046acc0efd2336bcdc`  
-		Last Modified: Thu, 06 Oct 2022 19:54:18 GMT  
-		Size: 122.0 B  
+	-	`sha256:7fe10e617bb9fab6e845f6c0feb39e110610ab11115ba462991c612f7a410fb4`  
+		Last Modified: Fri, 07 Oct 2022 19:41:16 GMT  
+		Size: 119.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7fd9113513200994b4f8363b9a3ff7d6d618fb2f1690272f476e6e42b8ba0dc2`  
-		Last Modified: Thu, 06 Oct 2022 19:54:16 GMT  
+	-	`sha256:d5a7bd7e5925381829a64c85fde46c63063cde25fe1a409cede494629ebbddb4`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
 		Size: 1.2 KB (1233 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:87a2dc70af30020f1fd49a24cec2bcce85130941d5c41c6dbcb5e33760e80b1e`  
-		Last Modified: Thu, 06 Oct 2022 19:54:16 GMT  
-		Size: 114.0 B  
+	-	`sha256:8354d92c69b70dd6748ac85796528746adb07c9665e0686c52eeca5926e56a71`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 111.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:201e37ee56ee4a54b64dc500b91def3e43575c3b4468aa1200e8ff420d00eaad`  
-		Last Modified: Thu, 06 Oct 2022 19:54:16 GMT  
-		Size: 3.0 KB (3000 bytes)  
+	-	`sha256:f17a0dcd655da714128f4233e36d2c2686818f3b524642fc1a4bd4ac143f735e`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 3.0 KB (3011 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f6172ff1fd0d733339e8a27557a5d788212a4f42b7491bdd830543603ab2bedf`  
-		Last Modified: Thu, 06 Oct 2022 19:54:25 GMT  
-		Size: 116.7 MB (116688760 bytes)  
+	-	`sha256:5d141b4d5dcee5ce2546270c1002d4a83d7458f062a52b9b7b41a3f75fb6276f`  
+		Last Modified: Fri, 07 Oct 2022 19:41:27 GMT  
+		Size: 119.2 MB (119191347 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a2348246f4562d42618128248d56903c98195e7fb74f255d4296cc55b03a92c`  
-		Last Modified: Thu, 06 Oct 2022 19:54:16 GMT  
-		Size: 5.4 KB (5393 bytes)  
+	-	`sha256:ce674d50db2ba300dc2c6d26d93908e4c56432fa7f6d8047cd64999bf1dfe939`  
+		Last Modified: Fri, 07 Oct 2022 19:41:13 GMT  
+		Size: 5.4 KB (5387 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `bonita:latest` - linux; ppc64le
 
 ```console
-$ docker pull bonita@sha256:ed30ab3ec5061aff1dc71c87ce3b52a60cc3aacc160f8dcfd7692cf5f1c91383
+$ docker pull bonita@sha256:2c3128dbea0d3d5d8a63712d1db500fdecbc8b9d2995a695c37b4ebb80b5ef48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **176.1 MB (176142311 bytes)**  
+-	Total Size: **179.3 MB (179326996 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6f9e92713926d622cf557e08cf608df8445515cc2805d567604854576eabb7a1`
+-	Image ID: `sha256:1e3838b00163be847a672d409b30519320813b30bf0947292136a897403f4be7`
 -	Entrypoint: `["\/opt\/files\/startup.sh"]`
 -	Default Command: `["\/opt\/bonita\/server\/bin\/catalina.sh","run"]`
 
 ```dockerfile
-# Tue, 09 Aug 2022 17:17:20 GMT
-ADD file:be31abb0aba89ed5ff9200736a1c46091abc3845d0e332efd5e5c874ef2c99d1 in / 
-# Tue, 09 Aug 2022 17:17:21 GMT
+# Tue, 09 Aug 2022 17:17:09 GMT
+ADD file:66b351666e41834033d334aeb3dc6998dea77aa22e8e254028c923fee67a41a8 in / 
+# Tue, 09 Aug 2022 17:17:10 GMT
 CMD ["/bin/sh"]
-# Thu, 06 Oct 2022 19:56:39 GMT
+# Fri, 07 Oct 2022 19:16:36 GMT
 LABEL maintainer=Bonitasoft Runtime team <rd.engine@bonitasoft.com>
-# Thu, 06 Oct 2022 19:56:48 GMT
-RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre-headless
-# Thu, 06 Oct 2022 19:56:51 GMT
+# Fri, 07 Oct 2022 19:16:45 GMT
+RUN apk add --no-cache curl unzip bash su-exec jattach openjdk11-jre
+# Fri, 07 Oct 2022 19:16:48 GMT
 RUN mkdir /opt/custom-init.d/
-# Thu, 06 Oct 2022 19:56:52 GMT
+# Fri, 07 Oct 2022 19:16:49 GMT
 RUN addgroup -S -g 1000 bonita  && adduser -u 1000 -S  -G bonita -h /opt/bonita/ -s /sbin/nologin  bonita
-# Thu, 06 Oct 2022 19:56:53 GMT
+# Fri, 07 Oct 2022 19:16:49 GMT
 ARG BONITA_VERSION
-# Thu, 06 Oct 2022 19:56:53 GMT
+# Fri, 07 Oct 2022 19:16:50 GMT
 ARG BRANDING_VERSION
-# Thu, 06 Oct 2022 19:56:53 GMT
+# Fri, 07 Oct 2022 19:16:50 GMT
 ARG BONITA_SHA256
-# Thu, 06 Oct 2022 19:56:53 GMT
+# Fri, 07 Oct 2022 19:16:50 GMT
 ARG BASE_URL
-# Thu, 06 Oct 2022 19:56:54 GMT
+# Fri, 07 Oct 2022 19:16:50 GMT
 ARG BONITA_URL
-# Thu, 06 Oct 2022 19:56:54 GMT
-ENV BONITA_VERSION=7.14.0
-# Thu, 06 Oct 2022 19:56:54 GMT
-ENV BRANDING_VERSION=2022.1-u0
-# Thu, 06 Oct 2022 19:56:54 GMT
-ENV BONITA_SHA256=a88b3f4368bd68dda4eccf4680a71b7e523678811b6b3bcd61cd85e67e9b9aeb
-# Thu, 06 Oct 2022 19:56:55 GMT
-ENV ZIP_FILE=BonitaCommunity-2022.1-u0.zip
-# Thu, 06 Oct 2022 19:56:55 GMT
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BONITA_VERSION=7.15.0
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BRANDING_VERSION=2022.2-u0
+# Fri, 07 Oct 2022 19:16:51 GMT
+ENV BONITA_SHA256=9e6d35b3763ccc091b4b4dec1697c96231552847d4329420e796727c946e37a6
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV ZIP_FILE=BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:16:52 GMT
 ENV BASE_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download
-# Thu, 06 Oct 2022 19:56:55 GMT
-ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.1-u0/BonitaCommunity-2022.1-u0.zip
-# Thu, 06 Oct 2022 19:56:56 GMT
+# Fri, 07 Oct 2022 19:16:52 GMT
+ENV BONITA_URL=https://github.com/bonitasoft/bonita-platform-releases/releases/download/2022.2-u0/BonitaCommunity-2022.2-u0.zip
+# Fri, 07 Oct 2022 19:16:53 GMT
 RUN mkdir /opt/files
-# Thu, 06 Oct 2022 19:56:57 GMT
-COPY dir:55abb36f42ed7e3d3197415cf20ab2abe54eeefc3accbc7bc3be8dbd2d0f8d41 in /opt/files 
-# Thu, 06 Oct 2022 19:57:09 GMT
+# Fri, 07 Oct 2022 19:16:54 GMT
+COPY dir:2f998cb77cda0ed47e4d103dacbc15e680f0e173a75b624320e21173de664a22 in /opt/files 
+# Fri, 07 Oct 2022 19:17:11 GMT
 RUN if [ -f "/opt/files/BonitaCommunity-${BRANDING_VERSION}.zip" ]; then echo "File already present in /opt/files"; else curl -fsSL ${BONITA_URL} -o /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && echo "$BONITA_SHA256 */opt/files/$ZIP_FILE" | sha256sum -c - ; fi   && unzip -q /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip -d /opt/bonita/   && mv /opt/bonita/BonitaCommunity-${BRANDING_VERSION}/* /opt/bonita   && rmdir /opt/bonita/BonitaCommunity-${BRANDING_VERSION}   && unzip /opt/bonita/server/webapps/bonita.war -d /opt/bonita/server/webapps/bonita/   && rm /opt/bonita/server/webapps/bonita.war   && rm -f /opt/files/BonitaCommunity-${BRANDING_VERSION}.zip   && mkdir -p /opt/bonita/conf/logs/   && mkdir -p /opt/bonita/logs/   && mv /opt/files/log4j2/log4j2-appenders.xml /opt/bonita/conf/logs/   && mv /opt/bonita/server/conf/log4j2-loggers.xml /opt/bonita/conf/logs/   && chown -R bonita:bonita /opt/bonita   && chmod go+w /opt/   && chmod -R +rX /opt   && chmod go+w /opt/bonita   && chmod 777 /opt/bonita/server/logs   && chmod 777 /opt/bonita/logs/   && chmod 777 /opt/bonita/server/temp   && chmod 777 /opt/bonita/server/work   && chmod -R go+w /opt/bonita/server/conf   && chmod -R go+w /opt/bonita/server/bin   && chmod -R go+w /opt/bonita/server/lib/bonita   && chmod -R go+w /opt/bonita/setup
-# Thu, 06 Oct 2022 19:57:11 GMT
+# Fri, 07 Oct 2022 19:17:12 GMT
 ENV HTTP_API=false
-# Thu, 06 Oct 2022 19:57:11 GMT
+# Fri, 07 Oct 2022 19:17:13 GMT
 ENV HTTP_API_USERNAME=http-api
-# Thu, 06 Oct 2022 19:57:12 GMT
+# Fri, 07 Oct 2022 19:17:13 GMT
 ENV HTTP_API_PASSWORD=
-# Thu, 06 Oct 2022 19:57:12 GMT
+# Fri, 07 Oct 2022 19:17:13 GMT
 ENV MONITORING_USERNAME=monitoring
-# Thu, 06 Oct 2022 19:57:12 GMT
+# Fri, 07 Oct 2022 19:17:14 GMT
 ENV MONITORING_PASSWORD=mon1tor1ng_adm1n
-# Thu, 06 Oct 2022 19:57:13 GMT
+# Fri, 07 Oct 2022 19:17:14 GMT
 ENV JMX_REMOTE_ACCESS=false
-# Thu, 06 Oct 2022 19:57:13 GMT
+# Fri, 07 Oct 2022 19:17:14 GMT
 ENV REMOTE_IP_VALVE_ENABLED=false
-# Thu, 06 Oct 2022 19:57:13 GMT
+# Fri, 07 Oct 2022 19:17:14 GMT
 ENV ACCESSLOGS_STDOUT_ENABLED=false
-# Thu, 06 Oct 2022 19:57:14 GMT
+# Fri, 07 Oct 2022 19:17:15 GMT
 ENV ACCESSLOGS_FILES_ENABLED=false
-# Thu, 06 Oct 2022 19:57:14 GMT
+# Fri, 07 Oct 2022 19:17:15 GMT
 ENV ACCESSLOGS_PATH=/opt/bonita/logs
-# Thu, 06 Oct 2022 19:57:14 GMT
+# Fri, 07 Oct 2022 19:17:15 GMT
 ENV ACCESSLOGS_PATH_APPEND_HOSTNAME=false
-# Thu, 06 Oct 2022 19:57:15 GMT
+# Fri, 07 Oct 2022 19:17:16 GMT
 ENV ACCESSLOGS_MAX_DAYS=30
-# Thu, 06 Oct 2022 19:57:15 GMT
+# Fri, 07 Oct 2022 19:17:16 GMT
 ENV HTTP_MAX_THREADS=20
-# Thu, 06 Oct 2022 19:57:15 GMT
+# Fri, 07 Oct 2022 19:17:16 GMT
 COPY dir:ad0fdf5900d3b914efcbba3170cc7d773b5d57072eba969a052457514aa27adc in /opt/templates 
-# Thu, 06 Oct 2022 19:57:15 GMT
+# Fri, 07 Oct 2022 19:17:17 GMT
 EXPOSE 8080 9000
-# Thu, 06 Oct 2022 19:57:16 GMT
+# Fri, 07 Oct 2022 19:17:17 GMT
 ENTRYPOINT ["/opt/files/startup.sh"]
-# Thu, 06 Oct 2022 19:57:16 GMT
+# Fri, 07 Oct 2022 19:17:17 GMT
 CMD ["/opt/bonita/server/bin/catalina.sh" "run"]
 ```
 
 -	Layers:
-	-	`sha256:deb7065b3304c3a9834f31b8a53e8d6089060e9c6522668abd22f1f4d9f52ca7`  
-		Last Modified: Tue, 09 Aug 2022 17:18:45 GMT  
-		Size: 2.8 MB (2812989 bytes)  
+	-	`sha256:c79e5d1a8c89b87020a754c8a5c8370faaa37bfb5bca1d8af66770d522ef1caf`  
+		Last Modified: Tue, 09 Aug 2022 17:18:26 GMT  
+		Size: 2.8 MB (2803320 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0ef077ba375222dadf88017804c6db49ec3e6c7c7dda2b13cfe326acb96e5573`  
-		Last Modified: Thu, 06 Oct 2022 19:58:18 GMT  
-		Size: 56.6 MB (56628443 bytes)  
+	-	`sha256:3c61989a45cdf74208e16d4c9fef94cee3d8eb10602f7ac45e023fb053dbf4e7`  
+		Last Modified: Fri, 07 Oct 2022 19:18:27 GMT  
+		Size: 57.3 MB (57320650 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:93f9b2a0c46e4583581aea4b26d7e4888620778734b640fde9a243c60896a85c`  
-		Last Modified: Thu, 06 Oct 2022 19:58:06 GMT  
+	-	`sha256:fbd3fc5ec26c7a10b790182e0bc521d1c16847666abf323733fe17fb228c1839`  
+		Last Modified: Fri, 07 Oct 2022 19:18:13 GMT  
 		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6d02cbac52ba92d847db176427502c97ac8cfce0205b8df2e17984291749fb48`  
-		Last Modified: Thu, 06 Oct 2022 19:58:03 GMT  
-		Size: 1.3 KB (1261 bytes)  
+	-	`sha256:2817209af0ad99735a5596f59d738933e465b7ef11feeaa492e45b842fb1a4cc`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 1.3 KB (1263 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0e5d063ca3ad4a351f1d87243e8704f415833c9636631b3c787fdabc5893e198`  
-		Last Modified: Thu, 06 Oct 2022 19:58:03 GMT  
+	-	`sha256:5d550240e348d5a213ea1a0d93c6108eb6c1d9a1936d7579c893c4cf91024ba1`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
 		Size: 148.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b8ea1f55b182c3f8c835160384e887986ba36466e0bc71aa145f0065f4198f0`  
-		Last Modified: Thu, 06 Oct 2022 19:58:03 GMT  
-		Size: 3.0 KB (3032 bytes)  
+	-	`sha256:ddd7105d16280bde13de94b8d7829efa1a960a706fae2772e49d24c0b8c0bad2`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 3.0 KB (3043 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:679dc7c2196ec38ed7be31a96dd4f6c81db83b6e9a8bc4efd5f2edd63c8b4fbc`  
-		Last Modified: Thu, 06 Oct 2022 19:58:14 GMT  
-		Size: 116.7 MB (116690860 bytes)  
+	-	`sha256:01c5f0b41531d404e2a3e56f2983347537cec2d7cc8d0266e17897e3ef247be3`  
+		Last Modified: Fri, 07 Oct 2022 19:18:22 GMT  
+		Size: 119.2 MB (119192998 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c00f2bd54e8ef56344883e905c4ee8e2f08246937858fd47004be957103b17bb`  
-		Last Modified: Thu, 06 Oct 2022 19:58:03 GMT  
-		Size: 5.4 KB (5423 bytes)  
+	-	`sha256:7377eb804f8177040817c5380de0d04576a7b288322ff9c5a3ee7305720e5313`  
+		Last Modified: Fri, 07 Oct 2022 19:18:11 GMT  
+		Size: 5.4 KB (5419 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
