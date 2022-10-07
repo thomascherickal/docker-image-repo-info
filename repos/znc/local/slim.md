@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d274495d03c3d2b5bc06f2c5949f8490e29dc5f09436ba4798accc0e345f532b`
-- Created: `2022-07-20T03:47:48.668926717Z`
-- Virtual Size: ~ 133.87 Mb  
+- Image ID: `sha256:3078b3b99df7215ded8db96d35cbc2e557dd3614e75c79ced47a29399a239a9a`
+- Created: `2022-10-07T04:33:39.728981152Z`
+- Virtual Size: ~ 133.85 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -630,16 +630,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20211220-r0 description:
+ca-certificates-20220614-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20211220-r0 webpage:
+ca-certificates-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20211220-r0 installed size:
-652 KiB
+ca-certificates-20220614-r0 installed size:
+684 KiB
 
-ca-certificates-20211220-r0 license:
+ca-certificates-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -647,16 +647,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20211220-r0 description:
+ca-certificates-bundle-20220614-r0 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20211220-r0 webpage:
+ca-certificates-bundle-20220614-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20211220-r0 installed size:
-216 KiB
+ca-certificates-bundle-20220614-r0 installed size:
+228 KiB
 
-ca-certificates-bundle-20211220-r0 license:
+ca-certificates-bundle-20220614-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -681,16 +681,16 @@ custom
 ### `apk` package: `expat`
 
 ```console
-expat-2.2.10-r6 description:
+expat-2.2.10-r7 description:
 XML Parser library written in C
 
-expat-2.2.10-r6 webpage:
+expat-2.2.10-r7 webpage:
 http://www.libexpat.org/
 
-expat-2.2.10-r6 installed size:
+expat-2.2.10-r7 installed size:
 188 KiB
 
-expat-2.2.10-r6 license:
+expat-2.2.10-r7 license:
 MIT
 
 ```
@@ -1072,16 +1072,16 @@ GPL-2.0-or-later
 ### `apk` package: `runtime-dependencies`
 
 ```console
-runtime-dependencies-20220720.034325 description:
+runtime-dependencies-20221007.042925 description:
 virtual meta package
 
-runtime-dependencies-20220720.034325 webpage:
+runtime-dependencies-20221007.042925 webpage:
 
 
-runtime-dependencies-20220720.034325 installed size:
+runtime-dependencies-20221007.042925 installed size:
 0 B
 
-runtime-dependencies-20220720.034325 license:
+runtime-dependencies-20221007.042925 license:
 
 
 ```
@@ -1174,16 +1174,16 @@ MIT
 ### `apk` package: `tzdata`
 
 ```console
-tzdata-2022a-r0 description:
+tzdata-2022c-r0 description:
 Timezone data
 
-tzdata-2022a-r0 webpage:
+tzdata-2022c-r0 webpage:
 https://www.iana.org/time-zones
 
-tzdata-2022a-r0 installed size:
-3376 KiB
+tzdata-2022c-r0 installed size:
+3208 KiB
 
-tzdata-2022a-r0 license:
+tzdata-2022c-r0 license:
 Public-Domain
 
 ```
@@ -1208,16 +1208,16 @@ GPL-2.0-or-later AND Public-Domain AND LGPL-2.1-or-later
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.12-r1 description:
+zlib-1.2.12-r3 description:
 A compression/decompression Library
 
-zlib-1.2.12-r1 webpage:
+zlib-1.2.12-r3 webpage:
 https://zlib.net/
 
-zlib-1.2.12-r1 installed size:
+zlib-1.2.12-r3 installed size:
 108 KiB
 
-zlib-1.2.12-r1 license:
+zlib-1.2.12-r3 license:
 Zlib
 
 ```
