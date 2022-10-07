@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:40f89b99e36e0be6a7307f18341c9f09d7858e32621a838575fd7c127fdfc442`
-- Created: `2022-08-11T22:21:52.070406164Z`
-- Virtual Size: ~ 232.87 Mb  
+- Image ID: `sha256:a6c2fc7fe3adf9c5c4ffb30280f469d6719b8e167085d07b6cdf42ff3a564b70`
+- Created: `2022-10-07T05:35:15.754372558Z`
+- Virtual Size: ~ 232.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -159,16 +159,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.83.1-r2 description:
+curl-7.83.1-r3 description:
 URL retrival utility and library
 
-curl-7.83.1-r2 webpage:
+curl-7.83.1-r3 webpage:
 https://curl.se/
 
-curl-7.83.1-r2 installed size:
+curl-7.83.1-r3 installed size:
 256 KiB
 
-curl-7.83.1-r2 license:
+curl-7.83.1-r3 license:
 curl
 
 ```
@@ -448,16 +448,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r2 description:
+libcurl-7.83.1-r3 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r2 webpage:
+libcurl-7.83.1-r3 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r2 installed size:
-512 KiB
+libcurl-7.83.1-r3 installed size:
+516 KiB
 
-libcurl-7.83.1-r2 license:
+libcurl-7.83.1-r3 license:
 curl
 
 ```
@@ -550,16 +550,16 @@ GPL-2.0-or-later or GPL-3.0-or-later
 ### `apk` package: `libldap`
 
 ```console
-libldap-2.6.3-r0 description:
+libldap-2.6.3-r1 description:
 OpenLDAP libraries
 
-libldap-2.6.3-r0 webpage:
+libldap-2.6.3-r1 webpage:
 https://www.openldap.org/
 
-libldap-2.6.3-r0 installed size:
+libldap-2.6.3-r1 installed size:
 400 KiB
 
-libldap-2.6.3-r0 license:
+libldap-2.6.3-r1 license:
 OLDAP-2.8
 
 ```
