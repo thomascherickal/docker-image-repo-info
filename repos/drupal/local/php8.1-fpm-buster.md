@@ -1,10 +1,10 @@
-# `drupal:9.4.7-php8.1-fpm-buster`
+# `drupal:9.4.8-php8.1-fpm-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:41b16a9dbfede7a5d72e2b65e2dc0bdb010b31321ec5b41d1f0095256434b49c`
-- Created: `2022-10-06T00:07:59.851668009Z`
-- Virtual Size: ~ 493.81 Mb  
+- Image ID: `sha256:9657060875f217672ddfdd66eb3473d0efc8e5a19c6203f530bac3d9a5d9059b`
+- Created: `2022-10-07T23:23:08.571466661Z`
+- Virtual Size: ~ 493.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -21,7 +21,7 @@
   - `PHP_URL=https://www.php.net/distributions/php-8.1.11.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.11.tar.xz.asc`
   - `PHP_SHA256=3005198d7303f87ab31bc30695de76e8ad62783f806b6ab9744da59fe41cc5bd`
-  - `DRUPAL_VERSION=9.4.7`
+  - `DRUPAL_VERSION=9.4.8`
 
 ## `dpkg` (`.deb`-based packages)
 

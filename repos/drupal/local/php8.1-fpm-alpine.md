@@ -1,10 +1,10 @@
-# `drupal:9.4.7-php8.1-fpm-alpine3.16`
+# `drupal:9.4.8-php8.1-fpm-alpine3.16`
 
 ## Docker Metadata
 
-- Image ID: `sha256:24ad0d057c51c7e625e353fdfffc7ae867f7c88b2f2522a9f6841323e6df0eb7`
-- Created: `2022-09-29T19:58:25.767274639Z`
-- Virtual Size: ~ 172.70 Mb  
+- Image ID: `sha256:4a4117d02442e08cc1993ec61189546e147f5f88b130ddab00cf24954214b54e`
+- Created: `2022-10-07T23:23:24.579020622Z`
+- Virtual Size: ~ 172.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -21,7 +21,7 @@
   - `PHP_URL=https://www.php.net/distributions/php-8.1.11.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.11.tar.xz.asc`
   - `PHP_SHA256=3005198d7303f87ab31bc30695de76e8ad62783f806b6ab9744da59fe41cc5bd`
-  - `DRUPAL_VERSION=9.4.7`
+  - `DRUPAL_VERSION=9.4.8`
 
 ## `apk` (`.apk`-based packages)
 
@@ -181,16 +181,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.83.1-r2 description:
+curl-7.83.1-r3 description:
 URL retrival utility and library
 
-curl-7.83.1-r2 webpage:
+curl-7.83.1-r3 webpage:
 https://curl.se/
 
-curl-7.83.1-r2 installed size:
+curl-7.83.1-r3 installed size:
 256 KiB
 
-curl-7.83.1-r2 license:
+curl-7.83.1-r3 license:
 curl
 
 ```
