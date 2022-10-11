@@ -1,7 +1,7 @@
 ## `tomcat:8-jdk11-temurin-focal`
 
 ```console
-$ docker pull tomcat@sha256:06a8e5dbb1a42eefe67e36f42b8396ae3804a0a6b31624bc3634cafdd3dbdc3a
+$ docker pull tomcat@sha256:6f77de959d5cb0dc089a7e5abce6b3e1f9da0db2349ee0db0f2163e689225416
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -387,14 +387,14 @@ CMD ["catalina.sh" "run"]
 ### `tomcat:8-jdk11-temurin-focal` - linux; s390x
 
 ```console
-$ docker pull tomcat@sha256:42225d35d71c95da7225b6f7e98e344ff5beb7d78f1319ee8762025d49b2720e
+$ docker pull tomcat@sha256:7b3880cfa439e562ddda4af16d0383fb95ae6fb8b89d5ca105dd4dfd76fe18e3
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **227.1 MB (227108566 bytes)**  
+-	Total Size: **227.1 MB (227123988 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1a2040edbabb0d70ce1b4ed284dd781f4d94afd3bb78218f8bf26d816afc2523`
+-	Image ID: `sha256:1932e9575d1df363edf104865ae48e366d9b588411d36728bb182a3957faff7f`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -434,17 +434,17 @@ ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
 ENV GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 5C3C5F3E314C866292F359A8F3AD5C94A67F707E 765908099ACF92702C7D949BFA0C35EA8AA299F1 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
 # Wed, 05 Oct 2022 18:16:28 GMT
 ENV TOMCAT_MAJOR=8
-# Wed, 05 Oct 2022 18:16:28 GMT
-ENV TOMCAT_VERSION=8.5.82
-# Wed, 05 Oct 2022 18:16:28 GMT
-ENV TOMCAT_SHA512=ba701002be9729e19b5d2e12e1f4a723a38ad4452ab235127a19397bc81e95adc060187501701ba0160f0017723525b506a42f0dbb4f9f91f1a1a53be1ba1b25
-# Wed, 05 Oct 2022 18:16:51 GMT
+# Tue, 11 Oct 2022 20:30:02 GMT
+ENV TOMCAT_VERSION=8.5.83
+# Tue, 11 Oct 2022 20:30:02 GMT
+ENV TOMCAT_SHA512=57cbe9608a9c4e88135e5f5480812e8d57690d5f3f6c43a7c05fe647bddb7c3b684bf0fc0efebad399d05e80c6d20c43d5ecdf38ec58f123e6653e443f9054e3
+# Tue, 11 Oct 2022 20:30:26 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		dirmngr 		gnupg 	; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local mvnFile="${1:-}"; 		local success=; 		local distUrl=; 		for distUrl in 			"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile" 			"https://downloads.apache.org/$distFile" 			"https://www-us.apache.org/dist/$distFile" 			"https://www.apache.org/dist/$distFile" 			"https://archive.apache.org/dist/$distFile" 			${mvnFile:+"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile"} 		; do 			if curl -fL -o "$f" "$distUrl" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libapr1-dev 		libssl-dev 		make 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--build="$gnuArch" 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl 		; 		nproc="$(nproc)"; 		make -j "$nproc"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| xargs -rt readlink -e 		| sort -u 		| xargs -rt dpkg-query --search 		| cut -d: -f1 		| sort -u 		| tee "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt" 		| xargs -r apt-mark manual 	; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 777 logs temp work; 		catalina.sh version
-# Wed, 05 Oct 2022 18:16:52 GMT
+# Tue, 11 Oct 2022 20:30:28 GMT
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Wed, 05 Oct 2022 18:16:52 GMT
+# Tue, 11 Oct 2022 20:30:28 GMT
 EXPOSE 8080
-# Wed, 05 Oct 2022 18:16:52 GMT
+# Tue, 11 Oct 2022 20:30:28 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -469,11 +469,11 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Wed, 05 Oct 2022 18:26:33 GMT  
 		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e90cb0c6b519f8f14993cace4a712698c0dfa899b175debd7fd1e73dbd5ba03`  
-		Last Modified: Wed, 05 Oct 2022 18:30:54 GMT  
-		Size: 11.7 MB (11741818 bytes)  
+	-	`sha256:a0d58f52b5acddb5d471d9d92a9c2cb436a54c1927c8075b7d7c9f5c9bb20d73`  
+		Last Modified: Tue, 11 Oct 2022 20:41:04 GMT  
+		Size: 11.8 MB (11757239 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0dc3171d3003d2c0f3f90c343fbfb2398371af49a39e527a53bf423329d60775`  
-		Last Modified: Wed, 05 Oct 2022 18:30:53 GMT  
-		Size: 129.0 B  
+	-	`sha256:3bc3564b4ecb298d9b6a17d90e3f7582685a69516322f2bf011d3e7fbd7a8554`  
+		Last Modified: Tue, 11 Oct 2022 20:41:03 GMT  
+		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
