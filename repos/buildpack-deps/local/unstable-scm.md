@@ -809,21 +809,13 @@ Licenses: (parsed from: `/usr/share/doc/libgdbm-compat4/copyright`, `/usr/share/
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gdbm=1.23-2
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.23-2.dsc' gdbm_1.23-2.dsc 2583 SHA256:184342bd8a992ff35423471203478aff72ce4b280a1dd4809db5972a7411a92f
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.23.orig.tar.gz' gdbm_1.23.orig.tar.gz 1115854 SHA256:74b1081d21fff13ae4bd7c16e5d6e504a4c26f7cde1dca0d963a484174bbcacd
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.23.orig.tar.gz.asc' gdbm_1.23.orig.tar.gz.asc 181 SHA256:64ebb68cc68e8915d62cb20ea40323c00b56051f844589ee0a52169fff34cecb
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.23-2.debian.tar.xz' gdbm_1.23-2.debian.tar.xz 18508 SHA256:fb34453bfeae45bad72b5df8715a93e6f60b19f788f891f523cdd19d8564ce73
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gdbm/1.23-2/
 
-- https://sources.debian.net/src/gdbm/1.23-2/ (for browsing the source)
-- https://sources.debian.net/src/gdbm/1.23-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gdbm/1.23-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `git=1:2.37.2-1`
 
@@ -912,20 +904,13 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 - `LGPL-3`
 - `LGPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gmp=2:6.2.1+dfsg1-1
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1%2bdfsg1-1.dsc' gmp_6.2.1+dfsg1-1.dsc 2230 SHA256:7a2ca2112db9f7ddf46c14d56ee3ed5ffbc7f4b4b33f843c6167533cc4334ae8
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1%2bdfsg1.orig.tar.xz' gmp_6.2.1+dfsg1.orig.tar.xz 1787428 SHA256:471b9e463e04362a0124f215afc5f0a4b99caedeeb62634c61bbc12988efa64c
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1%2bdfsg1-1.debian.tar.xz' gmp_6.2.1+dfsg1-1.debian.tar.xz 19244 SHA256:35a11ed82eb0b612cb39e6136099880c4693035ea29d79828a050300a8b6dd6b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gmp/2:6.2.1+dfsg1-1/
 
-- https://sources.debian.net/src/gmp/2:6.2.1+dfsg1-1/ (for browsing the source)
-- https://sources.debian.net/src/gmp/2:6.2.1+dfsg1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gmp/2:6.2.1+dfsg1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnupg2=2.2.39-1`
 
@@ -1549,21 +1534,13 @@ Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 - `GPL-3`
 - `LGPL-2.1-or-later`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libksba=1.6.0-3
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.0-3.dsc' libksba_1.6.0-3.dsc 2472 SHA256:de87d32fced6fe9593815552043eec226aafc7e6a7f6b258c0f1dcf96adb0da5
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.0.orig.tar.bz2' libksba_1.6.0.orig.tar.bz2 662120 SHA256:dad683e6f2d915d880aa4bed5cea9a115690b8935b78a1bbe01669189307a48b
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.0.orig.tar.bz2.asc' libksba_1.6.0.orig.tar.bz2.asc 228 SHA256:c695098f67cc837071d899f0e15d993bcf29eaac8f1ca7428ee793d9c62c795c
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.0-3.debian.tar.xz' libksba_1.6.0-3.debian.tar.xz 15004 SHA256:17f8f9679d0dcaaa46d9f4974d2090e23d538206c37014177146b6a5201cf414
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libksba/1.6.0-3/
 
-- https://sources.debian.net/src/libksba/1.6.0-3/ (for browsing the source)
-- https://sources.debian.net/src/libksba/1.6.0-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libksba/1.6.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libmd=1.0.4-2`
 
@@ -2040,21 +2017,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=6.2.2-1
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.2.2-1.dsc' mercurial_6.2.2-1.dsc 2799 SHA256:fc70ce1fadf17ffa1a811acee98a5bb4ed181425ff7449eb3d0a49b96709ba3a
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.2.2.orig.tar.gz' mercurial_6.2.2.orig.tar.gz 8057375 SHA256:9efa9da5f497a8750ac9c48fa431c4ab72209f1360180c5d4920d1311b0420df
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.2.2.orig.tar.gz.asc' mercurial_6.2.2.orig.tar.gz.asc 659 SHA256:662079f5a5d4a44b8981b5b5353f5bf030a35fca4e8a0bef100fb83fc19ec78f
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.2.2-1.debian.tar.xz' mercurial_6.2.2-1.debian.tar.xz 70016 SHA256:33a32d5d2809a7b5ae8b7a1447d7497d7b04046155cb76b60ea5355c099b1074
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/6.2.2-1/
 
-- https://sources.debian.net/src/mercurial/6.2.2-1/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/6.2.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/6.2.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpdecimal=2.5.1-2`
 
@@ -2844,20 +2813,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=251.5-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.5-1.dsc' systemd_251.5-1.dsc 6244 SHA256:ade68055bac2af2286bd87abf28241fb2009f82703a052c8bbc23b86cc49d279
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.5.orig.tar.gz' systemd_251.5.orig.tar.gz 11444428 SHA256:5ac1e9dad7032561e2040ca7e4bacf4be045c4899bab4d72613d041a0401bf5f
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.5-1.debian.tar.xz' systemd_251.5-1.debian.tar.xz 172076 SHA256:13cd419f4177a4a2fdbdf3798363e3130a47b74f0246357e06f89942075d5347
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/251.5-1/
 
-- https://sources.debian.net/src/systemd/251.5-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/251.5-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/251.5-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.05-6`
 
@@ -2976,19 +2938,13 @@ Licenses: (parsed from: `/usr/share/doc/usr-is-merged/copyright`)
 - `GPL-2`
 - `later (please see /usr/share/common-licenses/GPL-2)`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris usrmerge=32
-'http://deb.debian.org/debian/pool/main/u/usrmerge/usrmerge_32.dsc' usrmerge_32.dsc 981 SHA256:1f500570b649129ee82f113f52f0e9ccac67258a599a34f93d3a253cdd487f99
-'http://deb.debian.org/debian/pool/main/u/usrmerge/usrmerge_32.tar.xz' usrmerge_32.tar.xz 13640 SHA256:fd3971bd0a97697ff13d1b75a9b551bb2cad8e8d4d92334444a87eb5463ec04d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/usrmerge/32/
 
-- https://sources.debian.net/src/usrmerge/32/ (for browsing the source)
-- https://sources.debian.net/src/usrmerge/32/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/usrmerge/32/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `utf8proc=2.7.0-4`
 

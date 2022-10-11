@@ -331,14 +331,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.39-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.39-1ubuntu1.dsc' binutils_2.39-1ubuntu1.dsc 8915 SHA512:4248a101144efa691ad5de7c1856542df2dd56dad6b3fb9992c9ad60077b7f2f2ad5ee71f0c64f952e9c8b2228d1232731043cf8674f02ea7ba6984f2ccb062b
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.39.orig.tar.xz' binutils_2.39.orig.tar.xz 25167756 SHA512:68e038f339a8c21faa19a57bbc447a51c817f47c2e06d740847c6e9cc3396c025d35d5369fa8c3f8b70414757c89f0e577939ddc0d70f283182504920f53b0a3
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.39-1ubuntu1.debian.tar.xz' binutils_2.39-1ubuntu1.debian.tar.xz 110024 SHA512:dd4c7c80b7c9f278a06a14478bd4351e16725123fbce9ffda1825d117938cf1757557869e8482a57c5c533e1135ea510f6496ab15a11494257a09a62e7c60c27
-```
 
 ### `dpkg` source package: `brotli=1.0.9-2build6`
 
@@ -3028,14 +3023,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.19.0-18.18
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.19.0-18.18.dsc' linux_5.19.0-18.18.dsc 7290 SHA512:991df136b8475b1612337c8775b4f98fbd110a8e2dea3cdd4b6f9c9086378b4dc0c2718d8ff947c390b5166fe38a9ed2be3818ba4b67c5f4f909e551b875e77b
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.19.0.orig.tar.gz' linux_5.19.0.orig.tar.gz 208263574 SHA512:9c018ef5d2b3f861f721a4541e547eb712352e8d6cfd4a6803c5a7ce96ce2a7e7baf1d83f9963f2244e7fae420731d95d198bf222e2b5079da624df0e0c78668
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.19.0-18.18.diff.gz' linux_5.19.0-18.18.diff.gz 4462573 SHA512:847c7436f391e83929826c8192cd28d17d69740bbb816c89a069839353e0b0a2344e3f86bcfd993f343ac1003d017fa9af775de71f68b8aba1d6e0cec1f054ee
-```
 
 ### `dpkg` source package: `lsb=11.2ubuntu1`
 
