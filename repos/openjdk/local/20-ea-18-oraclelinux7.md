@@ -1,10 +1,10 @@
-# `openjdk:20-ea-17-jdk-oraclelinux7`
+# `openjdk:20-ea-18-jdk-oraclelinux7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:81a4def3c9279a111784fa206c4e7b150171f9038b844aca28f74683d4be07c4`
-- Created: `2022-09-30T23:30:31.402541059Z`
-- Virtual Size: ~ 513.61 Mb  
+- Image ID: `sha256:7f31b9d55785ac8dda57655da65a18b4adb4d18a90e8e40979f77138aaf56337`
+- Created: `2022-10-07T23:46:10.923960721Z`
+- Virtual Size: ~ 513.85 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/java/openjdk-20`
   - `LANG=en_US.UTF-8`
-  - `JAVA_VERSION=20-ea+17`
+  - `JAVA_VERSION=20-ea+18`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -181,15 +181,15 @@ $ dnf --quiet download --source --url elfutils-libelf-0.176-5.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/elfutils-0.176-5.el7.src.rpm
 ```
 
-### `rpm` package: `expat-2.1.0-14.0.1.el7_9.x86_64`
+### `rpm` package: `expat-2.1.0-15.0.1.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url expat-2.1.0-14.0.1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/expat-2.1.0-14.0.1.el7_9.src.rpm
+$ dnf --quiet download --source --url expat-2.1.0-15.0.1.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/expat-2.1.0-15.0.1.el7_9.src.rpm
 ```
 
 ### `rpm` package: `file-libs-5.11-37.el7.x86_64`
@@ -754,26 +754,26 @@ $ dnf --quiet download --source --url ncurses-libs-5.9-14.20130511.el7_4
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/ncurses-5.9-14.20130511.el7_4.src.rpm
 ```
 
-### `rpm` package: `nspr-4.32.0-1.el7_9.x86_64`
+### `rpm` package: `nspr-4.34.0-3.1.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nspr-4.32.0-1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nspr-4.32.0-1.el7_9.src.rpm
+$ dnf --quiet download --source --url nspr-4.34.0-3.1.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nspr-4.34.0-3.1.el7_9.src.rpm
 ```
 
-### `rpm` package: `nss-3.67.0-4.el7_9.x86_64`
+### `rpm` package: `nss-3.79.0-4.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-3.67.0-4.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.67.0-4.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-3.79.0-4.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.79.0-4.el7_9.src.rpm
 ```
 
 ### `rpm` package: `nss-pem-1.0.3-7.el7.x86_64`
@@ -787,59 +787,59 @@ $ dnf --quiet download --source --url nss-pem-1.0.3-7.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-pem-1.0.3-7.el7.src.rpm
 ```
 
-### `rpm` package: `nss-softokn-3.67.0-3.0.1.el7_9.x86_64`
+### `rpm` package: `nss-softokn-3.79.0-4.0.1.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-softokn-3.67.0-3.0.1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-softokn-3.67.0-3.0.1.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-softokn-3.79.0-4.0.1.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-softokn-3.79.0-4.0.1.el7_9.src.rpm
 ```
 
-### `rpm` package: `nss-softokn-freebl-3.67.0-3.0.1.el7_9.x86_64`
+### `rpm` package: `nss-softokn-freebl-3.79.0-4.0.1.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-softokn-freebl-3.67.0-3.0.1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-softokn-3.67.0-3.0.1.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-softokn-freebl-3.79.0-4.0.1.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-softokn-3.79.0-4.0.1.el7_9.src.rpm
 ```
 
-### `rpm` package: `nss-sysinit-3.67.0-4.el7_9.x86_64`
+### `rpm` package: `nss-sysinit-3.79.0-4.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-sysinit-3.67.0-4.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.67.0-4.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-sysinit-3.79.0-4.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.79.0-4.el7_9.src.rpm
 ```
 
-### `rpm` package: `nss-tools-3.67.0-4.el7_9.x86_64`
+### `rpm` package: `nss-tools-3.79.0-4.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-tools-3.67.0-4.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.67.0-4.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-tools-3.79.0-4.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.79.0-4.el7_9.src.rpm
 ```
 
-### `rpm` package: `nss-util-3.67.0-1.el7_9.x86_64`
+### `rpm` package: `nss-util-3.79.0-1.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-util-3.67.0-1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-util-3.67.0-1.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-util-3.79.0-1.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-util-3.79.0-1.el7_9.src.rpm
 ```
 
 ### `rpm` package: `openldap-2.4.44-25.el7_9.x86_64`
