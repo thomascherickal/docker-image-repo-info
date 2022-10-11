@@ -329,7 +329,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url langpacks-en-1.0-12.el8.noarch
-https://mirror.fcix.net/rocky/8.6/AppStream/source/tree/Packages/l/langpacks-1.0-12.el8.src.rpm
+https://mirror.pit.teraswitch.com/rocky/8.6/AppStream/source/tree/Packages/l/langpacks-1.0-12.el8.src.rpm
 ```
 
 ### `rpm` package: `libacl-2.2.53-1.el8.1.x86_64`
