@@ -2,11 +2,31 @@
 
 # Tags of `arangodb`
 
+-	[`arangodb:3.10`](#arangodb310)
+-	[`arangodb:3.10.0`](#arangodb3100)
 -	[`arangodb:3.8`](#arangodb38)
 -	[`arangodb:3.8.7`](#arangodb387)
 -	[`arangodb:3.9`](#arangodb39)
 -	[`arangodb:3.9.3`](#arangodb393)
 -	[`arangodb:latest`](#arangodblatest)
+
+## `arangodb:3.10`
+
+```console
+$ docker pull arangodb@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `arangodb:3.10.0`
+
+```console
+$ docker pull arangodb@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `arangodb:3.8`
 
