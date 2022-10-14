@@ -1147,14 +1147,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `Unicode-DFS-2016`
 - `bzip2-1.0.6`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.74.0-2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.74.0-2.dsc' glib2.0_2.74.0-2.dsc 3453 SHA512:17f0990cec2ff91ceb3651aea40caa133c32b25b3dffb807f79221d955f33ae9f08034e349718b13c3cabb7ed0b8bbaff4eee0ed302a8c6f1daacf2f51449866
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.74.0.orig.tar.xz' glib2.0_2.74.0.orig.tar.xz 5183072 SHA512:5cdadd2f4568c0c3d45083b4d39699abf651e42e020f7bc880cce3ff33d28943118388d17a0632777e843f48009c1f97d5634fde3cb8c69c7c7f35b278ac8225
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.74.0-2.debian.tar.xz' glib2.0_2.74.0-2.debian.tar.xz 117392 SHA512:a5408bdde5eb835701bc24619228af74435136fe47ad0ca2444794edb7c212a01161ee1c823cfd0d7d30d39a7709836cc85ca03157d77967bdc530a67a7c089a
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/glib2.0/2.74.0-2/
+
 
 ### `dpkg` source package: `glibc=2.36-0ubuntu3`
 
@@ -1171,15 +1170,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.36-0ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36-0ubuntu3.dsc' glibc_2.36-0ubuntu3.dsc 8876 SHA512:fb647a67d4a7cf52b11cf792ffe10b6e9ac8515ede5028cc26937e80ac21ee0c790177a22238fc3e51d35570081e2c1634f6c63bcb125eca61b57aa68c35896a
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36.orig.tar.xz' glibc_2.36.orig.tar.xz 18610836 SHA512:9ea0bbda32f83a85b7da0c34f169607fb8a102f0a11a914e6bf531be47d1bef4f5307128286cffa1e2dc5879f0e6ccaef527dd353486883fa332a0b44bde8b3e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36.orig.tar.xz.asc' glibc_2.36.orig.tar.xz.asc 833 SHA512:b6999ebc4067e08950207e9c67f5172c6d43144e6680677bf3d93093c2270cb4c6e75f9ad37a60e7fec243141fd64b4348782c5794fcf03be363adf0b4543d53
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36-0ubuntu3.debian.tar.xz' glibc_2.36-0ubuntu3.debian.tar.xz 922984 SHA512:63e4d353ac6f5230b763f3d3994f7747633be2ab99cf02d885b14c0847eee5b7f22b7511e9d4787bbe44c3c0ecdeb2a07ea66d40ef51ab007f44a644347f28f2
-```
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg1-1ubuntu2`
 
@@ -1973,14 +1966,13 @@ Licenses: (parsed from: `/usr/share/doc/libevent-2.1-7/copyright`, `/usr/share/d
 - `ISC`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libevent=2.1.12-stable-5
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevent/libevent_2.1.12-stable-5.dsc' libevent_2.1.12-stable-5.dsc 2356 SHA512:f9ede7afde3917fe195812ca7ad1cd9d60cc7fc6119fa30ff1a9a4cb4aa8d376cc69e5422d827a2d40c8930fb4cdc0cc44f6fd56f4a363a234b85e990344ad31
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevent/libevent_2.1.12-stable.orig.tar.gz' libevent_2.1.12-stable.orig.tar.gz 1100847 SHA512:88d8944cd75cbe78bc4e56a6741ca67c017a3686d5349100f1c74f8a68ac0b6410ce64dff160be4a4ba0696ee29540dfed59aaf3c9a02f0c164b00307fcfe84f
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevent/libevent_2.1.12-stable-5.debian.tar.xz' libevent_2.1.12-stable-5.debian.tar.xz 17032 SHA512:a7fb99b224228a61cbae03f3d0832c1f543150797e6a2910fcdf0846b24cd986837ac11e468b5ffa3814919d293f15a47ca828cb4a7bdc5841e7d3a3f48a9d8b
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libevent/2.1.12-stable-5/
+
 
 ### `dpkg` source package: `libexif=0.6.24-1build1`
 
@@ -3292,14 +3284,9 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient-dev/copyright`, `/usr/sha
 - `public-domain`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mysql-8.0=8.0.30-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.30-0ubuntu2.dsc' mysql-8.0_8.0.30-0ubuntu2.dsc 3536 SHA512:ca7873da71701e600e028c2da7c98839c7eaf750c71f01170a733544546a2a2b266f78050c5dafb954eb99a7ef5170e44a0a7a7e02f2f16a13a1e8b15c6a419f
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.30.orig.tar.gz' mysql-8.0_8.0.30.orig.tar.gz 332772783 SHA512:03cf3f97c9ddac949311f201f0a2c8f46a9785e518b6671fac927df1c05e2bf30edac3ac0316d91e99bb3da04ce2866e1e47394ee6eb2ca8f43bbbd38ab4247a
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.30-0ubuntu2.debian.tar.xz' mysql-8.0_8.0.30-0ubuntu2.debian.tar.xz 161144 SHA512:bb36232f8b08dc811989f486b0c03a840b1d67ccf5bf07845e4d80a166ac8636878cec08b5666061276811e2e169aeded4c65ef5d30358335dad42a70d0eace0
-```
 
 ### `dpkg` source package: `mysql-defaults=1.0.8`
 
@@ -4351,15 +4338,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022c-1ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-1ubuntu3.dsc' tzdata_2022c-1ubuntu3.dsc 2326 SHA512:29d8c47fccc5fa2137551b9373fb523368e901b81303a4bfd57b68479dbd6bb8f3b4923ca8c045a733ea44efbda97e75d2ac34ebdf27e0dabeed57d41a723031
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz' tzdata_2022c.orig.tar.gz 432721 SHA512:e2ae92abac6d87ce4ab4ba9012e868e1791b842e083293489debc0c671b9cf135b5b70426dacb6dbebbf6eba24463205225ae45bb7df891a086b25475f85ee0b
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz.asc' tzdata_2022c.orig.tar.gz.asc 833 SHA512:8485b30e93782c76444b07c18c3032e91293edcb4a79b536b7d561de7981e5a4861b83ea3cae7e6efe7340ce8de313cb34a493d7ef46547f7f63f29eb0452da9
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-1ubuntu3.debian.tar.xz' tzdata_2022c-1ubuntu3.debian.tar.xz 171800 SHA512:8cf3e2974942483fdbff31855fb99fe58dfa7303abc51cbfb667766b207fa13da0432422236ceb4ef9b322e728215304f17e0e53ad22ed9af9d076590387b2ca
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2021.03.26`
 

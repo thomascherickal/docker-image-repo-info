@@ -3916,14 +3916,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris unzip=6.0-21ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-21ubuntu1.1.dsc' unzip_6.0-21ubuntu1.1.dsc 1630 SHA512:41b5ffb55fffe5da1e7f441c28981086f222ac6a05fd62ea914246f44d6bc7b8e96c9ae2faf8fc8bb685a7a0dda6ebc1218f0b7c1dd5d21f8b2bc74356e2639a
-'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0.orig.tar.gz' unzip_6.0.orig.tar.gz 1376845 SHA512:0694e403ebc57b37218e00ec1a406cae5cc9c5b52b6798e0d4590840b6cdbf9ddc0d9471f67af783e960f8fa2e620394d51384257dca23d06bcd90224a80ce5d
-'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-21ubuntu1.1.debian.tar.xz' unzip_6.0-21ubuntu1.1.debian.tar.xz 26240 SHA512:360f425ed634602cc3cc2bb4e2bd6ca9c3f514ec315f3cc32b5dbb47a6f7e582bfad1517e1f0a256d4fc701f55dc0d79ff7420868d132d9f0903137f646da0d3
-```
 
 ### `dpkg` source package: `util-linux=2.31.1-0.4ubuntu3.7`
 

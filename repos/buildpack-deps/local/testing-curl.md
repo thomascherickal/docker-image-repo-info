@@ -1843,20 +1843,13 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.5.2-2
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2-2.dsc' pam_1.5.2-2.dsc 2550 SHA256:dd6762b3a4a83697229680e277bacbe8f8d42a1d3f333bbb03d95f10038f9fdd
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2.orig.tar.xz' pam_1.5.2.orig.tar.xz 988784 SHA256:e4ec7131a91da44512574268f493c6d8ca105c87091691b8e9b56ca685d4f94d
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2-2.debian.tar.xz' pam_1.5.2-2.debian.tar.xz 120232 SHA256:c8815f19bc93bbc111f1f7cf1ffa7b9ce4e72da02c9101229a740a8f245c6446
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pam/1.5.2-2/
 
-- https://sources.debian.net/src/pam/1.5.2-2/ (for browsing the source)
-- https://sources.debian.net/src/pam/1.5.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pam/1.5.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pcre2=10.40-1`
 

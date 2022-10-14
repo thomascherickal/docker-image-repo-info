@@ -1327,21 +1327,13 @@ Licenses: (parsed from: `/usr/share/doc/libgdbm-compat4/copyright`, `/usr/share/
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gdbm=1.23-2
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.23-2.dsc' gdbm_1.23-2.dsc 2583 SHA256:184342bd8a992ff35423471203478aff72ce4b280a1dd4809db5972a7411a92f
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.23.orig.tar.gz' gdbm_1.23.orig.tar.gz 1115854 SHA256:74b1081d21fff13ae4bd7c16e5d6e504a4c26f7cde1dca0d963a484174bbcacd
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.23.orig.tar.gz.asc' gdbm_1.23.orig.tar.gz.asc 181 SHA256:64ebb68cc68e8915d62cb20ea40323c00b56051f844589ee0a52169fff34cecb
-'http://deb.debian.org/debian/pool/main/g/gdbm/gdbm_1.23-2.debian.tar.xz' gdbm_1.23-2.debian.tar.xz 18508 SHA256:fb34453bfeae45bad72b5df8715a93e6f60b19f788f891f523cdd19d8564ce73
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gdbm/1.23-2/
 
-- https://sources.debian.net/src/gdbm/1.23-2/ (for browsing the source)
-- https://sources.debian.net/src/gdbm/1.23-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gdbm/1.23-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gdk-pixbuf=2.42.9+dfsg-1`
 
@@ -3978,21 +3970,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=6.2.2-1
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.2.2-1.dsc' mercurial_6.2.2-1.dsc 2799 SHA256:fc70ce1fadf17ffa1a811acee98a5bb4ed181425ff7449eb3d0a49b96709ba3a
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.2.2.orig.tar.gz' mercurial_6.2.2.orig.tar.gz 8057375 SHA256:9efa9da5f497a8750ac9c48fa431c4ab72209f1360180c5d4920d1311b0420df
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.2.2.orig.tar.gz.asc' mercurial_6.2.2.orig.tar.gz.asc 659 SHA256:662079f5a5d4a44b8981b5b5353f5bf030a35fca4e8a0bef100fb83fc19ec78f
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.2.2-1.debian.tar.xz' mercurial_6.2.2-1.debian.tar.xz 70016 SHA256:33a32d5d2809a7b5ae8b7a1447d7497d7b04046155cb76b60ea5355c099b1074
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/6.2.2-1/
 
-- https://sources.debian.net/src/mercurial/6.2.2-1/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/6.2.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/6.2.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpclib3=1.2.1-2`
 
@@ -4497,20 +4481,13 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.5.2-2
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2-2.dsc' pam_1.5.2-2.dsc 2550 SHA256:dd6762b3a4a83697229680e277bacbe8f8d42a1d3f333bbb03d95f10038f9fdd
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2.orig.tar.xz' pam_1.5.2.orig.tar.xz 988784 SHA256:e4ec7131a91da44512574268f493c6d8ca105c87091691b8e9b56ca685d4f94d
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2-2.debian.tar.xz' pam_1.5.2-2.debian.tar.xz 120232 SHA256:c8815f19bc93bbc111f1f7cf1ffa7b9ce4e72da02c9101229a740a8f245c6446
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pam/1.5.2-2/
 
-- https://sources.debian.net/src/pam/1.5.2-2/ (for browsing the source)
-- https://sources.debian.net/src/pam/1.5.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pam/1.5.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pango1.0=1.50.10+ds-1`
 
