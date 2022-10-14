@@ -17,6 +17,9 @@
 -	[`neo4j:4.3.18`](#neo4j4318)
 -	[`neo4j:4.3.18-community`](#neo4j4318-community)
 -	[`neo4j:4.3.18-enterprise`](#neo4j4318-enterprise)
+-	[`neo4j:4.3.19`](#neo4j4319)
+-	[`neo4j:4.3.19-community`](#neo4j4319-community)
+-	[`neo4j:4.3.19-enterprise`](#neo4j4319-enterprise)
 -	[`neo4j:4.4`](#neo4j44)
 -	[`neo4j:4.4-community`](#neo4j44-community)
 -	[`neo4j:4.4-enterprise`](#neo4j44-enterprise)
@@ -26,6 +29,9 @@
 -	[`neo4j:4.4.11`](#neo4j4411)
 -	[`neo4j:4.4.11-community`](#neo4j4411-community)
 -	[`neo4j:4.4.11-enterprise`](#neo4j4411-enterprise)
+-	[`neo4j:4.4.12`](#neo4j4412)
+-	[`neo4j:4.4.12-community`](#neo4j4412-community)
+-	[`neo4j:4.4.12-enterprise`](#neo4j4412-enterprise)
 -	[`neo4j:4.4.9`](#neo4j449)
 -	[`neo4j:4.4.9-community`](#neo4j449-community)
 -	[`neo4j:4.4.9-enterprise`](#neo4j449-enterprise)
@@ -1247,6 +1253,33 @@ CMD ["neo4j"]
 		Last Modified: Thu, 06 Oct 2022 07:14:40 GMT  
 		Size: 160.7 MB (160741762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `neo4j:4.3.19`
+
+```console
+$ docker pull neo4j@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `neo4j:4.3.19-community`
+
+```console
+$ docker pull neo4j@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `neo4j:4.3.19-enterprise`
+
+```console
+$ docker pull neo4j@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `neo4j:4.4`
 
@@ -2624,6 +2657,33 @@ CMD ["neo4j"]
 		Last Modified: Thu, 06 Oct 2022 04:15:16 GMT  
 		Size: 231.5 MB (231498439 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `neo4j:4.4.12`
+
+```console
+$ docker pull neo4j@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `neo4j:4.4.12-community`
+
+```console
+$ docker pull neo4j@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
+
+## `neo4j:4.4.12-enterprise`
+
+```console
+$ docker pull neo4j@sha256:a8409dff6597f2ef5f7ecd3c672671bb2af9a390073efd74f95c54aa41cba22a
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 0
 
 ## `neo4j:4.4.9`
 
