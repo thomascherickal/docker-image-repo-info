@@ -1,9 +1,9 @@
-# `postgres:15rc2-alpine`
+# `postgres:15.0-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:53a0985adeebf5563034ff90da9de00befa955ff6eee07308f5281c499d8a161`
-- Created: `2022-10-07T23:58:02.020517734Z`
+- Image ID: `sha256:cc994726847f9000a5bb5c7896887ecf1d77b524239f00cd3e19675e0cba2b6f`
+- Created: `2022-10-14T21:28:21.927360989Z`
 - Virtual Size: ~ 217.84 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -13,8 +13,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=en_US.utf8`
   - `PG_MAJOR=15`
-  - `PG_VERSION=15rc2`
-  - `PG_SHA256=11739405e96699198733f4a0055362262c9c89f32d2e835e0b815687d700cc23`
+  - `PG_VERSION=15.0`
+  - `PG_SHA256=72ec74f4a7c16e684f43ea42e215497fcd4c55d028a68fb72e99e61ff40da4d6`
   - `PGDATA=/var/lib/postgresql/data`
 
 ## `apk` (`.apk`-based packages)
