@@ -5321,11 +5321,6 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`, `/usr/share/doc/zlib1
 
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.4.dsc' zlib_1.2.11.dfsg-2ubuntu1.4.dsc 2953 SHA512:a4d9186221ae78538d1ba9c356ce5e34c694f5410f89a39585f0936dfbf0ebd811f7b4bd150c3a143070cf241bdf7e93ce36828f9d6e7e1ff5c16c500f77206f
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA512:92819807c0b8de655021bb2d5d182f9b6b381d3072d8c8dc1df34bbaa25d36bcba140c85f754a43cc466aac65850b7a7366aa0c93e804180e5b255e61d5748de
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.4.debian.tar.xz' zlib_1.2.11.dfsg-2ubuntu1.4.debian.tar.xz 55628 SHA512:9d5ba3197de825a7528a331794f4e42aefaa68272603ab84fb2120af2d2c79ad6d72692b6414d4949654ccdedda3a24b9835d2264f82351c71109d06a2bb1d7a
-```
