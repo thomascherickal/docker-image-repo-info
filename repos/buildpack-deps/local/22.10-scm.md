@@ -169,13 +169,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=12.2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_12.2ubuntu2.dsc' base-files_12.2ubuntu2.dsc 958 SHA512:f524e01dbb04fed3721220912a052fdbb39b744eeef455a4b6f17ce19e27be4bfdf0c5973ab8bbdd4567bdd5e0d0f801641a5d3ecabde4cf4e268251f83a0cd6
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_12.2ubuntu2.tar.xz' base-files_12.2ubuntu2.tar.xz 92492 SHA512:7ffbc93fc46919baf8d75a542c4ee7d968902ecb7a863744d8ef84933bbebebded524d7c4ee4b84aa78aeb22be2941e967a75317735b04b9b804b4014a6ee7d6
-```
 
 ### `dpkg` source package: `base-passwd=3.6.0`
 

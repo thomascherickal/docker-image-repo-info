@@ -1448,20 +1448,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `Unicode-DFS-2016`
 - `bzip2-1.0.6`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.74.0-2
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.74.0-2.dsc' glib2.0_2.74.0-2.dsc 3453 SHA256:8be3cdfc9a01bcb2224db20f470ed773d528135560e28e05bc3bf523acf202d7
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.74.0.orig.tar.xz' glib2.0_2.74.0.orig.tar.xz 5183072 SHA256:3652c7f072d7b031a6b5edd623f77ebc5dcd2ae698598abcc89ff39ca75add30
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.74.0-2.debian.tar.xz' glib2.0_2.74.0-2.debian.tar.xz 117392 SHA256:960f843025a3af76b2aaa7822ebe44fd54f9d05d0aaad560d9726be1c0eef5e7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/glib2.0/2.74.0-2/
 
-- https://sources.debian.net/src/glib2.0/2.74.0-2/ (for browsing the source)
-- https://sources.debian.net/src/glib2.0/2.74.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/glib2.0/2.74.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.35-1`
 
@@ -2413,20 +2406,13 @@ Licenses: (parsed from: `/usr/share/doc/liberror-perl/copyright`)
 - `GPL-1+`
 - `MIT/X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris liberror-perl=0.17029-1
-'http://deb.debian.org/debian/pool/main/libe/liberror-perl/liberror-perl_0.17029-1.dsc' liberror-perl_0.17029-1.dsc 2336 SHA256:0590467fe8c5f81bff9336e991462b2a9994b4876f4b732c8b8b31e927987cd7
-'http://deb.debian.org/debian/pool/main/libe/liberror-perl/liberror-perl_0.17029.orig.tar.gz' liberror-perl_0.17029.orig.tar.gz 33304 SHA256:1a23f7913032aed6d4b68321373a3899ca66590f4727391a091ec19c95bf7adc
-'http://deb.debian.org/debian/pool/main/libe/liberror-perl/liberror-perl_0.17029-1.debian.tar.xz' liberror-perl_0.17029-1.debian.tar.xz 4552 SHA256:a753b142c4c33ebf9cc98ae5f7a08da13b7c9ca2823ec26e45c96efb9c15c42e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/liberror-perl/0.17029-1/
 
-- https://sources.debian.net/src/liberror-perl/0.17029-1/ (for browsing the source)
-- https://sources.debian.net/src/liberror-perl/0.17029-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/liberror-perl/0.17029-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libevent=2.1.12-stable-5`
 
@@ -4908,20 +4894,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.10=3.10.7-1
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.7-1.dsc' python3.10_3.10.7-1.dsc 3639 SHA256:148f2b7464dd37f87866a490995a74c9f114837f9a664342e8a7eb558ccee73e
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.7.orig.tar.xz' python3.10_3.10.7.orig.tar.xz 19618696 SHA256:6eed8415b7516fb2f260906db5d48dd4c06acc0cb24a7d6cc15296a604dcdc48
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.7-1.debian.tar.xz' python3.10_3.10.7-1.debian.tar.xz 219512 SHA256:a17544a1fc0046c178222be6795a191f7f7102f389af379f95e80a5e814d905a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.10/3.10.7-1/
 
-- https://sources.debian.net/src/python3.10/3.10.7-1/ (for browsing the source)
-- https://sources.debian.net/src/python3.10/3.10.7-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.10/3.10.7-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.2-1`
 
@@ -5396,19 +5375,13 @@ Licenses: (parsed from: `/usr/share/doc/usr-is-merged/copyright`)
 - `GPL-2`
 - `later (please see /usr/share/common-licenses/GPL-2)`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris usrmerge=31
-'http://deb.debian.org/debian/pool/main/u/usrmerge/usrmerge_31.dsc' usrmerge_31.dsc 938 SHA256:1264e130de7fe082f6ec4079fdaa95f0276224ce4168e1082df110a7bdee902c
-'http://deb.debian.org/debian/pool/main/u/usrmerge/usrmerge_31.tar.xz' usrmerge_31.tar.xz 13448 SHA256:d429b0756f4668a5ebb1b6f2e750a7107fcb9bcf2344e536272f792c4c76e7ff
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/usrmerge/31/
 
-- https://sources.debian.net/src/usrmerge/31/ (for browsing the source)
-- https://sources.debian.net/src/usrmerge/31/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/usrmerge/31/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `utf8proc=2.7.0-4`
 
