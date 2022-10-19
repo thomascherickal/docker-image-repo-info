@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1c08a395b24b20e8c7c1ae51755f18b303d80f3354f0b2003e377b0dd9b9a966`
-- Created: `2022-10-03T16:20:17.242035523Z`
+- Image ID: `sha256:f85772eaa0329a5d8c36979d4bc1d75ffbe016069a729d2856b20b1f79becd0b`
+- Created: `2022-10-17T23:19:56.946733725Z`
 - Virtual Size: ~ 37.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20220930`
+  - `build-date=20221017`
   - `name=Photon OS x86_64/4.0 Base Image`
   - `vendor=VMware`
 
@@ -107,7 +107,7 @@ Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libgcc-10.2.0-1.ph4.x86_64`
+### `rpm` package: `libgcc-10.2.0-2.ph4.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
@@ -185,7 +185,7 @@ Licenses (from `rpm --query`): GPLv3+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `rpm-libs-4.16.1.3-13.ph4.x86_64`
+### `rpm` package: `rpm-libs-4.16.1.3-14.ph4.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
