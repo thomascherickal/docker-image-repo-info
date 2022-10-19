@@ -1,7 +1,7 @@
 ## `mysql:5-oracle`
 
 ```console
-$ docker pull mysql@sha256:94176d0ad4ed85767fc0d74b8071387109a0390e7c1afd39788269c96d2dad74
+$ docker pull mysql@sha256:3e704854fb64969e551bf2a17d4e804778d26848e3b61533a415c7dc5711f2e7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull mysql@sha256:94176d0ad4ed85767fc0d74b8071387109a0390e7c1afd3978826
 ### `mysql:5-oracle` - linux; amd64
 
 ```console
-$ docker pull mysql@sha256:4ff8da589a6dd1ff2323a50b409575cb5ca7d5dd1169783a911476c757ed48f5
+$ docker pull mysql@sha256:e019c4d4af1ddf60e566f465a17cb7cebec653f888698d0e813f34ae9e0698c2
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **144.3 MB (144346386 bytes)**  
+-	Total Size: **144.3 MB (144346392 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:262701d58edd77960f86dc48c4090fe972d329b9aba26788eff6c46c8bbbfb11`
+-	Image ID: `sha256:73ab1e19d382f1ea775221a17ab489f82f74a66f5f71e6bf18ee6f58707f764e`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -53,15 +53,15 @@ ENV MYSQL_SHELL_VERSION=8.0.31-1.el7
 RUN set -eux; 	yum install -y --setopt=skip_missing_names_on_install=False "mysql-shell-$MYSQL_SHELL_VERSION"; 	yum clean all; 		mysqlsh --version
 # Tue, 11 Oct 2022 20:30:41 GMT
 VOLUME [/var/lib/mysql]
-# Tue, 11 Oct 2022 20:30:41 GMT
-COPY file:5e84598933ec95c9918378d8dde5be8d5f80b0e1fc321a029f840f313201ebce in /usr/local/bin/ 
-# Tue, 11 Oct 2022 20:30:41 GMT
+# Wed, 19 Oct 2022 19:24:33 GMT
+COPY file:e9c22353a1133b89c5bca24ecacd348acd094e50e5e5c45375a997c6b1f07192 in /usr/local/bin/ 
+# Wed, 19 Oct 2022 19:24:33 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /entrypoint.sh # backwards compat
-# Tue, 11 Oct 2022 20:30:42 GMT
+# Wed, 19 Oct 2022 19:24:33 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 11 Oct 2022 20:30:42 GMT
+# Wed, 19 Oct 2022 19:24:34 GMT
 EXPOSE 3306 33060
-# Tue, 11 Oct 2022 20:30:42 GMT
+# Wed, 19 Oct 2022 19:24:34 GMT
 CMD ["mysqld"]
 ```
 
@@ -102,11 +102,11 @@ CMD ["mysqld"]
 		Last Modified: Tue, 11 Oct 2022 20:33:12 GMT  
 		Size: 63.5 MB (63460088 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e3a8ad6eeebe68aa2729bf4325ccaebe03dfab39ed7eda5f3e39231dcaafd8e4`  
-		Last Modified: Tue, 11 Oct 2022 20:33:01 GMT  
-		Size: 5.4 KB (5388 bytes)  
+	-	`sha256:17c5629b5cae4526526239703b48f809e5b1a5b17f1a1c42dc4eb5ac1fa3765b`  
+		Last Modified: Wed, 19 Oct 2022 19:25:48 GMT  
+		Size: 5.4 KB (5394 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:919524a8718b6f154a115b2d995184e2362c8f03cc807b4722ecc42abbe3a2cd`  
-		Last Modified: Tue, 11 Oct 2022 20:33:01 GMT  
+	-	`sha256:c99181ed9cd3d8c313d73dec0eedef0463b6722f77edb38e2dd1fd64650be705`  
+		Last Modified: Wed, 19 Oct 2022 19:25:48 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
