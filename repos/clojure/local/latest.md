@@ -719,14 +719,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.34.1-1ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.4.dsc' git_2.34.1-1ubuntu1.4.dsc 2927 SHA512:a5cafdf105caeb9cd109c87d0a416464d734bb994a2689ff424da74913c4dcb4e5243b58649a4faf1faeda4067edd4f0425573d8ea22c4cf78062550052e020a
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1.orig.tar.xz' git_2.34.1.orig.tar.xz 6623760 SHA512:a1a8e9e6f64b1da25508fbd2f783564dcdbe181fb5ff1ebab3bdac6db6094e18acc334479a1abf22ac17ce4f733cc3e10a664db9ab234cd523735a3f027b42db
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.4.debian.tar.xz' git_2.34.1-1ubuntu1.4.debian.tar.xz 716400 SHA512:652965092b6079306a70215f16df7e52278a2bd166821d6876fb847d4c5bae29649f91791b48f1b91113b2da9a4c1f971d3be78cb02135d543fec4206c6c11e6
-```
 
 ### `dpkg` source package: `glibc=2.35-0ubuntu3.1`
 
@@ -2620,11 +2615,6 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2ubuntu9.1
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu9.1.dsc' zlib_1.2.11.dfsg-2ubuntu9.1.dsc 2953 SHA512:443edb665eee245314a768ee579e68684078aa3c2cb3295fca1fb8a06bb72b00975efb66d2cf1d14cf820044feba75442080c5a8d4b97ea9a5b2fc942cd43e9c
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA512:92819807c0b8de655021bb2d5d182f9b6b381d3072d8c8dc1df34bbaa25d36bcba140c85f754a43cc466aac65850b7a7366aa0c93e804180e5b255e61d5748de
-'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu9.1.debian.tar.xz' zlib_1.2.11.dfsg-2ubuntu9.1.debian.tar.xz 59368 SHA512:53c6b7bcc37c1e93ac2ceb33b5db917fd6251dd59f7dd02f2eea77f23f6b6a7a7467d942ae90163b953b970b147b4e3c4dcd5359a19481aeb941f77bec94c974
-```
