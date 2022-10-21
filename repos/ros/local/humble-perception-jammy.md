@@ -2249,14 +2249,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.34.1-1ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.4.dsc' git_2.34.1-1ubuntu1.4.dsc 2927 SHA512:a5cafdf105caeb9cd109c87d0a416464d734bb994a2689ff424da74913c4dcb4e5243b58649a4faf1faeda4067edd4f0425573d8ea22c4cf78062550052e020a
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1.orig.tar.xz' git_2.34.1.orig.tar.xz 6623760 SHA512:a1a8e9e6f64b1da25508fbd2f783564dcdbe181fb5ff1ebab3bdac6db6094e18acc334479a1abf22ac17ce4f733cc3e10a664db9ab234cd523735a3f027b42db
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.4.debian.tar.xz' git_2.34.1-1ubuntu1.4.debian.tar.xz 716400 SHA512:652965092b6079306a70215f16df7e52278a2bd166821d6876fb847d4c5bae29649f91791b48f1b91113b2da9a4c1f971d3be78cb02135d543fec4206c6c11e6
-```
 
 ### `dpkg` source package: `gl2ps=1.4.2+dfsg1-2`
 
