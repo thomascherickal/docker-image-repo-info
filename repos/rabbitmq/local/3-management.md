@@ -1,10 +1,10 @@
-# `rabbitmq:3.11.1-management`
+# `rabbitmq:3.11.2-management`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f513a91ed8273973c8340ffde78116a27b8d404b39fd9ced1d5c55d18f9c79e4`
-- Created: `2022-10-13T22:24:06.005209917Z`
-- Virtual Size: ~ 262.83 Mb  
+- Image ID: `sha256:00bf31c8c3a661976ecdd3e3d2afd2f41a3ac674ca6b4dbf395546654d513e0f`
+- Created: `2022-10-19T19:44:17.137522044Z`
+- Virtual Size: ~ 262.84 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `OTP_VERSION=25.1.1`
   - `OTP_SOURCE_SHA256=42840c32e13a27bdb2c376d69aa22466513d441bfe5eb882de23baf8218308d3`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
-  - `RABBITMQ_VERSION=3.11.1`
+  - `RABBITMQ_VERSION=3.11.2`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
   - `RABBITMQ_HOME=/opt/rabbitmq`
   - `HOME=/var/lib/rabbitmq`
@@ -1261,15 +1261,9 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.30.0-9ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0-9ubuntu0.2.dsc' perl_5.30.0-9ubuntu0.2.dsc 2962 SHA512:497f54e6e2d142b7a03cdee4999ea8d861911e2aa8115bb6895c244c4f285a00648bd6e1038c56017b7370c9b4b474dbe212071a65054c7435dbab66d2cd0ed3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0.orig-regen-configure.tar.gz' perl_5.30.0.orig-regen-configure.tar.gz 833235 SHA512:ab977887b53249a2423708aa38ecbb8bdbfdb7ba533a795eaa20bac427b2eb326756b076ca11088036550a4db24418903c0565d168fe9641e18077a76d04274a
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0.orig.tar.xz' perl_5.30.0.orig.tar.xz 12419868 SHA512:68a295eccd64debd9d6a10f0d5577f872a19ad8c2d702798f6b0f45b8c3af6ab3230768056e2131e9e2e2506d1035b27cfd627c845e32263fe448649c4b98ae9
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0-9ubuntu0.2.debian.tar.xz' perl_5.30.0-9ubuntu0.2.debian.tar.xz 167248 SHA512:841504df745d755603b6a592484ff91a44e4346adc96b01a0c0bce09205f46d4250a6aafbb7462510a150d1d2904ef6889f014bd5d33efc5f18bafd71cef8bce
-```
 
 ### `dpkg` source package: `procps=2:3.3.16-1ubuntu2.3`
 
