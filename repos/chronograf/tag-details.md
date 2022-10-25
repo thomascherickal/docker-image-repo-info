@@ -24,7 +24,7 @@
 ## `chronograf:1.10`
 
 ```console
-$ docker pull chronograf@sha256:06e0d9180e749071081d3b4b557f411a8528b1ca875bd4d0b20633db815fc558
+$ docker pull chronograf@sha256:9934c4ad3603cc81961a93d256471b923513266b3a843833796f032609cd23f1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -103,68 +103,68 @@ CMD ["chronograf"]
 ### `chronograf:1.10` - linux; arm variant v7
 
 ```console
-$ docker pull chronograf@sha256:74369d6a1722549033636ff6deae2ad8a6b22032830073fb7eceba29d595f1ff
+$ docker pull chronograf@sha256:7ac31c5a43030c20f35a79c2da4bf346947c5d1e05b3e9d9445dbedfe99f229b
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.6 MB (73562035 bytes)**  
+-	Total Size: **73.6 MB (73563597 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96c9aa985715d42e51fb74c1747427e927611ff0013d7f6e6d1e3cb6608334e6`
+-	Image ID: `sha256:9bf8854c34693f89ab353b81801cc7a1fefaf7bf996970e7c714b3c9a56f2c12`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["chronograf"]`
 
 ```dockerfile
-# Tue, 04 Oct 2022 23:58:46 GMT
-ADD file:ca1bf27f17594a91224a252bd446f97c3b898210c571f2f26fa2e723d2bf521e in / 
-# Tue, 04 Oct 2022 23:58:46 GMT
+# Tue, 25 Oct 2022 03:14:27 GMT
+ADD file:0d2a17d07f391dfbf63c00d2b826373c98aaf6ab777481e33d4bee6d57c4a0b0 in / 
+# Tue, 25 Oct 2022 03:14:27 GMT
 CMD ["bash"]
-# Wed, 05 Oct 2022 01:04:08 GMT
+# Tue, 25 Oct 2022 12:53:28 GMT
 RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     apt-get update && apt-get install -y gnupg ca-certificates dirmngr --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys "$key" ;     done
-# Wed, 05 Oct 2022 01:04:39 GMT
+# Tue, 25 Oct 2022 12:54:00 GMT
 ENV CHRONOGRAF_VERSION=1.10.0
-# Wed, 05 Oct 2022 01:04:50 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     set -x &&     apt-get update && apt-get install -y ca-certificates curl --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc" &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb" &&     gpg --batch --verify chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     dpkg -i chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     rm -f chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb* &&     apt-get purge -y --auto-remove $buildDeps
-# Wed, 05 Oct 2022 01:04:50 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 COPY file:6403df1bf15a98453f66ca6b38ee538c184409065ea1d3c321788dec9eaa5c77 in /usr/share/chronograf/LICENSE 
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 COPY file:6a5854b87d89e3055231dd56f8f199c325f44eeed8faed4cf32833126a5b9cd9 in /usr/share/chronograf/agpl-3.0.md 
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 EXPOSE 8888
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 VOLUME [/var/lib/chronograf]
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:10 GMT
 COPY file:7ce45912f7e80a04754c20ff31c757dd5de5eb9a5845af3b183b4a5227dd1c1e in /entrypoint.sh 
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:10 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:10 GMT
 CMD ["chronograf"]
 ```
 
 -	Layers:
-	-	`sha256:2bc64aeac2e429577e497affc8a416d2fc59158aa967f07aced793368e19455f`  
-		Last Modified: Wed, 05 Oct 2022 00:05:09 GMT  
-		Size: 26.6 MB (26579199 bytes)  
+	-	`sha256:e96255deabf6ae29e08aa044ffd2843f7a10c579cc8207bf0ddf13a90d192020`  
+		Last Modified: Tue, 25 Oct 2022 03:21:16 GMT  
+		Size: 26.6 MB (26579293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc14fee07560a2936b1d20d8255a4bd556e62f7fbc6f6315b40f6414a1e4cc7a`  
-		Last Modified: Wed, 05 Oct 2022 01:05:41 GMT  
-		Size: 4.5 MB (4493786 bytes)  
+	-	`sha256:68f1749ac90bfa69003129e242051632c3420cf35e2a888329d8709010afae29`  
+		Last Modified: Tue, 25 Oct 2022 12:55:02 GMT  
+		Size: 4.5 MB (4494994 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5165c7780555fbc9f43e71ea6eb27a6bab287a68d2d802985d54f0da110fe045`  
-		Last Modified: Wed, 05 Oct 2022 01:06:24 GMT  
-		Size: 42.5 MB (42464659 bytes)  
+	-	`sha256:f4fc4ff7d1f4516f3810e6354425d49541ff9ad663d48c35410d514b836a5da1`  
+		Last Modified: Tue, 25 Oct 2022 12:55:45 GMT  
+		Size: 42.5 MB (42464917 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a4e18bc5a8fc51c5e1207e5a000659db2c321522baaa001df2da8a2921dd16e`  
-		Last Modified: Wed, 05 Oct 2022 01:06:15 GMT  
-		Size: 12.2 KB (12246 bytes)  
+	-	`sha256:df95d9ae6a19b1e1e9cb18c93597ce98317251569f5cd855d4af3606f9a2dc4e`  
+		Last Modified: Tue, 25 Oct 2022 12:55:37 GMT  
+		Size: 12.2 KB (12247 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd30d77fb4c42b51b944e736258a7bc25bce848283ba633ac7317f69d9e6457a`  
-		Last Modified: Wed, 05 Oct 2022 01:06:15 GMT  
+	-	`sha256:494ef46291b2362156ed0fe658a1f43b2950377c3f62d0623cf215d2175e6be6`  
+		Last Modified: Tue, 25 Oct 2022 12:55:37 GMT  
 		Size: 11.9 KB (11906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:01214c89af7978821fdaa181b1c762c2e3336d1f89584134b888dbdd3892ec61`  
-		Last Modified: Wed, 05 Oct 2022 01:06:16 GMT  
-		Size: 239.0 B  
+	-	`sha256:d94a2368587118a72f6f1ca4a4ccb2a0179f7e77af6da9e20954e4dc88fa5989`  
+		Last Modified: Tue, 25 Oct 2022 12:55:37 GMT  
+		Size: 240.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `chronograf:1.10` - linux; arm64 variant v8
@@ -320,7 +320,7 @@ CMD ["chronograf"]
 ## `chronograf:1.10.0`
 
 ```console
-$ docker pull chronograf@sha256:06e0d9180e749071081d3b4b557f411a8528b1ca875bd4d0b20633db815fc558
+$ docker pull chronograf@sha256:9934c4ad3603cc81961a93d256471b923513266b3a843833796f032609cd23f1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -399,68 +399,68 @@ CMD ["chronograf"]
 ### `chronograf:1.10.0` - linux; arm variant v7
 
 ```console
-$ docker pull chronograf@sha256:74369d6a1722549033636ff6deae2ad8a6b22032830073fb7eceba29d595f1ff
+$ docker pull chronograf@sha256:7ac31c5a43030c20f35a79c2da4bf346947c5d1e05b3e9d9445dbedfe99f229b
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.6 MB (73562035 bytes)**  
+-	Total Size: **73.6 MB (73563597 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96c9aa985715d42e51fb74c1747427e927611ff0013d7f6e6d1e3cb6608334e6`
+-	Image ID: `sha256:9bf8854c34693f89ab353b81801cc7a1fefaf7bf996970e7c714b3c9a56f2c12`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["chronograf"]`
 
 ```dockerfile
-# Tue, 04 Oct 2022 23:58:46 GMT
-ADD file:ca1bf27f17594a91224a252bd446f97c3b898210c571f2f26fa2e723d2bf521e in / 
-# Tue, 04 Oct 2022 23:58:46 GMT
+# Tue, 25 Oct 2022 03:14:27 GMT
+ADD file:0d2a17d07f391dfbf63c00d2b826373c98aaf6ab777481e33d4bee6d57c4a0b0 in / 
+# Tue, 25 Oct 2022 03:14:27 GMT
 CMD ["bash"]
-# Wed, 05 Oct 2022 01:04:08 GMT
+# Tue, 25 Oct 2022 12:53:28 GMT
 RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     apt-get update && apt-get install -y gnupg ca-certificates dirmngr --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys "$key" ;     done
-# Wed, 05 Oct 2022 01:04:39 GMT
+# Tue, 25 Oct 2022 12:54:00 GMT
 ENV CHRONOGRAF_VERSION=1.10.0
-# Wed, 05 Oct 2022 01:04:50 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     set -x &&     apt-get update && apt-get install -y ca-certificates curl --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc" &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb" &&     gpg --batch --verify chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     dpkg -i chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     rm -f chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb* &&     apt-get purge -y --auto-remove $buildDeps
-# Wed, 05 Oct 2022 01:04:50 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 COPY file:6403df1bf15a98453f66ca6b38ee538c184409065ea1d3c321788dec9eaa5c77 in /usr/share/chronograf/LICENSE 
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 COPY file:6a5854b87d89e3055231dd56f8f199c325f44eeed8faed4cf32833126a5b9cd9 in /usr/share/chronograf/agpl-3.0.md 
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 EXPOSE 8888
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 VOLUME [/var/lib/chronograf]
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:10 GMT
 COPY file:7ce45912f7e80a04754c20ff31c757dd5de5eb9a5845af3b183b4a5227dd1c1e in /entrypoint.sh 
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:10 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:10 GMT
 CMD ["chronograf"]
 ```
 
 -	Layers:
-	-	`sha256:2bc64aeac2e429577e497affc8a416d2fc59158aa967f07aced793368e19455f`  
-		Last Modified: Wed, 05 Oct 2022 00:05:09 GMT  
-		Size: 26.6 MB (26579199 bytes)  
+	-	`sha256:e96255deabf6ae29e08aa044ffd2843f7a10c579cc8207bf0ddf13a90d192020`  
+		Last Modified: Tue, 25 Oct 2022 03:21:16 GMT  
+		Size: 26.6 MB (26579293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc14fee07560a2936b1d20d8255a4bd556e62f7fbc6f6315b40f6414a1e4cc7a`  
-		Last Modified: Wed, 05 Oct 2022 01:05:41 GMT  
-		Size: 4.5 MB (4493786 bytes)  
+	-	`sha256:68f1749ac90bfa69003129e242051632c3420cf35e2a888329d8709010afae29`  
+		Last Modified: Tue, 25 Oct 2022 12:55:02 GMT  
+		Size: 4.5 MB (4494994 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5165c7780555fbc9f43e71ea6eb27a6bab287a68d2d802985d54f0da110fe045`  
-		Last Modified: Wed, 05 Oct 2022 01:06:24 GMT  
-		Size: 42.5 MB (42464659 bytes)  
+	-	`sha256:f4fc4ff7d1f4516f3810e6354425d49541ff9ad663d48c35410d514b836a5da1`  
+		Last Modified: Tue, 25 Oct 2022 12:55:45 GMT  
+		Size: 42.5 MB (42464917 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a4e18bc5a8fc51c5e1207e5a000659db2c321522baaa001df2da8a2921dd16e`  
-		Last Modified: Wed, 05 Oct 2022 01:06:15 GMT  
-		Size: 12.2 KB (12246 bytes)  
+	-	`sha256:df95d9ae6a19b1e1e9cb18c93597ce98317251569f5cd855d4af3606f9a2dc4e`  
+		Last Modified: Tue, 25 Oct 2022 12:55:37 GMT  
+		Size: 12.2 KB (12247 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd30d77fb4c42b51b944e736258a7bc25bce848283ba633ac7317f69d9e6457a`  
-		Last Modified: Wed, 05 Oct 2022 01:06:15 GMT  
+	-	`sha256:494ef46291b2362156ed0fe658a1f43b2950377c3f62d0623cf215d2175e6be6`  
+		Last Modified: Tue, 25 Oct 2022 12:55:37 GMT  
 		Size: 11.9 KB (11906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:01214c89af7978821fdaa181b1c762c2e3336d1f89584134b888dbdd3892ec61`  
-		Last Modified: Wed, 05 Oct 2022 01:06:16 GMT  
-		Size: 239.0 B  
+	-	`sha256:d94a2368587118a72f6f1ca4a4ccb2a0179f7e77af6da9e20954e4dc88fa5989`  
+		Last Modified: Tue, 25 Oct 2022 12:55:37 GMT  
+		Size: 240.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `chronograf:1.10.0` - linux; arm64 variant v8
@@ -616,7 +616,7 @@ CMD ["chronograf"]
 ## `chronograf:1.7`
 
 ```console
-$ docker pull chronograf@sha256:ab78f3dcc3bc7e1f85d116666ffc43c435c5ade3851ccb2081bdf2e22189ab84
+$ docker pull chronograf@sha256:46c1c92bcc0a478724a19d2b00537a350bce3e74d1225bb78343508f6b80708d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -695,68 +695,68 @@ CMD ["chronograf"]
 ### `chronograf:1.7` - linux; arm variant v7
 
 ```console
-$ docker pull chronograf@sha256:4084c2b18a39914d1c000cea7bfecfdd2dc8c9b3c73abf49db5ac1860fc11b2f
+$ docker pull chronograf@sha256:6fc935dc6c039ddc5b11b0bb1b83b1bf8d150bd699af63afe379d3700285613c
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **63.4 MB (63420490 bytes)**  
+-	Total Size: **63.4 MB (63422436 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:134a2a9ec07e16fa4402f8c415e7ce22120ff13896d31b7244d4fd9760c04f4b`
+-	Image ID: `sha256:c2fbe33f96134563eaa044e6135f1d1a625626c4baed325925a464c870a21fc5`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["chronograf"]`
 
 ```dockerfile
-# Tue, 04 Oct 2022 23:58:46 GMT
-ADD file:ca1bf27f17594a91224a252bd446f97c3b898210c571f2f26fa2e723d2bf521e in / 
-# Tue, 04 Oct 2022 23:58:46 GMT
+# Tue, 25 Oct 2022 03:14:27 GMT
+ADD file:0d2a17d07f391dfbf63c00d2b826373c98aaf6ab777481e33d4bee6d57c4a0b0 in / 
+# Tue, 25 Oct 2022 03:14:27 GMT
 CMD ["bash"]
-# Wed, 05 Oct 2022 01:03:40 GMT
+# Tue, 25 Oct 2022 12:53:03 GMT
 RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     apt-get update && apt-get install -y gnupg dirmngr --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys "$key" ;     done
-# Wed, 05 Oct 2022 01:03:40 GMT
+# Tue, 25 Oct 2022 12:53:03 GMT
 ENV CHRONOGRAF_VERSION=1.7.17
-# Wed, 05 Oct 2022 01:03:52 GMT
+# Tue, 25 Oct 2022 12:53:13 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     set -x &&     apt-get update && apt-get install -y ca-certificates curl --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc" &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb" &&     gpg --batch --verify chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     dpkg -i chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     rm -f chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb* &&     apt-get purge -y --auto-remove $buildDeps
-# Wed, 05 Oct 2022 01:03:52 GMT
+# Tue, 25 Oct 2022 12:53:13 GMT
 COPY file:6403df1bf15a98453f66ca6b38ee538c184409065ea1d3c321788dec9eaa5c77 in /usr/share/chronograf/LICENSE 
-# Wed, 05 Oct 2022 01:03:52 GMT
+# Tue, 25 Oct 2022 12:53:13 GMT
 COPY file:6a5854b87d89e3055231dd56f8f199c325f44eeed8faed4cf32833126a5b9cd9 in /usr/share/chronograf/agpl-3.0.md 
-# Wed, 05 Oct 2022 01:03:53 GMT
+# Tue, 25 Oct 2022 12:53:14 GMT
 EXPOSE 8888
-# Wed, 05 Oct 2022 01:03:53 GMT
+# Tue, 25 Oct 2022 12:53:14 GMT
 VOLUME [/var/lib/chronograf]
-# Wed, 05 Oct 2022 01:03:53 GMT
+# Tue, 25 Oct 2022 12:53:14 GMT
 COPY file:7ce45912f7e80a04754c20ff31c757dd5de5eb9a5845af3b183b4a5227dd1c1e in /entrypoint.sh 
-# Wed, 05 Oct 2022 01:03:53 GMT
+# Tue, 25 Oct 2022 12:53:14 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 05 Oct 2022 01:03:53 GMT
+# Tue, 25 Oct 2022 12:53:14 GMT
 CMD ["chronograf"]
 ```
 
 -	Layers:
-	-	`sha256:2bc64aeac2e429577e497affc8a416d2fc59158aa967f07aced793368e19455f`  
-		Last Modified: Wed, 05 Oct 2022 00:05:09 GMT  
-		Size: 26.6 MB (26579199 bytes)  
+	-	`sha256:e96255deabf6ae29e08aa044ffd2843f7a10c579cc8207bf0ddf13a90d192020`  
+		Last Modified: Tue, 25 Oct 2022 03:21:16 GMT  
+		Size: 26.6 MB (26579293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e931f11d426389e45fd322323a3fe72a6011130c994318a8c88895eb403850b`  
-		Last Modified: Wed, 05 Oct 2022 01:05:23 GMT  
-		Size: 3.7 MB (3719646 bytes)  
+	-	`sha256:e31c3e9e24e975c089ecf2d1d0746bd3baf2cee02e0b41bbfad7ba91b7759832`  
+		Last Modified: Tue, 25 Oct 2022 12:54:45 GMT  
+		Size: 3.7 MB (3720261 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92e0d82c52c830b705e888c215329505bff540007ed58cc748ccf9212f5ad2e9`  
-		Last Modified: Wed, 05 Oct 2022 01:05:28 GMT  
-		Size: 33.1 MB (33097253 bytes)  
+	-	`sha256:03ad4e9d1579e38cb3ac71972eebc39be364100425374b36ec2566e7422d253d`  
+		Last Modified: Tue, 25 Oct 2022 12:54:50 GMT  
+		Size: 33.1 MB (33098489 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4c53a3be0ec39c7d345cec125bfe633e90c666573f43186004fded74f35b2f1`  
-		Last Modified: Wed, 05 Oct 2022 01:05:22 GMT  
+	-	`sha256:0d1e6693bcfd9b863df9163cc7af78a0d0c47b8ac1745533138d77d5339b534f`  
+		Last Modified: Tue, 25 Oct 2022 12:54:44 GMT  
 		Size: 12.2 KB (12247 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98ef0dcd6863600d8f216d50916bab30a4e763eaaee67aa124ae5f18c959c4d8`  
-		Last Modified: Wed, 05 Oct 2022 01:05:22 GMT  
+	-	`sha256:09f72bf714c3fffb723eba8fdfab7873683a74cd1dc233874cf4e9f9a4efeee7`  
+		Last Modified: Tue, 25 Oct 2022 12:54:44 GMT  
 		Size: 11.9 KB (11906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31090a231a7599fcfdf16ba32ab0acf19a1d44af130216b85bc871a8da844992`  
-		Last Modified: Wed, 05 Oct 2022 01:05:22 GMT  
-		Size: 239.0 B  
+	-	`sha256:95d9edb04a8523842fb7a8ffed6b327e82d324c7bf4957cade5105f4b7f614cb`  
+		Last Modified: Tue, 25 Oct 2022 12:54:44 GMT  
+		Size: 240.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `chronograf:1.7` - linux; arm64 variant v8
@@ -912,7 +912,7 @@ CMD ["chronograf"]
 ## `chronograf:1.7.17`
 
 ```console
-$ docker pull chronograf@sha256:ab78f3dcc3bc7e1f85d116666ffc43c435c5ade3851ccb2081bdf2e22189ab84
+$ docker pull chronograf@sha256:46c1c92bcc0a478724a19d2b00537a350bce3e74d1225bb78343508f6b80708d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -991,68 +991,68 @@ CMD ["chronograf"]
 ### `chronograf:1.7.17` - linux; arm variant v7
 
 ```console
-$ docker pull chronograf@sha256:4084c2b18a39914d1c000cea7bfecfdd2dc8c9b3c73abf49db5ac1860fc11b2f
+$ docker pull chronograf@sha256:6fc935dc6c039ddc5b11b0bb1b83b1bf8d150bd699af63afe379d3700285613c
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **63.4 MB (63420490 bytes)**  
+-	Total Size: **63.4 MB (63422436 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:134a2a9ec07e16fa4402f8c415e7ce22120ff13896d31b7244d4fd9760c04f4b`
+-	Image ID: `sha256:c2fbe33f96134563eaa044e6135f1d1a625626c4baed325925a464c870a21fc5`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["chronograf"]`
 
 ```dockerfile
-# Tue, 04 Oct 2022 23:58:46 GMT
-ADD file:ca1bf27f17594a91224a252bd446f97c3b898210c571f2f26fa2e723d2bf521e in / 
-# Tue, 04 Oct 2022 23:58:46 GMT
+# Tue, 25 Oct 2022 03:14:27 GMT
+ADD file:0d2a17d07f391dfbf63c00d2b826373c98aaf6ab777481e33d4bee6d57c4a0b0 in / 
+# Tue, 25 Oct 2022 03:14:27 GMT
 CMD ["bash"]
-# Wed, 05 Oct 2022 01:03:40 GMT
+# Tue, 25 Oct 2022 12:53:03 GMT
 RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     apt-get update && apt-get install -y gnupg dirmngr --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys "$key" ;     done
-# Wed, 05 Oct 2022 01:03:40 GMT
+# Tue, 25 Oct 2022 12:53:03 GMT
 ENV CHRONOGRAF_VERSION=1.7.17
-# Wed, 05 Oct 2022 01:03:52 GMT
+# Tue, 25 Oct 2022 12:53:13 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     set -x &&     apt-get update && apt-get install -y ca-certificates curl --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc" &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb" &&     gpg --batch --verify chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     dpkg -i chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     rm -f chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb* &&     apt-get purge -y --auto-remove $buildDeps
-# Wed, 05 Oct 2022 01:03:52 GMT
+# Tue, 25 Oct 2022 12:53:13 GMT
 COPY file:6403df1bf15a98453f66ca6b38ee538c184409065ea1d3c321788dec9eaa5c77 in /usr/share/chronograf/LICENSE 
-# Wed, 05 Oct 2022 01:03:52 GMT
+# Tue, 25 Oct 2022 12:53:13 GMT
 COPY file:6a5854b87d89e3055231dd56f8f199c325f44eeed8faed4cf32833126a5b9cd9 in /usr/share/chronograf/agpl-3.0.md 
-# Wed, 05 Oct 2022 01:03:53 GMT
+# Tue, 25 Oct 2022 12:53:14 GMT
 EXPOSE 8888
-# Wed, 05 Oct 2022 01:03:53 GMT
+# Tue, 25 Oct 2022 12:53:14 GMT
 VOLUME [/var/lib/chronograf]
-# Wed, 05 Oct 2022 01:03:53 GMT
+# Tue, 25 Oct 2022 12:53:14 GMT
 COPY file:7ce45912f7e80a04754c20ff31c757dd5de5eb9a5845af3b183b4a5227dd1c1e in /entrypoint.sh 
-# Wed, 05 Oct 2022 01:03:53 GMT
+# Tue, 25 Oct 2022 12:53:14 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 05 Oct 2022 01:03:53 GMT
+# Tue, 25 Oct 2022 12:53:14 GMT
 CMD ["chronograf"]
 ```
 
 -	Layers:
-	-	`sha256:2bc64aeac2e429577e497affc8a416d2fc59158aa967f07aced793368e19455f`  
-		Last Modified: Wed, 05 Oct 2022 00:05:09 GMT  
-		Size: 26.6 MB (26579199 bytes)  
+	-	`sha256:e96255deabf6ae29e08aa044ffd2843f7a10c579cc8207bf0ddf13a90d192020`  
+		Last Modified: Tue, 25 Oct 2022 03:21:16 GMT  
+		Size: 26.6 MB (26579293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e931f11d426389e45fd322323a3fe72a6011130c994318a8c88895eb403850b`  
-		Last Modified: Wed, 05 Oct 2022 01:05:23 GMT  
-		Size: 3.7 MB (3719646 bytes)  
+	-	`sha256:e31c3e9e24e975c089ecf2d1d0746bd3baf2cee02e0b41bbfad7ba91b7759832`  
+		Last Modified: Tue, 25 Oct 2022 12:54:45 GMT  
+		Size: 3.7 MB (3720261 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92e0d82c52c830b705e888c215329505bff540007ed58cc748ccf9212f5ad2e9`  
-		Last Modified: Wed, 05 Oct 2022 01:05:28 GMT  
-		Size: 33.1 MB (33097253 bytes)  
+	-	`sha256:03ad4e9d1579e38cb3ac71972eebc39be364100425374b36ec2566e7422d253d`  
+		Last Modified: Tue, 25 Oct 2022 12:54:50 GMT  
+		Size: 33.1 MB (33098489 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4c53a3be0ec39c7d345cec125bfe633e90c666573f43186004fded74f35b2f1`  
-		Last Modified: Wed, 05 Oct 2022 01:05:22 GMT  
+	-	`sha256:0d1e6693bcfd9b863df9163cc7af78a0d0c47b8ac1745533138d77d5339b534f`  
+		Last Modified: Tue, 25 Oct 2022 12:54:44 GMT  
 		Size: 12.2 KB (12247 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98ef0dcd6863600d8f216d50916bab30a4e763eaaee67aa124ae5f18c959c4d8`  
-		Last Modified: Wed, 05 Oct 2022 01:05:22 GMT  
+	-	`sha256:09f72bf714c3fffb723eba8fdfab7873683a74cd1dc233874cf4e9f9a4efeee7`  
+		Last Modified: Tue, 25 Oct 2022 12:54:44 GMT  
 		Size: 11.9 KB (11906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31090a231a7599fcfdf16ba32ab0acf19a1d44af130216b85bc871a8da844992`  
-		Last Modified: Wed, 05 Oct 2022 01:05:22 GMT  
-		Size: 239.0 B  
+	-	`sha256:95d9edb04a8523842fb7a8ffed6b327e82d324c7bf4957cade5105f4b7f614cb`  
+		Last Modified: Tue, 25 Oct 2022 12:54:44 GMT  
+		Size: 240.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `chronograf:1.7.17` - linux; arm64 variant v8
@@ -1208,7 +1208,7 @@ CMD ["chronograf"]
 ## `chronograf:1.8`
 
 ```console
-$ docker pull chronograf@sha256:0c19a15e98b0fe63cf6d089c1df7f2b24886db58f438791c2cef31a8ff984090
+$ docker pull chronograf@sha256:6be0f223b2a3452a1aac7b1c6badf11a64f46312b82958276e4d563317d037ff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1287,67 +1287,67 @@ CMD ["chronograf"]
 ### `chronograf:1.8` - linux; arm variant v7
 
 ```console
-$ docker pull chronograf@sha256:1eb3df82708a4cfd5be0ce5de63b0cb4700cc42502770560e36647c43000b8fd
+$ docker pull chronograf@sha256:befea31ea86df17af10517dd4437e5efffbf4ef29305caaa576e9fbd301fec2a
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **63.8 MB (63847714 bytes)**  
+-	Total Size: **63.8 MB (63849916 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:421cda6a39820ab3b2b72a3c9440ddbb709fdbce85e0f398dc3506657249b0eb`
+-	Image ID: `sha256:e7dff58c2393ff8c2722f58082df04be4c66f21609dab86e63b34d7a8602c1b5`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["chronograf"]`
 
 ```dockerfile
-# Tue, 04 Oct 2022 23:58:46 GMT
-ADD file:ca1bf27f17594a91224a252bd446f97c3b898210c571f2f26fa2e723d2bf521e in / 
-# Tue, 04 Oct 2022 23:58:46 GMT
+# Tue, 25 Oct 2022 03:14:27 GMT
+ADD file:0d2a17d07f391dfbf63c00d2b826373c98aaf6ab777481e33d4bee6d57c4a0b0 in / 
+# Tue, 25 Oct 2022 03:14:27 GMT
 CMD ["bash"]
-# Wed, 05 Oct 2022 01:04:08 GMT
+# Tue, 25 Oct 2022 12:53:28 GMT
 RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     apt-get update && apt-get install -y gnupg ca-certificates dirmngr --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys "$key" ;     done
-# Wed, 05 Oct 2022 01:04:08 GMT
+# Tue, 25 Oct 2022 12:53:28 GMT
 ENV CHRONOGRAF_VERSION=1.8.10
-# Wed, 05 Oct 2022 01:04:17 GMT
+# Tue, 25 Oct 2022 12:53:36 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     set -x &&     apt-get update && apt-get install -y ca-certificates curl --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc" &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb" &&     gpg --batch --verify chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     dpkg -i chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     rm -f chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb* &&     apt-get purge -y --auto-remove $buildDeps
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:36 GMT
 COPY file:6403df1bf15a98453f66ca6b38ee538c184409065ea1d3c321788dec9eaa5c77 in /usr/share/chronograf/LICENSE 
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 COPY file:6a5854b87d89e3055231dd56f8f199c325f44eeed8faed4cf32833126a5b9cd9 in /usr/share/chronograf/agpl-3.0.md 
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 EXPOSE 8888
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 VOLUME [/var/lib/chronograf]
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 COPY file:7ce45912f7e80a04754c20ff31c757dd5de5eb9a5845af3b183b4a5227dd1c1e in /entrypoint.sh 
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 05 Oct 2022 01:04:19 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 CMD ["chronograf"]
 ```
 
 -	Layers:
-	-	`sha256:2bc64aeac2e429577e497affc8a416d2fc59158aa967f07aced793368e19455f`  
-		Last Modified: Wed, 05 Oct 2022 00:05:09 GMT  
-		Size: 26.6 MB (26579199 bytes)  
+	-	`sha256:e96255deabf6ae29e08aa044ffd2843f7a10c579cc8207bf0ddf13a90d192020`  
+		Last Modified: Tue, 25 Oct 2022 03:21:16 GMT  
+		Size: 26.6 MB (26579293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc14fee07560a2936b1d20d8255a4bd556e62f7fbc6f6315b40f6414a1e4cc7a`  
-		Last Modified: Wed, 05 Oct 2022 01:05:41 GMT  
-		Size: 4.5 MB (4493786 bytes)  
+	-	`sha256:68f1749ac90bfa69003129e242051632c3420cf35e2a888329d8709010afae29`  
+		Last Modified: Tue, 25 Oct 2022 12:55:02 GMT  
+		Size: 4.5 MB (4494994 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65c7d73bdff2efca9ccc47f7b35473b6788d6b44facbe7778b1955f1dac2ad61`  
-		Last Modified: Wed, 05 Oct 2022 01:05:46 GMT  
-		Size: 32.8 MB (32750327 bytes)  
+	-	`sha256:4638362b727ada9e3a2c8ed11b884a4e1f04a2d5313b170892a434d1ef5c710d`  
+		Last Modified: Tue, 25 Oct 2022 12:55:08 GMT  
+		Size: 32.8 MB (32751236 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd13a6d0ef7f2a508ad4df2b6d9732b431322a0846c7b365d21d112d6a3f70ca`  
-		Last Modified: Wed, 05 Oct 2022 01:05:40 GMT  
-		Size: 12.3 KB (12251 bytes)  
+	-	`sha256:47f2273aee395b843b9893287408ecf12f76d2e79e5535d8aaac8805a31812ba`  
+		Last Modified: Tue, 25 Oct 2022 12:55:01 GMT  
+		Size: 12.2 KB (12248 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e0bea0b0f754b0e8d66654fbf099f74d76e8ca7170e50b2f8b702ded7f5cf4dc`  
-		Last Modified: Wed, 05 Oct 2022 01:05:40 GMT  
-		Size: 11.9 KB (11912 bytes)  
+	-	`sha256:91ba2422d64e37570091cfcfce5055db81e95cdd33daa11ea45eaaeba29aebd0`  
+		Last Modified: Tue, 25 Oct 2022 12:55:01 GMT  
+		Size: 11.9 KB (11906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0d262c7510b45c672d0de187e3ecdd70810801f22a407dc33f2e0bf4d4460245`  
-		Last Modified: Wed, 05 Oct 2022 01:05:40 GMT  
+	-	`sha256:72311b79f90a42cfcf3044dd676ace14df3ca6a2fe7b433d6f0de939ae0422d4`  
+		Last Modified: Tue, 25 Oct 2022 12:55:02 GMT  
 		Size: 239.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1504,7 +1504,7 @@ CMD ["chronograf"]
 ## `chronograf:1.8.10`
 
 ```console
-$ docker pull chronograf@sha256:0c19a15e98b0fe63cf6d089c1df7f2b24886db58f438791c2cef31a8ff984090
+$ docker pull chronograf@sha256:6be0f223b2a3452a1aac7b1c6badf11a64f46312b82958276e4d563317d037ff
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1583,67 +1583,67 @@ CMD ["chronograf"]
 ### `chronograf:1.8.10` - linux; arm variant v7
 
 ```console
-$ docker pull chronograf@sha256:1eb3df82708a4cfd5be0ce5de63b0cb4700cc42502770560e36647c43000b8fd
+$ docker pull chronograf@sha256:befea31ea86df17af10517dd4437e5efffbf4ef29305caaa576e9fbd301fec2a
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **63.8 MB (63847714 bytes)**  
+-	Total Size: **63.8 MB (63849916 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:421cda6a39820ab3b2b72a3c9440ddbb709fdbce85e0f398dc3506657249b0eb`
+-	Image ID: `sha256:e7dff58c2393ff8c2722f58082df04be4c66f21609dab86e63b34d7a8602c1b5`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["chronograf"]`
 
 ```dockerfile
-# Tue, 04 Oct 2022 23:58:46 GMT
-ADD file:ca1bf27f17594a91224a252bd446f97c3b898210c571f2f26fa2e723d2bf521e in / 
-# Tue, 04 Oct 2022 23:58:46 GMT
+# Tue, 25 Oct 2022 03:14:27 GMT
+ADD file:0d2a17d07f391dfbf63c00d2b826373c98aaf6ab777481e33d4bee6d57c4a0b0 in / 
+# Tue, 25 Oct 2022 03:14:27 GMT
 CMD ["bash"]
-# Wed, 05 Oct 2022 01:04:08 GMT
+# Tue, 25 Oct 2022 12:53:28 GMT
 RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     apt-get update && apt-get install -y gnupg ca-certificates dirmngr --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys "$key" ;     done
-# Wed, 05 Oct 2022 01:04:08 GMT
+# Tue, 25 Oct 2022 12:53:28 GMT
 ENV CHRONOGRAF_VERSION=1.8.10
-# Wed, 05 Oct 2022 01:04:17 GMT
+# Tue, 25 Oct 2022 12:53:36 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     set -x &&     apt-get update && apt-get install -y ca-certificates curl --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc" &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb" &&     gpg --batch --verify chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     dpkg -i chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     rm -f chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb* &&     apt-get purge -y --auto-remove $buildDeps
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:36 GMT
 COPY file:6403df1bf15a98453f66ca6b38ee538c184409065ea1d3c321788dec9eaa5c77 in /usr/share/chronograf/LICENSE 
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 COPY file:6a5854b87d89e3055231dd56f8f199c325f44eeed8faed4cf32833126a5b9cd9 in /usr/share/chronograf/agpl-3.0.md 
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 EXPOSE 8888
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 VOLUME [/var/lib/chronograf]
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 COPY file:7ce45912f7e80a04754c20ff31c757dd5de5eb9a5845af3b183b4a5227dd1c1e in /entrypoint.sh 
-# Wed, 05 Oct 2022 01:04:18 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 05 Oct 2022 01:04:19 GMT
+# Tue, 25 Oct 2022 12:53:37 GMT
 CMD ["chronograf"]
 ```
 
 -	Layers:
-	-	`sha256:2bc64aeac2e429577e497affc8a416d2fc59158aa967f07aced793368e19455f`  
-		Last Modified: Wed, 05 Oct 2022 00:05:09 GMT  
-		Size: 26.6 MB (26579199 bytes)  
+	-	`sha256:e96255deabf6ae29e08aa044ffd2843f7a10c579cc8207bf0ddf13a90d192020`  
+		Last Modified: Tue, 25 Oct 2022 03:21:16 GMT  
+		Size: 26.6 MB (26579293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc14fee07560a2936b1d20d8255a4bd556e62f7fbc6f6315b40f6414a1e4cc7a`  
-		Last Modified: Wed, 05 Oct 2022 01:05:41 GMT  
-		Size: 4.5 MB (4493786 bytes)  
+	-	`sha256:68f1749ac90bfa69003129e242051632c3420cf35e2a888329d8709010afae29`  
+		Last Modified: Tue, 25 Oct 2022 12:55:02 GMT  
+		Size: 4.5 MB (4494994 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65c7d73bdff2efca9ccc47f7b35473b6788d6b44facbe7778b1955f1dac2ad61`  
-		Last Modified: Wed, 05 Oct 2022 01:05:46 GMT  
-		Size: 32.8 MB (32750327 bytes)  
+	-	`sha256:4638362b727ada9e3a2c8ed11b884a4e1f04a2d5313b170892a434d1ef5c710d`  
+		Last Modified: Tue, 25 Oct 2022 12:55:08 GMT  
+		Size: 32.8 MB (32751236 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd13a6d0ef7f2a508ad4df2b6d9732b431322a0846c7b365d21d112d6a3f70ca`  
-		Last Modified: Wed, 05 Oct 2022 01:05:40 GMT  
-		Size: 12.3 KB (12251 bytes)  
+	-	`sha256:47f2273aee395b843b9893287408ecf12f76d2e79e5535d8aaac8805a31812ba`  
+		Last Modified: Tue, 25 Oct 2022 12:55:01 GMT  
+		Size: 12.2 KB (12248 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e0bea0b0f754b0e8d66654fbf099f74d76e8ca7170e50b2f8b702ded7f5cf4dc`  
-		Last Modified: Wed, 05 Oct 2022 01:05:40 GMT  
-		Size: 11.9 KB (11912 bytes)  
+	-	`sha256:91ba2422d64e37570091cfcfce5055db81e95cdd33daa11ea45eaaeba29aebd0`  
+		Last Modified: Tue, 25 Oct 2022 12:55:01 GMT  
+		Size: 11.9 KB (11906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0d262c7510b45c672d0de187e3ecdd70810801f22a407dc33f2e0bf4d4460245`  
-		Last Modified: Wed, 05 Oct 2022 01:05:40 GMT  
+	-	`sha256:72311b79f90a42cfcf3044dd676ace14df3ca6a2fe7b433d6f0de939ae0422d4`  
+		Last Modified: Tue, 25 Oct 2022 12:55:02 GMT  
 		Size: 239.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1800,7 +1800,7 @@ CMD ["chronograf"]
 ## `chronograf:1.9`
 
 ```console
-$ docker pull chronograf@sha256:1601f42d9fc76888d5c0eb90bac9f3aeef0d7b4a757fa910e2ac30e4888f1169
+$ docker pull chronograf@sha256:f297dbe245e6fcb2a7cc1fd62e99262f250e95d2a5b648fd4af828c60a15b101
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1879,68 +1879,68 @@ CMD ["chronograf"]
 ### `chronograf:1.9` - linux; arm variant v7
 
 ```console
-$ docker pull chronograf@sha256:a3ea835845566de7e46098dac2788ccaea86e3ba60324ad33db22c50bdb7af43
+$ docker pull chronograf@sha256:d39db9c5bee245adab9e2d279ae85081f5e8cdc9bc4a08e8a5c1a4fa3e882b9d
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **64.6 MB (64623938 bytes)**  
+-	Total Size: **64.6 MB (64625976 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4976d6dabea20fb462daf1a7484441d4a1e392e86f1cba5a2b1ad0d761328756`
+-	Image ID: `sha256:45220ed124c058e72b8ca2abf28cc304b74717a1b9cec565c0a6a848f813e8c3`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["chronograf"]`
 
 ```dockerfile
-# Tue, 04 Oct 2022 23:58:46 GMT
-ADD file:ca1bf27f17594a91224a252bd446f97c3b898210c571f2f26fa2e723d2bf521e in / 
-# Tue, 04 Oct 2022 23:58:46 GMT
+# Tue, 25 Oct 2022 03:14:27 GMT
+ADD file:0d2a17d07f391dfbf63c00d2b826373c98aaf6ab777481e33d4bee6d57c4a0b0 in / 
+# Tue, 25 Oct 2022 03:14:27 GMT
 CMD ["bash"]
-# Wed, 05 Oct 2022 01:04:08 GMT
+# Tue, 25 Oct 2022 12:53:28 GMT
 RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     apt-get update && apt-get install -y gnupg ca-certificates dirmngr --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys "$key" ;     done
-# Wed, 05 Oct 2022 01:04:24 GMT
+# Tue, 25 Oct 2022 12:53:44 GMT
 ENV CHRONOGRAF_VERSION=1.9.4
-# Wed, 05 Oct 2022 01:04:33 GMT
+# Tue, 25 Oct 2022 12:53:52 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     set -x &&     apt-get update && apt-get install -y ca-certificates curl --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc" &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb" &&     gpg --batch --verify chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     dpkg -i chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     rm -f chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb* &&     apt-get purge -y --auto-remove $buildDeps
-# Wed, 05 Oct 2022 01:04:33 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 COPY file:6403df1bf15a98453f66ca6b38ee538c184409065ea1d3c321788dec9eaa5c77 in /usr/share/chronograf/LICENSE 
-# Wed, 05 Oct 2022 01:04:33 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 COPY file:6a5854b87d89e3055231dd56f8f199c325f44eeed8faed4cf32833126a5b9cd9 in /usr/share/chronograf/agpl-3.0.md 
-# Wed, 05 Oct 2022 01:04:33 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 EXPOSE 8888
-# Wed, 05 Oct 2022 01:04:34 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 VOLUME [/var/lib/chronograf]
-# Wed, 05 Oct 2022 01:04:34 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 COPY file:7ce45912f7e80a04754c20ff31c757dd5de5eb9a5845af3b183b4a5227dd1c1e in /entrypoint.sh 
-# Wed, 05 Oct 2022 01:04:34 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 05 Oct 2022 01:04:34 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 CMD ["chronograf"]
 ```
 
 -	Layers:
-	-	`sha256:2bc64aeac2e429577e497affc8a416d2fc59158aa967f07aced793368e19455f`  
-		Last Modified: Wed, 05 Oct 2022 00:05:09 GMT  
-		Size: 26.6 MB (26579199 bytes)  
+	-	`sha256:e96255deabf6ae29e08aa044ffd2843f7a10c579cc8207bf0ddf13a90d192020`  
+		Last Modified: Tue, 25 Oct 2022 03:21:16 GMT  
+		Size: 26.6 MB (26579293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc14fee07560a2936b1d20d8255a4bd556e62f7fbc6f6315b40f6414a1e4cc7a`  
-		Last Modified: Wed, 05 Oct 2022 01:05:41 GMT  
-		Size: 4.5 MB (4493786 bytes)  
+	-	`sha256:68f1749ac90bfa69003129e242051632c3420cf35e2a888329d8709010afae29`  
+		Last Modified: Tue, 25 Oct 2022 12:55:02 GMT  
+		Size: 4.5 MB (4494994 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e1a7989fd5466c4811e805213425dc0d14330f0743bb66edc3a23ac0caaa30c`  
-		Last Modified: Wed, 05 Oct 2022 01:06:04 GMT  
-		Size: 33.5 MB (33526559 bytes)  
+	-	`sha256:09e8db9c3d57be2294d02966f878b5757729d88fef4b55fae953e9ccc65f19ea`  
+		Last Modified: Tue, 25 Oct 2022 12:55:25 GMT  
+		Size: 33.5 MB (33527297 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bfdf18cf6ee1467d616e2e9c58cbebde414818beb542e4af0e3165f16b9e279a`  
-		Last Modified: Wed, 05 Oct 2022 01:05:58 GMT  
-		Size: 12.2 KB (12248 bytes)  
+	-	`sha256:4585677714f44662fc1cf39c8142de63850610b0b0da8f64669c90b7c7f13a4a`  
+		Last Modified: Tue, 25 Oct 2022 12:55:20 GMT  
+		Size: 12.2 KB (12247 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:905a01f7abbe00038cca3087de0603252f9ec9b72f419c0cb35e35d2fe748aab`  
-		Last Modified: Wed, 05 Oct 2022 01:05:58 GMT  
-		Size: 11.9 KB (11907 bytes)  
+	-	`sha256:45098fb25922115244c237d7449f3919d0aecf8f3027d12ee9e210687f9b6467`  
+		Last Modified: Tue, 25 Oct 2022 12:55:20 GMT  
+		Size: 11.9 KB (11905 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e002105531f7862e0d8e2595e56d0d9ef416c19900bd7600a430e93d521dada4`  
-		Last Modified: Wed, 05 Oct 2022 01:05:58 GMT  
-		Size: 239.0 B  
+	-	`sha256:b3e399d15b9ffd9d2ae5af3b9e490a75a71c00ad3e9f28d377e3e605a1e83857`  
+		Last Modified: Tue, 25 Oct 2022 12:55:20 GMT  
+		Size: 240.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `chronograf:1.9` - linux; arm64 variant v8
@@ -2096,7 +2096,7 @@ CMD ["chronograf"]
 ## `chronograf:1.9.4`
 
 ```console
-$ docker pull chronograf@sha256:1601f42d9fc76888d5c0eb90bac9f3aeef0d7b4a757fa910e2ac30e4888f1169
+$ docker pull chronograf@sha256:f297dbe245e6fcb2a7cc1fd62e99262f250e95d2a5b648fd4af828c60a15b101
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2175,68 +2175,68 @@ CMD ["chronograf"]
 ### `chronograf:1.9.4` - linux; arm variant v7
 
 ```console
-$ docker pull chronograf@sha256:a3ea835845566de7e46098dac2788ccaea86e3ba60324ad33db22c50bdb7af43
+$ docker pull chronograf@sha256:d39db9c5bee245adab9e2d279ae85081f5e8cdc9bc4a08e8a5c1a4fa3e882b9d
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **64.6 MB (64623938 bytes)**  
+-	Total Size: **64.6 MB (64625976 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4976d6dabea20fb462daf1a7484441d4a1e392e86f1cba5a2b1ad0d761328756`
+-	Image ID: `sha256:45220ed124c058e72b8ca2abf28cc304b74717a1b9cec565c0a6a848f813e8c3`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["chronograf"]`
 
 ```dockerfile
-# Tue, 04 Oct 2022 23:58:46 GMT
-ADD file:ca1bf27f17594a91224a252bd446f97c3b898210c571f2f26fa2e723d2bf521e in / 
-# Tue, 04 Oct 2022 23:58:46 GMT
+# Tue, 25 Oct 2022 03:14:27 GMT
+ADD file:0d2a17d07f391dfbf63c00d2b826373c98aaf6ab777481e33d4bee6d57c4a0b0 in / 
+# Tue, 25 Oct 2022 03:14:27 GMT
 CMD ["bash"]
-# Wed, 05 Oct 2022 01:04:08 GMT
+# Tue, 25 Oct 2022 12:53:28 GMT
 RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     apt-get update && apt-get install -y gnupg ca-certificates dirmngr --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys "$key" ;     done
-# Wed, 05 Oct 2022 01:04:24 GMT
+# Tue, 25 Oct 2022 12:53:44 GMT
 ENV CHRONOGRAF_VERSION=1.9.4
-# Wed, 05 Oct 2022 01:04:33 GMT
+# Tue, 25 Oct 2022 12:53:52 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     set -x &&     apt-get update && apt-get install -y ca-certificates curl --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc" &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb" &&     gpg --batch --verify chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     dpkg -i chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     rm -f chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb* &&     apt-get purge -y --auto-remove $buildDeps
-# Wed, 05 Oct 2022 01:04:33 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 COPY file:6403df1bf15a98453f66ca6b38ee538c184409065ea1d3c321788dec9eaa5c77 in /usr/share/chronograf/LICENSE 
-# Wed, 05 Oct 2022 01:04:33 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 COPY file:6a5854b87d89e3055231dd56f8f199c325f44eeed8faed4cf32833126a5b9cd9 in /usr/share/chronograf/agpl-3.0.md 
-# Wed, 05 Oct 2022 01:04:33 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 EXPOSE 8888
-# Wed, 05 Oct 2022 01:04:34 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 VOLUME [/var/lib/chronograf]
-# Wed, 05 Oct 2022 01:04:34 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 COPY file:7ce45912f7e80a04754c20ff31c757dd5de5eb9a5845af3b183b4a5227dd1c1e in /entrypoint.sh 
-# Wed, 05 Oct 2022 01:04:34 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 05 Oct 2022 01:04:34 GMT
+# Tue, 25 Oct 2022 12:53:53 GMT
 CMD ["chronograf"]
 ```
 
 -	Layers:
-	-	`sha256:2bc64aeac2e429577e497affc8a416d2fc59158aa967f07aced793368e19455f`  
-		Last Modified: Wed, 05 Oct 2022 00:05:09 GMT  
-		Size: 26.6 MB (26579199 bytes)  
+	-	`sha256:e96255deabf6ae29e08aa044ffd2843f7a10c579cc8207bf0ddf13a90d192020`  
+		Last Modified: Tue, 25 Oct 2022 03:21:16 GMT  
+		Size: 26.6 MB (26579293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc14fee07560a2936b1d20d8255a4bd556e62f7fbc6f6315b40f6414a1e4cc7a`  
-		Last Modified: Wed, 05 Oct 2022 01:05:41 GMT  
-		Size: 4.5 MB (4493786 bytes)  
+	-	`sha256:68f1749ac90bfa69003129e242051632c3420cf35e2a888329d8709010afae29`  
+		Last Modified: Tue, 25 Oct 2022 12:55:02 GMT  
+		Size: 4.5 MB (4494994 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e1a7989fd5466c4811e805213425dc0d14330f0743bb66edc3a23ac0caaa30c`  
-		Last Modified: Wed, 05 Oct 2022 01:06:04 GMT  
-		Size: 33.5 MB (33526559 bytes)  
+	-	`sha256:09e8db9c3d57be2294d02966f878b5757729d88fef4b55fae953e9ccc65f19ea`  
+		Last Modified: Tue, 25 Oct 2022 12:55:25 GMT  
+		Size: 33.5 MB (33527297 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bfdf18cf6ee1467d616e2e9c58cbebde414818beb542e4af0e3165f16b9e279a`  
-		Last Modified: Wed, 05 Oct 2022 01:05:58 GMT  
-		Size: 12.2 KB (12248 bytes)  
+	-	`sha256:4585677714f44662fc1cf39c8142de63850610b0b0da8f64669c90b7c7f13a4a`  
+		Last Modified: Tue, 25 Oct 2022 12:55:20 GMT  
+		Size: 12.2 KB (12247 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:905a01f7abbe00038cca3087de0603252f9ec9b72f419c0cb35e35d2fe748aab`  
-		Last Modified: Wed, 05 Oct 2022 01:05:58 GMT  
-		Size: 11.9 KB (11907 bytes)  
+	-	`sha256:45098fb25922115244c237d7449f3919d0aecf8f3027d12ee9e210687f9b6467`  
+		Last Modified: Tue, 25 Oct 2022 12:55:20 GMT  
+		Size: 11.9 KB (11905 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e002105531f7862e0d8e2595e56d0d9ef416c19900bd7600a430e93d521dada4`  
-		Last Modified: Wed, 05 Oct 2022 01:05:58 GMT  
-		Size: 239.0 B  
+	-	`sha256:b3e399d15b9ffd9d2ae5af3b9e490a75a71c00ad3e9f28d377e3e605a1e83857`  
+		Last Modified: Tue, 25 Oct 2022 12:55:20 GMT  
+		Size: 240.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `chronograf:1.9.4` - linux; arm64 variant v8
@@ -2475,7 +2475,7 @@ CMD ["chronograf"]
 ## `chronograf:latest`
 
 ```console
-$ docker pull chronograf@sha256:06e0d9180e749071081d3b4b557f411a8528b1ca875bd4d0b20633db815fc558
+$ docker pull chronograf@sha256:9934c4ad3603cc81961a93d256471b923513266b3a843833796f032609cd23f1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2554,68 +2554,68 @@ CMD ["chronograf"]
 ### `chronograf:latest` - linux; arm variant v7
 
 ```console
-$ docker pull chronograf@sha256:74369d6a1722549033636ff6deae2ad8a6b22032830073fb7eceba29d595f1ff
+$ docker pull chronograf@sha256:7ac31c5a43030c20f35a79c2da4bf346947c5d1e05b3e9d9445dbedfe99f229b
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.6 MB (73562035 bytes)**  
+-	Total Size: **73.6 MB (73563597 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:96c9aa985715d42e51fb74c1747427e927611ff0013d7f6e6d1e3cb6608334e6`
+-	Image ID: `sha256:9bf8854c34693f89ab353b81801cc7a1fefaf7bf996970e7c714b3c9a56f2c12`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["chronograf"]`
 
 ```dockerfile
-# Tue, 04 Oct 2022 23:58:46 GMT
-ADD file:ca1bf27f17594a91224a252bd446f97c3b898210c571f2f26fa2e723d2bf521e in / 
-# Tue, 04 Oct 2022 23:58:46 GMT
+# Tue, 25 Oct 2022 03:14:27 GMT
+ADD file:0d2a17d07f391dfbf63c00d2b826373c98aaf6ab777481e33d4bee6d57c4a0b0 in / 
+# Tue, 25 Oct 2022 03:14:27 GMT
 CMD ["bash"]
-# Wed, 05 Oct 2022 01:04:08 GMT
+# Tue, 25 Oct 2022 12:53:28 GMT
 RUN set -ex &&     mkdir ~/.gnupg;     echo "disable-ipv6" >> ~/.gnupg/dirmngr.conf;     apt-get update && apt-get install -y gnupg ca-certificates dirmngr --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     for key in         05CE15085FC09D18E99EFB22684A14CF2582E0C5 ;     do         gpg --keyserver hkp://keyserver.ubuntu.com --recv-keys "$key" ;     done
-# Wed, 05 Oct 2022 01:04:39 GMT
+# Tue, 25 Oct 2022 12:54:00 GMT
 ENV CHRONOGRAF_VERSION=1.10.0
-# Wed, 05 Oct 2022 01:04:50 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)" &&     case "${dpkgArch##*-}" in       amd64) ARCH='amd64';;       arm64) ARCH='arm64';;       armhf) ARCH='armhf';;       armel) ARCH='armel';;       *)     echo "Unsupported architecture: ${dpkgArch}"; exit 1;;     esac &&     set -x &&     apt-get update && apt-get install -y ca-certificates curl --no-install-recommends &&     rm -rf /var/lib/apt/lists/* &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc" &&     curl -SLO "https://dl.influxdata.com/chronograf/releases/chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb" &&     gpg --batch --verify chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb.asc chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     dpkg -i chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb &&     rm -f chronograf_${CHRONOGRAF_VERSION}_${ARCH}.deb* &&     apt-get purge -y --auto-remove $buildDeps
-# Wed, 05 Oct 2022 01:04:50 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 COPY file:6403df1bf15a98453f66ca6b38ee538c184409065ea1d3c321788dec9eaa5c77 in /usr/share/chronograf/LICENSE 
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 COPY file:6a5854b87d89e3055231dd56f8f199c325f44eeed8faed4cf32833126a5b9cd9 in /usr/share/chronograf/agpl-3.0.md 
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 EXPOSE 8888
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:09 GMT
 VOLUME [/var/lib/chronograf]
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:10 GMT
 COPY file:7ce45912f7e80a04754c20ff31c757dd5de5eb9a5845af3b183b4a5227dd1c1e in /entrypoint.sh 
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:10 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 05 Oct 2022 01:04:51 GMT
+# Tue, 25 Oct 2022 12:54:10 GMT
 CMD ["chronograf"]
 ```
 
 -	Layers:
-	-	`sha256:2bc64aeac2e429577e497affc8a416d2fc59158aa967f07aced793368e19455f`  
-		Last Modified: Wed, 05 Oct 2022 00:05:09 GMT  
-		Size: 26.6 MB (26579199 bytes)  
+	-	`sha256:e96255deabf6ae29e08aa044ffd2843f7a10c579cc8207bf0ddf13a90d192020`  
+		Last Modified: Tue, 25 Oct 2022 03:21:16 GMT  
+		Size: 26.6 MB (26579293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc14fee07560a2936b1d20d8255a4bd556e62f7fbc6f6315b40f6414a1e4cc7a`  
-		Last Modified: Wed, 05 Oct 2022 01:05:41 GMT  
-		Size: 4.5 MB (4493786 bytes)  
+	-	`sha256:68f1749ac90bfa69003129e242051632c3420cf35e2a888329d8709010afae29`  
+		Last Modified: Tue, 25 Oct 2022 12:55:02 GMT  
+		Size: 4.5 MB (4494994 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5165c7780555fbc9f43e71ea6eb27a6bab287a68d2d802985d54f0da110fe045`  
-		Last Modified: Wed, 05 Oct 2022 01:06:24 GMT  
-		Size: 42.5 MB (42464659 bytes)  
+	-	`sha256:f4fc4ff7d1f4516f3810e6354425d49541ff9ad663d48c35410d514b836a5da1`  
+		Last Modified: Tue, 25 Oct 2022 12:55:45 GMT  
+		Size: 42.5 MB (42464917 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2a4e18bc5a8fc51c5e1207e5a000659db2c321522baaa001df2da8a2921dd16e`  
-		Last Modified: Wed, 05 Oct 2022 01:06:15 GMT  
-		Size: 12.2 KB (12246 bytes)  
+	-	`sha256:df95d9ae6a19b1e1e9cb18c93597ce98317251569f5cd855d4af3606f9a2dc4e`  
+		Last Modified: Tue, 25 Oct 2022 12:55:37 GMT  
+		Size: 12.2 KB (12247 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd30d77fb4c42b51b944e736258a7bc25bce848283ba633ac7317f69d9e6457a`  
-		Last Modified: Wed, 05 Oct 2022 01:06:15 GMT  
+	-	`sha256:494ef46291b2362156ed0fe658a1f43b2950377c3f62d0623cf215d2175e6be6`  
+		Last Modified: Tue, 25 Oct 2022 12:55:37 GMT  
 		Size: 11.9 KB (11906 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:01214c89af7978821fdaa181b1c762c2e3336d1f89584134b888dbdd3892ec61`  
-		Last Modified: Wed, 05 Oct 2022 01:06:16 GMT  
-		Size: 239.0 B  
+	-	`sha256:d94a2368587118a72f6f1ca4a4ccb2a0179f7e77af6da9e20954e4dc88fa5989`  
+		Last Modified: Tue, 25 Oct 2022 12:55:37 GMT  
+		Size: 240.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `chronograf:latest` - linux; arm64 variant v8
