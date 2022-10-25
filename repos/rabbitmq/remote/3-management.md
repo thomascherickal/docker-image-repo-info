@@ -1,7 +1,7 @@
 ## `rabbitmq:3-management`
 
 ```console
-$ docker pull rabbitmq@sha256:d3d3942b4d20e3ef2ddc22a5cc494843c03292c06fdbcb1e0f8f8b223f8524c9
+$ docker pull rabbitmq@sha256:a13c9c763900dadc14e62a3137933ec70a8d7cb7c4971f6ad93e4a471c433921
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -504,123 +504,123 @@ EXPOSE 15671 15672
 ### `rabbitmq:3-management` - linux; riscv64
 
 ```console
-$ docker pull rabbitmq@sha256:6af1ade3e609a891092a166de8ac86aca291f74868f20aabf56159cc74ac2703
+$ docker pull rabbitmq@sha256:8ea6182562b28e47c4f9561d36b0ed442196f478148093fd8215a111b9a55e40
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **99.5 MB (99481053 bytes)**  
+-	Total Size: **97.4 MB (97444260 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:aca01991d1c516178fe6f251c67d28e68c961f2fc8b9dfcec26ca2ea88a6092f`
+-	Image ID: `sha256:569399a30b92205be7f4b6c08d21b41aa9cf22052d5841f9dc147bb3e133901f`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["rabbitmq-server"]`
 
 ```dockerfile
-# Wed, 05 Oct 2022 00:12:13 GMT
-ADD file:8c408c11e1eeed71fdd784404ddf9ac52b700161e6187e2313c2751d756e3442 in / 
-# Wed, 05 Oct 2022 00:12:14 GMT
+# Tue, 25 Oct 2022 04:21:42 GMT
+ADD file:17e9da722830d339043e49823c36c7dfa1d3aa51ef59854e1c72cf370df7d44b in / 
+# Tue, 25 Oct 2022 04:21:43 GMT
 CMD ["bash"]
-# Wed, 05 Oct 2022 01:09:12 GMT
+# Tue, 25 Oct 2022 08:00:29 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		gosu 		tzdata 	; 	rm -rf /var/lib/apt/lists/*; 	gosu nobody true
-# Wed, 05 Oct 2022 01:09:13 GMT
+# Tue, 25 Oct 2022 08:00:30 GMT
 ARG PGP_KEYSERVER=keyserver.ubuntu.com
-# Wed, 05 Oct 2022 01:09:13 GMT
+# Tue, 25 Oct 2022 08:00:31 GMT
 ENV OPENSSL_VERSION=1.1.1q
-# Wed, 05 Oct 2022 01:09:14 GMT
+# Tue, 25 Oct 2022 08:00:31 GMT
 ENV OPENSSL_SOURCE_SHA256=d7939ce614029cdff0b6c20f0e2e5703158a489a72b2507b8bd51bf8c8fd10ca
-# Wed, 05 Oct 2022 01:09:14 GMT
+# Tue, 25 Oct 2022 08:00:32 GMT
 ENV OPENSSL_PGP_KEY_IDS=0x8657ABB260F056B1E5190839D9C4D26D0E604491 0x5B2545DAB21995F4088CEFAA36CEE4DEB00CFE33 0xED230BEC4D4F2518B9D7DF41F0DB4D21C1D35231 0xC1F33DD8CE1D4CC613AF14DA9195C48241FBF7DD 0x7953AC1FBC3DC8B3B292393ED5E9E43F7DF9EE8C 0xE5E52560DD91C556DDBDA5D02064C53641C25E5D
-# Tue, 25 Oct 2022 02:37:26 GMT
+# Tue, 25 Oct 2022 08:00:32 GMT
 ENV OTP_VERSION=25.1.2
-# Tue, 25 Oct 2022 02:37:27 GMT
+# Tue, 25 Oct 2022 08:00:33 GMT
 ENV OTP_SOURCE_SHA256=5442dea694e7555d479d80bc81f1428020639c258f8e40b2052732d1cc95cca5
-# Tue, 25 Oct 2022 03:03:24 GMT
+# Tue, 25 Oct 2022 08:26:29 GMT
 # ARGS: PGP_KEYSERVER=keyserver.ubuntu.com
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install --yes --no-install-recommends 		autoconf 		ca-certificates 		dpkg-dev 		gcc 		g++ 		gnupg 		libncurses5-dev 		make 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		OPENSSL_SOURCE_URL="https://www.openssl.org/source/openssl-$OPENSSL_VERSION.tar.gz"; 	OPENSSL_PATH="/usr/local/src/openssl-$OPENSSL_VERSION"; 	OPENSSL_CONFIG_DIR=/usr/local/etc/ssl; 		wget --progress dot:giga --output-document "$OPENSSL_PATH.tar.gz.asc" "$OPENSSL_SOURCE_URL.asc"; 	wget --progress dot:giga --output-document "$OPENSSL_PATH.tar.gz" "$OPENSSL_SOURCE_URL"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $OPENSSL_PGP_KEY_IDS; do 		gpg --batch --keyserver "$PGP_KEYSERVER" --recv-keys "$key"; 	done; 	gpg --batch --verify "$OPENSSL_PATH.tar.gz.asc" "$OPENSSL_PATH.tar.gz"; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 	echo "$OPENSSL_SOURCE_SHA256 *$OPENSSL_PATH.tar.gz" | sha256sum --check --strict -; 	mkdir -p "$OPENSSL_PATH"; 	tar --extract --file "$OPENSSL_PATH.tar.gz" --directory "$OPENSSL_PATH" --strip-components 1; 		cd "$OPENSSL_PATH"; 	debMultiarch="$(dpkg-architecture --query DEB_HOST_MULTIARCH)"; 	MACHINE="$(dpkg-architecture --query DEB_BUILD_GNU_CPU)" 	RELEASE="4.x.y-z" 	SYSTEM='Linux' 	BUILD='???' 	./config 		--openssldir="$OPENSSL_CONFIG_DIR" 		--libdir="lib/$debMultiarch" 		-Wl,-rpath=/usr/local/lib 	; 	make -j "$(getconf _NPROCESSORS_ONLN)"; 	make install_sw install_ssldirs; 	cd ..; 	rm -rf "$OPENSSL_PATH"*; 	ldconfig; 	rmdir "$OPENSSL_CONFIG_DIR/certs" "$OPENSSL_CONFIG_DIR/private"; 	ln -sf /etc/ssl/certs /etc/ssl/private "$OPENSSL_CONFIG_DIR"; 	openssl version; 		OTP_SOURCE_URL="https://github.com/erlang/otp/releases/download/OTP-$OTP_VERSION/otp_src_$OTP_VERSION.tar.gz"; 	OTP_PATH="/usr/local/src/otp-$OTP_VERSION"; 		mkdir -p "$OTP_PATH"; 	wget --progress dot:giga --output-document "$OTP_PATH.tar.gz" "$OTP_SOURCE_URL"; 	echo "$OTP_SOURCE_SHA256 *$OTP_PATH.tar.gz" | sha256sum --check --strict -; 	tar --extract --file "$OTP_PATH.tar.gz" --directory "$OTP_PATH" --strip-components 1; 		cd "$OTP_PATH"; 	export ERL_TOP="$OTP_PATH"; 	./otp_build autoconf; 	CFLAGS="$(dpkg-buildflags --get CFLAGS)"; export CFLAGS; 	export CFLAGS="$CFLAGS -Wl,-rpath=/usr/local/lib"; 	hostArch="$(dpkg-architecture --query DEB_HOST_GNU_TYPE)"; 	buildArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	dpkgArch="$(dpkg --print-architecture)"; dpkgArch="${dpkgArch##*-}"; 	jitFlag=; 	case "$dpkgArch" in 		amd64) jitFlag='--enable-jit' ;; 	esac; 	./configure 		--host="$hostArch" 		--build="$buildArch" 		--disable-dynamic-ssl-lib 		--disable-hipe 		--disable-sctp 		--disable-silent-rules 		--enable-clock-gettime 		--enable-hybrid-heap 		--enable-kernel-poll 		--enable-shared-zlib 		--enable-smp-support 		--enable-threads 		--with-microstate-accounting=extra 		--without-common_test 		--without-debugger 		--without-dialyzer 		--without-diameter 		--without-edoc 		--without-erl_docgen 		--without-et 		--without-eunit 		--without-ftp 		--without-hipe 		--without-jinterface 		--without-megaco 		--without-observer 		--without-odbc 		--without-reltool 		--without-ssh 		--without-tftp 		--without-wx 		$jitFlag 	; 	make -j "$(getconf _NPROCESSORS_ONLN)" GEN_OPT_FLGS="-O2 -fno-strict-aliasing"; 	make install; 	cd ..; 	rm -rf 		"$OTP_PATH"* 		/usr/local/lib/erlang/lib/*/examples 		/usr/local/lib/erlang/lib/*/src 	; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		openssl version; 	erl -noshell -eval 'io:format("~p~n~n~p~n~n", [crypto:supports(), ssl:versions()]), init:stop().'
-# Tue, 25 Oct 2022 03:03:25 GMT
+# Tue, 25 Oct 2022 08:26:30 GMT
 ENV RABBITMQ_DATA_DIR=/var/lib/rabbitmq
-# Tue, 25 Oct 2022 03:03:28 GMT
+# Tue, 25 Oct 2022 08:26:33 GMT
 # ARGS: PGP_KEYSERVER=keyserver.ubuntu.com
 RUN set -eux; 	groupadd --gid 999 --system rabbitmq; 	useradd --uid 999 --system --home-dir "$RABBITMQ_DATA_DIR" --gid rabbitmq rabbitmq; 	mkdir -p "$RABBITMQ_DATA_DIR" /etc/rabbitmq /etc/rabbitmq/conf.d /tmp/rabbitmq-ssl /var/log/rabbitmq; 	chown -fR rabbitmq:rabbitmq "$RABBITMQ_DATA_DIR" /etc/rabbitmq /etc/rabbitmq/conf.d /tmp/rabbitmq-ssl /var/log/rabbitmq; 	chmod 777 "$RABBITMQ_DATA_DIR" /etc/rabbitmq /etc/rabbitmq/conf.d /tmp/rabbitmq-ssl /var/log/rabbitmq; 	ln -sf "$RABBITMQ_DATA_DIR/.erlang.cookie" /root/.erlang.cookie
-# Tue, 25 Oct 2022 03:03:28 GMT
+# Tue, 25 Oct 2022 08:26:33 GMT
 ENV RABBITMQ_VERSION=3.11.2
-# Tue, 25 Oct 2022 03:03:29 GMT
+# Tue, 25 Oct 2022 08:26:34 GMT
 ENV RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA
-# Tue, 25 Oct 2022 03:03:29 GMT
+# Tue, 25 Oct 2022 08:26:34 GMT
 ENV RABBITMQ_HOME=/opt/rabbitmq
-# Tue, 25 Oct 2022 03:03:30 GMT
+# Tue, 25 Oct 2022 08:26:35 GMT
 ENV PATH=/opt/rabbitmq/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 25 Oct 2022 03:05:05 GMT
+# Tue, 25 Oct 2022 08:28:10 GMT
 # ARGS: PGP_KEYSERVER=keyserver.ubuntu.com
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install --yes --no-install-recommends 		ca-certificates 		gnupg 		wget 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*; 		RABBITMQ_SOURCE_URL="https://github.com/rabbitmq/rabbitmq-server/releases/download/v$RABBITMQ_VERSION/rabbitmq-server-generic-unix-latest-toolchain-$RABBITMQ_VERSION.tar.xz"; 	RABBITMQ_PATH="/usr/local/src/rabbitmq-$RABBITMQ_VERSION"; 		wget --progress dot:giga --output-document "$RABBITMQ_PATH.tar.xz.asc" "$RABBITMQ_SOURCE_URL.asc"; 	wget --progress dot:giga --output-document "$RABBITMQ_PATH.tar.xz" "$RABBITMQ_SOURCE_URL"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$RABBITMQ_PGP_KEY_ID"; 	gpg --batch --verify "$RABBITMQ_PATH.tar.xz.asc" "$RABBITMQ_PATH.tar.xz"; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$RABBITMQ_HOME"; 	tar --extract --file "$RABBITMQ_PATH.tar.xz" --directory "$RABBITMQ_HOME" --strip-components 1; 	rm -rf "$RABBITMQ_PATH"*; 	grep -qE '^SYS_PREFIX=\$\{RABBITMQ_HOME\}$' "$RABBITMQ_HOME/sbin/rabbitmq-defaults"; 	sed -i 's/^SYS_PREFIX=.*$/SYS_PREFIX=/' "$RABBITMQ_HOME/sbin/rabbitmq-defaults"; 	grep -qE '^SYS_PREFIX=$' "$RABBITMQ_HOME/sbin/rabbitmq-defaults"; 	chown -R rabbitmq:rabbitmq "$RABBITMQ_HOME"; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		[ ! -e "$RABBITMQ_DATA_DIR/.erlang.cookie" ]; 	gosu rabbitmq rabbitmqctl help; 	gosu rabbitmq rabbitmqctl list_ciphers; 	gosu rabbitmq rabbitmq-plugins list; 	rm "$RABBITMQ_DATA_DIR/.erlang.cookie"
-# Tue, 25 Oct 2022 03:05:15 GMT
+# Tue, 25 Oct 2022 08:28:20 GMT
 # ARGS: PGP_KEYSERVER=keyserver.ubuntu.com
 RUN set -eux; 	gosu rabbitmq rabbitmq-plugins enable --offline rabbitmq_prometheus; 	echo 'management_agent.disable_metrics_collector = true' > /etc/rabbitmq/conf.d/management_agent.disable_metrics_collector.conf; 	chown rabbitmq:rabbitmq /etc/rabbitmq/conf.d/management_agent.disable_metrics_collector.conf
-# Tue, 25 Oct 2022 03:05:17 GMT
+# Tue, 25 Oct 2022 08:28:22 GMT
 # ARGS: PGP_KEYSERVER=keyserver.ubuntu.com
 RUN ln -sf /opt/rabbitmq/plugins /plugins
-# Tue, 25 Oct 2022 03:05:17 GMT
+# Tue, 25 Oct 2022 08:28:23 GMT
 ENV HOME=/var/lib/rabbitmq
-# Tue, 25 Oct 2022 03:05:18 GMT
+# Tue, 25 Oct 2022 08:28:23 GMT
 VOLUME [/var/lib/rabbitmq]
-# Tue, 25 Oct 2022 03:05:19 GMT
+# Tue, 25 Oct 2022 08:28:24 GMT
 ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
-# Tue, 25 Oct 2022 03:05:19 GMT
+# Tue, 25 Oct 2022 08:28:24 GMT
 COPY --chown=rabbitmq:rabbitmqfile:1010d75e6e011d4f35a78624739f459bbc98829ae9696991358350d1bd6a12ac in /etc/rabbitmq/conf.d/ 
-# Tue, 25 Oct 2022 03:05:20 GMT
+# Tue, 25 Oct 2022 08:28:25 GMT
 COPY file:d7e54a3570407a262351dfa2e082aa1713b74883d564d1616d93787afcf4b8c0 in /usr/local/bin/ 
-# Tue, 25 Oct 2022 03:05:21 GMT
+# Tue, 25 Oct 2022 08:28:26 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 25 Oct 2022 03:05:21 GMT
+# Tue, 25 Oct 2022 08:28:26 GMT
 EXPOSE 15691 15692 25672 4369 5671 5672
-# Tue, 25 Oct 2022 03:05:22 GMT
+# Tue, 25 Oct 2022 08:28:27 GMT
 CMD ["rabbitmq-server"]
-# Tue, 25 Oct 2022 03:08:47 GMT
+# Tue, 25 Oct 2022 08:31:54 GMT
 RUN set eux; 	rabbitmq-plugins enable --offline rabbitmq_management; 	rm -f /etc/rabbitmq/conf.d/management_agent.disable_metrics_collector.conf; 	cp /plugins/rabbitmq_management-*/priv/www/cli/rabbitmqadmin /usr/local/bin/rabbitmqadmin; 	[ -s /usr/local/bin/rabbitmqadmin ]; 	chmod +x /usr/local/bin/rabbitmqadmin; 	apt-get update; 	apt-get install -y --no-install-recommends python3; 	rm -rf /var/lib/apt/lists/*; 	rabbitmqadmin --version
-# Tue, 25 Oct 2022 03:08:48 GMT
+# Tue, 25 Oct 2022 08:31:55 GMT
 EXPOSE 15671 15672
 ```
 
 -	Layers:
-	-	`sha256:edcdeceb0859700b9f2e87516c30c0049092e29666696c30e6b862e0df3d4961`  
-		Last Modified: Wed, 05 Oct 2022 00:29:16 GMT  
-		Size: 24.2 MB (24242839 bytes)  
+	-	`sha256:89a1a9f2b5d3274e29cbdfc7d2931985de1b026062899b9f2d9a3a4c88b09008`  
+		Last Modified: Tue, 25 Oct 2022 04:37:33 GMT  
+		Size: 24.2 MB (24246057 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21b3c1978e4e7c203421dddc0ea41f295d3b38c4d4e064894fbe0c8ffe96ed2b`  
-		Last Modified: Wed, 05 Oct 2022 02:09:23 GMT  
-		Size: 1.9 MB (1895001 bytes)  
+	-	`sha256:a7f831e13c2f67e9033fa07a6bf17dd016e88e08fa7eb27d2f8167e5fe573abb`  
+		Last Modified: Tue, 25 Oct 2022 09:00:37 GMT  
+		Size: 1.9 MB (1894939 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:31bbea9c204851fb33dcb32832aacfb6f5e63ac6f2a0c502851a38404778b1a0`  
-		Last Modified: Tue, 25 Oct 2022 03:38:10 GMT  
-		Size: 45.2 MB (45185261 bytes)  
+	-	`sha256:96b6aea319943fbf73c79bd4b5564b5d9244dc51ab387bad103de2efc3266bf6`  
+		Last Modified: Tue, 25 Oct 2022 09:01:28 GMT  
+		Size: 43.1 MB (43145587 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c2b51be9a558c7fa1b973f95c9ba04bc841c331526280a97769c7c281261b3e`  
-		Last Modified: Tue, 25 Oct 2022 03:37:09 GMT  
-		Size: 2.0 KB (1989 bytes)  
+	-	`sha256:b3078ca38266791ad59426ed7dfcd7ef2c50cbf0657d829bb31ec5d8c5e95c30`  
+		Last Modified: Tue, 25 Oct 2022 09:00:30 GMT  
+		Size: 2.0 KB (1990 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d7c1fd22deefdc5959aed5f5497f8cae4da4b7c6e6b040d187f3fa199a21ac59`  
-		Last Modified: Tue, 25 Oct 2022 03:37:24 GMT  
-		Size: 17.8 MB (17817569 bytes)  
+	-	`sha256:a0c4c7c0d53587207bbabff520c233da409974c603b491dee322ff8cf4393427`  
+		Last Modified: Tue, 25 Oct 2022 09:00:46 GMT  
+		Size: 17.8 MB (17817423 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8694f2783ddcde567d6272acb3855803c476fdf84c33a01541dc6fbfe6ecf1c9`  
-		Last Modified: Tue, 25 Oct 2022 03:37:06 GMT  
-		Size: 273.0 B  
+	-	`sha256:809498674463e5cb3a8290eeba6d880018974e7cabca5e7663b868a582f0d79f`  
+		Last Modified: Tue, 25 Oct 2022 09:00:27 GMT  
+		Size: 272.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:56883697bd587485adb692e41d04034a4a8f0e6a8c5eb8efc416ae8e75338447`  
-		Last Modified: Tue, 25 Oct 2022 03:37:06 GMT  
+	-	`sha256:e13fa71be47ef3919064219d36bd4b2eea8d527305846660fb0eef38932fdadc`  
+		Last Modified: Tue, 25 Oct 2022 09:00:27 GMT  
 		Size: 107.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecd663ee5b3bf4a9cfad320e816093b793b9b251368029008ac9df9e9d8ce6af`  
-		Last Modified: Tue, 25 Oct 2022 03:37:06 GMT  
-		Size: 501.0 B  
+	-	`sha256:4ae3306afcf84fbf35fe5871b1768a707fe11e49dba96f272f7a3888f41e09e3`  
+		Last Modified: Tue, 25 Oct 2022 09:00:27 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a5b849c03189b7f0d082d0c7a0baa50a84ae0b57190da9f7ed9532038833250`  
-		Last Modified: Tue, 25 Oct 2022 03:37:06 GMT  
-		Size: 839.0 B  
+	-	`sha256:5af5d4c19700f4c054266d725a29b2a8fafa28638f2fc97ff09462293a0e0097`  
+		Last Modified: Tue, 25 Oct 2022 09:00:27 GMT  
+		Size: 834.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3c0cf074cecc2fcb3a5bc4f4b61851e147a6fbd8ba2609ffc1307665be59bd57`  
-		Last Modified: Tue, 25 Oct 2022 03:40:53 GMT  
-		Size: 10.3 MB (10336674 bytes)  
+	-	`sha256:7e8854d9ad1bc262d571b6fedcd4bef779cc2a03b74eb39c388e9aa10bd45a49`  
+		Last Modified: Tue, 25 Oct 2022 09:04:11 GMT  
+		Size: 10.3 MB (10336552 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rabbitmq:3-management` - linux; s390x
