@@ -1,7 +1,7 @@
 ## `php:zts`
 
 ```console
-$ docker pull php@sha256:02a1efd1314c2c94835d4fe2a6074dc8b4e6ccc7468ef7cf0cf774d51ca4fcb7
+$ docker pull php@sha256:2737be7b61e8d39b7d98918546b492057f427f3afc9218448753ac8056fe7715
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -697,96 +697,96 @@ CMD ["php" "-a"]
 ### `php:zts` - linux; s390x
 
 ```console
-$ docker pull php@sha256:be4db7e97ef959513bd1cd3a0e75751c273b7739b64dcce7638854fe5b18cdd4
+$ docker pull php@sha256:6ff1b772951aa89cfe72650f13a0bf1617bc8e32a41022c4af72c3c85c910624
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **138.8 MB (138767230 bytes)**  
+-	Total Size: **138.8 MB (138770403 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ca828520162644e95464f7d3f9ef6a0f74e601aaa75400089078572ced373ab2`
+-	Image ID: `sha256:0d195e3439e3a691f60642e0e6f867ee6728cb908c2675806dae004c1768ab38`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php","-a"]`
 
 ```dockerfile
-# Tue, 04 Oct 2022 23:42:42 GMT
-ADD file:7acfe92be51da9cffeb5b063cc87926d1ce457729e3080de340603a38216a708 in / 
-# Tue, 04 Oct 2022 23:42:43 GMT
+# Tue, 25 Oct 2022 01:14:42 GMT
+ADD file:1bb8efa7f80e494b9d2831490a7e74810350c1f9ee2d100596d2e1cb4c62f529 in / 
+# Tue, 25 Oct 2022 01:14:44 GMT
 CMD ["bash"]
-# Wed, 05 Oct 2022 03:49:27 GMT
+# Tue, 25 Oct 2022 04:44:20 GMT
 RUN set -eux; 	{ 		echo 'Package: php*'; 		echo 'Pin: release *'; 		echo 'Pin-Priority: -1'; 	} > /etc/apt/preferences.d/no-debian-php
-# Wed, 05 Oct 2022 03:49:27 GMT
+# Tue, 25 Oct 2022 04:44:21 GMT
 ENV PHPIZE_DEPS=autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c
-# Wed, 05 Oct 2022 03:49:42 GMT
+# Tue, 25 Oct 2022 04:44:40 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		$PHPIZE_DEPS 		ca-certificates 		curl 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 05 Oct 2022 03:49:46 GMT
+# Tue, 25 Oct 2022 04:44:44 GMT
 ENV PHP_INI_DIR=/usr/local/etc/php
-# Wed, 05 Oct 2022 03:49:46 GMT
+# Tue, 25 Oct 2022 04:44:44 GMT
 RUN set -eux; 	mkdir -p "$PHP_INI_DIR/conf.d"; 	[ ! -d /var/www/html ]; 	mkdir -p /var/www/html; 	chown www-data:www-data /var/www/html; 	chmod 777 /var/www/html
-# Wed, 05 Oct 2022 03:49:46 GMT
+# Tue, 25 Oct 2022 04:44:44 GMT
 ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Wed, 05 Oct 2022 03:49:47 GMT
+# Tue, 25 Oct 2022 04:44:44 GMT
 ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Wed, 05 Oct 2022 03:49:47 GMT
+# Tue, 25 Oct 2022 04:44:45 GMT
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Wed, 05 Oct 2022 04:02:57 GMT
+# Tue, 25 Oct 2022 04:55:02 GMT
 ENV GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD
-# Wed, 05 Oct 2022 04:02:58 GMT
+# Tue, 25 Oct 2022 05:04:57 GMT
 ENV PHP_VERSION=8.1.11
-# Wed, 05 Oct 2022 04:02:58 GMT
+# Tue, 25 Oct 2022 05:04:57 GMT
 ENV PHP_URL=https://www.php.net/distributions/php-8.1.11.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.1.11.tar.xz.asc
-# Wed, 05 Oct 2022 04:02:58 GMT
+# Tue, 25 Oct 2022 05:04:57 GMT
 ENV PHP_SHA256=3005198d7303f87ab31bc30695de76e8ad62783f806b6ab9744da59fe41cc5bd
-# Wed, 05 Oct 2022 04:03:07 GMT
+# Tue, 25 Oct 2022 05:05:06 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 05 Oct 2022 04:03:08 GMT
+# Tue, 25 Oct 2022 05:05:06 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Wed, 05 Oct 2022 04:13:41 GMT
+# Tue, 25 Oct 2022 05:14:01 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		libargon2-dev 		libcurl4-openssl-dev 		libonig-dev 		libreadline-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 	; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-iconv 		--with-openssl 		--with-readline 		--with-zlib 				--disable-phpdbg 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				--disable-cgi 				--enable-embed 				--enable-zts 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find 		/usr/local 		-type f 		-perm '/0111' 		-exec sh -euxc ' 			strip --strip-all "$@" || : 		' -- '{}' + 	; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Wed, 05 Oct 2022 04:13:43 GMT
+# Tue, 25 Oct 2022 05:14:02 GMT
 COPY multi:6edd033b037aa2d7697fc3b9f82c2f162146c1920a0c6d25a165dc56783204db in /usr/local/bin/ 
-# Wed, 05 Oct 2022 04:13:44 GMT
+# Tue, 25 Oct 2022 05:14:03 GMT
 RUN docker-php-ext-enable sodium
-# Wed, 05 Oct 2022 04:13:44 GMT
+# Tue, 25 Oct 2022 05:14:03 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Wed, 05 Oct 2022 04:13:44 GMT
+# Tue, 25 Oct 2022 05:14:03 GMT
 CMD ["php" "-a"]
 ```
 
 -	Layers:
-	-	`sha256:62990b94a520bfcf718ec711f8444f83c536af2c83c8e53fdfe1f89fdcb79826`  
-		Last Modified: Tue, 04 Oct 2022 23:47:16 GMT  
-		Size: 29.7 MB (29650719 bytes)  
+	-	`sha256:abc14eb2518761d53b91fc564a31b657914f96b531f99a74ac8268f0717b007e`  
+		Last Modified: Tue, 25 Oct 2022 01:19:01 GMT  
+		Size: 29.7 MB (29650722 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11c6100c5da5e147c51c1423d657e79d2dff4dd181c31f934a41ae83c6d39262`  
-		Last Modified: Wed, 05 Oct 2022 04:47:49 GMT  
-		Size: 226.0 B  
+	-	`sha256:d036b7cffe54cd9d789fe0faa587ecaf8b153f4d347002ed7998536a576ae062`  
+		Last Modified: Tue, 25 Oct 2022 05:42:14 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:70604a80be4877e1eadd22a96fd3e1d5051435d36194e48876fd138f8773f3f5`  
-		Last Modified: Wed, 05 Oct 2022 04:47:58 GMT  
-		Size: 71.6 MB (71625657 bytes)  
+	-	`sha256:070976ca7bd4e77169299c5a0ea0650757087daf6336a25abb7081a0fa21d54b`  
+		Last Modified: Tue, 25 Oct 2022 05:42:24 GMT  
+		Size: 71.6 MB (71627350 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3da0fbe4d7818a668f0b61bb2678d6b5a4eba5f84513ae0e51426d69595cb60c`  
-		Last Modified: Wed, 05 Oct 2022 04:47:49 GMT  
-		Size: 271.0 B  
+	-	`sha256:f29da416964c90c6db6eda606ac4b2abecd381679522e3ab489e10647a073d4b`  
+		Last Modified: Tue, 25 Oct 2022 05:42:14 GMT  
+		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:397d1dabc5745f502e622188771ed4415b3d8af279ffbfde91069be4327e0584`  
-		Last Modified: Wed, 05 Oct 2022 04:49:27 GMT  
-		Size: 12.1 MB (12114870 bytes)  
+	-	`sha256:cce37012729e4f8d7535f64de7e9909955ee5f6db7749a576a8d12bd95219c0c`  
+		Last Modified: Tue, 25 Oct 2022 05:45:17 GMT  
+		Size: 12.1 MB (12115494 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df64641df0e7eeb62b4f3be3546321d8e843a9cdb990a69931228d02a154186d`  
-		Last Modified: Wed, 05 Oct 2022 04:49:27 GMT  
-		Size: 491.0 B  
+	-	`sha256:5714598123dd3811cc35ceb0defc49dbc5596fc048796f3fae5330bf98b761fa`  
+		Last Modified: Tue, 25 Oct 2022 05:45:17 GMT  
+		Size: 492.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9ab901c71ac40a982a6694a74a5a78aa6b6874d0d60f63d8f06badda9bcceeba`  
-		Last Modified: Wed, 05 Oct 2022 04:51:03 GMT  
-		Size: 25.4 MB (25372296 bytes)  
+	-	`sha256:f992ca8f6e358a1fd1030ea4c8f0f20dd63ee917630f4c8d4b4c4841efc5efae`  
+		Last Modified: Tue, 25 Oct 2022 05:46:51 GMT  
+		Size: 25.4 MB (25373154 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11102d19343d86f827c0f35ef4f6f401d59d7cbfefa38355fa8a46cca1d6dc39`  
-		Last Modified: Wed, 05 Oct 2022 04:51:00 GMT  
-		Size: 2.5 KB (2452 bytes)  
+	-	`sha256:f38d3ad55a79ed06ea0fd037f11ad7966906f037a367b24f4cd9af3a5f4fc15b`  
+		Last Modified: Tue, 25 Oct 2022 05:46:47 GMT  
+		Size: 2.4 KB (2449 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8af09bda0ff789ebae75e6aa3deb63c44da3978cebb530e6ad1db2be8252884f`  
-		Last Modified: Wed, 05 Oct 2022 04:51:00 GMT  
-		Size: 248.0 B  
+	-	`sha256:e9c5b0badcb43c1857f00f0ed13dbbdac0ccabf7f4235a6d0d494b60e06e8cf1`  
+		Last Modified: Tue, 25 Oct 2022 05:46:47 GMT  
+		Size: 245.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
