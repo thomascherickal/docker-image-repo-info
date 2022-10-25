@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:da5fb79923d815372876a15ca9afa7294969ee8f6142ae8377dd987dd91de455`
-- Created: `2022-10-05T01:10:09.492191061Z`
-- Virtual Size: ~ 218.30 Mb  
+- Image ID: `sha256:5573733c9ba96c80b0611b2fad02228115e5e4b857edd0ce2780d2aeaf261de8`
+- Created: `2022-10-25T09:38:49.424047535Z`
+- Virtual Size: ~ 218.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -616,12 +616,12 @@ $ apt-get source -qq --print-uris gdbm=1.23-1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.23-1.debian.tar.xz' gdbm_1.23-1.debian.tar.xz 18484 SHA512:e7ca0a608da94e5b5bc5949e27b794c87e032202eb09359ad55f6c1a7a6e895f01126781a4e0fbfdb8fef3de7c4a312b9d5a653aaf55ce8c5afbceb945945253
 ```
 
-### `dpkg` source package: `git=1:2.34.1-1ubuntu1.4`
+### `dpkg` source package: `git=1:2.34.1-1ubuntu1.5`
 
 Binary Packages:
 
-- `git=1:2.34.1-1ubuntu1.4`
-- `git-man=1:2.34.1-1ubuntu1.4`
+- `git=1:2.34.1-1ubuntu1.5`
+- `git-man=1:2.34.1-1ubuntu1.5`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -643,9 +643,14 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris git=1:2.34.1-1ubuntu1.5
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.5.dsc' git_2.34.1-1ubuntu1.5.dsc 2927 SHA512:2c09bfb357d165afe93ec43a91fab03b757ddc049bd9e274f2c57cee84b5a0dbe4e70a3ff8c565d476da4cf7f8e28b44a43a1e5a4b3a4bb7795d09d6630ff703
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1.orig.tar.xz' git_2.34.1.orig.tar.xz 6623760 SHA512:a1a8e9e6f64b1da25508fbd2f783564dcdbe181fb5ff1ebab3bdac6db6094e18acc334479a1abf22ac17ce4f733cc3e10a664db9ab234cd523735a3f027b42db
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.5.debian.tar.xz' git_2.34.1-1ubuntu1.5.debian.tar.xz 729288 SHA512:fe195ef7ccba86ce8fde4043bf5f62e75ce04075a47fa5eff03d9fe60adce9b510f2be16ad2bb17be38565c4386c79fc89ecff73fe14d957adf08e9f7338c1ee
+```
 
 ### `dpkg` source package: `glibc=2.35-0ubuntu3.1`
 
@@ -1173,11 +1178,11 @@ $ apt-get source -qq --print-uris libidn2=2.3.2-2build1
 'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.3.2-2build1.debian.tar.xz' libidn2_2.3.2-2build1.debian.tar.xz 15972 SHA512:d5af028cc405d326c31e67e577ef16d9b8b81e433171220fda2c2a6f8fc982a63b6d1d85c6595f5ce01a5005768d935aeeaa5de8a552990f4e070bc541e78570
 ```
 
-### `dpkg` source package: `libksba=1.6.0-2build1`
+### `dpkg` source package: `libksba=1.6.0-2ubuntu0.1`
 
 Binary Packages:
 
-- `libksba8:amd64=1.6.0-2build1`
+- `libksba8:amd64=1.6.0-2ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 
@@ -1188,11 +1193,11 @@ Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libksba=1.6.0-2build1
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0-2build1.dsc' libksba_1.6.0-2build1.dsc 2602 SHA512:832761d70684def527dacae7f2403972eea3e9133a74c7daa96bf8497693b29a2ddb8d6cd54893604106cecae56637eddbf272e4b7e5778fef4bdd92046f838c
+$ apt-get source -qq --print-uris libksba=1.6.0-2ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0-2ubuntu0.1.dsc' libksba_1.6.0-2ubuntu0.1.dsc 2585 SHA512:a37a73c251d4eaa5aa47cdccf00eb1d1616d9acf0999c1ec46747482f367d513afd5fc087c10e40279cd81c6741ea914e5be7ddf80d299624be58e4a08375e9e
 'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0.orig.tar.bz2' libksba_1.6.0.orig.tar.bz2 662120 SHA512:a7c76d41dfd8ec6383ac2de3c53848cd9f066b538f6f3cd43175e3c8095df51b96d0a24a573481c0c4856b09b7c224e2b562d88f5c0801e7acfb582ea2739c2b
 'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0.orig.tar.bz2.asc' libksba_1.6.0.orig.tar.bz2.asc 228 SHA512:fc381ea66eefdb431a5248fa3ac0751d7343d7f99cc7ebf7621b0763e6e31a80b45c5e17b09bbc7c1c1154e6a0152af1f13798f64959ac63f50b789ec046d7a3
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0-2build1.debian.tar.xz' libksba_1.6.0-2build1.debian.tar.xz 14612 SHA512:95b789302a6a3408e8f3751845a8ed09ad5a09313e8106b9aba24c565219ce2012899068faaa6606b134e64a3244286ef4f035bf36e95d0010c7701edf8aa64e
+'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0-2ubuntu0.1.debian.tar.xz' libksba_1.6.0-2ubuntu0.1.debian.tar.xz 15320 SHA512:91f69cc5f7ceaf2e638825d0e4c76b48ae35538c1a16e39dc8e922cc4cf8e91ebf7c40e19aa83d2ec87c227ae4cc8ea11f2e983c4b3a5648d7fbb04fc161cd36
 ```
 
 ### `dpkg` source package: `libmd=1.0.4-1build1`
@@ -1898,14 +1903,14 @@ $ apt-get source -qq --print-uris pcre3=2:8.39-13ubuntu0.22.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39-13ubuntu0.22.04.1.debian.tar.gz' pcre3_8.39-13ubuntu0.22.04.1.debian.tar.gz 28251 SHA512:50aa437187fd45632213fe7b09a69dfbe2a58ad568a7f71c47ddab204db49850b732f17c8295788afd0c58d8134620a11aaa9fa259a980a0ab85ce043098a659
 ```
 
-### `dpkg` source package: `perl=5.34.0-3ubuntu1`
+### `dpkg` source package: `perl=5.34.0-3ubuntu1.1`
 
 Binary Packages:
 
-- `libperl5.34:amd64=5.34.0-3ubuntu1`
-- `perl=5.34.0-3ubuntu1`
-- `perl-base=5.34.0-3ubuntu1`
-- `perl-modules-5.34=5.34.0-3ubuntu1`
+- `libperl5.34:amd64=5.34.0-3ubuntu1.1`
+- `perl=5.34.0-3ubuntu1.1`
+- `perl-base=5.34.0-3ubuntu1.1`
+- `perl-modules-5.34=5.34.0-3ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/libperl5.34/copyright`, `/usr/share/doc/perl/copyright`, `/usr/share/doc/perl-base/copyright`, `/usr/share/doc/perl-modules-5.34/copyright`)
 
@@ -1940,11 +1945,11 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.34/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris perl=5.34.0-3ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-3ubuntu1.dsc' perl_5.34.0-3ubuntu1.dsc 2993 SHA512:6f65ee700ac9a4d45ff9c676d1ae6dac1d75cfd4d071e4c88cd00a0579dcdbc68f194121a610f4d8f460d5d086d118dc0ec2d1b016d56c945ce262702dec2c6c
+$ apt-get source -qq --print-uris perl=5.34.0-3ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-3ubuntu1.1.dsc' perl_5.34.0-3ubuntu1.1.dsc 2976 SHA512:46121062c161c4cb9a66d2ea7dff2ac943c67b92fc0bf6b9460dee63041fb53d4b9024e245a84f1b1c3bd971515d7d62ae396abb6bde919763ee0686e561572e
 'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0.orig-regen-configure.tar.xz' perl_5.34.0.orig-regen-configure.tar.xz 415412 SHA512:2581152e0747105314c4fa4167f1f97d286436b996341b9b75e4099ba18f15eb0d2b42888622fbe9b5499d3fe304bc8aa9ad207a945f590135beccfb68ea28b0
 'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0.orig.tar.xz' perl_5.34.0.orig.tar.xz 12881416 SHA512:691b4b31eacec357191fba777612b4e3eae59e946a22998a50766697c0d61db1d42a9b3bc1e41abf0d1ca1893e4a7c06d7bf3290480cf03d7f79befd7a8a3267
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-3ubuntu1.debian.tar.xz' perl_5.34.0-3ubuntu1.debian.tar.xz 167356 SHA512:670be9084642fbce2ac074c684ec857a57f5ce3a87bfa20e93a4504876abb38821bc31a39deca01eda767ad4a09bd97709990e8704fe4225f9401916c151313a
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-3ubuntu1.1.debian.tar.xz' perl_5.34.0-3ubuntu1.1.debian.tar.xz 192096 SHA512:ba3e8dd687c441121ef68fe6497889e1d4a9f3b65a2fd4ef5558b6625f32238367da92195f0a8d495c5778a44aaf67605ade5fe1846266d69f993d155475189a
 ```
 
 ### `dpkg` source package: `pinentry=1.1.1-1build2`
@@ -2506,16 +2511,21 @@ $ apt-get source -qq --print-uris xz-utils=5.2.5-2ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.5-2ubuntu1.debian.tar.xz' xz-utils_5.2.5-2ubuntu1.debian.tar.xz 35108 SHA512:c50c36fe82204f79be5f409c633aae52ae7b5d36fc64f404308372c80c862455c26455ad0dba93877e80db576d80e672314f757a1ed080f200702d47247e9d6e
 ```
 
-### `dpkg` source package: `zlib=1:1.2.11.dfsg-2ubuntu9.1`
+### `dpkg` source package: `zlib=1:1.2.11.dfsg-2ubuntu9.2`
 
 Binary Packages:
 
-- `zlib1g:amd64=1:1.2.11.dfsg-2ubuntu9.1`
+- `zlib1g:amd64=1:1.2.11.dfsg-2ubuntu9.2`
 
 Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
 - `Zlib`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2ubuntu9.2
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu9.2.dsc' zlib_1.2.11.dfsg-2ubuntu9.2.dsc 2649 SHA512:08f3ca4c6680ddec9532de5e937c39aa891e1c2062e6da65a96aaa060c8111bbb63de6d5c36efd34f4d3892e6e334b50fa2947fde68b3ba276e6645027dd8715
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA512:92819807c0b8de655021bb2d5d182f9b6b381d3072d8c8dc1df34bbaa25d36bcba140c85f754a43cc466aac65850b7a7366aa0c93e804180e5b255e61d5748de
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu9.2.debian.tar.xz' zlib_1.2.11.dfsg-2ubuntu9.2.debian.tar.xz 60140 SHA512:5e86b01c08d5027fab6682849e6065b750d2aecafe8bd6ca85fd729c1cca88031e46f869e20d0b0483d2a6128eab9754f530d0b25f009b684b18bd6f0e8c4ae8
+```
