@@ -1,7 +1,7 @@
 ## `clojure:temurin-11-lein-2.9.10`
 
 ```console
-$ docker pull clojure@sha256:56c59abecfb3dcb968eb6543e5054d1aa17bb0a7f02b52ba21194c0b14177fb8
+$ docker pull clojure@sha256:e959e1a4ba249053b635bbbc60b83c6744b953b59a7ab8cbb35f7bd57d6a0a2d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -90,14 +90,14 @@ CMD ["lein" "repl"]
 ### `clojure:temurin-11-lein-2.9.10` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:928b4b597da3b0946743805ea10a5678f21dd45ba6f05933bcd292cefdb40eda
+$ docker pull clojure@sha256:a5d49cf7903d5303c685d3e3da847bd96c55664a96b3e3d11865b0bcbacdbf45
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **252.2 MB (252193745 bytes)**  
+-	Total Size: **252.4 MB (252433257 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:80405eabaf2b79344e6fb17ffac9159a8686ec258a336759fd3c63180c655837`
+-	Image ID: `sha256:bff76b4a696db8e55eeca0c1b7c040fb67126b99bfaaff616e2931b4fd5bb027`
 -	Default Command: `["lein","repl"]`
 
 ```dockerfile
@@ -121,21 +121,21 @@ RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in    
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
 # Wed, 05 Oct 2022 15:45:45 GMT
 CMD ["jshell"]
-# Thu, 06 Oct 2022 02:36:07 GMT
+# Wed, 26 Oct 2022 00:01:12 GMT
 ENV LEIN_VERSION=2.9.10
-# Thu, 06 Oct 2022 02:36:08 GMT
+# Wed, 26 Oct 2022 00:01:12 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Thu, 06 Oct 2022 02:36:09 GMT
+# Wed, 26 Oct 2022 00:01:12 GMT
 WORKDIR /tmp
-# Thu, 06 Oct 2022 02:36:27 GMT
+# Wed, 26 Oct 2022 00:01:23 GMT
 RUN set -eux; apt-get update && apt-get install -y make gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://codeberg.org/leiningen/leiningen/raw/tag/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "dbb84d13d6df5b85bbf7f89a39daeed103133c24a4686d037fe6bd65e38e7f32 *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && export GNUPGHOME="$(mktemp -d)" && export FILENAME_EXT=jar && if printf '%s\n%s\n' "2.9.7" "$LEIN_VERSION" | sort -cV; then               gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys 6A2D483DB59437EBB97D09B1040193357D0606ED;             else               gpg --batch --keyserver hkps://keyserver.ubuntu.com --recv-keys 20242BACBBE95ADA22D0AFD7808A33D379C806C3;               FILENAME_EXT=zip;             fi && wget -q https://codeberg.org/leiningen/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT && wget -q https://codeberg.org/leiningen/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT && gpgconf --kill all && rm -rf "$GNUPGHOME" leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Thu, 06 Oct 2022 02:36:27 GMT
+# Wed, 26 Oct 2022 00:01:24 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 06 Oct 2022 02:36:28 GMT
+# Wed, 26 Oct 2022 00:01:24 GMT
 ENV LEIN_ROOT=1
-# Thu, 06 Oct 2022 02:36:32 GMT
+# Wed, 26 Oct 2022 00:01:26 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.11.1"]])' > project.clj   && lein deps && rm project.clj
-# Thu, 06 Oct 2022 02:36:32 GMT
+# Wed, 26 Oct 2022 00:01:26 GMT
 CMD ["lein" "repl"]
 ```
 
@@ -156,11 +156,11 @@ CMD ["lein" "repl"]
 		Last Modified: Wed, 05 Oct 2022 15:53:39 GMT  
 		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62b3c90ea39edaae325b80724c21668db74c104d3743b2b679c2206a7de02818`  
-		Last Modified: Thu, 06 Oct 2022 02:59:01 GMT  
-		Size: 12.1 MB (12138566 bytes)  
+	-	`sha256:cc58cecd27a91ac63a63656aeb0b62fd0ffe60ccab22beedfd7c0570968790c3`  
+		Last Modified: Wed, 26 Oct 2022 00:18:17 GMT  
+		Size: 12.4 MB (12377958 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bec3ebc60f05061c086ebce0f8b8516898bed3806092c177638f24f340b68583`  
-		Last Modified: Thu, 06 Oct 2022 02:59:01 GMT  
-		Size: 4.4 MB (4398557 bytes)  
+	-	`sha256:56852cee2f0a7ca253a2c51b42bbcfb2188045f7815126598c7f1bc6157e3158`  
+		Last Modified: Wed, 26 Oct 2022 00:18:17 GMT  
+		Size: 4.4 MB (4398677 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip

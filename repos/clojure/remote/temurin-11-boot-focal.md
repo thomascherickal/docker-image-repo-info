@@ -1,7 +1,7 @@
 ## `clojure:temurin-11-boot-focal`
 
 ```console
-$ docker pull clojure@sha256:fcf10be5d5cf6aa9d372ca8e0a6fd9cb39e0ce0ab7a2f93377e219ed40a75c0d
+$ docker pull clojure@sha256:0a90b72d0a552724a112f7d38ee608eef228f6a1f3130f9e444c8dec152f9ca4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -90,14 +90,14 @@ CMD ["boot" "repl"]
 ### `clojure:temurin-11-boot-focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:8875e265f4a0b8c55e7cec51aa1f7b2a4cf479d0c8669f392ae3852be5ef3669
+$ docker pull clojure@sha256:4674ba98fc7be6cb9c80cbfb853f4399ad34f96b1cdd4d983fa1db9a703031ba
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **297.2 MB (297200289 bytes)**  
+-	Total Size: **297.4 MB (297442628 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d811a18f046a5d73bc791529b5f025d394f1841a553a5494dc3cf3ceff1a89ad`
+-	Image ID: `sha256:ca6d93da435950932bd97168e46fef62618e816d1ce9987b3fa6c75b64664acd`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -121,21 +121,21 @@ RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in    
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
 # Wed, 05 Oct 2022 15:45:26 GMT
 CMD ["jshell"]
-# Thu, 06 Oct 2022 02:33:04 GMT
+# Tue, 25 Oct 2022 23:59:29 GMT
 ENV BOOT_VERSION=2.8.3
-# Thu, 06 Oct 2022 02:33:04 GMT
+# Tue, 25 Oct 2022 23:59:29 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Thu, 06 Oct 2022 02:33:05 GMT
+# Tue, 25 Oct 2022 23:59:29 GMT
 WORKDIR /tmp
-# Thu, 06 Oct 2022 02:33:12 GMT
+# Tue, 25 Oct 2022 23:59:33 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Thu, 06 Oct 2022 02:33:12 GMT
+# Tue, 25 Oct 2022 23:59:33 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Thu, 06 Oct 2022 02:33:13 GMT
+# Tue, 25 Oct 2022 23:59:33 GMT
 ENV BOOT_AS_ROOT=yes
-# Thu, 06 Oct 2022 02:33:29 GMT
+# Tue, 25 Oct 2022 23:59:50 GMT
 RUN boot
-# Thu, 06 Oct 2022 02:33:29 GMT
+# Tue, 25 Oct 2022 23:59:50 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -156,11 +156,11 @@ CMD ["boot" "repl"]
 		Last Modified: Wed, 05 Oct 2022 15:53:09 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:336327a96c1ffa86f0306ebaab7104dcf0989eb8d97d7e958ec1ecac914303d6`  
-		Last Modified: Thu, 06 Oct 2022 02:57:45 GMT  
-		Size: 100.1 KB (100078 bytes)  
+	-	`sha256:2cdf25371465b644c3c9668b1034f3c0d066204de3bacdc226f9d33b8c093628`  
+		Last Modified: Wed, 26 Oct 2022 00:17:13 GMT  
+		Size: 337.9 KB (337852 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1aceac709d1ca10080c2ec42f37c01ddd5eac9f13722314cb224afacf999c1ce`  
-		Last Modified: Thu, 06 Oct 2022 02:57:49 GMT  
-		Size: 58.8 MB (58815894 bytes)  
+	-	`sha256:94718f7b42196fa0b0ea7ac381345b32615f13b3e553428eabd9c57cb7f73c6f`  
+		Last Modified: Wed, 26 Oct 2022 00:17:15 GMT  
+		Size: 58.8 MB (58820459 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
