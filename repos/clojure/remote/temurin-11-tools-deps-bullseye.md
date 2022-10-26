@@ -1,7 +1,7 @@
 ## `clojure:temurin-11-tools-deps-bullseye`
 
 ```console
-$ docker pull clojure@sha256:8402dd894c938950bfbbdc59ba1019a7eb9099bfd80ccf6ccb4a9806b95fe583
+$ docker pull clojure@sha256:6b25d0517dd0fdd3a0d351056e22dd54a4ea09cf39533a52dba11e79a97f62cf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -66,14 +66,14 @@ CMD ["clj"]
 ### `clojure:temurin-11-tools-deps-bullseye` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:b015fd787d995e6f585d63678ec2f0aabb0dd1b54049350918ea8df27c3f6807
+$ docker pull clojure@sha256:7b47404cfe4967502ab88ec777f83fac95bea59bccbe5c95eed0aebbebc8255a
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **295.9 MB (295862042 bytes)**  
+-	Total Size: **295.9 MB (295862594 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3bca5b89517357095ba9585dce61afe7e9a0c042fbd8e0c50f6da7d416d3c1b7`
+-	Image ID: `sha256:fe8a4f97ff800d6a7ed09c6cf31f7a84db274995f57a4cf8b6004a48f207e29f`
 -	Default Command: `["clj"]`
 
 ```dockerfile
@@ -83,19 +83,19 @@ ADD file:b16745ece8ef84c028d7e9ac4bf026ac64f885d4170bfcc9d435f237144a1b99 in /
 CMD ["bash"]
 # Tue, 25 Oct 2022 23:53:17 GMT
 ENV JAVA_HOME=/opt/java/openjdk
-# Tue, 25 Oct 2022 23:58:29 GMT
-COPY dir:0dc06d70d42a32ae203bdf41d3806f1204b90ca101c4efe4662ba862f2c76b8a in /opt/java/openjdk 
-# Tue, 25 Oct 2022 23:58:33 GMT
+# Wed, 26 Oct 2022 15:37:43 GMT
+COPY dir:0c9c8c2b9cd43799d246d5824c591352650ad79f5d15544287f00c2deb1e4608 in /opt/java/openjdk 
+# Wed, 26 Oct 2022 15:37:48 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 00:01:29 GMT
+# Wed, 26 Oct 2022 15:42:58 GMT
 ENV CLOJURE_VERSION=1.11.1.1165
-# Wed, 26 Oct 2022 00:01:29 GMT
+# Wed, 26 Oct 2022 15:42:58 GMT
 WORKDIR /tmp
-# Wed, 26 Oct 2022 00:01:42 GMT
+# Wed, 26 Oct 2022 15:43:30 GMT
 RUN apt-get update && apt-get install -y curl make rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "72d662bdc99b79037f9e34996272384de35e01e0416d8eb79cc940ee0f0fc808 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Wed, 26 Oct 2022 00:01:42 GMT
+# Wed, 26 Oct 2022 15:43:30 GMT
 COPY file:b0aef3ea203de7b5c2ea645debf58c8231445a2e3070b72749b54614f4a89b82 in /usr/local/bin/rlwrap 
-# Wed, 26 Oct 2022 00:01:42 GMT
+# Wed, 26 Oct 2022 15:43:30 GMT
 CMD ["clj"]
 ```
 
@@ -104,15 +104,15 @@ CMD ["clj"]
 		Last Modified: Tue, 25 Oct 2022 05:48:40 GMT  
 		Size: 53.7 MB (53701966 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99902a91af1a5ac43f8cea176770b6ec766f5259b18c45fd17a0de6098ce0bac`  
-		Last Modified: Wed, 26 Oct 2022 00:16:49 GMT  
-		Size: 194.9 MB (194866492 bytes)  
+	-	`sha256:1c7a7b51e23fc2e53d8018b07b36bae7b1c261267f2981e18b50be0d7b845881`  
+		Last Modified: Wed, 26 Oct 2022 15:57:42 GMT  
+		Size: 194.9 MB (194866970 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d33a8db5c60e5c9ee92ed02c9338e1cffc0b3d5a6235a09c830fec0e1a1bcbc3`  
-		Last Modified: Wed, 26 Oct 2022 00:18:37 GMT  
-		Size: 47.3 MB (47292966 bytes)  
+	-	`sha256:624bbf40b0a3115da86bd822046649555c1947f2eed68aa2821f2ca18d305c77`  
+		Last Modified: Wed, 26 Oct 2022 15:59:37 GMT  
+		Size: 47.3 MB (47293041 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8f93d5db6b1f7ae33a5fca0e54d95f22e00112e09d5be4093d75550ce81652f`  
-		Last Modified: Wed, 26 Oct 2022 00:18:31 GMT  
-		Size: 618.0 B  
+	-	`sha256:0adfe51daf9cf02bcca2737a4a9b3412309cc4fc46f4a180f4ac673a5897a9d5`  
+		Last Modified: Wed, 26 Oct 2022 15:59:32 GMT  
+		Size: 617.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
