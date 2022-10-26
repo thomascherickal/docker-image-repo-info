@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:243c50c3d268cf6981da0bd25ccf795b7d581d141cd2d64553b4fc451358cc0a`
-- Created: `2022-10-13T18:38:21.896755418Z`
+- Image ID: `sha256:d8047e98f297852604ef2f8268858f0075d3769ed50df4172152065bbfa78cdd`
+- Created: `2022-10-25T18:09:18.261023058Z`
 - Virtual Size: ~ 3.28 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -2006,11 +2006,11 @@ $ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.9
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.9.debian.tar.xz' glibc_2.31-0ubuntu9.9.debian.tar.xz 875580 SHA512:7b2b6eaaa2c1fb0e62bc662dcd4f5c30aec5e199fe69561efe8d29156a4fe5be4cb15323e3f74072cf34e182fe8112d9d895aab8535e4622729554c7f039195f
 ```
 
-### `dpkg` source package: `gmp=2:6.2.0+dfsg-4`
+### `dpkg` source package: `gmp=2:6.2.0+dfsg-4ubuntu0.1`
 
 Binary Packages:
 
-- `libgmp10:amd64=2:6.2.0+dfsg-4`
+- `libgmp10:amd64=2:6.2.0+dfsg-4ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 
@@ -2022,10 +2022,10 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gmp=2:6.2.0+dfsg-4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0%2bdfsg-4.dsc' gmp_6.2.0+dfsg-4.dsc 2144 SHA256:4ca8c5bca982c78eb7679256a5d41b2c9363a6c3e3ee15ed765515bc328e9989
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0%2bdfsg.orig.tar.xz' gmp_6.2.0+dfsg.orig.tar.xz 1842912 SHA256:5d7610449498a79aa62d4b9a8f6baaef91b8716726e1009e02b879962dff32ab
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0%2bdfsg-4.debian.tar.xz' gmp_6.2.0+dfsg-4.debian.tar.xz 21120 SHA256:a0772595583dbcf2147e8457602ccf4b524b18227d6804c4a74050df64ece912
+$ apt-get source -qq --print-uris gmp=2:6.2.0+dfsg-4ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0%2bdfsg-4ubuntu0.1.dsc' gmp_6.2.0+dfsg-4ubuntu0.1.dsc 2279 SHA512:6171e0fa69e6ddb3332a9fa4a23ca6006a451d19f0df717b1db8ed67c97104b247c9c711db4ea879318b2fd17345c2b63ae4e960613884f34ce0da85dc8f78ea
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0%2bdfsg.orig.tar.xz' gmp_6.2.0+dfsg.orig.tar.xz 1842912 SHA512:6ed6df69ced53b13e3e2d64d94f8a34c3257abd4c0967f16d48b064956e260a3d8fb424c84d47dca6d1308bd16b347af3740fce68ebd2d45f1d7f752422c2496
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.2.0%2bdfsg-4ubuntu0.1.debian.tar.xz' gmp_6.2.0+dfsg-4ubuntu0.1.debian.tar.xz 21644 SHA512:b89b351bd9648108a15aa4db193610a36d59a9f75ddcbad2ea85004dbdf39553a6e611552351d2f37836eed3d99f152cba22fdbaa71b92f94635797b06404a27
 ```
 
 ### `dpkg` source package: `gnupg2=2.2.19-3ubuntu2.2`
@@ -2431,19 +2431,19 @@ $ apt-get source -qq --print-uris harfbuzz=2.6.4-1ubuntu4.2
 'http://archive.ubuntu.com/ubuntu/pool/main/h/harfbuzz/harfbuzz_2.6.4-1ubuntu4.2.debian.tar.xz' harfbuzz_2.6.4-1ubuntu4.2.debian.tar.xz 12000 SHA512:a82f88147e34b830bb0eda78313aff32f079fc902e79eeb8b270d1513b4fe07f60c927d1b4204a593baab929c1285302ae02edda147b3a45fa453938aa0525b6
 ```
 
-### `dpkg` source package: `heimdal=7.7.0+dfsg-1ubuntu1`
+### `dpkg` source package: `heimdal=7.7.0+dfsg-1ubuntu1.1`
 
 Binary Packages:
 
-- `libasn1-8-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
-- `libgssapi3-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
-- `libhcrypto4-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
-- `libheimbase1-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
-- `libheimntlm0-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
-- `libhx509-5-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
-- `libkrb5-26-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
-- `libroken18-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
-- `libwind0-heimdal:amd64=7.7.0+dfsg-1ubuntu1`
+- `libasn1-8-heimdal:amd64=7.7.0+dfsg-1ubuntu1.1`
+- `libgssapi3-heimdal:amd64=7.7.0+dfsg-1ubuntu1.1`
+- `libhcrypto4-heimdal:amd64=7.7.0+dfsg-1ubuntu1.1`
+- `libheimbase1-heimdal:amd64=7.7.0+dfsg-1ubuntu1.1`
+- `libheimntlm0-heimdal:amd64=7.7.0+dfsg-1ubuntu1.1`
+- `libhx509-5-heimdal:amd64=7.7.0+dfsg-1ubuntu1.1`
+- `libkrb5-26-heimdal:amd64=7.7.0+dfsg-1ubuntu1.1`
+- `libroken18-heimdal:amd64=7.7.0+dfsg-1ubuntu1.1`
+- `libwind0-heimdal:amd64=7.7.0+dfsg-1ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/share/doc/libgssapi3-heimdal/copyright`, `/usr/share/doc/libhcrypto4-heimdal/copyright`, `/usr/share/doc/libheimbase1-heimdal/copyright`, `/usr/share/doc/libheimntlm0-heimdal/copyright`, `/usr/share/doc/libhx509-5-heimdal/copyright`, `/usr/share/doc/libkrb5-26-heimdal/copyright`, `/usr/share/doc/libroken18-heimdal/copyright`, `/usr/share/doc/libwind0-heimdal/copyright`)
 
@@ -2456,10 +2456,10 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 Source:
 
 ```console
-$ apt-get source -qq --print-uris heimdal=7.7.0+dfsg-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.dsc' heimdal_7.7.0+dfsg-1ubuntu1.dsc 3633 SHA256:46b7873a11c8279f5efec50f16b5ed4abafa5a957224c3f624229f9d888e1ebe
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg.orig.tar.xz' heimdal_7.7.0+dfsg.orig.tar.xz 5945252 SHA256:6822c9547188b753b6325047fda9255744e4ebbbe02bb0dade78c261061fefac
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.debian.tar.xz' heimdal_7.7.0+dfsg-1ubuntu1.debian.tar.xz 128604 SHA256:0c0b4572de525c3c294bcdbde95ebfc3386461c47c2e8d1a86fe0d37da6bd479
+$ apt-get source -qq --print-uris heimdal=7.7.0+dfsg-1ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.1.dsc' heimdal_7.7.0+dfsg-1ubuntu1.1.dsc 3399 SHA512:e3dea31fa907cd8b238c87bb02a6a42b576427213278ee58eb4455540b85bb06597bb80a322b4960a5d3c2ebe016d9c1822b70ef6e8ec25f55bfd8bfac8575f2
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg.orig.tar.xz' heimdal_7.7.0+dfsg.orig.tar.xz 5945252 SHA512:14141f3fff264c9516f736bcc51c998df69cfaa7108d2387921299efd7e82d79b918dee4029905dc221c204d3340ffc17da9472baf80029372d7c13de328ec0a
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.1.debian.tar.xz' heimdal_7.7.0+dfsg-1ubuntu1.1.debian.tar.xz 130324 SHA512:434b3811d019c319972b021b39ed21db8aeed15629aeb0a06796b270a649d0387870280e98a2fed53129777ba670471f98420c5207884c18c4bad300480c9e81
 ```
 
 ### `dpkg` source package: `hicolor-icon-theme=0.17-2`
@@ -4632,11 +4632,11 @@ $ apt-get source -qq --print-uris libjpeg8-empty=8c-2ubuntu8
 'http://archive.ubuntu.com/ubuntu/pool/main/libj/libjpeg8-empty/libjpeg8-empty_8c-2ubuntu8.tar.gz' libjpeg8-empty_8c-2ubuntu8.tar.gz 1770 SHA256:48a4227e9fc70851a4f304b10624e02875bf6f4e2debfcbe4ba0dd85a3ec05c6
 ```
 
-### `dpkg` source package: `libksba=1.3.5-2`
+### `dpkg` source package: `libksba=1.3.5-2ubuntu0.20.04.1`
 
 Binary Packages:
 
-- `libksba8:amd64=1.3.5-2`
+- `libksba8:amd64=1.3.5-2ubuntu0.20.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 
@@ -4645,11 +4645,11 @@ Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libksba=1.3.5-2
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2.dsc' libksba_1.3.5-2.dsc 2526 SHA256:4fd08fd129f97ab1df86c220b88b7b2c6e4e04aa90bfd3ae364d18022256bef8
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2' libksba_1.3.5.orig.tar.bz2 620649 SHA256:41444fd7a6ff73a79ad9728f985e71c9ba8cd3e5e53358e70d5f066d35c1a340
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2.asc' libksba_1.3.5.orig.tar.bz2.asc 287 SHA256:a954b03144ee882c838853da24fd7b6868b78df72a18c71079217d968698a76f
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2.debian.tar.xz' libksba_1.3.5-2.debian.tar.xz 13852 SHA256:98c985bff973be1aecc702fa15887ff1e5b8de481d1dc3e99423a587754eaabd
+$ apt-get source -qq --print-uris libksba=1.3.5-2ubuntu0.20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2ubuntu0.20.04.1.dsc' libksba_1.3.5-2ubuntu0.20.04.1.dsc 2697 SHA512:f313415b25c63fdbd39e93ec430279eaaeee47e19727f8e02a3a225310c25c69647787939fa47b15679df9738c360c84b8ccb909d475bdfcd271a9e21706ca08
+'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2' libksba_1.3.5.orig.tar.bz2 620649 SHA512:60179bfd109b7b4fd8d2b30a3216540f03f5a13620d9a5b63f1f95788028708a420911619f172ba57e945a6a2fcd2ef7eaafc5585a0eb2b9652cfadf47bf39a2
+'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2.asc' libksba_1.3.5.orig.tar.bz2.asc 287 SHA512:6b58b1c6ee924230e4f3b040836e85cb3b3f527f667bcb370c28d8ec702c884bcceab374688e02d0356dede81f9fcf975d726c1958d4d87e5c41757a6b2ba39e
+'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2ubuntu0.20.04.1.debian.tar.xz' libksba_1.3.5-2ubuntu0.20.04.1.debian.tar.xz 14608 SHA512:890cc5a084fa45bf3e446acf6d38505a4812d63090931f8044423da1e5462b4cf110cfdecf4e30b94e255fd5cd74fd785a425496ba59fefad0f109a5a7166dba
 ```
 
 ### `dpkg` source package: `liblangtag=0.6.3-1`
@@ -5183,52 +5183,52 @@ $ apt-get source -qq --print-uris libraw1394=2.1.2-1
 'http://archive.ubuntu.com/ubuntu/pool/main/libr/libraw1394/libraw1394_2.1.2-1.debian.tar.xz' libraw1394_2.1.2-1.debian.tar.xz 8760 SHA256:5cee0e0049d820a8e4e5d3dbd94fb2c3d7b782ec09134c6c714ed523829dc1c3
 ```
 
-### `dpkg` source package: `libreoffice=1:6.4.7-0ubuntu0.20.04.4`
+### `dpkg` source package: `libreoffice=1:6.4.7-0ubuntu0.20.04.6`
 
 Binary Packages:
 
-- `fonts-opensymbol=2:102.11+LibO6.4.7-0ubuntu0.20.04.4`
-- `libjuh-java=1:6.4.7-0ubuntu0.20.04.4`
-- `libjurt-java=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-base=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-base-core=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-base-drivers=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-calc=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-common=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-core=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-draw=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-gnome=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-gtk3=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-impress=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-java-common=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-math=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-nlpsolver=0.9+LibO6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-report-builder=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-report-builder-bin=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-script-provider-bsh=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-script-provider-js=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-script-provider-python=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-sdbc-firebird=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-sdbc-hsqldb=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-sdbc-mysql=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-sdbc-postgresql=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-style-colibre=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-style-elementary=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-style-tango=1:6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-wiki-publisher=1.2.0+LibO6.4.7-0ubuntu0.20.04.4`
-- `libreoffice-writer=1:6.4.7-0ubuntu0.20.04.4`
-- `libridl-java=1:6.4.7-0ubuntu0.20.04.4`
-- `libuno-cppu3=1:6.4.7-0ubuntu0.20.04.4`
-- `libuno-cppuhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.4`
-- `libuno-purpenvhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.4`
-- `libuno-sal3=1:6.4.7-0ubuntu0.20.04.4`
-- `libuno-salhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.4`
-- `libunoil-java=1:6.4.7-0ubuntu0.20.04.4`
-- `libunoloader-java=1:6.4.7-0ubuntu0.20.04.4`
-- `python3-uno=1:6.4.7-0ubuntu0.20.04.4`
-- `uno-libs-private=1:6.4.7-0ubuntu0.20.04.4`
-- `ure=1:6.4.7-0ubuntu0.20.04.4`
+- `fonts-opensymbol=2:102.11+LibO6.4.7-0ubuntu0.20.04.6`
+- `libjuh-java=1:6.4.7-0ubuntu0.20.04.6`
+- `libjurt-java=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-base=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-base-core=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-base-drivers=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-calc=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-common=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-core=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-draw=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-gnome=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-gtk3=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-impress=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-java-common=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-math=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-nlpsolver=0.9+LibO6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-report-builder=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-report-builder-bin=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-script-provider-bsh=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-script-provider-js=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-script-provider-python=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-sdbc-firebird=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-sdbc-hsqldb=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-sdbc-mysql=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-sdbc-postgresql=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-style-colibre=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-style-elementary=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-style-tango=1:6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-wiki-publisher=1.2.0+LibO6.4.7-0ubuntu0.20.04.6`
+- `libreoffice-writer=1:6.4.7-0ubuntu0.20.04.6`
+- `libridl-java=1:6.4.7-0ubuntu0.20.04.6`
+- `libuno-cppu3=1:6.4.7-0ubuntu0.20.04.6`
+- `libuno-cppuhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.6`
+- `libuno-purpenvhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.6`
+- `libuno-sal3=1:6.4.7-0ubuntu0.20.04.6`
+- `libuno-salhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.6`
+- `libunoil-java=1:6.4.7-0ubuntu0.20.04.6`
+- `libunoloader-java=1:6.4.7-0ubuntu0.20.04.6`
+- `python3-uno=1:6.4.7-0ubuntu0.20.04.6`
+- `uno-libs-private=1:6.4.7-0ubuntu0.20.04.6`
+- `ure=1:6.4.7-0ubuntu0.20.04.6`
 
 Licenses: (parsed from: `/usr/share/doc/fonts-opensymbol/copyright`, `/usr/share/doc/libjuh-java/copyright`, `/usr/share/doc/libjurt-java/copyright`, `/usr/share/doc/libreoffice/copyright`, `/usr/share/doc/libreoffice-base/copyright`, `/usr/share/doc/libreoffice-base-core/copyright`, `/usr/share/doc/libreoffice-base-drivers/copyright`, `/usr/share/doc/libreoffice-calc/copyright`, `/usr/share/doc/libreoffice-common/copyright`, `/usr/share/doc/libreoffice-core/copyright`, `/usr/share/doc/libreoffice-draw/copyright`, `/usr/share/doc/libreoffice-gnome/copyright`, `/usr/share/doc/libreoffice-gtk3/copyright`, `/usr/share/doc/libreoffice-impress/copyright`, `/usr/share/doc/libreoffice-java-common/copyright`, `/usr/share/doc/libreoffice-math/copyright`, `/usr/share/doc/libreoffice-nlpsolver/copyright`, `/usr/share/doc/libreoffice-report-builder/copyright`, `/usr/share/doc/libreoffice-report-builder-bin/copyright`, `/usr/share/doc/libreoffice-script-provider-bsh/copyright`, `/usr/share/doc/libreoffice-script-provider-js/copyright`, `/usr/share/doc/libreoffice-script-provider-python/copyright`, `/usr/share/doc/libreoffice-sdbc-firebird/copyright`, `/usr/share/doc/libreoffice-sdbc-hsqldb/copyright`, `/usr/share/doc/libreoffice-sdbc-mysql/copyright`, `/usr/share/doc/libreoffice-sdbc-postgresql/copyright`, `/usr/share/doc/libreoffice-style-colibre/copyright`, `/usr/share/doc/libreoffice-style-elementary/copyright`, `/usr/share/doc/libreoffice-style-tango/copyright`, `/usr/share/doc/libreoffice-wiki-publisher/copyright`, `/usr/share/doc/libreoffice-writer/copyright`, `/usr/share/doc/libridl-java/copyright`, `/usr/share/doc/libuno-cppu3/copyright`, `/usr/share/doc/libuno-cppuhelpergcc3-3/copyright`, `/usr/share/doc/libuno-purpenvhelpergcc3-3/copyright`, `/usr/share/doc/libuno-sal3/copyright`, `/usr/share/doc/libuno-salhelpergcc3-3/copyright`, `/usr/share/doc/libunoil-java/copyright`, `/usr/share/doc/libunoloader-java/copyright`, `/usr/share/doc/python3-uno/copyright`, `/usr/share/doc/uno-libs-private/copyright`, `/usr/share/doc/ure/copyright`)
 
@@ -5248,9 +5248,17 @@ Licenses: (parsed from: `/usr/share/doc/fonts-opensymbol/copyright`, `/usr/share
 - `MPL-2.0`
 - `other`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libreoffice=1:6.4.7-0ubuntu0.20.04.6
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7-0ubuntu0.20.04.6.dsc' libreoffice_6.4.7-0ubuntu0.20.04.6.dsc 30509 SHA512:967b4eb5c730849613e1c07ba3a7024a7f5be4ffa704ceb47deac7aa1cddc25e6a3aae8cc96f8926bb4da7659779dcfceae6ff329123d6dce1fad0bedace0e9f
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7.orig-helpcontent2.tar.xz' libreoffice_6.4.7.orig-helpcontent2.tar.xz 88073752 SHA512:3d6459cd4eab764d1fc15eb6edd6c1b16272f51869de1e9379328e81e03adb146d73c2acaf147d13b8ccc9a99721e023d404a0cf2f99a05264cc5536604828da
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7.orig-tarballs.tar.xz' libreoffice_6.4.7.orig-tarballs.tar.xz 200916520 SHA512:10dc6e7b0521dff9aea57859312bb9802e1671f52d97f0f3fb7e030e779f778842088160ee14f446a8cc457d67b21b683c90c94bf0aa797ff890b2dea344f5ab
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7.orig-translations.tar.xz' libreoffice_6.4.7.orig-translations.tar.xz 179847328 SHA512:6496ce816b136504c9511aeac5e881f329360e144ea48f28e9b56720ed727719339703431e0e0cee931d721c0e2b308366f0a3af771ebc980952c410f400c1cd
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7.orig.tar.xz' libreoffice_6.4.7.orig.tar.xz 211530416 SHA512:a0ee0c0e617b33655dce0fbb14e2af12c3d810a3a9631d4b2204a75c8ac64c8797ab52735b799d078e1fff5a14d188ee850c239dab7bce4035a7ca704d6caa97
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7-0ubuntu0.20.04.6.debian.tar.xz' libreoffice_6.4.7-0ubuntu0.20.04.6.debian.tar.xz 2416004 SHA512:3a6fb30762147560fb41ab0720d875c40de417fd5915368bd7509fe98addc533522e72ac67a3a60f3e8e58e1d5709bcd8833301525f7a2788aafe89204868f1f
+```
 
 ### `dpkg` source package: `librest=0.8.1-1`
 
@@ -7146,11 +7154,11 @@ $ apt-get source -qq --print-uris mpg123=1.25.13-1
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mpg123/mpg123_1.25.13-1.debian.tar.xz' mpg123_1.25.13-1.debian.tar.xz 23768 SHA256:34a93a2afcbd3c7529a7c9c3c7f24b310a6f2921ce21e7b3325d497a18601fdb
 ```
 
-### `dpkg` source package: `mysql-8.0=8.0.30-0ubuntu0.20.04.2`
+### `dpkg` source package: `mysql-8.0=8.0.31-0ubuntu0.20.04.1`
 
 Binary Packages:
 
-- `libmysqlclient21:amd64=8.0.30-0ubuntu0.20.04.2`
+- `libmysqlclient21:amd64=8.0.31-0ubuntu0.20.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libmysqlclient21/copyright`)
 
@@ -7170,10 +7178,10 @@ Licenses: (parsed from: `/usr/share/doc/libmysqlclient21/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris mysql-8.0=8.0.30-0ubuntu0.20.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.30-0ubuntu0.20.04.2.dsc' mysql-8.0_8.0.30-0ubuntu0.20.04.2.dsc 3497 SHA512:85c6eabd52567f565f2909811e36269aead8c9679ecb9fa25b558401b8aa9cbabc73e5d60a10111a0b8ab4c5a115e0e7cc45cd37a5a7b44cc42665dc7af92631
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.30.orig.tar.gz' mysql-8.0_8.0.30.orig.tar.gz 332772783 SHA512:03cf3f97c9ddac949311f201f0a2c8f46a9785e518b6671fac927df1c05e2bf30edac3ac0316d91e99bb3da04ce2866e1e47394ee6eb2ca8f43bbbd38ab4247a
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.30-0ubuntu0.20.04.2.debian.tar.xz' mysql-8.0_8.0.30-0ubuntu0.20.04.2.debian.tar.xz 162072 SHA512:ef819e3fdd255e9ed2386f730016b9499cab198510b0081cdca36b658b30bac10a007b86d74924309c0e093547b68cbffc0635452b941f1ae16c3167d4161168
+$ apt-get source -qq --print-uris mysql-8.0=8.0.31-0ubuntu0.20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.31-0ubuntu0.20.04.1.dsc' mysql-8.0_8.0.31-0ubuntu0.20.04.1.dsc 3497 SHA512:511233391df5304aecb0c91a233770bc79ed328561c5f4335671d91e0584eba47a216beb1cda70cf7ebe6b9ad6cfb8520542c9ae457a9e2f43916efa559fc5de
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.31.orig.tar.gz' mysql-8.0_8.0.31.orig.tar.gz 334504577 SHA512:87b1678de8c2fd640fd6f3ae58266ea63fe240578330e3296d0e5fc209bbe9b0c22996214b6ca4cce8c0d9cc2f9897f4e6723d835b33fc4342983c82929c3d96
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.31-0ubuntu0.20.04.1.debian.tar.xz' mysql-8.0_8.0.31-0ubuntu0.20.04.1.debian.tar.xz 161620 SHA512:52c0a56af7741f9f10fff8e174ae76676eef3bf53583df57e10e276d86049f9aed1cf4d241bfc32dc6f92929e87e91f47784222412a58fdabe907c0f948c2e06
 ```
 
 ### `dpkg` source package: `mysql-defaults=1.0.5ubuntu2`
@@ -7851,14 +7859,14 @@ $ apt-get source -qq --print-uris perl-openssl-defaults=4
 'http://archive.ubuntu.com/ubuntu/pool/main/p/perl-openssl-defaults/perl-openssl-defaults_4.tar.xz' perl-openssl-defaults_4.tar.xz 4392 SHA256:81653b03e48f9f8d638dd5a2bcd82dd5738d02ed66cdffa56c6f2882f08faa1e
 ```
 
-### `dpkg` source package: `perl=5.30.0-9ubuntu0.2`
+### `dpkg` source package: `perl=5.30.0-9ubuntu0.3`
 
 Binary Packages:
 
-- `libperl5.30:amd64=5.30.0-9ubuntu0.2`
-- `perl=5.30.0-9ubuntu0.2`
-- `perl-base=5.30.0-9ubuntu0.2`
-- `perl-modules-5.30=5.30.0-9ubuntu0.2`
+- `libperl5.30:amd64=5.30.0-9ubuntu0.3`
+- `perl=5.30.0-9ubuntu0.3`
+- `perl-base=5.30.0-9ubuntu0.3`
+- `perl-modules-5.30=5.30.0-9ubuntu0.3`
 
 Licenses: (parsed from: `/usr/share/doc/libperl5.30/copyright`, `/usr/share/doc/perl/copyright`, `/usr/share/doc/perl-base/copyright`, `/usr/share/doc/perl-modules-5.30/copyright`)
 
@@ -7890,9 +7898,15 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.30/copyright`, `/usr/share/doc/
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris perl=5.30.0-9ubuntu0.3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0-9ubuntu0.3.dsc' perl_5.30.0-9ubuntu0.3.dsc 2962 SHA512:2377a1c211a465deb42ba927dc49329403924bd316abf5b90e028eb1543cf8d1feb7d8fd0c83561a95a022d8417d6d5cea3b3f889830f2bfbb3d19ace6669ab6
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0.orig-regen-configure.tar.gz' perl_5.30.0.orig-regen-configure.tar.gz 833235 SHA512:ab977887b53249a2423708aa38ecbb8bdbfdb7ba533a795eaa20bac427b2eb326756b076ca11088036550a4db24418903c0565d168fe9641e18077a76d04274a
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0.orig.tar.xz' perl_5.30.0.orig.tar.xz 12419868 SHA512:68a295eccd64debd9d6a10f0d5577f872a19ad8c2d702798f6b0f45b8c3af6ab3230768056e2131e9e2e2506d1035b27cfd627c845e32263fe448649c4b98ae9
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.30.0-9ubuntu0.3.debian.tar.xz' perl_5.30.0-9ubuntu0.3.debian.tar.xz 169880 SHA512:307dd75353f0b939a50fbbeb5e206655b931697d7334ffd2620729093263ef050d9846549db9794da20f46f8f152464ff5171f866e62aa135bb3cfea109c451c
+```
 
 ### `dpkg` source package: `pinentry=1.1.0-3build1`
 
@@ -8821,10 +8835,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris tzdata=2022c-0ubuntu0.20.04.0
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.20.04.0.dsc' tzdata_2022c-0ubuntu0.20.04.0.dsc 2184 SHA512:66611eaa71b317c8c839318b48369b02ca5d9923e8c4e2182f014edd538082355d87defc1f2b0f969780c8dd707e4c3535a6b15637b59b6aa9541dc3df269cb7
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz' tzdata_2022c.orig.tar.gz 432721 SHA512:e2ae92abac6d87ce4ab4ba9012e868e1791b842e083293489debc0c671b9cf135b5b70426dacb6dbebbf6eba24463205225ae45bb7df891a086b25475f85ee0b
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz.asc' tzdata_2022c.orig.tar.gz.asc 833 SHA512:8485b30e93782c76444b07c18c3032e91293edcb4a79b536b7d561de7981e5a4861b83ea3cae7e6efe7340ce8de313cb34a493d7ef46547f7f63f29eb0452da9
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.20.04.0.debian.tar.xz' tzdata_2022c-0ubuntu0.20.04.0.debian.tar.xz 166776 SHA512:4968a98a9113c28aad6d126220eacfcffbfe571ca2708d178d205ea1ee119b9f9a12f73b43aab44c8e3fd9be584ff5e5c73326f0a7a0ebf39537c8874db44995
+'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.20.04.0.dsc' tzdata_2022c-0ubuntu0.20.04.0.dsc 2184 SHA512:66611eaa71b317c8c839318b48369b02ca5d9923e8c4e2182f014edd538082355d87defc1f2b0f969780c8dd707e4c3535a6b15637b59b6aa9541dc3df269cb7
+'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz' tzdata_2022c.orig.tar.gz 432721 SHA512:e2ae92abac6d87ce4ab4ba9012e868e1791b842e083293489debc0c671b9cf135b5b70426dacb6dbebbf6eba24463205225ae45bb7df891a086b25475f85ee0b
+'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz.asc' tzdata_2022c.orig.tar.gz.asc 833 SHA512:8485b30e93782c76444b07c18c3032e91293edcb4a79b536b7d561de7981e5a4861b83ea3cae7e6efe7340ce8de313cb34a493d7ef46547f7f63f29eb0452da9
+'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.20.04.0.debian.tar.xz' tzdata_2022c-0ubuntu0.20.04.0.debian.tar.xz 166776 SHA512:4968a98a9113c28aad6d126220eacfcffbfe571ca2708d178d205ea1ee119b9f9a12f73b43aab44c8e3fd9be584ff5e5c73326f0a7a0ebf39537c8874db44995
 ```
 
 ### `dpkg` source package: `ubuntu-keyring=2020.02.11.4`
@@ -8883,11 +8897,11 @@ $ apt-get source -qq --print-uris ucf=3.0038+nmu1
 'http://archive.ubuntu.com/ubuntu/pool/main/u/ucf/ucf_3.0038%2bnmu1.tar.xz' ucf_3.0038+nmu1.tar.xz 65860 SHA256:d00bc3dd8d2f91317f52b5352fe129023c72babad55bc0dd4ece7b34183c7436
 ```
 
-### `dpkg` source package: `unzip=6.0-25ubuntu1`
+### `dpkg` source package: `unzip=6.0-25ubuntu1.1`
 
 Binary Packages:
 
-- `unzip=6.0-25ubuntu1`
+- `unzip=6.0-25ubuntu1.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -8896,10 +8910,10 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris unzip=6.0-25ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-25ubuntu1.dsc' unzip_6.0-25ubuntu1.dsc 1833 SHA256:893fcd9e73c91c4df06716f9620adf1ec701a4846b6269c513785a125e55550c
-'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0.orig.tar.gz' unzip_6.0.orig.tar.gz 1376845 SHA256:036d96991646d0449ed0aa952e4fbe21b476ce994abc276e49d30e686708bd37
-'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-25ubuntu1.debian.tar.xz' unzip_6.0-25ubuntu1.debian.tar.xz 26276 SHA256:6a22b0d23cf8b9e1a74626d7d9af5efe1257e157f20006272dc68693a13f3b45
+$ apt-get source -qq --print-uris unzip=6.0-25ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-25ubuntu1.1.dsc' unzip_6.0-25ubuntu1.1.dsc 1674 SHA512:5589dcca106750f69af732513552a3ad7940f9fb01e30d8663c536dda1b245c6b06786d81ac76ed299f87c6f945c0d631a70808056c6fcde48c224508a1a91d0
+'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0.orig.tar.gz' unzip_6.0.orig.tar.gz 1376845 SHA512:0694e403ebc57b37218e00ec1a406cae5cc9c5b52b6798e0d4590840b6cdbf9ddc0d9471f67af783e960f8fa2e620394d51384257dca23d06bcd90224a80ce5d
+'http://archive.ubuntu.com/ubuntu/pool/main/u/unzip/unzip_6.0-25ubuntu1.1.debian.tar.xz' unzip_6.0-25ubuntu1.1.debian.tar.xz 27520 SHA512:589ba60ba88eda4ca6713826268d68583b0c90fd7dbbed6aa831631bf77aee94fde7c29e5da26ddec9a13644eaf614c7bb9368707efc9d11f62db89e4a985456
 ```
 
 ### `dpkg` source package: `util-linux=2.34-0.1ubuntu9.3`
@@ -9473,19 +9487,24 @@ $ apt-get source -qq --print-uris zip=3.0-11build1
 'http://archive.ubuntu.com/ubuntu/pool/main/z/zip/zip_3.0-11build1.debian.tar.xz' zip_3.0-11build1.debian.tar.xz 8308 SHA256:3011af4bcde82439198f97af23220e6ba4837de9aaa68811688bd48a990c7981
 ```
 
-### `dpkg` source package: `zlib=1:1.2.11.dfsg-2ubuntu1.3`
+### `dpkg` source package: `zlib=1:1.2.11.dfsg-2ubuntu1.5`
 
 Binary Packages:
 
-- `zlib1g:amd64=1:1.2.11.dfsg-2ubuntu1.3`
+- `zlib1g:amd64=1:1.2.11.dfsg-2ubuntu1.5`
 
 Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
 - `Zlib`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-2ubuntu1.5
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.5.dsc' zlib_1.2.11.dfsg-2ubuntu1.5.dsc 2649 SHA512:f28659c4389c08be0023850921a9a7fb29d5c1d79429fe2a4a754209102aa48e84835006bd79dfa5943ef8319969fa549a50668db10d22c37c46082cc58969d4
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA512:92819807c0b8de655021bb2d5d182f9b6b381d3072d8c8dc1df34bbaa25d36bcba140c85f754a43cc466aac65850b7a7366aa0c93e804180e5b255e61d5748de
+'http://archive.ubuntu.com/ubuntu/pool/main/z/zlib/zlib_1.2.11.dfsg-2ubuntu1.5.debian.tar.xz' zlib_1.2.11.dfsg-2ubuntu1.5.debian.tar.xz 56436 SHA512:f6e3a370612f2a836c36f674e7647dc6cf339bf698648a3630c9b71515d317f846345c9d0db6e1c73e627ce239245a24083e705b8dfe3baece638bb3f5c0b195
+```
 
 ### `dpkg` source package: `zvbi=0.2.35-17`
 
