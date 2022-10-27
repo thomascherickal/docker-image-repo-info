@@ -11,6 +11,15 @@
 -	[`caddy:2-windowsservercore`](#caddy2-windowsservercore)
 -	[`caddy:2-windowsservercore-1809`](#caddy2-windowsservercore-1809)
 -	[`caddy:2-windowsservercore-ltsc2022`](#caddy2-windowsservercore-ltsc2022)
+-	[`caddy:2.6`](#caddy26)
+-	[`caddy:2.6-alpine`](#caddy26-alpine)
+-	[`caddy:2.6-builder`](#caddy26-builder)
+-	[`caddy:2.6-builder-alpine`](#caddy26-builder-alpine)
+-	[`caddy:2.6-builder-windowsservercore-1809`](#caddy26-builder-windowsservercore-1809)
+-	[`caddy:2.6-builder-windowsservercore-ltsc2022`](#caddy26-builder-windowsservercore-ltsc2022)
+-	[`caddy:2.6-windowsservercore`](#caddy26-windowsservercore)
+-	[`caddy:2.6-windowsservercore-1809`](#caddy26-windowsservercore-1809)
+-	[`caddy:2.6-windowsservercore-ltsc2022`](#caddy26-windowsservercore-ltsc2022)
 -	[`caddy:2.6.2`](#caddy262)
 -	[`caddy:2.6.2-alpine`](#caddy262-alpine)
 -	[`caddy:2.6.2-builder`](#caddy262-builder)
@@ -3602,6 +3611,42 @@ CMD ["caddy" "run" "--config" "/etc/caddy/Caddyfile" "--adapter" "caddyfile"]
 		Last Modified: Thu, 13 Oct 2022 23:21:25 GMT  
 		Size: 1.4 KB (1396 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `caddy:2.6`
+
+**does not exist** (yet?)
+
+## `caddy:2.6-alpine`
+
+**does not exist** (yet?)
+
+## `caddy:2.6-builder`
+
+**does not exist** (yet?)
+
+## `caddy:2.6-builder-alpine`
+
+**does not exist** (yet?)
+
+## `caddy:2.6-builder-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `caddy:2.6-builder-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
+## `caddy:2.6-windowsservercore`
+
+**does not exist** (yet?)
+
+## `caddy:2.6-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `caddy:2.6-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `caddy:2.6.2`
 
