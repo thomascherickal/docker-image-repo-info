@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a57aa7e6dee8b500915dfd8f6f0f6f31eb4d4cbf37376364d1d015c017431d61`
-- Created: `2022-10-05T16:52:01.554526374Z`
+- Image ID: `sha256:e90f2ecc7c1d1a8125c5eee0ac919ccafcf279b235374a70bedb052ac4ede914`
+- Created: `2022-10-25T16:05:32.736892392Z`
 - Virtual Size: ~ 775.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -494,11 +494,11 @@ $ apt-get source -qq --print-uris glibc=2.27-3ubuntu1.6
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.27-3ubuntu1.6.debian.tar.xz' glibc_2.27-3ubuntu1.6.debian.tar.xz 1111120 SHA512:5b696d4c5404dfa71724a6758b312ae4a2c82b3e9da56e5b5e3a76a903c348bf14dfb9bae77e1453da28a2ce96fdc3405513d60e0c8dd7e04c226ebe34fed606
 ```
 
-### `dpkg` source package: `gmp=2:6.1.2+dfsg-2`
+### `dpkg` source package: `gmp=2:6.1.2+dfsg-2ubuntu0.1`
 
 Binary Packages:
 
-- `libgmp10:amd64=2:6.1.2+dfsg-2`
+- `libgmp10:amd64=2:6.1.2+dfsg-2ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 
@@ -510,10 +510,10 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gmp=2:6.1.2+dfsg-2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.1.2%2bdfsg-2.dsc' gmp_6.1.2+dfsg-2.dsc 2152 SHA256:d1e7b69c619c2d07b3eaf9f051159cde1884cf9c68109f1dee278bf7a59b632b
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.1.2%2bdfsg.orig.tar.xz' gmp_6.1.2+dfsg.orig.tar.xz 1804424 SHA256:18016f718f621e7641ddd4e57f8e140391c5183252e5998263ffff59198a65b7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.1.2%2bdfsg-2.debian.tar.xz' gmp_6.1.2+dfsg-2.debian.tar.xz 20744 SHA256:33cf6cc65827c9df744e4e07b216ca2d02eb57327a949f80a7b7dddd0485ee85
+$ apt-get source -qq --print-uris gmp=2:6.1.2+dfsg-2ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.1.2%2bdfsg-2ubuntu0.1.dsc' gmp_6.1.2+dfsg-2ubuntu0.1.dsc 2283 SHA512:05711b25a05e2bd13887b82afd54458f357c1524ce26da37373f9567f97bc7c6ab6ddd379c31bd0b6d007b3ca60f9bdc8116562029385a426bfce06c47ccecee
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.1.2%2bdfsg.orig.tar.xz' gmp_6.1.2+dfsg.orig.tar.xz 1804424 SHA512:cd3771807ebd467cbfdd0c08e5abef107e88af35dfa75e0aa514ea335479c570392f453c05cb033b558f81dc5c0e132cc5e2f56209ef3647fe14ed41cd961e89
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gmp/gmp_6.1.2%2bdfsg-2ubuntu0.1.debian.tar.xz' gmp_6.1.2+dfsg-2ubuntu0.1.debian.tar.xz 21272 SHA512:3566a04bb8271cce23068ccdcd9fa9a9a4d5f42fca15442a2f1c23cc5b5f03b33ce241b574d5b361018c685b3cd4f005395cc2fda36fd8d9801631463c8344f3
 ```
 
 ### `dpkg` source package: `gnupg2=2.2.4-1ubuntu1.6`
@@ -1299,11 +1299,11 @@ $ apt-get source -qq --print-uris pcre3=2:8.39-9ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39-9ubuntu0.1.debian.tar.gz' pcre3_8.39-9ubuntu0.1.debian.tar.gz 27241 SHA512:31396aa4ad4077c702cb28c3611e58605e04a45f0d0c6e3ef6158324ee6703784c53a9b2b84959defa3bef96ea5754420016bb15ca6dd0bcfe3b1cf37a025c43
 ```
 
-### `dpkg` source package: `perl=5.26.1-6ubuntu0.5`
+### `dpkg` source package: `perl=5.26.1-6ubuntu0.6`
 
 Binary Packages:
 
-- `perl-base=5.26.1-6ubuntu0.5`
+- `perl-base=5.26.1-6ubuntu0.6`
 
 Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 
@@ -1336,9 +1336,15 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris perl=5.26.1-6ubuntu0.6
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1-6ubuntu0.6.dsc' perl_5.26.1-6ubuntu0.6.dsc 2768 SHA512:bd9753e82e06455628fe271f1bafc7be75359daea84c71dc1c6484772507b4191804b325f07513b82cb5c156df0c7f0fe1c44e5da085fbdc7f57370bb87f0073
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1.orig-regen-configure.tar.gz' perl_5.26.1.orig-regen-configure.tar.gz 712883 SHA512:3a8ecf16483d87d40bf428e952a3f5c287af8e4f64977133b61188855120d5896b3c5af845a19ad1912f469d9345dddd728708f6171498a7fd0dd0f56b463139
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1.orig.tar.xz' perl_5.26.1.orig.tar.xz 11922848 SHA512:13faa7bcd7ed8c490c37e9032c115af06c9b8152b75f8062409dd72d263d1314480e8a9a883490de1b448b2e6d53b6a87d108e2eceb17de2524d5857c6a7d300
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1-6ubuntu0.6.debian.tar.xz' perl_5.26.1-6ubuntu0.6.debian.tar.xz 181812 SHA512:5cf34deafe0755b063bc0fcdddc4f0fe49feb751fcb462395bbec26bebde052914ae14b962feecbf229b8b687a8054ea49e68365c6ca02494713ba46a6f983a5
+```
 
 ### `dpkg` source package: `procps=2:3.3.12-3ubuntu1.2`
 
@@ -1564,10 +1570,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris tzdata=2022c-0ubuntu0.18.04.0
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.18.04.0.dsc' tzdata_2022c-0ubuntu0.18.04.0.dsc 2165 SHA512:93f397292ad375638ed1792a56d7d98b7799678849d412deb6d76a9c7ef038066db546d8b43c21e19e200db16f90bae2dbfcdc1c8a60e949780ff285bae4f7ff
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz' tzdata_2022c.orig.tar.gz 432721 SHA512:e2ae92abac6d87ce4ab4ba9012e868e1791b842e083293489debc0c671b9cf135b5b70426dacb6dbebbf6eba24463205225ae45bb7df891a086b25475f85ee0b
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz.asc' tzdata_2022c.orig.tar.gz.asc 833 SHA512:8485b30e93782c76444b07c18c3032e91293edcb4a79b536b7d561de7981e5a4861b83ea3cae7e6efe7340ce8de313cb34a493d7ef46547f7f63f29eb0452da9
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.18.04.0.debian.tar.xz' tzdata_2022c-0ubuntu0.18.04.0.debian.tar.xz 106772 SHA512:5e3f4835a6cfc533ecf78f96ecc74c9af24eb86db8b3f2960b12ad663af62b1b9ce747b56728cdcaa9ac69315a9365c0d80da517c0a2b6c276c855864cbc73aa
+'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.18.04.0.dsc' tzdata_2022c-0ubuntu0.18.04.0.dsc 2165 SHA512:93f397292ad375638ed1792a56d7d98b7799678849d412deb6d76a9c7ef038066db546d8b43c21e19e200db16f90bae2dbfcdc1c8a60e949780ff285bae4f7ff
+'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz' tzdata_2022c.orig.tar.gz 432721 SHA512:e2ae92abac6d87ce4ab4ba9012e868e1791b842e083293489debc0c671b9cf135b5b70426dacb6dbebbf6eba24463205225ae45bb7df891a086b25475f85ee0b
+'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz.asc' tzdata_2022c.orig.tar.gz.asc 833 SHA512:8485b30e93782c76444b07c18c3032e91293edcb4a79b536b7d561de7981e5a4861b83ea3cae7e6efe7340ce8de313cb34a493d7ef46547f7f63f29eb0452da9
+'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.18.04.0.debian.tar.xz' tzdata_2022c-0ubuntu0.18.04.0.debian.tar.xz 106772 SHA512:5e3f4835a6cfc533ecf78f96ecc74c9af24eb86db8b3f2960b12ad663af62b1b9ce747b56728cdcaa9ac69315a9365c0d80da517c0a2b6c276c855864cbc73aa
 ```
 
 ### `dpkg` source package: `ubuntu-keyring=2018.09.18.1~18.04.2`
