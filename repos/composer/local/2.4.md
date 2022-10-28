@@ -1,10 +1,10 @@
-# `composer:2.4.3`
+# `composer:2.4.4`
 
 ## Docker Metadata
 
-- Image ID: `sha256:93cce806035468fc5d1e96ca0e0ebcd583878650f301668c2221ba40b476533c`
-- Created: `2022-10-17T20:24:48.320111946Z`
-- Virtual Size: ~ 200.65 Mb  
+- Image ID: `sha256:6cf943c50bd34f9ef4c99fb33a849e2ef96152538716b306237fcdce22307b58`
+- Created: `2022-10-28T17:19:58.118683289Z`
+- Virtual Size: ~ 212.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=3005198d7303f87ab31bc30695de76e8ad62783f806b6ab9744da59fe41cc5bd`
   - `COMPOSER_ALLOW_SUPERUSER=1`
   - `COMPOSER_HOME=/tmp`
-  - `COMPOSER_VERSION=2.4.3`
+  - `COMPOSER_VERSION=2.4.4`
 
 ## `apk` (`.apk`-based packages)
 
@@ -251,16 +251,16 @@ GPL-3.0-or-later
 ### `apk` package: `curl`
 
 ```console
-curl-7.83.1-r3 description:
+curl-7.83.1-r4 description:
 URL retrival utility and library
 
-curl-7.83.1-r3 webpage:
+curl-7.83.1-r4 webpage:
 https://curl.se/
 
-curl-7.83.1-r3 installed size:
+curl-7.83.1-r4 installed size:
 256 KiB
 
-curl-7.83.1-r3 license:
+curl-7.83.1-r4 license:
 curl
 
 ```
@@ -268,16 +268,16 @@ curl
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.9-r0 description:
+expat-2.5.0-r0 description:
 XML Parser library written in C
 
-expat-2.4.9-r0 webpage:
+expat-2.5.0-r0 webpage:
 https://libexpat.github.io/
 
-expat-2.4.9-r0 installed size:
+expat-2.5.0-r0 installed size:
 192 KiB
 
-expat-2.4.9-r0 license:
+expat-2.5.0-r0 license:
 MIT
 
 ```
@@ -302,16 +302,16 @@ GPL-3.0-or-later
 ### `apk` package: `git`
 
 ```console
-git-2.36.2-r0 description:
+git-2.36.3-r0 description:
 Distributed version control system
 
-git-2.36.2-r0 webpage:
+git-2.36.3-r0 webpage:
 https://www.git-scm.com/
 
-git-2.36.2-r0 installed size:
+git-2.36.3-r0 installed size:
 10 MiB
 
-git-2.36.2-r0 license:
+git-2.36.3-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -438,16 +438,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r3 description:
+libcurl-7.83.1-r4 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r3 webpage:
+libcurl-7.83.1-r4 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r3 installed size:
-516 KiB
+libcurl-7.83.1-r4 installed size:
+512 KiB
 
-libcurl-7.83.1-r3 license:
+libcurl-7.83.1-r4 license:
 curl
 
 ```
