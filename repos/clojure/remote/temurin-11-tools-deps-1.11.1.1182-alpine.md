@@ -1,24 +1,24 @@
-## `clojure:temurin-11-tools-deps-1.11.1.1165-alpine`
+## `clojure:temurin-11-tools-deps-1.11.1.1182-alpine`
 
 ```console
-$ docker pull clojure@sha256:3b17eb513a9a2ca24578a700d4f83465b0f0694b0ee46b80ee7c2a672c34b748
+$ docker pull clojure@sha256:2beb9efbc2829bba34ddc41f370868aa106a6a603fcc32f894b2767bce94d43a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms: 1
 	-	linux; amd64
 
-### `clojure:temurin-11-tools-deps-1.11.1.1165-alpine` - linux; amd64
+### `clojure:temurin-11-tools-deps-1.11.1.1182-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:67095facd5af22f1d7c4e575678d06af7b9430d36d51d5feb6af51d7d2d1a1b8
+$ docker pull clojure@sha256:50036b24837944642e80349a505c68887df8e6e286a15cb8b51e15acb4f99328
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **238.4 MB (238390330 bytes)**  
+-	Total Size: **238.4 MB (238389351 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:41d1d9318cdc04a7136016213f1ec7f98fa0530f0342918d3bf8cadf88f90b88`
+-	Image ID: `sha256:e6899d4352875ddf60d807978350899bec2efa3d3b2a25136018c1bb0d4df15f`
 -	Default Command: `["clj"]`
 
 ```dockerfile
@@ -42,15 +42,15 @@ RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
 # Fri, 07 Oct 2022 16:54:15 GMT
 CMD ["jshell"]
-# Fri, 07 Oct 2022 17:20:00 GMT
-ENV CLOJURE_VERSION=1.11.1.1165
-# Fri, 07 Oct 2022 17:20:00 GMT
+# Fri, 28 Oct 2022 20:36:03 GMT
+ENV CLOJURE_VERSION=1.11.1.1182
+# Fri, 28 Oct 2022 20:36:03 GMT
 WORKDIR /tmp
-# Fri, 07 Oct 2022 17:20:06 GMT
-RUN apk add --no-cache curl bash make git && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "72d662bdc99b79037f9e34996272384de35e01e0416d8eb79cc940ee0f0fc808 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apk del curl
-# Fri, 07 Oct 2022 17:20:06 GMT
+# Fri, 28 Oct 2022 20:36:09 GMT
+RUN apk add --no-cache curl bash make git && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "0e80041419bb91e142e2e8683e4dad6faf79958b603bb63b2a93bdd62c2a4f14 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apk del curl
+# Fri, 28 Oct 2022 20:36:09 GMT
 COPY file:b0aef3ea203de7b5c2ea645debf58c8231445a2e3070b72749b54614f4a89b82 in /usr/local/bin/rlwrap 
-# Fri, 07 Oct 2022 17:20:06 GMT
+# Fri, 28 Oct 2022 20:36:09 GMT
 CMD ["clj"]
 ```
 
@@ -71,11 +71,11 @@ CMD ["clj"]
 		Last Modified: Fri, 07 Oct 2022 16:58:33 GMT  
 		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f38d8b03afbcedfedf3d767cf8910e06481f555fcabb964093de41005a37916b`  
-		Last Modified: Fri, 07 Oct 2022 17:27:15 GMT  
-		Size: 30.1 MB (30084395 bytes)  
+	-	`sha256:fe4fc4ba202d1119ced69b8fd6a5d36790e03a3e72c2d8702e0cbfc88dc35f5b`  
+		Last Modified: Fri, 28 Oct 2022 20:46:46 GMT  
+		Size: 30.1 MB (30083417 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8a0ad224d480c88c4f02e0ac7d97c190b211cc34abcd3988a42063266e249aa0`  
-		Last Modified: Fri, 07 Oct 2022 17:27:13 GMT  
-		Size: 626.0 B  
+	-	`sha256:28a3f4314933eadb9069bd6d5bd11a58efcf49d45042eed4cd1972ae3c47e3b2`  
+		Last Modified: Fri, 28 Oct 2022 20:46:43 GMT  
+		Size: 625.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
