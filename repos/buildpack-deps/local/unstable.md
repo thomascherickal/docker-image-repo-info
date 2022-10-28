@@ -615,21 +615,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `X11`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.85.0-1
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.85.0-1.dsc' curl_7.85.0-1.dsc 2955 SHA256:d0855261f69992255ecd9dd39dae1067df8625821a73589a6405f86ea77fdee7
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.85.0.orig.tar.gz' curl_7.85.0.orig.tar.gz 4182153 SHA256:78a06f918bd5fde3c4573ef4f9806f56372b32ec1829c9ec474799eeee641c27
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.85.0.orig.tar.gz.asc' curl_7.85.0.orig.tar.gz.asc 488 SHA256:6794e4b59dea9dee2c6373be4e1b1cded5c8a9aea8bbf58c3e97f3adfe8d8474
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.85.0-1.debian.tar.xz' curl_7.85.0-1.debian.tar.xz 38160 SHA256:fed9ef7fab87ab12a8290c1a059c05cdfe6ef706d077601bbb30d5a978404be5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.85.0-1/
 
-- https://sources.debian.net/src/curl/7.85.0-1/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.85.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.85.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-8`
 
@@ -1022,20 +1014,13 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`, `/usr/share/doc/li
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris expat=2.4.9-1
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.4.9-1.dsc' expat_2.4.9-1.dsc 1981 SHA256:2d33fa5be60cd65123a955ba031047d8b013b8266d0d177a8e874b4319b9e5c5
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.4.9.orig.tar.gz' expat_2.4.9.orig.tar.gz 8319186 SHA256:286bb78d8800f20b5da0ff48d98d6c67a16242cfe8cc823a04998f94b5253279
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.4.9-1.debian.tar.xz' expat_2.4.9-1.debian.tar.xz 12620 SHA256:ad4bf6a85ee28827cf14b9c3c980d0f83ad7ef88bdcc785a13009f0fc415ca3f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/expat/2.4.9-1/
 
-- https://sources.debian.net/src/expat/2.4.9-1/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.4.9-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.4.9-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `fftw3=3.3.8-2`
 
@@ -1719,21 +1704,13 @@ Licenses: (parsed from: `/usr/share/doc/grep/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris grep=3.8-2
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8-2.dsc' grep_3.8-2.dsc 1608 SHA256:05145a63145de98c193e05e5d05ce2cbfaa284318ce201b25fb77234f176d56d
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8.orig.tar.xz' grep_3.8.orig.tar.xz 1709536 SHA256:498d7cc1b4fb081904d87343febb73475cf771e424fb7e6141aff66013abc382
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8.orig.tar.xz.asc' grep_3.8.orig.tar.xz.asc 833 SHA256:347aec924499df3fa41a0d782f3cd3e4a51a15de98b44eaab04084cd34060cd0
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8-2.debian.tar.xz' grep_3.8-2.debian.tar.xz 19588 SHA256:f88cd3d9d83f6d6ab20adb9c3867adfc48bdb71ad0dff4e47ec447de8204fbcc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/grep/3.8-2/
 
-- https://sources.debian.net/src/grep/3.8-2/ (for browsing the source)
-- https://sources.debian.net/src/grep/3.8-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/grep/3.8-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gzip=1.12-1`
 
@@ -2360,20 +2337,13 @@ Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 - `public-domain-1`
 - `public-domain-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libde265=1.0.8-1.1
-'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.8-1.1.dsc' libde265_1.0.8-1.1.dsc 1906 SHA256:b1952c68bd07dc011a6939f79c353adfaadf8be6b07cd0fef492aece26bc1131
-'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.8.orig.tar.gz' libde265_1.0.8.orig.tar.gz 837878 SHA256:24c791dd334fa521762320ff54f0febfd3c09fc978880a8c5fbc40a88f21d905
-'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.8-1.1.debian.tar.xz' libde265_1.0.8-1.1.debian.tar.xz 12232 SHA256:7119e07718d621e6d1b4843391c01086e468ae6df9de150f410765a985a8af0f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libde265/1.0.8-1.1/
 
-- https://sources.debian.net/src/libde265/1.0.8-1.1/ (for browsing the source)
-- https://sources.debian.net/src/libde265/1.0.8-1.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libde265/1.0.8-1.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libdeflate=1.14-1`
 
@@ -5246,20 +5216,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=251.6-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.6-1.dsc' systemd_251.6-1.dsc 6242 SHA256:9c3f4d0419ba96164b52711255f28083638782284d653671cc8280b1cb90e519
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.6.orig.tar.gz' systemd_251.6.orig.tar.gz 11448383 SHA256:74d7deb6e20635d58ca8837d917a171ae694a07837db0632b93e27aa3550a2c1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.6-1.debian.tar.xz' systemd_251.6-1.debian.tar.xz 174628 SHA256:624397d939f83fb70354edb80b33ce347617139f33648fb2bd7d628daa0f750c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/251.6-1/
 
-- https://sources.debian.net/src/systemd/251.6-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/251.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/251.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.05-6`
 
@@ -5731,20 +5694,13 @@ Licenses: (parsed from: `/usr/share/doc/liblzma-dev/copyright`, `/usr/share/doc/
 - `permissive-nowarranty`
 - `probably-PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xz-utils=5.2.7-0.0
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.7-0.0.dsc' xz-utils_5.2.7-0.0.dsc 2247 SHA256:fb69d7fd952e830567783bf47022308767cbda1647d154c1c4cfdce9f7486c16
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.7.orig.tar.xz' xz-utils_5.2.7.orig.tar.xz 1282620 SHA256:8712e9acb0b6b49a97d443458a3067dc5c08a025e02dc5f773176c51dd7cfc69
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.7-0.0.debian.tar.xz' xz-utils_5.2.7-0.0.debian.tar.xz 25336 SHA256:67cf32d000741aa5015ce0801f88ac83eb8b7923d041c24c9c7e397e8331b635
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xz-utils/5.2.7-0.0/
 
-- https://sources.debian.net/src/xz-utils/5.2.7-0.0/ (for browsing the source)
-- https://sources.debian.net/src/xz-utils/5.2.7-0.0/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xz-utils/5.2.7-0.0/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `zlib=1:1.2.11.dfsg-4.1`
 

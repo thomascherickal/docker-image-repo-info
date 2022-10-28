@@ -2558,9 +2558,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris procps=2:3.3.17-7
-'http://deb.debian.org/debian/pool/main/p/procps/procps_3.3.17-7.dsc' procps_3.3.17-7.dsc 2136 SHA256:732d511886d3141ca96d189706232eada1b73dc44e3671ca7ef2ffd6838d01f7
+'http://deb.debian.org/debian/pool/main/p/procps/procps_3.3.17-7.1.dsc' procps_3.3.17-7.1.dsc 2144 SHA256:789aba0b71ce3985ac7c9fb2f80a7a66afc5924590dba241e0b345c64136511e
 'http://deb.debian.org/debian/pool/main/p/procps/procps_3.3.17.orig.tar.xz' procps_3.3.17.orig.tar.xz 1008428 SHA256:4518b3e7aafd34ec07d0063d250fd474999b20b200218c3ae56f5d2113f141b4
-'http://deb.debian.org/debian/pool/main/p/procps/procps_3.3.17-7.debian.tar.xz' procps_3.3.17-7.debian.tar.xz 29196 SHA256:43148a05c2694b946dd485aea135a3c0645019e785b80064d0ebffa88426f6a9
+'http://deb.debian.org/debian/pool/main/p/procps/procps_3.3.17-7.1.debian.tar.xz' procps_3.3.17-7.1.debian.tar.xz 29244 SHA256:7c2cd3d0f83b74adc202e463fbc55591538a1f2e1cc775ebaa7f5bf7be48949e
 ```
 
 Other potentially useful URLs:
@@ -2624,20 +2624,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.10=3.10.7-2
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.7-2.dsc' python3.10_3.10.7-2.dsc 3639 SHA256:6ea62d329717ed1d74295d4d15aee5d2d3f98959bb45f4ae30e5a8f49a885012
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.7.orig.tar.xz' python3.10_3.10.7.orig.tar.xz 19618696 SHA256:6eed8415b7516fb2f260906db5d48dd4c06acc0cb24a7d6cc15296a604dcdc48
-'http://deb.debian.org/debian/pool/main/p/python3.10/python3.10_3.10.7-2.debian.tar.xz' python3.10_3.10.7-2.debian.tar.xz 219612 SHA256:faa6d32467d5406e0592521ef783b99e87528ae4546f24cdab3f0f15e171597e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.10/3.10.7-2/
 
-- https://sources.debian.net/src/python3.10/3.10.7-2/ (for browsing the source)
-- https://sources.debian.net/src/python3.10/3.10.7-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.10/3.10.7-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.2-1`
 
@@ -2781,20 +2774,13 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.12.3+dfsg1-1
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.12.3%2bdfsg1-1.dsc' shadow_4.12.3+dfsg1-1.dsc 2416 SHA256:83d288a278cc88d38f96ff59a0fa257c4672cd07b27dbf8a64e71d4d4160b0bd
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.12.3%2bdfsg1.orig.tar.xz' shadow_4.12.3+dfsg1.orig.tar.xz 1796336 SHA256:0f6b86620d4893e766401ae7aca0361e19859e5da56851af6d6dc58932044657
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.12.3%2bdfsg1-1.debian.tar.xz' shadow_4.12.3+dfsg1-1.debian.tar.xz 78976 SHA256:40edaf4c1626a9874bb53ed21848d8b41e8115c79c51c3c364a171fe6f389556
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/shadow/1:4.12.3+dfsg1-1/
 
-- https://sources.debian.net/src/shadow/1:4.12.3+dfsg1-1/ (for browsing the source)
-- https://sources.debian.net/src/shadow/1:4.12.3+dfsg1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/shadow/1:4.12.3+dfsg1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sqlite3=3.39.4-1`
 
