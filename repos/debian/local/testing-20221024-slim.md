@@ -1553,20 +1553,13 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.12.3+dfsg1-1
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.12.3%2bdfsg1-1.dsc' shadow_4.12.3+dfsg1-1.dsc 2416 SHA256:83d288a278cc88d38f96ff59a0fa257c4672cd07b27dbf8a64e71d4d4160b0bd
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.12.3%2bdfsg1.orig.tar.xz' shadow_4.12.3+dfsg1.orig.tar.xz 1796336 SHA256:0f6b86620d4893e766401ae7aca0361e19859e5da56851af6d6dc58932044657
-'http://deb.debian.org/debian/pool/main/s/shadow/shadow_4.12.3%2bdfsg1-1.debian.tar.xz' shadow_4.12.3+dfsg1-1.debian.tar.xz 78976 SHA256:40edaf4c1626a9874bb53ed21848d8b41e8115c79c51c3c364a171fe6f389556
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/shadow/1:4.12.3+dfsg1-1/
 
-- https://sources.debian.net/src/shadow/1:4.12.3+dfsg1-1/ (for browsing the source)
-- https://sources.debian.net/src/shadow/1:4.12.3+dfsg1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/shadow/1:4.12.3+dfsg1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=251.6-1`
 

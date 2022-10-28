@@ -727,21 +727,13 @@ Licenses: (parsed from: `/usr/share/doc/grep/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris grep=3.8-2
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8-2.dsc' grep_3.8-2.dsc 1608 SHA256:05145a63145de98c193e05e5d05ce2cbfaa284318ce201b25fb77234f176d56d
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8.orig.tar.xz' grep_3.8.orig.tar.xz 1709536 SHA256:498d7cc1b4fb081904d87343febb73475cf771e424fb7e6141aff66013abc382
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8.orig.tar.xz.asc' grep_3.8.orig.tar.xz.asc 833 SHA256:347aec924499df3fa41a0d782f3cd3e4a51a15de98b44eaab04084cd34060cd0
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8-2.debian.tar.xz' grep_3.8-2.debian.tar.xz 19588 SHA256:f88cd3d9d83f6d6ab20adb9c3867adfc48bdb71ad0dff4e47ec447de8204fbcc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/grep/3.8-2/
 
-- https://sources.debian.net/src/grep/3.8-2/ (for browsing the source)
-- https://sources.debian.net/src/grep/3.8-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/grep/3.8-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gzip=1.12-1`
 
@@ -1558,20 +1550,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=251.6-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.6-1.dsc' systemd_251.6-1.dsc 6242 SHA256:9c3f4d0419ba96164b52711255f28083638782284d653671cc8280b1cb90e519
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.6.orig.tar.gz' systemd_251.6.orig.tar.gz 11448383 SHA256:74d7deb6e20635d58ca8837d917a171ae694a07837db0632b93e27aa3550a2c1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_251.6-1.debian.tar.xz' systemd_251.6-1.debian.tar.xz 174628 SHA256:624397d939f83fb70354edb80b33ce347617139f33648fb2bd7d628daa0f750c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/251.6-1/
 
-- https://sources.debian.net/src/systemd/251.6-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/251.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/251.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.05-6`
 
@@ -1777,20 +1762,13 @@ Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
 - `permissive-nowarranty`
 - `probably-PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xz-utils=5.2.7-0.0
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.7-0.0.dsc' xz-utils_5.2.7-0.0.dsc 2247 SHA256:fb69d7fd952e830567783bf47022308767cbda1647d154c1c4cfdce9f7486c16
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.7.orig.tar.xz' xz-utils_5.2.7.orig.tar.xz 1282620 SHA256:8712e9acb0b6b49a97d443458a3067dc5c08a025e02dc5f773176c51dd7cfc69
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.7-0.0.debian.tar.xz' xz-utils_5.2.7-0.0.debian.tar.xz 25336 SHA256:67cf32d000741aa5015ce0801f88ac83eb8b7923d041c24c9c7e397e8331b635
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xz-utils/5.2.7-0.0/
 
-- https://sources.debian.net/src/xz-utils/5.2.7-0.0/ (for browsing the source)
-- https://sources.debian.net/src/xz-utils/5.2.7-0.0/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xz-utils/5.2.7-0.0/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `zlib=1:1.2.11.dfsg-4.1`
 
