@@ -1,7 +1,7 @@
 ## `phpmyadmin:5-fpm-alpine`
 
 ```console
-$ docker pull phpmyadmin@sha256:4c4693af4d1463cf3597b94301325c904ac3646f5c9236bdff954d787866e0ae
+$ docker pull phpmyadmin@sha256:2e00b4bf618b85defd315b3a3fd636a8e9221dd0f1990e15e445de42c682b0fa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -669,14 +669,14 @@ CMD ["php-fpm"]
 ### `phpmyadmin:5-fpm-alpine` - linux; 386
 
 ```console
-$ docker pull phpmyadmin@sha256:c5b085ddc4550e6b3dc0d040238f32e8de1d35c5a426dd1279ba1b1dcf1bfde2
+$ docker pull phpmyadmin@sha256:ea76f22ddcb0d12aebd349311510f94abfff9134dddd5e97c2fb7a37ec820431
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **47.2 MB (47179009 bytes)**  
+-	Total Size: **47.4 MB (47382032 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b98cbb83fa6f9103ba792d7fba2ba59cf6d755b77bfd279f3bbe5bbcf0e611fd`
+-	Image ID: `sha256:ad8b6718b11dea51bc755e3d89d8c8513be74d0511c556587b24641e9fac5633`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -701,65 +701,65 @@ ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_F
 ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
 # Thu, 06 Oct 2022 21:01:34 GMT
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Thu, 06 Oct 2022 21:51:23 GMT
-ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F
-# Thu, 06 Oct 2022 21:51:23 GMT
-ENV PHP_VERSION=8.0.24
-# Thu, 06 Oct 2022 21:51:24 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-8.0.24.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.24.tar.xz.asc
-# Thu, 06 Oct 2022 21:51:25 GMT
-ENV PHP_SHA256=8e6a63ac9cdabe4c345b32a54b18f348d9e50a1decda217faf2d61278d22f08b
-# Thu, 06 Oct 2022 21:51:32 GMT
+# Fri, 28 Oct 2022 20:08:00 GMT
+ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4
+# Fri, 28 Oct 2022 20:08:01 GMT
+ENV PHP_VERSION=8.0.25
+# Fri, 28 Oct 2022 20:08:02 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-8.0.25.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.25.tar.xz.asc
+# Fri, 28 Oct 2022 20:08:03 GMT
+ENV PHP_SHA256=a291b71d0498707fc5514eb5b9513e88f0f1d4890bcdefd67282ded8a2bfb941
+# Fri, 28 Oct 2022 20:08:10 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Thu, 06 Oct 2022 21:51:33 GMT
+# Fri, 28 Oct 2022 20:08:12 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Thu, 06 Oct 2022 21:59:21 GMT
+# Fri, 28 Oct 2022 20:15:59 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		gnu-libiconv-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		readline-dev 		sqlite-dev 	; 		rm -vf /usr/include/iconv.h; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-iconv=/usr 		--with-openssl 		--with-readline 		--with-zlib 				--disable-phpdbg 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				--disable-cgi 				--enable-fpm 		--with-fpm-user=www-data 		--with-fpm-group=www-data 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find 		/usr/local 		-type f 		-perm '/0111' 		-exec sh -euxc ' 			strip --strip-all "$@" || : 		' -- '{}' + 	; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Thu, 06 Oct 2022 21:59:23 GMT
+# Fri, 28 Oct 2022 20:16:00 GMT
 COPY multi:869bde9dbeae74886a05c9e2107b3e3b4877116db8c6d9adbaff2719f9fb5262 in /usr/local/bin/ 
-# Thu, 06 Oct 2022 21:59:23 GMT
+# Fri, 28 Oct 2022 20:16:00 GMT
 RUN docker-php-ext-enable sodium
-# Thu, 06 Oct 2022 21:59:24 GMT
+# Fri, 28 Oct 2022 20:16:01 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Thu, 06 Oct 2022 21:59:25 GMT
+# Fri, 28 Oct 2022 20:16:02 GMT
 WORKDIR /var/www/html
-# Thu, 06 Oct 2022 21:59:26 GMT
+# Fri, 28 Oct 2022 20:16:03 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Thu, 06 Oct 2022 21:59:27 GMT
+# Fri, 28 Oct 2022 20:16:04 GMT
 STOPSIGNAL SIGQUIT
-# Thu, 06 Oct 2022 21:59:28 GMT
+# Fri, 28 Oct 2022 20:16:05 GMT
 EXPOSE 9000
-# Thu, 06 Oct 2022 21:59:29 GMT
+# Fri, 28 Oct 2022 20:16:06 GMT
 CMD ["php-fpm"]
-# Fri, 07 Oct 2022 04:26:02 GMT
+# Fri, 28 Oct 2022 23:23:37 GMT
 RUN apk add --no-cache     bash     tzdata
-# Fri, 07 Oct 2022 04:27:06 GMT
+# Fri, 28 Oct 2022 23:24:41 GMT
 RUN set -ex;         apk add --no-cache --virtual .build-deps         bzip2-dev         freetype-dev         libjpeg-turbo-dev         libpng-dev         libwebp-dev         libxpm-dev         libzip-dev     ;         docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp --with-xpm;     docker-php-ext-install -j "$(nproc)"         bz2         gd         mysqli         opcache         zip     ;         runDeps="$(         scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions             | tr ',' '\n'             | sort -u             | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }'     )";     apk add --virtual .phpmyadmin-phpexts-rundeps $runDeps;     apk del --no-network .build-deps
-# Fri, 07 Oct 2022 04:27:07 GMT
+# Fri, 28 Oct 2022 23:24:42 GMT
 ENV MAX_EXECUTION_TIME=600
-# Fri, 07 Oct 2022 04:27:08 GMT
+# Fri, 28 Oct 2022 23:24:43 GMT
 ENV MEMORY_LIMIT=512M
-# Fri, 07 Oct 2022 04:27:09 GMT
+# Fri, 28 Oct 2022 23:24:44 GMT
 ENV UPLOAD_LIMIT=2048K
-# Fri, 07 Oct 2022 04:27:10 GMT
+# Fri, 28 Oct 2022 23:24:45 GMT
 RUN set -ex;         {         echo 'opcache.memory_consumption=128';         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=4000';         echo 'opcache.revalidate_freq=2';         echo 'opcache.fast_shutdown=1';     } > $PHP_INI_DIR/conf.d/opcache-recommended.ini;         {         echo 'session.cookie_httponly=1';         echo 'session.use_strict_mode=1';     } > $PHP_INI_DIR/conf.d/session-strict.ini;         {         echo 'allow_url_fopen=Off';         echo 'max_execution_time=${MAX_EXECUTION_TIME}';         echo 'max_input_vars=10000';         echo 'memory_limit=${MEMORY_LIMIT}';         echo 'post_max_size=${UPLOAD_LIMIT}';         echo 'upload_max_filesize=${UPLOAD_LIMIT}';     } > $PHP_INI_DIR/conf.d/phpmyadmin-misc.ini
-# Fri, 07 Oct 2022 04:27:11 GMT
+# Fri, 28 Oct 2022 23:24:46 GMT
 ENV VERSION=5.2.0
-# Fri, 07 Oct 2022 04:27:12 GMT
+# Fri, 28 Oct 2022 23:24:47 GMT
 ENV SHA256=66da31ca295f06182ac3f2e6e96057dc824c459baedf4b29de6ed0d3be039230
-# Fri, 07 Oct 2022 04:27:13 GMT
+# Fri, 28 Oct 2022 23:24:48 GMT
 ENV URL=https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-all-languages.tar.xz
-# Fri, 07 Oct 2022 04:27:14 GMT
+# Fri, 28 Oct 2022 23:24:49 GMT
 LABEL org.opencontainers.image.title=Official phpMyAdmin Docker image org.opencontainers.image.description=Run phpMyAdmin with Alpine, Apache and PHP FPM. org.opencontainers.image.authors=The phpMyAdmin Team <developers@phpmyadmin.net> org.opencontainers.image.vendor=phpMyAdmin org.opencontainers.image.documentation=https://github.com/phpmyadmin/docker#readme org.opencontainers.image.licenses=GPL-2.0-only org.opencontainers.image.version=5.2.0 org.opencontainers.image.url=https://github.com/phpmyadmin/docker#readme org.opencontainers.image.source=https://github.com/phpmyadmin/docker.git
-# Fri, 07 Oct 2022 04:27:19 GMT
+# Fri, 28 Oct 2022 23:24:54 GMT
 RUN set -ex;     apk add --no-cache --virtual .fetch-deps         gnupg     ;         export GNUPGHOME="$(mktemp -d)";     export GPGKEY="3D06A59ECE730EB71B511C17CE752F178259BD92";     curl -fsSL -o phpMyAdmin.tar.xz $URL;     curl -fsSL -o phpMyAdmin.tar.xz.asc $URL.asc;     echo "$SHA256 *phpMyAdmin.tar.xz" | sha256sum -c -;     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$GPGKEY"         || gpg --batch --keyserver pgp.mit.edu --recv-keys "$GPGKEY"         || gpg --batch --keyserver keyserver.pgp.com --recv-keys "$GPGKEY"         || gpg --batch --keyserver keys.openpgp.org --recv-keys "$GPGKEY";     gpg --batch --verify phpMyAdmin.tar.xz.asc phpMyAdmin.tar.xz;     tar -xf phpMyAdmin.tar.xz -C /var/www/html --strip-components=1;     mkdir -p /var/www/html/tmp;     chown www-data:www-data /var/www/html/tmp;     gpgconf --kill all;     rm -r "$GNUPGHOME" phpMyAdmin.tar.xz phpMyAdmin.tar.xz.asc;     rm -r -v /var/www/html/setup/ /var/www/html/examples/ /var/www/html/js/src/ /var/www/html/templates/test/ /var/www/html/babel.config.json /var/www/html/doc/html/_sources/ /var/www/html/RELEASE-DATE-$VERSION /var/www/html/CONTRIBUTING.md;     grep -q -F "'configFile' => ROOT_PATH . 'config.inc.php'," /var/www/html/libraries/vendor_config.php;     sed -i "s@'configFile' => .*@'configFile' => '/etc/phpmyadmin/config.inc.php',@" /var/www/html/libraries/vendor_config.php;     grep -q -F "'configFile' => '/etc/phpmyadmin/config.inc.php'," /var/www/html/libraries/vendor_config.php;     php -l /var/www/html/libraries/vendor_config.php;     apk del --no-network .fetch-deps
-# Fri, 07 Oct 2022 04:27:20 GMT
+# Fri, 28 Oct 2022 23:24:55 GMT
 COPY file:74e988fef607090521e63cea57b4c61ab22b3a2a131bc55f0cf4a0d9c36ce65d in /etc/phpmyadmin/config.inc.php 
-# Fri, 07 Oct 2022 04:27:21 GMT
+# Fri, 28 Oct 2022 23:24:56 GMT
 COPY file:d8c9f50886f5865fe589f64cb31544582913bb98f2cfa51a8828d71871363ce9 in /docker-entrypoint.sh 
-# Fri, 07 Oct 2022 04:27:21 GMT
+# Fri, 28 Oct 2022 23:24:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 07 Oct 2022 04:27:22 GMT
+# Fri, 28 Oct 2022 23:24:57 GMT
 CMD ["php-fpm"]
 ```
 
@@ -780,66 +780,66 @@ CMD ["php-fpm"]
 		Last Modified: Thu, 06 Oct 2022 22:46:39 GMT  
 		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0c7ff0365b8da65942c6ae938416feeccf1a4c3463406c41cfb041da6f8551d`  
-		Last Modified: Thu, 06 Oct 2022 22:53:05 GMT  
-		Size: 10.9 MB (10915252 bytes)  
+	-	`sha256:6da5c8b89d6e703775a56f2a6c6a5013dae21dfd47316ad36cdefa8ae7a767ac`  
+		Last Modified: Fri, 28 Oct 2022 20:52:59 GMT  
+		Size: 10.8 MB (10822788 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:666f3f01e0082c0931145d577adbcc5f83b58f3637d008780d25f28acbe2cf6a`  
-		Last Modified: Thu, 06 Oct 2022 22:53:04 GMT  
-		Size: 495.0 B  
+	-	`sha256:d6c8921c25191bb26da67f5c03a0d8ae73d3d176c47b03ceb30f9100214f2e4d`  
+		Last Modified: Fri, 28 Oct 2022 20:52:57 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb78339b6e2a3af8ce54454e8a586ea51233ae076e997d3da732100c4848e9f7`  
-		Last Modified: Thu, 06 Oct 2022 22:53:41 GMT  
-		Size: 12.3 MB (12345233 bytes)  
+	-	`sha256:2a5ddc7c91196c28387661c5128e22951eb9db3ce5fc8bb003d688e5e5b79801`  
+		Last Modified: Fri, 28 Oct 2022 20:53:33 GMT  
+		Size: 12.6 MB (12631829 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:776439008167a2302340a65526056571a9de514760fd1c138004f577bab7305e`  
-		Last Modified: Thu, 06 Oct 2022 22:53:39 GMT  
-		Size: 2.5 KB (2450 bytes)  
+	-	`sha256:a1e9a05f40ac99175d6f9f8fef8c1e3257db0e121c775e41de5f3c48e2f8a1b4`  
+		Last Modified: Fri, 28 Oct 2022 20:53:31 GMT  
+		Size: 2.4 KB (2447 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:875a994466b78157a203f19322bfd5661376eb93ef90413dd7a23bae9ce400b6`  
-		Last Modified: Thu, 06 Oct 2022 22:53:39 GMT  
-		Size: 18.5 KB (18518 bytes)  
+	-	`sha256:c89ea58145a4c9959174a80963f820a01ff8358bb051f34cb99006ac812a9668`  
+		Last Modified: Fri, 28 Oct 2022 20:53:31 GMT  
+		Size: 18.6 KB (18558 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a1da42930c1c3a1628526b0cc5af3d8cdf2c7d1a367034564b118fae1a8220e3`  
-		Last Modified: Thu, 06 Oct 2022 22:53:39 GMT  
-		Size: 8.6 KB (8572 bytes)  
+	-	`sha256:3a064e5cb3cee52edd32e7b90f061854d215570366bae1937fa591eb97f9896e`  
+		Last Modified: Fri, 28 Oct 2022 20:53:31 GMT  
+		Size: 8.6 KB (8570 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b0170019effdcf3e2823abc9fd10c4a06989edc1da2f46d0edb191cf231b608b`  
-		Last Modified: Fri, 07 Oct 2022 04:28:12 GMT  
-		Size: 898.7 KB (898678 bytes)  
+	-	`sha256:8a045495e7207b1f20af77d2e36f03898c27519259301f7abb8839b08f34e952`  
+		Last Modified: Fri, 28 Oct 2022 23:26:47 GMT  
+		Size: 898.7 KB (898718 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a70fba491a1760d55c83200d7c16b90fe3740f8cd8445c11474ca34a02f35114`  
-		Last Modified: Fri, 07 Oct 2022 04:28:10 GMT  
-		Size: 6.2 MB (6206639 bytes)  
+	-	`sha256:da4e9ac179f4462d312ae1bd4b79d272a1c4377a12a70fc3116064deb9ed2229`  
+		Last Modified: Fri, 28 Oct 2022 23:26:44 GMT  
+		Size: 6.2 MB (6215227 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b9f27fd115dcafd7ec42129083cf3b019707b12d19a9515d74e0de4589abdadf`  
-		Last Modified: Fri, 07 Oct 2022 04:28:09 GMT  
-		Size: 542.0 B  
+	-	`sha256:b28800839a8247418527b82072085dd38f49a4aa5d9b18bf18e9a8e743f03572`  
+		Last Modified: Fri, 28 Oct 2022 23:26:44 GMT  
+		Size: 543.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:266948ad7d681db0eb5dbbdba31444b9469dd0ea0fe06952b4499407fd70a06b`  
-		Last Modified: Fri, 07 Oct 2022 04:28:12 GMT  
-		Size: 12.2 MB (12151290 bytes)  
+	-	`sha256:41ee8f364fe934745197fc10fff25781002a54b832cd5972c2f7437d96ef19ea`  
+		Last Modified: Fri, 28 Oct 2022 23:26:46 GMT  
+		Size: 12.2 MB (12151514 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5dab534f1642b452cd2a140e3e13c1c6036376087b5aef7db7fbebc5545a1ef6`  
-		Last Modified: Fri, 07 Oct 2022 04:28:09 GMT  
+	-	`sha256:8c3024697ed7e3e59454047e04d6c9a5d4ae934d60c2bc89abf0d3812e47e60a`  
+		Last Modified: Fri, 28 Oct 2022 23:26:44 GMT  
 		Size: 1.5 KB (1500 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67a6547c0a7d4f887e74098134d0231427e29128532c28242aca47ee783f0c15`  
-		Last Modified: Fri, 07 Oct 2022 04:28:09 GMT  
-		Size: 783.0 B  
+	-	`sha256:17a4e758cf1d4877ee525a7a2ae8b519f2d6fd8948730d9d581f1136f2af9364`  
+		Last Modified: Fri, 28 Oct 2022 23:26:44 GMT  
+		Size: 782.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `phpmyadmin:5-fpm-alpine` - linux; ppc64le
 
 ```console
-$ docker pull phpmyadmin@sha256:6ede3a672fc5b9bdc683c2927aea295c6192de9d94cd2a07664cf7886df19a55
+$ docker pull phpmyadmin@sha256:ac56038b526508f509886efcd5247090dee803a8b0a0e9dbc3abc0ade84d1ed3
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **47.0 MB (46956864 bytes)**  
+-	Total Size: **47.1 MB (47124106 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:aa887af1a2c0d159a95ea89a19ef69624bc9ddd5749c1869752678b58edb26ad`
+-	Image ID: `sha256:d3e442d16dbb5600bcb3bfb6e599e1250a027e12f3c6b5530af456ccbc06a201`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -864,65 +864,65 @@ ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_F
 ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
 # Thu, 06 Oct 2022 23:59:53 GMT
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Fri, 07 Oct 2022 01:03:41 GMT
-ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F
-# Fri, 07 Oct 2022 01:03:41 GMT
-ENV PHP_VERSION=8.0.24
-# Fri, 07 Oct 2022 01:03:41 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-8.0.24.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.24.tar.xz.asc
-# Fri, 07 Oct 2022 01:03:42 GMT
-ENV PHP_SHA256=8e6a63ac9cdabe4c345b32a54b18f348d9e50a1decda217faf2d61278d22f08b
-# Fri, 07 Oct 2022 01:03:54 GMT
+# Fri, 28 Oct 2022 19:40:00 GMT
+ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4
+# Fri, 28 Oct 2022 19:40:00 GMT
+ENV PHP_VERSION=8.0.25
+# Fri, 28 Oct 2022 19:40:00 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-8.0.25.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.25.tar.xz.asc
+# Fri, 28 Oct 2022 19:40:01 GMT
+ENV PHP_SHA256=a291b71d0498707fc5514eb5b9513e88f0f1d4890bcdefd67282ded8a2bfb941
+# Fri, 28 Oct 2022 19:40:11 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
-# Fri, 07 Oct 2022 01:03:54 GMT
+# Fri, 28 Oct 2022 19:40:11 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Fri, 07 Oct 2022 01:13:57 GMT
+# Fri, 28 Oct 2022 19:49:58 GMT
 RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		gnu-libiconv-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		readline-dev 		sqlite-dev 	; 		rm -vf /usr/include/iconv.h; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-iconv=/usr 		--with-openssl 		--with-readline 		--with-zlib 				--disable-phpdbg 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				--disable-cgi 				--enable-fpm 		--with-fpm-user=www-data 		--with-fpm-group=www-data 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find 		/usr/local 		-type f 		-perm '/0111' 		-exec sh -euxc ' 			strip --strip-all "$@" || : 		' -- '{}' + 	; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Fri, 07 Oct 2022 01:13:59 GMT
+# Fri, 28 Oct 2022 19:50:00 GMT
 COPY multi:869bde9dbeae74886a05c9e2107b3e3b4877116db8c6d9adbaff2719f9fb5262 in /usr/local/bin/ 
-# Fri, 07 Oct 2022 01:14:00 GMT
+# Fri, 28 Oct 2022 19:50:01 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 07 Oct 2022 01:14:01 GMT
+# Fri, 28 Oct 2022 19:50:02 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 07 Oct 2022 01:14:01 GMT
+# Fri, 28 Oct 2022 19:50:02 GMT
 WORKDIR /var/www/html
-# Fri, 07 Oct 2022 01:14:02 GMT
+# Fri, 28 Oct 2022 19:50:03 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf
-# Fri, 07 Oct 2022 01:14:02 GMT
+# Fri, 28 Oct 2022 19:50:03 GMT
 STOPSIGNAL SIGQUIT
-# Fri, 07 Oct 2022 01:14:02 GMT
+# Fri, 28 Oct 2022 19:50:04 GMT
 EXPOSE 9000
-# Fri, 07 Oct 2022 01:14:03 GMT
+# Fri, 28 Oct 2022 19:50:04 GMT
 CMD ["php-fpm"]
-# Fri, 07 Oct 2022 10:50:52 GMT
+# Sat, 29 Oct 2022 00:04:21 GMT
 RUN apk add --no-cache     bash     tzdata
-# Fri, 07 Oct 2022 10:51:57 GMT
+# Sat, 29 Oct 2022 00:05:27 GMT
 RUN set -ex;         apk add --no-cache --virtual .build-deps         bzip2-dev         freetype-dev         libjpeg-turbo-dev         libpng-dev         libwebp-dev         libxpm-dev         libzip-dev     ;         docker-php-ext-configure gd --with-freetype --with-jpeg --with-webp --with-xpm;     docker-php-ext-install -j "$(nproc)"         bz2         gd         mysqli         opcache         zip     ;         runDeps="$(         scanelf --needed --nobanner --format '%n#p' --recursive /usr/local/lib/php/extensions             | tr ',' '\n'             | sort -u             | awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }'     )";     apk add --virtual .phpmyadmin-phpexts-rundeps $runDeps;     apk del --no-network .build-deps
-# Fri, 07 Oct 2022 10:51:57 GMT
+# Sat, 29 Oct 2022 00:05:27 GMT
 ENV MAX_EXECUTION_TIME=600
-# Fri, 07 Oct 2022 10:51:57 GMT
+# Sat, 29 Oct 2022 00:05:28 GMT
 ENV MEMORY_LIMIT=512M
-# Fri, 07 Oct 2022 10:51:58 GMT
+# Sat, 29 Oct 2022 00:05:28 GMT
 ENV UPLOAD_LIMIT=2048K
-# Fri, 07 Oct 2022 10:51:59 GMT
+# Sat, 29 Oct 2022 00:05:29 GMT
 RUN set -ex;         {         echo 'opcache.memory_consumption=128';         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=4000';         echo 'opcache.revalidate_freq=2';         echo 'opcache.fast_shutdown=1';     } > $PHP_INI_DIR/conf.d/opcache-recommended.ini;         {         echo 'session.cookie_httponly=1';         echo 'session.use_strict_mode=1';     } > $PHP_INI_DIR/conf.d/session-strict.ini;         {         echo 'allow_url_fopen=Off';         echo 'max_execution_time=${MAX_EXECUTION_TIME}';         echo 'max_input_vars=10000';         echo 'memory_limit=${MEMORY_LIMIT}';         echo 'post_max_size=${UPLOAD_LIMIT}';         echo 'upload_max_filesize=${UPLOAD_LIMIT}';     } > $PHP_INI_DIR/conf.d/phpmyadmin-misc.ini
-# Fri, 07 Oct 2022 10:51:59 GMT
+# Sat, 29 Oct 2022 00:05:30 GMT
 ENV VERSION=5.2.0
-# Fri, 07 Oct 2022 10:51:59 GMT
+# Sat, 29 Oct 2022 00:05:30 GMT
 ENV SHA256=66da31ca295f06182ac3f2e6e96057dc824c459baedf4b29de6ed0d3be039230
-# Fri, 07 Oct 2022 10:51:59 GMT
+# Sat, 29 Oct 2022 00:05:31 GMT
 ENV URL=https://files.phpmyadmin.net/phpMyAdmin/5.2.0/phpMyAdmin-5.2.0-all-languages.tar.xz
-# Fri, 07 Oct 2022 10:52:00 GMT
+# Sat, 29 Oct 2022 00:05:31 GMT
 LABEL org.opencontainers.image.title=Official phpMyAdmin Docker image org.opencontainers.image.description=Run phpMyAdmin with Alpine, Apache and PHP FPM. org.opencontainers.image.authors=The phpMyAdmin Team <developers@phpmyadmin.net> org.opencontainers.image.vendor=phpMyAdmin org.opencontainers.image.documentation=https://github.com/phpmyadmin/docker#readme org.opencontainers.image.licenses=GPL-2.0-only org.opencontainers.image.version=5.2.0 org.opencontainers.image.url=https://github.com/phpmyadmin/docker#readme org.opencontainers.image.source=https://github.com/phpmyadmin/docker.git
-# Fri, 07 Oct 2022 10:52:07 GMT
+# Sat, 29 Oct 2022 00:05:39 GMT
 RUN set -ex;     apk add --no-cache --virtual .fetch-deps         gnupg     ;         export GNUPGHOME="$(mktemp -d)";     export GPGKEY="3D06A59ECE730EB71B511C17CE752F178259BD92";     curl -fsSL -o phpMyAdmin.tar.xz $URL;     curl -fsSL -o phpMyAdmin.tar.xz.asc $URL.asc;     echo "$SHA256 *phpMyAdmin.tar.xz" | sha256sum -c -;     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$GPGKEY"         || gpg --batch --keyserver pgp.mit.edu --recv-keys "$GPGKEY"         || gpg --batch --keyserver keyserver.pgp.com --recv-keys "$GPGKEY"         || gpg --batch --keyserver keys.openpgp.org --recv-keys "$GPGKEY";     gpg --batch --verify phpMyAdmin.tar.xz.asc phpMyAdmin.tar.xz;     tar -xf phpMyAdmin.tar.xz -C /var/www/html --strip-components=1;     mkdir -p /var/www/html/tmp;     chown www-data:www-data /var/www/html/tmp;     gpgconf --kill all;     rm -r "$GNUPGHOME" phpMyAdmin.tar.xz phpMyAdmin.tar.xz.asc;     rm -r -v /var/www/html/setup/ /var/www/html/examples/ /var/www/html/js/src/ /var/www/html/templates/test/ /var/www/html/babel.config.json /var/www/html/doc/html/_sources/ /var/www/html/RELEASE-DATE-$VERSION /var/www/html/CONTRIBUTING.md;     grep -q -F "'configFile' => ROOT_PATH . 'config.inc.php'," /var/www/html/libraries/vendor_config.php;     sed -i "s@'configFile' => .*@'configFile' => '/etc/phpmyadmin/config.inc.php',@" /var/www/html/libraries/vendor_config.php;     grep -q -F "'configFile' => '/etc/phpmyadmin/config.inc.php'," /var/www/html/libraries/vendor_config.php;     php -l /var/www/html/libraries/vendor_config.php;     apk del --no-network .fetch-deps
-# Fri, 07 Oct 2022 10:52:08 GMT
+# Sat, 29 Oct 2022 00:05:40 GMT
 COPY file:74e988fef607090521e63cea57b4c61ab22b3a2a131bc55f0cf4a0d9c36ce65d in /etc/phpmyadmin/config.inc.php 
-# Fri, 07 Oct 2022 10:52:08 GMT
+# Sat, 29 Oct 2022 00:05:40 GMT
 COPY file:d8c9f50886f5865fe589f64cb31544582913bb98f2cfa51a8828d71871363ce9 in /docker-entrypoint.sh 
-# Fri, 07 Oct 2022 10:52:09 GMT
+# Sat, 29 Oct 2022 00:05:41 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 07 Oct 2022 10:52:09 GMT
+# Sat, 29 Oct 2022 00:05:41 GMT
 CMD ["php-fpm"]
 ```
 
@@ -943,52 +943,52 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 07 Oct 2022 02:13:06 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65cc4e385d98968381b7276915f00586f09f6ef37fe2b2271d382906c032af69`  
-		Last Modified: Fri, 07 Oct 2022 02:19:57 GMT  
-		Size: 10.9 MB (10915505 bytes)  
+	-	`sha256:f626c041059ef8070e05061a4d11d3837345ad7fcbafbe9526aae556c9fae16d`  
+		Last Modified: Fri, 28 Oct 2022 20:28:50 GMT  
+		Size: 10.8 MB (10823040 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07893d7a84dda188ed80c21ef08b519a12156c8a8d286b95c4e9e5cc69e5e821`  
-		Last Modified: Fri, 07 Oct 2022 02:19:56 GMT  
-		Size: 496.0 B  
+	-	`sha256:aadea64d57b7b840b8fe0e868ddb1872fbe30655a24e4ed6b313b180741acce0`  
+		Last Modified: Fri, 28 Oct 2022 20:28:49 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a06095e98190b6a0d77dca97b3dc83db74a1e2945f3be99e6fa81913f689cc5`  
-		Last Modified: Fri, 07 Oct 2022 02:20:39 GMT  
-		Size: 12.5 MB (12539203 bytes)  
+	-	`sha256:1c115b06e473aecc3fe96d25682fd7c0202a445223e66b13175c91331b5ab9b0`  
+		Last Modified: Fri, 28 Oct 2022 20:29:31 GMT  
+		Size: 12.8 MB (12797465 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:77ad53e367f1bad61f8775df9aa2a55a0434163e73b6dfb5452ac0312f34b4d9`  
-		Last Modified: Fri, 07 Oct 2022 02:20:35 GMT  
-		Size: 2.4 KB (2448 bytes)  
+	-	`sha256:48d12089b79c56adf667d598e7ff75924f388af98902756f1d0acdddb5e9e944`  
+		Last Modified: Fri, 28 Oct 2022 20:29:27 GMT  
+		Size: 2.5 KB (2451 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49354f56418505a63c799b4a5e264388404138a88b011655e43c2d1ae973c3fc`  
-		Last Modified: Fri, 07 Oct 2022 02:20:35 GMT  
-		Size: 18.6 KB (18625 bytes)  
+	-	`sha256:18db0d7a31168eb31714050c77b5be985096ef8d7252933492e9344a6018f5b2`  
+		Last Modified: Fri, 28 Oct 2022 20:29:27 GMT  
+		Size: 18.7 KB (18674 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6fb78337b11d6d16ae2dae161e37561588231b2829f4a95c39298f97c3ccdb40`  
-		Last Modified: Fri, 07 Oct 2022 02:20:35 GMT  
+	-	`sha256:30ce0d3555a70b853e32e6a08967ed500a82999a049a49fafa8f2f1ce3ad853c`  
+		Last Modified: Fri, 28 Oct 2022 20:29:27 GMT  
 		Size: 8.6 KB (8571 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0143561c7c7452f631e0090cceb65c1ad09c83188dd29e8216d296b7add65063`  
-		Last Modified: Fri, 07 Oct 2022 10:53:04 GMT  
-		Size: 927.2 KB (927161 bytes)  
+	-	`sha256:3855806f211945e1074c34a496b4af2e124c474b4b5137effd86eaff293399ac`  
+		Last Modified: Sat, 29 Oct 2022 00:07:49 GMT  
+		Size: 927.2 KB (927180 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eab3a412e968c66fb0d02e851903acb66005be5cf51d455eee3a354d336bfa13`  
-		Last Modified: Fri, 07 Oct 2022 10:53:02 GMT  
-		Size: 5.8 MB (5809942 bytes)  
+	-	`sha256:c030fb2cb7c501f8e702a8ecf9556f6ce1c75fcb51497c0feef1fe42b7e8bbb8`  
+		Last Modified: Sat, 29 Oct 2022 00:07:47 GMT  
+		Size: 5.8 MB (5811181 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:78dcbe89ac61d6e7cee9cf11054a579a5ed4a37f50df9b6afa4c51ec1401ef0e`  
-		Last Modified: Fri, 07 Oct 2022 10:53:02 GMT  
-		Size: 548.0 B  
+	-	`sha256:945f409b50c5f84e1135eb6103a95419d3c958b434a8723d8bc43318a72abce0`  
+		Last Modified: Sat, 29 Oct 2022 00:07:46 GMT  
+		Size: 544.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:132c631eb5170517567dc8d69da749d9bb8ffcd01b844290b7434626c1474fcd`  
-		Last Modified: Fri, 07 Oct 2022 10:53:05 GMT  
-		Size: 12.2 MB (12154911 bytes)  
+	-	`sha256:0eafb6a8af54e6a2ae3ae985a1b4be363e26d5225c2f9aabe899ca24cc6456f9`  
+		Last Modified: Sat, 29 Oct 2022 00:07:50 GMT  
+		Size: 12.2 MB (12155046 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ac5f6318f60b4fe622e135547d16ac63bc343970244b532ad2dfec4f86cdccf1`  
-		Last Modified: Fri, 07 Oct 2022 10:53:01 GMT  
-		Size: 1.5 KB (1526 bytes)  
+	-	`sha256:92aaba935083e9d3a1437e3ad1191c18cea897a42bfdea8caa4447921bbc6c7e`  
+		Last Modified: Sat, 29 Oct 2022 00:07:46 GMT  
+		Size: 1.5 KB (1527 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05d596719d77dd299d4ea25d4a7506c289a62200582865935283b4f880392e44`  
-		Last Modified: Fri, 07 Oct 2022 10:53:01 GMT  
+	-	`sha256:aa913c48599157a1ba758bcf3479a327ad7ffddd38909015a6fc3ecbbf7d70ab`  
+		Last Modified: Sat, 29 Oct 2022 00:07:46 GMT  
 		Size: 782.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
