@@ -1,10 +1,10 @@
-# `traefik:v2.9.1`
+# `traefik:v2.9.4`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e6de8578b2384107d9e08f90be5d6cf43472e369ba98dca46373b336b83fdbd8`
-- Created: `2022-10-07T04:21:19.044824287Z`
-- Virtual Size: ~ 107.07 Mb  
+- Image ID: `sha256:288889429becfa205fc2887f5b51e8b53d3c32021b7614d350ff54ce88bbd4a8`
+- Created: `2022-10-27T22:48:41.69730985Z`
+- Virtual Size: ~ 134.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -14,10 +14,11 @@
 - Labels:
   - `org.opencontainers.image.description=A modern reverse-proxy`
   - `org.opencontainers.image.documentation=https://docs.traefik.io`
+  - `org.opencontainers.image.source=https://github.com/traefik/traefik`
   - `org.opencontainers.image.title=Traefik`
   - `org.opencontainers.image.url=https://traefik.io`
   - `org.opencontainers.image.vendor=Traefik Labs`
-  - `org.opencontainers.image.version=v2.9.1`
+  - `org.opencontainers.image.version=v2.9.4`
 
 ## `apk` (`.apk`-based packages)
 
