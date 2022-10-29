@@ -713,20 +713,13 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris expat=2.2.6-2+deb10u5
-'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u5.dsc' expat_2.2.6-2+deb10u5.dsc 2140 SHA256:2eee1ea4da8668417e03851c3934773e7b39bacd3f2c4da35644a8b7f472b6da
-'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6.orig.tar.gz' expat_2.2.6.orig.tar.gz 8275473 SHA256:574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff
-'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u5.debian.tar.xz' expat_2.2.6-2+deb10u5.debian.tar.xz 28464 SHA256:102e9c7195796b831942b8b380b6396906a49b54426c5082baea4602dd07ef4c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u5/
 
-- https://sources.debian.net/src/expat/2.2.6-2+deb10u5/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.2.6-2+deb10u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.6.0+git+20190209-2`
 
@@ -3042,20 +3035,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u7
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u7.dsc' tzdata_2021a-0+deb10u7.dsc 2023 SHA256:c7464bc7872aa0b43653a38c1f131d31531bbb18d7ed3e34e3a47b2b62dc0801
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u7.debian.tar.xz' tzdata_2021a-0+deb10u7.debian.tar.xz 114484 SHA256:808028fadf6f8a2e3349c29c761ea3063571e1f286ac4e27460b0fbe87bd27a4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u7/
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u7/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
