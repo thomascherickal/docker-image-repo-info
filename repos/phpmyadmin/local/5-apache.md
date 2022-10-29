@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:dfa5f07e88dc3a79018e618bd12a3f4b2748736fd176f46387e1c7e613c3a278`
-- Created: `2022-10-06T02:28:22.894739964Z`
-- Virtual Size: ~ 510.59 Mb  
+- Image ID: `sha256:d7b79de1139ea924acfd3723dac20401078ec0fc5e3e9b988c633657201b2bad`
+- Created: `2022-10-26T18:59:17.793253744Z`
+- Virtual Size: ~ 510.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -1141,14 +1141,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/glib2.0/2.66.8-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/glib2.0/2.66.8-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `glibc=2.31-13+deb11u4`
+### `dpkg` source package: `glibc=2.31-13+deb11u5`
 
 Binary Packages:
 
-- `libc-bin=2.31-13+deb11u4`
-- `libc-dev-bin=2.31-13+deb11u4`
-- `libc6:amd64=2.31-13+deb11u4`
-- `libc6-dev:amd64=2.31-13+deb11u4`
+- `libc-bin=2.31-13+deb11u5`
+- `libc-dev-bin=2.31-13+deb11u5`
+- `libc6:amd64=2.31-13+deb11u5`
+- `libc6-dev:amd64=2.31-13+deb11u5`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`)
 
@@ -1158,17 +1158,17 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris glibc=2.31-13+deb11u4
-'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.31-13%2bdeb11u4.dsc' glibc_2.31-13+deb11u4.dsc 8347 SHA256:2591bbb14fbf3f7490b3d67775601f991cfff721db3bc7bb0bf311165540fdaf
+$ apt-get source -qq --print-uris glibc=2.31-13+deb11u5
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.31-13%2bdeb11u5.dsc' glibc_2.31-13+deb11u5.dsc 8347 SHA256:77e3760f65a2f850bf492c8248690aed6eaec2eb988a261e0439cdcada110487
 'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17254692 SHA256:3dc7704b6166839c37d7047626fd199f3d4c09aca0d90e48c51c31c967dce34e
-'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.31-13%2bdeb11u4.debian.tar.xz' glibc_2.31-13+deb11u4.debian.tar.xz 953784 SHA256:0913d214e3c213d4e148b39fd7a1289dd3612799ec97fb55e1a77f8b6108cf76
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.31-13%2bdeb11u5.debian.tar.xz' glibc_2.31-13+deb11u5.debian.tar.xz 954032 SHA256:bb679f8e65d5b692f4479848848ec60e6eaa40e40b7eba7f5c2cf7bc79e3a415
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/glibc/2.31-13+deb11u4/ (for browsing the source)
-- https://sources.debian.net/src/glibc/2.31-13+deb11u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/glibc/2.31-13+deb11u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/glibc/2.31-13+deb11u5/ (for browsing the source)
+- https://sources.debian.net/src/glibc/2.31-13+deb11u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/glibc/2.31-13+deb11u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg-1+deb11u1`
 
@@ -2433,11 +2433,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.140-1`
+### `dpkg` source package: `linux=5.10.149-2`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.140-1`
+- `linux-libc-dev:amd64=5.10.149-2`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -2453,17 +2453,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.10.140-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.140-1.dsc' linux_5.10.140-1.dsc 197238 SHA256:6f6e4648f0d42cf3bab38de16c0f8fe3a93772ebcd899631ef0417027dc6c3fe
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.140.orig.tar.xz' linux_5.10.140.orig.tar.xz 121772956 SHA256:9ba969f17730d0ac57adf9d9dda5e2da39bec6785058fd50bd4499766c44ae52
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.140-1.debian.tar.xz' linux_5.10.140-1.debian.tar.xz 1541552 SHA256:0a8e5f111f6766cf31942239255dc6093906ec1725796bbe561f503b3ad6c113
+$ apt-get source -qq --print-uris linux=5.10.149-2
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.149-2.dsc' linux_5.10.149-2.dsc 197238 SHA256:3224be746cd8eb283471d0791ee1132b89bc0485e8c7348b9bce85f15852554e
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.149.orig.tar.xz' linux_5.10.149.orig.tar.xz 121772840 SHA256:4d3279aa39a3d3a17fe382c3e8a09ea430ff2d3eb4cdcd29864c700ac5885169
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.149-2.debian.tar.xz' linux_5.10.149-2.debian.tar.xz 3473800 SHA256:2efe84aab6aeb700fd0a94f463b4a9f58f45f20e619e54841e962bb2bc03bab3
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/5.10.140-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.140-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.140-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/5.10.149-2/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.149-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.149-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -3386,23 +3386,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.34+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.34+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-1+deb11u6`
+### `dpkg` source package: `tzdata=2021a-1+deb11u7`
 
 Binary Packages:
 
-- `tzdata=2021a-1+deb11u6`
+- `tzdata=2021a-1+deb11u7`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u7
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u7.dsc' tzdata_2021a-1+deb11u7.dsc 2269 SHA256:77cea3308c13dc8dc94c0a210f1af5177ba081b7ba0db69254d77643e5c81921
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u7.debian.tar.xz' tzdata_2021a-1+deb11u7.debian.tar.xz 114652 SHA256:dd4f2b7c623603ae5912ca267358468eee613630270a3e1ba628fcdc35330dd0
+```
 
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u6/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u7/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.36.1-8+deb11u1`
 
