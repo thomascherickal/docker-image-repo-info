@@ -1457,12 +1457,7 @@ Licenses (from `rpm --query`): GPLv2+
 
 Licenses (from `rpm --query`): GPLv3
 
-Source:
-
-```console
-$ dnf --quiet download --source --url tar-1.34-1.mga9
-http://mirror.datacenter.by/pub/mirrors/mageia.org/distrib/cauldron/SRPMS/core/release/tar-1.34-1.mga9.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `tcb-1.1-12.mga8.x86_64`
 
