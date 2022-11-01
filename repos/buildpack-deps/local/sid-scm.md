@@ -131,19 +131,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.5.3
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.5.3.dsc' apt_2.5.3.dsc 2933 SHA256:0b3236a168d0038731fb4c98fc06512a2de2599c2d28d0ad85a0754d169bfebb
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.5.3.tar.xz' apt_2.5.3.tar.xz 2322196 SHA256:e5b14a37125b7caf9534aad0670e0686b516e2fe9d4d441408397bb498c5c10a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.5.3/
 
-- https://sources.debian.net/src/apt/2.5.3/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.5.3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.5.3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -2593,20 +2587,13 @@ Licenses: (parsed from: `/usr/share/doc/libreadline8/copyright`, `/usr/share/doc
 - `GFDL`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris readline=8.2-1
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2-1.dsc' readline_8.2-1.dsc 2612 SHA256:74198798c8b2844d44173cbaf6e0a6d715fe09d8fc9bb77ed464dc40b1c91210
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2.orig.tar.gz' readline_8.2.orig.tar.gz 3043952 SHA256:3feb7171f16a84ee82ca18a36d7b9be109a52c04f492a053331d7d1095007c35
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2-1.debian.tar.xz' readline_8.2-1.debian.tar.xz 29136 SHA256:4305e3679be17f31ae6aed06406b7c54140ccc0b3c21f32f05bccdc654085384
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/readline/8.2-1/
 
-- https://sources.debian.net/src/readline/8.2-1/ (for browsing the source)
-- https://sources.debian.net/src/readline/8.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/readline/8.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rtmpdump=2.4+20151223.gitfa8646d.1-2`
 
@@ -2896,21 +2883,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022e-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e-1.dsc' tzdata_2022e-1.dsc 2205 SHA256:8632f4a176ca6665d4c8c2e6fb243f90d9ac4de4a36e6386d7ad1d337a79c187
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz' tzdata_2022e.orig.tar.gz 433785 SHA256:8de4c2686dce3d1aae9030719e6814931c216a2d5e891ec3d332e6f6516aeccd
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz.asc' tzdata_2022e.orig.tar.gz.asc 833 SHA256:9316acc6e3a3787232c63aae67eadeaff56e43ec505095678bf8e498e2b41a45
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e-1.debian.tar.xz' tzdata_2022e-1.debian.tar.xz 112124 SHA256:808423677dc7a5038929b12396695a76342b0e851d599bfce4c1a5cc4201d9c1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2022e-1/
 
-- https://sources.debian.net/src/tzdata/2022e-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2022e-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2022e-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 

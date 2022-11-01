@@ -161,19 +161,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.5.3
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.5.3.dsc' apt_2.5.3.dsc 2933 SHA256:0b3236a168d0038731fb4c98fc06512a2de2599c2d28d0ad85a0754d169bfebb
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.5.3.tar.xz' apt_2.5.3.tar.xz 2322196 SHA256:e5b14a37125b7caf9534aad0670e0686b516e2fe9d4d441408397bb498c5c10a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.5.3/
 
-- https://sources.debian.net/src/apt/2.5.3/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.5.3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.5.3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-1`
 
@@ -3591,9 +3585,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris libxml2=2.9.14+dfsg-1
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.14%2bdfsg-1.dsc' libxml2_2.9.14+dfsg-1.dsc 2915 SHA256:560b526a9b445b239eedac460cb7554e4e9aeaea5cf6a7c669dae08e3d4c14a5
+'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.14%2bdfsg-1.1.dsc' libxml2_2.9.14+dfsg-1.1.dsc 3078 SHA256:ed31c56a4ecec3acbed5012fa5f1a2e23059d89eab938d5c66e809d9ae9bbf8d
 'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.14%2bdfsg.orig.tar.xz' libxml2_2.9.14+dfsg.orig.tar.xz 2351200 SHA256:4fe913dec8b1ab89d13b489b419a8203176ea39e931eaa0d25b17eafb9c279e9
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.14%2bdfsg-1.debian.tar.xz' libxml2_2.9.14+dfsg-1.debian.tar.xz 28664 SHA256:6d563feb4a3f79c5e704703264bc4c06afd6fb30176a85afaba3549e3bef2a28
+'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.14%2bdfsg-1.1.debian.tar.xz' libxml2_2.9.14+dfsg-1.1.debian.tar.xz 32820 SHA256:9a6d8cfcd1cab9ef2130c6e28e2d63c9eb789c3f6e8d25e2e702694f3049ef9a
 ```
 
 Other potentially useful URLs:
@@ -3752,20 +3746,13 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `Unicode-data`
 - `Xen-interface`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=6.0.3-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.0.3-1.dsc' linux_6.0.3-1.dsc 249241 SHA256:3003697723f8fb736308ba09d1d51ecced1781758d526d64f235de2058399bd3
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.0.3.orig.tar.xz' linux_6.0.3.orig.tar.xz 136370440 SHA256:ddeef723b31ad93bcf8f92bc2553177817e13d2c9f4a4e9eec61068adff18db0
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.0.3-1.debian.tar.xz' linux_6.0.3-1.debian.tar.xz 1354824 SHA256:b74c5026406e30d3629bc9209b6ac52964f44b0fe0006a12fc306702d783c143
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/linux/6.0.3-1/
 
-- https://sources.debian.net/src/linux/6.0.3-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/6.0.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/6.0.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lz4=1.9.4-1`
 
@@ -4860,20 +4847,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-stdlib-extensions=3.10.7-1
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.10.7-1.dsc' python3-stdlib-extensions_3.10.7-1.dsc 2575 SHA256:f4e74574a7abadcced8d0f78f26fcbb9e7bb36415e694a1a2719d9ce0eea8011
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.10.7.orig.tar.xz' python3-stdlib-extensions_3.10.7.orig.tar.xz 1116932 SHA256:38f6d238c73b3b433ebe6878a132372d402e7fab99f1914765aebf0e848076e7
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.10.7-1.debian.tar.xz' python3-stdlib-extensions_3.10.7-1.debian.tar.xz 25764 SHA256:9f0f0c1615f0e70423a48ea01f7ff69fe85317d4d4e6cb6d3dbe66fee32aba2b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-stdlib-extensions/3.10.7-1/
 
-- https://sources.debian.net/src/python3-stdlib-extensions/3.10.7-1/ (for browsing the source)
-- https://sources.debian.net/src/python3-stdlib-extensions/3.10.7-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-stdlib-extensions/3.10.7-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3.10=3.10.7-2`
 
@@ -4925,20 +4905,13 @@ Licenses: (parsed from: `/usr/share/doc/libreadline-dev/copyright`, `/usr/share/
 - `GFDL`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris readline=8.2-1
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2-1.dsc' readline_8.2-1.dsc 2612 SHA256:74198798c8b2844d44173cbaf6e0a6d715fe09d8fc9bb77ed464dc40b1c91210
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2.orig.tar.gz' readline_8.2.orig.tar.gz 3043952 SHA256:3feb7171f16a84ee82ca18a36d7b9be109a52c04f492a053331d7d1095007c35
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2-1.debian.tar.xz' readline_8.2-1.debian.tar.xz 29136 SHA256:4305e3679be17f31ae6aed06406b7c54140ccc0b3c21f32f05bccdc654085384
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/readline/8.2-1/
 
-- https://sources.debian.net/src/readline/8.2-1/ (for browsing the source)
-- https://sources.debian.net/src/readline/8.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/readline/8.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rpcsvc-proto=1.4.2-4`
 
@@ -5291,20 +5264,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.4.0-4
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.4.0-4.dsc' tiff_4.4.0-4.dsc 2238 SHA256:5c7d396d178b96476aacd71e5f57dd935a8b8bbae5cf7ac3d2822ad29d942824
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.4.0.orig.tar.bz2' tiff_4.4.0.orig.tar.bz2 2072723 SHA256:ce0848109b627eb5442187b6362a8e4809728e4f28fcc5a04940e5afb464caba
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.4.0-4.debian.tar.xz' tiff_4.4.0-4.debian.tar.xz 23344 SHA256:06d7a994e9dff6efbfabb998f87d6ae824e4e97669e4ae8e51aa6fb60515c837
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tiff/4.4.0-4/
 
-- https://sources.debian.net/src/tiff/4.4.0-4/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.4.0-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.4.0-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2022e-1`
 
@@ -5316,21 +5282,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022e-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e-1.dsc' tzdata_2022e-1.dsc 2205 SHA256:8632f4a176ca6665d4c8c2e6fb243f90d9ac4de4a36e6386d7ad1d337a79c187
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz' tzdata_2022e.orig.tar.gz 433785 SHA256:8de4c2686dce3d1aae9030719e6814931c216a2d5e891ec3d332e6f6516aeccd
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz.asc' tzdata_2022e.orig.tar.gz.asc 833 SHA256:9316acc6e3a3787232c63aae67eadeaff56e43ec505095678bf8e498e2b41a45
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e-1.debian.tar.xz' tzdata_2022e-1.debian.tar.xz 112124 SHA256:808423677dc7a5038929b12396695a76342b0e851d599bfce4c1a5cc4201d9c1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2022e-1/
 
-- https://sources.debian.net/src/tzdata/2022e-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2022e-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2022e-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 

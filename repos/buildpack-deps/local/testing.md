@@ -388,20 +388,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.2~rc2-2
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2%7erc2-2.dsc' bash_5.2~rc2-2.dsc 2324 SHA256:61e6d4775fc8944e526c1fa534efc8665f744d2822685032d35e43b1091ac939
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2%7erc2.orig.tar.xz' bash_5.2~rc2.orig.tar.xz 5881656 SHA256:763ff1906505b6ac19c1155123cfe7772665a52a3ab2b2a38b1ff73813a69b5e
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2%7erc2-2.debian.tar.xz' bash_5.2~rc2-2.debian.tar.xz 85856 SHA256:3adbe653ae8bfef1a7df7787323f37095682748771e9ea25d280ff75faa2c32f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.2~rc2-2/
 
-- https://sources.debian.net/src/bash/5.2~rc2-2/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.2~rc2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.2~rc2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `binutils=2.39-8`
 
@@ -1029,20 +1022,13 @@ Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`, `/usr/share/doc/li
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris expat=2.4.9-1
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.4.9-1.dsc' expat_2.4.9-1.dsc 1981 SHA256:2d33fa5be60cd65123a955ba031047d8b013b8266d0d177a8e874b4319b9e5c5
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.4.9.orig.tar.gz' expat_2.4.9.orig.tar.gz 8319186 SHA256:286bb78d8800f20b5da0ff48d98d6c67a16242cfe8cc823a04998f94b5253279
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.4.9-1.debian.tar.xz' expat_2.4.9-1.debian.tar.xz 12620 SHA256:ad4bf6a85ee28827cf14b9c3c980d0f83ad7ef88bdcc785a13009f0fc415ca3f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/expat/2.4.9-1/
 
-- https://sources.debian.net/src/expat/2.4.9-1/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.4.9-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.4.9-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `fftw3=3.3.8-2`
 
@@ -2367,20 +2353,13 @@ Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 - `public-domain-1`
 - `public-domain-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libde265=1.0.8-1.1
-'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.8-1.1.dsc' libde265_1.0.8-1.1.dsc 1906 SHA256:b1952c68bd07dc011a6939f79c353adfaadf8be6b07cd0fef492aece26bc1131
-'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.8.orig.tar.gz' libde265_1.0.8.orig.tar.gz 837878 SHA256:24c791dd334fa521762320ff54f0febfd3c09fc978880a8c5fbc40a88f21d905
-'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.8-1.1.debian.tar.xz' libde265_1.0.8-1.1.debian.tar.xz 12232 SHA256:7119e07718d621e6d1b4843391c01086e468ae6df9de150f410765a985a8af0f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libde265/1.0.8-1.1/
 
-- https://sources.debian.net/src/libde265/1.0.8-1.1/ (for browsing the source)
-- https://sources.debian.net/src/libde265/1.0.8-1.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libde265/1.0.8-1.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libdeflate=1.14-1`
 
@@ -4842,20 +4821,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `double-metaphone`
 - `nagaysau-ishii`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-15=15.0-1
-'http://deb.debian.org/debian/pool/main/p/postgresql-15/postgresql-15_15.0-1.dsc' postgresql-15_15.0-1.dsc 3863 SHA256:d3dcd683a35fb646b6ef5c5764825c4df1c3ce05eaa51494a4724a2ee350ccbd
-'http://deb.debian.org/debian/pool/main/p/postgresql-15/postgresql-15_15.0.orig.tar.bz2' postgresql-15_15.0.orig.tar.bz2 22403741 SHA256:72ec74f4a7c16e684f43ea42e215497fcd4c55d028a68fb72e99e61ff40da4d6
-'http://deb.debian.org/debian/pool/main/p/postgresql-15/postgresql-15_15.0-1.debian.tar.xz' postgresql-15_15.0-1.debian.tar.xz 22068 SHA256:a16858ce47e849c0ecf9b606ed7b47e08d03a0ccb8934aa5f97d66c81d623492
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-15/15.0-1/
 
-- https://sources.debian.net/src/postgresql-15/15.0-1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-15/15.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-15/15.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.17-7`
 
@@ -5381,21 +5353,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022e-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e-1.dsc' tzdata_2022e-1.dsc 2205 SHA256:8632f4a176ca6665d4c8c2e6fb243f90d9ac4de4a36e6386d7ad1d337a79c187
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz' tzdata_2022e.orig.tar.gz 433785 SHA256:8de4c2686dce3d1aae9030719e6814931c216a2d5e891ec3d332e6f6516aeccd
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz.asc' tzdata_2022e.orig.tar.gz.asc 833 SHA256:9316acc6e3a3787232c63aae67eadeaff56e43ec505095678bf8e498e2b41a45
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022e-1.debian.tar.xz' tzdata_2022e-1.debian.tar.xz 112124 SHA256:808423677dc7a5038929b12396695a76342b0e851d599bfce4c1a5cc4201d9c1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2022e-1/
 
-- https://sources.debian.net/src/tzdata/2022e-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2022e-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2022e-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
