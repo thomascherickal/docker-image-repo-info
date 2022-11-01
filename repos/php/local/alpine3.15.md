@@ -1,10 +1,10 @@
-# `php:8.1.11-cli-alpine3.15`
+# `php:8.1.12-cli-alpine3.15`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4318c330ee75604929eef526f5efaeb0facdf4f5d30c0d84181af80337bf17d9`
-- Created: `2022-10-07T00:03:04.700878803Z`
-- Virtual Size: ~ 92.24 Mb  
+- Image ID: `sha256:25d4a8e997e085b33cb4441c5323a2b66c9b2bd23bf917e87091a21efc11047d`
+- Created: `2022-10-28T19:08:41.009267273Z`
+- Virtual Size: ~ 92.70 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.11`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.11.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.11.tar.xz.asc`
-  - `PHP_SHA256=3005198d7303f87ab31bc30695de76e8ad62783f806b6ab9744da59fe41cc5bd`
+  - `PHP_VERSION=8.1.12`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.12.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.12.tar.xz.asc`
+  - `PHP_SHA256=08243359e2204d842082269eedc15f08d2eca726d0e65b93fb11f4bfc51bbbab`
 
 ## `apk` (`.apk`-based packages)
 
@@ -248,16 +248,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.80.0-r3 description:
+libcurl-7.80.0-r4 description:
 The multiprotocol file transfer library
 
-libcurl-7.80.0-r3 webpage:
+libcurl-7.80.0-r4 webpage:
 https://curl.se/
 
-libcurl-7.80.0-r3 installed size:
+libcurl-7.80.0-r4 installed size:
 504 KiB
 
-libcurl-7.80.0-r3 license:
+libcurl-7.80.0-r4 license:
 MIT
 
 ```
@@ -333,16 +333,16 @@ OpenSSL
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.9.14-r1 description:
+libxml2-2.9.14-r2 description:
 XML parsing library, version 2
 
-libxml2-2.9.14-r1 webpage:
+libxml2-2.9.14-r2 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.9.14-r1 installed size:
+libxml2-2.9.14-r2 installed size:
 1200 KiB
 
-libxml2-2.9.14-r1 license:
+libxml2-2.9.14-r2 license:
 MIT
 
 ```

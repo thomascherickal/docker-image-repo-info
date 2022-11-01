@@ -1,10 +1,10 @@
-# `php:8.1.11-cli-bullseye`
+# `php:8.1.12-cli-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:59b9bc4713c25161d3def416655d8b087b11fc20bd95a6a2063f2cfd1114d250`
-- Created: `2022-10-25T14:31:55.747580942Z`
-- Virtual Size: ~ 484.08 Mb  
+- Image ID: `sha256:30e567f030d31942f9a657441c6489cf63998dcc385a0319f5972e4d551aa5a5`
+- Created: `2022-10-28T18:26:38.340865129Z`
+- Virtual Size: ~ 484.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.11`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.11.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.11.tar.xz.asc`
-  - `PHP_SHA256=3005198d7303f87ab31bc30695de76e8ad62783f806b6ab9744da59fe41cc5bd`
+  - `PHP_VERSION=8.1.12`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.12.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.12.tar.xz.asc`
+  - `PHP_SHA256=08243359e2204d842082269eedc15f08d2eca726d0e65b93fb11f4bfc51bbbab`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -2741,21 +2741,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u7
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u7.dsc' tzdata_2021a-1+deb11u7.dsc 2269 SHA256:77cea3308c13dc8dc94c0a210f1af5177ba081b7ba0db69254d77643e5c81921
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u7.debian.tar.xz' tzdata_2021a-1+deb11u7.debian.tar.xz 114652 SHA256:dd4f2b7c623603ae5912ca267358468eee613630270a3e1ba628fcdc35330dd0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u7/
 
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u7/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.36.1-8+deb11u1`
 
