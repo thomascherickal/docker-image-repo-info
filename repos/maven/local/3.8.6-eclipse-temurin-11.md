@@ -1887,15 +1887,9 @@ Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/open
 - `GPL-1`
 - `GPL-1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=3.0.2-0ubuntu1.6
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.6.dsc' openssl_3.0.2-0ubuntu1.6.dsc 2726 SHA512:5c1bc449ca7882cd82a516673b27a6730ba0d9cb0d651d84b6681536a0e4e55096da3ba11d76dd9f53882140a1d09665b037c2cd3f0a11099943f75d81b62f72
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2.orig.tar.gz' openssl_3.0.2.orig.tar.gz 15038141 SHA512:f986850d5be908b4d6b5fd7091bc4652d7378c9bccebfbc5becd7753843c04c1eb61a1749c432139d263dfac33df0b1f6c773664b485cad47542266823a4eb03
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2.orig.tar.gz.asc' openssl_3.0.2.orig.tar.gz.asc 488 SHA512:4303391a58107c76ad9b05510f5bfc95f687f4cb2f9ff5b03fb262ba99b573423ab83f0437471199954496799b343191b889ad9ef8fabdd7ee4ec3ec9b5f1d81
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.6.debian.tar.xz' openssl_3.0.2-0ubuntu1.6.debian.tar.xz 160832 SHA512:df88acffbf79b95729d69d96abaece01040b20de352c3d81cf3f165fbe73271be0eae0da0fce655c4f42d89b829f4b0a1b5bfbb750d5aff40b1a008380d23db3
-```
 
 ### `dpkg` source package: `p11-kit=0.24.0-6build1`
 
