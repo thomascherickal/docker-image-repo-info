@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:88b2917e1d85683ec96a9a3d254cbbfaeec62be7960081b1eeb3e0c8e98cccfe`
-- Created: `2022-10-17T20:28:23.916942642Z`
-- Virtual Size: ~ 210.61 Mb  
+- Image ID: `sha256:4b9c526d72d2d8e9e5e3bea2b2f994463b30b25e8842202843e4a01a8b2f9faa`
+- Created: `2022-10-31T18:27:30.441413286Z`
+- Virtual Size: ~ 210.70 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -205,16 +205,16 @@ curl
 ### `apk` package: `expat`
 
 ```console
-expat-2.4.9-r0 description:
+expat-2.5.0-r0 description:
 XML Parser library written in C
 
-expat-2.4.9-r0 webpage:
+expat-2.5.0-r0 webpage:
 https://libexpat.github.io/
 
-expat-2.4.9-r0 installed size:
+expat-2.5.0-r0 installed size:
 192 KiB
 
-expat-2.4.9-r0 license:
+expat-2.5.0-r0 license:
 MIT
 
 ```
@@ -324,16 +324,16 @@ LGPL-2.1-or-later
 ### `apk` package: `imagemagick-libs`
 
 ```console
-imagemagick-libs-7.1.0.35-r0 description:
+imagemagick-libs-7.1.0.50-r0 description:
 Collection of tools and libraries for many image formats (libraries)
 
-imagemagick-libs-7.1.0.35-r0 webpage:
+imagemagick-libs-7.1.0.50-r0 webpage:
 https://imagemagick.org/
 
-imagemagick-libs-7.1.0.35-r0 installed size:
-3280 KiB
+imagemagick-libs-7.1.0.50-r0 installed size:
+3296 KiB
 
-imagemagick-libs-7.1.0.35-r0 license:
+imagemagick-libs-7.1.0.50-r0 license:
 ImageMagick
 
 ```
