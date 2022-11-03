@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d2f9901b8f0ef3c6fc4f6a2fffaa00a65aea24177e475b9c4c1a8c08459287db`
-- Created: `2022-10-25T17:31:00.43698879Z`
-- Virtual Size: ~ 265.90 Mb  
+- Image ID: `sha256:330ae7b67bde470d70bda07f93d42e4aa4ca36141e32c03003c57ff62294f6ea`
+- Created: `2022-11-02T18:46:14.116656376Z`
+- Virtual Size: ~ 265.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -303,12 +303,12 @@ $ apt-get source -qq --print-uris coreutils=8.32-4.1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.32-4.1ubuntu1.debian.tar.xz' coreutils_8.32-4.1ubuntu1.debian.tar.xz 41096 SHA512:74adfa2f2a85af8d7024ad6d13942e915217dcb10e29caa9c314e0a15da6ec019e7aa52ac5351c35ccea1bace7a05c6dc7569b7b0487c8fcd46b3ba42d66d89d
 ```
 
-### `dpkg` source package: `curl=7.81.0-1ubuntu1.4`
+### `dpkg` source package: `curl=7.81.0-1ubuntu1.6`
 
 Binary Packages:
 
-- `curl=7.81.0-1ubuntu1.4`
-- `libcurl4:amd64=7.81.0-1ubuntu1.4`
+- `curl=7.81.0-1ubuntu1.6`
+- `libcurl4:amd64=7.81.0-1ubuntu1.6`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -319,9 +319,15 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.81.0-1ubuntu1.6
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.6.dsc' curl_7.81.0-1ubuntu1.6.dsc 3139 SHA512:f8dadc5d836c69d24bab3272d28aeca71d73a9c5a1aec5302043fd0bf1870423de694580c38954f09100268f3094d678bc82aabcaa0362e95ff6ab893d122d47
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz' curl_7.81.0.orig.tar.gz 4188040 SHA512:e3084f0fa083f7f93eac923edbfdddb5fd0a372b94673ba9d4427a2b95508898c15ecdf63b99a1c1f6cf3215e27b06cbaa2b7073df038d43b362e586f92495d3
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz.asc' curl_7.81.0.orig.tar.gz.asc 488 SHA512:92bc5ede831551285d67b03abe8400c609ad31c9d33e324ee5c41b92dd5c2a0245a09a396bd76807b3e44bcfef944b1e16ac266264f7b85d27cc1c072a6e82bd
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.6.debian.tar.xz' curl_7.81.0-1ubuntu1.6.debian.tar.xz 53192 SHA512:88bd319a13c8594ac6cccdddb0b499e7e9554dee2b16cae63bf6e023f983f6939a3c43f686798a329166e45e3c5d29f6d0c31ed59d4ae17b998f86c486670a2d
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg2-3ubuntu1`
 
@@ -1484,12 +1490,12 @@ $ apt-get source -qq --print-uris openldap=2.5.13+dfsg-0ubuntu0.22.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.13%2bdfsg-0ubuntu0.22.04.1.debian.tar.xz' openldap_2.5.13+dfsg-0ubuntu0.22.04.1.debian.tar.xz 171328 SHA512:d87cc91a1ea87442fcdec494b59e54daa31804123101e1c378baa310141cc8352ab4b4efa7a5539dde69ad50023058241c73158081916ef5f7e2516996a7c94f
 ```
 
-### `dpkg` source package: `openssl=3.0.2-0ubuntu1.6`
+### `dpkg` source package: `openssl=3.0.2-0ubuntu1.7`
 
 Binary Packages:
 
-- `libssl3:amd64=3.0.2-0ubuntu1.6`
-- `openssl=3.0.2-0ubuntu1.6`
+- `libssl3:amd64=3.0.2-0ubuntu1.7`
+- `openssl=3.0.2-0ubuntu1.7`
 
 Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/openssl/copyright`)
 
@@ -1501,11 +1507,11 @@ Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/open
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=3.0.2-0ubuntu1.6
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.6.dsc' openssl_3.0.2-0ubuntu1.6.dsc 2726 SHA512:5c1bc449ca7882cd82a516673b27a6730ba0d9cb0d651d84b6681536a0e4e55096da3ba11d76dd9f53882140a1d09665b037c2cd3f0a11099943f75d81b62f72
+$ apt-get source -qq --print-uris openssl=3.0.2-0ubuntu1.7
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.7.dsc' openssl_3.0.2-0ubuntu1.7.dsc 2726 SHA512:ccef1474135698d8a1c1c2d399032b45d86ab9f46160a51e688be0fcb3060695919bd78535e8bbcf30f4d7fe1e5cb46e13d48ec849ec54efe9a533b7992f1235
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2.orig.tar.gz' openssl_3.0.2.orig.tar.gz 15038141 SHA512:f986850d5be908b4d6b5fd7091bc4652d7378c9bccebfbc5becd7753843c04c1eb61a1749c432139d263dfac33df0b1f6c773664b485cad47542266823a4eb03
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2.orig.tar.gz.asc' openssl_3.0.2.orig.tar.gz.asc 488 SHA512:4303391a58107c76ad9b05510f5bfc95f687f4cb2f9ff5b03fb262ba99b573423ab83f0437471199954496799b343191b889ad9ef8fabdd7ee4ec3ec9b5f1d81
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.6.debian.tar.xz' openssl_3.0.2-0ubuntu1.6.debian.tar.xz 160832 SHA512:df88acffbf79b95729d69d96abaece01040b20de352c3d81cf3f165fbe73271be0eae0da0fce655c4f42d89b829f4b0a1b5bfbb750d5aff40b1a008380d23db3
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.7.debian.tar.xz' openssl_3.0.2-0ubuntu1.7.debian.tar.xz 165180 SHA512:e77f2b0a6db63d2c8c38682da646df9c8b8bca3c40ad7a61ffb732e1aa682aa5297858531889bf93637fce84b8ab4479c6a5dbb79b376262048492eef0491f29
 ```
 
 ### `dpkg` source package: `p11-kit=0.24.0-6build1`
@@ -1815,11 +1821,11 @@ $ apt-get source -qq --print-uris tar=1.34+dfsg-1build3
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1build3.debian.tar.xz' tar_1.34+dfsg-1build3.debian.tar.xz 19416 SHA512:3fbe7b908963df828585139f884762b698c14a2fc37618dcf3adb90819b160c8ea7aaa2e9dc9470abf40bd5100710dd1292f666cb77865ef3c558729dd313521
 ```
 
-### `dpkg` source package: `tzdata=2022c-0ubuntu0.22.04.0`
+### `dpkg` source package: `tzdata=2022e-0ubuntu0.22.04.0`
 
 Binary Packages:
 
-- `tzdata=2022c-0ubuntu0.22.04.0`
+- `tzdata=2022e-0ubuntu0.22.04.0`
 
 Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
@@ -1828,11 +1834,11 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tzdata=2022c-0ubuntu0.22.04.0
-'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.22.04.0.dsc' tzdata_2022c-0ubuntu0.22.04.0.dsc 2184 SHA512:a580d298f2447cf1228febc85a60402e27dadb53f91f48035ec6ea3632ff7c2ca29ce7288f9204f97d45a0f17d031ea31af07ccf538ef3949b095d0cb4ac485e
-'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz' tzdata_2022c.orig.tar.gz 432721 SHA512:e2ae92abac6d87ce4ab4ba9012e868e1791b842e083293489debc0c671b9cf135b5b70426dacb6dbebbf6eba24463205225ae45bb7df891a086b25475f85ee0b
-'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz.asc' tzdata_2022c.orig.tar.gz.asc 833 SHA512:8485b30e93782c76444b07c18c3032e91293edcb4a79b536b7d561de7981e5a4861b83ea3cae7e6efe7340ce8de313cb34a493d7ef46547f7f63f29eb0452da9
-'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.22.04.0.debian.tar.xz' tzdata_2022c-0ubuntu0.22.04.0.debian.tar.xz 171464 SHA512:3ee718e6ed6faea2a9289bd4854205e0904e70e78eb9194a2bf0bfbaf7fee0fcbaaf55eadd8ba4f7b12d476d8ce1c367ad9059db62bd2cd5d2d4e6f623a9a75b
+$ apt-get source -qq --print-uris tzdata=2022e-0ubuntu0.22.04.0
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e-0ubuntu0.22.04.0.dsc' tzdata_2022e-0ubuntu0.22.04.0.dsc 2383 SHA512:0911ad087bc93c66a16e3f622a1fe8e072d0a8f256666ffed4a81c481d69874e0855fbad0410e331832dff1788bab0d6a6db360b505ff3b517e65dbebe980dcb
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz' tzdata_2022e.orig.tar.gz 433785 SHA512:3b63ba2662930ee13dec79290f57545d71d21d4ddb76f94498a7096edaee0b3150e501c221c4d596df6af7c1d770c211f88feb5add13c5e3bed979218b4544da
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz.asc' tzdata_2022e.orig.tar.gz.asc 833 SHA512:d1fbc609370e1fd2a6aded16fe2c6705ee422fd1caffc12941d38acd8eca31bac5fa244af71c2427ce122a0d20cb53b6286ead675c25a7922fc5feda3daacf3c
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e-0ubuntu0.22.04.0.debian.tar.xz' tzdata_2022e-0ubuntu0.22.04.0.debian.tar.xz 171324 SHA512:d4f42c20e09cb6e05fb1b117ff5b50511304c2b36eed775375a397f3dbb48be0f52036dddc327be4f2d9388807b2458bca5a0658096306842c120de5c9fb8d7b
 ```
 
 ### `dpkg` source package: `ubuntu-keyring=2021.03.26`
