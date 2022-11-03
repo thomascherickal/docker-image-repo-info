@@ -1,9 +1,9 @@
-# `irssi:1.4.2-alpine`
+# `irssi:1.4.3-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2fc301d89821ccc5a0e589d8d6b518a347caa3780b0dd715b0ec7e2d18500a21`
-- Created: `2022-10-06T22:46:42.629411952Z`
+- Image ID: `sha256:e788de2b86e371837a5e85fe4b38024c00678c723a9fb4310529c309ff1d4c32`
+- Created: `2022-10-31T19:28:23.555487584Z`
 - Virtual Size: ~ 55.02 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `HOME=/home/user`
   - `LANG=C.UTF-8`
-  - `IRSSI_VERSION=1.4.2`
+  - `IRSSI_VERSION=1.4.3`
 
 ## `apk` (`.apk`-based packages)
 

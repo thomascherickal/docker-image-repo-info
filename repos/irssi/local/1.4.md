@@ -1,9 +1,9 @@
-# `irssi:1.4.2`
+# `irssi:1.4.3`
 
 ## Docker Metadata
 
-- Image ID: `sha256:435cb2233fbbdec84727f086521c54b837594188f2a1b76c35d0f9c066f2fe34`
-- Created: `2022-10-25T04:02:13.095110469Z`
+- Image ID: `sha256:cfa8f212b7579046f23abcb4e8e464b8a28f4fd5a799ad21e2afe650a04ed8eb`
+- Created: `2022-10-31T19:27:54.451778606Z`
 - Virtual Size: ~ 169.62 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `HOME=/home/user`
   - `LANG=C.UTF-8`
-  - `IRSSI_VERSION=1.4.2`
+  - `IRSSI_VERSION=1.4.3`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1320,20 +1320,13 @@ Licenses: (parsed from: `/usr/share/doc/libdatetime-timezone-perl/copyright`)
 - `GPL-1`
 - `GPL-1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libdatetime-timezone-perl=1:2.47-1+2022e
-'http://deb.debian.org/debian/pool/main/libd/libdatetime-timezone-perl/libdatetime-timezone-perl_2.47-1%2b2022e.dsc' libdatetime-timezone-perl_2.47-1+2022e.dsc 2914 SHA256:79589d7d1177a2bbf57a6834efce0e4e329c10e94109da6af89a0f50cb672645
-'http://deb.debian.org/debian/pool/main/libd/libdatetime-timezone-perl/libdatetime-timezone-perl_2.47.orig.tar.gz' libdatetime-timezone-perl_2.47.orig.tar.gz 1006477 SHA256:41617138dbb5e255fe5ac3cab6f1cc8e09f934bc95906b8cd7077192a21ef2b9
-'http://deb.debian.org/debian/pool/main/libd/libdatetime-timezone-perl/libdatetime-timezone-perl_2.47-1%2b2022e.debian.tar.xz' libdatetime-timezone-perl_2.47-1+2022e.debian.tar.xz 71860 SHA256:17257dff61a9c4f4b2ef8ed27d75eb1f62ecc7170af0e6a92e23ce889f7859c7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libdatetime-timezone-perl/1:2.47-1+2022e/
 
-- https://sources.debian.net/src/libdatetime-timezone-perl/1:2.47-1+2022e/ (for browsing the source)
-- https://sources.debian.net/src/libdatetime-timezone-perl/1:2.47-1+2022e/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libdatetime-timezone-perl/1:2.47-1+2022e/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libdevel-callchecker-perl=0.008-1`
 
@@ -3524,21 +3517,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u7
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u7.dsc' tzdata_2021a-1+deb11u7.dsc 2269 SHA256:77cea3308c13dc8dc94c0a210f1af5177ba081b7ba0db69254d77643e5c81921
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u7.debian.tar.xz' tzdata_2021a-1+deb11u7.debian.tar.xz 114652 SHA256:dd4f2b7c623603ae5912ca267358468eee613630270a3e1ba628fcdc35330dd0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u7/
 
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u7/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-1+deb11u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.36.1-8+deb11u1`
 
