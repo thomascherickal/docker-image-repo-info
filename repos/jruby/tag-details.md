@@ -61,7 +61,7 @@
 ## `jruby:9`
 
 ```console
-$ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52f962bbc73e1
+$ docker pull jruby@sha256:49263ea3888f7b984ea5858916c6cd49da093a0053e4f44d0cfa114841fd92f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -72,14 +72,14 @@ $ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52
 ### `jruby:9` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:18e3643422c845f1f82b4b300e29bb4d69d29ba5f7ca03be14f54627900a2850
+$ docker pull jruby@sha256:8f682181c67c5a6872b665e1fd3cb6f17dabf06adc9a1701a8e6b4c174ae6f48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.4 MB (123402307 bytes)**  
+-	Total Size: **123.4 MB (123413836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1f90a45d6373abab7601d0e68675844213f06d51536d5b6d200c4f94d24e8a`
+-	Image ID: `sha256:c587c020e9ab1ac467eb09d934f69e7f14198014aa19e0a43d40b03de29e2ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -95,35 +95,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:25 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:10 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 CMD ["irb"]
 ```
 
@@ -136,46 +136,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21f064ab5784caeae419e2afb7425a62f23f0f248baf0fb37b31c634416c085d`  
-		Last Modified: Wed, 26 Oct 2022 23:34:25 GMT  
-		Size: 28.7 MB (28672411 bytes)  
+	-	`sha256:abcd65b5e27237c16d5459bdbc47c6b6a0ca212ddc03b57b3e2614c1336f441a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:13 GMT  
+		Size: 28.7 MB (28672310 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b41c00b5a25852f4e311853c9350bf3450b06122c1c8d16930f3b102121dc01b`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
+	-	`sha256:8417d2088c784659969a8d1fb12e683aef6b38b7d6e9ab24f318c8561a67d465`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b5b22973e822afdd8cd315b5059edd2f7f243b1f6cbbe664168c2745bcb8b9`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 1.1 MB (1065548 bytes)  
+	-	`sha256:06e9846e9e420e7062f956fa3a917d500aa2c2a68492db43ed5467d2a11e8cd7`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a1181ffff2bfba3de3fef4afc77171660aaa9b9f1c2a0fc7d5725851cd55ee`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 174.0 B  
+	-	`sha256:8ff332a63cadd19e84f8dd63d0ceef329ae33a5397774c277ca2574da6b23c58`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:182728558624a9c95a60f682d2e5bea5c13bfa27fb5a7255b83d3c8606a6eed1
+$ docker pull jruby@sha256:957872cb202a626f58800d1177a1ca07b9e36d3ce5d553c1b6cc5532fe29c919
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **119.8 MB (119841033 bytes)**  
+-	Total Size: **119.8 MB (119845863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92a74d9cd79247d8ca3109c892c4ad250ea23f1f490dc3a869ee6667a94dd9d3`
+-	Image ID: `sha256:5831cdb5121c7ddd276e3f55560d6c9441dda083283d4d3a1c32be5425a29279`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -191,35 +191,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:09:55 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:09:55 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:40:17 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:40:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:28:45 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 CMD ["irb"]
 ```
 
@@ -232,39 +232,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c6957aefb66d28abfffaa8b0316225c93ae248e51de41c6472d528a29af6525`  
-		Last Modified: Wed, 26 Oct 2022 01:17:16 GMT  
-		Size: 40.8 MB (40803724 bytes)  
+	-	`sha256:a82f0b25b538ab3b61f52f143646fa2b54297b4cda1ec43ddced742cbbcf01c2`  
+		Last Modified: Fri, 04 Nov 2022 22:44:37 GMT  
+		Size: 40.8 MB (40807540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8abb56da477fa4a069dad39242e6d6999b85b514c78dc09595ac485605f1270`  
-		Last Modified: Wed, 26 Oct 2022 01:17:12 GMT  
+	-	`sha256:615afaccba5823904abefbf4e7856717efed9d89d5aec959a10e5cee835c9079`  
+		Last Modified: Fri, 04 Nov 2022 22:44:33 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebbb6e560a099b3810c3427e0327f394392499bcd6fbeda23a4d864b510bf097`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 5.9 MB (5886734 bytes)  
+	-	`sha256:347eda5a9750ed4935d2f9aca6db5b71b352a1e5147943698f02b70c3424cd8a`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 5.9 MB (5886762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d6e9848f0eedb11e3bfe91204b99089d0c16c2664743259442b1ab4d0cb3502`  
-		Last Modified: Wed, 26 Oct 2022 18:30:34 GMT  
-		Size: 28.7 MB (28672415 bytes)  
+	-	`sha256:a7ec581d2bbce6acf852e60383cc0ba7fb5624aaf3df18c26fa001b710c08302`  
+		Last Modified: Fri, 04 Nov 2022 23:41:52 GMT  
+		Size: 28.7 MB (28672679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ed42c04ea317722d6a835a9276829cc295e57d11424383e9aa2b58a0075a64`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 224.0 B  
+	-	`sha256:abe3d5824237eeaaa67bc8b970adf27d150e34354223ab9a39447f94edc0bbeb`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5896696ee8d8c7d1ebf557a9bec79c111339baed5fb9cb1e31332739a77bec`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 1.1 MB (1065595 bytes)  
+	-	`sha256:5ca23cd8897f38c3c9699a7fcf32dc4bf95e7d1676bb88e37b881afd0f1ca8fa`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 1.1 MB (1066313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8a33d03a9035b87bbcffcef0b770943dff76c9735cc50db4a0b1a86cc898f1e`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:3cb2e88e21d802708863053326d846d1024c3549da8ed7c8a15788dbdeb53591`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9-jdk`
 
 ```console
-$ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a153851a4c124b2e
+$ docker pull jruby@sha256:c2f1f3c5da03fe547238cc434e2e1dfa61d34a13cc8cb26db5fb7060d5b648d1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -275,14 +275,14 @@ $ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a1538
 ### `jruby:9-jdk` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:b3f092b500a43bc786249ea7139b473a5445402ed0da9340718f8a11b605d822
+$ docker pull jruby@sha256:e1946c55a5209d6dbf348061fe5456779d28ada1f48af04f3db0d6f79d63c3a9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **185.1 MB (185109927 bytes)**  
+-	Total Size: **185.1 MB (185125651 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:43039622a1686ffdcf20f0b2c181dfdbd66accd8729bd3c34444598d6c6b1d81`
+-	Image ID: `sha256:d4b0a610f60849dbded20c5fbb62d09345cb14ad55971dbedf03943605bf65b8`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -298,35 +298,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:46 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:24 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 CMD ["irb"]
 ```
 
@@ -339,46 +339,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d4cce88531bbe6024147de98024b6ee6321c70c8259f2ea11ad5712e2163e9d`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 28.7 MB (28672416 bytes)  
+	-	`sha256:5314fb85b3dcc9645b47232b283c5de36f644cd14832bf9409c0f6bedf003dd0`  
+		Last Modified: Sat, 05 Nov 2022 00:09:49 GMT  
+		Size: 28.7 MB (28672720 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0450dc5c9e7d02e0a1d3a4f8d2fbc7121a236688436c0496ae57f83e8c59ded`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 225.0 B  
+	-	`sha256:1122bf7420d03abefba5c58a74fdc4ada67856d509418f335dc2c3f3558dc531`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b896ffcc3cec7375b8b8440043e31c3d433ed1dc7e3eeaf662ab7cc1087546`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 1.1 MB (1065568 bytes)  
+	-	`sha256:89daf4a51bdf7aeefbf498c7fc3ff1bbba0ce22c0b5eb7029f7200895e9d401a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 1.1 MB (1066293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:143cc65463789f601c9e00f12c6b1747cfeeb100d414217e4cf23e52f41e2324`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
+	-	`sha256:24a69c2df430cef80585cc4de5c2833ebbc72aa59e31e57cf7c3ffcc65157236`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
 		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9-jdk` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:221ec85a6f16b8f7201a67cf87729aa22d7937cf1490c8e694cf2cec86d551b7
+$ docker pull jruby@sha256:b9a4e515d76f35742bb72a0ad4cc671367d8e4ed340fe40344e49043930f4399
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **181.7 MB (181653129 bytes)**  
+-	Total Size: **181.7 MB (181669077 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6f88ce27631397fb5dbf92a11e91eab84fe6726e4a3c47c1d84dcc16d592078`
+-	Image ID: `sha256:9a43aa62f6f52ec7f9f4fff9fa1bcbbd386d8b91843d4faffcecfd4e9f8b8650`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -394,35 +394,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:08:24 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:08:26 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:39:44 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:39:46 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:09 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 CMD ["irb"]
 ```
 
@@ -435,39 +435,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d378871150e62d050c8f290958e6f8468c306ae04dcb0ddb140197b42969f0a6`  
-		Last Modified: Wed, 26 Oct 2022 01:16:20 GMT  
-		Size: 102.6 MB (102615823 bytes)  
+	-	`sha256:89d22354a80d2d12ffad6f61953c73519c4d3e501897b672ceaa720a21ca9533`  
+		Last Modified: Fri, 04 Nov 2022 22:43:42 GMT  
+		Size: 102.6 MB (102630792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae5e11c8b7a6c46afa4aa04526b7ae48696bdd7460c3b4ecf082cb565252c62f`  
-		Last Modified: Wed, 26 Oct 2022 01:16:13 GMT  
+	-	`sha256:dfd3de5d3cf89d4eb535267ba80576b5c8b40771b2b9213e5a423086faf1b916`  
+		Last Modified: Fri, 04 Nov 2022 22:43:34 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e166ec431737c992a580b2ae74f399d7efcc3783d5eed348d15a89730f55558`  
-		Last Modified: Wed, 26 Oct 2022 18:31:09 GMT  
-		Size: 5.9 MB (5886740 bytes)  
+	-	`sha256:76083e2bbb9d806969ce8ad3eca743ddbc01f21cf076d1145a17ed2a6cd0ad2c`  
+		Last Modified: Fri, 04 Nov 2022 23:42:26 GMT  
+		Size: 5.9 MB (5886787 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d81692bf3018f4cc37993ec23bb15b0ab616efed80c7e38a13e2745b3ba41c5a`  
-		Last Modified: Wed, 26 Oct 2022 18:31:10 GMT  
-		Size: 28.7 MB (28672424 bytes)  
+	-	`sha256:27a7bdf9254d520e509d0dfd7b5be7ac4e2c88104eb0d609395255edd677e3a2`  
+		Last Modified: Fri, 04 Nov 2022 23:42:27 GMT  
+		Size: 28.7 MB (28672657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:30b52c5b63ce1d1a0c763f5bb96cae40b877bca27aa5f6a1f9970c621906e3bd`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 225.0 B  
+	-	`sha256:a732e63ff73d304cdb542f7fda1f163bceb4d1029639d948841f9ca2e7b0f2b9`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35db8dea10915a920e750a85e8bf05436a4b7fcf52cb5db3f2f6b9a5e7e904e3`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 1.1 MB (1065578 bytes)  
+	-	`sha256:4e7cdf605588cb2f2d259fb4cffce27af2db4e98c307e042f95169b259647bb6`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 1.1 MB (1066274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c1d3a702b3ec7fe7fe64259ba5602aaea93f39e2845d14bdf75f40996b060e57`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 174.0 B  
+	-	`sha256:071281295b8993de5c4baa7f7328cd27217a6399a5d515e641fb9e58a1d2addb`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9-jdk8`
 
 ```console
-$ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a153851a4c124b2e
+$ docker pull jruby@sha256:c2f1f3c5da03fe547238cc434e2e1dfa61d34a13cc8cb26db5fb7060d5b648d1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -478,14 +478,14 @@ $ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a1538
 ### `jruby:9-jdk8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:b3f092b500a43bc786249ea7139b473a5445402ed0da9340718f8a11b605d822
+$ docker pull jruby@sha256:e1946c55a5209d6dbf348061fe5456779d28ada1f48af04f3db0d6f79d63c3a9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **185.1 MB (185109927 bytes)**  
+-	Total Size: **185.1 MB (185125651 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:43039622a1686ffdcf20f0b2c181dfdbd66accd8729bd3c34444598d6c6b1d81`
+-	Image ID: `sha256:d4b0a610f60849dbded20c5fbb62d09345cb14ad55971dbedf03943605bf65b8`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -501,35 +501,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:46 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:24 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 CMD ["irb"]
 ```
 
@@ -542,46 +542,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d4cce88531bbe6024147de98024b6ee6321c70c8259f2ea11ad5712e2163e9d`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 28.7 MB (28672416 bytes)  
+	-	`sha256:5314fb85b3dcc9645b47232b283c5de36f644cd14832bf9409c0f6bedf003dd0`  
+		Last Modified: Sat, 05 Nov 2022 00:09:49 GMT  
+		Size: 28.7 MB (28672720 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0450dc5c9e7d02e0a1d3a4f8d2fbc7121a236688436c0496ae57f83e8c59ded`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 225.0 B  
+	-	`sha256:1122bf7420d03abefba5c58a74fdc4ada67856d509418f335dc2c3f3558dc531`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b896ffcc3cec7375b8b8440043e31c3d433ed1dc7e3eeaf662ab7cc1087546`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 1.1 MB (1065568 bytes)  
+	-	`sha256:89daf4a51bdf7aeefbf498c7fc3ff1bbba0ce22c0b5eb7029f7200895e9d401a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 1.1 MB (1066293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:143cc65463789f601c9e00f12c6b1747cfeeb100d414217e4cf23e52f41e2324`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
+	-	`sha256:24a69c2df430cef80585cc4de5c2833ebbc72aa59e31e57cf7c3ffcc65157236`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
 		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9-jdk8` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:221ec85a6f16b8f7201a67cf87729aa22d7937cf1490c8e694cf2cec86d551b7
+$ docker pull jruby@sha256:b9a4e515d76f35742bb72a0ad4cc671367d8e4ed340fe40344e49043930f4399
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **181.7 MB (181653129 bytes)**  
+-	Total Size: **181.7 MB (181669077 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6f88ce27631397fb5dbf92a11e91eab84fe6726e4a3c47c1d84dcc16d592078`
+-	Image ID: `sha256:9a43aa62f6f52ec7f9f4fff9fa1bcbbd386d8b91843d4faffcecfd4e9f8b8650`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -597,35 +597,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:08:24 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:08:26 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:39:44 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:39:46 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:09 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 CMD ["irb"]
 ```
 
@@ -638,39 +638,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d378871150e62d050c8f290958e6f8468c306ae04dcb0ddb140197b42969f0a6`  
-		Last Modified: Wed, 26 Oct 2022 01:16:20 GMT  
-		Size: 102.6 MB (102615823 bytes)  
+	-	`sha256:89d22354a80d2d12ffad6f61953c73519c4d3e501897b672ceaa720a21ca9533`  
+		Last Modified: Fri, 04 Nov 2022 22:43:42 GMT  
+		Size: 102.6 MB (102630792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae5e11c8b7a6c46afa4aa04526b7ae48696bdd7460c3b4ecf082cb565252c62f`  
-		Last Modified: Wed, 26 Oct 2022 01:16:13 GMT  
+	-	`sha256:dfd3de5d3cf89d4eb535267ba80576b5c8b40771b2b9213e5a423086faf1b916`  
+		Last Modified: Fri, 04 Nov 2022 22:43:34 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e166ec431737c992a580b2ae74f399d7efcc3783d5eed348d15a89730f55558`  
-		Last Modified: Wed, 26 Oct 2022 18:31:09 GMT  
-		Size: 5.9 MB (5886740 bytes)  
+	-	`sha256:76083e2bbb9d806969ce8ad3eca743ddbc01f21cf076d1145a17ed2a6cd0ad2c`  
+		Last Modified: Fri, 04 Nov 2022 23:42:26 GMT  
+		Size: 5.9 MB (5886787 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d81692bf3018f4cc37993ec23bb15b0ab616efed80c7e38a13e2745b3ba41c5a`  
-		Last Modified: Wed, 26 Oct 2022 18:31:10 GMT  
-		Size: 28.7 MB (28672424 bytes)  
+	-	`sha256:27a7bdf9254d520e509d0dfd7b5be7ac4e2c88104eb0d609395255edd677e3a2`  
+		Last Modified: Fri, 04 Nov 2022 23:42:27 GMT  
+		Size: 28.7 MB (28672657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:30b52c5b63ce1d1a0c763f5bb96cae40b877bca27aa5f6a1f9970c621906e3bd`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 225.0 B  
+	-	`sha256:a732e63ff73d304cdb542f7fda1f163bceb4d1029639d948841f9ca2e7b0f2b9`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35db8dea10915a920e750a85e8bf05436a4b7fcf52cb5db3f2f6b9a5e7e904e3`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 1.1 MB (1065578 bytes)  
+	-	`sha256:4e7cdf605588cb2f2d259fb4cffce27af2db4e98c307e042f95169b259647bb6`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 1.1 MB (1066274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c1d3a702b3ec7fe7fe64259ba5602aaea93f39e2845d14bdf75f40996b060e57`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 174.0 B  
+	-	`sha256:071281295b8993de5c4baa7f7328cd27217a6399a5d515e641fb9e58a1d2addb`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2`
 
 ```console
-$ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a862a8cf2317
+$ docker pull jruby@sha256:f88f0458dc187b3ae6387e0f91f34dc55145b4753f9b6dad8c75e9f412df17d2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -680,14 +680,14 @@ $ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a
 ### `jruby:9.2` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:cccaf23799cfd1ba88c5b6bd8f3460f117477bc63d1c3068cfc23898afdcfb4f
+$ docker pull jruby@sha256:29582053d9907366b14816845c40986ab48cdb6f0b963af704595bb19f129d60
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **122.6 MB (122574579 bytes)**  
+-	Total Size: **122.6 MB (122586072 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b6a0fdb197a0ac5122b1c05c2bd39fc95281ac2c85f6c0601df6303bd65ff77c`
+-	Image ID: `sha256:da8f1684efe70fd25658b29db3aeea5a45990558f9fe8fcf69d18fd0d925ef4d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -703,35 +703,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:08 GMT
+# Sat, 05 Nov 2022 00:07:19 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 CMD ["irb"]
 ```
 
@@ -744,39 +744,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:071c603be07ab44266b03df5df7a2c2e11305fba1bc7b1f462bbc4e330d48587`  
-		Last Modified: Wed, 26 Oct 2022 23:36:14 GMT  
-		Size: 27.8 MB (27844770 bytes)  
+	-	`sha256:ced9de2d7bf44da59c1d8c8d1a84bcdc195f765903bf4b20a39a52060cfeb411`  
+		Last Modified: Sat, 05 Nov 2022 00:10:51 GMT  
+		Size: 27.8 MB (27844644 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1abd3e69940b05a192444b16a0648fb5f61f201b5fac92bb4fbd714ad5cd5af4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 226.0 B  
+	-	`sha256:34976b2fa0f403e613035f1300a1c7e0a852e03a8b6dd5300fc4506c25cf61c9`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05205e2b995741a5bf3b6526edeec0f128be4e086bf1251c99cd42c386bc2fe7`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 1.1 MB (1065460 bytes)  
+	-	`sha256:5a750128aa05a6bbc70747f2b19d09eb632e14cebb8914b42c8ce501749c0f82`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 1.1 MB (1066194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73fb3a106225bef0456bde044d0307985775ebf5d7391572e09a68cc814bd4b4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 175.0 B  
+	-	`sha256:f32e30cedb7df042a0e49a19fe87540c050dad8a73d10a07bf65a76771d78e40`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2-jdk`
 
 ```console
-$ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e6360986149d3c4
+$ docker pull jruby@sha256:cc5d9e0f90fa6effd68057c202f6d06aeaf59da8ec1f30d00a52eca04e36aaa0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -786,14 +786,14 @@ $ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e636
 ### `jruby:9.2-jdk` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:d9a38af2aecd16a32f7efb2f275b827aad2fae4fc4de23d267d5bbc8cbcc910b
+$ docker pull jruby@sha256:02b958fc839d2ba597f5c708423a76ceea4b8ed0ec9680f6f2923075cfe5aa97
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.3 MB (184282155 bytes)**  
+-	Total Size: **184.3 MB (184297538 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f1ab3c0a3cb32706f6174e8614e993859c53d233e1791ca59f2e2e5ce51deea`
+-	Image ID: `sha256:f453b00d18af70268eac2afecbc450ea00edcf40f78c1cb21ac017466df67282`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -809,35 +809,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:21 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:22 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 CMD ["irb"]
 ```
 
@@ -850,39 +850,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:916b8a217746c620be284cc368e5a6c3c14813f72c1ba96ceda9e5ed5c650040`  
-		Last Modified: Wed, 26 Oct 2022 23:36:44 GMT  
-		Size: 27.8 MB (27844740 bytes)  
+	-	`sha256:962804d5bf7b26ba6903d7bd08ba5c6b6610ce1294ddff65c5d893956428d57c`  
+		Last Modified: Sat, 05 Nov 2022 00:11:22 GMT  
+		Size: 27.8 MB (27844717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb2868d8f56b845477a3c3cbde47c7da74e39643a0cefb8e76074917067f653e`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 226.0 B  
+	-	`sha256:0ff7dbff446b4f836be54050d9513a550385951c4414e6254e068677f60009cf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df028bd250f9257bd62d81493cb7542d06db97780f0bac5551daa8be399655eb`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 1.1 MB (1065471 bytes)  
+	-	`sha256:7485f77acddea956f7d5a49be3cd34efa75588d3a9f9b49f6c1c6e48c95d1eaf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 1.1 MB (1066183 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d152537be7223d8dc2ea0f4efaaf2438757ab63a73fe62aafeafdf1872218dc3`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 175.0 B  
+	-	`sha256:ed282981b78bca73362bdf69bd8559623e54fe8e1f8c010a8e0a1961fa367d7a`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2-jdk11`
 
 ```console
-$ docker pull jruby@sha256:742c9a222bd9ab280f74cef152c59967dbab18808c793c72ef5b2256cdc0651d
+$ docker pull jruby@sha256:fbb4e62cf84c81e7ad19f991b4f0803067ca93267c8c74d9059d1b0b09046ef3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -892,14 +892,14 @@ $ docker pull jruby@sha256:742c9a222bd9ab280f74cef152c59967dbab18808c793c72ef5b2
 ### `jruby:9.2-jdk11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:aaad37ff5303f69e24693abb104c2a6fcbbb0e28b7af31f6fb19193b1f1234ba
+$ docker pull jruby@sha256:66762b4de39ab25355c51e3ba5f1f5b227601f9d64856f17ff928594e898ad51
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **278.9 MB (278895300 bytes)**  
+-	Total Size: **279.2 MB (279231452 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bed1c02917e4c8b5997e6fb58a63391e9c0d4e87addb844b94c563043120bbbf`
+-	Image ID: `sha256:ff43099757e5d0c251c2e1021b7b33a817c18f48d6b8375a3f3c696cb8f3c5a9`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -915,37 +915,37 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:28:53 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='a703acfd04ece4a4aac4cb9bda26b7d225874008bba324237bd6f53792edb778';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b18877871eda801ccb99bb34c5d7d77fccf6adad02514110c21389632ec91024';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='b16b1b50699a9caaae3d782be687625d81e069c886df904f83d13e6c4322a179';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='5f6b513757d386352cf91514ed5859d1ab59364b4453e1f1c57152ba2039b8e2';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:21:36 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='d18b5dd73fce9edd5c58f623a1173f9ee2d45023836b8753b96beae51673a432';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='9ff3b4bd2bac18fb39f3356148efa2dc710ac029e12dc8f18ea1fe6be23bf299';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='18c636bd103e240d29cdb30d7867720ea9fb9ff7c645738bfb4d5b8027269263';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='eb861db1433ddc1b89f170b789fafde282f137218d6d985fb5c2003e4ff44984';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b8d46ed08ef4859476fe6421a7690d899ed83dce63f13fd894f994043177ef3c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:21:38 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:38 GMT
 CMD ["jshell"]
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:53 GMT
+# Sat, 05 Nov 2022 00:08:00 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:53 GMT
+# Sat, 05 Nov 2022 00:08:00 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:55 GMT
+# Sat, 05 Nov 2022 00:08:02 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:55 GMT
+# Sat, 05 Nov 2022 00:08:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:56 GMT
+# Sat, 05 Nov 2022 00:08:03 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:33:05 GMT
+# Sat, 05 Nov 2022 00:08:12 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:33:05 GMT
+# Sat, 05 Nov 2022 00:08:12 GMT
 CMD ["irb"]
 ```
 
@@ -958,33 +958,33 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc580f2109be281fc1a5ab6d065bf040ae81d4c412e9aab8f36ebfc16e001488`  
-		Last Modified: Wed, 26 Oct 2022 16:44:21 GMT  
-		Size: 198.1 MB (198129334 bytes)  
+	-	`sha256:92987a6c66b9d34f09f6ef0fad549352afbe72ee489c23324c1dd11f432c0243`  
+		Last Modified: Fri, 04 Nov 2022 23:27:46 GMT  
+		Size: 198.5 MB (198464645 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:317971f3cd99c10fb540436d85a33bbc5fb1b174ea9f7cfbac0a9d0d7ea0b3e7`  
-		Last Modified: Wed, 26 Oct 2022 16:44:06 GMT  
+	-	`sha256:e0db103a91cc0800441b2d41aeab58673674235234416ed22e955b92d025c3ab`  
+		Last Modified: Fri, 04 Nov 2022 23:27:32 GMT  
+		Size: 174.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a2bce30d84c17f1b6d4e186d576332eddea352dae0c743b10fda5870a4ff62f3`  
+		Last Modified: Sat, 05 Nov 2022 00:10:32 GMT  
+		Size: 6.9 MB (6923824 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:246ed1720663ca3c64db13e4f7bb0a0de236bda5d72a79525e098a769dd8e071`  
+		Last Modified: Sat, 05 Nov 2022 00:11:59 GMT  
+		Size: 27.8 MB (27844740 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:02048e12fe03b585fd5cd0122bc0b0fa617800979eb47d09d7bd83062fba13d0`  
+		Last Modified: Sat, 05 Nov 2022 00:11:57 GMT  
+		Size: 225.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:375a02765e3d4e88ea5b3a6da7b635fc7ed067c0b16ae4fcddae7ba9ac0e3fbf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:58 GMT  
+		Size: 1.1 MB (1066179 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5ef04a240900f25005bad1e16c5b46096c7f0b884b5fecd4109dcfafec872754`  
+		Last Modified: Sat, 05 Nov 2022 00:11:57 GMT  
 		Size: 175.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:baba098fdf0de0c0367cd4a2b486b49fb90456e89f29fa6ade923373ba6f93dd`  
-		Last Modified: Wed, 26 Oct 2022 23:35:43 GMT  
-		Size: 6.9 MB (6923759 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae4b31b0df0387b270f293e0d2f6bdf685f7b32abd74a921a4d57b339fa68dfc`  
-		Last Modified: Wed, 26 Oct 2022 23:37:21 GMT  
-		Size: 27.8 MB (27844688 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:363d05cadc51b3a1b9789d98b5527dc0410dd036ac83c4ceb5611ac02334ca7a`  
-		Last Modified: Wed, 26 Oct 2022 23:37:18 GMT  
-		Size: 223.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:007df6e5748c44e7575e2ba584ee387a9b9ef71fde48f516555c682dd33823c5`  
-		Last Modified: Wed, 26 Oct 2022 23:37:19 GMT  
-		Size: 1.1 MB (1065455 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:331612e58e3b2c2f66f5b7dc8acb4ed4a1839af49233fd934ac636c28f0b7b4b`  
-		Last Modified: Wed, 26 Oct 2022 23:37:18 GMT  
-		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2-jdk17`
@@ -1098,7 +1098,7 @@ CMD ["irb"]
 ## `jruby:9.2-jdk8`
 
 ```console
-$ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e6360986149d3c4
+$ docker pull jruby@sha256:cc5d9e0f90fa6effd68057c202f6d06aeaf59da8ec1f30d00a52eca04e36aaa0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1108,14 +1108,14 @@ $ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e636
 ### `jruby:9.2-jdk8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:d9a38af2aecd16a32f7efb2f275b827aad2fae4fc4de23d267d5bbc8cbcc910b
+$ docker pull jruby@sha256:02b958fc839d2ba597f5c708423a76ceea4b8ed0ec9680f6f2923075cfe5aa97
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.3 MB (184282155 bytes)**  
+-	Total Size: **184.3 MB (184297538 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f1ab3c0a3cb32706f6174e8614e993859c53d233e1791ca59f2e2e5ce51deea`
+-	Image ID: `sha256:f453b00d18af70268eac2afecbc450ea00edcf40f78c1cb21ac017466df67282`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -1131,35 +1131,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:21 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:22 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 CMD ["irb"]
 ```
 
@@ -1172,39 +1172,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:916b8a217746c620be284cc368e5a6c3c14813f72c1ba96ceda9e5ed5c650040`  
-		Last Modified: Wed, 26 Oct 2022 23:36:44 GMT  
-		Size: 27.8 MB (27844740 bytes)  
+	-	`sha256:962804d5bf7b26ba6903d7bd08ba5c6b6610ce1294ddff65c5d893956428d57c`  
+		Last Modified: Sat, 05 Nov 2022 00:11:22 GMT  
+		Size: 27.8 MB (27844717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb2868d8f56b845477a3c3cbde47c7da74e39643a0cefb8e76074917067f653e`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 226.0 B  
+	-	`sha256:0ff7dbff446b4f836be54050d9513a550385951c4414e6254e068677f60009cf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df028bd250f9257bd62d81493cb7542d06db97780f0bac5551daa8be399655eb`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 1.1 MB (1065471 bytes)  
+	-	`sha256:7485f77acddea956f7d5a49be3cd34efa75588d3a9f9b49f6c1c6e48c95d1eaf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 1.1 MB (1066183 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d152537be7223d8dc2ea0f4efaaf2438757ab63a73fe62aafeafdf1872218dc3`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 175.0 B  
+	-	`sha256:ed282981b78bca73362bdf69bd8559623e54fe8e1f8c010a8e0a1961fa367d7a`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2-jre`
 
 ```console
-$ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a862a8cf2317
+$ docker pull jruby@sha256:f88f0458dc187b3ae6387e0f91f34dc55145b4753f9b6dad8c75e9f412df17d2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1214,14 +1214,14 @@ $ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a
 ### `jruby:9.2-jre` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:cccaf23799cfd1ba88c5b6bd8f3460f117477bc63d1c3068cfc23898afdcfb4f
+$ docker pull jruby@sha256:29582053d9907366b14816845c40986ab48cdb6f0b963af704595bb19f129d60
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **122.6 MB (122574579 bytes)**  
+-	Total Size: **122.6 MB (122586072 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b6a0fdb197a0ac5122b1c05c2bd39fc95281ac2c85f6c0601df6303bd65ff77c`
+-	Image ID: `sha256:da8f1684efe70fd25658b29db3aeea5a45990558f9fe8fcf69d18fd0d925ef4d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -1237,35 +1237,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:08 GMT
+# Sat, 05 Nov 2022 00:07:19 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 CMD ["irb"]
 ```
 
@@ -1278,39 +1278,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:071c603be07ab44266b03df5df7a2c2e11305fba1bc7b1f462bbc4e330d48587`  
-		Last Modified: Wed, 26 Oct 2022 23:36:14 GMT  
-		Size: 27.8 MB (27844770 bytes)  
+	-	`sha256:ced9de2d7bf44da59c1d8c8d1a84bcdc195f765903bf4b20a39a52060cfeb411`  
+		Last Modified: Sat, 05 Nov 2022 00:10:51 GMT  
+		Size: 27.8 MB (27844644 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1abd3e69940b05a192444b16a0648fb5f61f201b5fac92bb4fbd714ad5cd5af4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 226.0 B  
+	-	`sha256:34976b2fa0f403e613035f1300a1c7e0a852e03a8b6dd5300fc4506c25cf61c9`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05205e2b995741a5bf3b6526edeec0f128be4e086bf1251c99cd42c386bc2fe7`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 1.1 MB (1065460 bytes)  
+	-	`sha256:5a750128aa05a6bbc70747f2b19d09eb632e14cebb8914b42c8ce501749c0f82`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 1.1 MB (1066194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73fb3a106225bef0456bde044d0307985775ebf5d7391572e09a68cc814bd4b4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 175.0 B  
+	-	`sha256:f32e30cedb7df042a0e49a19fe87540c050dad8a73d10a07bf65a76771d78e40`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2-jre11`
 
 ```console
-$ docker pull jruby@sha256:5a95ff7c6f53169afdb66c8fe8807178e291b577db2fb265d84d12324d7a48f7
+$ docker pull jruby@sha256:754ed78fe573ce35f3fe8ba61161733cdc59ee583bff00dba57a791b78d71eb0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1320,14 +1320,14 @@ $ docker pull jruby@sha256:5a95ff7c6f53169afdb66c8fe8807178e291b577db2fb265d84d1
 ### `jruby:9.2-jre11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:1f91e7299c21c5d5e0cf7ed1150e41fd08847931911112ff4bcef65a59367df5
+$ docker pull jruby@sha256:792ee6967ee73f620fafb9aa616cc5f407d9a2f110beb4990459a8358f2fc7a6
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **127.3 MB (127263109 bytes)**  
+-	Total Size: **127.4 MB (127396943 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e2f339bd6f25bf0dbcccc8a381f7b30bd6dbda13877e8987003aee8638f41ec7`
+-	Image ID: `sha256:75c5e1bf6247b1626f7338dc5561327330eb9c8517a33bb5ec933d2a4206e043`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -1343,35 +1343,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:29:23 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:29:24 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:22:24 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:22:25 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:36 GMT
+# Sat, 05 Nov 2022 00:07:46 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:36 GMT
+# Sat, 05 Nov 2022 00:07:46 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:38 GMT
+# Sat, 05 Nov 2022 00:07:48 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:39 GMT
+# Sat, 05 Nov 2022 00:07:48 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:39 GMT
+# Sat, 05 Nov 2022 00:07:49 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:49 GMT
+# Sat, 05 Nov 2022 00:07:58 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:49 GMT
+# Sat, 05 Nov 2022 00:07:58 GMT
 CMD ["irb"]
 ```
 
@@ -1384,39 +1384,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:66d4ce13fd620ba04abe64eeebe53783f1fceba116a08eace8fdfe202db35c00`  
-		Last Modified: Wed, 26 Oct 2022 16:45:13 GMT  
-		Size: 46.5 MB (46497092 bytes)  
+	-	`sha256:bbd45db92608776aa8d24a28e427c9e56ec56a4d83bc3da5db28817f88a8ffad`  
+		Last Modified: Fri, 04 Nov 2022 23:29:16 GMT  
+		Size: 46.6 MB (46630173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e81ede82d9fd39574aad8126301364fc83a05b01f9537dc5a8c8c17865dca42`  
-		Last Modified: Wed, 26 Oct 2022 16:45:06 GMT  
+	-	`sha256:6fcfd0f47989acccee774146a436995f6d433299e82638b90c6b47f093ebd3cc`  
+		Last Modified: Fri, 04 Nov 2022 23:29:09 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90dc6131f518995245e9cf60c905e000f4c31b781da122846b5489bfaa2c84f0`  
-		Last Modified: Wed, 26 Oct 2022 23:35:29 GMT  
-		Size: 6.9 MB (6923824 bytes)  
+	-	`sha256:b2efe7cd9800950ff66f440f2247d8eeb53b1a4c8c235e14b0ca3917821a1410`  
+		Last Modified: Sat, 05 Nov 2022 00:10:16 GMT  
+		Size: 6.9 MB (6923817 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99dbed3153418c8d81c0ac5761ca46f27ed84eeaaef884912523b42d28957495`  
-		Last Modified: Wed, 26 Oct 2022 23:37:06 GMT  
-		Size: 27.8 MB (27844664 bytes)  
+	-	`sha256:3571f7f1016f65748e283a1522425ff29680f015e3fd681db4de45071710848f`  
+		Last Modified: Sat, 05 Nov 2022 00:11:45 GMT  
+		Size: 27.8 MB (27844733 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e2e75dddd8f96ac51c156c67e6b179fb592583f99f555288e7bf7a337e6fd52`  
-		Last Modified: Wed, 26 Oct 2022 23:37:04 GMT  
-		Size: 225.0 B  
+	-	`sha256:7cb924ba09b304ee52012afd625f97ead42d4405be459948b18cf7175f17eacc`  
+		Last Modified: Sat, 05 Nov 2022 00:11:42 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6dde4eeb9f2741d06488e1c99e81cf14c9001e1ddb71e6ba9342c7538c2c3dcf`  
-		Last Modified: Wed, 26 Oct 2022 23:37:04 GMT  
-		Size: 1.1 MB (1065478 bytes)  
+	-	`sha256:c4ed1651616435faeb35471dd1659df9fc581a06108f4b2a5b03981d819d8745`  
+		Last Modified: Sat, 05 Nov 2022 00:11:43 GMT  
+		Size: 1.1 MB (1066166 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:36a53bf399c755b0242f3a2ca808f196abc1ff8131818266dccc819bd594d729`  
-		Last Modified: Wed, 26 Oct 2022 23:37:04 GMT  
-		Size: 175.0 B  
+	-	`sha256:fabf5db522fef36d2cc3e7ce345f1c81499549f172029bf0c452b800ec1c1d69`  
+		Last Modified: Sat, 05 Nov 2022 00:11:42 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2-jre8`
 
 ```console
-$ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a862a8cf2317
+$ docker pull jruby@sha256:f88f0458dc187b3ae6387e0f91f34dc55145b4753f9b6dad8c75e9f412df17d2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1426,14 +1426,14 @@ $ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a
 ### `jruby:9.2-jre8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:cccaf23799cfd1ba88c5b6bd8f3460f117477bc63d1c3068cfc23898afdcfb4f
+$ docker pull jruby@sha256:29582053d9907366b14816845c40986ab48cdb6f0b963af704595bb19f129d60
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **122.6 MB (122574579 bytes)**  
+-	Total Size: **122.6 MB (122586072 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b6a0fdb197a0ac5122b1c05c2bd39fc95281ac2c85f6c0601df6303bd65ff77c`
+-	Image ID: `sha256:da8f1684efe70fd25658b29db3aeea5a45990558f9fe8fcf69d18fd0d925ef4d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -1449,35 +1449,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:08 GMT
+# Sat, 05 Nov 2022 00:07:19 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 CMD ["irb"]
 ```
 
@@ -1490,39 +1490,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:071c603be07ab44266b03df5df7a2c2e11305fba1bc7b1f462bbc4e330d48587`  
-		Last Modified: Wed, 26 Oct 2022 23:36:14 GMT  
-		Size: 27.8 MB (27844770 bytes)  
+	-	`sha256:ced9de2d7bf44da59c1d8c8d1a84bcdc195f765903bf4b20a39a52060cfeb411`  
+		Last Modified: Sat, 05 Nov 2022 00:10:51 GMT  
+		Size: 27.8 MB (27844644 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1abd3e69940b05a192444b16a0648fb5f61f201b5fac92bb4fbd714ad5cd5af4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 226.0 B  
+	-	`sha256:34976b2fa0f403e613035f1300a1c7e0a852e03a8b6dd5300fc4506c25cf61c9`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05205e2b995741a5bf3b6526edeec0f128be4e086bf1251c99cd42c386bc2fe7`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 1.1 MB (1065460 bytes)  
+	-	`sha256:5a750128aa05a6bbc70747f2b19d09eb632e14cebb8914b42c8ce501749c0f82`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 1.1 MB (1066194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73fb3a106225bef0456bde044d0307985775ebf5d7391572e09a68cc814bd4b4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 175.0 B  
+	-	`sha256:f32e30cedb7df042a0e49a19fe87540c050dad8a73d10a07bf65a76771d78e40`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2-onbuild`
 
 ```console
-$ docker pull jruby@sha256:b9ee8bb6ff4dbae146910fbdd2bdf78c9ccc51643484abb966c7b846d8857389
+$ docker pull jruby@sha256:140e65b1b20fc307b45c3ec53d6d50980aff5fbb39a4611873cb95a3b3fe9c04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1532,14 +1532,14 @@ $ docker pull jruby@sha256:b9ee8bb6ff4dbae146910fbdd2bdf78c9ccc51643484abb966c7b
 ### `jruby:9.2-onbuild` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:a71f6bd28a3f551d95544dc4cbbca4f4d84d66dd962c4e402cc89e4a7121665e
+$ docker pull jruby@sha256:7ceacf4950140e02e13c58fcab6d76324a122b4485c3e1cb1cbac392d00fba5b
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.3 MB (184282320 bytes)**  
+-	Total Size: **184.3 MB (184297704 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b9ef8e82d188752905ebeabe1327639cc6c3c3b09cf338e87454ccdb0bf2b607`
+-	Image ID: `sha256:12cf4e8adf5b2561282956150bb474bfc33a47be2ecef3a2f9f5a8fcb333b412`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -1555,47 +1555,47 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:21 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:22 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 CMD ["irb"]
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 RUN mkdir -p /usr/src/app
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 WORKDIR /usr/src/app
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 ONBUILD ADD Gemfile /usr/src/app/
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 ONBUILD ADD Gemfile.lock /usr/src/app/
-# Wed, 26 Oct 2022 23:33:25 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 ONBUILD RUN bundle install --system
-# Wed, 26 Oct 2022 23:33:25 GMT
+# Sat, 05 Nov 2022 00:08:18 GMT
 ONBUILD ADD . /usr/src/app
 ```
 
@@ -1608,43 +1608,43 @@ ONBUILD ADD . /usr/src/app
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:916b8a217746c620be284cc368e5a6c3c14813f72c1ba96ceda9e5ed5c650040`  
-		Last Modified: Wed, 26 Oct 2022 23:36:44 GMT  
-		Size: 27.8 MB (27844740 bytes)  
+	-	`sha256:962804d5bf7b26ba6903d7bd08ba5c6b6610ce1294ddff65c5d893956428d57c`  
+		Last Modified: Sat, 05 Nov 2022 00:11:22 GMT  
+		Size: 27.8 MB (27844717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb2868d8f56b845477a3c3cbde47c7da74e39643a0cefb8e76074917067f653e`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 226.0 B  
+	-	`sha256:0ff7dbff446b4f836be54050d9513a550385951c4414e6254e068677f60009cf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df028bd250f9257bd62d81493cb7542d06db97780f0bac5551daa8be399655eb`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 1.1 MB (1065471 bytes)  
+	-	`sha256:7485f77acddea956f7d5a49be3cd34efa75588d3a9f9b49f6c1c6e48c95d1eaf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 1.1 MB (1066183 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d152537be7223d8dc2ea0f4efaaf2438757ab63a73fe62aafeafdf1872218dc3`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 175.0 B  
+	-	`sha256:ed282981b78bca73362bdf69bd8559623e54fe8e1f8c010a8e0a1961fa367d7a`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd62201c38a9fab135e2569e65a0a03a4c6fffb4f44444830c815c50b1acd5d2`  
-		Last Modified: Wed, 26 Oct 2022 23:37:47 GMT  
-		Size: 165.0 B  
+	-	`sha256:b055aec8be67730ac13b35f78e077636dadd07c04fa108ea16a6b8fbc10de711`  
+		Last Modified: Sat, 05 Nov 2022 00:12:14 GMT  
+		Size: 166.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21`
 
 ```console
-$ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a862a8cf2317
+$ docker pull jruby@sha256:f88f0458dc187b3ae6387e0f91f34dc55145b4753f9b6dad8c75e9f412df17d2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1654,14 +1654,14 @@ $ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a
 ### `jruby:9.2.21` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:cccaf23799cfd1ba88c5b6bd8f3460f117477bc63d1c3068cfc23898afdcfb4f
+$ docker pull jruby@sha256:29582053d9907366b14816845c40986ab48cdb6f0b963af704595bb19f129d60
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **122.6 MB (122574579 bytes)**  
+-	Total Size: **122.6 MB (122586072 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b6a0fdb197a0ac5122b1c05c2bd39fc95281ac2c85f6c0601df6303bd65ff77c`
+-	Image ID: `sha256:da8f1684efe70fd25658b29db3aeea5a45990558f9fe8fcf69d18fd0d925ef4d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -1677,35 +1677,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:08 GMT
+# Sat, 05 Nov 2022 00:07:19 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 CMD ["irb"]
 ```
 
@@ -1718,39 +1718,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:071c603be07ab44266b03df5df7a2c2e11305fba1bc7b1f462bbc4e330d48587`  
-		Last Modified: Wed, 26 Oct 2022 23:36:14 GMT  
-		Size: 27.8 MB (27844770 bytes)  
+	-	`sha256:ced9de2d7bf44da59c1d8c8d1a84bcdc195f765903bf4b20a39a52060cfeb411`  
+		Last Modified: Sat, 05 Nov 2022 00:10:51 GMT  
+		Size: 27.8 MB (27844644 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1abd3e69940b05a192444b16a0648fb5f61f201b5fac92bb4fbd714ad5cd5af4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 226.0 B  
+	-	`sha256:34976b2fa0f403e613035f1300a1c7e0a852e03a8b6dd5300fc4506c25cf61c9`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05205e2b995741a5bf3b6526edeec0f128be4e086bf1251c99cd42c386bc2fe7`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 1.1 MB (1065460 bytes)  
+	-	`sha256:5a750128aa05a6bbc70747f2b19d09eb632e14cebb8914b42c8ce501749c0f82`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 1.1 MB (1066194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73fb3a106225bef0456bde044d0307985775ebf5d7391572e09a68cc814bd4b4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 175.0 B  
+	-	`sha256:f32e30cedb7df042a0e49a19fe87540c050dad8a73d10a07bf65a76771d78e40`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21-jdk`
 
 ```console
-$ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e6360986149d3c4
+$ docker pull jruby@sha256:cc5d9e0f90fa6effd68057c202f6d06aeaf59da8ec1f30d00a52eca04e36aaa0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1760,14 +1760,14 @@ $ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e636
 ### `jruby:9.2.21-jdk` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:d9a38af2aecd16a32f7efb2f275b827aad2fae4fc4de23d267d5bbc8cbcc910b
+$ docker pull jruby@sha256:02b958fc839d2ba597f5c708423a76ceea4b8ed0ec9680f6f2923075cfe5aa97
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.3 MB (184282155 bytes)**  
+-	Total Size: **184.3 MB (184297538 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f1ab3c0a3cb32706f6174e8614e993859c53d233e1791ca59f2e2e5ce51deea`
+-	Image ID: `sha256:f453b00d18af70268eac2afecbc450ea00edcf40f78c1cb21ac017466df67282`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -1783,35 +1783,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:21 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:22 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 CMD ["irb"]
 ```
 
@@ -1824,39 +1824,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:916b8a217746c620be284cc368e5a6c3c14813f72c1ba96ceda9e5ed5c650040`  
-		Last Modified: Wed, 26 Oct 2022 23:36:44 GMT  
-		Size: 27.8 MB (27844740 bytes)  
+	-	`sha256:962804d5bf7b26ba6903d7bd08ba5c6b6610ce1294ddff65c5d893956428d57c`  
+		Last Modified: Sat, 05 Nov 2022 00:11:22 GMT  
+		Size: 27.8 MB (27844717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb2868d8f56b845477a3c3cbde47c7da74e39643a0cefb8e76074917067f653e`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 226.0 B  
+	-	`sha256:0ff7dbff446b4f836be54050d9513a550385951c4414e6254e068677f60009cf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df028bd250f9257bd62d81493cb7542d06db97780f0bac5551daa8be399655eb`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 1.1 MB (1065471 bytes)  
+	-	`sha256:7485f77acddea956f7d5a49be3cd34efa75588d3a9f9b49f6c1c6e48c95d1eaf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 1.1 MB (1066183 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d152537be7223d8dc2ea0f4efaaf2438757ab63a73fe62aafeafdf1872218dc3`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 175.0 B  
+	-	`sha256:ed282981b78bca73362bdf69bd8559623e54fe8e1f8c010a8e0a1961fa367d7a`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21-jdk11`
 
 ```console
-$ docker pull jruby@sha256:742c9a222bd9ab280f74cef152c59967dbab18808c793c72ef5b2256cdc0651d
+$ docker pull jruby@sha256:fbb4e62cf84c81e7ad19f991b4f0803067ca93267c8c74d9059d1b0b09046ef3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1866,14 +1866,14 @@ $ docker pull jruby@sha256:742c9a222bd9ab280f74cef152c59967dbab18808c793c72ef5b2
 ### `jruby:9.2.21-jdk11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:aaad37ff5303f69e24693abb104c2a6fcbbb0e28b7af31f6fb19193b1f1234ba
+$ docker pull jruby@sha256:66762b4de39ab25355c51e3ba5f1f5b227601f9d64856f17ff928594e898ad51
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **278.9 MB (278895300 bytes)**  
+-	Total Size: **279.2 MB (279231452 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bed1c02917e4c8b5997e6fb58a63391e9c0d4e87addb844b94c563043120bbbf`
+-	Image ID: `sha256:ff43099757e5d0c251c2e1021b7b33a817c18f48d6b8375a3f3c696cb8f3c5a9`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -1889,37 +1889,37 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:28:53 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='a703acfd04ece4a4aac4cb9bda26b7d225874008bba324237bd6f53792edb778';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b18877871eda801ccb99bb34c5d7d77fccf6adad02514110c21389632ec91024';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='b16b1b50699a9caaae3d782be687625d81e069c886df904f83d13e6c4322a179';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='5f6b513757d386352cf91514ed5859d1ab59364b4453e1f1c57152ba2039b8e2';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:21:36 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='d18b5dd73fce9edd5c58f623a1173f9ee2d45023836b8753b96beae51673a432';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='9ff3b4bd2bac18fb39f3356148efa2dc710ac029e12dc8f18ea1fe6be23bf299';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='18c636bd103e240d29cdb30d7867720ea9fb9ff7c645738bfb4d5b8027269263';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='eb861db1433ddc1b89f170b789fafde282f137218d6d985fb5c2003e4ff44984';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b8d46ed08ef4859476fe6421a7690d899ed83dce63f13fd894f994043177ef3c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:21:38 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:38 GMT
 CMD ["jshell"]
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:53 GMT
+# Sat, 05 Nov 2022 00:08:00 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:53 GMT
+# Sat, 05 Nov 2022 00:08:00 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:55 GMT
+# Sat, 05 Nov 2022 00:08:02 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:55 GMT
+# Sat, 05 Nov 2022 00:08:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:56 GMT
+# Sat, 05 Nov 2022 00:08:03 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:33:05 GMT
+# Sat, 05 Nov 2022 00:08:12 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:33:05 GMT
+# Sat, 05 Nov 2022 00:08:12 GMT
 CMD ["irb"]
 ```
 
@@ -1932,33 +1932,33 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc580f2109be281fc1a5ab6d065bf040ae81d4c412e9aab8f36ebfc16e001488`  
-		Last Modified: Wed, 26 Oct 2022 16:44:21 GMT  
-		Size: 198.1 MB (198129334 bytes)  
+	-	`sha256:92987a6c66b9d34f09f6ef0fad549352afbe72ee489c23324c1dd11f432c0243`  
+		Last Modified: Fri, 04 Nov 2022 23:27:46 GMT  
+		Size: 198.5 MB (198464645 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:317971f3cd99c10fb540436d85a33bbc5fb1b174ea9f7cfbac0a9d0d7ea0b3e7`  
-		Last Modified: Wed, 26 Oct 2022 16:44:06 GMT  
+	-	`sha256:e0db103a91cc0800441b2d41aeab58673674235234416ed22e955b92d025c3ab`  
+		Last Modified: Fri, 04 Nov 2022 23:27:32 GMT  
+		Size: 174.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a2bce30d84c17f1b6d4e186d576332eddea352dae0c743b10fda5870a4ff62f3`  
+		Last Modified: Sat, 05 Nov 2022 00:10:32 GMT  
+		Size: 6.9 MB (6923824 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:246ed1720663ca3c64db13e4f7bb0a0de236bda5d72a79525e098a769dd8e071`  
+		Last Modified: Sat, 05 Nov 2022 00:11:59 GMT  
+		Size: 27.8 MB (27844740 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:02048e12fe03b585fd5cd0122bc0b0fa617800979eb47d09d7bd83062fba13d0`  
+		Last Modified: Sat, 05 Nov 2022 00:11:57 GMT  
+		Size: 225.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:375a02765e3d4e88ea5b3a6da7b635fc7ed067c0b16ae4fcddae7ba9ac0e3fbf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:58 GMT  
+		Size: 1.1 MB (1066179 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5ef04a240900f25005bad1e16c5b46096c7f0b884b5fecd4109dcfafec872754`  
+		Last Modified: Sat, 05 Nov 2022 00:11:57 GMT  
 		Size: 175.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:baba098fdf0de0c0367cd4a2b486b49fb90456e89f29fa6ade923373ba6f93dd`  
-		Last Modified: Wed, 26 Oct 2022 23:35:43 GMT  
-		Size: 6.9 MB (6923759 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae4b31b0df0387b270f293e0d2f6bdf685f7b32abd74a921a4d57b339fa68dfc`  
-		Last Modified: Wed, 26 Oct 2022 23:37:21 GMT  
-		Size: 27.8 MB (27844688 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:363d05cadc51b3a1b9789d98b5527dc0410dd036ac83c4ceb5611ac02334ca7a`  
-		Last Modified: Wed, 26 Oct 2022 23:37:18 GMT  
-		Size: 223.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:007df6e5748c44e7575e2ba584ee387a9b9ef71fde48f516555c682dd33823c5`  
-		Last Modified: Wed, 26 Oct 2022 23:37:19 GMT  
-		Size: 1.1 MB (1065455 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:331612e58e3b2c2f66f5b7dc8acb4ed4a1839af49233fd934ac636c28f0b7b4b`  
-		Last Modified: Wed, 26 Oct 2022 23:37:18 GMT  
-		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21-jdk17`
@@ -2072,7 +2072,7 @@ CMD ["irb"]
 ## `jruby:9.2.21-jdk8`
 
 ```console
-$ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e6360986149d3c4
+$ docker pull jruby@sha256:cc5d9e0f90fa6effd68057c202f6d06aeaf59da8ec1f30d00a52eca04e36aaa0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2082,14 +2082,14 @@ $ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e636
 ### `jruby:9.2.21-jdk8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:d9a38af2aecd16a32f7efb2f275b827aad2fae4fc4de23d267d5bbc8cbcc910b
+$ docker pull jruby@sha256:02b958fc839d2ba597f5c708423a76ceea4b8ed0ec9680f6f2923075cfe5aa97
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.3 MB (184282155 bytes)**  
+-	Total Size: **184.3 MB (184297538 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f1ab3c0a3cb32706f6174e8614e993859c53d233e1791ca59f2e2e5ce51deea`
+-	Image ID: `sha256:f453b00d18af70268eac2afecbc450ea00edcf40f78c1cb21ac017466df67282`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -2105,35 +2105,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:21 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:22 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 CMD ["irb"]
 ```
 
@@ -2146,39 +2146,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:916b8a217746c620be284cc368e5a6c3c14813f72c1ba96ceda9e5ed5c650040`  
-		Last Modified: Wed, 26 Oct 2022 23:36:44 GMT  
-		Size: 27.8 MB (27844740 bytes)  
+	-	`sha256:962804d5bf7b26ba6903d7bd08ba5c6b6610ce1294ddff65c5d893956428d57c`  
+		Last Modified: Sat, 05 Nov 2022 00:11:22 GMT  
+		Size: 27.8 MB (27844717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb2868d8f56b845477a3c3cbde47c7da74e39643a0cefb8e76074917067f653e`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 226.0 B  
+	-	`sha256:0ff7dbff446b4f836be54050d9513a550385951c4414e6254e068677f60009cf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df028bd250f9257bd62d81493cb7542d06db97780f0bac5551daa8be399655eb`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 1.1 MB (1065471 bytes)  
+	-	`sha256:7485f77acddea956f7d5a49be3cd34efa75588d3a9f9b49f6c1c6e48c95d1eaf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 1.1 MB (1066183 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d152537be7223d8dc2ea0f4efaaf2438757ab63a73fe62aafeafdf1872218dc3`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 175.0 B  
+	-	`sha256:ed282981b78bca73362bdf69bd8559623e54fe8e1f8c010a8e0a1961fa367d7a`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21-jre`
 
 ```console
-$ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a862a8cf2317
+$ docker pull jruby@sha256:f88f0458dc187b3ae6387e0f91f34dc55145b4753f9b6dad8c75e9f412df17d2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2188,14 +2188,14 @@ $ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a
 ### `jruby:9.2.21-jre` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:cccaf23799cfd1ba88c5b6bd8f3460f117477bc63d1c3068cfc23898afdcfb4f
+$ docker pull jruby@sha256:29582053d9907366b14816845c40986ab48cdb6f0b963af704595bb19f129d60
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **122.6 MB (122574579 bytes)**  
+-	Total Size: **122.6 MB (122586072 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b6a0fdb197a0ac5122b1c05c2bd39fc95281ac2c85f6c0601df6303bd65ff77c`
+-	Image ID: `sha256:da8f1684efe70fd25658b29db3aeea5a45990558f9fe8fcf69d18fd0d925ef4d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -2211,35 +2211,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:08 GMT
+# Sat, 05 Nov 2022 00:07:19 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 CMD ["irb"]
 ```
 
@@ -2252,39 +2252,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:071c603be07ab44266b03df5df7a2c2e11305fba1bc7b1f462bbc4e330d48587`  
-		Last Modified: Wed, 26 Oct 2022 23:36:14 GMT  
-		Size: 27.8 MB (27844770 bytes)  
+	-	`sha256:ced9de2d7bf44da59c1d8c8d1a84bcdc195f765903bf4b20a39a52060cfeb411`  
+		Last Modified: Sat, 05 Nov 2022 00:10:51 GMT  
+		Size: 27.8 MB (27844644 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1abd3e69940b05a192444b16a0648fb5f61f201b5fac92bb4fbd714ad5cd5af4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 226.0 B  
+	-	`sha256:34976b2fa0f403e613035f1300a1c7e0a852e03a8b6dd5300fc4506c25cf61c9`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05205e2b995741a5bf3b6526edeec0f128be4e086bf1251c99cd42c386bc2fe7`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 1.1 MB (1065460 bytes)  
+	-	`sha256:5a750128aa05a6bbc70747f2b19d09eb632e14cebb8914b42c8ce501749c0f82`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 1.1 MB (1066194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73fb3a106225bef0456bde044d0307985775ebf5d7391572e09a68cc814bd4b4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 175.0 B  
+	-	`sha256:f32e30cedb7df042a0e49a19fe87540c050dad8a73d10a07bf65a76771d78e40`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21-jre11`
 
 ```console
-$ docker pull jruby@sha256:5a95ff7c6f53169afdb66c8fe8807178e291b577db2fb265d84d12324d7a48f7
+$ docker pull jruby@sha256:754ed78fe573ce35f3fe8ba61161733cdc59ee583bff00dba57a791b78d71eb0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2294,14 +2294,14 @@ $ docker pull jruby@sha256:5a95ff7c6f53169afdb66c8fe8807178e291b577db2fb265d84d1
 ### `jruby:9.2.21-jre11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:1f91e7299c21c5d5e0cf7ed1150e41fd08847931911112ff4bcef65a59367df5
+$ docker pull jruby@sha256:792ee6967ee73f620fafb9aa616cc5f407d9a2f110beb4990459a8358f2fc7a6
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **127.3 MB (127263109 bytes)**  
+-	Total Size: **127.4 MB (127396943 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e2f339bd6f25bf0dbcccc8a381f7b30bd6dbda13877e8987003aee8638f41ec7`
+-	Image ID: `sha256:75c5e1bf6247b1626f7338dc5561327330eb9c8517a33bb5ec933d2a4206e043`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -2317,35 +2317,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:29:23 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:29:24 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:22:24 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:22:25 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:36 GMT
+# Sat, 05 Nov 2022 00:07:46 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:36 GMT
+# Sat, 05 Nov 2022 00:07:46 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:38 GMT
+# Sat, 05 Nov 2022 00:07:48 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:39 GMT
+# Sat, 05 Nov 2022 00:07:48 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:39 GMT
+# Sat, 05 Nov 2022 00:07:49 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:49 GMT
+# Sat, 05 Nov 2022 00:07:58 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:49 GMT
+# Sat, 05 Nov 2022 00:07:58 GMT
 CMD ["irb"]
 ```
 
@@ -2358,39 +2358,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:66d4ce13fd620ba04abe64eeebe53783f1fceba116a08eace8fdfe202db35c00`  
-		Last Modified: Wed, 26 Oct 2022 16:45:13 GMT  
-		Size: 46.5 MB (46497092 bytes)  
+	-	`sha256:bbd45db92608776aa8d24a28e427c9e56ec56a4d83bc3da5db28817f88a8ffad`  
+		Last Modified: Fri, 04 Nov 2022 23:29:16 GMT  
+		Size: 46.6 MB (46630173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e81ede82d9fd39574aad8126301364fc83a05b01f9537dc5a8c8c17865dca42`  
-		Last Modified: Wed, 26 Oct 2022 16:45:06 GMT  
+	-	`sha256:6fcfd0f47989acccee774146a436995f6d433299e82638b90c6b47f093ebd3cc`  
+		Last Modified: Fri, 04 Nov 2022 23:29:09 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90dc6131f518995245e9cf60c905e000f4c31b781da122846b5489bfaa2c84f0`  
-		Last Modified: Wed, 26 Oct 2022 23:35:29 GMT  
-		Size: 6.9 MB (6923824 bytes)  
+	-	`sha256:b2efe7cd9800950ff66f440f2247d8eeb53b1a4c8c235e14b0ca3917821a1410`  
+		Last Modified: Sat, 05 Nov 2022 00:10:16 GMT  
+		Size: 6.9 MB (6923817 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99dbed3153418c8d81c0ac5761ca46f27ed84eeaaef884912523b42d28957495`  
-		Last Modified: Wed, 26 Oct 2022 23:37:06 GMT  
-		Size: 27.8 MB (27844664 bytes)  
+	-	`sha256:3571f7f1016f65748e283a1522425ff29680f015e3fd681db4de45071710848f`  
+		Last Modified: Sat, 05 Nov 2022 00:11:45 GMT  
+		Size: 27.8 MB (27844733 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e2e75dddd8f96ac51c156c67e6b179fb592583f99f555288e7bf7a337e6fd52`  
-		Last Modified: Wed, 26 Oct 2022 23:37:04 GMT  
-		Size: 225.0 B  
+	-	`sha256:7cb924ba09b304ee52012afd625f97ead42d4405be459948b18cf7175f17eacc`  
+		Last Modified: Sat, 05 Nov 2022 00:11:42 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6dde4eeb9f2741d06488e1c99e81cf14c9001e1ddb71e6ba9342c7538c2c3dcf`  
-		Last Modified: Wed, 26 Oct 2022 23:37:04 GMT  
-		Size: 1.1 MB (1065478 bytes)  
+	-	`sha256:c4ed1651616435faeb35471dd1659df9fc581a06108f4b2a5b03981d819d8745`  
+		Last Modified: Sat, 05 Nov 2022 00:11:43 GMT  
+		Size: 1.1 MB (1066166 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:36a53bf399c755b0242f3a2ca808f196abc1ff8131818266dccc819bd594d729`  
-		Last Modified: Wed, 26 Oct 2022 23:37:04 GMT  
-		Size: 175.0 B  
+	-	`sha256:fabf5db522fef36d2cc3e7ce345f1c81499549f172029bf0c452b800ec1c1d69`  
+		Last Modified: Sat, 05 Nov 2022 00:11:42 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21-jre8`
 
 ```console
-$ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a862a8cf2317
+$ docker pull jruby@sha256:f88f0458dc187b3ae6387e0f91f34dc55145b4753f9b6dad8c75e9f412df17d2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2400,14 +2400,14 @@ $ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a
 ### `jruby:9.2.21-jre8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:cccaf23799cfd1ba88c5b6bd8f3460f117477bc63d1c3068cfc23898afdcfb4f
+$ docker pull jruby@sha256:29582053d9907366b14816845c40986ab48cdb6f0b963af704595bb19f129d60
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **122.6 MB (122574579 bytes)**  
+-	Total Size: **122.6 MB (122586072 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b6a0fdb197a0ac5122b1c05c2bd39fc95281ac2c85f6c0601df6303bd65ff77c`
+-	Image ID: `sha256:da8f1684efe70fd25658b29db3aeea5a45990558f9fe8fcf69d18fd0d925ef4d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -2423,35 +2423,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:08 GMT
+# Sat, 05 Nov 2022 00:07:19 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 CMD ["irb"]
 ```
 
@@ -2464,39 +2464,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:071c603be07ab44266b03df5df7a2c2e11305fba1bc7b1f462bbc4e330d48587`  
-		Last Modified: Wed, 26 Oct 2022 23:36:14 GMT  
-		Size: 27.8 MB (27844770 bytes)  
+	-	`sha256:ced9de2d7bf44da59c1d8c8d1a84bcdc195f765903bf4b20a39a52060cfeb411`  
+		Last Modified: Sat, 05 Nov 2022 00:10:51 GMT  
+		Size: 27.8 MB (27844644 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1abd3e69940b05a192444b16a0648fb5f61f201b5fac92bb4fbd714ad5cd5af4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 226.0 B  
+	-	`sha256:34976b2fa0f403e613035f1300a1c7e0a852e03a8b6dd5300fc4506c25cf61c9`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05205e2b995741a5bf3b6526edeec0f128be4e086bf1251c99cd42c386bc2fe7`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 1.1 MB (1065460 bytes)  
+	-	`sha256:5a750128aa05a6bbc70747f2b19d09eb632e14cebb8914b42c8ce501749c0f82`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 1.1 MB (1066194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73fb3a106225bef0456bde044d0307985775ebf5d7391572e09a68cc814bd4b4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 175.0 B  
+	-	`sha256:f32e30cedb7df042a0e49a19fe87540c050dad8a73d10a07bf65a76771d78e40`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21-onbuild`
 
 ```console
-$ docker pull jruby@sha256:b9ee8bb6ff4dbae146910fbdd2bdf78c9ccc51643484abb966c7b846d8857389
+$ docker pull jruby@sha256:140e65b1b20fc307b45c3ec53d6d50980aff5fbb39a4611873cb95a3b3fe9c04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2506,14 +2506,14 @@ $ docker pull jruby@sha256:b9ee8bb6ff4dbae146910fbdd2bdf78c9ccc51643484abb966c7b
 ### `jruby:9.2.21-onbuild` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:a71f6bd28a3f551d95544dc4cbbca4f4d84d66dd962c4e402cc89e4a7121665e
+$ docker pull jruby@sha256:7ceacf4950140e02e13c58fcab6d76324a122b4485c3e1cb1cbac392d00fba5b
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.3 MB (184282320 bytes)**  
+-	Total Size: **184.3 MB (184297704 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b9ef8e82d188752905ebeabe1327639cc6c3c3b09cf338e87454ccdb0bf2b607`
+-	Image ID: `sha256:12cf4e8adf5b2561282956150bb474bfc33a47be2ecef3a2f9f5a8fcb333b412`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -2529,47 +2529,47 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:21 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:22 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 CMD ["irb"]
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 RUN mkdir -p /usr/src/app
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 WORKDIR /usr/src/app
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 ONBUILD ADD Gemfile /usr/src/app/
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 ONBUILD ADD Gemfile.lock /usr/src/app/
-# Wed, 26 Oct 2022 23:33:25 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 ONBUILD RUN bundle install --system
-# Wed, 26 Oct 2022 23:33:25 GMT
+# Sat, 05 Nov 2022 00:08:18 GMT
 ONBUILD ADD . /usr/src/app
 ```
 
@@ -2582,43 +2582,43 @@ ONBUILD ADD . /usr/src/app
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:916b8a217746c620be284cc368e5a6c3c14813f72c1ba96ceda9e5ed5c650040`  
-		Last Modified: Wed, 26 Oct 2022 23:36:44 GMT  
-		Size: 27.8 MB (27844740 bytes)  
+	-	`sha256:962804d5bf7b26ba6903d7bd08ba5c6b6610ce1294ddff65c5d893956428d57c`  
+		Last Modified: Sat, 05 Nov 2022 00:11:22 GMT  
+		Size: 27.8 MB (27844717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb2868d8f56b845477a3c3cbde47c7da74e39643a0cefb8e76074917067f653e`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 226.0 B  
+	-	`sha256:0ff7dbff446b4f836be54050d9513a550385951c4414e6254e068677f60009cf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df028bd250f9257bd62d81493cb7542d06db97780f0bac5551daa8be399655eb`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 1.1 MB (1065471 bytes)  
+	-	`sha256:7485f77acddea956f7d5a49be3cd34efa75588d3a9f9b49f6c1c6e48c95d1eaf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 1.1 MB (1066183 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d152537be7223d8dc2ea0f4efaaf2438757ab63a73fe62aafeafdf1872218dc3`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 175.0 B  
+	-	`sha256:ed282981b78bca73362bdf69bd8559623e54fe8e1f8c010a8e0a1961fa367d7a`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd62201c38a9fab135e2569e65a0a03a4c6fffb4f44444830c815c50b1acd5d2`  
-		Last Modified: Wed, 26 Oct 2022 23:37:47 GMT  
-		Size: 165.0 B  
+	-	`sha256:b055aec8be67730ac13b35f78e077636dadd07c04fa108ea16a6b8fbc10de711`  
+		Last Modified: Sat, 05 Nov 2022 00:12:14 GMT  
+		Size: 166.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21.0`
 
 ```console
-$ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a862a8cf2317
+$ docker pull jruby@sha256:f88f0458dc187b3ae6387e0f91f34dc55145b4753f9b6dad8c75e9f412df17d2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2628,14 +2628,14 @@ $ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a
 ### `jruby:9.2.21.0` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:cccaf23799cfd1ba88c5b6bd8f3460f117477bc63d1c3068cfc23898afdcfb4f
+$ docker pull jruby@sha256:29582053d9907366b14816845c40986ab48cdb6f0b963af704595bb19f129d60
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **122.6 MB (122574579 bytes)**  
+-	Total Size: **122.6 MB (122586072 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b6a0fdb197a0ac5122b1c05c2bd39fc95281ac2c85f6c0601df6303bd65ff77c`
+-	Image ID: `sha256:da8f1684efe70fd25658b29db3aeea5a45990558f9fe8fcf69d18fd0d925ef4d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -2651,35 +2651,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:08 GMT
+# Sat, 05 Nov 2022 00:07:19 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 CMD ["irb"]
 ```
 
@@ -2692,39 +2692,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:071c603be07ab44266b03df5df7a2c2e11305fba1bc7b1f462bbc4e330d48587`  
-		Last Modified: Wed, 26 Oct 2022 23:36:14 GMT  
-		Size: 27.8 MB (27844770 bytes)  
+	-	`sha256:ced9de2d7bf44da59c1d8c8d1a84bcdc195f765903bf4b20a39a52060cfeb411`  
+		Last Modified: Sat, 05 Nov 2022 00:10:51 GMT  
+		Size: 27.8 MB (27844644 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1abd3e69940b05a192444b16a0648fb5f61f201b5fac92bb4fbd714ad5cd5af4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 226.0 B  
+	-	`sha256:34976b2fa0f403e613035f1300a1c7e0a852e03a8b6dd5300fc4506c25cf61c9`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05205e2b995741a5bf3b6526edeec0f128be4e086bf1251c99cd42c386bc2fe7`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 1.1 MB (1065460 bytes)  
+	-	`sha256:5a750128aa05a6bbc70747f2b19d09eb632e14cebb8914b42c8ce501749c0f82`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 1.1 MB (1066194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73fb3a106225bef0456bde044d0307985775ebf5d7391572e09a68cc814bd4b4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 175.0 B  
+	-	`sha256:f32e30cedb7df042a0e49a19fe87540c050dad8a73d10a07bf65a76771d78e40`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21.0-jdk`
 
 ```console
-$ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e6360986149d3c4
+$ docker pull jruby@sha256:cc5d9e0f90fa6effd68057c202f6d06aeaf59da8ec1f30d00a52eca04e36aaa0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2734,14 +2734,14 @@ $ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e636
 ### `jruby:9.2.21.0-jdk` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:d9a38af2aecd16a32f7efb2f275b827aad2fae4fc4de23d267d5bbc8cbcc910b
+$ docker pull jruby@sha256:02b958fc839d2ba597f5c708423a76ceea4b8ed0ec9680f6f2923075cfe5aa97
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.3 MB (184282155 bytes)**  
+-	Total Size: **184.3 MB (184297538 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f1ab3c0a3cb32706f6174e8614e993859c53d233e1791ca59f2e2e5ce51deea`
+-	Image ID: `sha256:f453b00d18af70268eac2afecbc450ea00edcf40f78c1cb21ac017466df67282`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -2757,35 +2757,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:21 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:22 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 CMD ["irb"]
 ```
 
@@ -2798,39 +2798,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:916b8a217746c620be284cc368e5a6c3c14813f72c1ba96ceda9e5ed5c650040`  
-		Last Modified: Wed, 26 Oct 2022 23:36:44 GMT  
-		Size: 27.8 MB (27844740 bytes)  
+	-	`sha256:962804d5bf7b26ba6903d7bd08ba5c6b6610ce1294ddff65c5d893956428d57c`  
+		Last Modified: Sat, 05 Nov 2022 00:11:22 GMT  
+		Size: 27.8 MB (27844717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb2868d8f56b845477a3c3cbde47c7da74e39643a0cefb8e76074917067f653e`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 226.0 B  
+	-	`sha256:0ff7dbff446b4f836be54050d9513a550385951c4414e6254e068677f60009cf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df028bd250f9257bd62d81493cb7542d06db97780f0bac5551daa8be399655eb`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 1.1 MB (1065471 bytes)  
+	-	`sha256:7485f77acddea956f7d5a49be3cd34efa75588d3a9f9b49f6c1c6e48c95d1eaf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 1.1 MB (1066183 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d152537be7223d8dc2ea0f4efaaf2438757ab63a73fe62aafeafdf1872218dc3`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 175.0 B  
+	-	`sha256:ed282981b78bca73362bdf69bd8559623e54fe8e1f8c010a8e0a1961fa367d7a`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21.0-jdk11`
 
 ```console
-$ docker pull jruby@sha256:742c9a222bd9ab280f74cef152c59967dbab18808c793c72ef5b2256cdc0651d
+$ docker pull jruby@sha256:fbb4e62cf84c81e7ad19f991b4f0803067ca93267c8c74d9059d1b0b09046ef3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2840,14 +2840,14 @@ $ docker pull jruby@sha256:742c9a222bd9ab280f74cef152c59967dbab18808c793c72ef5b2
 ### `jruby:9.2.21.0-jdk11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:aaad37ff5303f69e24693abb104c2a6fcbbb0e28b7af31f6fb19193b1f1234ba
+$ docker pull jruby@sha256:66762b4de39ab25355c51e3ba5f1f5b227601f9d64856f17ff928594e898ad51
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **278.9 MB (278895300 bytes)**  
+-	Total Size: **279.2 MB (279231452 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bed1c02917e4c8b5997e6fb58a63391e9c0d4e87addb844b94c563043120bbbf`
+-	Image ID: `sha256:ff43099757e5d0c251c2e1021b7b33a817c18f48d6b8375a3f3c696cb8f3c5a9`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -2863,37 +2863,37 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:28:53 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='a703acfd04ece4a4aac4cb9bda26b7d225874008bba324237bd6f53792edb778';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b18877871eda801ccb99bb34c5d7d77fccf6adad02514110c21389632ec91024';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='b16b1b50699a9caaae3d782be687625d81e069c886df904f83d13e6c4322a179';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='5f6b513757d386352cf91514ed5859d1ab59364b4453e1f1c57152ba2039b8e2';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:21:36 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='d18b5dd73fce9edd5c58f623a1173f9ee2d45023836b8753b96beae51673a432';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='9ff3b4bd2bac18fb39f3356148efa2dc710ac029e12dc8f18ea1fe6be23bf299';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='18c636bd103e240d29cdb30d7867720ea9fb9ff7c645738bfb4d5b8027269263';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='eb861db1433ddc1b89f170b789fafde282f137218d6d985fb5c2003e4ff44984';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b8d46ed08ef4859476fe6421a7690d899ed83dce63f13fd894f994043177ef3c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:21:38 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:38 GMT
 CMD ["jshell"]
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:53 GMT
+# Sat, 05 Nov 2022 00:08:00 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:53 GMT
+# Sat, 05 Nov 2022 00:08:00 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:55 GMT
+# Sat, 05 Nov 2022 00:08:02 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:55 GMT
+# Sat, 05 Nov 2022 00:08:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:56 GMT
+# Sat, 05 Nov 2022 00:08:03 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:33:04 GMT
+# Sat, 05 Nov 2022 00:08:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:33:05 GMT
+# Sat, 05 Nov 2022 00:08:12 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:33:05 GMT
+# Sat, 05 Nov 2022 00:08:12 GMT
 CMD ["irb"]
 ```
 
@@ -2906,33 +2906,33 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc580f2109be281fc1a5ab6d065bf040ae81d4c412e9aab8f36ebfc16e001488`  
-		Last Modified: Wed, 26 Oct 2022 16:44:21 GMT  
-		Size: 198.1 MB (198129334 bytes)  
+	-	`sha256:92987a6c66b9d34f09f6ef0fad549352afbe72ee489c23324c1dd11f432c0243`  
+		Last Modified: Fri, 04 Nov 2022 23:27:46 GMT  
+		Size: 198.5 MB (198464645 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:317971f3cd99c10fb540436d85a33bbc5fb1b174ea9f7cfbac0a9d0d7ea0b3e7`  
-		Last Modified: Wed, 26 Oct 2022 16:44:06 GMT  
+	-	`sha256:e0db103a91cc0800441b2d41aeab58673674235234416ed22e955b92d025c3ab`  
+		Last Modified: Fri, 04 Nov 2022 23:27:32 GMT  
+		Size: 174.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a2bce30d84c17f1b6d4e186d576332eddea352dae0c743b10fda5870a4ff62f3`  
+		Last Modified: Sat, 05 Nov 2022 00:10:32 GMT  
+		Size: 6.9 MB (6923824 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:246ed1720663ca3c64db13e4f7bb0a0de236bda5d72a79525e098a769dd8e071`  
+		Last Modified: Sat, 05 Nov 2022 00:11:59 GMT  
+		Size: 27.8 MB (27844740 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:02048e12fe03b585fd5cd0122bc0b0fa617800979eb47d09d7bd83062fba13d0`  
+		Last Modified: Sat, 05 Nov 2022 00:11:57 GMT  
+		Size: 225.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:375a02765e3d4e88ea5b3a6da7b635fc7ed067c0b16ae4fcddae7ba9ac0e3fbf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:58 GMT  
+		Size: 1.1 MB (1066179 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5ef04a240900f25005bad1e16c5b46096c7f0b884b5fecd4109dcfafec872754`  
+		Last Modified: Sat, 05 Nov 2022 00:11:57 GMT  
 		Size: 175.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:baba098fdf0de0c0367cd4a2b486b49fb90456e89f29fa6ade923373ba6f93dd`  
-		Last Modified: Wed, 26 Oct 2022 23:35:43 GMT  
-		Size: 6.9 MB (6923759 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae4b31b0df0387b270f293e0d2f6bdf685f7b32abd74a921a4d57b339fa68dfc`  
-		Last Modified: Wed, 26 Oct 2022 23:37:21 GMT  
-		Size: 27.8 MB (27844688 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:363d05cadc51b3a1b9789d98b5527dc0410dd036ac83c4ceb5611ac02334ca7a`  
-		Last Modified: Wed, 26 Oct 2022 23:37:18 GMT  
-		Size: 223.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:007df6e5748c44e7575e2ba584ee387a9b9ef71fde48f516555c682dd33823c5`  
-		Last Modified: Wed, 26 Oct 2022 23:37:19 GMT  
-		Size: 1.1 MB (1065455 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:331612e58e3b2c2f66f5b7dc8acb4ed4a1839af49233fd934ac636c28f0b7b4b`  
-		Last Modified: Wed, 26 Oct 2022 23:37:18 GMT  
-		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21.0-jdk17`
@@ -3046,7 +3046,7 @@ CMD ["irb"]
 ## `jruby:9.2.21.0-jdk8`
 
 ```console
-$ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e6360986149d3c4
+$ docker pull jruby@sha256:cc5d9e0f90fa6effd68057c202f6d06aeaf59da8ec1f30d00a52eca04e36aaa0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3056,14 +3056,14 @@ $ docker pull jruby@sha256:17c3542f28375f062acf7d99e550d14f69e3c589047362394e636
 ### `jruby:9.2.21.0-jdk8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:d9a38af2aecd16a32f7efb2f275b827aad2fae4fc4de23d267d5bbc8cbcc910b
+$ docker pull jruby@sha256:02b958fc839d2ba597f5c708423a76ceea4b8ed0ec9680f6f2923075cfe5aa97
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.3 MB (184282155 bytes)**  
+-	Total Size: **184.3 MB (184297538 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f1ab3c0a3cb32706f6174e8614e993859c53d233e1791ca59f2e2e5ce51deea`
+-	Image ID: `sha256:f453b00d18af70268eac2afecbc450ea00edcf40f78c1cb21ac017466df67282`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -3079,35 +3079,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:21 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:22 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 CMD ["irb"]
 ```
 
@@ -3120,39 +3120,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:916b8a217746c620be284cc368e5a6c3c14813f72c1ba96ceda9e5ed5c650040`  
-		Last Modified: Wed, 26 Oct 2022 23:36:44 GMT  
-		Size: 27.8 MB (27844740 bytes)  
+	-	`sha256:962804d5bf7b26ba6903d7bd08ba5c6b6610ce1294ddff65c5d893956428d57c`  
+		Last Modified: Sat, 05 Nov 2022 00:11:22 GMT  
+		Size: 27.8 MB (27844717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb2868d8f56b845477a3c3cbde47c7da74e39643a0cefb8e76074917067f653e`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 226.0 B  
+	-	`sha256:0ff7dbff446b4f836be54050d9513a550385951c4414e6254e068677f60009cf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df028bd250f9257bd62d81493cb7542d06db97780f0bac5551daa8be399655eb`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 1.1 MB (1065471 bytes)  
+	-	`sha256:7485f77acddea956f7d5a49be3cd34efa75588d3a9f9b49f6c1c6e48c95d1eaf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 1.1 MB (1066183 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d152537be7223d8dc2ea0f4efaaf2438757ab63a73fe62aafeafdf1872218dc3`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 175.0 B  
+	-	`sha256:ed282981b78bca73362bdf69bd8559623e54fe8e1f8c010a8e0a1961fa367d7a`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21.0-jre`
 
 ```console
-$ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a862a8cf2317
+$ docker pull jruby@sha256:f88f0458dc187b3ae6387e0f91f34dc55145b4753f9b6dad8c75e9f412df17d2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3162,14 +3162,14 @@ $ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a
 ### `jruby:9.2.21.0-jre` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:cccaf23799cfd1ba88c5b6bd8f3460f117477bc63d1c3068cfc23898afdcfb4f
+$ docker pull jruby@sha256:29582053d9907366b14816845c40986ab48cdb6f0b963af704595bb19f129d60
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **122.6 MB (122574579 bytes)**  
+-	Total Size: **122.6 MB (122586072 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b6a0fdb197a0ac5122b1c05c2bd39fc95281ac2c85f6c0601df6303bd65ff77c`
+-	Image ID: `sha256:da8f1684efe70fd25658b29db3aeea5a45990558f9fe8fcf69d18fd0d925ef4d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -3185,35 +3185,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:08 GMT
+# Sat, 05 Nov 2022 00:07:19 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 CMD ["irb"]
 ```
 
@@ -3226,39 +3226,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:071c603be07ab44266b03df5df7a2c2e11305fba1bc7b1f462bbc4e330d48587`  
-		Last Modified: Wed, 26 Oct 2022 23:36:14 GMT  
-		Size: 27.8 MB (27844770 bytes)  
+	-	`sha256:ced9de2d7bf44da59c1d8c8d1a84bcdc195f765903bf4b20a39a52060cfeb411`  
+		Last Modified: Sat, 05 Nov 2022 00:10:51 GMT  
+		Size: 27.8 MB (27844644 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1abd3e69940b05a192444b16a0648fb5f61f201b5fac92bb4fbd714ad5cd5af4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 226.0 B  
+	-	`sha256:34976b2fa0f403e613035f1300a1c7e0a852e03a8b6dd5300fc4506c25cf61c9`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05205e2b995741a5bf3b6526edeec0f128be4e086bf1251c99cd42c386bc2fe7`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 1.1 MB (1065460 bytes)  
+	-	`sha256:5a750128aa05a6bbc70747f2b19d09eb632e14cebb8914b42c8ce501749c0f82`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 1.1 MB (1066194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73fb3a106225bef0456bde044d0307985775ebf5d7391572e09a68cc814bd4b4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 175.0 B  
+	-	`sha256:f32e30cedb7df042a0e49a19fe87540c050dad8a73d10a07bf65a76771d78e40`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21.0-jre11`
 
 ```console
-$ docker pull jruby@sha256:5a95ff7c6f53169afdb66c8fe8807178e291b577db2fb265d84d12324d7a48f7
+$ docker pull jruby@sha256:754ed78fe573ce35f3fe8ba61161733cdc59ee583bff00dba57a791b78d71eb0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3268,14 +3268,14 @@ $ docker pull jruby@sha256:5a95ff7c6f53169afdb66c8fe8807178e291b577db2fb265d84d1
 ### `jruby:9.2.21.0-jre11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:1f91e7299c21c5d5e0cf7ed1150e41fd08847931911112ff4bcef65a59367df5
+$ docker pull jruby@sha256:792ee6967ee73f620fafb9aa616cc5f407d9a2f110beb4990459a8358f2fc7a6
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **127.3 MB (127263109 bytes)**  
+-	Total Size: **127.4 MB (127396943 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e2f339bd6f25bf0dbcccc8a381f7b30bd6dbda13877e8987003aee8638f41ec7`
+-	Image ID: `sha256:75c5e1bf6247b1626f7338dc5561327330eb9c8517a33bb5ec933d2a4206e043`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -3291,35 +3291,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:29:23 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:29:24 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:22:24 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:22:25 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:36 GMT
+# Sat, 05 Nov 2022 00:07:46 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:36 GMT
+# Sat, 05 Nov 2022 00:07:46 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:38 GMT
+# Sat, 05 Nov 2022 00:07:48 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:39 GMT
+# Sat, 05 Nov 2022 00:07:48 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:39 GMT
+# Sat, 05 Nov 2022 00:07:49 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:48 GMT
+# Sat, 05 Nov 2022 00:07:57 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:49 GMT
+# Sat, 05 Nov 2022 00:07:58 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:49 GMT
+# Sat, 05 Nov 2022 00:07:58 GMT
 CMD ["irb"]
 ```
 
@@ -3332,39 +3332,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:66d4ce13fd620ba04abe64eeebe53783f1fceba116a08eace8fdfe202db35c00`  
-		Last Modified: Wed, 26 Oct 2022 16:45:13 GMT  
-		Size: 46.5 MB (46497092 bytes)  
+	-	`sha256:bbd45db92608776aa8d24a28e427c9e56ec56a4d83bc3da5db28817f88a8ffad`  
+		Last Modified: Fri, 04 Nov 2022 23:29:16 GMT  
+		Size: 46.6 MB (46630173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e81ede82d9fd39574aad8126301364fc83a05b01f9537dc5a8c8c17865dca42`  
-		Last Modified: Wed, 26 Oct 2022 16:45:06 GMT  
+	-	`sha256:6fcfd0f47989acccee774146a436995f6d433299e82638b90c6b47f093ebd3cc`  
+		Last Modified: Fri, 04 Nov 2022 23:29:09 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90dc6131f518995245e9cf60c905e000f4c31b781da122846b5489bfaa2c84f0`  
-		Last Modified: Wed, 26 Oct 2022 23:35:29 GMT  
-		Size: 6.9 MB (6923824 bytes)  
+	-	`sha256:b2efe7cd9800950ff66f440f2247d8eeb53b1a4c8c235e14b0ca3917821a1410`  
+		Last Modified: Sat, 05 Nov 2022 00:10:16 GMT  
+		Size: 6.9 MB (6923817 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99dbed3153418c8d81c0ac5761ca46f27ed84eeaaef884912523b42d28957495`  
-		Last Modified: Wed, 26 Oct 2022 23:37:06 GMT  
-		Size: 27.8 MB (27844664 bytes)  
+	-	`sha256:3571f7f1016f65748e283a1522425ff29680f015e3fd681db4de45071710848f`  
+		Last Modified: Sat, 05 Nov 2022 00:11:45 GMT  
+		Size: 27.8 MB (27844733 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e2e75dddd8f96ac51c156c67e6b179fb592583f99f555288e7bf7a337e6fd52`  
-		Last Modified: Wed, 26 Oct 2022 23:37:04 GMT  
-		Size: 225.0 B  
+	-	`sha256:7cb924ba09b304ee52012afd625f97ead42d4405be459948b18cf7175f17eacc`  
+		Last Modified: Sat, 05 Nov 2022 00:11:42 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6dde4eeb9f2741d06488e1c99e81cf14c9001e1ddb71e6ba9342c7538c2c3dcf`  
-		Last Modified: Wed, 26 Oct 2022 23:37:04 GMT  
-		Size: 1.1 MB (1065478 bytes)  
+	-	`sha256:c4ed1651616435faeb35471dd1659df9fc581a06108f4b2a5b03981d819d8745`  
+		Last Modified: Sat, 05 Nov 2022 00:11:43 GMT  
+		Size: 1.1 MB (1066166 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:36a53bf399c755b0242f3a2ca808f196abc1ff8131818266dccc819bd594d729`  
-		Last Modified: Wed, 26 Oct 2022 23:37:04 GMT  
-		Size: 175.0 B  
+	-	`sha256:fabf5db522fef36d2cc3e7ce345f1c81499549f172029bf0c452b800ec1c1d69`  
+		Last Modified: Sat, 05 Nov 2022 00:11:42 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21.0-jre8`
 
 ```console
-$ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a862a8cf2317
+$ docker pull jruby@sha256:f88f0458dc187b3ae6387e0f91f34dc55145b4753f9b6dad8c75e9f412df17d2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3374,14 +3374,14 @@ $ docker pull jruby@sha256:f7e7fb0cbb77618896f69759c0f7838615f740456474a8e30965a
 ### `jruby:9.2.21.0-jre8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:cccaf23799cfd1ba88c5b6bd8f3460f117477bc63d1c3068cfc23898afdcfb4f
+$ docker pull jruby@sha256:29582053d9907366b14816845c40986ab48cdb6f0b963af704595bb19f129d60
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **122.6 MB (122574579 bytes)**  
+-	Total Size: **122.6 MB (122586072 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b6a0fdb197a0ac5122b1c05c2bd39fc95281ac2c85f6c0601df6303bd65ff77c`
+-	Image ID: `sha256:da8f1684efe70fd25658b29db3aeea5a45990558f9fe8fcf69d18fd0d925ef4d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -3397,35 +3397,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:06 GMT
+# Sat, 05 Nov 2022 00:07:17 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:08 GMT
+# Sat, 05 Nov 2022 00:07:19 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:09 GMT
+# Sat, 05 Nov 2022 00:07:20 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:17 GMT
+# Sat, 05 Nov 2022 00:07:27 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:18 GMT
+# Sat, 05 Nov 2022 00:07:28 GMT
 CMD ["irb"]
 ```
 
@@ -3438,39 +3438,39 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:071c603be07ab44266b03df5df7a2c2e11305fba1bc7b1f462bbc4e330d48587`  
-		Last Modified: Wed, 26 Oct 2022 23:36:14 GMT  
-		Size: 27.8 MB (27844770 bytes)  
+	-	`sha256:ced9de2d7bf44da59c1d8c8d1a84bcdc195f765903bf4b20a39a52060cfeb411`  
+		Last Modified: Sat, 05 Nov 2022 00:10:51 GMT  
+		Size: 27.8 MB (27844644 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1abd3e69940b05a192444b16a0648fb5f61f201b5fac92bb4fbd714ad5cd5af4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 226.0 B  
+	-	`sha256:34976b2fa0f403e613035f1300a1c7e0a852e03a8b6dd5300fc4506c25cf61c9`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 224.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05205e2b995741a5bf3b6526edeec0f128be4e086bf1251c99cd42c386bc2fe7`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 1.1 MB (1065460 bytes)  
+	-	`sha256:5a750128aa05a6bbc70747f2b19d09eb632e14cebb8914b42c8ce501749c0f82`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 1.1 MB (1066194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:73fb3a106225bef0456bde044d0307985775ebf5d7391572e09a68cc814bd4b4`  
-		Last Modified: Wed, 26 Oct 2022 23:36:12 GMT  
-		Size: 175.0 B  
+	-	`sha256:f32e30cedb7df042a0e49a19fe87540c050dad8a73d10a07bf65a76771d78e40`  
+		Last Modified: Sat, 05 Nov 2022 00:10:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.2.21.0-onbuild`
 
 ```console
-$ docker pull jruby@sha256:b9ee8bb6ff4dbae146910fbdd2bdf78c9ccc51643484abb966c7b846d8857389
+$ docker pull jruby@sha256:140e65b1b20fc307b45c3ec53d6d50980aff5fbb39a4611873cb95a3b3fe9c04
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3480,14 +3480,14 @@ $ docker pull jruby@sha256:b9ee8bb6ff4dbae146910fbdd2bdf78c9ccc51643484abb966c7b
 ### `jruby:9.2.21.0-onbuild` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:a71f6bd28a3f551d95544dc4cbbca4f4d84d66dd962c4e402cc89e4a7121665e
+$ docker pull jruby@sha256:7ceacf4950140e02e13c58fcab6d76324a122b4485c3e1cb1cbac392d00fba5b
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.3 MB (184282320 bytes)**  
+-	Total Size: **184.3 MB (184297704 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b9ef8e82d188752905ebeabe1327639cc6c3c3b09cf338e87454ccdb0bf2b607`
+-	Image ID: `sha256:12cf4e8adf5b2561282956150bb474bfc33a47be2ecef3a2f9f5a8fcb333b412`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -3503,47 +3503,47 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:32:21 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_VERSION=9.2.21.0
-# Wed, 26 Oct 2022 23:32:22 GMT
+# Sat, 05 Nov 2022 00:07:32 GMT
 ENV JRUBY_SHA256=dbf05fca4f61bd7d5131d9b83c5f4d1a249213c474b82def37e82013969c8b8a
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:24 GMT
+# Sat, 05 Nov 2022 00:07:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:32:32 GMT
+# Sat, 05 Nov 2022 00:07:42 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:32:33 GMT
+# Sat, 05 Nov 2022 00:07:43 GMT
 CMD ["irb"]
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 RUN mkdir -p /usr/src/app
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 WORKDIR /usr/src/app
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 ONBUILD ADD Gemfile /usr/src/app/
-# Wed, 26 Oct 2022 23:33:24 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 ONBUILD ADD Gemfile.lock /usr/src/app/
-# Wed, 26 Oct 2022 23:33:25 GMT
+# Sat, 05 Nov 2022 00:08:17 GMT
 ONBUILD RUN bundle install --system
-# Wed, 26 Oct 2022 23:33:25 GMT
+# Sat, 05 Nov 2022 00:08:18 GMT
 ONBUILD ADD . /usr/src/app
 ```
 
@@ -3556,43 +3556,43 @@ ONBUILD ADD . /usr/src/app
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:916b8a217746c620be284cc368e5a6c3c14813f72c1ba96ceda9e5ed5c650040`  
-		Last Modified: Wed, 26 Oct 2022 23:36:44 GMT  
-		Size: 27.8 MB (27844740 bytes)  
+	-	`sha256:962804d5bf7b26ba6903d7bd08ba5c6b6610ce1294ddff65c5d893956428d57c`  
+		Last Modified: Sat, 05 Nov 2022 00:11:22 GMT  
+		Size: 27.8 MB (27844717 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb2868d8f56b845477a3c3cbde47c7da74e39643a0cefb8e76074917067f653e`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 226.0 B  
+	-	`sha256:0ff7dbff446b4f836be54050d9513a550385951c4414e6254e068677f60009cf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df028bd250f9257bd62d81493cb7542d06db97780f0bac5551daa8be399655eb`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 1.1 MB (1065471 bytes)  
+	-	`sha256:7485f77acddea956f7d5a49be3cd34efa75588d3a9f9b49f6c1c6e48c95d1eaf`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 1.1 MB (1066183 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d152537be7223d8dc2ea0f4efaaf2438757ab63a73fe62aafeafdf1872218dc3`  
-		Last Modified: Wed, 26 Oct 2022 23:36:42 GMT  
-		Size: 175.0 B  
+	-	`sha256:ed282981b78bca73362bdf69bd8559623e54fe8e1f8c010a8e0a1961fa367d7a`  
+		Last Modified: Sat, 05 Nov 2022 00:11:20 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd62201c38a9fab135e2569e65a0a03a4c6fffb4f44444830c815c50b1acd5d2`  
-		Last Modified: Wed, 26 Oct 2022 23:37:47 GMT  
-		Size: 165.0 B  
+	-	`sha256:b055aec8be67730ac13b35f78e077636dadd07c04fa108ea16a6b8fbc10de711`  
+		Last Modified: Sat, 05 Nov 2022 00:12:14 GMT  
+		Size: 166.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3`
 
 ```console
-$ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52f962bbc73e1
+$ docker pull jruby@sha256:49263ea3888f7b984ea5858916c6cd49da093a0053e4f44d0cfa114841fd92f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3603,14 +3603,14 @@ $ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52
 ### `jruby:9.3` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:18e3643422c845f1f82b4b300e29bb4d69d29ba5f7ca03be14f54627900a2850
+$ docker pull jruby@sha256:8f682181c67c5a6872b665e1fd3cb6f17dabf06adc9a1701a8e6b4c174ae6f48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.4 MB (123402307 bytes)**  
+-	Total Size: **123.4 MB (123413836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1f90a45d6373abab7601d0e68675844213f06d51536d5b6d200c4f94d24e8a`
+-	Image ID: `sha256:c587c020e9ab1ac467eb09d934f69e7f14198014aa19e0a43d40b03de29e2ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -3626,35 +3626,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:25 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:10 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 CMD ["irb"]
 ```
 
@@ -3667,46 +3667,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21f064ab5784caeae419e2afb7425a62f23f0f248baf0fb37b31c634416c085d`  
-		Last Modified: Wed, 26 Oct 2022 23:34:25 GMT  
-		Size: 28.7 MB (28672411 bytes)  
+	-	`sha256:abcd65b5e27237c16d5459bdbc47c6b6a0ca212ddc03b57b3e2614c1336f441a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:13 GMT  
+		Size: 28.7 MB (28672310 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b41c00b5a25852f4e311853c9350bf3450b06122c1c8d16930f3b102121dc01b`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
+	-	`sha256:8417d2088c784659969a8d1fb12e683aef6b38b7d6e9ab24f318c8561a67d465`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b5b22973e822afdd8cd315b5059edd2f7f243b1f6cbbe664168c2745bcb8b9`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 1.1 MB (1065548 bytes)  
+	-	`sha256:06e9846e9e420e7062f956fa3a917d500aa2c2a68492db43ed5467d2a11e8cd7`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a1181ffff2bfba3de3fef4afc77171660aaa9b9f1c2a0fc7d5725851cd55ee`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 174.0 B  
+	-	`sha256:8ff332a63cadd19e84f8dd63d0ceef329ae33a5397774c277ca2574da6b23c58`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:182728558624a9c95a60f682d2e5bea5c13bfa27fb5a7255b83d3c8606a6eed1
+$ docker pull jruby@sha256:957872cb202a626f58800d1177a1ca07b9e36d3ce5d553c1b6cc5532fe29c919
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **119.8 MB (119841033 bytes)**  
+-	Total Size: **119.8 MB (119845863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92a74d9cd79247d8ca3109c892c4ad250ea23f1f490dc3a869ee6667a94dd9d3`
+-	Image ID: `sha256:5831cdb5121c7ddd276e3f55560d6c9441dda083283d4d3a1c32be5425a29279`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -3722,35 +3722,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:09:55 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:09:55 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:40:17 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:40:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:28:45 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 CMD ["irb"]
 ```
 
@@ -3763,39 +3763,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c6957aefb66d28abfffaa8b0316225c93ae248e51de41c6472d528a29af6525`  
-		Last Modified: Wed, 26 Oct 2022 01:17:16 GMT  
-		Size: 40.8 MB (40803724 bytes)  
+	-	`sha256:a82f0b25b538ab3b61f52f143646fa2b54297b4cda1ec43ddced742cbbcf01c2`  
+		Last Modified: Fri, 04 Nov 2022 22:44:37 GMT  
+		Size: 40.8 MB (40807540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8abb56da477fa4a069dad39242e6d6999b85b514c78dc09595ac485605f1270`  
-		Last Modified: Wed, 26 Oct 2022 01:17:12 GMT  
+	-	`sha256:615afaccba5823904abefbf4e7856717efed9d89d5aec959a10e5cee835c9079`  
+		Last Modified: Fri, 04 Nov 2022 22:44:33 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebbb6e560a099b3810c3427e0327f394392499bcd6fbeda23a4d864b510bf097`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 5.9 MB (5886734 bytes)  
+	-	`sha256:347eda5a9750ed4935d2f9aca6db5b71b352a1e5147943698f02b70c3424cd8a`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 5.9 MB (5886762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d6e9848f0eedb11e3bfe91204b99089d0c16c2664743259442b1ab4d0cb3502`  
-		Last Modified: Wed, 26 Oct 2022 18:30:34 GMT  
-		Size: 28.7 MB (28672415 bytes)  
+	-	`sha256:a7ec581d2bbce6acf852e60383cc0ba7fb5624aaf3df18c26fa001b710c08302`  
+		Last Modified: Fri, 04 Nov 2022 23:41:52 GMT  
+		Size: 28.7 MB (28672679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ed42c04ea317722d6a835a9276829cc295e57d11424383e9aa2b58a0075a64`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 224.0 B  
+	-	`sha256:abe3d5824237eeaaa67bc8b970adf27d150e34354223ab9a39447f94edc0bbeb`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5896696ee8d8c7d1ebf557a9bec79c111339baed5fb9cb1e31332739a77bec`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 1.1 MB (1065595 bytes)  
+	-	`sha256:5ca23cd8897f38c3c9699a7fcf32dc4bf95e7d1676bb88e37b881afd0f1ca8fa`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 1.1 MB (1066313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8a33d03a9035b87bbcffcef0b770943dff76c9735cc50db4a0b1a86cc898f1e`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:3cb2e88e21d802708863053326d846d1024c3549da8ed7c8a15788dbdeb53591`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3-jdk`
 
 ```console
-$ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a153851a4c124b2e
+$ docker pull jruby@sha256:c2f1f3c5da03fe547238cc434e2e1dfa61d34a13cc8cb26db5fb7060d5b648d1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3806,14 +3806,14 @@ $ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a1538
 ### `jruby:9.3-jdk` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:b3f092b500a43bc786249ea7139b473a5445402ed0da9340718f8a11b605d822
+$ docker pull jruby@sha256:e1946c55a5209d6dbf348061fe5456779d28ada1f48af04f3db0d6f79d63c3a9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **185.1 MB (185109927 bytes)**  
+-	Total Size: **185.1 MB (185125651 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:43039622a1686ffdcf20f0b2c181dfdbd66accd8729bd3c34444598d6c6b1d81`
+-	Image ID: `sha256:d4b0a610f60849dbded20c5fbb62d09345cb14ad55971dbedf03943605bf65b8`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -3829,35 +3829,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:46 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:24 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 CMD ["irb"]
 ```
 
@@ -3870,46 +3870,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d4cce88531bbe6024147de98024b6ee6321c70c8259f2ea11ad5712e2163e9d`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 28.7 MB (28672416 bytes)  
+	-	`sha256:5314fb85b3dcc9645b47232b283c5de36f644cd14832bf9409c0f6bedf003dd0`  
+		Last Modified: Sat, 05 Nov 2022 00:09:49 GMT  
+		Size: 28.7 MB (28672720 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0450dc5c9e7d02e0a1d3a4f8d2fbc7121a236688436c0496ae57f83e8c59ded`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 225.0 B  
+	-	`sha256:1122bf7420d03abefba5c58a74fdc4ada67856d509418f335dc2c3f3558dc531`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b896ffcc3cec7375b8b8440043e31c3d433ed1dc7e3eeaf662ab7cc1087546`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 1.1 MB (1065568 bytes)  
+	-	`sha256:89daf4a51bdf7aeefbf498c7fc3ff1bbba0ce22c0b5eb7029f7200895e9d401a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 1.1 MB (1066293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:143cc65463789f601c9e00f12c6b1747cfeeb100d414217e4cf23e52f41e2324`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
+	-	`sha256:24a69c2df430cef80585cc4de5c2833ebbc72aa59e31e57cf7c3ffcc65157236`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
 		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3-jdk` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:221ec85a6f16b8f7201a67cf87729aa22d7937cf1490c8e694cf2cec86d551b7
+$ docker pull jruby@sha256:b9a4e515d76f35742bb72a0ad4cc671367d8e4ed340fe40344e49043930f4399
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **181.7 MB (181653129 bytes)**  
+-	Total Size: **181.7 MB (181669077 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6f88ce27631397fb5dbf92a11e91eab84fe6726e4a3c47c1d84dcc16d592078`
+-	Image ID: `sha256:9a43aa62f6f52ec7f9f4fff9fa1bcbbd386d8b91843d4faffcecfd4e9f8b8650`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -3925,35 +3925,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:08:24 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:08:26 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:39:44 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:39:46 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:09 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 CMD ["irb"]
 ```
 
@@ -3966,39 +3966,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d378871150e62d050c8f290958e6f8468c306ae04dcb0ddb140197b42969f0a6`  
-		Last Modified: Wed, 26 Oct 2022 01:16:20 GMT  
-		Size: 102.6 MB (102615823 bytes)  
+	-	`sha256:89d22354a80d2d12ffad6f61953c73519c4d3e501897b672ceaa720a21ca9533`  
+		Last Modified: Fri, 04 Nov 2022 22:43:42 GMT  
+		Size: 102.6 MB (102630792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae5e11c8b7a6c46afa4aa04526b7ae48696bdd7460c3b4ecf082cb565252c62f`  
-		Last Modified: Wed, 26 Oct 2022 01:16:13 GMT  
+	-	`sha256:dfd3de5d3cf89d4eb535267ba80576b5c8b40771b2b9213e5a423086faf1b916`  
+		Last Modified: Fri, 04 Nov 2022 22:43:34 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e166ec431737c992a580b2ae74f399d7efcc3783d5eed348d15a89730f55558`  
-		Last Modified: Wed, 26 Oct 2022 18:31:09 GMT  
-		Size: 5.9 MB (5886740 bytes)  
+	-	`sha256:76083e2bbb9d806969ce8ad3eca743ddbc01f21cf076d1145a17ed2a6cd0ad2c`  
+		Last Modified: Fri, 04 Nov 2022 23:42:26 GMT  
+		Size: 5.9 MB (5886787 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d81692bf3018f4cc37993ec23bb15b0ab616efed80c7e38a13e2745b3ba41c5a`  
-		Last Modified: Wed, 26 Oct 2022 18:31:10 GMT  
-		Size: 28.7 MB (28672424 bytes)  
+	-	`sha256:27a7bdf9254d520e509d0dfd7b5be7ac4e2c88104eb0d609395255edd677e3a2`  
+		Last Modified: Fri, 04 Nov 2022 23:42:27 GMT  
+		Size: 28.7 MB (28672657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:30b52c5b63ce1d1a0c763f5bb96cae40b877bca27aa5f6a1f9970c621906e3bd`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 225.0 B  
+	-	`sha256:a732e63ff73d304cdb542f7fda1f163bceb4d1029639d948841f9ca2e7b0f2b9`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35db8dea10915a920e750a85e8bf05436a4b7fcf52cb5db3f2f6b9a5e7e904e3`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 1.1 MB (1065578 bytes)  
+	-	`sha256:4e7cdf605588cb2f2d259fb4cffce27af2db4e98c307e042f95169b259647bb6`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 1.1 MB (1066274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c1d3a702b3ec7fe7fe64259ba5602aaea93f39e2845d14bdf75f40996b060e57`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 174.0 B  
+	-	`sha256:071281295b8993de5c4baa7f7328cd27217a6399a5d515e641fb9e58a1d2addb`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3-jdk11`
 
 ```console
-$ docker pull jruby@sha256:fc6c1df2c60e013d227f2bd16763cdec04d65ba2f2feca10a750481454e04832
+$ docker pull jruby@sha256:ea6db7565b6812e4250e21eb53019606ca863d293972ea2ac41f89c152db3525
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4009,14 +4009,14 @@ $ docker pull jruby@sha256:fc6c1df2c60e013d227f2bd16763cdec04d65ba2f2feca10a7504
 ### `jruby:9.3-jdk11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:e841201c92f97896b07b39e9b4ec5618094f1893dd406fe604e32f1a1ae56271
+$ docker pull jruby@sha256:39ce45bd4b0ca79db6afa0493676ab4e87f8214ebb9fbd1218263e3b2905f9a4
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **279.7 MB (279722855 bytes)**  
+-	Total Size: **280.1 MB (280059530 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bbdce0879821096c7925b8b47a2989514fabbbe9df9db66c1381d6bf48530b89`
+-	Image ID: `sha256:d6d7f0253f55ff2e10251de15880bfea2294ad2fcc6b5773bb0e544bccc7ac55`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -4032,37 +4032,37 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:28:53 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='a703acfd04ece4a4aac4cb9bda26b7d225874008bba324237bd6f53792edb778';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b18877871eda801ccb99bb34c5d7d77fccf6adad02514110c21389632ec91024';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='b16b1b50699a9caaae3d782be687625d81e069c886df904f83d13e6c4322a179';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='5f6b513757d386352cf91514ed5859d1ab59364b4453e1f1c57152ba2039b8e2';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:21:36 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='d18b5dd73fce9edd5c58f623a1173f9ee2d45023836b8753b96beae51673a432';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='9ff3b4bd2bac18fb39f3356148efa2dc710ac029e12dc8f18ea1fe6be23bf299';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='18c636bd103e240d29cdb30d7867720ea9fb9ff7c645738bfb4d5b8027269263';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='eb861db1433ddc1b89f170b789fafde282f137218d6d985fb5c2003e4ff44984';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b8d46ed08ef4859476fe6421a7690d899ed83dce63f13fd894f994043177ef3c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:21:38 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:38 GMT
 CMD ["jshell"]
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:31:31 GMT
+# Sat, 05 Nov 2022 00:07:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:31:31 GMT
+# Sat, 05 Nov 2022 00:07:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:31 GMT
+# Sat, 05 Nov 2022 00:07:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:11 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:41 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:31:41 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 CMD ["irb"]
 ```
 
@@ -4075,46 +4075,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc580f2109be281fc1a5ab6d065bf040ae81d4c412e9aab8f36ebfc16e001488`  
-		Last Modified: Wed, 26 Oct 2022 16:44:21 GMT  
-		Size: 198.1 MB (198129334 bytes)  
+	-	`sha256:92987a6c66b9d34f09f6ef0fad549352afbe72ee489c23324c1dd11f432c0243`  
+		Last Modified: Fri, 04 Nov 2022 23:27:46 GMT  
+		Size: 198.5 MB (198464645 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:317971f3cd99c10fb540436d85a33bbc5fb1b174ea9f7cfbac0a9d0d7ea0b3e7`  
-		Last Modified: Wed, 26 Oct 2022 16:44:06 GMT  
-		Size: 175.0 B  
+	-	`sha256:e0db103a91cc0800441b2d41aeab58673674235234416ed22e955b92d025c3ab`  
+		Last Modified: Fri, 04 Nov 2022 23:27:32 GMT  
+		Size: 174.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:baba098fdf0de0c0367cd4a2b486b49fb90456e89f29fa6ade923373ba6f93dd`  
-		Last Modified: Wed, 26 Oct 2022 23:35:43 GMT  
-		Size: 6.9 MB (6923759 bytes)  
+	-	`sha256:a2bce30d84c17f1b6d4e186d576332eddea352dae0c743b10fda5870a4ff62f3`  
+		Last Modified: Sat, 05 Nov 2022 00:10:32 GMT  
+		Size: 6.9 MB (6923824 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:306a2d83f9b764500de04c5398b32cea050312509ba417438eacff1a7c85d592`  
-		Last Modified: Wed, 26 Oct 2022 23:35:45 GMT  
-		Size: 28.7 MB (28672125 bytes)  
+	-	`sha256:aa873161908a24a4bf2d7bde300371be79bfc425f79a4a758dff2bbc5f06693d`  
+		Last Modified: Sat, 05 Nov 2022 00:10:34 GMT  
+		Size: 28.7 MB (28672701 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b937e8786017be9f648a560a9c68ead8939826e8ba2183954740d6c0b593ebff`  
-		Last Modified: Wed, 26 Oct 2022 23:35:42 GMT  
+	-	`sha256:3a3c31703e9a6f3e8615aa790b1bf2d8b9508a209700595b6d6b5b5e44a816eb`  
+		Last Modified: Sat, 05 Nov 2022 00:10:31 GMT  
 		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:932f048cde86f0b24396574b4e470e62a300ae91f0d9e3a4129d0c84817f2d06`  
-		Last Modified: Wed, 26 Oct 2022 23:35:42 GMT  
-		Size: 1.1 MB (1065571 bytes)  
+	-	`sha256:038dc409e9e4b919c3ca52973ff12f4a3ed7360caeba9b18f46946fa559bcbc4`  
+		Last Modified: Sat, 05 Nov 2022 00:10:31 GMT  
+		Size: 1.1 MB (1066295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2da41cea8486ff52b8265794033e9f2e4bd465525c5a7a46fb250c98210a3ea8`  
-		Last Modified: Wed, 26 Oct 2022 23:35:42 GMT  
+	-	`sha256:9e2da42e6fe8f8d85a9a61c5d924cbdd86401157a8ab42dd203e1e9546c2595e`  
+		Last Modified: Sat, 05 Nov 2022 00:10:31 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3-jdk11` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:3455d670b130493e8a545f0cddf42fca626c7227fc67ab7d24aaa351e707016f
+$ docker pull jruby@sha256:23265b95e3cb6d26a980d90db54aeecbae9c37b3e229a9a09698563b350074b0
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **273.9 MB (273914396 bytes)**  
+-	Total Size: **274.3 MB (274253070 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ae1fdf499f0a08fc91ca6caa130d848b977e1d8fd867a08fa4347f29676c1628`
+-	Image ID: `sha256:aba9268704a50969762bf178bd96eb643b2d8d839304457914ca1ac0a861f0e2`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -4130,37 +4130,37 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:10:09 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 26 Oct 2022 01:10:22 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='a703acfd04ece4a4aac4cb9bda26b7d225874008bba324237bd6f53792edb778';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b18877871eda801ccb99bb34c5d7d77fccf6adad02514110c21389632ec91024';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='b16b1b50699a9caaae3d782be687625d81e069c886df904f83d13e6c4322a179';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='5f6b513757d386352cf91514ed5859d1ab59364b4453e1f1c57152ba2039b8e2';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 26 Oct 2022 01:10:25 GMT
+# Fri, 04 Nov 2022 22:40:30 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:40:47 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='d18b5dd73fce9edd5c58f623a1173f9ee2d45023836b8753b96beae51673a432';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='9ff3b4bd2bac18fb39f3356148efa2dc710ac029e12dc8f18ea1fe6be23bf299';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='18c636bd103e240d29cdb30d7867720ea9fb9ff7c645738bfb4d5b8027269263';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='eb861db1433ddc1b89f170b789fafde282f137218d6d985fb5c2003e4ff44984';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b8d46ed08ef4859476fe6421a7690d899ed83dce63f13fd894f994043177ef3c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:40:51 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 01:10:25 GMT
+# Fri, 04 Nov 2022 22:40:51 GMT
 CMD ["jshell"]
-# Wed, 26 Oct 2022 18:29:33 GMT
+# Fri, 04 Nov 2022 23:41:05 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:33 GMT
+# Fri, 04 Nov 2022 23:41:05 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:33 GMT
+# Fri, 04 Nov 2022 23:41:05 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:35 GMT
+# Fri, 04 Nov 2022 23:41:06 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:35 GMT
+# Fri, 04 Nov 2022 23:41:06 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:36 GMT
+# Fri, 04 Nov 2022 23:41:07 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:42 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:14 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:14 GMT
 CMD ["irb"]
 ```
 
@@ -4173,32 +4173,32 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea8c3cca8e2bed9bb815370558027bbb061daeb97bb885f6775c5f84ecb769dc`  
-		Last Modified: Wed, 26 Oct 2022 01:18:06 GMT  
-		Size: 194.9 MB (194877058 bytes)  
+	-	`sha256:8c67043335a7043f697bda117df614e35c201fa3cb63419f2b48ef06f40919ba`  
+		Last Modified: Fri, 04 Nov 2022 22:45:25 GMT  
+		Size: 195.2 MB (195215377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adca56bcc01b8733bc9129b5c092d02e64ca44faa0f8011186c60c0857b3f45d`  
-		Last Modified: Wed, 26 Oct 2022 01:17:54 GMT  
-		Size: 174.0 B  
+	-	`sha256:433eedea1da6277a5795ecee1af3019b8504b9bab7666ad9b163815b3d9fac1b`  
+		Last Modified: Fri, 04 Nov 2022 22:45:14 GMT  
+		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3160a1695329cd93f93a9a46d2fe22afd97db6e03d3aa18c4db9b8e9322cb130`  
-		Last Modified: Wed, 26 Oct 2022 18:31:51 GMT  
-		Size: 5.9 MB (5886782 bytes)  
+	-	`sha256:1913ba871e0096c07c11d0b13db56fc259e73da2b6f87c9825dc7e9100e470f1`  
+		Last Modified: Fri, 04 Nov 2022 23:43:08 GMT  
+		Size: 5.9 MB (5886759 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d97885c75b68daac249b20d0d21a0ed559f281b684f087f7a0607bc36798cb2`  
-		Last Modified: Wed, 26 Oct 2022 18:31:52 GMT  
-		Size: 28.7 MB (28672417 bytes)  
+	-	`sha256:c5a3b46f4692b7ae2648cd204c745805c1b7c8698d83c68814bdc3e3fb1b06d7`  
+		Last Modified: Fri, 04 Nov 2022 23:43:09 GMT  
+		Size: 28.7 MB (28672049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eaabc89348e8a13f4c834c540bf518ced07f8103b5ffb863bdcb550172f9aa16`  
-		Last Modified: Wed, 26 Oct 2022 18:31:50 GMT  
-		Size: 224.0 B  
+	-	`sha256:3496b6470dc589e8add58fde627019788182e2df235781956e8b6f4167dc9522`  
+		Last Modified: Fri, 04 Nov 2022 23:43:07 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b0add80fb016129bd71005543e7037fb1c87071dd3e13563b353428868db6eb5`  
-		Last Modified: Wed, 26 Oct 2022 18:31:51 GMT  
-		Size: 1.1 MB (1065560 bytes)  
+	-	`sha256:51921c65c9176f1ffb1c635cfc32ff5cd07fb6758a81c0440521ae527dda5a87`  
+		Last Modified: Fri, 04 Nov 2022 23:43:07 GMT  
+		Size: 1.1 MB (1066308 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3f4299d9323416a52b36d507aad0e735c43fec6204038ca4dc84409dbc62c71`  
-		Last Modified: Wed, 26 Oct 2022 18:31:51 GMT  
+	-	`sha256:9173db868470b4119bce8bcbbebaffbf93f016254652dd90659620a49c26c3eb`  
+		Last Modified: Fri, 04 Nov 2022 23:43:07 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -4412,7 +4412,7 @@ CMD ["irb"]
 ## `jruby:9.3-jdk8`
 
 ```console
-$ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a153851a4c124b2e
+$ docker pull jruby@sha256:c2f1f3c5da03fe547238cc434e2e1dfa61d34a13cc8cb26db5fb7060d5b648d1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4423,14 +4423,14 @@ $ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a1538
 ### `jruby:9.3-jdk8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:b3f092b500a43bc786249ea7139b473a5445402ed0da9340718f8a11b605d822
+$ docker pull jruby@sha256:e1946c55a5209d6dbf348061fe5456779d28ada1f48af04f3db0d6f79d63c3a9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **185.1 MB (185109927 bytes)**  
+-	Total Size: **185.1 MB (185125651 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:43039622a1686ffdcf20f0b2c181dfdbd66accd8729bd3c34444598d6c6b1d81`
+-	Image ID: `sha256:d4b0a610f60849dbded20c5fbb62d09345cb14ad55971dbedf03943605bf65b8`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -4446,35 +4446,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:46 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:24 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 CMD ["irb"]
 ```
 
@@ -4487,46 +4487,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d4cce88531bbe6024147de98024b6ee6321c70c8259f2ea11ad5712e2163e9d`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 28.7 MB (28672416 bytes)  
+	-	`sha256:5314fb85b3dcc9645b47232b283c5de36f644cd14832bf9409c0f6bedf003dd0`  
+		Last Modified: Sat, 05 Nov 2022 00:09:49 GMT  
+		Size: 28.7 MB (28672720 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0450dc5c9e7d02e0a1d3a4f8d2fbc7121a236688436c0496ae57f83e8c59ded`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 225.0 B  
+	-	`sha256:1122bf7420d03abefba5c58a74fdc4ada67856d509418f335dc2c3f3558dc531`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b896ffcc3cec7375b8b8440043e31c3d433ed1dc7e3eeaf662ab7cc1087546`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 1.1 MB (1065568 bytes)  
+	-	`sha256:89daf4a51bdf7aeefbf498c7fc3ff1bbba0ce22c0b5eb7029f7200895e9d401a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 1.1 MB (1066293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:143cc65463789f601c9e00f12c6b1747cfeeb100d414217e4cf23e52f41e2324`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
+	-	`sha256:24a69c2df430cef80585cc4de5c2833ebbc72aa59e31e57cf7c3ffcc65157236`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
 		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3-jdk8` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:221ec85a6f16b8f7201a67cf87729aa22d7937cf1490c8e694cf2cec86d551b7
+$ docker pull jruby@sha256:b9a4e515d76f35742bb72a0ad4cc671367d8e4ed340fe40344e49043930f4399
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **181.7 MB (181653129 bytes)**  
+-	Total Size: **181.7 MB (181669077 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6f88ce27631397fb5dbf92a11e91eab84fe6726e4a3c47c1d84dcc16d592078`
+-	Image ID: `sha256:9a43aa62f6f52ec7f9f4fff9fa1bcbbd386d8b91843d4faffcecfd4e9f8b8650`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -4542,35 +4542,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:08:24 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:08:26 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:39:44 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:39:46 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:09 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 CMD ["irb"]
 ```
 
@@ -4583,39 +4583,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d378871150e62d050c8f290958e6f8468c306ae04dcb0ddb140197b42969f0a6`  
-		Last Modified: Wed, 26 Oct 2022 01:16:20 GMT  
-		Size: 102.6 MB (102615823 bytes)  
+	-	`sha256:89d22354a80d2d12ffad6f61953c73519c4d3e501897b672ceaa720a21ca9533`  
+		Last Modified: Fri, 04 Nov 2022 22:43:42 GMT  
+		Size: 102.6 MB (102630792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae5e11c8b7a6c46afa4aa04526b7ae48696bdd7460c3b4ecf082cb565252c62f`  
-		Last Modified: Wed, 26 Oct 2022 01:16:13 GMT  
+	-	`sha256:dfd3de5d3cf89d4eb535267ba80576b5c8b40771b2b9213e5a423086faf1b916`  
+		Last Modified: Fri, 04 Nov 2022 22:43:34 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e166ec431737c992a580b2ae74f399d7efcc3783d5eed348d15a89730f55558`  
-		Last Modified: Wed, 26 Oct 2022 18:31:09 GMT  
-		Size: 5.9 MB (5886740 bytes)  
+	-	`sha256:76083e2bbb9d806969ce8ad3eca743ddbc01f21cf076d1145a17ed2a6cd0ad2c`  
+		Last Modified: Fri, 04 Nov 2022 23:42:26 GMT  
+		Size: 5.9 MB (5886787 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d81692bf3018f4cc37993ec23bb15b0ab616efed80c7e38a13e2745b3ba41c5a`  
-		Last Modified: Wed, 26 Oct 2022 18:31:10 GMT  
-		Size: 28.7 MB (28672424 bytes)  
+	-	`sha256:27a7bdf9254d520e509d0dfd7b5be7ac4e2c88104eb0d609395255edd677e3a2`  
+		Last Modified: Fri, 04 Nov 2022 23:42:27 GMT  
+		Size: 28.7 MB (28672657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:30b52c5b63ce1d1a0c763f5bb96cae40b877bca27aa5f6a1f9970c621906e3bd`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 225.0 B  
+	-	`sha256:a732e63ff73d304cdb542f7fda1f163bceb4d1029639d948841f9ca2e7b0f2b9`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35db8dea10915a920e750a85e8bf05436a4b7fcf52cb5db3f2f6b9a5e7e904e3`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 1.1 MB (1065578 bytes)  
+	-	`sha256:4e7cdf605588cb2f2d259fb4cffce27af2db4e98c307e042f95169b259647bb6`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 1.1 MB (1066274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c1d3a702b3ec7fe7fe64259ba5602aaea93f39e2845d14bdf75f40996b060e57`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 174.0 B  
+	-	`sha256:071281295b8993de5c4baa7f7328cd27217a6399a5d515e641fb9e58a1d2addb`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3-jre`
 
 ```console
-$ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52f962bbc73e1
+$ docker pull jruby@sha256:49263ea3888f7b984ea5858916c6cd49da093a0053e4f44d0cfa114841fd92f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4626,14 +4626,14 @@ $ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52
 ### `jruby:9.3-jre` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:18e3643422c845f1f82b4b300e29bb4d69d29ba5f7ca03be14f54627900a2850
+$ docker pull jruby@sha256:8f682181c67c5a6872b665e1fd3cb6f17dabf06adc9a1701a8e6b4c174ae6f48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.4 MB (123402307 bytes)**  
+-	Total Size: **123.4 MB (123413836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1f90a45d6373abab7601d0e68675844213f06d51536d5b6d200c4f94d24e8a`
+-	Image ID: `sha256:c587c020e9ab1ac467eb09d934f69e7f14198014aa19e0a43d40b03de29e2ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -4649,35 +4649,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:25 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:10 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 CMD ["irb"]
 ```
 
@@ -4690,46 +4690,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21f064ab5784caeae419e2afb7425a62f23f0f248baf0fb37b31c634416c085d`  
-		Last Modified: Wed, 26 Oct 2022 23:34:25 GMT  
-		Size: 28.7 MB (28672411 bytes)  
+	-	`sha256:abcd65b5e27237c16d5459bdbc47c6b6a0ca212ddc03b57b3e2614c1336f441a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:13 GMT  
+		Size: 28.7 MB (28672310 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b41c00b5a25852f4e311853c9350bf3450b06122c1c8d16930f3b102121dc01b`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
+	-	`sha256:8417d2088c784659969a8d1fb12e683aef6b38b7d6e9ab24f318c8561a67d465`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b5b22973e822afdd8cd315b5059edd2f7f243b1f6cbbe664168c2745bcb8b9`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 1.1 MB (1065548 bytes)  
+	-	`sha256:06e9846e9e420e7062f956fa3a917d500aa2c2a68492db43ed5467d2a11e8cd7`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a1181ffff2bfba3de3fef4afc77171660aaa9b9f1c2a0fc7d5725851cd55ee`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 174.0 B  
+	-	`sha256:8ff332a63cadd19e84f8dd63d0ceef329ae33a5397774c277ca2574da6b23c58`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3-jre` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:182728558624a9c95a60f682d2e5bea5c13bfa27fb5a7255b83d3c8606a6eed1
+$ docker pull jruby@sha256:957872cb202a626f58800d1177a1ca07b9e36d3ce5d553c1b6cc5532fe29c919
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **119.8 MB (119841033 bytes)**  
+-	Total Size: **119.8 MB (119845863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92a74d9cd79247d8ca3109c892c4ad250ea23f1f490dc3a869ee6667a94dd9d3`
+-	Image ID: `sha256:5831cdb5121c7ddd276e3f55560d6c9441dda083283d4d3a1c32be5425a29279`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -4745,35 +4745,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:09:55 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:09:55 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:40:17 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:40:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:28:45 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 CMD ["irb"]
 ```
 
@@ -4786,39 +4786,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c6957aefb66d28abfffaa8b0316225c93ae248e51de41c6472d528a29af6525`  
-		Last Modified: Wed, 26 Oct 2022 01:17:16 GMT  
-		Size: 40.8 MB (40803724 bytes)  
+	-	`sha256:a82f0b25b538ab3b61f52f143646fa2b54297b4cda1ec43ddced742cbbcf01c2`  
+		Last Modified: Fri, 04 Nov 2022 22:44:37 GMT  
+		Size: 40.8 MB (40807540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8abb56da477fa4a069dad39242e6d6999b85b514c78dc09595ac485605f1270`  
-		Last Modified: Wed, 26 Oct 2022 01:17:12 GMT  
+	-	`sha256:615afaccba5823904abefbf4e7856717efed9d89d5aec959a10e5cee835c9079`  
+		Last Modified: Fri, 04 Nov 2022 22:44:33 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebbb6e560a099b3810c3427e0327f394392499bcd6fbeda23a4d864b510bf097`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 5.9 MB (5886734 bytes)  
+	-	`sha256:347eda5a9750ed4935d2f9aca6db5b71b352a1e5147943698f02b70c3424cd8a`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 5.9 MB (5886762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d6e9848f0eedb11e3bfe91204b99089d0c16c2664743259442b1ab4d0cb3502`  
-		Last Modified: Wed, 26 Oct 2022 18:30:34 GMT  
-		Size: 28.7 MB (28672415 bytes)  
+	-	`sha256:a7ec581d2bbce6acf852e60383cc0ba7fb5624aaf3df18c26fa001b710c08302`  
+		Last Modified: Fri, 04 Nov 2022 23:41:52 GMT  
+		Size: 28.7 MB (28672679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ed42c04ea317722d6a835a9276829cc295e57d11424383e9aa2b58a0075a64`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 224.0 B  
+	-	`sha256:abe3d5824237eeaaa67bc8b970adf27d150e34354223ab9a39447f94edc0bbeb`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5896696ee8d8c7d1ebf557a9bec79c111339baed5fb9cb1e31332739a77bec`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 1.1 MB (1065595 bytes)  
+	-	`sha256:5ca23cd8897f38c3c9699a7fcf32dc4bf95e7d1676bb88e37b881afd0f1ca8fa`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 1.1 MB (1066313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8a33d03a9035b87bbcffcef0b770943dff76c9735cc50db4a0b1a86cc898f1e`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:3cb2e88e21d802708863053326d846d1024c3549da8ed7c8a15788dbdeb53591`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3-jre11`
 
 ```console
-$ docker pull jruby@sha256:babb58733a65e654ea95c088281b4fbbf6357075ddf531355a1326552e05f64a
+$ docker pull jruby@sha256:3c19614878c95f69370fe8f839a19a4e27d638955be0b320538b901179b8889b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4829,14 +4829,14 @@ $ docker pull jruby@sha256:babb58733a65e654ea95c088281b4fbbf6357075ddf531355a132
 ### `jruby:9.3-jre11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:80afdf5c8481a8a1c276607517262caf3a24b54b9e456a1b5f67d3716b2ac3f2
+$ docker pull jruby@sha256:2bbc395bb7b641e22689ac4b752b472323059274b18581d50b86e06b288a91dc
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **128.1 MB (128090714 bytes)**  
+-	Total Size: **128.2 MB (128224356 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:da0ba8567fcb2f0a598863fd0b437ed4c9c6418750ee60c2b7f13361a1f6c8a8`
+-	Image ID: `sha256:356c64f4caa5e02282762dd465fd1ecb6ce8b92c4a3efe966b7f7126b5cb6a1d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -4852,35 +4852,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:29:23 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:29:24 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:22:24 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:22:25 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:31:07 GMT
+# Sat, 05 Nov 2022 00:06:43 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:31:07 GMT
+# Sat, 05 Nov 2022 00:06:44 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:08 GMT
+# Sat, 05 Nov 2022 00:06:44 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:18 GMT
+# Sat, 05 Nov 2022 00:06:53 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:31:18 GMT
+# Sat, 05 Nov 2022 00:06:53 GMT
 CMD ["irb"]
 ```
 
@@ -4893,46 +4893,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:66d4ce13fd620ba04abe64eeebe53783f1fceba116a08eace8fdfe202db35c00`  
-		Last Modified: Wed, 26 Oct 2022 16:45:13 GMT  
-		Size: 46.5 MB (46497092 bytes)  
+	-	`sha256:bbd45db92608776aa8d24a28e427c9e56ec56a4d83bc3da5db28817f88a8ffad`  
+		Last Modified: Fri, 04 Nov 2022 23:29:16 GMT  
+		Size: 46.6 MB (46630173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e81ede82d9fd39574aad8126301364fc83a05b01f9537dc5a8c8c17865dca42`  
-		Last Modified: Wed, 26 Oct 2022 16:45:06 GMT  
+	-	`sha256:6fcfd0f47989acccee774146a436995f6d433299e82638b90c6b47f093ebd3cc`  
+		Last Modified: Fri, 04 Nov 2022 23:29:09 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90dc6131f518995245e9cf60c905e000f4c31b781da122846b5489bfaa2c84f0`  
-		Last Modified: Wed, 26 Oct 2022 23:35:29 GMT  
-		Size: 6.9 MB (6923824 bytes)  
+	-	`sha256:b2efe7cd9800950ff66f440f2247d8eeb53b1a4c8c235e14b0ca3917821a1410`  
+		Last Modified: Sat, 05 Nov 2022 00:10:16 GMT  
+		Size: 6.9 MB (6923817 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:afd6c1e63d3214b61efc53d57df0ad8ce402330bb1de2c745970f2eb93a0b287`  
-		Last Modified: Wed, 26 Oct 2022 23:35:30 GMT  
-		Size: 28.7 MB (28672163 bytes)  
+	-	`sha256:0f2d9565a34861ead3ef552193c114746577e4a9da348ede5c890fe2a859e87a`  
+		Last Modified: Sat, 05 Nov 2022 00:10:18 GMT  
+		Size: 28.7 MB (28672025 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ac7c8bcd537319bcdc85ae640f8ed7c1e877882401200bb87c12e18e7ea4ed`  
-		Last Modified: Wed, 26 Oct 2022 23:35:27 GMT  
+	-	`sha256:d93f1e27f1dc8727ff1a5d8d780ef5271d257e381864b843a8786a0958c72966`  
+		Last Modified: Sat, 05 Nov 2022 00:10:15 GMT  
 		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e90a8660fc2ce81f7969e6fadd7b2fa2778410397a74d8ef44cfb76226bd1fb1`  
-		Last Modified: Wed, 26 Oct 2022 23:35:27 GMT  
-		Size: 1.1 MB (1065584 bytes)  
+	-	`sha256:109f4088a7c107cd692cb0f06f1fa7961989b12856f1c4d05e573985490649d5`  
+		Last Modified: Sat, 05 Nov 2022 00:10:15 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0ec06761e72540327117f544909a2c3ffddb1700baf7c16eef1a5862f00b3c12`  
-		Last Modified: Wed, 26 Oct 2022 23:35:27 GMT  
+	-	`sha256:bff63a591e2c6f8b1acf70902a1598a43acd091ca9688039620993c1934879a5`  
+		Last Modified: Sat, 05 Nov 2022 00:10:15 GMT  
 		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3-jre11` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:76396e5371f25396ed300091324aa5e514498d3f21dfb6062dba01cc562dee57
+$ docker pull jruby@sha256:9849afc5357a4a4dc74ecdf292b08cc4b5daca1594b8de232518e1081c008b8c
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.9 MB (123862571 bytes)**  
+-	Total Size: **124.0 MB (123998152 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0a0d41ac2bf60dba2511c7a976cbf29a641ccc646880129732dfb68b1e0b3235`
+-	Image ID: `sha256:2c327e8a702c02690a0faf06628b79ebbec5fa2a06053c08bfd08479100ca16c`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -4948,35 +4948,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:10:09 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 26 Oct 2022 01:11:00 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 26 Oct 2022 01:11:01 GMT
+# Fri, 04 Nov 2022 22:40:30 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:27 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:28 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 18:29:17 GMT
+# Fri, 04 Nov 2022 23:40:48 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:17 GMT
+# Fri, 04 Nov 2022 23:40:48 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:17 GMT
+# Fri, 04 Nov 2022 23:40:48 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:19 GMT
+# Fri, 04 Nov 2022 23:40:50 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:19 GMT
+# Fri, 04 Nov 2022 23:40:50 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:19 GMT
+# Fri, 04 Nov 2022 23:40:51 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:27 GMT
+# Fri, 04 Nov 2022 23:40:58 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:27 GMT
+# Fri, 04 Nov 2022 23:40:58 GMT
 CMD ["irb"]
 ```
 
@@ -4989,39 +4989,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2f074bb0d3a200c73832f49376539750092a87663c1626d2cfad573adeb47d19`  
-		Last Modified: Wed, 26 Oct 2022 01:19:11 GMT  
-		Size: 44.8 MB (44825170 bytes)  
+	-	`sha256:479785166a86894f7082d07c7739f94a19bd6518753eff613b79be4de2e385a3`  
+		Last Modified: Fri, 04 Nov 2022 22:46:31 GMT  
+		Size: 45.0 MB (44959920 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:912068dbc2a17ebd81e7b1b2de4c78a115995117b29aecd10d6140ce0e9b6555`  
-		Last Modified: Wed, 26 Oct 2022 01:19:06 GMT  
-		Size: 160.0 B  
+	-	`sha256:6dd5e491c74305e59c65f0432b4cb15518760d88967d02f27ea037374c86f121`  
+		Last Modified: Fri, 04 Nov 2022 22:46:26 GMT  
+		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67df722a9408260da51c609e02b0665967e5140690410e03d53d2ff4a881f2b8`  
-		Last Modified: Wed, 26 Oct 2022 18:31:36 GMT  
-		Size: 5.9 MB (5886796 bytes)  
+	-	`sha256:bf328668acf32152a909cd923877276ca5ef218d7413cf59d1bbd359ed523b54`  
+		Last Modified: Fri, 04 Nov 2022 23:42:54 GMT  
+		Size: 5.9 MB (5886739 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f41b7a49afbe4c88699c86b45f000deddf2a3b229b875fe35fa21aa6f908e537`  
-		Last Modified: Wed, 26 Oct 2022 18:31:37 GMT  
-		Size: 28.7 MB (28672446 bytes)  
+	-	`sha256:56555b922bb3bb6e9827a3739ca6127dbbdfc5c29d7ce6c14ebd5e1639786c66`  
+		Last Modified: Fri, 04 Nov 2022 23:42:55 GMT  
+		Size: 28.7 MB (28672629 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7de25df39da8cb7681a5f26a21b205ce50fb5c7b8def2a41f44ad7666bc6056`  
-		Last Modified: Wed, 26 Oct 2022 18:31:35 GMT  
+	-	`sha256:4bb2e55c255535a90671420409f40a35323cd0e9fcaa8d8bd49d302911d9daa5`  
+		Last Modified: Fri, 04 Nov 2022 23:42:52 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7962912ef718e479e8b568dd95df0932aff827f30a85e0d5b4484147b84564f7`  
-		Last Modified: Wed, 26 Oct 2022 18:31:36 GMT  
-		Size: 1.1 MB (1065593 bytes)  
+	-	`sha256:9bc6859dd8f730a87f206e4d5160548bdab62cd350f1e42ca0b78c7994fd4c3b`  
+		Last Modified: Fri, 04 Nov 2022 23:42:53 GMT  
+		Size: 1.1 MB (1066296 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:50714b830904cdd9454659ad9505809570585ce63aef0966c99011078375a5fe`  
-		Last Modified: Wed, 26 Oct 2022 18:31:35 GMT  
-		Size: 175.0 B  
+	-	`sha256:abbc3490ff5c51cbbf3f5e59ae5b985509478349bdef5f437b289abd534941be`  
+		Last Modified: Fri, 04 Nov 2022 23:42:53 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3-jre8`
 
 ```console
-$ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52f962bbc73e1
+$ docker pull jruby@sha256:49263ea3888f7b984ea5858916c6cd49da093a0053e4f44d0cfa114841fd92f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5032,14 +5032,14 @@ $ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52
 ### `jruby:9.3-jre8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:18e3643422c845f1f82b4b300e29bb4d69d29ba5f7ca03be14f54627900a2850
+$ docker pull jruby@sha256:8f682181c67c5a6872b665e1fd3cb6f17dabf06adc9a1701a8e6b4c174ae6f48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.4 MB (123402307 bytes)**  
+-	Total Size: **123.4 MB (123413836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1f90a45d6373abab7601d0e68675844213f06d51536d5b6d200c4f94d24e8a`
+-	Image ID: `sha256:c587c020e9ab1ac467eb09d934f69e7f14198014aa19e0a43d40b03de29e2ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -5055,35 +5055,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:25 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:10 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 CMD ["irb"]
 ```
 
@@ -5096,46 +5096,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21f064ab5784caeae419e2afb7425a62f23f0f248baf0fb37b31c634416c085d`  
-		Last Modified: Wed, 26 Oct 2022 23:34:25 GMT  
-		Size: 28.7 MB (28672411 bytes)  
+	-	`sha256:abcd65b5e27237c16d5459bdbc47c6b6a0ca212ddc03b57b3e2614c1336f441a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:13 GMT  
+		Size: 28.7 MB (28672310 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b41c00b5a25852f4e311853c9350bf3450b06122c1c8d16930f3b102121dc01b`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
+	-	`sha256:8417d2088c784659969a8d1fb12e683aef6b38b7d6e9ab24f318c8561a67d465`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b5b22973e822afdd8cd315b5059edd2f7f243b1f6cbbe664168c2745bcb8b9`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 1.1 MB (1065548 bytes)  
+	-	`sha256:06e9846e9e420e7062f956fa3a917d500aa2c2a68492db43ed5467d2a11e8cd7`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a1181ffff2bfba3de3fef4afc77171660aaa9b9f1c2a0fc7d5725851cd55ee`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 174.0 B  
+	-	`sha256:8ff332a63cadd19e84f8dd63d0ceef329ae33a5397774c277ca2574da6b23c58`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3-jre8` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:182728558624a9c95a60f682d2e5bea5c13bfa27fb5a7255b83d3c8606a6eed1
+$ docker pull jruby@sha256:957872cb202a626f58800d1177a1ca07b9e36d3ce5d553c1b6cc5532fe29c919
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **119.8 MB (119841033 bytes)**  
+-	Total Size: **119.8 MB (119845863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92a74d9cd79247d8ca3109c892c4ad250ea23f1f490dc3a869ee6667a94dd9d3`
+-	Image ID: `sha256:5831cdb5121c7ddd276e3f55560d6c9441dda083283d4d3a1c32be5425a29279`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -5151,35 +5151,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:09:55 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:09:55 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:40:17 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:40:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:28:45 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 CMD ["irb"]
 ```
 
@@ -5192,39 +5192,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c6957aefb66d28abfffaa8b0316225c93ae248e51de41c6472d528a29af6525`  
-		Last Modified: Wed, 26 Oct 2022 01:17:16 GMT  
-		Size: 40.8 MB (40803724 bytes)  
+	-	`sha256:a82f0b25b538ab3b61f52f143646fa2b54297b4cda1ec43ddced742cbbcf01c2`  
+		Last Modified: Fri, 04 Nov 2022 22:44:37 GMT  
+		Size: 40.8 MB (40807540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8abb56da477fa4a069dad39242e6d6999b85b514c78dc09595ac485605f1270`  
-		Last Modified: Wed, 26 Oct 2022 01:17:12 GMT  
+	-	`sha256:615afaccba5823904abefbf4e7856717efed9d89d5aec959a10e5cee835c9079`  
+		Last Modified: Fri, 04 Nov 2022 22:44:33 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebbb6e560a099b3810c3427e0327f394392499bcd6fbeda23a4d864b510bf097`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 5.9 MB (5886734 bytes)  
+	-	`sha256:347eda5a9750ed4935d2f9aca6db5b71b352a1e5147943698f02b70c3424cd8a`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 5.9 MB (5886762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d6e9848f0eedb11e3bfe91204b99089d0c16c2664743259442b1ab4d0cb3502`  
-		Last Modified: Wed, 26 Oct 2022 18:30:34 GMT  
-		Size: 28.7 MB (28672415 bytes)  
+	-	`sha256:a7ec581d2bbce6acf852e60383cc0ba7fb5624aaf3df18c26fa001b710c08302`  
+		Last Modified: Fri, 04 Nov 2022 23:41:52 GMT  
+		Size: 28.7 MB (28672679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ed42c04ea317722d6a835a9276829cc295e57d11424383e9aa2b58a0075a64`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 224.0 B  
+	-	`sha256:abe3d5824237eeaaa67bc8b970adf27d150e34354223ab9a39447f94edc0bbeb`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5896696ee8d8c7d1ebf557a9bec79c111339baed5fb9cb1e31332739a77bec`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 1.1 MB (1065595 bytes)  
+	-	`sha256:5ca23cd8897f38c3c9699a7fcf32dc4bf95e7d1676bb88e37b881afd0f1ca8fa`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 1.1 MB (1066313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8a33d03a9035b87bbcffcef0b770943dff76c9735cc50db4a0b1a86cc898f1e`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:3cb2e88e21d802708863053326d846d1024c3549da8ed7c8a15788dbdeb53591`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9`
 
 ```console
-$ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52f962bbc73e1
+$ docker pull jruby@sha256:49263ea3888f7b984ea5858916c6cd49da093a0053e4f44d0cfa114841fd92f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5235,14 +5235,14 @@ $ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52
 ### `jruby:9.3.9` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:18e3643422c845f1f82b4b300e29bb4d69d29ba5f7ca03be14f54627900a2850
+$ docker pull jruby@sha256:8f682181c67c5a6872b665e1fd3cb6f17dabf06adc9a1701a8e6b4c174ae6f48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.4 MB (123402307 bytes)**  
+-	Total Size: **123.4 MB (123413836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1f90a45d6373abab7601d0e68675844213f06d51536d5b6d200c4f94d24e8a`
+-	Image ID: `sha256:c587c020e9ab1ac467eb09d934f69e7f14198014aa19e0a43d40b03de29e2ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -5258,35 +5258,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:25 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:10 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 CMD ["irb"]
 ```
 
@@ -5299,46 +5299,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21f064ab5784caeae419e2afb7425a62f23f0f248baf0fb37b31c634416c085d`  
-		Last Modified: Wed, 26 Oct 2022 23:34:25 GMT  
-		Size: 28.7 MB (28672411 bytes)  
+	-	`sha256:abcd65b5e27237c16d5459bdbc47c6b6a0ca212ddc03b57b3e2614c1336f441a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:13 GMT  
+		Size: 28.7 MB (28672310 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b41c00b5a25852f4e311853c9350bf3450b06122c1c8d16930f3b102121dc01b`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
+	-	`sha256:8417d2088c784659969a8d1fb12e683aef6b38b7d6e9ab24f318c8561a67d465`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b5b22973e822afdd8cd315b5059edd2f7f243b1f6cbbe664168c2745bcb8b9`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 1.1 MB (1065548 bytes)  
+	-	`sha256:06e9846e9e420e7062f956fa3a917d500aa2c2a68492db43ed5467d2a11e8cd7`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a1181ffff2bfba3de3fef4afc77171660aaa9b9f1c2a0fc7d5725851cd55ee`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 174.0 B  
+	-	`sha256:8ff332a63cadd19e84f8dd63d0ceef329ae33a5397774c277ca2574da6b23c58`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:182728558624a9c95a60f682d2e5bea5c13bfa27fb5a7255b83d3c8606a6eed1
+$ docker pull jruby@sha256:957872cb202a626f58800d1177a1ca07b9e36d3ce5d553c1b6cc5532fe29c919
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **119.8 MB (119841033 bytes)**  
+-	Total Size: **119.8 MB (119845863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92a74d9cd79247d8ca3109c892c4ad250ea23f1f490dc3a869ee6667a94dd9d3`
+-	Image ID: `sha256:5831cdb5121c7ddd276e3f55560d6c9441dda083283d4d3a1c32be5425a29279`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -5354,35 +5354,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:09:55 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:09:55 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:40:17 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:40:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:28:45 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 CMD ["irb"]
 ```
 
@@ -5395,39 +5395,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c6957aefb66d28abfffaa8b0316225c93ae248e51de41c6472d528a29af6525`  
-		Last Modified: Wed, 26 Oct 2022 01:17:16 GMT  
-		Size: 40.8 MB (40803724 bytes)  
+	-	`sha256:a82f0b25b538ab3b61f52f143646fa2b54297b4cda1ec43ddced742cbbcf01c2`  
+		Last Modified: Fri, 04 Nov 2022 22:44:37 GMT  
+		Size: 40.8 MB (40807540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8abb56da477fa4a069dad39242e6d6999b85b514c78dc09595ac485605f1270`  
-		Last Modified: Wed, 26 Oct 2022 01:17:12 GMT  
+	-	`sha256:615afaccba5823904abefbf4e7856717efed9d89d5aec959a10e5cee835c9079`  
+		Last Modified: Fri, 04 Nov 2022 22:44:33 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebbb6e560a099b3810c3427e0327f394392499bcd6fbeda23a4d864b510bf097`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 5.9 MB (5886734 bytes)  
+	-	`sha256:347eda5a9750ed4935d2f9aca6db5b71b352a1e5147943698f02b70c3424cd8a`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 5.9 MB (5886762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d6e9848f0eedb11e3bfe91204b99089d0c16c2664743259442b1ab4d0cb3502`  
-		Last Modified: Wed, 26 Oct 2022 18:30:34 GMT  
-		Size: 28.7 MB (28672415 bytes)  
+	-	`sha256:a7ec581d2bbce6acf852e60383cc0ba7fb5624aaf3df18c26fa001b710c08302`  
+		Last Modified: Fri, 04 Nov 2022 23:41:52 GMT  
+		Size: 28.7 MB (28672679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ed42c04ea317722d6a835a9276829cc295e57d11424383e9aa2b58a0075a64`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 224.0 B  
+	-	`sha256:abe3d5824237eeaaa67bc8b970adf27d150e34354223ab9a39447f94edc0bbeb`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5896696ee8d8c7d1ebf557a9bec79c111339baed5fb9cb1e31332739a77bec`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 1.1 MB (1065595 bytes)  
+	-	`sha256:5ca23cd8897f38c3c9699a7fcf32dc4bf95e7d1676bb88e37b881afd0f1ca8fa`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 1.1 MB (1066313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8a33d03a9035b87bbcffcef0b770943dff76c9735cc50db4a0b1a86cc898f1e`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:3cb2e88e21d802708863053326d846d1024c3549da8ed7c8a15788dbdeb53591`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9-jdk`
 
 ```console
-$ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a153851a4c124b2e
+$ docker pull jruby@sha256:c2f1f3c5da03fe547238cc434e2e1dfa61d34a13cc8cb26db5fb7060d5b648d1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5438,14 +5438,14 @@ $ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a1538
 ### `jruby:9.3.9-jdk` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:b3f092b500a43bc786249ea7139b473a5445402ed0da9340718f8a11b605d822
+$ docker pull jruby@sha256:e1946c55a5209d6dbf348061fe5456779d28ada1f48af04f3db0d6f79d63c3a9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **185.1 MB (185109927 bytes)**  
+-	Total Size: **185.1 MB (185125651 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:43039622a1686ffdcf20f0b2c181dfdbd66accd8729bd3c34444598d6c6b1d81`
+-	Image ID: `sha256:d4b0a610f60849dbded20c5fbb62d09345cb14ad55971dbedf03943605bf65b8`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -5461,35 +5461,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:46 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:24 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 CMD ["irb"]
 ```
 
@@ -5502,46 +5502,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d4cce88531bbe6024147de98024b6ee6321c70c8259f2ea11ad5712e2163e9d`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 28.7 MB (28672416 bytes)  
+	-	`sha256:5314fb85b3dcc9645b47232b283c5de36f644cd14832bf9409c0f6bedf003dd0`  
+		Last Modified: Sat, 05 Nov 2022 00:09:49 GMT  
+		Size: 28.7 MB (28672720 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0450dc5c9e7d02e0a1d3a4f8d2fbc7121a236688436c0496ae57f83e8c59ded`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 225.0 B  
+	-	`sha256:1122bf7420d03abefba5c58a74fdc4ada67856d509418f335dc2c3f3558dc531`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b896ffcc3cec7375b8b8440043e31c3d433ed1dc7e3eeaf662ab7cc1087546`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 1.1 MB (1065568 bytes)  
+	-	`sha256:89daf4a51bdf7aeefbf498c7fc3ff1bbba0ce22c0b5eb7029f7200895e9d401a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 1.1 MB (1066293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:143cc65463789f601c9e00f12c6b1747cfeeb100d414217e4cf23e52f41e2324`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
+	-	`sha256:24a69c2df430cef80585cc4de5c2833ebbc72aa59e31e57cf7c3ffcc65157236`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
 		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9-jdk` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:221ec85a6f16b8f7201a67cf87729aa22d7937cf1490c8e694cf2cec86d551b7
+$ docker pull jruby@sha256:b9a4e515d76f35742bb72a0ad4cc671367d8e4ed340fe40344e49043930f4399
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **181.7 MB (181653129 bytes)**  
+-	Total Size: **181.7 MB (181669077 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6f88ce27631397fb5dbf92a11e91eab84fe6726e4a3c47c1d84dcc16d592078`
+-	Image ID: `sha256:9a43aa62f6f52ec7f9f4fff9fa1bcbbd386d8b91843d4faffcecfd4e9f8b8650`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -5557,35 +5557,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:08:24 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:08:26 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:39:44 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:39:46 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:09 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 CMD ["irb"]
 ```
 
@@ -5598,39 +5598,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d378871150e62d050c8f290958e6f8468c306ae04dcb0ddb140197b42969f0a6`  
-		Last Modified: Wed, 26 Oct 2022 01:16:20 GMT  
-		Size: 102.6 MB (102615823 bytes)  
+	-	`sha256:89d22354a80d2d12ffad6f61953c73519c4d3e501897b672ceaa720a21ca9533`  
+		Last Modified: Fri, 04 Nov 2022 22:43:42 GMT  
+		Size: 102.6 MB (102630792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae5e11c8b7a6c46afa4aa04526b7ae48696bdd7460c3b4ecf082cb565252c62f`  
-		Last Modified: Wed, 26 Oct 2022 01:16:13 GMT  
+	-	`sha256:dfd3de5d3cf89d4eb535267ba80576b5c8b40771b2b9213e5a423086faf1b916`  
+		Last Modified: Fri, 04 Nov 2022 22:43:34 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e166ec431737c992a580b2ae74f399d7efcc3783d5eed348d15a89730f55558`  
-		Last Modified: Wed, 26 Oct 2022 18:31:09 GMT  
-		Size: 5.9 MB (5886740 bytes)  
+	-	`sha256:76083e2bbb9d806969ce8ad3eca743ddbc01f21cf076d1145a17ed2a6cd0ad2c`  
+		Last Modified: Fri, 04 Nov 2022 23:42:26 GMT  
+		Size: 5.9 MB (5886787 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d81692bf3018f4cc37993ec23bb15b0ab616efed80c7e38a13e2745b3ba41c5a`  
-		Last Modified: Wed, 26 Oct 2022 18:31:10 GMT  
-		Size: 28.7 MB (28672424 bytes)  
+	-	`sha256:27a7bdf9254d520e509d0dfd7b5be7ac4e2c88104eb0d609395255edd677e3a2`  
+		Last Modified: Fri, 04 Nov 2022 23:42:27 GMT  
+		Size: 28.7 MB (28672657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:30b52c5b63ce1d1a0c763f5bb96cae40b877bca27aa5f6a1f9970c621906e3bd`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 225.0 B  
+	-	`sha256:a732e63ff73d304cdb542f7fda1f163bceb4d1029639d948841f9ca2e7b0f2b9`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35db8dea10915a920e750a85e8bf05436a4b7fcf52cb5db3f2f6b9a5e7e904e3`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 1.1 MB (1065578 bytes)  
+	-	`sha256:4e7cdf605588cb2f2d259fb4cffce27af2db4e98c307e042f95169b259647bb6`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 1.1 MB (1066274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c1d3a702b3ec7fe7fe64259ba5602aaea93f39e2845d14bdf75f40996b060e57`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 174.0 B  
+	-	`sha256:071281295b8993de5c4baa7f7328cd27217a6399a5d515e641fb9e58a1d2addb`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9-jdk11`
 
 ```console
-$ docker pull jruby@sha256:fc6c1df2c60e013d227f2bd16763cdec04d65ba2f2feca10a750481454e04832
+$ docker pull jruby@sha256:ea6db7565b6812e4250e21eb53019606ca863d293972ea2ac41f89c152db3525
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5641,14 +5641,14 @@ $ docker pull jruby@sha256:fc6c1df2c60e013d227f2bd16763cdec04d65ba2f2feca10a7504
 ### `jruby:9.3.9-jdk11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:e841201c92f97896b07b39e9b4ec5618094f1893dd406fe604e32f1a1ae56271
+$ docker pull jruby@sha256:39ce45bd4b0ca79db6afa0493676ab4e87f8214ebb9fbd1218263e3b2905f9a4
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **279.7 MB (279722855 bytes)**  
+-	Total Size: **280.1 MB (280059530 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bbdce0879821096c7925b8b47a2989514fabbbe9df9db66c1381d6bf48530b89`
+-	Image ID: `sha256:d6d7f0253f55ff2e10251de15880bfea2294ad2fcc6b5773bb0e544bccc7ac55`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -5664,37 +5664,37 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:28:53 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='a703acfd04ece4a4aac4cb9bda26b7d225874008bba324237bd6f53792edb778';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b18877871eda801ccb99bb34c5d7d77fccf6adad02514110c21389632ec91024';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='b16b1b50699a9caaae3d782be687625d81e069c886df904f83d13e6c4322a179';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='5f6b513757d386352cf91514ed5859d1ab59364b4453e1f1c57152ba2039b8e2';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:21:36 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='d18b5dd73fce9edd5c58f623a1173f9ee2d45023836b8753b96beae51673a432';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='9ff3b4bd2bac18fb39f3356148efa2dc710ac029e12dc8f18ea1fe6be23bf299';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='18c636bd103e240d29cdb30d7867720ea9fb9ff7c645738bfb4d5b8027269263';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='eb861db1433ddc1b89f170b789fafde282f137218d6d985fb5c2003e4ff44984';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b8d46ed08ef4859476fe6421a7690d899ed83dce63f13fd894f994043177ef3c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:21:38 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:38 GMT
 CMD ["jshell"]
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:31:31 GMT
+# Sat, 05 Nov 2022 00:07:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:31:31 GMT
+# Sat, 05 Nov 2022 00:07:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:31 GMT
+# Sat, 05 Nov 2022 00:07:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:11 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:41 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:31:41 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 CMD ["irb"]
 ```
 
@@ -5707,46 +5707,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc580f2109be281fc1a5ab6d065bf040ae81d4c412e9aab8f36ebfc16e001488`  
-		Last Modified: Wed, 26 Oct 2022 16:44:21 GMT  
-		Size: 198.1 MB (198129334 bytes)  
+	-	`sha256:92987a6c66b9d34f09f6ef0fad549352afbe72ee489c23324c1dd11f432c0243`  
+		Last Modified: Fri, 04 Nov 2022 23:27:46 GMT  
+		Size: 198.5 MB (198464645 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:317971f3cd99c10fb540436d85a33bbc5fb1b174ea9f7cfbac0a9d0d7ea0b3e7`  
-		Last Modified: Wed, 26 Oct 2022 16:44:06 GMT  
-		Size: 175.0 B  
+	-	`sha256:e0db103a91cc0800441b2d41aeab58673674235234416ed22e955b92d025c3ab`  
+		Last Modified: Fri, 04 Nov 2022 23:27:32 GMT  
+		Size: 174.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:baba098fdf0de0c0367cd4a2b486b49fb90456e89f29fa6ade923373ba6f93dd`  
-		Last Modified: Wed, 26 Oct 2022 23:35:43 GMT  
-		Size: 6.9 MB (6923759 bytes)  
+	-	`sha256:a2bce30d84c17f1b6d4e186d576332eddea352dae0c743b10fda5870a4ff62f3`  
+		Last Modified: Sat, 05 Nov 2022 00:10:32 GMT  
+		Size: 6.9 MB (6923824 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:306a2d83f9b764500de04c5398b32cea050312509ba417438eacff1a7c85d592`  
-		Last Modified: Wed, 26 Oct 2022 23:35:45 GMT  
-		Size: 28.7 MB (28672125 bytes)  
+	-	`sha256:aa873161908a24a4bf2d7bde300371be79bfc425f79a4a758dff2bbc5f06693d`  
+		Last Modified: Sat, 05 Nov 2022 00:10:34 GMT  
+		Size: 28.7 MB (28672701 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b937e8786017be9f648a560a9c68ead8939826e8ba2183954740d6c0b593ebff`  
-		Last Modified: Wed, 26 Oct 2022 23:35:42 GMT  
+	-	`sha256:3a3c31703e9a6f3e8615aa790b1bf2d8b9508a209700595b6d6b5b5e44a816eb`  
+		Last Modified: Sat, 05 Nov 2022 00:10:31 GMT  
 		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:932f048cde86f0b24396574b4e470e62a300ae91f0d9e3a4129d0c84817f2d06`  
-		Last Modified: Wed, 26 Oct 2022 23:35:42 GMT  
-		Size: 1.1 MB (1065571 bytes)  
+	-	`sha256:038dc409e9e4b919c3ca52973ff12f4a3ed7360caeba9b18f46946fa559bcbc4`  
+		Last Modified: Sat, 05 Nov 2022 00:10:31 GMT  
+		Size: 1.1 MB (1066295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2da41cea8486ff52b8265794033e9f2e4bd465525c5a7a46fb250c98210a3ea8`  
-		Last Modified: Wed, 26 Oct 2022 23:35:42 GMT  
+	-	`sha256:9e2da42e6fe8f8d85a9a61c5d924cbdd86401157a8ab42dd203e1e9546c2595e`  
+		Last Modified: Sat, 05 Nov 2022 00:10:31 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9-jdk11` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:3455d670b130493e8a545f0cddf42fca626c7227fc67ab7d24aaa351e707016f
+$ docker pull jruby@sha256:23265b95e3cb6d26a980d90db54aeecbae9c37b3e229a9a09698563b350074b0
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **273.9 MB (273914396 bytes)**  
+-	Total Size: **274.3 MB (274253070 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ae1fdf499f0a08fc91ca6caa130d848b977e1d8fd867a08fa4347f29676c1628`
+-	Image ID: `sha256:aba9268704a50969762bf178bd96eb643b2d8d839304457914ca1ac0a861f0e2`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -5762,37 +5762,37 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:10:09 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 26 Oct 2022 01:10:22 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='a703acfd04ece4a4aac4cb9bda26b7d225874008bba324237bd6f53792edb778';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b18877871eda801ccb99bb34c5d7d77fccf6adad02514110c21389632ec91024';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='b16b1b50699a9caaae3d782be687625d81e069c886df904f83d13e6c4322a179';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='5f6b513757d386352cf91514ed5859d1ab59364b4453e1f1c57152ba2039b8e2';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 26 Oct 2022 01:10:25 GMT
+# Fri, 04 Nov 2022 22:40:30 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:40:47 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='d18b5dd73fce9edd5c58f623a1173f9ee2d45023836b8753b96beae51673a432';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='9ff3b4bd2bac18fb39f3356148efa2dc710ac029e12dc8f18ea1fe6be23bf299';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='18c636bd103e240d29cdb30d7867720ea9fb9ff7c645738bfb4d5b8027269263';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='eb861db1433ddc1b89f170b789fafde282f137218d6d985fb5c2003e4ff44984';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b8d46ed08ef4859476fe6421a7690d899ed83dce63f13fd894f994043177ef3c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:40:51 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 01:10:25 GMT
+# Fri, 04 Nov 2022 22:40:51 GMT
 CMD ["jshell"]
-# Wed, 26 Oct 2022 18:29:33 GMT
+# Fri, 04 Nov 2022 23:41:05 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:33 GMT
+# Fri, 04 Nov 2022 23:41:05 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:33 GMT
+# Fri, 04 Nov 2022 23:41:05 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:35 GMT
+# Fri, 04 Nov 2022 23:41:06 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:35 GMT
+# Fri, 04 Nov 2022 23:41:06 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:36 GMT
+# Fri, 04 Nov 2022 23:41:07 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:42 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:14 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:14 GMT
 CMD ["irb"]
 ```
 
@@ -5805,32 +5805,32 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea8c3cca8e2bed9bb815370558027bbb061daeb97bb885f6775c5f84ecb769dc`  
-		Last Modified: Wed, 26 Oct 2022 01:18:06 GMT  
-		Size: 194.9 MB (194877058 bytes)  
+	-	`sha256:8c67043335a7043f697bda117df614e35c201fa3cb63419f2b48ef06f40919ba`  
+		Last Modified: Fri, 04 Nov 2022 22:45:25 GMT  
+		Size: 195.2 MB (195215377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adca56bcc01b8733bc9129b5c092d02e64ca44faa0f8011186c60c0857b3f45d`  
-		Last Modified: Wed, 26 Oct 2022 01:17:54 GMT  
-		Size: 174.0 B  
+	-	`sha256:433eedea1da6277a5795ecee1af3019b8504b9bab7666ad9b163815b3d9fac1b`  
+		Last Modified: Fri, 04 Nov 2022 22:45:14 GMT  
+		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3160a1695329cd93f93a9a46d2fe22afd97db6e03d3aa18c4db9b8e9322cb130`  
-		Last Modified: Wed, 26 Oct 2022 18:31:51 GMT  
-		Size: 5.9 MB (5886782 bytes)  
+	-	`sha256:1913ba871e0096c07c11d0b13db56fc259e73da2b6f87c9825dc7e9100e470f1`  
+		Last Modified: Fri, 04 Nov 2022 23:43:08 GMT  
+		Size: 5.9 MB (5886759 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d97885c75b68daac249b20d0d21a0ed559f281b684f087f7a0607bc36798cb2`  
-		Last Modified: Wed, 26 Oct 2022 18:31:52 GMT  
-		Size: 28.7 MB (28672417 bytes)  
+	-	`sha256:c5a3b46f4692b7ae2648cd204c745805c1b7c8698d83c68814bdc3e3fb1b06d7`  
+		Last Modified: Fri, 04 Nov 2022 23:43:09 GMT  
+		Size: 28.7 MB (28672049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eaabc89348e8a13f4c834c540bf518ced07f8103b5ffb863bdcb550172f9aa16`  
-		Last Modified: Wed, 26 Oct 2022 18:31:50 GMT  
-		Size: 224.0 B  
+	-	`sha256:3496b6470dc589e8add58fde627019788182e2df235781956e8b6f4167dc9522`  
+		Last Modified: Fri, 04 Nov 2022 23:43:07 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b0add80fb016129bd71005543e7037fb1c87071dd3e13563b353428868db6eb5`  
-		Last Modified: Wed, 26 Oct 2022 18:31:51 GMT  
-		Size: 1.1 MB (1065560 bytes)  
+	-	`sha256:51921c65c9176f1ffb1c635cfc32ff5cd07fb6758a81c0440521ae527dda5a87`  
+		Last Modified: Fri, 04 Nov 2022 23:43:07 GMT  
+		Size: 1.1 MB (1066308 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3f4299d9323416a52b36d507aad0e735c43fec6204038ca4dc84409dbc62c71`  
-		Last Modified: Wed, 26 Oct 2022 18:31:51 GMT  
+	-	`sha256:9173db868470b4119bce8bcbbebaffbf93f016254652dd90659620a49c26c3eb`  
+		Last Modified: Fri, 04 Nov 2022 23:43:07 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -6044,7 +6044,7 @@ CMD ["irb"]
 ## `jruby:9.3.9-jdk8`
 
 ```console
-$ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a153851a4c124b2e
+$ docker pull jruby@sha256:c2f1f3c5da03fe547238cc434e2e1dfa61d34a13cc8cb26db5fb7060d5b648d1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6055,14 +6055,14 @@ $ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a1538
 ### `jruby:9.3.9-jdk8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:b3f092b500a43bc786249ea7139b473a5445402ed0da9340718f8a11b605d822
+$ docker pull jruby@sha256:e1946c55a5209d6dbf348061fe5456779d28ada1f48af04f3db0d6f79d63c3a9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **185.1 MB (185109927 bytes)**  
+-	Total Size: **185.1 MB (185125651 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:43039622a1686ffdcf20f0b2c181dfdbd66accd8729bd3c34444598d6c6b1d81`
+-	Image ID: `sha256:d4b0a610f60849dbded20c5fbb62d09345cb14ad55971dbedf03943605bf65b8`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -6078,35 +6078,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:46 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:24 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 CMD ["irb"]
 ```
 
@@ -6119,46 +6119,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d4cce88531bbe6024147de98024b6ee6321c70c8259f2ea11ad5712e2163e9d`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 28.7 MB (28672416 bytes)  
+	-	`sha256:5314fb85b3dcc9645b47232b283c5de36f644cd14832bf9409c0f6bedf003dd0`  
+		Last Modified: Sat, 05 Nov 2022 00:09:49 GMT  
+		Size: 28.7 MB (28672720 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0450dc5c9e7d02e0a1d3a4f8d2fbc7121a236688436c0496ae57f83e8c59ded`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 225.0 B  
+	-	`sha256:1122bf7420d03abefba5c58a74fdc4ada67856d509418f335dc2c3f3558dc531`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b896ffcc3cec7375b8b8440043e31c3d433ed1dc7e3eeaf662ab7cc1087546`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 1.1 MB (1065568 bytes)  
+	-	`sha256:89daf4a51bdf7aeefbf498c7fc3ff1bbba0ce22c0b5eb7029f7200895e9d401a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 1.1 MB (1066293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:143cc65463789f601c9e00f12c6b1747cfeeb100d414217e4cf23e52f41e2324`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
+	-	`sha256:24a69c2df430cef80585cc4de5c2833ebbc72aa59e31e57cf7c3ffcc65157236`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
 		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9-jdk8` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:221ec85a6f16b8f7201a67cf87729aa22d7937cf1490c8e694cf2cec86d551b7
+$ docker pull jruby@sha256:b9a4e515d76f35742bb72a0ad4cc671367d8e4ed340fe40344e49043930f4399
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **181.7 MB (181653129 bytes)**  
+-	Total Size: **181.7 MB (181669077 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6f88ce27631397fb5dbf92a11e91eab84fe6726e4a3c47c1d84dcc16d592078`
+-	Image ID: `sha256:9a43aa62f6f52ec7f9f4fff9fa1bcbbd386d8b91843d4faffcecfd4e9f8b8650`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -6174,35 +6174,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:08:24 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:08:26 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:39:44 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:39:46 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:09 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 CMD ["irb"]
 ```
 
@@ -6215,39 +6215,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d378871150e62d050c8f290958e6f8468c306ae04dcb0ddb140197b42969f0a6`  
-		Last Modified: Wed, 26 Oct 2022 01:16:20 GMT  
-		Size: 102.6 MB (102615823 bytes)  
+	-	`sha256:89d22354a80d2d12ffad6f61953c73519c4d3e501897b672ceaa720a21ca9533`  
+		Last Modified: Fri, 04 Nov 2022 22:43:42 GMT  
+		Size: 102.6 MB (102630792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae5e11c8b7a6c46afa4aa04526b7ae48696bdd7460c3b4ecf082cb565252c62f`  
-		Last Modified: Wed, 26 Oct 2022 01:16:13 GMT  
+	-	`sha256:dfd3de5d3cf89d4eb535267ba80576b5c8b40771b2b9213e5a423086faf1b916`  
+		Last Modified: Fri, 04 Nov 2022 22:43:34 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e166ec431737c992a580b2ae74f399d7efcc3783d5eed348d15a89730f55558`  
-		Last Modified: Wed, 26 Oct 2022 18:31:09 GMT  
-		Size: 5.9 MB (5886740 bytes)  
+	-	`sha256:76083e2bbb9d806969ce8ad3eca743ddbc01f21cf076d1145a17ed2a6cd0ad2c`  
+		Last Modified: Fri, 04 Nov 2022 23:42:26 GMT  
+		Size: 5.9 MB (5886787 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d81692bf3018f4cc37993ec23bb15b0ab616efed80c7e38a13e2745b3ba41c5a`  
-		Last Modified: Wed, 26 Oct 2022 18:31:10 GMT  
-		Size: 28.7 MB (28672424 bytes)  
+	-	`sha256:27a7bdf9254d520e509d0dfd7b5be7ac4e2c88104eb0d609395255edd677e3a2`  
+		Last Modified: Fri, 04 Nov 2022 23:42:27 GMT  
+		Size: 28.7 MB (28672657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:30b52c5b63ce1d1a0c763f5bb96cae40b877bca27aa5f6a1f9970c621906e3bd`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 225.0 B  
+	-	`sha256:a732e63ff73d304cdb542f7fda1f163bceb4d1029639d948841f9ca2e7b0f2b9`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35db8dea10915a920e750a85e8bf05436a4b7fcf52cb5db3f2f6b9a5e7e904e3`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 1.1 MB (1065578 bytes)  
+	-	`sha256:4e7cdf605588cb2f2d259fb4cffce27af2db4e98c307e042f95169b259647bb6`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 1.1 MB (1066274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c1d3a702b3ec7fe7fe64259ba5602aaea93f39e2845d14bdf75f40996b060e57`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 174.0 B  
+	-	`sha256:071281295b8993de5c4baa7f7328cd27217a6399a5d515e641fb9e58a1d2addb`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9-jre`
 
 ```console
-$ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52f962bbc73e1
+$ docker pull jruby@sha256:49263ea3888f7b984ea5858916c6cd49da093a0053e4f44d0cfa114841fd92f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6258,14 +6258,14 @@ $ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52
 ### `jruby:9.3.9-jre` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:18e3643422c845f1f82b4b300e29bb4d69d29ba5f7ca03be14f54627900a2850
+$ docker pull jruby@sha256:8f682181c67c5a6872b665e1fd3cb6f17dabf06adc9a1701a8e6b4c174ae6f48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.4 MB (123402307 bytes)**  
+-	Total Size: **123.4 MB (123413836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1f90a45d6373abab7601d0e68675844213f06d51536d5b6d200c4f94d24e8a`
+-	Image ID: `sha256:c587c020e9ab1ac467eb09d934f69e7f14198014aa19e0a43d40b03de29e2ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -6281,35 +6281,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:25 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:10 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 CMD ["irb"]
 ```
 
@@ -6322,46 +6322,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21f064ab5784caeae419e2afb7425a62f23f0f248baf0fb37b31c634416c085d`  
-		Last Modified: Wed, 26 Oct 2022 23:34:25 GMT  
-		Size: 28.7 MB (28672411 bytes)  
+	-	`sha256:abcd65b5e27237c16d5459bdbc47c6b6a0ca212ddc03b57b3e2614c1336f441a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:13 GMT  
+		Size: 28.7 MB (28672310 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b41c00b5a25852f4e311853c9350bf3450b06122c1c8d16930f3b102121dc01b`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
+	-	`sha256:8417d2088c784659969a8d1fb12e683aef6b38b7d6e9ab24f318c8561a67d465`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b5b22973e822afdd8cd315b5059edd2f7f243b1f6cbbe664168c2745bcb8b9`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 1.1 MB (1065548 bytes)  
+	-	`sha256:06e9846e9e420e7062f956fa3a917d500aa2c2a68492db43ed5467d2a11e8cd7`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a1181ffff2bfba3de3fef4afc77171660aaa9b9f1c2a0fc7d5725851cd55ee`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 174.0 B  
+	-	`sha256:8ff332a63cadd19e84f8dd63d0ceef329ae33a5397774c277ca2574da6b23c58`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9-jre` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:182728558624a9c95a60f682d2e5bea5c13bfa27fb5a7255b83d3c8606a6eed1
+$ docker pull jruby@sha256:957872cb202a626f58800d1177a1ca07b9e36d3ce5d553c1b6cc5532fe29c919
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **119.8 MB (119841033 bytes)**  
+-	Total Size: **119.8 MB (119845863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92a74d9cd79247d8ca3109c892c4ad250ea23f1f490dc3a869ee6667a94dd9d3`
+-	Image ID: `sha256:5831cdb5121c7ddd276e3f55560d6c9441dda083283d4d3a1c32be5425a29279`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -6377,35 +6377,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:09:55 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:09:55 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:40:17 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:40:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:28:45 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 CMD ["irb"]
 ```
 
@@ -6418,39 +6418,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c6957aefb66d28abfffaa8b0316225c93ae248e51de41c6472d528a29af6525`  
-		Last Modified: Wed, 26 Oct 2022 01:17:16 GMT  
-		Size: 40.8 MB (40803724 bytes)  
+	-	`sha256:a82f0b25b538ab3b61f52f143646fa2b54297b4cda1ec43ddced742cbbcf01c2`  
+		Last Modified: Fri, 04 Nov 2022 22:44:37 GMT  
+		Size: 40.8 MB (40807540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8abb56da477fa4a069dad39242e6d6999b85b514c78dc09595ac485605f1270`  
-		Last Modified: Wed, 26 Oct 2022 01:17:12 GMT  
+	-	`sha256:615afaccba5823904abefbf4e7856717efed9d89d5aec959a10e5cee835c9079`  
+		Last Modified: Fri, 04 Nov 2022 22:44:33 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebbb6e560a099b3810c3427e0327f394392499bcd6fbeda23a4d864b510bf097`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 5.9 MB (5886734 bytes)  
+	-	`sha256:347eda5a9750ed4935d2f9aca6db5b71b352a1e5147943698f02b70c3424cd8a`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 5.9 MB (5886762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d6e9848f0eedb11e3bfe91204b99089d0c16c2664743259442b1ab4d0cb3502`  
-		Last Modified: Wed, 26 Oct 2022 18:30:34 GMT  
-		Size: 28.7 MB (28672415 bytes)  
+	-	`sha256:a7ec581d2bbce6acf852e60383cc0ba7fb5624aaf3df18c26fa001b710c08302`  
+		Last Modified: Fri, 04 Nov 2022 23:41:52 GMT  
+		Size: 28.7 MB (28672679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ed42c04ea317722d6a835a9276829cc295e57d11424383e9aa2b58a0075a64`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 224.0 B  
+	-	`sha256:abe3d5824237eeaaa67bc8b970adf27d150e34354223ab9a39447f94edc0bbeb`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5896696ee8d8c7d1ebf557a9bec79c111339baed5fb9cb1e31332739a77bec`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 1.1 MB (1065595 bytes)  
+	-	`sha256:5ca23cd8897f38c3c9699a7fcf32dc4bf95e7d1676bb88e37b881afd0f1ca8fa`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 1.1 MB (1066313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8a33d03a9035b87bbcffcef0b770943dff76c9735cc50db4a0b1a86cc898f1e`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:3cb2e88e21d802708863053326d846d1024c3549da8ed7c8a15788dbdeb53591`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9-jre11`
 
 ```console
-$ docker pull jruby@sha256:babb58733a65e654ea95c088281b4fbbf6357075ddf531355a1326552e05f64a
+$ docker pull jruby@sha256:3c19614878c95f69370fe8f839a19a4e27d638955be0b320538b901179b8889b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6461,14 +6461,14 @@ $ docker pull jruby@sha256:babb58733a65e654ea95c088281b4fbbf6357075ddf531355a132
 ### `jruby:9.3.9-jre11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:80afdf5c8481a8a1c276607517262caf3a24b54b9e456a1b5f67d3716b2ac3f2
+$ docker pull jruby@sha256:2bbc395bb7b641e22689ac4b752b472323059274b18581d50b86e06b288a91dc
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **128.1 MB (128090714 bytes)**  
+-	Total Size: **128.2 MB (128224356 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:da0ba8567fcb2f0a598863fd0b437ed4c9c6418750ee60c2b7f13361a1f6c8a8`
+-	Image ID: `sha256:356c64f4caa5e02282762dd465fd1ecb6ce8b92c4a3efe966b7f7126b5cb6a1d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -6484,35 +6484,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:29:23 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:29:24 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:22:24 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:22:25 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:31:07 GMT
+# Sat, 05 Nov 2022 00:06:43 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:31:07 GMT
+# Sat, 05 Nov 2022 00:06:44 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:08 GMT
+# Sat, 05 Nov 2022 00:06:44 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:18 GMT
+# Sat, 05 Nov 2022 00:06:53 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:31:18 GMT
+# Sat, 05 Nov 2022 00:06:53 GMT
 CMD ["irb"]
 ```
 
@@ -6525,46 +6525,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:66d4ce13fd620ba04abe64eeebe53783f1fceba116a08eace8fdfe202db35c00`  
-		Last Modified: Wed, 26 Oct 2022 16:45:13 GMT  
-		Size: 46.5 MB (46497092 bytes)  
+	-	`sha256:bbd45db92608776aa8d24a28e427c9e56ec56a4d83bc3da5db28817f88a8ffad`  
+		Last Modified: Fri, 04 Nov 2022 23:29:16 GMT  
+		Size: 46.6 MB (46630173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e81ede82d9fd39574aad8126301364fc83a05b01f9537dc5a8c8c17865dca42`  
-		Last Modified: Wed, 26 Oct 2022 16:45:06 GMT  
+	-	`sha256:6fcfd0f47989acccee774146a436995f6d433299e82638b90c6b47f093ebd3cc`  
+		Last Modified: Fri, 04 Nov 2022 23:29:09 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90dc6131f518995245e9cf60c905e000f4c31b781da122846b5489bfaa2c84f0`  
-		Last Modified: Wed, 26 Oct 2022 23:35:29 GMT  
-		Size: 6.9 MB (6923824 bytes)  
+	-	`sha256:b2efe7cd9800950ff66f440f2247d8eeb53b1a4c8c235e14b0ca3917821a1410`  
+		Last Modified: Sat, 05 Nov 2022 00:10:16 GMT  
+		Size: 6.9 MB (6923817 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:afd6c1e63d3214b61efc53d57df0ad8ce402330bb1de2c745970f2eb93a0b287`  
-		Last Modified: Wed, 26 Oct 2022 23:35:30 GMT  
-		Size: 28.7 MB (28672163 bytes)  
+	-	`sha256:0f2d9565a34861ead3ef552193c114746577e4a9da348ede5c890fe2a859e87a`  
+		Last Modified: Sat, 05 Nov 2022 00:10:18 GMT  
+		Size: 28.7 MB (28672025 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ac7c8bcd537319bcdc85ae640f8ed7c1e877882401200bb87c12e18e7ea4ed`  
-		Last Modified: Wed, 26 Oct 2022 23:35:27 GMT  
+	-	`sha256:d93f1e27f1dc8727ff1a5d8d780ef5271d257e381864b843a8786a0958c72966`  
+		Last Modified: Sat, 05 Nov 2022 00:10:15 GMT  
 		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e90a8660fc2ce81f7969e6fadd7b2fa2778410397a74d8ef44cfb76226bd1fb1`  
-		Last Modified: Wed, 26 Oct 2022 23:35:27 GMT  
-		Size: 1.1 MB (1065584 bytes)  
+	-	`sha256:109f4088a7c107cd692cb0f06f1fa7961989b12856f1c4d05e573985490649d5`  
+		Last Modified: Sat, 05 Nov 2022 00:10:15 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0ec06761e72540327117f544909a2c3ffddb1700baf7c16eef1a5862f00b3c12`  
-		Last Modified: Wed, 26 Oct 2022 23:35:27 GMT  
+	-	`sha256:bff63a591e2c6f8b1acf70902a1598a43acd091ca9688039620993c1934879a5`  
+		Last Modified: Sat, 05 Nov 2022 00:10:15 GMT  
 		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9-jre11` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:76396e5371f25396ed300091324aa5e514498d3f21dfb6062dba01cc562dee57
+$ docker pull jruby@sha256:9849afc5357a4a4dc74ecdf292b08cc4b5daca1594b8de232518e1081c008b8c
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.9 MB (123862571 bytes)**  
+-	Total Size: **124.0 MB (123998152 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0a0d41ac2bf60dba2511c7a976cbf29a641ccc646880129732dfb68b1e0b3235`
+-	Image ID: `sha256:2c327e8a702c02690a0faf06628b79ebbec5fa2a06053c08bfd08479100ca16c`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -6580,35 +6580,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:10:09 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 26 Oct 2022 01:11:00 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 26 Oct 2022 01:11:01 GMT
+# Fri, 04 Nov 2022 22:40:30 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:27 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:28 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 18:29:17 GMT
+# Fri, 04 Nov 2022 23:40:48 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:17 GMT
+# Fri, 04 Nov 2022 23:40:48 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:17 GMT
+# Fri, 04 Nov 2022 23:40:48 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:19 GMT
+# Fri, 04 Nov 2022 23:40:50 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:19 GMT
+# Fri, 04 Nov 2022 23:40:50 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:19 GMT
+# Fri, 04 Nov 2022 23:40:51 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:27 GMT
+# Fri, 04 Nov 2022 23:40:58 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:27 GMT
+# Fri, 04 Nov 2022 23:40:58 GMT
 CMD ["irb"]
 ```
 
@@ -6621,39 +6621,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2f074bb0d3a200c73832f49376539750092a87663c1626d2cfad573adeb47d19`  
-		Last Modified: Wed, 26 Oct 2022 01:19:11 GMT  
-		Size: 44.8 MB (44825170 bytes)  
+	-	`sha256:479785166a86894f7082d07c7739f94a19bd6518753eff613b79be4de2e385a3`  
+		Last Modified: Fri, 04 Nov 2022 22:46:31 GMT  
+		Size: 45.0 MB (44959920 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:912068dbc2a17ebd81e7b1b2de4c78a115995117b29aecd10d6140ce0e9b6555`  
-		Last Modified: Wed, 26 Oct 2022 01:19:06 GMT  
-		Size: 160.0 B  
+	-	`sha256:6dd5e491c74305e59c65f0432b4cb15518760d88967d02f27ea037374c86f121`  
+		Last Modified: Fri, 04 Nov 2022 22:46:26 GMT  
+		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67df722a9408260da51c609e02b0665967e5140690410e03d53d2ff4a881f2b8`  
-		Last Modified: Wed, 26 Oct 2022 18:31:36 GMT  
-		Size: 5.9 MB (5886796 bytes)  
+	-	`sha256:bf328668acf32152a909cd923877276ca5ef218d7413cf59d1bbd359ed523b54`  
+		Last Modified: Fri, 04 Nov 2022 23:42:54 GMT  
+		Size: 5.9 MB (5886739 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f41b7a49afbe4c88699c86b45f000deddf2a3b229b875fe35fa21aa6f908e537`  
-		Last Modified: Wed, 26 Oct 2022 18:31:37 GMT  
-		Size: 28.7 MB (28672446 bytes)  
+	-	`sha256:56555b922bb3bb6e9827a3739ca6127dbbdfc5c29d7ce6c14ebd5e1639786c66`  
+		Last Modified: Fri, 04 Nov 2022 23:42:55 GMT  
+		Size: 28.7 MB (28672629 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7de25df39da8cb7681a5f26a21b205ce50fb5c7b8def2a41f44ad7666bc6056`  
-		Last Modified: Wed, 26 Oct 2022 18:31:35 GMT  
+	-	`sha256:4bb2e55c255535a90671420409f40a35323cd0e9fcaa8d8bd49d302911d9daa5`  
+		Last Modified: Fri, 04 Nov 2022 23:42:52 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7962912ef718e479e8b568dd95df0932aff827f30a85e0d5b4484147b84564f7`  
-		Last Modified: Wed, 26 Oct 2022 18:31:36 GMT  
-		Size: 1.1 MB (1065593 bytes)  
+	-	`sha256:9bc6859dd8f730a87f206e4d5160548bdab62cd350f1e42ca0b78c7994fd4c3b`  
+		Last Modified: Fri, 04 Nov 2022 23:42:53 GMT  
+		Size: 1.1 MB (1066296 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:50714b830904cdd9454659ad9505809570585ce63aef0966c99011078375a5fe`  
-		Last Modified: Wed, 26 Oct 2022 18:31:35 GMT  
-		Size: 175.0 B  
+	-	`sha256:abbc3490ff5c51cbbf3f5e59ae5b985509478349bdef5f437b289abd534941be`  
+		Last Modified: Fri, 04 Nov 2022 23:42:53 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9-jre8`
 
 ```console
-$ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52f962bbc73e1
+$ docker pull jruby@sha256:49263ea3888f7b984ea5858916c6cd49da093a0053e4f44d0cfa114841fd92f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6664,14 +6664,14 @@ $ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52
 ### `jruby:9.3.9-jre8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:18e3643422c845f1f82b4b300e29bb4d69d29ba5f7ca03be14f54627900a2850
+$ docker pull jruby@sha256:8f682181c67c5a6872b665e1fd3cb6f17dabf06adc9a1701a8e6b4c174ae6f48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.4 MB (123402307 bytes)**  
+-	Total Size: **123.4 MB (123413836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1f90a45d6373abab7601d0e68675844213f06d51536d5b6d200c4f94d24e8a`
+-	Image ID: `sha256:c587c020e9ab1ac467eb09d934f69e7f14198014aa19e0a43d40b03de29e2ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -6687,35 +6687,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:25 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:10 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 CMD ["irb"]
 ```
 
@@ -6728,46 +6728,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21f064ab5784caeae419e2afb7425a62f23f0f248baf0fb37b31c634416c085d`  
-		Last Modified: Wed, 26 Oct 2022 23:34:25 GMT  
-		Size: 28.7 MB (28672411 bytes)  
+	-	`sha256:abcd65b5e27237c16d5459bdbc47c6b6a0ca212ddc03b57b3e2614c1336f441a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:13 GMT  
+		Size: 28.7 MB (28672310 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b41c00b5a25852f4e311853c9350bf3450b06122c1c8d16930f3b102121dc01b`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
+	-	`sha256:8417d2088c784659969a8d1fb12e683aef6b38b7d6e9ab24f318c8561a67d465`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b5b22973e822afdd8cd315b5059edd2f7f243b1f6cbbe664168c2745bcb8b9`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 1.1 MB (1065548 bytes)  
+	-	`sha256:06e9846e9e420e7062f956fa3a917d500aa2c2a68492db43ed5467d2a11e8cd7`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a1181ffff2bfba3de3fef4afc77171660aaa9b9f1c2a0fc7d5725851cd55ee`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 174.0 B  
+	-	`sha256:8ff332a63cadd19e84f8dd63d0ceef329ae33a5397774c277ca2574da6b23c58`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9-jre8` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:182728558624a9c95a60f682d2e5bea5c13bfa27fb5a7255b83d3c8606a6eed1
+$ docker pull jruby@sha256:957872cb202a626f58800d1177a1ca07b9e36d3ce5d553c1b6cc5532fe29c919
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **119.8 MB (119841033 bytes)**  
+-	Total Size: **119.8 MB (119845863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92a74d9cd79247d8ca3109c892c4ad250ea23f1f490dc3a869ee6667a94dd9d3`
+-	Image ID: `sha256:5831cdb5121c7ddd276e3f55560d6c9441dda083283d4d3a1c32be5425a29279`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -6783,35 +6783,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:09:55 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:09:55 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:40:17 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:40:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:28:45 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 CMD ["irb"]
 ```
 
@@ -6824,39 +6824,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c6957aefb66d28abfffaa8b0316225c93ae248e51de41c6472d528a29af6525`  
-		Last Modified: Wed, 26 Oct 2022 01:17:16 GMT  
-		Size: 40.8 MB (40803724 bytes)  
+	-	`sha256:a82f0b25b538ab3b61f52f143646fa2b54297b4cda1ec43ddced742cbbcf01c2`  
+		Last Modified: Fri, 04 Nov 2022 22:44:37 GMT  
+		Size: 40.8 MB (40807540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8abb56da477fa4a069dad39242e6d6999b85b514c78dc09595ac485605f1270`  
-		Last Modified: Wed, 26 Oct 2022 01:17:12 GMT  
+	-	`sha256:615afaccba5823904abefbf4e7856717efed9d89d5aec959a10e5cee835c9079`  
+		Last Modified: Fri, 04 Nov 2022 22:44:33 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebbb6e560a099b3810c3427e0327f394392499bcd6fbeda23a4d864b510bf097`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 5.9 MB (5886734 bytes)  
+	-	`sha256:347eda5a9750ed4935d2f9aca6db5b71b352a1e5147943698f02b70c3424cd8a`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 5.9 MB (5886762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d6e9848f0eedb11e3bfe91204b99089d0c16c2664743259442b1ab4d0cb3502`  
-		Last Modified: Wed, 26 Oct 2022 18:30:34 GMT  
-		Size: 28.7 MB (28672415 bytes)  
+	-	`sha256:a7ec581d2bbce6acf852e60383cc0ba7fb5624aaf3df18c26fa001b710c08302`  
+		Last Modified: Fri, 04 Nov 2022 23:41:52 GMT  
+		Size: 28.7 MB (28672679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ed42c04ea317722d6a835a9276829cc295e57d11424383e9aa2b58a0075a64`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 224.0 B  
+	-	`sha256:abe3d5824237eeaaa67bc8b970adf27d150e34354223ab9a39447f94edc0bbeb`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5896696ee8d8c7d1ebf557a9bec79c111339baed5fb9cb1e31332739a77bec`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 1.1 MB (1065595 bytes)  
+	-	`sha256:5ca23cd8897f38c3c9699a7fcf32dc4bf95e7d1676bb88e37b881afd0f1ca8fa`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 1.1 MB (1066313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8a33d03a9035b87bbcffcef0b770943dff76c9735cc50db4a0b1a86cc898f1e`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:3cb2e88e21d802708863053326d846d1024c3549da8ed7c8a15788dbdeb53591`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9.0`
 
 ```console
-$ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52f962bbc73e1
+$ docker pull jruby@sha256:49263ea3888f7b984ea5858916c6cd49da093a0053e4f44d0cfa114841fd92f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6867,14 +6867,14 @@ $ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52
 ### `jruby:9.3.9.0` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:18e3643422c845f1f82b4b300e29bb4d69d29ba5f7ca03be14f54627900a2850
+$ docker pull jruby@sha256:8f682181c67c5a6872b665e1fd3cb6f17dabf06adc9a1701a8e6b4c174ae6f48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.4 MB (123402307 bytes)**  
+-	Total Size: **123.4 MB (123413836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1f90a45d6373abab7601d0e68675844213f06d51536d5b6d200c4f94d24e8a`
+-	Image ID: `sha256:c587c020e9ab1ac467eb09d934f69e7f14198014aa19e0a43d40b03de29e2ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -6890,35 +6890,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:25 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:10 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 CMD ["irb"]
 ```
 
@@ -6931,46 +6931,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21f064ab5784caeae419e2afb7425a62f23f0f248baf0fb37b31c634416c085d`  
-		Last Modified: Wed, 26 Oct 2022 23:34:25 GMT  
-		Size: 28.7 MB (28672411 bytes)  
+	-	`sha256:abcd65b5e27237c16d5459bdbc47c6b6a0ca212ddc03b57b3e2614c1336f441a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:13 GMT  
+		Size: 28.7 MB (28672310 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b41c00b5a25852f4e311853c9350bf3450b06122c1c8d16930f3b102121dc01b`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
+	-	`sha256:8417d2088c784659969a8d1fb12e683aef6b38b7d6e9ab24f318c8561a67d465`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b5b22973e822afdd8cd315b5059edd2f7f243b1f6cbbe664168c2745bcb8b9`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 1.1 MB (1065548 bytes)  
+	-	`sha256:06e9846e9e420e7062f956fa3a917d500aa2c2a68492db43ed5467d2a11e8cd7`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a1181ffff2bfba3de3fef4afc77171660aaa9b9f1c2a0fc7d5725851cd55ee`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 174.0 B  
+	-	`sha256:8ff332a63cadd19e84f8dd63d0ceef329ae33a5397774c277ca2574da6b23c58`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9.0` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:182728558624a9c95a60f682d2e5bea5c13bfa27fb5a7255b83d3c8606a6eed1
+$ docker pull jruby@sha256:957872cb202a626f58800d1177a1ca07b9e36d3ce5d553c1b6cc5532fe29c919
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **119.8 MB (119841033 bytes)**  
+-	Total Size: **119.8 MB (119845863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92a74d9cd79247d8ca3109c892c4ad250ea23f1f490dc3a869ee6667a94dd9d3`
+-	Image ID: `sha256:5831cdb5121c7ddd276e3f55560d6c9441dda083283d4d3a1c32be5425a29279`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -6986,35 +6986,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:09:55 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:09:55 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:40:17 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:40:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:28:45 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 CMD ["irb"]
 ```
 
@@ -7027,39 +7027,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c6957aefb66d28abfffaa8b0316225c93ae248e51de41c6472d528a29af6525`  
-		Last Modified: Wed, 26 Oct 2022 01:17:16 GMT  
-		Size: 40.8 MB (40803724 bytes)  
+	-	`sha256:a82f0b25b538ab3b61f52f143646fa2b54297b4cda1ec43ddced742cbbcf01c2`  
+		Last Modified: Fri, 04 Nov 2022 22:44:37 GMT  
+		Size: 40.8 MB (40807540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8abb56da477fa4a069dad39242e6d6999b85b514c78dc09595ac485605f1270`  
-		Last Modified: Wed, 26 Oct 2022 01:17:12 GMT  
+	-	`sha256:615afaccba5823904abefbf4e7856717efed9d89d5aec959a10e5cee835c9079`  
+		Last Modified: Fri, 04 Nov 2022 22:44:33 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebbb6e560a099b3810c3427e0327f394392499bcd6fbeda23a4d864b510bf097`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 5.9 MB (5886734 bytes)  
+	-	`sha256:347eda5a9750ed4935d2f9aca6db5b71b352a1e5147943698f02b70c3424cd8a`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 5.9 MB (5886762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d6e9848f0eedb11e3bfe91204b99089d0c16c2664743259442b1ab4d0cb3502`  
-		Last Modified: Wed, 26 Oct 2022 18:30:34 GMT  
-		Size: 28.7 MB (28672415 bytes)  
+	-	`sha256:a7ec581d2bbce6acf852e60383cc0ba7fb5624aaf3df18c26fa001b710c08302`  
+		Last Modified: Fri, 04 Nov 2022 23:41:52 GMT  
+		Size: 28.7 MB (28672679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ed42c04ea317722d6a835a9276829cc295e57d11424383e9aa2b58a0075a64`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 224.0 B  
+	-	`sha256:abe3d5824237eeaaa67bc8b970adf27d150e34354223ab9a39447f94edc0bbeb`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5896696ee8d8c7d1ebf557a9bec79c111339baed5fb9cb1e31332739a77bec`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 1.1 MB (1065595 bytes)  
+	-	`sha256:5ca23cd8897f38c3c9699a7fcf32dc4bf95e7d1676bb88e37b881afd0f1ca8fa`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 1.1 MB (1066313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8a33d03a9035b87bbcffcef0b770943dff76c9735cc50db4a0b1a86cc898f1e`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:3cb2e88e21d802708863053326d846d1024c3549da8ed7c8a15788dbdeb53591`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9.0-jdk`
 
 ```console
-$ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a153851a4c124b2e
+$ docker pull jruby@sha256:c2f1f3c5da03fe547238cc434e2e1dfa61d34a13cc8cb26db5fb7060d5b648d1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7070,14 +7070,14 @@ $ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a1538
 ### `jruby:9.3.9.0-jdk` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:b3f092b500a43bc786249ea7139b473a5445402ed0da9340718f8a11b605d822
+$ docker pull jruby@sha256:e1946c55a5209d6dbf348061fe5456779d28ada1f48af04f3db0d6f79d63c3a9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **185.1 MB (185109927 bytes)**  
+-	Total Size: **185.1 MB (185125651 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:43039622a1686ffdcf20f0b2c181dfdbd66accd8729bd3c34444598d6c6b1d81`
+-	Image ID: `sha256:d4b0a610f60849dbded20c5fbb62d09345cb14ad55971dbedf03943605bf65b8`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -7093,35 +7093,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:46 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:24 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 CMD ["irb"]
 ```
 
@@ -7134,46 +7134,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d4cce88531bbe6024147de98024b6ee6321c70c8259f2ea11ad5712e2163e9d`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 28.7 MB (28672416 bytes)  
+	-	`sha256:5314fb85b3dcc9645b47232b283c5de36f644cd14832bf9409c0f6bedf003dd0`  
+		Last Modified: Sat, 05 Nov 2022 00:09:49 GMT  
+		Size: 28.7 MB (28672720 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0450dc5c9e7d02e0a1d3a4f8d2fbc7121a236688436c0496ae57f83e8c59ded`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 225.0 B  
+	-	`sha256:1122bf7420d03abefba5c58a74fdc4ada67856d509418f335dc2c3f3558dc531`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b896ffcc3cec7375b8b8440043e31c3d433ed1dc7e3eeaf662ab7cc1087546`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 1.1 MB (1065568 bytes)  
+	-	`sha256:89daf4a51bdf7aeefbf498c7fc3ff1bbba0ce22c0b5eb7029f7200895e9d401a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 1.1 MB (1066293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:143cc65463789f601c9e00f12c6b1747cfeeb100d414217e4cf23e52f41e2324`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
+	-	`sha256:24a69c2df430cef80585cc4de5c2833ebbc72aa59e31e57cf7c3ffcc65157236`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
 		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9.0-jdk` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:221ec85a6f16b8f7201a67cf87729aa22d7937cf1490c8e694cf2cec86d551b7
+$ docker pull jruby@sha256:b9a4e515d76f35742bb72a0ad4cc671367d8e4ed340fe40344e49043930f4399
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **181.7 MB (181653129 bytes)**  
+-	Total Size: **181.7 MB (181669077 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6f88ce27631397fb5dbf92a11e91eab84fe6726e4a3c47c1d84dcc16d592078`
+-	Image ID: `sha256:9a43aa62f6f52ec7f9f4fff9fa1bcbbd386d8b91843d4faffcecfd4e9f8b8650`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -7189,35 +7189,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:08:24 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:08:26 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:39:44 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:39:46 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:09 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 CMD ["irb"]
 ```
 
@@ -7230,39 +7230,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d378871150e62d050c8f290958e6f8468c306ae04dcb0ddb140197b42969f0a6`  
-		Last Modified: Wed, 26 Oct 2022 01:16:20 GMT  
-		Size: 102.6 MB (102615823 bytes)  
+	-	`sha256:89d22354a80d2d12ffad6f61953c73519c4d3e501897b672ceaa720a21ca9533`  
+		Last Modified: Fri, 04 Nov 2022 22:43:42 GMT  
+		Size: 102.6 MB (102630792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae5e11c8b7a6c46afa4aa04526b7ae48696bdd7460c3b4ecf082cb565252c62f`  
-		Last Modified: Wed, 26 Oct 2022 01:16:13 GMT  
+	-	`sha256:dfd3de5d3cf89d4eb535267ba80576b5c8b40771b2b9213e5a423086faf1b916`  
+		Last Modified: Fri, 04 Nov 2022 22:43:34 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e166ec431737c992a580b2ae74f399d7efcc3783d5eed348d15a89730f55558`  
-		Last Modified: Wed, 26 Oct 2022 18:31:09 GMT  
-		Size: 5.9 MB (5886740 bytes)  
+	-	`sha256:76083e2bbb9d806969ce8ad3eca743ddbc01f21cf076d1145a17ed2a6cd0ad2c`  
+		Last Modified: Fri, 04 Nov 2022 23:42:26 GMT  
+		Size: 5.9 MB (5886787 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d81692bf3018f4cc37993ec23bb15b0ab616efed80c7e38a13e2745b3ba41c5a`  
-		Last Modified: Wed, 26 Oct 2022 18:31:10 GMT  
-		Size: 28.7 MB (28672424 bytes)  
+	-	`sha256:27a7bdf9254d520e509d0dfd7b5be7ac4e2c88104eb0d609395255edd677e3a2`  
+		Last Modified: Fri, 04 Nov 2022 23:42:27 GMT  
+		Size: 28.7 MB (28672657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:30b52c5b63ce1d1a0c763f5bb96cae40b877bca27aa5f6a1f9970c621906e3bd`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 225.0 B  
+	-	`sha256:a732e63ff73d304cdb542f7fda1f163bceb4d1029639d948841f9ca2e7b0f2b9`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35db8dea10915a920e750a85e8bf05436a4b7fcf52cb5db3f2f6b9a5e7e904e3`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 1.1 MB (1065578 bytes)  
+	-	`sha256:4e7cdf605588cb2f2d259fb4cffce27af2db4e98c307e042f95169b259647bb6`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 1.1 MB (1066274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c1d3a702b3ec7fe7fe64259ba5602aaea93f39e2845d14bdf75f40996b060e57`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 174.0 B  
+	-	`sha256:071281295b8993de5c4baa7f7328cd27217a6399a5d515e641fb9e58a1d2addb`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9.0-jdk11`
 
 ```console
-$ docker pull jruby@sha256:fc6c1df2c60e013d227f2bd16763cdec04d65ba2f2feca10a750481454e04832
+$ docker pull jruby@sha256:ea6db7565b6812e4250e21eb53019606ca863d293972ea2ac41f89c152db3525
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7273,14 +7273,14 @@ $ docker pull jruby@sha256:fc6c1df2c60e013d227f2bd16763cdec04d65ba2f2feca10a7504
 ### `jruby:9.3.9.0-jdk11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:e841201c92f97896b07b39e9b4ec5618094f1893dd406fe604e32f1a1ae56271
+$ docker pull jruby@sha256:39ce45bd4b0ca79db6afa0493676ab4e87f8214ebb9fbd1218263e3b2905f9a4
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **279.7 MB (279722855 bytes)**  
+-	Total Size: **280.1 MB (280059530 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bbdce0879821096c7925b8b47a2989514fabbbe9df9db66c1381d6bf48530b89`
+-	Image ID: `sha256:d6d7f0253f55ff2e10251de15880bfea2294ad2fcc6b5773bb0e544bccc7ac55`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -7296,37 +7296,37 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:28:53 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='a703acfd04ece4a4aac4cb9bda26b7d225874008bba324237bd6f53792edb778';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b18877871eda801ccb99bb34c5d7d77fccf6adad02514110c21389632ec91024';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='b16b1b50699a9caaae3d782be687625d81e069c886df904f83d13e6c4322a179';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='5f6b513757d386352cf91514ed5859d1ab59364b4453e1f1c57152ba2039b8e2';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:21:36 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='d18b5dd73fce9edd5c58f623a1173f9ee2d45023836b8753b96beae51673a432';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='9ff3b4bd2bac18fb39f3356148efa2dc710ac029e12dc8f18ea1fe6be23bf299';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='18c636bd103e240d29cdb30d7867720ea9fb9ff7c645738bfb4d5b8027269263';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='eb861db1433ddc1b89f170b789fafde282f137218d6d985fb5c2003e4ff44984';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b8d46ed08ef4859476fe6421a7690d899ed83dce63f13fd894f994043177ef3c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:21:38 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Tue, 25 Oct 2022 17:28:56 GMT
+# Fri, 04 Nov 2022 23:21:38 GMT
 CMD ["jshell"]
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:31:28 GMT
+# Sat, 05 Nov 2022 00:07:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:31:31 GMT
+# Sat, 05 Nov 2022 00:07:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:31:31 GMT
+# Sat, 05 Nov 2022 00:07:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:31 GMT
+# Sat, 05 Nov 2022 00:07:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:11 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:40 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:41 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:31:41 GMT
+# Sat, 05 Nov 2022 00:07:12 GMT
 CMD ["irb"]
 ```
 
@@ -7339,46 +7339,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bc580f2109be281fc1a5ab6d065bf040ae81d4c412e9aab8f36ebfc16e001488`  
-		Last Modified: Wed, 26 Oct 2022 16:44:21 GMT  
-		Size: 198.1 MB (198129334 bytes)  
+	-	`sha256:92987a6c66b9d34f09f6ef0fad549352afbe72ee489c23324c1dd11f432c0243`  
+		Last Modified: Fri, 04 Nov 2022 23:27:46 GMT  
+		Size: 198.5 MB (198464645 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:317971f3cd99c10fb540436d85a33bbc5fb1b174ea9f7cfbac0a9d0d7ea0b3e7`  
-		Last Modified: Wed, 26 Oct 2022 16:44:06 GMT  
-		Size: 175.0 B  
+	-	`sha256:e0db103a91cc0800441b2d41aeab58673674235234416ed22e955b92d025c3ab`  
+		Last Modified: Fri, 04 Nov 2022 23:27:32 GMT  
+		Size: 174.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:baba098fdf0de0c0367cd4a2b486b49fb90456e89f29fa6ade923373ba6f93dd`  
-		Last Modified: Wed, 26 Oct 2022 23:35:43 GMT  
-		Size: 6.9 MB (6923759 bytes)  
+	-	`sha256:a2bce30d84c17f1b6d4e186d576332eddea352dae0c743b10fda5870a4ff62f3`  
+		Last Modified: Sat, 05 Nov 2022 00:10:32 GMT  
+		Size: 6.9 MB (6923824 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:306a2d83f9b764500de04c5398b32cea050312509ba417438eacff1a7c85d592`  
-		Last Modified: Wed, 26 Oct 2022 23:35:45 GMT  
-		Size: 28.7 MB (28672125 bytes)  
+	-	`sha256:aa873161908a24a4bf2d7bde300371be79bfc425f79a4a758dff2bbc5f06693d`  
+		Last Modified: Sat, 05 Nov 2022 00:10:34 GMT  
+		Size: 28.7 MB (28672701 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b937e8786017be9f648a560a9c68ead8939826e8ba2183954740d6c0b593ebff`  
-		Last Modified: Wed, 26 Oct 2022 23:35:42 GMT  
+	-	`sha256:3a3c31703e9a6f3e8615aa790b1bf2d8b9508a209700595b6d6b5b5e44a816eb`  
+		Last Modified: Sat, 05 Nov 2022 00:10:31 GMT  
 		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:932f048cde86f0b24396574b4e470e62a300ae91f0d9e3a4129d0c84817f2d06`  
-		Last Modified: Wed, 26 Oct 2022 23:35:42 GMT  
-		Size: 1.1 MB (1065571 bytes)  
+	-	`sha256:038dc409e9e4b919c3ca52973ff12f4a3ed7360caeba9b18f46946fa559bcbc4`  
+		Last Modified: Sat, 05 Nov 2022 00:10:31 GMT  
+		Size: 1.1 MB (1066295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2da41cea8486ff52b8265794033e9f2e4bd465525c5a7a46fb250c98210a3ea8`  
-		Last Modified: Wed, 26 Oct 2022 23:35:42 GMT  
+	-	`sha256:9e2da42e6fe8f8d85a9a61c5d924cbdd86401157a8ab42dd203e1e9546c2595e`  
+		Last Modified: Sat, 05 Nov 2022 00:10:31 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9.0-jdk11` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:3455d670b130493e8a545f0cddf42fca626c7227fc67ab7d24aaa351e707016f
+$ docker pull jruby@sha256:23265b95e3cb6d26a980d90db54aeecbae9c37b3e229a9a09698563b350074b0
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **273.9 MB (273914396 bytes)**  
+-	Total Size: **274.3 MB (274253070 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ae1fdf499f0a08fc91ca6caa130d848b977e1d8fd867a08fa4347f29676c1628`
+-	Image ID: `sha256:aba9268704a50969762bf178bd96eb643b2d8d839304457914ca1ac0a861f0e2`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -7394,37 +7394,37 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:10:09 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 26 Oct 2022 01:10:22 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='2b89cabf0ce1c2cedadd92b798d6e9056bc27c71a06f5ba24ede5dc9c316e3e8';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='a703acfd04ece4a4aac4cb9bda26b7d225874008bba324237bd6f53792edb778';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b18877871eda801ccb99bb34c5d7d77fccf6adad02514110c21389632ec91024';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='b16b1b50699a9caaae3d782be687625d81e069c886df904f83d13e6c4322a179';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='5f6b513757d386352cf91514ed5859d1ab59364b4453e1f1c57152ba2039b8e2';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 26 Oct 2022 01:10:25 GMT
+# Fri, 04 Nov 2022 22:40:30 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:40:47 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='d18b5dd73fce9edd5c58f623a1173f9ee2d45023836b8753b96beae51673a432';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='9ff3b4bd2bac18fb39f3356148efa2dc710ac029e12dc8f18ea1fe6be23bf299';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='18c636bd103e240d29cdb30d7867720ea9fb9ff7c645738bfb4d5b8027269263';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='eb861db1433ddc1b89f170b789fafde282f137218d6d985fb5c2003e4ff44984';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b8d46ed08ef4859476fe6421a7690d899ed83dce63f13fd894f994043177ef3c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jdk_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:40:51 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 01:10:25 GMT
+# Fri, 04 Nov 2022 22:40:51 GMT
 CMD ["jshell"]
-# Wed, 26 Oct 2022 18:29:33 GMT
+# Fri, 04 Nov 2022 23:41:05 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:33 GMT
+# Fri, 04 Nov 2022 23:41:05 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:33 GMT
+# Fri, 04 Nov 2022 23:41:05 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:35 GMT
+# Fri, 04 Nov 2022 23:41:06 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:35 GMT
+# Fri, 04 Nov 2022 23:41:06 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:36 GMT
+# Fri, 04 Nov 2022 23:41:07 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:42 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:13 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:14 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:43 GMT
+# Fri, 04 Nov 2022 23:41:14 GMT
 CMD ["irb"]
 ```
 
@@ -7437,32 +7437,32 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea8c3cca8e2bed9bb815370558027bbb061daeb97bb885f6775c5f84ecb769dc`  
-		Last Modified: Wed, 26 Oct 2022 01:18:06 GMT  
-		Size: 194.9 MB (194877058 bytes)  
+	-	`sha256:8c67043335a7043f697bda117df614e35c201fa3cb63419f2b48ef06f40919ba`  
+		Last Modified: Fri, 04 Nov 2022 22:45:25 GMT  
+		Size: 195.2 MB (195215377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adca56bcc01b8733bc9129b5c092d02e64ca44faa0f8011186c60c0857b3f45d`  
-		Last Modified: Wed, 26 Oct 2022 01:17:54 GMT  
-		Size: 174.0 B  
+	-	`sha256:433eedea1da6277a5795ecee1af3019b8504b9bab7666ad9b163815b3d9fac1b`  
+		Last Modified: Fri, 04 Nov 2022 22:45:14 GMT  
+		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3160a1695329cd93f93a9a46d2fe22afd97db6e03d3aa18c4db9b8e9322cb130`  
-		Last Modified: Wed, 26 Oct 2022 18:31:51 GMT  
-		Size: 5.9 MB (5886782 bytes)  
+	-	`sha256:1913ba871e0096c07c11d0b13db56fc259e73da2b6f87c9825dc7e9100e470f1`  
+		Last Modified: Fri, 04 Nov 2022 23:43:08 GMT  
+		Size: 5.9 MB (5886759 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d97885c75b68daac249b20d0d21a0ed559f281b684f087f7a0607bc36798cb2`  
-		Last Modified: Wed, 26 Oct 2022 18:31:52 GMT  
-		Size: 28.7 MB (28672417 bytes)  
+	-	`sha256:c5a3b46f4692b7ae2648cd204c745805c1b7c8698d83c68814bdc3e3fb1b06d7`  
+		Last Modified: Fri, 04 Nov 2022 23:43:09 GMT  
+		Size: 28.7 MB (28672049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eaabc89348e8a13f4c834c540bf518ced07f8103b5ffb863bdcb550172f9aa16`  
-		Last Modified: Wed, 26 Oct 2022 18:31:50 GMT  
-		Size: 224.0 B  
+	-	`sha256:3496b6470dc589e8add58fde627019788182e2df235781956e8b6f4167dc9522`  
+		Last Modified: Fri, 04 Nov 2022 23:43:07 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b0add80fb016129bd71005543e7037fb1c87071dd3e13563b353428868db6eb5`  
-		Last Modified: Wed, 26 Oct 2022 18:31:51 GMT  
-		Size: 1.1 MB (1065560 bytes)  
+	-	`sha256:51921c65c9176f1ffb1c635cfc32ff5cd07fb6758a81c0440521ae527dda5a87`  
+		Last Modified: Fri, 04 Nov 2022 23:43:07 GMT  
+		Size: 1.1 MB (1066308 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3f4299d9323416a52b36d507aad0e735c43fec6204038ca4dc84409dbc62c71`  
-		Last Modified: Wed, 26 Oct 2022 18:31:51 GMT  
+	-	`sha256:9173db868470b4119bce8bcbbebaffbf93f016254652dd90659620a49c26c3eb`  
+		Last Modified: Fri, 04 Nov 2022 23:43:07 GMT  
 		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -7676,7 +7676,7 @@ CMD ["irb"]
 ## `jruby:9.3.9.0-jdk8`
 
 ```console
-$ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a153851a4c124b2e
+$ docker pull jruby@sha256:c2f1f3c5da03fe547238cc434e2e1dfa61d34a13cc8cb26db5fb7060d5b648d1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7687,14 +7687,14 @@ $ docker pull jruby@sha256:9082977bbbf1249fc0ef5a607e4195c97cbf6e4122891680a1538
 ### `jruby:9.3.9.0-jdk8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:b3f092b500a43bc786249ea7139b473a5445402ed0da9340718f8a11b605d822
+$ docker pull jruby@sha256:e1946c55a5209d6dbf348061fe5456779d28ada1f48af04f3db0d6f79d63c3a9
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **185.1 MB (185109927 bytes)**  
+-	Total Size: **185.1 MB (185125651 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:43039622a1686ffdcf20f0b2c181dfdbd66accd8729bd3c34444598d6c6b1d81`
+-	Image ID: `sha256:d4b0a610f60849dbded20c5fbb62d09345cb14ad55971dbedf03943605bf65b8`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -7710,35 +7710,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:27:54 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:27:55 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:04 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:06 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:44 GMT
+# Sat, 05 Nov 2022 00:06:21 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:46 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:23 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:47 GMT
+# Sat, 05 Nov 2022 00:06:24 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:55 GMT
+# Sat, 05 Nov 2022 00:06:31 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:56 GMT
+# Sat, 05 Nov 2022 00:06:32 GMT
 CMD ["irb"]
 ```
 
@@ -7751,46 +7751,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:866927a29657a4897f87fc26d14dc7c29ca01d3cd59216153c378f5c515fe3d6`  
-		Last Modified: Tue, 25 Oct 2022 17:33:55 GMT  
-		Size: 103.5 MB (103516092 bytes)  
+	-	`sha256:33f80a1a0fab2544d040bfad097e957b495735264717b873ffc8702479c344da`  
+		Last Modified: Fri, 04 Nov 2022 23:25:14 GMT  
+		Size: 103.5 MB (103530792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99d0fba23f1b7f2b97f4823d038da396669bc68a4386734cdaef4a32c44fd308`  
-		Last Modified: Tue, 25 Oct 2022 17:33:45 GMT  
-		Size: 161.0 B  
+	-	`sha256:474407bf19afc18eb4e902eab43ac082c4e6590966c2de3d6d0cdc74aa8534d6`  
+		Last Modified: Fri, 04 Nov 2022 23:25:05 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a96a221511d7d18023446034e7f22863ed31693d9bc2e0e3bfeca195f92ef185`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 6.9 MB (6923800 bytes)  
+	-	`sha256:4a211813e9e7a293a1716bcf164e17faed2a52afc1235b6ec5c3ac011cb2bf31`  
+		Last Modified: Sat, 05 Nov 2022 00:09:48 GMT  
+		Size: 6.9 MB (6923795 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d4cce88531bbe6024147de98024b6ee6321c70c8259f2ea11ad5712e2163e9d`  
-		Last Modified: Wed, 26 Oct 2022 23:35:01 GMT  
-		Size: 28.7 MB (28672416 bytes)  
+	-	`sha256:5314fb85b3dcc9645b47232b283c5de36f644cd14832bf9409c0f6bedf003dd0`  
+		Last Modified: Sat, 05 Nov 2022 00:09:49 GMT  
+		Size: 28.7 MB (28672720 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0450dc5c9e7d02e0a1d3a4f8d2fbc7121a236688436c0496ae57f83e8c59ded`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 225.0 B  
+	-	`sha256:1122bf7420d03abefba5c58a74fdc4ada67856d509418f335dc2c3f3558dc531`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1b896ffcc3cec7375b8b8440043e31c3d433ed1dc7e3eeaf662ab7cc1087546`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
-		Size: 1.1 MB (1065568 bytes)  
+	-	`sha256:89daf4a51bdf7aeefbf498c7fc3ff1bbba0ce22c0b5eb7029f7200895e9d401a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
+		Size: 1.1 MB (1066293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:143cc65463789f601c9e00f12c6b1747cfeeb100d414217e4cf23e52f41e2324`  
-		Last Modified: Wed, 26 Oct 2022 23:34:59 GMT  
+	-	`sha256:24a69c2df430cef80585cc4de5c2833ebbc72aa59e31e57cf7c3ffcc65157236`  
+		Last Modified: Sat, 05 Nov 2022 00:09:47 GMT  
 		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9.0-jdk8` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:221ec85a6f16b8f7201a67cf87729aa22d7937cf1490c8e694cf2cec86d551b7
+$ docker pull jruby@sha256:b9a4e515d76f35742bb72a0ad4cc671367d8e4ed340fe40344e49043930f4399
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **181.7 MB (181653129 bytes)**  
+-	Total Size: **181.7 MB (181669077 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6f88ce27631397fb5dbf92a11e91eab84fe6726e4a3c47c1d84dcc16d592078`
+-	Image ID: `sha256:9a43aa62f6f52ec7f9f4fff9fa1bcbbd386d8b91843d4faffcecfd4e9f8b8650`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -7806,35 +7806,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:08:24 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='c1965fb24dded7d7944e2da36cd902adf3b7b1d327aaa21ea507cff00a5a0090';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='af4ecd311df32b405142d5756f966418d0200fbf6cb9009c20a44dc691e8da6f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='f2be72678f6c2ad283453d0e21a6cb03144dda356e4edf79f818d99c37feaf34';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='ed6c9db3719895584fb1fd69fc79c29240977675f26631911c5a1dbce07b7d58';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jdk_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:08:26 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:39:44 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:39:46 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:01 GMT
+# Fri, 04 Nov 2022 23:40:32 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:34 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:03 GMT
+# Fri, 04 Nov 2022 23:40:35 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:09 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:10 GMT
+# Fri, 04 Nov 2022 23:40:41 GMT
 CMD ["irb"]
 ```
 
@@ -7847,39 +7847,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d378871150e62d050c8f290958e6f8468c306ae04dcb0ddb140197b42969f0a6`  
-		Last Modified: Wed, 26 Oct 2022 01:16:20 GMT  
-		Size: 102.6 MB (102615823 bytes)  
+	-	`sha256:89d22354a80d2d12ffad6f61953c73519c4d3e501897b672ceaa720a21ca9533`  
+		Last Modified: Fri, 04 Nov 2022 22:43:42 GMT  
+		Size: 102.6 MB (102630792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae5e11c8b7a6c46afa4aa04526b7ae48696bdd7460c3b4ecf082cb565252c62f`  
-		Last Modified: Wed, 26 Oct 2022 01:16:13 GMT  
+	-	`sha256:dfd3de5d3cf89d4eb535267ba80576b5c8b40771b2b9213e5a423086faf1b916`  
+		Last Modified: Fri, 04 Nov 2022 22:43:34 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e166ec431737c992a580b2ae74f399d7efcc3783d5eed348d15a89730f55558`  
-		Last Modified: Wed, 26 Oct 2022 18:31:09 GMT  
-		Size: 5.9 MB (5886740 bytes)  
+	-	`sha256:76083e2bbb9d806969ce8ad3eca743ddbc01f21cf076d1145a17ed2a6cd0ad2c`  
+		Last Modified: Fri, 04 Nov 2022 23:42:26 GMT  
+		Size: 5.9 MB (5886787 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d81692bf3018f4cc37993ec23bb15b0ab616efed80c7e38a13e2745b3ba41c5a`  
-		Last Modified: Wed, 26 Oct 2022 18:31:10 GMT  
-		Size: 28.7 MB (28672424 bytes)  
+	-	`sha256:27a7bdf9254d520e509d0dfd7b5be7ac4e2c88104eb0d609395255edd677e3a2`  
+		Last Modified: Fri, 04 Nov 2022 23:42:27 GMT  
+		Size: 28.7 MB (28672657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:30b52c5b63ce1d1a0c763f5bb96cae40b877bca27aa5f6a1f9970c621906e3bd`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 225.0 B  
+	-	`sha256:a732e63ff73d304cdb542f7fda1f163bceb4d1029639d948841f9ca2e7b0f2b9`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35db8dea10915a920e750a85e8bf05436a4b7fcf52cb5db3f2f6b9a5e7e904e3`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 1.1 MB (1065578 bytes)  
+	-	`sha256:4e7cdf605588cb2f2d259fb4cffce27af2db4e98c307e042f95169b259647bb6`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 1.1 MB (1066274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c1d3a702b3ec7fe7fe64259ba5602aaea93f39e2845d14bdf75f40996b060e57`  
-		Last Modified: Wed, 26 Oct 2022 18:31:08 GMT  
-		Size: 174.0 B  
+	-	`sha256:071281295b8993de5c4baa7f7328cd27217a6399a5d515e641fb9e58a1d2addb`  
+		Last Modified: Fri, 04 Nov 2022 23:42:25 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9.0-jre`
 
 ```console
-$ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52f962bbc73e1
+$ docker pull jruby@sha256:49263ea3888f7b984ea5858916c6cd49da093a0053e4f44d0cfa114841fd92f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7890,14 +7890,14 @@ $ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52
 ### `jruby:9.3.9.0-jre` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:18e3643422c845f1f82b4b300e29bb4d69d29ba5f7ca03be14f54627900a2850
+$ docker pull jruby@sha256:8f682181c67c5a6872b665e1fd3cb6f17dabf06adc9a1701a8e6b4c174ae6f48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.4 MB (123402307 bytes)**  
+-	Total Size: **123.4 MB (123413836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1f90a45d6373abab7601d0e68675844213f06d51536d5b6d200c4f94d24e8a`
+-	Image ID: `sha256:c587c020e9ab1ac467eb09d934f69e7f14198014aa19e0a43d40b03de29e2ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -7913,35 +7913,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:25 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:10 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 CMD ["irb"]
 ```
 
@@ -7954,46 +7954,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21f064ab5784caeae419e2afb7425a62f23f0f248baf0fb37b31c634416c085d`  
-		Last Modified: Wed, 26 Oct 2022 23:34:25 GMT  
-		Size: 28.7 MB (28672411 bytes)  
+	-	`sha256:abcd65b5e27237c16d5459bdbc47c6b6a0ca212ddc03b57b3e2614c1336f441a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:13 GMT  
+		Size: 28.7 MB (28672310 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b41c00b5a25852f4e311853c9350bf3450b06122c1c8d16930f3b102121dc01b`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
+	-	`sha256:8417d2088c784659969a8d1fb12e683aef6b38b7d6e9ab24f318c8561a67d465`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b5b22973e822afdd8cd315b5059edd2f7f243b1f6cbbe664168c2745bcb8b9`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 1.1 MB (1065548 bytes)  
+	-	`sha256:06e9846e9e420e7062f956fa3a917d500aa2c2a68492db43ed5467d2a11e8cd7`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a1181ffff2bfba3de3fef4afc77171660aaa9b9f1c2a0fc7d5725851cd55ee`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 174.0 B  
+	-	`sha256:8ff332a63cadd19e84f8dd63d0ceef329ae33a5397774c277ca2574da6b23c58`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9.0-jre` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:182728558624a9c95a60f682d2e5bea5c13bfa27fb5a7255b83d3c8606a6eed1
+$ docker pull jruby@sha256:957872cb202a626f58800d1177a1ca07b9e36d3ce5d553c1b6cc5532fe29c919
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **119.8 MB (119841033 bytes)**  
+-	Total Size: **119.8 MB (119845863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92a74d9cd79247d8ca3109c892c4ad250ea23f1f490dc3a869ee6667a94dd9d3`
+-	Image ID: `sha256:5831cdb5121c7ddd276e3f55560d6c9441dda083283d4d3a1c32be5425a29279`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -8009,35 +8009,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:09:55 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:09:55 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:40:17 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:40:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:28:45 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 CMD ["irb"]
 ```
 
@@ -8050,39 +8050,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c6957aefb66d28abfffaa8b0316225c93ae248e51de41c6472d528a29af6525`  
-		Last Modified: Wed, 26 Oct 2022 01:17:16 GMT  
-		Size: 40.8 MB (40803724 bytes)  
+	-	`sha256:a82f0b25b538ab3b61f52f143646fa2b54297b4cda1ec43ddced742cbbcf01c2`  
+		Last Modified: Fri, 04 Nov 2022 22:44:37 GMT  
+		Size: 40.8 MB (40807540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8abb56da477fa4a069dad39242e6d6999b85b514c78dc09595ac485605f1270`  
-		Last Modified: Wed, 26 Oct 2022 01:17:12 GMT  
+	-	`sha256:615afaccba5823904abefbf4e7856717efed9d89d5aec959a10e5cee835c9079`  
+		Last Modified: Fri, 04 Nov 2022 22:44:33 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebbb6e560a099b3810c3427e0327f394392499bcd6fbeda23a4d864b510bf097`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 5.9 MB (5886734 bytes)  
+	-	`sha256:347eda5a9750ed4935d2f9aca6db5b71b352a1e5147943698f02b70c3424cd8a`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 5.9 MB (5886762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d6e9848f0eedb11e3bfe91204b99089d0c16c2664743259442b1ab4d0cb3502`  
-		Last Modified: Wed, 26 Oct 2022 18:30:34 GMT  
-		Size: 28.7 MB (28672415 bytes)  
+	-	`sha256:a7ec581d2bbce6acf852e60383cc0ba7fb5624aaf3df18c26fa001b710c08302`  
+		Last Modified: Fri, 04 Nov 2022 23:41:52 GMT  
+		Size: 28.7 MB (28672679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ed42c04ea317722d6a835a9276829cc295e57d11424383e9aa2b58a0075a64`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 224.0 B  
+	-	`sha256:abe3d5824237eeaaa67bc8b970adf27d150e34354223ab9a39447f94edc0bbeb`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5896696ee8d8c7d1ebf557a9bec79c111339baed5fb9cb1e31332739a77bec`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 1.1 MB (1065595 bytes)  
+	-	`sha256:5ca23cd8897f38c3c9699a7fcf32dc4bf95e7d1676bb88e37b881afd0f1ca8fa`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 1.1 MB (1066313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8a33d03a9035b87bbcffcef0b770943dff76c9735cc50db4a0b1a86cc898f1e`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:3cb2e88e21d802708863053326d846d1024c3549da8ed7c8a15788dbdeb53591`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9.0-jre11`
 
 ```console
-$ docker pull jruby@sha256:babb58733a65e654ea95c088281b4fbbf6357075ddf531355a1326552e05f64a
+$ docker pull jruby@sha256:3c19614878c95f69370fe8f839a19a4e27d638955be0b320538b901179b8889b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8093,14 +8093,14 @@ $ docker pull jruby@sha256:babb58733a65e654ea95c088281b4fbbf6357075ddf531355a132
 ### `jruby:9.3.9.0-jre11` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:80afdf5c8481a8a1c276607517262caf3a24b54b9e456a1b5f67d3716b2ac3f2
+$ docker pull jruby@sha256:2bbc395bb7b641e22689ac4b752b472323059274b18581d50b86e06b288a91dc
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **128.1 MB (128090714 bytes)**  
+-	Total Size: **128.2 MB (128224356 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:da0ba8567fcb2f0a598863fd0b437ed4c9c6418750ee60c2b7f13361a1f6c8a8`
+-	Image ID: `sha256:356c64f4caa5e02282762dd465fd1ecb6ce8b92c4a3efe966b7f7126b5cb6a1d`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -8116,35 +8116,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:28:44 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Tue, 25 Oct 2022 17:29:23 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 25 Oct 2022 17:29:24 GMT
+# Fri, 04 Nov 2022 23:21:27 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 23:22:24 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 23:22:25 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:31:05 GMT
+# Sat, 05 Nov 2022 00:06:41 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:31:07 GMT
+# Sat, 05 Nov 2022 00:06:43 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:31:07 GMT
+# Sat, 05 Nov 2022 00:06:44 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:08 GMT
+# Sat, 05 Nov 2022 00:06:44 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:31:17 GMT
+# Sat, 05 Nov 2022 00:06:52 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:31:18 GMT
+# Sat, 05 Nov 2022 00:06:53 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:31:18 GMT
+# Sat, 05 Nov 2022 00:06:53 GMT
 CMD ["irb"]
 ```
 
@@ -8157,46 +8157,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:66d4ce13fd620ba04abe64eeebe53783f1fceba116a08eace8fdfe202db35c00`  
-		Last Modified: Wed, 26 Oct 2022 16:45:13 GMT  
-		Size: 46.5 MB (46497092 bytes)  
+	-	`sha256:bbd45db92608776aa8d24a28e427c9e56ec56a4d83bc3da5db28817f88a8ffad`  
+		Last Modified: Fri, 04 Nov 2022 23:29:16 GMT  
+		Size: 46.6 MB (46630173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e81ede82d9fd39574aad8126301364fc83a05b01f9537dc5a8c8c17865dca42`  
-		Last Modified: Wed, 26 Oct 2022 16:45:06 GMT  
+	-	`sha256:6fcfd0f47989acccee774146a436995f6d433299e82638b90c6b47f093ebd3cc`  
+		Last Modified: Fri, 04 Nov 2022 23:29:09 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:90dc6131f518995245e9cf60c905e000f4c31b781da122846b5489bfaa2c84f0`  
-		Last Modified: Wed, 26 Oct 2022 23:35:29 GMT  
-		Size: 6.9 MB (6923824 bytes)  
+	-	`sha256:b2efe7cd9800950ff66f440f2247d8eeb53b1a4c8c235e14b0ca3917821a1410`  
+		Last Modified: Sat, 05 Nov 2022 00:10:16 GMT  
+		Size: 6.9 MB (6923817 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:afd6c1e63d3214b61efc53d57df0ad8ce402330bb1de2c745970f2eb93a0b287`  
-		Last Modified: Wed, 26 Oct 2022 23:35:30 GMT  
-		Size: 28.7 MB (28672163 bytes)  
+	-	`sha256:0f2d9565a34861ead3ef552193c114746577e4a9da348ede5c890fe2a859e87a`  
+		Last Modified: Sat, 05 Nov 2022 00:10:18 GMT  
+		Size: 28.7 MB (28672025 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ac7c8bcd537319bcdc85ae640f8ed7c1e877882401200bb87c12e18e7ea4ed`  
-		Last Modified: Wed, 26 Oct 2022 23:35:27 GMT  
+	-	`sha256:d93f1e27f1dc8727ff1a5d8d780ef5271d257e381864b843a8786a0958c72966`  
+		Last Modified: Sat, 05 Nov 2022 00:10:15 GMT  
 		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e90a8660fc2ce81f7969e6fadd7b2fa2778410397a74d8ef44cfb76226bd1fb1`  
-		Last Modified: Wed, 26 Oct 2022 23:35:27 GMT  
-		Size: 1.1 MB (1065584 bytes)  
+	-	`sha256:109f4088a7c107cd692cb0f06f1fa7961989b12856f1c4d05e573985490649d5`  
+		Last Modified: Sat, 05 Nov 2022 00:10:15 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0ec06761e72540327117f544909a2c3ffddb1700baf7c16eef1a5862f00b3c12`  
-		Last Modified: Wed, 26 Oct 2022 23:35:27 GMT  
+	-	`sha256:bff63a591e2c6f8b1acf70902a1598a43acd091ca9688039620993c1934879a5`  
+		Last Modified: Sat, 05 Nov 2022 00:10:15 GMT  
 		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9.0-jre11` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:76396e5371f25396ed300091324aa5e514498d3f21dfb6062dba01cc562dee57
+$ docker pull jruby@sha256:9849afc5357a4a4dc74ecdf292b08cc4b5daca1594b8de232518e1081c008b8c
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.9 MB (123862571 bytes)**  
+-	Total Size: **124.0 MB (123998152 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0a0d41ac2bf60dba2511c7a976cbf29a641ccc646880129732dfb68b1e0b3235`
+-	Image ID: `sha256:2c327e8a702c02690a0faf06628b79ebbec5fa2a06053c08bfd08479100ca16c`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -8212,35 +8212,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:10:09 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 26 Oct 2022 01:11:00 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 26 Oct 2022 01:11:01 GMT
+# Fri, 04 Nov 2022 22:40:30 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:27 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:28 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 26 Oct 2022 18:29:17 GMT
+# Fri, 04 Nov 2022 23:40:48 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:29:17 GMT
+# Fri, 04 Nov 2022 23:40:48 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:29:17 GMT
+# Fri, 04 Nov 2022 23:40:48 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:29:19 GMT
+# Fri, 04 Nov 2022 23:40:50 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:29:19 GMT
+# Fri, 04 Nov 2022 23:40:50 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:19 GMT
+# Fri, 04 Nov 2022 23:40:51 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:29:26 GMT
+# Fri, 04 Nov 2022 23:40:57 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:29:27 GMT
+# Fri, 04 Nov 2022 23:40:58 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:29:27 GMT
+# Fri, 04 Nov 2022 23:40:58 GMT
 CMD ["irb"]
 ```
 
@@ -8253,39 +8253,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2f074bb0d3a200c73832f49376539750092a87663c1626d2cfad573adeb47d19`  
-		Last Modified: Wed, 26 Oct 2022 01:19:11 GMT  
-		Size: 44.8 MB (44825170 bytes)  
+	-	`sha256:479785166a86894f7082d07c7739f94a19bd6518753eff613b79be4de2e385a3`  
+		Last Modified: Fri, 04 Nov 2022 22:46:31 GMT  
+		Size: 45.0 MB (44959920 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:912068dbc2a17ebd81e7b1b2de4c78a115995117b29aecd10d6140ce0e9b6555`  
-		Last Modified: Wed, 26 Oct 2022 01:19:06 GMT  
-		Size: 160.0 B  
+	-	`sha256:6dd5e491c74305e59c65f0432b4cb15518760d88967d02f27ea037374c86f121`  
+		Last Modified: Fri, 04 Nov 2022 22:46:26 GMT  
+		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67df722a9408260da51c609e02b0665967e5140690410e03d53d2ff4a881f2b8`  
-		Last Modified: Wed, 26 Oct 2022 18:31:36 GMT  
-		Size: 5.9 MB (5886796 bytes)  
+	-	`sha256:bf328668acf32152a909cd923877276ca5ef218d7413cf59d1bbd359ed523b54`  
+		Last Modified: Fri, 04 Nov 2022 23:42:54 GMT  
+		Size: 5.9 MB (5886739 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f41b7a49afbe4c88699c86b45f000deddf2a3b229b875fe35fa21aa6f908e537`  
-		Last Modified: Wed, 26 Oct 2022 18:31:37 GMT  
-		Size: 28.7 MB (28672446 bytes)  
+	-	`sha256:56555b922bb3bb6e9827a3739ca6127dbbdfc5c29d7ce6c14ebd5e1639786c66`  
+		Last Modified: Fri, 04 Nov 2022 23:42:55 GMT  
+		Size: 28.7 MB (28672629 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7de25df39da8cb7681a5f26a21b205ce50fb5c7b8def2a41f44ad7666bc6056`  
-		Last Modified: Wed, 26 Oct 2022 18:31:35 GMT  
+	-	`sha256:4bb2e55c255535a90671420409f40a35323cd0e9fcaa8d8bd49d302911d9daa5`  
+		Last Modified: Fri, 04 Nov 2022 23:42:52 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7962912ef718e479e8b568dd95df0932aff827f30a85e0d5b4484147b84564f7`  
-		Last Modified: Wed, 26 Oct 2022 18:31:36 GMT  
-		Size: 1.1 MB (1065593 bytes)  
+	-	`sha256:9bc6859dd8f730a87f206e4d5160548bdab62cd350f1e42ca0b78c7994fd4c3b`  
+		Last Modified: Fri, 04 Nov 2022 23:42:53 GMT  
+		Size: 1.1 MB (1066296 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:50714b830904cdd9454659ad9505809570585ce63aef0966c99011078375a5fe`  
-		Last Modified: Wed, 26 Oct 2022 18:31:35 GMT  
-		Size: 175.0 B  
+	-	`sha256:abbc3490ff5c51cbbf3f5e59ae5b985509478349bdef5f437b289abd534941be`  
+		Last Modified: Fri, 04 Nov 2022 23:42:53 GMT  
+		Size: 176.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:9.3.9.0-jre8`
 
 ```console
-$ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52f962bbc73e1
+$ docker pull jruby@sha256:49263ea3888f7b984ea5858916c6cd49da093a0053e4f44d0cfa114841fd92f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8296,14 +8296,14 @@ $ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52
 ### `jruby:9.3.9.0-jre8` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:18e3643422c845f1f82b4b300e29bb4d69d29ba5f7ca03be14f54627900a2850
+$ docker pull jruby@sha256:8f682181c67c5a6872b665e1fd3cb6f17dabf06adc9a1701a8e6b4c174ae6f48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.4 MB (123402307 bytes)**  
+-	Total Size: **123.4 MB (123413836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1f90a45d6373abab7601d0e68675844213f06d51536d5b6d200c4f94d24e8a`
+-	Image ID: `sha256:c587c020e9ab1ac467eb09d934f69e7f14198014aa19e0a43d40b03de29e2ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -8319,35 +8319,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:25 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:10 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 CMD ["irb"]
 ```
 
@@ -8360,46 +8360,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21f064ab5784caeae419e2afb7425a62f23f0f248baf0fb37b31c634416c085d`  
-		Last Modified: Wed, 26 Oct 2022 23:34:25 GMT  
-		Size: 28.7 MB (28672411 bytes)  
+	-	`sha256:abcd65b5e27237c16d5459bdbc47c6b6a0ca212ddc03b57b3e2614c1336f441a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:13 GMT  
+		Size: 28.7 MB (28672310 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b41c00b5a25852f4e311853c9350bf3450b06122c1c8d16930f3b102121dc01b`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
+	-	`sha256:8417d2088c784659969a8d1fb12e683aef6b38b7d6e9ab24f318c8561a67d465`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b5b22973e822afdd8cd315b5059edd2f7f243b1f6cbbe664168c2745bcb8b9`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 1.1 MB (1065548 bytes)  
+	-	`sha256:06e9846e9e420e7062f956fa3a917d500aa2c2a68492db43ed5467d2a11e8cd7`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a1181ffff2bfba3de3fef4afc77171660aaa9b9f1c2a0fc7d5725851cd55ee`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 174.0 B  
+	-	`sha256:8ff332a63cadd19e84f8dd63d0ceef329ae33a5397774c277ca2574da6b23c58`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:9.3.9.0-jre8` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:182728558624a9c95a60f682d2e5bea5c13bfa27fb5a7255b83d3c8606a6eed1
+$ docker pull jruby@sha256:957872cb202a626f58800d1177a1ca07b9e36d3ce5d553c1b6cc5532fe29c919
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **119.8 MB (119841033 bytes)**  
+-	Total Size: **119.8 MB (119845863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92a74d9cd79247d8ca3109c892c4ad250ea23f1f490dc3a869ee6667a94dd9d3`
+-	Image ID: `sha256:5831cdb5121c7ddd276e3f55560d6c9441dda083283d4d3a1c32be5425a29279`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -8415,35 +8415,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:09:55 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:09:55 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:40:17 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:40:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:28:45 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 CMD ["irb"]
 ```
 
@@ -8456,39 +8456,39 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c6957aefb66d28abfffaa8b0316225c93ae248e51de41c6472d528a29af6525`  
-		Last Modified: Wed, 26 Oct 2022 01:17:16 GMT  
-		Size: 40.8 MB (40803724 bytes)  
+	-	`sha256:a82f0b25b538ab3b61f52f143646fa2b54297b4cda1ec43ddced742cbbcf01c2`  
+		Last Modified: Fri, 04 Nov 2022 22:44:37 GMT  
+		Size: 40.8 MB (40807540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8abb56da477fa4a069dad39242e6d6999b85b514c78dc09595ac485605f1270`  
-		Last Modified: Wed, 26 Oct 2022 01:17:12 GMT  
+	-	`sha256:615afaccba5823904abefbf4e7856717efed9d89d5aec959a10e5cee835c9079`  
+		Last Modified: Fri, 04 Nov 2022 22:44:33 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebbb6e560a099b3810c3427e0327f394392499bcd6fbeda23a4d864b510bf097`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 5.9 MB (5886734 bytes)  
+	-	`sha256:347eda5a9750ed4935d2f9aca6db5b71b352a1e5147943698f02b70c3424cd8a`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 5.9 MB (5886762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d6e9848f0eedb11e3bfe91204b99089d0c16c2664743259442b1ab4d0cb3502`  
-		Last Modified: Wed, 26 Oct 2022 18:30:34 GMT  
-		Size: 28.7 MB (28672415 bytes)  
+	-	`sha256:a7ec581d2bbce6acf852e60383cc0ba7fb5624aaf3df18c26fa001b710c08302`  
+		Last Modified: Fri, 04 Nov 2022 23:41:52 GMT  
+		Size: 28.7 MB (28672679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ed42c04ea317722d6a835a9276829cc295e57d11424383e9aa2b58a0075a64`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 224.0 B  
+	-	`sha256:abe3d5824237eeaaa67bc8b970adf27d150e34354223ab9a39447f94edc0bbeb`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5896696ee8d8c7d1ebf557a9bec79c111339baed5fb9cb1e31332739a77bec`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 1.1 MB (1065595 bytes)  
+	-	`sha256:5ca23cd8897f38c3c9699a7fcf32dc4bf95e7d1676bb88e37b881afd0f1ca8fa`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 1.1 MB (1066313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8a33d03a9035b87bbcffcef0b770943dff76c9735cc50db4a0b1a86cc898f1e`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:3cb2e88e21d802708863053326d846d1024c3549da8ed7c8a15788dbdeb53591`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jruby:latest`
 
 ```console
-$ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52f962bbc73e1
+$ docker pull jruby@sha256:49263ea3888f7b984ea5858916c6cd49da093a0053e4f44d0cfa114841fd92f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8499,14 +8499,14 @@ $ docker pull jruby@sha256:c60298fe426dc93144147c36f909f4381f1fb5ac49f47abdabb52
 ### `jruby:latest` - linux; amd64
 
 ```console
-$ docker pull jruby@sha256:18e3643422c845f1f82b4b300e29bb4d69d29ba5f7ca03be14f54627900a2850
+$ docker pull jruby@sha256:8f682181c67c5a6872b665e1fd3cb6f17dabf06adc9a1701a8e6b4c174ae6f48
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **123.4 MB (123402307 bytes)**  
+-	Total Size: **123.4 MB (123413836 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1f90a45d6373abab7601d0e68675844213f06d51536d5b6d200c4f94d24e8a`
+-	Image ID: `sha256:c587c020e9ab1ac467eb09d934f69e7f14198014aa19e0a43d40b03de29e2ac0`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -8522,35 +8522,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Tue, 25 Oct 2022 17:27:46 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 17:27:46 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Tue, 25 Oct 2022 17:28:31 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Tue, 25 Oct 2022 17:28:32 GMT
+# Fri, 04 Nov 2022 23:19:59 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 23:20:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 23:20:42 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:00 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 23:30:23 GMT
+# Sat, 05 Nov 2022 00:06:01 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 23:30:25 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:03 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:26 GMT
+# Sat, 05 Nov 2022 00:06:04 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:10 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 23:30:34 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 23:30:35 GMT
+# Sat, 05 Nov 2022 00:06:11 GMT
 CMD ["irb"]
 ```
 
@@ -8563,46 +8563,46 @@ CMD ["irb"]
 		Last Modified: Tue, 25 Oct 2022 17:33:48 GMT  
 		Size: 16.4 MB (16353656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ec745e019fcec97ad385550869975f32c84d380c2e1e0144f7adf645c8b4e1a`  
-		Last Modified: Wed, 26 Oct 2022 16:43:39 GMT  
-		Size: 41.8 MB (41808475 bytes)  
+	-	`sha256:9c22fcc0bbbeb3a44837a47976727ff31cfb8ba5c3e1ef07f3e6e364842d8e0f`  
+		Last Modified: Fri, 04 Nov 2022 23:26:27 GMT  
+		Size: 41.8 MB (41819354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebeffd81f32972bf834384b283b12d171bd004c2dfdb5b66091154fff8c6f93c`  
-		Last Modified: Wed, 26 Oct 2022 16:43:34 GMT  
-		Size: 161.0 B  
+	-	`sha256:a178c011fee7dace8e11582e6a5b6ee7f4b84a14579863a97b594b2c8d0a66e0`  
+		Last Modified: Fri, 04 Nov 2022 23:26:22 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7d4ea6c612bb9cdc3628a76cee53716b60b0b07d259addba708f82d017d3799`  
-		Last Modified: Wed, 26 Oct 2022 23:34:24 GMT  
-		Size: 6.9 MB (6923822 bytes)  
+	-	`sha256:57593cd3e5459e0360ecca8951a21d213e0293604048ce557fe17276b48cdf7a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:12 GMT  
+		Size: 6.9 MB (6923830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21f064ab5784caeae419e2afb7425a62f23f0f248baf0fb37b31c634416c085d`  
-		Last Modified: Wed, 26 Oct 2022 23:34:25 GMT  
-		Size: 28.7 MB (28672411 bytes)  
+	-	`sha256:abcd65b5e27237c16d5459bdbc47c6b6a0ca212ddc03b57b3e2614c1336f441a`  
+		Last Modified: Sat, 05 Nov 2022 00:09:13 GMT  
+		Size: 28.7 MB (28672310 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b41c00b5a25852f4e311853c9350bf3450b06122c1c8d16930f3b102121dc01b`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
+	-	`sha256:8417d2088c784659969a8d1fb12e683aef6b38b7d6e9ab24f318c8561a67d465`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
 		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4b5b22973e822afdd8cd315b5059edd2f7f243b1f6cbbe664168c2745bcb8b9`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 1.1 MB (1065548 bytes)  
+	-	`sha256:06e9846e9e420e7062f956fa3a917d500aa2c2a68492db43ed5467d2a11e8cd7`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 1.1 MB (1066290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81a1181ffff2bfba3de3fef4afc77171660aaa9b9f1c2a0fc7d5725851cd55ee`  
-		Last Modified: Wed, 26 Oct 2022 23:34:23 GMT  
-		Size: 174.0 B  
+	-	`sha256:8ff332a63cadd19e84f8dd63d0ceef329ae33a5397774c277ca2574da6b23c58`  
+		Last Modified: Sat, 05 Nov 2022 00:09:11 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jruby:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull jruby@sha256:182728558624a9c95a60f682d2e5bea5c13bfa27fb5a7255b83d3c8606a6eed1
+$ docker pull jruby@sha256:957872cb202a626f58800d1177a1ca07b9e36d3ce5d553c1b6cc5532fe29c919
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **119.8 MB (119841033 bytes)**  
+-	Total Size: **119.8 MB (119845863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:92a74d9cd79247d8ca3109c892c4ad250ea23f1f490dc3a869ee6667a94dd9d3`
+-	Image ID: `sha256:5831cdb5121c7ddd276e3f55560d6c9441dda083283d4d3a1c32be5425a29279`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -8618,35 +8618,35 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 26 Oct 2022 01:08:14 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 01:08:14 GMT
-ENV JAVA_VERSION=jdk8u345-b01
-# Wed, 26 Oct 2022 01:09:55 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='65b8bd74382d6514d2458ff4375468651791a55a186a5bffe0803204801e9c94';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_aarch64_linux_hotspot_8u345b01.tar.gz';          ;;        armhf|arm)          ESUM='a9dd1ea4280a85158191101688bbf1920c4676a3849e22dc7783fb61f60d6199';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_arm_linux_hotspot_8u345b01.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='0e58c3fb39303969d7d6ff660c0b63997ab0ee68af3452f3d17f2892c61a58f6';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_ppc64le_linux_hotspot_8u345b01.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='2422a8831fe414b9dba4c443ee3562431dfcde27577124f0db58ec903afc262a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u345-b01/OpenJDK8U-jre_x64_linux_hotspot_8u345b01.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Wed, 26 Oct 2022 01:09:55 GMT
+# Fri, 04 Nov 2022 22:39:38 GMT
+ENV JAVA_VERSION=jdk8u352-b08
+# Fri, 04 Nov 2022 22:40:17 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Fri, 04 Nov 2022 22:40:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 RUN apt-get update && apt-get install -y libc6-dev --no-install-recommends && rm -rf /var/lib/apt/lists/*
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_VERSION=9.3.9.0
-# Wed, 26 Oct 2022 18:28:44 GMT
+# Fri, 04 Nov 2022 23:40:14 GMT
 ENV JRUBY_SHA256=251e6dd8d1d2f82922c8c778d7857e1bef82fe5ca2cf77bc09356421d0b05ab8
-# Wed, 26 Oct 2022 18:28:45 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir /opt/jruby   && curl -fSL https://repo1.maven.org/maven2/org/jruby/jruby-dist/${JRUBY_VERSION}/jruby-dist-${JRUBY_VERSION}-bin.tar.gz -o /tmp/jruby.tar.gz   && echo "$JRUBY_SHA256 /tmp/jruby.tar.gz" | sha256sum -c -   && tar -zx --strip-components=1 -f /tmp/jruby.tar.gz -C /opt/jruby   && rm /tmp/jruby.tar.gz   && update-alternatives --install /usr/local/bin/ruby ruby /opt/jruby/bin/jruby 1
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 ENV PATH=/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:46 GMT
+# Fri, 04 Nov 2022 23:40:16 GMT
 RUN mkdir -p /opt/jruby/etc 	&& { 		echo 'install: --no-document'; 		echo 'update: --no-document'; 	} >> /opt/jruby/etc/gemrc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 RUN gem install bundler rake net-telnet xmlrpc
-# Wed, 26 Oct 2022 18:28:52 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV GEM_HOME=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:22 GMT
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 ENV PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Wed, 26 Oct 2022 18:28:53 GMT
+# Fri, 04 Nov 2022 23:40:23 GMT
 CMD ["irb"]
 ```
 
@@ -8659,31 +8659,31 @@ CMD ["irb"]
 		Last Modified: Wed, 26 Oct 2022 01:16:15 GMT  
 		Size: 16.2 MB (16216007 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c6957aefb66d28abfffaa8b0316225c93ae248e51de41c6472d528a29af6525`  
-		Last Modified: Wed, 26 Oct 2022 01:17:16 GMT  
-		Size: 40.8 MB (40803724 bytes)  
+	-	`sha256:a82f0b25b538ab3b61f52f143646fa2b54297b4cda1ec43ddced742cbbcf01c2`  
+		Last Modified: Fri, 04 Nov 2022 22:44:37 GMT  
+		Size: 40.8 MB (40807540 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e8abb56da477fa4a069dad39242e6d6999b85b514c78dc09595ac485605f1270`  
-		Last Modified: Wed, 26 Oct 2022 01:17:12 GMT  
+	-	`sha256:615afaccba5823904abefbf4e7856717efed9d89d5aec959a10e5cee835c9079`  
+		Last Modified: Fri, 04 Nov 2022 22:44:33 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebbb6e560a099b3810c3427e0327f394392499bcd6fbeda23a4d864b510bf097`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 5.9 MB (5886734 bytes)  
+	-	`sha256:347eda5a9750ed4935d2f9aca6db5b71b352a1e5147943698f02b70c3424cd8a`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 5.9 MB (5886762 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d6e9848f0eedb11e3bfe91204b99089d0c16c2664743259442b1ab4d0cb3502`  
-		Last Modified: Wed, 26 Oct 2022 18:30:34 GMT  
-		Size: 28.7 MB (28672415 bytes)  
+	-	`sha256:a7ec581d2bbce6acf852e60383cc0ba7fb5624aaf3df18c26fa001b710c08302`  
+		Last Modified: Fri, 04 Nov 2022 23:41:52 GMT  
+		Size: 28.7 MB (28672679 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74ed42c04ea317722d6a835a9276829cc295e57d11424383e9aa2b58a0075a64`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 224.0 B  
+	-	`sha256:abe3d5824237eeaaa67bc8b970adf27d150e34354223ab9a39447f94edc0bbeb`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b5896696ee8d8c7d1ebf557a9bec79c111339baed5fb9cb1e31332739a77bec`  
-		Last Modified: Wed, 26 Oct 2022 18:30:33 GMT  
-		Size: 1.1 MB (1065595 bytes)  
+	-	`sha256:5ca23cd8897f38c3c9699a7fcf32dc4bf95e7d1676bb88e37b881afd0f1ca8fa`  
+		Last Modified: Fri, 04 Nov 2022 23:41:50 GMT  
+		Size: 1.1 MB (1066313 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d8a33d03a9035b87bbcffcef0b770943dff76c9735cc50db4a0b1a86cc898f1e`  
-		Last Modified: Wed, 26 Oct 2022 18:30:32 GMT  
-		Size: 176.0 B  
+	-	`sha256:3cb2e88e21d802708863053326d846d1024c3549da8ed7c8a15788dbdeb53591`  
+		Last Modified: Fri, 04 Nov 2022 23:41:49 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
