@@ -230,7 +230,7 @@ CMD ["zkServer.sh" "start-foreground"]
 ## `zookeeper:3.5-temurin`
 
 ```console
-$ docker pull zookeeper@sha256:1ab81790e582e773142ae7fd21c25b79d1773d3bd541a9c49ed3e6758679e545
+$ docker pull zookeeper@sha256:8544c14837aba89b0fe42e6020b5d9a81b3f09325a85e65b995b8df0fc2d7f71
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -339,14 +339,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:3.5-temurin` - linux; arm64 variant v8
 
 ```console
-$ docker pull zookeeper@sha256:291526ab08239cff746965b616fbc72e40bdd5649c7185dfd56a5f2d472f415a
+$ docker pull zookeeper@sha256:220acfb307605c7925aed670f4480a1bd95423f4473cdd0f05c1c23c843edfc5
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **99.7 MB (99693708 bytes)**  
+-	Total Size: **99.8 MB (99827557 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c1439d7c1995eb74e52e6de274643714fafc7874ed52d45dc8382637dde81644`
+-	Image ID: `sha256:0add9c075255e795ee5ffec66082afa1c80b6354a3e9c2629900d0ef7ee913cc`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -363,40 +363,40 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 02 Nov 2022 19:44:32 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 02 Nov 2022 19:44:58 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 02 Nov 2022 19:45:29 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 02 Nov 2022 19:45:30 GMT
+# Fri, 04 Nov 2022 22:40:54 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:33 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:34 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:15 GMT
 ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:16 GMT
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 02 Nov 2022 22:07:45 GMT
+# Sat, 05 Nov 2022 00:46:23 GMT
 RUN set -eux;     apt-get -qq update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 02 Nov 2022 22:07:45 GMT
+# Sat, 05 Nov 2022 00:46:23 GMT
 ARG GPG_KEY=3D296268A36FACA1B7EAF110792D43153B5B5147
-# Wed, 02 Nov 2022 22:07:45 GMT
+# Sat, 05 Nov 2022 00:46:23 GMT
 ARG SHORT_DISTRO_NAME=zookeeper-3.5.9
-# Wed, 02 Nov 2022 22:07:45 GMT
+# Sat, 05 Nov 2022 00:46:23 GMT
 ARG DISTRO_NAME=apache-zookeeper-3.5.9-bin
-# Wed, 02 Nov 2022 22:07:51 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 # ARGS: DISTRO_NAME=apache-zookeeper-3.5.9-bin GPG_KEY=3D296268A36FACA1B7EAF110792D43153B5B5147 SHORT_DISTRO_NAME=zookeeper-3.5.9
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 WORKDIR /apache-zookeeper-3.5.9-bin
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.5.9-bin/bin ZOOCFGDIR=/conf
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 COPY file:97ce87618885d3ddb3bea4e29e2422218111befae5783e3f1adaccd2191a05c6 in / 
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -409,28 +409,28 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 02 Nov 2022 19:48:28 GMT  
 		Size: 12.4 MB (12396330 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a23053ec7db1b2114e648a1fdd75a0c318db47d50b2d59c14df3b2fde7d1526`  
-		Last Modified: Wed, 02 Nov 2022 19:49:36 GMT  
-		Size: 44.8 MB (44824603 bytes)  
+	-	`sha256:bc4598c07dd818f03a0378b0341a4a8e80f0152fbb3e7d5246ca4f466f42e611`  
+		Last Modified: Fri, 04 Nov 2022 22:46:46 GMT  
+		Size: 45.0 MB (44958470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:756118ab994dacaae5f6c8d8deb6266a31d4f2cf15ef824efc08e12b5ae2a348`  
-		Last Modified: Wed, 02 Nov 2022 19:49:31 GMT  
-		Size: 159.0 B  
+	-	`sha256:715a937a1066f998b331fcd62256ad01a5571bdf46804e97825afc64f9ebb427`  
+		Last Modified: Fri, 04 Nov 2022 22:46:41 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0368efa5471d2939e154aaf89399aeb7f73378ac882442203c160cc33c7f582a`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 1.9 KB (1885 bytes)  
+	-	`sha256:7f6195000c84fc47caa340eb7dd634922b70bc084e15f3f993224e9e888b4f49`  
+		Last Modified: Sat, 05 Nov 2022 00:47:30 GMT  
+		Size: 1.9 KB (1890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb3cb59fe38bcbf8f033f6c998fd38fbb92ba0940b9405c59e7e8772423e4c76`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 4.5 MB (4506171 bytes)  
+	-	`sha256:23ce5e1f7be587847244b68918857b8dd91438a5970b749d08a098fa2bbe2365`  
+		Last Modified: Sat, 05 Nov 2022 00:47:31 GMT  
+		Size: 4.5 MB (4506184 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f75c980cb35d12c5e646106ac296d2d23a92bc7e9aed3745625c2e095ed5564c`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 9.6 MB (9581631 bytes)  
+	-	`sha256:edf6f2247975ae5129f460de5d97764b75ed232200388758b3dceda4803dd4d5`  
+		Last Modified: Sat, 05 Nov 2022 00:47:31 GMT  
+		Size: 9.6 MB (9581594 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:580a25f9bfb2acf21509befc9d885f54411469fe5a7c53f82ef89580910096c5`  
-		Last Modified: Wed, 02 Nov 2022 22:08:47 GMT  
+	-	`sha256:643bb9e3bb36179bac756cdec5492f939d00ae575cd82c5d99225073a6f463f7`  
+		Last Modified: Sat, 05 Nov 2022 00:47:30 GMT  
 		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -644,7 +644,7 @@ CMD ["zkServer.sh" "start-foreground"]
 ## `zookeeper:3.5.9-temurin`
 
 ```console
-$ docker pull zookeeper@sha256:1ab81790e582e773142ae7fd21c25b79d1773d3bd541a9c49ed3e6758679e545
+$ docker pull zookeeper@sha256:8544c14837aba89b0fe42e6020b5d9a81b3f09325a85e65b995b8df0fc2d7f71
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -753,14 +753,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:3.5.9-temurin` - linux; arm64 variant v8
 
 ```console
-$ docker pull zookeeper@sha256:291526ab08239cff746965b616fbc72e40bdd5649c7185dfd56a5f2d472f415a
+$ docker pull zookeeper@sha256:220acfb307605c7925aed670f4480a1bd95423f4473cdd0f05c1c23c843edfc5
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **99.7 MB (99693708 bytes)**  
+-	Total Size: **99.8 MB (99827557 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c1439d7c1995eb74e52e6de274643714fafc7874ed52d45dc8382637dde81644`
+-	Image ID: `sha256:0add9c075255e795ee5ffec66082afa1c80b6354a3e9c2629900d0ef7ee913cc`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -777,40 +777,40 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 02 Nov 2022 19:44:32 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 02 Nov 2022 19:44:58 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 02 Nov 2022 19:45:29 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 02 Nov 2022 19:45:30 GMT
+# Fri, 04 Nov 2022 22:40:54 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:33 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:34 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:15 GMT
 ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:16 GMT
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 02 Nov 2022 22:07:45 GMT
+# Sat, 05 Nov 2022 00:46:23 GMT
 RUN set -eux;     apt-get -qq update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 02 Nov 2022 22:07:45 GMT
+# Sat, 05 Nov 2022 00:46:23 GMT
 ARG GPG_KEY=3D296268A36FACA1B7EAF110792D43153B5B5147
-# Wed, 02 Nov 2022 22:07:45 GMT
+# Sat, 05 Nov 2022 00:46:23 GMT
 ARG SHORT_DISTRO_NAME=zookeeper-3.5.9
-# Wed, 02 Nov 2022 22:07:45 GMT
+# Sat, 05 Nov 2022 00:46:23 GMT
 ARG DISTRO_NAME=apache-zookeeper-3.5.9-bin
-# Wed, 02 Nov 2022 22:07:51 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 # ARGS: DISTRO_NAME=apache-zookeeper-3.5.9-bin GPG_KEY=3D296268A36FACA1B7EAF110792D43153B5B5147 SHORT_DISTRO_NAME=zookeeper-3.5.9
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 WORKDIR /apache-zookeeper-3.5.9-bin
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.5.9-bin/bin ZOOCFGDIR=/conf
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 COPY file:97ce87618885d3ddb3bea4e29e2422218111befae5783e3f1adaccd2191a05c6 in / 
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 02 Nov 2022 22:07:52 GMT
+# Sat, 05 Nov 2022 00:46:30 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -823,28 +823,28 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 02 Nov 2022 19:48:28 GMT  
 		Size: 12.4 MB (12396330 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a23053ec7db1b2114e648a1fdd75a0c318db47d50b2d59c14df3b2fde7d1526`  
-		Last Modified: Wed, 02 Nov 2022 19:49:36 GMT  
-		Size: 44.8 MB (44824603 bytes)  
+	-	`sha256:bc4598c07dd818f03a0378b0341a4a8e80f0152fbb3e7d5246ca4f466f42e611`  
+		Last Modified: Fri, 04 Nov 2022 22:46:46 GMT  
+		Size: 45.0 MB (44958470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:756118ab994dacaae5f6c8d8deb6266a31d4f2cf15ef824efc08e12b5ae2a348`  
-		Last Modified: Wed, 02 Nov 2022 19:49:31 GMT  
-		Size: 159.0 B  
+	-	`sha256:715a937a1066f998b331fcd62256ad01a5571bdf46804e97825afc64f9ebb427`  
+		Last Modified: Fri, 04 Nov 2022 22:46:41 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0368efa5471d2939e154aaf89399aeb7f73378ac882442203c160cc33c7f582a`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 1.9 KB (1885 bytes)  
+	-	`sha256:7f6195000c84fc47caa340eb7dd634922b70bc084e15f3f993224e9e888b4f49`  
+		Last Modified: Sat, 05 Nov 2022 00:47:30 GMT  
+		Size: 1.9 KB (1890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb3cb59fe38bcbf8f033f6c998fd38fbb92ba0940b9405c59e7e8772423e4c76`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 4.5 MB (4506171 bytes)  
+	-	`sha256:23ce5e1f7be587847244b68918857b8dd91438a5970b749d08a098fa2bbe2365`  
+		Last Modified: Sat, 05 Nov 2022 00:47:31 GMT  
+		Size: 4.5 MB (4506184 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f75c980cb35d12c5e646106ac296d2d23a92bc7e9aed3745625c2e095ed5564c`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 9.6 MB (9581631 bytes)  
+	-	`sha256:edf6f2247975ae5129f460de5d97764b75ed232200388758b3dceda4803dd4d5`  
+		Last Modified: Sat, 05 Nov 2022 00:47:31 GMT  
+		Size: 9.6 MB (9581594 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:580a25f9bfb2acf21509befc9d885f54411469fe5a7c53f82ef89580910096c5`  
-		Last Modified: Wed, 02 Nov 2022 22:08:47 GMT  
+	-	`sha256:643bb9e3bb36179bac756cdec5492f939d00ae575cd82c5d99225073a6f463f7`  
+		Last Modified: Sat, 05 Nov 2022 00:47:30 GMT  
 		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1058,7 +1058,7 @@ CMD ["zkServer.sh" "start-foreground"]
 ## `zookeeper:3.6-temurin`
 
 ```console
-$ docker pull zookeeper@sha256:efd4a60b3d0654333e28c915b3b3050ce741ec10bc58d75d1d2609be7530781d
+$ docker pull zookeeper@sha256:390538e1ffdec98fd5ac943cdfca58d67770034a06f4d86a562676e81b56c88b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1167,14 +1167,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:3.6-temurin` - linux; arm64 variant v8
 
 ```console
-$ docker pull zookeeper@sha256:5ecce138201b5c86bd970390e8b6b9872ca6286131d84feabf5da1d7ad1d0b98
+$ docker pull zookeeper@sha256:f6e63d88da1b9c59d80b2eaf2d17f199fa714b2a7b73f9e8d4da379f58ffa81c
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **102.6 MB (102579257 bytes)**  
+-	Total Size: **102.7 MB (102713260 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:12cd4bd68356056b126e463d16819c6fb0bc9365cf698cb30dc16c4cc362d1c0`
+-	Image ID: `sha256:94b4435207690aa2a3368f16a5600db9fca2a05937e0c7994c48b5ed707138f2`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -1191,40 +1191,40 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 02 Nov 2022 19:44:32 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 02 Nov 2022 19:44:58 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 02 Nov 2022 19:45:29 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 02 Nov 2022 19:45:30 GMT
+# Fri, 04 Nov 2022 22:40:54 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:33 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:34 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:15 GMT
 ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:16 GMT
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 ARG GPG_KEY=DFF24FB8323ADAC90E3CF36F729E61230EA917E9
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 ARG SHORT_DISTRO_NAME=zookeeper-3.6.3
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 ARG DISTRO_NAME=apache-zookeeper-3.6.3-bin
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:45 GMT
 # ARGS: DISTRO_NAME=apache-zookeeper-3.6.3-bin GPG_KEY=DFF24FB8323ADAC90E3CF36F729E61230EA917E9 SHORT_DISTRO_NAME=zookeeper-3.6.3
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:45 GMT
 WORKDIR /apache-zookeeper-3.6.3-bin
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:45 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:46 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:46 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.6.3-bin/bin ZOOCFGDIR=/conf
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:46 GMT
 COPY file:97ce87618885d3ddb3bea4e29e2422218111befae5783e3f1adaccd2191a05c6 in / 
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:46 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 02 Nov 2022 22:08:08 GMT
+# Sat, 05 Nov 2022 00:46:46 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -1237,29 +1237,29 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 02 Nov 2022 19:48:28 GMT  
 		Size: 12.4 MB (12396330 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a23053ec7db1b2114e648a1fdd75a0c318db47d50b2d59c14df3b2fde7d1526`  
-		Last Modified: Wed, 02 Nov 2022 19:49:36 GMT  
-		Size: 44.8 MB (44824603 bytes)  
+	-	`sha256:bc4598c07dd818f03a0378b0341a4a8e80f0152fbb3e7d5246ca4f466f42e611`  
+		Last Modified: Fri, 04 Nov 2022 22:46:46 GMT  
+		Size: 45.0 MB (44958470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:756118ab994dacaae5f6c8d8deb6266a31d4f2cf15ef824efc08e12b5ae2a348`  
-		Last Modified: Wed, 02 Nov 2022 19:49:31 GMT  
-		Size: 159.0 B  
+	-	`sha256:715a937a1066f998b331fcd62256ad01a5571bdf46804e97825afc64f9ebb427`  
+		Last Modified: Fri, 04 Nov 2022 22:46:41 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0368efa5471d2939e154aaf89399aeb7f73378ac882442203c160cc33c7f582a`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 1.9 KB (1885 bytes)  
+	-	`sha256:7f6195000c84fc47caa340eb7dd634922b70bc084e15f3f993224e9e888b4f49`  
+		Last Modified: Sat, 05 Nov 2022 00:47:30 GMT  
+		Size: 1.9 KB (1890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c359c1f2b5f7e636ee5abff57ef2d04e037ee66ccc55e9ef1301097f3fa5517`  
-		Last Modified: Wed, 02 Nov 2022 22:08:59 GMT  
-		Size: 4.5 MB (4506151 bytes)  
+	-	`sha256:193b0a7f3c72f41fa6168756ecb99bcdf55e878119b0e42fa64d6a23e6068e76`  
+		Last Modified: Sat, 05 Nov 2022 00:47:42 GMT  
+		Size: 4.5 MB (4506287 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:474b9e70c951e1a39aa4336c32a2a53f81d85e880dacf30e5b375b1d3cc0a55a`  
-		Last Modified: Wed, 02 Nov 2022 22:09:00 GMT  
-		Size: 12.5 MB (12467202 bytes)  
+	-	`sha256:134b7807c5e389edd97ed054414d933dbd07858f7d31394f2c801caaf7e38004`  
+		Last Modified: Sat, 05 Nov 2022 00:47:42 GMT  
+		Size: 12.5 MB (12467194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df5c49d4927e9a7f454125c082e635577544e63c0f1b604eb3c76acdb62e5f9a`  
-		Last Modified: Wed, 02 Nov 2022 22:08:59 GMT  
-		Size: 773.0 B  
+	-	`sha256:6b6ffa31440a47b8a0f2146ab149ae6b9f5526bd1a3331ad492ffcf41453972a`  
+		Last Modified: Sat, 05 Nov 2022 00:47:41 GMT  
+		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `zookeeper:3.6.3`
@@ -1472,7 +1472,7 @@ CMD ["zkServer.sh" "start-foreground"]
 ## `zookeeper:3.6.3-temurin`
 
 ```console
-$ docker pull zookeeper@sha256:efd4a60b3d0654333e28c915b3b3050ce741ec10bc58d75d1d2609be7530781d
+$ docker pull zookeeper@sha256:390538e1ffdec98fd5ac943cdfca58d67770034a06f4d86a562676e81b56c88b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1581,14 +1581,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:3.6.3-temurin` - linux; arm64 variant v8
 
 ```console
-$ docker pull zookeeper@sha256:5ecce138201b5c86bd970390e8b6b9872ca6286131d84feabf5da1d7ad1d0b98
+$ docker pull zookeeper@sha256:f6e63d88da1b9c59d80b2eaf2d17f199fa714b2a7b73f9e8d4da379f58ffa81c
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **102.6 MB (102579257 bytes)**  
+-	Total Size: **102.7 MB (102713260 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:12cd4bd68356056b126e463d16819c6fb0bc9365cf698cb30dc16c4cc362d1c0`
+-	Image ID: `sha256:94b4435207690aa2a3368f16a5600db9fca2a05937e0c7994c48b5ed707138f2`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -1605,40 +1605,40 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 02 Nov 2022 19:44:32 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 02 Nov 2022 19:44:58 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 02 Nov 2022 19:45:29 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 02 Nov 2022 19:45:30 GMT
+# Fri, 04 Nov 2022 22:40:54 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:33 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:34 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:15 GMT
 ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:16 GMT
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 ARG GPG_KEY=DFF24FB8323ADAC90E3CF36F729E61230EA917E9
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 ARG SHORT_DISTRO_NAME=zookeeper-3.6.3
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 ARG DISTRO_NAME=apache-zookeeper-3.6.3-bin
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:45 GMT
 # ARGS: DISTRO_NAME=apache-zookeeper-3.6.3-bin GPG_KEY=DFF24FB8323ADAC90E3CF36F729E61230EA917E9 SHORT_DISTRO_NAME=zookeeper-3.6.3
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:45 GMT
 WORKDIR /apache-zookeeper-3.6.3-bin
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:45 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:46 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:46 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.6.3-bin/bin ZOOCFGDIR=/conf
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:46 GMT
 COPY file:97ce87618885d3ddb3bea4e29e2422218111befae5783e3f1adaccd2191a05c6 in / 
-# Wed, 02 Nov 2022 22:08:07 GMT
+# Sat, 05 Nov 2022 00:46:46 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 02 Nov 2022 22:08:08 GMT
+# Sat, 05 Nov 2022 00:46:46 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -1651,29 +1651,29 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 02 Nov 2022 19:48:28 GMT  
 		Size: 12.4 MB (12396330 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a23053ec7db1b2114e648a1fdd75a0c318db47d50b2d59c14df3b2fde7d1526`  
-		Last Modified: Wed, 02 Nov 2022 19:49:36 GMT  
-		Size: 44.8 MB (44824603 bytes)  
+	-	`sha256:bc4598c07dd818f03a0378b0341a4a8e80f0152fbb3e7d5246ca4f466f42e611`  
+		Last Modified: Fri, 04 Nov 2022 22:46:46 GMT  
+		Size: 45.0 MB (44958470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:756118ab994dacaae5f6c8d8deb6266a31d4f2cf15ef824efc08e12b5ae2a348`  
-		Last Modified: Wed, 02 Nov 2022 19:49:31 GMT  
-		Size: 159.0 B  
+	-	`sha256:715a937a1066f998b331fcd62256ad01a5571bdf46804e97825afc64f9ebb427`  
+		Last Modified: Fri, 04 Nov 2022 22:46:41 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0368efa5471d2939e154aaf89399aeb7f73378ac882442203c160cc33c7f582a`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 1.9 KB (1885 bytes)  
+	-	`sha256:7f6195000c84fc47caa340eb7dd634922b70bc084e15f3f993224e9e888b4f49`  
+		Last Modified: Sat, 05 Nov 2022 00:47:30 GMT  
+		Size: 1.9 KB (1890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c359c1f2b5f7e636ee5abff57ef2d04e037ee66ccc55e9ef1301097f3fa5517`  
-		Last Modified: Wed, 02 Nov 2022 22:08:59 GMT  
-		Size: 4.5 MB (4506151 bytes)  
+	-	`sha256:193b0a7f3c72f41fa6168756ecb99bcdf55e878119b0e42fa64d6a23e6068e76`  
+		Last Modified: Sat, 05 Nov 2022 00:47:42 GMT  
+		Size: 4.5 MB (4506287 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:474b9e70c951e1a39aa4336c32a2a53f81d85e880dacf30e5b375b1d3cc0a55a`  
-		Last Modified: Wed, 02 Nov 2022 22:09:00 GMT  
-		Size: 12.5 MB (12467202 bytes)  
+	-	`sha256:134b7807c5e389edd97ed054414d933dbd07858f7d31394f2c801caaf7e38004`  
+		Last Modified: Sat, 05 Nov 2022 00:47:42 GMT  
+		Size: 12.5 MB (12467194 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df5c49d4927e9a7f454125c082e635577544e63c0f1b604eb3c76acdb62e5f9a`  
-		Last Modified: Wed, 02 Nov 2022 22:08:59 GMT  
-		Size: 773.0 B  
+	-	`sha256:6b6ffa31440a47b8a0f2146ab149ae6b9f5526bd1a3331ad492ffcf41453972a`  
+		Last Modified: Sat, 05 Nov 2022 00:47:41 GMT  
+		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `zookeeper:3.7`
@@ -1886,7 +1886,7 @@ CMD ["zkServer.sh" "start-foreground"]
 ## `zookeeper:3.7-temurin`
 
 ```console
-$ docker pull zookeeper@sha256:e8d337c34e3e6cc5c24774f8190aac1021b9d6dbb1105eeaf8c98041f91a41ec
+$ docker pull zookeeper@sha256:3df96c6564cf765b47457aa96498e3bc33bdc4263ccf2d2cad386f6c74395457
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1995,14 +1995,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:3.7-temurin` - linux; arm64 variant v8
 
 ```console
-$ docker pull zookeeper@sha256:957c19dfc42f526c614b06d3c77b1753a6e7f329c6299933ad0332153b9fc08d
+$ docker pull zookeeper@sha256:c2fc83bf3c999bc8b5117f65515a10836013e9cf674653e3ad49946e47abc29e
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **102.7 MB (102695753 bytes)**  
+-	Total Size: **102.8 MB (102829741 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2f02f02bc28ddea3d4f0688bb2220fe839f09481e0cfb340483339f09df4af03`
+-	Image ID: `sha256:351f09c39cbaa29981f03134f6f24a435785fbaf4f7d3495947697a663fd5e81`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -2019,40 +2019,40 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 02 Nov 2022 19:44:32 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 02 Nov 2022 19:44:58 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 02 Nov 2022 19:45:29 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 02 Nov 2022 19:45:30 GMT
+# Fri, 04 Nov 2022 22:40:54 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:33 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:34 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:15 GMT
 ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:16 GMT
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 ARG GPG_KEY=DFF24FB8323ADAC90E3CF36F729E61230EA917E9
-# Wed, 02 Nov 2022 22:08:11 GMT
+# Sat, 05 Nov 2022 00:46:50 GMT
 ARG SHORT_DISTRO_NAME=zookeeper-3.7.1
-# Wed, 02 Nov 2022 22:08:12 GMT
+# Sat, 05 Nov 2022 00:46:50 GMT
 ARG DISTRO_NAME=apache-zookeeper-3.7.1-bin
-# Wed, 02 Nov 2022 22:08:15 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 # ARGS: DISTRO_NAME=apache-zookeeper-3.7.1-bin GPG_KEY=DFF24FB8323ADAC90E3CF36F729E61230EA917E9 SHORT_DISTRO_NAME=zookeeper-3.7.1
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 02 Nov 2022 22:08:15 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 WORKDIR /apache-zookeeper-3.7.1-bin
-# Wed, 02 Nov 2022 22:08:15 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 02 Nov 2022 22:08:15 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 02 Nov 2022 22:08:15 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.7.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 02 Nov 2022 22:08:16 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 02 Nov 2022 22:08:16 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 02 Nov 2022 22:08:16 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -2065,29 +2065,29 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 02 Nov 2022 19:48:28 GMT  
 		Size: 12.4 MB (12396330 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a23053ec7db1b2114e648a1fdd75a0c318db47d50b2d59c14df3b2fde7d1526`  
-		Last Modified: Wed, 02 Nov 2022 19:49:36 GMT  
-		Size: 44.8 MB (44824603 bytes)  
+	-	`sha256:bc4598c07dd818f03a0378b0341a4a8e80f0152fbb3e7d5246ca4f466f42e611`  
+		Last Modified: Fri, 04 Nov 2022 22:46:46 GMT  
+		Size: 45.0 MB (44958470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:756118ab994dacaae5f6c8d8deb6266a31d4f2cf15ef824efc08e12b5ae2a348`  
-		Last Modified: Wed, 02 Nov 2022 19:49:31 GMT  
-		Size: 159.0 B  
+	-	`sha256:715a937a1066f998b331fcd62256ad01a5571bdf46804e97825afc64f9ebb427`  
+		Last Modified: Fri, 04 Nov 2022 22:46:41 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0368efa5471d2939e154aaf89399aeb7f73378ac882442203c160cc33c7f582a`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 1.9 KB (1885 bytes)  
+	-	`sha256:7f6195000c84fc47caa340eb7dd634922b70bc084e15f3f993224e9e888b4f49`  
+		Last Modified: Sat, 05 Nov 2022 00:47:30 GMT  
+		Size: 1.9 KB (1890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c359c1f2b5f7e636ee5abff57ef2d04e037ee66ccc55e9ef1301097f3fa5517`  
-		Last Modified: Wed, 02 Nov 2022 22:08:59 GMT  
-		Size: 4.5 MB (4506151 bytes)  
+	-	`sha256:193b0a7f3c72f41fa6168756ecb99bcdf55e878119b0e42fa64d6a23e6068e76`  
+		Last Modified: Sat, 05 Nov 2022 00:47:42 GMT  
+		Size: 4.5 MB (4506287 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cacb538faa87a2e2d0d1e34eec6202e0ef19ae613154d8816de2c75626686cf6`  
-		Last Modified: Wed, 02 Nov 2022 22:09:12 GMT  
-		Size: 12.6 MB (12583696 bytes)  
+	-	`sha256:83ee1daeb8bd3bea79e7b5ad201ff6e5da6f4624a499887dd0433909e31c79e7`  
+		Last Modified: Sat, 05 Nov 2022 00:47:53 GMT  
+		Size: 12.6 MB (12583676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:56aa900b24ead7dab610572abdd3b9fc0703e5024bf47c188591ddadee26801d`  
-		Last Modified: Wed, 02 Nov 2022 22:09:11 GMT  
-		Size: 775.0 B  
+	-	`sha256:cfb9fc56a96fd62afcd85e8715deec87e86fb202d716319fe81a73f5ce81d2e2`  
+		Last Modified: Sat, 05 Nov 2022 00:47:52 GMT  
+		Size: 774.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `zookeeper:3.7.1`
@@ -2300,7 +2300,7 @@ CMD ["zkServer.sh" "start-foreground"]
 ## `zookeeper:3.7.1-temurin`
 
 ```console
-$ docker pull zookeeper@sha256:e8d337c34e3e6cc5c24774f8190aac1021b9d6dbb1105eeaf8c98041f91a41ec
+$ docker pull zookeeper@sha256:3df96c6564cf765b47457aa96498e3bc33bdc4263ccf2d2cad386f6c74395457
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2409,14 +2409,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:3.7.1-temurin` - linux; arm64 variant v8
 
 ```console
-$ docker pull zookeeper@sha256:957c19dfc42f526c614b06d3c77b1753a6e7f329c6299933ad0332153b9fc08d
+$ docker pull zookeeper@sha256:c2fc83bf3c999bc8b5117f65515a10836013e9cf674653e3ad49946e47abc29e
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **102.7 MB (102695753 bytes)**  
+-	Total Size: **102.8 MB (102829741 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2f02f02bc28ddea3d4f0688bb2220fe839f09481e0cfb340483339f09df4af03`
+-	Image ID: `sha256:351f09c39cbaa29981f03134f6f24a435785fbaf4f7d3495947697a663fd5e81`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -2433,40 +2433,40 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 02 Nov 2022 19:44:32 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 02 Nov 2022 19:44:58 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 02 Nov 2022 19:45:29 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 02 Nov 2022 19:45:30 GMT
+# Fri, 04 Nov 2022 22:40:54 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:33 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:34 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:15 GMT
 ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:16 GMT
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 ARG GPG_KEY=DFF24FB8323ADAC90E3CF36F729E61230EA917E9
-# Wed, 02 Nov 2022 22:08:11 GMT
+# Sat, 05 Nov 2022 00:46:50 GMT
 ARG SHORT_DISTRO_NAME=zookeeper-3.7.1
-# Wed, 02 Nov 2022 22:08:12 GMT
+# Sat, 05 Nov 2022 00:46:50 GMT
 ARG DISTRO_NAME=apache-zookeeper-3.7.1-bin
-# Wed, 02 Nov 2022 22:08:15 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 # ARGS: DISTRO_NAME=apache-zookeeper-3.7.1-bin GPG_KEY=DFF24FB8323ADAC90E3CF36F729E61230EA917E9 SHORT_DISTRO_NAME=zookeeper-3.7.1
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 02 Nov 2022 22:08:15 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 WORKDIR /apache-zookeeper-3.7.1-bin
-# Wed, 02 Nov 2022 22:08:15 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 02 Nov 2022 22:08:15 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 02 Nov 2022 22:08:15 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.7.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 02 Nov 2022 22:08:16 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 02 Nov 2022 22:08:16 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 02 Nov 2022 22:08:16 GMT
+# Sat, 05 Nov 2022 00:46:55 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -2479,29 +2479,29 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 02 Nov 2022 19:48:28 GMT  
 		Size: 12.4 MB (12396330 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a23053ec7db1b2114e648a1fdd75a0c318db47d50b2d59c14df3b2fde7d1526`  
-		Last Modified: Wed, 02 Nov 2022 19:49:36 GMT  
-		Size: 44.8 MB (44824603 bytes)  
+	-	`sha256:bc4598c07dd818f03a0378b0341a4a8e80f0152fbb3e7d5246ca4f466f42e611`  
+		Last Modified: Fri, 04 Nov 2022 22:46:46 GMT  
+		Size: 45.0 MB (44958470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:756118ab994dacaae5f6c8d8deb6266a31d4f2cf15ef824efc08e12b5ae2a348`  
-		Last Modified: Wed, 02 Nov 2022 19:49:31 GMT  
-		Size: 159.0 B  
+	-	`sha256:715a937a1066f998b331fcd62256ad01a5571bdf46804e97825afc64f9ebb427`  
+		Last Modified: Fri, 04 Nov 2022 22:46:41 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0368efa5471d2939e154aaf89399aeb7f73378ac882442203c160cc33c7f582a`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 1.9 KB (1885 bytes)  
+	-	`sha256:7f6195000c84fc47caa340eb7dd634922b70bc084e15f3f993224e9e888b4f49`  
+		Last Modified: Sat, 05 Nov 2022 00:47:30 GMT  
+		Size: 1.9 KB (1890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c359c1f2b5f7e636ee5abff57ef2d04e037ee66ccc55e9ef1301097f3fa5517`  
-		Last Modified: Wed, 02 Nov 2022 22:08:59 GMT  
-		Size: 4.5 MB (4506151 bytes)  
+	-	`sha256:193b0a7f3c72f41fa6168756ecb99bcdf55e878119b0e42fa64d6a23e6068e76`  
+		Last Modified: Sat, 05 Nov 2022 00:47:42 GMT  
+		Size: 4.5 MB (4506287 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cacb538faa87a2e2d0d1e34eec6202e0ef19ae613154d8816de2c75626686cf6`  
-		Last Modified: Wed, 02 Nov 2022 22:09:12 GMT  
-		Size: 12.6 MB (12583696 bytes)  
+	-	`sha256:83ee1daeb8bd3bea79e7b5ad201ff6e5da6f4624a499887dd0433909e31c79e7`  
+		Last Modified: Sat, 05 Nov 2022 00:47:53 GMT  
+		Size: 12.6 MB (12583676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:56aa900b24ead7dab610572abdd3b9fc0703e5024bf47c188591ddadee26801d`  
-		Last Modified: Wed, 02 Nov 2022 22:09:11 GMT  
-		Size: 775.0 B  
+	-	`sha256:cfb9fc56a96fd62afcd85e8715deec87e86fb202d716319fe81a73f5ce81d2e2`  
+		Last Modified: Sat, 05 Nov 2022 00:47:52 GMT  
+		Size: 774.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `zookeeper:3.8`
@@ -2714,7 +2714,7 @@ CMD ["zkServer.sh" "start-foreground"]
 ## `zookeeper:3.8-temurin`
 
 ```console
-$ docker pull zookeeper@sha256:2f588b3babcbe7b78236a801d79480f121ce8d2e68929234351bf949a07e8f48
+$ docker pull zookeeper@sha256:b1f3df6a778ae086c2dd5c8c743d02323a1d27aee4a0ef34566414c375889dd7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2823,14 +2823,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:3.8-temurin` - linux; arm64 variant v8
 
 ```console
-$ docker pull zookeeper@sha256:07911a562a7125aac7aa5495e1ca4b090926c3e79295c4f1cc29521fce007fb6
+$ docker pull zookeeper@sha256:ea973cf680219a7ed95bd4012a16586ff0e22433d99f2d1be2c7cb2c918cab3b
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **103.4 MB (103377368 bytes)**  
+-	Total Size: **103.5 MB (103511360 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b1006097e55eebc1d005c22ab5b7ea62e911ac16b2c3c762d81e37443d17aec2`
+-	Image ID: `sha256:157e1ed01a76c11bc6c4c4953014a489733f5b180a928ad15a4253205ef46937`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -2847,40 +2847,40 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 02 Nov 2022 19:44:32 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 02 Nov 2022 19:44:58 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 02 Nov 2022 19:45:29 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 02 Nov 2022 19:45:30 GMT
+# Fri, 04 Nov 2022 22:40:54 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:33 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:34 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:15 GMT
 ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:16 GMT
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 02 Nov 2022 22:08:20 GMT
+# Sat, 05 Nov 2022 00:46:59 GMT
 ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 02 Nov 2022 22:08:20 GMT
+# Sat, 05 Nov 2022 00:47:00 GMT
 ARG SHORT_DISTRO_NAME=zookeeper-3.8.0
-# Wed, 02 Nov 2022 22:08:20 GMT
+# Sat, 05 Nov 2022 00:47:00 GMT
 ARG DISTRO_NAME=apache-zookeeper-3.8.0-bin
-# Wed, 02 Nov 2022 22:08:23 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 # ARGS: DISTRO_NAME=apache-zookeeper-3.8.0-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.0
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 02 Nov 2022 22:08:23 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 WORKDIR /apache-zookeeper-3.8.0-bin
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.0-bin/bin ZOOCFGDIR=/conf
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -2893,28 +2893,28 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 02 Nov 2022 19:48:28 GMT  
 		Size: 12.4 MB (12396330 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a23053ec7db1b2114e648a1fdd75a0c318db47d50b2d59c14df3b2fde7d1526`  
-		Last Modified: Wed, 02 Nov 2022 19:49:36 GMT  
-		Size: 44.8 MB (44824603 bytes)  
+	-	`sha256:bc4598c07dd818f03a0378b0341a4a8e80f0152fbb3e7d5246ca4f466f42e611`  
+		Last Modified: Fri, 04 Nov 2022 22:46:46 GMT  
+		Size: 45.0 MB (44958470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:756118ab994dacaae5f6c8d8deb6266a31d4f2cf15ef824efc08e12b5ae2a348`  
-		Last Modified: Wed, 02 Nov 2022 19:49:31 GMT  
-		Size: 159.0 B  
+	-	`sha256:715a937a1066f998b331fcd62256ad01a5571bdf46804e97825afc64f9ebb427`  
+		Last Modified: Fri, 04 Nov 2022 22:46:41 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0368efa5471d2939e154aaf89399aeb7f73378ac882442203c160cc33c7f582a`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 1.9 KB (1885 bytes)  
+	-	`sha256:7f6195000c84fc47caa340eb7dd634922b70bc084e15f3f993224e9e888b4f49`  
+		Last Modified: Sat, 05 Nov 2022 00:47:30 GMT  
+		Size: 1.9 KB (1890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c359c1f2b5f7e636ee5abff57ef2d04e037ee66ccc55e9ef1301097f3fa5517`  
-		Last Modified: Wed, 02 Nov 2022 22:08:59 GMT  
-		Size: 4.5 MB (4506151 bytes)  
+	-	`sha256:193b0a7f3c72f41fa6168756ecb99bcdf55e878119b0e42fa64d6a23e6068e76`  
+		Last Modified: Sat, 05 Nov 2022 00:47:42 GMT  
+		Size: 4.5 MB (4506287 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc159ca0bfaed48dff745e27c78ab8276a5318cd6e347069a6cb7ed00c36587c`  
-		Last Modified: Wed, 02 Nov 2022 22:09:23 GMT  
-		Size: 13.3 MB (13265312 bytes)  
+	-	`sha256:0f4f7759cc9e7e23d8805e86d001bc1c78e0f098c73410590723326fc04ee418`  
+		Last Modified: Sat, 05 Nov 2022 00:48:04 GMT  
+		Size: 13.3 MB (13265295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29ef9002844425d7882607edc28d115fe921b09ec4e50354b46c3a8ed8ff0d15`  
-		Last Modified: Wed, 02 Nov 2022 22:09:22 GMT  
+	-	`sha256:46c50c77e81cfcfcfcbee6ed41cc16e3bee02819fc8edd0379420dc7ebe0a33c`  
+		Last Modified: Sat, 05 Nov 2022 00:48:03 GMT  
 		Size: 774.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -3128,7 +3128,7 @@ CMD ["zkServer.sh" "start-foreground"]
 ## `zookeeper:3.8.0-temurin`
 
 ```console
-$ docker pull zookeeper@sha256:2f588b3babcbe7b78236a801d79480f121ce8d2e68929234351bf949a07e8f48
+$ docker pull zookeeper@sha256:b1f3df6a778ae086c2dd5c8c743d02323a1d27aee4a0ef34566414c375889dd7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3237,14 +3237,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:3.8.0-temurin` - linux; arm64 variant v8
 
 ```console
-$ docker pull zookeeper@sha256:07911a562a7125aac7aa5495e1ca4b090926c3e79295c4f1cc29521fce007fb6
+$ docker pull zookeeper@sha256:ea973cf680219a7ed95bd4012a16586ff0e22433d99f2d1be2c7cb2c918cab3b
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **103.4 MB (103377368 bytes)**  
+-	Total Size: **103.5 MB (103511360 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b1006097e55eebc1d005c22ab5b7ea62e911ac16b2c3c762d81e37443d17aec2`
+-	Image ID: `sha256:157e1ed01a76c11bc6c4c4953014a489733f5b180a928ad15a4253205ef46937`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -3261,40 +3261,40 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 02 Nov 2022 19:44:32 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 02 Nov 2022 19:44:58 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 02 Nov 2022 19:45:29 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 02 Nov 2022 19:45:30 GMT
+# Fri, 04 Nov 2022 22:40:54 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:33 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:34 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:15 GMT
 ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:16 GMT
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 02 Nov 2022 22:08:20 GMT
+# Sat, 05 Nov 2022 00:46:59 GMT
 ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 02 Nov 2022 22:08:20 GMT
+# Sat, 05 Nov 2022 00:47:00 GMT
 ARG SHORT_DISTRO_NAME=zookeeper-3.8.0
-# Wed, 02 Nov 2022 22:08:20 GMT
+# Sat, 05 Nov 2022 00:47:00 GMT
 ARG DISTRO_NAME=apache-zookeeper-3.8.0-bin
-# Wed, 02 Nov 2022 22:08:23 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 # ARGS: DISTRO_NAME=apache-zookeeper-3.8.0-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.0
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 02 Nov 2022 22:08:23 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 WORKDIR /apache-zookeeper-3.8.0-bin
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.0-bin/bin ZOOCFGDIR=/conf
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -3307,35 +3307,35 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 02 Nov 2022 19:48:28 GMT  
 		Size: 12.4 MB (12396330 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a23053ec7db1b2114e648a1fdd75a0c318db47d50b2d59c14df3b2fde7d1526`  
-		Last Modified: Wed, 02 Nov 2022 19:49:36 GMT  
-		Size: 44.8 MB (44824603 bytes)  
+	-	`sha256:bc4598c07dd818f03a0378b0341a4a8e80f0152fbb3e7d5246ca4f466f42e611`  
+		Last Modified: Fri, 04 Nov 2022 22:46:46 GMT  
+		Size: 45.0 MB (44958470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:756118ab994dacaae5f6c8d8deb6266a31d4f2cf15ef824efc08e12b5ae2a348`  
-		Last Modified: Wed, 02 Nov 2022 19:49:31 GMT  
-		Size: 159.0 B  
+	-	`sha256:715a937a1066f998b331fcd62256ad01a5571bdf46804e97825afc64f9ebb427`  
+		Last Modified: Fri, 04 Nov 2022 22:46:41 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0368efa5471d2939e154aaf89399aeb7f73378ac882442203c160cc33c7f582a`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 1.9 KB (1885 bytes)  
+	-	`sha256:7f6195000c84fc47caa340eb7dd634922b70bc084e15f3f993224e9e888b4f49`  
+		Last Modified: Sat, 05 Nov 2022 00:47:30 GMT  
+		Size: 1.9 KB (1890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c359c1f2b5f7e636ee5abff57ef2d04e037ee66ccc55e9ef1301097f3fa5517`  
-		Last Modified: Wed, 02 Nov 2022 22:08:59 GMT  
-		Size: 4.5 MB (4506151 bytes)  
+	-	`sha256:193b0a7f3c72f41fa6168756ecb99bcdf55e878119b0e42fa64d6a23e6068e76`  
+		Last Modified: Sat, 05 Nov 2022 00:47:42 GMT  
+		Size: 4.5 MB (4506287 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc159ca0bfaed48dff745e27c78ab8276a5318cd6e347069a6cb7ed00c36587c`  
-		Last Modified: Wed, 02 Nov 2022 22:09:23 GMT  
-		Size: 13.3 MB (13265312 bytes)  
+	-	`sha256:0f4f7759cc9e7e23d8805e86d001bc1c78e0f098c73410590723326fc04ee418`  
+		Last Modified: Sat, 05 Nov 2022 00:48:04 GMT  
+		Size: 13.3 MB (13265295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29ef9002844425d7882607edc28d115fe921b09ec4e50354b46c3a8ed8ff0d15`  
-		Last Modified: Wed, 02 Nov 2022 22:09:22 GMT  
+	-	`sha256:46c50c77e81cfcfcfcbee6ed41cc16e3bee02819fc8edd0379420dc7ebe0a33c`  
+		Last Modified: Sat, 05 Nov 2022 00:48:03 GMT  
 		Size: 774.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `zookeeper:latest`
 
 ```console
-$ docker pull zookeeper@sha256:2f588b3babcbe7b78236a801d79480f121ce8d2e68929234351bf949a07e8f48
+$ docker pull zookeeper@sha256:b1f3df6a778ae086c2dd5c8c743d02323a1d27aee4a0ef34566414c375889dd7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3444,14 +3444,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull zookeeper@sha256:07911a562a7125aac7aa5495e1ca4b090926c3e79295c4f1cc29521fce007fb6
+$ docker pull zookeeper@sha256:ea973cf680219a7ed95bd4012a16586ff0e22433d99f2d1be2c7cb2c918cab3b
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **103.4 MB (103377368 bytes)**  
+-	Total Size: **103.5 MB (103511360 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b1006097e55eebc1d005c22ab5b7ea62e911ac16b2c3c762d81e37443d17aec2`
+-	Image ID: `sha256:157e1ed01a76c11bc6c4c4953014a489733f5b180a928ad15a4253205ef46937`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -3468,40 +3468,40 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Wed, 02 Nov 2022 19:44:32 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Wed, 02 Nov 2022 19:44:58 GMT
-ENV JAVA_VERSION=jdk-11.0.16.1+1
-# Wed, 02 Nov 2022 19:45:29 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='b6607f28fa2906d612d517f0babe4f0f895aa1c3f901edcddb493e33c1e27364';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        armhf|arm)          ESUM='2ee7fe636a6a57e4718dfe597e8097b93ef8d976e4b05384433777c9f0526f5a';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_arm_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f76b64b201b64ff37f77f73ead546ebcf2af9862b7cd1a1f4e0e5628e3f6a7fc';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bf01489459135ab0ce1ad346a56f0dfeb2d6fe4e59854ef76a6bb989ac403f91';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_s390x_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1ffe1a682e8179e35238bf3f93aba0cb185850e202c676f41d38cb0561883eda';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.16.1%2B1/OpenJDK11U-jre_x64_linux_hotspot_11.0.16.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Wed, 02 Nov 2022 19:45:30 GMT
+# Fri, 04 Nov 2022 22:40:54 GMT
+ENV JAVA_VERSION=jdk-11.0.17+8
+# Fri, 04 Nov 2022 22:41:33 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='bd6efe3290c8b5a42f695a55a26f3e3c9c284288574879d4b7089f31f5114177';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.17_8.tar.gz';          ;;        armhf|arm)          ESUM='8cf113d3d7fa808895c8d2e41bb890af21c47e38c2460e0588147a4bb8fc658d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_arm_linux_hotspot_11.0.17_8.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='0ca3d806131ab5834c501f9c625bb0248cd528af361c704503348e9c9605bedf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.17_8.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='dd3b159a374086e65cb07c4ccb226c90f9c02ef929cba6f0b642171d7ed97fa4';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_s390x_linux_hotspot_11.0.17_8.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='752616097e09d7f60a3ad8bd312f90eaf50ac72577e55df229fe6e8091148f79';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.17%2B8/OpenJDK11U-jre_x64_linux_hotspot_11.0.17_8.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Fri, 04 Nov 2022 22:41:34 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:15 GMT
 ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 02 Nov 2022 22:07:37 GMT
+# Sat, 05 Nov 2022 00:46:16 GMT
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 02 Nov 2022 22:08:02 GMT
+# Sat, 05 Nov 2022 00:46:41 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 02 Nov 2022 22:08:20 GMT
+# Sat, 05 Nov 2022 00:46:59 GMT
 ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 02 Nov 2022 22:08:20 GMT
+# Sat, 05 Nov 2022 00:47:00 GMT
 ARG SHORT_DISTRO_NAME=zookeeper-3.8.0
-# Wed, 02 Nov 2022 22:08:20 GMT
+# Sat, 05 Nov 2022 00:47:00 GMT
 ARG DISTRO_NAME=apache-zookeeper-3.8.0-bin
-# Wed, 02 Nov 2022 22:08:23 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 # ARGS: DISTRO_NAME=apache-zookeeper-3.8.0-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.0
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 02 Nov 2022 22:08:23 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 WORKDIR /apache-zookeeper-3.8.0-bin
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.0-bin/bin ZOOCFGDIR=/conf
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 02 Nov 2022 22:08:24 GMT
+# Sat, 05 Nov 2022 00:47:05 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -3514,27 +3514,27 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 02 Nov 2022 19:48:28 GMT  
 		Size: 12.4 MB (12396330 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a23053ec7db1b2114e648a1fdd75a0c318db47d50b2d59c14df3b2fde7d1526`  
-		Last Modified: Wed, 02 Nov 2022 19:49:36 GMT  
-		Size: 44.8 MB (44824603 bytes)  
+	-	`sha256:bc4598c07dd818f03a0378b0341a4a8e80f0152fbb3e7d5246ca4f466f42e611`  
+		Last Modified: Fri, 04 Nov 2022 22:46:46 GMT  
+		Size: 45.0 MB (44958470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:756118ab994dacaae5f6c8d8deb6266a31d4f2cf15ef824efc08e12b5ae2a348`  
-		Last Modified: Wed, 02 Nov 2022 19:49:31 GMT  
-		Size: 159.0 B  
+	-	`sha256:715a937a1066f998b331fcd62256ad01a5571bdf46804e97825afc64f9ebb427`  
+		Last Modified: Fri, 04 Nov 2022 22:46:41 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0368efa5471d2939e154aaf89399aeb7f73378ac882442203c160cc33c7f582a`  
-		Last Modified: Wed, 02 Nov 2022 22:08:48 GMT  
-		Size: 1.9 KB (1885 bytes)  
+	-	`sha256:7f6195000c84fc47caa340eb7dd634922b70bc084e15f3f993224e9e888b4f49`  
+		Last Modified: Sat, 05 Nov 2022 00:47:30 GMT  
+		Size: 1.9 KB (1890 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c359c1f2b5f7e636ee5abff57ef2d04e037ee66ccc55e9ef1301097f3fa5517`  
-		Last Modified: Wed, 02 Nov 2022 22:08:59 GMT  
-		Size: 4.5 MB (4506151 bytes)  
+	-	`sha256:193b0a7f3c72f41fa6168756ecb99bcdf55e878119b0e42fa64d6a23e6068e76`  
+		Last Modified: Sat, 05 Nov 2022 00:47:42 GMT  
+		Size: 4.5 MB (4506287 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc159ca0bfaed48dff745e27c78ab8276a5318cd6e347069a6cb7ed00c36587c`  
-		Last Modified: Wed, 02 Nov 2022 22:09:23 GMT  
-		Size: 13.3 MB (13265312 bytes)  
+	-	`sha256:0f4f7759cc9e7e23d8805e86d001bc1c78e0f098c73410590723326fc04ee418`  
+		Last Modified: Sat, 05 Nov 2022 00:48:04 GMT  
+		Size: 13.3 MB (13265295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29ef9002844425d7882607edc28d115fe921b09ec4e50354b46c3a8ed8ff0d15`  
-		Last Modified: Wed, 02 Nov 2022 22:09:22 GMT  
+	-	`sha256:46c50c77e81cfcfcfcbee6ed41cc16e3bee02819fc8edd0379420dc7ebe0a33c`  
+		Last Modified: Sat, 05 Nov 2022 00:48:03 GMT  
 		Size: 774.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
