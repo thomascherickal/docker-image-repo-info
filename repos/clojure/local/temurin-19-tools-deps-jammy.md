@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4dc42689ada68abd20a2655c4231525dabff8290432def368ce3b7acaebf1b1d`
-- Created: `2022-11-02T20:20:04.744689631Z`
+- Image ID: `sha256:d0e943c46718f9da497bf607a235a9e8a4dd26c02a589aa214704c43971a1b71`
+- Created: `2022-11-03T20:28:50.669026737Z`
 - Virtual Size: ~ 596.50 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -16,7 +16,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-19+36`
-  - `CLOJURE_VERSION=1.11.1.1182`
+  - `CLOJURE_VERSION=1.11.1.1189`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -2163,14 +2163,14 @@ $ apt-get source -qq --print-uris python3-defaults=3.10.6-1~22.04
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.10.6-1%7e22.04.tar.gz' python3-defaults_3.10.6-1~22.04.tar.gz 145325 SHA512:4dce1fcadb47a3fbd72e489e78c6543aa4b35a0480eb4e10617b3afd223cdd244e97f79db55f2abf28367848658ae46a3cda895d3d9dcf21c530149207f080dd
 ```
 
-### `dpkg` source package: `python3.10=3.10.6-1~22.04`
+### `dpkg` source package: `python3.10=3.10.6-1~22.04.1`
 
 Binary Packages:
 
-- `libpython3.10-minimal:amd64=3.10.6-1~22.04`
-- `libpython3.10-stdlib:amd64=3.10.6-1~22.04`
-- `python3.10=3.10.6-1~22.04`
-- `python3.10-minimal=3.10.6-1~22.04`
+- `libpython3.10-minimal:amd64=3.10.6-1~22.04.1`
+- `libpython3.10-stdlib:amd64=3.10.6-1~22.04.1`
+- `python3.10=3.10.6-1~22.04.1`
+- `python3.10-minimal=3.10.6-1~22.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/share/doc/libpython3.10-stdlib/copyright`, `/usr/share/doc/python3.10/copyright`, `/usr/share/doc/python3.10-minimal/copyright`)
 
@@ -2195,10 +2195,10 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python3.10=3.10.6-1~22.04
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.dsc' python3.10_3.10.6-1~22.04.dsc 3663 SHA512:67f3e04c57a3b3d9cdc77ec29c4bf667d0d9d261ef5c19a0cb89dfbade2a49340dd6f2362bb6d9909301570ea7384e1af27873a1bc1c2acd8cf420b6ea638e3b
+$ apt-get source -qq --print-uris python3.10=3.10.6-1~22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.1.dsc' python3.10_3.10.6-1~22.04.1.dsc 3646 SHA512:142babe9542367ccf62192cf5f029f7fb0d3c386ec2cfdf4be6f85e1f47a22c6fada10d91f87c39ced6398de763d0717b78f902f3f797963eae6528522b7d26d
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6.orig.tar.xz' python3.10_3.10.6.orig.tar.xz 19600672 SHA512:f2bf424bf4f4caa524ee1248b431e8e06d0745c3fc3ba457710d75f3698e653733feb4b059cd124f1de2a9e851c30d847f567aa47abef12898c9dc8a6507b476
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.debian.tar.xz' python3.10_3.10.6-1~22.04.debian.tar.xz 219560 SHA512:d9a70157945aff96227ac822c0dedb1d0216bd65c05b786ddea0f5c0bd7060cf55c243efae3a727ca37d366e499337dc6986acb6fa5dd87fa19890c3afbf3e4f
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.1.debian.tar.xz' python3.10_3.10.6-1~22.04.1.debian.tar.xz 220664 SHA512:41ab703ff68b768dba43709a93baf333b12bd860db2bc25b359d8f8beef8813971a0190d03c320d32f323bf21a5f1b4a3d33a40aac776a180ffb1335469bd81c
 ```
 
 ### `dpkg` source package: `readline=8.1.2-1`
@@ -2425,15 +2425,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022e-0ubuntu0.22.04.0
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e-0ubuntu0.22.04.0.dsc' tzdata_2022e-0ubuntu0.22.04.0.dsc 2383 SHA512:0911ad087bc93c66a16e3f622a1fe8e072d0a8f256666ffed4a81c481d69874e0855fbad0410e331832dff1788bab0d6a6db360b505ff3b517e65dbebe980dcb
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz' tzdata_2022e.orig.tar.gz 433785 SHA512:3b63ba2662930ee13dec79290f57545d71d21d4ddb76f94498a7096edaee0b3150e501c221c4d596df6af7c1d770c211f88feb5add13c5e3bed979218b4544da
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz.asc' tzdata_2022e.orig.tar.gz.asc 833 SHA512:d1fbc609370e1fd2a6aded16fe2c6705ee422fd1caffc12941d38acd8eca31bac5fa244af71c2427ce122a0d20cb53b6286ead675c25a7922fc5feda3daacf3c
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e-0ubuntu0.22.04.0.debian.tar.xz' tzdata_2022e-0ubuntu0.22.04.0.debian.tar.xz 171324 SHA512:d4f42c20e09cb6e05fb1b117ff5b50511304c2b36eed775375a397f3dbb48be0f52036dddc327be4f2d9388807b2458bca5a0658096306842c120de5c9fb8d7b
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2021.03.26`
 

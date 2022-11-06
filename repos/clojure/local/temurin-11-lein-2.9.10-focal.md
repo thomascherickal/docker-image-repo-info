@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d1ca7d2875e157f1e6c3433b7f384e499839888f13c5df02cbee243ba7d54db8`
-- Created: `2022-10-26T21:52:43.275440794Z`
-- Virtual Size: ~ 470.82 Mb  
+- Image ID: `sha256:1f7882d472f50dece788e658c2547c2dff05c03de96241a39e74f40437cc4c51`
+- Created: `2022-11-05T01:16:10.841946437Z`
+- Virtual Size: ~ 471.39 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["lein","repl"]`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.16.1+1`
+  - `JAVA_VERSION=jdk-11.0.17+8`
   - `LEIN_VERSION=2.9.10`
   - `LEIN_INSTALL=/usr/local/bin/`
   - `LEIN_ROOT=1`
@@ -1759,15 +1759,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022c-0ubuntu0.20.04.0
-'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.20.04.0.dsc' tzdata_2022c-0ubuntu0.20.04.0.dsc 2184 SHA512:66611eaa71b317c8c839318b48369b02ca5d9923e8c4e2182f014edd538082355d87defc1f2b0f969780c8dd707e4c3535a6b15637b59b6aa9541dc3df269cb7
-'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz' tzdata_2022c.orig.tar.gz 432721 SHA512:e2ae92abac6d87ce4ab4ba9012e868e1791b842e083293489debc0c671b9cf135b5b70426dacb6dbebbf6eba24463205225ae45bb7df891a086b25475f85ee0b
-'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c.orig.tar.gz.asc' tzdata_2022c.orig.tar.gz.asc 833 SHA512:8485b30e93782c76444b07c18c3032e91293edcb4a79b536b7d561de7981e5a4861b83ea3cae7e6efe7340ce8de313cb34a493d7ef46547f7f63f29eb0452da9
-'http://security.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022c-0ubuntu0.20.04.0.debian.tar.xz' tzdata_2022c-0ubuntu0.20.04.0.debian.tar.xz 166776 SHA512:4968a98a9113c28aad6d126220eacfcffbfe571ca2708d178d205ea1ee119b9f9a12f73b43aab44c8e3fd9be584ff5e5c73326f0a7a0ebf39537c8874db44995
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2020.02.11.4`
 

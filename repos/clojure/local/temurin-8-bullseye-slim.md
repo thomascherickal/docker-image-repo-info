@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:dd3d6c17c2c8f2a1a77b4dae0c113c94ed7915c30e3da27fcaf5cd5106d12278`
-- Created: `2022-10-28T20:34:43.081886892Z`
-- Virtual Size: ~ 423.58 Mb  
+- Image ID: `sha256:b79db81f30ca0e503709161358ea36be9c535b6cc56cb0b10a13144a0114a517`
+- Created: `2022-11-05T01:10:24.42126105Z`
+- Virtual Size: ~ 423.60 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["clj"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/opt/java/openjdk`
-  - `CLOJURE_VERSION=1.11.1.1182`
+  - `CLOJURE_VERSION=1.11.1.1189`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -626,23 +626,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.46.2-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.46.2-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `expat=2.2.10-2+deb11u4`
+### `dpkg` source package: `expat=2.2.10-2+deb11u5`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.10-2+deb11u4`
+- `libexpat1:amd64=2.2.10-2+deb11u5`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
 - `MIT`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris expat=2.2.10-2+deb11u5
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10-2%2bdeb11u5.dsc' expat_2.2.10-2+deb11u5.dsc 2175 SHA256:5bbf7d1df4aa4fb5d31141b58dc08a687918c1685c48300bc3f67a8f56fe3071
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10.orig.tar.gz' expat_2.2.10.orig.tar.gz 8276395 SHA256:62e280f5fd29a5b70973f623e20a7412c3e3912c2684cb0e462e2c881be129e1
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10-2%2bdeb11u5.debian.tar.xz' expat_2.2.10-2+deb11u5.debian.tar.xz 29468 SHA256:b24f586a155c207b2dbf6db1b6e4106427150acdd3a654c00c52d400da70d23d
+```
 
-- http://snapshot.debian.org/package/expat/2.2.10-2+deb11u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/expat/2.2.10-2+deb11u5/ (for browsing the source)
+- https://sources.debian.net/src/expat/2.2.10-2+deb11u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/expat/2.2.10-2+deb11u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.8.0-1`
 

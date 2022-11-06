@@ -1,22 +1,21 @@
-# `clojure:temurin-17-jammy`
+# `clojure:temurin-11-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c07db1ea7c0b24451fba85ac37d233c214c584fa6964bdcf711ba93d09cc1077`
-- Created: `2022-11-02T20:18:13.673848536Z`
-- Virtual Size: ~ 579.43 Mb  
+- Image ID: `sha256:3b6bff7cd201f4def81cc9de7b38593739317f4a54b36f5a2738e4e037379044`
+- Created: `2022-11-05T01:17:59.721777935Z`
+- Virtual Size: ~ 571.89 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Entrypoint: `["entrypoint"]`
-- Command: `["-M","--repl"]`
+- Command: `["clj"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/opt/java/openjdk`
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.4.1+1`
-  - `CLOJURE_VERSION=1.11.1.1182`
+  - `JAVA_VERSION=jdk-11.0.17+8`
+  - `CLOJURE_VERSION=1.11.1.1189`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -180,32 +179,6 @@ $ apt-get source -qq --print-uris bash=5.1-6ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.dsc' bash_5.1-6ubuntu1.dsc 2426 SHA512:9c808b5b8a281e01c5a4a503eca84fca8b21a2153dc4e7abbedda21346ae4005c806ffe7afd689b7ff66af8d431b9b4bebf2f1324745c01ed5f3ee219a515a88
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA512:95d3acc542231cb893e1347c7d9dd66687f68cd347a0e9e126fde2d14e68c5b5530d1a5866eafa781e88aa013fcf72b4ad56d2e484c2ac7a69bd90bb149a9b86
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.debian.tar.xz' bash_5.1-6ubuntu1.debian.tar.xz 99652 SHA512:da77655882d0977656b75c750589307c54c7d5dd28b1cfc357d4a474ebf26399a91cfa19c4ba381e0a59a8f115f8381d432e82f2e659cb9bcbebf3fa0cd77bc1
-```
-
-### `dpkg` source package: `binutils=2.38-4ubuntu2`
-
-Binary Packages:
-
-- `binutils=2.38-4ubuntu2`
-- `binutils-common:amd64=2.38-4ubuntu2`
-- `binutils-x86-64-linux-gnu=2.38-4ubuntu2`
-- `libbinutils:amd64=2.38-4ubuntu2`
-- `libctf-nobfd0:amd64=2.38-4ubuntu2`
-- `libctf0:amd64=2.38-4ubuntu2`
-
-Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`, `/usr/share/doc/libctf-nobfd0/copyright`, `/usr/share/doc/libctf0/copyright`)
-
-- `GFDL`
-- `GPL`
-- `LGPL`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris binutils=2.38-4ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-4ubuntu2.dsc' binutils_2.38-4ubuntu2.dsc 8799 SHA512:3d089063e9fafa561419ea304f1ca662553b5de3b6a6e4a3a05e32634105e519f24ba43f8bb6654ddd31e0aeb1d0e36fa1079ee16f617c7c09383f657d291e0c
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38.orig.tar.xz' binutils_2.38.orig.tar.xz 23651408 SHA512:8bf0b0d193c9c010e0518ee2b2e5a830898af206510992483b427477ed178396cd210235e85fd7bd99a96fc6d5eedbeccbd48317a10f752b7336ada8b2bb826d
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-4ubuntu2.debian.tar.xz' binutils_2.38-4ubuntu2.debian.tar.xz 288676 SHA512:c8ba0beba773bb63f3a598c5795ee361fa9bb99c188b649c23931a05737983503267165f02654654b31088846078800fed3fc39282b230e7494ac2dfd5feb1e7
 ```
 
 ### `dpkg` source package: `brotli=1.0.9-2build6`
@@ -2163,14 +2136,14 @@ $ apt-get source -qq --print-uris python3-defaults=3.10.6-1~22.04
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.10.6-1%7e22.04.tar.gz' python3-defaults_3.10.6-1~22.04.tar.gz 145325 SHA512:4dce1fcadb47a3fbd72e489e78c6543aa4b35a0480eb4e10617b3afd223cdd244e97f79db55f2abf28367848658ae46a3cda895d3d9dcf21c530149207f080dd
 ```
 
-### `dpkg` source package: `python3.10=3.10.6-1~22.04`
+### `dpkg` source package: `python3.10=3.10.6-1~22.04.1`
 
 Binary Packages:
 
-- `libpython3.10-minimal:amd64=3.10.6-1~22.04`
-- `libpython3.10-stdlib:amd64=3.10.6-1~22.04`
-- `python3.10=3.10.6-1~22.04`
-- `python3.10-minimal=3.10.6-1~22.04`
+- `libpython3.10-minimal:amd64=3.10.6-1~22.04.1`
+- `libpython3.10-stdlib:amd64=3.10.6-1~22.04.1`
+- `python3.10=3.10.6-1~22.04.1`
+- `python3.10-minimal=3.10.6-1~22.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/share/doc/libpython3.10-stdlib/copyright`, `/usr/share/doc/python3.10/copyright`, `/usr/share/doc/python3.10-minimal/copyright`)
 
@@ -2195,10 +2168,10 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python3.10=3.10.6-1~22.04
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.dsc' python3.10_3.10.6-1~22.04.dsc 3663 SHA512:67f3e04c57a3b3d9cdc77ec29c4bf667d0d9d261ef5c19a0cb89dfbade2a49340dd6f2362bb6d9909301570ea7384e1af27873a1bc1c2acd8cf420b6ea638e3b
+$ apt-get source -qq --print-uris python3.10=3.10.6-1~22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.1.dsc' python3.10_3.10.6-1~22.04.1.dsc 3646 SHA512:142babe9542367ccf62192cf5f029f7fb0d3c386ec2cfdf4be6f85e1f47a22c6fada10d91f87c39ced6398de763d0717b78f902f3f797963eae6528522b7d26d
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6.orig.tar.xz' python3.10_3.10.6.orig.tar.xz 19600672 SHA512:f2bf424bf4f4caa524ee1248b431e8e06d0745c3fc3ba457710d75f3698e653733feb4b059cd124f1de2a9e851c30d847f567aa47abef12898c9dc8a6507b476
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.debian.tar.xz' python3.10_3.10.6-1~22.04.debian.tar.xz 219560 SHA512:d9a70157945aff96227ac822c0dedb1d0216bd65c05b786ddea0f5c0bd7060cf55c243efae3a727ca37d366e499337dc6986acb6fa5dd87fa19890c3afbf3e4f
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.1.debian.tar.xz' python3.10_3.10.6-1~22.04.1.debian.tar.xz 220664 SHA512:41ab703ff68b768dba43709a93baf333b12bd860db2bc25b359d8f8beef8813971a0190d03c320d32f323bf21a5f1b4a3d33a40aac776a180ffb1335469bd81c
 ```
 
 ### `dpkg` source package: `readline=8.1.2-1`
@@ -2425,15 +2398,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022e-0ubuntu0.22.04.0
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e-0ubuntu0.22.04.0.dsc' tzdata_2022e-0ubuntu0.22.04.0.dsc 2383 SHA512:0911ad087bc93c66a16e3f622a1fe8e072d0a8f256666ffed4a81c481d69874e0855fbad0410e331832dff1788bab0d6a6db360b505ff3b517e65dbebe980dcb
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz' tzdata_2022e.orig.tar.gz 433785 SHA512:3b63ba2662930ee13dec79290f57545d71d21d4ddb76f94498a7096edaee0b3150e501c221c4d596df6af7c1d770c211f88feb5add13c5e3bed979218b4544da
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e.orig.tar.gz.asc' tzdata_2022e.orig.tar.gz.asc 833 SHA512:d1fbc609370e1fd2a6aded16fe2c6705ee422fd1caffc12941d38acd8eca31bac5fa244af71c2427ce122a0d20cb53b6286ead675c25a7922fc5feda3daacf3c
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022e-0ubuntu0.22.04.0.debian.tar.xz' tzdata_2022e-0ubuntu0.22.04.0.debian.tar.xz 171324 SHA512:d4f42c20e09cb6e05fb1b117ff5b50511304c2b36eed775375a397f3dbb48be0f52036dddc327be4f2d9388807b2458bca5a0658096306842c120de5c9fb8d7b
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2021.03.26`
 
