@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8e4f7c2b2be9de01eceb6c4d79fd06bff49760703f7f890fe1cef98668a5acf0`
-- Created: `2022-11-02T23:22:47.512687185Z`
+- Image ID: `sha256:f89d363d68ed7dba328fd224383b0153270f1e83fc566e6c32ad2e6c41a50d71`
+- Created: `2022-11-05T02:47:32.844714997Z`
 - Virtual Size: ~ 1.17 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -15,7 +15,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.16.1+1`
+  - `JAVA_VERSION=jdk-11.0.17+8`
   - `CATALINA_HOME=/usr/local/tomcat`
   - `TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib`
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
@@ -3422,15 +3422,15 @@ $ apt-get source -qq --print-uris python3-defaults=3.10.6-1~22.04
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.10.6-1%7e22.04.tar.gz' python3-defaults_3.10.6-1~22.04.tar.gz 145325 SHA512:4dce1fcadb47a3fbd72e489e78c6543aa4b35a0480eb4e10617b3afd223cdd244e97f79db55f2abf28367848658ae46a3cda895d3d9dcf21c530149207f080dd
 ```
 
-### `dpkg` source package: `python3.10=3.10.6-1~22.04`
+### `dpkg` source package: `python3.10=3.10.6-1~22.04.1`
 
 Binary Packages:
 
-- `libpython3.10:amd64=3.10.6-1~22.04`
-- `libpython3.10-minimal:amd64=3.10.6-1~22.04`
-- `libpython3.10-stdlib:amd64=3.10.6-1~22.04`
-- `python3.10=3.10.6-1~22.04`
-- `python3.10-minimal=3.10.6-1~22.04`
+- `libpython3.10:amd64=3.10.6-1~22.04.1`
+- `libpython3.10-minimal:amd64=3.10.6-1~22.04.1`
+- `libpython3.10-stdlib:amd64=3.10.6-1~22.04.1`
+- `python3.10=3.10.6-1~22.04.1`
+- `python3.10-minimal=3.10.6-1~22.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.10/copyright`, `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/share/doc/libpython3.10-stdlib/copyright`, `/usr/share/doc/python3.10/copyright`, `/usr/share/doc/python3.10-minimal/copyright`)
 
@@ -3452,9 +3452,14 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10/copyright`, `/usr/share/do
 - `use in source`
 - `without`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris python3.10=3.10.6-1~22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.1.dsc' python3.10_3.10.6-1~22.04.1.dsc 3646 SHA512:142babe9542367ccf62192cf5f029f7fb0d3c386ec2cfdf4be6f85e1f47a22c6fada10d91f87c39ced6398de763d0717b78f902f3f797963eae6528522b7d26d
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6.orig.tar.xz' python3.10_3.10.6.orig.tar.xz 19600672 SHA512:f2bf424bf4f4caa524ee1248b431e8e06d0745c3fc3ba457710d75f3698e653733feb4b059cd124f1de2a9e851c30d847f567aa47abef12898c9dc8a6507b476
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.1.debian.tar.xz' python3.10_3.10.6-1~22.04.1.debian.tar.xz 220664 SHA512:41ab703ff68b768dba43709a93baf333b12bd860db2bc25b359d8f8beef8813971a0190d03c320d32f323bf21a5f1b4a3d33a40aac776a180ffb1335469bd81c
+```
 
 ### `dpkg` source package: `raptor2=2.0.15-0ubuntu4`
 
@@ -3757,15 +3762,9 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.3.0-6ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6ubuntu0.1.dsc' tiff_4.3.0-6ubuntu0.1.dsc 2402 SHA512:18e0269ec10e1b491600a721c0f6193f08058b140eabf796184cd46ec789e04296221a9035d2fb7ef6ec2be9bacccaa34d853a0e0afdc60a0a357d4cd9e22208
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz' tiff_4.3.0.orig.tar.gz 2808254 SHA512:e04a4a6c542e58a174c1e9516af3908acf1d3d3e1096648c5514f4963f73e7af27387a76b0fbabe43cf867a18874088f963796a7cd6e45deb998692e3e235493
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz.asc' tiff_4.3.0.orig.tar.gz.asc 488 SHA512:115a4c5714b52d0fbea800c494d83c8a96b70b2c9ce84a8df03205d9afc517faa17963f5f9508c013d7d3e2be6675b84b594a771a829406473234c4bd85e469e
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6ubuntu0.1.debian.tar.xz' tiff_4.3.0-6ubuntu0.1.debian.tar.xz 28016 SHA512:67039c9ceb9b6190ef3b9f003833d97502a8acf452e9b26c6ab9a686f75b726cda2a0c470c9dc81929629ef7eb2d8d20c684cd5bbee700b92e7e1112a63655d1
-```
 
 ### `dpkg` source package: `tzdata=2022e-0ubuntu0.22.04.0`
 
