@@ -1,10 +1,10 @@
-# `openjdk:20-ea-21-jdk-oraclelinux7`
+# `openjdk:20-ea-22-jdk-oraclelinux7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2115bcdefe261659ab6cb8fa6ddc969fc78faede2b485aa39a2209af2f71dd03`
-- Created: `2022-10-27T21:23:19.955371232Z`
-- Virtual Size: ~ 515.98 Mb  
+- Image ID: `sha256:b677d44e46431b0f297d120b6baa58df2103c7b0babf914d9e0d60f472b86f0e`
+- Created: `2022-11-07T22:24:38.441011894Z`
+- Virtual Size: ~ 515.91 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/java/openjdk-20`
   - `LANG=en_US.UTF-8`
-  - `JAVA_VERSION=20-ea+21`
+  - `JAVA_VERSION=20-ea+22`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -1194,15 +1194,15 @@ $ dnf --quiet download --source --url tar-1.26-35.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/tar-1.26-35.el7.src.rpm
 ```
 
-### `rpm` package: `tzdata-2022e-1.el7.noarch`
+### `rpm` package: `tzdata-2022f-1.el7.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url tzdata-2022e-1.el7.noarch
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/tzdata-2022e-1.el7.src.rpm
+$ dnf --quiet download --source --url tzdata-2022f-1.el7.noarch
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/tzdata-2022f-1.el7.src.rpm
 ```
 
 ### `rpm` package: `ustr-1.0.4-16.el7.x86_64`

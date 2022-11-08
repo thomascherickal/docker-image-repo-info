@@ -1,10 +1,10 @@
-# `openjdk:20-ea-21-jdk-oraclelinux8`
+# `openjdk:20-ea-22-jdk-oraclelinux8`
 
 ## Docker Metadata
 
-- Image ID: `sha256:581a779eedd892d24f3fd5b2117cb266c4727151c8df70bcd4beb2d52aa5f715`
-- Created: `2022-10-27T21:23:00.291556103Z`
-- Virtual Size: ~ 482.21 Mb  
+- Image ID: `sha256:77ef279441fc76c96a205f70081d3f57f6be6258cc6b487e756c3495c94ed85e`
+- Created: `2022-11-07T22:24:22.032465772Z`
+- Virtual Size: ~ 482.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/java/openjdk-20`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=20-ea+21`
+  - `JAVA_VERSION=20-ea+22`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -1210,15 +1210,15 @@ https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/sq
 https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/sqlite-3.26.0-16.el8_6.src.rpm
 ```
 
-### `rpm` package: `systemd-libs-239-58.0.1.el8_6.7.x86_64`
+### `rpm` package: `systemd-libs-239-58.0.1.el8_6.8.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url systemd-libs-239-58.0.1.el8_6.7
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/systemd-239-58.0.1.el8_6.7.src.rpm
+$ dnf --quiet download --source --url systemd-libs-239-58.0.1.el8_6.8
+https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/systemd-239-58.0.1.el8_6.8.src.rpm
 ```
 
 ### `rpm` package: `tar-1.30-5.el8.x86_64`
@@ -1232,16 +1232,16 @@ $ dnf --quiet download --source --url tar-1.30-5.el8
 https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/tar-1.30-5.el8.src.rpm
 ```
 
-### `rpm` package: `tzdata-2022e-1.el8.noarch`
+### `rpm` package: `tzdata-2022f-1.el8.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url tzdata-2022e-1.el8.noarch
-https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/tzdata-2022e-1.el8.src.rpm
-https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/tzdata-2022e-1.el8.src.rpm
+$ dnf --quiet download --source --url tzdata-2022f-1.el8.noarch
+https://yum.oracle.com/repo/OracleLinux/OL8/appstream/x86_64/getPackageSource/tzdata-2022f-1.el8.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL8/baseos/latest/x86_64/getPackageSource/tzdata-2022f-1.el8.src.rpm
 ```
 
 ### `rpm` package: `xz-libs-5.2.4-4.el8_6.x86_64`
