@@ -5653,14 +5653,9 @@ Licenses: (parsed from: `/usr/share/doc/libsdformat9/copyright`, `/usr/share/doc
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sdformat9=9.9.0-1~focal
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.9.0-1%7efocal.dsc' sdformat9_9.9.0-1~focal.dsc 1376 SHA256:83f6785d54e8f550027e6b1f4df91cdb69faf5564a7bab9c577b5f6e11b64d80
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.9.0.orig.tar.bz2' sdformat9_9.9.0.orig.tar.bz2 715487 SHA256:fd57fbc6459f7a12732dc012e890d39391ee0b8b4bd29dc89867eaeff3aeb59c
-'http://packages.osrfoundation.org/gazebo/ubuntu-stable/pool/main/s/sdformat9/sdformat9_9.9.0-1%7efocal.debian.tar.xz' sdformat9_9.9.0-1~focal.debian.tar.xz 3548 SHA256:b1d978287565ee507ea87d516d1a6d2512f01c5312f9679f98d2d55e15e6e132
-```
 
 ### `dpkg` source package: `sed=4.7-1`
 
@@ -5945,15 +5940,9 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.31.1-4ubuntu0.4
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.4.dsc' sqlite3_3.31.1-4ubuntu0.4.dsc 2519 SHA512:63501762b9e3d411213f88c158653246350e4f5d537fd868f57b1468f62ed270906b4f767bf7e70c8422d0ada35409a86ef8e98022f66f291dcad1d957ee6b46
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig-www.tar.xz' sqlite3_3.31.1.orig-www.tar.xz 5764424 SHA512:a47adacd46c673cfd674cb64fb54b054e69560aed8c8c429773f0eccdcdbce4be538397506eca8e2d169f4b46d0d47442b273e12d82f8c87e1aadf3ade458db6
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1.orig.tar.xz' sqlite3_3.31.1.orig.tar.xz 7108036 SHA512:67e1050efe2988fa3d0d7e4a87e147a8114c6ff9b6ca5307a068befb38e861930eaee0135048ff1abb1e6323b507cbc68a0aac3a8fe5f095d6fcea1547a7efaf
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.31.1-4ubuntu0.4.debian.tar.xz' sqlite3_3.31.1-4ubuntu0.4.debian.tar.xz 35468 SHA512:a4974f917c0f94142472bbaee2590be3baf9e5881db6df598ca4267bb823bd9934d5af30ea2e4b513044ab465ad9ebca2d1d7ae47cb41080edbd963a0a1fd227
-```
 
 ### `dpkg` source package: `sratom=0.6.4-1`
 
@@ -6115,14 +6104,9 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2ubuntu0.20.04.5
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.5.dsc' tiff_4.1.0+git191117-2ubuntu0.20.04.5.dsc 2251 SHA512:31bfbdb4148d6931b1f7f68ca42a00e873fcd001956bf037f82707d1d550b6c7134e8b02be0664de402fc5a9ad475d00b1a602253b0eb2e5d8756239d0906518
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA512:25b4bc4522fc2e7f3ca6857b87acd4481d8643566b1120c755020afc8b48949238ee2078bc43dd3ba7407eaa4e36b1b712d7056f101ddaf60f94dab8607870b8
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.5.debian.tar.xz' tiff_4.1.0+git191117-2ubuntu0.20.04.5.debian.tar.xz 29960 SHA512:d5a1d8b5d449795312124bdac56c267fa753302ed9ac3c9dd061214235a86ceeb0478193dee1a9c75807e910b8a7a6d1def59799c9edc870e2d305f98f12c10b
-```
 
 ### `dpkg` source package: `tinyxml2=7.0.0+dfsg-1build1`
 
