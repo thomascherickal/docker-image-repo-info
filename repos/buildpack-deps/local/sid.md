@@ -4777,19 +4777,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-defaults=3.10.6-1
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.10.6-1.dsc' python3-defaults_3.10.6-1.dsc 2944 SHA256:c3263746a9ae7d84f8c6afbd89026cbadb2d919710455ce7f73c32ca41bccbd9
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.10.6-1.tar.gz' python3-defaults_3.10.6-1.tar.gz 145185 SHA256:abc20d547cfef3199ba73ebc313abfeafa2f65fa260ec5c886efdeeb6c5aaaf4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-defaults/3.10.6-1/
 
-- https://sources.debian.net/src/python3-defaults/3.10.6-1/ (for browsing the source)
-- https://sources.debian.net/src/python3-defaults/3.10.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-defaults/3.10.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-stdlib-extensions=3.10.7-1`
 
@@ -5159,20 +5153,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-3`
 - `GPL-3.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=3.05-6
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.05-6.dsc' sysvinit_3.05-6.dsc 2373 SHA256:7653d028e6f5e001140da6178ec7b01d2ad260454534972d20f297b9f4366c95
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.05.orig.tar.gz' sysvinit_3.05.orig.tar.gz 435554 SHA256:1e15471afdd550e88c121e5030707d9f00ca66b29fa91eacdaae072bde53f6bc
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.05-6.debian.tar.xz' sysvinit_3.05-6.debian.tar.xz 134276 SHA256:88b77f119f85ac3afe059f045c679793373b6b62764acc0a8886934f2a9c8eda
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/3.05-6/
 
-- https://sources.debian.net/src/sysvinit/3.05-6/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/3.05-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/3.05-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1`
 
