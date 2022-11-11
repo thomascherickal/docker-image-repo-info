@@ -1,7 +1,7 @@
 ## `eggdrop:latest`
 
 ```console
-$ docker pull eggdrop@sha256:9f1965d62b902c20c0ed184f2574d764b12d71c19a427556ac7b896e9695d705
+$ docker pull eggdrop@sha256:4593cc4603ed97e3c71a594a9e884cbecdd29ae2aaaef3cfb6838d05aa95ae14
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -98,55 +98,55 @@ CMD ["eggdrop.conf"]
 ### `eggdrop:latest` - linux; arm variant v6
 
 ```console
-$ docker pull eggdrop@sha256:d4fabdb3e976aa66622e3304ba3e45201849cb039c9aadc5be30a1a40f822eff
+$ docker pull eggdrop@sha256:0d64378421412fcaa3ac5fc344c6ae24caa96d3a68e6f15fc9aab12ea1345a45
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **7.9 MB (7924541 bytes)**  
+-	Total Size: **9.6 MB (9559315 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b07ae53f2697dbd7bd75df44c817e148c7c37de3a457c5da742f1f94fa0cb73a`
+-	Image ID: `sha256:b0cfafce3ce9d77ed9157950236d249dbe6ff04833718097578d756d57f29564`
 -	Entrypoint: `["\/home\/eggdrop\/eggdrop\/entrypoint.sh"]`
 -	Default Command: `["eggdrop.conf"]`
 
 ```dockerfile
-# Tue, 09 Aug 2022 17:49:22 GMT
+# Thu, 10 Nov 2022 20:49:27 GMT
 ADD file:e8733e8cc0a81e15ca4041760b6e27392c34171512d34405a9b262b1fff5c687 in / 
-# Tue, 09 Aug 2022 17:49:22 GMT
+# Thu, 10 Nov 2022 20:49:27 GMT
 CMD ["/bin/sh"]
-# Thu, 06 Oct 2022 20:07:40 GMT
+# Thu, 10 Nov 2022 21:40:45 GMT
 MAINTAINER Geo Van O <geo@eggheads.org>
-# Thu, 06 Oct 2022 20:07:40 GMT
+# Thu, 10 Nov 2022 21:40:47 GMT
 RUN adduser -S eggdrop
-# Thu, 06 Oct 2022 20:07:42 GMT
+# Thu, 10 Nov 2022 21:40:49 GMT
 RUN apk add --no-cache 'su-exec>=0.2'
-# Thu, 06 Oct 2022 20:07:44 GMT
+# Thu, 10 Nov 2022 21:40:52 GMT
 RUN apk add --no-cache tcl bash openssl
-# Thu, 06 Oct 2022 20:08:49 GMT
+# Thu, 10 Nov 2022 21:42:28 GMT
 RUN apk add --no-cache --virtual egg-deps tcl-dev wget ca-certificates make tar gnupg build-base openssl-dev   && wget ftp://ftp.eggheads.org/pub/eggdrop/source/1.9/eggdrop-1.9.3.tar.gz   && wget ftp://ftp.eggheads.org/pub/eggdrop/source/1.9/eggdrop-1.9.3.tar.gz.asc   && gpg --keyserver keyserver.ubuntu.com --recv-key E01C240484DE7DBE190FE141E7667DE1D1A39AFF   && gpg --batch --verify eggdrop-1.9.3.tar.gz.asc eggdrop-1.9.3.tar.gz   && command -v gpgconf > /dev/null   && gpgconf --kill all   && rm eggdrop-1.9.3.tar.gz.asc   && tar -zxvf eggdrop-1.9.3.tar.gz   && rm eggdrop-1.9.3.tar.gz   && ( cd eggdrop-1.9.3     && ./configure     && make config     && make     && make install DEST=/home/eggdrop/eggdrop )   && rm -rf eggdrop-1.9.3   && mkdir /home/eggdrop/eggdrop/data   && chown -R eggdrop /home/eggdrop/eggdrop   && apk del egg-deps
-# Thu, 06 Oct 2022 20:08:49 GMT
+# Thu, 10 Nov 2022 21:42:28 GMT
 ENV NICK=
-# Thu, 06 Oct 2022 20:08:50 GMT
+# Thu, 10 Nov 2022 21:42:28 GMT
 ENV SERVER=
-# Thu, 06 Oct 2022 20:08:50 GMT
+# Thu, 10 Nov 2022 21:42:29 GMT
 ENV LISTEN=3333
-# Thu, 06 Oct 2022 20:08:50 GMT
+# Thu, 10 Nov 2022 21:42:29 GMT
 ENV OWNER=
-# Thu, 06 Oct 2022 20:08:50 GMT
+# Thu, 10 Nov 2022 21:42:29 GMT
 ENV USERFILE=eggdrop.user
-# Thu, 06 Oct 2022 20:08:50 GMT
+# Thu, 10 Nov 2022 21:42:30 GMT
 ENV CHANFILE=eggdrop.chan
-# Thu, 06 Oct 2022 20:08:50 GMT
+# Thu, 10 Nov 2022 21:42:30 GMT
 WORKDIR /home/eggdrop/eggdrop
-# Thu, 06 Oct 2022 20:08:50 GMT
+# Thu, 10 Nov 2022 21:42:31 GMT
 EXPOSE 3333
-# Thu, 06 Oct 2022 20:08:51 GMT
+# Thu, 10 Nov 2022 21:42:31 GMT
 COPY file:ddb4d88d0de0ae2531972fbd491e6c611f0bb89ff8457bc01e4e61ae7f66cd46 in /home/eggdrop/eggdrop 
-# Thu, 06 Oct 2022 20:08:51 GMT
+# Thu, 10 Nov 2022 21:42:32 GMT
 COPY file:b76e92fb28997fa3fd71a3b880ff3b73567ca05021b617d51ebdcefd8c31b457 in /home/eggdrop/eggdrop/scripts/ 
-# Thu, 06 Oct 2022 20:08:51 GMT
+# Thu, 10 Nov 2022 21:42:32 GMT
 ENTRYPOINT ["/home/eggdrop/eggdrop/entrypoint.sh"]
-# Thu, 06 Oct 2022 20:08:51 GMT
+# Thu, 10 Nov 2022 21:42:32 GMT
 CMD ["eggdrop.conf"]
 ```
 
@@ -155,83 +155,83 @@ CMD ["eggdrop.conf"]
 		Last Modified: Tue, 09 Aug 2022 17:50:33 GMT  
 		Size: 2.6 MB (2613965 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c3e522f2ab682b3bbcaf5b0ffe381c2b022a524480aa4784d881ab3d9cd52996`  
-		Last Modified: Thu, 06 Oct 2022 20:09:37 GMT  
-		Size: 1.3 KB (1275 bytes)  
+	-	`sha256:b4e80296a27fb59f866bf4278e334651c07eab4a0af469fb2925d13cac14d2e3`  
+		Last Modified: Thu, 10 Nov 2022 21:43:20 GMT  
+		Size: 1.2 KB (1246 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:64737932742df1c344b9efb4586bf884743317b594c35c30019d111d7d042cb4`  
-		Last Modified: Thu, 06 Oct 2022 20:09:35 GMT  
-		Size: 10.6 KB (10602 bytes)  
+	-	`sha256:758852f434b05a4764a0742f301982f2b67ec99dde6ed6c29f0052df96aa9503`  
+		Last Modified: Thu, 10 Nov 2022 21:43:18 GMT  
+		Size: 10.6 KB (10603 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:66d45b29c260fc6da08182aa8e5f2074252c460a7389e49ee0d2438285a0ba3c`  
-		Last Modified: Thu, 06 Oct 2022 20:09:36 GMT  
-		Size: 2.7 MB (2679942 bytes)  
+	-	`sha256:826cfa6ecefe00af4ce46d705a91e9d0b3ccf1cebe3847609b710a9f2e353814`  
+		Last Modified: Thu, 10 Nov 2022 21:43:19 GMT  
+		Size: 2.7 MB (2679667 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:de07fbfe2f3a15e71977f870cf5b35010ff2e88230757f61b66e377cc4b0203d`  
-		Last Modified: Thu, 06 Oct 2022 20:09:36 GMT  
-		Size: 2.6 MB (2616220 bytes)  
+	-	`sha256:2c06156ba57d23e1dc9ae62db477f8e6fded42b37946d9790b17ad9049ba6704`  
+		Last Modified: Thu, 10 Nov 2022 21:43:19 GMT  
+		Size: 4.3 MB (4251301 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7392333083693a6f52b4b97fb61fdabc59695f9315697282f33f88d40b5bb324`  
-		Last Modified: Thu, 06 Oct 2022 20:09:35 GMT  
-		Size: 1.8 KB (1837 bytes)  
+	-	`sha256:ca67cc648b3ebf0bd586dca501a2ec68fb1f65e1fca0f78b3b56695d99f19f97`  
+		Last Modified: Thu, 10 Nov 2022 21:43:18 GMT  
+		Size: 1.8 KB (1834 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62dace29cedee18da0ce71636558a089f32ae57a7208f6f18d4b250bd30c2a56`  
-		Last Modified: Thu, 06 Oct 2022 20:09:35 GMT  
-		Size: 700.0 B  
+	-	`sha256:fdd3f6fb7c1bac5e20883a9315847fc8efe04b158d9a939e2c9f3f5ab64ad9d1`  
+		Last Modified: Thu, 10 Nov 2022 21:43:18 GMT  
+		Size: 699.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `eggdrop:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull eggdrop@sha256:9318f18ed8a4ee8aa6ef1f06df5d5955dd3e4f4af614b4ec50ff11d7f722c5bc
+$ docker pull eggdrop@sha256:c88ed874f77d380d4c8eed3428e081c66bf520a9ebf05b199a3add40fc11bc3d
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **8.1 MB (8132046 bytes)**  
+-	Total Size: **9.9 MB (9887842 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:36a3677760db85cafb703d323e9c38547a8845f91bde110a912806c557ccb4f9`
+-	Image ID: `sha256:f5ee6e9d4f19227c1018b7100a511b402147cc57ca3c95e3ca8038aae59437df`
 -	Entrypoint: `["\/home\/eggdrop\/eggdrop\/entrypoint.sh"]`
 -	Default Command: `["eggdrop.conf"]`
 
 ```dockerfile
-# Tue, 09 Aug 2022 17:39:41 GMT
+# Thu, 10 Nov 2022 20:39:41 GMT
 ADD file:960fd469d48cf79ba14bbda71f3192074ed860c112e30e0bc92bff3440cb45ab in / 
-# Tue, 09 Aug 2022 17:39:42 GMT
+# Thu, 10 Nov 2022 20:39:41 GMT
 CMD ["/bin/sh"]
-# Thu, 06 Oct 2022 20:15:00 GMT
+# Thu, 10 Nov 2022 22:07:08 GMT
 MAINTAINER Geo Van O <geo@eggheads.org>
-# Thu, 06 Oct 2022 20:15:01 GMT
+# Thu, 10 Nov 2022 22:07:09 GMT
 RUN adduser -S eggdrop
-# Thu, 06 Oct 2022 20:15:02 GMT
+# Thu, 10 Nov 2022 22:07:09 GMT
 RUN apk add --no-cache 'su-exec>=0.2'
-# Thu, 06 Oct 2022 20:15:04 GMT
+# Thu, 10 Nov 2022 22:07:10 GMT
 RUN apk add --no-cache tcl bash openssl
-# Thu, 06 Oct 2022 20:16:12 GMT
+# Thu, 10 Nov 2022 22:08:05 GMT
 RUN apk add --no-cache --virtual egg-deps tcl-dev wget ca-certificates make tar gnupg build-base openssl-dev   && wget ftp://ftp.eggheads.org/pub/eggdrop/source/1.9/eggdrop-1.9.3.tar.gz   && wget ftp://ftp.eggheads.org/pub/eggdrop/source/1.9/eggdrop-1.9.3.tar.gz.asc   && gpg --keyserver keyserver.ubuntu.com --recv-key E01C240484DE7DBE190FE141E7667DE1D1A39AFF   && gpg --batch --verify eggdrop-1.9.3.tar.gz.asc eggdrop-1.9.3.tar.gz   && command -v gpgconf > /dev/null   && gpgconf --kill all   && rm eggdrop-1.9.3.tar.gz.asc   && tar -zxvf eggdrop-1.9.3.tar.gz   && rm eggdrop-1.9.3.tar.gz   && ( cd eggdrop-1.9.3     && ./configure     && make config     && make     && make install DEST=/home/eggdrop/eggdrop )   && rm -rf eggdrop-1.9.3   && mkdir /home/eggdrop/eggdrop/data   && chown -R eggdrop /home/eggdrop/eggdrop   && apk del egg-deps
-# Thu, 06 Oct 2022 20:16:13 GMT
+# Thu, 10 Nov 2022 22:08:05 GMT
 ENV NICK=
-# Thu, 06 Oct 2022 20:16:14 GMT
+# Thu, 10 Nov 2022 22:08:05 GMT
 ENV SERVER=
-# Thu, 06 Oct 2022 20:16:15 GMT
+# Thu, 10 Nov 2022 22:08:05 GMT
 ENV LISTEN=3333
-# Thu, 06 Oct 2022 20:16:16 GMT
+# Thu, 10 Nov 2022 22:08:06 GMT
 ENV OWNER=
-# Thu, 06 Oct 2022 20:16:17 GMT
+# Thu, 10 Nov 2022 22:08:06 GMT
 ENV USERFILE=eggdrop.user
-# Thu, 06 Oct 2022 20:16:18 GMT
+# Thu, 10 Nov 2022 22:08:06 GMT
 ENV CHANFILE=eggdrop.chan
-# Thu, 06 Oct 2022 20:16:19 GMT
+# Thu, 10 Nov 2022 22:08:06 GMT
 WORKDIR /home/eggdrop/eggdrop
-# Thu, 06 Oct 2022 20:16:20 GMT
+# Thu, 10 Nov 2022 22:08:06 GMT
 EXPOSE 3333
-# Thu, 06 Oct 2022 20:16:22 GMT
+# Thu, 10 Nov 2022 22:08:06 GMT
 COPY file:ddb4d88d0de0ae2531972fbd491e6c611f0bb89ff8457bc01e4e61ae7f66cd46 in /home/eggdrop/eggdrop 
-# Thu, 06 Oct 2022 20:16:23 GMT
+# Thu, 10 Nov 2022 22:08:06 GMT
 COPY file:b76e92fb28997fa3fd71a3b880ff3b73567ca05021b617d51ebdcefd8c31b457 in /home/eggdrop/eggdrop/scripts/ 
-# Thu, 06 Oct 2022 20:16:23 GMT
+# Thu, 10 Nov 2022 22:08:06 GMT
 ENTRYPOINT ["/home/eggdrop/eggdrop/entrypoint.sh"]
-# Thu, 06 Oct 2022 20:16:24 GMT
+# Thu, 10 Nov 2022 22:08:06 GMT
 CMD ["eggdrop.conf"]
 ```
 
@@ -240,27 +240,27 @@ CMD ["eggdrop.conf"]
 		Last Modified: Tue, 09 Aug 2022 17:40:38 GMT  
 		Size: 2.7 MB (2707663 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:efee3d631e04e4eab9c66de7d4c47b64f9cef29853541f1f5620115a0f561f78`  
-		Last Modified: Thu, 06 Oct 2022 20:17:10 GMT  
-		Size: 1.2 KB (1247 bytes)  
+	-	`sha256:9ae531d8ab57771397f121d555bba0e96be31d516bd04efc8825bf34807228bb`  
+		Last Modified: Thu, 10 Nov 2022 22:08:40 GMT  
+		Size: 1.3 KB (1274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8a8b617f3b978f5b945dcb21e77de70179052e253c97717beb004ee86406326e`  
-		Last Modified: Thu, 06 Oct 2022 20:17:08 GMT  
-		Size: 10.6 KB (10630 bytes)  
+	-	`sha256:6f5c8f5f5aec5a839a6c58df3fc3e42bd2175dc2c9aa7d7c8b91ba693fd3f0b3`  
+		Last Modified: Thu, 10 Nov 2022 22:08:39 GMT  
+		Size: 10.7 KB (10712 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cf73d74d35365f0fa2022e278a33c69c1fb460936f26633106cfc5085d782b8f`  
-		Last Modified: Thu, 06 Oct 2022 20:17:09 GMT  
-		Size: 2.8 MB (2775939 bytes)  
+	-	`sha256:54383a3907c5896a83dc603657f6d3b89e74ece7c22ab86bf872b85e90514deb`  
+		Last Modified: Thu, 10 Nov 2022 22:08:39 GMT  
+		Size: 2.8 MB (2776465 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:edc343a563af9c69340a6790f1b98333d9efb49be616a4ce377c6d19a31e4d03`  
-		Last Modified: Thu, 06 Oct 2022 20:17:09 GMT  
-		Size: 2.6 MB (2634027 bytes)  
+	-	`sha256:5206bf2a3db01c83d1f2af937d65454991e2d269b1b122de9ce96c5da60e9908`  
+		Last Modified: Thu, 10 Nov 2022 22:08:39 GMT  
+		Size: 4.4 MB (4389198 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b8a6420fbed1f37070ece7b3553f835f9264720866bd2e02d958a6b1739b418a`  
-		Last Modified: Thu, 06 Oct 2022 20:17:08 GMT  
-		Size: 1.8 KB (1837 bytes)  
+	-	`sha256:9591892ac43e2f59833af927855005cf8ce334f3e948987d3a23bde9bf9df7c1`  
+		Last Modified: Thu, 10 Nov 2022 22:08:37 GMT  
+		Size: 1.8 KB (1834 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d679e4bfbe94b527b4910ade655d2d46ac7ace8ced5e81676c349e7d5a025c1`  
-		Last Modified: Thu, 06 Oct 2022 20:17:08 GMT  
-		Size: 703.0 B  
+	-	`sha256:7e4691b51b92a50226e26d84c3dadbb3988adba787073e368ff5f5e616b55203`  
+		Last Modified: Thu, 10 Nov 2022 22:08:39 GMT  
+		Size: 696.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
