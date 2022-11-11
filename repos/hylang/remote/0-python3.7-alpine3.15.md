@@ -1,7 +1,7 @@
 ## `hylang:0-python3.7-alpine3.15`
 
 ```console
-$ docker pull hylang@sha256:c447f335e847a9fba76b6f993d4e4fd49356c2b1814dae47611263ea47a5d1e3
+$ docker pull hylang@sha256:c74aa14bf7a168572175eb02f6dffe2e19daf441e7f30a5c8fba7a5c9912d5d6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -257,54 +257,54 @@ CMD ["hy"]
 ### `hylang:0-python3.7-alpine3.15` - linux; arm64 variant v8
 
 ```console
-$ docker pull hylang@sha256:337b16388d01ef7d74d347e0924697c6e082ec713906ba0662671c698064cacd
+$ docker pull hylang@sha256:e0009ddce74b3e619c9df465fcaf73885d52f75339220125667a0c2835a53fb2
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **21.3 MB (21283122 bytes)**  
+-	Total Size: **22.7 MB (22663982 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5314db265769f2c826985b64f9b606f6649aa01300b01feef9eb2214ebb6a10c`
+-	Image ID: `sha256:9c1e0fc08f3136ce1983ef03510ffb04359132d7dba25ad5d4f8cdbfaee2306b`
 -	Default Command: `["hy"]`
 
 ```dockerfile
-# Tue, 09 Aug 2022 17:39:51 GMT
+# Thu, 10 Nov 2022 20:39:46 GMT
 ADD file:4b51a9d40f20d2beb29d0759b161d2b9403493453beb509de4e86a5d98513f16 in / 
-# Tue, 09 Aug 2022 17:39:51 GMT
+# Thu, 10 Nov 2022 20:39:46 GMT
 CMD ["/bin/sh"]
-# Tue, 25 Oct 2022 02:01:56 GMT
+# Thu, 10 Nov 2022 22:47:04 GMT
 ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 25 Oct 2022 02:01:57 GMT
+# Thu, 10 Nov 2022 23:56:39 GMT
 ENV LANG=C.UTF-8
-# Tue, 25 Oct 2022 02:01:58 GMT
+# Thu, 10 Nov 2022 23:56:40 GMT
 RUN set -eux; 	apk add --no-cache 		ca-certificates 		tzdata 	;
-# Tue, 25 Oct 2022 04:41:35 GMT
+# Fri, 11 Nov 2022 01:35:10 GMT
 ENV GPG_KEY=0D96DF4D4110E5C43FBFB17F2D347EA6AA65421D
-# Tue, 25 Oct 2022 04:41:35 GMT
+# Fri, 11 Nov 2022 01:35:10 GMT
 ENV PYTHON_VERSION=3.7.15
-# Tue, 25 Oct 2022 04:47:39 GMT
+# Fri, 11 Nov 2022 01:41:15 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		gnupg 		tar 		xz 				bluez-dev 		bzip2-dev 		dpkg-dev dpkg 		expat-dev 		findutils 		gcc 		gdbm-dev 		libc-dev 		libffi-dev 		libnsl-dev 		libtirpc-dev 		linux-headers 		make 		ncurses-dev 		openssl-dev 		pax-utils 		readline-dev 		sqlite-dev 		tcl-dev 		tk 		tk-dev 		util-linux-dev 		xz-dev 		zlib-dev 	; 		wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz"; 	wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc"; 	GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$GPG_KEY"; 	gpg --batch --verify python.tar.xz.asc python.tar.xz; 	command -v gpgconf > /dev/null && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" python.tar.xz.asc; 	mkdir -p /usr/src/python; 	tar --extract --directory /usr/src/python --strip-components=1 --file python.tar.xz; 	rm python.tar.xz; 		cd /usr/src/python; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--enable-loadable-sqlite-extensions 		--enable-optimizations 		--enable-option-checking=fatal 		--enable-shared 		--with-system-expat 		--without-ensurepip 	; 	nproc="$(nproc)"; 	make -j "$nproc" 		EXTRA_CFLAGS="-DTHREAD_STACK_SIZE=0x100000" 		LDFLAGS="-Wl,--strip-all" 		PROFILE_TASK='-m test.regrtest --pgo 			test_array 			test_base64 			test_binascii 			test_binhex 			test_binop 			test_bytes 			test_c_locale_coercion 			test_class 			test_cmath 			test_codecs 			test_compile 			test_complex 			test_csv 			test_decimal 			test_dict 			test_float 			test_fstring 			test_hashlib 			test_io 			test_iter 			test_json 			test_long 			test_math 			test_memoryview 			test_pickle 			test_re 			test_set 			test_slice 			test_struct 			test_threading 			test_time 			test_traceback 			test_unicode 		' 	; 	make install; 		cd /; 	rm -rf /usr/src/python; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o \( -type f -a \( -name '*.pyc' -o -name '*.pyo' -o -name 'libpython*.a' \) \) 			-o \( -type f -a -name 'wininst-*.exe' \) 		\) -exec rm -rf '{}' + 	; 		find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec scanelf --needed --nobanner --format '%n#p' '{}' ';' 		| tr ',' '\n' 		| sort -u 		| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 		| xargs -rt apk add --no-network --virtual .python-rundeps 	; 	apk del --no-network .build-deps; 		python3 --version
-# Tue, 25 Oct 2022 04:47:40 GMT
+# Fri, 11 Nov 2022 01:41:16 GMT
 RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo "$src" | tr -d 3)"; 		[ -s "/usr/local/bin/$src" ]; 		[ ! -e "/usr/local/bin/$dst" ]; 		ln -svT "$src" "/usr/local/bin/$dst"; 	done
-# Tue, 25 Oct 2022 04:47:40 GMT
+# Fri, 11 Nov 2022 01:41:16 GMT
 ENV PYTHON_PIP_VERSION=22.0.4
-# Tue, 25 Oct 2022 04:47:40 GMT
+# Fri, 11 Nov 2022 01:41:16 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=57.5.0
-# Tue, 25 Oct 2022 04:47:40 GMT
+# Fri, 11 Nov 2022 01:41:16 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/6d265be7a6b5bc4e9c5c07646aee0bf0394be03d/public/get-pip.py
-# Tue, 25 Oct 2022 04:47:40 GMT
+# Fri, 11 Nov 2022 01:41:16 GMT
 ENV PYTHON_GET_PIP_SHA256=36c6f6214694ef64cc70f4127ac0ccec668408a93825359d998fb31d24968d67
-# Tue, 25 Oct 2022 04:47:45 GMT
+# Fri, 11 Nov 2022 01:41:21 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Tue, 25 Oct 2022 04:47:45 GMT
+# Fri, 11 Nov 2022 01:41:22 GMT
 CMD ["python3"]
-# Wed, 09 Nov 2022 00:57:48 GMT
+# Fri, 11 Nov 2022 12:14:54 GMT
 ENV HY_VERSION=0.25.0
-# Wed, 09 Nov 2022 00:57:48 GMT
+# Fri, 11 Nov 2022 12:14:54 GMT
 ENV HYRULE_VERSION=0.2.1
-# Wed, 09 Nov 2022 00:58:02 GMT
+# Fri, 11 Nov 2022 12:15:08 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION" "hyrule == $HYRULE_VERSION"
-# Wed, 09 Nov 2022 00:58:02 GMT
+# Fri, 11 Nov 2022 12:15:08 GMT
 CMD ["hy"]
 ```
 
@@ -313,25 +313,25 @@ CMD ["hy"]
 		Last Modified: Tue, 09 Aug 2022 17:40:55 GMT  
 		Size: 2.7 MB (2718439 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0394c03120dbc272efffa099f416778a582eff2c6156bc620e31fe94096bc79b`  
-		Last Modified: Tue, 25 Oct 2022 04:51:12 GMT  
-		Size: 673.9 KB (673911 bytes)  
+	-	`sha256:c731b7986d62e5b932f888fa4b4c6539247b88d5c795bc180f5aebf82d0821b3`  
+		Last Modified: Fri, 11 Nov 2022 01:43:53 GMT  
+		Size: 663.2 KB (663152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d0cf42a71e5528761ba788813f21fce786f39c3afdf5204f29c2974f4654f2a`  
-		Last Modified: Tue, 25 Oct 2022 04:56:23 GMT  
-		Size: 11.3 MB (11276497 bytes)  
+	-	`sha256:36eaaeaa9994216100325bbcc45bf6cff449af4066f296bf11decf59ab6be04b`  
+		Last Modified: Fri, 11 Nov 2022 01:46:41 GMT  
+		Size: 12.6 MB (12625591 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:afaeea90ce2bf76558fa334b9e30b271c0be2110ac26814e3a5195e008485e2f`  
-		Last Modified: Tue, 25 Oct 2022 04:56:22 GMT  
-		Size: 230.0 B  
+	-	`sha256:9cae3fe02794e5bd0cfb140a929481b327020c905ddc056bce09029e707d8db4`  
+		Last Modified: Fri, 11 Nov 2022 01:46:39 GMT  
+		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:823ffc4dc6afabf300aa244558a1d6a6190b195e6e607437022463878f03dc42`  
-		Last Modified: Tue, 25 Oct 2022 04:56:22 GMT  
-		Size: 2.9 MB (2885830 bytes)  
+	-	`sha256:09c47813fc3b5481b69ae424936b5b9d2610dc67f31fffd814ae9f6a307c7aad`  
+		Last Modified: Fri, 11 Nov 2022 01:46:40 GMT  
+		Size: 2.9 MB (2885535 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:712e0fa414c937706bbc1c159fd5f388ec77600306166c52b252c7984a1ca016`  
-		Last Modified: Wed, 09 Nov 2022 01:11:22 GMT  
-		Size: 3.7 MB (3728215 bytes)  
+	-	`sha256:852b81d986f4e393bada867ada22ca9484092ae00441280d578a9a08f0eeae3e`  
+		Last Modified: Fri, 11 Nov 2022 12:22:06 GMT  
+		Size: 3.8 MB (3771034 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:0-python3.7-alpine3.15` - linux; 386
