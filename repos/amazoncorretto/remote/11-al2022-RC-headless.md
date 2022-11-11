@@ -1,0 +1,48 @@
+## `amazoncorretto:11-al2022-RC-headless`
+
+```console
+$ docker pull amazoncorretto@sha256:f9783d1e13bd10d8ccf95d83953aafe118f571d5c298cfdca36274ad25fc19ae
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	linux; amd64
+
+### `amazoncorretto:11-al2022-RC-headless` - linux; amd64
+
+```console
+$ docker pull amazoncorretto@sha256:4e0cc9d87649ad1d109d659e5106faecadec60c0c7779c957c6ca99a01c9f0ef
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **130.7 MB (130719282 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:bd17fa61710ab5a82345ef4ce5408e8b456938937e295c573fac2fde1adc1da3`
+-	Default Command: `["\/bin\/bash"]`
+
+```dockerfile
+# Tue, 01 Nov 2022 23:11:26 GMT
+ADD file:541cbb916857290067c17f8f5718a02004fa3ade45da9cd68db6a3fbec9191a6 in / 
+# Tue, 01 Nov 2022 23:11:26 GMT
+CMD ["/bin/bash"]
+# Fri, 11 Nov 2022 01:38:06 GMT
+ARG version=11.0.17.8-1
+# Fri, 11 Nov 2022 01:38:45 GMT
+# ARGS: version=11.0.17.8-1
+RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2022     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-11-amazon-corretto-headless-$version.amzn2022.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-11-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
+# Fri, 11 Nov 2022 01:38:45 GMT
+ENV LANG=C.UTF-8
+# Fri, 11 Nov 2022 01:38:46 GMT
+ENV JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto
+```
+
+-	Layers:
+	-	`sha256:b1f61030557f6b1b4adb79deb32494aecd38af05ed90a5d54900eea80eedc3bb`  
+		Last Modified: Tue, 01 Nov 2022 23:12:19 GMT  
+		Size: 57.7 MB (57657867 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:1c0203d9771217b9e68a7459290726f68de89105067c443eb8bbae6caf9243f6`  
+		Last Modified: Fri, 11 Nov 2022 01:43:34 GMT  
+		Size: 73.1 MB (73061415 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
