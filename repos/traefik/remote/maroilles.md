@@ -1,7 +1,7 @@
 ## `traefik:maroilles`
 
 ```console
-$ docker pull traefik@sha256:ecbdd7eb9b248e13f3f707def379a23b67dfe4011f0b3f90925b3d02aee78707
+$ docker pull traefik@sha256:3a46f4e724ac467d9e3955792bba4327e17fa2e9e1fed93f13b85fd45b71816a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -57,30 +57,30 @@ LABEL org.opencontainers.image.vendor=Traefik Labs org.opencontainers.image.url=
 ### `traefik:maroilles` - linux; arm variant v6
 
 ```console
-$ docker pull traefik@sha256:e690232cc6f5790b767b24035b2250779c1cf0f3989f81beb1aeaaa384b0178e
+$ docker pull traefik@sha256:ed51daf51f75bf5735027eed93829bc2ddc8cab5f7d2c92661e9ae240a812647
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **21.1 MB (21066872 bytes)**  
+-	Total Size: **21.1 MB (21055568 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1c47989dd8837c7900cf2b444d04b069650e580eb5b5c96590f8997f17e236c0`
+-	Image ID: `sha256:35629440895fbdc6144fd69e6ddccee4de8aa7785af39e4804683304ac4f2df1`
 -	Entrypoint: `["\/traefik"]`
 
 ```dockerfile
 # Fri, 28 Oct 2022 00:15:28 GMT
 COPY file:48964762d0c961c28f59ebd3ea194fb6486cf2bd9a9cf1780f6702d88bd7b7d9 in /etc/ssl/certs/ 
-# Fri, 28 Oct 2022 00:15:28 GMT
-COPY dir:c3f72545af4f290c8fc0a43693ea3334451b85d0dee09c519eb983a71a5a38fa in /usr/share/ 
-# Fri, 28 Oct 2022 00:15:30 GMT
+# Fri, 11 Nov 2022 11:59:12 GMT
+COPY dir:3b1b1d8650d4180b42ead5fd074947c16b0405195b425df367fbf007be68841d in /usr/share/ 
+# Fri, 11 Nov 2022 11:59:13 GMT
 COPY file:5d1e7e81e8b77b4f8828eeaf0d30a0f135a949b51396f12ae22af376c36d3129 in / 
-# Fri, 28 Oct 2022 00:15:30 GMT
+# Fri, 11 Nov 2022 11:59:14 GMT
 EXPOSE 80
-# Fri, 28 Oct 2022 00:15:30 GMT
+# Fri, 11 Nov 2022 11:59:14 GMT
 VOLUME [/tmp]
-# Fri, 28 Oct 2022 00:15:30 GMT
+# Fri, 11 Nov 2022 11:59:14 GMT
 ENTRYPOINT ["/traefik"]
-# Fri, 28 Oct 2022 00:15:30 GMT
+# Fri, 11 Nov 2022 11:59:14 GMT
 LABEL org.opencontainers.image.vendor=Traefik Labs org.opencontainers.image.url=https://traefik.io org.opencontainers.image.title=Traefik org.opencontainers.image.description=A modern reverse-proxy org.opencontainers.image.version=v1.7.34 org.opencontainers.image.documentation=https://docs.traefik.io
 ```
 
@@ -89,13 +89,13 @@ LABEL org.opencontainers.image.vendor=Traefik Labs org.opencontainers.image.url=
 		Last Modified: Fri, 28 Oct 2022 00:17:20 GMT  
 		Size: 123.5 KB (123538 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b507ebee3426425e2764f8ebd6549db6dfb80fd6ff52ecbeefdb14979e404f6d`  
-		Last Modified: Fri, 28 Oct 2022 00:17:20 GMT  
-		Size: 320.1 KB (320052 bytes)  
+	-	`sha256:e0efdacb2b2ba042055ea537001460b2cff92ff305869705801b66bc44dc8565`  
+		Last Modified: Fri, 11 Nov 2022 12:01:04 GMT  
+		Size: 308.7 KB (308749 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:977ea5e4e50172dc8b7f47a76ddca55c03808d852bac2bf211279355576c6705`  
-		Last Modified: Fri, 28 Oct 2022 00:17:24 GMT  
-		Size: 20.6 MB (20623282 bytes)  
+	-	`sha256:849ebe6d2d943e776e37535f360e7b0f3745d625ee69f6ee5fe1eecee5487ce1`  
+		Last Modified: Fri, 11 Nov 2022 12:01:08 GMT  
+		Size: 20.6 MB (20623281 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `traefik:maroilles` - linux; arm64 variant v8
