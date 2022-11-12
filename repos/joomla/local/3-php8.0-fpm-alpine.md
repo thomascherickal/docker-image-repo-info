@@ -1,10 +1,10 @@
-# `joomla:4.2.3-php7.4-fpm-alpine`
+# `joomla:3.10.11-php8.0-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e5182e6cb8203f61d8836b47e55103f1609b7249c622454545e62de306155f7e`
-- Created: `2022-11-03T18:53:02.942076264Z`
-- Virtual Size: ~ 322.35 Mb  
+- Image ID: `sha256:50a2cce3d7a5384b1b958b3490f293cf632f2df363dbb39d225366085d218084`
+- Created: `2022-11-10T20:57:42.96526205Z`
+- Virtual Size: ~ 279.55 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -16,14 +16,14 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.33`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.33.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.33.tar.xz.asc`
-  - `PHP_SHA256=924846abf93bc613815c55dd3f5809377813ac62a9ec4eb3778675b82a27b927`
+  - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4`
+  - `PHP_VERSION=8.0.25`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.25.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.25.tar.xz.asc`
+  - `PHP_SHA256=a291b71d0498707fc5514eb5b9513e88f0f1d4890bcdefd67282ded8a2bfb941`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
-  - `JOOMLA_VERSION=4.2.3`
-  - `JOOMLA_SHA512=8d24be3f0f1dd616d4ddc84ace89f7944b23bb32037a198b5c04c1f9e39c59a4496c760b5dd71bafe5b081799be630f2a905b11093760a9eb183e8f62db6d0bb`
+  - `JOOMLA_VERSION=3.10.11`
+  - `JOOMLA_SHA512=2c7db516ea07fa869cfff0ee01c9d141a8ac513c8040db6502e111a3d34cc681f6fee033006eeff0aa7f507a30280276c68af61c4d7595166bf9fd57728a9b44`
 - Labels:
   - `maintainer=Llewellyn van der Merwe <llewellyn.van-der-merwe@community.joomla.org> (@Llewellynvdm), Harald Leithner <harald.leithner@community.joomla.org> (@HLeithner)`
 
@@ -539,40 +539,6 @@ MIT
 
 ```
 
-### `apk` package: `icu-data-en`
-
-```console
-icu-data-en-71.1-r2 description:
-Stripped down ICU data with only en_US/GB locale and no legacy charset converters
-
-icu-data-en-71.1-r2 webpage:
-https://icu.unicode.org/
-
-icu-data-en-71.1-r2 installed size:
-2640 KiB
-
-icu-data-en-71.1-r2 license:
-MIT ICU Unicode-TOU
-
-```
-
-### `apk` package: `icu-libs`
-
-```console
-icu-libs-71.1-r2 description:
-International Components for Unicode library (libraries)
-
-icu-libs-71.1-r2 webpage:
-https://icu.unicode.org/
-
-icu-libs-71.1-r2 installed size:
-4540 KiB
-
-icu-libs-71.1-r2 license:
-MIT ICU Unicode-TOU
-
-```
-
 ### `apk` package: `imagemagick`
 
 ```console
@@ -882,16 +848,16 @@ Apache-2.0
 ### `apk` package: `libldap`
 
 ```console
-libldap-2.6.3-r1 description:
+libldap-2.6.3-r3 description:
 OpenLDAP libraries
 
-libldap-2.6.3-r1 webpage:
+libldap-2.6.3-r3 webpage:
 https://www.openldap.org/
 
-libldap-2.6.3-r1 installed size:
+libldap-2.6.3-r3 installed size:
 400 KiB
 
-libldap-2.6.3-r1 license:
+libldap-2.6.3-r3 license:
 OLDAP-2.8
 
 ```
@@ -910,6 +876,23 @@ libltdl-2.4.7-r0 installed size:
 
 libltdl-2.4.7-r0 license:
 LGPL-2.0-or-later AND GPL-2.0-or-later
+
+```
+
+### `apk` package: `libmcrypt`
+
+```console
+libmcrypt-2.5.8-r9 description:
+A library which provides a uniform interface to several symmetric encryption algorithms
+
+libmcrypt-2.5.8-r9 webpage:
+http://mcrypt.sourceforge.net/
+
+libmcrypt-2.5.8-r9 installed size:
+176 KiB
+
+libmcrypt-2.5.8-r9 license:
+LGPL-2.1-or-later
 
 ```
 
@@ -1001,16 +984,16 @@ LGPL-2.1-or-later
 ### `apk` package: `libsasl`
 
 ```console
-libsasl-2.1.28-r0 description:
+libsasl-2.1.28-r1 description:
 Cyrus Simple Authentication and Security Layer (SASL) library
 
-libsasl-2.1.28-r0 webpage:
+libsasl-2.1.28-r1 webpage:
 https://www.cyrusimap.org/sasl/
 
-libsasl-2.1.28-r0 installed size:
+libsasl-2.1.28-r1 installed size:
 192 KiB
 
-libsasl-2.1.28-r0 license:
+libsasl-2.1.28-r1 license:
 custom
 
 ```
@@ -1273,16 +1256,16 @@ BSD-3-Clause
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.3-r0 description:
+musl-1.2.3-r1 description:
 the musl c library (libc) implementation
 
-musl-1.2.3-r0 webpage:
+musl-1.2.3-r1 webpage:
 https://musl.libc.org/
 
-musl-1.2.3-r0 installed size:
+musl-1.2.3-r1 installed size:
 608 KiB
 
-musl-1.2.3-r0 license:
+musl-1.2.3-r1 license:
 MIT
 
 ```
