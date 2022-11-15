@@ -1,7 +1,7 @@
 ## `gcc:11-bullseye`
 
 ```console
-$ docker pull gcc@sha256:87c872b8114461e155e57d1c088062ffab4c90de37bfb0e061d9fc233526c3f3
+$ docker pull gcc@sha256:023fb94f8716fe72e75a8fb7cfe70dcd1f39f83111d5fb66244128240b565341
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -98,83 +98,83 @@ RUN set -ex; 	dpkg-divert --divert /usr/bin/gcc.orig --rename /usr/bin/gcc; 	dpk
 ### `gcc:11-bullseye` - linux; arm variant v5
 
 ```console
-$ docker pull gcc@sha256:55c43ebf98a9d34e332b6ab5d05348158a849ec10b5950abadeb11ad22a2ff98
+$ docker pull gcc@sha256:f22f8b0acbb25e31d83f4c8008e02c85b6cd02dd221308d3debf399d44497229
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **400.0 MB (400022226 bytes)**  
+-	Total Size: **400.0 MB (400018579 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9692e20c351be6ae679b20533da2c64177bee2a1665aa75e1f5bbd4c48940378`
+-	Image ID: `sha256:308e72c6731566b5b243fbab0f1d5348b00abf3a545f0cd96beb53b7b893767c`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 25 Oct 2022 03:06:19 GMT
-ADD file:b314b98654e8532fd10a08a172ea5c3edb7d7a36c7faf85d06d14be12f7b83ef in / 
-# Tue, 25 Oct 2022 03:06:19 GMT
+# Tue, 15 Nov 2022 01:49:01 GMT
+ADD file:1301cc1a3eec72236eb8cfb02c81a3e956e32a32025a89995435b641e1d9330d in / 
+# Tue, 15 Nov 2022 01:49:02 GMT
 CMD ["bash"]
-# Tue, 25 Oct 2022 06:12:04 GMT
+# Tue, 15 Nov 2022 05:42:09 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 06:12:14 GMT
+# Tue, 15 Nov 2022 05:42:17 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 25 Oct 2022 06:12:42 GMT
+# Tue, 15 Nov 2022 05:42:44 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 06:14:01 GMT
+# Tue, 15 Nov 2022 05:43:43 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 15:04:19 GMT
+# Tue, 15 Nov 2022 14:01:45 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
-# Tue, 25 Oct 2022 15:04:19 GMT
+# Tue, 15 Nov 2022 14:01:45 GMT
 ENV GPG_KEYS=B215C1633BCA0477615F1B35A5B3A004745C015A 	B3C42148A44E6983B3E4CC0793FA9B1AB75C61B8 	90AA470469D3965A87A5DCB494D03953902C9419 	80F98B2E0DAB6C8281BDF541A7C8C3B2F71EDF1C 	7F74F97C103468EE5D750B583AB00996FC26A641 	33C235A34C46AA3FFB293709A328C3A2C3C45C06 	D3A93CAD751C2AF4F8C7AD516C35B99309B5FA62
-# Tue, 25 Oct 2022 15:04:24 GMT
+# Tue, 15 Nov 2022 14:01:50 GMT
 RUN set -ex; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done
-# Tue, 25 Oct 2022 15:04:24 GMT
+# Tue, 15 Nov 2022 14:01:50 GMT
 ENV GCC_MIRRORS=https://ftpmirror.gnu.org/gcc 		https://mirrors.kernel.org/gnu/gcc 		https://bigsearcher.com/mirrors/gcc/releases 		http://www.netgull.com/gcc/releases 		https://ftpmirror.gnu.org/gcc 		ftp://ftp.gnu.org/gnu/gcc
-# Tue, 25 Oct 2022 15:59:05 GMT
+# Tue, 15 Nov 2022 14:57:00 GMT
 ENV GCC_VERSION=11.3.0
-# Tue, 25 Oct 2022 16:53:32 GMT
+# Tue, 15 Nov 2022 15:51:05 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dpkg-dev 		flex 	; 	rm -r /var/lib/apt/lists/*; 		_fetch() { 		local fetch="$1"; shift; 		local file="$1"; shift; 		for mirror in $GCC_MIRRORS; do 			if curl -fL "$mirror/$fetch" -o "$file"; then 				return 0; 			fi; 		done; 		echo >&2 "error: failed to download '$fetch' from several mirrors"; 		return 1; 	}; 		_fetch "gcc-$GCC_VERSION/gcc-$GCC_VERSION.tar.xz.sig" 'gcc.tar.xz.sig'; 	_fetch "gcc-$GCC_VERSION/gcc-$GCC_VERSION.tar.xz" 'gcc.tar.xz'; 	gpg --batch --verify gcc.tar.xz.sig gcc.tar.xz; 	mkdir -p /usr/src/gcc; 	tar -xf gcc.tar.xz -C /usr/src/gcc --strip-components=1; 	rm gcc.tar.xz*; 		cd /usr/src/gcc; 		./contrib/download_prerequisites; 	{ rm *.tar.* || true; }; 		for f in config.guess config.sub; do 		wget -O "$f" "https://git.savannah.gnu.org/cgit/config.git/plain/$f?id=7d3d27baf8107b630586c962c057e22149653deb"; 		find -mindepth 2 -name "$f" -exec cp -v "$f" '{}' ';'; 	done; 		dir="$(mktemp -d)"; 	cd "$dir"; 		extraConfigureArgs=''; 	dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		armel) 			extraConfigureArgs="$extraConfigureArgs --with-arch=armv5te --with-float=soft" 			;; 		armhf) 			extraConfigureArgs="$extraConfigureArgs --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb" 			;; 				i386) 			extraConfigureArgs="$extraConfigureArgs --with-arch-32=i686"; 			;; 	esac; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	/usr/src/gcc/configure 		--build="$gnuArch" 		--disable-multilib 		--enable-languages=c,c++,fortran,go 		$extraConfigureArgs 	; 	make -j "$(nproc)"; 	make install-strip; 		cd ..; 		rm -rf "$dir" /usr/src/gcc; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Tue, 25 Oct 2022 16:53:35 GMT
+# Tue, 15 Nov 2022 15:51:06 GMT
 RUN set -ex; 	{ echo '/usr/local/lib64'; echo '/usr/local/lib'; } > /etc/ld.so.conf.d/000-local-lib.conf; 	ldconfig -v
-# Tue, 25 Oct 2022 16:53:36 GMT
+# Tue, 15 Nov 2022 15:51:06 GMT
 RUN set -ex; 	dpkg-divert --divert /usr/bin/gcc.orig --rename /usr/bin/gcc; 	dpkg-divert --divert /usr/bin/g++.orig --rename /usr/bin/g++; 	dpkg-divert --divert /usr/bin/gfortran.orig --rename /usr/bin/gfortran; 	update-alternatives --install /usr/bin/cc cc /usr/local/bin/gcc 999
 ```
 
 -	Layers:
-	-	`sha256:1f0ecb08923b99bef3f82c2e88603bb53e3ed084c13252275c05039cc279c158`  
-		Last Modified: Tue, 25 Oct 2022 03:11:15 GMT  
-		Size: 52.5 MB (52547473 bytes)  
+	-	`sha256:0655cdb20ead0094190060645bdf853e9427b58a64f0c7d92ae439b80ca81fdf`  
+		Last Modified: Tue, 15 Nov 2022 01:53:55 GMT  
+		Size: 52.5 MB (52542295 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c8b399c5eb53b4c35fa33682a82d73bdc4b096cd78ae95fe36c4ed81d18f6849`  
-		Last Modified: Tue, 25 Oct 2022 06:19:02 GMT  
-		Size: 5.1 MB (5072235 bytes)  
+	-	`sha256:8bbb37740fe3185bdb0707209ff5ad54853d540c2a95c40ae3d998c9d4dcbe26`  
+		Last Modified: Tue, 15 Nov 2022 05:48:21 GMT  
+		Size: 5.1 MB (5072242 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23ccdd06393cd3873a3cc8b9cbe170a2032fd61d1d545b7045b649faf2f4e732`  
-		Last Modified: Tue, 25 Oct 2022 06:19:02 GMT  
-		Size: 10.6 MB (10574279 bytes)  
+	-	`sha256:ce25a37fc4ddb3f5200d17fea7e9ac780e294a18828ae0381ccb9c923c0d0f4f`  
+		Last Modified: Tue, 15 Nov 2022 05:48:22 GMT  
+		Size: 10.6 MB (10574332 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5aafe0e287af4e488dcda51195e4eb1ae1386e3265989c457172f32f6357bf26`  
-		Last Modified: Tue, 25 Oct 2022 06:19:28 GMT  
-		Size: 52.3 MB (52322157 bytes)  
+	-	`sha256:28570b06bbb5d744b44244a4402740ce8f46ce1521152a97286cf795ccd833ff`  
+		Last Modified: Tue, 15 Nov 2022 05:48:46 GMT  
+		Size: 52.3 MB (52322588 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:22771ccea19352dbb0e5ba44c17b8ef14425ff0a22c744bca41cdbde02bdfd9f`  
-		Last Modified: Tue, 25 Oct 2022 06:20:12 GMT  
-		Size: 175.0 MB (175040117 bytes)  
+	-	`sha256:e0e615eccf33dd8f0357cf8753f2820b809b923fd77333de02aede7b12d01186`  
+		Last Modified: Tue, 15 Nov 2022 05:49:30 GMT  
+		Size: 175.0 MB (175043532 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0c8738345642a7ee20191ae4e27cc243a5dc9e37f242220a50fe8637896e3d67`  
-		Last Modified: Tue, 25 Oct 2022 16:54:31 GMT  
-		Size: 16.1 KB (16088 bytes)  
+	-	`sha256:32e3970e59c56852d8004fb1d39f2efb34a039b61a741eb46d9644667d4079e1`  
+		Last Modified: Tue, 15 Nov 2022 15:51:56 GMT  
+		Size: 16.1 KB (16092 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae456622b7cdccca5b30c811df2b6939bc17e9c04e411579e87f46cd4ad4851d`  
-		Last Modified: Wed, 26 Oct 2022 15:56:38 GMT  
-		Size: 104.4 MB (104438179 bytes)  
+	-	`sha256:62bce1faaa1d397e18faf935750872e12632861ae8afd7e1b71dbfbbdf253056`  
+		Last Modified: Tue, 15 Nov 2022 15:53:07 GMT  
+		Size: 104.4 MB (104435788 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9505702a8da74e841de2e6478d77aa5eb0104055571015f7485c7fc402e6dca5`  
-		Last Modified: Wed, 26 Oct 2022 15:56:19 GMT  
-		Size: 9.8 KB (9818 bytes)  
+	-	`sha256:228a7ac410fa03df3ab62d3d9b8659baf8402af7678172d6396d4efc2f62f705`  
+		Last Modified: Tue, 15 Nov 2022 15:52:48 GMT  
+		Size: 9.8 KB (9825 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a974ac1f4f0b19b9d08fe2a7a8bfea1368539ea6a8e69775461a297677d9a7b`  
-		Last Modified: Wed, 26 Oct 2022 15:56:18 GMT  
-		Size: 1.9 KB (1880 bytes)  
+	-	`sha256:e74ceb02031adc18ef8e4bab290bd3fbd7bff102e5dfea28841f85f7795be85f`  
+		Last Modified: Tue, 15 Nov 2022 15:52:48 GMT  
+		Size: 1.9 KB (1885 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `gcc:11-bullseye` - linux; arm variant v7
