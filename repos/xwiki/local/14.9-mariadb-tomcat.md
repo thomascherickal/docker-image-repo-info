@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1a54a7fae182a835274fc2490518f2077df3b0b7bd11c16919c3566d620aad5d`
-- Created: `2022-11-05T02:49:06.208843629Z`
+- Image ID: `sha256:452b812db2340ea384ce0f62d27ed6b242f7a95a36ef1939f1cada4ea73c2993`
+- Created: `2022-11-15T09:45:40.887988557Z`
 - Virtual Size: ~ 1.17 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -21,8 +21,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=48F8E69F6390C9F25CFEDCD268248959359E722B A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.68`
-  - `TOMCAT_SHA512=840b21c5cd2bfea7bbfed99741c166608fa1515bb00475ebd4eccfd4f3ed2a1be6bfffd590b2a6600003205b62f271b6ba0937e557fc65a536df61cb4f7b7c8f`
+  - `TOMCAT_VERSION=9.0.69`
+  - `TOMCAT_SHA512=8c883c54ce9ce43eba37756a6404cdf3477879883a3e6d146dc8a7aa5e0425f487466afe6b6da4a895927cb7cb59177b9379cec18000f2de12785be57408c779`
   - `XWIKI_VERSION=14.9`
   - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/14.9`
   - `XWIKI_DOWNLOAD_SHA256=9a8639b590b2612c1603ac6788fe83b4d79dbaad484cc5c60230c00f16781460`
@@ -3337,11 +3337,11 @@ $ apt-get source -qq --print-uris pinentry=1.1.1-1build2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.1-1build2.debian.tar.xz' pinentry_1.1.1-1build2.debian.tar.xz 20060 SHA512:34adaf10856d36e7294fbc9841f6c1b2c9fc1d507fcff6d4c9c3f4e11d5aed9ce744d091f25e013084d56ce8ed3245fff67a7b5d799081def0c68345e921241e
 ```
 
-### `dpkg` source package: `pixman=0.40.0-1build4`
+### `dpkg` source package: `pixman=0.40.0-1ubuntu0.22.04.1`
 
 Binary Packages:
 
-- `libpixman-1-0:amd64=0.40.0-1build4`
+- `libpixman-1-0:amd64=0.40.0-1ubuntu0.22.04.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -3350,10 +3350,10 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris pixman=0.40.0-1build4
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pixman/pixman_0.40.0-1build4.dsc' pixman_0.40.0-1build4.dsc 2153 SHA512:b7893cacd1f4ab6b1012e4493fea0f5c95361cedd9ac1b4125b0660789724f3bfac0f3d2c17461390b77573bb41eb6fdc5370bde74b0a08669707820b415d75f
+$ apt-get source -qq --print-uris pixman=0.40.0-1ubuntu0.22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pixman/pixman_0.40.0-1ubuntu0.22.04.1.dsc' pixman_0.40.0-1ubuntu0.22.04.1.dsc 2160 SHA512:8065633dbf5f1d29da28dc2b97cdd6cb3f01a2904ecac623a8dc7d4fec0c1b15fe973edcc9d3ccc69362ce8da209325c6b522da021bf51b3a27fb10ce280b095
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pixman/pixman_0.40.0.orig.tar.gz' pixman_0.40.0.orig.tar.gz 913976 SHA512:063776e132f5d59a6d3f94497da41d6fc1c7dca0d269149c78247f0e0d7f520a25208d908cf5e421d1564889a91da44267b12d61c0bd7934cd54261729a7de5f
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pixman/pixman_0.40.0-1build4.diff.gz' pixman_0.40.0-1build4.diff.gz 327140 SHA512:1e27c3ca21d9e31640dfefe5576fa3d191890e47b0369c101d724aa95dd68bd9fc97d56b4b8ed700b68cc895a196e2ab3ceb5f77ed8c2e00655cfd20281edd92
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pixman/pixman_0.40.0-1ubuntu0.22.04.1.diff.gz' pixman_0.40.0-1ubuntu0.22.04.1.diff.gz 327740 SHA512:68949ad2589a7ae9fbe217a3d7fc58894d5a1b4bc6e219840b8620141fa2240b44e6a393bf847bfd18f5fcab2c6c6f143273936b076c29e1f979052b1275cb8e
 ```
 
 ### `dpkg` source package: `poppler=22.02.0-2ubuntu0.1`
@@ -3630,11 +3630,11 @@ $ apt-get source -qq --print-uris shadow=1:4.8.1-2ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-2ubuntu2.debian.tar.xz' shadow_4.8.1-2ubuntu2.debian.tar.xz 86604 SHA512:a3165c2df5848aebee7263b6d113dd0470cc07984e67602984b2f4c97fe97b0e141284ef02bd66a159acb34922b2d09fe999b1c6969a915423e8f421a7cb8d9f
 ```
 
-### `dpkg` source package: `sqlite3=3.37.2-2`
+### `dpkg` source package: `sqlite3=3.37.2-2ubuntu0.1`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.37.2-2`
+- `libsqlite3-0:amd64=3.37.2-2ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -3645,11 +3645,11 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris sqlite3=3.37.2-2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.37.2-2.dsc' sqlite3_3.37.2-2.dsc 2487 SHA512:d542b60afedb0556cc0c56622934bbd5d6ac456c00bca4ba38ef47245c7b798b871382c2b48b9a9b8a3aa12133b0d19bcc3a81aeebfb3619dca139493586b61f
+$ apt-get source -qq --print-uris sqlite3=3.37.2-2ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.37.2-2ubuntu0.1.dsc' sqlite3_3.37.2-2ubuntu0.1.dsc 2602 SHA512:d497f7faceb2ac77ecd3eab51f0bd8844deef1f77ebd6d318ac2f2f677e7f66bb8b31685d4c7710a5015e1769f8fd96b2c751177313c5a2000bcf9d1a49a233d
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.37.2.orig-www.tar.xz' sqlite3_3.37.2.orig-www.tar.xz 5694016 SHA512:577e34b4ae18a3c73be6d955a2e2321e993f61decefbcca5112170072ea556eca93dcf55f3059fbcd96147124442b368150de7f68c603e84b80cbe0228ae78f8
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.37.2.orig.tar.xz' sqlite3_3.37.2.orig.tar.xz 7623768 SHA512:dfa51b0a32ab0597cd00ae7abdb53bb255102f397ff8409f3fdbefaad17bc7d5a25f53db90bed47feb1bf4a9a1a4707bc40440c6c5303f3ef5c49ded61558fed
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.37.2-2.debian.tar.xz' sqlite3_3.37.2-2.debian.tar.xz 28536 SHA512:244fccac20d6c63c4897c04bf490603b0ee54d522aa2040d5ff5e41cc4665c8a32ac95e67fbc9961978b67dcbc64f84999b1502fb1696e138a1944aff113cd2f
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.37.2-2ubuntu0.1.debian.tar.xz' sqlite3_3.37.2-2ubuntu0.1.debian.tar.xz 29208 SHA512:db22aee842a2bbeae82d43909e357fb8e0985b1410decf82240d1f86939fd5ac10b116512566d87f2250e7a99e36c3736675d23111e851a7c1cb0d0192157955
 ```
 
 ### `dpkg` source package: `suitesparse=1:5.10.1+dfsg-4build1`
@@ -3752,19 +3752,25 @@ $ apt-get source -qq --print-uris tar=1.34+dfsg-1build3
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1build3.debian.tar.xz' tar_1.34+dfsg-1build3.debian.tar.xz 19416 SHA512:3fbe7b908963df828585139f884762b698c14a2fc37618dcf3adb90819b160c8ea7aaa2e9dc9470abf40bd5100710dd1292f666cb77865ef3c558729dd313521
 ```
 
-### `dpkg` source package: `tiff=4.3.0-6ubuntu0.1`
+### `dpkg` source package: `tiff=4.3.0-6ubuntu0.2`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.3.0-6ubuntu0.1`
+- `libtiff5:amd64=4.3.0-6ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tiff=4.3.0-6ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6ubuntu0.2.dsc' tiff_4.3.0-6ubuntu0.2.dsc 2402 SHA512:8f5796cc9dbace8f5bd04f538bd5877e564561414053a31aea1641d6e04593ff8a4837ebc7144d5efec67e5def86f0ef06eabb4e391ff0e39add933fcb19b72b
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz' tiff_4.3.0.orig.tar.gz 2808254 SHA512:e04a4a6c542e58a174c1e9516af3908acf1d3d3e1096648c5514f4963f73e7af27387a76b0fbabe43cf867a18874088f963796a7cd6e45deb998692e3e235493
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz.asc' tiff_4.3.0.orig.tar.gz.asc 488 SHA512:115a4c5714b52d0fbea800c494d83c8a96b70b2c9ce84a8df03205d9afc517faa17963f5f9508c013d7d3e2be6675b84b594a771a829406473234c4bd85e469e
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6ubuntu0.2.debian.tar.xz' tiff_4.3.0-6ubuntu0.2.debian.tar.xz 35976 SHA512:dad60b4c39f1bcc3ff93b921f8cc9d162f8850c8ac9904aa783c09e2b0f7416923083f5fdbe18ce70196946c1354b07bad17b6a96aa1b29b1d02a98268400b1f
+```
 
 ### `dpkg` source package: `tzdata=2022e-0ubuntu0.22.04.0`
 
