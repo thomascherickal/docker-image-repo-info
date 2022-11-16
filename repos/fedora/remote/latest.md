@@ -1,7 +1,7 @@
 ## `fedora:latest`
 
 ```console
-$ docker pull fedora@sha256:95384f113325b9c3361183cb3f0e1a60a8ff23eaab84822c82fe90b5cbb272e5
+$ docker pull fedora@sha256:f99efcddc4dd6736d8a88cc1ab6722098ec1d77dbf7aed9a7a514fc997ca08e0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,31 +14,31 @@ $ docker pull fedora@sha256:95384f113325b9c3361183cb3f0e1a60a8ff23eaab84822c82fe
 ### `fedora:latest` - linux; amd64
 
 ```console
-$ docker pull fedora@sha256:455fec9590de794fbc21f61dbc7e90bf9918b58492d2a03fa269c09db47b43f6
+$ docker pull fedora@sha256:f2c083c0b7d2367a375f15e002c2dc7baaca2b3181ace61f9d5113a8fe2f6b44
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **60.0 MB (59995747 bytes)**  
+-	Total Size: **66.0 MB (65990920 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7654d129a8a25626dce55adfa5d8a419b794952229ed9542968ef7faca2ee975`
+-	Image ID: `sha256:d1cd7f8c89a93f2df69a6288203e2632cf24b2403589992d422dd30cae6b568c`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
 # Thu, 01 Apr 2021 17:59:37 GMT
 LABEL maintainer=Clement Verna <cverna@fedoraproject.org>
-# Sun, 20 Mar 2022 10:46:00 GMT
-ENV DISTTAG=f36container FGC=f36 FBR=f36
-# Thu, 03 Nov 2022 20:40:40 GMT
-ADD file:8d61743db71ec38169aae6644f4ef369766e0bece381549d7530d11df9a9a214 in / 
-# Thu, 03 Nov 2022 20:40:40 GMT
+# Sun, 20 Mar 2022 10:46:14 GMT
+ENV DISTTAG=f37container FGC=f37 FBR=f37
+# Wed, 16 Nov 2022 07:26:41 GMT
+ADD file:6eb7a2800b072a663ea0feb28b73f0d4f92a08fc61c63e1de27b8b41c1d4d810 in / 
+# Wed, 16 Nov 2022 07:26:42 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:e437052d4f94147f80c5b03d10b6d7e034a32b1db5a9f340b2c8090cec1376f8`  
-		Last Modified: Thu, 03 Nov 2022 20:41:48 GMT  
-		Size: 60.0 MB (59995747 bytes)  
+	-	`sha256:cb8b1ed77979b894115a983f391465651aa7eb3edd036be4b508eea47271eb93`  
+		Last Modified: Wed, 16 Nov 2022 07:27:47 GMT  
+		Size: 66.0 MB (65990920 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `fedora:latest` - linux; arm64 variant v8
