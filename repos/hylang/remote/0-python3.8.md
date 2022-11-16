@@ -1,7 +1,7 @@
 ## `hylang:0-python3.8`
 
 ```console
-$ docker pull hylang@sha256:ba3da5dd53f33f96d31a5a67b4740a1f4ea9b9812c5d9ac52132260eed6d6645
+$ docker pull hylang@sha256:92b8cf5181c44401907e371221e7492341b9a6f913c2dbe5a46dfd9c8e25fc7f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,14 +18,14 @@ $ docker pull hylang@sha256:ba3da5dd53f33f96d31a5a67b4740a1f4ea9b9812c5d9ac52132
 ### `hylang:0-python3.8` - linux; amd64
 
 ```console
-$ docker pull hylang@sha256:09cd7360f1aad315dcddcb9e939be51933b66589a3359b39575d384d5cdea3c3
+$ docker pull hylang@sha256:2f369875773815edf8e4f374a7ab3bbd3a6d16fb3580d6f6fb6d8ac3512d0162
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **50.8 MB (50829183 bytes)**  
+-	Total Size: **50.8 MB (50829154 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f00ae97802654e7e9c409c6c77699d7b53b3b95c1f4b3a4fa8743423a09adb71`
+-	Image ID: `sha256:0816aa6869c80da7c784716685bf7134815b98fe313d3c1ae77f307ef8fa10eb`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -51,21 +51,21 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.0.4
 # Tue, 15 Nov 2022 22:13:32 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=57.5.0
-# Tue, 15 Nov 2022 22:13:32 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/6d265be7a6b5bc4e9c5c07646aee0bf0394be03d/public/get-pip.py
-# Tue, 15 Nov 2022 22:13:32 GMT
-ENV PYTHON_GET_PIP_SHA256=36c6f6214694ef64cc70f4127ac0ccec668408a93825359d998fb31d24968d67
-# Tue, 15 Nov 2022 22:13:45 GMT
+# Wed, 16 Nov 2022 06:58:46 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/66030fa03382b4914d4c4d0896961a0bdeeeb274/public/get-pip.py
+# Wed, 16 Nov 2022 06:58:46 GMT
+ENV PYTHON_GET_PIP_SHA256=1e501cf004eac1b7eb1f97266d28f995ae835d30250bec7f8850562703067dc6
+# Wed, 16 Nov 2022 06:58:57 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Tue, 15 Nov 2022 22:13:45 GMT
+# Wed, 16 Nov 2022 06:58:57 GMT
 CMD ["python3"]
-# Tue, 15 Nov 2022 23:07:19 GMT
+# Wed, 16 Nov 2022 07:36:40 GMT
 ENV HY_VERSION=0.25.0
-# Tue, 15 Nov 2022 23:07:19 GMT
+# Wed, 16 Nov 2022 07:36:40 GMT
 ENV HYRULE_VERSION=0.2.1
-# Tue, 15 Nov 2022 23:07:34 GMT
+# Wed, 16 Nov 2022 07:36:55 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION" "hyrule == $HYRULE_VERSION"
-# Tue, 15 Nov 2022 23:07:34 GMT
+# Wed, 16 Nov 2022 07:36:55 GMT
 CMD ["hy"]
 ```
 
@@ -86,13 +86,13 @@ CMD ["hy"]
 		Last Modified: Tue, 15 Nov 2022 23:02:13 GMT  
 		Size: 232.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff216a68487a836fd009a815efc638c86a9fa266b37192cfacbcf01d33eb0dbb`  
-		Last Modified: Tue, 15 Nov 2022 23:02:14 GMT  
-		Size: 3.2 MB (3178975 bytes)  
+	-	`sha256:6a0e4abca74a97205cba7ecb141fd4210bfab67dddb55e3a1fdaa6bcefbc44de`  
+		Last Modified: Wed, 16 Nov 2022 07:09:04 GMT  
+		Size: 3.2 MB (3178973 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fafff410ff078d3d13c53147d962dd15591e409cb07769aab2bf5fa61520497f`  
-		Last Modified: Tue, 15 Nov 2022 23:17:29 GMT  
-		Size: 3.8 MB (3823877 bytes)  
+	-	`sha256:5938a6afaa05857dadcee76f4745a76467dd35d1670e0d37eea7fc821b9a3035`  
+		Last Modified: Wed, 16 Nov 2022 07:46:52 GMT  
+		Size: 3.8 MB (3823850 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:0-python3.8` - linux; arm variant v5

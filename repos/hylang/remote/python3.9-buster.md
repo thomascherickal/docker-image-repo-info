@@ -1,7 +1,7 @@
 ## `hylang:python3.9-buster`
 
 ```console
-$ docker pull hylang@sha256:0f3c31939eb92069232baf4ef77e0bf976da195cd1203edc940df33ab4c01cb8
+$ docker pull hylang@sha256:2f0fd9ef4d116bd97e16a6ea38a2d483abcc7cd20be2fa5026547a948d3fca93
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,14 +14,14 @@ $ docker pull hylang@sha256:0f3c31939eb92069232baf4ef77e0bf976da195cd1203edc940d
 ### `hylang:python3.9-buster` - linux; amd64
 
 ```console
-$ docker pull hylang@sha256:66919158a6840e6ffc4bde79715501dc92cf461b3f54470f56b3f386431e3de1
+$ docker pull hylang@sha256:abf85d0e59cab90f46561848426d4f126e1256e41ca6315969eb12ef1eda6bdb
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.4 MB (48384236 bytes)**  
+-	Total Size: **48.4 MB (48384312 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3a90ea5ba181e046fefd57b55c1bb82f606a339b6eb1cd12cab1d7802064ef47`
+-	Image ID: `sha256:df4ed4ddba96533d46e413fb7c131a952b6220e57090a0109032c2e53c430f80`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -47,21 +47,21 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.0.4
 # Tue, 15 Nov 2022 22:00:10 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=58.1.0
-# Tue, 15 Nov 2022 22:00:10 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/6d265be7a6b5bc4e9c5c07646aee0bf0394be03d/public/get-pip.py
-# Tue, 15 Nov 2022 22:00:10 GMT
-ENV PYTHON_GET_PIP_SHA256=36c6f6214694ef64cc70f4127ac0ccec668408a93825359d998fb31d24968d67
-# Tue, 15 Nov 2022 22:00:23 GMT
+# Wed, 16 Nov 2022 06:58:03 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/66030fa03382b4914d4c4d0896961a0bdeeeb274/public/get-pip.py
+# Wed, 16 Nov 2022 06:58:03 GMT
+ENV PYTHON_GET_PIP_SHA256=1e501cf004eac1b7eb1f97266d28f995ae835d30250bec7f8850562703067dc6
+# Wed, 16 Nov 2022 06:58:15 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Tue, 15 Nov 2022 22:00:23 GMT
+# Wed, 16 Nov 2022 06:58:15 GMT
 CMD ["python3"]
-# Tue, 15 Nov 2022 23:06:57 GMT
+# Wed, 16 Nov 2022 07:35:46 GMT
 ENV HY_VERSION=0.25.0
-# Tue, 15 Nov 2022 23:06:57 GMT
+# Wed, 16 Nov 2022 07:35:46 GMT
 ENV HYRULE_VERSION=0.2.1
-# Tue, 15 Nov 2022 23:07:10 GMT
+# Wed, 16 Nov 2022 07:36:00 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION" "hyrule == $HYRULE_VERSION"
-# Tue, 15 Nov 2022 23:07:11 GMT
+# Wed, 16 Nov 2022 07:36:00 GMT
 CMD ["hy"]
 ```
 
@@ -82,13 +82,13 @@ CMD ["hy"]
 		Last Modified: Tue, 15 Nov 2022 23:01:50 GMT  
 		Size: 233.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:45f0bbb5157b2be568b7263d08868651d0920c543f79bb95f83e013e4d6170b3`  
-		Last Modified: Tue, 15 Nov 2022 23:01:51 GMT  
-		Size: 3.2 MB (3172905 bytes)  
+	-	`sha256:1d00b2d9e1d30b47820a61c452b256440db3a18677958db05e762e157591a835`  
+		Last Modified: Wed, 16 Nov 2022 07:08:08 GMT  
+		Size: 3.2 MB (3172897 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a868f8b27b2946a0c486db9dfc718f9a48120c1114c9486c919fb42f421988b5`  
-		Last Modified: Tue, 15 Nov 2022 23:17:11 GMT  
-		Size: 3.7 MB (3720900 bytes)  
+	-	`sha256:d59d2bf9bf368098e6f7fe5b8d0c8108cbd69c70a29225d24fcff160e50895f7`  
+		Last Modified: Wed, 16 Nov 2022 07:45:57 GMT  
+		Size: 3.7 MB (3720984 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:python3.9-buster` - linux; arm variant v7

@@ -1,7 +1,7 @@
 ## `hylang:0-python3.10-bullseye`
 
 ```console
-$ docker pull hylang@sha256:fa103d7b86ac025e18ecc84b23896527e1a83bc1e15ffa0f34c94828de7b0b0b
+$ docker pull hylang@sha256:ebf3873c8e6607797c52087c21ffd11107668652b4747bce5eeeec1d0cde6bdb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,14 +18,14 @@ $ docker pull hylang@sha256:fa103d7b86ac025e18ecc84b23896527e1a83bc1e15ffa0f34c9
 ### `hylang:0-python3.10-bullseye` - linux; amd64
 
 ```console
-$ docker pull hylang@sha256:d577db24b4944ac2ac2e8d7dd2ca2c3461cb4db55a9892eea4f8a6a3c66e168f
+$ docker pull hylang@sha256:ad21164ee90b68d6cde5920e57a547afc34e23cd71f0f1aa6ab0f8a8b29eae43
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **52.0 MB (51966141 bytes)**  
+-	Total Size: **52.0 MB (51966205 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:218f82ac80e05de5c01e50b02ec44c7fbf555495369f789b817c600ded76b324`
+-	Image ID: `sha256:f9ed5c69c82d3f9ebb9e1e363db0b30738bc8c7da9f3d4cd9fde52d5772c2506`
 -	Default Command: `["hy"]`
 
 ```dockerfile
@@ -51,21 +51,21 @@ RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo 
 ENV PYTHON_PIP_VERSION=22.2.2
 # Tue, 15 Nov 2022 21:08:19 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=63.2.0
-# Tue, 15 Nov 2022 21:08:19 GMT
-ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/6d265be7a6b5bc4e9c5c07646aee0bf0394be03d/public/get-pip.py
-# Tue, 15 Nov 2022 21:08:20 GMT
-ENV PYTHON_GET_PIP_SHA256=36c6f6214694ef64cc70f4127ac0ccec668408a93825359d998fb31d24968d67
-# Tue, 15 Nov 2022 21:08:31 GMT
+# Wed, 16 Nov 2022 06:56:36 GMT
+ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/66030fa03382b4914d4c4d0896961a0bdeeeb274/public/get-pip.py
+# Wed, 16 Nov 2022 06:56:36 GMT
+ENV PYTHON_GET_PIP_SHA256=1e501cf004eac1b7eb1f97266d28f995ae835d30250bec7f8850562703067dc6
+# Wed, 16 Nov 2022 06:56:47 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Tue, 15 Nov 2022 21:08:32 GMT
+# Wed, 16 Nov 2022 06:56:47 GMT
 CMD ["python3"]
-# Tue, 15 Nov 2022 23:06:01 GMT
+# Wed, 16 Nov 2022 07:34:22 GMT
 ENV HY_VERSION=0.25.0
-# Tue, 15 Nov 2022 23:06:01 GMT
+# Wed, 16 Nov 2022 07:34:22 GMT
 ENV HYRULE_VERSION=0.2.1
-# Tue, 15 Nov 2022 23:06:13 GMT
+# Wed, 16 Nov 2022 07:34:34 GMT
 RUN pip install --no-cache-dir "hy == $HY_VERSION" "hyrule == $HYRULE_VERSION"
-# Tue, 15 Nov 2022 23:06:13 GMT
+# Wed, 16 Nov 2022 07:34:34 GMT
 CMD ["hy"]
 ```
 
@@ -86,13 +86,13 @@ CMD ["hy"]
 		Last Modified: Tue, 15 Nov 2022 23:00:35 GMT  
 		Size: 232.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1c5f26de2e9c5c3631995cd8e238559f561ed33e66b7bcf37277c6d2d2eca235`  
-		Last Modified: Tue, 15 Nov 2022 23:00:35 GMT  
-		Size: 3.3 MB (3336768 bytes)  
+	-	`sha256:04a9993ebea101b8473401cf28834c76c4e7a97ef0f463f6707e1ac09ae68220`  
+		Last Modified: Wed, 16 Nov 2022 07:06:31 GMT  
+		Size: 3.3 MB (3336793 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:78a53194e947b71c721e8b2283090817881c61a91838ba3428cb0843e6b3ff15`  
-		Last Modified: Tue, 15 Nov 2022 23:16:26 GMT  
-		Size: 4.0 MB (4034198 bytes)  
+	-	`sha256:eb73fd47886e05301f6862b31a8fd1d82a5b140107c4892eaa7b71e57e703956`  
+		Last Modified: Wed, 16 Nov 2022 07:44:28 GMT  
+		Size: 4.0 MB (4034237 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `hylang:0-python3.10-bullseye` - linux; arm variant v5
