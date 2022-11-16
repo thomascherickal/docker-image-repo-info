@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f313713ca4d6e5f04d575a3cb3578041af27ce60f4fa3e39a0b9b224ba5cf268`
-- Created: `2022-11-03T18:45:23.6607149Z`
-- Virtual Size: ~ 112.43 Mb  
+- Image ID: `sha256:53c5e9b034b29785f897037365e1675f916cc6399c220841e2de01b108f0f542`
+- Created: `2022-11-12T12:07:03.858658847Z`
+- Virtual Size: ~ 109.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -33,16 +33,16 @@
 ### `apk` package: `alpine-baselayout`
 
 ```console
-alpine-baselayout-3.2.0-r22 description:
+alpine-baselayout-3.2.0-r23 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-3.2.0-r22 webpage:
+alpine-baselayout-3.2.0-r23 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-3.2.0-r22 installed size:
+alpine-baselayout-3.2.0-r23 installed size:
 340 KiB
 
-alpine-baselayout-3.2.0-r22 license:
+alpine-baselayout-3.2.0-r23 license:
 GPL-2.0-only
 
 ```
@@ -50,16 +50,16 @@ GPL-2.0-only
 ### `apk` package: `alpine-baselayout-data`
 
 ```console
-alpine-baselayout-data-3.2.0-r22 description:
+alpine-baselayout-data-3.2.0-r23 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-data-3.2.0-r22 webpage:
+alpine-baselayout-data-3.2.0-r23 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-data-3.2.0-r22 installed size:
-72 KiB
+alpine-baselayout-data-3.2.0-r23 installed size:
+76 KiB
 
-alpine-baselayout-data-3.2.0-r22 license:
+alpine-baselayout-data-3.2.0-r23 license:
 GPL-2.0-only
 
 ```
@@ -186,16 +186,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.83.1-r3 description:
+curl-7.83.1-r4 description:
 URL retrival utility and library
 
-curl-7.83.1-r3 webpage:
+curl-7.83.1-r4 webpage:
 https://curl.se/
 
-curl-7.83.1-r3 installed size:
+curl-7.83.1-r4 installed size:
 256 KiB
 
-curl-7.83.1-r3 license:
+curl-7.83.1-r4 license:
 curl
 
 ```
@@ -798,16 +798,16 @@ GPL-2.0-or-later or GPL-3.0-or-later
 ### `apk` package: `libldap`
 
 ```console
-libldap-2.6.3-r1 description:
+libldap-2.6.3-r3 description:
 OpenLDAP libraries
 
-libldap-2.6.3-r1 webpage:
+libldap-2.6.3-r3 webpage:
 https://www.openldap.org/
 
-libldap-2.6.3-r1 installed size:
+libldap-2.6.3-r3 installed size:
 400 KiB
 
-libldap-2.6.3-r1 license:
+libldap-2.6.3-r3 license:
 OLDAP-2.8
 
 ```
@@ -866,16 +866,16 @@ Libpng
 ### `apk` package: `libsasl`
 
 ```console
-libsasl-2.1.28-r0 description:
+libsasl-2.1.28-r1 description:
 Cyrus Simple Authentication and Security Layer (SASL) library
 
-libsasl-2.1.28-r0 webpage:
+libsasl-2.1.28-r1 webpage:
 https://www.cyrusimap.org/sasl/
 
-libsasl-2.1.28-r0 installed size:
+libsasl-2.1.28-r1 installed size:
 192 KiB
 
-libsasl-2.1.28-r0 license:
+libsasl-2.1.28-r1 license:
 custom
 
 ```
@@ -1155,16 +1155,16 @@ GPL-3.0-or-later
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.3-r0 description:
+musl-1.2.3-r2 description:
 the musl c library (libc) implementation
 
-musl-1.2.3-r0 webpage:
+musl-1.2.3-r2 webpage:
 https://musl.libc.org/
 
-musl-1.2.3-r0 installed size:
+musl-1.2.3-r2 installed size:
 608 KiB
 
-musl-1.2.3-r0 license:
+musl-1.2.3-r2 license:
 MIT
 
 ```
@@ -1172,16 +1172,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.3-r0 description:
+musl-utils-1.2.3-r1 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.3-r0 webpage:
+musl-utils-1.2.3-r1 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.3-r0 installed size:
+musl-utils-1.2.3-r1 installed size:
 132 KiB
 
-musl-utils-1.2.3-r0 license:
+musl-utils-1.2.3-r1 license:
 MIT BSD GPL2+
 
 ```
@@ -1291,16 +1291,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1q-r0 description:
+openssl-1.1.1s-r0 description:
 toolkit for transport layer security (TLS) - version 1.1
 
-openssl-1.1.1q-r0 webpage:
+openssl-1.1.1s-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1q-r0 installed size:
+openssl-1.1.1s-r0 installed size:
 660 KiB
 
-openssl-1.1.1q-r0 license:
+openssl-1.1.1s-r0 license:
 OpenSSL
 
 ```

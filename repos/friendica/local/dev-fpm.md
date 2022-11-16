@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7666302d777cf4c0f8c935481e9f713cf611aa2e8a173d4f44ef6902aa1246f4`
-- Created: `2022-11-03T18:45:19.246739949Z`
-- Virtual Size: ~ 553.22 Mb  
+- Image ID: `sha256:f9f42d65ae764a0a353dbcc5581f1a8d6a590d3d806ea84b833dc346f004a875`
+- Created: `2022-11-15T06:50:44.287960354Z`
+- Virtual Size: ~ 553.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -2840,11 +2840,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libxext/2:1.3.3-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libxext/2:1.3.3-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libxml2=2.9.10+dfsg-6.7+deb11u2`
+### `dpkg` source package: `libxml2=2.9.10+dfsg-6.7+deb11u3`
 
 Binary Packages:
 
-- `libxml2:amd64=2.9.10+dfsg-6.7+deb11u2`
+- `libxml2:amd64=2.9.10+dfsg-6.7+deb11u3`
 
 Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 
@@ -2854,17 +2854,17 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libxml2=2.9.10+dfsg-6.7+deb11u2
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u2.dsc' libxml2_2.9.10+dfsg-6.7+deb11u2.dsc 2859 SHA256:f80a2929c91dc06cfa84e7e555d5d76c9b9df848d9b3e561e59f1338417feba3
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg.orig.tar.xz' libxml2_2.9.10+dfsg.orig.tar.xz 2503560 SHA256:65ee7a2f5e100c64ddf7beb92297c9b2a30b994a76cd1fab67470cf22db6b7d0
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u2.debian.tar.xz' libxml2_2.9.10+dfsg-6.7+deb11u2.debian.tar.xz 36368 SHA256:76bb4df309fbb02b26a6d5ab1bc32e158c709f0e7fb255ec734be5efe3cb78d5
+$ apt-get source -qq --print-uris libxml2=2.9.10+dfsg-6.7+deb11u3
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u3.dsc' libxml2_2.9.10+dfsg-6.7+deb11u3.dsc 2859 SHA256:92c6d3646f72080370da38a84ee1b4a8c49f99d0254f81ea4e344a25c349915a
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.10%2bdfsg.orig.tar.xz' libxml2_2.9.10+dfsg.orig.tar.xz 2503560 SHA256:65ee7a2f5e100c64ddf7beb92297c9b2a30b994a76cd1fab67470cf22db6b7d0
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u3.debian.tar.xz' libxml2_2.9.10+dfsg-6.7+deb11u3.debian.tar.xz 40092 SHA256:af3a4b06a555f9a39d7f7487c330787795d0878c0e28313fcff44904f99a291c
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.7+deb11u2/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.7+deb11u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.10+dfsg-6.7+deb11u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.7+deb11u3/ (for browsing the source)
+- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.7+deb11u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libxml2/2.9.10+dfsg-6.7+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libzip=1.7.3-1`
 
@@ -4017,23 +4017,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tini/0.19.0-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tini/0.19.0-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-1+deb11u7`
+### `dpkg` source package: `tzdata=2021a-1+deb11u8`
 
 Binary Packages:
 
-- `tzdata=2021a-1+deb11u7`
+- `tzdata=2021a-1+deb11u8`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u8
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u8.dsc' tzdata_2021a-1+deb11u8.dsc 2269 SHA256:14db9f37ed6c5d294081edc708f262a4dcd627d22e08789362c88d4a3988f63d
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u8.debian.tar.xz' tzdata_2021a-1+deb11u8.debian.tar.xz 116136 SHA256:36ec850e434ba28da2a525f3a068c8b17fdddec05c65fd3093505750d0890c8d
+```
 
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u7/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u8/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u8/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
