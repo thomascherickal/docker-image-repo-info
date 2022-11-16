@@ -596,14 +596,9 @@ Licenses: (parsed from: `/usr/share/doc/gosu/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gosu=1.10-1ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/universe/g/gosu/gosu_1.10-1ubuntu0.20.04.1.dsc' gosu_1.10-1ubuntu0.20.04.1.dsc 2076 SHA512:f7056c719836cfbf384f5257329f946110af79b0f2247eac237badbc9dd2486b97c32abc8af5fa3fba26f280d78428d6fd04b17c05ac042d3fafd1ead5278f3f
-'http://archive.ubuntu.com/ubuntu/pool/universe/g/gosu/gosu_1.10.orig.tar.gz' gosu_1.10.orig.tar.gz 17683 SHA512:435a76e8c0dcdbeb5b11fcfb8246676031f3c2e6e085b65552c58e71a81acfbd8a9db9ae24c6943ae90062792aacf9c71586b7a0bf62179b2e046f50951c130a
-'http://archive.ubuntu.com/ubuntu/pool/universe/g/gosu/gosu_1.10-1ubuntu0.20.04.1.debian.tar.xz' gosu_1.10-1ubuntu0.20.04.1.debian.tar.xz 2968 SHA512:bdeb5cf26cd2ce46de2a663daa92dcaab134813fa341bc4316fdad880ccc3b2f25d0c887b68d0648525330424e253aebb1323066666eb7d03671485ae5e8167d
-```
 
 ### `dpkg` source package: `grep=3.4-1`
 
