@@ -1,7 +1,7 @@
 ## `ibmjava:8-sfj`
 
 ```console
-$ docker pull ibmjava@sha256:ab1e69e2d49f2ad24777c15e9d8a5961d453bcc6905ece8ae542f27d37fbf736
+$ docker pull ibmjava@sha256:b569d9d2b1fb5f8b34a06d320e446cec7972843a60b36d5839bd10b7b2d7c6d6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -58,14 +58,14 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/
 ### `ibmjava:8-sfj` - linux; 386
 
 ```console
-$ docker pull ibmjava@sha256:a00915e75cef7a9c5327a341872d14efdccd705a51e381a9ae011e5814634a57
+$ docker pull ibmjava@sha256:2e85ba8ab2044b131b7d71d22c5f6b33d297597f415fc5d92662bd4002311f69
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.5 MB (94534963 bytes)**  
+-	Total Size: **94.5 MB (94534428 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:506cbb7b85e950e24c021931730d7b0c052c860d452cda5cb0b41044b5d67602`
+-	Image ID: `sha256:c351fa1c6f98d5c48e5ba087a0f3697b6e3a8afc6d8d1f575d8d9bb54c9e6e3a`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -77,11 +77,11 @@ CMD ["bash"]
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
 # Tue, 25 Oct 2022 16:05:47 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 16:05:48 GMT
-ENV JAVA_VERSION=8.0.7.16
-# Tue, 25 Oct 2022 16:07:35 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='14c98ced5d88c2420df74edd155da7610171b441890234706b570e52e8ca92b6';          YML_FILE='8.0/sfj/linux/x86_64/index.yml';          ;;        i386)          ESUM='c9603ebfaf3c6a0737b73ff24bdfe87892df4819d2b52931c9a8b2e69cbbc529';          YML_FILE='8.0/sfj/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='ca0625b0e979ae4681a9441ab5e0b777c02885ba0894521166c526cef655e033';          YML_FILE='8.0/sfj/linux/ppc64le/index.yml';          ;;        s390)          ESUM='592758a743ed59742f18deaf4d5b3bf74577c470a306f0304da7d0c317a50dfa';          YML_FILE='8.0/sfj/linux/s390/index.yml';          ;;        s390x)          ESUM='3255b688a27c7eb5378f706120cccfaaba4f284b33d33324b424dba1a8224fa7';          YML_FILE='8.0/sfj/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Tue, 25 Oct 2022 16:07:35 GMT
+# Tue, 15 Nov 2022 23:18:47 GMT
+ENV JAVA_VERSION=8.0.7.20
+# Tue, 15 Nov 2022 23:20:26 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='bb548976980c436b15e59e0db7b4e99a7ed273df39e17db60047f950c2863c1b';          YML_FILE='8.0/sfj/linux/x86_64/index.yml';          ;;        i386)          ESUM='768e6f8df5c9735d703f2dd5352b7c063949d59c6e15bc7d5c31d7ac667a241a';          YML_FILE='8.0/sfj/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='1ce92e9c420b2d081c8cd63c8441b324e49348360490d61e08a0908b830748cb';          YML_FILE='8.0/sfj/linux/ppc64le/index.yml';          ;;        s390)          ESUM='e790dc7707417153227e1f3164db1c699e3b6b9f697d9e1c9c9142bc0e3d3409';          YML_FILE='8.0/sfj/linux/s390/index.yml';          ;;        s390x)          ESUM='bfac3d6409a7996301d948faedfd4c19920dbb667ba699b7fd4719188366be8b';          YML_FILE='8.0/sfj/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
+# Tue, 15 Nov 2022 23:20:27 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
@@ -94,9 +94,9 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/
 		Last Modified: Tue, 25 Oct 2022 16:09:13 GMT  
 		Size: 3.0 MB (2983275 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:78fb0a7bc812c699013828a44cf77fd6d4d785b727b8b25cd21f38a42452d642`  
-		Last Modified: Tue, 25 Oct 2022 16:09:44 GMT  
-		Size: 64.4 MB (64385629 bytes)  
+	-	`sha256:7db81788c4db2547a15f1640c5cc01c56a14e1f0e596161dfb9bcbe1d9b32138`  
+		Last Modified: Tue, 15 Nov 2022 23:22:33 GMT  
+		Size: 64.4 MB (64385094 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ibmjava:8-sfj` - linux; ppc64le
@@ -146,14 +146,14 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/
 ### `ibmjava:8-sfj` - linux; s390x
 
 ```console
-$ docker pull ibmjava@sha256:f4213e0f587804451a9e8aa651e0864ed68d872dda08a5f7b08edb7e722d0370
+$ docker pull ibmjava@sha256:1501c2a0eda0b3d09fd98fc12ad0bcf5c72bca5da4efdf93d373f367b1ca2a9e
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.2 MB (94161774 bytes)**  
+-	Total Size: **94.2 MB (94166477 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:35e5d3788d4c6c8ff71c0723cdae2b72e1538d6d39eabed4793e3fb4ce8c8db2`
+-	Image ID: `sha256:8ef0a00ca8c086048ac962c150c0062aa254471f49fc5d51e34e18f4902c8581`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -165,11 +165,11 @@ CMD ["bash"]
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
 # Tue, 25 Oct 2022 08:09:01 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Tue, 25 Oct 2022 08:09:02 GMT
-ENV JAVA_VERSION=8.0.7.16
-# Tue, 25 Oct 2022 08:10:41 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='14c98ced5d88c2420df74edd155da7610171b441890234706b570e52e8ca92b6';          YML_FILE='8.0/sfj/linux/x86_64/index.yml';          ;;        i386)          ESUM='c9603ebfaf3c6a0737b73ff24bdfe87892df4819d2b52931c9a8b2e69cbbc529';          YML_FILE='8.0/sfj/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='ca0625b0e979ae4681a9441ab5e0b777c02885ba0894521166c526cef655e033';          YML_FILE='8.0/sfj/linux/ppc64le/index.yml';          ;;        s390)          ESUM='592758a743ed59742f18deaf4d5b3bf74577c470a306f0304da7d0c317a50dfa';          YML_FILE='8.0/sfj/linux/s390/index.yml';          ;;        s390x)          ESUM='3255b688a27c7eb5378f706120cccfaaba4f284b33d33324b424dba1a8224fa7';          YML_FILE='8.0/sfj/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Tue, 25 Oct 2022 08:10:43 GMT
+# Wed, 16 Nov 2022 02:13:28 GMT
+ENV JAVA_VERSION=8.0.7.20
+# Wed, 16 Nov 2022 02:15:30 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='bb548976980c436b15e59e0db7b4e99a7ed273df39e17db60047f950c2863c1b';          YML_FILE='8.0/sfj/linux/x86_64/index.yml';          ;;        i386)          ESUM='768e6f8df5c9735d703f2dd5352b7c063949d59c6e15bc7d5c31d7ac667a241a';          YML_FILE='8.0/sfj/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='1ce92e9c420b2d081c8cd63c8441b324e49348360490d61e08a0908b830748cb';          YML_FILE='8.0/sfj/linux/ppc64le/index.yml';          ;;        s390)          ESUM='e790dc7707417153227e1f3164db1c699e3b6b9f697d9e1c9c9142bc0e3d3409';          YML_FILE='8.0/sfj/linux/s390/index.yml';          ;;        s390x)          ESUM='bfac3d6409a7996301d948faedfd4c19920dbb667ba699b7fd4719188366be8b';          YML_FILE='8.0/sfj/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
+# Wed, 16 Nov 2022 02:15:33 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
@@ -182,7 +182,7 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/
 		Last Modified: Tue, 25 Oct 2022 08:12:34 GMT  
 		Size: 2.7 MB (2671897 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0507b75e796b10ff38699a9e84df563cc47a7f5af9eb937f3ed5f50aad2fe722`  
-		Last Modified: Tue, 25 Oct 2022 08:12:58 GMT  
-		Size: 66.1 MB (66118416 bytes)  
+	-	`sha256:31fed98b4ba3f1832011c0c13075063bae2b99165f288d14f72b8a8e3eedd4dc`  
+		Last Modified: Wed, 16 Nov 2022 02:18:08 GMT  
+		Size: 66.1 MB (66123119 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
