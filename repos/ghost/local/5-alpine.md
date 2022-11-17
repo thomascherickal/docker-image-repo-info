@@ -1,10 +1,10 @@
-# `ghost:5.22.9-alpine`
+# `ghost:5.22.11-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8dd631fb7433a5a862f5754871df0c36ae5bad1f2553cc895ea0a6b5ceab576b`
-- Created: `2022-11-12T11:27:24.942248585Z`
-- Virtual Size: ~ 490.82 Mb  
+- Image ID: `sha256:7c9c51669a8e5f0ab9fdd99ebbf133033b8665f56ab260bd07e9e743f8a926dd`
+- Created: `2022-11-16T19:27:50.997755165Z`
+- Virtual Size: ~ 490.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,7 +17,7 @@
   - `GHOST_CLI_VERSION=1.23.1`
   - `GHOST_INSTALL=/var/lib/ghost`
   - `GHOST_CONTENT=/var/lib/ghost/content`
-  - `GHOST_VERSION=5.22.9`
+  - `GHOST_VERSION=5.22.11`
 
 ## `apk` (`.apk`-based packages)
 
