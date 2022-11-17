@@ -1,10 +1,10 @@
-# `mongo:4.4.17-focal`
+# `mongo:4.4.18-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:af86910c16daa355eed84bbf32b76d2aa10e627f5c0ac64f0ce75dfd960525df`
-- Created: `2022-10-25T17:39:10.894258532Z`
-- Virtual Size: ~ 437.70 Mb  
+- Image ID: `sha256:beecfb8aff0460fb0c85ec8be767d18255210e7b3e598c083c6b9a5939708f54`
+- Created: `2022-11-16T19:37:45.158849611Z`
+- Virtual Size: ~ 438.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -16,7 +16,7 @@
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=4.4`
-  - `MONGO_VERSION=4.4.17`
+  - `MONGO_VERSION=4.4.18`
   - `HOME=/data/db`
 
 ## `dpkg` (`.deb`-based packages)
@@ -280,11 +280,11 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.13`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.14`
 
 Binary Packages:
 
-- `libcurl4:amd64=7.68.0-1ubuntu2.13`
+- `libcurl4:amd64=7.68.0-1ubuntu2.14`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl4/copyright`)
 
@@ -295,9 +295,14 @@ Licenses: (parsed from: `/usr/share/doc/libcurl4/copyright`)
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.14
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.14.dsc' curl_7.68.0-1ubuntu2.14.dsc 2737 SHA512:653b4e9f917b70858e4c4d37cea1232a17f9ccbe6ee29384678419657b07dee9b437c3159f0083363287e743d4e905c0c958ad4b5cc15a0fd4e641c95a6148b6
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.14.debian.tar.xz' curl_7.68.0-1ubuntu2.14.debian.tar.xz 57840 SHA512:3b2fa1bc62354e4fbf638775e158b369ecb1c6dc3896743c1126237d3dbb36f298da4e3f768d2e8e81e4eff29b005955c59f3ccb105a5630edff7475003e3c2c
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -1262,11 +1267,11 @@ $ apt-get source -qq --print-uris mawk=1.3.4.20200120-2
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120-2.debian.tar.xz' mawk_1.3.4.20200120-2.debian.tar.xz 7504 SHA256:b772ed2f016b0286980c46cbc1f1f4ae62887ef2aa3dff6ef10cae638f923f26
 ```
 
-### `dpkg` source package: `mongodb-database-tools=100.6.0`
+### `dpkg` source package: `mongodb-database-tools=100.6.1`
 
 Binary Packages:
 
-- `mongodb-database-tools=100.6.0`
+- `mongodb-database-tools=100.6.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1276,16 +1281,16 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `mongodb-org=4.4.17`
+### `dpkg` source package: `mongodb-org=4.4.18`
 
 Binary Packages:
 
-- `mongodb-org=4.4.17`
-- `mongodb-org-database-tools-extra=4.4.17`
-- `mongodb-org-mongos=4.4.17`
-- `mongodb-org-server=4.4.17`
-- `mongodb-org-shell=4.4.17`
-- `mongodb-org-tools=4.4.17`
+- `mongodb-org=4.4.18`
+- `mongodb-org-database-tools-extra=4.4.18`
+- `mongodb-org-mongos=4.4.18`
+- `mongodb-org-server=4.4.18`
+- `mongodb-org-shell=4.4.18`
+- `mongodb-org-tools=4.4.18`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1839,19 +1844,25 @@ $ apt-get source -qq --print-uris tar=1.30+dfsg-7ubuntu0.20.04.2
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.2.debian.tar.xz' tar_1.30+dfsg-7ubuntu0.20.04.2.debian.tar.xz 23580 SHA512:2c9999bff0257251eb7d09a702898e42ce45b117d8e3595d68bf0a6ffdeb1d4a1d69202a2674d93a9193576f65dad4de4e094479228bfb4efc4a7931f00d3875
 ```
 
-### `dpkg` source package: `tzdata=2022c-0ubuntu0.20.04.0`
+### `dpkg` source package: `tzdata=2022f-0ubuntu0.20.04.1`
 
 Binary Packages:
 
-- `tzdata=2022c-0ubuntu0.20.04.0`
+- `tzdata=2022f-0ubuntu0.20.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tzdata=2022f-0ubuntu0.20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f-0ubuntu0.20.04.1.dsc' tzdata_2022f-0ubuntu0.20.04.1.dsc 2358 SHA512:1e1e7f0ca8eec93366dd81f5caf901cd49caab14c8d13dff08ba9b9ec377adfeaa2a9e1895a102e55084fcd3515e6e9f61ec18291e660d91873e6413aebeee7a
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f.orig.tar.gz' tzdata_2022f.orig.tar.gz 436352 SHA512:72d05d05be999075cdf57b896c0f4238b1b862d4d0ed92cc611736592a4ada14d47bd7f0fc8be39e7938a7f5940a903c8af41e87859482bcfab787d889d429f6
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f.orig.tar.gz.asc' tzdata_2022f.orig.tar.gz.asc 833 SHA512:51a8bd86a94f36f6c1bae4929b9f9370153bf68d75fdfe44b94edd2204dcfa421dcb714357879e81a8f327fc24a6a0281420343795cb220ba5f6a656ac548c9e
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f-0ubuntu0.20.04.1.debian.tar.xz' tzdata_2022f-0ubuntu0.20.04.1.debian.tar.xz 166732 SHA512:7ea2259563e12a3d1344bb22669c1be15b997c90abcaacdab6d3c133e2d75019faca57d73d6da154255d24dc483113b3dbdb86eb86dd5e7bd91044b16da71907
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2020.02.11.4`
 
