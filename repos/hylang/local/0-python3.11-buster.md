@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:fbd51b63c24cbae2e05deb9eb02cf02794499416ad2e7e07432e8253a07ba0d3`
-- Created: `2022-11-09T00:31:42.631827752Z`
-- Virtual Size: ~ 136.46 Mb  
+- Image ID: `sha256:a74414044968cfc992a866bcdeeabda56bb10ebe50d40918cb55f4719ac6e142`
+- Created: `2022-11-16T07:33:42.402365278Z`
+- Virtual Size: ~ 136.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -15,8 +15,8 @@
   - `PYTHON_VERSION=3.11.0`
   - `PYTHON_PIP_VERSION=22.3`
   - `PYTHON_SETUPTOOLS_VERSION=65.5.0`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/6d265be7a6b5bc4e9c5c07646aee0bf0394be03d/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=36c6f6214694ef64cc70f4127ac0ccec668408a93825359d998fb31d24968d67`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/66030fa03382b4914d4c4d0896961a0bdeeeb274/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=1e501cf004eac1b7eb1f97266d28f995ae835d30250bec7f8850562703067dc6`
   - `HY_VERSION=0.25.0`
   - `HYRULE_VERSION=0.2.1`
 
@@ -539,23 +539,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.44.5-1+deb10u3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.44.5-1+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `expat=2.2.6-2+deb10u5`
+### `dpkg` source package: `expat=2.2.6-2+deb10u6`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.6-2+deb10u5`
+- `libexpat1:amd64=2.2.6-2+deb10u6`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
 - `MIT`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris expat=2.2.6-2+deb10u6
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u6.dsc' expat_2.2.6-2+deb10u6.dsc 2010 SHA256:12e5e94724e3c495aab1fb7dba2f30eabf554b0b3ecafa3ad59fffb0ac379ebf
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6.orig.tar.gz' expat_2.2.6.orig.tar.gz 8275473 SHA256:574499cba22a599393e28d99ecfa1e7fc85be7d6651d543045244d5b561cb7ff
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.6-2%2bdeb10u6.debian.tar.xz' expat_2.2.6-2+deb10u6.debian.tar.xz 29268 SHA256:f938a77385f9e1a452ab2b45b887dc6539607d097211bf69d1194453d0f05d57
+```
 
-- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/expat/2.2.6-2+deb10u6/ (for browsing the source)
+- https://sources.debian.net/src/expat/2.2.6-2+deb10u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/expat/2.2.6-2+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.6.0+git+20190209-2`
 
@@ -1265,14 +1272,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/mawk/1.3.3-17/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/mawk/1.3.3-17/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u2`
+### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u3`
 
 Binary Packages:
 
-- `libncursesw6:amd64=6.1+20181013-2+deb10u2`
-- `libtinfo6:amd64=6.1+20181013-2+deb10u2`
-- `ncurses-base=6.1+20181013-2+deb10u2`
-- `ncurses-bin=6.1+20181013-2+deb10u2`
+- `libncursesw6:amd64=6.1+20181013-2+deb10u3`
+- `libtinfo6:amd64=6.1+20181013-2+deb10u3`
+- `ncurses-base=6.1+20181013-2+deb10u3`
+- `ncurses-bin=6.1+20181013-2+deb10u3`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1281,18 +1288,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ncurses=6.1+20181013-2+deb10u2
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u2.dsc' ncurses_6.1+20181013-2+deb10u2.dsc 4179 SHA256:8318631ff3298951a93d6dd6c20bd47c9e5fdaaf30578d541bd6404bdd5317ea
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.1%2b20181013.orig.tar.gz' ncurses_6.1+20181013.orig.tar.gz 3411288 SHA256:aeb1d098ee90b39a763b57b00da19ff5bbb573dea077f98fbd85d59444bb3b59
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.1%2b20181013.orig.tar.gz.asc' ncurses_6.1+20181013.orig.tar.gz.asc 251 SHA256:865931406e519909a4d0ab87b14d0c6d3ebccb7b3e0dac5c6095f0dfce5e14cf
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u2.debian.tar.xz' ncurses_6.1+20181013-2+deb10u2.debian.tar.xz 61664 SHA256:4574ec11ce2577e76f30f8d40cc2a9ebf94d8208f47247021da88b7b09e77df9
+$ apt-get source -qq --print-uris ncurses=6.1+20181013-2+deb10u3
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u3.dsc' ncurses_6.1+20181013-2+deb10u3.dsc 4338 SHA256:4d24cabc68bafb9750d6a4dd6a3916c0f1e7656923250fbf02ae25aa7aef3466
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013.orig.tar.gz' ncurses_6.1+20181013.orig.tar.gz 3411288 SHA256:aeb1d098ee90b39a763b57b00da19ff5bbb573dea077f98fbd85d59444bb3b59
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013.orig.tar.gz.asc' ncurses_6.1+20181013.orig.tar.gz.asc 251 SHA256:865931406e519909a4d0ab87b14d0c6d3ebccb7b3e0dac5c6095f0dfce5e14cf
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u3.debian.tar.xz' ncurses_6.1+20181013-2+deb10u3.debian.tar.xz 62512 SHA256:a71085f2aef402719769bbf5ce99677005be73324c06f54900fb3cf6bb2bf2c5
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ncurses/6.1+20181013-2+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ncurses/6.1+20181013-2+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=5.6`
 
@@ -1709,23 +1716,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-0+deb10u7`
+### `dpkg` source package: `tzdata=2021a-0+deb10u8`
 
 Binary Packages:
 
-- `tzdata=2021a-0+deb10u7`
+- `tzdata=2021a-0+deb10u8`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u8
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u8.dsc' tzdata_2021a-0+deb10u8.dsc 2023 SHA256:8d17f1f3620ef11e275fde3693f1f22495da66cdc40f2ec95ab804c7f4d56471
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u8.debian.tar.xz' tzdata_2021a-0+deb10u8.debian.tar.xz 115632 SHA256:e14dc836022592a32b8a99d33f9105e4a31258da39704e022a61a3c07824e49f
+```
 
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u7/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u8/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u8/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.33.1-0.1`
 

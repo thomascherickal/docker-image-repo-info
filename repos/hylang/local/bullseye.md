@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4498251bb5706e092af99cb2ed28d7e5b32d86a5abdd11152f8ec148b343ec54`
-- Created: `2022-11-09T00:31:24.323359148Z`
-- Virtual Size: ~ 143.97 Mb  
+- Image ID: `sha256:5a473f5de7e0af2dea5b9e7b2a48c3bdd5020668437ee8bb0f1ef033ec75fc15`
+- Created: `2022-11-16T07:33:24.851527238Z`
+- Virtual Size: ~ 143.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -15,8 +15,8 @@
   - `PYTHON_VERSION=3.11.0`
   - `PYTHON_PIP_VERSION=22.3`
   - `PYTHON_SETUPTOOLS_VERSION=65.5.0`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/6d265be7a6b5bc4e9c5c07646aee0bf0394be03d/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=36c6f6214694ef64cc70f4127ac0ccec668408a93825359d998fb31d24968d67`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/66030fa03382b4914d4c4d0896961a0bdeeeb274/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=1e501cf004eac1b7eb1f97266d28f995ae835d30250bec7f8850562703067dc6`
   - `HY_VERSION=0.25.0`
   - `HYRULE_VERSION=0.2.1`
 
@@ -549,23 +549,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.46.2-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.46.2-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `expat=2.2.10-2+deb11u4`
+### `dpkg` source package: `expat=2.2.10-2+deb11u5`
 
 Binary Packages:
 
-- `libexpat1:amd64=2.2.10-2+deb11u4`
+- `libexpat1:amd64=2.2.10-2+deb11u5`
 
 Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
 
 - `MIT`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris expat=2.2.10-2+deb11u5
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10-2%2bdeb11u5.dsc' expat_2.2.10-2+deb11u5.dsc 2175 SHA256:5bbf7d1df4aa4fb5d31141b58dc08a687918c1685c48300bc3f67a8f56fe3071
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10.orig.tar.gz' expat_2.2.10.orig.tar.gz 8276395 SHA256:62e280f5fd29a5b70973f623e20a7412c3e3912c2684cb0e462e2c881be129e1
+'http://deb.debian.org/debian-security/pool/updates/main/e/expat/expat_2.2.10-2%2bdeb11u5.debian.tar.xz' expat_2.2.10-2+deb11u5.debian.tar.xz 29468 SHA256:b24f586a155c207b2dbf6db1b6e4106427150acdd3a654c00c52d400da70d23d
+```
 
-- http://snapshot.debian.org/package/expat/2.2.10-2+deb11u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/expat/2.2.10-2+deb11u5/ (for browsing the source)
+- https://sources.debian.net/src/expat/2.2.10-2+deb11u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/expat/2.2.10-2+deb11u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.8.0-1`
 
@@ -1961,23 +1968,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.34+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.34+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-1+deb11u7`
+### `dpkg` source package: `tzdata=2021a-1+deb11u8`
 
 Binary Packages:
 
-- `tzdata=2021a-1+deb11u7`
+- `tzdata=2021a-1+deb11u8`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u8
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u8.dsc' tzdata_2021a-1+deb11u8.dsc 2269 SHA256:14db9f37ed6c5d294081edc708f262a4dcd627d22e08789362c88d4a3988f63d
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u8.debian.tar.xz' tzdata_2021a-1+deb11u8.debian.tar.xz 116136 SHA256:36ec850e434ba28da2a525f3a068c8b17fdddec05c65fd3093505750d0890c8d
+```
 
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u7/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u8/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u8/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.36.1-8+deb11u1`
 

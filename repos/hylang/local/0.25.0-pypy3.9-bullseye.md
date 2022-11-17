@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:787a1f97dbcc1debdfa285bc83c813b5dcbfc8968cf10e69d6a26accef6f763d`
-- Created: `2022-11-09T00:38:03.330939482Z`
-- Virtual Size: ~ 244.49 Mb  
+- Image ID: `sha256:ba1664976aec6903e29131c61a0b4e478061fb4feb1591002ecc24b2e5d05fb6`
+- Created: `2022-11-15T23:09:22.568438729Z`
+- Virtual Size: ~ 244.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -1925,23 +1925,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.34+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.34+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-1+deb11u7`
+### `dpkg` source package: `tzdata=2021a-1+deb11u8`
 
 Binary Packages:
 
-- `tzdata=2021a-1+deb11u7`
+- `tzdata=2021a-1+deb11u8`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-1+deb11u8
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u8.dsc' tzdata_2021a-1+deb11u8.dsc 2269 SHA256:14db9f37ed6c5d294081edc708f262a4dcd627d22e08789362c88d4a3988f63d
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a.orig.tar.gz.asc' tzdata_2021a.orig.tar.gz.asc 833 SHA256:9dc5f54674166f4ffbc2d4485e656227430ab5f39c9006e6ed9986281117f058
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2021a-1%2bdeb11u8.debian.tar.xz' tzdata_2021a-1+deb11u8.debian.tar.xz 116136 SHA256:36ec850e434ba28da2a525f3a068c8b17fdddec05c65fd3093505750d0890c8d
+```
 
-- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u7/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u8/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-1+deb11u8/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-1+deb11u8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.36.1-8+deb11u1`
 
