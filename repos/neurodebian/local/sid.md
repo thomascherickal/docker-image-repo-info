@@ -1874,21 +1874,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.39.4-1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.39.4-1.dsc' sqlite3_3.39.4-1.dsc 2487 SHA256:07a4a14c522e6a2a28e3165226cd101c442af64a53d49187c68499a8b913d0ac
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.39.4.orig-www.tar.xz' sqlite3_3.39.4.orig-www.tar.xz 5745632 SHA256:3bc15fa2c5df4f2849d83d76d9fc9eba7214209c4a10b577aea07f9e5be52004
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.39.4.orig.tar.xz' sqlite3_3.39.4.orig.tar.xz 7821660 SHA256:1201c9283346381d9ae7fc6c40d44af3f932480421de094345bf6fbcac5bb145
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.39.4-1.debian.tar.xz' sqlite3_3.39.4-1.debian.tar.xz 29596 SHA256:37dcbed7cdbbb6ab76e606a80bbe59732ce0aa58411fae6cea3de40b8b33d3a9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.39.4-1/
 
-- https://sources.debian.net/src/sqlite3/3.39.4-1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.39.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.39.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=252.1-1`
 
@@ -2062,20 +2054,13 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.38.1-1.1
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.38.1-1.1.dsc' util-linux_2.38.1-1.1.dsc 4676 SHA256:16bb253475afdbc55d251dd0805b9acea3dd71b87f9b07d7cd703602a8ffad0b
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.38.1.orig.tar.xz' util-linux_2.38.1.orig.tar.xz 7495904 SHA256:60492a19b44e6cf9a3ddff68325b333b8b52b6c59ce3ebd6a0ecaa4c5117e84f
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.38.1-1.1.debian.tar.xz' util-linux_2.38.1-1.1.debian.tar.xz 96028 SHA256:a93ae31d2ace2c380ef4e376ed0f92932dc7e80479342daf2dd5e4f55f1b6c21
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/util-linux/2.38.1-1.1/
 
-- https://sources.debian.net/src/util-linux/2.38.1-1.1/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.38.1-1.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.38.1-1.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xxhash=0.8.1-1`
 
