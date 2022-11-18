@@ -1,4 +1,4 @@
-## `openjdk:20-jdk-slim`
+## `openjdk:20-ea-24-slim`
 
 ```console
 $ docker pull openjdk@sha256:b62f4e97f8215e20bd44d24a582fc8615f39fc6792958beb0ee779821e48fdaa
@@ -9,7 +9,7 @@ $ docker pull openjdk@sha256:b62f4e97f8215e20bd44d24a582fc8615f39fc6792958beb0ee
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
-### `openjdk:20-jdk-slim` - linux; amd64
+### `openjdk:20-ea-24-slim` - linux; amd64
 
 ```console
 $ docker pull openjdk@sha256:22efbce4bf171b850713a1517bfcc2d382111f857d511dd199b070469a77128d
@@ -57,7 +57,7 @@ CMD ["jshell"]
 		Size: 198.7 MB (198653752 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `openjdk:20-jdk-slim` - linux; arm64 variant v8
+### `openjdk:20-ea-24-slim` - linux; arm64 variant v8
 
 ```console
 $ docker pull openjdk@sha256:445535935860b3fa199b30e6d0a94cad6567e2f6369db5b7b1b51f64f046ddc9
