@@ -3506,14 +3506,13 @@ Licenses: (parsed from: `/usr/share/doc/pkg-config/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pkg-config=0.29.2-1
-'http://http.debian.net/debian/pool/main/p/pkg-config/pkg-config_0.29.2-1.dsc' pkg-config_0.29.2-1.dsc 1771 SHA256:e4feeda94c3882e2aca55eab907900508a2e35111f927a79076154870f8fe373
-'http://http.debian.net/debian/pool/main/p/pkg-config/pkg-config_0.29.2.orig.tar.gz' pkg-config_0.29.2.orig.tar.gz 2016830 SHA256:6fc69c01688c9458a57eb9a1664c9aba372ccda420a02bf4429fe610e7e7d591
-'http://http.debian.net/debian/pool/main/p/pkg-config/pkg-config_0.29.2-1.diff.gz' pkg-config_0.29.2-1.diff.gz 9202 SHA256:6ecdd3463718e8922b53fca8d2fd37db4ba178f078b5e3ccd38c1a6efffb94ad
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/pkg-config/0.29.2-1/
+
 
 ### `dpkg` source package: `r-base=4.2.2-1`
 
@@ -3533,14 +3532,13 @@ Licenses: (parsed from: `/usr/share/doc/r-base/copyright`, `/usr/share/doc/r-bas
 - `LGPL-2.1`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-base=4.2.2-1
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.2.2-1.dsc' r-base_4.2.2-1.dsc 2941 SHA256:9ac7d11e65cdf6c8fa1c86393b521997ba3b6cbdcda77de5cc8c0c310e516895
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.2.2.orig.tar.gz' r-base_4.2.2.orig.tar.gz 33987014 SHA256:0ff62b42ec51afa5713caee7c4fde7a0c45940ba39bef8c5c9487fef0c953df5
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.2.2-1.debian.tar.xz' r-base_4.2.2-1.debian.tar.xz 98356 SHA256:0a6d835eac584b5a458db2a8c75d055b6b9f15a82db7923af52c254468547551
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/r-base/4.2.2-1/
+
 
 ### `dpkg` source package: `r-cran-class=7.3-20-1`
 
