@@ -2776,21 +2776,13 @@ Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 - `GPL-3`
 - `LGPL-2.1-or-later`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libksba=1.6.2-3
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.2-3.dsc' libksba_1.6.2-3.dsc 2473 SHA256:83b8d8720adcff9f01907b1bae1975bd936797beb3daa841ded936caa12fc0b9
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.2.orig.tar.bz2' libksba_1.6.2.orig.tar.bz2 667846 SHA256:fce01ccac59812bddadffacff017dac2e4762bdb6ebc6ffe06f6ed4f6192c971
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.2.orig.tar.bz2.asc' libksba_1.6.2.orig.tar.bz2.asc 228 SHA256:f12b91764d619a9b2d66a7c49b2e5563c39f91bf3b0fbb6b7dc4a445a18878d6
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.2-3.debian.tar.xz' libksba_1.6.2-3.debian.tar.xz 14368 SHA256:29d64039ce7fb917589db53ab1e8baf685802298003cc0dfd42f7cbf215ada42
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libksba/1.6.2-3/
 
-- https://sources.debian.net/src/libksba/1.6.2-3/ (for browsing the source)
-- https://sources.debian.net/src/libksba/1.6.2-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libksba/1.6.2-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `liblqr=0.4.2-2.1`
 
@@ -3538,20 +3530,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxcrypt=1:4.4.30-1
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.30-1.dsc' libxcrypt_4.4.30-1.dsc 1591 SHA256:7324f6d1e155fcd98e0a2da84280f1630987a64563b74be8dae04f5bc91b9e4f
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.30.orig.tar.xz' libxcrypt_4.4.30.orig.tar.xz 391672 SHA256:ef9894e5ee94d6dba2d268ba3cf89550f05096f97487eaded0b16b9178705f5e
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.30-1.debian.tar.xz' libxcrypt_4.4.30-1.debian.tar.xz 8076 SHA256:44a674897dddf90aaa76a811954812574b60b7efd80271873a829395216cd82e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxcrypt/1:4.4.30-1/
 
-- https://sources.debian.net/src/libxcrypt/1:4.4.30-1/ (for browsing the source)
-- https://sources.debian.net/src/libxcrypt/1:4.4.30-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxcrypt/1:4.4.30-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxdmcp=1:1.1.2-3`
 
@@ -4965,20 +4950,13 @@ Licenses: (parsed from: `/usr/share/doc/libreadline-dev/copyright`, `/usr/share/
 - `GFDL`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris readline=8.2-1.1
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2-1.1.dsc' readline_8.2-1.1.dsc 2595 SHA256:b10408a05c3181db5ccf34240c152020d43ec58703c41f39b1228e10c5fa6840
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2.orig.tar.gz' readline_8.2.orig.tar.gz 3043952 SHA256:3feb7171f16a84ee82ca18a36d7b9be109a52c04f492a053331d7d1095007c35
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2-1.1.debian.tar.xz' readline_8.2-1.1.debian.tar.xz 29484 SHA256:384e45522c28efb4cb4508a302b96fb729499d401f9f7c3f1b36a3bc145d09f5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/readline/8.2-1.1/
 
-- https://sources.debian.net/src/readline/8.2-1.1/ (for browsing the source)
-- https://sources.debian.net/src/readline/8.2-1.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/readline/8.2-1.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rpcsvc-proto=1.4.2-4`
 
