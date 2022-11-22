@@ -1169,20 +1169,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxcrypt=1:4.4.30-1
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.30-1.dsc' libxcrypt_4.4.30-1.dsc 1591 SHA256:7324f6d1e155fcd98e0a2da84280f1630987a64563b74be8dae04f5bc91b9e4f
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.30.orig.tar.xz' libxcrypt_4.4.30.orig.tar.xz 391672 SHA256:ef9894e5ee94d6dba2d268ba3cf89550f05096f97487eaded0b16b9178705f5e
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.30-1.debian.tar.xz' libxcrypt_4.4.30-1.debian.tar.xz 8076 SHA256:44a674897dddf90aaa76a811954812574b60b7efd80271873a829395216cd82e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxcrypt/1:4.4.30-1/
 
-- https://sources.debian.net/src/libxcrypt/1:4.4.30-1/ (for browsing the source)
-- https://sources.debian.net/src/libxcrypt/1:4.4.30-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxcrypt/1:4.4.30-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libzstd=1.5.2+dfsg-1`
 
@@ -1572,20 +1565,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-3`
 - `GPL-3.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=3.05-6
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.05-6.dsc' sysvinit_3.05-6.dsc 2373 SHA256:7653d028e6f5e001140da6178ec7b01d2ad260454534972d20f297b9f4366c95
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.05.orig.tar.gz' sysvinit_3.05.orig.tar.gz 435554 SHA256:1e15471afdd550e88c121e5030707d9f00ca66b29fa91eacdaae072bde53f6bc
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.05-6.debian.tar.xz' sysvinit_3.05-6.debian.tar.xz 134276 SHA256:88b77f119f85ac3afe059f045c679793373b6b62764acc0a8886934f2a9c8eda
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/3.05-6/
 
-- https://sources.debian.net/src/sysvinit/3.05-6/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/3.05-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/3.05-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1`
 
