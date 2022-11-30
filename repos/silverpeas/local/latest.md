@@ -7163,9 +7163,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris mysql-8.0=8.0.31-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.31-0ubuntu0.20.04.1.dsc' mysql-8.0_8.0.31-0ubuntu0.20.04.1.dsc 3497 SHA512:511233391df5304aecb0c91a233770bc79ed328561c5f4335671d91e0584eba47a216beb1cda70cf7ebe6b9ad6cfb8520542c9ae457a9e2f43916efa559fc5de
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.31.orig.tar.gz' mysql-8.0_8.0.31.orig.tar.gz 334504577 SHA512:87b1678de8c2fd640fd6f3ae58266ea63fe240578330e3296d0e5fc209bbe9b0c22996214b6ca4cce8c0d9cc2f9897f4e6723d835b33fc4342983c82929c3d96
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.31-0ubuntu0.20.04.1.debian.tar.xz' mysql-8.0_8.0.31-0ubuntu0.20.04.1.debian.tar.xz 161620 SHA512:52c0a56af7741f9f10fff8e174ae76676eef3bf53583df57e10e276d86049f9aed1cf4d241bfc32dc6f92929e87e91f47784222412a58fdabe907c0f948c2e06
+'http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.31-0ubuntu0.20.04.1.dsc' mysql-8.0_8.0.31-0ubuntu0.20.04.1.dsc 3497 SHA512:511233391df5304aecb0c91a233770bc79ed328561c5f4335671d91e0584eba47a216beb1cda70cf7ebe6b9ad6cfb8520542c9ae457a9e2f43916efa559fc5de
+'http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.31.orig.tar.gz' mysql-8.0_8.0.31.orig.tar.gz 334504577 SHA512:87b1678de8c2fd640fd6f3ae58266ea63fe240578330e3296d0e5fc209bbe9b0c22996214b6ca4cce8c0d9cc2f9897f4e6723d835b33fc4342983c82929c3d96
+'http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.31-0ubuntu0.20.04.1.debian.tar.xz' mysql-8.0_8.0.31-0ubuntu0.20.04.1.debian.tar.xz 161620 SHA512:52c0a56af7741f9f10fff8e174ae76676eef3bf53583df57e10e276d86049f9aed1cf4d241bfc32dc6f92929e87e91f47784222412a58fdabe907c0f948c2e06
 ```
 
 ### `dpkg` source package: `mysql-defaults=1.0.5ubuntu2`
@@ -8402,14 +8402,9 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu5.20.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.2.dsc' shadow_4.8.1-1ubuntu5.20.04.2.dsc 2377 SHA512:af962ea7d8a25b7f7862da189cd02f1a69bd42aa1daad323122e68f01b3b48ce5af1cd8e09340dc80325cddacdefb60940cad0ca275108ce4ec0d9cfd1abc522
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1.orig.tar.xz' shadow_4.8.1.orig.tar.xz 1611196 SHA512:780a983483d847ed3c91c82064a0fa902b6f4185225978241bc3bc03fcc3aa143975b46aee43151c6ba43efcfdb1819516b76ba7ad3d1d3c34fcc38ea42e917b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.2.debian.tar.xz' shadow_4.8.1-1ubuntu5.20.04.2.debian.tar.xz 86308 SHA512:927d5e25c5fc2a35f0994069783b94a45d2635d0358eccfc6ef5b7761fe3479ba62d093b2f7ddae26c935bdf77bfff648b68f3e4184420cb0eb200a17cb3a3b2
-```
 
 ### `dpkg` source package: `shared-mime-info=1.15-1`
 
