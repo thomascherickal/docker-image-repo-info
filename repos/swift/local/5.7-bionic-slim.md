@@ -1474,14 +1474,9 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.5-1ubuntu2.3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.3.dsc' shadow_4.5-1ubuntu2.3.dsc 2401 SHA512:9dfe2d6b0eab50d9a0ebf96b5760aabd3ebfc9afac159746526db252602652fbafd52b766386ea2fc46fa95b10f58b0d94b607bba0db43ea05a3087f8540ea2a
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5.orig.tar.xz' shadow_4.5.orig.tar.xz 1344524 SHA512:4278544efdd6d800a3c46cfcb144f209ace14ebe017ba1c0d05425fac7868062a73afa8522036a2bc0a16f6f1e7c16373a204463221012367ce0e8e9ef4c4a4d
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.5-1ubuntu2.3.debian.tar.xz' shadow_4.5-1ubuntu2.3.debian.tar.xz 473672 SHA512:018a8dbfbecd81b826683c26c3fb78450ae8c3c5c3e65276505dc16c0f2d782d0afce6c6012cf41d1b9d136109272c3cd15d11d8cda06c29a206aea6ac735359
-```
 
 ### `dpkg` source package: `sqlite3=3.22.0-1ubuntu0.6`
 
