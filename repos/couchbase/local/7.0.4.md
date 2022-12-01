@@ -1539,14 +1539,9 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu5.20.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.2.dsc' shadow_4.8.1-1ubuntu5.20.04.2.dsc 2377 SHA512:af962ea7d8a25b7f7862da189cd02f1a69bd42aa1daad323122e68f01b3b48ce5af1cd8e09340dc80325cddacdefb60940cad0ca275108ce4ec0d9cfd1abc522
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1.orig.tar.xz' shadow_4.8.1.orig.tar.xz 1611196 SHA512:780a983483d847ed3c91c82064a0fa902b6f4185225978241bc3bc03fcc3aa143975b46aee43151c6ba43efcfdb1819516b76ba7ad3d1d3c34fcc38ea42e917b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.2.debian.tar.xz' shadow_4.8.1-1ubuntu5.20.04.2.debian.tar.xz 86308 SHA512:927d5e25c5fc2a35f0994069783b94a45d2635d0358eccfc6ef5b7761fe3479ba62d093b2f7ddae26c935bdf77bfff648b68f3e4184420cb0eb200a17cb3a3b2
-```
 
 ### `dpkg` source package: `sysstat=12.2.0-2ubuntu0.1`
 
@@ -1559,14 +1554,9 @@ Licenses: (parsed from: `/usr/share/doc/sysstat/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysstat=12.2.0-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysstat/sysstat_12.2.0-2ubuntu0.1.dsc' sysstat_12.2.0-2ubuntu0.1.dsc 2041 SHA512:378587cc619ceb089ff096b930673bbd348043e6a9a86031b4e2d3ed74840f73298ff476eabc57bf1a3c62883b22ebfd34b1edeefc7a1d2244902df6f4e3f448
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysstat/sysstat_12.2.0.orig.tar.xz' sysstat_12.2.0.orig.tar.xz 700716 SHA512:65b4c895fd8a05babf0cf34dffed96eebb6b429bd8b28a635b25e764901d0cb791e00f7d489998cb8ab53025ead8c516ab5f6e2996a48da6d490b0d8a1a63e51
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysstat/sysstat_12.2.0-2ubuntu0.1.debian.tar.xz' sysstat_12.2.0-2ubuntu0.1.debian.tar.xz 34848 SHA512:6c8bc728a7d6c4eb613f68366c8852349cceac058b56af764d8145d7c787877a9395e02b819402fa904e27aff4b3857ba2697db28f5635e156f9aa38d891b992
-```
 
 ### `dpkg` source package: `systemd=245.4-4ubuntu3.18`
 
