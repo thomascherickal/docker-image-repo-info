@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:202d111807c81858aaf4bf5cfe40af86a43abe41c580d722b55ceb8043d10f11`
-- Created: `2022-11-16T20:20:45.909739516Z`
-- Virtual Size: ~ 164.95 Mb  
+- Image ID: `sha256:f01acc51609863a8e350497b585afc7f912655f3f956d19f5408052a11c6e73e`
+- Created: `2022-11-29T01:28:13.614031503Z`
+- Virtual Size: ~ 161.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -13,7 +13,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `DOCKER_VERSION=20.10.21`
   - `DOCKER_BUILDX_VERSION=0.9.1`
-  - `DOCKER_COMPOSE_VERSION=2.12.2`
+  - `DOCKER_COMPOSE_VERSION=2.13.0`
   - `DOCKER_TLS_CERTDIR=/certs`
 
 ## `apk` (`.apk`-based packages)
@@ -21,16 +21,16 @@
 ### `apk` package: `alpine-baselayout`
 
 ```console
-alpine-baselayout-3.2.0-r23 description:
+alpine-baselayout-3.4.0-r0 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-3.2.0-r23 webpage:
+alpine-baselayout-3.4.0-r0 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-3.2.0-r23 installed size:
-340 KiB
+alpine-baselayout-3.4.0-r0 installed size:
+324 KiB
 
-alpine-baselayout-3.2.0-r23 license:
+alpine-baselayout-3.4.0-r0 license:
 GPL-2.0-only
 
 ```
@@ -38,16 +38,16 @@ GPL-2.0-only
 ### `apk` package: `alpine-baselayout-data`
 
 ```console
-alpine-baselayout-data-3.2.0-r23 description:
+alpine-baselayout-data-3.4.0-r0 description:
 Alpine base dir structure and init scripts
 
-alpine-baselayout-data-3.2.0-r23 webpage:
+alpine-baselayout-data-3.4.0-r0 webpage:
 https://git.alpinelinux.org/cgit/aports/tree/main/alpine-baselayout
 
-alpine-baselayout-data-3.2.0-r23 installed size:
+alpine-baselayout-data-3.4.0-r0 installed size:
 76 KiB
 
-alpine-baselayout-data-3.2.0-r23 license:
+alpine-baselayout-data-3.4.0-r0 license:
 GPL-2.0-only
 
 ```
@@ -72,16 +72,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.12.9-r3 description:
+apk-tools-2.12.10-r1 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.12.9-r3 webpage:
+apk-tools-2.12.10-r1 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.12.9-r3 installed size:
+apk-tools-2.12.10-r1 installed size:
 300 KiB
 
-apk-tools-2.12.9-r3 license:
+apk-tools-2.12.10-r1 license:
 GPL-2.0-only
 
 ```
@@ -89,16 +89,16 @@ GPL-2.0-only
 ### `apk` package: `brotli-libs`
 
 ```console
-brotli-libs-1.0.9-r6 description:
+brotli-libs-1.0.9-r9 description:
 Generic lossless compressor (libraries)
 
-brotli-libs-1.0.9-r6 webpage:
+brotli-libs-1.0.9-r9 webpage:
 https://github.com/google/brotli
 
-brotli-libs-1.0.9-r6 installed size:
-716 KiB
+brotli-libs-1.0.9-r9 installed size:
+784 KiB
 
-brotli-libs-1.0.9-r6 license:
+brotli-libs-1.0.9-r9 license:
 MIT
 
 ```
@@ -106,16 +106,33 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.35.0-r17 description:
+busybox-1.35.0-r29 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.35.0-r17 webpage:
+busybox-1.35.0-r29 webpage:
 https://busybox.net/
 
-busybox-1.35.0-r17 installed size:
+busybox-1.35.0-r29 installed size:
 940 KiB
 
-busybox-1.35.0-r17 license:
+busybox-1.35.0-r29 license:
+GPL-2.0-only
+
+```
+
+### `apk` package: `busybox-binsh`
+
+```console
+busybox-binsh-1.35.0-r29 description:
+busybox ash /bin/sh
+
+busybox-binsh-1.35.0-r29 webpage:
+https://busybox.net/
+
+busybox-binsh-1.35.0-r29 installed size:
+8192 B
+
+busybox-binsh-1.35.0-r29 license:
 GPL-2.0-only
 
 ```
@@ -123,16 +140,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20220614-r0 description:
+ca-certificates-20220614-r2 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20220614-r0 webpage:
+ca-certificates-20220614-r2 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20220614-r0 installed size:
+ca-certificates-20220614-r2 installed size:
 688 KiB
 
-ca-certificates-20220614-r0 license:
+ca-certificates-20220614-r2 license:
 MPL-2.0 AND MIT
 
 ```
@@ -140,50 +157,33 @@ MPL-2.0 AND MIT
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20220614-r0 description:
+ca-certificates-bundle-20220614-r2 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20220614-r0 webpage:
+ca-certificates-bundle-20220614-r2 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20220614-r0 installed size:
-228 KiB
+ca-certificates-bundle-20220614-r2 installed size:
+232 KiB
 
-ca-certificates-bundle-20220614-r0 license:
+ca-certificates-bundle-20220614-r2 license:
 MPL-2.0 AND MIT
-
-```
-
-### `apk` package: `expat`
-
-```console
-expat-2.5.0-r0 description:
-XML Parser library written in C
-
-expat-2.5.0-r0 webpage:
-https://libexpat.github.io/
-
-expat-2.5.0-r0 installed size:
-192 KiB
-
-expat-2.5.0-r0 license:
-MIT
 
 ```
 
 ### `apk` package: `git`
 
 ```console
-git-2.36.3-r0 description:
+git-2.38.1-r0 description:
 Distributed version control system
 
-git-2.36.3-r0 webpage:
+git-2.38.1-r0 webpage:
 https://www.git-scm.com/
 
-git-2.36.3-r0 installed size:
-10 MiB
+git-2.38.1-r0 installed size:
+6060 KiB
 
-git-2.36.3-r0 license:
+git-2.38.1-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -208,50 +208,50 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libc6-compat`
 
 ```console
-libc6-compat-1.2.3-r2 description:
+libc6-compat-1.2.3-r4 description:
 compatibility libraries for glibc
 
-libc6-compat-1.2.3-r2 webpage:
+libc6-compat-1.2.3-r4 webpage:
 https://musl.libc.org/
 
-libc6-compat-1.2.3-r2 installed size:
+libc6-compat-1.2.3-r4 installed size:
 12 KiB
 
-libc6-compat-1.2.3-r2 license:
+libc6-compat-1.2.3-r4 license:
 MIT
 
 ```
 
-### `apk` package: `libcrypto1.1`
+### `apk` package: `libcrypto3`
 
 ```console
-libcrypto1.1-1.1.1s-r0 description:
+libcrypto3-3.0.7-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1s-r0 webpage:
+libcrypto3-3.0.7-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1s-r0 installed size:
-2708 KiB
+libcrypto3-3.0.7-r0 installed size:
+4108 KiB
 
-libcrypto1.1-1.1.1s-r0 license:
-OpenSSL
+libcrypto3-3.0.7-r0 license:
+Apache-2.0
 
 ```
 
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r4 description:
+libcurl-7.86.0-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r4 webpage:
+libcurl-7.86.0-r1 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r4 installed size:
-512 KiB
+libcurl-7.86.0-r1 installed size:
+528 KiB
 
-libcurl-7.83.1-r4 license:
+libcurl-7.86.0-r1 license:
 curl
 
 ```
@@ -259,50 +259,67 @@ curl
 ### `apk` package: `libedit`
 
 ```console
-libedit-20210910.3.1-r0 description:
+libedit-20221030.3.1-r0 description:
 BSD line editing library
 
-libedit-20210910.3.1-r0 webpage:
+libedit-20221030.3.1-r0 webpage:
 https://www.thrysoee.dk/editline
 
-libedit-20210910.3.1-r0 installed size:
-200 KiB
+libedit-20221030.3.1-r0 installed size:
+204 KiB
 
-libedit-20210910.3.1-r0 license:
+libedit-20221030.3.1-r0 license:
 BSD-3-Clause
 
 ```
 
-### `apk` package: `libssl1.1`
+### `apk` package: `libexpat`
 
 ```console
-libssl1.1-1.1.1s-r0 description:
+libexpat-2.5.0-r0 description:
+XML Parser library written in C (libraries)
+
+libexpat-2.5.0-r0 webpage:
+https://libexpat.github.io/
+
+libexpat-2.5.0-r0 installed size:
+152 KiB
+
+libexpat-2.5.0-r0 license:
+MIT
+
+```
+
+### `apk` package: `libssl3`
+
+```console
+libssl3-3.0.7-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1s-r0 webpage:
+libssl3-3.0.7-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1s-r0 installed size:
-528 KiB
+libssl3-3.0.7-r0 installed size:
+608 KiB
 
-libssl1.1-1.1.1s-r0 license:
-OpenSSL
+libssl3-3.0.7-r0 license:
+Apache-2.0
 
 ```
 
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.3-r2 description:
+musl-1.2.3-r4 description:
 the musl c library (libc) implementation
 
-musl-1.2.3-r2 webpage:
+musl-1.2.3-r4 webpage:
 https://musl.libc.org/
 
-musl-1.2.3-r2 installed size:
-608 KiB
+musl-1.2.3-r4 installed size:
+620 KiB
 
-musl-1.2.3-r2 license:
+musl-1.2.3-r4 license:
 MIT
 
 ```
@@ -310,33 +327,33 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.3-r1 description:
+musl-utils-1.2.3-r4 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.3-r1 webpage:
+musl-utils-1.2.3-r4 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.3-r1 installed size:
+musl-utils-1.2.3-r4 installed size:
 132 KiB
 
-musl-utils-1.2.3-r1 license:
-MIT BSD GPL2+
+musl-utils-1.2.3-r4 license:
+MIT AND BSD-2-Clause AND GPL-2.0-or-later
 
 ```
 
 ### `apk` package: `ncurses-libs`
 
 ```console
-ncurses-libs-6.3_p20220521-r0 description:
+ncurses-libs-6.3_p20221119-r0 description:
 Ncurses libraries
 
-ncurses-libs-6.3_p20220521-r0 webpage:
+ncurses-libs-6.3_p20221119-r0 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-libs-6.3_p20220521-r0 installed size:
+ncurses-libs-6.3_p20221119-r0 installed size:
 500 KiB
 
-ncurses-libs-6.3_p20220521-r0 license:
+ncurses-libs-6.3_p20221119-r0 license:
 MIT
 
 ```
@@ -344,16 +361,16 @@ MIT
 ### `apk` package: `ncurses-terminfo-base`
 
 ```console
-ncurses-terminfo-base-6.3_p20220521-r0 description:
+ncurses-terminfo-base-6.3_p20221119-r0 description:
 Descriptions of common terminals
 
-ncurses-terminfo-base-6.3_p20220521-r0 webpage:
+ncurses-terminfo-base-6.3_p20221119-r0 webpage:
 https://invisible-island.net/ncurses/
 
-ncurses-terminfo-base-6.3_p20220521-r0 installed size:
+ncurses-terminfo-base-6.3_p20221119-r0 installed size:
 216 KiB
 
-ncurses-terminfo-base-6.3_p20220521-r0 license:
+ncurses-terminfo-base-6.3_p20221119-r0 license:
 MIT
 
 ```
@@ -361,16 +378,16 @@ MIT
 ### `apk` package: `nghttp2-libs`
 
 ```console
-nghttp2-libs-1.47.0-r0 description:
+nghttp2-libs-1.51.0-r0 description:
 Experimental HTTP/2 client, server and proxy (libraries)
 
-nghttp2-libs-1.47.0-r0 webpage:
+nghttp2-libs-1.51.0-r0 webpage:
 https://nghttp2.org
 
-nghttp2-libs-1.47.0-r0 installed size:
-156 KiB
+nghttp2-libs-1.51.0-r0 installed size:
+172 KiB
 
-nghttp2-libs-1.47.0-r0 license:
+nghttp2-libs-1.51.0-r0 license:
 MIT
 
 ```
@@ -378,16 +395,16 @@ MIT
 ### `apk` package: `openssh-client-common`
 
 ```console
-openssh-client-common-9.0_p1-r2 description:
+openssh-client-common-9.1_p1-r1 description:
 OpenBSD's SSH client common files
 
-openssh-client-common-9.0_p1-r2 webpage:
+openssh-client-common-9.1_p1-r1 webpage:
 https://www.openssh.com/portable.html
 
-openssh-client-common-9.0_p1-r2 installed size:
-2688 KiB
+openssh-client-common-9.1_p1-r1 installed size:
+2732 KiB
 
-openssh-client-common-9.0_p1-r2 license:
+openssh-client-common-9.1_p1-r1 license:
 BSD
 
 ```
@@ -395,16 +412,16 @@ BSD
 ### `apk` package: `openssh-client-default`
 
 ```console
-openssh-client-default-9.0_p1-r2 description:
+openssh-client-default-9.1_p1-r1 description:
 OpenBSD's SSH client
 
-openssh-client-default-9.0_p1-r2 webpage:
+openssh-client-default-9.1_p1-r1 webpage:
 https://www.openssh.com/portable.html
 
-openssh-client-default-9.0_p1-r2 installed size:
-896 KiB
+openssh-client-default-9.1_p1-r1 installed size:
+900 KiB
 
-openssh-client-default-9.0_p1-r2 license:
+openssh-client-default-9.1_p1-r1 license:
 BSD
 
 ```
@@ -412,16 +429,16 @@ BSD
 ### `apk` package: `openssh-keygen`
 
 ```console
-openssh-keygen-9.0_p1-r2 description:
+openssh-keygen-9.1_p1-r1 description:
 ssh helper program for generating keys
 
-openssh-keygen-9.0_p1-r2 webpage:
+openssh-keygen-9.1_p1-r1 webpage:
 https://www.openssh.com/portable.html
 
-openssh-keygen-9.0_p1-r2 installed size:
-540 KiB
+openssh-keygen-9.1_p1-r1 installed size:
+548 KiB
 
-openssh-keygen-9.0_p1-r2 license:
+openssh-keygen-9.1_p1-r1 license:
 BSD
 
 ```
@@ -446,16 +463,16 @@ BSD-3-Clause
 ### `apk` package: `scanelf`
 
 ```console
-scanelf-1.3.4-r0 description:
+scanelf-1.3.5-r1 description:
 Scan ELF binaries for stuff
 
-scanelf-1.3.4-r0 webpage:
+scanelf-1.3.5-r1 webpage:
 https://wiki.gentoo.org/wiki/Hardened/PaX_Utilities
 
-scanelf-1.3.4-r0 installed size:
-92 KiB
+scanelf-1.3.5-r1 installed size:
+96 KiB
 
-scanelf-1.3.4-r0 license:
+scanelf-1.3.5-r1 license:
 GPL-2.0-only
 
 ```
@@ -463,16 +480,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.35.0-r17 description:
+ssl_client-1.35.0-r29 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.35.0-r17 webpage:
+ssl_client-1.35.0-r29 webpage:
 https://busybox.net/
 
-ssl_client-1.35.0-r17 installed size:
+ssl_client-1.35.0-r29 installed size:
 28 KiB
 
-ssl_client-1.35.0-r17 license:
+ssl_client-1.35.0-r29 license:
 GPL-2.0-only
 
 ```
@@ -480,16 +497,16 @@ GPL-2.0-only
 ### `apk` package: `zlib`
 
 ```console
-zlib-1.2.12-r3 description:
+zlib-1.2.13-r0 description:
 A compression/decompression Library
 
-zlib-1.2.12-r3 webpage:
+zlib-1.2.13-r0 webpage:
 https://zlib.net/
 
-zlib-1.2.12-r3 installed size:
+zlib-1.2.13-r0 installed size:
 108 KiB
 
-zlib-1.2.12-r3 license:
+zlib-1.2.13-r0 license:
 Zlib
 
 ```
