@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a23f5d4fab161500f8099be4a17ccb7840691d13333609588b3441ad82cae418`
-- Created: `2022-11-04T23:33:36.309890985Z`
+- Image ID: `sha256:779edc935fbd98a3330d10cdb68621899bdd7250ee1dc7b72e31be54a544f2b9`
+- Created: `2022-11-29T19:21:25.456707153Z`
 - Virtual Size: ~ 135.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -322,15 +322,15 @@ $ dnf --quiet download --source --url keyutils-libs-1.5.8-3.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/keyutils-1.5.8-3.el7.src.rpm
 ```
 
-### `rpm` package: `krb5-libs-1.15.1-54.0.1.el7_9.x86_64`
+### `rpm` package: `krb5-libs-1.15.1-55.0.1.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url krb5-libs-1.15.1-54.0.1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/krb5-1.15.1-54.0.1.el7_9.src.rpm
+$ dnf --quiet download --source --url krb5-libs-1.15.1-55.0.1.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/krb5-1.15.1-55.0.1.el7_9.src.rpm
 ```
 
 ### `rpm` package: `libacl-2.2.51-15.el7.x86_64`
@@ -1180,13 +1180,13 @@ $ dnf --quiet download --source --url yum-utils-1.1.31-54.0.1.el7_8.noarch
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/yum-utils-1.1.31-54.0.1.el7_8.src.rpm
 ```
 
-### `rpm` package: `zlib-1.2.7-20.el7_9.x86_64`
+### `rpm` package: `zlib-1.2.7-20.0.1.el7_9.x86_64`
 
 Licenses (from `rpm --query`): zlib and Boost
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url zlib-1.2.7-20.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/zlib-1.2.7-20.el7_9.src.rpm
+$ dnf --quiet download --source --url zlib-1.2.7-20.0.1.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/zlib-1.2.7-20.0.1.el7_9.src.rpm
 ```
