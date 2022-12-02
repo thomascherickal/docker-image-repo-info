@@ -3039,14 +3039,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.19.0-23.24
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.19.0-23.24.dsc' linux_5.19.0-23.24.dsc 7601 SHA512:d191b5ef649894bb5393058f8a420d21285657534edab2aaa9460ed5053ad1bf94d141b550b01587e0fcb3bdfe59dc48c5cb551457056b83168dbf59ab84f886
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.19.0.orig.tar.gz' linux_5.19.0.orig.tar.gz 208263574 SHA512:9c018ef5d2b3f861f721a4541e547eb712352e8d6cfd4a6803c5a7ce96ce2a7e7baf1d83f9963f2244e7fae420731d95d198bf222e2b5079da624df0e0c78668
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.19.0-23.24.diff.gz' linux_5.19.0-23.24.diff.gz 4547771 SHA512:81c17691e12267d53ec820be5000395aec3a40ca26d9f5c38886624449351d9b2e30c4dce526b7aebc549edbeac4f2e2912fec14334d7d0e5c8e24b473b259cd
-```
 
 ### `dpkg` source package: `lsb=11.2ubuntu1`
 

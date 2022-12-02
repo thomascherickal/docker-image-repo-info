@@ -499,19 +499,13 @@ Licenses: (parsed from: `/usr/share/doc/debconf/copyright`)
 
 - `BSD-2-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debconf=1.5.79
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.79.dsc' debconf_1.5.79.dsc 2082 SHA256:b6a438542c61b8ff8a58cc33dca17859875783945a0e516239369b7d80e3ca7c
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.79.tar.xz' debconf_1.5.79.tar.xz 570588 SHA256:3456338d4bc329b4140c87d91e76068852c3d354348f77aa3cfb98619c069164
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/debconf/1.5.79/
 
-- https://sources.debian.net/src/debconf/1.5.79/ (for browsing the source)
-- https://sources.debian.net/src/debconf/1.5.79/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debconf/1.5.79/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debian-archive-keyring=2021.1.1`
 
@@ -2108,20 +2102,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=252.1-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.1-1.dsc' systemd_252.1-1.dsc 6366 SHA256:3a688aa2c3cfb48e334c9ffb81158fe2ec1929acb2dd7c72a5fec0afba988d89
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.1.orig.tar.gz' systemd_252.1.orig.tar.gz 11743015 SHA256:efd1c04d14c5e44b55d19aaf9182b309c4253bbd884374f5d840947d598e9d47
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.1-1.debian.tar.xz' systemd_252.1-1.debian.tar.xz 166868 SHA256:aff5dccd2909c353d0d30cd892df5b680e6ab222d440ed2461df5c7c13dac93c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/252.1-1/
 
-- https://sources.debian.net/src/systemd/252.1-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/252.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/252.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.05-7`
 
