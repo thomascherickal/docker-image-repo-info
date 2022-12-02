@@ -1,10 +1,10 @@
-# `gradle:7.5.1-jdk8-focal`
+# `gradle:7.6.0-jdk8-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:27c5edf3742e6c921f353a4c7c84d5cc79ec52ca66c4dd5db339b00a581c89d4`
-- Created: `2022-11-04T23:51:06.850107745Z`
-- Virtual Size: ~ 646.50 Mb  
+- Image ID: `sha256:192d5fddba40ea934e07eef9a2065c7cf071981a274db46a26e58a85bc3e62a0`
+- Created: `2022-11-29T20:32:47.423514417Z`
+- Virtual Size: ~ 648.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -16,7 +16,7 @@
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk8u352-b08`
   - `GRADLE_HOME=/opt/gradle`
-  - `GRADLE_VERSION=7.5.1`
+  - `GRADLE_VERSION=7.6`
 
 ## `dpkg` (`.deb`-based packages)
 

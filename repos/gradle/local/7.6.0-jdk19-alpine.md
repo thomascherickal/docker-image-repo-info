@@ -1,10 +1,10 @@
-# `gradle:6.9.3-jdk11-alpine`
+# `gradle:7.6.0-jdk19-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b7bb3c596a110f4c5fbb05ea734ae0c784d42ad2ac36c3adc7cffc97d7261f5f`
-- Created: `2022-11-29T20:34:13.998581036Z`
-- Virtual Size: ~ 563.16 Mb  
+- Image ID: `sha256:713bfe6acdc8578032855e8d2ff95a077037b4891c14cc968722b209aa923d35`
+- Created: `2022-12-01T19:42:34.245405085Z`
+- Virtual Size: ~ 600.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -14,9 +14,9 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.17+8`
+  - `JAVA_VERSION=jdk-19.0.1+10`
   - `GRADLE_HOME=/opt/gradle`
-  - `GRADLE_VERSION=6.9.3`
+  - `GRADLE_VERSION=7.6`
 
 ## `apk` (`.apk`-based packages)
 
@@ -924,16 +924,16 @@ Public-Domain
 ### `apk` package: `xz-libs`
 
 ```console
-xz-libs-5.2.8-r0 description:
+xz-libs-5.2.9-r0 description:
 Library and CLI tools for XZ and LZMA compressed files (libraries)
 
-xz-libs-5.2.8-r0 webpage:
+xz-libs-5.2.9-r0 webpage:
 https://tukaani.org/xz
 
-xz-libs-5.2.8-r0 installed size:
+xz-libs-5.2.9-r0 installed size:
 176 KiB
 
-xz-libs-5.2.8-r0 license:
+xz-libs-5.2.9-r0 license:
 GPL-2.0-or-later AND Public-Domain AND LGPL-2.1-or-later
 
 ```
