@@ -1,10 +1,10 @@
-# `drupal:7.92-php7.4-fpm-bullseye`
+# `drupal:7.92-php8.0-fpm-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4c2d6bab4974528c9ce8acfa96a159fdffedfa975449ac4d0177b60f7940519f`
-- Created: `2022-11-15T08:30:36.510259116Z`
-- Virtual Size: ~ 461.23 Mb  
+- Image ID: `sha256:a44f5f5dfe2d885de2b3a5755be39a9c0e3129761f1cd8d824fcb1ed4ffee130`
+- Created: `2022-11-29T05:07:08.005735101Z`
+- Virtual Size: ~ 463.64 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -16,11 +16,11 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=42670A7FE4D0441C8E4632349E4FDC074A4EF02D 5A52880781F755608BF815FC910DEB46F53EA312`
-  - `PHP_VERSION=7.4.33`
-  - `PHP_URL=https://www.php.net/distributions/php-7.4.33.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-7.4.33.tar.xz.asc`
-  - `PHP_SHA256=924846abf93bc613815c55dd3f5809377813ac62a9ec4eb3778675b82a27b927`
+  - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4`
+  - `PHP_VERSION=8.0.26`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.26.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.26.tar.xz.asc`
+  - `PHP_SHA256=0765bfbe640dba37ccc36d2bc7c7b7ba3d2c3381c9cd4305f66eca83e82a40b3`
   - `DRUPAL_VERSION=7.92`
   - `DRUPAL_MD5=7f95bd4a6693ed5215aba4038c23c933`
 
