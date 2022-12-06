@@ -1,7 +1,7 @@
 ## `buildpack-deps:bookworm-curl`
 
 ```console
-$ docker pull buildpack-deps@sha256:0c8287e8f837b23ea8aa7d76878fc1c62544a9355313b109488e1c5b13985fdb
+$ docker pull buildpack-deps@sha256:9cf12bd8d7699f85716f06ae94b570aa277d126a2ec8c64fee17d6106eefaee3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -246,39 +246,39 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 ### `buildpack-deps:bookworm-curl` - linux; ppc64le
 
 ```console
-$ docker pull buildpack-deps@sha256:88a2d219394341b68d4f5921259c07905cbd095262c5ad9a83ac787ea172d4b1
+$ docker pull buildpack-deps@sha256:d2069610b204e2b3407e66e9fe4c715ae4c3c85b940752e076ac3f3887c8762a
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **76.1 MB (76086639 bytes)**  
+-	Total Size: **76.0 MB (76046478 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2c73cd50f13a80ab70e487962fc0beaff1aadb0dd9b7a085a13e0acc64db4882`
+-	Image ID: `sha256:6513f00fe77dc724e1e75ee76cc576d60d3432b2e62be90e2b43eb9b89025075`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 15 Nov 2022 05:17:43 GMT
-ADD file:b13da8e7ee4f9b71f42de64cf2dfe92a09d9d6be3537a8b151db32013e632fb4 in / 
-# Tue, 15 Nov 2022 05:17:45 GMT
+# Tue, 06 Dec 2022 01:16:54 GMT
+ADD file:394004d3191138471ba2dd50891718f9142a137ec9018f4f69a653139a98abf1 in / 
+# Tue, 06 Dec 2022 01:16:57 GMT
 CMD ["bash"]
-# Tue, 15 Nov 2022 11:51:37 GMT
+# Tue, 06 Dec 2022 06:34:47 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 15 Nov 2022 11:51:59 GMT
+# Tue, 06 Dec 2022 06:35:08 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
 ```
 
 -	Layers:
-	-	`sha256:24f3e6cef4f753f77f6e0b5b4e73cf7a7fdbfa85b11f29916d1d4fe28bee544c`  
-		Last Modified: Tue, 15 Nov 2022 05:22:58 GMT  
-		Size: 54.4 MB (54360800 bytes)  
+	-	`sha256:c1206773e59171c1200c3692244202cc0da97f8fc41cb86ed64f742f1e75b47f`  
+		Last Modified: Tue, 06 Dec 2022 01:22:51 GMT  
+		Size: 54.3 MB (54319290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e462c1bdfc268a97c6033242cd34635559a926155991efd84c30d93ce39ce6ee`  
-		Last Modified: Tue, 15 Nov 2022 12:06:33 GMT  
-		Size: 9.6 MB (9596802 bytes)  
+	-	`sha256:4d2bf8fe0b01dd711eba4372279b1ec1baca4dda44423540050ddc904916d0bf`  
+		Last Modified: Tue, 06 Dec 2022 06:48:23 GMT  
+		Size: 9.6 MB (9598813 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:970a93fcc7e991ae16e04be69f70dc91326e712c64e700b5ee5a6a3f14bb797f`  
-		Last Modified: Tue, 15 Nov 2022 12:06:34 GMT  
-		Size: 12.1 MB (12129037 bytes)  
+	-	`sha256:594f52d0cb31836574048a516ce0e264a5125592606d1b50484ce8dc7c4f0b92`  
+		Last Modified: Tue, 06 Dec 2022 06:48:23 GMT  
+		Size: 12.1 MB (12128375 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:bookworm-curl` - linux; s390x
