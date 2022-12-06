@@ -203,13 +203,9 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ca-certificates=20211016~18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016%7e18.04.1.dsc' ca-certificates_20211016~18.04.1.dsc 1909 SHA512:b6c9b224902b90ee51db3ec5563e4b068fcbf1b5c7ac70fcb37f7c9855eec8157d25f8b608dbb8b71152327c62e10d22488af4a0be23a6829ae433ba2e6d23d0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016%7e18.04.1.tar.xz' ca-certificates_20211016~18.04.1.tar.xz 238936 SHA512:df2f0033bed9c5d99673dab9e041339d8fa051b658a2f9b8d6219328999ad42ebbe0d0c5ef76613655c4af493b82a468560c0a69de870ff574571c14f6be39fe
-```
 
 ### `dpkg` source package: `cdebconf=0.213ubuntu1`
 
@@ -1842,14 +1838,9 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-6.1ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-6.1ubuntu1.7.dsc' libxml2_2.9.4+dfsg1-6.1ubuntu1.7.dsc 3167 SHA512:00caa10ba73d760a371cd31dd01048128a617d084855ede2d4e5dc936a788621752d90c89f0e20ae515686fe7548d13b28e917bd0e1ec5ca205135ce4670853d
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4%2bdfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA512:c921697db38b530b1a088636cb31226bbe9df8c9e9c83316ce53770f9bd2faeef360d5f526f34e00cd778150c408e8d91b99a67a5f5030a8b279961ff9299ae5
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-6.1ubuntu1.7.debian.tar.xz' libxml2_2.9.4+dfsg1-6.1ubuntu1.7.debian.tar.xz 46572 SHA512:22351ec3e28fac85a8cd644516d12752f95ca31edc7d717863dcbed1e735c89fb29c964c039d5a97647c300cf2f709f78cbf7cfcd05c1bc69823ad74f01ac001
-```
 
 ### `dpkg` source package: `libxmu=2:1.1.2-2`
 
