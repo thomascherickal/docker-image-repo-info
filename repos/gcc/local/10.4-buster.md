@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e3538e1f6ea821eb5034b2ca883e49d0c3c485a31499f7e44e24900c1a4efefa`
-- Created: `2022-11-16T02:52:52.438560384Z`
+- Image ID: `sha256:cbcdfd216d1a4ae043e9de7f61f837945e7170cf5bc80731bec75cd8c955b4f2`
+- Created: `2022-12-06T19:36:03.366524792Z`
 - Virtual Size: ~ 1.19 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1974,20 +1974,20 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/keyutils/1.6-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/keyutils/1.6-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `krb5=1.17-3+deb10u4`
+### `dpkg` source package: `krb5=1.17-3+deb10u5`
 
 Binary Packages:
 
-- `krb5-multidev:amd64=1.17-3+deb10u4`
-- `libgssapi-krb5-2:amd64=1.17-3+deb10u4`
-- `libgssrpc4:amd64=1.17-3+deb10u4`
-- `libk5crypto3:amd64=1.17-3+deb10u4`
-- `libkadm5clnt-mit11:amd64=1.17-3+deb10u4`
-- `libkadm5srv-mit11:amd64=1.17-3+deb10u4`
-- `libkdb5-9:amd64=1.17-3+deb10u4`
-- `libkrb5-3:amd64=1.17-3+deb10u4`
-- `libkrb5-dev:amd64=1.17-3+deb10u4`
-- `libkrb5support0:amd64=1.17-3+deb10u4`
+- `krb5-multidev:amd64=1.17-3+deb10u5`
+- `libgssapi-krb5-2:amd64=1.17-3+deb10u5`
+- `libgssrpc4:amd64=1.17-3+deb10u5`
+- `libk5crypto3:amd64=1.17-3+deb10u5`
+- `libkadm5clnt-mit11:amd64=1.17-3+deb10u5`
+- `libkadm5srv-mit11:amd64=1.17-3+deb10u5`
+- `libkdb5-9:amd64=1.17-3+deb10u5`
+- `libkrb5-3:amd64=1.17-3+deb10u5`
+- `libkrb5-dev:amd64=1.17-3+deb10u5`
+- `libkrb5support0:amd64=1.17-3+deb10u5`
 
 Licenses: (parsed from: `/usr/share/doc/krb5-multidev/copyright`, `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libgssrpc4/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkadm5clnt-mit11/copyright`, `/usr/share/doc/libkadm5srv-mit11/copyright`, `/usr/share/doc/libkdb5-9/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5-dev/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
@@ -1996,17 +1996,17 @@ Licenses: (parsed from: `/usr/share/doc/krb5-multidev/copyright`, `/usr/share/do
 Source:
 
 ```console
-$ apt-get source -qq --print-uris krb5=1.17-3+deb10u4
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3%2bdeb10u4.dsc' krb5_1.17-3+deb10u4.dsc 2968 SHA256:7b2d47d17563e72841d353010442ff56b9ec87a8f83ac0e0aef68dff23c5da9d
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.17-3%2bdeb10u4.debian.tar.xz' krb5_1.17-3+deb10u4.debian.tar.xz 104736 SHA256:69e9f59958fc0c2d7aa7540e93280b67a2e2377efbfd7b3c0c8411b8994df181
+$ apt-get source -qq --print-uris krb5=1.17-3+deb10u5
+'http://deb.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17-3%2bdeb10u5.dsc' krb5_1.17-3+deb10u5.dsc 3573 SHA256:9c077e4e8be514692b32bfb3cbfe9de1b660fac9fd2686aae15cb75bf1be4edf
+'http://deb.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA256:5a6e2284a53de5702d3dc2be3b9339c963f9b5397d3fbbc53beb249380a781f5
+'http://deb.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.17-3%2bdeb10u5.debian.tar.xz' krb5_1.17-3+deb10u5.debian.tar.xz 105892 SHA256:b5d9785d100eab8a0de448e39ce0f830d823d5d00d76ee0ffeae6e8d3ca51a9a
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/krb5/1.17-3+deb10u4/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.17-3+deb10u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.17-3+deb10u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/krb5/1.17-3+deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/krb5/1.17-3+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lcms2=2.9-3`
 
