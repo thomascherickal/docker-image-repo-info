@@ -1700,14 +1700,9 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris heimdal=7.7.0+dfsg-1ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.1.dsc' heimdal_7.7.0+dfsg-1ubuntu1.1.dsc 3399 SHA512:e3dea31fa907cd8b238c87bb02a6a42b576427213278ee58eb4455540b85bb06597bb80a322b4960a5d3c2ebe016d9c1822b70ef6e8ec25f55bfd8bfac8575f2
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg.orig.tar.xz' heimdal_7.7.0+dfsg.orig.tar.xz 5945252 SHA512:14141f3fff264c9516f736bcc51c998df69cfaa7108d2387921299efd7e82d79b918dee4029905dc221c204d3340ffc17da9472baf80029372d7c13de328ec0a
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.1.debian.tar.xz' heimdal_7.7.0+dfsg-1ubuntu1.1.debian.tar.xz 130324 SHA512:434b3811d019c319972b021b39ed21db8aeed15629aeb0a06796b270a649d0387870280e98a2fed53129777ba670471f98420c5207884c18c4bad300480c9e81
-```
 
 ### `dpkg` source package: `hostname=3.23`
 
@@ -4001,14 +3996,9 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.10+dfsg-5ubuntu0.20.04.4
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-5ubuntu0.20.04.4.dsc' libxml2_2.9.10+dfsg-5ubuntu0.20.04.4.dsc 3121 SHA512:9e2e61812ad0c082bb4498c6fb5bb3fab468c6cc54294f12ec0b546f68d8890638db36684970005aa8e7f20531e46abbf9928168162ce6d32f5752f148a51f54
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg.orig.tar.xz' libxml2_2.9.10+dfsg.orig.tar.xz 2503560 SHA512:605c6c0f8bf2c53208d0a036ff09a4025843f45139b711c90dc83066feda2f285a5578d55d4a58d33eedbe7485a5c1ec5608ba6c6beed1fb55649f87dca0cec3
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-5ubuntu0.20.04.4.debian.tar.xz' libxml2_2.9.10+dfsg-5ubuntu0.20.04.4.debian.tar.xz 36220 SHA512:93402b5c0180a7a99da434248672bcce6574896dba5f20df3ab371c128c3c19057df3ed146c9ef15ace6ff2f7442c4b8e2eb3ca7e963d14a17da9094d0f694fd
-```
 
 ### `dpkg` source package: `libxmu=2:1.1.3-0ubuntu1`
 

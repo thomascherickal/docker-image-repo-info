@@ -431,14 +431,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.34-6ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.3.dsc' binutils_2.34-6ubuntu1.3.dsc 8829 SHA512:4bc4408053e8a0b1a4f97dba2ef1ff20f4c44a34a068e48e0e3e7414d36b968b09d9db50a8430e2527f979216c4e326a6548d75d0baed1b886adb743c5046f25
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34.orig.tar.xz' binutils_2.34.orig.tar.xz 21637796 SHA512:2c7976939dcf5e8c5b7374cccd39bfe803b1bec73c6abfa0eb17c24e1942574c6bdb874c66a092a82adc443182eacd8a5a8001c19a76101f0c7ba40c27de0bbd
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.3.debian.tar.xz' binutils_2.34-6ubuntu1.3.debian.tar.xz 158192 SHA512:9d182ac514e5383892a2a9bbc2267c5439c699557a7392003bdfd43e2fc5c66fb10b793a25c8f17c763d377c1628d070c5a29bf7213513da3e769305517683e2
-```
 
 ### `dpkg` source package: `boost-defaults=1.71.0.0ubuntu2`
 
@@ -668,13 +663,9 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ca-certificates=20211016~20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016%7e20.04.1.dsc' ca-certificates_20211016~20.04.1.dsc 1917 SHA512:136bf6a197dbae1b560a0302c9a0dd6b58bb25f2d284680ad59486eb8ad9be5c340ad2eabb448fd7284971bb8358a83cc23868a8e64e6c21368edbf9978ce2d9
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016%7e20.04.1.tar.xz' ca-certificates_20211016~20.04.1.tar.xz 239236 SHA512:8a8a96eeae0dc4a117f7b73f8d0823b0e3b99cae555538fd5ab7cab0216107656cd61a10e92a244482227568c695a52ac5debf2203ae419e0c9e24ca1f1c7beb
-```
 
 ### `dpkg` source package: `cairo=1.16.0-4ubuntu1`
 
@@ -2241,14 +2232,9 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris heimdal=7.7.0+dfsg-1ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.1.dsc' heimdal_7.7.0+dfsg-1ubuntu1.1.dsc 3399 SHA512:e3dea31fa907cd8b238c87bb02a6a42b576427213278ee58eb4455540b85bb06597bb80a322b4960a5d3c2ebe016d9c1822b70ef6e8ec25f55bfd8bfac8575f2
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg.orig.tar.xz' heimdal_7.7.0+dfsg.orig.tar.xz 5945252 SHA512:14141f3fff264c9516f736bcc51c998df69cfaa7108d2387921299efd7e82d79b918dee4029905dc221c204d3340ffc17da9472baf80029372d7c13de328ec0a
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.1.debian.tar.xz' heimdal_7.7.0+dfsg-1ubuntu1.1.debian.tar.xz 130324 SHA512:434b3811d019c319972b021b39ed21db8aeed15629aeb0a06796b270a649d0387870280e98a2fed53129777ba670471f98420c5207884c18c4bad300480c9e81
-```
 
 ### `dpkg` source package: `hostname=3.23`
 
@@ -4955,14 +4941,9 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libx
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.10+dfsg-5ubuntu0.20.04.4
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-5ubuntu0.20.04.4.dsc' libxml2_2.9.10+dfsg-5ubuntu0.20.04.4.dsc 3121 SHA512:9e2e61812ad0c082bb4498c6fb5bb3fab468c6cc54294f12ec0b546f68d8890638db36684970005aa8e7f20531e46abbf9928168162ce6d32f5752f148a51f54
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg.orig.tar.xz' libxml2_2.9.10+dfsg.orig.tar.xz 2503560 SHA512:605c6c0f8bf2c53208d0a036ff09a4025843f45139b711c90dc83066feda2f285a5578d55d4a58d33eedbe7485a5c1ec5608ba6c6beed1fb55649f87dca0cec3
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-5ubuntu0.20.04.4.debian.tar.xz' libxml2_2.9.10+dfsg-5ubuntu0.20.04.4.debian.tar.xz 36220 SHA512:93402b5c0180a7a99da434248672bcce6574896dba5f20df3ab371c128c3c19057df3ed146c9ef15ace6ff2f7442c4b8e2eb3ca7e963d14a17da9094d0f694fd
-```
 
 ### `dpkg` source package: `libxmu=2:1.1.3-0ubuntu1`
 

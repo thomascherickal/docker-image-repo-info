@@ -1551,14 +1551,9 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris heimdal=7.5.0+dfsg-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg-1ubuntu0.1.dsc' heimdal_7.5.0+dfsg-1ubuntu0.1.dsc 3424 SHA512:262e68acd0e01fbef5dac3780c24e707a9c2afdb547e6c7cac24cbf1db8a53fd576f85978caa289a660f73a94ef2620cd6a17111f26dbe0970f8b962305b70be
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg.orig.tar.gz' heimdal_7.5.0+dfsg.orig.tar.gz 8955005 SHA512:8ecd3514cb42c746769fb4c83896fc1258cc68ab606894e775e5f99075b6ff87d7024f144a6a369816572270b89e2eb59e8f8dc4384eea25863a90c905cdfa14
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg-1ubuntu0.1.debian.tar.xz' heimdal_7.5.0+dfsg-1ubuntu0.1.debian.tar.xz 323804 SHA512:66f7ce293e9af8c7e8850fabbbb162bed6cf0b2bbfbc667ed088e03f9c2227eec674dbbfd01fde058e363a46819f9cf8498b1e915906b8bfcfb112a58b2bb798
-```
 
 ### `dpkg` source package: `hostname=3.20`
 
@@ -3816,14 +3811,9 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-6.1ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-6.1ubuntu1.7.dsc' libxml2_2.9.4+dfsg1-6.1ubuntu1.7.dsc 3167 SHA512:00caa10ba73d760a371cd31dd01048128a617d084855ede2d4e5dc936a788621752d90c89f0e20ae515686fe7548d13b28e917bd0e1ec5ca205135ce4670853d
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4%2bdfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA512:c921697db38b530b1a088636cb31226bbe9df8c9e9c83316ce53770f9bd2faeef360d5f526f34e00cd778150c408e8d91b99a67a5f5030a8b279961ff9299ae5
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-6.1ubuntu1.7.debian.tar.xz' libxml2_2.9.4+dfsg1-6.1ubuntu1.7.debian.tar.xz 46572 SHA512:22351ec3e28fac85a8cd644516d12752f95ca31edc7d717863dcbed1e735c89fb29c964c039d5a97647c300cf2f709f78cbf7cfcd05c1bc69823ad74f01ac001
-```
 
 ### `dpkg` source package: `libxmu=2:1.1.2-2`
 

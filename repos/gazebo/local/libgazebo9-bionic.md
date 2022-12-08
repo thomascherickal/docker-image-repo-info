@@ -294,14 +294,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.30-21ubuntu1~18.04.7
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30-21ubuntu1%7e18.04.7.dsc' binutils_2.30-21ubuntu1~18.04.7.dsc 11670 SHA512:33866f71fa39e9d5b85fb0060f33325148616b2d3c7cd43de593178b72fe7df4818c3a27c2d064e66c2cbbca6a899da7ae8a09e46f9efc1244a07adf8cfe84f8
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30.orig.tar.xz' binutils_2.30.orig.tar.xz 20286700 SHA512:e747ea20d8d79fcd21b9d9f6695059caa7189d60f19256da398e34b789fea9a133c32b192e9693b5828d27683739b0198431bf8b3e39fb3b04884cf89d9aa839
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.30-21ubuntu1%7e18.04.7.debian.tar.xz' binutils_2.30-21ubuntu1~18.04.7.debian.tar.xz 624916 SHA512:b5cd722de3d57b566e8b29fa124516aa94a4c868a2e202bf2656e525f6aaba5f25d48a8a1c7bdc799f604aec9e7bb7dbf8d5b8183af546da0cbd0dd332f6c3d0
-```
 
 ### `dpkg` source package: `boost-defaults=1.65.1.0ubuntu1`
 
@@ -1786,14 +1781,9 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris heimdal=7.5.0+dfsg-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg-1ubuntu0.1.dsc' heimdal_7.5.0+dfsg-1ubuntu0.1.dsc 3424 SHA512:262e68acd0e01fbef5dac3780c24e707a9c2afdb547e6c7cac24cbf1db8a53fd576f85978caa289a660f73a94ef2620cd6a17111f26dbe0970f8b962305b70be
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg.orig.tar.gz' heimdal_7.5.0+dfsg.orig.tar.gz 8955005 SHA512:8ecd3514cb42c746769fb4c83896fc1258cc68ab606894e775e5f99075b6ff87d7024f144a6a369816572270b89e2eb59e8f8dc4384eea25863a90c905cdfa14
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg-1ubuntu0.1.debian.tar.xz' heimdal_7.5.0+dfsg-1ubuntu0.1.debian.tar.xz 323804 SHA512:66f7ce293e9af8c7e8850fabbbb162bed6cf0b2bbfbc667ed088e03f9c2227eec674dbbfd01fde058e363a46819f9cf8498b1e915906b8bfcfb112a58b2bb798
-```
 
 ### `dpkg` source package: `hostname=3.20`
 
@@ -4215,14 +4205,9 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libx
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-6.1ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-6.1ubuntu1.7.dsc' libxml2_2.9.4+dfsg1-6.1ubuntu1.7.dsc 3167 SHA512:00caa10ba73d760a371cd31dd01048128a617d084855ede2d4e5dc936a788621752d90c89f0e20ae515686fe7548d13b28e917bd0e1ec5ca205135ce4670853d
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4%2bdfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA512:c921697db38b530b1a088636cb31226bbe9df8c9e9c83316ce53770f9bd2faeef360d5f526f34e00cd778150c408e8d91b99a67a5f5030a8b279961ff9299ae5
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-6.1ubuntu1.7.debian.tar.xz' libxml2_2.9.4+dfsg1-6.1ubuntu1.7.debian.tar.xz 46572 SHA512:22351ec3e28fac85a8cd644516d12752f95ca31edc7d717863dcbed1e735c89fb29c964c039d5a97647c300cf2f709f78cbf7cfcd05c1bc69823ad74f01ac001
-```
 
 ### `dpkg` source package: `libxmu=2:1.1.2-2`
 
