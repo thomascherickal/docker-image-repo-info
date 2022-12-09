@@ -1,7 +1,7 @@
 ## `clojure:temurin-8-jammy`
 
 ```console
-$ docker pull clojure@sha256:c28271420db5a558f26287db2894db6d8ad6419b1decdc3e3ddc1d3cc62ea60e
+$ docker pull clojure@sha256:f23b77ca0ab287580ee49f6d937a1134c618f6a79622352c9d65f1a651c64275
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,139 +12,139 @@ $ docker pull clojure@sha256:c28271420db5a558f26287db2894db6d8ad6419b1decdc3e3dd
 ### `clojure:temurin-8-jammy` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:62a9f9c22b5f63c05dcd43c352842ea20f949f6755c948920618b195b9c10ded
+$ docker pull clojure@sha256:b574db5976c9dad91996123a459f98161cdf26e44491172137c2de1f75c9dc5b
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **200.8 MB (200826071 bytes)**  
+-	Total Size: **200.8 MB (200825966 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5404b92de7f35139cffdb22227bc9c764ab0a7b7f7072b84cbe431ac23b91f1c`
+-	Image ID: `sha256:cf00e9d111e1e286b06864ce08127ea35a96f436d87540caf80aa700beabedfb`
 -	Default Command: `["clj"]`
 
 ```dockerfile
-# Wed, 02 Nov 2022 18:25:55 GMT
-ADD file:29c72d5be8c977acaeb6391aeb23ec27559b594e25a0bb3a6dd280bac2847b7f in / 
-# Wed, 02 Nov 2022 18:25:55 GMT
+# Fri, 09 Dec 2022 01:20:30 GMT
+ADD file:481dd2da6de71525248eba186feeeafcc73cc956ade0a196a4e8b0c2424e74b9 in / 
+# Fri, 09 Dec 2022 01:20:31 GMT
 CMD ["bash"]
-# Wed, 02 Nov 2022 18:43:42 GMT
+# Fri, 09 Dec 2022 01:42:58 GMT
 ENV JAVA_HOME=/opt/java/openjdk
-# Wed, 02 Nov 2022 18:43:42 GMT
+# Fri, 09 Dec 2022 01:42:58 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 02 Nov 2022 18:43:42 GMT
+# Fri, 09 Dec 2022 01:42:58 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Wed, 02 Nov 2022 18:44:10 GMT
+# Fri, 09 Dec 2022 01:43:29 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 04 Nov 2022 23:20:09 GMT
+# Fri, 09 Dec 2022 01:43:29 GMT
 ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 04 Nov 2022 23:20:14 GMT
+# Fri, 09 Dec 2022 01:43:35 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 04 Nov 2022 23:20:15 GMT
+# Fri, 09 Dec 2022 01:43:36 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Fri, 18 Nov 2022 22:22:54 GMT
+# Fri, 09 Dec 2022 06:35:52 GMT
 ENV CLOJURE_VERSION=1.11.1.1200
-# Fri, 18 Nov 2022 22:22:54 GMT
+# Fri, 09 Dec 2022 06:35:52 GMT
 WORKDIR /tmp
-# Fri, 18 Nov 2022 22:23:09 GMT
+# Fri, 09 Dec 2022 06:36:06 GMT
 RUN apt-get update && apt-get install -y make git rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "694381cb78d44f143bdcc38657507f012ebac4009bc57cec67abef1675447878 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove wget
-# Fri, 18 Nov 2022 22:23:10 GMT
+# Fri, 09 Dec 2022 06:36:07 GMT
 COPY file:b0aef3ea203de7b5c2ea645debf58c8231445a2e3070b72749b54614f4a89b82 in /usr/local/bin/rlwrap 
-# Fri, 18 Nov 2022 22:23:10 GMT
+# Fri, 09 Dec 2022 06:36:07 GMT
 CMD ["clj"]
 ```
 
 -	Layers:
-	-	`sha256:e96e057aae67380a4ddb16c337c5c3669d97fdff69ec537f02aa2cc30d814281`  
-		Last Modified: Wed, 02 Nov 2022 03:03:36 GMT  
-		Size: 30.4 MB (30425607 bytes)  
+	-	`sha256:6e3729cf69e0ce2de9e779575a1fec8b7fb5efdfa822829290ab6d5d1bc3e797`  
+		Last Modified: Thu, 08 Dec 2022 14:10:00 GMT  
+		Size: 30.4 MB (30428708 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4ced2591451da3a02e2b6bb44752b9e3f00d77789921be4df5082fb9f9880ad0`  
-		Last Modified: Wed, 02 Nov 2022 18:48:43 GMT  
-		Size: 12.4 MB (12439006 bytes)  
+	-	`sha256:96aa423488f0ed1e9bf6c6da11fa7fb53568d1ea4003892416b3adeccb47e3bf`  
+		Last Modified: Fri, 09 Dec 2022 01:50:02 GMT  
+		Size: 12.4 MB (12432218 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:22cd2b580a647650c8d650377e6ad35526f51d10dd0c29b4e054402fdc90955a`  
-		Last Modified: Fri, 04 Nov 2022 23:25:35 GMT  
-		Size: 103.5 MB (103530821 bytes)  
+	-	`sha256:f34fa275bf0b5bab28fea58c490432229021012bc8c653e6755e7ee9c085a663`  
+		Last Modified: Fri, 09 Dec 2022 01:50:08 GMT  
+		Size: 103.5 MB (103530830 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:191e5a2019b63444c66595f90922ab90da59ba089d35c72bc534874fc829341c`  
-		Last Modified: Fri, 04 Nov 2022 23:25:26 GMT  
-		Size: 160.0 B  
+	-	`sha256:28777328b1ab712f896886df6064f17b12b95b28ead3d026e0c7c5b0590fcd9a`  
+		Last Modified: Fri, 09 Dec 2022 01:49:59 GMT  
+		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:953cc30628e0c0049f511484d84f6a093cc5dafabad82f2c75914aaf10860deb`  
-		Last Modified: Fri, 18 Nov 2022 22:33:13 GMT  
-		Size: 54.4 MB (54429859 bytes)  
+	-	`sha256:d2e6e32499b4f1ee4a3fb0c8e7a0a0921e637c4e0ab8af7f2db27fa229bbfb19`  
+		Last Modified: Fri, 09 Dec 2022 06:52:58 GMT  
+		Size: 54.4 MB (54433432 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:30c42538003f0750039e2169382256a729ed98519c125e79c78d5586fd050af1`  
-		Last Modified: Fri, 18 Nov 2022 22:33:06 GMT  
-		Size: 618.0 B  
+	-	`sha256:a281f73f5aedeb63307ac5d1633c8a2eeb62dc075799ee57e63dd18c66ea0523`  
+		Last Modified: Fri, 09 Dec 2022 06:52:52 GMT  
+		Size: 619.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:temurin-8-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:205cb4ff822c090549cbd94c81d1bd107575ae1d8a65bdd6167f554deea63d9c
+$ docker pull clojure@sha256:fa93fa0a04c42300590bd3496a148c224f32e1a11f35e44a63188fd960c5053a
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **197.8 MB (197801937 bytes)**  
+-	Total Size: **197.8 MB (197802924 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2261596f0a427709084846bee408b9894afcd6952ab57e04eac50a147690f569`
+-	Image ID: `sha256:b1468fce60cc14fe0f7b4d575456ec196e4e0cd37efeaefd8f0f6e30f9815bdd`
 -	Default Command: `["clj"]`
 
 ```dockerfile
-# Wed, 02 Nov 2022 18:49:40 GMT
-ADD file:a934fb007525d0b56966a52a22ab22560bf48b6e09917f05324042129d4d894a in / 
-# Wed, 02 Nov 2022 18:49:40 GMT
+# Fri, 09 Dec 2022 01:46:57 GMT
+ADD file:429a55a11d4bcd15647d1316d9debd9ead4b4ab5c0b9146894d07c39aa814290 in / 
+# Fri, 09 Dec 2022 01:46:57 GMT
 CMD ["bash"]
-# Wed, 02 Nov 2022 19:44:20 GMT
+# Fri, 09 Dec 2022 03:39:20 GMT
 ENV JAVA_HOME=/opt/java/openjdk
-# Wed, 02 Nov 2022 19:44:20 GMT
+# Fri, 09 Dec 2022 03:39:20 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 02 Nov 2022 19:44:20 GMT
+# Fri, 09 Dec 2022 03:39:20 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Wed, 02 Nov 2022 19:44:32 GMT
+# Fri, 09 Dec 2022 03:39:39 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 04 Nov 2022 22:39:49 GMT
+# Fri, 09 Dec 2022 03:39:40 GMT
 ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 04 Nov 2022 22:39:54 GMT
+# Fri, 09 Dec 2022 03:39:49 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 04 Nov 2022 22:39:55 GMT
+# Fri, 09 Dec 2022 03:39:50 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Fri, 18 Nov 2022 22:42:31 GMT
+# Fri, 09 Dec 2022 05:03:15 GMT
 ENV CLOJURE_VERSION=1.11.1.1200
-# Fri, 18 Nov 2022 22:42:31 GMT
+# Fri, 09 Dec 2022 05:03:15 GMT
 WORKDIR /tmp
-# Fri, 18 Nov 2022 22:42:43 GMT
+# Fri, 09 Dec 2022 05:03:26 GMT
 RUN apt-get update && apt-get install -y make git rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "694381cb78d44f143bdcc38657507f012ebac4009bc57cec67abef1675447878 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove wget
-# Fri, 18 Nov 2022 22:42:43 GMT
+# Fri, 09 Dec 2022 05:03:26 GMT
 COPY file:b0aef3ea203de7b5c2ea645debf58c8231445a2e3070b72749b54614f4a89b82 in /usr/local/bin/rlwrap 
-# Fri, 18 Nov 2022 22:42:43 GMT
+# Fri, 09 Dec 2022 05:03:26 GMT
 CMD ["clj"]
 ```
 
 -	Layers:
-	-	`sha256:0509fae36eb0656f8bdb23f8ae64100d893bcea2563e97468d337e04d2d0410b`  
-		Last Modified: Wed, 02 Nov 2022 18:50:21 GMT  
-		Size: 28.4 MB (28382154 bytes)  
+	-	`sha256:10175de2f0c4f7d306f660ee073bce12b824c8012dd19b3c140aae053fabd1cc`  
+		Last Modified: Thu, 08 Dec 2022 18:50:01 GMT  
+		Size: 28.4 MB (28384475 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e502a1af2bcd98f5f0d2f5e4da1a0e7bbe07a2c548e2662f7d37dce5ae1df46c`  
-		Last Modified: Wed, 02 Nov 2022 19:48:28 GMT  
-		Size: 12.4 MB (12396330 bytes)  
+	-	`sha256:6940ebf96dce07e0f2d684dad9d95a74c7620e493977fa2d52970797dafd6002`  
+		Last Modified: Fri, 09 Dec 2022 03:45:30 GMT  
+		Size: 12.4 MB (12391491 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b8e305092c30b6339dbb28b964305f454e01415c7f73a2b2bc833aab9848081c`  
-		Last Modified: Fri, 04 Nov 2022 22:44:01 GMT  
-		Size: 102.6 MB (102629603 bytes)  
+	-	`sha256:b4a26d8726f6e237d7a24a566b3b99f49baffb85f989ca045393a6934c70cf46`  
+		Last Modified: Fri, 09 Dec 2022 03:45:36 GMT  
+		Size: 102.6 MB (102629595 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ae05edc48e9f9fd169a4504357fcc83a2df848e6e75ecf12f63e72f0032cca50`  
-		Last Modified: Fri, 04 Nov 2022 22:43:54 GMT  
+	-	`sha256:650fc84deef6195c3692013832b8a460a180b2534a7c294413ec14e11a5ffe59`  
+		Last Modified: Fri, 09 Dec 2022 03:45:28 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ac56a1551d717b9c9edeb3b550813b81797c8e320815715baab3f8e006aaac6f`  
-		Last Modified: Fri, 18 Nov 2022 22:50:30 GMT  
-		Size: 54.4 MB (54393071 bytes)  
+	-	`sha256:63ab2a22a016c42280bc457f332e57b3a5f7cf85de6b533dd032f0c5d6eca01d`  
+		Last Modified: Fri, 09 Dec 2022 05:17:47 GMT  
+		Size: 54.4 MB (54396584 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bad78f3237ad248499fe99302df6ed3ece3db4e21506caaadc134b10d67d2899`  
-		Last Modified: Fri, 18 Nov 2022 22:50:24 GMT  
+	-	`sha256:bc91bb9558cfba4fb678839a8ae746c21927d62ca9bc102805283cdb6cfb6e1c`  
+		Last Modified: Fri, 09 Dec 2022 05:17:42 GMT  
 		Size: 618.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
