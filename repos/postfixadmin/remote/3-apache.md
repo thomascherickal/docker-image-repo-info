@@ -1,7 +1,7 @@
 ## `postfixadmin:3-apache`
 
 ```console
-$ docker pull postfixadmin@sha256:dbf472d1f54fc03fa5a9a2195626185d654ef4c828d8a4c2e6eeddd42a800abe
+$ docker pull postfixadmin@sha256:c2781b6d8260886e52dd12f68993024237e19a8aaa6f5ed66d012b2b9c136407
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -903,14 +903,14 @@ CMD ["apache2-foreground"]
 ### `postfixadmin:3-apache` - linux; mips64le
 
 ```console
-$ docker pull postfixadmin@sha256:0944da5b15294d842c829c2ae0e1f75bd3bcb5fc29cc95f899f9a72279657f8e
+$ docker pull postfixadmin@sha256:cc76219d5dfaa181087aa2a62b770410d169782faec20a0a9ca6785ed0c7eb39
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **146.3 MB (146280440 bytes)**  
+-	Total Size: **146.3 MB (146280726 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3cc7c414ae6507bb64f95ca0023c87a25344239528babcb4fc00737ce32b231f`
+-	Image ID: `sha256:dee549670b1f55d0ba7fb88c2a990edd4b297c2f26a94a2f0200e955d49bb15e`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -981,25 +981,25 @@ LABEL maintainer=David Goodwin <david@codepoets.co.uk> (@DavidGoodwin)
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		gosu 	; 	rm -rf /var/lib/apt/lists/*
 # Thu, 08 Dec 2022 04:57:14 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 	libc-client2007e-dev 	libkrb5-dev 	libpq-dev 	libsqlite3-dev 	; 		docker-php-ext-configure 		imap --with-imap-ssl --with-kerberos 	; 		docker-php-ext-install -j "$(nproc)" 		imap 		pdo_mysql 		pdo_pgsql 		pdo_sqlite 		pgsql 	; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 		ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so 		| awk '/=>/ { print $3 }' 		| sort -u 		| xargs -r dpkg-query -S 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 			apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*
-# Thu, 08 Dec 2022 04:57:17 GMT
-ARG POSTFIXADMIN_VERSION=3.3.12
-# Thu, 08 Dec 2022 04:57:21 GMT
-ARG POSTFIXADMIN_SHA512=46b22876b9ad07a23f32499615cb25b82eeb5ff457ea92f48628f7810f1b4caa5c98fe39b6e1f28cbfc59c8a110f523573742cedb7badc6dd26e79db330b108c
-# Thu, 08 Dec 2022 04:57:25 GMT
-ENV POSTFIXADMIN_VERSION=3.3.12
-# Thu, 08 Dec 2022 04:57:28 GMT
-ENV POSTFIXADMIN_SHA512=46b22876b9ad07a23f32499615cb25b82eeb5ff457ea92f48628f7810f1b4caa5c98fe39b6e1f28cbfc59c8a110f523573742cedb7badc6dd26e79db330b108c
-# Thu, 08 Dec 2022 04:57:32 GMT
+# Fri, 09 Dec 2022 02:31:12 GMT
+ARG POSTFIXADMIN_VERSION=3.3.13
+# Fri, 09 Dec 2022 02:31:15 GMT
+ARG POSTFIXADMIN_SHA512=bf7daaa089ee3adc4b557f1a7d0509d78979ef688fb725bab795f5c9d81e8774296245fde0cb184db51e9185cad381682c3ecc0bfadf852388b499a0a95cca64
+# Fri, 09 Dec 2022 02:31:18 GMT
+ENV POSTFIXADMIN_VERSION=3.3.13
+# Fri, 09 Dec 2022 02:31:22 GMT
+ENV POSTFIXADMIN_SHA512=bf7daaa089ee3adc4b557f1a7d0509d78979ef688fb725bab795f5c9d81e8774296245fde0cb184db51e9185cad381682c3ecc0bfadf852388b499a0a95cca64
+# Fri, 09 Dec 2022 02:31:26 GMT
 ENV APACHE_DOCUMENT_ROOT=/var/www/html/public
-# Thu, 08 Dec 2022 04:57:38 GMT
+# Fri, 09 Dec 2022 02:31:32 GMT
 RUN set -eu; sed -ri -e 's!/var/www/html!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/sites-available/*.conf; 	sed -ri -e 's!/var/www/!${APACHE_DOCUMENT_ROOT}!g' /etc/apache2/apache2.conf /etc/apache2/conf-available/*.conf
-# Thu, 08 Dec 2022 04:57:46 GMT
+# Fri, 09 Dec 2022 02:31:40 GMT
 RUN set -eu; 	curl -fsSL -o postfixadmin.tar.gz "https://github.com/postfixadmin/postfixadmin/archive/postfixadmin-${POSTFIXADMIN_VERSION}.tar.gz"; 	echo "$POSTFIXADMIN_SHA512 *postfixadmin.tar.gz" | sha512sum -c -; 	mkdir /usr/src/postfixadmin; 	tar -xf postfixadmin.tar.gz -C /usr/src/postfixadmin --strip-components=1; 	rm postfixadmin.tar.gz; 	mkdir -p /usr/src/postfixadmin/templates_c; 	chown -R www-data:www-data /usr/src/postfixadmin
-# Thu, 08 Dec 2022 04:57:50 GMT
+# Fri, 09 Dec 2022 02:31:44 GMT
 COPY file:0330067c04a06041dac55442e16abfe0ed234a7c50cf07812b84b1921c7cb5e3 in /usr/local/bin/ 
-# Thu, 08 Dec 2022 04:57:53 GMT
+# Fri, 09 Dec 2022 02:31:47 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Thu, 08 Dec 2022 04:57:57 GMT
+# Fri, 09 Dec 2022 02:31:51 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1064,17 +1064,17 @@ CMD ["apache2-foreground"]
 		Last Modified: Thu, 08 Dec 2022 05:01:21 GMT  
 		Size: 944.8 KB (944801 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad3113cf6b93a5aeb904ccd991ca2c1bc73519218d70adf6b9d67e4a4771510c`  
-		Last Modified: Thu, 08 Dec 2022 05:01:20 GMT  
-		Size: 8.2 KB (8230 bytes)  
+	-	`sha256:bdc9602bdaad8c824ee7a50327d1b5905d4b9cb0efdebd93464ac02637af477d`  
+		Last Modified: Fri, 09 Dec 2022 02:32:49 GMT  
+		Size: 8.2 KB (8225 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:67e92636e4bd973ad5ff521582968e7ddcd31953a00f6a8ade3a8278b4c5f2f0`  
-		Last Modified: Thu, 08 Dec 2022 05:01:22 GMT  
-		Size: 1.9 MB (1862258 bytes)  
+	-	`sha256:78597c6ac5f21e7ffdd249860eec8ffdaf7df2be699eada053c9a1c6a826348b`  
+		Last Modified: Fri, 09 Dec 2022 02:32:50 GMT  
+		Size: 1.9 MB (1862546 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd9e28c1e90d9ed7f605bc54dcf74e104ce0c150838c4295094fb53b3c0d2ccb`  
-		Last Modified: Thu, 08 Dec 2022 05:01:20 GMT  
-		Size: 1.6 KB (1597 bytes)  
+	-	`sha256:35b4a0fb21ba3a1bc1cdcead9df12f4020b3e8cda9e9c865c112f955dbed7072`  
+		Last Modified: Fri, 09 Dec 2022 02:32:49 GMT  
+		Size: 1.6 KB (1600 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postfixadmin:3-apache` - linux; ppc64le
