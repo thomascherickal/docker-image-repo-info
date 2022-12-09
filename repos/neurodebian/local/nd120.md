@@ -106,21 +106,13 @@ Licenses: (parsed from: `/usr/share/doc/libattr1/copyright`)
 - `LGPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris attr=1:2.5.1-1
-'http://deb.debian.org/debian/pool/main/a/attr/attr_2.5.1-1.dsc' attr_2.5.1-1.dsc 2455 SHA256:c0bd0dcb0309cdcbd286b31bd97b2c93552ebb7f7634964f351098cd9191e132
-'http://deb.debian.org/debian/pool/main/a/attr/attr_2.5.1.orig.tar.xz' attr_2.5.1.orig.tar.xz 318188 SHA256:db448a626f9313a1a970d636767316a8da32aede70518b8050fa0de7947adc32
-'http://deb.debian.org/debian/pool/main/a/attr/attr_2.5.1.orig.tar.xz.asc' attr_2.5.1.orig.tar.xz.asc 833 SHA256:67bc632e754efbadba846d0b40138b3fc3e306c3b909a9ba868c6dba1e2689d0
-'http://deb.debian.org/debian/pool/main/a/attr/attr_2.5.1-1.debian.tar.xz' attr_2.5.1-1.debian.tar.xz 27948 SHA256:7eb32437dca67cd24667432150dcb07d8c7d0526e1d3284ecef6833b35214cdf
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/attr/1:2.5.1-1/
 
-- https://sources.debian.net/src/attr/1:2.5.1-1/ (for browsing the source)
-- https://sources.debian.net/src/attr/1:2.5.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/attr/1:2.5.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `audit=1:3.0.7-1.1`
 
@@ -1682,20 +1674,13 @@ Licenses: (parsed from: `/usr/share/doc/libpcre2-8-0/copyright`)
 - `X11`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pcre2=10.40-2
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.40-2.dsc' pcre2_10.40-2.dsc 2286 SHA256:0e8c4be76baaa3d0e6917d28d8d58756bea4d7d792ef81950b8ce2e132213526
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.40.orig.tar.gz' pcre2_10.40.orig.tar.gz 2359622 SHA256:ded42661cab30ada2e72ebff9e725e745b4b16ce831993635136f2ef86177724
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.40-2.diff.gz' pcre2_10.40-2.diff.gz 7862 SHA256:1a465883118d186a27ac6c2c7adb118bf54bf4e7fe161c587cdd86df1c323f21
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pcre2/10.40-2/
 
-- https://sources.debian.net/src/pcre2/10.40-2/ (for browsing the source)
-- https://sources.debian.net/src/pcre2/10.40-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pcre2/10.40-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `perl=5.36.0-4`
 
@@ -2127,21 +2112,13 @@ Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
 - `permissive-nowarranty`
 - `probably-PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xz-utils=5.2.8-0.0
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.8-0.0.dsc' xz-utils_5.2.8-0.0.dsc 2494 SHA256:5ba89543dc099e2e318c5e19fcbc713b5205780fae028c7fcd5c6382280b48b0
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.8.orig.tar.xz' xz-utils_5.2.8.orig.tar.xz 1287596 SHA256:2424b2711b1d40d2129645d550363896c6853c97528f085f7765092fe68679d4
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.8.orig.tar.xz.asc' xz-utils_5.2.8.orig.tar.xz.asc 833 SHA256:871171b605daca919e153181c360842d6b710c1e4f7cee3bf7eb211c3765aee4
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.8-0.0.debian.tar.xz' xz-utils_5.2.8-0.0.debian.tar.xz 31536 SHA256:be1fcb74c769ad1579f202c5780acb04cc6332a762ae70d52bf8445be16c7a81
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xz-utils/5.2.8-0.0/
 
-- https://sources.debian.net/src/xz-utils/5.2.8-0.0/ (for browsing the source)
-- https://sources.debian.net/src/xz-utils/5.2.8-0.0/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xz-utils/5.2.8-0.0/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `zlib=1:1.2.11.dfsg-4.1`
 
