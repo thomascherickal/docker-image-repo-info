@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:62b7dddc219dbcec5fcc764cf7cf74ef070fe5601470db142862f194d3217f10`
-- Created: `2022-11-02T22:50:53.01745088Z`
-- Virtual Size: ~ 394.61 Mb  
+- Image ID: `sha256:39c3cbe695a1430be40c0dd7caad9ae78ca3b70a5eedbf0626657b0464834559`
+- Created: `2022-12-09T02:54:16.890569238Z`
+- Virtual Size: ~ 394.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -222,11 +222,11 @@ $ apt-get source -qq --print-uris bzip2=1.0.8-5build1
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.8-5build1.debian.tar.bz2' bzip2_1.0.8-5build1.debian.tar.bz2 26870 SHA512:e030c257c3458d780fd0ffc6f328efd69d0e875e81acd7441a7c6651194ebded61017c96aad7c99061f93d50dfc33056abe98c9a599abc900f49d51c4a1eed6f
 ```
 
-### `dpkg` source package: `ca-certificates=20211016`
+### `dpkg` source package: `ca-certificates=20211016ubuntu0.22.04.1`
 
 Binary Packages:
 
-- `ca-certificates=20211016`
+- `ca-certificates=20211016ubuntu0.22.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 
@@ -237,9 +237,9 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris ca-certificates=20211016
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016.dsc' ca-certificates_20211016.dsc 1890 SHA512:fab268d15ac882b5a39939a04edd613761b284781bf2fecadce13ce38815e5b1afa6fc4001c2076a355e9257f52b942ac0e38e943f587536f79e1876c3f670c9
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016.tar.xz' ca-certificates_20211016.tar.xz 239608 SHA512:bedf072c8aa1b05b249ea272f5cecfe16bdcd762c02c712323f12ac7a278e8814453f5f3caad86a2581e451788b292ed3a76a6a81620926459bb890133cffde1
+$ apt-get source -qq --print-uris ca-certificates=20211016ubuntu0.22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016ubuntu0.22.04.1.dsc' ca-certificates_20211016ubuntu0.22.04.1.dsc 1878 SHA512:7be5940a426fc66bd93ad2c9675242a62df40f617f35e6d3520909ce27d953cde7c516b74b7da442eef8408a7c3dc023ef7af9d2ec78838d074119bc04bea932
+'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016ubuntu0.22.04.1.tar.xz' ca-certificates_20211016ubuntu0.22.04.1.tar.xz 239584 SHA512:4000767458dd5e296ee0ad0f009bea7a2086414fc204a1cd6aea85a7028d61284d6acfadcfd92bfc72415ce646ecb79598883aad17b5c65b2ebd0538da33c89e
 ```
 
 ### `dpkg` source package: `cdebconf=0.261ubuntu1`
@@ -1184,20 +1184,25 @@ $ apt-get source -qq --print-uris libxcrypt=1:4.4.27-1
 'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.27-1.debian.tar.xz' libxcrypt_4.4.27-1.debian.tar.xz 7764 SHA512:02e38ba06f3555dd930fc7ed44602dc816ce48f4c29fdc085249948596d5e7e96600cb81c8c9fb2e1dc33574d5136d08feeff3eb1dd3522aa8e5cdc9037c1ae0
 ```
 
-### `dpkg` source package: `libxml2=2.9.13+dfsg-1ubuntu0.1`
+### `dpkg` source package: `libxml2=2.9.13+dfsg-1ubuntu0.2`
 
 Binary Packages:
 
-- `libxml2:amd64=2.9.13+dfsg-1ubuntu0.1`
+- `libxml2:amd64=2.9.13+dfsg-1ubuntu0.2`
 
 Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 
 - `ISC`
 - `MIT-1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libxml2=2.9.13+dfsg-1ubuntu0.2
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.13%2bdfsg-1ubuntu0.2.dsc' libxml2_2.9.13+dfsg-1ubuntu0.2.dsc 3030 SHA512:3279b1f64a595177883173b2fb348261a7cb6ee82ef32ace6b1f3c87508e693eed564bb880394a49617cbd0c8a8a24c57c4d7f5e346e3fc98656c9e8c7045fe9
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.13%2bdfsg.orig.tar.xz' libxml2_2.9.13+dfsg.orig.tar.xz 2351356 SHA512:6283071de4934c856c7ff5202ac1a2ed5892d7fcde82a364d40c8bc2bf3d3201fbcbb5f6983d8bf6b962026bc216b8182d71efe280f1dcef2931b277314e6e89
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.13%2bdfsg-1ubuntu0.2.debian.tar.xz' libxml2_2.9.13+dfsg-1ubuntu0.2.debian.tar.xz 35160 SHA512:84a5b4edad3593e2caca5526017e785811671e8893876ba593cf70eb37d557d163ee35ff2e27386fe504fa130dacc2c139cbfeb5b8778760f18ef62bffdc1c35
+```
 
 ### `dpkg` source package: `libzstd=1.4.8+dfsg-3build1`
 
@@ -1646,12 +1651,12 @@ $ apt-get source -qq --print-uris sensible-utils=0.0.17
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.17.tar.xz' sensible-utils_0.0.17.tar.xz 66648 SHA512:fb7803cacc4222f232f64850e5559aca0b56ad98b6fd31f36c89740d72f7a235e7f2934ebce1d788882bff7196d59a2ed6cc3584f31e1c1c9e3593cedca2382b
 ```
 
-### `dpkg` source package: `shadow=1:4.8.1-2ubuntu2`
+### `dpkg` source package: `shadow=1:4.8.1-2ubuntu2.1`
 
 Binary Packages:
 
-- `login=1:4.8.1-2ubuntu2`
-- `passwd=1:4.8.1-2ubuntu2`
+- `login=1:4.8.1-2ubuntu2.1`
+- `passwd=1:4.8.1-2ubuntu2.1`
 
 Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd/copyright`)
 
@@ -1660,10 +1665,10 @@ Licenses: (parsed from: `/usr/share/doc/login/copyright`, `/usr/share/doc/passwd
 Source:
 
 ```console
-$ apt-get source -qq --print-uris shadow=1:4.8.1-2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-2ubuntu2.dsc' shadow_4.8.1-2ubuntu2.dsc 2348 SHA512:05c707ca159ebdb4bf19731cdd2d1095b90943956058d81105e1bdb64a677e23ada91e619a30c82ce6a7963296085c2ffc63f50c2d45dbdf3f2a952e3b71bd0f
+$ apt-get source -qq --print-uris shadow=1:4.8.1-2ubuntu2.1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-2ubuntu2.1.dsc' shadow_4.8.1-2ubuntu2.1.dsc 2060 SHA512:c642f1979173ee997678a73dc7cb9098e185aee3a2860807895534dbe16d25fc2b2546355024d3b45e1dae5ea8bf9184f38929f4fd4e13203b411de3e6690c2d
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1.orig.tar.xz' shadow_4.8.1.orig.tar.xz 1611196 SHA512:780a983483d847ed3c91c82064a0fa902b6f4185225978241bc3bc03fcc3aa143975b46aee43151c6ba43efcfdb1819516b76ba7ad3d1d3c34fcc38ea42e917b
-'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-2ubuntu2.debian.tar.xz' shadow_4.8.1-2ubuntu2.debian.tar.xz 86604 SHA512:a3165c2df5848aebee7263b6d113dd0470cc07984e67602984b2f4c97fe97b0e141284ef02bd66a159acb34922b2d09fe999b1c6969a915423e8f421a7cb8d9f
+'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-2ubuntu2.1.debian.tar.xz' shadow_4.8.1-2ubuntu2.1.debian.tar.xz 96432 SHA512:aa6eead6f612c0dc9001ce0f74de0b9b0e4da371958d4860675e5cbf88d353adce8e070fa1bb904e287ce79de7ccc3d896936fb95113d2440b75f0207e2504f3
 ```
 
 ### `dpkg` source package: `systemd=249.11-0ubuntu3.6`
@@ -1733,19 +1738,25 @@ $ apt-get source -qq --print-uris tar=1.34+dfsg-1build3
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1build3.debian.tar.xz' tar_1.34+dfsg-1build3.debian.tar.xz 19416 SHA512:3fbe7b908963df828585139f884762b698c14a2fc37618dcf3adb90819b160c8ea7aaa2e9dc9470abf40bd5100710dd1292f666cb77865ef3c558729dd313521
 ```
 
-### `dpkg` source package: `tzdata=2022e-0ubuntu0.22.04.0`
+### `dpkg` source package: `tzdata=2022f-0ubuntu0.22.04.1`
 
 Binary Packages:
 
-- `tzdata=2022e-0ubuntu0.22.04.0`
+- `tzdata=2022f-0ubuntu0.22.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tzdata=2022f-0ubuntu0.22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f-0ubuntu0.22.04.1.dsc' tzdata_2022f-0ubuntu0.22.04.1.dsc 2358 SHA512:bfa2e8eed862f8642be4e49ca369c1c45cfcd31883180a75612627478e47c10d0d11fb3fa9393f663820832cfe69a6ae3017f231b2a7667bb04799189e0d1cfd
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f.orig.tar.gz' tzdata_2022f.orig.tar.gz 436352 SHA512:72d05d05be999075cdf57b896c0f4238b1b862d4d0ed92cc611736592a4ada14d47bd7f0fc8be39e7938a7f5940a903c8af41e87859482bcfab787d889d429f6
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f.orig.tar.gz.asc' tzdata_2022f.orig.tar.gz.asc 833 SHA512:51a8bd86a94f36f6c1bae4929b9f9370153bf68d75fdfe44b94edd2204dcfa421dcb714357879e81a8f327fc24a6a0281420343795cb220ba5f6a656ac548c9e
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f-0ubuntu0.22.04.1.debian.tar.xz' tzdata_2022f-0ubuntu0.22.04.1.debian.tar.xz 171592 SHA512:6fd6e75ea6b83ac2ee71495fcc2af28ec61585f2c5b99e9fc6121130653c551789629501bdf052ce3ee72af4e6d28f1835a3283d39541c6b5dc5f841d17d78bb
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2021.03.26`
 
