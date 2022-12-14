@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e7c091c475f1f35bb90c2d1a3e1b12fa28c33a0596b9d912c6ce940ff8fb0694`
-- Created: `2022-12-05T20:55:11.030432779Z`
+- Image ID: `sha256:3f0837361a584534cf10e475808159524644d91f80bf0f827cb28624d51df643`
+- Created: `2022-12-12T20:56:59.077985805Z`
 - Virtual Size: ~ 37.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20221203`
+  - `build-date=20221210`
   - `name=Photon OS x86_64/4.0 Base Image`
   - `vendor=VMware`
 
@@ -125,7 +125,7 @@ Licenses (from `rpm --query`): BSD
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libxml2-2.9.12-6.ph4.x86_64`
+### `rpm` package: `libxml2-2.9.12-7.ph4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
