@@ -3,15 +3,15 @@
 # Tags of `archlinux`
 
 -	[`archlinux:base`](#archlinuxbase)
--	[`archlinux:base-20221204.0.107760`](#archlinuxbase-202212040107760)
+-	[`archlinux:base-20221211.0.109768`](#archlinuxbase-202212110109768)
 -	[`archlinux:base-devel`](#archlinuxbase-devel)
--	[`archlinux:base-devel-20221204.0.107760`](#archlinuxbase-devel-202212040107760)
+-	[`archlinux:base-devel-20221211.0.109768`](#archlinuxbase-devel-202212110109768)
 -	[`archlinux:latest`](#archlinuxlatest)
 
 ## `archlinux:base`
 
 ```console
-$ docker pull archlinux@sha256:55c45738d156c99d00242e830ec54eef8c02748a7c2dbe248892da9a1205974e
+$ docker pull archlinux@sha256:2eb5372d8e6d6a16575b7483544cecb9b5bb35f654594c75e3c84838b5db7544
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -21,85 +21,85 @@ $ docker pull archlinux@sha256:55c45738d156c99d00242e830ec54eef8c02748a7c2dbe248
 ### `archlinux:base` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:3d6aee337dd9ecc8fe77748b2ca752fd8df376bb7906e12c78df405fc67e59cf
+$ docker pull archlinux@sha256:e98008b351bf47ada7efe158b9220d403cd555d86353b5d457b53e72bd7ef727
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **141.8 MB (141795991 bytes)**  
+-	Total Size: **141.8 MB (141809154 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6e8792549afc11a8564693e63f6d1a75a45d0c24b76f288b4a9030ffa0dcb8b1`
+-	Image ID: `sha256:50279e9f2546fe76fff3e18897010bc2cbb188ad9a62bc260c8cb683a118767b`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
-# Mon, 05 Dec 2022 20:20:00 GMT
-COPY dir:4757859b63a669f0999e7e839d9752a4922ec2fb682fc9d4736e5e0dca4a7504 in / 
-# Mon, 05 Dec 2022 20:20:01 GMT
+# Mon, 12 Dec 2022 20:19:51 GMT
+COPY dir:48ab6d1ef10204fcea7f0fe1fb1fb0c1d03aae627091060cf59340b5f88981e3 in / 
+# Mon, 12 Dec 2022 20:19:52 GMT
 RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=TEMPLATE_VERSION_ID' /etc/os-release
-# Mon, 05 Dec 2022 20:20:01 GMT
+# Mon, 12 Dec 2022 20:19:53 GMT
 ENV LANG=C.UTF-8
-# Mon, 05 Dec 2022 20:20:02 GMT
+# Mon, 12 Dec 2022 20:19:53 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:b4eb00ee61960c4be31f11880595238c7a8821317aa5768f85ee62d5c4d26685`  
-		Last Modified: Mon, 05 Dec 2022 20:21:42 GMT  
-		Size: 141.8 MB (141788039 bytes)  
+	-	`sha256:ff1caeb8e1af152c988a72c6f36e3221dac74b60f089ec8f71651119697eba01`  
+		Last Modified: Mon, 12 Dec 2022 20:21:35 GMT  
+		Size: 141.8 MB (141801185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:00026c6783148c69ad6afbc1f14108341d55e2944decd384eeccc93693bbc508`  
-		Last Modified: Mon, 05 Dec 2022 20:21:22 GMT  
-		Size: 8.0 KB (7952 bytes)  
+	-	`sha256:505b4dbbb765e6af8ccfc37d0997d638797774082251dfc66084f1d12fb3958b`  
+		Last Modified: Mon, 12 Dec 2022 20:21:15 GMT  
+		Size: 8.0 KB (7969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `archlinux:base-20221204.0.107760`
+## `archlinux:base-20221211.0.109768`
 
 ```console
-$ docker pull archlinux@sha256:55c45738d156c99d00242e830ec54eef8c02748a7c2dbe248892da9a1205974e
+$ docker pull archlinux@sha256:2eb5372d8e6d6a16575b7483544cecb9b5bb35f654594c75e3c84838b5db7544
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms: 1
 	-	linux; amd64
 
-### `archlinux:base-20221204.0.107760` - linux; amd64
+### `archlinux:base-20221211.0.109768` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:3d6aee337dd9ecc8fe77748b2ca752fd8df376bb7906e12c78df405fc67e59cf
+$ docker pull archlinux@sha256:e98008b351bf47ada7efe158b9220d403cd555d86353b5d457b53e72bd7ef727
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **141.8 MB (141795991 bytes)**  
+-	Total Size: **141.8 MB (141809154 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6e8792549afc11a8564693e63f6d1a75a45d0c24b76f288b4a9030ffa0dcb8b1`
+-	Image ID: `sha256:50279e9f2546fe76fff3e18897010bc2cbb188ad9a62bc260c8cb683a118767b`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
-# Mon, 05 Dec 2022 20:20:00 GMT
-COPY dir:4757859b63a669f0999e7e839d9752a4922ec2fb682fc9d4736e5e0dca4a7504 in / 
-# Mon, 05 Dec 2022 20:20:01 GMT
+# Mon, 12 Dec 2022 20:19:51 GMT
+COPY dir:48ab6d1ef10204fcea7f0fe1fb1fb0c1d03aae627091060cf59340b5f88981e3 in / 
+# Mon, 12 Dec 2022 20:19:52 GMT
 RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=TEMPLATE_VERSION_ID' /etc/os-release
-# Mon, 05 Dec 2022 20:20:01 GMT
+# Mon, 12 Dec 2022 20:19:53 GMT
 ENV LANG=C.UTF-8
-# Mon, 05 Dec 2022 20:20:02 GMT
+# Mon, 12 Dec 2022 20:19:53 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:b4eb00ee61960c4be31f11880595238c7a8821317aa5768f85ee62d5c4d26685`  
-		Last Modified: Mon, 05 Dec 2022 20:21:42 GMT  
-		Size: 141.8 MB (141788039 bytes)  
+	-	`sha256:ff1caeb8e1af152c988a72c6f36e3221dac74b60f089ec8f71651119697eba01`  
+		Last Modified: Mon, 12 Dec 2022 20:21:35 GMT  
+		Size: 141.8 MB (141801185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:00026c6783148c69ad6afbc1f14108341d55e2944decd384eeccc93693bbc508`  
-		Last Modified: Mon, 05 Dec 2022 20:21:22 GMT  
-		Size: 8.0 KB (7952 bytes)  
+	-	`sha256:505b4dbbb765e6af8ccfc37d0997d638797774082251dfc66084f1d12fb3958b`  
+		Last Modified: Mon, 12 Dec 2022 20:21:15 GMT  
+		Size: 8.0 KB (7969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `archlinux:base-devel`
 
 ```console
-$ docker pull archlinux@sha256:67bc73f3952a7fa0e63c83a6fc0a218adb95d4e9925db100cf8e717efc50596f
+$ docker pull archlinux@sha256:c8b95aeb80103e3b23e5bd2a9a95da17aae97033bac7ea3ffa81aab9ddeb70d8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -109,85 +109,85 @@ $ docker pull archlinux@sha256:67bc73f3952a7fa0e63c83a6fc0a218adb95d4e9925db100c
 ### `archlinux:base-devel` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:76bd5cb87f5e7cec03196249530ead7404b154507f677fdc2572d0b296aef95a
+$ docker pull archlinux@sha256:6a69ef51b378b54267e0a586dd3e8a08f88de2089349dc33497e15468151c29b
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **243.0 MB (242990004 bytes)**  
+-	Total Size: **243.0 MB (243031321 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a76159f99df5f82cbfcdb27a95f4dc8b6386f011851d5a61cf14ee374a53e494`
+-	Image ID: `sha256:30c2cd56ad0967ab0c7c63933a26b3536ac44367c3070f7fac01c6eca94dacfa`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
-# Mon, 05 Dec 2022 20:21:01 GMT
-COPY dir:e1c43c82e176f0ee5255fc4df29ca1cd8a31ad1955dd4d2c0b4b1063f039c1d0 in / 
-# Mon, 05 Dec 2022 20:21:04 GMT
+# Mon, 12 Dec 2022 20:20:51 GMT
+COPY dir:5cd2e889b898a10ff0b003cf6eeb987182554f44af4ea277b44647d1a2061a73 in / 
+# Mon, 12 Dec 2022 20:20:54 GMT
 RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=TEMPLATE_VERSION_ID' /etc/os-release
-# Mon, 05 Dec 2022 20:21:04 GMT
+# Mon, 12 Dec 2022 20:20:54 GMT
 ENV LANG=C.UTF-8
-# Mon, 05 Dec 2022 20:21:04 GMT
+# Mon, 12 Dec 2022 20:20:54 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:c52c4b627283e2c5bbf333053262dc5d8c615f4877d4f124c1c39be5d62706c3`  
-		Last Modified: Mon, 05 Dec 2022 20:22:29 GMT  
-		Size: 243.0 MB (242981363 bytes)  
+	-	`sha256:2bdca0923c12cab704a400d8e21a44209994395f7e48d32f2b4e6a5124eb877e`  
+		Last Modified: Mon, 12 Dec 2022 20:22:21 GMT  
+		Size: 243.0 MB (243022693 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2858aab8a1ab92eb25a7112696e5233d3336e057e3c273719e17007efb6402df`  
-		Last Modified: Mon, 05 Dec 2022 20:21:53 GMT  
-		Size: 8.6 KB (8641 bytes)  
+	-	`sha256:ff276260fe9975fd9db874ad88b53a8c37ca5a4f46d040319df6dc983f9c1937`  
+		Last Modified: Mon, 12 Dec 2022 20:21:46 GMT  
+		Size: 8.6 KB (8628 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `archlinux:base-devel-20221204.0.107760`
+## `archlinux:base-devel-20221211.0.109768`
 
 ```console
-$ docker pull archlinux@sha256:67bc73f3952a7fa0e63c83a6fc0a218adb95d4e9925db100cf8e717efc50596f
+$ docker pull archlinux@sha256:c8b95aeb80103e3b23e5bd2a9a95da17aae97033bac7ea3ffa81aab9ddeb70d8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms: 1
 	-	linux; amd64
 
-### `archlinux:base-devel-20221204.0.107760` - linux; amd64
+### `archlinux:base-devel-20221211.0.109768` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:76bd5cb87f5e7cec03196249530ead7404b154507f677fdc2572d0b296aef95a
+$ docker pull archlinux@sha256:6a69ef51b378b54267e0a586dd3e8a08f88de2089349dc33497e15468151c29b
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **243.0 MB (242990004 bytes)**  
+-	Total Size: **243.0 MB (243031321 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a76159f99df5f82cbfcdb27a95f4dc8b6386f011851d5a61cf14ee374a53e494`
+-	Image ID: `sha256:30c2cd56ad0967ab0c7c63933a26b3536ac44367c3070f7fac01c6eca94dacfa`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
-# Mon, 05 Dec 2022 20:21:01 GMT
-COPY dir:e1c43c82e176f0ee5255fc4df29ca1cd8a31ad1955dd4d2c0b4b1063f039c1d0 in / 
-# Mon, 05 Dec 2022 20:21:04 GMT
+# Mon, 12 Dec 2022 20:20:51 GMT
+COPY dir:5cd2e889b898a10ff0b003cf6eeb987182554f44af4ea277b44647d1a2061a73 in / 
+# Mon, 12 Dec 2022 20:20:54 GMT
 RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=TEMPLATE_VERSION_ID' /etc/os-release
-# Mon, 05 Dec 2022 20:21:04 GMT
+# Mon, 12 Dec 2022 20:20:54 GMT
 ENV LANG=C.UTF-8
-# Mon, 05 Dec 2022 20:21:04 GMT
+# Mon, 12 Dec 2022 20:20:54 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:c52c4b627283e2c5bbf333053262dc5d8c615f4877d4f124c1c39be5d62706c3`  
-		Last Modified: Mon, 05 Dec 2022 20:22:29 GMT  
-		Size: 243.0 MB (242981363 bytes)  
+	-	`sha256:2bdca0923c12cab704a400d8e21a44209994395f7e48d32f2b4e6a5124eb877e`  
+		Last Modified: Mon, 12 Dec 2022 20:22:21 GMT  
+		Size: 243.0 MB (243022693 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2858aab8a1ab92eb25a7112696e5233d3336e057e3c273719e17007efb6402df`  
-		Last Modified: Mon, 05 Dec 2022 20:21:53 GMT  
-		Size: 8.6 KB (8641 bytes)  
+	-	`sha256:ff276260fe9975fd9db874ad88b53a8c37ca5a4f46d040319df6dc983f9c1937`  
+		Last Modified: Mon, 12 Dec 2022 20:21:46 GMT  
+		Size: 8.6 KB (8628 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `archlinux:latest`
 
 ```console
-$ docker pull archlinux@sha256:55c45738d156c99d00242e830ec54eef8c02748a7c2dbe248892da9a1205974e
+$ docker pull archlinux@sha256:2eb5372d8e6d6a16575b7483544cecb9b5bb35f654594c75e3c84838b5db7544
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -197,33 +197,33 @@ $ docker pull archlinux@sha256:55c45738d156c99d00242e830ec54eef8c02748a7c2dbe248
 ### `archlinux:latest` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:3d6aee337dd9ecc8fe77748b2ca752fd8df376bb7906e12c78df405fc67e59cf
+$ docker pull archlinux@sha256:e98008b351bf47ada7efe158b9220d403cd555d86353b5d457b53e72bd7ef727
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **141.8 MB (141795991 bytes)**  
+-	Total Size: **141.8 MB (141809154 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6e8792549afc11a8564693e63f6d1a75a45d0c24b76f288b4a9030ffa0dcb8b1`
+-	Image ID: `sha256:50279e9f2546fe76fff3e18897010bc2cbb188ad9a62bc260c8cb683a118767b`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
-# Mon, 05 Dec 2022 20:20:00 GMT
-COPY dir:4757859b63a669f0999e7e839d9752a4922ec2fb682fc9d4736e5e0dca4a7504 in / 
-# Mon, 05 Dec 2022 20:20:01 GMT
+# Mon, 12 Dec 2022 20:19:51 GMT
+COPY dir:48ab6d1ef10204fcea7f0fe1fb1fb0c1d03aae627091060cf59340b5f88981e3 in / 
+# Mon, 12 Dec 2022 20:19:52 GMT
 RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=TEMPLATE_VERSION_ID' /etc/os-release
-# Mon, 05 Dec 2022 20:20:01 GMT
+# Mon, 12 Dec 2022 20:19:53 GMT
 ENV LANG=C.UTF-8
-# Mon, 05 Dec 2022 20:20:02 GMT
+# Mon, 12 Dec 2022 20:19:53 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:b4eb00ee61960c4be31f11880595238c7a8821317aa5768f85ee62d5c4d26685`  
-		Last Modified: Mon, 05 Dec 2022 20:21:42 GMT  
-		Size: 141.8 MB (141788039 bytes)  
+	-	`sha256:ff1caeb8e1af152c988a72c6f36e3221dac74b60f089ec8f71651119697eba01`  
+		Last Modified: Mon, 12 Dec 2022 20:21:35 GMT  
+		Size: 141.8 MB (141801185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:00026c6783148c69ad6afbc1f14108341d55e2944decd384eeccc93693bbc508`  
-		Last Modified: Mon, 05 Dec 2022 20:21:22 GMT  
-		Size: 8.0 KB (7952 bytes)  
+	-	`sha256:505b4dbbb765e6af8ccfc37d0997d638797774082251dfc66084f1d12fb3958b`  
+		Last Modified: Mon, 12 Dec 2022 20:21:15 GMT  
+		Size: 8.0 KB (7969 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
