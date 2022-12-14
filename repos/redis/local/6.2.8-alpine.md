@@ -1,9 +1,9 @@
-# `redis:6.2.7-alpine`
+# `redis:6.2.8-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:fd45e5a11a9d7583a57867f782459a9b04b4949a78bf13ab79b83017b4da2121`
-- Created: `2022-12-02T00:31:09.165650288Z`
+- Image ID: `sha256:fde943dfa6d2b9603095ee69c34a204e767e28c72e8cde332ba8b9e9da676227`
+- Created: `2022-12-12T21:09:26.912929364Z`
 - Virtual Size: ~ 27.09 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,9 +11,9 @@
 - Command: `["redis-server"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `REDIS_VERSION=6.2.7`
-  - `REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-6.2.7.tar.gz`
-  - `REDIS_DOWNLOAD_SHA=b7a79cc3b46d3c6eb52fa37dde34a4a60824079ebdfb3abfbbfa035947c55319`
+  - `REDIS_VERSION=6.2.8`
+  - `REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-6.2.8.tar.gz`
+  - `REDIS_DOWNLOAD_SHA=f91ab24bcb42673cb853292eb5d43c2017d11d659854808ed6a529c97297fdfe`
 
 ## `apk` (`.apk`-based packages)
 
