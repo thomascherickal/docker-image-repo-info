@@ -1,4 +1,4 @@
-## `clojure:temurin-19-tools-deps-1.11.1.1200`
+## `clojure:temurin-19-tools-deps-1.11.1.1208-jammy`
 
 ```console
 $ docker pull clojure@sha256:6b5e21701d068b257597743edc3a396c12061ea19b3490155a1b9145f36d5919
@@ -9,7 +9,7 @@ $ docker pull clojure@sha256:6b5e21701d068b257597743edc3a396c12061ea19b3490155a1
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
-### `clojure:temurin-19-tools-deps-1.11.1.1200` - linux; amd64
+### `clojure:temurin-19-tools-deps-1.11.1.1208-jammy` - linux; amd64
 
 ```console
 $ docker pull clojure@sha256:a49276278e02f5523a46c6e69f3a3d1cbb17fe48244e5b71af9a1c99096f78a5
@@ -90,7 +90,7 @@ CMD ["-M" "--repl"]
 		Size: 402.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `clojure:temurin-19-tools-deps-1.11.1.1200` - linux; arm64 variant v8
+### `clojure:temurin-19-tools-deps-1.11.1.1208-jammy` - linux; arm64 variant v8
 
 ```console
 $ docker pull clojure@sha256:c0d6c24f117ee3856cf22d6fe0c656e69a637370049e01dc03683bd26999e32a

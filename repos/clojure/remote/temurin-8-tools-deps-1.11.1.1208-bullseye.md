@@ -1,4 +1,4 @@
-## `clojure:temurin-8-tools-deps-1.11.1.1200-bullseye`
+## `clojure:temurin-8-tools-deps-1.11.1.1208-bullseye`
 
 ```console
 $ docker pull clojure@sha256:e0b5b0b96d701f4d239f832ed4e36323895d4bcb6c374a1c4bb995ecd3bde2b5
@@ -9,7 +9,7 @@ $ docker pull clojure@sha256:e0b5b0b96d701f4d239f832ed4e36323895d4bcb6c374a1c4bb
 	-	linux; amd64
 	-	linux; arm64 variant v8
 
-### `clojure:temurin-8-tools-deps-1.11.1.1200-bullseye` - linux; amd64
+### `clojure:temurin-8-tools-deps-1.11.1.1208-bullseye` - linux; amd64
 
 ```console
 $ docker pull clojure@sha256:9ebad960f6e6851b502cff4b7dc51fa5a958c59150ccc0c8ebe2e47254785ea2
@@ -63,7 +63,7 @@ CMD ["clj"]
 		Size: 617.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `clojure:temurin-8-tools-deps-1.11.1.1200-bullseye` - linux; arm64 variant v8
+### `clojure:temurin-8-tools-deps-1.11.1.1208-bullseye` - linux; arm64 variant v8
 
 ```console
 $ docker pull clojure@sha256:36ee16d1570c8333d50eeb86dea060daa10c7188d18f3c4918a57c663f15ed89

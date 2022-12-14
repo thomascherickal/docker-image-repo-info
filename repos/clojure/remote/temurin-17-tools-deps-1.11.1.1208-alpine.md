@@ -1,4 +1,4 @@
-## `clojure:temurin-17-tools-deps-1.11.1.1200-alpine`
+## `clojure:temurin-17-tools-deps-1.11.1.1208-alpine`
 
 ```console
 $ docker pull clojure@sha256:f879aaeb63abfc892b64302e22b37db6329e12037d83345672d4c82ded8e117b
@@ -8,7 +8,7 @@ $ docker pull clojure@sha256:f879aaeb63abfc892b64302e22b37db6329e12037d83345672d
 -	Platforms: 1
 	-	linux; amd64
 
-### `clojure:temurin-17-tools-deps-1.11.1.1200-alpine` - linux; amd64
+### `clojure:temurin-17-tools-deps-1.11.1.1208-alpine` - linux; amd64
 
 ```console
 $ docker pull clojure@sha256:acc9fd1aa568bee21fb0f268a62cf00c85536c1a372dfcc103bc171d2e5cdb28
