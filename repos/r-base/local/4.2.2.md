@@ -900,20 +900,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-foreign/copyright`)
 - `GPL`
 - `GPL `
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris foreign=0.8.83-1
-'http://deb.debian.org/debian/pool/main/f/foreign/foreign_0.8.83-1.dsc' foreign_0.8.83-1.dsc 1838 SHA256:85c57a8702a8ed4f0174720a7e367e1a106bd97cd7e3cc5a7079c825aa2edd9f
-'http://deb.debian.org/debian/pool/main/f/foreign/foreign_0.8.83.orig.tar.gz' foreign_0.8.83.orig.tar.gz 361612 SHA256:87eae73f780b6bbcf0a45b3e21d1c87be0404aa2d5b455df92ab45516030721b
-'http://deb.debian.org/debian/pool/main/f/foreign/foreign_0.8.83-1.debian.tar.xz' foreign_0.8.83-1.debian.tar.xz 4312 SHA256:4b3f668bb88c6ab839b9a6ee1f7abbce4b2b86946e977e199d332efeaaa256f4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/foreign/0.8.83-1/
 
-- https://sources.debian.net/src/foreign/0.8.83-1/ (for browsing the source)
-- https://sources.debian.net/src/foreign/0.8.83-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/foreign/0.8.83-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `freetype=2.12.1+dfsg-3`
 
@@ -1472,20 +1465,13 @@ Licenses: (parsed from: `/usr/share/doc/libjbig0/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris jbigkit=2.1-3.1
-'http://deb.debian.org/debian/pool/main/j/jbigkit/jbigkit_2.1-3.1.dsc' jbigkit_2.1-3.1.dsc 1299 SHA256:62c8812d508958c5d35f2b1579dc3052fb5bd8d2e77d023fad064c4b48c8c3f8
-'http://deb.debian.org/debian/pool/main/j/jbigkit/jbigkit_2.1.orig.tar.gz' jbigkit_2.1.orig.tar.gz 438710 SHA256:de7106b6bfaf495d6865c7dd7ac6ca1381bd12e0d81405ea81e7f2167263d932
-'http://deb.debian.org/debian/pool/main/j/jbigkit/jbigkit_2.1-3.1.debian.tar.xz' jbigkit_2.1-3.1.debian.tar.xz 7600 SHA256:ebc3c52deaf37d52baea54d648a713640dc262926abda7bf05cd08e7db5dd1ee
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/jbigkit/2.1-3.1/
 
-- https://sources.debian.net/src/jbigkit/2.1-3.1/ (for browsing the source)
-- https://sources.debian.net/src/jbigkit/2.1-3.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/jbigkit/2.1-3.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `kernsmooth=2.23-20-1`
 
@@ -3028,20 +3014,13 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 - `SIL-OFL-1.1`
 - `all-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nghttp2=1.50.0-1
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.50.0-1.dsc' nghttp2_1.50.0-1.dsc 2508 SHA256:60ee2845ebb87ea663191a22d16fa4bc191ddb7a826c94e56f39023e717ebacc
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.50.0.orig.tar.gz' nghttp2_1.50.0.orig.tar.gz 3885952 SHA256:6de469efc8e9d47059327a6736aebe0a7d73f57e5e37ab4c4f838fb1eebd7889
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.50.0-1.debian.tar.xz' nghttp2_1.50.0-1.debian.tar.xz 12912 SHA256:4db3911036ea625172b517d590a31386fd950b1a9c4b561e252d915582af8318
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nghttp2/1.50.0-1/
 
-- https://sources.debian.net/src/nghttp2/1.50.0-1/ (for browsing the source)
-- https://sources.debian.net/src/nghttp2/1.50.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nghttp2/1.50.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nlme=3.1.160-1`
 
@@ -4353,10 +4332,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris xz-utils=5.2.7-0.1
-'http://http.debian.net/debian/pool/main/x/xz-utils/xz-utils_5.2.7-0.1.dsc' xz-utils_5.2.7-0.1.dsc 2247 SHA256:9324b210c29b9a9e0ae510e98d160d3c22e043bceafc16df0321a910f5769457
-'http://http.debian.net/debian/pool/main/x/xz-utils/xz-utils_5.2.7.orig.tar.xz' xz-utils_5.2.7.orig.tar.xz 1282620 SHA256:8712e9acb0b6b49a97d443458a3067dc5c08a025e02dc5f773176c51dd7cfc69
-'http://http.debian.net/debian/pool/main/x/xz-utils/xz-utils_5.2.7-0.1.debian.tar.xz' xz-utils_5.2.7-0.1.debian.tar.xz 31540 SHA256:9cf41fbe4f0048b8553ad7b4085f90ee671b24da77b4f630b4a149fcc43f613e
+'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.7-0.1.dsc' xz-utils_5.2.7-0.1.dsc 2247 SHA256:9324b210c29b9a9e0ae510e98d160d3c22e043bceafc16df0321a910f5769457
+'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.7.orig.tar.xz' xz-utils_5.2.7.orig.tar.xz 1282620 SHA256:8712e9acb0b6b49a97d443458a3067dc5c08a025e02dc5f773176c51dd7cfc69
+'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.7-0.1.debian.tar.xz' xz-utils_5.2.7-0.1.debian.tar.xz 31540 SHA256:9cf41fbe4f0048b8553ad7b4085f90ee671b24da77b4f630b4a149fcc43f613e
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/xz-utils/5.2.7-0.1/ (for browsing the source)
+- https://sources.debian.net/src/xz-utils/5.2.7-0.1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/xz-utils/5.2.7-0.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `zip=3.0-12`
 
