@@ -1,10 +1,10 @@
-# `jetty:10.0.12`
+# `jetty:10.0.13`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ecf9f1f8746d4c873c0142cddfba19d2b8588e49cc7bf384660e43e82bd2c383`
-- Created: `2022-12-09T08:39:35.21903434Z`
-- Virtual Size: ~ 473.17 Mb  
+- Image ID: `sha256:eee958d18f07f021412849bb243a1c815548446cace6099721a69d930bc4122a`
+- Created: `2022-12-13T19:28:43.642529487Z`
+- Virtual Size: ~ 473.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -16,11 +16,11 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-17.0.5+8`
-  - `JETTY_VERSION=10.0.12`
+  - `JETTY_VERSION=10.0.13`
   - `JETTY_HOME=/usr/local/jetty`
   - `JETTY_BASE=/var/lib/jetty`
   - `TMPDIR=/tmp/jetty`
-  - `JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/10.0.12/jetty-home-10.0.12.tar.gz`
+  - `JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/10.0.13/jetty-home-10.0.13.tar.gz`
   - `JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146`
 
 ## `dpkg` (`.deb`-based packages)
@@ -1774,15 +1774,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022f-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f-0ubuntu0.20.04.1.dsc' tzdata_2022f-0ubuntu0.20.04.1.dsc 2358 SHA512:1e1e7f0ca8eec93366dd81f5caf901cd49caab14c8d13dff08ba9b9ec377adfeaa2a9e1895a102e55084fcd3515e6e9f61ec18291e660d91873e6413aebeee7a
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f.orig.tar.gz' tzdata_2022f.orig.tar.gz 436352 SHA512:72d05d05be999075cdf57b896c0f4238b1b862d4d0ed92cc611736592a4ada14d47bd7f0fc8be39e7938a7f5940a903c8af41e87859482bcfab787d889d429f6
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f.orig.tar.gz.asc' tzdata_2022f.orig.tar.gz.asc 833 SHA512:51a8bd86a94f36f6c1bae4929b9f9370153bf68d75fdfe44b94edd2204dcfa421dcb714357879e81a8f327fc24a6a0281420343795cb220ba5f6a656ac548c9e
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022f-0ubuntu0.20.04.1.debian.tar.xz' tzdata_2022f-0ubuntu0.20.04.1.debian.tar.xz 166732 SHA512:7ea2259563e12a3d1344bb22669c1be15b997c90abcaacdab6d3c133e2d75019faca57d73d6da154255d24dc483113b3dbdb86eb86dd5e7bd91044b16da71907
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2020.02.11.4`
 
