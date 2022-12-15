@@ -1,7 +1,7 @@
 ## `rust:1-alpine`
 
 ```console
-$ docker pull rust@sha256:9aa6c9c3df9cfa2f8c5a648a8f1baf8fac31fc5fc7e916389296df92daccf388
+$ docker pull rust@sha256:fcea007479a2e3a1205b5febb4df1a8128d7d75967cdcc92c62fb89a574aa02b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -52,39 +52,39 @@ RUN set -eux;     apkArch="$(apk --print-arch)";     case "$apkArch" in         
 ### `rust:1-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull rust@sha256:3aac648fde5eb7001a966006ceaaa0263bcf81577a17d198a80f52e4a44b385c
+$ docker pull rust@sha256:56366791f0ddb1c15955e607f60120a0cbb78c5e6a523fb80bb5b639f33c9794
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **248.5 MB (248499774 bytes)**  
+-	Total Size: **258.0 MB (258030472 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3812437e83be9bbc226e8867e68a1be997b76cd547d4beca0064363e4383861a`
+-	Image ID: `sha256:87eecbd0d0667bc5ee65f65c9e58ab9f75fc8f685ab9576fa50029fa0974227d`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Sat, 12 Nov 2022 03:39:38 GMT
-ADD file:57d621536158358b14d15155826ef2dd4ca034278044111ec0aaf6717016e569 in / 
-# Sat, 12 Nov 2022 03:39:38 GMT
+# Tue, 22 Nov 2022 22:39:21 GMT
+ADD file:685b5edadf1d5bf0aeb2aec35f810d83876e6d2ea0903b213f75a9c5f0dc5901 in / 
+# Tue, 22 Nov 2022 22:39:21 GMT
 CMD ["/bin/sh"]
-# Sat, 12 Nov 2022 09:41:17 GMT
+# Thu, 15 Dec 2022 19:49:19 GMT
 RUN apk add --no-cache         ca-certificates         gcc
-# Sat, 12 Nov 2022 09:41:18 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.65.0
-# Sat, 12 Nov 2022 09:41:33 GMT
+# Thu, 15 Dec 2022 19:49:19 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.66.0
+# Thu, 15 Dec 2022 19:49:32 GMT
 RUN set -eux;     apkArch="$(apk --print-arch)";     case "$apkArch" in         x86_64) rustArch='x86_64-unknown-linux-musl'; rustupSha256='95427cb0592e32ed39c8bd522fe2a40a746ba07afb8149f91e936cddb4d6eeac' ;;         aarch64) rustArch='aarch64-unknown-linux-musl'; rustupSha256='7855404cdc50c20040c743800c947b6f452490d47f8590a4a83bc6f75d1d8eda' ;;         *) echo >&2 "unsupported architecture: $apkArch"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.1/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
 -	Layers:
-	-	`sha256:6875df1f535433e5affe18ecfde9acb7950ab5f76887980ff06c5cdd48cf98f4`  
-		Last Modified: Sat, 12 Nov 2022 03:40:05 GMT  
-		Size: 2.7 MB (2707756 bytes)  
+	-	`sha256:261da4162673b93e5c0e7700a3718d40bcc086dbf24b1ec9b54bca0b82300626`  
+		Last Modified: Tue, 22 Nov 2022 22:39:45 GMT  
+		Size: 3.3 MB (3259190 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:78d95e1c5e994d9ffd6f33c6457bdcd56cb560f191a2c10c60a87368fb5673c2`  
-		Last Modified: Sat, 12 Nov 2022 09:42:32 GMT  
-		Size: 37.2 MB (37190663 bytes)  
+	-	`sha256:e47a17aaa7548ed1211281bc6eed0c98037907155c7ac8d8bea43e63c32ecc2e`  
+		Last Modified: Thu, 15 Dec 2022 19:53:56 GMT  
+		Size: 45.6 MB (45611188 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29acc21ff5c032cfeba1a25e52e0d1473a788d64dbae79b0145eb17d42bc34dd`  
-		Last Modified: Sat, 12 Nov 2022 09:42:50 GMT  
-		Size: 208.6 MB (208601355 bytes)  
+	-	`sha256:43e222af2929cfbd2e522c723ff2697a0b482bde46640bbd40d6493a6262927f`  
+		Last Modified: Thu, 15 Dec 2022 19:54:13 GMT  
+		Size: 209.2 MB (209160094 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
