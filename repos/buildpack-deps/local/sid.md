@@ -890,21 +890,13 @@ Licenses: (parsed from: `/usr/share/doc/diffutils/copyright`)
 - `GFDL`
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris diffutils=1:3.8-1
-'http://deb.debian.org/debian/pool/main/d/diffutils/diffutils_3.8-1.dsc' diffutils_3.8-1.dsc 1705 SHA256:f00b310d95fce4312f44c4940b374fa3c2b5ccfcb53b6daa4e4a98e2bb47b58a
-'http://deb.debian.org/debian/pool/main/d/diffutils/diffutils_3.8.orig.tar.xz' diffutils_3.8.orig.tar.xz 1585120 SHA256:a6bdd7d1b31266d11c4f4de6c1b748d4607ab0231af5188fc2533d0ae2438fec
-'http://deb.debian.org/debian/pool/main/d/diffutils/diffutils_3.8.orig.tar.xz.asc' diffutils_3.8.orig.tar.xz.asc 833 SHA256:500f423d0ffa8d28966d916ed5fc6b79fb160a20ed5cb74eeb1c94a30c340311
-'http://deb.debian.org/debian/pool/main/d/diffutils/diffutils_3.8-1.debian.tar.xz' diffutils_3.8-1.debian.tar.xz 11004 SHA256:120b1eaecd0cb09eb60cddaf616d269684f2f2b796ee6d9ca7aa4e16af517767
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/diffutils/1:3.8-1/
 
-- https://sources.debian.net/src/diffutils/1:3.8-1/ (for browsing the source)
-- https://sources.debian.net/src/diffutils/1:3.8-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/diffutils/1:3.8-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `djvulibre=3.5.28-2`
 
@@ -1779,20 +1771,13 @@ Licenses: (parsed from: `/usr/share/doc/libharfbuzz0b/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris harfbuzz=5.2.0-2
-'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_5.2.0-2.dsc' harfbuzz_5.2.0-2.dsc 2706 SHA256:4bfd1fc7f915a6e94672cfcf0223f312c6827c1e52425de04b51006eb8e6f2e3
-'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_5.2.0.orig.tar.xz' harfbuzz_5.2.0.orig.tar.xz 17711968 SHA256:735a94917b47936575acb4d4fa7e7986522f8a89527e4635721474dee2bc942c
-'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_5.2.0-2.debian.tar.xz' harfbuzz_5.2.0-2.debian.tar.xz 11288 SHA256:091bd761e734cb982ef9ca8571d99ea761b669b6246e0a69e161604700945fae
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/harfbuzz/5.2.0-2/
 
-- https://sources.debian.net/src/harfbuzz/5.2.0-2/ (for browsing the source)
-- https://sources.debian.net/src/harfbuzz/5.2.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/harfbuzz/5.2.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `hicolor-icon-theme=0.17-2`
 
@@ -4573,20 +4558,13 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 - `TCL`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pango1.0=1.50.10+ds-1
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.10%2bds-1.dsc' pango1.0_1.50.10+ds-1.dsc 3746 SHA256:c535dafe1f8c8eefc2ce36b873e14e2457ded847effaa88727a61c9fab41ed56
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.10%2bds.orig.tar.xz' pango1.0_1.50.10+ds.orig.tar.xz 2671840 SHA256:ffeb42c3ad15b20a69d25116d83a39f5412b514b3f68dc2e61eae0fcfa7a20ec
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.10%2bds-1.debian.tar.xz' pango1.0_1.50.10+ds-1.debian.tar.xz 49292 SHA256:5ec6733f7bcdc5210463b963291af3f83348e6b1b728ebbef773ef485dd1d328
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pango1.0/1.50.10+ds-1/
 
-- https://sources.debian.net/src/pango1.0/1.50.10+ds-1/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.50.10+ds-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.50.10+ds-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-7`
 
@@ -5713,21 +5691,13 @@ Licenses: (parsed from: `/usr/share/doc/liblzma-dev/copyright`, `/usr/share/doc/
 - `permissive-nowarranty`
 - `probably-PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xz-utils=5.2.9-0.0
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.9-0.0.dsc' xz-utils_5.2.9-0.0.dsc 2494 SHA256:7c036733f89fc466e85ed25bdd515c9f5523d525c45b0818e789632cd3c470fd
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.9.orig.tar.xz' xz-utils_5.2.9.orig.tar.xz 1290516 SHA256:287ef163e7e57561e9de590b2a9037457af24f03a46bbd12bf84f3263679e8d2
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.9.orig.tar.xz.asc' xz-utils_5.2.9.orig.tar.xz.asc 833 SHA256:e14b1eb3cb53320bae1eddbc6f70d6657a52be8078f0b0d24b36ab663ee2291b
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.2.9-0.0.debian.tar.xz' xz-utils_5.2.9-0.0.debian.tar.xz 30448 SHA256:5ff25eae43f977de51eeefa3fd174cea1da1aa5c89c783ee6e0561d272cd08e0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xz-utils/5.2.9-0.0/
 
-- https://sources.debian.net/src/xz-utils/5.2.9-0.0/ (for browsing the source)
-- https://sources.debian.net/src/xz-utils/5.2.9-0.0/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xz-utils/5.2.9-0.0/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `zlib=1:1.2.13.dfsg-1`
 

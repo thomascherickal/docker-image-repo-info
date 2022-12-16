@@ -1707,20 +1707,13 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 - `SIL-OFL-1.1`
 - `all-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nghttp2=1.50.0-1
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.50.0-1.dsc' nghttp2_1.50.0-1.dsc 2508 SHA256:60ee2845ebb87ea663191a22d16fa4bc191ddb7a826c94e56f39023e717ebacc
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.50.0.orig.tar.gz' nghttp2_1.50.0.orig.tar.gz 3885952 SHA256:6de469efc8e9d47059327a6736aebe0a7d73f57e5e37ab4c4f838fb1eebd7889
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.50.0-1.debian.tar.xz' nghttp2_1.50.0-1.debian.tar.xz 12912 SHA256:4db3911036ea625172b517d590a31386fd950b1a9c4b561e252d915582af8318
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nghttp2/1.50.0-1/
 
-- https://sources.debian.net/src/nghttp2/1.50.0-1/ (for browsing the source)
-- https://sources.debian.net/src/nghttp2/1.50.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nghttp2/1.50.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `npth=1.6-3`
 
@@ -2146,20 +2139,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=252.2-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.2-1.dsc' systemd_252.2-1.dsc 6371 SHA256:6c43f00da55faa0f59240932d2d5a79328185e42fbdc1ac858daf5bf5bb8b64c
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.2.orig.tar.gz' systemd_252.2.orig.tar.gz 11745627 SHA256:4682efb2dccdfdc4241d21fe4f6e762d5c43c2b964daae1c9fe9167ffe28c874
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.2-1.debian.tar.xz' systemd_252.2-1.debian.tar.xz 167192 SHA256:b6b172972efff0ead5547cf2e273db55b713c0761569619ccac796ac70c7c6d0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/252.2-1/
 
-- https://sources.debian.net/src/systemd/252.2-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/252.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/252.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.05-7`
 
