@@ -1,7 +1,7 @@
 ## `swift:bionic`
 
 ```console
-$ docker pull swift@sha256:1fbb1b941ab6b5d422bee550efa31461db7999180ad61197e3d3f133d35ccd12
+$ docker pull swift@sha256:0b4bc20ceb72cdf228f4b19279537536460107a20e68fb4ea4024412bbe4ab1b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull swift@sha256:1fbb1b941ab6b5d422bee550efa31461db7999180ad61197e3d3f
 ### `swift:bionic` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:b5cbf34684ff7004d3cb62ede80bf795a6972b7850efbbcb546a12fe057d4596
+$ docker pull swift@sha256:9b65568a343c03b1cfda99f2b70042a1063f09bae79d38e16ff832d66d60bfb2
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **723.8 MB (723762546 bytes)**  
+-	Total Size: **723.7 MB (723710093 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:86621ed920513185149182866c70e760e9d3d9599d23c23730bca463d4ea058a`
+-	Image ID: `sha256:a2c03957a10d578f827c6b20357470310d24fea03d742c9c2a113cc3f297f922`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -36,17 +36,17 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
 # Fri, 09 Dec 2022 02:55:35 GMT
 ARG SWIFT_PLATFORM=ubuntu18.04
-# Fri, 09 Dec 2022 02:55:35 GMT
-ARG SWIFT_BRANCH=swift-5.7.1-release
-# Fri, 09 Dec 2022 02:55:35 GMT
-ARG SWIFT_VERSION=swift-5.7.1-RELEASE
-# Fri, 09 Dec 2022 02:55:35 GMT
+# Fri, 16 Dec 2022 18:30:27 GMT
+ARG SWIFT_BRANCH=swift-5.7.2-release
+# Fri, 16 Dec 2022 18:30:27 GMT
+ARG SWIFT_VERSION=swift-5.7.2-RELEASE
+# Fri, 16 Dec 2022 18:30:27 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Fri, 09 Dec 2022 02:55:35 GMT
-ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubuntu18.04 SWIFT_BRANCH=swift-5.7.1-release SWIFT_VERSION=swift-5.7.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Fri, 09 Dec 2022 02:56:18 GMT
+# Fri, 16 Dec 2022 18:30:27 GMT
+ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubuntu18.04 SWIFT_BRANCH=swift-5.7.2-release SWIFT_VERSION=swift-5.7.2-RELEASE SWIFT_WEBROOT=https://download.swift.org
+# Fri, 16 Dec 2022 18:31:17 GMT
 RUN set -e;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export DEBIAN_FRONTEND=noninteractive     && apt-get -q update && apt-get -q install -y curl && rm -rf /var/lib/apt/lists/*     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz     && apt-get purge --auto-remove -y curl
-# Fri, 09 Dec 2022 02:56:25 GMT
+# Fri, 16 Dec 2022 18:31:23 GMT
 RUN swift --version
 ```
 
@@ -59,11 +59,11 @@ RUN swift --version
 		Last Modified: Fri, 09 Dec 2022 03:30:19 GMT  
 		Size: 151.9 MB (151874952 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:677238b0b77d840d26ec24c449cdc8301f583dcbe187eff99ac89e6e2ec998c2`  
-		Last Modified: Fri, 09 Dec 2022 03:31:11 GMT  
-		Size: 545.2 MB (545175910 bytes)  
+	-	`sha256:bce877cbb4a218f2267ec4b93a5ae95a50092d75bd59f0a2d14e5d752927142d`  
+		Last Modified: Fri, 16 Dec 2022 18:50:51 GMT  
+		Size: 545.1 MB (545123457 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:01d6fa6dfad515a0a24c8f587237f111a781d27b26f6c9d4ca3ae9a57a3267cb`  
-		Last Modified: Fri, 09 Dec 2022 03:29:52 GMT  
+	-	`sha256:40307da3bc51afc399626761571dd57440136b9565b86a82d97d74b20f46b3c2`  
+		Last Modified: Fri, 16 Dec 2022 18:49:34 GMT  
 		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
