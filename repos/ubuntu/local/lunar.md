@@ -67,13 +67,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.5.3
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.5.3.dsc' apt_2.5.3.dsc 2933 SHA512:fb662b81a6f3474217aa6f3b3ae25e8a43ad3310bb87b82567fa8d5adf0db4f43ecc2b1008a6b509fd1e5200a9b1b8907eebddcb4875f0119610cbde73e74d59
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.5.3.tar.xz' apt_2.5.3.tar.xz 2322196 SHA512:0681efbfc8de04760462410bbb8bdaeff3fb2833709ac4b7bda72b5fb2a530fe6d520a3702ff02bff9bd583bb7bb146885f5ca193f4996803e838d0c0dd44ab6
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/apt/2.5.3/
+
 
 ### `dpkg` source package: `attr=1:2.5.1-3`
 
@@ -251,14 +251,9 @@ Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dash=0.5.11+git20210903+057cd650a4ed-8ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-8ubuntu1.dsc' dash_0.5.11+git20210903+057cd650a4ed-8ubuntu1.dsc 2208 SHA512:e0dde76140d2c0c62a8172ab46483d56277748162b75f0dc2ffff39ca437270648f4a63fc46cb690f83844bf8f98f87d7999705b34d4332454c07dce4cdf549f
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed.orig.tar.xz' dash_0.5.11+git20210903+057cd650a4ed.orig.tar.xz 133320 SHA512:eced6bc60ca6ba4394a2ee65d8c6b88eca729c43e47053fc01dec5500ebe002a12f536c128c3fd821a2eb61b97e92c8a0be6d4532926479ce4b7d986be109cb7
-'http://archive.ubuntu.com/ubuntu/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-8ubuntu1.debian.tar.xz' dash_0.5.11+git20210903+057cd650a4ed-8ubuntu1.debian.tar.xz 35656 SHA512:7e0247e4d7577ad5889c0ae488e465a610ddf829b325d6f1ab763599bf7e261333bf6f7d3878a3ba392962b107d42df8e5a9350264f7e76700c402b753da054d
-```
 
 ### `dpkg` source package: `db5.3=5.3.28+dfsg1-0.10`
 
@@ -317,14 +312,13 @@ Licenses: (parsed from: `/usr/share/doc/debianutils/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debianutils=5.7-0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/d/debianutils/debianutils_5.7-0.3.dsc' debianutils_5.7-0.3.dsc 1887 SHA512:c125ce17d3415f0aea9ba92afb527cfe20db17d41e4c86670ee198865a776771e86fd4d067151658f9f14ae8fea04348d123a0a263ecb72be7805385c6543fa7
-'http://archive.ubuntu.com/ubuntu/pool/main/d/debianutils/debianutils_5.7.orig.tar.gz' debianutils_5.7.orig.tar.gz 257231 SHA512:79acd8885abca93842d696167171a359011c49a40f38deeb25bc94d62905f95afa3a7b2540d3bd4b0ffd363c5c48a439a1a68139a29d6c033980b019cea75d92
-'http://archive.ubuntu.com/ubuntu/pool/main/d/debianutils/debianutils_5.7-0.3.debian.tar.xz' debianutils_5.7-0.3.debian.tar.xz 22120 SHA512:b0c4e5177e4b61664b4fa76382882900268119b9c211e4aea30865aecb970bef7926c0779adf09845d786e1aaa4bc80bfddfbfa8da02563ec7807d1b7e2a1198
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/debianutils/5.7-0.3/
+
 
 ### `dpkg` source package: `diffutils=1:3.8-1`
 
@@ -383,15 +377,9 @@ Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/li
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.46.5-2ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.5-2ubuntu2.dsc' e2fsprogs_1.46.5-2ubuntu2.dsc 2865 SHA512:b273bf7dc996e3a85712268ae9bbc1ceb24002f3b17426abe06964f59d3638ded7af3cfe94a7cf5207a8ea99af1cac40a4b231192d7d8fa9249ea7e2152fb679
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.5.orig.tar.gz' e2fsprogs_1.46.5.orig.tar.gz 9530158 SHA512:1a3496cb6ac575c7a5c523cc4eede39bc77c313a6d1fea2d303fc967792d75d94e42d7821e1a61b7513509320aae4a7170506decf5753ddbd1dda9d304cc392e
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.5.orig.tar.gz.asc' e2fsprogs_1.46.5.orig.tar.gz.asc 488 SHA512:b288fa2418a85750673743cb58faf10537e2c79a5c2ec8b0d59435316f00006424195556ccf78fa023b67b05a29cd85bf9d96c14c166847d71a1d79b189c1d05
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.5-2ubuntu2.debian.tar.xz' e2fsprogs_1.46.5-2ubuntu2.debian.tar.xz 85956 SHA512:2842625713c5d30d5bd1d59c792a6e618ee46b33f429d0857778e1ae624be2cbad9ef37b8539096e02ce33b80053963cc1ee1e93932872cf298dd9d2ad849c32
-```
 
 ### `dpkg` source package: `findutils=4.9.0-3ubuntu1`
 
@@ -621,13 +609,13 @@ Licenses: (parsed from: `/usr/share/doc/init-system-helpers/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris init-system-helpers=1.64
-'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.64.dsc' init-system-helpers_1.64.dsc 1993 SHA512:0cac01db69df5bc2265302a9fce4f900f3b9e7bc07bcc67323e80e43c2fca16b6cc1ff5c45b45162c4765c924976f29e5a912c64675b1ab273eb350284be3e8e
-'http://archive.ubuntu.com/ubuntu/pool/main/i/init-system-helpers/init-system-helpers_1.64.tar.xz' init-system-helpers_1.64.tar.xz 43400 SHA512:8f4b70a1eab178338527c66ad16b719e86320127a627011fd12c2dd839e512173179d15749f2e48a385708a78dfa7fd719b3cf3a231cc23d82710651dff582d8
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/init-system-helpers/1.64/
+
 
 ### `dpkg` source package: `libcap-ng=0.8.3-1build1`
 
@@ -998,14 +986,9 @@ Licenses: (parsed from: `/usr/share/doc/liblz4-1/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lz4=1.9.3-2build2
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.3-2build2.dsc' lz4_1.9.3-2build2.dsc 2091 SHA512:a8f802737139536f8a9c0a3483635ff4dd8a3eba2e0d9d0d27f4f91c17592d1797929d491183dc25de4100a7aa924edefa8ca45eed4968c0e1b7e817f1ae9e1c
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.3.orig.tar.gz' lz4_1.9.3.orig.tar.gz 320958 SHA512:c246b0bda881ee9399fa1be490fa39f43b291bb1d9db72dba8a85db1a50aad416a97e9b300eee3d2a4203c2bd88bda2762e81bc229c3aa409ad217eb306a454c
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.3-2build2.debian.tar.xz' lz4_1.9.3-2build2.debian.tar.xz 14088 SHA512:9f61516a672186299a96aee5b7a71d9cb1ad3db2697fa10b802fef14a63587bb3459281f7300726711a116893c10858914f558aece1d224876e287020a23dde6
-```
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-3.1`
 
@@ -1209,15 +1192,9 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.34.0-5ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-5ubuntu1.dsc' perl_5.34.0-5ubuntu1.dsc 2993 SHA512:348adb884921a586da07c448d6eeec262d790daa43668e47f03642f2ddb158b645ca937aa6ad08f6e5336a21839a8b5ab58782e7b9128cd5b65cf940406f6402
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0.orig-regen-configure.tar.xz' perl_5.34.0.orig-regen-configure.tar.xz 415412 SHA512:2581152e0747105314c4fa4167f1f97d286436b996341b9b75e4099ba18f15eb0d2b42888622fbe9b5499d3fe304bc8aa9ad207a945f590135beccfb68ea28b0
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0.orig.tar.xz' perl_5.34.0.orig.tar.xz 12881416 SHA512:691b4b31eacec357191fba777612b4e3eae59e946a22998a50766697c0d61db1d42a9b3bc1e41abf0d1ca1893e4a7c06d7bf3290480cf03d7f79befd7a8a3267
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-5ubuntu1.debian.tar.xz' perl_5.34.0-5ubuntu1.debian.tar.xz 168144 SHA512:10f80dc7908e12bd17f32d3e465d898516fbf4e405117ceec09feae5237891a525a43a3b284d3802db5bd457b13abc540878ca5fb339738c9e0b54cca9280ab9
-```
 
 ### `dpkg` source package: `procps=2:3.3.17-7ubuntu1`
 
