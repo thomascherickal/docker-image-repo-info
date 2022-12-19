@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e582042be72097869779c3308f88b7bf148dbcf37f36d9fa7e09d39bc5ad739f`
-- Created: `2022-12-07T01:27:29.840252692Z`
+- Image ID: `sha256:7e937f482648f48d148f78f6cbd95908b6841a0496dc7b12cfa4590eabd46096`
+- Created: `2022-12-16T23:19:53.689341625Z`
 - Virtual Size: ~ 147.04 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -13,7 +13,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `DOCKER_VERSION=23.0.0-beta.1`
   - `DOCKER_BUILDX_VERSION=0.9.1`
-  - `DOCKER_COMPOSE_VERSION=2.14.0`
+  - `DOCKER_COMPOSE_VERSION=2.14.1`
   - `DOCKER_TLS_CERTDIR=/certs`
 
 ## `apk` (`.apk`-based packages)
@@ -174,16 +174,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `git`
 
 ```console
-git-2.38.1-r0 description:
+git-2.38.2-r0 description:
 Distributed version control system
 
-git-2.38.1-r0 webpage:
+git-2.38.2-r0 webpage:
 https://www.git-scm.com/
 
-git-2.38.1-r0 installed size:
+git-2.38.2-r0 installed size:
 6060 KiB
 
-git-2.38.1-r0 license:
+git-2.38.2-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -446,16 +446,16 @@ BSD
 ### `apk` package: `pcre2`
 
 ```console
-pcre2-10.41-r0 description:
+pcre2-10.42-r0 description:
 Perl-compatible regular expression library
 
-pcre2-10.41-r0 webpage:
+pcre2-10.42-r0 webpage:
 https://pcre.org/
 
-pcre2-10.41-r0 installed size:
+pcre2-10.42-r0 installed size:
 672 KiB
 
-pcre2-10.41-r0 license:
+pcre2-10.42-r0 license:
 BSD-3-Clause
 
 ```

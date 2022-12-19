@@ -1,9 +1,9 @@
-# `docker:20.10.21-git`
+# `docker:20.10.22-git`
 
 ## Docker Metadata
 
-- Image ID: `sha256:066c93cf2f21ea046f8a1fe7f6bd196e815104d34d3920971a37abed8024bef5`
-- Created: `2022-12-05T21:20:40.551946622Z`
+- Image ID: `sha256:c10b481642820031297b3fbea0617485c2f45f4a7ecb8e65217507689eade960`
+- Created: `2022-12-16T23:20:30.103767227Z`
 - Virtual Size: ~ 160.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,9 +11,9 @@
 - Command: `["sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `DOCKER_VERSION=20.10.21`
+  - `DOCKER_VERSION=20.10.22`
   - `DOCKER_BUILDX_VERSION=0.9.1`
-  - `DOCKER_COMPOSE_VERSION=2.14.0`
+  - `DOCKER_COMPOSE_VERSION=2.14.1`
   - `DOCKER_TLS_CERTDIR=/certs`
 
 ## `apk` (`.apk`-based packages)
@@ -174,16 +174,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `git`
 
 ```console
-git-2.38.1-r0 description:
+git-2.38.2-r0 description:
 Distributed version control system
 
-git-2.38.1-r0 webpage:
+git-2.38.2-r0 webpage:
 https://www.git-scm.com/
 
-git-2.38.1-r0 installed size:
+git-2.38.2-r0 installed size:
 6060 KiB
 
-git-2.38.1-r0 license:
+git-2.38.2-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -446,16 +446,16 @@ BSD
 ### `apk` package: `pcre2`
 
 ```console
-pcre2-10.40-r0 description:
+pcre2-10.42-r0 description:
 Perl-compatible regular expression library
 
-pcre2-10.40-r0 webpage:
+pcre2-10.42-r0 webpage:
 https://pcre.org/
 
-pcre2-10.40-r0 installed size:
+pcre2-10.42-r0 installed size:
 672 KiB
 
-pcre2-10.40-r0 license:
+pcre2-10.42-r0 license:
 BSD-3-Clause
 
 ```
