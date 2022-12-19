@@ -1,10 +1,10 @@
-# `drupal:9.4.9-php8.0-fpm-alpine3.16`
+# `drupal:9.5.0-php8.1-fpm-alpine3.16`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b3f8d82fe84f47f7cc78824a87e7bc53ea932f24cc38f4e2e38294f34f0c9dc2`
-- Created: `2022-12-08T04:48:21.146069988Z`
-- Virtual Size: ~ 168.26 Mb  
+- Image ID: `sha256:b3ce002a352787dd5aea4b4a66ba25969abab2b05f5fa24dd965968e196774b9`
+- Created: `2022-12-17T02:17:53.637381745Z`
+- Virtual Size: ~ 175.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -16,12 +16,12 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4`
-  - `PHP_VERSION=8.0.26`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.26.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.26.tar.xz.asc`
-  - `PHP_SHA256=0765bfbe640dba37ccc36d2bc7c7b7ba3d2c3381c9cd4305f66eca83e82a40b3`
-  - `DRUPAL_VERSION=9.4.9`
+  - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
+  - `PHP_VERSION=8.1.13`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.13.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.13.tar.xz.asc`
+  - `PHP_SHA256=b15ef0ccdd6760825604b3c4e3e73558dcf87c75ef1d68ef4289d8fd261ac856`
+  - `DRUPAL_VERSION=9.5.0`
 
 ## `apk` (`.apk`-based packages)
 
@@ -311,6 +311,23 @@ libcurl-7.83.1-r4 installed size:
 
 libcurl-7.83.1-r4 license:
 curl
+
+```
+
+### `apk` package: `libgcc`
+
+```console
+libgcc-11.2.1_git20220219-r2 description:
+GNU C compiler runtime libraries
+
+libgcc-11.2.1_git20220219-r2 webpage:
+https://gcc.gnu.org
+
+libgcc-11.2.1_git20220219-r2 installed size:
+108 KiB
+
+libgcc-11.2.1_git20220219-r2 license:
+GPL-2.0-or-later LGPL-2.1-or-later
 
 ```
 
