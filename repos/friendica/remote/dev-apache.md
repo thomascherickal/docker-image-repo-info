@@ -1,7 +1,7 @@
 ## `friendica:dev-apache`
 
 ```console
-$ docker pull friendica@sha256:0762a5b046c1b4a62d5955941cee0f6dcd162f0fc77bf60aa1c7e997d026ffa8
+$ docker pull friendica@sha256:d82bc1a8e9c0eab9eed79ec7e98124c4db8875bfbd1f3cdfde4a1e35f2d75bd3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,14 +18,14 @@ $ docker pull friendica@sha256:0762a5b046c1b4a62d5955941cee0f6dcd162f0fc77bf60aa
 ### `friendica:dev-apache` - linux; amd64
 
 ```console
-$ docker pull friendica@sha256:0aff5177e5e8b9b3ea6f91fe473b094348b6f9282cf421c1a3247ddb6ec78d10
+$ docker pull friendica@sha256:3961ea8d266ac73b639d5f80855a21457f72d9d9e9e0497632b5b6960440b046
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **216.2 MB (216187836 bytes)**  
+-	Total Size: **216.2 MB (216189564 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:587d3c674dbdf0e7ac3d511d0348465f7190d3ad1fd2e676f81e86dc65cd7e26`
+-	Image ID: `sha256:281bf88ee0c1bfdaa942030831e5eca62875f9cadcf4c8f89b446f0fddbec911`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -110,19 +110,19 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Tue, 06 Dec 2022 21:20:59 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Tue, 06 Dec 2022 21:24:40 GMT
-ENV FRIENDICA_VERSION=2022.12-dev
-# Tue, 06 Dec 2022 21:24:40 GMT
-ENV FRIENDICA_ADDONS=2022.12-dev
-# Tue, 06 Dec 2022 21:24:45 GMT
+# Tue, 20 Dec 2022 20:20:58 GMT
+ENV FRIENDICA_VERSION=2023.03-dev
+# Tue, 20 Dec 2022 20:20:59 GMT
+ENV FRIENDICA_ADDONS=2023.03-dev
+# Tue, 20 Dec 2022 20:21:04 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;
-# Tue, 06 Dec 2022 21:24:46 GMT
+# Tue, 20 Dec 2022 20:21:04 GMT
 COPY multi:f87d330cfcee641708f831c1e9357b18f2b0ed18bc7541fec914e00a972d58a1 in / 
-# Tue, 06 Dec 2022 21:24:46 GMT
+# Tue, 20 Dec 2022 20:21:04 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Tue, 06 Dec 2022 21:24:46 GMT
+# Tue, 20 Dec 2022 20:21:04 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Tue, 06 Dec 2022 21:24:46 GMT
+# Tue, 20 Dec 2022 20:21:05 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -199,30 +199,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 06 Dec 2022 21:25:22 GMT  
 		Size: 537.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4f495420109d4f6bb98edcaec4ec4f013b1b307b75ffbc82ed677e1c42b9a55`  
-		Last Modified: Tue, 06 Dec 2022 21:26:13 GMT  
-		Size: 17.1 MB (17146457 bytes)  
+	-	`sha256:78a29e57893f637fe1f1d1634ea71c0b2bee8eab913b8df9a9c102da46f077b5`  
+		Last Modified: Tue, 20 Dec 2022 20:22:51 GMT  
+		Size: 17.1 MB (17148183 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:51ac196bd2714754d704d324e80fb5191e6505050af54ea150949f83d5573df0`  
-		Last Modified: Tue, 06 Dec 2022 21:26:11 GMT  
-		Size: 3.6 KB (3624 bytes)  
+	-	`sha256:95fc4ea8aac75b2b6ac7ddf4e681a29c0b94d623bc0c626a89569e1ebdc58138`  
+		Last Modified: Tue, 20 Dec 2022 20:22:49 GMT  
+		Size: 3.6 KB (3623 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29cfa39a8549d83c2978b205f81c4038a6ee0f1191f662a3b2ac18b7cd0bf9d3`  
-		Last Modified: Tue, 06 Dec 2022 21:26:11 GMT  
-		Size: 944.0 B  
+	-	`sha256:0e8c6dd67c1597b212057814571aa1aa98bdfdbb524476003a74149c95b05506`  
+		Last Modified: Tue, 20 Dec 2022 20:22:49 GMT  
+		Size: 947.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev-apache` - linux; arm variant v5
 
 ```console
-$ docker pull friendica@sha256:6723d876ca2f57f7a2f93edf8b027900010dcd0a6dc7c9e1b1811ca752ff59cf
+$ docker pull friendica@sha256:0809998a64b907b2422fba2122bd06db4f275069fc95c0a629c97f1ad1377227
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **191.4 MB (191386080 bytes)**  
+-	Total Size: **191.4 MB (191392320 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d22f765e20e18105863d20b888f5a6f37ba70fa55fb479a022c083d6f4704890`
+-	Image ID: `sha256:202ec0a6b9fb63216678931c1077b22eeb7572b334719478df6e095f2117d913`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -307,19 +307,19 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Tue, 06 Dec 2022 13:29:14 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Tue, 06 Dec 2022 13:33:24 GMT
-ENV FRIENDICA_VERSION=2022.12-dev
-# Tue, 06 Dec 2022 13:33:24 GMT
-ENV FRIENDICA_ADDONS=2022.12-dev
-# Tue, 06 Dec 2022 13:33:31 GMT
+# Tue, 20 Dec 2022 19:49:32 GMT
+ENV FRIENDICA_VERSION=2023.03-dev
+# Tue, 20 Dec 2022 19:49:32 GMT
+ENV FRIENDICA_ADDONS=2023.03-dev
+# Tue, 20 Dec 2022 19:49:39 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;
-# Tue, 06 Dec 2022 13:33:32 GMT
+# Tue, 20 Dec 2022 19:49:40 GMT
 COPY multi:f87d330cfcee641708f831c1e9357b18f2b0ed18bc7541fec914e00a972d58a1 in / 
-# Tue, 06 Dec 2022 13:33:32 GMT
+# Tue, 20 Dec 2022 19:49:40 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Tue, 06 Dec 2022 13:33:32 GMT
+# Tue, 20 Dec 2022 19:49:40 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Tue, 06 Dec 2022 13:33:32 GMT
+# Tue, 20 Dec 2022 19:49:40 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -396,30 +396,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 06 Dec 2022 13:34:34 GMT  
 		Size: 541.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f80ab33ff0a824f438d747b5373678d436d40a9ab81354754b1caa20c8bc491`  
-		Last Modified: Tue, 06 Dec 2022 13:35:38 GMT  
-		Size: 16.9 MB (16902280 bytes)  
+	-	`sha256:b2afa7e288ccba1e85eff8ec569958d5484485b76a8ac14720131a6d8745ee7c`  
+		Last Modified: Tue, 20 Dec 2022 19:51:49 GMT  
+		Size: 16.9 MB (16908520 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5dbf3e0dad205f06ccc98ad2a5fa9e5615b20bea1f1bede6fb58141e9509f7c0`  
-		Last Modified: Tue, 06 Dec 2022 13:35:35 GMT  
-		Size: 3.6 KB (3624 bytes)  
+	-	`sha256:66c02f149f34eb8383fa05f73c87277210fcf27ace0d6dff328e46faead7353f`  
+		Last Modified: Tue, 20 Dec 2022 19:51:47 GMT  
+		Size: 3.6 KB (3623 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1019fcb1af29a5e559bae528a65cf53ef59d76fe75742ab23a46a529422038e7`  
-		Last Modified: Tue, 06 Dec 2022 13:35:35 GMT  
-		Size: 921.0 B  
+	-	`sha256:9dac1127eea5badfbd813e0f9f5b39038c9b5f2e64033bc7317baa14a6cf2b66`  
+		Last Modified: Tue, 20 Dec 2022 19:51:48 GMT  
+		Size: 922.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev-apache` - linux; arm variant v7
 
 ```console
-$ docker pull friendica@sha256:6ddc243d20b1427400074d48d61a40b0baececc030d47697df6702cd38f7d027
+$ docker pull friendica@sha256:349e9f70c2ede01f24fea9ae8efbb1c63951c0fa403ecdbadc2faa6fe50d3d01
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **182.5 MB (182507855 bytes)**  
+-	Total Size: **182.5 MB (182515545 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e7bab8a903021b722e25859a1211f4b73271a9c783cf0a9a9367aa81eefb8664`
+-	Image ID: `sha256:5c1c0f4421e033e0bff1e7adc0d20a398864d8cb32e800bb4968cb8b9fc23391`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -504,19 +504,19 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Tue, 06 Dec 2022 15:01:40 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Tue, 06 Dec 2022 15:05:45 GMT
-ENV FRIENDICA_VERSION=2022.12-dev
-# Tue, 06 Dec 2022 15:05:45 GMT
-ENV FRIENDICA_ADDONS=2022.12-dev
-# Tue, 06 Dec 2022 15:05:50 GMT
+# Tue, 20 Dec 2022 19:59:05 GMT
+ENV FRIENDICA_VERSION=2023.03-dev
+# Tue, 20 Dec 2022 19:59:06 GMT
+ENV FRIENDICA_ADDONS=2023.03-dev
+# Tue, 20 Dec 2022 19:59:11 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;
-# Tue, 06 Dec 2022 15:05:51 GMT
+# Tue, 20 Dec 2022 19:59:12 GMT
 COPY multi:f87d330cfcee641708f831c1e9357b18f2b0ed18bc7541fec914e00a972d58a1 in / 
-# Tue, 06 Dec 2022 15:05:51 GMT
+# Tue, 20 Dec 2022 19:59:12 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Tue, 06 Dec 2022 15:05:51 GMT
+# Tue, 20 Dec 2022 19:59:12 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Tue, 06 Dec 2022 15:05:51 GMT
+# Tue, 20 Dec 2022 19:59:12 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -593,30 +593,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 06 Dec 2022 15:07:10 GMT  
 		Size: 540.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bed42b64165739bc50c1c95538715b07423d58da17ea0774befb19a3973a4a89`  
-		Last Modified: Tue, 06 Dec 2022 15:08:18 GMT  
-		Size: 16.8 MB (16807595 bytes)  
+	-	`sha256:244bb7319b91d52d177af4581ebb7f7e0996787e66d30f3fd4bffc55ea12add4`  
+		Last Modified: Tue, 20 Dec 2022 20:02:08 GMT  
+		Size: 16.8 MB (16815279 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd1a73d9de312a58be0e6a89d4149b0efe5d1790c55bb98dd74184c2f114a7cf`  
-		Last Modified: Tue, 06 Dec 2022 15:08:16 GMT  
+	-	`sha256:ebade27d57c672a8f7779d307f6d4d72192d1cece17f9db523944dd92ce0a51b`  
+		Last Modified: Tue, 20 Dec 2022 20:02:06 GMT  
 		Size: 3.6 KB (3623 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57a0ef290c27ee1bb2d979326d7e0531299874de8f87b4189b9eb702d46f3498`  
-		Last Modified: Tue, 06 Dec 2022 15:08:16 GMT  
-		Size: 916.0 B  
+	-	`sha256:0646970413490ae90ae4c55c7d1c06b49041acef54c83dc83242e3c03922aab5`  
+		Last Modified: Tue, 20 Dec 2022 20:02:06 GMT  
+		Size: 922.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev-apache` - linux; arm64 variant v8
 
 ```console
-$ docker pull friendica@sha256:f5fa2c7627b8e5dcff80e16459c8d3cf67013e5746e1b210465d0730c8f1ce33
+$ docker pull friendica@sha256:b288c19e41bcb17244f18d5cb9fa86ace0bc37d9905b113cb1375cd53ab9f34a
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **206.6 MB (206579978 bytes)**  
+-	Total Size: **206.6 MB (206582320 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:24715b6b1cc8f929d91e4cec7dd3c2b9d28583a4ef0aa519bf07bd92322c7af1`
+-	Image ID: `sha256:c49259b0b81b35c5afcab5f9f5b6b3da9f53393e2ef37b53c1d0dd0e1ad11fbd`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -701,19 +701,19 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Tue, 06 Dec 2022 18:38:30 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Tue, 06 Dec 2022 18:41:24 GMT
-ENV FRIENDICA_VERSION=2022.12-dev
-# Tue, 06 Dec 2022 18:41:24 GMT
-ENV FRIENDICA_ADDONS=2022.12-dev
-# Tue, 06 Dec 2022 18:41:28 GMT
+# Tue, 20 Dec 2022 19:40:41 GMT
+ENV FRIENDICA_VERSION=2023.03-dev
+# Tue, 20 Dec 2022 19:40:41 GMT
+ENV FRIENDICA_ADDONS=2023.03-dev
+# Tue, 20 Dec 2022 19:40:45 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;
-# Tue, 06 Dec 2022 18:41:29 GMT
+# Tue, 20 Dec 2022 19:40:46 GMT
 COPY multi:f87d330cfcee641708f831c1e9357b18f2b0ed18bc7541fec914e00a972d58a1 in / 
-# Tue, 06 Dec 2022 18:41:29 GMT
+# Tue, 20 Dec 2022 19:40:46 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Tue, 06 Dec 2022 18:41:29 GMT
+# Tue, 20 Dec 2022 19:40:46 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Tue, 06 Dec 2022 18:41:29 GMT
+# Tue, 20 Dec 2022 19:40:46 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -790,30 +790,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 06 Dec 2022 18:42:03 GMT  
 		Size: 535.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a03b432d5b5b9566052ebe222d582e297868dd7acba4fbd0a74795d04ede33e5`  
-		Last Modified: Tue, 06 Dec 2022 18:42:51 GMT  
-		Size: 16.9 MB (16939101 bytes)  
+	-	`sha256:041e13c5b45d449da13ea9ca007d046093d1fcad1acb240ff2c9daa2a76f9970`  
+		Last Modified: Tue, 20 Dec 2022 19:42:28 GMT  
+		Size: 16.9 MB (16941443 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:254e6eb04c6624bc1365f8d58956d88c318763c354f0558fa9ee5ea6a00e8bbb`  
-		Last Modified: Tue, 06 Dec 2022 18:42:50 GMT  
-		Size: 3.6 KB (3623 bytes)  
+	-	`sha256:4aaf751a1cba9a63a1961f0e90ca529cfa317b91da0340bb77aa17552469949a`  
+		Last Modified: Tue, 20 Dec 2022 19:42:27 GMT  
+		Size: 3.6 KB (3625 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c341d19e7bff51054de71f335c63e0e690d2081362825d0542dfebcd1fc3651e`  
-		Last Modified: Tue, 06 Dec 2022 18:42:50 GMT  
-		Size: 947.0 B  
+	-	`sha256:66ab360f3ebb960e8eb929e5456cb70b94837d4301701310293df592f73c32a3`  
+		Last Modified: Tue, 20 Dec 2022 19:42:27 GMT  
+		Size: 945.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev-apache` - linux; 386
 
 ```console
-$ docker pull friendica@sha256:531e79c47017feee3c475eea2d588cb2df981fe1311a56513ca29b03c105c5b8
+$ docker pull friendica@sha256:5f08ef7d158beb5dca1959442c07b6baa4cb650a813f800ce75edcb90a6f276f
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **218.3 MB (218255138 bytes)**  
+-	Total Size: **218.3 MB (218257531 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9b1851f7b34a17fd89c052604a8699aa95114886db38050218a07f5be8ad883c`
+-	Image ID: `sha256:5aeed3483759a8d6ce8732a8b7dd506a8568d8b1230499aec372cb8f497f3ec0`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -898,19 +898,19 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Tue, 06 Dec 2022 17:49:18 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Tue, 06 Dec 2022 17:53:27 GMT
-ENV FRIENDICA_VERSION=2022.12-dev
-# Tue, 06 Dec 2022 17:53:27 GMT
-ENV FRIENDICA_ADDONS=2022.12-dev
-# Tue, 06 Dec 2022 17:53:34 GMT
+# Tue, 20 Dec 2022 19:40:49 GMT
+ENV FRIENDICA_VERSION=2023.03-dev
+# Tue, 20 Dec 2022 19:40:49 GMT
+ENV FRIENDICA_ADDONS=2023.03-dev
+# Tue, 20 Dec 2022 19:40:56 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;
-# Tue, 06 Dec 2022 17:53:35 GMT
+# Tue, 20 Dec 2022 19:40:57 GMT
 COPY multi:f87d330cfcee641708f831c1e9357b18f2b0ed18bc7541fec914e00a972d58a1 in / 
-# Tue, 06 Dec 2022 17:53:36 GMT
+# Tue, 20 Dec 2022 19:40:58 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Tue, 06 Dec 2022 17:53:36 GMT
+# Tue, 20 Dec 2022 19:40:58 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Tue, 06 Dec 2022 17:53:37 GMT
+# Tue, 20 Dec 2022 19:40:59 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -987,30 +987,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 06 Dec 2022 17:54:44 GMT  
 		Size: 539.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0431ffede34bf26191fa81bb6fbc9f9a8850630c844ba7a8ddc474afebcffebc`  
-		Last Modified: Tue, 06 Dec 2022 17:55:43 GMT  
-		Size: 17.6 MB (17631044 bytes)  
+	-	`sha256:b0e32acb56fb552e0d7c8fc227e65ed3dfdf6b0c0ab310c9caa121682fd7f4e6`  
+		Last Modified: Tue, 20 Dec 2022 19:43:30 GMT  
+		Size: 17.6 MB (17633441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3c35a023d71f17b6eca82940e6735d213115b9d724b197347f9506ef02a1c51e`  
-		Last Modified: Tue, 06 Dec 2022 17:55:42 GMT  
-		Size: 3.6 KB (3624 bytes)  
+	-	`sha256:8bb290a8303b4f7a4587185350aa31f5d79d204428a3816fc774ca0494b9b94b`  
+		Last Modified: Tue, 20 Dec 2022 19:42:44 GMT  
+		Size: 3.6 KB (3623 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c1e04e273b550739a74e2be3486e7d87c8ed661e1833a2a8cc393e46018b99aa`  
-		Last Modified: Tue, 06 Dec 2022 17:55:42 GMT  
-		Size: 920.0 B  
+	-	`sha256:97d659969db559e8eede63275e13f5a57840799a2529d310a9b8c3123a432470`  
+		Last Modified: Tue, 20 Dec 2022 19:43:28 GMT  
+		Size: 917.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev-apache` - linux; mips64le
 
 ```console
-$ docker pull friendica@sha256:0832f1ea76ebbe3966d74d1a7d05d579dfd7b20922bf3284c168d4ce72e11367
+$ docker pull friendica@sha256:38a1f2211bf0e3cda55b9f1a4e4c5296694b1b43c82655e44d8f926fb7e44c39
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **189.1 MB (189148805 bytes)**  
+-	Total Size: **189.2 MB (189152772 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e8209103b32982daac615bb8e01a7733a81b90b10d728fba60eb8dc0fb640883`
+-	Image ID: `sha256:62a943636b55777716328418b72f239c4960682b2e838ebaa92d23250ec7a318`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -1095,19 +1095,19 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Wed, 07 Dec 2022 11:00:30 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Wed, 07 Dec 2022 11:17:14 GMT
-ENV FRIENDICA_VERSION=2022.12-dev
-# Wed, 07 Dec 2022 11:17:18 GMT
-ENV FRIENDICA_ADDONS=2022.12-dev
-# Wed, 07 Dec 2022 11:17:48 GMT
+# Tue, 20 Dec 2022 20:12:09 GMT
+ENV FRIENDICA_VERSION=2023.03-dev
+# Tue, 20 Dec 2022 20:12:13 GMT
+ENV FRIENDICA_ADDONS=2023.03-dev
+# Tue, 20 Dec 2022 20:12:47 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;
-# Wed, 07 Dec 2022 11:17:52 GMT
+# Tue, 20 Dec 2022 20:12:51 GMT
 COPY multi:f87d330cfcee641708f831c1e9357b18f2b0ed18bc7541fec914e00a972d58a1 in / 
-# Wed, 07 Dec 2022 11:17:56 GMT
+# Tue, 20 Dec 2022 20:12:55 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Wed, 07 Dec 2022 11:17:59 GMT
+# Tue, 20 Dec 2022 20:12:58 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Wed, 07 Dec 2022 11:18:03 GMT
+# Tue, 20 Dec 2022 20:13:03 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1184,30 +1184,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Wed, 07 Dec 2022 11:19:27 GMT  
 		Size: 547.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d7cdb2be7cb58c42ea59b8563ee4c9797a44559ce8b76d42a5e623cc0df66015`  
-		Last Modified: Wed, 07 Dec 2022 11:21:09 GMT  
-		Size: 16.4 MB (16424343 bytes)  
+	-	`sha256:8a9453de15cce52d915ccc7652512ce7dd2aeac205da6cd3657281ce6c73ee5b`  
+		Last Modified: Tue, 20 Dec 2022 20:16:19 GMT  
+		Size: 16.4 MB (16428309 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b0d1c03e944ea0cf592df3eea262eb0f030876c93846ec196ecb7064b2a1bf46`  
-		Last Modified: Wed, 07 Dec 2022 11:21:02 GMT  
-		Size: 3.6 KB (3624 bytes)  
+	-	`sha256:a25f2500e071852413cfc4a8f58e82381ddc6dbfa0c0b0ccf227189508ebc2b7`  
+		Last Modified: Tue, 20 Dec 2022 20:16:12 GMT  
+		Size: 3.6 KB (3623 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:76a59e0be2fa8b78c9d6b29cb5d08d7afbf49d9f2935cc0b5b6c318aaf55b485`  
-		Last Modified: Wed, 07 Dec 2022 11:21:02 GMT  
-		Size: 923.0 B  
+	-	`sha256:b316115b3e7c2e447d511e6d211284f0f2086aa6c8019a66b95a22d3b7a575b7`  
+		Last Modified: Tue, 20 Dec 2022 20:16:12 GMT  
+		Size: 925.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev-apache` - linux; ppc64le
 
 ```console
-$ docker pull friendica@sha256:90ef1229fc35546bd324d2ffb173892a2b6acc117179e52e13097b75d73ddc1b
+$ docker pull friendica@sha256:02b8accc3afa97045c5791a4a0de65f34f0f4fbc8b6c57d0d60f255912919c08
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **216.2 MB (216190932 bytes)**  
+-	Total Size: **216.2 MB (216194636 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:464350f93adc6a005075fb0a8139a02074512d29935e2fe9e460d30fd5c70429`
+-	Image ID: `sha256:560592ca9a205f4fda68b18b83fddd0c6e0ad9c3977f27c41b7bbc6b193514c2`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -1292,19 +1292,19 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Tue, 06 Dec 2022 18:50:58 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Tue, 06 Dec 2022 18:52:58 GMT
-ENV FRIENDICA_VERSION=2022.12-dev
-# Tue, 06 Dec 2022 18:52:59 GMT
-ENV FRIENDICA_ADDONS=2022.12-dev
-# Tue, 06 Dec 2022 18:53:10 GMT
+# Tue, 20 Dec 2022 20:19:00 GMT
+ENV FRIENDICA_VERSION=2023.03-dev
+# Tue, 20 Dec 2022 20:19:01 GMT
+ENV FRIENDICA_ADDONS=2023.03-dev
+# Tue, 20 Dec 2022 20:19:12 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;
-# Tue, 06 Dec 2022 18:53:11 GMT
+# Tue, 20 Dec 2022 20:19:13 GMT
 COPY multi:f87d330cfcee641708f831c1e9357b18f2b0ed18bc7541fec914e00a972d58a1 in / 
-# Tue, 06 Dec 2022 18:53:12 GMT
+# Tue, 20 Dec 2022 20:19:14 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Tue, 06 Dec 2022 18:53:12 GMT
+# Tue, 20 Dec 2022 20:19:14 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Tue, 06 Dec 2022 18:53:12 GMT
+# Tue, 20 Dec 2022 20:19:14 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1381,30 +1381,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 06 Dec 2022 18:54:34 GMT  
 		Size: 543.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b7397eb4817f24eb629c507622f6e03a30b0ab089c35c28e735ac832f2f7e0d1`  
-		Last Modified: Tue, 06 Dec 2022 18:55:20 GMT  
-		Size: 17.4 MB (17444766 bytes)  
+	-	`sha256:410886a1037fc1634798976f45c64529033d11ba82dfbe518ec85cc8fbf740ba`  
+		Last Modified: Tue, 20 Dec 2022 20:22:12 GMT  
+		Size: 17.4 MB (17448467 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8da256179c7a8b1cc119884e076f67935eb547be1e20792ada7b263e96afcbd5`  
-		Last Modified: Tue, 06 Dec 2022 18:55:17 GMT  
+	-	`sha256:01d42af2c8c0414ac6214acf900f9af10896663f9674e0f9e933e45495d78377`  
+		Last Modified: Tue, 20 Dec 2022 20:22:09 GMT  
 		Size: 3.6 KB (3623 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3be3eaab17a178df9fd4dd15ee62ffa80ff89740bde89be848ad5efaf0ee2503`  
-		Last Modified: Tue, 06 Dec 2022 18:55:16 GMT  
-		Size: 947.0 B  
+	-	`sha256:68ff90aa48def8d96dc8bce344603e8323c7b2f2dd3a15a6b52d4dfcf097d72a`  
+		Last Modified: Tue, 20 Dec 2022 20:22:09 GMT  
+		Size: 950.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:dev-apache` - linux; s390x
 
 ```console
-$ docker pull friendica@sha256:03191e86b5546a9f2016806a812e6abc963215cd6a1c5f09ca9b3a58cfb4daf9
+$ docker pull friendica@sha256:a991332d8c95a2215c3d9e6810fc0e8f84e5b993732e9066d45df77644529d25
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **189.7 MB (189662828 bytes)**  
+-	Total Size: **189.7 MB (189665978 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:03c5b06dd68ee452dda37d0e4ef879a63fe20874fb07473ac4aa280de935e0a1`
+-	Image ID: `sha256:f54afd22fe71aa84f8feb7215113225814aa0971c935a2555cb66acbb64f02a3`
 -	Entrypoint: `["\/entrypoint-dev.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -1489,19 +1489,19 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Thu, 08 Dec 2022 21:27:06 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Thu, 08 Dec 2022 21:29:17 GMT
-ENV FRIENDICA_VERSION=2022.12-dev
-# Thu, 08 Dec 2022 21:29:18 GMT
-ENV FRIENDICA_ADDONS=2022.12-dev
-# Thu, 08 Dec 2022 21:29:28 GMT
+# Tue, 20 Dec 2022 19:44:45 GMT
+ENV FRIENDICA_VERSION=2023.03-dev
+# Tue, 20 Dec 2022 19:44:45 GMT
+ENV FRIENDICA_ADDONS=2023.03-dev
+# Tue, 20 Dec 2022 19:44:57 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;
-# Thu, 08 Dec 2022 21:29:30 GMT
+# Tue, 20 Dec 2022 19:44:58 GMT
 COPY multi:f87d330cfcee641708f831c1e9357b18f2b0ed18bc7541fec914e00a972d58a1 in / 
-# Thu, 08 Dec 2022 21:29:31 GMT
+# Tue, 20 Dec 2022 19:44:59 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Thu, 08 Dec 2022 21:29:31 GMT
+# Tue, 20 Dec 2022 19:44:59 GMT
 ENTRYPOINT ["/entrypoint-dev.sh"]
-# Thu, 08 Dec 2022 21:29:32 GMT
+# Tue, 20 Dec 2022 19:45:00 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1578,15 +1578,15 @@ CMD ["apache2-foreground"]
 		Last Modified: Thu, 08 Dec 2022 21:30:42 GMT  
 		Size: 540.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:55e7b9ab719130f5cab3a9ee88836a18c7d01d97e39ba711e0c9cdf726d24c37`  
-		Last Modified: Thu, 08 Dec 2022 21:31:27 GMT  
-		Size: 16.5 MB (16504349 bytes)  
+	-	`sha256:117f95884308bd761c5932270f02073891098a92ff2174bbf984db34dd55b1b0`  
+		Last Modified: Tue, 20 Dec 2022 19:47:18 GMT  
+		Size: 16.5 MB (16507501 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d1d750ab6c83ca0ada81f01bd31e560d09d53243e53196a776b001d6298077f`  
-		Last Modified: Thu, 08 Dec 2022 21:31:26 GMT  
-		Size: 3.6 KB (3624 bytes)  
+	-	`sha256:bf17ab07266937051fa4e0c45dfbafa2699702b8ad9e6358f0b1c88dd198525b`  
+		Last Modified: Tue, 20 Dec 2022 19:47:17 GMT  
+		Size: 3.6 KB (3623 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d74f5242c569f242349f985f4346ea3e115b8c93d6bf4f837de1f7e5b350052f`  
-		Last Modified: Thu, 08 Dec 2022 21:31:26 GMT  
-		Size: 950.0 B  
+	-	`sha256:9c29de74668999db084d894baa55b52664458aef46bb6024f1ad9f13a2a12d18`  
+		Last Modified: Tue, 20 Dec 2022 19:47:17 GMT  
+		Size: 949.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
