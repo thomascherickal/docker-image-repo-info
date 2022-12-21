@@ -1,7 +1,7 @@
 ## `debian:rc-buggy`
 
 ```console
-$ docker pull debian@sha256:d06ff63ea77c5df143bb5870b67c24ce73b393d8056bacc377f7b3840482eaf6
+$ docker pull debian@sha256:a1e2ca831bc0960bfe3173f842f6c8d96338c79202206b7c8a247bbbef985a03
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -178,65 +178,65 @@ RUN echo 'deb http://deb.debian.org/debian rc-buggy main' > /etc/apt/sources.lis
 ### `debian:rc-buggy` - linux; mips64le
 
 ```console
-$ docker pull debian@sha256:71029589e69069f24a8665268b424f4e9b1509bc21f72d0de9eab428aac45270
+$ docker pull debian@sha256:4784b4da74e5ecd7649c797bcd5566fc636793e2863c92cd68c8459bd1099858
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **50.3 MB (50320062 bytes)**  
+-	Total Size: **50.3 MB (50293174 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:75e659d4871bb263bff4be2d16c2d19678fb07f7eb970e13bd117f3df08350d1`
+-	Image ID: `sha256:c1f39fd58d2a9059103f0965bf008d54f6129deae35b424bc4f1e9bc33d0026f`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 06 Dec 2022 01:56:07 GMT
-ADD file:f0c5ebbf2aa59cd4e0996c808ed4d378c47b86ca4c00f63fa5de02b4cb838334 in / 
-# Tue, 06 Dec 2022 01:56:12 GMT
+# Wed, 21 Dec 2022 01:11:07 GMT
+ADD file:bc4f0f717f54bc1982dd6d104f684f180c7b8da660351e5be4853a56b38e374f in / 
+# Wed, 21 Dec 2022 01:11:13 GMT
 CMD ["bash"]
-# Tue, 06 Dec 2022 02:00:41 GMT
+# Wed, 21 Dec 2022 01:15:28 GMT
 RUN echo 'deb http://deb.debian.org/debian rc-buggy main' > /etc/apt/sources.list.d/experimental.list
 ```
 
 -	Layers:
-	-	`sha256:dfb5e33f7f324b83c5e49e84922c9f448eace01382dd0e6ac683debf1a61eb39`  
-		Last Modified: Tue, 06 Dec 2022 02:04:23 GMT  
-		Size: 50.3 MB (50319836 bytes)  
+	-	`sha256:22a773956e0933f1a01038ae977c7c99f46cd5ce02f672c66be9a1c837de4eac`  
+		Last Modified: Wed, 21 Dec 2022 01:19:25 GMT  
+		Size: 50.3 MB (50292945 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:79a793a0afba1cf58ce7858b20f117f3187e6158d9c606a0bcf5e8d5bb87dc5b`  
-		Last Modified: Tue, 06 Dec 2022 02:08:45 GMT  
-		Size: 226.0 B  
+	-	`sha256:7fbac5846049f646e00726b2427a9325410332fa41ecad99b2ef194b4565aa11`  
+		Last Modified: Wed, 21 Dec 2022 01:23:57 GMT  
+		Size: 229.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:rc-buggy` - linux; ppc64le
 
 ```console
-$ docker pull debian@sha256:b392c508867d3e2cc8cad874b6bf66acb8749c10054faf8425fa7c012c609eff
+$ docker pull debian@sha256:bdebc967c838bdeb57625c533682f1c4b07277a81911761b391378876b6d0b58
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **54.4 MB (54361384 bytes)**  
+-	Total Size: **54.3 MB (54333215 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b661fe7a1df6e294a50b03d6a5e8ef1d63aae06ad1968adb295efcbc56b685e8`
+-	Image ID: `sha256:798b316c2494544076a927932f48584f1da97a100633e960dda0196e47496a3b`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 06 Dec 2022 01:18:26 GMT
-ADD file:bdb06f846e6364870996f9ac20fb236d99a0ac4e61f11a82dda8599bbd6ea354 in / 
-# Tue, 06 Dec 2022 01:18:29 GMT
+# Wed, 21 Dec 2022 01:17:58 GMT
+ADD file:4af1feaa33ee2a3c1112b5ed0efbcccec637c4dc23a5af7d55343f6ab7005920 in / 
+# Wed, 21 Dec 2022 01:18:01 GMT
 CMD ["bash"]
-# Tue, 06 Dec 2022 01:21:05 GMT
+# Wed, 21 Dec 2022 01:20:14 GMT
 RUN echo 'deb http://deb.debian.org/debian rc-buggy main' > /etc/apt/sources.list.d/experimental.list
 ```
 
 -	Layers:
-	-	`sha256:7e30927c2af9840769d712ec0a0e33b7ccaba3ec9a715660e8c1b04953084dec`  
-		Last Modified: Tue, 06 Dec 2022 01:24:47 GMT  
-		Size: 54.4 MB (54361158 bytes)  
+	-	`sha256:47dc200f753ddc67a9fec80382c7c2b6f164cb907748c309862373fa8d94c504`  
+		Last Modified: Wed, 21 Dec 2022 01:23:50 GMT  
+		Size: 54.3 MB (54332986 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:566d31afea92658fe57ae15421094eab54da5fcdaba5697fca941bb3d2d44b26`  
-		Last Modified: Tue, 06 Dec 2022 01:27:50 GMT  
-		Size: 226.0 B  
+	-	`sha256:56334aaa76047ddce75ea1b17b7bc1c38062b9c34153037287836794ea5eb5d5`  
+		Last Modified: Wed, 21 Dec 2022 01:26:52 GMT  
+		Size: 229.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:rc-buggy` - linux; s390x
