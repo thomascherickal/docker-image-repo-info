@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2f601b4ab1bffd041f14ad1fe263c30f7b729213b71cd7cfb76d9f75e65c042e`
-- Created: `2022-12-16T00:19:55.523758394Z`
-- Virtual Size: ~ 249.47 Mb  
+- Image ID: `sha256:c207e90c34520f27508ac0a18405256f981ecb45aae2baa2835c91a8f1963f0a`
+- Created: `2022-12-21T01:44:12.792567762Z`
+- Virtual Size: ~ 249.44 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint.sh"]`
@@ -209,23 +209,29 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/audit/1:3.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/audit/1:3.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `base-files=11.1+deb11u5`
+### `dpkg` source package: `base-files=11.1+deb11u6`
 
 Binary Packages:
 
-- `base-files=11.1+deb11u5`
+- `base-files=11.1+deb11u6`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=11.1+deb11u6
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_11.1%2bdeb11u6.dsc' base-files_11.1+deb11u6.dsc 1110 SHA256:df6d12e042b225431d93a2cb297bbd07f667dcdc94d9d7bc0b3f3849af174c1e
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_11.1%2bdeb11u6.tar.xz' base-files_11.1+deb11u6.tar.xz 65644 SHA256:7399a3755e527ef0d87153090ae5bc73b18b6e80edd2b48639418f840e4f9238
+```
 
-- http://snapshot.debian.org/package/base-files/11.1+deb11u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/11.1+deb11u6/ (for browsing the source)
+- https://sources.debian.net/src/base-files/11.1+deb11u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/11.1+deb11u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.51`
 
@@ -1541,11 +1547,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libsodium/1.0.18-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libsodium/1.0.18-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libtasn1-6=4.16.0-2`
+### `dpkg` source package: `libtasn1-6=4.16.0-2+deb11u1`
 
 Binary Packages:
 
-- `libtasn1-6:amd64=4.16.0-2`
+- `libtasn1-6:amd64=4.16.0-2+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 
@@ -1554,13 +1560,21 @@ Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 - `LGPL`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libtasn1-6=4.16.0-2+deb11u1
+'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0-2%2bdeb11u1.dsc' libtasn1-6_4.16.0-2+deb11u1.dsc 2618 SHA256:795155e19208ef5cf07534cd0fc0664b6144f94c16eec03d80fdee7a14f838b8
+'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0.orig.tar.gz' libtasn1-6_4.16.0.orig.tar.gz 1812442 SHA256:0e0fb0903839117cb6e3b56e68222771bebf22ad7fc2295a0ed7d576e8d4329d
+'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0.orig.tar.gz.asc' libtasn1-6_4.16.0.orig.tar.gz.asc 488 SHA256:06c201e8c3b43c27465ed79294d4c4ec8dcd3e95e4a6176ecbf273229ee3e2d0
+'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.16.0-2%2bdeb11u1.debian.tar.xz' libtasn1-6_4.16.0-2+deb11u1.debian.tar.xz 18324 SHA256:85198cc8eac7ecf5dc8bf220b0973c4ccd6c039217240fbf45ffe49860aacdd1
+```
 
-- http://snapshot.debian.org/package/libtasn1-6/4.16.0-2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libtasn1-6/4.16.0-2+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/libtasn1-6/4.16.0-2+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libtasn1-6/4.16.0-2+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libtirpc=1.3.1-1+deb11u1`
 
@@ -2273,11 +2287,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/php7.4/7.4.33-1+deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/php7.4/7.4.33-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-13=13.8-0+deb11u1`
+### `dpkg` source package: `postgresql-13=13.9-0+deb11u1`
 
 Binary Packages:
 
-- `libpq5:amd64=13.8-0+deb11u1`
+- `libpq5:amd64=13.9-0+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -2297,13 +2311,20 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 - `nagaysau-ishii`
 - `rijndael`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris postgresql-13=13.9-0+deb11u1
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.9-0%2bdeb11u1.dsc' postgresql-13_13.9-0+deb11u1.dsc 3696 SHA256:2691b0326076ef925d9a3470b0b3121ffa27d91bf3e269a1035aba1c85ebdb1d
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.9.orig.tar.bz2' postgresql-13_13.9.orig.tar.bz2 21439045 SHA256:ef1966c0a5e49fbed3370ad2824928cb6b1164617aeeae1606da283f7f33a415
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.9-0%2bdeb11u1.debian.tar.xz' postgresql-13_13.9-0+deb11u1.debian.tar.xz 29460 SHA256:31ba6def020e902b26f231c7e554ecb77acb79b1e7c4dccb3b650b6b2fed9de2
+```
 
-- http://snapshot.debian.org/package/postgresql-13/13.8-0+deb11u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/postgresql-13/13.9-0+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-13/13.9-0+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-13/13.9-0+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.17-5`
 
