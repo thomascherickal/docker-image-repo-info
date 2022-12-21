@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7d5e02dd466952d4d0bc2a41aa3d0e617acd7c34c0e2facab852f2bc540d25aa`
-- Created: `2022-12-07T02:41:09.631704493Z`
-- Virtual Size: ~ 934.93 Mb  
+- Image ID: `sha256:efd6534ce279fbf1c450ccc035a7af18d526c850be74cb166b357f2fabdb067b`
+- Created: `2022-12-21T12:32:31.641538547Z`
+- Virtual Size: ~ 934.97 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["pypy"]`
@@ -1257,12 +1257,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gdk-pixbuf/2.38.1+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gdk-pixbuf/2.38.1+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `git=1:2.20.1-2+deb10u4`
+### `dpkg` source package: `git=1:2.20.1-2+deb10u6`
 
 Binary Packages:
 
-- `git=1:2.20.1-2+deb10u4`
-- `git-man=1:2.20.1-2+deb10u4`
+- `git=1:2.20.1-2+deb10u6`
+- `git-man=1:2.20.1-2+deb10u6`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -1285,13 +1285,20 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris git=1:2.20.1-2+deb10u6
+'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2%2bdeb10u6.dsc' git_2.20.1-2+deb10u6.dsc 2894 SHA256:e4693cb9f20d2a7061b43bb30224ee41d779d027e15785e85f8f67eddf4ee3ae
+'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1.orig.tar.xz' git_2.20.1.orig.tar.xz 5359872 SHA256:9d2e91e2faa2ea61ba0a70201d023b36f54d846314591a002c610ea2ab81c3e9
+'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2%2bdeb10u6.debian.tar.xz' git_2.20.1-2+deb10u6.debian.tar.xz 676232 SHA256:ce8c8cb4a3f420589aeb2ac244bab88316e34641c7a3efceb049d2854b54196b
+```
 
-- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/git/1:2.20.1-2+deb10u6/ (for browsing the source)
+- https://sources.debian.net/src/git/1:2.20.1-2+deb10u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.58.3-2+deb10u4`
 
@@ -2216,11 +2223,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libdatrie/0.2.12-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libdatrie/0.2.12-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libde265=1.0.3-1`
+### `dpkg` source package: `libde265=1.0.3-1+deb10u1`
 
 Binary Packages:
 
-- `libde265-0:amd64=1.0.3-1+b1`
+- `libde265-0:amd64=1.0.3-1+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 
@@ -2236,17 +2243,17 @@ Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libde265=1.0.3-1
-'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.3-1.dsc' libde265_1.0.3-1.dsc 2210 SHA256:cfec77f3186539c6573216220ea506ab5c1702d09f71cb5f15aa6aff1821f19c
-'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.3.orig.tar.gz' libde265_1.0.3.orig.tar.gz 871127 SHA256:e4206185a7c67d3b797d6537df8dcaa6e5fd5a5f93bd14e65a755c33cd645f7a
-'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.3-1.debian.tar.xz' libde265_1.0.3-1.debian.tar.xz 8004 SHA256:c0613a26f8722a4b1edbfd3a69e3b9c2b048a095e4c6167dedcb4c1312658a6e
+$ apt-get source -qq --print-uris libde265=1.0.3-1+deb10u1
+'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.3-1%2bdeb10u1.dsc' libde265_1.0.3-1+deb10u1.dsc 2245 SHA256:d654810caeeac7d37340a6793228ede8ef6d728592ccf5e117555f7bdb68eb42
+'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.3.orig.tar.gz' libde265_1.0.3.orig.tar.gz 871127 SHA256:e4206185a7c67d3b797d6537df8dcaa6e5fd5a5f93bd14e65a755c33cd645f7a
+'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.3-1%2bdeb10u1.debian.tar.xz' libde265_1.0.3-1+deb10u1.debian.tar.xz 11588 SHA256:52b7d8d393c79a853c18c89652a272a402c2af0a5f87be78a817c13050c6a4e7
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libde265/1.0.3-1/ (for browsing the source)
-- https://sources.debian.net/src/libde265/1.0.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libde265/1.0.3-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libde265/1.0.3-1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/libde265/1.0.3-1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libde265/1.0.3-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libedit=3.1-20181209-1`
 
@@ -4055,12 +4062,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/numactl/2.0.12-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/numactl/2.0.12-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openexr=2.2.1-4.1+deb10u1`
+### `dpkg` source package: `openexr=2.2.1-4.1+deb10u2`
 
 Binary Packages:
 
-- `libopenexr-dev=2.2.1-4.1+deb10u1`
-- `libopenexr23:amd64=2.2.1-4.1+deb10u1`
+- `libopenexr-dev=2.2.1-4.1+deb10u2`
+- `libopenexr23:amd64=2.2.1-4.1+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libopenexr-dev/copyright`, `/usr/share/doc/libopenexr23/copyright`)
 
@@ -4069,17 +4076,17 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr-dev/copyright`, `/usr/share/d
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openexr=2.2.1-4.1+deb10u1
-'http://deb.debian.org/debian/pool/main/o/openexr/openexr_2.2.1-4.1%2bdeb10u1.dsc' openexr_2.2.1-4.1+deb10u1.dsc 2302 SHA256:bf813e2e7c6baedd9068c02301511b2d05f14e511c18db827b16eca6bd7d9478
-'http://deb.debian.org/debian/pool/main/o/openexr/openexr_2.2.1.orig.tar.gz' openexr_2.2.1.orig.tar.gz 18176639 SHA256:8f9a5af6131583404261931d9a5c83de0a425cb4b8b25ddab2b169fbf113aecd
-'http://deb.debian.org/debian/pool/main/o/openexr/openexr_2.2.1-4.1%2bdeb10u1.debian.tar.xz' openexr_2.2.1-4.1+deb10u1.debian.tar.xz 27212 SHA256:c991df0bf7582a9ce9ddf2294793c68e1b2f381d1bcc429eb8bfb914161dc47a
+$ apt-get source -qq --print-uris openexr=2.2.1-4.1+deb10u2
+'http://deb.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.1-4.1%2bdeb10u2.dsc' openexr_2.2.1-4.1+deb10u2.dsc 2453 SHA256:d0462492a4d2177d5510446ebaf058c16bbc735a4ce851a0bd864ac741bffa35
+'http://deb.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.1.orig.tar.gz' openexr_2.2.1.orig.tar.gz 18176639 SHA256:8f9a5af6131583404261931d9a5c83de0a425cb4b8b25ddab2b169fbf113aecd
+'http://deb.debian.org/debian-security/pool/updates/main/o/openexr/openexr_2.2.1-4.1%2bdeb10u2.debian.tar.xz' openexr_2.2.1-4.1+deb10u2.debian.tar.xz 37452 SHA256:76695ba4b3f11b3f56a1e98f23bf72040f0a1afcb012021fc3367ab194cf26fd
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openexr/2.2.1-4.1+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/openexr/2.2.1-4.1+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openexr/2.2.1-4.1+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openexr/2.2.1-4.1+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/openexr/2.2.1-4.1+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openexr/2.2.1-4.1+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openjpeg2=2.3.0-2+deb10u2`
 
