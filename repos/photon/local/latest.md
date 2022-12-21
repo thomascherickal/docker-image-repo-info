@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3f0837361a584534cf10e475808159524644d91f80bf0f827cb28624d51df643`
-- Created: `2022-12-12T20:56:59.077985805Z`
+- Image ID: `sha256:3347997bca7b2fcb8fb66e09925b8f12b309e22d79def379cd602fa3d8e2bf71`
+- Created: `2022-12-20T01:20:22.715034498Z`
 - Virtual Size: ~ 37.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20221210`
+  - `build-date=20221219`
   - `name=Photon OS x86_64/4.0 Base Image`
   - `vendor=VMware`
 
@@ -41,13 +41,13 @@ Licenses (from `rpm --query`): Custom
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `curl-7.86.0-1.ph4.x86_64`
+### `rpm` package: `curl-7.86.0-2.ph4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `curl-libs-7.86.0-1.ph4.x86_64`
+### `rpm` package: `curl-libs-7.86.0-2.ph4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -191,7 +191,7 @@ Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `sqlite-libs-3.38.5-1.ph4.x86_64`
+### `rpm` package: `sqlite-libs-3.38.5-2.ph4.x86_64`
 
 Licenses (from `rpm --query`): Public Domain
 
