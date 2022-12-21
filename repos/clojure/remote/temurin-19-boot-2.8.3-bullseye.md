@@ -1,7 +1,7 @@
 ## `clojure:temurin-19-boot-2.8.3-bullseye`
 
 ```console
-$ docker pull clojure@sha256:229f6857ed6242f5a603c88fa748e8bc73764632bc8f9fc303cd0a1e27809cad
+$ docker pull clojure@sha256:67c591a2850e531943d47f3738ba65ea4e3a45d6fd608c37779af1f1a6ebdd20
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,137 +12,137 @@ $ docker pull clojure@sha256:229f6857ed6242f5a603c88fa748e8bc73764632bc8f9fc303c
 ### `clojure:temurin-19-boot-2.8.3-bullseye` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:96ed30c7a698b8866f1a2bcdbbc6410a01bb63485a1aad94796165c7d9c0541d
+$ docker pull clojure@sha256:3f2b4cd5a82b81384adde8f909c3f86c802553e8cfb0161a036f3e35c4a8cf37
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **317.3 MB (317327678 bytes)**  
+-	Total Size: **317.3 MB (317310301 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f1bff1ec2078b400384bb7f6124f8da97c3aee4bf9f9fdd15070aaa02f2db3bc`
+-	Image ID: `sha256:9fab26d4664ffaa2d3a68b3701f60699d6e5d7f85196f2afd0ed36887d15ecc6`
 -	Entrypoint: `["entrypoint"]`
 -	Default Command: `["repl"]`
 
 ```dockerfile
-# Tue, 06 Dec 2022 01:20:41 GMT
-ADD file:553d20b03d45305e58cde07e0c259421bba044155ac90b4559e5cc0b69093347 in / 
-# Tue, 06 Dec 2022 01:20:41 GMT
+# Wed, 21 Dec 2022 01:20:21 GMT
+ADD file:c13b430c8699df107ffd9ea5230b92238bc037a8e1cbbe35d6ab664941d575da in / 
+# Wed, 21 Dec 2022 01:20:22 GMT
 CMD ["bash"]
-# Tue, 06 Dec 2022 01:48:43 GMT
+# Wed, 21 Dec 2022 01:50:07 GMT
 ENV JAVA_HOME=/opt/java/openjdk
-# Tue, 06 Dec 2022 01:57:42 GMT
+# Wed, 21 Dec 2022 01:59:28 GMT
 COPY dir:fef581854733ec7202f8c807463b9e1952aeb6c7a002719c7e54987e50ea4dcb in /opt/java/openjdk 
-# Tue, 06 Dec 2022 01:57:44 GMT
+# Wed, 21 Dec 2022 01:59:30 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 06 Dec 2022 01:57:44 GMT
+# Wed, 21 Dec 2022 01:59:30 GMT
 ENV BOOT_VERSION=2.8.3
-# Tue, 06 Dec 2022 01:57:44 GMT
+# Wed, 21 Dec 2022 01:59:30 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Tue, 06 Dec 2022 01:57:45 GMT
+# Wed, 21 Dec 2022 01:59:30 GMT
 WORKDIR /tmp
-# Tue, 06 Dec 2022 01:57:50 GMT
+# Wed, 21 Dec 2022 01:59:36 GMT
 RUN apt-get update && apt-get install -y make wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Tue, 06 Dec 2022 01:57:51 GMT
+# Wed, 21 Dec 2022 01:59:36 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Tue, 06 Dec 2022 01:57:51 GMT
+# Wed, 21 Dec 2022 01:59:36 GMT
 ENV BOOT_AS_ROOT=yes
-# Tue, 06 Dec 2022 01:58:09 GMT
+# Wed, 21 Dec 2022 01:59:56 GMT
 RUN boot
-# Tue, 06 Dec 2022 01:58:10 GMT
+# Wed, 21 Dec 2022 01:59:56 GMT
 COPY file:0282db266eb050a3ad3609149efe2188243cb9f95c0b3e48a312ddef6c6bea02 in /usr/local/bin/entrypoint 
-# Tue, 06 Dec 2022 01:58:10 GMT
+# Wed, 21 Dec 2022 01:59:56 GMT
 ENTRYPOINT ["entrypoint"]
-# Tue, 06 Dec 2022 01:58:10 GMT
+# Wed, 21 Dec 2022 01:59:56 GMT
 CMD ["repl"]
 ```
 
 -	Layers:
-	-	`sha256:f2f58072e9ed1aa1b0143341c5ee83815c00ce47548309fa240155067ab0e698`  
-		Last Modified: Tue, 06 Dec 2022 01:24:48 GMT  
-		Size: 55.0 MB (55041342 bytes)  
+	-	`sha256:32de3c850997ce03b6ff4ae8fb00b34b9d7d7f9a35bfcdb8538e22cc7b77c29d`  
+		Last Modified: Wed, 21 Dec 2022 01:24:10 GMT  
+		Size: 55.0 MB (55025166 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5c5290555b9fd520933dc8e0c6563f92fd2a2cfc886a885094d2288c04a01ae4`  
-		Last Modified: Tue, 06 Dec 2022 02:09:00 GMT  
-		Size: 201.1 MB (201103430 bytes)  
+	-	`sha256:02d80e226f52e65f91550fee64cdd6a467c4da00bac7bed86c44aa550b443f1d`  
+		Last Modified: Wed, 21 Dec 2022 02:10:56 GMT  
+		Size: 201.1 MB (201103393 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:08be81519dcdfd8889e9981950349894fe25cd9a1b6d7d2c2519d5602fab32e1`  
-		Last Modified: Tue, 06 Dec 2022 02:08:45 GMT  
-		Size: 2.4 MB (2362007 bytes)  
+	-	`sha256:a2e754739fc0e1bf4f36d451e74a4c9fb186056451a4c97fc329c15bc2e54755`  
+		Last Modified: Wed, 21 Dec 2022 02:10:41 GMT  
+		Size: 2.4 MB (2360818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:03a69c6d3fb333cffbfa189fa191907358d8fc940e4fd9df9c2746014ab0b277`  
-		Last Modified: Tue, 06 Dec 2022 02:08:48 GMT  
-		Size: 58.8 MB (58820500 bytes)  
+	-	`sha256:ea8d601246dd8a92c25606aa7076f9e1b3e5cc3fd191e6d8ec478eac4fe6a1df`  
+		Last Modified: Wed, 21 Dec 2022 02:10:44 GMT  
+		Size: 58.8 MB (58820522 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3c8d57dc92696bcedb61a24b994603f41703f6c265b283e65d26b4f80df801c4`  
-		Last Modified: Tue, 06 Dec 2022 02:08:44 GMT  
-		Size: 399.0 B  
+	-	`sha256:09d79ed0981aab55e215fe98037cd80c2c7a9c89833da441cc46a7cf1bd28a1a`  
+		Last Modified: Wed, 21 Dec 2022 02:10:40 GMT  
+		Size: 402.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:temurin-19-boot-2.8.3-bullseye` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:ff362f5ed4e5b5a7257b8e7418db764973292aea66f3390fa445409aeca159d3
+$ docker pull clojure@sha256:a12b43a85e24463213b2acc776c3329ebfafec22d1399cdbb6522533e2b7460a
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **314.7 MB (314736577 bytes)**  
+-	Total Size: **314.7 MB (314717737 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:039a17c34e8056e7ea9af9b2e65f65f9d179b70ced2e992325c2036b88079ac8`
+-	Image ID: `sha256:06bd749c2d50a10b0ab70f91009671a39e48f596ef506bdc2a2c1bd158ea3aa6`
 -	Entrypoint: `["entrypoint"]`
 -	Default Command: `["repl"]`
 
 ```dockerfile
-# Tue, 06 Dec 2022 01:40:06 GMT
-ADD file:b1e7652678bbfc9556636e77d79c947ff1436888e2929f9c5c3ddb42a50c1176 in / 
-# Tue, 06 Dec 2022 01:40:07 GMT
+# Wed, 21 Dec 2022 01:39:40 GMT
+ADD file:5bbdc914ec8ed60ac85293e88ee1aafc3f0290762e320fc86dc9d79fa201834e in / 
+# Wed, 21 Dec 2022 01:39:41 GMT
 CMD ["bash"]
-# Tue, 06 Dec 2022 02:17:15 GMT
+# Wed, 21 Dec 2022 02:18:05 GMT
 ENV JAVA_HOME=/opt/java/openjdk
-# Tue, 06 Dec 2022 02:24:58 GMT
+# Wed, 21 Dec 2022 02:25:44 GMT
 COPY dir:4138443eebfda1a2a245638d5bb568645bd34d79b66d39a3be31b5ac6b823d6d in /opt/java/openjdk 
-# Tue, 06 Dec 2022 02:25:03 GMT
+# Wed, 21 Dec 2022 02:25:49 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 06 Dec 2022 02:25:03 GMT
+# Wed, 21 Dec 2022 02:25:49 GMT
 ENV BOOT_VERSION=2.8.3
-# Tue, 06 Dec 2022 02:25:03 GMT
+# Wed, 21 Dec 2022 02:25:49 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Tue, 06 Dec 2022 02:25:03 GMT
+# Wed, 21 Dec 2022 02:25:49 GMT
 WORKDIR /tmp
-# Tue, 06 Dec 2022 02:25:07 GMT
+# Wed, 21 Dec 2022 02:25:54 GMT
 RUN apt-get update && apt-get install -y make wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Tue, 06 Dec 2022 02:25:08 GMT
+# Wed, 21 Dec 2022 02:25:54 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Tue, 06 Dec 2022 02:25:08 GMT
+# Wed, 21 Dec 2022 02:25:54 GMT
 ENV BOOT_AS_ROOT=yes
-# Tue, 06 Dec 2022 02:25:24 GMT
+# Wed, 21 Dec 2022 02:26:11 GMT
 RUN boot
-# Tue, 06 Dec 2022 02:25:24 GMT
+# Wed, 21 Dec 2022 02:26:11 GMT
 COPY file:0282db266eb050a3ad3609149efe2188243cb9f95c0b3e48a312ddef6c6bea02 in /usr/local/bin/entrypoint 
-# Tue, 06 Dec 2022 02:25:24 GMT
+# Wed, 21 Dec 2022 02:26:12 GMT
 ENTRYPOINT ["entrypoint"]
-# Tue, 06 Dec 2022 02:25:24 GMT
+# Wed, 21 Dec 2022 02:26:12 GMT
 CMD ["repl"]
 ```
 
 -	Layers:
-	-	`sha256:4948a51a9a3f176f30ac619014f4a2da453a943244eacb53096ee9742eb7cef1`  
-		Last Modified: Tue, 06 Dec 2022 01:43:33 GMT  
-		Size: 53.7 MB (53699146 bytes)  
+	-	`sha256:c3e6129b48b69d14c5e7a5605e2b94003fb71aac82eac46b8689f5b8007af2c5`  
+		Last Modified: Wed, 21 Dec 2022 01:42:49 GMT  
+		Size: 53.7 MB (53681797 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9cabaaf976f2d5c56a302b35a76e1a18a5cb39245bb9fc93db9557a6e3e5f0b9`  
-		Last Modified: Tue, 06 Dec 2022 02:35:02 GMT  
-		Size: 199.9 MB (199864416 bytes)  
+	-	`sha256:5504f1730ed4e1dc3a15ab910d7a54c44be3b7eaa38521d40d2d6396a25c2b74`  
+		Last Modified: Wed, 21 Dec 2022 02:35:43 GMT  
+		Size: 199.9 MB (199864404 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d60e3496fd36b3ec4bfa4a97baf3cf1b24a6f8afb3cdfabd970c7a93a5e7c3cb`  
-		Last Modified: Tue, 06 Dec 2022 02:34:50 GMT  
-		Size: 2.4 MB (2352215 bytes)  
+	-	`sha256:801f1853010684e3f0dc5dce2747af4acbb8a255c79ebfd3eead69984fbc256e`  
+		Last Modified: Wed, 21 Dec 2022 02:35:30 GMT  
+		Size: 2.4 MB (2350687 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c036d654a148e6200f74baa024e72300fd938aaafcbefdcd8f5b76fd4716fa6`  
-		Last Modified: Tue, 06 Dec 2022 02:34:52 GMT  
-		Size: 58.8 MB (58820399 bytes)  
+	-	`sha256:a5257cdfb79c831515cd23ff921821b515b78b4e700dc59c27d43f6d67548a55`  
+		Last Modified: Wed, 21 Dec 2022 02:35:33 GMT  
+		Size: 58.8 MB (58820447 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba3a6777f0442a85e6d45b07e2ffd409ca264b50bf706d17be51978f86b51b69`  
-		Last Modified: Tue, 06 Dec 2022 02:34:49 GMT  
-		Size: 401.0 B  
+	-	`sha256:310ae8b69834bbd415d242d70d1dba1019edf48f56576a0cc59562e9fb144da5`  
+		Last Modified: Wed, 21 Dec 2022 02:35:30 GMT  
+		Size: 402.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
