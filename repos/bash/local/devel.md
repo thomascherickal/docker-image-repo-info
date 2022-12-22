@@ -1,18 +1,18 @@
-# `bash:devel-20221206`
+# `bash:devel-20221219`
 
 ## Docker Metadata
 
-- Image ID: `sha256:da84693257126114ea1549eab5964c0a17363e19a4d77ba3b72dc7db1e3283bf`
-- Created: `2022-12-13T22:21:44.061903646Z`
-- Virtual Size: ~ 12.98 Mb  
+- Image ID: `sha256:080859767178a1ac6dc38ef680288c671c43789ac438e116315a6c16e4214a9f`
+- Created: `2022-12-22T01:54:14.542144992Z`
+- Virtual Size: ~ 12.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `_BASH_COMMIT=237c32ba166c23d59a620a4850cd3dacdbb16a55`
-  - `_BASH_VERSION=devel-20221206`
+  - `_BASH_COMMIT=c4a2e37470e223c171f9dcf70d353d0e1eab1ea9`
+  - `_BASH_VERSION=devel-20221219`
 
 ## `apk` (`.apk`-based packages)
 
