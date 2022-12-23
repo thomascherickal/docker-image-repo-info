@@ -1,7 +1,7 @@
 ## `composer:latest`
 
 ```console
-$ docker pull composer@sha256:1e95d2ed305a8a96420cce18c916e62ecd9ccb8debc7f9c4d71e0a90db9e9d34
+$ docker pull composer@sha256:bc005854f61641cebcd54dac83ee10bc2c700d2f8599d01802721825b33d7b28
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -153,13 +153,13 @@ CMD ["composer"]
 ### `composer:latest` - linux; arm variant v6
 
 ```console
-$ docker pull composer@sha256:75c28534000da79b832cae984c8a12d755a72e7809ee29cbd804ceff3056e725
+$ docker pull composer@sha256:219a7df8fe94314287163910876fcc81e8820c4214ddf1eafb85030d1ab1ba44
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **63.7 MB (63690649 bytes)**  
+-	Total Size: **63.7 MB (63690745 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3f19715efcd1b752297dc3c77ebe79b817010ec2087efe367a84b783a1989cfc`
+-	Image ID: `sha256:dbb041022a9f4507febaf9ba5ceacb79c20298d8845069632754f3337535d509`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -210,21 +210,21 @@ CMD ["php" "-a"]
 RUN set -eux ;   apk add --no-cache --virtual .composer-rundeps     bash     coreutils     git     make     openssh-client     patch     subversion     tini     unzip     zip     $([ "$(apk --print-arch)" != "x86" ] && echo mercurial)     $([ "$(apk --print-arch)" != "armhf" ] && echo p7zip) # buildkit
 # Thu, 22 Dec 2022 18:49:42 GMT
 RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\n" > $PHP_INI_DIR/php-cli.ini # buildkit
-# Thu, 22 Dec 2022 18:50:09 GMT
+# Fri, 23 Dec 2022 16:50:01 GMT
 ENV COMPOSER_ALLOW_SUPERUSER=1
-# Thu, 22 Dec 2022 18:50:09 GMT
+# Fri, 23 Dec 2022 16:50:01 GMT
 ENV COMPOSER_HOME=/tmp
-# Thu, 22 Dec 2022 18:50:09 GMT
-ENV COMPOSER_VERSION=2.5.0
-# Thu, 22 Dec 2022 18:50:09 GMT
+# Fri, 23 Dec 2022 16:50:01 GMT
+ENV COMPOSER_VERSION=2.5.1
+# Fri, 23 Dec 2022 16:50:01 GMT
 RUN set -eux ;   curl     --silent     --fail     --location     --retry 3     --output /usr/local/bin/install-php-extensions     --url https://github.com/mlocati/docker-php-extension-installer/releases/download/1.2.58/install-php-extensions   ;   echo 182011b3dca5544a70fdeb587af44ed1760aa9a2ed37d787d0f280a99f92b008e638c37762360cd85583830a097665547849cb2293c4a0ee32c2a36ef7a349e2 /usr/local/bin/install-php-extensions | sha512sum --strict --check ;   chmod +x /usr/local/bin/install-php-extensions ;   install-php-extensions     bz2     zip   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   echo 572b963c4b7512a7de3c71a788772440b1996d918b1d2b5354bf8ba2bb057fadec6f7ac4852f2f8a8c01ab94c18141ce0422aec3619354b057216e0597db5ac2 /tmp/keys.dev.pub | sha512sum --strict --check ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   echo 47f374b8840dcb0aa7b2327f13d24ab5f6ae9e58aa630af0d62b3d0ea114f4a315c5d97b21dcad3c7ffe2f0a95db2edec267adaba3f4f5a262abebe39aed3a28 /tmp/keys.tags.pub | sha512sum --strict --check ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/f24b8f860b95b52167f91bbd3e3a7bcafe043038/web/installer   ;   echo 3137ad86bd990524ba1dedc2038309dfa6b63790d3ca52c28afea65dcc2eaead16fb33e9a72fd2a7a8240afaf26e065939a2d472f3b0eeaa575d1e8648f9bf19 /tmp/installer.php | sha512sum --strict --check ;   php /tmp/installer.php     --no-ansi     --install-dir=/usr/bin     --filename=composer     --version=${COMPOSER_VERSION}   ;   composer --ansi --version --no-interaction ;   composer diagnose ;   rm -f /tmp/installer.php ;   find /tmp -type d -exec chmod -v 1777 {} + # buildkit
-# Thu, 22 Dec 2022 18:50:09 GMT
+# Fri, 23 Dec 2022 16:50:01 GMT
 COPY docker-entrypoint.sh /docker-entrypoint.sh # buildkit
-# Thu, 22 Dec 2022 18:50:09 GMT
+# Fri, 23 Dec 2022 16:50:01 GMT
 WORKDIR /app
-# Thu, 22 Dec 2022 18:50:09 GMT
+# Fri, 23 Dec 2022 16:50:01 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 22 Dec 2022 18:50:09 GMT
+# Fri, 23 Dec 2022 16:50:01 GMT
 CMD ["composer"]
 ```
 
@@ -273,29 +273,29 @@ CMD ["composer"]
 		Last Modified: Thu, 22 Dec 2022 18:53:32 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbe776d561d4d544248747f4c75667ca61a9a11893c5bf107ee5f38bd1e11d42`  
-		Last Modified: Thu, 22 Dec 2022 18:53:32 GMT  
-		Size: 1.9 MB (1864895 bytes)  
+	-	`sha256:e0fd50a3903350559583e5b9b604bea8c072c8aee164300c3a5a63425194b0df`  
+		Last Modified: Fri, 23 Dec 2022 16:51:04 GMT  
+		Size: 1.9 MB (1864991 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:882ed2b7fc110e9ffc1488ea4019719282204db7ffedbc7b7db290b16575d1b0`  
-		Last Modified: Thu, 22 Dec 2022 18:53:32 GMT  
+	-	`sha256:8a13529e75f41e489dc09fa8aae309463a89f983f85c3072e57f773d1f7607d9`  
+		Last Modified: Fri, 23 Dec 2022 16:51:04 GMT  
 		Size: 418.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff51eed74d943dd07d88b018b5f738b94f14cfe44f634bf6cc1b484c2619e244`  
-		Last Modified: Thu, 22 Dec 2022 18:53:32 GMT  
+	-	`sha256:c58b4a7b406b631ef28cd7151b56a48cd8313e68d22ececea10581d4394b60e9`  
+		Last Modified: Fri, 23 Dec 2022 16:51:04 GMT  
 		Size: 92.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `composer:latest` - linux; arm variant v7
 
 ```console
-$ docker pull composer@sha256:05bb947e6571caefe386e07f5b193cd7508a761d0ff89393374587fe4b0b2d04
+$ docker pull composer@sha256:e4dceb306c96d53dc0d32c1e5705396e5f00284ffc00d1761d85e11a745bd7c6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **65.0 MB (64973485 bytes)**  
+-	Total Size: **65.0 MB (64973539 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e683e240a5c82ad51535a6ae671171d964117678708ed5bc9e5bc005833f8fcc`
+-	Image ID: `sha256:7b236d08e659e671840cb660966e4712da8840a64f3ce111e1a5950cca4de3c2`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -346,21 +346,21 @@ CMD ["php" "-a"]
 RUN set -eux ;   apk add --no-cache --virtual .composer-rundeps     bash     coreutils     git     make     openssh-client     patch     subversion     tini     unzip     zip     $([ "$(apk --print-arch)" != "x86" ] && echo mercurial)     $([ "$(apk --print-arch)" != "armhf" ] && echo p7zip) # buildkit
 # Thu, 22 Dec 2022 18:57:45 GMT
 RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\n" > $PHP_INI_DIR/php-cli.ini # buildkit
-# Thu, 22 Dec 2022 18:58:10 GMT
+# Fri, 23 Dec 2022 16:58:06 GMT
 ENV COMPOSER_ALLOW_SUPERUSER=1
-# Thu, 22 Dec 2022 18:58:10 GMT
+# Fri, 23 Dec 2022 16:58:06 GMT
 ENV COMPOSER_HOME=/tmp
-# Thu, 22 Dec 2022 18:58:10 GMT
-ENV COMPOSER_VERSION=2.5.0
-# Thu, 22 Dec 2022 18:58:10 GMT
+# Fri, 23 Dec 2022 16:58:06 GMT
+ENV COMPOSER_VERSION=2.5.1
+# Fri, 23 Dec 2022 16:58:06 GMT
 RUN set -eux ;   curl     --silent     --fail     --location     --retry 3     --output /usr/local/bin/install-php-extensions     --url https://github.com/mlocati/docker-php-extension-installer/releases/download/1.2.58/install-php-extensions   ;   echo 182011b3dca5544a70fdeb587af44ed1760aa9a2ed37d787d0f280a99f92b008e638c37762360cd85583830a097665547849cb2293c4a0ee32c2a36ef7a349e2 /usr/local/bin/install-php-extensions | sha512sum --strict --check ;   chmod +x /usr/local/bin/install-php-extensions ;   install-php-extensions     bz2     zip   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   echo 572b963c4b7512a7de3c71a788772440b1996d918b1d2b5354bf8ba2bb057fadec6f7ac4852f2f8a8c01ab94c18141ce0422aec3619354b057216e0597db5ac2 /tmp/keys.dev.pub | sha512sum --strict --check ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   echo 47f374b8840dcb0aa7b2327f13d24ab5f6ae9e58aa630af0d62b3d0ea114f4a315c5d97b21dcad3c7ffe2f0a95db2edec267adaba3f4f5a262abebe39aed3a28 /tmp/keys.tags.pub | sha512sum --strict --check ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/f24b8f860b95b52167f91bbd3e3a7bcafe043038/web/installer   ;   echo 3137ad86bd990524ba1dedc2038309dfa6b63790d3ca52c28afea65dcc2eaead16fb33e9a72fd2a7a8240afaf26e065939a2d472f3b0eeaa575d1e8648f9bf19 /tmp/installer.php | sha512sum --strict --check ;   php /tmp/installer.php     --no-ansi     --install-dir=/usr/bin     --filename=composer     --version=${COMPOSER_VERSION}   ;   composer --ansi --version --no-interaction ;   composer diagnose ;   rm -f /tmp/installer.php ;   find /tmp -type d -exec chmod -v 1777 {} + # buildkit
-# Thu, 22 Dec 2022 18:58:10 GMT
+# Fri, 23 Dec 2022 16:58:06 GMT
 COPY docker-entrypoint.sh /docker-entrypoint.sh # buildkit
-# Thu, 22 Dec 2022 18:58:10 GMT
+# Fri, 23 Dec 2022 16:58:06 GMT
 WORKDIR /app
-# Thu, 22 Dec 2022 18:58:10 GMT
+# Fri, 23 Dec 2022 16:58:06 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 22 Dec 2022 18:58:10 GMT
+# Fri, 23 Dec 2022 16:58:06 GMT
 CMD ["composer"]
 ```
 
@@ -409,29 +409,29 @@ CMD ["composer"]
 		Last Modified: Thu, 22 Dec 2022 19:01:28 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3afa7e39aee15a6e8af0811bf720e7d7118ef6ffd84e8237742b0a385baa5350`  
-		Last Modified: Thu, 22 Dec 2022 19:01:29 GMT  
-		Size: 1.8 MB (1787154 bytes)  
+	-	`sha256:49126b2b9777615ea8ec679a689f2c1b864e9f1469ae1c003c4f5cdc7a355e81`  
+		Last Modified: Fri, 23 Dec 2022 16:59:08 GMT  
+		Size: 1.8 MB (1787209 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7ca5d49a4c6d87457313924cec9e97d71f24c10fae6755c346e45e85264e3b8d`  
-		Last Modified: Thu, 22 Dec 2022 19:01:28 GMT  
-		Size: 419.0 B  
+	-	`sha256:9d8c2678511aa172c034758376dcb7b7fb34cfb6c6b452a883c77c8fc628774b`  
+		Last Modified: Fri, 23 Dec 2022 16:59:07 GMT  
+		Size: 418.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34e796d2b4f70fdd2ed3c301c78ab093cf00c902e49c193e54daf837c4016297`  
-		Last Modified: Thu, 22 Dec 2022 19:01:28 GMT  
+	-	`sha256:f5e93dc9247ded6121b846a250851034afe80a90d4af1c38d6253764f58cfe5d`  
+		Last Modified: Fri, 23 Dec 2022 16:59:07 GMT  
 		Size: 92.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `composer:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull composer@sha256:d9cb72f6d914c88d7da7280afbe9aabfd70015e8b4e07683692cc2e2b9f0e6a0
+$ docker pull composer@sha256:ad50a76b26e926b605604112e74463307cacc8b8d7d02d6f6f406d59bb040494
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **70.4 MB (70394190 bytes)**  
+-	Total Size: **70.4 MB (70394254 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d68fab1e348f39bd67e8e6436cc0534bcad7fd243c0c45769c10f32fbe2a32b6`
+-	Image ID: `sha256:d7fbe1d55e5cac735c05fa052cf496b960bbd905f1fd91f3487c2904bb30af96`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -482,21 +482,21 @@ CMD ["php" "-a"]
 RUN set -eux ;   apk add --no-cache --virtual .composer-rundeps     bash     coreutils     git     make     openssh-client     patch     subversion     tini     unzip     zip     $([ "$(apk --print-arch)" != "x86" ] && echo mercurial)     $([ "$(apk --print-arch)" != "armhf" ] && echo p7zip) # buildkit
 # Thu, 22 Dec 2022 18:40:35 GMT
 RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\n" > $PHP_INI_DIR/php-cli.ini # buildkit
-# Thu, 22 Dec 2022 18:40:54 GMT
+# Fri, 23 Dec 2022 16:39:45 GMT
 ENV COMPOSER_ALLOW_SUPERUSER=1
-# Thu, 22 Dec 2022 18:40:54 GMT
+# Fri, 23 Dec 2022 16:39:45 GMT
 ENV COMPOSER_HOME=/tmp
-# Thu, 22 Dec 2022 18:40:54 GMT
-ENV COMPOSER_VERSION=2.5.0
-# Thu, 22 Dec 2022 18:40:54 GMT
+# Fri, 23 Dec 2022 16:39:45 GMT
+ENV COMPOSER_VERSION=2.5.1
+# Fri, 23 Dec 2022 16:39:45 GMT
 RUN set -eux ;   curl     --silent     --fail     --location     --retry 3     --output /usr/local/bin/install-php-extensions     --url https://github.com/mlocati/docker-php-extension-installer/releases/download/1.2.58/install-php-extensions   ;   echo 182011b3dca5544a70fdeb587af44ed1760aa9a2ed37d787d0f280a99f92b008e638c37762360cd85583830a097665547849cb2293c4a0ee32c2a36ef7a349e2 /usr/local/bin/install-php-extensions | sha512sum --strict --check ;   chmod +x /usr/local/bin/install-php-extensions ;   install-php-extensions     bz2     zip   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   echo 572b963c4b7512a7de3c71a788772440b1996d918b1d2b5354bf8ba2bb057fadec6f7ac4852f2f8a8c01ab94c18141ce0422aec3619354b057216e0597db5ac2 /tmp/keys.dev.pub | sha512sum --strict --check ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   echo 47f374b8840dcb0aa7b2327f13d24ab5f6ae9e58aa630af0d62b3d0ea114f4a315c5d97b21dcad3c7ffe2f0a95db2edec267adaba3f4f5a262abebe39aed3a28 /tmp/keys.tags.pub | sha512sum --strict --check ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/f24b8f860b95b52167f91bbd3e3a7bcafe043038/web/installer   ;   echo 3137ad86bd990524ba1dedc2038309dfa6b63790d3ca52c28afea65dcc2eaead16fb33e9a72fd2a7a8240afaf26e065939a2d472f3b0eeaa575d1e8648f9bf19 /tmp/installer.php | sha512sum --strict --check ;   php /tmp/installer.php     --no-ansi     --install-dir=/usr/bin     --filename=composer     --version=${COMPOSER_VERSION}   ;   composer --ansi --version --no-interaction ;   composer diagnose ;   rm -f /tmp/installer.php ;   find /tmp -type d -exec chmod -v 1777 {} + # buildkit
-# Thu, 22 Dec 2022 18:40:54 GMT
+# Fri, 23 Dec 2022 16:39:45 GMT
 COPY docker-entrypoint.sh /docker-entrypoint.sh # buildkit
-# Thu, 22 Dec 2022 18:40:54 GMT
+# Fri, 23 Dec 2022 16:39:45 GMT
 WORKDIR /app
-# Thu, 22 Dec 2022 18:40:54 GMT
+# Fri, 23 Dec 2022 16:39:45 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 22 Dec 2022 18:40:54 GMT
+# Fri, 23 Dec 2022 16:39:45 GMT
 CMD ["composer"]
 ```
 
@@ -545,16 +545,16 @@ CMD ["composer"]
 		Last Modified: Thu, 22 Dec 2022 18:42:47 GMT  
 		Size: 267.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb8cf6e063e4037866fd92f52a48e5a39a0f5eb50f95bcd76e9f97b467a29473`  
-		Last Modified: Thu, 22 Dec 2022 18:42:48 GMT  
-		Size: 1.9 MB (1868090 bytes)  
+	-	`sha256:6e07a931d7cd37457884e3f82da5130a57ddefee4d741385a804a158acd31109`  
+		Last Modified: Fri, 23 Dec 2022 16:40:15 GMT  
+		Size: 1.9 MB (1868152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec82e90ab186c3dd695c5a24772cca72e8d5f2ef376cad82ba4c1692b79c6910`  
-		Last Modified: Thu, 22 Dec 2022 18:42:47 GMT  
-		Size: 418.0 B  
+	-	`sha256:cb7eb8349f6091d645f0a69fd50f3fd24d6dd159567d725da69bae042e15e69f`  
+		Last Modified: Fri, 23 Dec 2022 16:40:15 GMT  
+		Size: 420.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61ccc0a353a49c96eafc927a7868205242a406cf556ccf5696e7d62c9244c9fd`  
-		Last Modified: Thu, 22 Dec 2022 18:42:47 GMT  
+	-	`sha256:8898a22efd0f3170951cba3da336528c470254ed4f347da2e041e2aba8cfc6c1`  
+		Last Modified: Fri, 23 Dec 2022 16:40:15 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -834,13 +834,13 @@ CMD ["composer"]
 ### `composer:latest` - linux; s390x
 
 ```console
-$ docker pull composer@sha256:8edb11372fbcb2bad85b9ad2f84f1a27cb2e50baedd625a9bcf3dfa0b4a553d5
+$ docker pull composer@sha256:46fecbd5fef13a2cb937e398177c1e3e781ae7e4c4550337ffbf5c4b0dd08626
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **69.3 MB (69301462 bytes)**  
+-	Total Size: **69.3 MB (69301550 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e6c5b1197dd8e3f935df8e6b26c231e55bbc35e7537182c230112b8d246d34b0`
+-	Image ID: `sha256:e45290d27155f9c5c17a8e9b97915fa14eb0d1562c83c628267b2714fdd87468`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["composer"]`
 
@@ -891,21 +891,21 @@ CMD ["php" "-a"]
 RUN set -eux ;   apk add --no-cache --virtual .composer-rundeps     bash     coreutils     git     make     openssh-client     patch     subversion     tini     unzip     zip     $([ "$(apk --print-arch)" != "x86" ] && echo mercurial)     $([ "$(apk --print-arch)" != "armhf" ] && echo p7zip) # buildkit
 # Thu, 22 Dec 2022 18:42:00 GMT
 RUN printf "# composer php cli ini settings\ndate.timezone=UTC\nmemory_limit=-1\n" > $PHP_INI_DIR/php-cli.ini # buildkit
-# Thu, 22 Dec 2022 18:42:30 GMT
+# Fri, 23 Dec 2022 16:42:27 GMT
 ENV COMPOSER_ALLOW_SUPERUSER=1
-# Thu, 22 Dec 2022 18:42:30 GMT
+# Fri, 23 Dec 2022 16:42:27 GMT
 ENV COMPOSER_HOME=/tmp
-# Thu, 22 Dec 2022 18:42:30 GMT
-ENV COMPOSER_VERSION=2.5.0
-# Thu, 22 Dec 2022 18:42:30 GMT
+# Fri, 23 Dec 2022 16:42:27 GMT
+ENV COMPOSER_VERSION=2.5.1
+# Fri, 23 Dec 2022 16:42:27 GMT
 RUN set -eux ;   curl     --silent     --fail     --location     --retry 3     --output /usr/local/bin/install-php-extensions     --url https://github.com/mlocati/docker-php-extension-installer/releases/download/1.2.58/install-php-extensions   ;   echo 182011b3dca5544a70fdeb587af44ed1760aa9a2ed37d787d0f280a99f92b008e638c37762360cd85583830a097665547849cb2293c4a0ee32c2a36ef7a349e2 /usr/local/bin/install-php-extensions | sha512sum --strict --check ;   chmod +x /usr/local/bin/install-php-extensions ;   install-php-extensions     bz2     zip   ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.dev.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/snapshots.pub   ;   echo 572b963c4b7512a7de3c71a788772440b1996d918b1d2b5354bf8ba2bb057fadec6f7ac4852f2f8a8c01ab94c18141ce0422aec3619354b057216e0597db5ac2 /tmp/keys.dev.pub | sha512sum --strict --check ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/keys.tags.pub     --url https://raw.githubusercontent.com/composer/composer.github.io/e7f28b7200249f8e5bc912b42837d4598c74153a/releases.pub   ;   echo 47f374b8840dcb0aa7b2327f13d24ab5f6ae9e58aa630af0d62b3d0ea114f4a315c5d97b21dcad3c7ffe2f0a95db2edec267adaba3f4f5a262abebe39aed3a28 /tmp/keys.tags.pub | sha512sum --strict --check ;   curl     --silent     --fail     --location     --retry 3     --output /tmp/installer.php     --url https://raw.githubusercontent.com/composer/getcomposer.org/f24b8f860b95b52167f91bbd3e3a7bcafe043038/web/installer   ;   echo 3137ad86bd990524ba1dedc2038309dfa6b63790d3ca52c28afea65dcc2eaead16fb33e9a72fd2a7a8240afaf26e065939a2d472f3b0eeaa575d1e8648f9bf19 /tmp/installer.php | sha512sum --strict --check ;   php /tmp/installer.php     --no-ansi     --install-dir=/usr/bin     --filename=composer     --version=${COMPOSER_VERSION}   ;   composer --ansi --version --no-interaction ;   composer diagnose ;   rm -f /tmp/installer.php ;   find /tmp -type d -exec chmod -v 1777 {} + # buildkit
-# Thu, 22 Dec 2022 18:42:30 GMT
+# Fri, 23 Dec 2022 16:42:28 GMT
 COPY docker-entrypoint.sh /docker-entrypoint.sh # buildkit
-# Thu, 22 Dec 2022 18:42:30 GMT
+# Fri, 23 Dec 2022 16:42:28 GMT
 WORKDIR /app
-# Thu, 22 Dec 2022 18:42:30 GMT
+# Fri, 23 Dec 2022 16:42:28 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 22 Dec 2022 18:42:30 GMT
+# Fri, 23 Dec 2022 16:42:28 GMT
 CMD ["composer"]
 ```
 
@@ -954,15 +954,15 @@ CMD ["composer"]
 		Last Modified: Thu, 22 Dec 2022 18:45:47 GMT  
 		Size: 268.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb8f645e77638e1977a4e426817111e93cf54d33e3c7f4d5626a9c9f0371a55f`  
-		Last Modified: Thu, 22 Dec 2022 18:45:47 GMT  
-		Size: 1.9 MB (1887155 bytes)  
+	-	`sha256:c9b4189244e810b03a7c4ec0e6bba51ad2a9ce0d1e39da5d4763640a275db1dd`  
+		Last Modified: Fri, 23 Dec 2022 16:43:32 GMT  
+		Size: 1.9 MB (1887243 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c2b85576f22e9e29a6a92436a10035d2faf255360b3f5333a2f763d0dcc6117`  
-		Last Modified: Thu, 22 Dec 2022 18:45:47 GMT  
+	-	`sha256:780f15aac99518758e6d5596be2a9afd3044947a7379f3f6ba0c5de0ce83ff70`  
+		Last Modified: Fri, 23 Dec 2022 16:43:32 GMT  
 		Size: 418.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1d3e26ad18c80601730c6837cf011c86313f0c733d72870803a1e7c4d242dfda`  
-		Last Modified: Thu, 22 Dec 2022 18:45:47 GMT  
+	-	`sha256:134504f6725637803e911841197b2b5bf64de9c9fde465f39dfe3d02566108c9`  
+		Last Modified: Fri, 23 Dec 2022 16:43:32 GMT  
 		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
