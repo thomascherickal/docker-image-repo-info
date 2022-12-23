@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:30eb701a486f658b67be548b96faddc6b58c6e2f9e4b7d7b13b6f8415765aeb6`
-- Created: `2022-12-06T08:59:55.598597779Z`
-- Virtual Size: ~ 137.98 Mb  
+- Image ID: `sha256:cf47ff996a38db1fa2f78e0f2f824090741a185518697cceb919b708f9d8eecf`
+- Created: `2022-12-21T12:46:29.038573651Z`
+- Virtual Size: ~ 138.10 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -13,11 +13,11 @@
 
 ## `dpkg` (`.deb`-based packages)
 
-### `dpkg` source package: `acl=2.3.1-1`
+### `dpkg` source package: `acl=2.3.1-2`
 
 Binary Packages:
 
-- `libacl1:amd64=2.3.1-1`
+- `libacl1:amd64=2.3.1-2`
 
 Licenses: (parsed from: `/usr/share/doc/libacl1/copyright`)
 
@@ -29,18 +29,18 @@ Licenses: (parsed from: `/usr/share/doc/libacl1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris acl=2.3.1-1
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.3.1-1.dsc' acl_2.3.1-1.dsc 2486 SHA256:6299780e84c240e79aae9886deaacc1bd8439a2a58f6a23749156f8a4d62572e
+$ apt-get source -qq --print-uris acl=2.3.1-2
+'http://deb.debian.org/debian/pool/main/a/acl/acl_2.3.1-2.dsc' acl_2.3.1-2.dsc 2486 SHA256:b46280a58fdab11f202f98754ba6fa98d597698ec16bd64a8efb547d03da73e8
 'http://deb.debian.org/debian/pool/main/a/acl/acl_2.3.1.orig.tar.xz' acl_2.3.1.orig.tar.xz 355676 SHA256:c0234042e17f11306c23c038b08e5e070edb7be44bef6697fb8734dcff1c66b1
 'http://deb.debian.org/debian/pool/main/a/acl/acl_2.3.1.orig.tar.xz.asc' acl_2.3.1.orig.tar.xz.asc 833 SHA256:54fb8fcd6ae6901f2257e18d503e5e18ad956babf8d80d2ea29f280fc7264662
-'http://deb.debian.org/debian/pool/main/a/acl/acl_2.3.1-1.debian.tar.xz' acl_2.3.1-1.debian.tar.xz 27732 SHA256:900e8993f3a8b95e2c83fc7f530cc15b5cd165b6f517a639239f51cd60d06f2a
+'http://deb.debian.org/debian/pool/main/a/acl/acl_2.3.1-2.debian.tar.xz' acl_2.3.1-2.debian.tar.xz 27792 SHA256:ed7ecbd6064e4ed33af321e03dd01807de8b3cf301ae6fe23b80ed0f8993c57c
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/acl/2.3.1-1/ (for browsing the source)
-- https://sources.debian.net/src/acl/2.3.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/acl/2.3.1-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/acl/2.3.1-2/ (for browsing the source)
+- https://sources.debian.net/src/acl/2.3.1-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/acl/2.3.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `adduser=3.129`
 
@@ -93,11 +93,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/apt/2.5.4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/apt/2.5.4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `attr=1:2.5.1-1`
+### `dpkg` source package: `attr=1:2.5.1-3`
 
 Binary Packages:
 
-- `libattr1:amd64=1:2.5.1-1`
+- `libattr1:amd64=1:2.5.1-3`
 
 Licenses: (parsed from: `/usr/share/doc/libattr1/copyright`)
 
@@ -106,13 +106,21 @@ Licenses: (parsed from: `/usr/share/doc/libattr1/copyright`)
 - `LGPL-2+`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris attr=1:2.5.1-3
+'http://deb.debian.org/debian/pool/main/a/attr/attr_2.5.1-3.dsc' attr_2.5.1-3.dsc 2455 SHA256:8c90015fb32daa77e2f158e75595d1975637eaf97c4b8f4f6808c64d0d0f0cea
+'http://deb.debian.org/debian/pool/main/a/attr/attr_2.5.1.orig.tar.xz' attr_2.5.1.orig.tar.xz 318188 SHA256:db448a626f9313a1a970d636767316a8da32aede70518b8050fa0de7947adc32
+'http://deb.debian.org/debian/pool/main/a/attr/attr_2.5.1.orig.tar.xz.asc' attr_2.5.1.orig.tar.xz.asc 833 SHA256:67bc632e754efbadba846d0b40138b3fc3e306c3b909a9ba868c6dba1e2689d0
+'http://deb.debian.org/debian/pool/main/a/attr/attr_2.5.1-3.debian.tar.xz' attr_2.5.1-3.debian.tar.xz 29024 SHA256:870e4bcf9e7ed448f9e4d2c5a19f329c67e5b6c2ad216787a1c806040fc50a11
+```
 
-- http://snapshot.debian.org/package/attr/1:2.5.1-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/attr/1:2.5.1-3/ (for browsing the source)
+- https://sources.debian.net/src/attr/1:2.5.1-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/attr/1:2.5.1-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `audit=1:3.0.7-1.1`
 
@@ -511,33 +519,26 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/diffutils/1:3.8-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/diffutils/1:3.8-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `dpkg=1.21.9`
+### `dpkg` source package: `dpkg=1.21.12`
 
 Binary Packages:
 
-- `dpkg=1.21.9+b1`
+- `dpkg=1.21.12`
 
 Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 
 - `BSD-2-clause`
 - `GPL-2`
 - `GPL-2+`
-- `public-domain-md5`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.21.9
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.9.dsc' dpkg_1.21.9.dsc 2120 SHA256:065ee6146fecf372c587fd6f2083cda8704f9b3e20d1816f0972307cdee0c0ac
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.9.tar.xz' dpkg_1.21.9.tar.xz 5084044 SHA256:a0aba375625459260cbc89933a12b3188a713c840e3aaefc14bf2d9adee19642
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dpkg/1.21.12/
 
-- https://sources.debian.net/src/dpkg/1.21.9/ (for browsing the source)
-- https://sources.debian.net/src/dpkg/1.21.9/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dpkg/1.21.9/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `e2fsprogs=1.46.6~rc1-1`
 
@@ -597,13 +598,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/findutils/4.9.0-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/findutils/4.9.0-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gcc-12=12.2.0-9`
+### `dpkg` source package: `gcc-12=12.2.0-10`
 
 Binary Packages:
 
-- `gcc-12-base:amd64=12.2.0-9`
-- `libgcc-s1:amd64=12.2.0-9`
-- `libstdc++6:amd64=12.2.0-9`
+- `gcc-12-base:amd64=12.2.0-10`
+- `libgcc-s1:amd64=12.2.0-10`
+- `libstdc++6:amd64=12.2.0-10`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-12-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -617,17 +618,17 @@ Licenses: (parsed from: `/usr/share/doc/gcc-12-base/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gcc-12=12.2.0-9
-'http://deb.debian.org/debian/pool/main/g/gcc-12/gcc-12_12.2.0-9.dsc' gcc-12_12.2.0-9.dsc 27501 SHA256:63279c981d508ab170e62409398ca662818b00f498011671f3d1f2d69f09983c
+$ apt-get source -qq --print-uris gcc-12=12.2.0-10
+'http://deb.debian.org/debian/pool/main/g/gcc-12/gcc-12_12.2.0-10.dsc' gcc-12_12.2.0-10.dsc 27505 SHA256:35885811d2ff65f8cb9489baa8bc1979486e92de23bd8755cccfde0a5202f2b2
 'http://deb.debian.org/debian/pool/main/g/gcc-12/gcc-12_12.2.0.orig.tar.gz' gcc-12_12.2.0.orig.tar.gz 87090343 SHA256:b8298be16aeeb96a889c6afed0a8e2241b47452e89cc81fe65ea849d5c740fcb
-'http://deb.debian.org/debian/pool/main/g/gcc-12/gcc-12_12.2.0-9.debian.tar.xz' gcc-12_12.2.0-9.debian.tar.xz 1610684 SHA256:f0d55cb27b02d531047400eefa2ed898fbb8ce55a6b7cc4213e6b398bf3607e1
+'http://deb.debian.org/debian/pool/main/g/gcc-12/gcc-12_12.2.0-10.debian.tar.xz' gcc-12_12.2.0-10.debian.tar.xz 1641860 SHA256:62b18bf48ee0d2c451c2c4243a79162aadca6fabb2540c24c9d5765949641798
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gcc-12/12.2.0-9/ (for browsing the source)
-- https://sources.debian.net/src/gcc-12/12.2.0-9/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-12/12.2.0-9/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gcc-12/12.2.0-10/ (for browsing the source)
+- https://sources.debian.net/src/gcc-12/12.2.0-10/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gcc-12/12.2.0-10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.36-6`
 
@@ -1133,21 +1134,47 @@ Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 - `GPL-3`
 - `LGPL-2.1-or-later`
 
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
+
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libksba/1.6.2-4/
+
+
+### `dpkg` source package: `libmd=1.0.4-2`
+
+Binary Packages:
+
+- `libmd0:amd64=1.0.4-2`
+
+Licenses: (parsed from: `/usr/share/doc/libmd0/copyright`)
+
+- `BSD-2-clause`
+- `BSD-2-clause-NetBSD`
+- `BSD-3-clause`
+- `BSD-3-clause-Aaron-D-Gifford`
+- `Beerware`
+- `ISC`
+- `public-domain-md4`
+- `public-domain-md5`
+- `public-domain-sha1`
+
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libksba=1.6.2-4
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.2-4.dsc' libksba_1.6.2-4.dsc 2482 SHA256:10d4b48393c7e4df4517b47c1e96ee8dfea9b7b93237e25bb4d16d97860178a7
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.2.orig.tar.bz2' libksba_1.6.2.orig.tar.bz2 667846 SHA256:fce01ccac59812bddadffacff017dac2e4762bdb6ebc6ffe06f6ed4f6192c971
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.2.orig.tar.bz2.asc' libksba_1.6.2.orig.tar.bz2.asc 228 SHA256:f12b91764d619a9b2d66a7c49b2e5563c39f91bf3b0fbb6b7dc4a445a18878d6
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.2-4.debian.tar.xz' libksba_1.6.2-4.debian.tar.xz 16052 SHA256:0e6a5919e45f8329ec0931a83f734676b17e39826dcdf5c569a92a824c890738
+$ apt-get source -qq --print-uris libmd=1.0.4-2
+'http://deb.debian.org/debian/pool/main/libm/libmd/libmd_1.0.4-2.dsc' libmd_1.0.4-2.dsc 2264 SHA256:5e060cb277f31e67b91033e05ece00832ca8056decba873b1698a5680414a177
+'http://deb.debian.org/debian/pool/main/libm/libmd/libmd_1.0.4.orig.tar.xz' libmd_1.0.4.orig.tar.xz 264472 SHA256:f51c921042e34beddeded4b75557656559cf5b1f2448033b4c1eec11c07e530f
+'http://deb.debian.org/debian/pool/main/libm/libmd/libmd_1.0.4.orig.tar.xz.asc' libmd_1.0.4.orig.tar.xz.asc 833 SHA256:32deebe1cfab127ee69a3e8c8caf439e459b7cdcdd7535fe021cb485adc14057
+'http://deb.debian.org/debian/pool/main/libm/libmd/libmd_1.0.4-2.debian.tar.xz' libmd_1.0.4-2.debian.tar.xz 10204 SHA256:a27a2221b1a81e192455e2e93da2e313b21e489f6ac2bcf84b0b813dc3fe261b
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libksba/1.6.2-4/ (for browsing the source)
-- https://sources.debian.net/src/libksba/1.6.2-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libksba/1.6.2-4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libmd/1.0.4-2/ (for browsing the source)
+- https://sources.debian.net/src/libmd/1.0.4-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libmd/1.0.4-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libseccomp=2.5.4-1`
 
@@ -1660,11 +1687,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pam/1.5.2-5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pam/1.5.2-5/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `pcre2=10.40-2`
+### `dpkg` source package: `pcre2=10.40-3`
 
 Binary Packages:
 
-- `libpcre2-8-0:amd64=10.40-2`
+- `libpcre2-8-0:amd64=10.40-3`
 
 Licenses: (parsed from: `/usr/share/doc/libpcre2-8-0/copyright`)
 
@@ -1674,19 +1701,26 @@ Licenses: (parsed from: `/usr/share/doc/libpcre2-8-0/copyright`)
 - `X11`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris pcre2=10.40-3
+'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.40-3.dsc' pcre2_10.40-3.dsc 2302 SHA256:5bf89d8451b21377b879c010d297b30593565fa5ad2c6ab10966284b023a56bc
+'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.40.orig.tar.gz' pcre2_10.40.orig.tar.gz 2359622 SHA256:ded42661cab30ada2e72ebff9e725e745b4b16ce831993635136f2ef86177724
+'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.40-3.diff.gz' pcre2_10.40-3.diff.gz 7889 SHA256:e73ec04ac1b59b395a67d4248ba1b9e1f21fd414b802e0f997aeca78c4ffb384
+```
 
-- http://snapshot.debian.org/package/pcre2/10.40-2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/pcre2/10.40-3/ (for browsing the source)
+- https://sources.debian.net/src/pcre2/10.40-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/pcre2/10.40-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `perl=5.36.0-4`
+### `dpkg` source package: `perl=5.36.0-6`
 
 Binary Packages:
 
-- `perl-base=5.36.0-4`
+- `perl-base=5.36.0-6`
 
 Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 
@@ -1718,13 +1752,21 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris perl=5.36.0-6
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.36.0-6.dsc' perl_5.36.0-6.dsc 2886 SHA256:7320742b0a87dacc67458359c687b21e26e7ce7014a56832b0f064cb27455044
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.36.0.orig-regen-configure.tar.xz' perl_5.36.0.orig-regen-configure.tar.xz 417784 SHA256:10ac353bc5a933403afe60ed1817e7a456f99bdbcaf80c1cdb0eb3a08ea56d4e
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.36.0.orig.tar.xz' perl_5.36.0.orig.tar.xz 13051500 SHA256:0f386dccbee8e26286404b2cca144e1005be65477979beb9b1ba272d4819bcf0
+'http://deb.debian.org/debian/pool/main/p/perl/perl_5.36.0-6.debian.tar.xz' perl_5.36.0-6.debian.tar.xz 169352 SHA256:440b16282ab8acd9a3d22ea2caaf657e51832d0ad45b161e6b3400c9ded2b6ce
+```
 
-- http://snapshot.debian.org/package/perl/5.36.0-4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/perl/5.36.0-6/ (for browsing the source)
+- https://sources.debian.net/src/perl/5.36.0-6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/perl/5.36.0-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pinentry=1.2.1-1`
 
@@ -1867,12 +1909,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/sqlite3/3.40.0-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/sqlite3/3.40.0-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `systemd=252.2-1`
+### `dpkg` source package: `systemd=252.2-2`
 
 Binary Packages:
 
-- `libsystemd0:amd64=252.2-1`
-- `libudev1:amd64=252.2-1`
+- `libsystemd0:amd64=252.2-2`
+- `libudev1:amd64=252.2-2`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1885,13 +1927,20 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris systemd=252.2-2
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.2-2.dsc' systemd_252.2-2.dsc 6355 SHA256:e1c3bd987bf61732bcaa4c733edc00a911981c6f374b33763a30f3936dad09bb
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.2.orig.tar.gz' systemd_252.2.orig.tar.gz 11745627 SHA256:4682efb2dccdfdc4241d21fe4f6e762d5c43c2b964daae1c9fe9167ffe28c874
+'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.2-2.debian.tar.xz' systemd_252.2-2.debian.tar.xz 167308 SHA256:0fc2fb5c4841547e3cd23bca714e58de4234a7a33be276e044ec78bfa3e92621
+```
 
-- http://snapshot.debian.org/package/systemd/252.2-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/systemd/252.2-2/ (for browsing the source)
+- https://sources.debian.net/src/systemd/252.2-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/systemd/252.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.05-7`
 
@@ -2067,11 +2116,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/xxhash/0.8.1-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/xxhash/0.8.1-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `xz-utils=5.2.8-0.0`
+### `dpkg` source package: `xz-utils=5.2.9-0.0`
 
 Binary Packages:
 
-- `liblzma5:amd64=5.2.8-0.0`
+- `liblzma5:amd64=5.2.9-0.0`
 
 Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
 
@@ -2096,14 +2145,14 @@ This is *usually* due to a new package version being released and the old versio
 
 The source package *may* still be available for download from:
 
-- http://snapshot.debian.org/package/xz-utils/5.2.8-0.0/
+- http://snapshot.debian.org/package/xz-utils/5.2.9-0.0/
 
 
-### `dpkg` source package: `zlib=1:1.2.11.dfsg-4.1`
+### `dpkg` source package: `zlib=1:1.2.13.dfsg-1`
 
 Binary Packages:
 
-- `zlib1g:amd64=1:1.2.11.dfsg-4.1`
+- `zlib1g:amd64=1:1.2.13.dfsg-1`
 
 Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 
@@ -2112,14 +2161,14 @@ Licenses: (parsed from: `/usr/share/doc/zlib1g/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris zlib=1:1.2.11.dfsg-4.1
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-4.1.dsc' zlib_1.2.11.dfsg-4.1.dsc 2881 SHA256:aeb102797f718f2f9bcd090b233dcfaa6a43bd0d7e0148a2d880822406c89728
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg.orig.tar.gz' zlib_1.2.11.dfsg.orig.tar.gz 370248 SHA256:80c481411a4fe8463aeb8270149a0e80bb9eaf7da44132b6e16f2b5af01bc899
-'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.11.dfsg-4.1.debian.tar.xz' zlib_1.2.11.dfsg-4.1.debian.tar.xz 24052 SHA256:6136b2cc6483c27eec681f995864f1876c4765e69ad9c9c61d9cd62a86104e4d
+$ apt-get source -qq --print-uris zlib=1:1.2.13.dfsg-1
+'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.13.dfsg-1.dsc' zlib_1.2.13.dfsg-1.dsc 2399 SHA256:3fa1e6b2fc525062aa88207dda52fed8e045373c809d362fe8a2bfbf7cf515a8
+'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.13.dfsg.orig.tar.bz2' zlib_1.2.13.dfsg.orig.tar.bz2 1239825 SHA256:71feb7947e3c00ef125f83b79a4e529bde31171e5babe48b391f06758d1ab0a1
+'http://deb.debian.org/debian/pool/main/z/zlib/zlib_1.2.13.dfsg-1.debian.tar.xz' zlib_1.2.13.dfsg-1.debian.tar.xz 15700 SHA256:f66cf3d4f2d7defcd4d1fd1fb0a11ee39f1e01b42ec7d059c9dc5c1695133c44
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-4.1/ (for browsing the source)
-- https://sources.debian.net/src/zlib/1:1.2.11.dfsg-4.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/zlib/1:1.2.11.dfsg-4.1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/zlib/1:1.2.13.dfsg-1/ (for browsing the source)
+- https://sources.debian.net/src/zlib/1:1.2.13.dfsg-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/zlib/1:1.2.13.dfsg-1/ (for access to the source package after it no longer exists in the archive)
