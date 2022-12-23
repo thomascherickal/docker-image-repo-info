@@ -2,20 +2,20 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9a6c248046f763976183868f47df24f1fecd9fcbb486e4dbe538eac9d0fdc3bc`
-- Created: `2022-11-14T22:36:59.283764146Z`
-- Virtual Size: ~ 81.65 Mb  
+- Image ID: `sha256:f215692469590e4ed519b8000b99ff1c7f6670069e8dc742f6656cbb9e7c6374`
+- Created: `2022-12-22T03:26:30.898218765Z`
+- Virtual Size: ~ 82.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["iex"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OTP_VERSION=25.1.2`
+  - `OTP_VERSION=25.2`
   - `REBAR3_VERSION=3.19.0`
   - `ELIXIR_VERSION=v1.14.2`
   - `LANG=C.UTF-8`
 - Labels:
-  - `org.opencontainers.image.version=25.1.2`
+  - `org.opencontainers.image.version=25.2`
 
 ## `apk` (`.apk`-based packages)
 
@@ -260,16 +260,16 @@ GPL-2.0-only AND LGPL-2.1-or-later
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.3-r1 description:
+musl-1.2.3-r2 description:
 the musl c library (libc) implementation
 
-musl-1.2.3-r1 webpage:
+musl-1.2.3-r2 webpage:
 https://musl.libc.org/
 
-musl-1.2.3-r1 installed size:
+musl-1.2.3-r2 installed size:
 608 KiB
 
-musl-1.2.3-r1 license:
+musl-1.2.3-r2 license:
 MIT
 
 ```
