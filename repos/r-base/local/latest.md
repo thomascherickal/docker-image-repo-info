@@ -1509,20 +1509,13 @@ Licenses: (parsed from: `/usr/share/doc/libkeyutils1/copyright`)
 - `LGPL-2`
 - `LGPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris keyutils=1.6.3-1
-'http://deb.debian.org/debian/pool/main/k/keyutils/keyutils_1.6.3-1.dsc' keyutils_1.6.3-1.dsc 2055 SHA256:2c0e828b11a4483b5d1c949384f77d49412559c9f6a7193a1321476830f742be
-'http://deb.debian.org/debian/pool/main/k/keyutils/keyutils_1.6.3.orig.tar.gz' keyutils_1.6.3.orig.tar.gz 137022 SHA256:a61d5706136ae4c05bd48f86186bcfdbd88dd8bd5107e3e195c924cfc1b39bb4
-'http://deb.debian.org/debian/pool/main/k/keyutils/keyutils_1.6.3-1.debian.tar.xz' keyutils_1.6.3-1.debian.tar.xz 13136 SHA256:e11ef757e2db97c8c5cd381cc29f3e5e125aa485f8446dc62777ba5a16678a63
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/keyutils/1.6.3-1/
 
-- https://sources.debian.net/src/keyutils/1.6.3-1/ (for browsing the source)
-- https://sources.debian.net/src/keyutils/1.6.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/keyutils/1.6.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `krb5=1.20-1`
 
@@ -3031,20 +3024,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-nlme/copyright`)
 - `GPL`
 - `GPL `
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nlme=3.1.160-1
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.160-1.dsc' nlme_3.1.160-1.dsc 1840 SHA256:78d6e2f3710d64e4b62d1bd47e441458527199d6a3a95b2f7340a60023692792
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.160.orig.tar.gz' nlme_3.1.160.orig.tar.gz 845714 SHA256:d4454623194876b083774c662fd223bc3b9e8325824cb758b8adecd5dc0d8a08
-'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.160-1.debian.tar.xz' nlme_3.1.160-1.debian.tar.xz 7276 SHA256:f24b7ead7fc67a73239669c89ade9d0d0f4907c3444ae8138bea86e1c2cbdd86
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nlme/3.1.160-1/
 
-- https://sources.debian.net/src/nlme/3.1.160-1/ (for browsing the source)
-- https://sources.debian.net/src/nlme/3.1.160-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nlme/3.1.160-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openblas=0.3.21+ds-2`
 
