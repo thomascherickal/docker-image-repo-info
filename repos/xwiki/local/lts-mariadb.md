@@ -1,10 +1,10 @@
-# `xwiki:13-mariadb-tomcat`
+# `xwiki:14-mariadb-tomcat`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4478a3c7f47ea349d2f172aefbe622fb7c204ec0fcd9d59e494a3ad1c30272d7`
-- Created: `2022-12-09T12:23:00.16070313Z`
-- Virtual Size: ~ 1.13 Gb  
+- Image ID: `sha256:bc10059c6048e39ce7e6c76c3e08789f98feee97fecb5acd52fa95b8d8fd7d16`
+- Created: `2022-12-27T18:08:53.828828607Z`
+- Virtual Size: ~ 1.16 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -23,14 +23,14 @@
   - `TOMCAT_MAJOR=9`
   - `TOMCAT_VERSION=9.0.70`
   - `TOMCAT_SHA512=9b57b332f4cfb2c4b9250b95924314507ebafec44f732e755be96d35e1a50d98ca3ea11a8c62e0c6fde2541d31a981f5ca792ea9931b2551b81b495932474726`
-  - `XWIKI_VERSION=13.10.10`
-  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/13.10.10`
-  - `XWIKI_DOWNLOAD_SHA256=bae87a16d291d321d0848fcba55e455bfcd4b1890597cd9b735d98013cf44bad`
-  - `MARIADB_JDBC_VERSION=3.0.8`
-  - `MARIADB_JDBC_SHA256=83697e1c44e77476123ab63cd8bb2ca96c1a349269f307c339f97caced2d0dd6`
-  - `MARIADB_JDBC_PREFIX=https://repo1.maven.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.0.8`
-  - `MARIADB_JDBC_ARTIFACT=mariadb-java-client-3.0.8.jar`
-  - `MARIADB_JDBC_TARGET=/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/mariadb-java-client-3.0.8.jar`
+  - `XWIKI_VERSION=14.10.2`
+  - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/14.10.2`
+  - `XWIKI_DOWNLOAD_SHA256=d84eda7c2952dd4e7336abf3dbe4cec58e8f857938925b130b02296d415d3f14`
+  - `MARIADB_JDBC_VERSION=3.1.0`
+  - `MARIADB_JDBC_SHA256=bf78c92310a848b348f8478667f68fd17f8b80963c67474e8199f5abc8acbd50`
+  - `MARIADB_JDBC_PREFIX=https://repo1.maven.org/maven2/org/mariadb/jdbc/mariadb-java-client/3.1.0`
+  - `MARIADB_JDBC_ARTIFACT=mariadb-java-client-3.1.0.jar`
+  - `MARIADB_JDBC_TARGET=/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/mariadb-java-client-3.1.0.jar`
 - Labels:
   - `org.opencontainers.image.authors=XWiki Development Team <committers@xwiki.org>`
   - `org.opencontainers.image.documentation=https://hub.docker.com/_/xwiki`
