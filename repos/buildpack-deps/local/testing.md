@@ -622,21 +622,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `X11`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.86.0-2
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.86.0-2.dsc' curl_7.86.0-2.dsc 2955 SHA256:e72d957a9d2098eb568ab259938d8dc31fbb970cbdd40842cc3fcab2232078d2
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.86.0.orig.tar.gz' curl_7.86.0.orig.tar.gz 4232231 SHA256:3dfdd39ba95e18847965cd3051ea6d22586609d9011d91df7bc5521288987a82
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.86.0.orig.tar.gz.asc' curl_7.86.0.orig.tar.gz.asc 488 SHA256:8e31713d4513023e44a2034af660b2af6240a8501cadf153f96431cd34f5fc31
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.86.0-2.debian.tar.xz' curl_7.86.0-2.debian.tar.xz 40508 SHA256:1a555a414051a86677389ab912c9328da9b94a74940fd51e8378d17a5a0d3b61
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.86.0-2/
 
-- https://sources.debian.net/src/curl/7.86.0-2/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.86.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.86.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-10`
 
@@ -1402,20 +1394,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.35.1-1
-'http://deb.debian.org/debian/pool/main/g/git/git_2.35.1-1.dsc' git_2.35.1-1.dsc 2825 SHA256:7729b160cbcdd798f0b180ae8c40542321d73e55c00dbd0ec483ddfaf7b7d117
-'http://deb.debian.org/debian/pool/main/g/git/git_2.35.1.orig.tar.xz' git_2.35.1.orig.tar.xz 6874520 SHA256:d768528e6443f65a203036266f1ca50f9d127ba89751e32ead37117ed9191080
-'http://deb.debian.org/debian/pool/main/g/git/git_2.35.1-1.debian.tar.xz' git_2.35.1-1.debian.tar.xz 708244 SHA256:33b241bcf5b8a8483396878ae44ba204c252735f9b2c10af5b6387e0543579b5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.35.1-1/
 
-- https://sources.debian.net/src/git/1:2.35.1-1/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.35.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.35.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.74.2-1`
 
@@ -1455,21 +1440,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `Unicode-DFS-2016`
 - `bzip2-1.0.6`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.74.2-1
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.74.2-1.dsc' glib2.0_2.74.2-1.dsc 3750 SHA256:cf20f706170bc7a62e0c03532592473dfdb526b2774cbf86e7dba134be79ac04
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.74.2.orig-unicode-data.tar.xz' glib2.0_2.74.2.orig-unicode-data.tar.xz 266184 SHA256:7c3e36ec1356ac025a92169b74c4c3e6858345f59ed4ea4cf0db300dec4fa21a
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.74.2.orig.tar.xz' glib2.0_2.74.2.orig.tar.xz 5182312 SHA256:ddf03e9bc7ea5717ef3c2f77c0714913a1726adc0bf3e8247cf41475284ec7bc
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.74.2-1.debian.tar.xz' glib2.0_2.74.2-1.debian.tar.xz 117032 SHA256:645d6c8125c319e1112b0172ff78ed763664ba619635f569d1b0c694ca780338
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/glib2.0/2.74.2-1/
 
-- https://sources.debian.net/src/glib2.0/2.74.2-1/ (for browsing the source)
-- https://sources.debian.net/src/glib2.0/2.74.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/glib2.0/2.74.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.36-6`
 

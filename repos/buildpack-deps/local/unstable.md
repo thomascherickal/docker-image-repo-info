@@ -1778,20 +1778,13 @@ Licenses: (parsed from: `/usr/share/doc/libharfbuzz0b/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris harfbuzz=5.3.1-2
-'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_5.3.1-2.dsc' harfbuzz_5.3.1-2.dsc 2706 SHA256:819a4983fba012b92d16cd1166615b42f38db66437d249e5fc7043cdce6c2e51
-'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_5.3.1.orig.tar.xz' harfbuzz_5.3.1.orig.tar.xz 17874260 SHA256:4a6ce097b75a8121facc4ba83b5b083bfec657f45b003cd5a3424f2ae6b4434d
-'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_5.3.1-2.debian.tar.xz' harfbuzz_5.3.1-2.debian.tar.xz 12268 SHA256:5e0ddd7eb86c60345a15b7330d9641c9fc1d07f750683d42d07cc29db6b86a90
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/harfbuzz/5.3.1-2/
 
-- https://sources.debian.net/src/harfbuzz/5.3.1-2/ (for browsing the source)
-- https://sources.debian.net/src/harfbuzz/5.3.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/harfbuzz/5.3.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `hicolor-icon-theme=0.17-2`
 
@@ -1829,19 +1822,13 @@ Licenses: (parsed from: `/usr/share/doc/hostname/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris hostname=3.23
-'http://deb.debian.org/debian/pool/main/h/hostname/hostname_3.23.dsc' hostname_3.23.dsc 1402 SHA256:0694c083fad82da1fd33204557a30bfc745a689a64030ba360062daafe03ede0
-'http://deb.debian.org/debian/pool/main/h/hostname/hostname_3.23.tar.gz' hostname_3.23.tar.gz 13672 SHA256:bc6d1954b22849869ff8b2a602e39f08b1702f686d4b58dd7927cdeb5b4876ef
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/hostname/3.23/
 
-- https://sources.debian.net/src/hostname/3.23/ (for browsing the source)
-- https://sources.debian.net/src/hostname/3.23/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/hostname/3.23/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `icu=72.1-3`
 
@@ -4317,20 +4304,13 @@ Licenses: (parsed from: `/usr/share/doc/libnuma1/copyright`)
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris numactl=2.0.15-1
-'http://deb.debian.org/debian/pool/main/n/numactl/numactl_2.0.15-1.dsc' numactl_2.0.15-1.dsc 1974 SHA256:d428e041c97e5d5c3a74f82781532bad95262f9261fe786427f74e14c457183e
-'http://deb.debian.org/debian/pool/main/n/numactl/numactl_2.0.15.orig.tar.gz' numactl_2.0.15.orig.tar.gz 110817 SHA256:1508bb02f56f1b9376243980ba96291856ba083e7a3480fdcb0fbf11ff01d6fa
-'http://deb.debian.org/debian/pool/main/n/numactl/numactl_2.0.15-1.debian.tar.xz' numactl_2.0.15-1.debian.tar.xz 7016 SHA256:a19526d54d1ae0e291b90ab4802e8adf5af0e196505f64b75ba6f6e3ffbcd1b8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/numactl/2.0.15-1/
 
-- https://sources.debian.net/src/numactl/2.0.15-1/ (for browsing the source)
-- https://sources.debian.net/src/numactl/2.0.15-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/numactl/2.0.15-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openexr=3.1.5-4`
 

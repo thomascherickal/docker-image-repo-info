@@ -65,14 +65,9 @@ Licenses: (parsed from: `/usr/share/doc/libaprutil1/copyright`)
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apr-util=1.6.1-5ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-5ubuntu4.dsc' apr-util_1.6.1-5ubuntu4.dsc 2266 SHA512:ed049fbfc6316f2c014c0933851de8fa3d671d62ef9e68f153ba39d9e0bcbd9a627fee9902773fca85c6bb35b264ddc247f50aacd3f1773175be09cfd0d1a585
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1.orig.tar.bz2' apr-util_1.6.1.orig.tar.bz2 428595 SHA512:40eff8a37c0634f7fdddd6ca5e596b38de15fd10767a34c30bbe49c632816e8f3e1e230678034f578dd5816a94f246fb5dfdf48d644829af13bf28de3225205d
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-5ubuntu4.debian.tar.xz' apr-util_1.6.1-5ubuntu4.debian.tar.xz 342880 SHA512:01795e95ce4b5003c3622925151caea9bdf0104d33f1d4ef4279429bfdf4a381749e6019658bdc9037fabde0aab6c9f6b437e81303b89364f0f5385f34ad4070
-```
 
 ### `dpkg` source package: `apr=1.7.0-8build1`
 
