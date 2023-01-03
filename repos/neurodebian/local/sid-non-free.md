@@ -203,20 +203,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.2-2
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2-2.dsc' bash_5.2-2.dsc 2296 SHA256:29d400729f7eef31fb181ffc3cf1d1099b3432f70da46dd702ae5872a5990efa
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2.orig.tar.xz' bash_5.2.orig.tar.xz 5886100 SHA256:f358a087da1f0c754f814172d8cd0b012ea68086d7aadd4eabff92074aa575d8
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2-2.debian.tar.xz' bash_5.2-2.debian.tar.xz 86508 SHA256:c4ea6d58fc2c50a6d34ea06522983eab47fc41345a34373c37f67eb3d89c853f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.2-2/
 
-- https://sources.debian.net/src/bash/5.2-2/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bzip2=1.0.8-5`
 
@@ -420,19 +413,13 @@ Licenses: (parsed from: `/usr/share/doc/debconf/copyright`)
 
 - `BSD-2-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debconf=1.5.80
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.80.dsc' debconf_1.5.80.dsc 2035 SHA256:6ac0151d82a50c972d7d0aaa9aa23c987b2e12e0ae04b3ceb268582a532472e6
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.80.tar.xz' debconf_1.5.80.tar.xz 571240 SHA256:8b8609fa013cda12916736b82c108063c2c11755e7cc1be7f5a03f473f663d38
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/debconf/1.5.80/
 
-- https://sources.debian.net/src/debconf/1.5.80/ (for browsing the source)
-- https://sources.debian.net/src/debconf/1.5.80/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debconf/1.5.80/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debian-archive-keyring=2021.1.1`
 
@@ -1690,20 +1677,13 @@ Licenses: (parsed from: `/usr/share/doc/libpcre2-8-0/copyright`)
 - `X11`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pcre2=10.40-3
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.40-3.dsc' pcre2_10.40-3.dsc 2302 SHA256:5bf89d8451b21377b879c010d297b30593565fa5ad2c6ab10966284b023a56bc
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.40.orig.tar.gz' pcre2_10.40.orig.tar.gz 2359622 SHA256:ded42661cab30ada2e72ebff9e725e745b4b16ce831993635136f2ef86177724
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.40-3.diff.gz' pcre2_10.40-3.diff.gz 7889 SHA256:e73ec04ac1b59b395a67d4248ba1b9e1f21fd414b802e0f997aeca78c4ffb384
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pcre2/10.40-3/
 
-- https://sources.debian.net/src/pcre2/10.40-3/ (for browsing the source)
-- https://sources.debian.net/src/pcre2/10.40-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pcre2/10.40-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `perl=5.36.0-6`
 
@@ -1882,21 +1862,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.40.0-2
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.40.0-2.dsc' sqlite3_3.40.0-2.dsc 2487 SHA256:947608ffde4cebea07a17d69f02cdc0bcdb5394f90d27a7e0313d04293d98c4a
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.40.0.orig-www.tar.xz' sqlite3_3.40.0.orig-www.tar.xz 5820724 SHA256:68f6fe79b29e8827f5afca2253ca8003f223b493c0183da37ba6c5dd1d90b384
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.40.0.orig.tar.xz' sqlite3_3.40.0.orig.tar.xz 8024516 SHA256:bf128951764cef3cab199cd6b962cb373336743f9bb791c6bb03ac467de08333
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.40.0-2.debian.tar.xz' sqlite3_3.40.0-2.debian.tar.xz 30308 SHA256:cc75f5a93571f6f979b22868de070ffe711462e39a94c54d720f1261aa4e7c85
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.40.0-2/
 
-- https://sources.debian.net/src/sqlite3/3.40.0-2/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.40.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.40.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=252.3-2`
 
@@ -1987,21 +1959,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022f-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022f-1.dsc' tzdata_2022f-1.dsc 2205 SHA256:ba9398a31794bf68a9ab08edc1560b6fc41644db67381fa1044cc7bec71eaeb7
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022f.orig.tar.gz' tzdata_2022f.orig.tar.gz 436352 SHA256:9990d71f675d212567b931fe8aae1cab7027f89fefb8a79d808a6933a67af000
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022f.orig.tar.gz.asc' tzdata_2022f.orig.tar.gz.asc 833 SHA256:2788b16875bbb5f8ccd1343352ed9bcf7cb98393ea6ecb49f48bb938ffc88854
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022f-1.debian.tar.xz' tzdata_2022f-1.debian.tar.xz 112140 SHA256:e0780bbc953d605a30da7627ac3fd3bd738ef23aa5cad08d346367f2ef372b33
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2022f-1/
 
-- https://sources.debian.net/src/tzdata/2022f-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2022f-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2022f-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `usrmerge=35`
 
