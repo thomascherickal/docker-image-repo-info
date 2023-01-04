@@ -1317,20 +1317,13 @@ Licenses: (parsed from: `/usr/share/doc/libharfbuzz0b/copyright`)
 
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris harfbuzz=5.2.0-2
-'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_5.2.0-2.dsc' harfbuzz_5.2.0-2.dsc 2706 SHA256:4bfd1fc7f915a6e94672cfcf0223f312c6827c1e52425de04b51006eb8e6f2e3
-'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_5.2.0.orig.tar.xz' harfbuzz_5.2.0.orig.tar.xz 17711968 SHA256:735a94917b47936575acb4d4fa7e7986522f8a89527e4635721474dee2bc942c
-'http://deb.debian.org/debian/pool/main/h/harfbuzz/harfbuzz_5.2.0-2.debian.tar.xz' harfbuzz_5.2.0-2.debian.tar.xz 11288 SHA256:091bd761e734cb982ef9ca8571d99ea761b669b6246e0a69e161604700945fae
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/harfbuzz/5.2.0-2/
 
-- https://sources.debian.net/src/harfbuzz/5.2.0-2/ (for browsing the source)
-- https://sources.debian.net/src/harfbuzz/5.2.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/harfbuzz/5.2.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `hostname=3.23`
 
@@ -3113,21 +3106,13 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris p11-kit=0.24.1-1
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.1-1.dsc' p11-kit_0.24.1-1.dsc 2501 SHA256:6d4336ed2799503c65dfb0518d623e3af46bac03e0e1a0ea9ce432044261d55b
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.1.orig.tar.xz' p11-kit_0.24.1.orig.tar.xz 838304 SHA256:d8be783efd5cd4ae534cee4132338e3f40f182c3205d23b200094ec85faaaef8
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.1.orig.tar.xz.asc' p11-kit_0.24.1.orig.tar.xz.asc 833 SHA256:48041a234bac05f70519b0d4727e78a129ea80a51baf92c7d419f80b7cbdf0ab
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.24.1-1.debian.tar.xz' p11-kit_0.24.1-1.debian.tar.xz 23200 SHA256:769674df62c3caeada0e5885a992302cbde63a81a09972bf6b78f8797ebc40bd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/p11-kit/0.24.1-1/
 
-- https://sources.debian.net/src/p11-kit/0.24.1-1/ (for browsing the source)
-- https://sources.debian.net/src/p11-kit/0.24.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/p11-kit/0.24.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.5.2-5`
 
@@ -3194,20 +3179,13 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 - `TCL`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pango1.0=1.50.10+ds-1
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.10%2bds-1.dsc' pango1.0_1.50.10+ds-1.dsc 3746 SHA256:c535dafe1f8c8eefc2ce36b873e14e2457ded847effaa88727a61c9fab41ed56
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.10%2bds.orig.tar.xz' pango1.0_1.50.10+ds.orig.tar.xz 2671840 SHA256:ffeb42c3ad15b20a69d25116d83a39f5412b514b3f68dc2e61eae0fcfa7a20ec
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.50.10%2bds-1.debian.tar.xz' pango1.0_1.50.10+ds-1.debian.tar.xz 49292 SHA256:5ec6733f7bcdc5210463b963291af3f83348e6b1b728ebbef773ef485dd1d328
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pango1.0/1.50.10+ds-1/
 
-- https://sources.debian.net/src/pango1.0/1.50.10+ds-1/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.50.10+ds-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.50.10+ds-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-7`
 
@@ -3277,20 +3255,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pcre3=2:8.39-14
-'http://deb.debian.org/debian/pool/main/p/pcre3/pcre3_8.39-14.dsc' pcre3_8.39-14.dsc 2226 SHA256:d94bb6081f26cdd05738aab33cee1cfbd6129a0ccd340b777c2814f4b6b7dc3d
-'http://deb.debian.org/debian/pool/main/p/pcre3/pcre3_8.39.orig.tar.bz2' pcre3_8.39.orig.tar.bz2 1560758 SHA256:b858099f82483031ee02092711689e7245586ada49e534a06e678b8ea9549e8b
-'http://deb.debian.org/debian/pool/main/p/pcre3/pcre3_8.39-14.debian.tar.gz' pcre3_8.39-14.debian.tar.gz 27185 SHA256:51369d53bb668d9a41de0adf094450f7bed57541a2d4e2cabc8dccec5026a1cf
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pcre3/2:8.39-14/
 
-- https://sources.debian.net/src/pcre3/2:8.39-14/ (for browsing the source)
-- https://sources.debian.net/src/pcre3/2:8.39-14/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pcre3/2:8.39-14/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `perl=5.36.0-4`
 
