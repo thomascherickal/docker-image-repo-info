@@ -1,10 +1,10 @@
-# `maven:3.8.6-eclipse-temurin-17-focal`
+# `maven:3.8.7-eclipse-temurin-17-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:65adf296457f632612a8213b81c51e6dc70d47a7ed9c4a58bde10c7927390d3f`
-- Created: `2022-12-09T07:15:37.34978505Z`
-- Virtual Size: ~ 556.38 Mb  
+- Image ID: `sha256:4f46df66285043d6003049f0a5a1f7c414d84d9f99e62273a4169d722d1317f3`
+- Created: `2023-01-02T18:40:17.748905307Z`
+- Virtual Size: ~ 555.94 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`

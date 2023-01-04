@@ -1,10 +1,10 @@
-# `maven:3.8.6-openjdk-18-slim`
+# `maven:3.8.7-openjdk-18-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3648648aef4ba387ec57dad985c9763e3707b864ed3eea552b48b5bd046d2370`
-- Created: `2022-12-22T01:21:23.744964411Z`
-- Virtual Size: ~ 426.58 Mb  
+- Image ID: `sha256:c67a913ae47103134dc9876f605e978f4a3275f25cc6787683bdbdb4904d9078`
+- Created: `2023-01-02T18:39:36.078464527Z`
+- Virtual Size: ~ 426.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`

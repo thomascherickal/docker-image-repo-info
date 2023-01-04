@@ -1,10 +1,10 @@
-# `maven:3.8.6-ibm-semeru-11-focal`
+# `maven:3.8.7-ibm-semeru-11-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:71868d86fa29504cfc261415e6c554b990a7e92a585321e8b0bf0ae4f901f42f`
-- Created: `2022-12-09T07:17:35.106866951Z`
-- Virtual Size: ~ 572.07 Mb  
+- Image ID: `sha256:6f36268e09e7ea7d18b79c784b2c546022c0d67c9d2f12d5260d65c4fe110e14`
+- Created: `2023-01-02T18:41:20.343766485Z`
+- Virtual Size: ~ 571.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`

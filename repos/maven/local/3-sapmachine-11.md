@@ -1,10 +1,10 @@
-# `maven:3.8.6-sapmachine-11`
+# `maven:3.8.7-sapmachine-11`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2222699ba5f8cda18b2cf0eac81095dc425248492b8674f5976137bbdda543c9`
-- Created: `2022-12-09T07:18:16.23332447Z`
-- Virtual Size: ~ 522.69 Mb  
+- Image ID: `sha256:05b57cbbe11e914ab706a4c70a7a2e9f19db013d4cf7de65934283187d29c7d4`
+- Created: `2023-01-02T18:42:07.319995081Z`
+- Virtual Size: ~ 522.25 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
