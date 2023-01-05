@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f69aa58698a6d0c0de481069e2e183bbac0dae0dcb825db4112e84f617d80c15`
-- Created: `2022-12-21T15:40:49.620173773Z`
-- Virtual Size: ~ 232.71 Mb  
+- Image ID: `sha256:2979ffadbd7052b50cab0da3a49d5817d98ab2cf5233b4045536d962eda7b525`
+- Created: `2023-01-04T02:12:18.65386816Z`
+- Virtual Size: ~ 233.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
 - Environment:
   - `PATH=/opt/pypy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `PYPY_VERSION=7.3.10`
+  - `PYPY_VERSION=7.3.11`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/3843bff3a0a61da5b63ea0b7d34794c5c51a2f11/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=95c5ee602b2f3cc50ae053d716c3c89bea62c58568f64d7d25924d399b2d5218`
   - `HY_VERSION=0.25.0`
@@ -1194,11 +1194,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.3.8+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.19.260-1`
+### `dpkg` source package: `linux=4.19.269-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.19.260-1`
+- `linux-libc-dev:amd64=4.19.269-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1213,17 +1213,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.19.260-1
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.260-1.dsc' linux_4.19.260-1.dsc 191175 SHA256:f9ee6c14c965c6fa0edc571c90528a4633af6f1be122611f469bdd30820c1c40
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.260.orig.tar.xz' linux_4.19.260.orig.tar.xz 107669140 SHA256:268b96f0f24422e22f6cacf8ed54a2d243b2629ce1f37471f73c10bac841ec87
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.260-1.debian.tar.xz' linux_4.19.260-1.debian.tar.xz 1554248 SHA256:9bcd2e000c6c7621893dbe1427b27a7b539fcb6b652d68eff0115a41ba7177b8
+$ apt-get source -qq --print-uris linux=4.19.269-1
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.269-1.dsc' linux_4.19.269-1.dsc 191175 SHA256:d0ae91ec3417756b99dad1f2b809a6761f2d9582ef4b65de157e615c153428c6
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.269.orig.tar.xz' linux_4.19.269.orig.tar.xz 107667056 SHA256:4eeb8209a8454d497de3b9d02d94f329394691d80482833c58985ecc6c53a2a8
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.269-1.debian.tar.xz' linux_4.19.269-1.debian.tar.xz 1569132 SHA256:03d425fbb17bba30403d1e25c0a7ed41a5d8de893f82cd569ba13a055ae5bee2
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.19.260-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.19.260-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.19.260-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.19.269-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.19.269-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.19.269-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lz4=1.8.3-1+deb10u1`
 
