@@ -1,7 +1,7 @@
 ## `python:3-alpine`
 
 ```console
-$ docker pull python@sha256:af8fef83397b3886ed93d2c81bf3b4e70d39c0789c1c6feb1ecb86ca9bc42a0a
+$ docker pull python@sha256:c6efc7dae2bad45c023b0606dd0427b99c130ccb54ab996a8b9acdbad59bf8d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17,14 +17,14 @@ $ docker pull python@sha256:af8fef83397b3886ed93d2c81bf3b4e70d39c0789c1c6feb1ecb
 ### `python:3-alpine` - linux; amd64
 
 ```console
-$ docker pull python@sha256:ed092003fe2c497ba66569dae9fa037af68e13afb3e51efa5b760bd62e6b4ae6
+$ docker pull python@sha256:ab54613ad5bc67ae68a123837c7a4ac720ecd6ae81e002c796182074cda2f529
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **19.9 MB (19925952 bytes)**  
+-	Total Size: **19.9 MB (19925965 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:18ccdc39ea2835afc9c7b68089c85d21577bb4ceaa44a156a57c555bcfa9a8cc`
+-	Image ID: `sha256:426bd32e71b2322064af6bb0fe13a42196d48cae73138d9fdd2eb129c598291b`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -48,15 +48,15 @@ RUN set -eux; 		apk add --no-cache --virtual .build-deps 		gnupg 		tar 		xz 				
 RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo "$src" | tr -d 3)"; 		[ -s "/usr/local/bin/$src" ]; 		[ ! -e "/usr/local/bin/$dst" ]; 		ln -svT "$src" "/usr/local/bin/$dst"; 	done
 # Thu, 08 Dec 2022 01:08:16 GMT
 ENV PYTHON_PIP_VERSION=22.3.1
-# Thu, 08 Dec 2022 01:08:16 GMT
-ENV PYTHON_SETUPTOOLS_VERSION=65.5.0
-# Thu, 08 Dec 2022 01:08:16 GMT
+# Fri, 06 Jan 2023 18:42:22 GMT
+ENV PYTHON_SETUPTOOLS_VERSION=65.5.1
+# Fri, 06 Jan 2023 18:42:22 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/66030fa03382b4914d4c4d0896961a0bdeeeb274/public/get-pip.py
-# Thu, 08 Dec 2022 01:08:16 GMT
+# Fri, 06 Jan 2023 18:42:22 GMT
 ENV PYTHON_GET_PIP_SHA256=1e501cf004eac1b7eb1f97266d28f995ae835d30250bec7f8850562703067dc6
-# Thu, 08 Dec 2022 01:08:23 GMT
+# Fri, 06 Jan 2023 18:42:29 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Thu, 08 Dec 2022 01:08:23 GMT
+# Fri, 06 Jan 2023 18:42:29 GMT
 CMD ["python3"]
 ```
 
@@ -77,22 +77,22 @@ CMD ["python3"]
 		Last Modified: Thu, 08 Dec 2022 04:34:59 GMT  
 		Size: 234.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cfcd1e4ebaed44a6f2a00121b619ba39704c849c536da2abf6883c304e61c56`  
-		Last Modified: Thu, 08 Dec 2022 04:35:00 GMT  
-		Size: 3.1 MB (3056427 bytes)  
+	-	`sha256:c36ddec1e9ffa704139798f25b7553d050699f648b41c6f4b4bf2e3e07e85bc1`  
+		Last Modified: Fri, 06 Jan 2023 18:48:03 GMT  
+		Size: 3.1 MB (3056440 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:3-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull python@sha256:41451b11ffbc53d3df0ba493972aca8c13c1b244a865d555046a1a59b321a18c
+$ docker pull python@sha256:590950fc822fc6c21fe9308f69b2de47fa7bdd827a7a4e7720ff1ae3bbe31d13
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **19.2 MB (19173736 bytes)**  
+-	Total Size: **19.2 MB (19173738 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fae4f0308737f28f40f5f2b6358b2c24699f6c71b8286c6937cb7cdcb5c8be02`
+-	Image ID: `sha256:d0f77b4104e0cffac7ceed174f71f95b9d6393b203c11516c8b9185f22e80970`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -116,15 +116,15 @@ RUN set -eux; 		apk add --no-cache --virtual .build-deps 		gnupg 		tar 		xz 				
 RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo "$src" | tr -d 3)"; 		[ -s "/usr/local/bin/$src" ]; 		[ ! -e "/usr/local/bin/$dst" ]; 		ln -svT "$src" "/usr/local/bin/$dst"; 	done
 # Wed, 07 Dec 2022 23:00:05 GMT
 ENV PYTHON_PIP_VERSION=22.3.1
-# Wed, 07 Dec 2022 23:00:05 GMT
-ENV PYTHON_SETUPTOOLS_VERSION=65.5.0
-# Wed, 07 Dec 2022 23:00:05 GMT
+# Fri, 06 Jan 2023 23:09:48 GMT
+ENV PYTHON_SETUPTOOLS_VERSION=65.5.1
+# Fri, 06 Jan 2023 23:09:49 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/66030fa03382b4914d4c4d0896961a0bdeeeb274/public/get-pip.py
-# Wed, 07 Dec 2022 23:00:05 GMT
+# Fri, 06 Jan 2023 23:09:49 GMT
 ENV PYTHON_GET_PIP_SHA256=1e501cf004eac1b7eb1f97266d28f995ae835d30250bec7f8850562703067dc6
-# Wed, 07 Dec 2022 23:00:12 GMT
+# Fri, 06 Jan 2023 23:09:58 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Wed, 07 Dec 2022 23:00:12 GMT
+# Fri, 06 Jan 2023 23:09:59 GMT
 CMD ["python3"]
 ```
 
@@ -145,9 +145,9 @@ CMD ["python3"]
 		Last Modified: Thu, 08 Dec 2022 03:36:01 GMT  
 		Size: 230.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7e092798464829416877772aef26976ac7fdcca0376078d0cf71ff1ec3cca05b`  
-		Last Modified: Thu, 08 Dec 2022 03:36:02 GMT  
-		Size: 3.1 MB (3056219 bytes)  
+	-	`sha256:7f315803852908e62b52b83be593af6f225dcd09ea35012315c7b9c5fb6a04c4`  
+		Last Modified: Fri, 06 Jan 2023 23:13:31 GMT  
+		Size: 3.1 MB (3056221 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:3-alpine` - linux; arm variant v7
@@ -221,14 +221,14 @@ CMD ["python3"]
 ### `python:3-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull python@sha256:5693bfba00d784b3bb48b1f485233a2ac845946cde2a65427e316882b3e2f564
+$ docker pull python@sha256:f4b9f49aca68eec3dac4a783ffeaf433e069d8ad2627dada641dc7c7dbeb1dd4
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **19.7 MB (19736772 bytes)**  
+-	Total Size: **19.7 MB (19736755 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bbd3f7c28acebf719a48db90839073e2d32da8a1d44d9686613ca58ec56942f9`
+-	Image ID: `sha256:1cf9a2b6e13d07e76fd205d927d34140134e38d4d4eb68069d0d82a051ada47f`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -252,15 +252,15 @@ RUN set -eux; 		apk add --no-cache --virtual .build-deps 		gnupg 		tar 		xz 				
 RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo "$src" | tr -d 3)"; 		[ -s "/usr/local/bin/$src" ]; 		[ ! -e "/usr/local/bin/$dst" ]; 		ln -svT "$src" "/usr/local/bin/$dst"; 	done
 # Thu, 08 Dec 2022 00:23:40 GMT
 ENV PYTHON_PIP_VERSION=22.3.1
-# Thu, 08 Dec 2022 00:23:40 GMT
-ENV PYTHON_SETUPTOOLS_VERSION=65.5.0
-# Thu, 08 Dec 2022 00:23:40 GMT
+# Fri, 06 Jan 2023 20:53:50 GMT
+ENV PYTHON_SETUPTOOLS_VERSION=65.5.1
+# Fri, 06 Jan 2023 20:53:50 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/66030fa03382b4914d4c4d0896961a0bdeeeb274/public/get-pip.py
-# Thu, 08 Dec 2022 00:23:40 GMT
+# Fri, 06 Jan 2023 20:53:50 GMT
 ENV PYTHON_GET_PIP_SHA256=1e501cf004eac1b7eb1f97266d28f995ae835d30250bec7f8850562703067dc6
-# Thu, 08 Dec 2022 00:23:46 GMT
+# Fri, 06 Jan 2023 20:53:56 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Thu, 08 Dec 2022 00:23:46 GMT
+# Fri, 06 Jan 2023 20:53:56 GMT
 CMD ["python3"]
 ```
 
@@ -281,22 +281,22 @@ CMD ["python3"]
 		Last Modified: Thu, 08 Dec 2022 03:13:03 GMT  
 		Size: 230.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1fe52bb1731b2f5a7a7c38544faa2cbd654ecebbf287757c5e12d0d3c0c35a9`  
-		Last Modified: Thu, 08 Dec 2022 03:13:03 GMT  
-		Size: 3.1 MB (3056469 bytes)  
+	-	`sha256:9a89ffc9625815de219890bce8462a38f8beeac8fb2ea55b327cc4b53b1a8cbe`  
+		Last Modified: Fri, 06 Jan 2023 20:59:31 GMT  
+		Size: 3.1 MB (3056452 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:3-alpine` - linux; 386
 
 ```console
-$ docker pull python@sha256:592ea56207ee16fa88b48169f52ad56779f3c72a53ad6350406b78f1ee4baa43
+$ docker pull python@sha256:3496a09b1110f63943089f23d44b964916187064e166605b3b0d6a4f952527c4
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.2 MB (20195035 bytes)**  
+-	Total Size: **20.2 MB (20195074 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3b5e3ab62de573a861032dbae0087954b765be18ac6929e70fd31607f6887b63`
+-	Image ID: `sha256:bf1df40b52ebfb56b1629b6a0b61c17aa833563cf30e0b224aa92d8d78926322`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -320,15 +320,15 @@ RUN set -eux; 		apk add --no-cache --virtual .build-deps 		gnupg 		tar 		xz 				
 RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo "$src" | tr -d 3)"; 		[ -s "/usr/local/bin/$src" ]; 		[ ! -e "/usr/local/bin/$dst" ]; 		ln -svT "$src" "/usr/local/bin/$dst"; 	done
 # Thu, 08 Dec 2022 01:07:09 GMT
 ENV PYTHON_PIP_VERSION=22.3.1
-# Thu, 08 Dec 2022 01:07:10 GMT
-ENV PYTHON_SETUPTOOLS_VERSION=65.5.0
-# Thu, 08 Dec 2022 01:07:11 GMT
+# Fri, 06 Jan 2023 18:43:55 GMT
+ENV PYTHON_SETUPTOOLS_VERSION=65.5.1
+# Fri, 06 Jan 2023 18:43:56 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/66030fa03382b4914d4c4d0896961a0bdeeeb274/public/get-pip.py
-# Thu, 08 Dec 2022 01:07:12 GMT
+# Fri, 06 Jan 2023 18:43:57 GMT
 ENV PYTHON_GET_PIP_SHA256=1e501cf004eac1b7eb1f97266d28f995ae835d30250bec7f8850562703067dc6
-# Thu, 08 Dec 2022 01:07:19 GMT
+# Fri, 06 Jan 2023 18:44:04 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Thu, 08 Dec 2022 01:07:20 GMT
+# Fri, 06 Jan 2023 18:44:05 GMT
 CMD ["python3"]
 ```
 
@@ -349,22 +349,22 @@ CMD ["python3"]
 		Last Modified: Thu, 08 Dec 2022 04:49:44 GMT  
 		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cf163fb99fce054ec56f4fca1b8e8635e80262e7f13f609b0000ba25bd81e79b`  
-		Last Modified: Thu, 08 Dec 2022 04:49:45 GMT  
-		Size: 3.1 MB (3054166 bytes)  
+	-	`sha256:33c837f2bd903729c67cdfb49fa321e04593a6c763d06aaa1e67d4fe5764f51b`  
+		Last Modified: Fri, 06 Jan 2023 18:53:54 GMT  
+		Size: 3.1 MB (3054205 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:3-alpine` - linux; ppc64le
 
 ```console
-$ docker pull python@sha256:b8a7afab575771a258cffa90f38f446414b98ab234c65effec486ca21f5da79a
+$ docker pull python@sha256:9dd185bb1049822eea2e2c04f8ebed2ee90932c79f1c3c0ae2b99ac05db203c2
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.4 MB (20378527 bytes)**  
+-	Total Size: **20.4 MB (20378586 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ac075cdff67c7a8c5f3697dec8073c5193943768898ad8e571d401361e0bc67c`
+-	Image ID: `sha256:92f9e9b0c7d593d488907745092d26c3214f61ad90a529714aef4b8238b2894f`
 -	Default Command: `["python3"]`
 
 ```dockerfile
@@ -388,15 +388,15 @@ RUN set -eux; 		apk add --no-cache --virtual .build-deps 		gnupg 		tar 		xz 				
 RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo "$src" | tr -d 3)"; 		[ -s "/usr/local/bin/$src" ]; 		[ ! -e "/usr/local/bin/$dst" ]; 		ln -svT "$src" "/usr/local/bin/$dst"; 	done
 # Thu, 08 Dec 2022 03:00:52 GMT
 ENV PYTHON_PIP_VERSION=22.3.1
-# Thu, 08 Dec 2022 03:00:52 GMT
-ENV PYTHON_SETUPTOOLS_VERSION=65.5.0
-# Thu, 08 Dec 2022 03:00:53 GMT
+# Fri, 06 Jan 2023 20:50:53 GMT
+ENV PYTHON_SETUPTOOLS_VERSION=65.5.1
+# Fri, 06 Jan 2023 20:50:53 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/66030fa03382b4914d4c4d0896961a0bdeeeb274/public/get-pip.py
-# Thu, 08 Dec 2022 03:00:53 GMT
+# Fri, 06 Jan 2023 20:50:53 GMT
 ENV PYTHON_GET_PIP_SHA256=1e501cf004eac1b7eb1f97266d28f995ae835d30250bec7f8850562703067dc6
-# Thu, 08 Dec 2022 03:01:04 GMT
+# Fri, 06 Jan 2023 20:51:05 GMT
 RUN set -eux; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Thu, 08 Dec 2022 03:01:05 GMT
+# Fri, 06 Jan 2023 20:51:07 GMT
 CMD ["python3"]
 ```
 
@@ -417,9 +417,9 @@ CMD ["python3"]
 		Last Modified: Thu, 08 Dec 2022 08:24:05 GMT  
 		Size: 232.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cb6bc25f4f7c98ce7ee5a13176531ef7afbeb15b7c66fc0f9ce6f626d075c69b`  
-		Last Modified: Thu, 08 Dec 2022 08:24:07 GMT  
-		Size: 3.1 MB (3056436 bytes)  
+	-	`sha256:1fcf7e9a8c34bbdf028ec95e6bdab1109d0de97394c28a2c62e81cc26549a55f`  
+		Last Modified: Fri, 06 Jan 2023 20:58:33 GMT  
+		Size: 3.1 MB (3056495 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:3-alpine` - linux; s390x
