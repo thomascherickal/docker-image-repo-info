@@ -484,15 +484,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.81.0-1ubuntu1.6
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.6.dsc' curl_7.81.0-1ubuntu1.6.dsc 3139 SHA512:f8dadc5d836c69d24bab3272d28aeca71d73a9c5a1aec5302043fd0bf1870423de694580c38954f09100268f3094d678bc82aabcaa0362e95ff6ab893d122d47
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz' curl_7.81.0.orig.tar.gz 4188040 SHA512:e3084f0fa083f7f93eac923edbfdddb5fd0a372b94673ba9d4427a2b95508898c15ecdf63b99a1c1f6cf3215e27b06cbaa2b7073df038d43b362e586f92495d3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz.asc' curl_7.81.0.orig.tar.gz.asc 488 SHA512:92bc5ede831551285d67b03abe8400c609ad31c9d33e324ee5c41b92dd5c2a0245a09a396bd76807b3e44bcfef944b1e16ac266264f7b85d27cc1c072a6e82bd
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.6.debian.tar.xz' curl_7.81.0-1ubuntu1.6.debian.tar.xz 53192 SHA512:88bd319a13c8594ac6cccdddb0b499e7e9554dee2b16cae63bf6e023f983f6939a3c43f686798a329166e45e3c5d29f6d0c31ed59d4ae17b998f86c486670a2d
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg2-3ubuntu1`
 
@@ -1880,15 +1874,9 @@ Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 - `GPL-3`
 - `LGPL-2.1-or-later`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libksba=1.6.0-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0-2ubuntu0.1.dsc' libksba_1.6.0-2ubuntu0.1.dsc 2585 SHA512:a37a73c251d4eaa5aa47cdccf00eb1d1616d9acf0999c1ec46747482f367d513afd5fc087c10e40279cd81c6741ea914e5be7ddf80d299624be58e4a08375e9e
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0.orig.tar.bz2' libksba_1.6.0.orig.tar.bz2 662120 SHA512:a7c76d41dfd8ec6383ac2de3c53848cd9f066b538f6f3cd43175e3c8095df51b96d0a24a573481c0c4856b09b7c224e2b562d88f5c0801e7acfb582ea2739c2b
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0.orig.tar.bz2.asc' libksba_1.6.0.orig.tar.bz2.asc 228 SHA512:fc381ea66eefdb431a5248fa3ac0751d7343d7f99cc7ebf7621b0763e6e31a80b45c5e17b09bbc7c1c1154e6a0152af1f13798f64959ac63f50b789ec046d7a3
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0-2ubuntu0.1.debian.tar.xz' libksba_1.6.0-2ubuntu0.1.debian.tar.xz 15320 SHA512:91f69cc5f7ceaf2e638825d0e4c76b48ae35538c1a16e39dc8e922cc4cf8e91ebf7c40e19aa83d2ec87c227ae4cc8ea11f2e983c4b3a5648d7fbb04fc161cd36
-```
 
 ### `dpkg` source package: `liblangtag=0.6.3-2ubuntu1`
 
