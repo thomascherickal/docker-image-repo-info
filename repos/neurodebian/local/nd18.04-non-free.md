@@ -824,15 +824,9 @@ Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libksba=1.3.5-2ubuntu0.18.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2ubuntu0.18.04.1.dsc' libksba_1.3.5-2ubuntu0.18.04.1.dsc 2697 SHA512:153e61eab772f0a1013df1c5b41d0c8bdcde582a9733252d6f08f0ba0ee4032d2d0a944d049034410b35e75eab8a3e329f594084afb93649914d67a2c8a335b0
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2' libksba_1.3.5.orig.tar.bz2 620649 SHA512:60179bfd109b7b4fd8d2b30a3216540f03f5a13620d9a5b63f1f95788028708a420911619f172ba57e945a6a2fcd2ef7eaafc5585a0eb2b9652cfadf47bf39a2
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2.asc' libksba_1.3.5.orig.tar.bz2.asc 287 SHA512:6b58b1c6ee924230e4f3b040836e85cb3b3f527f667bcb370c28d8ec702c884bcceab374688e02d0356dede81f9fcf975d726c1958d4d87e5c41757a6b2ba39e
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2ubuntu0.18.04.1.debian.tar.xz' libksba_1.3.5-2ubuntu0.18.04.1.debian.tar.xz 14592 SHA512:ffa8d10c546fa1be6a358893498994d07bbd9a443326ed3b270a0d6d0cdc18c5999678b4e1033ba18729bca4dbd98c073fd95e35c545e25551578a341287882d
-```
 
 ### `dpkg` source package: `libseccomp=2.5.1-1ubuntu1~18.04.2`
 
