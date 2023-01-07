@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ab6dbc9f5634cc11a6e13b7709e3551a547d23fef20ec6d6a0512f0ddd7d26bd`
-- Created: `2022-12-09T00:44:39.412693404Z`
-- Virtual Size: ~ 740.55 Mb  
+- Image ID: `sha256:47dc35af3e41bd9e54b03360828235b798e138804490e7808184345665b66d62`
+- Created: `2023-01-06T04:29:26.180197662Z`
+- Virtual Size: ~ 741.01 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.13`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.13.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.13.tar.xz.asc`
-  - `PHP_SHA256=b15ef0ccdd6760825604b3c4e3e73558dcf87c75ef1d68ef4289d8fd261ac856`
+  - `PHP_VERSION=8.1.14`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.14.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.14.tar.xz.asc`
+  - `PHP_SHA256=e16e47a872d58685913ac848ce92ec49f42c1828110c98c65fb6265a08724a1a`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `NEXTCLOUD_VERSION=25.0.2`
@@ -710,16 +710,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r4 description:
+libcurl-7.83.1-r5 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r4 webpage:
+libcurl-7.83.1-r5 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r4 installed size:
+libcurl-7.83.1-r5 installed size:
 512 KiB
 
-libcurl-7.83.1-r4 license:
+libcurl-7.83.1-r5 license:
 curl
 
 ```
@@ -1050,16 +1050,16 @@ GPL-2.0-or-later LGPL-2.1-or-later
 ### `apk` package: `libtasn1`
 
 ```console
-libtasn1-4.18.0-r0 description:
+libtasn1-4.18.0-r1 description:
 The ASN.1 library used in GNUTLS
 
-libtasn1-4.18.0-r0 webpage:
+libtasn1-4.18.0-r1 webpage:
 https://www.gnu.org/software/gnutls/
 
-libtasn1-4.18.0-r0 installed size:
+libtasn1-4.18.0-r1 installed size:
 84 KiB
 
-libtasn1-4.18.0-r0 license:
+libtasn1-4.18.0-r1 license:
 LGPL-2.1-or-later
 
 ```
