@@ -1,7 +1,7 @@
 ## `redis:7-alpine3.17`
 
 ```console
-$ docker pull redis@sha256:a5c17a333421b86d3e27063c25927f9cf0891dd3fd1fdefaa2099ae670504519
+$ docker pull redis@sha256:7a325af04e643b7685874adcedc381ed8d739e3dea9737b0521faec444124be8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -236,73 +236,73 @@ CMD ["redis-server"]
 ### `redis:7-alpine3.17` - linux; arm64 variant v8
 
 ```console
-$ docker pull redis@sha256:2531ab66a8e7d1ee63c500366947640035fca3849e2c0ed5ace7551a64c89a4f
+$ docker pull redis@sha256:02ebd2634174623435e63f596793ea02651b5e4930f96518f8672e0359ecef30
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **12.4 MB (12369676 bytes)**  
+-	Total Size: **12.4 MB (12369716 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c03be620fd3be11d3da8eb80526cfa37ae63c562f480af01723f2732f45d4626`
+-	Image ID: `sha256:faced132af8d474b63fc3802ffd4acde24e498c70cd3954cc2a868f22543876a`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["redis-server"]`
 
 ```dockerfile
-# Tue, 22 Nov 2022 22:39:21 GMT
-ADD file:685b5edadf1d5bf0aeb2aec35f810d83876e6d2ea0903b213f75a9c5f0dc5901 in / 
-# Tue, 22 Nov 2022 22:39:21 GMT
+# Mon, 09 Jan 2023 17:04:48 GMT
+ADD file:3080f19f39259a4b77cc53975de0184c78d4335ceb9ffb77a2838d0539ad6f85 in / 
+# Mon, 09 Jan 2023 17:04:49 GMT
 CMD ["/bin/sh"]
-# Thu, 01 Dec 2022 23:59:13 GMT
+# Mon, 09 Jan 2023 21:43:40 GMT
 RUN addgroup -S -g 1000 redis && adduser -S -G redis -u 999 redis
-# Thu, 01 Dec 2022 23:59:14 GMT
+# Mon, 09 Jan 2023 21:43:41 GMT
 RUN apk add --no-cache 		'su-exec>=0.2' 		tzdata
-# Fri, 16 Dec 2022 23:01:37 GMT
+# Mon, 09 Jan 2023 21:43:41 GMT
 ENV REDIS_VERSION=7.0.7
-# Fri, 16 Dec 2022 23:01:37 GMT
+# Mon, 09 Jan 2023 21:43:41 GMT
 ENV REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.0.7.tar.gz
-# Fri, 16 Dec 2022 23:01:37 GMT
+# Mon, 09 Jan 2023 21:43:41 GMT
 ENV REDIS_DOWNLOAD_SHA=8d327d7e887d1bb308fc37aaf717a0bf79f58129e3739069aaeeae88955ac586
-# Fri, 16 Dec 2022 23:02:08 GMT
+# Mon, 09 Jan 2023 21:44:13 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		dpkg-dev dpkg 		gcc 		linux-headers 		make 		musl-dev 		openssl-dev 		wget 	; 		wget -O redis.tar.gz "$REDIS_DOWNLOAD_URL"; 	echo "$REDIS_DOWNLOAD_SHA *redis.tar.gz" | sha256sum -c -; 	mkdir -p /usr/src/redis; 	tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1; 	rm redis.tar.gz; 		grep -E '^ *createBoolConfig[(]"protected-mode",.*, *1 *,.*[)],$' /usr/src/redis/src/config.c; 	sed -ri 's!^( *createBoolConfig[(]"protected-mode",.*, *)1( *,.*[)],)$!\10\2!' /usr/src/redis/src/config.c; 	grep -E '^ *createBoolConfig[(]"protected-mode",.*, *0 *,.*[)],$' /usr/src/redis/src/config.c; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	extraJemallocConfigureFlags="--build=$gnuArch"; 	dpkgArch="$(dpkg --print-architecture)"; 	case "${dpkgArch##*-}" in 		amd64 | i386 | x32) extraJemallocConfigureFlags="$extraJemallocConfigureFlags --with-lg-page=12" ;; 		*) extraJemallocConfigureFlags="$extraJemallocConfigureFlags --with-lg-page=16" ;; 	esac; 	extraJemallocConfigureFlags="$extraJemallocConfigureFlags --with-lg-hugepage=21"; 	grep -F 'cd jemalloc && ./configure ' /usr/src/redis/deps/Makefile; 	sed -ri 's!cd jemalloc && ./configure !&'"$extraJemallocConfigureFlags"' !' /usr/src/redis/deps/Makefile; 	grep -F "cd jemalloc && ./configure $extraJemallocConfigureFlags " /usr/src/redis/deps/Makefile; 		export BUILD_TLS=yes; 	make -C /usr/src/redis -j "$(nproc)" all; 	make -C /usr/src/redis install; 		serverMd5="$(md5sum /usr/local/bin/redis-server | cut -d' ' -f1)"; export serverMd5; 	find /usr/local/bin/redis* -maxdepth 0 		-type f -not -name redis-server 		-exec sh -eux -c ' 			md5="$(md5sum "$1" | cut -d" " -f1)"; 			test "$md5" = "$serverMd5"; 		' -- '{}' ';' 		-exec ln -svfT 'redis-server' '{}' ';' 	; 		rm -r /usr/src/redis; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .redis-rundeps $runDeps; 	apk del --no-network .build-deps; 		redis-cli --version; 	redis-server --version
-# Fri, 16 Dec 2022 23:02:09 GMT
+# Mon, 09 Jan 2023 21:44:13 GMT
 RUN mkdir /data && chown redis:redis /data
-# Fri, 16 Dec 2022 23:02:09 GMT
+# Mon, 09 Jan 2023 21:44:13 GMT
 VOLUME [/data]
-# Fri, 16 Dec 2022 23:02:09 GMT
+# Mon, 09 Jan 2023 21:44:13 GMT
 WORKDIR /data
-# Fri, 16 Dec 2022 23:02:09 GMT
+# Mon, 09 Jan 2023 21:44:13 GMT
 COPY file:a9e7249f657e2eec627bb4be492ad18aae3e5e1f0e47d22644eaf1ef2138c0ce in /usr/local/bin/ 
-# Fri, 16 Dec 2022 23:02:09 GMT
+# Mon, 09 Jan 2023 21:44:13 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Dec 2022 23:02:09 GMT
+# Mon, 09 Jan 2023 21:44:13 GMT
 EXPOSE 6379
-# Fri, 16 Dec 2022 23:02:10 GMT
+# Mon, 09 Jan 2023 21:44:14 GMT
 CMD ["redis-server"]
 ```
 
 -	Layers:
-	-	`sha256:261da4162673b93e5c0e7700a3718d40bcc086dbf24b1ec9b54bca0b82300626`  
-		Last Modified: Tue, 22 Nov 2022 22:39:45 GMT  
-		Size: 3.3 MB (3259190 bytes)  
+	-	`sha256:a9eaa45ef418e883481a13c7d84fa9904f2ec56789c52a87ba5a9e6483f2b74f`  
+		Last Modified: Mon, 09 Jan 2023 17:05:12 GMT  
+		Size: 3.3 MB (3259241 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7b8fc6a3465ef1129a850e221e8e43c4b8381cccc6c4fa4e930cc23a4524796d`  
-		Last Modified: Fri, 02 Dec 2022 00:01:42 GMT  
-		Size: 1.3 KB (1265 bytes)  
+	-	`sha256:d60c5bfc4515ca45a1d7e0f19ba442639a014baa29ae89f3ecad5389c2cd2295`  
+		Last Modified: Mon, 09 Jan 2023 21:46:09 GMT  
+		Size: 1.3 KB (1262 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4f9545f2103602ed70183810dd35d0e551444688abbc0b13f83d45635978e07c`  
-		Last Modified: Fri, 02 Dec 2022 00:01:43 GMT  
-		Size: 347.9 KB (347902 bytes)  
+	-	`sha256:d6b470822c93ffb73ecf0da151fab720a45366613d2db952375c3d90ea75dea3`  
+		Last Modified: Mon, 09 Jan 2023 21:46:09 GMT  
+		Size: 347.9 KB (347897 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5b2491a2e1fd67a1258830ed4ca412de5d49da05edd8c3c32b56dfc36166c84f`  
-		Last Modified: Fri, 16 Dec 2022 23:04:08 GMT  
-		Size: 8.8 MB (8760608 bytes)  
+	-	`sha256:d384d7da926668362f4adb5e767890bc365bd9b0cd23fa436dc3088039597ac5`  
+		Last Modified: Mon, 09 Jan 2023 21:46:10 GMT  
+		Size: 8.8 MB (8760605 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7da7b5bc298119eb9d3a62717ab733d009b1d3a261dd7502771c6a3ebd27e38a`  
-		Last Modified: Fri, 16 Dec 2022 23:04:07 GMT  
+	-	`sha256:de634586986caa1aeef47c5b8e22e093c553f57364a1e79c45db60296c622764`  
+		Last Modified: Mon, 09 Jan 2023 21:46:09 GMT  
 		Size: 135.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ebd92ccede6a3a25f015152d5ff278163c59f1a1ccc398e8ad3f386750262445`  
-		Last Modified: Fri, 16 Dec 2022 23:04:07 GMT  
+	-	`sha256:4efda47d05f4ce0a286eeee2f51e02dd5acdb7b6c1bc6548499c812f911b6cb9`  
+		Last Modified: Mon, 09 Jan 2023 21:46:09 GMT  
 		Size: 576.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
