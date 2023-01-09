@@ -997,15 +997,9 @@ Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libksba=1.3.5-2ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2ubuntu0.20.04.1.dsc' libksba_1.3.5-2ubuntu0.20.04.1.dsc 2697 SHA512:f313415b25c63fdbd39e93ec430279eaaeee47e19727f8e02a3a225310c25c69647787939fa47b15679df9738c360c84b8ccb909d475bdfcd271a9e21706ca08
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2' libksba_1.3.5.orig.tar.bz2 620649 SHA512:60179bfd109b7b4fd8d2b30a3216540f03f5a13620d9a5b63f1f95788028708a420911619f172ba57e945a6a2fcd2ef7eaafc5585a0eb2b9652cfadf47bf39a2
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2.asc' libksba_1.3.5.orig.tar.bz2.asc 287 SHA512:6b58b1c6ee924230e4f3b040836e85cb3b3f527f667bcb370c28d8ec702c884bcceab374688e02d0356dede81f9fcf975d726c1958d4d87e5c41757a6b2ba39e
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2ubuntu0.20.04.1.debian.tar.xz' libksba_1.3.5-2ubuntu0.20.04.1.debian.tar.xz 14608 SHA512:890cc5a084fa45bf3e446acf6d38505a4812d63090931f8044423da1e5462b4cf110cfdecf4e30b94e255fd5cd74fd785a425496ba59fefad0f109a5a7166dba
-```
 
 ### `dpkg` source package: `libpng1.6=1.6.37-2`
 
