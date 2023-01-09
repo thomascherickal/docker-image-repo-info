@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e479652597256ac172fd45fa1b724aada0203bfe5b65bbe82ca18e5c960208a3`
-- Created: `2023-01-04T20:22:34.76492104Z`
-- Virtual Size: ~ 158.73 Mb  
+- Image ID: `sha256:db9fbb968475e2ebbfe662ba5fd89d1b99e3c7d7e824ffac8542c9d58f54f693`
+- Created: `2023-01-06T02:30:10.972774718Z`
+- Virtual Size: ~ 164.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.13`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.13.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.13.tar.xz.asc`
-  - `PHP_SHA256=b15ef0ccdd6760825604b3c4e3e73558dcf87c75ef1d68ef4289d8fd261ac856`
+  - `PHP_VERSION=8.1.14`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.14.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.14.tar.xz.asc`
+  - `PHP_SHA256=e16e47a872d58685913ac848ce92ec49f42c1828110c98c65fb6265a08724a1a`
   - `DRUPAL_VERSION=10.0.1`
 
 ## `apk` (`.apk`-based packages)
@@ -300,16 +300,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.0.7-r0 description:
+libcrypto3-3.0.7-r2 description:
 Crypto library from openssl
 
-libcrypto3-3.0.7-r0 webpage:
+libcrypto3-3.0.7-r2 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.0.7-r0 installed size:
+libcrypto3-3.0.7-r2 installed size:
 4108 KiB
 
-libcrypto3-3.0.7-r0 license:
+libcrypto3-3.0.7-r2 license:
 Apache-2.0
 
 ```
@@ -317,16 +317,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.86.0-r1 description:
+libcurl-7.87.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.86.0-r1 webpage:
+libcurl-7.87.0-r0 webpage:
 https://curl.se/
 
-libcurl-7.86.0-r1 installed size:
-528 KiB
+libcurl-7.87.0-r0 installed size:
+540 KiB
 
-libcurl-7.86.0-r1 license:
+libcurl-7.87.0-r0 license:
 curl
 
 ```
@@ -419,16 +419,16 @@ ISC
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.0.7-r0 description:
+libssl3-3.0.7-r2 description:
 SSL shared libraries
 
-libssl3-3.0.7-r0 webpage:
+libssl3-3.0.7-r2 webpage:
 https://www.openssl.org/
 
-libssl3-3.0.7-r0 installed size:
+libssl3-3.0.7-r2 installed size:
 608 KiB
 
-libssl3-3.0.7-r0 license:
+libssl3-3.0.7-r2 license:
 Apache-2.0
 
 ```
@@ -640,16 +640,16 @@ GPL-2.0-only
 ### `apk` package: `sqlite-libs`
 
 ```console
-sqlite-libs-3.40.0-r0 description:
+sqlite-libs-3.40.1-r0 description:
 Sqlite3 library
 
-sqlite-libs-3.40.0-r0 webpage:
+sqlite-libs-3.40.1-r0 webpage:
 https://www.sqlite.org/
 
-sqlite-libs-3.40.0-r0 installed size:
+sqlite-libs-3.40.1-r0 installed size:
 1008 KiB
 
-sqlite-libs-3.40.0-r0 license:
+sqlite-libs-3.40.1-r0 license:
 blessing
 
 ```

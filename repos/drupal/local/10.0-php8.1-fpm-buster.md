@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6ba1843661236513a9e90db3eaf7c1ed2cf77b535bba1abdfa8f853872c2e152`
-- Created: `2023-01-04T20:22:16.106979364Z`
-- Virtual Size: ~ 478.27 Mb  
+- Image ID: `sha256:4fbe76d25c4e401849dcf98112129c2e7d1405a32841fc28c76a7d850845f054`
+- Created: `2023-01-06T02:28:53.222673616Z`
+- Virtual Size: ~ 478.22 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.13`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.13.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.13.tar.xz.asc`
-  - `PHP_SHA256=b15ef0ccdd6760825604b3c4e3e73558dcf87c75ef1d68ef4289d8fd261ac856`
+  - `PHP_VERSION=8.1.14`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.14.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.14.tar.xz.asc`
+  - `PHP_SHA256=e16e47a872d58685913ac848ce92ec49f42c1828110c98c65fb6265a08724a1a`
   - `DRUPAL_VERSION=10.0.1`
 
 ## `dpkg` (`.deb`-based packages)
