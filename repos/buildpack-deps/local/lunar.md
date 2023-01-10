@@ -47,13 +47,9 @@ Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris adduser=3.121ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.121ubuntu1.dsc' adduser_3.121ubuntu1.dsc 1804 SHA512:5d884c2b792bb2197c4d9855f06a1c778a346d8473f77f836fab34ff3adeb9197c7221bca622a92bb5f20fdadb53abb6538b6da2ed4f80d7f83ac84e55cf4464
-'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.121ubuntu1.tar.xz' adduser_3.121ubuntu1.tar.xz 228260 SHA512:0d47de2e87f6e4327831eb875b5db322d197e50c207f2b574297cd0e782ced11dfffd2f6c1cc42d1d49efecfd491bbc26a26cb99a62cacb1a34a201c5ceab4c7
-```
 
 ### `dpkg` source package: `aom=3.5.0-1`
 
@@ -1690,15 +1686,13 @@ Licenses: (parsed from: `/usr/share/doc/krb5-multidev/copyright`, `/usr/share/do
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.20.1-1
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.20.1-1.dsc' krb5_1.20.1-1.dsc 3168 SHA512:9b30020228a8a19aa27a33aa75e8cc009c0d59262546a7ab47a5a0cba435f4f696369f6d8a600742035351a463333c94ed09e02637418c038ccdcac1194b2b0a
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.20.1.orig.tar.gz' krb5_1.20.1.orig.tar.gz 8661660 SHA512:6f57479f13f107cd84f30de5c758eb6b9fc59171329c13e5da6073b806755f8d163eb7bd84767ea861ad6458ea0c9eeb00ee044d3bcad01ef136e9888564b6a2
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.20.1.orig.tar.gz.asc' krb5_1.20.1.orig.tar.gz.asc 833 SHA512:1d3312bd67581e07adfdadf2c5fe394179631d8add8bd075efefe982a0de22369004e60a14422d426382c8c591e4181b9897088afe9d4e86f0b5a97e5954c67a
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.20.1-1.debian.tar.xz' krb5_1.20.1-1.debian.tar.xz 99428 SHA512:3bfe5ac7e818304f6199645212f13d043ba3b4095028d611bb89ae29df0581ec27b89fe20d403d1779f78ddfd147064199803517d5bc9cd05f2afc7a7e4d191f
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/krb5/1.20.1-1/
+
 
 ### `dpkg` source package: `lcms2=2.13.1-1`
 
@@ -2308,14 +2302,9 @@ Licenses: (parsed from: `/usr/share/doc/libmaxminddb-dev/copyright`, `/usr/share
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libmaxminddb=1.5.2-1build2
-'http://archive.ubuntu.com/ubuntu/pool/main/libm/libmaxminddb/libmaxminddb_1.5.2-1build2.dsc' libmaxminddb_1.5.2-1build2.dsc 2454 SHA512:7e7166e405d886d2f8f4a29c0e4c4920d86d1cce2e453cc97e8185a67a7baeadf51a77c313a0bb896342ecb9b77c80733e3ca1641c8bdf0a8f234d49addb69fd
-'http://archive.ubuntu.com/ubuntu/pool/main/libm/libmaxminddb/libmaxminddb_1.5.2.orig.tar.gz' libmaxminddb_1.5.2.orig.tar.gz 249507 SHA512:2f053028e28dc4f1d94039e52193ab71f8dc278f1fafa14bca1af0251d239351acadb5d540e63c250232d0fd1b8f2dd45289f0eae5c55d9b4430acbabbcd11a9
-'http://archive.ubuntu.com/ubuntu/pool/main/libm/libmaxminddb/libmaxminddb_1.5.2-1build2.debian.tar.xz' libmaxminddb_1.5.2-1build2.debian.tar.xz 12488 SHA512:1017b70ee85f22eed14258a4d594d77e5bf6fbe5dcb0a23e635f0dcb26d09eb173dd777063f695f9610350dab91b8717ae4d701c3b1eb282358d6450394a0889
-```
 
 ### `dpkg` source package: `libmd=1.0.4-2`
 
@@ -3159,15 +3148,13 @@ Licenses: (parsed from: `/usr/share/doc/m4/copyright`)
 - `GFDL`
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris m4=1.4.19-1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/m4/m4_1.4.19-1.dsc' m4_1.4.19-1.dsc 1637 SHA512:ee0b6613b8e542300f6611514167c0aa68ec3333188a9f9f2bd3b9fab08289abf754471b3b4635d79f4abfe8cf2b765d7b9680618f4b459c0c2089cb30f30640
-'http://archive.ubuntu.com/ubuntu/pool/main/m/m4/m4_1.4.19.orig.tar.xz' m4_1.4.19.orig.tar.xz 1654908 SHA512:47f595845c89709727bda0b3fc78e3188ef78ec818965b395532e7041cabe9e49677ee4aca3d042930095a7f8df81de3da1026b23b6897be471f6cf13ddd512b
-'http://archive.ubuntu.com/ubuntu/pool/main/m/m4/m4_1.4.19.orig.tar.xz.asc' m4_1.4.19.orig.tar.xz.asc 488 SHA512:d6ac9c6a54c57e9b53fb3e34a60d49df2f46a6e494da0a0c9ae8246b984e68a853b5d8c42677c1a0485c3f36b0bce10a481d3775c0edc1dbdfb27b43545bc31e
-'http://archive.ubuntu.com/ubuntu/pool/main/m/m4/m4_1.4.19-1.debian.tar.xz' m4_1.4.19-1.debian.tar.xz 16340 SHA512:380c490512701b208d495eee7043c84fd407feee123e4d7a2572e981781405a0f380cd9a962a483ff41bd22389636043e3cca98395430413c4d6abb3cb52acb4
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/m4/1.4.19-1/
+
 
 ### `dpkg` source package: `make-dfsg=4.3-4.1build1`
 
@@ -4423,15 +4410,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022g-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g-0ubuntu2.dsc' tzdata_2022g-0ubuntu2.dsc 2379 SHA512:f95011227bd9a428a7f649fdbb35ee1b85cfcf844f53ac06483edc3699458eb3b9d2847c4017689e460a5a40d22ee7e220588e42bb5f8969fcb0fa6f073e8579
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g.orig.tar.gz' tzdata_2022g.orig.tar.gz 439731 SHA512:7f79394295e00e3a24ebdbf9af3bc454a65f432a93b517e7e96c7f9db9949f6f5fdae9892a9d3789ff44ae0eb1bfe4744d36976b4624659af951d26414f94e65
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g.orig.tar.gz.asc' tzdata_2022g.orig.tar.gz.asc 833 SHA512:3474a05373ec4397e17133c54708e1f9efd1f1c5e7ee6945f0972809ceda2214cc4962238773818d04ab4f29dcdf0b3e87247ab19795d06a62b8769dd85cf76b
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g-0ubuntu2.debian.tar.xz' tzdata_2022g-0ubuntu2.debian.tar.xz 171864 SHA512:a69e0ac0bfa910b819f63bb51dc2bb8a146ab0c998c2d7429e4e2c6af6bfe3951d56a699a6ba4d3373164dd5ef8c767bff7ead195078c0a1af525bd07b1d1ab2
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2021.03.26`
 

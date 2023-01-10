@@ -53,19 +53,13 @@ Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris adduser=3.129
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.129.dsc' adduser_3.129.dsc 1671 SHA256:1201331222be92b5e2eecdf41be2319ed0ea8af8746507133491ed0dad7fbabd
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.129.tar.xz' adduser_3.129.tar.xz 230752 SHA256:45a9f9a6c38961466d3539999c9f9b490d5491c777ab88346ea7a9d81ca56cc3
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/adduser/3.129/
 
-- https://sources.debian.net/src/adduser/3.129/ (for browsing the source)
-- https://sources.debian.net/src/adduser/3.129/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/adduser/3.129/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apr-util=1.6.1-5`
 
@@ -261,20 +255,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.2-2
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2-2.dsc' bash_5.2-2.dsc 2296 SHA256:29d400729f7eef31fb181ffc3cf1d1099b3432f70da46dd702ae5872a5990efa
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2.orig.tar.xz' bash_5.2.orig.tar.xz 5886100 SHA256:f358a087da1f0c754f814172d8cd0b012ea68086d7aadd4eabff92074aa575d8
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2-2.debian.tar.xz' bash_5.2-2.debian.tar.xz 86508 SHA256:c4ea6d58fc2c50a6d34ea06522983eab47fc41345a34373c37f67eb3d89c853f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.2-2/
 
-- https://sources.debian.net/src/bash/5.2-2/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `brotli=1.0.9-2`
 
@@ -499,20 +486,13 @@ Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dash=0.5.11+git20210903+057cd650a4ed-9
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-9.dsc' dash_0.5.11+git20210903+057cd650a4ed-9.dsc 1720 SHA256:dacd578e5fb925bda192f380e65ce17d3d06b2fc3dc8aba3b68a9a42646cce04
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed.orig.tar.xz' dash_0.5.11+git20210903+057cd650a4ed.orig.tar.xz 133320 SHA256:4fb06697f33f14fcd6b96cd4dfdd5b343c848a4bb69b7c04f1717767e4a117d3
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.11%2bgit20210903%2b057cd650a4ed-9.debian.tar.xz' dash_0.5.11+git20210903+057cd650a4ed-9.debian.tar.xz 35488 SHA256:0314a8fa4bcd794c36b8e1c129587e125322b25db9d9cbb61cc9389a263ab242
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dash/0.5.11+git20210903+057cd650a4ed-9/
 
-- https://sources.debian.net/src/dash/0.5.11+git20210903+057cd650a4ed-9/ (for browsing the source)
-- https://sources.debian.net/src/dash/0.5.11+git20210903+057cd650a4ed-9/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dash/0.5.11+git20210903+057cd650a4ed-9/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `db5.3=5.3.28+dfsg1-0.10`
 
@@ -559,19 +539,13 @@ Licenses: (parsed from: `/usr/share/doc/debconf/copyright`)
 
 - `BSD-2-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debconf=1.5.80
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.80.dsc' debconf_1.5.80.dsc 2035 SHA256:6ac0151d82a50c972d7d0aaa9aa23c987b2e12e0ae04b3ceb268582a532472e6
-'http://deb.debian.org/debian/pool/main/d/debconf/debconf_1.5.80.tar.xz' debconf_1.5.80.tar.xz 571240 SHA256:8b8609fa013cda12916736b82c108063c2c11755e7cc1be7f5a03f473f663d38
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/debconf/1.5.80/
 
-- https://sources.debian.net/src/debconf/1.5.80/ (for browsing the source)
-- https://sources.debian.net/src/debconf/1.5.80/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debconf/1.5.80/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debian-archive-keyring=2021.1.1`
 
@@ -2855,21 +2829,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022f-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022f-1.dsc' tzdata_2022f-1.dsc 2205 SHA256:ba9398a31794bf68a9ab08edc1560b6fc41644db67381fa1044cc7bec71eaeb7
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022f.orig.tar.gz' tzdata_2022f.orig.tar.gz 436352 SHA256:9990d71f675d212567b931fe8aae1cab7027f89fefb8a79d808a6933a67af000
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022f.orig.tar.gz.asc' tzdata_2022f.orig.tar.gz.asc 833 SHA256:2788b16875bbb5f8ccd1343352ed9bcf7cb98393ea6ecb49f48bb938ffc88854
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022f-1.debian.tar.xz' tzdata_2022f-1.debian.tar.xz 112140 SHA256:e0780bbc953d605a30da7627ac3fd3bd738ef23aa5cad08d346367f2ef372b33
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2022f-1/
 
-- https://sources.debian.net/src/tzdata/2022f-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2022f-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2022f-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 
