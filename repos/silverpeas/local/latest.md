@@ -8011,9 +8011,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris postgresql-12=12.12-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12-0ubuntu0.20.04.1.dsc' postgresql-12_12.12-0ubuntu0.20.04.1.dsc 3764 SHA512:7173ca458dcdf2b46ce9a08845514809703b295c64b29ba97b001b2fe99e1ff6f784a25aad1c19e04cb8e61e16f0cceab926965858919815d88203fbfdae6a7e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12.orig.tar.gz' postgresql-12_12.12.orig.tar.gz 27619852 SHA512:c2c49f4b1bffaa8028c8c6b7b5ef2aafc6530bf4114f7fa2627bc9594477e22740567d5b578c6b824ed033e461d40911ef0634a168c55808bb45f8474522e5c2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12-0ubuntu0.20.04.1.debian.tar.xz' postgresql-12_12.12-0ubuntu0.20.04.1.debian.tar.xz 26780 SHA512:1d2ef2f26790a391e7111028eb18e79751b2de136bafa6c6c43a57bc0fafe8fab19cc957a4fd32a07ec58c53f08e36d3e3365381b5d27330aeed49fa4cd05626
+'http://security.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12-0ubuntu0.20.04.1.dsc' postgresql-12_12.12-0ubuntu0.20.04.1.dsc 3764 SHA512:7173ca458dcdf2b46ce9a08845514809703b295c64b29ba97b001b2fe99e1ff6f784a25aad1c19e04cb8e61e16f0cceab926965858919815d88203fbfdae6a7e
+'http://security.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12.orig.tar.gz' postgresql-12_12.12.orig.tar.gz 27619852 SHA512:c2c49f4b1bffaa8028c8c6b7b5ef2aafc6530bf4114f7fa2627bc9594477e22740567d5b578c6b824ed033e461d40911ef0634a168c55808bb45f8474522e5c2
+'http://security.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12-0ubuntu0.20.04.1.debian.tar.xz' postgresql-12_12.12-0ubuntu0.20.04.1.debian.tar.xz 26780 SHA512:1d2ef2f26790a391e7111028eb18e79751b2de136bafa6c6c43a57bc0fafe8fab19cc957a4fd32a07ec58c53f08e36d3e3365381b5d27330aeed49fa4cd05626
 ```
 
 ### `dpkg` source package: `procps=2:3.3.16-1ubuntu2.3`
