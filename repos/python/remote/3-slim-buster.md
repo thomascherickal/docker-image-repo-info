@@ -1,7 +1,7 @@
 ## `python:3-slim-buster`
 
 ```console
-$ docker pull python@sha256:7ee8e2303a3beca0258ec067e56c12e3fabb02e9511031980f211dedde8571fe
+$ docker pull python@sha256:d0bcd8f7298e8f956ddb12f180fd2aeb80f31cb54e8c6583d10598ad504aad65
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -150,69 +150,69 @@ CMD ["python3"]
 ### `python:3-slim-buster` - linux; arm64 variant v8
 
 ```console
-$ docker pull python@sha256:0cd43c3bea35f29e4051498a39fb43d80f264f086448c929dbba57d925fcb067
+$ docker pull python@sha256:cc9c793286fa4041560d1c3917b714f7c0858552167ab3b83d09516753822bcc
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **44.4 MB (44393716 bytes)**  
+-	Total Size: **44.4 MB (44393473 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f6573980135ff6905ce69353fa3f5fade20a645798ea46cbb1673c4ed7249f01`
+-	Image ID: `sha256:bbc7cacd7ff750974342ac878813611ae38105452dba462ee89c4f454ac87273`
 -	Default Command: `["python3"]`
 
 ```dockerfile
-# Wed, 21 Dec 2022 01:40:02 GMT
-ADD file:51788132818f0e1cbed57cd022358b0564ec0d9cab6d33e5ef53902645d53c98 in / 
-# Wed, 21 Dec 2022 01:40:02 GMT
+# Wed, 11 Jan 2023 02:57:52 GMT
+ADD file:08addf73dde8bf5ac64e0d9bdd1997ce5f406976c19da431616783c14fdb36ac in / 
+# Wed, 11 Jan 2023 02:57:52 GMT
 CMD ["bash"]
-# Wed, 21 Dec 2022 09:12:54 GMT
+# Wed, 11 Jan 2023 10:17:47 GMT
 ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 21 Dec 2022 09:12:54 GMT
+# Wed, 11 Jan 2023 10:17:47 GMT
 ENV LANG=C.UTF-8
-# Wed, 21 Dec 2022 09:12:59 GMT
+# Wed, 11 Jan 2023 10:17:53 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		netbase 		tzdata 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 21 Dec 2022 10:07:14 GMT
+# Wed, 11 Jan 2023 11:13:30 GMT
 ENV GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D
-# Wed, 21 Dec 2022 10:07:14 GMT
+# Wed, 11 Jan 2023 11:13:30 GMT
 ENV PYTHON_VERSION=3.11.1
-# Wed, 21 Dec 2022 10:20:26 GMT
+# Wed, 11 Jan 2023 11:26:59 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		gnupg dirmngr 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 	; 		wget -O python.tar.xz "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz"; 	wget -O python.tar.xz.asc "https://www.python.org/ftp/python/${PYTHON_VERSION%%[a-z]*}/Python-$PYTHON_VERSION.tar.xz.asc"; 	GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$GPG_KEY"; 	gpg --batch --verify python.tar.xz.asc python.tar.xz; 	command -v gpgconf > /dev/null && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" python.tar.xz.asc; 	mkdir -p /usr/src/python; 	tar --extract --directory /usr/src/python --strip-components=1 --file python.tar.xz; 	rm python.tar.xz; 		cd /usr/src/python; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--enable-loadable-sqlite-extensions 		--enable-optimizations 		--enable-option-checking=fatal 		--enable-shared 		--with-lto 		--with-system-expat 		--without-ensurepip 	; 	nproc="$(nproc)"; 	make -j "$nproc" 		LDFLAGS="-Wl,--strip-all" 	; 	make install; 		cd /; 	rm -rf /usr/src/python; 		find /usr/local -depth 		\( 			\( -type d -a \( -name test -o -name tests -o -name idle_test \) \) 			-o \( -type f -a \( -name '*.pyc' -o -name '*.pyo' -o -name 'libpython*.a' \) \) 		\) -exec rm -rf '{}' + 	; 		ldconfig; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -not \( -name '*tkinter*' \) -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		python3 --version
-# Wed, 21 Dec 2022 10:20:27 GMT
+# Wed, 11 Jan 2023 11:26:59 GMT
 RUN set -eux; 	for src in idle3 pydoc3 python3 python3-config; do 		dst="$(echo "$src" | tr -d 3)"; 		[ -s "/usr/local/bin/$src" ]; 		[ ! -e "/usr/local/bin/$dst" ]; 		ln -svT "$src" "/usr/local/bin/$dst"; 	done
-# Wed, 21 Dec 2022 10:20:27 GMT
+# Wed, 11 Jan 2023 11:26:59 GMT
 ENV PYTHON_PIP_VERSION=22.3.1
-# Fri, 06 Jan 2023 20:53:36 GMT
+# Wed, 11 Jan 2023 11:26:59 GMT
 ENV PYTHON_SETUPTOOLS_VERSION=65.5.1
-# Fri, 06 Jan 2023 20:53:36 GMT
+# Wed, 11 Jan 2023 11:26:59 GMT
 ENV PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/66030fa03382b4914d4c4d0896961a0bdeeeb274/public/get-pip.py
-# Fri, 06 Jan 2023 20:53:37 GMT
+# Wed, 11 Jan 2023 11:27:00 GMT
 ENV PYTHON_GET_PIP_SHA256=1e501cf004eac1b7eb1f97266d28f995ae835d30250bec7f8850562703067dc6
-# Fri, 06 Jan 2023 20:53:46 GMT
+# Wed, 11 Jan 2023 11:27:15 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version
-# Fri, 06 Jan 2023 20:53:47 GMT
+# Wed, 11 Jan 2023 11:27:15 GMT
 CMD ["python3"]
 ```
 
 -	Layers:
-	-	`sha256:eb4ce5bba15e4b6fd353d7fc222fbe9c71d6881cefe1e10384c6c358d4b4eb90`  
-		Last Modified: Wed, 21 Dec 2022 01:43:52 GMT  
-		Size: 25.9 MB (25914906 bytes)  
+	-	`sha256:7fac02f4cd2bcf681b9e156a67009cf4609f45447818b52327d93553bfeb2965`  
+		Last Modified: Wed, 11 Jan 2023 03:01:58 GMT  
+		Size: 25.9 MB (25914925 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5e223a4c0eb830e2d9c7d4373e236b36e6f2544d6d2234a312a16c9144899e70`  
-		Last Modified: Wed, 21 Dec 2022 12:02:17 GMT  
-		Size: 2.6 MB (2646728 bytes)  
+	-	`sha256:4fde605dfd60b9c08bbe6eb957b9d1ad0756c9fd78f80d752e80a007547a0777`  
+		Last Modified: Wed, 11 Jan 2023 13:11:11 GMT  
+		Size: 2.6 MB (2646689 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7fbcc227f002674680f32f92da9e4114235785f7ff399ea9508852a4a2b62d0`  
-		Last Modified: Wed, 21 Dec 2022 12:03:23 GMT  
-		Size: 12.5 MB (12486786 bytes)  
+	-	`sha256:854f73b16edf5d321ef748893867acb16e8eff547c035ef6e1fb2b1832da262a`  
+		Last Modified: Wed, 11 Jan 2023 13:12:17 GMT  
+		Size: 12.5 MB (12486652 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:81288cfa346e050875760524be6db9b1228e2254cce4319fc79a0483dd375175`  
-		Last Modified: Wed, 21 Dec 2022 12:03:21 GMT  
-		Size: 235.0 B  
+	-	`sha256:e0b356ac6d7ad6bff55efaeb5d8c3b4872f2804574dcd170c9110b4f317b2c4c`  
+		Last Modified: Wed, 11 Jan 2023 13:12:15 GMT  
+		Size: 234.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d6fc0cd74be6116e488b03a375b89dc71678a304f82b3256b644058ba7821fa`  
-		Last Modified: Fri, 06 Jan 2023 20:59:18 GMT  
-		Size: 3.3 MB (3345061 bytes)  
+	-	`sha256:43775a2e9aca2111efc55d5e34013830819b426d211ad53107dc34306f8e312f`  
+		Last Modified: Wed, 11 Jan 2023 13:12:16 GMT  
+		Size: 3.3 MB (3344973 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:3-slim-buster` - linux; 386
