@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:834e339ef8cdc14e0e0c73ed3ad573743be3a7538fdc5282f2ae2cb7ee84b1b0`
-- Created: `2023-01-05T21:21:53.731500109Z`
-- Virtual Size: ~ 152.32 Mb  
+- Image ID: `sha256:0f8d12a73562adf6588be88e37974abd42168017f375a1e160ba08a7ee3ffaa9`
+- Created: `2023-01-10T00:00:04.483836239Z`
+- Virtual Size: ~ 152.34 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -13,7 +13,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `DOCKER_VERSION=20.10.22`
   - `DOCKER_BUILDX_VERSION=0.9.1`
-  - `DOCKER_COMPOSE_VERSION=2.15.0`
+  - `DOCKER_COMPOSE_VERSION=2.15.1`
   - `DOCKER_TLS_CERTDIR=/certs`
 
 ## `apk` (`.apk`-based packages)
@@ -123,16 +123,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20220614-r2 description:
+ca-certificates-20220614-r4 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20220614-r2 webpage:
+ca-certificates-20220614-r4 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20220614-r2 installed size:
+ca-certificates-20220614-r4 installed size:
 688 KiB
 
-ca-certificates-20220614-r2 license:
+ca-certificates-20220614-r4 license:
 MPL-2.0 AND MIT
 
 ```
@@ -140,16 +140,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20220614-r2 description:
+ca-certificates-bundle-20220614-r4 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20220614-r2 webpage:
+ca-certificates-bundle-20220614-r4 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20220614-r2 installed size:
+ca-certificates-bundle-20220614-r4 installed size:
 232 KiB
 
-ca-certificates-bundle-20220614-r2 license:
+ca-certificates-bundle-20220614-r4 license:
 MPL-2.0 AND MIT
 
 ```
@@ -191,16 +191,16 @@ MIT
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.0.7-r0 description:
+libcrypto3-3.0.7-r2 description:
 Crypto library from openssl
 
-libcrypto3-3.0.7-r0 webpage:
+libcrypto3-3.0.7-r2 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.0.7-r0 installed size:
+libcrypto3-3.0.7-r2 installed size:
 4108 KiB
 
-libcrypto3-3.0.7-r0 license:
+libcrypto3-3.0.7-r2 license:
 Apache-2.0
 
 ```
@@ -225,16 +225,16 @@ BSD-3-Clause
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.0.7-r0 description:
+libssl3-3.0.7-r2 description:
 SSL shared libraries
 
-libssl3-3.0.7-r0 webpage:
+libssl3-3.0.7-r2 webpage:
 https://www.openssl.org/
 
-libssl3-3.0.7-r0 installed size:
+libssl3-3.0.7-r2 installed size:
 608 KiB
 
-libssl3-3.0.7-r0 license:
+libssl3-3.0.7-r2 license:
 Apache-2.0
 
 ```
