@@ -3852,9 +3852,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris postgresql-14=14.5-0ubuntu0.22.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.5-0ubuntu0.22.04.1.dsc' postgresql-14_14.5-0ubuntu0.22.04.1.dsc 3857 SHA512:5b3ee25100d4c5869fa367792429db28b133abf32a2c45b06235e0576dfd3a096dd72d62b0d28987be6588ebdd80c6e9a1a726a8c4ff35f67d2ddc3d15c6acb0
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.5.orig.tar.gz' postgresql-14_14.5.orig.tar.gz 28988974 SHA512:48cf25613d2069cf8371e9e7934742b431eb94bcd867cc75d6dbd821b51ca582983c7334055984ba0c9778501dfbde5c082209f42c442f50a0d0802306f69fc3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.5-0ubuntu0.22.04.1.debian.tar.xz' postgresql-14_14.5-0ubuntu0.22.04.1.debian.tar.xz 24576 SHA512:372c82a07cac661fdc03b5266dc6f23686f1ccabffb9bd9a33cea62ce38ef65f4efb50f25b65152dcb9ba34d0f89fbd6c1e0de32065250eedefa6f3d5bbdad35
+'http://security.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.5-0ubuntu0.22.04.1.dsc' postgresql-14_14.5-0ubuntu0.22.04.1.dsc 3857 SHA512:5b3ee25100d4c5869fa367792429db28b133abf32a2c45b06235e0576dfd3a096dd72d62b0d28987be6588ebdd80c6e9a1a726a8c4ff35f67d2ddc3d15c6acb0
+'http://security.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.5.orig.tar.gz' postgresql-14_14.5.orig.tar.gz 28988974 SHA512:48cf25613d2069cf8371e9e7934742b431eb94bcd867cc75d6dbd821b51ca582983c7334055984ba0c9778501dfbde5c082209f42c442f50a0d0802306f69fc3
+'http://security.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.5-0ubuntu0.22.04.1.debian.tar.xz' postgresql-14_14.5-0ubuntu0.22.04.1.debian.tar.xz 24576 SHA512:372c82a07cac661fdc03b5266dc6f23686f1ccabffb9bd9a33cea62ce38ef65f4efb50f25b65152dcb9ba34d0f89fbd6c1e0de32065250eedefa6f3d5bbdad35
 ```
 
 ### `dpkg` source package: `procps=2:3.3.17-6ubuntu2`

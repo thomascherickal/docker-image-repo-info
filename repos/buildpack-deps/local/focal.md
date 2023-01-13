@@ -1415,14 +1415,9 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris heimdal=7.7.0+dfsg-1ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.2.dsc' heimdal_7.7.0+dfsg-1ubuntu1.2.dsc 3391 SHA512:fb1f48d402dcc3b7e514f6f95c4b086eb00527194c86e1c7acbc5eb250cbba01e5dc28e114995c0b5fcc161281488db1969543e6de81aa48298fe266bf995d95
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg.orig.tar.xz' heimdal_7.7.0+dfsg.orig.tar.xz 5945252 SHA512:14141f3fff264c9516f736bcc51c998df69cfaa7108d2387921299efd7e82d79b918dee4029905dc221c204d3340ffc17da9472baf80029372d7c13de328ec0a
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.2.debian.tar.xz' heimdal_7.7.0+dfsg-1ubuntu1.2.debian.tar.xz 130884 SHA512:72cabaa0c299e821da0290cc4bca35de824a36ab6eb4b07eb536e950065bc984d9c590f573d8562c237af194215d0ef841175583102853ae93dd2eb7126f1b3d
-```
 
 ### `dpkg` source package: `hicolor-icon-theme=0.17-2`
 
@@ -3580,9 +3575,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris postgresql-12=12.12-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12-0ubuntu0.20.04.1.dsc' postgresql-12_12.12-0ubuntu0.20.04.1.dsc 3764 SHA512:7173ca458dcdf2b46ce9a08845514809703b295c64b29ba97b001b2fe99e1ff6f784a25aad1c19e04cb8e61e16f0cceab926965858919815d88203fbfdae6a7e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12.orig.tar.gz' postgresql-12_12.12.orig.tar.gz 27619852 SHA512:c2c49f4b1bffaa8028c8c6b7b5ef2aafc6530bf4114f7fa2627bc9594477e22740567d5b578c6b824ed033e461d40911ef0634a168c55808bb45f8474522e5c2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12-0ubuntu0.20.04.1.debian.tar.xz' postgresql-12_12.12-0ubuntu0.20.04.1.debian.tar.xz 26780 SHA512:1d2ef2f26790a391e7111028eb18e79751b2de136bafa6c6c43a57bc0fafe8fab19cc957a4fd32a07ec58c53f08e36d3e3365381b5d27330aeed49fa4cd05626
+'http://security.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12-0ubuntu0.20.04.1.dsc' postgresql-12_12.12-0ubuntu0.20.04.1.dsc 3764 SHA512:7173ca458dcdf2b46ce9a08845514809703b295c64b29ba97b001b2fe99e1ff6f784a25aad1c19e04cb8e61e16f0cceab926965858919815d88203fbfdae6a7e
+'http://security.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12.orig.tar.gz' postgresql-12_12.12.orig.tar.gz 27619852 SHA512:c2c49f4b1bffaa8028c8c6b7b5ef2aafc6530bf4114f7fa2627bc9594477e22740567d5b578c6b824ed033e461d40911ef0634a168c55808bb45f8474522e5c2
+'http://security.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.12-0ubuntu0.20.04.1.debian.tar.xz' postgresql-12_12.12-0ubuntu0.20.04.1.debian.tar.xz 26780 SHA512:1d2ef2f26790a391e7111028eb18e79751b2de136bafa6c6c43a57bc0fafe8fab19cc957a4fd32a07ec58c53f08e36d3e3365381b5d27330aeed49fa4cd05626
 ```
 
 ### `dpkg` source package: `procps=2:3.3.16-1ubuntu2.3`

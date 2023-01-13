@@ -806,14 +806,9 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris heimdal=7.5.0+dfsg-1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg-1ubuntu0.2.dsc' heimdal_7.5.0+dfsg-1ubuntu0.2.dsc 3416 SHA512:b0fc315daf2661494513582c0d48d70eb72b4c9b984daeecd96236a6c2f7904d908b2c28efb3459f153ec7e11b12328b2013a547f06f8e951c5ab742453ca8a1
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg.orig.tar.gz' heimdal_7.5.0+dfsg.orig.tar.gz 8955005 SHA512:8ecd3514cb42c746769fb4c83896fc1258cc68ab606894e775e5f99075b6ff87d7024f144a6a369816572270b89e2eb59e8f8dc4384eea25863a90c905cdfa14
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg-1ubuntu0.2.debian.tar.xz' heimdal_7.5.0+dfsg-1ubuntu0.2.debian.tar.xz 324348 SHA512:b943b95dd9e0b8df0a1e810064a11bc19be75ccd73f5bce09f902108c9dbd07cdfcb9d6439decc9c2ecd0cbc0210016bed27e9eea6cfd4d4842897854e64351f
-```
 
 ### `dpkg` source package: `hostname=3.20`
 

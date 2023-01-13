@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2fa08650fa36e370ef6e5d83e9b348955d673d5ba3820ff490117a7533853a1e`
-- Created: `2022-12-21T11:16:22.50536571Z`
+- Image ID: `sha256:aad5b762119c7e8363a9c14c69c4188e26381be23b7d7b40e024984597e3f688`
+- Created: `2023-01-11T03:06:14.113219128Z`
 - Virtual Size: ~ 293.76 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1500,23 +1500,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libidn2/2.0.5-1+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libidn2/2.0.5-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libksba=1.3.5-2+deb10u1`
+### `dpkg` source package: `libksba=1.3.5-2+deb10u2`
 
 Binary Packages:
 
-- `libksba8:amd64=1.3.5-2+deb10u1`
+- `libksba8:amd64=1.3.5-2+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 
 - `GPL-3`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libksba=1.3.5-2+deb10u2
+'http://deb.debian.org/debian-security/pool/updates/main/libk/libksba/libksba_1.3.5-2%2bdeb10u2.dsc' libksba_1.3.5-2+deb10u2.dsc 2741 SHA256:5224c0002e08ea18a6ad8da4bfb064c5e887c0e7ea0fbef2e229f740efb0c021
+'http://deb.debian.org/debian-security/pool/updates/main/libk/libksba/libksba_1.3.5.orig.tar.bz2' libksba_1.3.5.orig.tar.bz2 620649 SHA256:41444fd7a6ff73a79ad9728f985e71c9ba8cd3e5e53358e70d5f066d35c1a340
+'http://deb.debian.org/debian-security/pool/updates/main/libk/libksba/libksba_1.3.5.orig.tar.bz2.asc' libksba_1.3.5.orig.tar.bz2.asc 287 SHA256:a954b03144ee882c838853da24fd7b6868b78df72a18c71079217d968698a76f
+'http://deb.debian.org/debian-security/pool/updates/main/libk/libksba/libksba_1.3.5-2%2bdeb10u2.debian.tar.xz' libksba_1.3.5-2+deb10u2.debian.tar.xz 14948 SHA256:914841ff8d892ba2c7ed8ceb09d04edaafd17595ca859fe6ac8d6b5438c3410b
+```
 
-- http://snapshot.debian.org/package/libksba/1.3.5-2+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libksba/1.3.5-2+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/libksba/1.3.5-2+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libksba/1.3.5-2+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libmnl=1.0.4-2`
 

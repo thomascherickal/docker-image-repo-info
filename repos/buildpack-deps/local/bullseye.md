@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c9f3081b1d2dee4fc5d86b3b98f8b88e82451941f5bdf2eb8497f553c74eb474`
-- Created: `2022-12-21T11:15:31.49682344Z`
+- Image ID: `sha256:d2f64efc606ae35cbd07bb3e63edc8b1046b9963971759ca67288d13a6e89f9c`
+- Created: `2023-01-11T03:05:32.247919391Z`
 - Virtual Size: ~ 834.62 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -2667,11 +2667,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libjpeg-turbo/1:2.0.6-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libjpeg-turbo/1:2.0.6-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libksba=1.5.0-3+deb11u1`
+### `dpkg` source package: `libksba=1.5.0-3+deb11u2`
 
 Binary Packages:
 
-- `libksba8:amd64=1.5.0-3+deb11u1`
+- `libksba8:amd64=1.5.0-3+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 
@@ -2682,18 +2682,17 @@ Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libksba=1.5.0-3+deb11u1
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.5.0-3%2bdeb11u1.dsc' libksba_1.5.0-3+deb11u1.dsc 2502 SHA256:045b58b87315cbeaab6c82a8cdaf0f53463c1d8369935539cf0615df7bdac877
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.5.0.orig.tar.bz2' libksba_1.5.0.orig.tar.bz2 656518 SHA256:ae4af129216b2d7fdea0b5bf2a788cd458a79c983bb09a43f4d525cc87aba0ba
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.5.0.orig.tar.bz2.asc' libksba_1.5.0.orig.tar.bz2.asc 228 SHA256:41a9020381b8201f15b9d7fc2a1abdb90ab2723152d1af0b77a58b12b4884a0f
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.5.0-3%2bdeb11u1.debian.tar.xz' libksba_1.5.0-3+deb11u1.debian.tar.xz 14940 SHA256:8cf8f061a85a496cc4dd4756f38e982e4ae79a41eef331ca0fe1fccb3c8e7a1a
+$ apt-get source -qq --print-uris libksba=1.5.0-3+deb11u2
+'http://deb.debian.org/debian-security/pool/updates/main/libk/libksba/libksba_1.5.0-3%2bdeb11u2.dsc' libksba_1.5.0-3+deb11u2.dsc 2255 SHA256:acf88e1fab76405a18e0b85753ae1a6d2b68d0634711b9f24f03f7ab77b7263a
+'http://deb.debian.org/debian-security/pool/updates/main/libk/libksba/libksba_1.5.0.orig.tar.bz2' libksba_1.5.0.orig.tar.bz2 656518 SHA256:ae4af129216b2d7fdea0b5bf2a788cd458a79c983bb09a43f4d525cc87aba0ba
+'http://deb.debian.org/debian-security/pool/updates/main/libk/libksba/libksba_1.5.0-3%2bdeb11u2.debian.tar.xz' libksba_1.5.0-3+deb11u2.debian.tar.xz 15672 SHA256:556d4370f91d73a2152c5a1979d792ed8a82de52c37b5c8cc5e5da8464bd6eed
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libksba/1.5.0-3+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/libksba/1.5.0-3+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libksba/1.5.0-3+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libksba/1.5.0-3+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/libksba/1.5.0-3+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libksba/1.5.0-3+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `liblqr=0.4.2-2.1`
 
