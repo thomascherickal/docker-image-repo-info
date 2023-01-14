@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cd1ea89b6427d293478bde1946b3040068dd7238725aebbda958f8aeb4681219`
-- Created: `2022-12-09T12:14:50.992821094Z`
-- Virtual Size: ~ 615.34 Mb  
+- Image ID: `sha256:5af2144faa6c2f35a81ac6e0368ed82d522f43e7131d8521696c0e29422f56cc`
+- Created: `2023-01-13T22:08:15.986711042Z`
+- Virtual Size: ~ 616.22 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","--","/docker-entrypoint.sh"]`
@@ -21,8 +21,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=48F8E69F6390C9F25CFEDCD268248959359E722B A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.70`
-  - `TOMCAT_SHA512=9b57b332f4cfb2c4b9250b95924314507ebafec44f732e755be96d35e1a50d98ca3ea11a8c62e0c6fde2541d31a981f5ca792ea9931b2551b81b495932474726`
+  - `TOMCAT_VERSION=9.0.71`
+  - `TOMCAT_SHA512=6a747e68eff4b68a8defba111103ef6b1606030c180143de0419d015052a5567fca1a86e3d3e058a10246c02b98e89431e9344f80475189573fa0d5c70bfb4cb`
   - `SWT_GTK3=0`
   - `GOSU_VERSION=1.14`
   - `GOSU_GPG_KEYS=B42F6819007F00F88E364FD4036A9C25BF357DD4`
@@ -339,12 +339,12 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.14`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.15`
 
 Binary Packages:
 
-- `curl=7.68.0-1ubuntu2.14`
-- `libcurl4:amd64=7.68.0-1ubuntu2.14`
+- `curl=7.68.0-1ubuntu2.15`
+- `libcurl4:amd64=7.68.0-1ubuntu2.15`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -355,9 +355,14 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.15
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.15.dsc' curl_7.68.0-1ubuntu2.15.dsc 2737 SHA512:26c41b8eac11f5274527ae5b19f1cbaa529a8688f7196cf4dcc42f96a6bd10e236c205a311d2c14a323e44681a3f4ea6fb0d31dfb94f0ffe7add6f9bfdc2cc9f
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.15.debian.tar.xz' curl_7.68.0-1ubuntu2.15.debian.tar.xz 58376 SHA512:1f20c6fbcb594e6a79af4578029d840e5f054c1bacbed44cd16f6ed420cb6a55f383c09f2b0caf5b1cb3d82aa4ca6aa5dfbe3c1129c6e7511e7065b3738c6b62
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -848,14 +853,9 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris heimdal=7.7.0+dfsg-1ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.2.dsc' heimdal_7.7.0+dfsg-1ubuntu1.2.dsc 3391 SHA512:fb1f48d402dcc3b7e514f6f95c4b086eb00527194c86e1c7acbc5eb250cbba01e5dc28e114995c0b5fcc161281488db1969543e6de81aa48298fe266bf995d95
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg.orig.tar.xz' heimdal_7.7.0+dfsg.orig.tar.xz 5945252 SHA512:14141f3fff264c9516f736bcc51c998df69cfaa7108d2387921299efd7e82d79b918dee4029905dc221c204d3340ffc17da9472baf80029372d7c13de328ec0a
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.2.debian.tar.xz' heimdal_7.7.0+dfsg-1ubuntu1.2.debian.tar.xz 130884 SHA512:72cabaa0c299e821da0290cc4bca35de824a36ab6eb4b07eb536e950065bc984d9c590f573d8562c237af194215d0ef841175583102853ae93dd2eb7126f1b3d
-```
 
 ### `dpkg` source package: `hostname=3.23`
 
@@ -1080,19 +1080,25 @@ $ apt-get source -qq --print-uris libidn2=2.2.0-2
 'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.2.0-2.debian.tar.xz' libidn2_2.2.0-2.debian.tar.xz 11184 SHA256:b38ce002d7eb1abbf2c870ac9570cd06a5087693f359b133defbf44b06f8784d
 ```
 
-### `dpkg` source package: `libksba=1.3.5-2ubuntu0.20.04.1`
+### `dpkg` source package: `libksba=1.3.5-2ubuntu0.20.04.2`
 
 Binary Packages:
 
-- `libksba8:amd64=1.3.5-2ubuntu0.20.04.1`
+- `libksba8:amd64=1.3.5-2ubuntu0.20.04.2`
 
 Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 
 - `GPL-3`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libksba=1.3.5-2ubuntu0.20.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2ubuntu0.20.04.2.dsc' libksba_1.3.5-2ubuntu0.20.04.2.dsc 2697 SHA512:d0c165b3bdfbc90459056b2758bc46e3f392ca660ab25e7661adf9a0325cdddef11ba6aa0a6411e737e0ea6490e28e94e6575e11cd893bc93b21ed90ed256fff
+'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2' libksba_1.3.5.orig.tar.bz2 620649 SHA512:60179bfd109b7b4fd8d2b30a3216540f03f5a13620d9a5b63f1f95788028708a420911619f172ba57e945a6a2fcd2ef7eaafc5585a0eb2b9652cfadf47bf39a2
+'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5.orig.tar.bz2.asc' libksba_1.3.5.orig.tar.bz2.asc 287 SHA512:6b58b1c6ee924230e4f3b040836e85cb3b3f527f667bcb370c28d8ec702c884bcceab374688e02d0356dede81f9fcf975d726c1958d4d87e5c41757a6b2ba39e
+'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.3.5-2ubuntu0.20.04.2.debian.tar.xz' libksba_1.3.5-2ubuntu0.20.04.2.debian.tar.xz 15308 SHA512:a2289eb5c73dcef41bf8b66c70ddb216ebabf1912b81ad79af6db32c3b6c351a5c5dab703cabdbbc11026c6f7cc4433ca6a3ff6a031ee500cab625ba7ea30fc9
+```
 
 ### `dpkg` source package: `libpng1.6=1.6.37-2`
 
