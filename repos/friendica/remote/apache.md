@@ -1,7 +1,7 @@
 ## `friendica:apache`
 
 ```console
-$ docker pull friendica@sha256:5f22018ab7728347b73abf722928664171bfb47f6f3fb84e6878631c80c40058
+$ docker pull friendica@sha256:ee52203eb631fa2127613008bf83b0e6026047f1011cd1dc611460b210dffe5f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,14 +18,14 @@ $ docker pull friendica@sha256:5f22018ab7728347b73abf722928664171bfb47f6f3fb84e6
 ### `friendica:apache` - linux; amd64
 
 ```console
-$ docker pull friendica@sha256:ab1ccc9bd7de21f44b9bf185bc400698dac57abf2af6f861552d1849831c2683
+$ docker pull friendica@sha256:64870f8af3dc132d32480e0164e9e6b84bdb2de89aa4489f9054d788390d41b2
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **252.7 MB (252705502 bytes)**  
+-	Total Size: **252.7 MB (252686307 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b8f199ada06124e755a7aeee32bcf5bff77725f9cc99c92f0601b36333b1ad0b`
+-	Image ID: `sha256:7e3551926c66027463ef904d00d10e952ecd4059f1529609b90a7efd98d4bb93`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -110,23 +110,23 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Thu, 12 Jan 2023 00:30:39 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Thu, 12 Jan 2023 00:30:39 GMT
-ENV FRIENDICA_VERSION=2022.12
-# Thu, 12 Jan 2023 00:30:39 GMT
-ENV FRIENDICA_ADDONS=2022.12
-# Thu, 12 Jan 2023 00:30:39 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=05c6b8152314dc45fd2e574994b531e7f1e1509a70dc56cd78bf1e3c07227092
-# Thu, 12 Jan 2023 00:30:39 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=feff1548f01431bd3822372a6c228c872d70e2831c0877b248aae66e1ded8315
-# Thu, 12 Jan 2023 00:31:04 GMT
+# Tue, 17 Jan 2023 20:57:28 GMT
+ENV FRIENDICA_VERSION=2023.01
+# Tue, 17 Jan 2023 20:57:28 GMT
+ENV FRIENDICA_ADDONS=2023.01
+# Tue, 17 Jan 2023 20:57:29 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=4496990805142d20051a5273904a47809ae12f1cadd74de305d5ae167b7cdf6e
+# Tue, 17 Jan 2023 20:57:29 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=48117926a6ffeb58aaf81795cfbd5ad24acf76693744e92817593e310acc5262
+# Tue, 17 Jan 2023 20:57:55 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;         export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps;     rm -rf /var/lib/apt/lists/*
-# Thu, 12 Jan 2023 00:31:05 GMT
+# Tue, 17 Jan 2023 20:57:56 GMT
 COPY multi:7cba7205e29ccd126186db9586c104a13fc6a00055e2ad88545d236d2d069334 in / 
-# Thu, 12 Jan 2023 00:31:05 GMT
+# Tue, 17 Jan 2023 20:57:56 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Thu, 12 Jan 2023 00:31:05 GMT
+# Tue, 17 Jan 2023 20:57:56 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 12 Jan 2023 00:31:05 GMT
+# Tue, 17 Jan 2023 20:57:56 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -203,30 +203,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Thu, 12 Jan 2023 00:35:26 GMT  
 		Size: 537.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d702fb58f1078bb63b524dc314a84c8fa9a71d8670dcdfdb942a79762df3c313`  
-		Last Modified: Thu, 12 Jan 2023 00:35:33 GMT  
-		Size: 53.7 MB (53747220 bytes)  
+	-	`sha256:ad01e40ae09f902a4804ee0fd106ec3889a3908ee24b9c1ffd6d655b99f5bf51`  
+		Last Modified: Tue, 17 Jan 2023 20:59:28 GMT  
+		Size: 53.7 MB (53728027 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3582b22f66f9726ac914444c18266dca6e7773b5bb10e0c67c84840f71c7611c`  
-		Last Modified: Thu, 12 Jan 2023 00:35:26 GMT  
-		Size: 3.0 KB (2989 bytes)  
+	-	`sha256:4c8f6c4e5de0f14c942365a9851d934b06765465f8c11cb7137c75b24607207b`  
+		Last Modified: Tue, 17 Jan 2023 20:59:22 GMT  
+		Size: 3.0 KB (2988 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2f45692aac06edd1be19750d29ed90af314e99fb8ead9336c0c2f2464f07db3d`  
-		Last Modified: Thu, 12 Jan 2023 00:35:26 GMT  
-		Size: 930.0 B  
+	-	`sha256:87a5a65329eac61ab8c77cb4c1430b5ac25b2254a5d59103e43ec8272c1eaee9`  
+		Last Modified: Tue, 17 Jan 2023 20:59:22 GMT  
+		Size: 929.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:apache` - linux; arm variant v5
 
 ```console
-$ docker pull friendica@sha256:813fa8caa3ead81600409566a8981bf3e51dd6d4ca7d311b43136d603e2b689f
+$ docker pull friendica@sha256:125b273e801ed6bb6d75cd1e2803a27dd067f36033ed01e70bfdb4192f092267
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **228.1 MB (228145517 bytes)**  
+-	Total Size: **228.1 MB (228126581 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ae5be0037332bd087169dbede01a8cdf265c7eddf04e08df8ab79f622a888049`
+-	Image ID: `sha256:994b66af5524b4eab23cd5a9bc68ccfc2eab22f8f684a4c8d6e7291d4f940a4e`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -311,23 +311,23 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Wed, 11 Jan 2023 13:49:28 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Wed, 11 Jan 2023 13:49:28 GMT
-ENV FRIENDICA_VERSION=2022.12
-# Wed, 11 Jan 2023 13:49:28 GMT
-ENV FRIENDICA_ADDONS=2022.12
-# Wed, 11 Jan 2023 13:49:28 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=05c6b8152314dc45fd2e574994b531e7f1e1509a70dc56cd78bf1e3c07227092
-# Wed, 11 Jan 2023 13:49:28 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=feff1548f01431bd3822372a6c228c872d70e2831c0877b248aae66e1ded8315
-# Wed, 11 Jan 2023 13:49:57 GMT
+# Tue, 17 Jan 2023 19:48:30 GMT
+ENV FRIENDICA_VERSION=2023.01
+# Tue, 17 Jan 2023 19:48:30 GMT
+ENV FRIENDICA_ADDONS=2023.01
+# Tue, 17 Jan 2023 19:48:30 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=4496990805142d20051a5273904a47809ae12f1cadd74de305d5ae167b7cdf6e
+# Tue, 17 Jan 2023 19:48:30 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=48117926a6ffeb58aaf81795cfbd5ad24acf76693744e92817593e310acc5262
+# Tue, 17 Jan 2023 19:48:59 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;         export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps;     rm -rf /var/lib/apt/lists/*
-# Wed, 11 Jan 2023 13:49:59 GMT
+# Tue, 17 Jan 2023 19:49:00 GMT
 COPY multi:7cba7205e29ccd126186db9586c104a13fc6a00055e2ad88545d236d2d069334 in / 
-# Wed, 11 Jan 2023 13:49:59 GMT
+# Tue, 17 Jan 2023 19:49:00 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Wed, 11 Jan 2023 13:49:59 GMT
+# Tue, 17 Jan 2023 19:49:00 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 11 Jan 2023 13:49:59 GMT
+# Tue, 17 Jan 2023 19:49:00 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -404,30 +404,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Wed, 11 Jan 2023 13:54:59 GMT  
 		Size: 539.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d5ee31e15de3dea75eb2d5433fb5ee6d4a6a159e2dd645c88d705242f8273c8a`  
-		Last Modified: Wed, 11 Jan 2023 13:55:08 GMT  
-		Size: 53.7 MB (53745343 bytes)  
+	-	`sha256:f75e41b3af1e46a32dccd632441727d736ae4fd711fe4071170e6169c3c4a608`  
+		Last Modified: Tue, 17 Jan 2023 19:50:44 GMT  
+		Size: 53.7 MB (53726407 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ccfb77f44e54241318da69284c1818d3b8465d11dcfb18efa49b9f92a3731467`  
-		Last Modified: Wed, 11 Jan 2023 13:54:59 GMT  
+	-	`sha256:8c1797d7272bd3210d2a09e8f0efc779df925ce016cbbfb6f6c7ea105dd184b4`  
+		Last Modified: Tue, 17 Jan 2023 19:50:36 GMT  
 		Size: 3.0 KB (2989 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:91d47a067a4baea82eab51e0587a867ccc7eae44d7d7461703cf32d204fc3f7c`  
-		Last Modified: Wed, 11 Jan 2023 13:54:59 GMT  
+	-	`sha256:0f241d80729d325a86f0f2dc7cea0895ae5577c98a8b17232e0e1135dd79aef9`  
+		Last Modified: Tue, 17 Jan 2023 19:50:36 GMT  
 		Size: 929.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:apache` - linux; arm variant v7
 
 ```console
-$ docker pull friendica@sha256:3ac86d64c7ddfb7e62716fe9c6c70e1ee1a8b38c27a9e0c52c2d165b870d5fe4
+$ docker pull friendica@sha256:1a71365b3806039ffb5f093ed13c89fc72690a4263b316b8870dbefa2b524709
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **219.4 MB (219367456 bytes)**  
+-	Total Size: **219.3 MB (219348463 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ff114a1410003934edc33ee766afbdbabdcabd72250dc1a87c42fc0a0f044ab6`
+-	Image ID: `sha256:0dc97295a6d52be5cdd3e3cfc9fe78becaf161b6d161b828f11cc5bb8e5fb717`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -512,23 +512,23 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Thu, 12 Jan 2023 02:41:51 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Thu, 12 Jan 2023 02:41:51 GMT
-ENV FRIENDICA_VERSION=2022.12
-# Thu, 12 Jan 2023 02:41:51 GMT
-ENV FRIENDICA_ADDONS=2022.12
-# Thu, 12 Jan 2023 02:41:51 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=05c6b8152314dc45fd2e574994b531e7f1e1509a70dc56cd78bf1e3c07227092
-# Thu, 12 Jan 2023 02:41:51 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=feff1548f01431bd3822372a6c228c872d70e2831c0877b248aae66e1ded8315
-# Thu, 12 Jan 2023 02:42:16 GMT
+# Tue, 17 Jan 2023 20:11:16 GMT
+ENV FRIENDICA_VERSION=2023.01
+# Tue, 17 Jan 2023 20:11:16 GMT
+ENV FRIENDICA_ADDONS=2023.01
+# Tue, 17 Jan 2023 20:11:16 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=4496990805142d20051a5273904a47809ae12f1cadd74de305d5ae167b7cdf6e
+# Tue, 17 Jan 2023 20:11:16 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=48117926a6ffeb58aaf81795cfbd5ad24acf76693744e92817593e310acc5262
+# Tue, 17 Jan 2023 20:11:40 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;         export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps;     rm -rf /var/lib/apt/lists/*
-# Thu, 12 Jan 2023 02:42:18 GMT
+# Tue, 17 Jan 2023 20:11:42 GMT
 COPY multi:7cba7205e29ccd126186db9586c104a13fc6a00055e2ad88545d236d2d069334 in / 
-# Thu, 12 Jan 2023 02:42:18 GMT
+# Tue, 17 Jan 2023 20:11:42 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Thu, 12 Jan 2023 02:42:18 GMT
+# Tue, 17 Jan 2023 20:11:42 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 12 Jan 2023 02:42:18 GMT
+# Tue, 17 Jan 2023 20:11:42 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -605,30 +605,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Thu, 12 Jan 2023 02:47:05 GMT  
 		Size: 535.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0d3b285fdd94d2c73dca9c8292593122b6f03abe5546ac394925f933379d7704`  
-		Last Modified: Thu, 12 Jan 2023 02:47:14 GMT  
-		Size: 53.7 MB (53745355 bytes)  
+	-	`sha256:7d9512ae7297629e87683bbfd51a3374d009132d00fa2aeb858fac8d61d2b8d7`  
+		Last Modified: Tue, 17 Jan 2023 20:13:59 GMT  
+		Size: 53.7 MB (53726369 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:77b7fd9dcf899f1b1cacd009118b71c5fdad255f63f8a98f22f7c446105cadb0`  
-		Last Modified: Thu, 12 Jan 2023 02:47:05 GMT  
+	-	`sha256:ee323192c05db1b0991bfaf68c78bd9c74425b82a26219b7391482f1c507f369`  
+		Last Modified: Tue, 17 Jan 2023 20:13:51 GMT  
 		Size: 3.0 KB (2988 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad3b3f234328c728dd8f7389628d43c14573d5c64f3ec9b4154f27f84ca1a68a`  
-		Last Modified: Thu, 12 Jan 2023 02:47:05 GMT  
-		Size: 933.0 B  
+	-	`sha256:8b7031925db8944283a98fe89897eb197fa878907ccf09bb74ad2743104b81aa`  
+		Last Modified: Tue, 17 Jan 2023 20:13:51 GMT  
+		Size: 926.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:apache` - linux; arm64 variant v8
 
 ```console
-$ docker pull friendica@sha256:8daefcbe739e2fb9176b9fe7f5955a4d25e1f45ad4230543f200f3d1ad601307
+$ docker pull friendica@sha256:52f6e1dfa860b6824eda80fcefb6fc26f9d4679b0dc2e617f3cce6e09557c540
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **243.3 MB (243302698 bytes)**  
+-	Total Size: **243.3 MB (243283584 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bb2a04a57d3bda10e80a9d9ef554b233e1f11b46810b85f6ccf5a6d47e9ac4b1`
+-	Image ID: `sha256:d8730401e3ff23b90102f8905fab4227acb4fce8903fd57cb6973fdd94ef1f8d`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -713,23 +713,23 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Wed, 11 Jan 2023 18:58:57 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Wed, 11 Jan 2023 18:58:57 GMT
-ENV FRIENDICA_VERSION=2022.12
-# Wed, 11 Jan 2023 18:58:57 GMT
-ENV FRIENDICA_ADDONS=2022.12
-# Wed, 11 Jan 2023 18:58:58 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=05c6b8152314dc45fd2e574994b531e7f1e1509a70dc56cd78bf1e3c07227092
-# Wed, 11 Jan 2023 18:58:58 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=feff1548f01431bd3822372a6c228c872d70e2831c0877b248aae66e1ded8315
-# Wed, 11 Jan 2023 18:59:19 GMT
+# Tue, 17 Jan 2023 19:39:31 GMT
+ENV FRIENDICA_VERSION=2023.01
+# Tue, 17 Jan 2023 19:39:31 GMT
+ENV FRIENDICA_ADDONS=2023.01
+# Tue, 17 Jan 2023 19:39:31 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=4496990805142d20051a5273904a47809ae12f1cadd74de305d5ae167b7cdf6e
+# Tue, 17 Jan 2023 19:39:31 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=48117926a6ffeb58aaf81795cfbd5ad24acf76693744e92817593e310acc5262
+# Tue, 17 Jan 2023 19:39:55 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;         export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps;     rm -rf /var/lib/apt/lists/*
-# Wed, 11 Jan 2023 18:59:20 GMT
+# Tue, 17 Jan 2023 19:39:56 GMT
 COPY multi:7cba7205e29ccd126186db9586c104a13fc6a00055e2ad88545d236d2d069334 in / 
-# Wed, 11 Jan 2023 18:59:20 GMT
+# Tue, 17 Jan 2023 19:39:56 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Wed, 11 Jan 2023 18:59:20 GMT
+# Tue, 17 Jan 2023 19:39:56 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 11 Jan 2023 18:59:20 GMT
+# Tue, 17 Jan 2023 19:39:56 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -806,30 +806,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Wed, 11 Jan 2023 19:02:51 GMT  
 		Size: 538.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a5d9f53d76f3d526e62434d7736bb15fdef39638c8c609bc9a0c138f9bdc373`  
-		Last Modified: Wed, 11 Jan 2023 19:02:57 GMT  
-		Size: 53.7 MB (53746543 bytes)  
+	-	`sha256:73986c9483c5cb81ff67af8c3df9b4989da2c558233e7aab083df3d01c6d956f`  
+		Last Modified: Tue, 17 Jan 2023 19:41:23 GMT  
+		Size: 53.7 MB (53727430 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5bb22bfb4aa5ab1d5657e22db2f062bfb207165f7d29b3fa0b15b77282b6436b`  
-		Last Modified: Wed, 11 Jan 2023 19:02:51 GMT  
+	-	`sha256:ffbb73b43f12c077fd49a7aefbb22c7cdde01f288da6ba7376a8dc3e6a20c38c`  
+		Last Modified: Tue, 17 Jan 2023 19:41:17 GMT  
 		Size: 3.0 KB (2989 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4c492c780d34bf19740aae481a0e407835760432f124e1ee790aaeb03776695`  
-		Last Modified: Wed, 11 Jan 2023 19:02:51 GMT  
-		Size: 931.0 B  
+	-	`sha256:ca931130cb94631511fa56ca08fe67ced1339ae8311e40de7e0a6adc6123f45d`  
+		Last Modified: Tue, 17 Jan 2023 19:41:17 GMT  
+		Size: 930.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:apache` - linux; 386
 
 ```console
-$ docker pull friendica@sha256:fd51b28aa3c1c0aed35f0b3a4a86c48e96ea4da4e1106932b38d23d540015944
+$ docker pull friendica@sha256:df57d418572af1368313fb1c01ef2c92c90e9e96b2569a74460393994fda31b2
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **254.3 MB (254250991 bytes)**  
+-	Total Size: **254.2 MB (254235142 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:269b74099d91316a4ef095e15ed0816623680863018d2cc0599c920b2c7a5e2a`
+-	Image ID: `sha256:85e95772f0818ef2025934e1b63b2f83debf933befe07cf3feb89ac0374c15d4`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -914,23 +914,23 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Wed, 11 Jan 2023 19:19:30 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Wed, 11 Jan 2023 19:19:31 GMT
-ENV FRIENDICA_VERSION=2022.12
-# Wed, 11 Jan 2023 19:19:32 GMT
-ENV FRIENDICA_ADDONS=2022.12
-# Wed, 11 Jan 2023 19:19:33 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=05c6b8152314dc45fd2e574994b531e7f1e1509a70dc56cd78bf1e3c07227092
-# Wed, 11 Jan 2023 19:19:34 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=feff1548f01431bd3822372a6c228c872d70e2831c0877b248aae66e1ded8315
-# Wed, 11 Jan 2023 19:20:00 GMT
+# Tue, 17 Jan 2023 21:31:12 GMT
+ENV FRIENDICA_VERSION=2023.01
+# Tue, 17 Jan 2023 21:31:13 GMT
+ENV FRIENDICA_ADDONS=2023.01
+# Tue, 17 Jan 2023 21:31:14 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=4496990805142d20051a5273904a47809ae12f1cadd74de305d5ae167b7cdf6e
+# Tue, 17 Jan 2023 21:31:15 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=48117926a6ffeb58aaf81795cfbd5ad24acf76693744e92817593e310acc5262
+# Tue, 17 Jan 2023 21:31:37 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;         export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps;     rm -rf /var/lib/apt/lists/*
-# Wed, 11 Jan 2023 19:20:01 GMT
+# Tue, 17 Jan 2023 21:31:39 GMT
 COPY multi:7cba7205e29ccd126186db9586c104a13fc6a00055e2ad88545d236d2d069334 in / 
-# Wed, 11 Jan 2023 19:20:02 GMT
+# Tue, 17 Jan 2023 21:31:40 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Wed, 11 Jan 2023 19:20:03 GMT
+# Tue, 17 Jan 2023 21:31:40 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 11 Jan 2023 19:20:04 GMT
+# Tue, 17 Jan 2023 21:31:41 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1007,30 +1007,30 @@ CMD ["apache2-foreground"]
 		Last Modified: Wed, 11 Jan 2023 19:25:17 GMT  
 		Size: 537.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d26d75fb2f5be8baf00baf8b748bc890a6288cca59429dd7e679f4462cdc45c6`  
-		Last Modified: Wed, 11 Jan 2023 19:25:25 GMT  
-		Size: 53.5 MB (53504044 bytes)  
+	-	`sha256:4c00b18a27b0104a158dd50df0e5a3076fde613ab94f8064108dcba8afb24e88`  
+		Last Modified: Tue, 17 Jan 2023 21:33:56 GMT  
+		Size: 53.5 MB (53488199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:745cdc4195e2b89b763325105c660f75c173c107f219a938f68032bb61b27ca4`  
-		Last Modified: Wed, 11 Jan 2023 19:25:18 GMT  
-		Size: 3.0 KB (2989 bytes)  
+	-	`sha256:79c392b2d5266774340b36b5b05abeaa0181d72953cfeaa503ac3dccfa76bf65`  
+		Last Modified: Tue, 17 Jan 2023 21:33:49 GMT  
+		Size: 3.0 KB (2988 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8e124520b614fc1e4500a8fd10b29ae3fd056d713430b1dd741cd781f203ac1d`  
-		Last Modified: Wed, 11 Jan 2023 19:25:17 GMT  
-		Size: 930.0 B  
+	-	`sha256:95070a339413b447a07b2cab84ffa0d9a441e81103c25f9280568b5665a3b391`  
+		Last Modified: Tue, 17 Jan 2023 21:33:49 GMT  
+		Size: 927.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:apache` - linux; mips64le
 
 ```console
-$ docker pull friendica@sha256:eb859a90179faf59dec4d154df2e8e09a9fa7e2b926126d4fc107a06081ca875
+$ docker pull friendica@sha256:2c6b16d2c94447e13a6b970a7ce9c89647d5bc137e65c651e3ac30f309b207cd
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **226.4 MB (226355606 bytes)**  
+-	Total Size: **226.3 MB (226340081 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c11e649c96c18ea9b301891473039447f237bff338b3b7fb4da3de9a0b0cb47f`
+-	Image ID: `sha256:ef4a08c121dc12cc865c2095c588d215bf1218062d628e0858ded7b13b51384f`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -1115,23 +1115,23 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Thu, 12 Jan 2023 21:23:56 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Thu, 12 Jan 2023 21:24:00 GMT
-ENV FRIENDICA_VERSION=2022.12
-# Thu, 12 Jan 2023 21:24:04 GMT
-ENV FRIENDICA_ADDONS=2022.12
-# Thu, 12 Jan 2023 21:24:08 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=05c6b8152314dc45fd2e574994b531e7f1e1509a70dc56cd78bf1e3c07227092
-# Thu, 12 Jan 2023 21:24:12 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=feff1548f01431bd3822372a6c228c872d70e2831c0877b248aae66e1ded8315
-# Thu, 12 Jan 2023 21:25:40 GMT
+# Tue, 17 Jan 2023 21:06:32 GMT
+ENV FRIENDICA_VERSION=2023.01
+# Tue, 17 Jan 2023 21:06:36 GMT
+ENV FRIENDICA_ADDONS=2023.01
+# Tue, 17 Jan 2023 21:06:40 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=4496990805142d20051a5273904a47809ae12f1cadd74de305d5ae167b7cdf6e
+# Tue, 17 Jan 2023 21:06:44 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=48117926a6ffeb58aaf81795cfbd5ad24acf76693744e92817593e310acc5262
+# Tue, 17 Jan 2023 21:08:14 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;         export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps;     rm -rf /var/lib/apt/lists/*
-# Thu, 12 Jan 2023 21:25:48 GMT
+# Tue, 17 Jan 2023 21:08:21 GMT
 COPY multi:7cba7205e29ccd126186db9586c104a13fc6a00055e2ad88545d236d2d069334 in / 
-# Thu, 12 Jan 2023 21:25:54 GMT
+# Tue, 17 Jan 2023 21:08:27 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Thu, 12 Jan 2023 21:26:01 GMT
+# Tue, 17 Jan 2023 21:08:33 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Thu, 12 Jan 2023 21:26:07 GMT
+# Tue, 17 Jan 2023 21:08:39 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1208,231 +1208,231 @@ CMD ["apache2-foreground"]
 		Last Modified: Thu, 12 Jan 2023 21:49:36 GMT  
 		Size: 546.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:828b032d10971070d059e7290dab5477ba0add1c253352fd853f519df720f751`  
-		Last Modified: Thu, 12 Jan 2023 21:50:06 GMT  
-		Size: 53.5 MB (53505225 bytes)  
+	-	`sha256:7271d9d9bb7efaf885efe78383b34e038251b29ce244b5454b553a3072b4a959`  
+		Last Modified: Tue, 17 Jan 2023 21:11:56 GMT  
+		Size: 53.5 MB (53489699 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9a3207a41d9251d5f0c1334a769e880d78bfb9418875a32e9c6cb386c91ef3a`  
-		Last Modified: Thu, 12 Jan 2023 21:49:36 GMT  
-		Size: 3.0 KB (2989 bytes)  
+	-	`sha256:008eeaab6320a950dcbee5961493ef582603bcef28e27f359e82b32f438d9808`  
+		Last Modified: Tue, 17 Jan 2023 21:11:28 GMT  
+		Size: 3.0 KB (2988 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e886ff627983e900112e0a48766a973949effb45c538d01edc60f51c8a950291`  
-		Last Modified: Thu, 12 Jan 2023 21:49:36 GMT  
-		Size: 930.0 B  
+	-	`sha256:a21f1d4cf96409c1ce514c463b1cce72a959026a439d12251595b289eabda4b8`  
+		Last Modified: Tue, 17 Jan 2023 21:11:28 GMT  
+		Size: 932.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:apache` - linux; ppc64le
 
 ```console
-$ docker pull friendica@sha256:87ac13f4569e1ac889cf893128e4453024f6daab225c241b65ac61e4deae6580
+$ docker pull friendica@sha256:489524a9d412b7edf80d80f1a6223dc13d71620d79a9d60e15ecbc6c1a9b69d5
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **252.4 MB (252408789 bytes)**  
+-	Total Size: **252.4 MB (252392280 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fad91c10ace3284b54890407c0085e6dac667d833dfdca217baa1e2022c8673c`
+-	Image ID: `sha256:cf47eaf305041279708add974383c84d24698c7cd5ec761bf4aac555eec2d666`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
 ```dockerfile
-# Wed, 21 Dec 2022 01:17:41 GMT
-ADD file:5ab731e5c1e145738476449b6b0748f44822bb2cd6c53ae5bbf6ae6bfec83383 in / 
-# Wed, 21 Dec 2022 01:17:43 GMT
+# Wed, 11 Jan 2023 03:49:30 GMT
+ADD file:3c7553fb5eda606d574ff6c08bc2213f9e6a68910043fe3087e4c1a04b65a18e in / 
+# Wed, 11 Jan 2023 03:49:32 GMT
 CMD ["bash"]
-# Wed, 21 Dec 2022 02:54:28 GMT
+# Wed, 11 Jan 2023 05:41:42 GMT
 RUN set -eux; 	{ 		echo 'Package: php*'; 		echo 'Pin: release *'; 		echo 'Pin-Priority: -1'; 	} > /etc/apt/preferences.d/no-debian-php
-# Wed, 21 Dec 2022 02:54:28 GMT
+# Wed, 11 Jan 2023 05:41:43 GMT
 ENV PHPIZE_DEPS=autoconf 		dpkg-dev 		file 		g++ 		gcc 		libc-dev 		make 		pkg-config 		re2c
-# Wed, 21 Dec 2022 02:55:08 GMT
+# Wed, 11 Jan 2023 05:42:21 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		$PHPIZE_DEPS 		ca-certificates 		curl 		xz-utils 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 21 Dec 2022 02:55:12 GMT
+# Wed, 11 Jan 2023 05:42:25 GMT
 ENV PHP_INI_DIR=/usr/local/etc/php
-# Wed, 21 Dec 2022 02:55:13 GMT
+# Wed, 11 Jan 2023 05:42:26 GMT
 RUN set -eux; 	mkdir -p "$PHP_INI_DIR/conf.d"; 	[ ! -d /var/www/html ]; 	mkdir -p /var/www/html; 	chown www-data:www-data /var/www/html; 	chmod 777 /var/www/html
-# Wed, 21 Dec 2022 03:00:08 GMT
+# Wed, 11 Jan 2023 05:46:52 GMT
 ENV APACHE_CONFDIR=/etc/apache2
-# Wed, 21 Dec 2022 03:00:08 GMT
+# Wed, 11 Jan 2023 05:46:52 GMT
 ENV APACHE_ENVVARS=/etc/apache2/envvars
-# Wed, 21 Dec 2022 03:00:29 GMT
+# Wed, 11 Jan 2023 05:47:11 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends apache2; 	rm -rf /var/lib/apt/lists/*; 		sed -ri 's/^export ([^=]+)=(.*)$/: ${\1:=\2}\nexport \1/' "$APACHE_ENVVARS"; 		. "$APACHE_ENVVARS"; 	for dir in 		"$APACHE_LOCK_DIR" 		"$APACHE_RUN_DIR" 		"$APACHE_LOG_DIR" 	; do 		rm -rvf "$dir"; 		mkdir -p "$dir"; 		chown "$APACHE_RUN_USER:$APACHE_RUN_GROUP" "$dir"; 		chmod 777 "$dir"; 	done; 		rm -rvf /var/www/html/*; 		ln -sfT /dev/stderr "$APACHE_LOG_DIR/error.log"; 	ln -sfT /dev/stdout "$APACHE_LOG_DIR/access.log"; 	ln -sfT /dev/stdout "$APACHE_LOG_DIR/other_vhosts_access.log"; 	chown -R --no-dereference "$APACHE_RUN_USER:$APACHE_RUN_GROUP" "$APACHE_LOG_DIR"
-# Wed, 21 Dec 2022 03:00:31 GMT
+# Wed, 11 Jan 2023 05:47:14 GMT
 RUN a2dismod mpm_event && a2enmod mpm_prefork
-# Wed, 21 Dec 2022 03:00:33 GMT
+# Wed, 11 Jan 2023 05:47:15 GMT
 RUN { 		echo '<FilesMatch \.php$>'; 		echo '\tSetHandler application/x-httpd-php'; 		echo '</FilesMatch>'; 		echo; 		echo 'DirectoryIndex disabled'; 		echo 'DirectoryIndex index.php index.html'; 		echo; 		echo '<Directory /var/www/>'; 		echo '\tOptions -Indexes'; 		echo '\tAllowOverride All'; 		echo '</Directory>'; 	} | tee "$APACHE_CONFDIR/conf-available/docker-php.conf" 	&& a2enconf docker-php
-# Wed, 21 Dec 2022 03:00:33 GMT
+# Wed, 11 Jan 2023 05:47:15 GMT
 ENV PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Wed, 21 Dec 2022 03:00:33 GMT
+# Wed, 11 Jan 2023 05:47:15 GMT
 ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64
-# Wed, 21 Dec 2022 03:00:34 GMT
+# Wed, 11 Jan 2023 05:47:16 GMT
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
-# Wed, 21 Dec 2022 04:14:02 GMT
+# Wed, 11 Jan 2023 06:22:31 GMT
 ENV GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4
-# Fri, 06 Jan 2023 00:51:28 GMT
+# Wed, 11 Jan 2023 06:22:31 GMT
 ENV PHP_VERSION=8.0.27
-# Fri, 06 Jan 2023 00:51:28 GMT
+# Wed, 11 Jan 2023 06:22:31 GMT
 ENV PHP_URL=https://www.php.net/distributions/php-8.0.27.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.0.27.tar.xz.asc
-# Fri, 06 Jan 2023 00:51:28 GMT
+# Wed, 11 Jan 2023 06:22:32 GMT
 ENV PHP_SHA256=f942cbfe2f7bacbb8039fb79bbec41c76ea779ac5c8157f21e1e0c1b28a5fc3a
-# Fri, 06 Jan 2023 00:51:49 GMT
+# Wed, 11 Jan 2023 06:22:54 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg dirmngr; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Fri, 06 Jan 2023 00:51:49 GMT
+# Wed, 11 Jan 2023 06:22:54 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Fri, 06 Jan 2023 00:55:41 GMT
+# Wed, 11 Jan 2023 06:26:49 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		apache2-dev 		libargon2-dev 		libcurl4-openssl-dev 		libonig-dev 		libreadline-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 	; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-iconv 		--with-openssl 		--with-readline 		--with-zlib 				--disable-phpdbg 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				--disable-cgi 				--with-apxs2 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find 		/usr/local 		-type f 		-perm '/0111' 		-exec sh -euxc ' 			strip --strip-all "$@" || : 		' -- '{}' + 	; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Fri, 06 Jan 2023 00:55:42 GMT
+# Wed, 11 Jan 2023 06:26:51 GMT
 COPY multi:e11221d43af7136e4dbad5a74e659bcfa753214a9e615c3daf357f1633d9d3d1 in /usr/local/bin/ 
-# Fri, 06 Jan 2023 00:55:44 GMT
+# Wed, 11 Jan 2023 06:26:52 GMT
 RUN docker-php-ext-enable sodium
-# Fri, 06 Jan 2023 00:55:44 GMT
+# Wed, 11 Jan 2023 06:26:52 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Fri, 06 Jan 2023 00:55:44 GMT
+# Wed, 11 Jan 2023 06:26:52 GMT
 STOPSIGNAL SIGWINCH
-# Fri, 06 Jan 2023 00:55:45 GMT
+# Wed, 11 Jan 2023 06:26:53 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Fri, 06 Jan 2023 00:55:45 GMT
+# Wed, 11 Jan 2023 06:26:53 GMT
 WORKDIR /var/www/html
-# Fri, 06 Jan 2023 00:55:46 GMT
+# Wed, 11 Jan 2023 06:26:53 GMT
 EXPOSE 80
-# Fri, 06 Jan 2023 00:55:47 GMT
+# Wed, 11 Jan 2023 06:26:54 GMT
 CMD ["apache2-foreground"]
-# Fri, 06 Jan 2023 02:59:12 GMT
+# Fri, 13 Jan 2023 06:17:28 GMT
 RUN set -ex;         apt-get update;     apt-get install -y --no-install-recommends         rsync         bzip2         msmtp         tini     ;
-# Fri, 06 Jan 2023 02:59:13 GMT
+# Fri, 13 Jan 2023 06:17:29 GMT
 ENV GOSU_VERSION=1.14
-# Fri, 06 Jan 2023 02:59:31 GMT
+# Fri, 13 Jan 2023 06:17:48 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates wget; 	if ! command -v gpg; then 		apt-get install -y --no-install-recommends gnupg2 dirmngr; 	elif gpg --version | grep -q '^gpg (GnuPG) 1\.'; then 		apt-get install -y --no-install-recommends gnupg-curl; 	fi; 	rm -rf /var/lib/apt/lists/*; 		dpkgArch="$(dpkg --print-architecture | awk -F- '{ print $NF }')"; 	wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch"; 	wget -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$dpkgArch.asc"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4; 	gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		chmod +x /usr/local/bin/gosu; 	gosu --version; 	gosu nobody true
-# Fri, 06 Jan 2023 03:03:47 GMT
+# Tue, 17 Jan 2023 21:10:49 GMT
 RUN set -ex;         savedAptMark="$(apt-mark showmanual)";         apt-get update;     apt-get install -y --no-install-recommends         mariadb-client         bash         libpng-dev         libjpeg62-turbo-dev         libtool         libmagick++-dev         libmemcached-dev         libgraphicsmagick1-dev         libfreetype6-dev         libwebp-dev         librsvg2-2         libzip-dev         libldap2-dev         libgmp-dev         libmagickcore-6.q16-6-extra     ;             debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)";         docker-php-ext-configure gd         --with-freetype         --with-jpeg         --with-webp     ;     docker-php-ext-configure ldap         --with-libdir=lib/$debMultiarch/     ;    docker-php-ext-install -j "$(nproc)"         pdo_mysql         gd         exif         zip         opcache         ctype         pcntl         ldap         gmp     ;         pecl install apcu-5.1.22;     pecl install memcached-3.2.0RC2;     pecl install redis-5.3.7;     pecl install imagick-3.7.0;         docker-php-ext-enable         apcu         memcached         redis         imagick     ;         apt-mark auto '.*' > /dev/null;     apt-mark manual $savedAptMark;     ldd "$(php -r 'echo ini_get("extension_dir");')"/*.so         | awk '/=>/ { print $3 }'         | sort -u         | xargs -r dpkg-query -S         | cut -d: -f1         | sort -u         | xargs -rt apt-mark manual;         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false;     rm -rf /var/lib/apt/lists/*
-# Fri, 06 Jan 2023 03:03:48 GMT
+# Tue, 17 Jan 2023 21:10:50 GMT
 ENV PHP_MEMORY_LIMIT=512M
-# Fri, 06 Jan 2023 03:03:49 GMT
+# Tue, 17 Jan 2023 21:10:50 GMT
 ENV PHP_UPLOAD_LIMIT=512M
-# Fri, 06 Jan 2023 03:03:50 GMT
+# Tue, 17 Jan 2023 21:10:51 GMT
 RUN set -ex;     {         echo 'opcache.enable=1' ;         echo 'opcache.interned_strings_buffer=8';         echo 'opcache.max_accelerated_files=10000';         echo 'opcache.memory_consumption=128';         echo 'opcache.save_comments=1';         echo 'opcache.revalidte_freq=1';     } > /usr/local/etc/php/conf.d/opcache-recommended.ini;         {         echo sendmail_path = "/usr/bin/msmtp -t";     } > /usr/local/etc/php/conf.d/sendmail.ini;         echo 'apc.enable_cli=1' >> /usr/local/etc/php/conf.d/docker-php-ext-apcu.ini;         {         echo 'memory_limit=${PHP_MEMORY_LIMIT}';         echo 'upload_max_filesize=${PHP_UPLOAD_LIMIT}';         echo 'post_max_size=${PHP_UPLOAD_LIMIT}';     } > /usr/local/etc/php/conf.d/friendica.ini;         mkdir /var/www/data;     chown -R www-data:root /var/www;     chmod -R g=u /var/www
-# Fri, 06 Jan 2023 03:03:50 GMT
+# Tue, 17 Jan 2023 21:10:51 GMT
 VOLUME [/var/www/html]
-# Fri, 06 Jan 2023 03:03:51 GMT
+# Tue, 17 Jan 2023 21:10:53 GMT
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
-# Fri, 06 Jan 2023 03:03:51 GMT
+# Tue, 17 Jan 2023 21:10:53 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Fri, 06 Jan 2023 03:03:52 GMT
-ENV FRIENDICA_VERSION=2022.12
-# Fri, 06 Jan 2023 03:03:52 GMT
-ENV FRIENDICA_ADDONS=2022.12
-# Fri, 06 Jan 2023 03:03:52 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=05c6b8152314dc45fd2e574994b531e7f1e1509a70dc56cd78bf1e3c07227092
-# Fri, 06 Jan 2023 03:03:53 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=feff1548f01431bd3822372a6c228c872d70e2831c0877b248aae66e1ded8315
-# Fri, 06 Jan 2023 03:04:30 GMT
+# Tue, 17 Jan 2023 21:10:53 GMT
+ENV FRIENDICA_VERSION=2023.01
+# Tue, 17 Jan 2023 21:10:54 GMT
+ENV FRIENDICA_ADDONS=2023.01
+# Tue, 17 Jan 2023 21:10:54 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=4496990805142d20051a5273904a47809ae12f1cadd74de305d5ae167b7cdf6e
+# Tue, 17 Jan 2023 21:10:54 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=48117926a6ffeb58aaf81795cfbd5ad24acf76693744e92817593e310acc5262
+# Tue, 17 Jan 2023 21:11:29 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;         export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps;     rm -rf /var/lib/apt/lists/*
-# Fri, 06 Jan 2023 03:04:34 GMT
+# Tue, 17 Jan 2023 21:11:32 GMT
 COPY multi:7cba7205e29ccd126186db9586c104a13fc6a00055e2ad88545d236d2d069334 in / 
-# Fri, 06 Jan 2023 03:04:35 GMT
+# Tue, 17 Jan 2023 21:11:33 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Fri, 06 Jan 2023 03:04:35 GMT
+# Tue, 17 Jan 2023 21:11:33 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Fri, 06 Jan 2023 03:04:35 GMT
+# Tue, 17 Jan 2023 21:11:34 GMT
 CMD ["apache2-foreground"]
 ```
 
 -	Layers:
-	-	`sha256:ba010cdd67bb149ba042a834d84020887fc3f8ca9d8e51b31f3104286cafb9ba`  
-		Last Modified: Wed, 21 Dec 2022 01:23:22 GMT  
-		Size: 35.3 MB (35268748 bytes)  
+	-	`sha256:bbf81328aca90b7ddb122fc175443f5323674a9e51bbb00d5b1d683ef0b858f4`  
+		Last Modified: Wed, 11 Jan 2023 03:55:33 GMT  
+		Size: 35.3 MB (35268773 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba7e47853cce58ab3b0e90477d33a7cba4e32fe2c4869183d5b159cc2a331137`  
-		Last Modified: Wed, 21 Dec 2022 04:35:19 GMT  
-		Size: 227.0 B  
+	-	`sha256:c4379437c86e610929801c4b002ebb0e16e22386c100c3572876389b662ef919`  
+		Last Modified: Wed, 11 Jan 2023 06:40:37 GMT  
+		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c2f2925c57c4227f5aaf5bfc813e2b13f014cf5db5bc7ad9f18dd4134fe67a22`  
-		Last Modified: Wed, 21 Dec 2022 04:35:43 GMT  
-		Size: 86.6 MB (86632961 bytes)  
+	-	`sha256:e0c872424ad6e42db6d62b5ecf528da108f30b96fd3a50c09dcc034ec3c1046c`  
+		Last Modified: Wed, 11 Jan 2023 06:41:01 GMT  
+		Size: 86.6 MB (86632852 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6559957d2a1157e881884b86d6b3ad933922be2896c5787bda3c2c9442a9add8`  
-		Last Modified: Wed, 21 Dec 2022 04:35:18 GMT  
-		Size: 270.0 B  
+	-	`sha256:938343d42556b0999a8c10c21195617ddd37b298b164adc36a426137e969ac19`  
+		Last Modified: Wed, 11 Jan 2023 06:40:37 GMT  
+		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:56f0ad6bf5c9b9867714546e715fd3fcb027e09d7dee2efb3e590dc4969dc532`  
-		Last Modified: Wed, 21 Dec 2022 04:36:20 GMT  
-		Size: 20.5 MB (20464165 bytes)  
+	-	`sha256:2ba4fc85f5fd29d8514078facf03448e82c7d0260702b06b9601aab8ea162286`  
+		Last Modified: Wed, 11 Jan 2023 06:42:06 GMT  
+		Size: 20.5 MB (20464227 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4410cbfb5dadcb662ff50f58fa2ca753afb440501006c1cd221a552593fab1ae`  
-		Last Modified: Wed, 21 Dec 2022 04:36:15 GMT  
-		Size: 480.0 B  
+	-	`sha256:7ff83dd786fd9ac5a1878be807e593f7e97db4ede8fee76217d113531a82de5c`  
+		Last Modified: Wed, 11 Jan 2023 06:42:01 GMT  
+		Size: 476.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b8e3c972f7a55a635258cdd551bd3717135cb0099cf868f969a24560e0222982`  
-		Last Modified: Wed, 21 Dec 2022 04:36:15 GMT  
-		Size: 515.0 B  
+	-	`sha256:89200773d3355ca9a42b6f52558b48c3e65f54cd1db7949bbbe06f7c0d7f6fb0`  
+		Last Modified: Wed, 11 Jan 2023 06:42:01 GMT  
+		Size: 512.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b7ff2e657d689820fbebc01598c7da0c536a4f4a121a8ae59829a55755000168`  
-		Last Modified: Fri, 06 Jan 2023 01:36:55 GMT  
-		Size: 11.1 MB (11143222 bytes)  
+	-	`sha256:a2b07d78f6eb8fad668025e84ebfab66a29733b067a4b17241b8c5930986d304`  
+		Last Modified: Wed, 11 Jan 2023 06:47:15 GMT  
+		Size: 11.1 MB (11143276 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0e263883fce9522cc493dfd683d2e8897a3956db074a9ce6f6d6e0446f173323`  
-		Last Modified: Fri, 06 Jan 2023 01:36:52 GMT  
-		Size: 493.0 B  
+	-	`sha256:aa0a7f9450d2284f168e5de731ed1aa369f08e3709167db2c57bf8e1c3f74f11`  
+		Last Modified: Wed, 11 Jan 2023 06:47:12 GMT  
+		Size: 492.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5d40c5f41833703b8e6eb4e18cc612582036083e06274e7405f77fc8045dac35`  
-		Last Modified: Fri, 06 Jan 2023 01:36:55 GMT  
-		Size: 11.1 MB (11139477 bytes)  
+	-	`sha256:3b205c935454f9421d46792e93a22722310630c81855897b07ac71992a1d1de7`  
+		Last Modified: Wed, 11 Jan 2023 06:47:15 GMT  
+		Size: 11.1 MB (11139533 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d0bc8840463ba3614ff9475e55fcd299e3bc4a746c587e76e44863522d123253`  
-		Last Modified: Fri, 06 Jan 2023 01:36:52 GMT  
-		Size: 2.5 KB (2458 bytes)  
+	-	`sha256:2d10fe1c033cb30ca9bf201da029668f2f9d96233eb26b9e6ac3a9c544b5974f`  
+		Last Modified: Wed, 11 Jan 2023 06:47:12 GMT  
+		Size: 2.5 KB (2459 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:293bff66720681d4c820abb3c8de7eea23f0056835531289e4ff2ffd4e48d2c0`  
-		Last Modified: Fri, 06 Jan 2023 01:36:52 GMT  
-		Size: 247.0 B  
+	-	`sha256:319873578e7de7db3cb57f870991ef3762f385ec49b3fc980bb6ce1274a7ffe4`  
+		Last Modified: Wed, 11 Jan 2023 06:47:12 GMT  
+		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14b6f260e29806baf9c803a7201b089c681ae686a08cce7f01129fa189fc6fab`  
-		Last Modified: Fri, 06 Jan 2023 01:36:52 GMT  
+	-	`sha256:966b08c74db58af0392466a89a944b69db674bc1ff78f7bf4ea4a0d94d5acddf`  
+		Last Modified: Wed, 11 Jan 2023 06:47:12 GMT  
 		Size: 895.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:86e8b9de8da01f4b7d13dff54eaa1d9932753f0b338a17813f99ae74966869eb`  
-		Last Modified: Fri, 06 Jan 2023 03:12:18 GMT  
-		Size: 15.4 MB (15407135 bytes)  
+	-	`sha256:be2065f5ccae67995435e9bd89df967a391c0d4b068564004553c4a18c8422d5`  
+		Last Modified: Tue, 17 Jan 2023 21:14:40 GMT  
+		Size: 15.4 MB (15409563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9b13801958c8aa33e5ebfd306d973c7adb378c6d101b2e3b41d4f27fad598cb`  
-		Last Modified: Fri, 06 Jan 2023 03:12:15 GMT  
-		Size: 1.2 MB (1195774 bytes)  
+	-	`sha256:3430783cac717c567fdd043285ada2da5aa4c734bde2f537d5ab44d3ac26b7ea`  
+		Last Modified: Tue, 17 Jan 2023 21:14:38 GMT  
+		Size: 1.2 MB (1195851 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d623285a9e7ebd813104693e3907a714e411cf85955c8b2619105d0b4dffb30`  
-		Last Modified: Fri, 06 Jan 2023 03:12:19 GMT  
-		Size: 17.4 MB (17399008 bytes)  
+	-	`sha256:9f47d56e75d29f4c444edd636886a9871f9ab900480e16834e8bc00b85133aef`  
+		Last Modified: Tue, 17 Jan 2023 21:14:42 GMT  
+		Size: 17.4 MB (17398968 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b2c6bc6835b4a60189b326accac2a45b78fd1ce7d4c31c9d97a6a8516b52543`  
-		Last Modified: Fri, 06 Jan 2023 03:12:13 GMT  
-		Size: 642.0 B  
+	-	`sha256:3bf065ca30461600b555b08b3705e417a752eaec8374001c1bef37ab05710873`  
+		Last Modified: Tue, 17 Jan 2023 21:14:36 GMT  
+		Size: 645.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ce05e26ac553811c7c95e58c471f3a84974ce1b84fa2b65af9ed9f17f2e5ed63`  
-		Last Modified: Fri, 06 Jan 2023 03:12:13 GMT  
-		Size: 545.0 B  
+	-	`sha256:1a8d657477e31ab2661619d6217bbb1f383a68689e91107489359f9d2fb3f1ee`  
+		Last Modified: Tue, 17 Jan 2023 21:14:36 GMT  
+		Size: 544.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0eeb5ad8512c10e181efa901a799f242378cd166952d8d8004bef011e516a81c`  
-		Last Modified: Fri, 06 Jan 2023 03:12:24 GMT  
-		Size: 53.7 MB (53747607 bytes)  
+	-	`sha256:14a283220bead4f1fcf455e82e2a843e3c310622b5d4ef53fd577d1dbbaa481a`  
+		Last Modified: Tue, 17 Jan 2023 21:14:46 GMT  
+		Size: 53.7 MB (53728550 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df61abb6856a9304dd21f5e1c723e43972431d864123cc7b6c37073a175485c7`  
-		Last Modified: Fri, 06 Jan 2023 03:12:13 GMT  
+	-	`sha256:e300b1df1e9dcc0f9dd3240f567e5624efd293a9a7d588828a80ef9971f8cda3`  
+		Last Modified: Tue, 17 Jan 2023 21:14:36 GMT  
 		Size: 3.0 KB (2989 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d7e8419e69ccea6c98ff80477c674f22674f4797e617f5e7fa107b644cedc47d`  
-		Last Modified: Fri, 06 Jan 2023 03:12:13 GMT  
-		Size: 931.0 B  
+	-	`sha256:4e18cfe9f42b2e6cdfd38ea2e0905cc25874383d5f2e46228050175e849798aa`  
+		Last Modified: Tue, 17 Jan 2023 21:14:36 GMT  
+		Size: 930.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `friendica:apache` - linux; s390x
 
 ```console
-$ docker pull friendica@sha256:03915fbb4483453dc6b89bb3c889c84a3c09f63b5fdbdec71b9f23f7bf74adc4
+$ docker pull friendica@sha256:7665d04ac671c61325aebf826ba9cb0f6e7b8a4655ad41131d955a0a12c70d4e
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **226.8 MB (226818526 bytes)**  
+-	Total Size: **226.8 MB (226799650 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c9fa707e4ade1dbc660ef1bc2ae0f0d055d1dcff7deb6628bd3172eec34d8245`
+-	Image ID: `sha256:5eaccbd661c989ca26625d5638ee6668f5bb71db0c64a6ba2e81f8ee8a4af27a`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -1517,23 +1517,23 @@ VOLUME [/var/www/html]
 RUN set -ex;    a2enmod rewrite remoteip ;    {     echo RemoteIPHeader X-Real-IP ;     echo RemoteIPTrustedProxy 10.0.0.0/8 ;     echo RemoteIPTrustedProxy 172.16.0.0/12 ;     echo RemoteIPTrustedProxy 192.168.0.0/16 ;    } > /etc/apache2/conf-available/remoteip.conf;    a2enconf remoteip
 # Wed, 11 Jan 2023 13:56:56 GMT
 ENV FRIENDICA_SYSLOG_FLAGS=39
-# Wed, 11 Jan 2023 13:56:56 GMT
-ENV FRIENDICA_VERSION=2022.12
-# Wed, 11 Jan 2023 13:56:56 GMT
-ENV FRIENDICA_ADDONS=2022.12
-# Wed, 11 Jan 2023 13:56:56 GMT
-ENV FRIENDICA_DOWNLOAD_SHA256=05c6b8152314dc45fd2e574994b531e7f1e1509a70dc56cd78bf1e3c07227092
-# Wed, 11 Jan 2023 13:56:56 GMT
-ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=feff1548f01431bd3822372a6c228c872d70e2831c0877b248aae66e1ded8315
-# Wed, 11 Jan 2023 13:57:13 GMT
+# Tue, 17 Jan 2023 19:42:05 GMT
+ENV FRIENDICA_VERSION=2023.01
+# Tue, 17 Jan 2023 19:42:05 GMT
+ENV FRIENDICA_ADDONS=2023.01
+# Tue, 17 Jan 2023 19:42:06 GMT
+ENV FRIENDICA_DOWNLOAD_SHA256=4496990805142d20051a5273904a47809ae12f1cadd74de305d5ae167b7cdf6e
+# Tue, 17 Jan 2023 19:42:07 GMT
+ENV FRIENDICA_DOWNLOAD_ADDONS_SHA256=48117926a6ffeb58aaf81795cfbd5ad24acf76693744e92817593e310acc5262
+# Tue, 17 Jan 2023 19:42:52 GMT
 RUN set -ex;     fetchDeps="         gnupg     ";     apt-get update;     apt-get install -y --no-install-recommends $fetchDeps;         export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 08656443618E6567A39524083EE197EF3F9E4287;         curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz";     curl -fsSL -o friendica-full-${FRIENDICA_VERSION}.tar.gz.asc         "https://files.friendi.ca/friendica-full-${FRIENDICA_VERSION}.tar.gz.asc";     gpg --batch --verify friendica-full-${FRIENDICA_VERSION}.tar.gz.asc friendica-full-${FRIENDICA_VERSION}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_SHA256} *friendica-full-${FRIENDICA_VERSION}.tar.gz" | sha256sum -c;     tar -xzf friendica-full-${FRIENDICA_VERSION}.tar.gz -C /usr/src/;     rm friendica-full-${FRIENDICA_VERSION}.tar.gz friendica-full-${FRIENDICA_VERSION}.tar.gz.asc;     mv -f /usr/src/friendica-full-${FRIENDICA_VERSION}/ /usr/src/friendica;     chmod 777 /usr/src/friendica/view/smarty3;         curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz";     curl -fsSL -o friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc             "https://files.friendi.ca/friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc";     gpg --batch --verify friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc friendica-addons-${FRIENDICA_ADDONS}.tar.gz;     echo "${FRIENDICA_DOWNLOAD_ADDONS_SHA256} *friendica-addons-${FRIENDICA_ADDONS}.tar.gz" | sha256sum -c;     mkdir -p /usr/src/friendica/proxy;     mkdir -p /usr/src/friendica/addon;     tar -xzf friendica-addons-${FRIENDICA_ADDONS}.tar.gz -C /usr/src/friendica/addon --strip-components=1;     rm friendica-addons-${FRIENDICA_ADDONS}.tar.gz friendica-addons-${FRIENDICA_ADDONS}.tar.gz.asc;         gpgconf --kill all;     rm -rf "$GNUPGHOME";         apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps;     rm -rf /var/lib/apt/lists/*
-# Wed, 11 Jan 2023 13:57:16 GMT
+# Tue, 17 Jan 2023 19:43:05 GMT
 COPY multi:7cba7205e29ccd126186db9586c104a13fc6a00055e2ad88545d236d2d069334 in / 
-# Wed, 11 Jan 2023 13:57:17 GMT
+# Tue, 17 Jan 2023 19:43:06 GMT
 COPY multi:201dba5df7e408009a8882797a28095a47753a2db673a80c99e898e88501c42e in /usr/src/friendica/config/ 
-# Wed, 11 Jan 2023 13:57:17 GMT
+# Tue, 17 Jan 2023 19:43:06 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 11 Jan 2023 13:57:17 GMT
+# Tue, 17 Jan 2023 19:43:07 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1610,15 +1610,15 @@ CMD ["apache2-foreground"]
 		Last Modified: Wed, 11 Jan 2023 13:59:42 GMT  
 		Size: 541.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5cf3b8ad9df9e0f019a991755dd0a2a69680aee1b24bceb22b4e3bc51c1a2e9d`  
-		Last Modified: Wed, 11 Jan 2023 13:59:47 GMT  
-		Size: 53.7 MB (53745758 bytes)  
+	-	`sha256:c6e493448044c58fbea1106381de2e8695488273b6935e46fd4f80b32e894e22`  
+		Last Modified: Tue, 17 Jan 2023 19:49:58 GMT  
+		Size: 53.7 MB (53726885 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:848b2ee6fc7ffc5b8b3c44549f09cd68ee73b5c03ec9fd02226e47dd302a2f97`  
-		Last Modified: Wed, 11 Jan 2023 13:59:42 GMT  
-		Size: 3.0 KB (2989 bytes)  
+	-	`sha256:bb340596d030c89764d5010f0b5be42e44b0811e393599a16d0285f382de6492`  
+		Last Modified: Tue, 17 Jan 2023 19:49:53 GMT  
+		Size: 3.0 KB (2988 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0c7f81c433082c20b68e425c322ba34fa42a1b7dff165d2489c2b15548445a14`  
-		Last Modified: Wed, 11 Jan 2023 13:59:42 GMT  
-		Size: 930.0 B  
+	-	`sha256:0f2e1b0bdfe3176779a075845197a504fd19417959bc2040ed801b12dd538a3c`  
+		Last Modified: Tue, 17 Jan 2023 19:49:52 GMT  
+		Size: 928.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
