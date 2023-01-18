@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f22d8d3b1f3f9592de84beaeae28eb86c7dfa50c9d913b18a9b4d5d10ce8310d`
-- Created: `2023-01-10T00:08:17.165035866Z`
+- Image ID: `sha256:b62c18af1158e14744fe36b77e95bcfc63385527c1ddfb2925562a5d1f949705`
+- Created: `2023-01-17T21:12:21.836913324Z`
 - Virtual Size: ~ 37.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20230109`
+  - `build-date=20230114`
   - `name=Photon OS x86_64/4.0 Base Image`
   - `vendor=VMware`
 
@@ -53,7 +53,7 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `e2fsprogs-libs-1.45.6-2.ph4.x86_64`
+### `rpm` package: `e2fsprogs-libs-1.46.5-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
@@ -95,7 +95,7 @@ Licenses (from `rpm --query`): pubkey
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `krb5-1.17-7.ph4.x86_64`
+### `rpm` package: `krb5-1.17-8.ph4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -155,7 +155,7 @@ Licenses (from `rpm --query`): MPLv2.0
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `openssl-3.0.7-2.ph4.x86_64`
+### `rpm` package: `openssl-3.0.7-3.ph4.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
 
@@ -197,13 +197,13 @@ Licenses (from `rpm --query`): Public Domain
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `tdnf-3.3.4-1.ph4.x86_64`
+### `rpm` package: `tdnf-3.3.5-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2.1,GPLv2
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `tdnf-cli-libs-3.3.4-1.ph4.x86_64`
+### `rpm` package: `tdnf-cli-libs-3.3.5-1.ph4.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2.1,GPLv2
 
