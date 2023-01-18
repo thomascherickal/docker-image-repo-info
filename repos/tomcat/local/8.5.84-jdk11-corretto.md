@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3589f55759f5c6ba9ef90464b59bf7dcd01158ca500a5a1bfd900793d5254078`
-- Created: `2022-12-16T02:49:28.751793032Z`
-- Virtual Size: ~ 477.97 Mb  
+- Image ID: `sha256:8a034ebd781fb3088d2e33fe1796b060685894c03631e7f6897315e4ad580029`
+- Created: `2023-01-18T21:23:17.938224427Z`
+- Virtual Size: ~ 478.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -408,7 +408,7 @@ $ dnf --quiet download --source --url info-5.1-5.amzn2
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/3a34d2ccd58f36cf9a9bb7b1a032827c5c9d80cbc8b910e3004ed20a643b1b9a/../../../../../blobstore/968c079ef8a8a2efee76ff59cd99e06dd242b8813960171d0f5c23f4a6eb0bb2/texinfo-5.1-5.amzn2.src.rpm
 ```
 
-### `rpm` package: `java-11-amazon-corretto-devel-11.0.17.8-1.x86_64`
+### `rpm` package: `java-11-amazon-corretto-devel-11.0.18.10-1.x86_64`
 
 Licenses (from `rpm --query`): ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv2.0 and Public Domain and W3C and zlib and ISC and FTL and RSA.
 
