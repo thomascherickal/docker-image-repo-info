@@ -737,11 +737,17 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris e2fsprogs=1.46.6~rc1-1
-'http://http.debian.net/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6%7erc1-1.1.dsc' e2fsprogs_1.46.6~rc1-1.1.dsc 2988 SHA256:ec8d0444b9670874736a41e26307f7f4880b2048ae449a557fe8e8d760b005ca
-'http://http.debian.net/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6%7erc1.orig.tar.gz' e2fsprogs_1.46.6~rc1.orig.tar.gz 9615342 SHA256:a21354e3f0e94d2874ebe1b5587aa536438aca10b516aa00bd6a808e86c5adeb
-'http://http.debian.net/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6%7erc1.orig.tar.gz.asc' e2fsprogs_1.46.6~rc1.orig.tar.gz.asc 13016974 SHA256:26ffb2f1c2d7440375791863bc579347060ddf2b6c1339cf469d5edb492d4604
-'http://http.debian.net/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6%7erc1-1.1.debian.tar.xz' e2fsprogs_1.46.6~rc1-1.1.debian.tar.xz 87584 SHA256:96ac4037585457876872395b13930885b76b07ab8054ce890334311831729ff0
+'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6%7erc1-1.1.dsc' e2fsprogs_1.46.6~rc1-1.1.dsc 2988 SHA256:ec8d0444b9670874736a41e26307f7f4880b2048ae449a557fe8e8d760b005ca
+'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6%7erc1.orig.tar.gz' e2fsprogs_1.46.6~rc1.orig.tar.gz 9615342 SHA256:a21354e3f0e94d2874ebe1b5587aa536438aca10b516aa00bd6a808e86c5adeb
+'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6%7erc1.orig.tar.gz.asc' e2fsprogs_1.46.6~rc1.orig.tar.gz.asc 13016974 SHA256:26ffb2f1c2d7440375791863bc579347060ddf2b6c1339cf469d5edb492d4604
+'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6%7erc1-1.1.debian.tar.xz' e2fsprogs_1.46.6~rc1-1.1.debian.tar.xz 87584 SHA256:96ac4037585457876872395b13930885b76b07ab8054ce890334311831729ff0
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/e2fsprogs/1.46.6~rc1-1/ (for browsing the source)
+- https://sources.debian.net/src/e2fsprogs/1.46.6~rc1-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/e2fsprogs/1.46.6~rc1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ed=1.18-1`
 
@@ -813,21 +819,13 @@ Licenses: (parsed from: `/usr/share/doc/findutils/copyright`)
 - `GFDL-1.3`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris findutils=4.9.0-3
-'http://deb.debian.org/debian/pool/main/f/findutils/findutils_4.9.0-3.dsc' findutils_4.9.0-3.dsc 2304 SHA256:509979a2aeae2883c16b4bf6e96b4b8df9173a6c56e936e957ce86f25b2b4125
-'http://deb.debian.org/debian/pool/main/f/findutils/findutils_4.9.0.orig.tar.xz' findutils_4.9.0.orig.tar.xz 2046252 SHA256:a2bfb8c09d436770edc59f50fa483e785b161a3b7b9d547573cb08065fd462fe
-'http://deb.debian.org/debian/pool/main/f/findutils/findutils_4.9.0.orig.tar.xz.asc' findutils_4.9.0.orig.tar.xz.asc 488 SHA256:924c3719d066eda1b3e47175f8b83e90e9a23f0a639ebe7445621917b283c385
-'http://deb.debian.org/debian/pool/main/f/findutils/findutils_4.9.0-3.debian.tar.xz' findutils_4.9.0-3.debian.tar.xz 27980 SHA256:d10dfc7a728d372b60d5455b190b6ee78bc65de0ee3ca4974e1addd90389c675
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/findutils/4.9.0-3/
 
-- https://sources.debian.net/src/findutils/4.9.0-3/ (for browsing the source)
-- https://sources.debian.net/src/findutils/4.9.0-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/findutils/4.9.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `fontconfig=2.13.1-4.5`
 
@@ -3075,20 +3073,13 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.5.2-5
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2-5.dsc' pam_1.5.2-5.dsc 2559 SHA256:84f46408901fdc41394db0a7feecffafb889fd5420a4d0b158af8b92970e2f37
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2.orig.tar.xz' pam_1.5.2.orig.tar.xz 988784 SHA256:e4ec7131a91da44512574268f493c6d8ca105c87091691b8e9b56ca685d4f94d
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2-5.debian.tar.xz' pam_1.5.2-5.debian.tar.xz 120208 SHA256:bcb0bc38f2589669eb92feec0581235f06b9d278393326ec509963484853a46c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pam/1.5.2-5/
 
-- https://sources.debian.net/src/pam/1.5.2-5/ (for browsing the source)
-- https://sources.debian.net/src/pam/1.5.2-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pam/1.5.2-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pango1.0=1.50.10+ds-1`
 
@@ -3489,20 +3480,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-matrix/copyright`)
 - `GPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris rmatrix=1.5-1-1
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.5-1-1.dsc' rmatrix_1.5-1-1.dsc 1860 SHA256:205c32850d72b3b14fa755fadff1411fd2959ee7ec39b07a8dd0c015b4adcc80
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.5-1.orig.tar.gz' rmatrix_1.5-1.orig.tar.gz 2200191 SHA256:557dba0358172d67dc63eb5db90841915bb5ce1528f941a8005ae808d635575d
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.5-1-1.debian.tar.xz' rmatrix_1.5-1-1.debian.tar.xz 5732 SHA256:d7fc677d0feefd6dbed3f3f49d48e15ecc0ce51a3578cbb7d7413357a4ce83ed
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/rmatrix/1.5-1-1/
 
-- https://sources.debian.net/src/rmatrix/1.5-1-1/ (for browsing the source)
-- https://sources.debian.net/src/rmatrix/1.5-1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/rmatrix/1.5-1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rpart=4.1.19-1`
 
