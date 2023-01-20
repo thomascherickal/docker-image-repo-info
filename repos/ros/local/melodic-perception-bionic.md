@@ -1944,14 +1944,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.17.1-1ubuntu0.13
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.17.1-1ubuntu0.13.dsc' git_2.17.1-1ubuntu0.13.dsc 2963 SHA512:7abe9a0dadcdd1b9da11f241ffbe5850a01fe48edfd745f2bd8ea7d3e4b057e121d4062d5022bb4a3ec49d09c07e7d833e2c727f2bc087c639d0aee4372b03ef
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.17.1.orig.tar.xz' git_2.17.1.orig.tar.xz 5015484 SHA512:77c27569d40fbae1842130baa0cdda674a02e384631bd8fb1f2ddf67ce372dd4903b2ce6b4283a4ae506cdedd5daa55baa2afe6a6689528511e24e4beb864960
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.17.1-1ubuntu0.13.debian.tar.xz' git_2.17.1-1ubuntu0.13.debian.tar.xz 642656 SHA512:692c2bc35a0bb18b8bba8e252ddc504f540c1e104f8057f80f5201f664883404e89f436f25175540b4d36d27ee7666f9fb6122e417e24414000503bab2453666
-```
 
 ### `dpkg` source package: `gl2ps=1.4.0+dfsg1-1`
 
@@ -10103,14 +10098,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sudo=1.8.21p2-3ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2-3ubuntu1.4.dsc' sudo_1.8.21p2-3ubuntu1.4.dsc 2137 SHA512:6ec2e856c4767f36bc47bcb69890f36f90dba61f762831020794fb8bb5700b0bc4c77bfa1335325cdcbe7b98c0006e57be3e944e59781e3c6ad28e3325ad9219
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2.orig.tar.gz' sudo_1.8.21p2.orig.tar.gz 3008808 SHA512:fa9eb3324ad05cb7ca7637cadf3c2fe4b0d781c8a970942b356d12b1b8a22d6f16f293c2f547fe54cb71848770da1af3626da9fb44f92d18b8f523b0a1f723da
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2-3ubuntu1.4.debian.tar.xz' sudo_1.8.21p2-3ubuntu1.4.debian.tar.xz 39836 SHA512:aac2fcffff8e448263c9eae2742dfe9dc82fe2a2af1cc17edc82af84b9b1825611091817caa6c60610b766d4d13b0817793544c33d0b647e28efa22c1456433e
-```
 
 ### `dpkg` source package: `superlu=5.2.1+dfsg1-3`
 

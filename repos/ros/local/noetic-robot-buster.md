@@ -7858,20 +7858,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sudo=1.8.27-1+deb10u4
-'http://deb.debian.org/debian-security/pool/updates/main/s/sudo/sudo_1.8.27-1%2bdeb10u4.dsc' sudo_1.8.27-1+deb10u4.dsc 1975 SHA256:5c360201a76f9eba3678831758c6fce797c421b3d6a063bd7d6e36b78209c209
-'http://deb.debian.org/debian-security/pool/updates/main/s/sudo/sudo_1.8.27.orig.tar.gz' sudo_1.8.27.orig.tar.gz 3293178 SHA256:7beb68b94471ef56d8a1036dbcdc09a7b58a949a68ffce48b83f837dd33e2ec0
-'http://deb.debian.org/debian-security/pool/updates/main/s/sudo/sudo_1.8.27-1%2bdeb10u4.debian.tar.xz' sudo_1.8.27-1+deb10u4.debian.tar.xz 31832 SHA256:427851e6293e39c32ac9a50246c1773e12b13eb35307c77e241e546736cb466a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sudo/1.8.27-1+deb10u4/
 
-- https://sources.debian.net/src/sudo/1.8.27-1+deb10u4/ (for browsing the source)
-- https://sources.debian.net/src/sudo/1.8.27-1+deb10u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sudo/1.8.27-1+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=241-7~deb10u8`
 

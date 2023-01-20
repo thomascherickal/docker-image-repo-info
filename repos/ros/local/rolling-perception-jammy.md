@@ -2243,14 +2243,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.34.1-1ubuntu1.5
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.5.dsc' git_2.34.1-1ubuntu1.5.dsc 2927 SHA512:2c09bfb357d165afe93ec43a91fab03b757ddc049bd9e274f2c57cee84b5a0dbe4e70a3ff8c565d476da4cf7f8e28b44a43a1e5a4b3a4bb7795d09d6630ff703
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1.orig.tar.xz' git_2.34.1.orig.tar.xz 6623760 SHA512:a1a8e9e6f64b1da25508fbd2f783564dcdbe181fb5ff1ebab3bdac6db6094e18acc334479a1abf22ac17ce4f733cc3e10a664db9ab234cd523735a3f027b42db
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.5.debian.tar.xz' git_2.34.1-1ubuntu1.5.debian.tar.xz 729288 SHA512:fe195ef7ccba86ce8fde4043bf5f62e75ce04075a47fa5eff03d9fe60adce9b510f2be16ad2bb17be38565c4386c79fc89ecff73fe14d957adf08e9f7338c1ee
-```
 
 ### `dpkg` source package: `gl2ps=1.4.2+dfsg1-2`
 
@@ -12618,15 +12613,9 @@ Licenses: (parsed from: `/usr/share/doc/sudo/copyright`)
 - `Zlib`
 - `other`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sudo=1.9.9-1ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.9.9-1ubuntu2.1.dsc' sudo_1.9.9-1ubuntu2.1.dsc 2595 SHA512:45d7c5fe3aae245959e6ef08f3f9c81bf6229c71f133499a6532aa28546b58f63fa4041f0e14a48ec06420e5db3f501f24fbd426a1ff59a5cc26f47987fc34e5
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.9.9.orig.tar.gz' sudo_1.9.9.orig.tar.gz 4456969 SHA512:53064240431ae3d9409dc5cb7d72ab55d9ab5f802af4de99fadd987855461b3cca53f261d6256e3b6f35e30c7e162f4dfa3978ef6976415cf5be874fb2026614
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.9.9.orig.tar.gz.asc' sudo_1.9.9.orig.tar.gz.asc 833 SHA512:b73866881351b10e8feca9db238c38330a0d91d53ca33c61c3ed6623e771daf088095332452f99ac2d13126cfc9bab63f0ff1d948b5ae881a194a70c3b0c4e18
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.9.9-1ubuntu2.1.debian.tar.xz' sudo_1.9.9-1ubuntu2.1.debian.tar.xz 40804 SHA512:2973b827f978bb62d4761074cee0ed780764ad77e35be635bca7d67c7b63bf926f09a094adf0f459329ab65d583addef509dff0c4464b6b399c941935f2242c3
-```
 
 ### `dpkg` source package: `superlu=5.3.0+dfsg1-2`
 

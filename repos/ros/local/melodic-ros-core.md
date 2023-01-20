@@ -4588,14 +4588,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sudo=1.8.21p2-3ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2-3ubuntu1.4.dsc' sudo_1.8.21p2-3ubuntu1.4.dsc 2137 SHA512:6ec2e856c4767f36bc47bcb69890f36f90dba61f762831020794fb8bb5700b0bc4c77bfa1335325cdcbe7b98c0006e57be3e944e59781e3c6ad28e3325ad9219
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2.orig.tar.gz' sudo_1.8.21p2.orig.tar.gz 3008808 SHA512:fa9eb3324ad05cb7ca7637cadf3c2fe4b0d781c8a970942b356d12b1b8a22d6f16f293c2f547fe54cb71848770da1af3626da9fb44f92d18b8f523b0a1f723da
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.21p2-3ubuntu1.4.debian.tar.xz' sudo_1.8.21p2-3ubuntu1.4.debian.tar.xz 39836 SHA512:aac2fcffff8e448263c9eae2742dfe9dc82fe2a2af1cc17edc82af84b9b1825611091817caa6c60610b766d4d13b0817793544c33d0b647e28efa22c1456433e
-```
 
 ### `dpkg` source package: `systemd=237-3ubuntu10.56`
 

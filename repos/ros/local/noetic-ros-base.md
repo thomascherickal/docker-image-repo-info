@@ -5272,14 +5272,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sudo=1.8.31-1ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.31-1ubuntu1.2.dsc' sudo_1.8.31-1ubuntu1.2.dsc 2088 SHA512:1da22b8a98fa324d0aa2bc2e788b736398e7c2c8100dec818b10c7e8a5e285277b820153b366da9a3c2aca43f335e4c3247b90ccf60f7f66a80f369ac9c48f14
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.31.orig.tar.gz' sudo_1.8.31.orig.tar.gz 3350674 SHA512:b9e408a322938c7a712458e9012d8a5f648fba5b23a5057cf5d8372c7f931262595f1575c32c32b9cb1a04af670ff4611e7df48d197e5c4cc038d6b65439a28a
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.31-1ubuntu1.2.debian.tar.xz' sudo_1.8.31-1ubuntu1.2.debian.tar.xz 36780 SHA512:9e658099547a66633bc98749ef6b888bc17914a6b170bdf30c67417157f2e39366b4f19165c04f0d6377773b6b256962618f1f602918b3a8a2b37217eccd7daa
-```
 
 ### `dpkg` source package: `systemd=245.4-4ubuntu3.19`
 
