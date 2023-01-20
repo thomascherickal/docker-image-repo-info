@@ -1,19 +1,19 @@
-# `erlang:24.3.4.6-alpine`
+# `erlang:24.3.4.7-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b1ab3b4a9963ef877a41c87c5ab82119fcdfa067851f581344c34815331eb791`
-- Created: `2022-11-12T05:32:08.282452632Z`
-- Virtual Size: ~ 71.71 Mb  
+- Image ID: `sha256:81f11bd9153eb10c0662859dd6894d4e4b7ccb2589571d1554cb3818779bcc2b`
+- Created: `2023-01-17T20:54:13.582483861Z`
+- Virtual Size: ~ 72.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["erl"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OTP_VERSION=24.3.4.6`
+  - `OTP_VERSION=24.3.4.7`
   - `REBAR3_VERSION=3.19.0`
 - Labels:
-  - `org.opencontainers.image.version=24.3.4.6`
+  - `org.opencontainers.image.version=24.3.4.7`
 
 ## `apk` (`.apk`-based packages)
 
@@ -258,16 +258,16 @@ GPL-2.0-only AND LGPL-2.1-or-later
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.3-r1 description:
+musl-1.2.3-r2 description:
 the musl c library (libc) implementation
 
-musl-1.2.3-r1 webpage:
+musl-1.2.3-r2 webpage:
 https://musl.libc.org/
 
-musl-1.2.3-r1 installed size:
+musl-1.2.3-r2 installed size:
 608 KiB
 
-musl-1.2.3-r1 license:
+musl-1.2.3-r2 license:
 MIT
 
 ```
