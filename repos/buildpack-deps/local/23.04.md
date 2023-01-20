@@ -147,15 +147,13 @@ Licenses: (parsed from: `/usr/share/doc/libattr1/copyright`)
 - `LGPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris attr=1:2.5.1-3
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.5.1-3.dsc' attr_2.5.1-3.dsc 2455 SHA512:9dffb244524007bf47b7f17507e807d14c50da0691e2846cb40787087a45abbc89c46cb6feabb3206223d04cd12e0c1647b2e10c682a5c6af993e675482a889c
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.5.1.orig.tar.xz' attr_2.5.1.orig.tar.xz 318188 SHA512:9e5555260189bb6ef2440c76700ebb813ff70582eb63d446823874977307d13dfa3a347dfae619f8866943dfa4b24ccf67dadd7e3ea2637239fdb219be5d2932
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.5.1.orig.tar.xz.asc' attr_2.5.1.orig.tar.xz.asc 833 SHA512:be4f3629ef66bd400bcdeaf8b6b1564dc729472a514d59fb4909a30f3269711dedea16002283e9aabbf83c374e0a3d70bc00f1136da0fed66a8184acdfd7e78f
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.5.1-3.debian.tar.xz' attr_2.5.1-3.debian.tar.xz 29024 SHA512:8dd45ce9cf525f036a930c976bb31b246ec846d48abf79c6d01a481da1e9c6a8ec47883354e226466a297cbdcf6189482a2ad953b6ddc68ad21ea60734aade7c
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/attr/1:2.5.1-3/
+
 
 ### `dpkg` source package: `audit=1:3.0.7-1ubuntu2`
 
@@ -200,14 +198,13 @@ Licenses: (parsed from: `/usr/share/doc/autoconf/copyright`)
 - `permissive-without-disclaimer`
 - `permissive-without-notices-or-disclaimer`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris autoconf=2.71-2
-'http://archive.ubuntu.com/ubuntu/pool/main/a/autoconf/autoconf_2.71-2.dsc' autoconf_2.71-2.dsc 1988 SHA512:c5757e1208aa8749f0b37953b7440847691759c66f9c313f3541bdfb837a17d02341254bf8cb6db43a01005c8aa9a247101283598c5ce4014a47daf9e61d2b0a
-'http://archive.ubuntu.com/ubuntu/pool/main/a/autoconf/autoconf_2.71.orig.tar.gz' autoconf_2.71.orig.tar.gz 2003781 SHA512:2bc5331f9807da8754b2ee623a30299cc0d103d6f98068a4c22263aab67ff148b7ad3a1646bd274e604bc08a8ef0ac2601e6422e641ad0cfab2222d60a58c5a8
-'http://archive.ubuntu.com/ubuntu/pool/main/a/autoconf/autoconf_2.71-2.debian.tar.xz' autoconf_2.71-2.debian.tar.xz 23588 SHA512:578c6ccf29c3e46f4bd109a7fb17d55ae7e0fa1db1082e91da00b320bcd7699872cb1db1ea5c8d9034f20c13d00010e1dceea6013f46fe67bf5d406a8485914a
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/autoconf/2.71-2/
+
 
 ### `dpkg` source package: `automake-1.16=1:1.16.5-1.3`
 
@@ -300,14 +297,9 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.2-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.2-1ubuntu2.dsc' bash_5.2-1ubuntu2.dsc 2422 SHA512:2ce1f0186b3a1db8c2c6a96891e980938e088e1091eeccab890ed6a79933629557d7cfe76006c7b67d574e8f7b2651ac10db7ef5d8e12604e60636f4d34dd788
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.2.orig.tar.xz' bash_5.2.orig.tar.xz 5886100 SHA512:2aa66d4f25bce7bb3d5275eca16e8697916780811799d5f7b27a1d39b3e04f462424e3760725f17eb2fd64dce1f7573375858a97eee03a557e5a46a0db818053
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.2-1ubuntu2.debian.tar.xz' bash_5.2-1ubuntu2.debian.tar.xz 92980 SHA512:acfd80a2edc9881e79219de7fe3b4a0da7e672313e4d40c0ccf40ff9d30f7ee189fcc302e57fabb9c22e02c2a488f6eeaba867caed9d7c846ea74b6bf7c2eab7
-```
 
 ### `dpkg` source package: `binutils=2.39.50.20221224-1ubuntu1`
 
@@ -630,13 +622,9 @@ Licenses: (parsed from: `/usr/share/doc/debconf/copyright`)
 
 - `BSD-2-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debconf=1.5.79ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/d/debconf/debconf_1.5.79ubuntu1.dsc' debconf_1.5.79ubuntu1.dsc 2077 SHA512:0aac451b347a5f6758ab2e468c25ea8061840519412210861a13ced479d5e6bb2a3abd469cb0cf68d80f1f9c4debba28501141055eb2eb1ac1701f800cdd83ba
-'http://archive.ubuntu.com/ubuntu/pool/main/d/debconf/debconf_1.5.79ubuntu1.tar.xz' debconf_1.5.79ubuntu1.tar.xz 570660 SHA512:1bf6de4d1cec7475f64d9bdaa47ef6dcb3d1181bcb3b97076ec60213534aa344ca49d552fdcb5c6fde4d42c364b8242bb4880de0a787493868383e6db36f9e5f
-```
 
 ### `dpkg` source package: `debianutils=5.7-0.4`
 
@@ -920,18 +908,13 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype-dev/copyright`, `/usr/share/
 - `Public-Domain`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris freetype=2.12.1+dfsg-3
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg-3.dsc' freetype_2.12.1+dfsg-3.dsc 3713 SHA512:26c4d01a6b2b203e794b9c08df71814df157df1a30ca6df0f4909b5a93d77e6137c602399c6138a43eada4b65c0197b5e1bbfccfcb737aa5eee1e442528c701e
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg.orig-ft2demos.tar.xz' freetype_2.12.1+dfsg.orig-ft2demos.tar.xz 263656 SHA512:cd9356152a64d807c75b797d005ca1dd0bde69cc2fadedec101d125cb54b2aaff1f7afa2f20839caba7db66325df7c11ed4883b7e906110356b28d9900caaae7
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg.orig-ft2demos.tar.xz.asc' freetype_2.12.1+dfsg.orig-ft2demos.tar.xz.asc 833 SHA512:7e21a0136aef896f400099c80ce40ae61f226cdd1c807915bf4d856707b79ef0a1ea15a66539a4aeb55d2d1f12ba0706bd2f205d6f7545d8abb0c5c1298e9310
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg.orig-ft2docs.tar.xz' freetype_2.12.1+dfsg.orig-ft2docs.tar.xz 2038632 SHA512:276b91b93e375096bc0f9fa76408a6ea9fa89d4d06e9c9179f88d27d41df3f3bc0ce6939ea7a3fd7c93cb694e78fd6bfb154e969188279e2bca82dcc3afd108d
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg.orig-ft2docs.tar.xz.asc' freetype_2.12.1+dfsg.orig-ft2docs.tar.xz.asc 833 SHA512:39ccd90fde04074f30029a1a92b09c0d5a1bae7e2fbd965d02591e2cccda80c11588679fb0a9541a6307f120f5c8e386ba50375dc27fbd9e5c5cc3cdee5f2d82
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg.orig.tar.xz' freetype_2.12.1+dfsg.orig.tar.xz 2188492 SHA512:0f7e7522508c716d90e0051d255904039fc548378489bc20531268d738e2deb196b81f521e31552de42fde3c955c22745585f3c5324b6968c7de6b029ce4bc92
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.12.1%2bdfsg-3.debian.tar.xz' freetype_2.12.1+dfsg-3.debian.tar.xz 44068 SHA512:507ba82c9ceaa4ada3a0274047a659a1b2ed655f5ca1d415a73b09811ad05b9dbd27de16de51b0040057372b1126afb9ce41450e8310d64559b348d72c196684
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/freetype/2.12.1+dfsg-3/
+
 
 ### `dpkg` source package: `fribidi=1.0.8-2.1ubuntu1`
 
@@ -1139,15 +1122,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `Unicode-DFS-2016`
 - `bzip2-1.0.6`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.74.2-1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.74.2-1.dsc' glib2.0_2.74.2-1.dsc 3750 SHA512:5c19b0201763426086780c7ed1cbcfdca7b28ffd73a0bcbb18da29b254f7ff43bf943f8fdc0ddf6e11da246cbe88b970e0e1b00a56e63c070b1b4a7c285e70d9
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.74.2.orig-unicode-data.tar.xz' glib2.0_2.74.2.orig-unicode-data.tar.xz 266184 SHA512:c818eae7b8df69b69abc2c59870eaad7488e3266afb5055b851fcbdd9dd96d9808787881631a8d840487acb3b40c18691b6c58d3df4735fa6eab41a5aa1295ff
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.74.2.orig.tar.xz' glib2.0_2.74.2.orig.tar.xz 5182312 SHA512:90bb2410f038e47401fc985ff7fe6d1abecec9417254e039ac18e6b0d77e0b8539b975bef84d5f933be8e43c8ceca236bd466622504491e08e71d079d8804895
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.74.2-1.debian.tar.xz' glib2.0_2.74.2-1.debian.tar.xz 117032 SHA512:ef43a6e3711f3416ed2d69222c7179c0fefa52fc04d538021fcb3550310ba8de9dc26ac188376ab8252e8f6e92d481378586ca2e48b0333abb316bb86690ed5b
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/glib2.0/2.74.2-1/
+
 
 ### `dpkg` source package: `glibc=2.36-0ubuntu4`
 
@@ -1688,14 +1669,13 @@ Licenses: (parsed from: `/usr/share/doc/liblcms2-2/copyright`, `/usr/share/doc/l
 - `GPL-3 (GPL-3 for the fast_float plugin only)`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lcms2=2.13.1-1
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lcms2/lcms2_2.13.1-1.dsc' lcms2_2.13.1-1.dsc 1971 SHA512:a3c837451e092256853b48918d2039f7cecbeac6cf585469fd5953a1b334e19691a548033a809a2ce4e6f42fb6794042f4977fdff6c0331aff96f89782d81fbb
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lcms2/lcms2_2.13.1.orig.tar.gz' lcms2_2.13.1.orig.tar.gz 7276499 SHA512:214ec63fa086b580a6507d493a54ccf5faf02c40e149d71e41f9fc8510efdb16554621c96d91cc886f09682c9631b10aa194b4b67eb6ffcc871d5d4666b05617
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lcms2/lcms2_2.13.1-1.debian.tar.xz' lcms2_2.13.1-1.debian.tar.xz 9984 SHA512:25f2c9737db2113bbbd29f5952b82e240d15d03054387b9a11d69351f3616bf660ccaea62edaa4098b1a2791d57dcbaed0896c0b4adb2f13d633a874790edcc1
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/lcms2/2.13.1-1/
+
 
 ### `dpkg` source package: `lerc=4.0.0+ds-2ubuntu2`
 
@@ -2130,14 +2110,13 @@ Licenses: (parsed from: `/usr/share/doc/libheif1/copyright`)
 - `LGPL-3+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libheif=1.13.0-1
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.13.0-1.dsc' libheif_1.13.0-1.dsc 2283 SHA512:15318e9d7cb4107075b160fb058c1bc68889e2fe570002cd82561872848c1529fd0e647c629ce6bdc3508cf8c076c13cc553c2cf173563289ad2a77cc8cd5075
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.13.0.orig.tar.gz' libheif_1.13.0.orig.tar.gz 1703950 SHA512:44cb12ec7191bdf8ef2193c075d5d7a064a7a90c00625e5346624de1ebbedd064601998d042c8336d6c5b2aaef4cd3b439b850d0ab5882daa2e22dcc8722c779
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.13.0-1.debian.tar.xz' libheif_1.13.0-1.debian.tar.xz 7240 SHA512:3dd0064907e58ac11f3bd738cad0ac5d2e6d18e25a1311f2b0d77505d6e9bf79ae1d2ff68b94115a2f3071783bbfb50925de107e377fffb072f29accd9d26bd9
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libheif/1.13.0-1/
+
 
 ### `dpkg` source package: `libice=2:1.0.10-1build2`
 
@@ -2841,14 +2820,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxcrypt=1:4.4.33-1
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.33-1.dsc' libxcrypt_4.4.33-1.dsc 1591 SHA512:0f9c4e2af010735b972498e48152daaaac4380aeca23a69bddb14cc4aaf51d990e428f6fd17edf64bd83b6c0fc85967a751f20ff5e7a888a93ba9456087f1733
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.33.orig.tar.xz' libxcrypt_4.4.33.orig.tar.xz 393372 SHA512:67a0a2ce0301976513873a15acfb0d3c36c934bf62c5172a6268f48ce54cba40bbd05a1881a96cfe57c0f69c4816f0fff5a344afd99147b5f6b3fde16006d59e
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.33-1.debian.tar.xz' libxcrypt_4.4.33-1.debian.tar.xz 8148 SHA512:12f8513f45c01d7c6922b90325078a69692195987e14a5922ea2e091d520c849b8df4951d7714b7150286b373167c44268d5d265a44322ad59f52f42cef7f801
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libxcrypt/1:4.4.33-1/
+
 
 ### `dpkg` source package: `libxdmcp=1:1.1.3-0ubuntu5`
 
@@ -3840,15 +3818,9 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.36/copyright`, `/usr/share/doc/
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.36.0-4ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-4ubuntu2.dsc' perl_5.36.0-4ubuntu2.dsc 2968 SHA512:00fbb2e81f6ee6b892e3eb1553414b8b3fdab17da352b3e6d6e45b2eb35e3370a1e10fd5d9a6c20acb28263f359ecacab5e6ce5a0f96cabae62ada589039568f
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig-regen-configure.tar.xz' perl_5.36.0.orig-regen-configure.tar.xz 417784 SHA512:4d16685f569a5b1dea79d607b6d62718111c32efaf5547bb9e1528bd755acf0c8fc74a1cc1f4d68fcb10aef9da7d8fea17a5cc10dabce6efa4721ab45ab03a65
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig.tar.xz' perl_5.36.0.orig.tar.xz 13051500 SHA512:6dd6ac2a77566c173c5ab9c238cf555f2c3e592e89abb5600bc23ce1cbd0c349e0233f6417cbbf1f6d0aefc6a734ba491285af0d3dc68a605b658b65c89f1dab
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-4ubuntu2.debian.tar.xz' perl_5.36.0-4ubuntu2.debian.tar.xz 168076 SHA512:4d9ee60d762684b07b3b63d087ca2e3542a535dcd75d873fe63069996211c6605120f9b0cea728cce501e142c23d873832539db77e4b21b26c9d1b49def89064
-```
 
 ### `dpkg` source package: `pinentry=1.2.1-1ubuntu1`
 
@@ -4060,14 +4032,13 @@ Licenses: (parsed from: `/usr/share/doc/libreadline-dev/copyright`, `/usr/share/
 - `GFDL`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris readline=8.2-1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.2-1.2.dsc' readline_8.2-1.2.dsc 2703 SHA512:b807f3ae8b24d46eb01f77652e9a1b44e9343dcd030fcbb4c8f9834a4e2154bb49ce12aa2e4595deec90b8d1e2249bf587b710688f854b58c2039ffdf00fde06
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.2.orig.tar.gz' readline_8.2.orig.tar.gz 3043952 SHA512:0a451d459146bfdeecc9cdd94bda6a6416d3e93abd80885a40b334312f16eb890f8618a27ca26868cebbddf1224983e631b1cbc002c1a4d1cd0d65fba9fea49a
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.2-1.2.debian.tar.xz' readline_8.2-1.2.debian.tar.xz 29532 SHA512:fa56e148777d933b8301d49e6e06a6deb14ec9133e00768e2f3e564ee613a674bb88cd4bcf1544ce8112a1fc215aa28cc0d8706c321b871100c511cedf4fac06
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/readline/8.2-1.2/
+
 
 ### `dpkg` source package: `rpcsvc-proto=1.4.2-0ubuntu6`
 
@@ -4230,15 +4201,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.40.0-1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.0-1.dsc' sqlite3_3.40.0-1.dsc 2487 SHA512:fc5478633b50a4e07c65a9fe5311e93d1a83e6d4bf63d6c172a41639531dfb89907ce16e09343810600863c7908e90a1aa6c6e8eff13f00a835dfc1b83bb0f40
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.0.orig-www.tar.xz' sqlite3_3.40.0.orig-www.tar.xz 5820724 SHA512:225030e35edce214759b66bd1888356ad89d7ec5a5133abbed456f3dcd80da55aafb03aa91ce757027d038bf785f02981d2ce29d15b96d1d8da14699174aadf7
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.0.orig.tar.xz' sqlite3_3.40.0.orig.tar.xz 8024516 SHA512:b24e81bd3e471c38906aedc03ac48d971f7ec445774f54c62bc5511893c40f296ee2db0982c4ce26579c90f3f733f8153e32898a5778f241fa69665641e59c72
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.0-1.debian.tar.xz' sqlite3_3.40.0-1.debian.tar.xz 29640 SHA512:ac2f972311ea3fe9529ed89c6c6cbf7198ee1e85cdde3d2e1ae8b56d5fafbf7c4b4ffa07407f33a508c6449322764ae9fed4a46ec7a0796af86ed9477193b7b1
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/sqlite3/3.40.0-1/
+
 
 ### `dpkg` source package: `subversion=1.14.2-4`
 
@@ -4688,15 +4657,13 @@ Licenses: (parsed from: `/usr/share/doc/liblzma-dev/copyright`, `/usr/share/doc/
 - `permissive-nowarranty`
 - `probably-PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xz-utils=5.2.9-0.0
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.9-0.0.dsc' xz-utils_5.2.9-0.0.dsc 2494 SHA512:eb19634e671b4137d1498b367781df17706e6b75be11f693592015d69fb74b606e0bbac99b5f848aaa3d6ad3029bcfcab4e132df1b25fa9e64e0bc60712307a0
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.9.orig.tar.xz' xz-utils_5.2.9.orig.tar.xz 1290516 SHA512:fa844d63ceedf3b35c38f82532dc3b847543ac37b9e56db774c234af73d1385a300ba1033154689059031f18793d791c8cdb65bbeb031691d837f76e673372a7
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.9.orig.tar.xz.asc' xz-utils_5.2.9.orig.tar.xz.asc 833 SHA512:5e6805b52b959af4414ddcc6cfd82dea13018d1c183fe495a73f49b7034ac23af3e620acfc8dca15636a1519c1c191864f8935e8dca5a0701f8d1489911b7b20
-'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.9-0.0.debian.tar.xz' xz-utils_5.2.9-0.0.debian.tar.xz 30448 SHA512:db65f8c7b7884878c8bf8a05df9de5bb900c34aa122a831588d88f8e9139fbf55398e68b63d3a050d13137cae9dc7627848cccf59182dad2cb1294dcf10443fa
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/xz-utils/5.2.9-0.0/
+
 
 ### `dpkg` source package: `zlib=1:1.2.11.dfsg-4.1ubuntu1`
 

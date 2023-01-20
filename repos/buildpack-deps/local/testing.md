@@ -107,21 +107,13 @@ Licenses: (parsed from: `/usr/share/doc/libaprutil1/copyright`)
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apr-util=1.6.1-5
-'http://deb.debian.org/debian/pool/main/a/apr-util/apr-util_1.6.1-5.dsc' apr-util_1.6.1-5.dsc 2754 SHA256:dab17dcb495ae31448ceb506448a5b1a6155ae9771073950227c47e09241b9d6
-'http://deb.debian.org/debian/pool/main/a/apr-util/apr-util_1.6.1.orig.tar.bz2' apr-util_1.6.1.orig.tar.bz2 428595 SHA256:d3e12f7b6ad12687572a3a39475545a072608f4ba03a6ce8a3778f607dd0035b
-'http://deb.debian.org/debian/pool/main/a/apr-util/apr-util_1.6.1.orig.tar.bz2.asc' apr-util_1.6.1.orig.tar.bz2.asc 801 SHA256:47837b605290c0d7659b73734e4a9d5e6c0c24c13185cd4d91837afe63c07ca4
-'http://deb.debian.org/debian/pool/main/a/apr-util/apr-util_1.6.1-5.debian.tar.xz' apr-util_1.6.1-5.debian.tar.xz 342000 SHA256:9489fa1228c0e7362f4a4d099c015b7552b928b7d73c9d79b6d4c16b52edce3b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apr-util/1.6.1-5/
 
-- https://sources.debian.net/src/apr-util/1.6.1-5/ (for browsing the source)
-- https://sources.debian.net/src/apr-util/1.6.1-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apr-util/1.6.1-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apr=1.7.0-8`
 
@@ -258,20 +250,13 @@ Licenses: (parsed from: `/usr/share/doc/autoconf/copyright`)
 - `permissive-without-disclaimer`
 - `permissive-without-notices-or-disclaimer`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris autoconf=2.71-2
-'http://deb.debian.org/debian/pool/main/a/autoconf/autoconf_2.71-2.dsc' autoconf_2.71-2.dsc 1988 SHA256:1b0263feeaedb0ab187f648015bf1f4a2751589fd2de5d24b9753a42367fa0f4
-'http://deb.debian.org/debian/pool/main/a/autoconf/autoconf_2.71.orig.tar.gz' autoconf_2.71.orig.tar.gz 2003781 SHA256:431075ad0bf529ef13cb41e9042c542381103e80015686222b8a9d4abef42a1c
-'http://deb.debian.org/debian/pool/main/a/autoconf/autoconf_2.71-2.debian.tar.xz' autoconf_2.71-2.debian.tar.xz 23588 SHA256:89237343fc74050a83c0e43221d3fff46e7441391d90b099efc5ceedab0f8efc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/autoconf/2.71-2/
 
-- https://sources.debian.net/src/autoconf/2.71-2/ (for browsing the source)
-- https://sources.debian.net/src/autoconf/2.71-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/autoconf/2.71-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `automake-1.16=1:1.16.5-1.3`
 
@@ -1022,10 +1007,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris elfutils=0.188-2
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.188-2.dsc' elfutils_0.188-2.dsc 3472 SHA256:a332a5f81cdaa0b8a1e888514758569909475b5e596fd182bf74902a2a918eae
+'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.188-2.1.dsc' elfutils_0.188-2.1.dsc 3451 SHA256:2e73c5bfe9d0ddbf837742d638c43b049590ae1de8f6e3d9c2740c28e2550760
 'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.188.orig.tar.bz2' elfutils_0.188.orig.tar.bz2 9112977 SHA256:fb8b0e8d0802005b9a309c60c1d8de32dd2951b56f0c3a3cb56d21ce01595dff
 'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.188.orig.tar.bz2.asc' elfutils_0.188.orig.tar.bz2.asc 488 SHA256:061bb59801b8a23de4b129acb242210889be2c25b43ad2bcc2eb04966a1823e6
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.188-2.debian.tar.xz' elfutils_0.188-2.debian.tar.xz 39984 SHA256:0dc3425cb1a31ad02ef367d23de7eceea3494ae66ce86e9a7d614e378c590b10
+'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.188-2.1.debian.tar.xz' elfutils_0.188-2.1.debian.tar.xz 42328 SHA256:dac77dc13f8f3bb2c541d631faf75216fc6640a359143a4545129ee096bc35ff
 ```
 
 Other potentially useful URLs:
@@ -1150,20 +1135,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris fontconfig=2.13.1-4.5
-'http://deb.debian.org/debian/pool/main/f/fontconfig/fontconfig_2.13.1-4.5.dsc' fontconfig_2.13.1-4.5.dsc 2687 SHA256:2c71a85d457f50aa3e179768a2c448764882be11f0aab944a817b5b076ea096e
-'http://deb.debian.org/debian/pool/main/f/fontconfig/fontconfig_2.13.1.orig.tar.bz2' fontconfig_2.13.1.orig.tar.bz2 1723639 SHA256:f655dd2a986d7aa97e052261b36aa67b0a64989496361eca8d604e6414006741
-'http://deb.debian.org/debian/pool/main/f/fontconfig/fontconfig_2.13.1-4.5.debian.tar.xz' fontconfig_2.13.1-4.5.debian.tar.xz 56244 SHA256:886bcb0f34349a368e886e8d7054c8dbbbe35cfc45cce1a44495dda88af3fad8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/fontconfig/2.13.1-4.5/
 
-- https://sources.debian.net/src/fontconfig/2.13.1-4.5/ (for browsing the source)
-- https://sources.debian.net/src/fontconfig/2.13.1-4.5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/fontconfig/2.13.1-4.5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `fonts-dejavu=2.37-2`
 
@@ -4118,20 +4096,13 @@ Licenses: (parsed from: `/usr/share/doc/libmpfr6/copyright`)
 - `GFDL-1.2`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mpfr4=4.1.1-3
-'http://deb.debian.org/debian/pool/main/m/mpfr4/mpfr4_4.1.1-3.dsc' mpfr4_4.1.1-3.dsc 1959 SHA256:588de6cdf6fe290b793634105c8171a18e35307cac5090eec8cfb5ab7339c445
-'http://deb.debian.org/debian/pool/main/m/mpfr4/mpfr4_4.1.1.orig.tar.xz' mpfr4_4.1.1.orig.tar.xz 1429836 SHA256:ffd195bd567dbaffc3b98b23fd00aad0537680c9896171e44fe3ff79e28ac33d
-'http://deb.debian.org/debian/pool/main/m/mpfr4/mpfr4_4.1.1-3.debian.tar.xz' mpfr4_4.1.1-3.debian.tar.xz 13244 SHA256:89dbb414e62a813218479120a5acd22ea3096a67c0222cc563c822920a0da296
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mpfr4/4.1.1-3/
 
-- https://sources.debian.net/src/mpfr4/4.1.1-3/ (for browsing the source)
-- https://sources.debian.net/src/mpfr4/4.1.1-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mpfr4/4.1.1-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mysql-defaults=1.0.8`
 
@@ -4433,20 +4404,13 @@ Licenses: (parsed from: `/usr/share/doc/libldap-2.5-0/copyright`)
 - `UMich`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.5.13+dfsg-2
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.5.13%2bdfsg-2.dsc' openldap_2.5.13+dfsg-2.dsc 3224 SHA256:304eb2f104e2c1986f18c14c4f3d0ddba6049aa4440f8401c903303c6943ef24
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.5.13%2bdfsg.orig.tar.xz' openldap_2.5.13+dfsg.orig.tar.xz 3727704 SHA256:1d95c400a3eae6730246614ef16883de3dbd1b14b01a1ebe3a9aa1ccad2c13ec
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.5.13%2bdfsg-2.debian.tar.xz' openldap_2.5.13+dfsg-2.debian.tar.xz 164476 SHA256:ca255fdc5ef77c3c9660af701331f19a0fe7dffbd625c5302746d2ace75a9656
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.5.13+dfsg-2/
 
-- https://sources.debian.net/src/openldap/2.5.13+dfsg-2/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.5.13+dfsg-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.5.13+dfsg-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:9.1p1-1`
 
@@ -4970,20 +4934,13 @@ Licenses: (parsed from: `/usr/share/doc/libreadline-dev/copyright`, `/usr/share/
 - `GFDL`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris readline=8.2-1.2
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2-1.2.dsc' readline_8.2-1.2.dsc 2703 SHA256:97cd1ac9185d16d78aedab93b16fc13f8cb9df26039833a7080d3b6ed3ce4039
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2.orig.tar.gz' readline_8.2.orig.tar.gz 3043952 SHA256:3feb7171f16a84ee82ca18a36d7b9be109a52c04f492a053331d7d1095007c35
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.2-1.2.debian.tar.xz' readline_8.2-1.2.debian.tar.xz 29532 SHA256:87a72130de94229ac48b365607a15705689613c50cfa34657e420cae34b60e21
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/readline/8.2-1.2/
 
-- https://sources.debian.net/src/readline/8.2-1.2/ (for browsing the source)
-- https://sources.debian.net/src/readline/8.2-1.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/readline/8.2-1.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rpcsvc-proto=1.4.3-1`
 
@@ -5078,19 +5035,13 @@ Licenses: (parsed from: `/usr/share/doc/sensible-utils/copyright`)
 - `configure`
 - `installsh`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sensible-utils=0.0.17
-'http://deb.debian.org/debian/pool/main/s/sensible-utils/sensible-utils_0.0.17.dsc' sensible-utils_0.0.17.dsc 1733 SHA256:e4754f4763f77d57fdb29093ec78eb0a84bac4e3aa94e4c251f0d00f11a4b231
-'http://deb.debian.org/debian/pool/main/s/sensible-utils/sensible-utils_0.0.17.tar.xz' sensible-utils_0.0.17.tar.xz 66648 SHA256:5edf1f6043eeb88957ffe0b0e8793fbbdf40c8ff83f5bf9b36c9421c2d977626
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sensible-utils/0.0.17/
 
-- https://sources.debian.net/src/sensible-utils/0.0.17/ (for browsing the source)
-- https://sources.debian.net/src/sensible-utils/0.0.17/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sensible-utils/0.0.17/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `serf=1.3.9-11`
 
@@ -5360,21 +5311,13 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022g-1
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022g-1.dsc' tzdata_2022g-1.dsc 2231 SHA256:0c64467b115608f9589007ef9c4fbfc1a57de1878fb80fd39c534565304378c3
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022g.orig.tar.gz' tzdata_2022g.orig.tar.gz 439731 SHA256:4491db8281ae94a84d939e427bdd83dc389f26764d27d9a5c52d782c16764478
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022g.orig.tar.gz.asc' tzdata_2022g.orig.tar.gz.asc 833 SHA256:2fe43e895ab050f5909041d1105222f0678d716128b59d39b8a3ac94b4a1bbc0
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2022g-1.debian.tar.xz' tzdata_2022g-1.debian.tar.xz 112624 SHA256:d498649597f65d0d5df228054350a0dafce346f6b995494945183c5cb981e93c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2022g-1/
 
-- https://sources.debian.net/src/tzdata/2022g-1/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2022g-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2022g-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043`
 

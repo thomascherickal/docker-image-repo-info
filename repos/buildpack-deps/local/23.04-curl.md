@@ -84,15 +84,13 @@ Licenses: (parsed from: `/usr/share/doc/libattr1/copyright`)
 - `LGPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris attr=1:2.5.1-3
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.5.1-3.dsc' attr_2.5.1-3.dsc 2455 SHA512:9dffb244524007bf47b7f17507e807d14c50da0691e2846cb40787087a45abbc89c46cb6feabb3206223d04cd12e0c1647b2e10c682a5c6af993e675482a889c
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.5.1.orig.tar.xz' attr_2.5.1.orig.tar.xz 318188 SHA512:9e5555260189bb6ef2440c76700ebb813ff70582eb63d446823874977307d13dfa3a347dfae619f8866943dfa4b24ccf67dadd7e3ea2637239fdb219be5d2932
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.5.1.orig.tar.xz.asc' attr_2.5.1.orig.tar.xz.asc 833 SHA512:be4f3629ef66bd400bcdeaf8b6b1564dc729472a514d59fb4909a30f3269711dedea16002283e9aabbf83c374e0a3d70bc00f1136da0fed66a8184acdfd7e78f
-'http://archive.ubuntu.com/ubuntu/pool/main/a/attr/attr_2.5.1-3.debian.tar.xz' attr_2.5.1-3.debian.tar.xz 29024 SHA512:8dd45ce9cf525f036a930c976bb31b246ec846d48abf79c6d01a481da1e9c6a8ec47883354e226466a297cbdcf6189482a2ad953b6ddc68ad21ea60734aade7c
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/attr/1:2.5.1-3/
+
 
 ### `dpkg` source package: `audit=1:3.0.7-1ubuntu2`
 
@@ -158,14 +156,9 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.2-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.2-1ubuntu2.dsc' bash_5.2-1ubuntu2.dsc 2422 SHA512:2ce1f0186b3a1db8c2c6a96891e980938e088e1091eeccab890ed6a79933629557d7cfe76006c7b67d574e8f7b2651ac10db7ef5d8e12604e60636f4d34dd788
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.2.orig.tar.xz' bash_5.2.orig.tar.xz 5886100 SHA512:2aa66d4f25bce7bb3d5275eca16e8697916780811799d5f7b27a1d39b3e04f462424e3760725f17eb2fd64dce1f7573375858a97eee03a557e5a46a0db818053
-'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.2-1ubuntu2.debian.tar.xz' bash_5.2-1ubuntu2.debian.tar.xz 92980 SHA512:acfd80a2edc9881e79219de7fe3b4a0da7e672313e4d40c0ccf40ff9d30f7ee189fcc302e57fabb9c22e02c2a488f6eeaba867caed9d7c846ea74b6bf7c2eab7
-```
 
 ### `dpkg` source package: `brotli=1.0.9-2build7`
 
@@ -1285,15 +1278,13 @@ Licenses: (parsed from: `/usr/share/doc/libncurses6/copyright`, `/usr/share/doc/
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.3+20220423-2
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.3%2b20220423-2.dsc' ncurses_6.3+20220423-2.dsc 4200 SHA512:6a7194bec8331f7e5396cc58390c6523388a08b6cfc7488dc357112163b2f55d0de7d5060d2591a33b2b074c1fd8b7acb111157c68b9f10a9ed6e21b9551c228
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.3%2b20220423.orig.tar.gz' ncurses_6.3+20220423.orig.tar.gz 3611993 SHA512:350a2f36ffea4f98a346217356e2730b6ef115eecd35144b8ef741a119932ab717febb2bd16acc596364084758bd9ecc8223ffcd91e59c9e0700445cfb700284
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.3%2b20220423.orig.tar.gz.asc' ncurses_6.3+20220423.orig.tar.gz.asc 729 SHA512:b933258b43863cd1a68dd0ba40d7340dbd2676586aae1409f7dcc33e86f3b0e0e6d1544430632976d96b8ec7a5b3e630c0a81cea3f7f7471eba14ac7194dac3f
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.3%2b20220423-2.debian.tar.xz' ncurses_6.3+20220423-2.debian.tar.xz 54600 SHA512:575373307127325f015df4d654037c8294d8ae07c5cd2acb8f145e35d2dfded53cc3c38776a76a4fc3783ddeff8f6f2134eefc0d7d52da456a42871094eea356
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/ncurses/6.3+20220423-2/
+
 
 ### `dpkg` source package: `netbase=6.4`
 
