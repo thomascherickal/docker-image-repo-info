@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e1d455d16447fc4e4bde4f9335695b30959c7442b08b13d4ec5f9bdc6ea9493a`
-- Created: `2023-01-12T02:47:51.486954208Z`
-- Virtual Size: ~ 531.24 Mb  
+- Image ID: `sha256:c09e7783ad4552642c533cdcdf6a2dcc7cb595a71ebf768f2954cdbb65a75dc3`
+- Created: `2023-01-19T18:53:44.171230657Z`
+- Virtual Size: ~ 531.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
@@ -657,12 +657,12 @@ $ apt-get source -qq --print-uris gdbm=1.18.1-5
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.18.1-5.debian.tar.xz' gdbm_1.18.1-5.debian.tar.xz 16348 SHA256:3c1a0e05b40a97ee51ce77c736c72c37738ba31b2720111d3bc99175a2c3a3ed
 ```
 
-### `dpkg` source package: `git=1:2.25.1-1ubuntu3.6`
+### `dpkg` source package: `git=1:2.25.1-1ubuntu3.8`
 
 Binary Packages:
 
-- `git=1:2.25.1-1ubuntu3.6`
-- `git-man=1:2.25.1-1ubuntu3.6`
+- `git=1:2.25.1-1ubuntu3.8`
+- `git-man=1:2.25.1-1ubuntu3.8`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -685,9 +685,14 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris git=1:2.25.1-1ubuntu3.8
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.25.1-1ubuntu3.8.dsc' git_2.25.1-1ubuntu3.8.dsc 2962 SHA512:9de11f42828c52fc6ac10f1feba306b8b21fd5ae320f9a0c6119b08e2bce1ddd6973e26eec9067d8375d8c1c2d5dfd291189a2394a552e0dc9094f69af9b70c5
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.25.1.orig.tar.xz' git_2.25.1.orig.tar.xz 5875548 SHA512:15241143acfd8542d85d2709ac3c80dbd6e8d5234438f70c4f33cc71a2bdec3e32938df7f6351e2746d570b021d3bd0b70474ea4beec0c51d1fc45f9c287b344
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.25.1-1ubuntu3.8.debian.tar.xz' git_2.25.1-1ubuntu3.8.debian.tar.xz 697772 SHA512:089e5eee0f8be77d52725f1862ebe964f45c527b9a392ef67141a75cd79bd802665c30f87a9d4bfdb78e9710d55d970d9036dfdc26990b15b056286530c4a6fe
+```
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu9.9`
 
@@ -2209,11 +2214,11 @@ $ apt-get source -qq --print-uris rtmpdump=2.4+20151223.gitfa8646d.1-2build1
 'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4%2b20151223.gitfa8646d.1-2build1.debian.tar.xz' rtmpdump_2.4+20151223.gitfa8646d.1-2build1.debian.tar.xz 8216 SHA256:b256cc2aa96c9b99918052c4badfab0339ba95a852eab5ae37aa8b53c259efd2
 ```
 
-### `dpkg` source package: `sapmachine-17-jdk=17.0.5`
+### `dpkg` source package: `sapmachine-17-jdk=17.0.6`
 
 Binary Packages:
 
-- `sapmachine-17-jdk=17.0.5`
+- `sapmachine-17-jdk=17.0.6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.

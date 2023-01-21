@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b77aaa934ec11ddb86eef36b62d68fa5012488aefe6a908728e8d160788f5879`
-- Created: `2023-01-12T02:47:32.451229323Z`
-- Virtual Size: ~ 522.24 Mb  
+- Image ID: `sha256:babf1a4c63a8ae8f87a148b255acc8e300682de7af8d2da2cc14372aa5f98234`
+- Created: `2023-01-18T21:02:15.074565138Z`
+- Virtual Size: ~ 522.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
@@ -657,12 +657,12 @@ $ apt-get source -qq --print-uris gdbm=1.18.1-5
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.18.1-5.debian.tar.xz' gdbm_1.18.1-5.debian.tar.xz 16348 SHA256:3c1a0e05b40a97ee51ce77c736c72c37738ba31b2720111d3bc99175a2c3a3ed
 ```
 
-### `dpkg` source package: `git=1:2.25.1-1ubuntu3.6`
+### `dpkg` source package: `git=1:2.25.1-1ubuntu3.7`
 
 Binary Packages:
 
-- `git=1:2.25.1-1ubuntu3.6`
-- `git-man=1:2.25.1-1ubuntu3.6`
+- `git=1:2.25.1-1ubuntu3.7`
+- `git-man=1:2.25.1-1ubuntu3.7`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -2209,11 +2209,11 @@ $ apt-get source -qq --print-uris rtmpdump=2.4+20151223.gitfa8646d.1-2build1
 'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4%2b20151223.gitfa8646d.1-2build1.debian.tar.xz' rtmpdump_2.4+20151223.gitfa8646d.1-2build1.debian.tar.xz 8216 SHA256:b256cc2aa96c9b99918052c4badfab0339ba95a852eab5ae37aa8b53c259efd2
 ```
 
-### `dpkg` source package: `sapmachine-11-jdk=11.0.17`
+### `dpkg` source package: `sapmachine-11-jdk=11.0.18`
 
 Binary Packages:
 
-- `sapmachine-11-jdk=11.0.17`
+- `sapmachine-11-jdk=11.0.18`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
