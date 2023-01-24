@@ -1,10 +1,10 @@
-# `tomee:8.0.13-jre11-Temurin-ubuntu-plume`
+# `tomee:8.0.14-jre11-Temurin-ubuntu-plume`
 
 ## Docker Metadata
 
-- Image ID: `sha256:081f12772c2a5b40cd3ed0000ef8447b41aa7d5c02d2c2572f38b4308fe1d81a`
-- Created: `2022-12-09T09:08:56.012151088Z`
-- Virtual Size: ~ 353.15 Mb  
+- Image ID: `sha256:4d9681a445c083bfb736338d731619a5f7da1f8aca1322dcdd9e72484218a5f2`
+- Created: `2023-01-24T02:36:01.201579831Z`
+- Virtual Size: ~ 354.51 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -15,7 +15,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-11.0.17+8`
-  - `TOMEE_VER=8.0.13`
+  - `TOMEE_VER=8.0.14`
   - `TOMEE_BUILD=plume`
 
 ## `dpkg` (`.deb`-based packages)

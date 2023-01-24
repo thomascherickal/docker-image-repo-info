@@ -1,10 +1,10 @@
-# `tomee:8.0.13-jre8-Temurin-ubuntu-microprofile`
+# `tomee:8.0.14-jre8-Temurin-ubuntu-microprofile`
 
 ## Docker Metadata
 
-- Image ID: `sha256:146339bf85fe81c6b6ac8906fbac7c93c5881efd8b0e07f61f6dc4b6fbb76ab9`
-- Created: `2022-12-09T09:10:07.169321307Z`
-- Virtual Size: ~ 307.83 Mb  
+- Image ID: `sha256:8c7e20e67f52658355256ba811afb1a09d65d582a3eafc94d1fb6e96ed338d05`
+- Created: `2023-01-24T02:37:16.32426503Z`
+- Virtual Size: ~ 308.06 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -15,7 +15,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk8u352-b08`
-  - `TOMEE_VER=8.0.13`
+  - `TOMEE_VER=8.0.14`
   - `TOMEE_BUILD=microprofile`
 
 ## `dpkg` (`.deb`-based packages)

@@ -1,10 +1,10 @@
-# `tomee:9.0.0.RC1-jre11-Temurin-alpine-webprofile`
+# `tomee:9.0.0-jre11-Temurin-alpine-webprofile`
 
 ## Docker Metadata
 
-- Image ID: `sha256:bdeb4809749376e72add60979ccc4aff5407fa59cbf8a9060fc1e99350313513`
-- Created: `2023-01-09T22:19:58.629998274Z`
-- Virtual Size: ~ 236.76 Mb  
+- Image ID: `sha256:02929bf5449e29752026a29cd38172f694eded580a05b7b1c7f6b68aba184e33`
+- Created: `2023-01-24T02:43:06.829650334Z`
+- Virtual Size: ~ 235.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -15,7 +15,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-11.0.17+8`
-  - `TOMEE_VER=9.0.0.RC1`
+  - `TOMEE_VER=9.0.0`
   - `TOMEE_BUILD=webprofile`
 
 ## `apk` (`.apk`-based packages)
