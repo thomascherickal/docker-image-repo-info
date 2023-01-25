@@ -22740,7 +22740,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9-jdk8`
 
 ```console
-$ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f030e7c391df
+$ docker pull jetty@sha256:f98946fa84f603f886098a271a96dddf5eaeca5abbaf09078dfdeaecc88d1b70
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -22751,14 +22751,14 @@ $ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f
 ### `jetty:9-jdk8` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:518e9a06f5dd77b37ed96f9733ea484e3c1f9387a9da860613b550780e38cb8b
+$ docker pull jetty@sha256:c15f94b5c3fa543cd8df3c88eb1db4eb077e30184136308c80e65c7ae77065f7
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **158.7 MB (158689411 bytes)**  
+-	Total Size: **110.2 MB (110213251 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:932e8a80b2c495f1489b18c83e62ea3d6317f8fe91640801d8f78a28b9c6125a`
+-	Image ID: `sha256:6b31f091412188174715214d15712c721b1abad4ebff5eea6ec3b8d9c76a4775`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -22775,39 +22775,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:42:42 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:42:42 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:42:52 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:42:53 GMT
+# Wed, 25 Jan 2023 19:19:58 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:03 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='9290a8beefd7a94f0eb030f62d402411a852100482b9c5b63714bacc57002c2a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='039843c200d0773fe927fa07c368f23d1d74ae58edd09138c97aa1f5e2007b28';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='69658dd316c6a160915655971573179766e19c6610ea03880c1e578a0e518f74';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1486a792fb224611ce0cd0e83d4aacd3503b56698549f8e9a9f0a6ebb83bdba1';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:05 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -22820,21 +22820,21 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:49:42 GMT  
 		Size: 16.3 MB (16333067 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5d2e925df9ad8f26afed7d0069d9642a6af50c1208671c99044b6d77cb1ee165`  
-		Last Modified: Fri, 09 Dec 2022 01:49:49 GMT  
-		Size: 103.5 MB (103530790 bytes)  
+	-	`sha256:d37fb312ae19f62ad480ce6086c9b6578ca2410115a9273a116277a4baa172c3`  
+		Last Modified: Wed, 25 Jan 2023 19:26:09 GMT  
+		Size: 54.6 MB (54635847 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:421df23398e7ac608f5fcb1c89643a28847a8df3f2afeb8dc5d2791c96cc929d`  
-		Last Modified: Fri, 09 Dec 2022 01:49:39 GMT  
+	-	`sha256:fa2e2b34b018853989bb73ef5b890ce38ef7577705dae25d3af5b7167b1a630a`  
+		Last Modified: Wed, 25 Jan 2023 19:26:02 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc0f474dbfc3a19300af017d5ff0da5c1bf03b63aaef4dea84ebf8348404013`  
-		Last Modified: Tue, 13 Dec 2022 19:39:08 GMT  
-		Size: 10.2 MB (10247072 bytes)  
+	-	`sha256:ea4f5af6f8772e4f84d1046d9b88b101b6cf877e58620bf8c096e58ba886bde0`  
+		Last Modified: Wed, 25 Jan 2023 21:26:22 GMT  
+		Size: 10.7 MB (10665854 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f82b6a1720e077cc00aa2fc5510da41799feb8a8a4e7f1e73c856f966dafec2`  
-		Last Modified: Tue, 13 Dec 2022 19:39:07 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:e02cc6c770c632ee829d89db00897318fe31c77d559b2df6754e8f4b2af71626`  
+		Last Modified: Wed, 25 Jan 2023 21:26:21 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jetty:9-jdk8` - linux; arm64 variant v8
@@ -23180,7 +23180,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9-jdk8-eclipse-temurin`
 
 ```console
-$ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f030e7c391df
+$ docker pull jetty@sha256:f98946fa84f603f886098a271a96dddf5eaeca5abbaf09078dfdeaecc88d1b70
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -23191,14 +23191,14 @@ $ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f
 ### `jetty:9-jdk8-eclipse-temurin` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:518e9a06f5dd77b37ed96f9733ea484e3c1f9387a9da860613b550780e38cb8b
+$ docker pull jetty@sha256:c15f94b5c3fa543cd8df3c88eb1db4eb077e30184136308c80e65c7ae77065f7
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **158.7 MB (158689411 bytes)**  
+-	Total Size: **110.2 MB (110213251 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:932e8a80b2c495f1489b18c83e62ea3d6317f8fe91640801d8f78a28b9c6125a`
+-	Image ID: `sha256:6b31f091412188174715214d15712c721b1abad4ebff5eea6ec3b8d9c76a4775`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -23215,39 +23215,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:42:42 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:42:42 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:42:52 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:42:53 GMT
+# Wed, 25 Jan 2023 19:19:58 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:03 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='9290a8beefd7a94f0eb030f62d402411a852100482b9c5b63714bacc57002c2a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='039843c200d0773fe927fa07c368f23d1d74ae58edd09138c97aa1f5e2007b28';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='69658dd316c6a160915655971573179766e19c6610ea03880c1e578a0e518f74';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1486a792fb224611ce0cd0e83d4aacd3503b56698549f8e9a9f0a6ebb83bdba1';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:05 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -23260,21 +23260,21 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:49:42 GMT  
 		Size: 16.3 MB (16333067 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5d2e925df9ad8f26afed7d0069d9642a6af50c1208671c99044b6d77cb1ee165`  
-		Last Modified: Fri, 09 Dec 2022 01:49:49 GMT  
-		Size: 103.5 MB (103530790 bytes)  
+	-	`sha256:d37fb312ae19f62ad480ce6086c9b6578ca2410115a9273a116277a4baa172c3`  
+		Last Modified: Wed, 25 Jan 2023 19:26:09 GMT  
+		Size: 54.6 MB (54635847 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:421df23398e7ac608f5fcb1c89643a28847a8df3f2afeb8dc5d2791c96cc929d`  
-		Last Modified: Fri, 09 Dec 2022 01:49:39 GMT  
+	-	`sha256:fa2e2b34b018853989bb73ef5b890ce38ef7577705dae25d3af5b7167b1a630a`  
+		Last Modified: Wed, 25 Jan 2023 19:26:02 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc0f474dbfc3a19300af017d5ff0da5c1bf03b63aaef4dea84ebf8348404013`  
-		Last Modified: Tue, 13 Dec 2022 19:39:08 GMT  
-		Size: 10.2 MB (10247072 bytes)  
+	-	`sha256:ea4f5af6f8772e4f84d1046d9b88b101b6cf877e58620bf8c096e58ba886bde0`  
+		Last Modified: Wed, 25 Jan 2023 21:26:22 GMT  
+		Size: 10.7 MB (10665854 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f82b6a1720e077cc00aa2fc5510da41799feb8a8a4e7f1e73c856f966dafec2`  
-		Last Modified: Tue, 13 Dec 2022 19:39:07 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:e02cc6c770c632ee829d89db00897318fe31c77d559b2df6754e8f4b2af71626`  
+		Last Modified: Wed, 25 Jan 2023 21:26:21 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jetty:9-jdk8-eclipse-temurin` - linux; arm64 variant v8
@@ -24521,7 +24521,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9-jre8`
 
 ```console
-$ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a058398782288b
+$ docker pull jetty@sha256:ffca40cd48f8352038b0a98f14235b8d559be0b733d7864c65d6863681c4535b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -24532,14 +24532,14 @@ $ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a05
 ### `jetty:9-jre8` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:53705d14efdab949fdf0216e35c66edb783c7c96049b3d509f32aebf61d0089f
+$ docker pull jetty@sha256:427cc59222257b633fd1c63170ed268847f7dc63145b24fa368ea197e21d04ca
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.9 MB (94927472 bytes)**  
+-	Total Size: **95.4 MB (95403641 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25e10d1d86b6acecf01f7ec50b6f3d23394a3a9a2786272a495dcca0e7ba30ef`
+-	Image ID: `sha256:072e942b9792e2789d3d35feb774f6d920e5430bde43a803c784fa5212fd7eba`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -24556,39 +24556,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:43:29 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:43:29 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:44:00 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:44:00 GMT
+# Wed, 25 Jan 2023 19:20:07 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:51 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cbe45788fa2d9d04d6b10f8aec7dbb15a018dbafe897ed75e31876d0367d56a5';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='82d8524838b07ee438d42f4c33b6ecfe89ae83efac9af0605c76d75195bdcd99';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5ec3e07126fedc23b58bb0f5b2dd05b5e9599ce1a3567fc2c7b27587f39faa3b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='c8c4e180f915fc7c163240bf363dcdf2b481cd2723fabfc3d08ccf12e049611f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:52 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -24601,20 +24601,20 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:50:02 GMT  
 		Size: 12.4 MB (12432218 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3288c03e49cae6a8536d8a768800dd9e20cf02b299b37957f7bb4a047664be95`  
-		Last Modified: Fri, 09 Dec 2022 01:50:41 GMT  
-		Size: 41.8 MB (41818679 bytes)  
+	-	`sha256:336fe784e5c8994ba6d71d22881f134ae430928f0d002a91c50b68388e5d63c2`  
+		Last Modified: Wed, 25 Jan 2023 19:27:44 GMT  
+		Size: 41.8 MB (41823501 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d6928f99163e99ef8e576ac26c39825c9913f9aa977e9d1dc8548e4fc51ce3b`  
-		Last Modified: Fri, 09 Dec 2022 01:50:36 GMT  
-		Size: 159.0 B  
+	-	`sha256:eab0566e1e8f2f37a21032bcf8ce5f1767f12b3874b25105ff39b518cc70dd88`  
+		Last Modified: Wed, 25 Jan 2023 19:27:39 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89a9832bf41affc7eab6afe6cd11929953faebc1fc43e7a97c90592f481620bf`  
-		Last Modified: Tue, 13 Dec 2022 19:37:36 GMT  
-		Size: 10.2 MB (10246267 bytes)  
+	-	`sha256:8a3eef973181c171936f979053cb494d5aa85ec73106b3b7e8e95d36b8083ca3`  
+		Last Modified: Wed, 25 Jan 2023 21:25:54 GMT  
+		Size: 10.7 MB (10717613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b0448c37ec598c32e0dcd1ab7f134e794de787beffaa05db38ee1312b1db273`  
-		Last Modified: Tue, 13 Dec 2022 19:37:35 GMT  
+	-	`sha256:f08379fcc50709467697d2d640fcb02e6073866983fb1867a362072dec3afacc`  
+		Last Modified: Wed, 25 Jan 2023 21:25:53 GMT  
 		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -24710,7 +24710,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9-jre8-alpine`
 
 ```console
-$ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036dfa5f99a9d72
+$ docker pull jetty@sha256:0fc480b4cf43cdfa49efb8d643c6fd26327bc55023ae8586e4ad9c4936818f7f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -24720,14 +24720,14 @@ $ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036d
 ### `jetty:9-jre8-alpine` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:48f1557c2ff16e89c095486460f24720e25507fdeccbfc4b97f55f9dfc781ec8
+$ docker pull jetty@sha256:7484764a548788935ce224e15ece9211aabec50bcc9b7c2e215c62bb0086b6c0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **74.3 MB (74321004 bytes)**  
+-	Total Size: **74.3 MB (74323926 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:68868b624a4b0090bf3e77b40ce4992fd227eec1070381ccce51262c5787a548`
+-	Image ID: `sha256:98cdad49e600c54d8e65f5c7da0f41991d7f3e4cd4ba83e91430fbbf1c1e8a96`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -24744,39 +24744,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Mon, 09 Jan 2023 17:40:11 GMT
 RUN apk add --no-cache fontconfig libretls musl-locales musl-locales-lang ttf-dejavu tzdata zlib     && rm -rf /var/cache/apk/*
-# Mon, 09 Jan 2023 17:40:11 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Mon, 09 Jan 2023 17:40:34 GMT
-RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='0f4a4a3c092d8cca171fc36003ac82e2f3d8d768bd6f530a20e2a4caf79bdb9e';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;
-# Mon, 09 Jan 2023 17:40:35 GMT
+# Wed, 25 Jan 2023 19:19:44 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:36 GMT
+RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='f6da8a27ed9b4482bc23ef5c6074d345f2d3a32a64baa88567ef5c57c61075bc';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;
+# Wed, 25 Jan 2023 19:20:37 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV TMPDIR=/tmp/jetty
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 RUN set -xe ; 	mkdir -p $TMPDIR ; 	apk add --no-cache gnupg curl ; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	addgroup -S jetty && adduser -h $JETTY_BASE -S jetty -G jetty; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 WORKDIR /var/lib/jetty
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 USER jetty
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 EXPOSE 8080
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -24789,27 +24789,27 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Mon, 09 Jan 2023 17:44:40 GMT  
 		Size: 12.0 MB (12020134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9016bbb79adbedb65d58f59d9d150a07994632fb60d9b87a607175be3580052`  
-		Last Modified: Mon, 09 Jan 2023 17:45:07 GMT  
-		Size: 41.8 MB (41768092 bytes)  
+	-	`sha256:93e4962f974bd8c0a3b34acee4771a3368ccd4a8e56a2d18757e4f37279e4f36`  
+		Last Modified: Wed, 25 Jan 2023 19:27:17 GMT  
+		Size: 41.8 MB (41771000 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1cb99de928bea1fd694c4ae2c44607db0553b2673803a1b27bc9fa34b598eb2`  
-		Last Modified: Mon, 09 Jan 2023 17:45:02 GMT  
+	-	`sha256:4590205f1d8a867cbfed9f8efd33f5683d9d960f172a093973bdbe8b8066d59c`  
+		Last Modified: Wed, 25 Jan 2023 19:27:12 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2121860b608b7d3a3f7fcb3d39b30108f579022231acc1ccfa2649f20bbd0e4e`  
-		Last Modified: Mon, 09 Jan 2023 21:55:30 GMT  
-		Size: 17.2 MB (17160550 bytes)  
+	-	`sha256:ac2345d1cee6e7124a336001c95886fb8c8fb0ac4f638152ab4605728bb9be57`  
+		Last Modified: Wed, 25 Jan 2023 21:25:35 GMT  
+		Size: 17.2 MB (17160563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2358e29b84d1fc1ddf90b477efc8ff1619e8778fdae36b46df01cf50eb17fb`  
-		Last Modified: Mon, 09 Jan 2023 21:55:29 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:21763b1cf4f2c92b223439d538289e8ff6afc6e69d6bada6a5b749c8a26701b9`  
+		Last Modified: Wed, 25 Jan 2023 21:25:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jetty:9-jre8-alpine-eclipse-temurin`
 
 ```console
-$ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036dfa5f99a9d72
+$ docker pull jetty@sha256:0fc480b4cf43cdfa49efb8d643c6fd26327bc55023ae8586e4ad9c4936818f7f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -24819,14 +24819,14 @@ $ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036d
 ### `jetty:9-jre8-alpine-eclipse-temurin` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:48f1557c2ff16e89c095486460f24720e25507fdeccbfc4b97f55f9dfc781ec8
+$ docker pull jetty@sha256:7484764a548788935ce224e15ece9211aabec50bcc9b7c2e215c62bb0086b6c0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **74.3 MB (74321004 bytes)**  
+-	Total Size: **74.3 MB (74323926 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:68868b624a4b0090bf3e77b40ce4992fd227eec1070381ccce51262c5787a548`
+-	Image ID: `sha256:98cdad49e600c54d8e65f5c7da0f41991d7f3e4cd4ba83e91430fbbf1c1e8a96`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -24843,39 +24843,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Mon, 09 Jan 2023 17:40:11 GMT
 RUN apk add --no-cache fontconfig libretls musl-locales musl-locales-lang ttf-dejavu tzdata zlib     && rm -rf /var/cache/apk/*
-# Mon, 09 Jan 2023 17:40:11 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Mon, 09 Jan 2023 17:40:34 GMT
-RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='0f4a4a3c092d8cca171fc36003ac82e2f3d8d768bd6f530a20e2a4caf79bdb9e';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;
-# Mon, 09 Jan 2023 17:40:35 GMT
+# Wed, 25 Jan 2023 19:19:44 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:36 GMT
+RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='f6da8a27ed9b4482bc23ef5c6074d345f2d3a32a64baa88567ef5c57c61075bc';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;
+# Wed, 25 Jan 2023 19:20:37 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV TMPDIR=/tmp/jetty
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 RUN set -xe ; 	mkdir -p $TMPDIR ; 	apk add --no-cache gnupg curl ; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	addgroup -S jetty && adduser -h $JETTY_BASE -S jetty -G jetty; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 WORKDIR /var/lib/jetty
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 USER jetty
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 EXPOSE 8080
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -24888,27 +24888,27 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Mon, 09 Jan 2023 17:44:40 GMT  
 		Size: 12.0 MB (12020134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9016bbb79adbedb65d58f59d9d150a07994632fb60d9b87a607175be3580052`  
-		Last Modified: Mon, 09 Jan 2023 17:45:07 GMT  
-		Size: 41.8 MB (41768092 bytes)  
+	-	`sha256:93e4962f974bd8c0a3b34acee4771a3368ccd4a8e56a2d18757e4f37279e4f36`  
+		Last Modified: Wed, 25 Jan 2023 19:27:17 GMT  
+		Size: 41.8 MB (41771000 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1cb99de928bea1fd694c4ae2c44607db0553b2673803a1b27bc9fa34b598eb2`  
-		Last Modified: Mon, 09 Jan 2023 17:45:02 GMT  
+	-	`sha256:4590205f1d8a867cbfed9f8efd33f5683d9d960f172a093973bdbe8b8066d59c`  
+		Last Modified: Wed, 25 Jan 2023 19:27:12 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2121860b608b7d3a3f7fcb3d39b30108f579022231acc1ccfa2649f20bbd0e4e`  
-		Last Modified: Mon, 09 Jan 2023 21:55:30 GMT  
-		Size: 17.2 MB (17160550 bytes)  
+	-	`sha256:ac2345d1cee6e7124a336001c95886fb8c8fb0ac4f638152ab4605728bb9be57`  
+		Last Modified: Wed, 25 Jan 2023 21:25:35 GMT  
+		Size: 17.2 MB (17160563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2358e29b84d1fc1ddf90b477efc8ff1619e8778fdae36b46df01cf50eb17fb`  
-		Last Modified: Mon, 09 Jan 2023 21:55:29 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:21763b1cf4f2c92b223439d538289e8ff6afc6e69d6bada6a5b749c8a26701b9`  
+		Last Modified: Wed, 25 Jan 2023 21:25:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jetty:9-jre8-eclipse-temurin`
 
 ```console
-$ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a058398782288b
+$ docker pull jetty@sha256:ffca40cd48f8352038b0a98f14235b8d559be0b733d7864c65d6863681c4535b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -24919,14 +24919,14 @@ $ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a05
 ### `jetty:9-jre8-eclipse-temurin` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:53705d14efdab949fdf0216e35c66edb783c7c96049b3d509f32aebf61d0089f
+$ docker pull jetty@sha256:427cc59222257b633fd1c63170ed268847f7dc63145b24fa368ea197e21d04ca
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.9 MB (94927472 bytes)**  
+-	Total Size: **95.4 MB (95403641 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25e10d1d86b6acecf01f7ec50b6f3d23394a3a9a2786272a495dcca0e7ba30ef`
+-	Image ID: `sha256:072e942b9792e2789d3d35feb774f6d920e5430bde43a803c784fa5212fd7eba`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -24943,39 +24943,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:43:29 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:43:29 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:44:00 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:44:00 GMT
+# Wed, 25 Jan 2023 19:20:07 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:51 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cbe45788fa2d9d04d6b10f8aec7dbb15a018dbafe897ed75e31876d0367d56a5';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='82d8524838b07ee438d42f4c33b6ecfe89ae83efac9af0605c76d75195bdcd99';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5ec3e07126fedc23b58bb0f5b2dd05b5e9599ce1a3567fc2c7b27587f39faa3b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='c8c4e180f915fc7c163240bf363dcdf2b481cd2723fabfc3d08ccf12e049611f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:52 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -24988,20 +24988,20 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:50:02 GMT  
 		Size: 12.4 MB (12432218 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3288c03e49cae6a8536d8a768800dd9e20cf02b299b37957f7bb4a047664be95`  
-		Last Modified: Fri, 09 Dec 2022 01:50:41 GMT  
-		Size: 41.8 MB (41818679 bytes)  
+	-	`sha256:336fe784e5c8994ba6d71d22881f134ae430928f0d002a91c50b68388e5d63c2`  
+		Last Modified: Wed, 25 Jan 2023 19:27:44 GMT  
+		Size: 41.8 MB (41823501 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d6928f99163e99ef8e576ac26c39825c9913f9aa977e9d1dc8548e4fc51ce3b`  
-		Last Modified: Fri, 09 Dec 2022 01:50:36 GMT  
-		Size: 159.0 B  
+	-	`sha256:eab0566e1e8f2f37a21032bcf8ce5f1767f12b3874b25105ff39b518cc70dd88`  
+		Last Modified: Wed, 25 Jan 2023 19:27:39 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89a9832bf41affc7eab6afe6cd11929953faebc1fc43e7a97c90592f481620bf`  
-		Last Modified: Tue, 13 Dec 2022 19:37:36 GMT  
-		Size: 10.2 MB (10246267 bytes)  
+	-	`sha256:8a3eef973181c171936f979053cb494d5aa85ec73106b3b7e8e95d36b8083ca3`  
+		Last Modified: Wed, 25 Jan 2023 21:25:54 GMT  
+		Size: 10.7 MB (10717613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b0448c37ec598c32e0dcd1ab7f134e794de787beffaa05db38ee1312b1db273`  
-		Last Modified: Tue, 13 Dec 2022 19:37:35 GMT  
+	-	`sha256:f08379fcc50709467697d2d640fcb02e6073866983fb1867a362072dec3afacc`  
+		Last Modified: Wed, 25 Jan 2023 21:25:53 GMT  
 		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -27324,7 +27324,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9.4-jdk8`
 
 ```console
-$ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f030e7c391df
+$ docker pull jetty@sha256:f98946fa84f603f886098a271a96dddf5eaeca5abbaf09078dfdeaecc88d1b70
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -27335,14 +27335,14 @@ $ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f
 ### `jetty:9.4-jdk8` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:518e9a06f5dd77b37ed96f9733ea484e3c1f9387a9da860613b550780e38cb8b
+$ docker pull jetty@sha256:c15f94b5c3fa543cd8df3c88eb1db4eb077e30184136308c80e65c7ae77065f7
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **158.7 MB (158689411 bytes)**  
+-	Total Size: **110.2 MB (110213251 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:932e8a80b2c495f1489b18c83e62ea3d6317f8fe91640801d8f78a28b9c6125a`
+-	Image ID: `sha256:6b31f091412188174715214d15712c721b1abad4ebff5eea6ec3b8d9c76a4775`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -27359,39 +27359,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:42:42 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:42:42 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:42:52 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:42:53 GMT
+# Wed, 25 Jan 2023 19:19:58 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:03 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='9290a8beefd7a94f0eb030f62d402411a852100482b9c5b63714bacc57002c2a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='039843c200d0773fe927fa07c368f23d1d74ae58edd09138c97aa1f5e2007b28';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='69658dd316c6a160915655971573179766e19c6610ea03880c1e578a0e518f74';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1486a792fb224611ce0cd0e83d4aacd3503b56698549f8e9a9f0a6ebb83bdba1';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:05 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -27404,21 +27404,21 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:49:42 GMT  
 		Size: 16.3 MB (16333067 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5d2e925df9ad8f26afed7d0069d9642a6af50c1208671c99044b6d77cb1ee165`  
-		Last Modified: Fri, 09 Dec 2022 01:49:49 GMT  
-		Size: 103.5 MB (103530790 bytes)  
+	-	`sha256:d37fb312ae19f62ad480ce6086c9b6578ca2410115a9273a116277a4baa172c3`  
+		Last Modified: Wed, 25 Jan 2023 19:26:09 GMT  
+		Size: 54.6 MB (54635847 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:421df23398e7ac608f5fcb1c89643a28847a8df3f2afeb8dc5d2791c96cc929d`  
-		Last Modified: Fri, 09 Dec 2022 01:49:39 GMT  
+	-	`sha256:fa2e2b34b018853989bb73ef5b890ce38ef7577705dae25d3af5b7167b1a630a`  
+		Last Modified: Wed, 25 Jan 2023 19:26:02 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc0f474dbfc3a19300af017d5ff0da5c1bf03b63aaef4dea84ebf8348404013`  
-		Last Modified: Tue, 13 Dec 2022 19:39:08 GMT  
-		Size: 10.2 MB (10247072 bytes)  
+	-	`sha256:ea4f5af6f8772e4f84d1046d9b88b101b6cf877e58620bf8c096e58ba886bde0`  
+		Last Modified: Wed, 25 Jan 2023 21:26:22 GMT  
+		Size: 10.7 MB (10665854 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f82b6a1720e077cc00aa2fc5510da41799feb8a8a4e7f1e73c856f966dafec2`  
-		Last Modified: Tue, 13 Dec 2022 19:39:07 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:e02cc6c770c632ee829d89db00897318fe31c77d559b2df6754e8f4b2af71626`  
+		Last Modified: Wed, 25 Jan 2023 21:26:21 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jetty:9.4-jdk8` - linux; arm64 variant v8
@@ -27764,7 +27764,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9.4-jdk8-eclipse-temurin`
 
 ```console
-$ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f030e7c391df
+$ docker pull jetty@sha256:f98946fa84f603f886098a271a96dddf5eaeca5abbaf09078dfdeaecc88d1b70
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -27775,14 +27775,14 @@ $ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f
 ### `jetty:9.4-jdk8-eclipse-temurin` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:518e9a06f5dd77b37ed96f9733ea484e3c1f9387a9da860613b550780e38cb8b
+$ docker pull jetty@sha256:c15f94b5c3fa543cd8df3c88eb1db4eb077e30184136308c80e65c7ae77065f7
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **158.7 MB (158689411 bytes)**  
+-	Total Size: **110.2 MB (110213251 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:932e8a80b2c495f1489b18c83e62ea3d6317f8fe91640801d8f78a28b9c6125a`
+-	Image ID: `sha256:6b31f091412188174715214d15712c721b1abad4ebff5eea6ec3b8d9c76a4775`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -27799,39 +27799,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:42:42 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:42:42 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:42:52 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:42:53 GMT
+# Wed, 25 Jan 2023 19:19:58 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:03 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='9290a8beefd7a94f0eb030f62d402411a852100482b9c5b63714bacc57002c2a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='039843c200d0773fe927fa07c368f23d1d74ae58edd09138c97aa1f5e2007b28';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='69658dd316c6a160915655971573179766e19c6610ea03880c1e578a0e518f74';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1486a792fb224611ce0cd0e83d4aacd3503b56698549f8e9a9f0a6ebb83bdba1';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:05 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -27844,21 +27844,21 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:49:42 GMT  
 		Size: 16.3 MB (16333067 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5d2e925df9ad8f26afed7d0069d9642a6af50c1208671c99044b6d77cb1ee165`  
-		Last Modified: Fri, 09 Dec 2022 01:49:49 GMT  
-		Size: 103.5 MB (103530790 bytes)  
+	-	`sha256:d37fb312ae19f62ad480ce6086c9b6578ca2410115a9273a116277a4baa172c3`  
+		Last Modified: Wed, 25 Jan 2023 19:26:09 GMT  
+		Size: 54.6 MB (54635847 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:421df23398e7ac608f5fcb1c89643a28847a8df3f2afeb8dc5d2791c96cc929d`  
-		Last Modified: Fri, 09 Dec 2022 01:49:39 GMT  
+	-	`sha256:fa2e2b34b018853989bb73ef5b890ce38ef7577705dae25d3af5b7167b1a630a`  
+		Last Modified: Wed, 25 Jan 2023 19:26:02 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc0f474dbfc3a19300af017d5ff0da5c1bf03b63aaef4dea84ebf8348404013`  
-		Last Modified: Tue, 13 Dec 2022 19:39:08 GMT  
-		Size: 10.2 MB (10247072 bytes)  
+	-	`sha256:ea4f5af6f8772e4f84d1046d9b88b101b6cf877e58620bf8c096e58ba886bde0`  
+		Last Modified: Wed, 25 Jan 2023 21:26:22 GMT  
+		Size: 10.7 MB (10665854 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f82b6a1720e077cc00aa2fc5510da41799feb8a8a4e7f1e73c856f966dafec2`  
-		Last Modified: Tue, 13 Dec 2022 19:39:07 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:e02cc6c770c632ee829d89db00897318fe31c77d559b2df6754e8f4b2af71626`  
+		Last Modified: Wed, 25 Jan 2023 21:26:21 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jetty:9.4-jdk8-eclipse-temurin` - linux; arm64 variant v8
@@ -29105,7 +29105,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9.4-jre8`
 
 ```console
-$ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a058398782288b
+$ docker pull jetty@sha256:ffca40cd48f8352038b0a98f14235b8d559be0b733d7864c65d6863681c4535b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -29116,14 +29116,14 @@ $ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a05
 ### `jetty:9.4-jre8` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:53705d14efdab949fdf0216e35c66edb783c7c96049b3d509f32aebf61d0089f
+$ docker pull jetty@sha256:427cc59222257b633fd1c63170ed268847f7dc63145b24fa368ea197e21d04ca
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.9 MB (94927472 bytes)**  
+-	Total Size: **95.4 MB (95403641 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25e10d1d86b6acecf01f7ec50b6f3d23394a3a9a2786272a495dcca0e7ba30ef`
+-	Image ID: `sha256:072e942b9792e2789d3d35feb774f6d920e5430bde43a803c784fa5212fd7eba`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -29140,39 +29140,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:43:29 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:43:29 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:44:00 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:44:00 GMT
+# Wed, 25 Jan 2023 19:20:07 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:51 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cbe45788fa2d9d04d6b10f8aec7dbb15a018dbafe897ed75e31876d0367d56a5';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='82d8524838b07ee438d42f4c33b6ecfe89ae83efac9af0605c76d75195bdcd99';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5ec3e07126fedc23b58bb0f5b2dd05b5e9599ce1a3567fc2c7b27587f39faa3b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='c8c4e180f915fc7c163240bf363dcdf2b481cd2723fabfc3d08ccf12e049611f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:52 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -29185,20 +29185,20 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:50:02 GMT  
 		Size: 12.4 MB (12432218 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3288c03e49cae6a8536d8a768800dd9e20cf02b299b37957f7bb4a047664be95`  
-		Last Modified: Fri, 09 Dec 2022 01:50:41 GMT  
-		Size: 41.8 MB (41818679 bytes)  
+	-	`sha256:336fe784e5c8994ba6d71d22881f134ae430928f0d002a91c50b68388e5d63c2`  
+		Last Modified: Wed, 25 Jan 2023 19:27:44 GMT  
+		Size: 41.8 MB (41823501 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d6928f99163e99ef8e576ac26c39825c9913f9aa977e9d1dc8548e4fc51ce3b`  
-		Last Modified: Fri, 09 Dec 2022 01:50:36 GMT  
-		Size: 159.0 B  
+	-	`sha256:eab0566e1e8f2f37a21032bcf8ce5f1767f12b3874b25105ff39b518cc70dd88`  
+		Last Modified: Wed, 25 Jan 2023 19:27:39 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89a9832bf41affc7eab6afe6cd11929953faebc1fc43e7a97c90592f481620bf`  
-		Last Modified: Tue, 13 Dec 2022 19:37:36 GMT  
-		Size: 10.2 MB (10246267 bytes)  
+	-	`sha256:8a3eef973181c171936f979053cb494d5aa85ec73106b3b7e8e95d36b8083ca3`  
+		Last Modified: Wed, 25 Jan 2023 21:25:54 GMT  
+		Size: 10.7 MB (10717613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b0448c37ec598c32e0dcd1ab7f134e794de787beffaa05db38ee1312b1db273`  
-		Last Modified: Tue, 13 Dec 2022 19:37:35 GMT  
+	-	`sha256:f08379fcc50709467697d2d640fcb02e6073866983fb1867a362072dec3afacc`  
+		Last Modified: Wed, 25 Jan 2023 21:25:53 GMT  
 		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -29294,7 +29294,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9.4-jre8-alpine`
 
 ```console
-$ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036dfa5f99a9d72
+$ docker pull jetty@sha256:0fc480b4cf43cdfa49efb8d643c6fd26327bc55023ae8586e4ad9c4936818f7f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -29304,14 +29304,14 @@ $ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036d
 ### `jetty:9.4-jre8-alpine` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:48f1557c2ff16e89c095486460f24720e25507fdeccbfc4b97f55f9dfc781ec8
+$ docker pull jetty@sha256:7484764a548788935ce224e15ece9211aabec50bcc9b7c2e215c62bb0086b6c0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **74.3 MB (74321004 bytes)**  
+-	Total Size: **74.3 MB (74323926 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:68868b624a4b0090bf3e77b40ce4992fd227eec1070381ccce51262c5787a548`
+-	Image ID: `sha256:98cdad49e600c54d8e65f5c7da0f41991d7f3e4cd4ba83e91430fbbf1c1e8a96`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -29328,39 +29328,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Mon, 09 Jan 2023 17:40:11 GMT
 RUN apk add --no-cache fontconfig libretls musl-locales musl-locales-lang ttf-dejavu tzdata zlib     && rm -rf /var/cache/apk/*
-# Mon, 09 Jan 2023 17:40:11 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Mon, 09 Jan 2023 17:40:34 GMT
-RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='0f4a4a3c092d8cca171fc36003ac82e2f3d8d768bd6f530a20e2a4caf79bdb9e';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;
-# Mon, 09 Jan 2023 17:40:35 GMT
+# Wed, 25 Jan 2023 19:19:44 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:36 GMT
+RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='f6da8a27ed9b4482bc23ef5c6074d345f2d3a32a64baa88567ef5c57c61075bc';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;
+# Wed, 25 Jan 2023 19:20:37 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV TMPDIR=/tmp/jetty
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 RUN set -xe ; 	mkdir -p $TMPDIR ; 	apk add --no-cache gnupg curl ; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	addgroup -S jetty && adduser -h $JETTY_BASE -S jetty -G jetty; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 WORKDIR /var/lib/jetty
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 USER jetty
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 EXPOSE 8080
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -29373,27 +29373,27 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Mon, 09 Jan 2023 17:44:40 GMT  
 		Size: 12.0 MB (12020134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9016bbb79adbedb65d58f59d9d150a07994632fb60d9b87a607175be3580052`  
-		Last Modified: Mon, 09 Jan 2023 17:45:07 GMT  
-		Size: 41.8 MB (41768092 bytes)  
+	-	`sha256:93e4962f974bd8c0a3b34acee4771a3368ccd4a8e56a2d18757e4f37279e4f36`  
+		Last Modified: Wed, 25 Jan 2023 19:27:17 GMT  
+		Size: 41.8 MB (41771000 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1cb99de928bea1fd694c4ae2c44607db0553b2673803a1b27bc9fa34b598eb2`  
-		Last Modified: Mon, 09 Jan 2023 17:45:02 GMT  
+	-	`sha256:4590205f1d8a867cbfed9f8efd33f5683d9d960f172a093973bdbe8b8066d59c`  
+		Last Modified: Wed, 25 Jan 2023 19:27:12 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2121860b608b7d3a3f7fcb3d39b30108f579022231acc1ccfa2649f20bbd0e4e`  
-		Last Modified: Mon, 09 Jan 2023 21:55:30 GMT  
-		Size: 17.2 MB (17160550 bytes)  
+	-	`sha256:ac2345d1cee6e7124a336001c95886fb8c8fb0ac4f638152ab4605728bb9be57`  
+		Last Modified: Wed, 25 Jan 2023 21:25:35 GMT  
+		Size: 17.2 MB (17160563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2358e29b84d1fc1ddf90b477efc8ff1619e8778fdae36b46df01cf50eb17fb`  
-		Last Modified: Mon, 09 Jan 2023 21:55:29 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:21763b1cf4f2c92b223439d538289e8ff6afc6e69d6bada6a5b749c8a26701b9`  
+		Last Modified: Wed, 25 Jan 2023 21:25:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jetty:9.4-jre8-alpine-eclipse-temurin`
 
 ```console
-$ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036dfa5f99a9d72
+$ docker pull jetty@sha256:0fc480b4cf43cdfa49efb8d643c6fd26327bc55023ae8586e4ad9c4936818f7f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -29403,14 +29403,14 @@ $ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036d
 ### `jetty:9.4-jre8-alpine-eclipse-temurin` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:48f1557c2ff16e89c095486460f24720e25507fdeccbfc4b97f55f9dfc781ec8
+$ docker pull jetty@sha256:7484764a548788935ce224e15ece9211aabec50bcc9b7c2e215c62bb0086b6c0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **74.3 MB (74321004 bytes)**  
+-	Total Size: **74.3 MB (74323926 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:68868b624a4b0090bf3e77b40ce4992fd227eec1070381ccce51262c5787a548`
+-	Image ID: `sha256:98cdad49e600c54d8e65f5c7da0f41991d7f3e4cd4ba83e91430fbbf1c1e8a96`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -29427,39 +29427,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Mon, 09 Jan 2023 17:40:11 GMT
 RUN apk add --no-cache fontconfig libretls musl-locales musl-locales-lang ttf-dejavu tzdata zlib     && rm -rf /var/cache/apk/*
-# Mon, 09 Jan 2023 17:40:11 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Mon, 09 Jan 2023 17:40:34 GMT
-RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='0f4a4a3c092d8cca171fc36003ac82e2f3d8d768bd6f530a20e2a4caf79bdb9e';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;
-# Mon, 09 Jan 2023 17:40:35 GMT
+# Wed, 25 Jan 2023 19:19:44 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:36 GMT
+RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='f6da8a27ed9b4482bc23ef5c6074d345f2d3a32a64baa88567ef5c57c61075bc';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;
+# Wed, 25 Jan 2023 19:20:37 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV TMPDIR=/tmp/jetty
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 RUN set -xe ; 	mkdir -p $TMPDIR ; 	apk add --no-cache gnupg curl ; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	addgroup -S jetty && adduser -h $JETTY_BASE -S jetty -G jetty; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 WORKDIR /var/lib/jetty
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 USER jetty
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 EXPOSE 8080
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -29472,27 +29472,27 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Mon, 09 Jan 2023 17:44:40 GMT  
 		Size: 12.0 MB (12020134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9016bbb79adbedb65d58f59d9d150a07994632fb60d9b87a607175be3580052`  
-		Last Modified: Mon, 09 Jan 2023 17:45:07 GMT  
-		Size: 41.8 MB (41768092 bytes)  
+	-	`sha256:93e4962f974bd8c0a3b34acee4771a3368ccd4a8e56a2d18757e4f37279e4f36`  
+		Last Modified: Wed, 25 Jan 2023 19:27:17 GMT  
+		Size: 41.8 MB (41771000 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1cb99de928bea1fd694c4ae2c44607db0553b2673803a1b27bc9fa34b598eb2`  
-		Last Modified: Mon, 09 Jan 2023 17:45:02 GMT  
+	-	`sha256:4590205f1d8a867cbfed9f8efd33f5683d9d960f172a093973bdbe8b8066d59c`  
+		Last Modified: Wed, 25 Jan 2023 19:27:12 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2121860b608b7d3a3f7fcb3d39b30108f579022231acc1ccfa2649f20bbd0e4e`  
-		Last Modified: Mon, 09 Jan 2023 21:55:30 GMT  
-		Size: 17.2 MB (17160550 bytes)  
+	-	`sha256:ac2345d1cee6e7124a336001c95886fb8c8fb0ac4f638152ab4605728bb9be57`  
+		Last Modified: Wed, 25 Jan 2023 21:25:35 GMT  
+		Size: 17.2 MB (17160563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2358e29b84d1fc1ddf90b477efc8ff1619e8778fdae36b46df01cf50eb17fb`  
-		Last Modified: Mon, 09 Jan 2023 21:55:29 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:21763b1cf4f2c92b223439d538289e8ff6afc6e69d6bada6a5b749c8a26701b9`  
+		Last Modified: Wed, 25 Jan 2023 21:25:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jetty:9.4-jre8-eclipse-temurin`
 
 ```console
-$ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a058398782288b
+$ docker pull jetty@sha256:ffca40cd48f8352038b0a98f14235b8d559be0b733d7864c65d6863681c4535b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -29503,14 +29503,14 @@ $ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a05
 ### `jetty:9.4-jre8-eclipse-temurin` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:53705d14efdab949fdf0216e35c66edb783c7c96049b3d509f32aebf61d0089f
+$ docker pull jetty@sha256:427cc59222257b633fd1c63170ed268847f7dc63145b24fa368ea197e21d04ca
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.9 MB (94927472 bytes)**  
+-	Total Size: **95.4 MB (95403641 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25e10d1d86b6acecf01f7ec50b6f3d23394a3a9a2786272a495dcca0e7ba30ef`
+-	Image ID: `sha256:072e942b9792e2789d3d35feb774f6d920e5430bde43a803c784fa5212fd7eba`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -29527,39 +29527,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:43:29 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:43:29 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:44:00 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:44:00 GMT
+# Wed, 25 Jan 2023 19:20:07 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:51 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cbe45788fa2d9d04d6b10f8aec7dbb15a018dbafe897ed75e31876d0367d56a5';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='82d8524838b07ee438d42f4c33b6ecfe89ae83efac9af0605c76d75195bdcd99';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5ec3e07126fedc23b58bb0f5b2dd05b5e9599ce1a3567fc2c7b27587f39faa3b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='c8c4e180f915fc7c163240bf363dcdf2b481cd2723fabfc3d08ccf12e049611f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:52 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -29572,20 +29572,20 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:50:02 GMT  
 		Size: 12.4 MB (12432218 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3288c03e49cae6a8536d8a768800dd9e20cf02b299b37957f7bb4a047664be95`  
-		Last Modified: Fri, 09 Dec 2022 01:50:41 GMT  
-		Size: 41.8 MB (41818679 bytes)  
+	-	`sha256:336fe784e5c8994ba6d71d22881f134ae430928f0d002a91c50b68388e5d63c2`  
+		Last Modified: Wed, 25 Jan 2023 19:27:44 GMT  
+		Size: 41.8 MB (41823501 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d6928f99163e99ef8e576ac26c39825c9913f9aa977e9d1dc8548e4fc51ce3b`  
-		Last Modified: Fri, 09 Dec 2022 01:50:36 GMT  
-		Size: 159.0 B  
+	-	`sha256:eab0566e1e8f2f37a21032bcf8ce5f1767f12b3874b25105ff39b518cc70dd88`  
+		Last Modified: Wed, 25 Jan 2023 19:27:39 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89a9832bf41affc7eab6afe6cd11929953faebc1fc43e7a97c90592f481620bf`  
-		Last Modified: Tue, 13 Dec 2022 19:37:36 GMT  
-		Size: 10.2 MB (10246267 bytes)  
+	-	`sha256:8a3eef973181c171936f979053cb494d5aa85ec73106b3b7e8e95d36b8083ca3`  
+		Last Modified: Wed, 25 Jan 2023 21:25:54 GMT  
+		Size: 10.7 MB (10717613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b0448c37ec598c32e0dcd1ab7f134e794de787beffaa05db38ee1312b1db273`  
-		Last Modified: Tue, 13 Dec 2022 19:37:35 GMT  
+	-	`sha256:f08379fcc50709467697d2d640fcb02e6073866983fb1867a362072dec3afacc`  
+		Last Modified: Wed, 25 Jan 2023 21:25:53 GMT  
 		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -31908,7 +31908,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9.4.50-jdk8`
 
 ```console
-$ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f030e7c391df
+$ docker pull jetty@sha256:f98946fa84f603f886098a271a96dddf5eaeca5abbaf09078dfdeaecc88d1b70
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -31919,14 +31919,14 @@ $ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f
 ### `jetty:9.4.50-jdk8` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:518e9a06f5dd77b37ed96f9733ea484e3c1f9387a9da860613b550780e38cb8b
+$ docker pull jetty@sha256:c15f94b5c3fa543cd8df3c88eb1db4eb077e30184136308c80e65c7ae77065f7
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **158.7 MB (158689411 bytes)**  
+-	Total Size: **110.2 MB (110213251 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:932e8a80b2c495f1489b18c83e62ea3d6317f8fe91640801d8f78a28b9c6125a`
+-	Image ID: `sha256:6b31f091412188174715214d15712c721b1abad4ebff5eea6ec3b8d9c76a4775`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -31943,39 +31943,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:42:42 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:42:42 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:42:52 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:42:53 GMT
+# Wed, 25 Jan 2023 19:19:58 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:03 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='9290a8beefd7a94f0eb030f62d402411a852100482b9c5b63714bacc57002c2a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='039843c200d0773fe927fa07c368f23d1d74ae58edd09138c97aa1f5e2007b28';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='69658dd316c6a160915655971573179766e19c6610ea03880c1e578a0e518f74';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1486a792fb224611ce0cd0e83d4aacd3503b56698549f8e9a9f0a6ebb83bdba1';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:05 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -31988,21 +31988,21 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:49:42 GMT  
 		Size: 16.3 MB (16333067 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5d2e925df9ad8f26afed7d0069d9642a6af50c1208671c99044b6d77cb1ee165`  
-		Last Modified: Fri, 09 Dec 2022 01:49:49 GMT  
-		Size: 103.5 MB (103530790 bytes)  
+	-	`sha256:d37fb312ae19f62ad480ce6086c9b6578ca2410115a9273a116277a4baa172c3`  
+		Last Modified: Wed, 25 Jan 2023 19:26:09 GMT  
+		Size: 54.6 MB (54635847 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:421df23398e7ac608f5fcb1c89643a28847a8df3f2afeb8dc5d2791c96cc929d`  
-		Last Modified: Fri, 09 Dec 2022 01:49:39 GMT  
+	-	`sha256:fa2e2b34b018853989bb73ef5b890ce38ef7577705dae25d3af5b7167b1a630a`  
+		Last Modified: Wed, 25 Jan 2023 19:26:02 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc0f474dbfc3a19300af017d5ff0da5c1bf03b63aaef4dea84ebf8348404013`  
-		Last Modified: Tue, 13 Dec 2022 19:39:08 GMT  
-		Size: 10.2 MB (10247072 bytes)  
+	-	`sha256:ea4f5af6f8772e4f84d1046d9b88b101b6cf877e58620bf8c096e58ba886bde0`  
+		Last Modified: Wed, 25 Jan 2023 21:26:22 GMT  
+		Size: 10.7 MB (10665854 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f82b6a1720e077cc00aa2fc5510da41799feb8a8a4e7f1e73c856f966dafec2`  
-		Last Modified: Tue, 13 Dec 2022 19:39:07 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:e02cc6c770c632ee829d89db00897318fe31c77d559b2df6754e8f4b2af71626`  
+		Last Modified: Wed, 25 Jan 2023 21:26:21 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jetty:9.4.50-jdk8` - linux; arm64 variant v8
@@ -32348,7 +32348,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9.4.50-jdk8-eclipse-temurin`
 
 ```console
-$ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f030e7c391df
+$ docker pull jetty@sha256:f98946fa84f603f886098a271a96dddf5eaeca5abbaf09078dfdeaecc88d1b70
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -32359,14 +32359,14 @@ $ docker pull jetty@sha256:c9778ef059f4ce2454da8e7d651899c88509bab74fba1130e701f
 ### `jetty:9.4.50-jdk8-eclipse-temurin` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:518e9a06f5dd77b37ed96f9733ea484e3c1f9387a9da860613b550780e38cb8b
+$ docker pull jetty@sha256:c15f94b5c3fa543cd8df3c88eb1db4eb077e30184136308c80e65c7ae77065f7
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **158.7 MB (158689411 bytes)**  
+-	Total Size: **110.2 MB (110213251 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:932e8a80b2c495f1489b18c83e62ea3d6317f8fe91640801d8f78a28b9c6125a`
+-	Image ID: `sha256:6b31f091412188174715214d15712c721b1abad4ebff5eea6ec3b8d9c76a4775`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -32383,39 +32383,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:42:42 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:42:42 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:42:52 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='a70768968bbcccccf977f036e87e545c3b080ed6c44072a01e9dadb94051c454';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='c9126fe87ebec147af2f237424d9b77f7ea5a9844999e8c90d046fdb741bf463';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='863791dd8e0536a678f5e439c9c67199a0f3f18c76138a8e242775dfe1784009';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1633bd7590cb1cd72f5a1378ae8294451028b274d798e2a4ac672059a2f00fee';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jdk_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:42:53 GMT
+# Wed, 25 Jan 2023 19:19:58 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:03 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='9290a8beefd7a94f0eb030f62d402411a852100482b9c5b63714bacc57002c2a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='039843c200d0773fe927fa07c368f23d1d74ae58edd09138c97aa1f5e2007b28';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='69658dd316c6a160915655971573179766e19c6610ea03880c1e578a0e518f74';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1486a792fb224611ce0cd0e83d4aacd3503b56698549f8e9a9f0a6ebb83bdba1';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:05 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:22:10 GMT
+# Wed, 25 Jan 2023 21:21:14 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:22:11 GMT
+# Wed, 25 Jan 2023 21:21:15 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:36 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:22:39 GMT
+# Wed, 25 Jan 2023 21:21:37 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -32428,21 +32428,21 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:49:42 GMT  
 		Size: 16.3 MB (16333067 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5d2e925df9ad8f26afed7d0069d9642a6af50c1208671c99044b6d77cb1ee165`  
-		Last Modified: Fri, 09 Dec 2022 01:49:49 GMT  
-		Size: 103.5 MB (103530790 bytes)  
+	-	`sha256:d37fb312ae19f62ad480ce6086c9b6578ca2410115a9273a116277a4baa172c3`  
+		Last Modified: Wed, 25 Jan 2023 19:26:09 GMT  
+		Size: 54.6 MB (54635847 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:421df23398e7ac608f5fcb1c89643a28847a8df3f2afeb8dc5d2791c96cc929d`  
-		Last Modified: Fri, 09 Dec 2022 01:49:39 GMT  
+	-	`sha256:fa2e2b34b018853989bb73ef5b890ce38ef7577705dae25d3af5b7167b1a630a`  
+		Last Modified: Wed, 25 Jan 2023 19:26:02 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ffc0f474dbfc3a19300af017d5ff0da5c1bf03b63aaef4dea84ebf8348404013`  
-		Last Modified: Tue, 13 Dec 2022 19:39:08 GMT  
-		Size: 10.2 MB (10247072 bytes)  
+	-	`sha256:ea4f5af6f8772e4f84d1046d9b88b101b6cf877e58620bf8c096e58ba886bde0`  
+		Last Modified: Wed, 25 Jan 2023 21:26:22 GMT  
+		Size: 10.7 MB (10665854 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f82b6a1720e077cc00aa2fc5510da41799feb8a8a4e7f1e73c856f966dafec2`  
-		Last Modified: Tue, 13 Dec 2022 19:39:07 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:e02cc6c770c632ee829d89db00897318fe31c77d559b2df6754e8f4b2af71626`  
+		Last Modified: Wed, 25 Jan 2023 21:26:21 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `jetty:9.4.50-jdk8-eclipse-temurin` - linux; arm64 variant v8
@@ -33689,7 +33689,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9.4.50-jre8`
 
 ```console
-$ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a058398782288b
+$ docker pull jetty@sha256:ffca40cd48f8352038b0a98f14235b8d559be0b733d7864c65d6863681c4535b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -33700,14 +33700,14 @@ $ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a05
 ### `jetty:9.4.50-jre8` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:53705d14efdab949fdf0216e35c66edb783c7c96049b3d509f32aebf61d0089f
+$ docker pull jetty@sha256:427cc59222257b633fd1c63170ed268847f7dc63145b24fa368ea197e21d04ca
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.9 MB (94927472 bytes)**  
+-	Total Size: **95.4 MB (95403641 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25e10d1d86b6acecf01f7ec50b6f3d23394a3a9a2786272a495dcca0e7ba30ef`
+-	Image ID: `sha256:072e942b9792e2789d3d35feb774f6d920e5430bde43a803c784fa5212fd7eba`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -33724,39 +33724,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:43:29 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:43:29 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:44:00 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:44:00 GMT
+# Wed, 25 Jan 2023 19:20:07 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:51 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cbe45788fa2d9d04d6b10f8aec7dbb15a018dbafe897ed75e31876d0367d56a5';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='82d8524838b07ee438d42f4c33b6ecfe89ae83efac9af0605c76d75195bdcd99';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5ec3e07126fedc23b58bb0f5b2dd05b5e9599ce1a3567fc2c7b27587f39faa3b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='c8c4e180f915fc7c163240bf363dcdf2b481cd2723fabfc3d08ccf12e049611f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:52 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -33769,20 +33769,20 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:50:02 GMT  
 		Size: 12.4 MB (12432218 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3288c03e49cae6a8536d8a768800dd9e20cf02b299b37957f7bb4a047664be95`  
-		Last Modified: Fri, 09 Dec 2022 01:50:41 GMT  
-		Size: 41.8 MB (41818679 bytes)  
+	-	`sha256:336fe784e5c8994ba6d71d22881f134ae430928f0d002a91c50b68388e5d63c2`  
+		Last Modified: Wed, 25 Jan 2023 19:27:44 GMT  
+		Size: 41.8 MB (41823501 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d6928f99163e99ef8e576ac26c39825c9913f9aa977e9d1dc8548e4fc51ce3b`  
-		Last Modified: Fri, 09 Dec 2022 01:50:36 GMT  
-		Size: 159.0 B  
+	-	`sha256:eab0566e1e8f2f37a21032bcf8ce5f1767f12b3874b25105ff39b518cc70dd88`  
+		Last Modified: Wed, 25 Jan 2023 19:27:39 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89a9832bf41affc7eab6afe6cd11929953faebc1fc43e7a97c90592f481620bf`  
-		Last Modified: Tue, 13 Dec 2022 19:37:36 GMT  
-		Size: 10.2 MB (10246267 bytes)  
+	-	`sha256:8a3eef973181c171936f979053cb494d5aa85ec73106b3b7e8e95d36b8083ca3`  
+		Last Modified: Wed, 25 Jan 2023 21:25:54 GMT  
+		Size: 10.7 MB (10717613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b0448c37ec598c32e0dcd1ab7f134e794de787beffaa05db38ee1312b1db273`  
-		Last Modified: Tue, 13 Dec 2022 19:37:35 GMT  
+	-	`sha256:f08379fcc50709467697d2d640fcb02e6073866983fb1867a362072dec3afacc`  
+		Last Modified: Wed, 25 Jan 2023 21:25:53 GMT  
 		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -33878,7 +33878,7 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ## `jetty:9.4.50-jre8-alpine`
 
 ```console
-$ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036dfa5f99a9d72
+$ docker pull jetty@sha256:0fc480b4cf43cdfa49efb8d643c6fd26327bc55023ae8586e4ad9c4936818f7f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -33888,14 +33888,14 @@ $ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036d
 ### `jetty:9.4.50-jre8-alpine` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:48f1557c2ff16e89c095486460f24720e25507fdeccbfc4b97f55f9dfc781ec8
+$ docker pull jetty@sha256:7484764a548788935ce224e15ece9211aabec50bcc9b7c2e215c62bb0086b6c0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **74.3 MB (74321004 bytes)**  
+-	Total Size: **74.3 MB (74323926 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:68868b624a4b0090bf3e77b40ce4992fd227eec1070381ccce51262c5787a548`
+-	Image ID: `sha256:98cdad49e600c54d8e65f5c7da0f41991d7f3e4cd4ba83e91430fbbf1c1e8a96`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -33912,39 +33912,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Mon, 09 Jan 2023 17:40:11 GMT
 RUN apk add --no-cache fontconfig libretls musl-locales musl-locales-lang ttf-dejavu tzdata zlib     && rm -rf /var/cache/apk/*
-# Mon, 09 Jan 2023 17:40:11 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Mon, 09 Jan 2023 17:40:34 GMT
-RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='0f4a4a3c092d8cca171fc36003ac82e2f3d8d768bd6f530a20e2a4caf79bdb9e';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;
-# Mon, 09 Jan 2023 17:40:35 GMT
+# Wed, 25 Jan 2023 19:19:44 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:36 GMT
+RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='f6da8a27ed9b4482bc23ef5c6074d345f2d3a32a64baa88567ef5c57c61075bc';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;
+# Wed, 25 Jan 2023 19:20:37 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV TMPDIR=/tmp/jetty
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 RUN set -xe ; 	mkdir -p $TMPDIR ; 	apk add --no-cache gnupg curl ; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	addgroup -S jetty && adduser -h $JETTY_BASE -S jetty -G jetty; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 WORKDIR /var/lib/jetty
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 USER jetty
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 EXPOSE 8080
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -33957,27 +33957,27 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Mon, 09 Jan 2023 17:44:40 GMT  
 		Size: 12.0 MB (12020134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9016bbb79adbedb65d58f59d9d150a07994632fb60d9b87a607175be3580052`  
-		Last Modified: Mon, 09 Jan 2023 17:45:07 GMT  
-		Size: 41.8 MB (41768092 bytes)  
+	-	`sha256:93e4962f974bd8c0a3b34acee4771a3368ccd4a8e56a2d18757e4f37279e4f36`  
+		Last Modified: Wed, 25 Jan 2023 19:27:17 GMT  
+		Size: 41.8 MB (41771000 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1cb99de928bea1fd694c4ae2c44607db0553b2673803a1b27bc9fa34b598eb2`  
-		Last Modified: Mon, 09 Jan 2023 17:45:02 GMT  
+	-	`sha256:4590205f1d8a867cbfed9f8efd33f5683d9d960f172a093973bdbe8b8066d59c`  
+		Last Modified: Wed, 25 Jan 2023 19:27:12 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2121860b608b7d3a3f7fcb3d39b30108f579022231acc1ccfa2649f20bbd0e4e`  
-		Last Modified: Mon, 09 Jan 2023 21:55:30 GMT  
-		Size: 17.2 MB (17160550 bytes)  
+	-	`sha256:ac2345d1cee6e7124a336001c95886fb8c8fb0ac4f638152ab4605728bb9be57`  
+		Last Modified: Wed, 25 Jan 2023 21:25:35 GMT  
+		Size: 17.2 MB (17160563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2358e29b84d1fc1ddf90b477efc8ff1619e8778fdae36b46df01cf50eb17fb`  
-		Last Modified: Mon, 09 Jan 2023 21:55:29 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:21763b1cf4f2c92b223439d538289e8ff6afc6e69d6bada6a5b749c8a26701b9`  
+		Last Modified: Wed, 25 Jan 2023 21:25:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jetty:9.4.50-jre8-alpine-eclipse-temurin`
 
 ```console
-$ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036dfa5f99a9d72
+$ docker pull jetty@sha256:0fc480b4cf43cdfa49efb8d643c6fd26327bc55023ae8586e4ad9c4936818f7f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -33987,14 +33987,14 @@ $ docker pull jetty@sha256:efabae293853e6fd99a3cdd7703cbd9995e9413fe99673b95036d
 ### `jetty:9.4.50-jre8-alpine-eclipse-temurin` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:48f1557c2ff16e89c095486460f24720e25507fdeccbfc4b97f55f9dfc781ec8
+$ docker pull jetty@sha256:7484764a548788935ce224e15ece9211aabec50bcc9b7c2e215c62bb0086b6c0
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **74.3 MB (74321004 bytes)**  
+-	Total Size: **74.3 MB (74323926 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:68868b624a4b0090bf3e77b40ce4992fd227eec1070381ccce51262c5787a548`
+-	Image ID: `sha256:98cdad49e600c54d8e65f5c7da0f41991d7f3e4cd4ba83e91430fbbf1c1e8a96`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -34011,39 +34011,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Mon, 09 Jan 2023 17:40:11 GMT
 RUN apk add --no-cache fontconfig libretls musl-locales musl-locales-lang ttf-dejavu tzdata zlib     && rm -rf /var/cache/apk/*
-# Mon, 09 Jan 2023 17:40:11 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Mon, 09 Jan 2023 17:40:34 GMT
-RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='0f4a4a3c092d8cca171fc36003ac82e2f3d8d768bd6f530a20e2a4caf79bdb9e';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;
-# Mon, 09 Jan 2023 17:40:35 GMT
+# Wed, 25 Jan 2023 19:19:44 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:36 GMT
+RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='f6da8a27ed9b4482bc23ef5c6074d345f2d3a32a64baa88567ef5c57c61075bc';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_alpine-linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;
+# Wed, 25 Jan 2023 19:20:37 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Mon, 09 Jan 2023 21:48:00 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV TMPDIR=/tmp/jetty
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Mon, 09 Jan 2023 21:48:01 GMT
+# Wed, 25 Jan 2023 21:20:30 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 RUN set -xe ; 	mkdir -p $TMPDIR ; 	apk add --no-cache gnupg curl ; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	addgroup -S jetty && adduser -h $JETTY_BASE -S jetty -G jetty; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 WORKDIR /var/lib/jetty
-# Mon, 09 Jan 2023 21:48:12 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 USER jetty
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 EXPOSE 8080
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 09 Jan 2023 21:48:13 GMT
+# Wed, 25 Jan 2023 21:20:41 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -34056,27 +34056,27 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Mon, 09 Jan 2023 17:44:40 GMT  
 		Size: 12.0 MB (12020134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9016bbb79adbedb65d58f59d9d150a07994632fb60d9b87a607175be3580052`  
-		Last Modified: Mon, 09 Jan 2023 17:45:07 GMT  
-		Size: 41.8 MB (41768092 bytes)  
+	-	`sha256:93e4962f974bd8c0a3b34acee4771a3368ccd4a8e56a2d18757e4f37279e4f36`  
+		Last Modified: Wed, 25 Jan 2023 19:27:17 GMT  
+		Size: 41.8 MB (41771000 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1cb99de928bea1fd694c4ae2c44607db0553b2673803a1b27bc9fa34b598eb2`  
-		Last Modified: Mon, 09 Jan 2023 17:45:02 GMT  
+	-	`sha256:4590205f1d8a867cbfed9f8efd33f5683d9d960f172a093973bdbe8b8066d59c`  
+		Last Modified: Wed, 25 Jan 2023 19:27:12 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2121860b608b7d3a3f7fcb3d39b30108f579022231acc1ccfa2649f20bbd0e4e`  
-		Last Modified: Mon, 09 Jan 2023 21:55:30 GMT  
-		Size: 17.2 MB (17160550 bytes)  
+	-	`sha256:ac2345d1cee6e7124a336001c95886fb8c8fb0ac4f638152ab4605728bb9be57`  
+		Last Modified: Wed, 25 Jan 2023 21:25:35 GMT  
+		Size: 17.2 MB (17160563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2358e29b84d1fc1ddf90b477efc8ff1619e8778fdae36b46df01cf50eb17fb`  
-		Last Modified: Mon, 09 Jan 2023 21:55:29 GMT  
-		Size: 1.4 KB (1440 bytes)  
+	-	`sha256:21763b1cf4f2c92b223439d538289e8ff6afc6e69d6bada6a5b749c8a26701b9`  
+		Last Modified: Wed, 25 Jan 2023 21:25:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `jetty:9.4.50-jre8-eclipse-temurin`
 
 ```console
-$ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a058398782288b
+$ docker pull jetty@sha256:ffca40cd48f8352038b0a98f14235b8d559be0b733d7864c65d6863681c4535b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -34087,14 +34087,14 @@ $ docker pull jetty@sha256:e324cbe4fead18a34e5ef700da7f6674ae0aa662143c4ce4e5a05
 ### `jetty:9.4.50-jre8-eclipse-temurin` - linux; amd64
 
 ```console
-$ docker pull jetty@sha256:53705d14efdab949fdf0216e35c66edb783c7c96049b3d509f32aebf61d0089f
+$ docker pull jetty@sha256:427cc59222257b633fd1c63170ed268847f7dc63145b24fa368ea197e21d04ca
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.9 MB (94927472 bytes)**  
+-	Total Size: **95.4 MB (95403641 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25e10d1d86b6acecf01f7ec50b6f3d23394a3a9a2786272a495dcca0e7ba30ef`
+-	Image ID: `sha256:072e942b9792e2789d3d35feb774f6d920e5430bde43a803c784fa5212fd7eba`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -34111,39 +34111,39 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Fri, 09 Dec 2022 01:43:29 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 09 Dec 2022 01:43:29 GMT
-ENV JAVA_VERSION=jdk8u352-b08
-# Fri, 09 Dec 2022 01:44:00 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cce4db7c4311378d8d2a174b2cf680d57b52a4036f37c995b14f936b6fc1141a';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_aarch64_linux_hotspot_8u352b08.tar.gz';          ;;        armhf|arm)          ESUM='d5ef8ced672a1b391e7949190b8d24db16290e06f257816d5bd0969aed593852';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_arm_linux_hotspot_8u352b08.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5649672dab65b3519ec16653fb2f154da90a7cd2afc568da03f3bff5c6b30a90';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_ppc64le_linux_hotspot_8u352b08.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='40b6b4c3d8f7332ea479527b530413bf0dbc13cff3c0ed9fcadf1ca053bed106';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u352-b08/OpenJDK8U-jre_x64_linux_hotspot_8u352b08.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm /tmp/openjdk.tar.gz;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Fri, 09 Dec 2022 01:44:00 GMT
+# Wed, 25 Jan 2023 19:20:07 GMT
+ENV JAVA_VERSION=jdk8u362-b09
+# Wed, 25 Jan 2023 19:20:51 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cbe45788fa2d9d04d6b10f8aec7dbb15a018dbafe897ed75e31876d0367d56a5';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='82d8524838b07ee438d42f4c33b6ecfe89ae83efac9af0605c76d75195bdcd99';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5ec3e07126fedc23b58bb0f5b2dd05b5e9599ce1a3567fc2c7b27587f39faa3b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='c8c4e180f915fc7c163240bf363dcdf2b481cd2723fabfc3d08ccf12e049611f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 25 Jan 2023 19:20:52 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_VERSION=9.4.50.v20221201
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV TMPDIR=/tmp/jetty
-# Tue, 13 Dec 2022 19:20:16 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.50.v20221201/jetty-home-9.4.50.v20221201.tar.gz
-# Tue, 13 Dec 2022 19:20:17 GMT
+# Wed, 25 Jan 2023 21:20:44 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 WORKDIR /var/lib/jetty
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:03 GMT
 COPY multi:a6bf79f83e3ff0c7dc5946cd61ca0413cd3191ce9671725a647923d97a115fae in / 
-# Tue, 13 Dec 2022 19:20:43 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 USER jetty
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 EXPOSE 8080
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Tue, 13 Dec 2022 19:20:44 GMT
+# Wed, 25 Jan 2023 21:21:04 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 ```
 
@@ -34156,20 +34156,20 @@ CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
 		Last Modified: Fri, 09 Dec 2022 01:50:02 GMT  
 		Size: 12.4 MB (12432218 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3288c03e49cae6a8536d8a768800dd9e20cf02b299b37957f7bb4a047664be95`  
-		Last Modified: Fri, 09 Dec 2022 01:50:41 GMT  
-		Size: 41.8 MB (41818679 bytes)  
+	-	`sha256:336fe784e5c8994ba6d71d22881f134ae430928f0d002a91c50b68388e5d63c2`  
+		Last Modified: Wed, 25 Jan 2023 19:27:44 GMT  
+		Size: 41.8 MB (41823501 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d6928f99163e99ef8e576ac26c39825c9913f9aa977e9d1dc8548e4fc51ce3b`  
-		Last Modified: Fri, 09 Dec 2022 01:50:36 GMT  
-		Size: 159.0 B  
+	-	`sha256:eab0566e1e8f2f37a21032bcf8ce5f1767f12b3874b25105ff39b518cc70dd88`  
+		Last Modified: Wed, 25 Jan 2023 19:27:39 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89a9832bf41affc7eab6afe6cd11929953faebc1fc43e7a97c90592f481620bf`  
-		Last Modified: Tue, 13 Dec 2022 19:37:36 GMT  
-		Size: 10.2 MB (10246267 bytes)  
+	-	`sha256:8a3eef973181c171936f979053cb494d5aa85ec73106b3b7e8e95d36b8083ca3`  
+		Last Modified: Wed, 25 Jan 2023 21:25:54 GMT  
+		Size: 10.7 MB (10717613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b0448c37ec598c32e0dcd1ab7f134e794de787beffaa05db38ee1312b1db273`  
-		Last Modified: Tue, 13 Dec 2022 19:37:35 GMT  
+	-	`sha256:f08379fcc50709467697d2d640fcb02e6073866983fb1867a362072dec3afacc`  
+		Last Modified: Wed, 25 Jan 2023 21:25:53 GMT  
 		Size: 1.4 KB (1441 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
