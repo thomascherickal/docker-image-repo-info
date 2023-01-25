@@ -600,20 +600,13 @@ Licenses: (parsed from: `/usr/share/doc/libdb5.3/copyright`)
 - `X11`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris db5.3=5.3.28+dfsg1-0.10
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1-0.10.dsc' db5.3_5.3.28+dfsg1-0.10.dsc 2964 SHA256:7bab820246eb763be7d04fcb2893bedb414f9b3cf7a29327e3530adfbca1963e
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1.orig.tar.xz' db5.3_5.3.28+dfsg1.orig.tar.xz 19723860 SHA256:b19bf3dd8ce74b95a7b215be9a7c8489e8e8f18da60d64d6340a06e75f497749
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg1-0.10.debian.tar.xz' db5.3_5.3.28+dfsg1-0.10.debian.tar.xz 34656 SHA256:2d2b3c6b4643e9c94db58f9540332e23a780d63afdc3fcabe66df01a343d6c65
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/db5.3/5.3.28+dfsg1-0.10/
 
-- https://sources.debian.net/src/db5.3/5.3.28+dfsg1-0.10/ (for browsing the source)
-- https://sources.debian.net/src/db5.3/5.3.28+dfsg1-0.10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/db5.3/5.3.28+dfsg1-0.10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debconf=1.5.79`
 
@@ -2638,20 +2631,13 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `Unicode-data`
 - `Xen-interface`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=6.0.5-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.0.5-1.dsc' linux_6.0.5-1.dsc 249241 SHA256:9ec11e9350c4b553e4627970785e24693770b7a45af0be71a2add94db702fe1f
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.0.5.orig.tar.xz' linux_6.0.5.orig.tar.xz 136367304 SHA256:f0ba15e4a74124b2cd950285b752d9007d63350fd6deaabaaf588fd6d7f530f5
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.0.5-1.debian.tar.xz' linux_6.0.5-1.debian.tar.xz 4117412 SHA256:9972925735cefe36b787a8d6eb57e14c175022032ff5149ac7a7963dcad1005a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/linux/6.0.5-1/
 
-- https://sources.debian.net/src/linux/6.0.5-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/6.0.5-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/6.0.5-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `littler=0.3.16-1`
 
