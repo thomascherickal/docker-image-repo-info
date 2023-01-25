@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b62c18af1158e14744fe36b77e95bcfc63385527c1ddfb2925562a5d1f949705`
-- Created: `2023-01-17T21:12:21.836913324Z`
+- Image ID: `sha256:8dfc400fca892a0109eb4fab019ff6f4edb57a73103d9b5d973cfe2267642356`
+- Created: `2023-01-23T19:24:05.164338542Z`
 - Virtual Size: ~ 37.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
-  - `build-date=20230114`
+  - `build-date=20230121`
   - `name=Photon OS x86_64/4.0 Base Image`
   - `vendor=VMware`
 
@@ -53,7 +53,7 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `e2fsprogs-libs-1.46.5-1.ph4.x86_64`
+### `rpm` package: `e2fsprogs-libs-1.46.5-2.ph4.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
@@ -95,7 +95,7 @@ Licenses (from `rpm --query`): pubkey
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `krb5-1.17-8.ph4.x86_64`
+### `rpm` package: `krb5-1.17-9.ph4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
