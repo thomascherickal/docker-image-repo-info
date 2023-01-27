@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:22678a141223abe35cf822736e305b27c75e8d36bf5df6a4d9cf8553fbd0cbc1`
-- Created: `2023-01-18T04:40:26.456653672Z`
-- Virtual Size: ~ 771.28 Mb  
+- Image ID: `sha256:6c85ff17552c048d0ce695c1caf0c5f9b44792ae08046e329b41e57e42490e99`
+- Created: `2023-01-24T02:08:12.796117781Z`
+- Virtual Size: ~ 771.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -867,20 +867,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.20.1-2+deb10u6
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2%2bdeb10u6.dsc' git_2.20.1-2+deb10u6.dsc 2894 SHA256:e4693cb9f20d2a7061b43bb30224ee41d779d027e15785e85f8f67eddf4ee3ae
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1.orig.tar.xz' git_2.20.1.orig.tar.xz 5359872 SHA256:9d2e91e2faa2ea61ba0a70201d023b36f54d846314591a002c610ea2ab81c3e9
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2%2bdeb10u6.debian.tar.xz' git_2.20.1-2+deb10u6.debian.tar.xz 676232 SHA256:ce8c8cb4a3f420589aeb2ac244bab88316e34641c7a3efceb049d2854b54196b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u6/
 
-- https://sources.debian.net/src/git/1:2.20.1-2+deb10u6/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.20.1-2+deb10u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.58.3-2+deb10u4`
 
@@ -3225,11 +3218,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.1.0+git191117-2~deb10u4`
+### `dpkg` source package: `tiff=4.1.0+git191117-2~deb10u5`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.1.0+git191117-2~deb10u4`
+- `libtiff5:amd64=4.1.0+git191117-2~deb10u5`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
@@ -3238,17 +3231,17 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u4
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2%7edeb10u4.dsc' tiff_4.1.0+git191117-2~deb10u4.dsc 2274 SHA256:e8e9e834ccf9602fcf5fc941af272332a82b1208a116a1bd2fb0a83288b3f692
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0%2bgit191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2%7edeb10u4.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u4.debian.tar.xz 26308 SHA256:1e145d2207b2b998ca88b8adb0bf1c1ef0ab1d433ff9e623a78ad3066d43850b
+$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u5
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117-2%7edeb10u5.dsc' tiff_4.1.0+git191117-2~deb10u5.dsc 2274 SHA256:7077e5047df9053ccdfd0aefdc959cd5078f86a78b9c8d6bfd226ea66bd52e4e
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117-2%7edeb10u5.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u5.debian.tar.xz 40312 SHA256:70af094d655a57e45d815388d76547c81af25ddc83805ee026bd7462ae008f67
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u4/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-0+deb10u8`
 
