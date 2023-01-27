@@ -1007,13 +1007,9 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.1.8-3.6ubuntu2.18.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.3.dsc' pam_1.1.8-3.6ubuntu2.18.04.3.dsc 2557 SHA512:2ef95d8bdbc9edbad8f20c1db07bd07c0a9b32d431ff144c92e8739ed2f1a43580a257ba5c45505a471265c55d7ae4dee86667bb0424fd3541abbca22aa51c46
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.3.tar.gz' pam_1.1.8-3.6ubuntu2.18.04.3.tar.gz 2011024 SHA512:18a11b3b9e355354ab1a9ae11f7870727a1bb9cfddfc080b2f0df43afafec6f23ce9f60d8d870eb282bd47bb20a4deab9fc0ec4a4fc1d7db50081ecef2257d11
-```
 
 ### `dpkg` source package: `pcre3=2:8.39-9ubuntu0.1`
 
