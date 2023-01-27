@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7cd9e8068585c6e276297730a7b3395355169ddec3d88027fff939c43d754182`
-- Created: `2023-01-12T01:23:01.473845532Z`
+- Image ID: `sha256:572b1521979000caccc202d584c4edb946cda742460acfc2183668f0760c5fad`
+- Created: `2023-01-26T23:59:06.164282368Z`
 - Virtual Size: ~ 1.36 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `RUSTUP_HOME=/usr/local/rustup`
   - `CARGO_HOME=/usr/local/cargo`
-  - `RUST_VERSION=1.66.1`
+  - `RUST_VERSION=1.67.0`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1284,20 +1284,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.20.1-2+deb10u6
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2%2bdeb10u6.dsc' git_2.20.1-2+deb10u6.dsc 2894 SHA256:e4693cb9f20d2a7061b43bb30224ee41d779d027e15785e85f8f67eddf4ee3ae
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1.orig.tar.xz' git_2.20.1.orig.tar.xz 5359872 SHA256:9d2e91e2faa2ea61ba0a70201d023b36f54d846314591a002c610ea2ab81c3e9
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2%2bdeb10u6.debian.tar.xz' git_2.20.1-2+deb10u6.debian.tar.xz 676232 SHA256:ce8c8cb4a3f420589aeb2ac244bab88316e34641c7a3efceb049d2854b54196b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u6/
 
-- https://sources.debian.net/src/git/1:2.20.1-2+deb10u6/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.20.1-2+deb10u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.58.3-2+deb10u4`
 
@@ -2239,20 +2232,13 @@ Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 - `public-domain-1`
 - `public-domain-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libde265=1.0.3-1+deb10u1
-'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.3-1%2bdeb10u1.dsc' libde265_1.0.3-1+deb10u1.dsc 2245 SHA256:d654810caeeac7d37340a6793228ede8ef6d728592ccf5e117555f7bdb68eb42
-'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.3.orig.tar.gz' libde265_1.0.3.orig.tar.gz 871127 SHA256:e4206185a7c67d3b797d6537df8dcaa6e5fd5a5f93bd14e65a755c33cd645f7a
-'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.3-1%2bdeb10u1.debian.tar.xz' libde265_1.0.3-1+deb10u1.debian.tar.xz 11588 SHA256:52b7d8d393c79a853c18c89652a272a402c2af0a5f87be78a817c13050c6a4e7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libde265/1.0.3-1+deb10u1/
 
-- https://sources.debian.net/src/libde265/1.0.3-1+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/libde265/1.0.3-1+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libde265/1.0.3-1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libedit=3.1-20181209-1`
 
