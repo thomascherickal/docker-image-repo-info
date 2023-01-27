@@ -767,21 +767,13 @@ Licenses: (parsed from: `/usr/share/doc/grep/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris grep=3.8-3
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8-3.dsc' grep_3.8-3.dsc 1608 SHA256:b5b25e30ece7da06ea4ef856f362b77a6e47ece57e7b1b1b0abcf2f5b1312222
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8.orig.tar.xz' grep_3.8.orig.tar.xz 1709536 SHA256:498d7cc1b4fb081904d87343febb73475cf771e424fb7e6141aff66013abc382
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8.orig.tar.xz.asc' grep_3.8.orig.tar.xz.asc 833 SHA256:347aec924499df3fa41a0d782f3cd3e4a51a15de98b44eaab04084cd34060cd0
-'http://deb.debian.org/debian/pool/main/g/grep/grep_3.8-3.debian.tar.xz' grep_3.8-3.debian.tar.xz 20332 SHA256:72d615732ccef5721b4c4e7cdf62daa46399d092ae7d324ff89958fb6cac8512
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/grep/3.8-3/
 
-- https://sources.debian.net/src/grep/3.8-3/ (for browsing the source)
-- https://sources.debian.net/src/grep/3.8-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/grep/3.8-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gzip=1.12-1`
 
@@ -1463,21 +1455,13 @@ Licenses: (parsed from: `/usr/share/doc/libncursesw6/copyright`, `/usr/share/doc
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.4-1
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4-1.dsc' ncurses_6.4-1.dsc 4110 SHA256:773fc287edc9f5fe4308031e924c8f14fc9c9121f9efc2ba05e9736896f56cbf
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4.orig.tar.gz' ncurses_6.4.orig.tar.gz 3612591 SHA256:6931283d9ac87c5073f30b6290c4c75f21632bb4fc3603ac8100812bed248159
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4.orig.tar.gz.asc' ncurses_6.4.orig.tar.gz.asc 729 SHA256:f9096c5311eab61908c142e77e58f503f9228e13d351365b3c331ca5ad5a67db
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4-1.debian.tar.xz' ncurses_6.4-1.debian.tar.xz 54792 SHA256:5d8d297df0de14473d4e3c5e0f400a95badb9ca84258e51ab13f9bdbf1e508ac
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ncurses/6.4-1/
 
-- https://sources.debian.net/src/ncurses/6.4-1/ (for browsing the source)
-- https://sources.debian.net/src/ncurses/6.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ncurses/6.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nettle=3.8.1-2`
 
@@ -1915,20 +1899,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=252.4-1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.4-1.dsc' systemd_252.4-1.dsc 6422 SHA256:c8fa461ee9df69a54eb0d5748ce98315842336e825a36ee6edf522085f53ac92
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.4.orig.tar.gz' systemd_252.4.orig.tar.gz 11753300 SHA256:cf2d27e67663d599a045101c7178cf0ec63d9df2962a54adf7de0d0357724f00
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.4-1.debian.tar.xz' systemd_252.4-1.debian.tar.xz 172708 SHA256:867a347f5df22a6a7546ec6bb7b470e6986e4997d6e0e74a7f3f760d8936be65
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/252.4-1/
 
-- https://sources.debian.net/src/systemd/252.4-1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/252.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/252.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.06-2`
 
