@@ -1,170 +1,183 @@
 ## `ubuntu:rolling`
 
 ```console
-$ docker pull ubuntu@sha256:de3394e00e0e7e0d5f2092ae05a4c652f9918e67efa617565df2a1ed5353bbfb
+$ docker pull ubuntu@sha256:a062bfdb0c233a5a7c4758c028ef6a8f4981b78008606e23f47143ca0bfb483d
 ```
 
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 6
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 5
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
-	-	linux; riscv64
 	-	linux; s390x
 
 ### `ubuntu:rolling` - linux; amd64
 
 ```console
-$ docker pull ubuntu@sha256:ee0752679bed0fa6c877f24dc19a94abb62d3d212197431f4d92638a1613ff17
+$ docker pull ubuntu@sha256:ef3c777a7db8a2c49d31284cc924fc3a2f471dce44378a18d6d1fefff5a63fe5
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **27.5 MB (27478988 bytes)**  
+-	Total Size: **26.7 MB (26691650 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d6547859cd2f8a9d8f1730ea25a2d5943fb8c8149be724229ce9078af13fcd79`
--	Default Command: `["bash"]`
+-	Image ID: `sha256:10c2f4041af137e6b0ba5c793df3dfdf4e72a4e011ce6847f4cc0247b9bbf7f2`
+-	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Fri, 09 Dec 2022 01:20:40 GMT
-ADD file:6c9f486c9412e2a47f196c5d3be4ea6041dc5eb579b1f1c35ae6dd8e7e3bfc64 in / 
-# Fri, 09 Dec 2022 01:20:40 GMT
-CMD ["bash"]
+# Thu, 26 Jan 2023 11:51:12 GMT
+ARG RELEASE
+# Thu, 26 Jan 2023 11:51:12 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Thu, 26 Jan 2023 11:51:12 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Thu, 26 Jan 2023 11:51:13 GMT
+LABEL org.opencontainers.image.version=22.10
+# Thu, 26 Jan 2023 11:51:14 GMT
+ADD file:e886423892b371751386c0ce7147599acb72d8fb528eaaa78092b879d9ff58ce in / 
+# Thu, 26 Jan 2023 11:51:15 GMT
+CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:3f701d9643d37eca8cb445ba978c767bc1e07bf958e94504db0298999bfe58c1`  
-		Last Modified: Fri, 09 Dec 2022 01:22:08 GMT  
-		Size: 27.5 MB (27478988 bytes)  
+	-	`sha256:256644d5a307c3efeca6ae2854b6329a2753157868dc5548e33161b377658e6a`  
+		Last Modified: Thu, 26 Jan 2023 12:14:04 GMT  
+		Size: 26.7 MB (26691650 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:rolling` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:9b87317e5b0e1c0e30677e705e26926742c437701919af9b42a3f521b17e1b7e
+$ docker pull ubuntu@sha256:a9fd5288ceabc4990263038e3ff67154088e5df217fd2eaed5ac7fce8318d84a
 ```
 
--	Docker Version: 20.10.17
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **25.9 MB (25892971 bytes)**  
+-	Total Size: **25.1 MB (25066997 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45a782654444cc7c6ef7d6679bf74d9c8c2868ee3dfeefec606b3cee48dde727`
--	Default Command: `["bash"]`
+-	Image ID: `sha256:8d643d5974c30c06b1d811877a3a8f0047c4278b1fe0801d8d812b3a17ce6c15`
+-	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Fri, 09 Dec 2022 01:36:45 GMT
-ADD file:d233b1e175c6c664c61d6b9655e68f70321ed1d18717f4709aede57ca633959d in / 
-# Fri, 09 Dec 2022 01:36:45 GMT
-CMD ["bash"]
+# Thu, 26 Jan 2023 11:52:00 GMT
+ARG RELEASE
+# Thu, 26 Jan 2023 11:52:00 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Thu, 26 Jan 2023 11:52:00 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Thu, 26 Jan 2023 11:52:00 GMT
+LABEL org.opencontainers.image.version=22.10
+# Thu, 26 Jan 2023 11:52:03 GMT
+ADD file:d35c57b0dc2840a8b1ef40f7f6cfd826da68611f1ba37a89a382618c8612b52c in / 
+# Thu, 26 Jan 2023 11:52:03 GMT
+CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:32d980e58054da2da0ffd3e115907a93757913f5c431a52b4427379d3737ee4b`  
-		Last Modified: Fri, 09 Dec 2022 01:39:17 GMT  
-		Size: 25.9 MB (25892971 bytes)  
+	-	`sha256:697d38f8dfe625e3e751c0b01ddeaaeeff6e8d6f594dd7da227aea3974a49ce1`  
+		Last Modified: Thu, 26 Jan 2023 12:14:16 GMT  
+		Size: 25.1 MB (25066997 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:rolling` - linux; arm64 variant v8
 
 ```console
-$ docker pull ubuntu@sha256:2042487aa17efb24674019bc4395b8dd1d2865e295a449542474adc072b177e7
+$ docker pull ubuntu@sha256:aff210956f022245b200f8be680a99c7d93f191b2cfc8d6f770f87ef3644a080
 ```
 
--	Docker Version: 20.10.17
+-	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.7 MB (26700267 bytes)**  
+-	Total Size: **25.8 MB (25757647 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c4efd9f596e004d75c444ffb9d89145965e05b1659617324396a63868cfb5c32`
--	Default Command: `["bash"]`
+-	Image ID: `sha256:c7096432b6a9855592152ad8009431b92d7aa40980c9c94684fcc72626bbbab9`
+-	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Fri, 09 Dec 2022 01:47:04 GMT
-ADD file:bfc30ac3a38dd1f76f8a80aa5a10bd3abdcddba8c233e54a84935dc8959da97c in / 
-# Fri, 09 Dec 2022 01:47:04 GMT
-CMD ["bash"]
+# Thu, 26 Jan 2023 12:08:18 GMT
+ARG RELEASE
+# Thu, 26 Jan 2023 12:08:18 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Thu, 26 Jan 2023 12:08:18 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Thu, 26 Jan 2023 12:08:18 GMT
+LABEL org.opencontainers.image.version=22.10
+# Thu, 26 Jan 2023 12:08:20 GMT
+ADD file:f61617371f6963c6be2852e2b94d04e8507feb8f77e3484c94aa8b9d0ac67f76 in / 
+# Thu, 26 Jan 2023 12:08:20 GMT
+CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:e9ac92330003b70c7feb4ea962cd0bd70aedbb2a72b3544cc3d9fb3a78447fa3`  
-		Last Modified: Fri, 09 Dec 2022 01:48:26 GMT  
-		Size: 26.7 MB (26700267 bytes)  
+	-	`sha256:05f69cab0b799028e03233ffa93abd2d0b426412cff70959a07a29a437447ee3`  
+		Last Modified: Thu, 26 Jan 2023 12:14:10 GMT  
+		Size: 25.8 MB (25757647 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:rolling` - linux; ppc64le
 
 ```console
-$ docker pull ubuntu@sha256:a3f4126e6e07018ae3be3cec5535417a885b968b45ae602b8d1d79e06704cf58
+$ docker pull ubuntu@sha256:daab817634ed004a6c564aec6ca0a0d84205d49371765eb625366344ceb7d5bd
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **32.1 MB (32109595 bytes)**  
+-	Total Size: **31.1 MB (31110147 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0d7ff9bcef9bffb44ee5dca265510529c871398f4268042d03bfb7972968bc22`
--	Default Command: `["bash"]`
+-	Image ID: `sha256:5dfbc0b60efcd8ea2a51c157e7bc286d8de7e88ae1bf756e0d8a44ff107e21c7`
+-	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Fri, 09 Dec 2022 01:28:11 GMT
-ADD file:ff6e70600cb0ebcb9aa6617d8d8c160771f450ae3c28b4d56ee84f3b7b749fb2 in / 
-# Fri, 09 Dec 2022 01:28:13 GMT
-CMD ["bash"]
+# Thu, 26 Jan 2023 11:57:00 GMT
+ARG RELEASE
+# Thu, 26 Jan 2023 11:57:00 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Thu, 26 Jan 2023 11:57:00 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Thu, 26 Jan 2023 11:57:00 GMT
+LABEL org.opencontainers.image.version=22.10
+# Thu, 26 Jan 2023 11:57:03 GMT
+ADD file:3c2bc98d283cce5149d7992233f5fe644b7239417045faf3f93750b92de5f68e in / 
+# Thu, 26 Jan 2023 11:57:04 GMT
+CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:8b9fbf12c270bd8e683dce41eb3b54e64a8658d36272e8728b81587156971e16`  
-		Last Modified: Fri, 09 Dec 2022 01:30:58 GMT  
-		Size: 32.1 MB (32109595 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `ubuntu:rolling` - linux; riscv64
-
-```console
-$ docker pull ubuntu@sha256:d708589f4214d8612f0fdf9ba3e8488e16f9a665f7fd9e0ba24edcdfc326f0f7
-```
-
--	Docker Version: 20.10.17
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **25.6 MB (25640259 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4819792eac8ee5fc12e4dd0eb179280d6e3dcae69b77905d52a750f15b2cd6e2`
--	Default Command: `["bash"]`
-
-```dockerfile
-# Fri, 09 Dec 2022 01:14:46 GMT
-ADD file:7e2bfb25c400fe48fedbb3adb245a3bc6b40ec07dae2feeb339c704b967ce658 in / 
-# Fri, 09 Dec 2022 01:14:48 GMT
-CMD ["bash"]
-```
-
--	Layers:
-	-	`sha256:080423a9398e3d16c0feb2851e7596ddc2d8d33fdfb3bf0b4a881619b9b86c9f`  
-		Last Modified: Fri, 09 Dec 2022 01:37:40 GMT  
-		Size: 25.6 MB (25640259 bytes)  
+	-	`sha256:8da618ff876e10064f550b9dc5b51b0d0ae6939f67b56ce9a0c7fa8bb77de40f`  
+		Last Modified: Thu, 26 Jan 2023 12:14:22 GMT  
+		Size: 31.1 MB (31110147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ubuntu:rolling` - linux; s390x
 
 ```console
-$ docker pull ubuntu@sha256:37b590aae211a73aa668db4b4f7dc13c16d6cd19c3a37d4cf5ff17d45a187c8b
+$ docker pull ubuntu@sha256:944066fb6be279b0de11cb4ecc57c81794b912ba6f95a544f3d462ceab3a78a6
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **26.0 MB (26029416 bytes)**  
+-	Total Size: **25.5 MB (25487159 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7a63a77a500fa89ed0e551524eb9afeaa278fce9e6c95a92a13b1b9bd9499e6e`
--	Default Command: `["bash"]`
+-	Image ID: `sha256:91297aceb6d3e297e45ec91916dbea079b90ae1c7edbaf14a99c41d3f493f537`
+-	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Fri, 09 Dec 2022 01:53:16 GMT
-ADD file:3664024c53edd795e8d3cdd91bc26651c0962e85200bdf8a9b23c7103aad3433 in / 
-# Fri, 09 Dec 2022 01:53:19 GMT
-CMD ["bash"]
+# Thu, 26 Jan 2023 12:08:47 GMT
+ARG RELEASE
+# Thu, 26 Jan 2023 12:08:47 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Thu, 26 Jan 2023 12:08:48 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Thu, 26 Jan 2023 12:08:48 GMT
+LABEL org.opencontainers.image.version=22.10
+# Thu, 26 Jan 2023 12:08:50 GMT
+ADD file:a83afd93816f868be76d243df85b87a66b39d5ef0497c3cb8d0bba2bd4a27c40 in / 
+# Thu, 26 Jan 2023 12:08:50 GMT
+CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:a9f1ddfd3fe3bd668f8c96ba98090ed119f7f65f39d79a995ac0c7bf56187808`  
-		Last Modified: Fri, 09 Dec 2022 01:55:24 GMT  
-		Size: 26.0 MB (26029416 bytes)  
+	-	`sha256:fe4914a812d394969d56f220e5ddb037a62164607a937ca866bf4ee592a8799a`  
+		Last Modified: Thu, 26 Jan 2023 12:14:28 GMT  
+		Size: 25.5 MB (25487159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
