@@ -31,7 +31,7 @@
 ## `websphere-liberty:22.0.0.12-full-java11-openj9`
 
 ```console
-$ docker pull websphere-liberty@sha256:7b407c510b8c8e90cb5dd743b7322e78fcda6212db13b1915d8c802420be367f
+$ docker pull websphere-liberty@sha256:67fc8f8a5171d10c1a153dce9eb1751e06ccbc24567b04aa65d88f9e96953d12
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -361,104 +361,104 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 ### `websphere-liberty:22.0.0.12-full-java11-openj9` - linux; s390x
 
 ```console
-$ docker pull websphere-liberty@sha256:9d1baca52629402ed455f6889a3d398933ce9fef7882aec7cb995c2c76c49287
+$ docker pull websphere-liberty@sha256:4ad135e1c009bd4b8da8ff5c58e65cd621998812950e5ddc4c4cca98f3e074e5
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **451.0 MB (450952574 bytes)**  
+-	Total Size: **451.0 MB (450972877 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8a739fe9ac4a38d4e055344f95a84b2437fc072b19954165ddcda09bfef0b0ab`
+-	Image ID: `sha256:d5bb829950e7e4b7a04f9fba66756b63612603e7610d86c15d27501a2182ca98`
 -	Entrypoint: `["\/opt\/ibm\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ibm\/wlp\/bin\/server","run","defaultServer"]`
 
 ```dockerfile
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG RELEASE
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 26 Jan 2023 13:21:29 GMT
+# Wed, 01 Feb 2023 12:00:23 GMT
 ADD file:4d5fa9b68af51e9c8cd7b25fb55ddd47256efb0b2eda9432507b72b7c1a17053 in / 
-# Thu, 26 Jan 2023 13:21:30 GMT
+# Wed, 01 Feb 2023 12:00:24 GMT
 CMD ["/bin/bash"]
-# Tue, 31 Jan 2023 18:09:20 GMT
+# Wed, 01 Feb 2023 18:23:26 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 31 Jan 2023 18:09:30 GMT
+# Wed, 01 Feb 2023 18:23:36 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 18:13:14 GMT
+# Wed, 01 Feb 2023 18:25:34 GMT
 ENV JAVA_VERSION=jdk-11.0.17+8_openj9-0.35.0
-# Tue, 31 Jan 2023 18:15:13 GMT
+# Wed, 01 Feb 2023 18:26:40 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='ab7f01a961559b49ce9b0a76af20191b7c047c6c1b6e5258e38f6c38de8cdc3f';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_aarch64_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='fba1dd9c25b0cce7efe124151b006624eeb2d2b0764284ca892d0e50ee457a41';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_ppc64le_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        amd64|x86_64)          ESUM='b1d31a4165cabcad66771a05acf8ff750f40953558494ba8d88e97fac55af6a9';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_x64_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        s390x)          ESUM='5f52184c9f4fff9ed628c12da4567162c8be77f4bcbc5939b6fe6e9d250b3798';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_s390x_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Tue, 31 Jan 2023 18:15:15 GMT
+# Wed, 01 Feb 2023 18:26:42 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 18:15:15 GMT
+# Wed, 01 Feb 2023 18:26:42 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal
-# Tue, 31 Jan 2023 18:15:50 GMT
+# Wed, 01 Feb 2023 18:27:32 GMT
 RUN set -eux;     unset OPENJ9_JAVA_OPTIONS;     SCC_SIZE="50m";     DOWNLOAD_PATH_TOMCAT=/tmp/tomcat;     INSTALL_PATH_TOMCAT=/opt/tomcat-home;     TOMCAT_CHECKSUM="0db27185d9fc3174f2c670f814df3dda8a008b89d1a38a5d96cbbe119767ebfb1cf0bce956b27954aee9be19c4a7b91f2579d967932207976322033a86075f98";     TOMCAT_DWNLD_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz";         mkdir -p "${DOWNLOAD_PATH_TOMCAT}" "${INSTALL_PATH_TOMCAT}";     curl -LfsSo "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz "${TOMCAT_DWNLD_URL}";     echo "${TOMCAT_CHECKSUM} *${DOWNLOAD_PATH_TOMCAT}/tomcat.tar.gz" | sha512sum -c -;     tar -xf "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz -C "${INSTALL_PATH_TOMCAT}" --strip-components=1;     rm -rf "${DOWNLOAD_PATH_TOMCAT}";         java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 15;     FULL=$( (java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     DST_CACHE=$(java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,destroy 2>&1 || true);     SCC_SIZE=$(echo $SCC_SIZE | sed 's/.$//');     SCC_SIZE=$(awk "BEGIN {print int($SCC_SIZE * $FULL / 100.0)}");     [ "${SCC_SIZE}" -eq 0 ] && SCC_SIZE=1;     SCC_SIZE="${SCC_SIZE}m";     java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     unset OPENJ9_JAVA_OPTIONS;         export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 5;     FULL=$( (java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     echo "SCC layer is $FULL% full.";     rm -rf "${INSTALL_PATH_TOMCAT}";     if [ -d "/opt/java/.scc" ]; then           chmod -R 0777 /opt/java/.scc;     fi;         echo "SCC generation phase completed";
-# Tue, 31 Jan 2023 20:37:43 GMT
+# Wed, 01 Feb 2023 20:08:04 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 20:37:43 GMT
+# Wed, 01 Feb 2023 20:08:04 GMT
 ARG OPENJ9_SCC=true
-# Tue, 31 Jan 2023 20:40:21 GMT
+# Wed, 01 Feb 2023 20:10:30 GMT
 ARG EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a
-# Tue, 31 Jan 2023 20:40:21 GMT
+# Wed, 01 Feb 2023 20:10:30 GMT
 ARG NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a
-# Tue, 31 Jan 2023 20:40:21 GMT
+# Wed, 01 Feb 2023 20:10:30 GMT
 ARG NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4
-# Tue, 31 Jan 2023 20:40:22 GMT
+# Wed, 01 Feb 2023 20:10:30 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter, Christy Jesuraj org.opencontainers.image.vendor=IBM org.opencontainers.image.url=http://wasdev.net org.opencontainers.image.documentation=https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html org.opencontainers.image.version=22.0.0.12 org.opencontainers.image.revision=cl221220221107-1900 org.opencontainers.image.description=This image contains the WebSphere Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/WASdev/ci.docker#building-an-application-image org.opencontainers.image.title=IBM WebSphere Liberty
-# Tue, 31 Jan 2023 20:40:22 GMT
+# Wed, 01 Feb 2023 20:10:31 GMT
 ENV LIBERTY_VERSION=22.0.0_12
-# Tue, 31 Jan 2023 20:40:22 GMT
+# Wed, 01 Feb 2023 20:10:31 GMT
 ARG LIBERTY_URL
-# Tue, 31 Jan 2023 20:40:22 GMT
+# Wed, 01 Feb 2023 20:10:31 GMT
 ARG DOWNLOAD_OPTIONS=
-# Tue, 31 Jan 2023 20:40:32 GMT
+# Wed, 01 Feb 2023 20:10:40 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 OPENJ9_SCC=true VERBOSE=false
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip wget openssl     && rm -rf /var/lib/apt/lists/*     && mkdir -p /licenses/     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && LIBERTY_URL=${LIBERTY_URL:-$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*kernel:\s//p' | tr -d '\r' )}      && wget $DOWNLOAD_OPTIONS $LIBERTY_URL -U UA-IBM-WebSphere-Liberty-Docker -O /tmp/wlp.zip     && unzip -q /tmp/wlp.zip -d /opt/ibm     && rm /tmp/wlp.zip     && chown -R 1001:0 /opt/ibm/wlp     && chmod -R g+rw /opt/ibm/wlp     && LICENSE_BASE=$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*license:\s//p' | sed 's/\(.*\)\/.*/\1\//' | tr -d '\r')     && wget ${LICENSE_BASE}en.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/en.html     && wget ${LICENSE_BASE}non_ibm_license.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/non_ibm_license.html     && wget ${LICENSE_BASE}notices.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/notices.html     && echo "$EN_SHA /licenses/en.html" | sha256sum -c --strict --check     && echo "$NON_IBM_SHA /licenses/non_ibm_license.html" | sha256sum -c --strict --check     && echo "$NOTICES_SHA /licenses/notices.html" | sha256sum -c --strict --check     && apt-get purge --auto-remove -y unzip     && apt-get purge --auto-remove -y wget     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 20:40:32 GMT
+# Wed, 01 Feb 2023 20:10:41 GMT
 ENV PATH=/opt/ibm/wlp/bin:/opt/ibm/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 20:40:33 GMT
+# Wed, 01 Feb 2023 20:10:41 GMT
 LABEL ProductID=fbf6a96d49214c0abc6a3bc5da6e48cd ProductName=WebSphere Application Server Liberty ProductVersion=22.0.0.12 BuildLabel=cl221220221107-1900
-# Tue, 31 Jan 2023 20:40:33 GMT
+# Wed, 01 Feb 2023 20:10:41 GMT
 ENV LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ibm/wlp/output OPENJ9_SCC=true
-# Tue, 31 Jan 2023 20:40:33 GMT
+# Wed, 01 Feb 2023 20:10:42 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN /opt/ibm/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 31 Jan 2023 20:40:33 GMT
+# Wed, 01 Feb 2023 20:10:42 GMT
 COPY dir:8bf844c49178cf63745af9ec643f57d70bd92c28166fabfad188dfc250d88353 in /opt/ibm/helpers/ 
-# Tue, 31 Jan 2023 20:40:34 GMT
+# Wed, 01 Feb 2023 20:10:42 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ibm/fixes/ 
-# Tue, 31 Jan 2023 20:40:34 GMT
+# Wed, 01 Feb 2023 20:10:43 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN mkdir /logs     && mkdir /etc/wlp     && mkdir -p /opt/ibm/wlp/usr/shared/resources/lib.index.cache     && mkdir -p /home/default     && mkdir /output     && chmod -t /output     && rm -rf /output     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ibm/wlp/usr/servers/defaultServer /config     && ln -s /opt/ibm /liberty     && ln -s /opt/ibm/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /opt/ibm/helpers     && chmod -R g+rwx /opt/ibm/helpers     && chown -R 1001:0 /opt/ibm/fixes     && chmod -R g+rwx /opt/ibm/fixes     && chown -R 1001:0 /opt/ibm/wlp/usr     && chmod -R g+rw /opt/ibm/wlp/usr     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rw /opt/ibm/wlp/output     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && chown -R 1001:0 /home/default     && chmod -R g+rw /home/default
-# Tue, 31 Jan 2023 20:40:39 GMT
+# Wed, 01 Feb 2023 20:10:48 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rwx /opt/ibm/wlp/output
-# Tue, 31 Jan 2023 20:40:40 GMT
+# Wed, 01 Feb 2023 20:10:49 GMT
 ENV RANDFILE=/tmp/.rnd OPENJ9_JAVA_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal -Dosgi.checkConfiguration=false
-# Tue, 31 Jan 2023 20:40:40 GMT
+# Wed, 01 Feb 2023 20:10:49 GMT
 USER 1001
-# Tue, 31 Jan 2023 20:40:40 GMT
+# Wed, 01 Feb 2023 20:10:49 GMT
 EXPOSE 9080 9443
-# Tue, 31 Jan 2023 20:40:40 GMT
+# Wed, 01 Feb 2023 20:10:49 GMT
 ENTRYPOINT ["/opt/ibm/helpers/runtime/docker-server.sh"]
-# Tue, 31 Jan 2023 20:40:40 GMT
+# Wed, 01 Feb 2023 20:10:49 GMT
 CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
-# Tue, 31 Jan 2023 20:49:57 GMT
+# Wed, 01 Feb 2023 20:11:31 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 20:49:57 GMT
+# Wed, 01 Feb 2023 20:11:31 GMT
 ARG REPOSITORIES_PROPERTIES=
-# Tue, 31 Jan 2023 20:57:40 GMT
+# Wed, 01 Feb 2023 20:19:16 GMT
 # ARGS: REPOSITORIES_PROPERTIES= VERBOSE=false
 RUN if [ ! -z $REPOSITORIES_PROPERTIES ]; then mkdir /opt/ibm/wlp/etc/   && echo $REPOSITORIES_PROPERTIES > /opt/ibm/wlp/etc/repositories.properties; fi   && installUtility install --acceptLicense baseBundle   && if [ ! -z $REPOSITORIES_PROPERTIES ]; then rm /opt/ibm/wlp/etc/repositories.properties; fi   && rm -rf /output/workarea /output/logs   && find /opt/ibm/wlp ! -perm -g=rw -print0 | xargs -r -0 chmod g+rw
-# Tue, 31 Jan 2023 20:57:45 GMT
+# Wed, 01 Feb 2023 20:19:30 GMT
 COPY --chown=1001:0file:f212cc38605f508baa0f75a07632700533ad28792dd9761a792209e709b00f23 in /config/ 
-# Tue, 31 Jan 2023 20:58:09 GMT
+# Wed, 01 Feb 2023 20:19:57 GMT
 # ARGS: REPOSITORIES_PROPERTIES= VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && find /opt/ibm/wlp/output ! -perm -g=rwx -print0 | xargs -0 -r chmod g+rwx
 ```
@@ -468,59 +468,59 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 		Last Modified: Tue, 31 Jan 2023 17:54:46 GMT  
 		Size: 27.0 MB (27016130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5406d9b53af576e5eab24c32472fe585404352de13fa2709d3d0cbb69e200e45`  
-		Last Modified: Tue, 31 Jan 2023 18:25:45 GMT  
-		Size: 15.7 MB (15686946 bytes)  
+	-	`sha256:32329c78fa891c29ef5b9df096b2cffaba8738e3e5a77aa5d7cb00958cf46491`  
+		Last Modified: Wed, 01 Feb 2023 18:33:24 GMT  
+		Size: 15.7 MB (15686940 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:68f9e43b9be22d876ca8f054d2380db38d2bf92ed91ab533f959d36d37e456fb`  
-		Last Modified: Tue, 31 Jan 2023 18:27:25 GMT  
-		Size: 47.6 MB (47642944 bytes)  
+	-	`sha256:19ba7baf8026d8f40d5c119cf11fdb6d21249356d691e52da604fcf2107d05a4`  
+		Last Modified: Wed, 01 Feb 2023 18:34:23 GMT  
+		Size: 47.6 MB (47642946 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c35ddc7c9947667de6c3af4c36b23372330b434bdd6d50dbdb962f302c8c365f`  
-		Last Modified: Tue, 31 Jan 2023 18:27:20 GMT  
-		Size: 4.3 MB (4327007 bytes)  
+	-	`sha256:763ced59e58d5188a679c7c1b6dea8805c26f03bdb8a71bc0298c6cde7c0e47e`  
+		Last Modified: Wed, 01 Feb 2023 18:34:17 GMT  
+		Size: 4.4 MB (4364541 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a95360561ab31cdcd98d60221158a03d999cc9474f09cc4a88fb4eef97b765f9`  
-		Last Modified: Tue, 31 Jan 2023 21:33:47 GMT  
-		Size: 14.4 MB (14374496 bytes)  
+	-	`sha256:6f2a627be4ad357190eecc63c36248965d726d529ead33c84ee735680d6278af`  
+		Last Modified: Wed, 01 Feb 2023 20:46:09 GMT  
+		Size: 14.4 MB (14374486 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:66df909957048899f13a580ac27242646f832f0bc240e2bc420d864c73270e35`  
-		Last Modified: Tue, 31 Jan 2023 21:33:45 GMT  
+	-	`sha256:d5fd958fa831b4a177577cf8ac466438525570bb7ea086ba9652488bef13aa50`  
+		Last Modified: Wed, 01 Feb 2023 20:46:07 GMT  
 		Size: 676.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3354d4ecf8347f2ce4f4fb277b13598596c2fe954e53a4079e677d9455412972`  
-		Last Modified: Tue, 31 Jan 2023 21:33:45 GMT  
+	-	`sha256:3f8e75c808c7a77ea085383ec930010a0082cbf5b2bbb9b33414185bbb895075`  
+		Last Modified: Wed, 01 Feb 2023 20:46:07 GMT  
 		Size: 9.8 KB (9755 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bcb57a5c93d35cf6b98b06a2f6083a10050fb532a5e23b7eb3153bc57466dbfa`  
-		Last Modified: Tue, 31 Jan 2023 21:33:45 GMT  
-		Size: 274.0 B  
+	-	`sha256:54dc1b97d3a1c27a2112df4fb078e4aeb0141ec54792ad8e94dadc9a74dcd721`  
+		Last Modified: Wed, 01 Feb 2023 20:46:07 GMT  
+		Size: 271.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eee6769ba929778fe330065b9e2ca03edca5e0bddae67da6c1963e0f86b771f6`  
-		Last Modified: Tue, 31 Jan 2023 21:33:45 GMT  
-		Size: 10.7 KB (10739 bytes)  
+	-	`sha256:3df5f55bfbcec43bee6635dae30ed8f818e43768e0900c0822b4d1dcd363b988`  
+		Last Modified: Wed, 01 Feb 2023 20:46:07 GMT  
+		Size: 10.7 KB (10742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e43864f0429134838cc53466a92a7eceb9ae4d6bf1e094c5a2936d6503f42dc7`  
-		Last Modified: Tue, 31 Jan 2023 21:33:45 GMT  
-		Size: 2.6 MB (2584993 bytes)  
+	-	`sha256:c82be56d5fa49431eae32ab614b03b9812f44d7f3a6eb12e7410ca4dd1779f38`  
+		Last Modified: Wed, 01 Feb 2023 20:46:07 GMT  
+		Size: 2.6 MB (2617312 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c00aaae82c4fc3a46ac987f098f12953e874e17164002250ea37261a2b2b229`  
-		Last Modified: Tue, 31 Jan 2023 21:34:38 GMT  
-		Size: 324.8 MB (324834521 bytes)  
+	-	`sha256:93fc2265d4ad363d80a0f4df9106ad067188cb010ea235dbf6718834f7ecd0ff`  
+		Last Modified: Wed, 01 Feb 2023 20:46:37 GMT  
+		Size: 324.8 MB (324833678 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4cb7578ff9527b960cf4436baa498515f58f69b68c9390a5e69a9f6a98f036cc`  
-		Last Modified: Tue, 31 Jan 2023 21:34:24 GMT  
+	-	`sha256:586f58ef443c77cdba2c1a0c476ef7a616e99da83a486e7986fde99d1cdc254e`  
+		Last Modified: Wed, 01 Feb 2023 20:46:22 GMT  
 		Size: 947.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4c4c222ca5f0f6adf2725f4ab3dd8a7ae1a849df5e37b52bc0d53e5cf22cf24`  
-		Last Modified: Tue, 31 Jan 2023 21:34:25 GMT  
-		Size: 14.5 MB (14463146 bytes)  
+	-	`sha256:3d223b2b957d2a89c0ec1821cf3815c3bed7471f6485bc372ebec2ddedc7d841`  
+		Last Modified: Wed, 01 Feb 2023 20:46:24 GMT  
+		Size: 14.4 MB (14414453 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `websphere-liberty:22.0.0.12-full-java17-openj9`
 
 ```console
-$ docker pull websphere-liberty@sha256:fc3b5a6d6e41255c4f950c4f1a87535642755ccf9ce1eb647c45f68a380c8005
+$ docker pull websphere-liberty@sha256:5ba1ee366a3b4a610ee6c4ed7d2d6cbfff713aeded20bbdcfac965c0ba63bfad
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -850,104 +850,104 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 ### `websphere-liberty:22.0.0.12-full-java17-openj9` - linux; s390x
 
 ```console
-$ docker pull websphere-liberty@sha256:528d49ec674755b88213d0090af534e21dd840f52ed80213af20d0e00795e5c4
+$ docker pull websphere-liberty@sha256:270d80b670dfa5eb2fd95cea6c863a48d3dbcdaff385d126a7c5e2dd5f0f63fb
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **451.4 MB (451352651 bytes)**  
+-	Total Size: **451.3 MB (451323585 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4413cf620d9a30ae2f7e90d12bac7c93429fe95f389b90c641f0b934bd96f8ed`
+-	Image ID: `sha256:9338ed1be179728ef4a4355de297f1891b22d3052587ff9e82cb32bf2d32e7cf`
 -	Entrypoint: `["\/opt\/ibm\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ibm\/wlp\/bin\/server","run","defaultServer"]`
 
 ```dockerfile
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG RELEASE
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 26 Jan 2023 13:21:29 GMT
+# Wed, 01 Feb 2023 12:00:23 GMT
 ADD file:4d5fa9b68af51e9c8cd7b25fb55ddd47256efb0b2eda9432507b72b7c1a17053 in / 
-# Thu, 26 Jan 2023 13:21:30 GMT
+# Wed, 01 Feb 2023 12:00:24 GMT
 CMD ["/bin/bash"]
-# Tue, 31 Jan 2023 18:09:20 GMT
+# Wed, 01 Feb 2023 18:23:26 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 31 Jan 2023 18:09:30 GMT
+# Wed, 01 Feb 2023 18:23:36 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 18:16:47 GMT
+# Wed, 01 Feb 2023 18:27:49 GMT
 ENV JAVA_VERSION=jdk-17.0.5+8_openj9-0.35.0
-# Tue, 31 Jan 2023 18:18:45 GMT
+# Wed, 01 Feb 2023 18:28:54 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='8f934ce1745f52a067bdeb56b3b9e9192f51e674ff2956a1e53b33e44ea5ca42';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_aarch64_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='d54972fb938f655a3665512c7181c2c5813e3bfe742650d6081e2f480388ef2f';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_ppc64le_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        amd64|x86_64)          ESUM='759f9c507e0faf53b260ee9f492bab8fdeb8091bdecad904134861714e4d913b';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_x64_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        s390x)          ESUM='64ffeaff0ea4915fb66d3356ef5de65e884172b031e0c268bdeb4d2aa6be1c91';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_s390x_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Tue, 31 Jan 2023 18:18:46 GMT
+# Wed, 01 Feb 2023 18:28:56 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 18:18:47 GMT
+# Wed, 01 Feb 2023 18:28:56 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal
-# Tue, 31 Jan 2023 18:19:19 GMT
+# Wed, 01 Feb 2023 18:29:29 GMT
 RUN set -eux;     unset OPENJ9_JAVA_OPTIONS;     SCC_SIZE="50m";     DOWNLOAD_PATH_TOMCAT=/tmp/tomcat;     INSTALL_PATH_TOMCAT=/opt/tomcat-home;     TOMCAT_CHECKSUM="0db27185d9fc3174f2c670f814df3dda8a008b89d1a38a5d96cbbe119767ebfb1cf0bce956b27954aee9be19c4a7b91f2579d967932207976322033a86075f98";     TOMCAT_DWNLD_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz";         mkdir -p "${DOWNLOAD_PATH_TOMCAT}" "${INSTALL_PATH_TOMCAT}";     curl -LfsSo "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz "${TOMCAT_DWNLD_URL}";     echo "${TOMCAT_CHECKSUM} *${DOWNLOAD_PATH_TOMCAT}/tomcat.tar.gz" | sha512sum -c -;     tar -xf "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz -C "${INSTALL_PATH_TOMCAT}" --strip-components=1;     rm -rf "${DOWNLOAD_PATH_TOMCAT}";         java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 15;     FULL=$( (java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     DST_CACHE=$(java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,destroy 2>&1 || true);     SCC_SIZE=$(echo $SCC_SIZE | sed 's/.$//');     SCC_SIZE=$(awk "BEGIN {print int($SCC_SIZE * $FULL / 100.0)}");     [ "${SCC_SIZE}" -eq 0 ] && SCC_SIZE=1;     SCC_SIZE="${SCC_SIZE}m";     java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     unset OPENJ9_JAVA_OPTIONS;         export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 5;     FULL=$( (java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     echo "SCC layer is $FULL% full.";     rm -rf "${INSTALL_PATH_TOMCAT}";     if [ -d "/opt/java/.scc" ]; then           chmod -R 0777 /opt/java/.scc;     fi;         echo "SCC generation phase completed";
-# Tue, 31 Jan 2023 20:38:07 GMT
+# Wed, 01 Feb 2023 20:08:28 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 20:38:07 GMT
+# Wed, 01 Feb 2023 20:08:28 GMT
 ARG OPENJ9_SCC=true
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 ARG EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 ARG NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 ARG NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 LABEL org.opencontainers.image.authors=Chris Potter, Christy Jesuraj, Melissa Lee org.opencontainers.image.vendor=IBM org.opencontainers.image.url=http://wasdev.net org.opencontainers.image.documentation=https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html org.opencontainers.image.version=22.0.0.12 org.opencontainers.image.revision=cl221220221107-1900 org.opencontainers.image.description=This image contains the WebSphere Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/WASdev/ci.docker#building-an-application-image org.opencontainers.image.title=IBM WebSphere Liberty
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 ENV LIBERTY_VERSION=22.0.0_12
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 ARG LIBERTY_URL
-# Tue, 31 Jan 2023 20:40:50 GMT
+# Wed, 01 Feb 2023 20:10:58 GMT
 ARG DOWNLOAD_OPTIONS=
-# Tue, 31 Jan 2023 20:40:59 GMT
+# Wed, 01 Feb 2023 20:11:07 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 OPENJ9_SCC=true VERBOSE=false
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip wget openssl     && rm -rf /var/lib/apt/lists/*     && mkdir -p /licenses/     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && LIBERTY_URL=${LIBERTY_URL:-$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*kernel:\s//p' | tr -d '\r' )}      && wget $DOWNLOAD_OPTIONS $LIBERTY_URL -U UA-IBM-WebSphere-Liberty-Docker -O /tmp/wlp.zip     && unzip -q /tmp/wlp.zip -d /opt/ibm     && rm /tmp/wlp.zip     && chown -R 1001:0 /opt/ibm/wlp     && chmod -R g+rw /opt/ibm/wlp     && LICENSE_BASE=$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*license:\s//p' | sed 's/\(.*\)\/.*/\1\//' | tr -d '\r')     && wget ${LICENSE_BASE}en.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/en.html     && wget ${LICENSE_BASE}non_ibm_license.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/non_ibm_license.html     && wget ${LICENSE_BASE}notices.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/notices.html     && echo "$EN_SHA /licenses/en.html" | sha256sum -c --strict --check     && echo "$NON_IBM_SHA /licenses/non_ibm_license.html" | sha256sum -c --strict --check     && echo "$NOTICES_SHA /licenses/notices.html" | sha256sum -c --strict --check     && apt-get purge --auto-remove -y unzip     && apt-get purge --auto-remove -y wget     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 20:41:00 GMT
+# Wed, 01 Feb 2023 20:11:08 GMT
 ENV PATH=/opt/ibm/wlp/bin:/opt/ibm/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 20:41:00 GMT
+# Wed, 01 Feb 2023 20:11:08 GMT
 LABEL ProductID=fbf6a96d49214c0abc6a3bc5da6e48cd ProductName=WebSphere Application Server Liberty ProductVersion=22.0.0.12 BuildLabel=cl221220221107-1900
-# Tue, 31 Jan 2023 20:41:00 GMT
+# Wed, 01 Feb 2023 20:11:08 GMT
 ENV LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ibm/wlp/output OPENJ9_SCC=true
-# Tue, 31 Jan 2023 20:41:01 GMT
+# Wed, 01 Feb 2023 20:11:09 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN /opt/ibm/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 31 Jan 2023 20:41:01 GMT
+# Wed, 01 Feb 2023 20:11:09 GMT
 COPY dir:8bf844c49178cf63745af9ec643f57d70bd92c28166fabfad188dfc250d88353 in /opt/ibm/helpers/ 
-# Tue, 31 Jan 2023 20:41:01 GMT
+# Wed, 01 Feb 2023 20:11:09 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ibm/fixes/ 
-# Tue, 31 Jan 2023 20:41:02 GMT
+# Wed, 01 Feb 2023 20:11:10 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN mkdir /logs     && mkdir /etc/wlp     && mkdir -p /opt/ibm/wlp/usr/shared/resources/lib.index.cache     && mkdir -p /home/default     && mkdir /output     && chmod -t /output     && rm -rf /output     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ibm/wlp/usr/servers/defaultServer /config     && ln -s /opt/ibm /liberty     && ln -s /opt/ibm/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /opt/ibm/helpers     && chmod -R g+rwx /opt/ibm/helpers     && chown -R 1001:0 /opt/ibm/fixes     && chmod -R g+rwx /opt/ibm/fixes     && chown -R 1001:0 /opt/ibm/wlp/usr     && chmod -R g+rw /opt/ibm/wlp/usr     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rw /opt/ibm/wlp/output     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && chown -R 1001:0 /home/default     && chmod -R g+rw /home/default
-# Tue, 31 Jan 2023 20:41:07 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rwx /opt/ibm/wlp/output
-# Tue, 31 Jan 2023 20:41:07 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 ENV RANDFILE=/tmp/.rnd OPENJ9_JAVA_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal -Dosgi.checkConfiguration=false
-# Tue, 31 Jan 2023 20:41:07 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 USER 1001
-# Tue, 31 Jan 2023 20:41:07 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 EXPOSE 9080 9443
-# Tue, 31 Jan 2023 20:41:08 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 ENTRYPOINT ["/opt/ibm/helpers/runtime/docker-server.sh"]
-# Tue, 31 Jan 2023 20:41:08 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
-# Tue, 31 Jan 2023 20:58:26 GMT
+# Wed, 01 Feb 2023 20:20:12 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 20:58:26 GMT
+# Wed, 01 Feb 2023 20:20:12 GMT
 ARG REPOSITORIES_PROPERTIES=
-# Tue, 31 Jan 2023 21:07:22 GMT
+# Wed, 01 Feb 2023 20:27:54 GMT
 # ARGS: REPOSITORIES_PROPERTIES= VERBOSE=false
 RUN if [ ! -z $REPOSITORIES_PROPERTIES ]; then mkdir /opt/ibm/wlp/etc/   && echo $REPOSITORIES_PROPERTIES > /opt/ibm/wlp/etc/repositories.properties; fi   && installUtility install --acceptLicense baseBundle   && if [ ! -z $REPOSITORIES_PROPERTIES ]; then rm /opt/ibm/wlp/etc/repositories.properties; fi   && rm -rf /output/workarea /output/logs   && find /opt/ibm/wlp ! -perm -g=rw -print0 | xargs -r -0 chmod g+rw
-# Tue, 31 Jan 2023 21:07:28 GMT
+# Wed, 01 Feb 2023 20:28:00 GMT
 COPY --chown=1001:0file:f212cc38605f508baa0f75a07632700533ad28792dd9761a792209e709b00f23 in /config/ 
-# Tue, 31 Jan 2023 21:07:53 GMT
+# Wed, 01 Feb 2023 20:28:26 GMT
 # ARGS: REPOSITORIES_PROPERTIES= VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && find /opt/ibm/wlp/output ! -perm -g=rwx -print0 | xargs -0 -r chmod g+rwx
 ```
@@ -957,53 +957,53 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 		Last Modified: Tue, 31 Jan 2023 17:54:46 GMT  
 		Size: 27.0 MB (27016130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5406d9b53af576e5eab24c32472fe585404352de13fa2709d3d0cbb69e200e45`  
-		Last Modified: Tue, 31 Jan 2023 18:25:45 GMT  
-		Size: 15.7 MB (15686946 bytes)  
+	-	`sha256:32329c78fa891c29ef5b9df096b2cffaba8738e3e5a77aa5d7cb00958cf46491`  
+		Last Modified: Wed, 01 Feb 2023 18:33:24 GMT  
+		Size: 15.7 MB (15686940 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0714e404ae0ba086f5291bf5c8846a86f2717cfb77c0bccf2902410cce6ec2`  
-		Last Modified: Tue, 31 Jan 2023 18:28:36 GMT  
-		Size: 47.2 MB (47171552 bytes)  
+	-	`sha256:5dde736d5f3fc3ff30e36d5200176d181f3375acc1add5b3e1f1221fb4625a13`  
+		Last Modified: Wed, 01 Feb 2023 18:35:00 GMT  
+		Size: 47.2 MB (47171516 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4058dd980adb4d50bb006d9400f2cd60b6c7dc741192fac6a78638b1d14eb7f5`  
-		Last Modified: Tue, 31 Jan 2023 18:28:30 GMT  
-		Size: 4.9 MB (4912851 bytes)  
+	-	`sha256:7d4dc1d40a0f0a3191b241c09d9c4da6f009ee6df7d3945387d585e29ca96480`  
+		Last Modified: Wed, 01 Feb 2023 18:34:55 GMT  
+		Size: 4.9 MB (4916173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1948193069d26a46db2fb8df7d33054d10eb1d1189ce42963b239a6f414315cf`  
-		Last Modified: Tue, 31 Jan 2023 21:33:54 GMT  
-		Size: 14.4 MB (14374491 bytes)  
+	-	`sha256:062b3372f73ea932026b643e8eb0cb60109e6c19105a90ac9122ad89360ed774`  
+		Last Modified: Wed, 01 Feb 2023 20:46:16 GMT  
+		Size: 14.4 MB (14374519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:836658d08b1636beeb99d9b0d24f8685d1b5351285ba44dc2f3556eace87d6e7`  
-		Last Modified: Tue, 31 Jan 2023 21:33:52 GMT  
-		Size: 672.0 B  
+	-	`sha256:a270ab605f93210009123dfe18f00d2b3877f3a98d60041cc147cbd56e687b95`  
+		Last Modified: Wed, 01 Feb 2023 20:46:14 GMT  
+		Size: 673.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3d7137d9f55d544f6fec6eb65d8dc7cca6ca9efc0987576fe68932261e21ec91`  
-		Last Modified: Tue, 31 Jan 2023 21:33:52 GMT  
-		Size: 9.8 KB (9751 bytes)  
+	-	`sha256:af4484b5f3ff40fdcc0cf1c243f7ac975829031e6608757376252a50eae6aa29`  
+		Last Modified: Wed, 01 Feb 2023 20:46:14 GMT  
+		Size: 9.8 KB (9750 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61d347796060e65200ee58b501dd6074b644260765e3ebf1a10403fce2f60924`  
-		Last Modified: Tue, 31 Jan 2023 21:33:52 GMT  
+	-	`sha256:bc6e275ed2abaa853d4e525eb2e283cf8545289eed32549956b70c3fdd515d10`  
+		Last Modified: Wed, 01 Feb 2023 20:46:14 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bea488cd121f1642e54de4bfb2b109c726b375de18484bcd18d2f0dbfd72ab25`  
-		Last Modified: Tue, 31 Jan 2023 21:33:52 GMT  
-		Size: 10.7 KB (10730 bytes)  
+	-	`sha256:ffecf1bebbf6b32060ee5910ca984802e6c3a445f49291db96b8e25b6ea627a5`  
+		Last Modified: Wed, 01 Feb 2023 20:46:14 GMT  
+		Size: 10.7 KB (10731 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d6c9f9adcb6e188857bd18064fa749fdb32b7b0aee7eb41e8fa952dbf292ecc6`  
-		Last Modified: Tue, 31 Jan 2023 21:33:52 GMT  
-		Size: 2.6 MB (2623469 bytes)  
+	-	`sha256:69cfbfe570b722054443b6e05e5bb2117f40fd15d9f69e52e40f38cfd7a13aea`  
+		Last Modified: Wed, 01 Feb 2023 20:46:14 GMT  
+		Size: 2.6 MB (2577179 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3027e26cca30623108b56b392e4a68a166b67000571a82f1baa6985e00ed1e8`  
-		Last Modified: Tue, 31 Jan 2023 21:34:57 GMT  
-		Size: 324.8 MB (324833570 bytes)  
+	-	`sha256:5b8ae2b1cbeeafb3ca09f872d3239a79865ed7f9e20382a28155ac13d0dcccca`  
+		Last Modified: Wed, 01 Feb 2023 20:46:56 GMT  
+		Size: 324.8 MB (324833640 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a2af5fd4cff80420e9ce42b2a511d205100afce403aa08b3f5f71d78d2269a0d`  
-		Last Modified: Tue, 31 Jan 2023 21:34:43 GMT  
-		Size: 949.0 B  
+	-	`sha256:d52ab17d93f6163815ad083d5ec66d93db5e3e63cdb0df190a821582e287acb9`  
+		Last Modified: Wed, 01 Feb 2023 20:46:42 GMT  
+		Size: 943.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a7cd62157ff2e33012d5d0c7a0eb2008ec05f34f9dec47b084c588e18fc35d1`  
-		Last Modified: Tue, 31 Jan 2023 21:34:44 GMT  
-		Size: 14.7 MB (14711271 bytes)  
+	-	`sha256:293a51430ba30aa31216adf8a28f51b431d9ef5e9b4d374a692a944b315aa075`  
+		Last Modified: Wed, 01 Feb 2023 20:46:44 GMT  
+		Size: 14.7 MB (14725122 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `websphere-liberty:22.0.0.12-full-java8-ibmjava`
@@ -1474,7 +1474,7 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 ## `websphere-liberty:22.0.0.12-kernel-java11-openj9`
 
 ```console
-$ docker pull websphere-liberty@sha256:03e1f6242d3ff4cf31904523406e31e3e0644653e8034ebbcfd64e96aefd1768
+$ docker pull websphere-liberty@sha256:51cca5be1871bbeeab31ef3e4c83d35b0474aa1174f0d3ad0b19165015b5551c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1756,93 +1756,93 @@ CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 ### `websphere-liberty:22.0.0.12-kernel-java11-openj9` - linux; s390x
 
 ```console
-$ docker pull websphere-liberty@sha256:d179dfe63895d1c756d36774aca12e376f3b5cc044adf10e97352408eb9592b1
+$ docker pull websphere-liberty@sha256:5a455e92ff5f4cac4cc9dd20d8592fadb15725c6098cc1a4456794a498ff2348
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **111.7 MB (111653960 bytes)**  
+-	Total Size: **111.7 MB (111723799 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25c894671ebb6965474ad6ac1b1ccdf5ebdcc6674c5832502ace0bd048246146`
+-	Image ID: `sha256:a12bef10c7e98f2c8a94c6f0ade6fddc2d22df3091997e23cbb94d2d93b08f83`
 -	Entrypoint: `["\/opt\/ibm\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ibm\/wlp\/bin\/server","run","defaultServer"]`
 
 ```dockerfile
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG RELEASE
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 26 Jan 2023 13:21:29 GMT
+# Wed, 01 Feb 2023 12:00:23 GMT
 ADD file:4d5fa9b68af51e9c8cd7b25fb55ddd47256efb0b2eda9432507b72b7c1a17053 in / 
-# Thu, 26 Jan 2023 13:21:30 GMT
+# Wed, 01 Feb 2023 12:00:24 GMT
 CMD ["/bin/bash"]
-# Tue, 31 Jan 2023 18:09:20 GMT
+# Wed, 01 Feb 2023 18:23:26 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 31 Jan 2023 18:09:30 GMT
+# Wed, 01 Feb 2023 18:23:36 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 18:13:14 GMT
+# Wed, 01 Feb 2023 18:25:34 GMT
 ENV JAVA_VERSION=jdk-11.0.17+8_openj9-0.35.0
-# Tue, 31 Jan 2023 18:15:13 GMT
+# Wed, 01 Feb 2023 18:26:40 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='ab7f01a961559b49ce9b0a76af20191b7c047c6c1b6e5258e38f6c38de8cdc3f';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_aarch64_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='fba1dd9c25b0cce7efe124151b006624eeb2d2b0764284ca892d0e50ee457a41';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_ppc64le_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        amd64|x86_64)          ESUM='b1d31a4165cabcad66771a05acf8ff750f40953558494ba8d88e97fac55af6a9';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_x64_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        s390x)          ESUM='5f52184c9f4fff9ed628c12da4567162c8be77f4bcbc5939b6fe6e9d250b3798';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_s390x_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Tue, 31 Jan 2023 18:15:15 GMT
+# Wed, 01 Feb 2023 18:26:42 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 18:15:15 GMT
+# Wed, 01 Feb 2023 18:26:42 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal
-# Tue, 31 Jan 2023 18:15:50 GMT
+# Wed, 01 Feb 2023 18:27:32 GMT
 RUN set -eux;     unset OPENJ9_JAVA_OPTIONS;     SCC_SIZE="50m";     DOWNLOAD_PATH_TOMCAT=/tmp/tomcat;     INSTALL_PATH_TOMCAT=/opt/tomcat-home;     TOMCAT_CHECKSUM="0db27185d9fc3174f2c670f814df3dda8a008b89d1a38a5d96cbbe119767ebfb1cf0bce956b27954aee9be19c4a7b91f2579d967932207976322033a86075f98";     TOMCAT_DWNLD_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz";         mkdir -p "${DOWNLOAD_PATH_TOMCAT}" "${INSTALL_PATH_TOMCAT}";     curl -LfsSo "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz "${TOMCAT_DWNLD_URL}";     echo "${TOMCAT_CHECKSUM} *${DOWNLOAD_PATH_TOMCAT}/tomcat.tar.gz" | sha512sum -c -;     tar -xf "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz -C "${INSTALL_PATH_TOMCAT}" --strip-components=1;     rm -rf "${DOWNLOAD_PATH_TOMCAT}";         java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 15;     FULL=$( (java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     DST_CACHE=$(java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,destroy 2>&1 || true);     SCC_SIZE=$(echo $SCC_SIZE | sed 's/.$//');     SCC_SIZE=$(awk "BEGIN {print int($SCC_SIZE * $FULL / 100.0)}");     [ "${SCC_SIZE}" -eq 0 ] && SCC_SIZE=1;     SCC_SIZE="${SCC_SIZE}m";     java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     unset OPENJ9_JAVA_OPTIONS;         export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 5;     FULL=$( (java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     echo "SCC layer is $FULL% full.";     rm -rf "${INSTALL_PATH_TOMCAT}";     if [ -d "/opt/java/.scc" ]; then           chmod -R 0777 /opt/java/.scc;     fi;         echo "SCC generation phase completed";
-# Tue, 31 Jan 2023 20:37:43 GMT
+# Wed, 01 Feb 2023 20:08:04 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 20:37:43 GMT
+# Wed, 01 Feb 2023 20:08:04 GMT
 ARG OPENJ9_SCC=true
-# Tue, 31 Jan 2023 20:40:21 GMT
+# Wed, 01 Feb 2023 20:10:30 GMT
 ARG EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a
-# Tue, 31 Jan 2023 20:40:21 GMT
+# Wed, 01 Feb 2023 20:10:30 GMT
 ARG NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a
-# Tue, 31 Jan 2023 20:40:21 GMT
+# Wed, 01 Feb 2023 20:10:30 GMT
 ARG NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4
-# Tue, 31 Jan 2023 20:40:22 GMT
+# Wed, 01 Feb 2023 20:10:30 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter, Christy Jesuraj org.opencontainers.image.vendor=IBM org.opencontainers.image.url=http://wasdev.net org.opencontainers.image.documentation=https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html org.opencontainers.image.version=22.0.0.12 org.opencontainers.image.revision=cl221220221107-1900 org.opencontainers.image.description=This image contains the WebSphere Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/WASdev/ci.docker#building-an-application-image org.opencontainers.image.title=IBM WebSphere Liberty
-# Tue, 31 Jan 2023 20:40:22 GMT
+# Wed, 01 Feb 2023 20:10:31 GMT
 ENV LIBERTY_VERSION=22.0.0_12
-# Tue, 31 Jan 2023 20:40:22 GMT
+# Wed, 01 Feb 2023 20:10:31 GMT
 ARG LIBERTY_URL
-# Tue, 31 Jan 2023 20:40:22 GMT
+# Wed, 01 Feb 2023 20:10:31 GMT
 ARG DOWNLOAD_OPTIONS=
-# Tue, 31 Jan 2023 20:40:32 GMT
+# Wed, 01 Feb 2023 20:10:40 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 OPENJ9_SCC=true VERBOSE=false
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip wget openssl     && rm -rf /var/lib/apt/lists/*     && mkdir -p /licenses/     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && LIBERTY_URL=${LIBERTY_URL:-$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*kernel:\s//p' | tr -d '\r' )}      && wget $DOWNLOAD_OPTIONS $LIBERTY_URL -U UA-IBM-WebSphere-Liberty-Docker -O /tmp/wlp.zip     && unzip -q /tmp/wlp.zip -d /opt/ibm     && rm /tmp/wlp.zip     && chown -R 1001:0 /opt/ibm/wlp     && chmod -R g+rw /opt/ibm/wlp     && LICENSE_BASE=$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*license:\s//p' | sed 's/\(.*\)\/.*/\1\//' | tr -d '\r')     && wget ${LICENSE_BASE}en.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/en.html     && wget ${LICENSE_BASE}non_ibm_license.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/non_ibm_license.html     && wget ${LICENSE_BASE}notices.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/notices.html     && echo "$EN_SHA /licenses/en.html" | sha256sum -c --strict --check     && echo "$NON_IBM_SHA /licenses/non_ibm_license.html" | sha256sum -c --strict --check     && echo "$NOTICES_SHA /licenses/notices.html" | sha256sum -c --strict --check     && apt-get purge --auto-remove -y unzip     && apt-get purge --auto-remove -y wget     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 20:40:32 GMT
+# Wed, 01 Feb 2023 20:10:41 GMT
 ENV PATH=/opt/ibm/wlp/bin:/opt/ibm/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 20:40:33 GMT
+# Wed, 01 Feb 2023 20:10:41 GMT
 LABEL ProductID=fbf6a96d49214c0abc6a3bc5da6e48cd ProductName=WebSphere Application Server Liberty ProductVersion=22.0.0.12 BuildLabel=cl221220221107-1900
-# Tue, 31 Jan 2023 20:40:33 GMT
+# Wed, 01 Feb 2023 20:10:41 GMT
 ENV LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ibm/wlp/output OPENJ9_SCC=true
-# Tue, 31 Jan 2023 20:40:33 GMT
+# Wed, 01 Feb 2023 20:10:42 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN /opt/ibm/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 31 Jan 2023 20:40:33 GMT
+# Wed, 01 Feb 2023 20:10:42 GMT
 COPY dir:8bf844c49178cf63745af9ec643f57d70bd92c28166fabfad188dfc250d88353 in /opt/ibm/helpers/ 
-# Tue, 31 Jan 2023 20:40:34 GMT
+# Wed, 01 Feb 2023 20:10:42 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ibm/fixes/ 
-# Tue, 31 Jan 2023 20:40:34 GMT
+# Wed, 01 Feb 2023 20:10:43 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN mkdir /logs     && mkdir /etc/wlp     && mkdir -p /opt/ibm/wlp/usr/shared/resources/lib.index.cache     && mkdir -p /home/default     && mkdir /output     && chmod -t /output     && rm -rf /output     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ibm/wlp/usr/servers/defaultServer /config     && ln -s /opt/ibm /liberty     && ln -s /opt/ibm/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /opt/ibm/helpers     && chmod -R g+rwx /opt/ibm/helpers     && chown -R 1001:0 /opt/ibm/fixes     && chmod -R g+rwx /opt/ibm/fixes     && chown -R 1001:0 /opt/ibm/wlp/usr     && chmod -R g+rw /opt/ibm/wlp/usr     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rw /opt/ibm/wlp/output     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && chown -R 1001:0 /home/default     && chmod -R g+rw /home/default
-# Tue, 31 Jan 2023 20:40:39 GMT
+# Wed, 01 Feb 2023 20:10:48 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rwx /opt/ibm/wlp/output
-# Tue, 31 Jan 2023 20:40:40 GMT
+# Wed, 01 Feb 2023 20:10:49 GMT
 ENV RANDFILE=/tmp/.rnd OPENJ9_JAVA_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal -Dosgi.checkConfiguration=false
-# Tue, 31 Jan 2023 20:40:40 GMT
+# Wed, 01 Feb 2023 20:10:49 GMT
 USER 1001
-# Tue, 31 Jan 2023 20:40:40 GMT
+# Wed, 01 Feb 2023 20:10:49 GMT
 EXPOSE 9080 9443
-# Tue, 31 Jan 2023 20:40:40 GMT
+# Wed, 01 Feb 2023 20:10:49 GMT
 ENTRYPOINT ["/opt/ibm/helpers/runtime/docker-server.sh"]
-# Tue, 31 Jan 2023 20:40:40 GMT
+# Wed, 01 Feb 2023 20:10:49 GMT
 CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 ```
 
@@ -1851,47 +1851,47 @@ CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Tue, 31 Jan 2023 17:54:46 GMT  
 		Size: 27.0 MB (27016130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5406d9b53af576e5eab24c32472fe585404352de13fa2709d3d0cbb69e200e45`  
-		Last Modified: Tue, 31 Jan 2023 18:25:45 GMT  
-		Size: 15.7 MB (15686946 bytes)  
+	-	`sha256:32329c78fa891c29ef5b9df096b2cffaba8738e3e5a77aa5d7cb00958cf46491`  
+		Last Modified: Wed, 01 Feb 2023 18:33:24 GMT  
+		Size: 15.7 MB (15686940 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:68f9e43b9be22d876ca8f054d2380db38d2bf92ed91ab533f959d36d37e456fb`  
-		Last Modified: Tue, 31 Jan 2023 18:27:25 GMT  
-		Size: 47.6 MB (47642944 bytes)  
+	-	`sha256:19ba7baf8026d8f40d5c119cf11fdb6d21249356d691e52da604fcf2107d05a4`  
+		Last Modified: Wed, 01 Feb 2023 18:34:23 GMT  
+		Size: 47.6 MB (47642946 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c35ddc7c9947667de6c3af4c36b23372330b434bdd6d50dbdb962f302c8c365f`  
-		Last Modified: Tue, 31 Jan 2023 18:27:20 GMT  
-		Size: 4.3 MB (4327007 bytes)  
+	-	`sha256:763ced59e58d5188a679c7c1b6dea8805c26f03bdb8a71bc0298c6cde7c0e47e`  
+		Last Modified: Wed, 01 Feb 2023 18:34:17 GMT  
+		Size: 4.4 MB (4364541 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a95360561ab31cdcd98d60221158a03d999cc9474f09cc4a88fb4eef97b765f9`  
-		Last Modified: Tue, 31 Jan 2023 21:33:47 GMT  
-		Size: 14.4 MB (14374496 bytes)  
+	-	`sha256:6f2a627be4ad357190eecc63c36248965d726d529ead33c84ee735680d6278af`  
+		Last Modified: Wed, 01 Feb 2023 20:46:09 GMT  
+		Size: 14.4 MB (14374486 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:66df909957048899f13a580ac27242646f832f0bc240e2bc420d864c73270e35`  
-		Last Modified: Tue, 31 Jan 2023 21:33:45 GMT  
+	-	`sha256:d5fd958fa831b4a177577cf8ac466438525570bb7ea086ba9652488bef13aa50`  
+		Last Modified: Wed, 01 Feb 2023 20:46:07 GMT  
 		Size: 676.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3354d4ecf8347f2ce4f4fb277b13598596c2fe954e53a4079e677d9455412972`  
-		Last Modified: Tue, 31 Jan 2023 21:33:45 GMT  
+	-	`sha256:3f8e75c808c7a77ea085383ec930010a0082cbf5b2bbb9b33414185bbb895075`  
+		Last Modified: Wed, 01 Feb 2023 20:46:07 GMT  
 		Size: 9.8 KB (9755 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bcb57a5c93d35cf6b98b06a2f6083a10050fb532a5e23b7eb3153bc57466dbfa`  
-		Last Modified: Tue, 31 Jan 2023 21:33:45 GMT  
-		Size: 274.0 B  
+	-	`sha256:54dc1b97d3a1c27a2112df4fb078e4aeb0141ec54792ad8e94dadc9a74dcd721`  
+		Last Modified: Wed, 01 Feb 2023 20:46:07 GMT  
+		Size: 271.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eee6769ba929778fe330065b9e2ca03edca5e0bddae67da6c1963e0f86b771f6`  
-		Last Modified: Tue, 31 Jan 2023 21:33:45 GMT  
-		Size: 10.7 KB (10739 bytes)  
+	-	`sha256:3df5f55bfbcec43bee6635dae30ed8f818e43768e0900c0822b4d1dcd363b988`  
+		Last Modified: Wed, 01 Feb 2023 20:46:07 GMT  
+		Size: 10.7 KB (10742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e43864f0429134838cc53466a92a7eceb9ae4d6bf1e094c5a2936d6503f42dc7`  
-		Last Modified: Tue, 31 Jan 2023 21:33:45 GMT  
-		Size: 2.6 MB (2584993 bytes)  
+	-	`sha256:c82be56d5fa49431eae32ab614b03b9812f44d7f3a6eb12e7410ca4dd1779f38`  
+		Last Modified: Wed, 01 Feb 2023 20:46:07 GMT  
+		Size: 2.6 MB (2617312 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `websphere-liberty:22.0.0.12-kernel-java17-openj9`
 
 ```console
-$ docker pull websphere-liberty@sha256:a97fd374e4471e9c4a96b728ad9f230e4ce879dc2dc8778ee3894cd585ad59fa
+$ docker pull websphere-liberty@sha256:49fbe04ecea08e1c5e2fe2905be840fbef981974517f3f8f05fd987976ce057d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2173,93 +2173,93 @@ CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 ### `websphere-liberty:22.0.0.12-kernel-java17-openj9` - linux; s390x
 
 ```console
-$ docker pull websphere-liberty@sha256:5307122a997c825a504b53895fd7b1d1e064a1e50f42b42434fad79ccbe1086a
+$ docker pull websphere-liberty@sha256:f776779955590d5ae1776c2c534e0500b51d15b3769975c17d79dd40c3442179
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **111.8 MB (111806861 bytes)**  
+-	Total Size: **111.8 MB (111763880 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7122ded5dd66ecd46fd4c0547307d2ffbfbe4c13248206d3de8c1f2fb464ac1f`
+-	Image ID: `sha256:225cc6a9dbd99c91fb462604104207edccf5e5269d2fd344d2c3e11e2c831d45`
 -	Entrypoint: `["\/opt\/ibm\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ibm\/wlp\/bin\/server","run","defaultServer"]`
 
 ```dockerfile
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG RELEASE
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 26 Jan 2023 13:21:29 GMT
+# Wed, 01 Feb 2023 12:00:23 GMT
 ADD file:4d5fa9b68af51e9c8cd7b25fb55ddd47256efb0b2eda9432507b72b7c1a17053 in / 
-# Thu, 26 Jan 2023 13:21:30 GMT
+# Wed, 01 Feb 2023 12:00:24 GMT
 CMD ["/bin/bash"]
-# Tue, 31 Jan 2023 18:09:20 GMT
+# Wed, 01 Feb 2023 18:23:26 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 31 Jan 2023 18:09:30 GMT
+# Wed, 01 Feb 2023 18:23:36 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 18:16:47 GMT
+# Wed, 01 Feb 2023 18:27:49 GMT
 ENV JAVA_VERSION=jdk-17.0.5+8_openj9-0.35.0
-# Tue, 31 Jan 2023 18:18:45 GMT
+# Wed, 01 Feb 2023 18:28:54 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='8f934ce1745f52a067bdeb56b3b9e9192f51e674ff2956a1e53b33e44ea5ca42';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_aarch64_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='d54972fb938f655a3665512c7181c2c5813e3bfe742650d6081e2f480388ef2f';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_ppc64le_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        amd64|x86_64)          ESUM='759f9c507e0faf53b260ee9f492bab8fdeb8091bdecad904134861714e4d913b';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_x64_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        s390x)          ESUM='64ffeaff0ea4915fb66d3356ef5de65e884172b031e0c268bdeb4d2aa6be1c91';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_s390x_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Tue, 31 Jan 2023 18:18:46 GMT
+# Wed, 01 Feb 2023 18:28:56 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 18:18:47 GMT
+# Wed, 01 Feb 2023 18:28:56 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal
-# Tue, 31 Jan 2023 18:19:19 GMT
+# Wed, 01 Feb 2023 18:29:29 GMT
 RUN set -eux;     unset OPENJ9_JAVA_OPTIONS;     SCC_SIZE="50m";     DOWNLOAD_PATH_TOMCAT=/tmp/tomcat;     INSTALL_PATH_TOMCAT=/opt/tomcat-home;     TOMCAT_CHECKSUM="0db27185d9fc3174f2c670f814df3dda8a008b89d1a38a5d96cbbe119767ebfb1cf0bce956b27954aee9be19c4a7b91f2579d967932207976322033a86075f98";     TOMCAT_DWNLD_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz";         mkdir -p "${DOWNLOAD_PATH_TOMCAT}" "${INSTALL_PATH_TOMCAT}";     curl -LfsSo "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz "${TOMCAT_DWNLD_URL}";     echo "${TOMCAT_CHECKSUM} *${DOWNLOAD_PATH_TOMCAT}/tomcat.tar.gz" | sha512sum -c -;     tar -xf "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz -C "${INSTALL_PATH_TOMCAT}" --strip-components=1;     rm -rf "${DOWNLOAD_PATH_TOMCAT}";         java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 15;     FULL=$( (java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     DST_CACHE=$(java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,destroy 2>&1 || true);     SCC_SIZE=$(echo $SCC_SIZE | sed 's/.$//');     SCC_SIZE=$(awk "BEGIN {print int($SCC_SIZE * $FULL / 100.0)}");     [ "${SCC_SIZE}" -eq 0 ] && SCC_SIZE=1;     SCC_SIZE="${SCC_SIZE}m";     java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     unset OPENJ9_JAVA_OPTIONS;         export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 5;     FULL=$( (java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     echo "SCC layer is $FULL% full.";     rm -rf "${INSTALL_PATH_TOMCAT}";     if [ -d "/opt/java/.scc" ]; then           chmod -R 0777 /opt/java/.scc;     fi;         echo "SCC generation phase completed";
-# Tue, 31 Jan 2023 20:38:07 GMT
+# Wed, 01 Feb 2023 20:08:28 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 20:38:07 GMT
+# Wed, 01 Feb 2023 20:08:28 GMT
 ARG OPENJ9_SCC=true
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 ARG EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 ARG NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 ARG NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 LABEL org.opencontainers.image.authors=Chris Potter, Christy Jesuraj, Melissa Lee org.opencontainers.image.vendor=IBM org.opencontainers.image.url=http://wasdev.net org.opencontainers.image.documentation=https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html org.opencontainers.image.version=22.0.0.12 org.opencontainers.image.revision=cl221220221107-1900 org.opencontainers.image.description=This image contains the WebSphere Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/WASdev/ci.docker#building-an-application-image org.opencontainers.image.title=IBM WebSphere Liberty
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 ENV LIBERTY_VERSION=22.0.0_12
-# Tue, 31 Jan 2023 20:40:49 GMT
+# Wed, 01 Feb 2023 20:10:57 GMT
 ARG LIBERTY_URL
-# Tue, 31 Jan 2023 20:40:50 GMT
+# Wed, 01 Feb 2023 20:10:58 GMT
 ARG DOWNLOAD_OPTIONS=
-# Tue, 31 Jan 2023 20:40:59 GMT
+# Wed, 01 Feb 2023 20:11:07 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 OPENJ9_SCC=true VERBOSE=false
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip wget openssl     && rm -rf /var/lib/apt/lists/*     && mkdir -p /licenses/     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && LIBERTY_URL=${LIBERTY_URL:-$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*kernel:\s//p' | tr -d '\r' )}      && wget $DOWNLOAD_OPTIONS $LIBERTY_URL -U UA-IBM-WebSphere-Liberty-Docker -O /tmp/wlp.zip     && unzip -q /tmp/wlp.zip -d /opt/ibm     && rm /tmp/wlp.zip     && chown -R 1001:0 /opt/ibm/wlp     && chmod -R g+rw /opt/ibm/wlp     && LICENSE_BASE=$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*license:\s//p' | sed 's/\(.*\)\/.*/\1\//' | tr -d '\r')     && wget ${LICENSE_BASE}en.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/en.html     && wget ${LICENSE_BASE}non_ibm_license.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/non_ibm_license.html     && wget ${LICENSE_BASE}notices.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/notices.html     && echo "$EN_SHA /licenses/en.html" | sha256sum -c --strict --check     && echo "$NON_IBM_SHA /licenses/non_ibm_license.html" | sha256sum -c --strict --check     && echo "$NOTICES_SHA /licenses/notices.html" | sha256sum -c --strict --check     && apt-get purge --auto-remove -y unzip     && apt-get purge --auto-remove -y wget     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 20:41:00 GMT
+# Wed, 01 Feb 2023 20:11:08 GMT
 ENV PATH=/opt/ibm/wlp/bin:/opt/ibm/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 20:41:00 GMT
+# Wed, 01 Feb 2023 20:11:08 GMT
 LABEL ProductID=fbf6a96d49214c0abc6a3bc5da6e48cd ProductName=WebSphere Application Server Liberty ProductVersion=22.0.0.12 BuildLabel=cl221220221107-1900
-# Tue, 31 Jan 2023 20:41:00 GMT
+# Wed, 01 Feb 2023 20:11:08 GMT
 ENV LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ibm/wlp/output OPENJ9_SCC=true
-# Tue, 31 Jan 2023 20:41:01 GMT
+# Wed, 01 Feb 2023 20:11:09 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN /opt/ibm/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 31 Jan 2023 20:41:01 GMT
+# Wed, 01 Feb 2023 20:11:09 GMT
 COPY dir:8bf844c49178cf63745af9ec643f57d70bd92c28166fabfad188dfc250d88353 in /opt/ibm/helpers/ 
-# Tue, 31 Jan 2023 20:41:01 GMT
+# Wed, 01 Feb 2023 20:11:09 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ibm/fixes/ 
-# Tue, 31 Jan 2023 20:41:02 GMT
+# Wed, 01 Feb 2023 20:11:10 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN mkdir /logs     && mkdir /etc/wlp     && mkdir -p /opt/ibm/wlp/usr/shared/resources/lib.index.cache     && mkdir -p /home/default     && mkdir /output     && chmod -t /output     && rm -rf /output     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ibm/wlp/usr/servers/defaultServer /config     && ln -s /opt/ibm /liberty     && ln -s /opt/ibm/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /opt/ibm/helpers     && chmod -R g+rwx /opt/ibm/helpers     && chown -R 1001:0 /opt/ibm/fixes     && chmod -R g+rwx /opt/ibm/fixes     && chown -R 1001:0 /opt/ibm/wlp/usr     && chmod -R g+rw /opt/ibm/wlp/usr     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rw /opt/ibm/wlp/output     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && chown -R 1001:0 /home/default     && chmod -R g+rw /home/default
-# Tue, 31 Jan 2023 20:41:07 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=1e17d4aaf1fa467f73b9b8b81c1cb0ef2839ef5e9772cad5821e0322fb3f455a NON_IBM_SHA=bb36c29ffe57a4cb5805d5cdcaa2594229e8caded88ec178aea3561fac30b06a NOTICES_SHA=3f1afde6d12d56d4c96bb3005aa9f80c78089b9b358e952974fe1fad9f4cf3a4 VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rwx /opt/ibm/wlp/output
-# Tue, 31 Jan 2023 20:41:07 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 ENV RANDFILE=/tmp/.rnd OPENJ9_JAVA_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal -Dosgi.checkConfiguration=false
-# Tue, 31 Jan 2023 20:41:07 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 USER 1001
-# Tue, 31 Jan 2023 20:41:07 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 EXPOSE 9080 9443
-# Tue, 31 Jan 2023 20:41:08 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 ENTRYPOINT ["/opt/ibm/helpers/runtime/docker-server.sh"]
-# Tue, 31 Jan 2023 20:41:08 GMT
+# Wed, 01 Feb 2023 20:11:16 GMT
 CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 ```
 
@@ -2268,41 +2268,41 @@ CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Tue, 31 Jan 2023 17:54:46 GMT  
 		Size: 27.0 MB (27016130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5406d9b53af576e5eab24c32472fe585404352de13fa2709d3d0cbb69e200e45`  
-		Last Modified: Tue, 31 Jan 2023 18:25:45 GMT  
-		Size: 15.7 MB (15686946 bytes)  
+	-	`sha256:32329c78fa891c29ef5b9df096b2cffaba8738e3e5a77aa5d7cb00958cf46491`  
+		Last Modified: Wed, 01 Feb 2023 18:33:24 GMT  
+		Size: 15.7 MB (15686940 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0714e404ae0ba086f5291bf5c8846a86f2717cfb77c0bccf2902410cce6ec2`  
-		Last Modified: Tue, 31 Jan 2023 18:28:36 GMT  
-		Size: 47.2 MB (47171552 bytes)  
+	-	`sha256:5dde736d5f3fc3ff30e36d5200176d181f3375acc1add5b3e1f1221fb4625a13`  
+		Last Modified: Wed, 01 Feb 2023 18:35:00 GMT  
+		Size: 47.2 MB (47171516 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4058dd980adb4d50bb006d9400f2cd60b6c7dc741192fac6a78638b1d14eb7f5`  
-		Last Modified: Tue, 31 Jan 2023 18:28:30 GMT  
-		Size: 4.9 MB (4912851 bytes)  
+	-	`sha256:7d4dc1d40a0f0a3191b241c09d9c4da6f009ee6df7d3945387d585e29ca96480`  
+		Last Modified: Wed, 01 Feb 2023 18:34:55 GMT  
+		Size: 4.9 MB (4916173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1948193069d26a46db2fb8df7d33054d10eb1d1189ce42963b239a6f414315cf`  
-		Last Modified: Tue, 31 Jan 2023 21:33:54 GMT  
-		Size: 14.4 MB (14374491 bytes)  
+	-	`sha256:062b3372f73ea932026b643e8eb0cb60109e6c19105a90ac9122ad89360ed774`  
+		Last Modified: Wed, 01 Feb 2023 20:46:16 GMT  
+		Size: 14.4 MB (14374519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:836658d08b1636beeb99d9b0d24f8685d1b5351285ba44dc2f3556eace87d6e7`  
-		Last Modified: Tue, 31 Jan 2023 21:33:52 GMT  
-		Size: 672.0 B  
+	-	`sha256:a270ab605f93210009123dfe18f00d2b3877f3a98d60041cc147cbd56e687b95`  
+		Last Modified: Wed, 01 Feb 2023 20:46:14 GMT  
+		Size: 673.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3d7137d9f55d544f6fec6eb65d8dc7cca6ca9efc0987576fe68932261e21ec91`  
-		Last Modified: Tue, 31 Jan 2023 21:33:52 GMT  
-		Size: 9.8 KB (9751 bytes)  
+	-	`sha256:af4484b5f3ff40fdcc0cf1c243f7ac975829031e6608757376252a50eae6aa29`  
+		Last Modified: Wed, 01 Feb 2023 20:46:14 GMT  
+		Size: 9.8 KB (9750 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61d347796060e65200ee58b501dd6074b644260765e3ebf1a10403fce2f60924`  
-		Last Modified: Tue, 31 Jan 2023 21:33:52 GMT  
+	-	`sha256:bc6e275ed2abaa853d4e525eb2e283cf8545289eed32549956b70c3fdd515d10`  
+		Last Modified: Wed, 01 Feb 2023 20:46:14 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bea488cd121f1642e54de4bfb2b109c726b375de18484bcd18d2f0dbfd72ab25`  
-		Last Modified: Tue, 31 Jan 2023 21:33:52 GMT  
-		Size: 10.7 KB (10730 bytes)  
+	-	`sha256:ffecf1bebbf6b32060ee5910ca984802e6c3a445f49291db96b8e25b6ea627a5`  
+		Last Modified: Wed, 01 Feb 2023 20:46:14 GMT  
+		Size: 10.7 KB (10731 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d6c9f9adcb6e188857bd18064fa749fdb32b7b0aee7eb41e8fa952dbf292ecc6`  
-		Last Modified: Tue, 31 Jan 2023 21:33:52 GMT  
-		Size: 2.6 MB (2623469 bytes)  
+	-	`sha256:69cfbfe570b722054443b6e05e5bb2117f40fd15d9f69e52e40f38cfd7a13aea`  
+		Last Modified: Wed, 01 Feb 2023 20:46:14 GMT  
+		Size: 2.6 MB (2577179 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `websphere-liberty:22.0.0.12-kernel-java8-ibmjava`
@@ -5227,7 +5227,7 @@ CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 ## `websphere-liberty:22.0.0.9-full-java11-openj9`
 
 ```console
-$ docker pull websphere-liberty@sha256:2825ebe2d112dbdc8e378f7231d15ecb3af587339bd44c13a72f4c41fd58f12c
+$ docker pull websphere-liberty@sha256:28846954de46150439bc467263b6cff45f57741203c0e3719c75f7b6b66926f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5557,104 +5557,104 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 ### `websphere-liberty:22.0.0.9-full-java11-openj9` - linux; s390x
 
 ```console
-$ docker pull websphere-liberty@sha256:9c38624318eba3862de50df2e328461876a6d178d54d6acd98330e12fa2d42b9
+$ docker pull websphere-liberty@sha256:c178926c6f9fc13d5333e4d3e0b7682cf360f2caa3ac882f7c6dafa4f5c79b97
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **407.6 MB (407558954 bytes)**  
+-	Total Size: **407.6 MB (407591716 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f2326c43de281efb1179ed761f29fbfe395914c23cc68d4122f3a44db6375ec9`
+-	Image ID: `sha256:acc393f9e87330423dc3737eea496f640353a1a1ec3a8c5d5f4c92cc7b62f147`
 -	Entrypoint: `["\/opt\/ibm\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ibm\/wlp\/bin\/server","run","defaultServer"]`
 
 ```dockerfile
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG RELEASE
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 26 Jan 2023 13:21:29 GMT
+# Wed, 01 Feb 2023 12:00:23 GMT
 ADD file:4d5fa9b68af51e9c8cd7b25fb55ddd47256efb0b2eda9432507b72b7c1a17053 in / 
-# Thu, 26 Jan 2023 13:21:30 GMT
+# Wed, 01 Feb 2023 12:00:24 GMT
 CMD ["/bin/bash"]
-# Tue, 31 Jan 2023 18:09:20 GMT
+# Wed, 01 Feb 2023 18:23:26 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 31 Jan 2023 18:09:30 GMT
+# Wed, 01 Feb 2023 18:23:36 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 18:13:14 GMT
+# Wed, 01 Feb 2023 18:25:34 GMT
 ENV JAVA_VERSION=jdk-11.0.17+8_openj9-0.35.0
-# Tue, 31 Jan 2023 18:15:13 GMT
+# Wed, 01 Feb 2023 18:26:40 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='ab7f01a961559b49ce9b0a76af20191b7c047c6c1b6e5258e38f6c38de8cdc3f';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_aarch64_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='fba1dd9c25b0cce7efe124151b006624eeb2d2b0764284ca892d0e50ee457a41';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_ppc64le_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        amd64|x86_64)          ESUM='b1d31a4165cabcad66771a05acf8ff750f40953558494ba8d88e97fac55af6a9';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_x64_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        s390x)          ESUM='5f52184c9f4fff9ed628c12da4567162c8be77f4bcbc5939b6fe6e9d250b3798';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_s390x_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Tue, 31 Jan 2023 18:15:15 GMT
+# Wed, 01 Feb 2023 18:26:42 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 18:15:15 GMT
+# Wed, 01 Feb 2023 18:26:42 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal
-# Tue, 31 Jan 2023 18:15:50 GMT
+# Wed, 01 Feb 2023 18:27:32 GMT
 RUN set -eux;     unset OPENJ9_JAVA_OPTIONS;     SCC_SIZE="50m";     DOWNLOAD_PATH_TOMCAT=/tmp/tomcat;     INSTALL_PATH_TOMCAT=/opt/tomcat-home;     TOMCAT_CHECKSUM="0db27185d9fc3174f2c670f814df3dda8a008b89d1a38a5d96cbbe119767ebfb1cf0bce956b27954aee9be19c4a7b91f2579d967932207976322033a86075f98";     TOMCAT_DWNLD_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz";         mkdir -p "${DOWNLOAD_PATH_TOMCAT}" "${INSTALL_PATH_TOMCAT}";     curl -LfsSo "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz "${TOMCAT_DWNLD_URL}";     echo "${TOMCAT_CHECKSUM} *${DOWNLOAD_PATH_TOMCAT}/tomcat.tar.gz" | sha512sum -c -;     tar -xf "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz -C "${INSTALL_PATH_TOMCAT}" --strip-components=1;     rm -rf "${DOWNLOAD_PATH_TOMCAT}";         java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 15;     FULL=$( (java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     DST_CACHE=$(java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,destroy 2>&1 || true);     SCC_SIZE=$(echo $SCC_SIZE | sed 's/.$//');     SCC_SIZE=$(awk "BEGIN {print int($SCC_SIZE * $FULL / 100.0)}");     [ "${SCC_SIZE}" -eq 0 ] && SCC_SIZE=1;     SCC_SIZE="${SCC_SIZE}m";     java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     unset OPENJ9_JAVA_OPTIONS;         export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 5;     FULL=$( (java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     echo "SCC layer is $FULL% full.";     rm -rf "${INSTALL_PATH_TOMCAT}";     if [ -d "/opt/java/.scc" ]; then           chmod -R 0777 /opt/java/.scc;     fi;         echo "SCC generation phase completed";
-# Tue, 31 Jan 2023 20:37:43 GMT
+# Wed, 01 Feb 2023 20:08:04 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 20:37:43 GMT
+# Wed, 01 Feb 2023 20:08:04 GMT
 ARG OPENJ9_SCC=true
-# Tue, 31 Jan 2023 21:08:40 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 ARG EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 ARG NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 ARG NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter, Christy Jesuraj org.opencontainers.image.vendor=IBM org.opencontainers.image.url=http://wasdev.net org.opencontainers.image.documentation=https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html org.opencontainers.image.version=22.0.0.9 org.opencontainers.image.revision=cl220920220815-1900 org.opencontainers.image.description=This image contains the WebSphere Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/WASdev/ci.docker#building-an-application-image org.opencontainers.image.title=IBM WebSphere Liberty
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 ENV LIBERTY_VERSION=22.0.0_09
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 ARG LIBERTY_URL
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:46 GMT
 ARG DOWNLOAD_OPTIONS=
-# Tue, 31 Jan 2023 21:08:53 GMT
+# Wed, 01 Feb 2023 20:28:55 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 OPENJ9_SCC=true VERBOSE=false
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip wget openssl     && rm -rf /var/lib/apt/lists/*     && mkdir -p /licenses/     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && LIBERTY_URL=${LIBERTY_URL:-$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*kernel:\s//p' | tr -d '\r' )}      && wget $DOWNLOAD_OPTIONS $LIBERTY_URL -U UA-IBM-WebSphere-Liberty-Docker -O /tmp/wlp.zip     && unzip -q /tmp/wlp.zip -d /opt/ibm     && rm /tmp/wlp.zip     && chown -R 1001:0 /opt/ibm/wlp     && chmod -R g+rw /opt/ibm/wlp     && LICENSE_BASE=$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*license:\s//p' | sed 's/\(.*\)\/.*/\1\//' | tr -d '\r')     && wget ${LICENSE_BASE}en.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/en.html     && wget ${LICENSE_BASE}non_ibm_license.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/non_ibm_license.html     && wget ${LICENSE_BASE}notices.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/notices.html     && echo "$EN_SHA /licenses/en.html" | sha256sum -c --strict --check     && echo "$NON_IBM_SHA /licenses/non_ibm_license.html" | sha256sum -c --strict --check     && echo "$NOTICES_SHA /licenses/notices.html" | sha256sum -c --strict --check     && apt-get purge --auto-remove -y unzip     && apt-get purge --auto-remove -y wget     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 21:08:54 GMT
+# Wed, 01 Feb 2023 20:28:55 GMT
 ENV PATH=/opt/ibm/wlp/bin:/opt/ibm/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 21:08:54 GMT
+# Wed, 01 Feb 2023 20:28:56 GMT
 LABEL ProductID=fbf6a96d49214c0abc6a3bc5da6e48cd ProductName=WebSphere Application Server Liberty ProductVersion=22.0.0.9 BuildLabel=cl220920220815-1900
-# Tue, 31 Jan 2023 21:08:54 GMT
+# Wed, 01 Feb 2023 20:28:56 GMT
 ENV LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ibm/wlp/output OPENJ9_SCC=true
-# Tue, 31 Jan 2023 21:08:55 GMT
+# Wed, 01 Feb 2023 20:28:56 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN /opt/ibm/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 31 Jan 2023 21:08:55 GMT
+# Wed, 01 Feb 2023 20:28:56 GMT
 COPY dir:8bf844c49178cf63745af9ec643f57d70bd92c28166fabfad188dfc250d88353 in /opt/ibm/helpers/ 
-# Tue, 31 Jan 2023 21:08:55 GMT
+# Wed, 01 Feb 2023 20:28:57 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ibm/fixes/ 
-# Tue, 31 Jan 2023 21:08:56 GMT
+# Wed, 01 Feb 2023 20:28:57 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN mkdir /logs     && mkdir /etc/wlp     && mkdir -p /opt/ibm/wlp/usr/shared/resources/lib.index.cache     && mkdir -p /home/default     && mkdir /output     && chmod -t /output     && rm -rf /output     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ibm/wlp/usr/servers/defaultServer /config     && ln -s /opt/ibm /liberty     && ln -s /opt/ibm/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /opt/ibm/helpers     && chmod -R g+rwx /opt/ibm/helpers     && chown -R 1001:0 /opt/ibm/fixes     && chmod -R g+rwx /opt/ibm/fixes     && chown -R 1001:0 /opt/ibm/wlp/usr     && chmod -R g+rw /opt/ibm/wlp/usr     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rw /opt/ibm/wlp/output     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && chown -R 1001:0 /home/default     && chmod -R g+rw /home/default
-# Tue, 31 Jan 2023 21:09:01 GMT
+# Wed, 01 Feb 2023 20:29:02 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rwx /opt/ibm/wlp/output
-# Tue, 31 Jan 2023 21:09:01 GMT
+# Wed, 01 Feb 2023 20:29:03 GMT
 ENV RANDFILE=/tmp/.rnd OPENJ9_JAVA_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal -Dosgi.checkConfiguration=false
-# Tue, 31 Jan 2023 21:09:02 GMT
+# Wed, 01 Feb 2023 20:29:03 GMT
 USER 1001
-# Tue, 31 Jan 2023 21:09:02 GMT
+# Wed, 01 Feb 2023 20:29:03 GMT
 EXPOSE 9080 9443
-# Tue, 31 Jan 2023 21:09:02 GMT
+# Wed, 01 Feb 2023 20:29:03 GMT
 ENTRYPOINT ["/opt/ibm/helpers/runtime/docker-server.sh"]
-# Tue, 31 Jan 2023 21:09:02 GMT
+# Wed, 01 Feb 2023 20:29:03 GMT
 CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
-# Tue, 31 Jan 2023 21:17:29 GMT
+# Wed, 01 Feb 2023 20:29:41 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 21:17:29 GMT
+# Wed, 01 Feb 2023 20:29:41 GMT
 ARG REPOSITORIES_PROPERTIES=
-# Tue, 31 Jan 2023 21:24:40 GMT
+# Wed, 01 Feb 2023 20:36:55 GMT
 # ARGS: REPOSITORIES_PROPERTIES= VERBOSE=false
 RUN if [ ! -z $REPOSITORIES_PROPERTIES ]; then mkdir /opt/ibm/wlp/etc/   && echo $REPOSITORIES_PROPERTIES > /opt/ibm/wlp/etc/repositories.properties; fi   && installUtility install --acceptLicense baseBundle   && if [ ! -z $REPOSITORIES_PROPERTIES ]; then rm /opt/ibm/wlp/etc/repositories.properties; fi   && rm -rf /output/workarea /output/logs   && find /opt/ibm/wlp ! -perm -g=rw -print0 | xargs -r -0 chmod g+rw
-# Tue, 31 Jan 2023 21:24:51 GMT
+# Wed, 01 Feb 2023 20:37:06 GMT
 COPY --chown=1001:0file:f212cc38605f508baa0f75a07632700533ad28792dd9761a792209e709b00f23 in /config/ 
-# Tue, 31 Jan 2023 21:25:16 GMT
+# Wed, 01 Feb 2023 20:37:31 GMT
 # ARGS: REPOSITORIES_PROPERTIES= VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && find /opt/ibm/wlp/output ! -perm -g=rwx -print0 | xargs -0 -r chmod g+rwx
 ```
@@ -5664,59 +5664,59 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 		Last Modified: Tue, 31 Jan 2023 17:54:46 GMT  
 		Size: 27.0 MB (27016130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5406d9b53af576e5eab24c32472fe585404352de13fa2709d3d0cbb69e200e45`  
-		Last Modified: Tue, 31 Jan 2023 18:25:45 GMT  
-		Size: 15.7 MB (15686946 bytes)  
+	-	`sha256:32329c78fa891c29ef5b9df096b2cffaba8738e3e5a77aa5d7cb00958cf46491`  
+		Last Modified: Wed, 01 Feb 2023 18:33:24 GMT  
+		Size: 15.7 MB (15686940 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:68f9e43b9be22d876ca8f054d2380db38d2bf92ed91ab533f959d36d37e456fb`  
-		Last Modified: Tue, 31 Jan 2023 18:27:25 GMT  
-		Size: 47.6 MB (47642944 bytes)  
+	-	`sha256:19ba7baf8026d8f40d5c119cf11fdb6d21249356d691e52da604fcf2107d05a4`  
+		Last Modified: Wed, 01 Feb 2023 18:34:23 GMT  
+		Size: 47.6 MB (47642946 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c35ddc7c9947667de6c3af4c36b23372330b434bdd6d50dbdb962f302c8c365f`  
-		Last Modified: Tue, 31 Jan 2023 18:27:20 GMT  
-		Size: 4.3 MB (4327007 bytes)  
+	-	`sha256:763ced59e58d5188a679c7c1b6dea8805c26f03bdb8a71bc0298c6cde7c0e47e`  
+		Last Modified: Wed, 01 Feb 2023 18:34:17 GMT  
+		Size: 4.4 MB (4364541 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d653fe49c1fe003203e510cb016d8b628f26cae17a8aa8bd6d42afc09fc1e56`  
-		Last Modified: Tue, 31 Jan 2023 21:35:12 GMT  
-		Size: 14.3 MB (14273843 bytes)  
+	-	`sha256:d7f12686e10fa8fe80016715865e0fd1f061fc5efb3d23a1830b13a1be3752e6`  
+		Last Modified: Wed, 01 Feb 2023 20:47:06 GMT  
+		Size: 14.3 MB (14273852 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a9a4fdceb6e51350a03317e7315b1d0d899a9d26638c23f6d081ac2b592c395`  
-		Last Modified: Tue, 31 Jan 2023 21:35:09 GMT  
-		Size: 677.0 B  
+	-	`sha256:529a2079348863b537b9c3f9c3ab85418b822f624bbf31388732fd9f1eb968d0`  
+		Last Modified: Wed, 01 Feb 2023 20:47:03 GMT  
+		Size: 675.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a9e7f27d48db483a5e26e857244af6d7e54b6ee39755643f5e83c78eec33b77`  
-		Last Modified: Tue, 31 Jan 2023 21:35:09 GMT  
-		Size: 9.8 KB (9753 bytes)  
+	-	`sha256:6cd4916991b63218b9b7acd8df8f817770e7295658043aab0248ebbd2112d477`  
+		Last Modified: Wed, 01 Feb 2023 20:47:03 GMT  
+		Size: 9.8 KB (9750 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:da6b4d66f60b359f0aa24fb74fc2a3f3941efc914635e6baadafc03c68cecda5`  
-		Last Modified: Tue, 31 Jan 2023 21:35:09 GMT  
-		Size: 269.0 B  
+	-	`sha256:23dd304c4a7161c9b58ff4dbe9f12164a770a85d8e2bbddf49efcfccb1069e90`  
+		Last Modified: Wed, 01 Feb 2023 20:47:03 GMT  
+		Size: 271.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd174d1ff89443b6a525c393fa4cace1e0a5d12091867727b8a899dcf465c0dd`  
-		Last Modified: Tue, 31 Jan 2023 21:35:09 GMT  
-		Size: 10.7 KB (10729 bytes)  
+	-	`sha256:9bb71217ec8e5d96d6c250439aecf70118fe1a77822a6880f96d933bd15233ba`  
+		Last Modified: Wed, 01 Feb 2023 20:47:03 GMT  
+		Size: 10.7 KB (10735 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6d6bc2be5d707d6813224455e6a5c2f356afe41843cd7ae1b3e1397443e17273`  
-		Last Modified: Tue, 31 Jan 2023 21:35:10 GMT  
-		Size: 2.6 MB (2604395 bytes)  
+	-	`sha256:14a0e71047cf66d96f86fb7a45ced76ea62fe2dce0b5bc600d6e46ac556519aa`  
+		Last Modified: Wed, 01 Feb 2023 20:47:04 GMT  
+		Size: 2.6 MB (2585609 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c78783d14028248c672426558924ec1519248c28624ab885e4aa05d86b7e80d9`  
-		Last Modified: Tue, 31 Jan 2023 21:35:52 GMT  
-		Size: 281.6 MB (281621386 bytes)  
+	-	`sha256:1e65b17c9b55eae535e24ad27fb6c441e060ea4ba70fa7877716011e84c9e0ba`  
+		Last Modified: Wed, 01 Feb 2023 20:47:31 GMT  
+		Size: 281.6 MB (281621463 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a679ae76da851d0190d0269dd991dd205e48d59a138aa9c11385ee34f4b99ae1`  
-		Last Modified: Tue, 31 Jan 2023 21:35:40 GMT  
-		Size: 948.0 B  
+	-	`sha256:2c49fe2dbd9022f778bf62e609a751d59cacdea5a86668b656dd9ff63cde7f65`  
+		Last Modified: Wed, 01 Feb 2023 20:47:19 GMT  
+		Size: 942.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c24c01f13b8c67cb7aa931123db1046994e20e457e3d2e736880b7bc26fc6ee4`  
-		Last Modified: Tue, 31 Jan 2023 21:35:41 GMT  
-		Size: 14.4 MB (14363927 bytes)  
+	-	`sha256:a5b5aec98d9d933555cc17771cfa9e94dccdc7772817a49674cb563f32d93f5a`  
+		Last Modified: Wed, 01 Feb 2023 20:47:21 GMT  
+		Size: 14.4 MB (14377862 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `websphere-liberty:22.0.0.9-full-java17-openj9`
 
 ```console
-$ docker pull websphere-liberty@sha256:3810855c02990c69e4fd76f5d314abb957473040b2bae623f8859a60c56265df
+$ docker pull websphere-liberty@sha256:1455acb57e877e356820df7f79cf20737f6a2562354d6a48f3c21f69cd164af9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6046,104 +6046,104 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 ### `websphere-liberty:22.0.0.9-full-java17-openj9` - linux; s390x
 
 ```console
-$ docker pull websphere-liberty@sha256:9c6455116a5671975a6cdcdfb651ed04189690ed0382e84ddcebe69a74d4f57b
+$ docker pull websphere-liberty@sha256:2570d07922c63bbc5b890c4c1ae63f2691e2a6f45fdae656307918a9063318d8
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **408.0 MB (407982809 bytes)**  
+-	Total Size: **408.0 MB (408031480 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:59e040aa733883ef3ba6c310030a755606ae10db5f12bf0ddb7215a7df1fe1eb`
+-	Image ID: `sha256:3d3e2d619f509dff4322a6a3d65df0b19bbcceb0be0337486e1c56ce273a6d99`
 -	Entrypoint: `["\/opt\/ibm\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ibm\/wlp\/bin\/server","run","defaultServer"]`
 
 ```dockerfile
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG RELEASE
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 26 Jan 2023 13:21:29 GMT
+# Wed, 01 Feb 2023 12:00:23 GMT
 ADD file:4d5fa9b68af51e9c8cd7b25fb55ddd47256efb0b2eda9432507b72b7c1a17053 in / 
-# Thu, 26 Jan 2023 13:21:30 GMT
+# Wed, 01 Feb 2023 12:00:24 GMT
 CMD ["/bin/bash"]
-# Tue, 31 Jan 2023 18:09:20 GMT
+# Wed, 01 Feb 2023 18:23:26 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 31 Jan 2023 18:09:30 GMT
+# Wed, 01 Feb 2023 18:23:36 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 18:16:47 GMT
+# Wed, 01 Feb 2023 18:27:49 GMT
 ENV JAVA_VERSION=jdk-17.0.5+8_openj9-0.35.0
-# Tue, 31 Jan 2023 18:18:45 GMT
+# Wed, 01 Feb 2023 18:28:54 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='8f934ce1745f52a067bdeb56b3b9e9192f51e674ff2956a1e53b33e44ea5ca42';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_aarch64_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='d54972fb938f655a3665512c7181c2c5813e3bfe742650d6081e2f480388ef2f';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_ppc64le_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        amd64|x86_64)          ESUM='759f9c507e0faf53b260ee9f492bab8fdeb8091bdecad904134861714e4d913b';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_x64_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        s390x)          ESUM='64ffeaff0ea4915fb66d3356ef5de65e884172b031e0c268bdeb4d2aa6be1c91';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_s390x_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Tue, 31 Jan 2023 18:18:46 GMT
+# Wed, 01 Feb 2023 18:28:56 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 18:18:47 GMT
+# Wed, 01 Feb 2023 18:28:56 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal
-# Tue, 31 Jan 2023 18:19:19 GMT
+# Wed, 01 Feb 2023 18:29:29 GMT
 RUN set -eux;     unset OPENJ9_JAVA_OPTIONS;     SCC_SIZE="50m";     DOWNLOAD_PATH_TOMCAT=/tmp/tomcat;     INSTALL_PATH_TOMCAT=/opt/tomcat-home;     TOMCAT_CHECKSUM="0db27185d9fc3174f2c670f814df3dda8a008b89d1a38a5d96cbbe119767ebfb1cf0bce956b27954aee9be19c4a7b91f2579d967932207976322033a86075f98";     TOMCAT_DWNLD_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz";         mkdir -p "${DOWNLOAD_PATH_TOMCAT}" "${INSTALL_PATH_TOMCAT}";     curl -LfsSo "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz "${TOMCAT_DWNLD_URL}";     echo "${TOMCAT_CHECKSUM} *${DOWNLOAD_PATH_TOMCAT}/tomcat.tar.gz" | sha512sum -c -;     tar -xf "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz -C "${INSTALL_PATH_TOMCAT}" --strip-components=1;     rm -rf "${DOWNLOAD_PATH_TOMCAT}";         java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 15;     FULL=$( (java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     DST_CACHE=$(java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,destroy 2>&1 || true);     SCC_SIZE=$(echo $SCC_SIZE | sed 's/.$//');     SCC_SIZE=$(awk "BEGIN {print int($SCC_SIZE * $FULL / 100.0)}");     [ "${SCC_SIZE}" -eq 0 ] && SCC_SIZE=1;     SCC_SIZE="${SCC_SIZE}m";     java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     unset OPENJ9_JAVA_OPTIONS;         export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 5;     FULL=$( (java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     echo "SCC layer is $FULL% full.";     rm -rf "${INSTALL_PATH_TOMCAT}";     if [ -d "/opt/java/.scc" ]; then           chmod -R 0777 /opt/java/.scc;     fi;         echo "SCC generation phase completed";
-# Tue, 31 Jan 2023 20:38:07 GMT
+# Wed, 01 Feb 2023 20:08:28 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 20:38:07 GMT
+# Wed, 01 Feb 2023 20:08:28 GMT
 ARG OPENJ9_SCC=true
-# Tue, 31 Jan 2023 21:09:07 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ARG EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80
-# Tue, 31 Jan 2023 21:09:07 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ARG NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c
-# Tue, 31 Jan 2023 21:09:07 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ARG NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59
-# Tue, 31 Jan 2023 21:09:07 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 LABEL org.opencontainers.image.authors=Chris Potter, Christy Jesuraj, Melissa Lee org.opencontainers.image.vendor=IBM org.opencontainers.image.url=http://wasdev.net org.opencontainers.image.documentation=https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html org.opencontainers.image.version=22.0.0.9 org.opencontainers.image.revision=cl220920220815-1900 org.opencontainers.image.description=This image contains the WebSphere Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/WASdev/ci.docker#building-an-application-image org.opencontainers.image.title=IBM WebSphere Liberty
-# Tue, 31 Jan 2023 21:09:08 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ENV LIBERTY_VERSION=22.0.0_09
-# Tue, 31 Jan 2023 21:09:08 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ARG LIBERTY_URL
-# Tue, 31 Jan 2023 21:09:08 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ARG DOWNLOAD_OPTIONS=
-# Tue, 31 Jan 2023 21:09:17 GMT
+# Wed, 01 Feb 2023 20:29:21 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 OPENJ9_SCC=true VERBOSE=false
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip wget openssl     && rm -rf /var/lib/apt/lists/*     && mkdir -p /licenses/     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && LIBERTY_URL=${LIBERTY_URL:-$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*kernel:\s//p' | tr -d '\r' )}      && wget $DOWNLOAD_OPTIONS $LIBERTY_URL -U UA-IBM-WebSphere-Liberty-Docker -O /tmp/wlp.zip     && unzip -q /tmp/wlp.zip -d /opt/ibm     && rm /tmp/wlp.zip     && chown -R 1001:0 /opt/ibm/wlp     && chmod -R g+rw /opt/ibm/wlp     && LICENSE_BASE=$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*license:\s//p' | sed 's/\(.*\)\/.*/\1\//' | tr -d '\r')     && wget ${LICENSE_BASE}en.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/en.html     && wget ${LICENSE_BASE}non_ibm_license.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/non_ibm_license.html     && wget ${LICENSE_BASE}notices.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/notices.html     && echo "$EN_SHA /licenses/en.html" | sha256sum -c --strict --check     && echo "$NON_IBM_SHA /licenses/non_ibm_license.html" | sha256sum -c --strict --check     && echo "$NOTICES_SHA /licenses/notices.html" | sha256sum -c --strict --check     && apt-get purge --auto-remove -y unzip     && apt-get purge --auto-remove -y wget     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 21:09:18 GMT
+# Wed, 01 Feb 2023 20:29:22 GMT
 ENV PATH=/opt/ibm/wlp/bin:/opt/ibm/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 21:09:18 GMT
+# Wed, 01 Feb 2023 20:29:22 GMT
 LABEL ProductID=fbf6a96d49214c0abc6a3bc5da6e48cd ProductName=WebSphere Application Server Liberty ProductVersion=22.0.0.9 BuildLabel=cl220920220815-1900
-# Tue, 31 Jan 2023 21:09:18 GMT
+# Wed, 01 Feb 2023 20:29:22 GMT
 ENV LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ibm/wlp/output OPENJ9_SCC=true
-# Tue, 31 Jan 2023 21:09:18 GMT
+# Wed, 01 Feb 2023 20:29:23 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN /opt/ibm/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 31 Jan 2023 21:09:19 GMT
+# Wed, 01 Feb 2023 20:29:23 GMT
 COPY dir:8bf844c49178cf63745af9ec643f57d70bd92c28166fabfad188dfc250d88353 in /opt/ibm/helpers/ 
-# Tue, 31 Jan 2023 21:09:19 GMT
+# Wed, 01 Feb 2023 20:29:23 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ibm/fixes/ 
-# Tue, 31 Jan 2023 21:09:19 GMT
+# Wed, 01 Feb 2023 20:29:24 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN mkdir /logs     && mkdir /etc/wlp     && mkdir -p /opt/ibm/wlp/usr/shared/resources/lib.index.cache     && mkdir -p /home/default     && mkdir /output     && chmod -t /output     && rm -rf /output     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ibm/wlp/usr/servers/defaultServer /config     && ln -s /opt/ibm /liberty     && ln -s /opt/ibm/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /opt/ibm/helpers     && chmod -R g+rwx /opt/ibm/helpers     && chown -R 1001:0 /opt/ibm/fixes     && chmod -R g+rwx /opt/ibm/fixes     && chown -R 1001:0 /opt/ibm/wlp/usr     && chmod -R g+rw /opt/ibm/wlp/usr     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rw /opt/ibm/wlp/output     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && chown -R 1001:0 /home/default     && chmod -R g+rw /home/default
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:29 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rwx /opt/ibm/wlp/output
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:29 GMT
 ENV RANDFILE=/tmp/.rnd OPENJ9_JAVA_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal -Dosgi.checkConfiguration=false
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:30 GMT
 USER 1001
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:30 GMT
 EXPOSE 9080 9443
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:30 GMT
 ENTRYPOINT ["/opt/ibm/helpers/runtime/docker-server.sh"]
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:30 GMT
 CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
-# Tue, 31 Jan 2023 21:25:25 GMT
+# Wed, 01 Feb 2023 20:37:51 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 21:25:25 GMT
+# Wed, 01 Feb 2023 20:37:52 GMT
 ARG REPOSITORIES_PROPERTIES=
-# Tue, 31 Jan 2023 21:32:25 GMT
+# Wed, 01 Feb 2023 20:44:50 GMT
 # ARGS: REPOSITORIES_PROPERTIES= VERBOSE=false
 RUN if [ ! -z $REPOSITORIES_PROPERTIES ]; then mkdir /opt/ibm/wlp/etc/   && echo $REPOSITORIES_PROPERTIES > /opt/ibm/wlp/etc/repositories.properties; fi   && installUtility install --acceptLicense baseBundle   && if [ ! -z $REPOSITORIES_PROPERTIES ]; then rm /opt/ibm/wlp/etc/repositories.properties; fi   && rm -rf /output/workarea /output/logs   && find /opt/ibm/wlp ! -perm -g=rw -print0 | xargs -r -0 chmod g+rw
-# Tue, 31 Jan 2023 21:32:30 GMT
+# Wed, 01 Feb 2023 20:44:57 GMT
 COPY --chown=1001:0file:f212cc38605f508baa0f75a07632700533ad28792dd9761a792209e709b00f23 in /config/ 
-# Tue, 31 Jan 2023 21:32:54 GMT
+# Wed, 01 Feb 2023 20:45:22 GMT
 # ARGS: REPOSITORIES_PROPERTIES= VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && find /opt/ibm/wlp/output ! -perm -g=rwx -print0 | xargs -0 -r chmod g+rwx
 ```
@@ -6153,53 +6153,53 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 		Last Modified: Tue, 31 Jan 2023 17:54:46 GMT  
 		Size: 27.0 MB (27016130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5406d9b53af576e5eab24c32472fe585404352de13fa2709d3d0cbb69e200e45`  
-		Last Modified: Tue, 31 Jan 2023 18:25:45 GMT  
-		Size: 15.7 MB (15686946 bytes)  
+	-	`sha256:32329c78fa891c29ef5b9df096b2cffaba8738e3e5a77aa5d7cb00958cf46491`  
+		Last Modified: Wed, 01 Feb 2023 18:33:24 GMT  
+		Size: 15.7 MB (15686940 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0714e404ae0ba086f5291bf5c8846a86f2717cfb77c0bccf2902410cce6ec2`  
-		Last Modified: Tue, 31 Jan 2023 18:28:36 GMT  
-		Size: 47.2 MB (47171552 bytes)  
+	-	`sha256:5dde736d5f3fc3ff30e36d5200176d181f3375acc1add5b3e1f1221fb4625a13`  
+		Last Modified: Wed, 01 Feb 2023 18:35:00 GMT  
+		Size: 47.2 MB (47171516 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4058dd980adb4d50bb006d9400f2cd60b6c7dc741192fac6a78638b1d14eb7f5`  
-		Last Modified: Tue, 31 Jan 2023 18:28:30 GMT  
-		Size: 4.9 MB (4912851 bytes)  
+	-	`sha256:7d4dc1d40a0f0a3191b241c09d9c4da6f009ee6df7d3945387d585e29ca96480`  
+		Last Modified: Wed, 01 Feb 2023 18:34:55 GMT  
+		Size: 4.9 MB (4916173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b029ad5ecf81359029a5b204696e66f3b3953db3174027ea6140750d204b331b`  
-		Last Modified: Tue, 31 Jan 2023 21:35:18 GMT  
-		Size: 14.3 MB (14273829 bytes)  
+	-	`sha256:f127c10dfc21878ce5ace77058c21b611bbcb04d3b2ba109c6dd1804d8730474`  
+		Last Modified: Wed, 01 Feb 2023 20:47:13 GMT  
+		Size: 14.3 MB (14273848 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0dbd354e5c3fe645b07965990c14fc290a8b6667a4859f8feeed5338b15925c3`  
-		Last Modified: Tue, 31 Jan 2023 21:35:16 GMT  
-		Size: 676.0 B  
+	-	`sha256:3ede642e0e91ca82c1cc7a0690e914b4105be95be56b2eb5fcc57557351c615b`  
+		Last Modified: Wed, 01 Feb 2023 20:47:11 GMT  
+		Size: 679.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a89e4e709ffba707b60fa5244553f70bda169e5c4e8ddfe230a60226054c1dec`  
-		Last Modified: Tue, 31 Jan 2023 21:35:16 GMT  
+	-	`sha256:b03a2f91c6851139f3d782e42dfc4991ac884259ea47852416be2bbbcd5d31e1`  
+		Last Modified: Wed, 01 Feb 2023 20:47:11 GMT  
 		Size: 9.8 KB (9752 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adabec4150c7540085ce28977062bfe0ab8c9333a5f1ae9f37b3d86dd2986077`  
-		Last Modified: Tue, 31 Jan 2023 21:35:16 GMT  
-		Size: 269.0 B  
+	-	`sha256:fe86ed15538cfbe4e61367f1d684a75e5394664974aa9e11a4f4227e6767c1cf`  
+		Last Modified: Wed, 01 Feb 2023 20:47:11 GMT  
+		Size: 271.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:132a6db2c223d0df1ff13a690c0cef673790802b45c5e46f91cd8a586571b3f6`  
-		Last Modified: Tue, 31 Jan 2023 21:35:16 GMT  
-		Size: 10.7 KB (10730 bytes)  
+	-	`sha256:07bfd2929e5678a1d6d8da840b0e354a0f13bc2fef0f570e3287f3581df7c72e`  
+		Last Modified: Wed, 01 Feb 2023 20:47:11 GMT  
+		Size: 10.7 KB (10726 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:58b69d554f9e01cfc9814ef697ab63897a74d0514362544512f72b17e0530361`  
-		Last Modified: Tue, 31 Jan 2023 21:35:16 GMT  
-		Size: 2.6 MB (2602065 bytes)  
+	-	`sha256:cb155c4fd384499dacf47bc6039b3fd2893f6a1e209c577fdfa1a44554214d5e`  
+		Last Modified: Wed, 01 Feb 2023 20:47:11 GMT  
+		Size: 2.6 MB (2583418 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d50a42211450ceb540788f6d865bf13c0512a90ea9013aab58917efa8f802b8f`  
-		Last Modified: Tue, 31 Jan 2023 21:36:09 GMT  
-		Size: 281.6 MB (281621424 bytes)  
+	-	`sha256:603355eea5735d4dcf5b69337afb4acc5110b451a7fe598cbd1d28efaa28de95`  
+		Last Modified: Wed, 01 Feb 2023 20:47:49 GMT  
+		Size: 281.6 MB (281621218 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aeb287cd0bcc430134747b8ea4a5628d3ad220308a02206a355363876a6789d7`  
-		Last Modified: Tue, 31 Jan 2023 21:35:57 GMT  
-		Size: 946.0 B  
+	-	`sha256:cf247895dbd39ff170787a7c49e898adfd45bf636356f4f03d73ec9fe7b2dc61`  
+		Last Modified: Wed, 01 Feb 2023 20:47:37 GMT  
+		Size: 944.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:478ae78cdc01fa1d3717921b162d6578720133570027e4285e420650b9e481e6`  
-		Last Modified: Tue, 31 Jan 2023 21:35:59 GMT  
-		Size: 14.7 MB (14675639 bytes)  
+	-	`sha256:506f1281ca67c52a739e0d35e391209553d1611f6a838630d45bb32c7223f17e`  
+		Last Modified: Wed, 01 Feb 2023 20:47:38 GMT  
+		Size: 14.7 MB (14739865 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `websphere-liberty:22.0.0.9-full-java8-ibmjava`
@@ -6670,7 +6670,7 @@ RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /outpu
 ## `websphere-liberty:22.0.0.9-kernel-java11-openj9`
 
 ```console
-$ docker pull websphere-liberty@sha256:945ef51a44021b5d213a463533263f9fe5476f4c38d4c85b66d57314db304846
+$ docker pull websphere-liberty@sha256:ba144bc659cd7f14ba451d436468b7742401418e9fa2a288ffa25142c0fa02ba
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6952,93 +6952,93 @@ CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 ### `websphere-liberty:22.0.0.9-kernel-java11-openj9` - linux; s390x
 
 ```console
-$ docker pull websphere-liberty@sha256:0e3c211ce1dff3367c7816bcb76ec9991b41dbf22fae5a331842e8fc0ae84be4
+$ docker pull websphere-liberty@sha256:9017f5108a11b8a862abfc229b5bfcf98f0146112cc33b0378bb0cc3f00e5e07
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **111.6 MB (111572693 bytes)**  
+-	Total Size: **111.6 MB (111591449 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:413ed40aa1b4822e43336628271ad42b5a88afef874b751cf0e06b5e276716a4`
+-	Image ID: `sha256:85b81de00199cba0441966688a6648aba8e5efa0a56cbfca85757f798f6bbe81`
 -	Entrypoint: `["\/opt\/ibm\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ibm\/wlp\/bin\/server","run","defaultServer"]`
 
 ```dockerfile
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG RELEASE
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 26 Jan 2023 13:21:29 GMT
+# Wed, 01 Feb 2023 12:00:23 GMT
 ADD file:4d5fa9b68af51e9c8cd7b25fb55ddd47256efb0b2eda9432507b72b7c1a17053 in / 
-# Thu, 26 Jan 2023 13:21:30 GMT
+# Wed, 01 Feb 2023 12:00:24 GMT
 CMD ["/bin/bash"]
-# Tue, 31 Jan 2023 18:09:20 GMT
+# Wed, 01 Feb 2023 18:23:26 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 31 Jan 2023 18:09:30 GMT
+# Wed, 01 Feb 2023 18:23:36 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 18:13:14 GMT
+# Wed, 01 Feb 2023 18:25:34 GMT
 ENV JAVA_VERSION=jdk-11.0.17+8_openj9-0.35.0
-# Tue, 31 Jan 2023 18:15:13 GMT
+# Wed, 01 Feb 2023 18:26:40 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='ab7f01a961559b49ce9b0a76af20191b7c047c6c1b6e5258e38f6c38de8cdc3f';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_aarch64_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='fba1dd9c25b0cce7efe124151b006624eeb2d2b0764284ca892d0e50ee457a41';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_ppc64le_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        amd64|x86_64)          ESUM='b1d31a4165cabcad66771a05acf8ff750f40953558494ba8d88e97fac55af6a9';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_x64_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        s390x)          ESUM='5f52184c9f4fff9ed628c12da4567162c8be77f4bcbc5939b6fe6e9d250b3798';          BINARY_URL='https://github.com/ibmruntimes/semeru11-binaries/releases/download/jdk-11.0.17%2B8_openj9-0.35.0/ibm-semeru-open-jre_s390x_linux_11.0.17_8_openj9-0.35.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Tue, 31 Jan 2023 18:15:15 GMT
+# Wed, 01 Feb 2023 18:26:42 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 18:15:15 GMT
+# Wed, 01 Feb 2023 18:26:42 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal
-# Tue, 31 Jan 2023 18:15:50 GMT
+# Wed, 01 Feb 2023 18:27:32 GMT
 RUN set -eux;     unset OPENJ9_JAVA_OPTIONS;     SCC_SIZE="50m";     DOWNLOAD_PATH_TOMCAT=/tmp/tomcat;     INSTALL_PATH_TOMCAT=/opt/tomcat-home;     TOMCAT_CHECKSUM="0db27185d9fc3174f2c670f814df3dda8a008b89d1a38a5d96cbbe119767ebfb1cf0bce956b27954aee9be19c4a7b91f2579d967932207976322033a86075f98";     TOMCAT_DWNLD_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz";         mkdir -p "${DOWNLOAD_PATH_TOMCAT}" "${INSTALL_PATH_TOMCAT}";     curl -LfsSo "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz "${TOMCAT_DWNLD_URL}";     echo "${TOMCAT_CHECKSUM} *${DOWNLOAD_PATH_TOMCAT}/tomcat.tar.gz" | sha512sum -c -;     tar -xf "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz -C "${INSTALL_PATH_TOMCAT}" --strip-components=1;     rm -rf "${DOWNLOAD_PATH_TOMCAT}";         java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 15;     FULL=$( (java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     DST_CACHE=$(java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,destroy 2>&1 || true);     SCC_SIZE=$(echo $SCC_SIZE | sed 's/.$//');     SCC_SIZE=$(awk "BEGIN {print int($SCC_SIZE * $FULL / 100.0)}");     [ "${SCC_SIZE}" -eq 0 ] && SCC_SIZE=1;     SCC_SIZE="${SCC_SIZE}m";     java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     unset OPENJ9_JAVA_OPTIONS;         export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 5;     FULL=$( (java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     echo "SCC layer is $FULL% full.";     rm -rf "${INSTALL_PATH_TOMCAT}";     if [ -d "/opt/java/.scc" ]; then           chmod -R 0777 /opt/java/.scc;     fi;         echo "SCC generation phase completed";
-# Tue, 31 Jan 2023 20:37:43 GMT
+# Wed, 01 Feb 2023 20:08:04 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 20:37:43 GMT
+# Wed, 01 Feb 2023 20:08:04 GMT
 ARG OPENJ9_SCC=true
-# Tue, 31 Jan 2023 21:08:40 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 ARG EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 ARG NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 ARG NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 LABEL org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter, Christy Jesuraj org.opencontainers.image.vendor=IBM org.opencontainers.image.url=http://wasdev.net org.opencontainers.image.documentation=https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html org.opencontainers.image.version=22.0.0.9 org.opencontainers.image.revision=cl220920220815-1900 org.opencontainers.image.description=This image contains the WebSphere Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/WASdev/ci.docker#building-an-application-image org.opencontainers.image.title=IBM WebSphere Liberty
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 ENV LIBERTY_VERSION=22.0.0_09
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:45 GMT
 ARG LIBERTY_URL
-# Tue, 31 Jan 2023 21:08:41 GMT
+# Wed, 01 Feb 2023 20:28:46 GMT
 ARG DOWNLOAD_OPTIONS=
-# Tue, 31 Jan 2023 21:08:53 GMT
+# Wed, 01 Feb 2023 20:28:55 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 OPENJ9_SCC=true VERBOSE=false
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip wget openssl     && rm -rf /var/lib/apt/lists/*     && mkdir -p /licenses/     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && LIBERTY_URL=${LIBERTY_URL:-$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*kernel:\s//p' | tr -d '\r' )}      && wget $DOWNLOAD_OPTIONS $LIBERTY_URL -U UA-IBM-WebSphere-Liberty-Docker -O /tmp/wlp.zip     && unzip -q /tmp/wlp.zip -d /opt/ibm     && rm /tmp/wlp.zip     && chown -R 1001:0 /opt/ibm/wlp     && chmod -R g+rw /opt/ibm/wlp     && LICENSE_BASE=$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*license:\s//p' | sed 's/\(.*\)\/.*/\1\//' | tr -d '\r')     && wget ${LICENSE_BASE}en.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/en.html     && wget ${LICENSE_BASE}non_ibm_license.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/non_ibm_license.html     && wget ${LICENSE_BASE}notices.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/notices.html     && echo "$EN_SHA /licenses/en.html" | sha256sum -c --strict --check     && echo "$NON_IBM_SHA /licenses/non_ibm_license.html" | sha256sum -c --strict --check     && echo "$NOTICES_SHA /licenses/notices.html" | sha256sum -c --strict --check     && apt-get purge --auto-remove -y unzip     && apt-get purge --auto-remove -y wget     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 21:08:54 GMT
+# Wed, 01 Feb 2023 20:28:55 GMT
 ENV PATH=/opt/ibm/wlp/bin:/opt/ibm/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 21:08:54 GMT
+# Wed, 01 Feb 2023 20:28:56 GMT
 LABEL ProductID=fbf6a96d49214c0abc6a3bc5da6e48cd ProductName=WebSphere Application Server Liberty ProductVersion=22.0.0.9 BuildLabel=cl220920220815-1900
-# Tue, 31 Jan 2023 21:08:54 GMT
+# Wed, 01 Feb 2023 20:28:56 GMT
 ENV LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ibm/wlp/output OPENJ9_SCC=true
-# Tue, 31 Jan 2023 21:08:55 GMT
+# Wed, 01 Feb 2023 20:28:56 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN /opt/ibm/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 31 Jan 2023 21:08:55 GMT
+# Wed, 01 Feb 2023 20:28:56 GMT
 COPY dir:8bf844c49178cf63745af9ec643f57d70bd92c28166fabfad188dfc250d88353 in /opt/ibm/helpers/ 
-# Tue, 31 Jan 2023 21:08:55 GMT
+# Wed, 01 Feb 2023 20:28:57 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ibm/fixes/ 
-# Tue, 31 Jan 2023 21:08:56 GMT
+# Wed, 01 Feb 2023 20:28:57 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN mkdir /logs     && mkdir /etc/wlp     && mkdir -p /opt/ibm/wlp/usr/shared/resources/lib.index.cache     && mkdir -p /home/default     && mkdir /output     && chmod -t /output     && rm -rf /output     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ibm/wlp/usr/servers/defaultServer /config     && ln -s /opt/ibm /liberty     && ln -s /opt/ibm/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /opt/ibm/helpers     && chmod -R g+rwx /opt/ibm/helpers     && chown -R 1001:0 /opt/ibm/fixes     && chmod -R g+rwx /opt/ibm/fixes     && chown -R 1001:0 /opt/ibm/wlp/usr     && chmod -R g+rw /opt/ibm/wlp/usr     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rw /opt/ibm/wlp/output     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && chown -R 1001:0 /home/default     && chmod -R g+rw /home/default
-# Tue, 31 Jan 2023 21:09:01 GMT
+# Wed, 01 Feb 2023 20:29:02 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rwx /opt/ibm/wlp/output
-# Tue, 31 Jan 2023 21:09:01 GMT
+# Wed, 01 Feb 2023 20:29:03 GMT
 ENV RANDFILE=/tmp/.rnd OPENJ9_JAVA_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal -Dosgi.checkConfiguration=false
-# Tue, 31 Jan 2023 21:09:02 GMT
+# Wed, 01 Feb 2023 20:29:03 GMT
 USER 1001
-# Tue, 31 Jan 2023 21:09:02 GMT
+# Wed, 01 Feb 2023 20:29:03 GMT
 EXPOSE 9080 9443
-# Tue, 31 Jan 2023 21:09:02 GMT
+# Wed, 01 Feb 2023 20:29:03 GMT
 ENTRYPOINT ["/opt/ibm/helpers/runtime/docker-server.sh"]
-# Tue, 31 Jan 2023 21:09:02 GMT
+# Wed, 01 Feb 2023 20:29:03 GMT
 CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 ```
 
@@ -7047,47 +7047,47 @@ CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Tue, 31 Jan 2023 17:54:46 GMT  
 		Size: 27.0 MB (27016130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5406d9b53af576e5eab24c32472fe585404352de13fa2709d3d0cbb69e200e45`  
-		Last Modified: Tue, 31 Jan 2023 18:25:45 GMT  
-		Size: 15.7 MB (15686946 bytes)  
+	-	`sha256:32329c78fa891c29ef5b9df096b2cffaba8738e3e5a77aa5d7cb00958cf46491`  
+		Last Modified: Wed, 01 Feb 2023 18:33:24 GMT  
+		Size: 15.7 MB (15686940 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:68f9e43b9be22d876ca8f054d2380db38d2bf92ed91ab533f959d36d37e456fb`  
-		Last Modified: Tue, 31 Jan 2023 18:27:25 GMT  
-		Size: 47.6 MB (47642944 bytes)  
+	-	`sha256:19ba7baf8026d8f40d5c119cf11fdb6d21249356d691e52da604fcf2107d05a4`  
+		Last Modified: Wed, 01 Feb 2023 18:34:23 GMT  
+		Size: 47.6 MB (47642946 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c35ddc7c9947667de6c3af4c36b23372330b434bdd6d50dbdb962f302c8c365f`  
-		Last Modified: Tue, 31 Jan 2023 18:27:20 GMT  
-		Size: 4.3 MB (4327007 bytes)  
+	-	`sha256:763ced59e58d5188a679c7c1b6dea8805c26f03bdb8a71bc0298c6cde7c0e47e`  
+		Last Modified: Wed, 01 Feb 2023 18:34:17 GMT  
+		Size: 4.4 MB (4364541 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d653fe49c1fe003203e510cb016d8b628f26cae17a8aa8bd6d42afc09fc1e56`  
-		Last Modified: Tue, 31 Jan 2023 21:35:12 GMT  
-		Size: 14.3 MB (14273843 bytes)  
+	-	`sha256:d7f12686e10fa8fe80016715865e0fd1f061fc5efb3d23a1830b13a1be3752e6`  
+		Last Modified: Wed, 01 Feb 2023 20:47:06 GMT  
+		Size: 14.3 MB (14273852 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0a9a4fdceb6e51350a03317e7315b1d0d899a9d26638c23f6d081ac2b592c395`  
-		Last Modified: Tue, 31 Jan 2023 21:35:09 GMT  
-		Size: 677.0 B  
+	-	`sha256:529a2079348863b537b9c3f9c3ab85418b822f624bbf31388732fd9f1eb968d0`  
+		Last Modified: Wed, 01 Feb 2023 20:47:03 GMT  
+		Size: 675.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a9e7f27d48db483a5e26e857244af6d7e54b6ee39755643f5e83c78eec33b77`  
-		Last Modified: Tue, 31 Jan 2023 21:35:09 GMT  
-		Size: 9.8 KB (9753 bytes)  
+	-	`sha256:6cd4916991b63218b9b7acd8df8f817770e7295658043aab0248ebbd2112d477`  
+		Last Modified: Wed, 01 Feb 2023 20:47:03 GMT  
+		Size: 9.8 KB (9750 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:da6b4d66f60b359f0aa24fb74fc2a3f3941efc914635e6baadafc03c68cecda5`  
-		Last Modified: Tue, 31 Jan 2023 21:35:09 GMT  
-		Size: 269.0 B  
+	-	`sha256:23dd304c4a7161c9b58ff4dbe9f12164a770a85d8e2bbddf49efcfccb1069e90`  
+		Last Modified: Wed, 01 Feb 2023 20:47:03 GMT  
+		Size: 271.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd174d1ff89443b6a525c393fa4cace1e0a5d12091867727b8a899dcf465c0dd`  
-		Last Modified: Tue, 31 Jan 2023 21:35:09 GMT  
-		Size: 10.7 KB (10729 bytes)  
+	-	`sha256:9bb71217ec8e5d96d6c250439aecf70118fe1a77822a6880f96d933bd15233ba`  
+		Last Modified: Wed, 01 Feb 2023 20:47:03 GMT  
+		Size: 10.7 KB (10735 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6d6bc2be5d707d6813224455e6a5c2f356afe41843cd7ae1b3e1397443e17273`  
-		Last Modified: Tue, 31 Jan 2023 21:35:10 GMT  
-		Size: 2.6 MB (2604395 bytes)  
+	-	`sha256:14a0e71047cf66d96f86fb7a45ced76ea62fe2dce0b5bc600d6e46ac556519aa`  
+		Last Modified: Wed, 01 Feb 2023 20:47:04 GMT  
+		Size: 2.6 MB (2585609 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `websphere-liberty:22.0.0.9-kernel-java17-openj9`
 
 ```console
-$ docker pull websphere-liberty@sha256:fceb306c6950826afbc560bd7ee49693b63c7d3c9bd56e6665f726bf37d0b254
+$ docker pull websphere-liberty@sha256:ccdc8e3036dfcab8ed2af4eb5bb732ab04bbe928d7da85b56ba05d272132d709
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7369,93 +7369,93 @@ CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 ### `websphere-liberty:22.0.0.9-kernel-java17-openj9` - linux; s390x
 
 ```console
-$ docker pull websphere-liberty@sha256:3fe5d22a7dcdf8102ae34f90861d5181e721eba841e7cc8d6ba059069a1bc18a
+$ docker pull websphere-liberty@sha256:698225776217b7b09f595d7aafda2466a815304925a98128e05db091c142e6f3
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **111.7 MB (111684800 bytes)**  
+-	Total Size: **111.7 MB (111669453 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a77b9a0729d81ff2c817221362115176223e4cab4f8bf451c8b9878091fc87f6`
+-	Image ID: `sha256:9e08212a442b817b21849d2bd4254cf876e4aab49511d3868075c52ec58605e2`
 -	Entrypoint: `["\/opt\/ibm\/helpers\/runtime\/docker-server.sh"]`
 -	Default Command: `["\/opt\/ibm\/wlp\/bin\/server","run","defaultServer"]`
 
 ```dockerfile
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG RELEASE
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:21 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 26 Jan 2023 13:21:27 GMT
+# Wed, 01 Feb 2023 12:00:22 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 26 Jan 2023 13:21:29 GMT
+# Wed, 01 Feb 2023 12:00:23 GMT
 ADD file:4d5fa9b68af51e9c8cd7b25fb55ddd47256efb0b2eda9432507b72b7c1a17053 in / 
-# Thu, 26 Jan 2023 13:21:30 GMT
+# Wed, 01 Feb 2023 12:00:24 GMT
 CMD ["/bin/bash"]
-# Tue, 31 Jan 2023 18:09:20 GMT
+# Wed, 01 Feb 2023 18:23:26 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 31 Jan 2023 18:09:30 GMT
+# Wed, 01 Feb 2023 18:23:36 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 18:16:47 GMT
+# Wed, 01 Feb 2023 18:27:49 GMT
 ENV JAVA_VERSION=jdk-17.0.5+8_openj9-0.35.0
-# Tue, 31 Jan 2023 18:18:45 GMT
+# Wed, 01 Feb 2023 18:28:54 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='8f934ce1745f52a067bdeb56b3b9e9192f51e674ff2956a1e53b33e44ea5ca42';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_aarch64_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        ppc64el|ppc64le)          ESUM='d54972fb938f655a3665512c7181c2c5813e3bfe742650d6081e2f480388ef2f';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_ppc64le_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        amd64|x86_64)          ESUM='759f9c507e0faf53b260ee9f492bab8fdeb8091bdecad904134861714e4d913b';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_x64_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        s390x)          ESUM='64ffeaff0ea4915fb66d3356ef5de65e884172b031e0c268bdeb4d2aa6be1c91';          BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.5%2B8_openj9-0.35.0/ibm-semeru-open-jre_s390x_linux_17.0.5_8_openj9-0.35.0.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     curl -LfsSo /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p /opt/java/openjdk;     cd /opt/java/openjdk;     tar -xf /tmp/openjdk.tar.gz --strip-components=1;     rm -rf /tmp/openjdk.tar.gz;
-# Tue, 31 Jan 2023 18:18:46 GMT
+# Wed, 01 Feb 2023 18:28:56 GMT
 ENV JAVA_HOME=/opt/java/openjdk PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 18:18:47 GMT
+# Wed, 01 Feb 2023 18:28:56 GMT
 ENV JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal
-# Tue, 31 Jan 2023 18:19:19 GMT
+# Wed, 01 Feb 2023 18:29:29 GMT
 RUN set -eux;     unset OPENJ9_JAVA_OPTIONS;     SCC_SIZE="50m";     DOWNLOAD_PATH_TOMCAT=/tmp/tomcat;     INSTALL_PATH_TOMCAT=/opt/tomcat-home;     TOMCAT_CHECKSUM="0db27185d9fc3174f2c670f814df3dda8a008b89d1a38a5d96cbbe119767ebfb1cf0bce956b27954aee9be19c4a7b91f2579d967932207976322033a86075f98";     TOMCAT_DWNLD_URL="https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.35/bin/apache-tomcat-9.0.35.tar.gz";         mkdir -p "${DOWNLOAD_PATH_TOMCAT}" "${INSTALL_PATH_TOMCAT}";     curl -LfsSo "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz "${TOMCAT_DWNLD_URL}";     echo "${TOMCAT_CHECKSUM} *${DOWNLOAD_PATH_TOMCAT}/tomcat.tar.gz" | sha512sum -c -;     tar -xf "${DOWNLOAD_PATH_TOMCAT}"/tomcat.tar.gz -C "${INSTALL_PATH_TOMCAT}" --strip-components=1;     rm -rf "${DOWNLOAD_PATH_TOMCAT}";         java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 15;     FULL=$( (java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     DST_CACHE=$(java -Xshareclasses:name=dry_run_scc,cacheDir=/opt/java/.scc,destroy 2>&1 || true);     SCC_SIZE=$(echo $SCC_SIZE | sed 's/.$//');     SCC_SIZE=$(awk "BEGIN {print int($SCC_SIZE * $FULL / 100.0)}");     [ "${SCC_SIZE}" -eq 0 ] && SCC_SIZE=1;     SCC_SIZE="${SCC_SIZE}m";     java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal,createLayer -Xscmx$SCC_SIZE -version;     unset OPENJ9_JAVA_OPTIONS;         export OPENJ9_JAVA_OPTIONS="-Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,bootClassesOnly,nonFatal";     "${INSTALL_PATH_TOMCAT}"/bin/startup.sh;     sleep 5;     "${INSTALL_PATH_TOMCAT}"/bin/shutdown.sh -force;     sleep 5;     FULL=$( (java -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,printallStats 2>&1 || true) | awk '/^Cache is [0-9.]*% .*full/ {print substr($3, 1, length($3)-1)}');     echo "SCC layer is $FULL% full.";     rm -rf "${INSTALL_PATH_TOMCAT}";     if [ -d "/opt/java/.scc" ]; then           chmod -R 0777 /opt/java/.scc;     fi;         echo "SCC generation phase completed";
-# Tue, 31 Jan 2023 20:38:07 GMT
+# Wed, 01 Feb 2023 20:08:28 GMT
 ARG VERBOSE=false
-# Tue, 31 Jan 2023 20:38:07 GMT
+# Wed, 01 Feb 2023 20:08:28 GMT
 ARG OPENJ9_SCC=true
-# Tue, 31 Jan 2023 21:09:07 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ARG EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80
-# Tue, 31 Jan 2023 21:09:07 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ARG NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c
-# Tue, 31 Jan 2023 21:09:07 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ARG NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59
-# Tue, 31 Jan 2023 21:09:07 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 LABEL org.opencontainers.image.authors=Chris Potter, Christy Jesuraj, Melissa Lee org.opencontainers.image.vendor=IBM org.opencontainers.image.url=http://wasdev.net org.opencontainers.image.documentation=https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html org.opencontainers.image.version=22.0.0.9 org.opencontainers.image.revision=cl220920220815-1900 org.opencontainers.image.description=This image contains the WebSphere Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/WASdev/ci.docker#building-an-application-image org.opencontainers.image.title=IBM WebSphere Liberty
-# Tue, 31 Jan 2023 21:09:08 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ENV LIBERTY_VERSION=22.0.0_09
-# Tue, 31 Jan 2023 21:09:08 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ARG LIBERTY_URL
-# Tue, 31 Jan 2023 21:09:08 GMT
+# Wed, 01 Feb 2023 20:29:12 GMT
 ARG DOWNLOAD_OPTIONS=
-# Tue, 31 Jan 2023 21:09:17 GMT
+# Wed, 01 Feb 2023 20:29:21 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 OPENJ9_SCC=true VERBOSE=false
 RUN apt-get update     && apt-get install -y --no-install-recommends unzip wget openssl     && rm -rf /var/lib/apt/lists/*     && mkdir -p /licenses/     && useradd -u 1001 -r -g 0 -s /usr/sbin/nologin default     && LIBERTY_URL=${LIBERTY_URL:-$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*kernel:\s//p' | tr -d '\r' )}      && wget $DOWNLOAD_OPTIONS $LIBERTY_URL -U UA-IBM-WebSphere-Liberty-Docker -O /tmp/wlp.zip     && unzip -q /tmp/wlp.zip -d /opt/ibm     && rm /tmp/wlp.zip     && chown -R 1001:0 /opt/ibm/wlp     && chmod -R g+rw /opt/ibm/wlp     && LICENSE_BASE=$(wget -q -O - https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/downloads/wlp/index.yml  | grep $LIBERTY_VERSION -A 6 | sed -n 's/\s*license:\s//p' | sed 's/\(.*\)\/.*/\1\//' | tr -d '\r')     && wget ${LICENSE_BASE}en.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/en.html     && wget ${LICENSE_BASE}non_ibm_license.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/non_ibm_license.html     && wget ${LICENSE_BASE}notices.html -U UA-IBM-WebSphere-Liberty-Docker -O /licenses/notices.html     && echo "$EN_SHA /licenses/en.html" | sha256sum -c --strict --check     && echo "$NON_IBM_SHA /licenses/non_ibm_license.html" | sha256sum -c --strict --check     && echo "$NOTICES_SHA /licenses/notices.html" | sha256sum -c --strict --check     && apt-get purge --auto-remove -y unzip     && apt-get purge --auto-remove -y wget     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 21:09:18 GMT
+# Wed, 01 Feb 2023 20:29:22 GMT
 ENV PATH=/opt/ibm/wlp/bin:/opt/ibm/helpers/build:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 21:09:18 GMT
+# Wed, 01 Feb 2023 20:29:22 GMT
 LABEL ProductID=fbf6a96d49214c0abc6a3bc5da6e48cd ProductName=WebSphere Application Server Liberty ProductVersion=22.0.0.9 BuildLabel=cl220920220815-1900
-# Tue, 31 Jan 2023 21:09:18 GMT
+# Wed, 01 Feb 2023 20:29:22 GMT
 ENV LOG_DIR=/logs WLP_OUTPUT_DIR=/opt/ibm/wlp/output OPENJ9_SCC=true
-# Tue, 31 Jan 2023 21:09:18 GMT
+# Wed, 01 Feb 2023 20:29:23 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN /opt/ibm/wlp/bin/server create     && rm -rf $WLP_OUTPUT_DIR/.classCache /output/workarea
-# Tue, 31 Jan 2023 21:09:19 GMT
+# Wed, 01 Feb 2023 20:29:23 GMT
 COPY dir:8bf844c49178cf63745af9ec643f57d70bd92c28166fabfad188dfc250d88353 in /opt/ibm/helpers/ 
-# Tue, 31 Jan 2023 21:09:19 GMT
+# Wed, 01 Feb 2023 20:29:23 GMT
 COPY dir:1cf5cc2663c6235241a5228340a9c566587fe27b3e434a313debbf75dacd7a4b in /opt/ibm/fixes/ 
-# Tue, 31 Jan 2023 21:09:19 GMT
+# Wed, 01 Feb 2023 20:29:24 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN mkdir /logs     && mkdir /etc/wlp     && mkdir -p /opt/ibm/wlp/usr/shared/resources/lib.index.cache     && mkdir -p /home/default     && mkdir /output     && chmod -t /output     && rm -rf /output     && ln -s $WLP_OUTPUT_DIR/defaultServer /output     && ln -s /opt/ibm/wlp/usr/servers/defaultServer /config     && ln -s /opt/ibm /liberty     && ln -s /opt/ibm/wlp/usr/shared/resources/lib.index.cache /lib.index.cache     && mkdir -p /config/configDropins/defaults     && mkdir -p /config/configDropins/overrides     && chown -R 1001:0 /config     && chmod -R g+rw /config     && chown -R 1001:0 /opt/ibm/helpers     && chmod -R g+rwx /opt/ibm/helpers     && chown -R 1001:0 /opt/ibm/fixes     && chmod -R g+rwx /opt/ibm/fixes     && chown -R 1001:0 /opt/ibm/wlp/usr     && chmod -R g+rw /opt/ibm/wlp/usr     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rw /opt/ibm/wlp/output     && chown -R 1001:0 /logs     && chmod -R g+rw /logs     && chown -R 1001:0 /etc/wlp     && chmod -R g+rw /etc/wlp     && chown -R 1001:0 /home/default     && chmod -R g+rw /home/default
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:29 GMT
 # ARGS: DOWNLOAD_OPTIONS= EN_SHA=0da5f8d87acc83789f5856b075aff9036d7be8989085b67be945d81feac3fb80 NON_IBM_SHA=5b303ac0a6398ec84f34cfd0877c64f41183cab8a2c4d8867ff1f6c0bb56760c NOTICES_SHA=8a5706e718f5b1505aaf1d50f9160999862dc2e1537c60524929f79b3133bb59 VERBOSE=false
 RUN if [ "$OPENJ9_SCC" = "true" ]; then populate_scc.sh; fi     && rm -rf /output/messaging /output/resources/security /logs/* $WLP_OUTPUT_DIR/.classCache     && chown -R 1001:0 /opt/ibm/wlp/output     && chmod -R g+rwx /opt/ibm/wlp/output
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:29 GMT
 ENV RANDFILE=/tmp/.rnd OPENJ9_JAVA_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal -Dosgi.checkConfiguration=false
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:30 GMT
 USER 1001
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:30 GMT
 EXPOSE 9080 9443
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:30 GMT
 ENTRYPOINT ["/opt/ibm/helpers/runtime/docker-server.sh"]
-# Tue, 31 Jan 2023 21:09:25 GMT
+# Wed, 01 Feb 2023 20:29:30 GMT
 CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 ```
 
@@ -7464,41 +7464,41 @@ CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Tue, 31 Jan 2023 17:54:46 GMT  
 		Size: 27.0 MB (27016130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5406d9b53af576e5eab24c32472fe585404352de13fa2709d3d0cbb69e200e45`  
-		Last Modified: Tue, 31 Jan 2023 18:25:45 GMT  
-		Size: 15.7 MB (15686946 bytes)  
+	-	`sha256:32329c78fa891c29ef5b9df096b2cffaba8738e3e5a77aa5d7cb00958cf46491`  
+		Last Modified: Wed, 01 Feb 2023 18:33:24 GMT  
+		Size: 15.7 MB (15686940 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a0714e404ae0ba086f5291bf5c8846a86f2717cfb77c0bccf2902410cce6ec2`  
-		Last Modified: Tue, 31 Jan 2023 18:28:36 GMT  
-		Size: 47.2 MB (47171552 bytes)  
+	-	`sha256:5dde736d5f3fc3ff30e36d5200176d181f3375acc1add5b3e1f1221fb4625a13`  
+		Last Modified: Wed, 01 Feb 2023 18:35:00 GMT  
+		Size: 47.2 MB (47171516 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4058dd980adb4d50bb006d9400f2cd60b6c7dc741192fac6a78638b1d14eb7f5`  
-		Last Modified: Tue, 31 Jan 2023 18:28:30 GMT  
-		Size: 4.9 MB (4912851 bytes)  
+	-	`sha256:7d4dc1d40a0f0a3191b241c09d9c4da6f009ee6df7d3945387d585e29ca96480`  
+		Last Modified: Wed, 01 Feb 2023 18:34:55 GMT  
+		Size: 4.9 MB (4916173 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b029ad5ecf81359029a5b204696e66f3b3953db3174027ea6140750d204b331b`  
-		Last Modified: Tue, 31 Jan 2023 21:35:18 GMT  
-		Size: 14.3 MB (14273829 bytes)  
+	-	`sha256:f127c10dfc21878ce5ace77058c21b611bbcb04d3b2ba109c6dd1804d8730474`  
+		Last Modified: Wed, 01 Feb 2023 20:47:13 GMT  
+		Size: 14.3 MB (14273848 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0dbd354e5c3fe645b07965990c14fc290a8b6667a4859f8feeed5338b15925c3`  
-		Last Modified: Tue, 31 Jan 2023 21:35:16 GMT  
-		Size: 676.0 B  
+	-	`sha256:3ede642e0e91ca82c1cc7a0690e914b4105be95be56b2eb5fcc57557351c615b`  
+		Last Modified: Wed, 01 Feb 2023 20:47:11 GMT  
+		Size: 679.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a89e4e709ffba707b60fa5244553f70bda169e5c4e8ddfe230a60226054c1dec`  
-		Last Modified: Tue, 31 Jan 2023 21:35:16 GMT  
+	-	`sha256:b03a2f91c6851139f3d782e42dfc4991ac884259ea47852416be2bbbcd5d31e1`  
+		Last Modified: Wed, 01 Feb 2023 20:47:11 GMT  
 		Size: 9.8 KB (9752 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:adabec4150c7540085ce28977062bfe0ab8c9333a5f1ae9f37b3d86dd2986077`  
-		Last Modified: Tue, 31 Jan 2023 21:35:16 GMT  
-		Size: 269.0 B  
+	-	`sha256:fe86ed15538cfbe4e61367f1d684a75e5394664974aa9e11a4f4227e6767c1cf`  
+		Last Modified: Wed, 01 Feb 2023 20:47:11 GMT  
+		Size: 271.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:132a6db2c223d0df1ff13a690c0cef673790802b45c5e46f91cd8a586571b3f6`  
-		Last Modified: Tue, 31 Jan 2023 21:35:16 GMT  
-		Size: 10.7 KB (10730 bytes)  
+	-	`sha256:07bfd2929e5678a1d6d8da840b0e354a0f13bc2fef0f570e3287f3581df7c72e`  
+		Last Modified: Wed, 01 Feb 2023 20:47:11 GMT  
+		Size: 10.7 KB (10726 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:58b69d554f9e01cfc9814ef697ab63897a74d0514362544512f72b17e0530361`  
-		Last Modified: Tue, 31 Jan 2023 21:35:16 GMT  
-		Size: 2.6 MB (2602065 bytes)  
+	-	`sha256:cb155c4fd384499dacf47bc6039b3fd2893f6a1e209c577fdfa1a44554214d5e`  
+		Last Modified: Wed, 01 Feb 2023 20:47:11 GMT  
+		Size: 2.6 MB (2583418 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `websphere-liberty:22.0.0.9-kernel-java8-ibmjava`
