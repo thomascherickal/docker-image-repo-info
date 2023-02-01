@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cda350a491c0f6616f118407609979841d02ebcd54cf5f799489c91266708cd7`
-- Created: `2023-01-24T22:59:19.921191509Z`
-- Virtual Size: ~ 477.95 Mb  
+- Image ID: `sha256:ab418763db7a236ec3ea7c753e9068a7fdc519cdffca09a6648279389a87e9c4`
+- Created: `2023-02-01T01:57:22.146652957Z`
+- Virtual Size: ~ 477.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -22,6 +22,9 @@
   - `TMPDIR=/tmp/jetty`
   - `JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/11.0.13/jetty-home-11.0.13.tar.gz`
   - `JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	FBA2B18D238AB852DF95745C76157BDF03D0DCD6 	5C9579B3DB2E506429319AAEF33B071B29559E1E 	F254B35617DC255D9344BCFA873A8E86B4372146`
+- Labels:
+  - `org.opencontainers.image.ref.name=ubuntu`
+  - `org.opencontainers.image.version=20.04`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -792,19 +795,19 @@ $ apt-get source -qq --print-uris gzip=1.10-0ubuntu4.1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.10-0ubuntu4.1.debian.tar.xz' gzip_1.10-0ubuntu4.1.debian.tar.xz 31144 SHA512:26096584c400dc78d892f1721ad28778aa1a0c0476337bd37589c6d985f8636aad9c7fde55385c25ce1c8420a40c6ca33c06887f18b855ba8a5f45b980fe6c99
 ```
 
-### `dpkg` source package: `heimdal=7.7.0+dfsg-1ubuntu1.2`
+### `dpkg` source package: `heimdal=7.7.0+dfsg-1ubuntu1.3`
 
 Binary Packages:
 
-- `libasn1-8-heimdal:amd64=7.7.0+dfsg-1ubuntu1.2`
-- `libgssapi3-heimdal:amd64=7.7.0+dfsg-1ubuntu1.2`
-- `libhcrypto4-heimdal:amd64=7.7.0+dfsg-1ubuntu1.2`
-- `libheimbase1-heimdal:amd64=7.7.0+dfsg-1ubuntu1.2`
-- `libheimntlm0-heimdal:amd64=7.7.0+dfsg-1ubuntu1.2`
-- `libhx509-5-heimdal:amd64=7.7.0+dfsg-1ubuntu1.2`
-- `libkrb5-26-heimdal:amd64=7.7.0+dfsg-1ubuntu1.2`
-- `libroken18-heimdal:amd64=7.7.0+dfsg-1ubuntu1.2`
-- `libwind0-heimdal:amd64=7.7.0+dfsg-1ubuntu1.2`
+- `libasn1-8-heimdal:amd64=7.7.0+dfsg-1ubuntu1.3`
+- `libgssapi3-heimdal:amd64=7.7.0+dfsg-1ubuntu1.3`
+- `libhcrypto4-heimdal:amd64=7.7.0+dfsg-1ubuntu1.3`
+- `libheimbase1-heimdal:amd64=7.7.0+dfsg-1ubuntu1.3`
+- `libheimntlm0-heimdal:amd64=7.7.0+dfsg-1ubuntu1.3`
+- `libhx509-5-heimdal:amd64=7.7.0+dfsg-1ubuntu1.3`
+- `libkrb5-26-heimdal:amd64=7.7.0+dfsg-1ubuntu1.3`
+- `libroken18-heimdal:amd64=7.7.0+dfsg-1ubuntu1.3`
+- `libwind0-heimdal:amd64=7.7.0+dfsg-1ubuntu1.3`
 
 Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/share/doc/libgssapi3-heimdal/copyright`, `/usr/share/doc/libhcrypto4-heimdal/copyright`, `/usr/share/doc/libheimbase1-heimdal/copyright`, `/usr/share/doc/libheimntlm0-heimdal/copyright`, `/usr/share/doc/libhx509-5-heimdal/copyright`, `/usr/share/doc/libkrb5-26-heimdal/copyright`, `/usr/share/doc/libroken18-heimdal/copyright`, `/usr/share/doc/libwind0-heimdal/copyright`)
 
@@ -814,9 +817,14 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris heimdal=7.7.0+dfsg-1ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.3.dsc' heimdal_7.7.0+dfsg-1ubuntu1.3.dsc 3391 SHA512:5c4a420a9744a3499cc3c6bfa5e10752d32473b83c05518015e238bb50792308a344e4f6368f4c7cdab6f72c3164ebe7fa932192aef7c5c17aca826e767458c7
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg.orig.tar.xz' heimdal_7.7.0+dfsg.orig.tar.xz 5945252 SHA512:14141f3fff264c9516f736bcc51c998df69cfaa7108d2387921299efd7e82d79b918dee4029905dc221c204d3340ffc17da9472baf80029372d7c13de328ec0a
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.7.0%2bdfsg-1ubuntu1.3.debian.tar.xz' heimdal_7.7.0+dfsg-1ubuntu1.3.debian.tar.xz 138092 SHA512:e4fb361879935deeb67af3a8751e1f711a43f42102a43b546a9e66f5944add9b85520c8e02be78a2f0456cf6f4f9a1a9f4f63add2d788d988716ad493fae17db
+```
 
 ### `dpkg` source package: `hostname=3.23`
 
@@ -878,22 +886,27 @@ $ apt-get source -qq --print-uris keyutils=1.6-6ubuntu1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6-6ubuntu1.1.debian.tar.xz' keyutils_1.6-6ubuntu1.1.debian.tar.xz 14556 SHA512:300ed4c9626de95616a7c799f14d4f8bf7dc0b765d1751d3c9d60f86b7c60801bfbb97bf26c5d0ab39e5e41d5f3021ca870748f9555433b0e6c4ba261f475c3b
 ```
 
-### `dpkg` source package: `krb5=1.17-6ubuntu4.1`
+### `dpkg` source package: `krb5=1.17-6ubuntu4.2`
 
 Binary Packages:
 
-- `libgssapi-krb5-2:amd64=1.17-6ubuntu4.1`
-- `libk5crypto3:amd64=1.17-6ubuntu4.1`
-- `libkrb5-3:amd64=1.17-6ubuntu4.1`
-- `libkrb5support0:amd64=1.17-6ubuntu4.1`
+- `libgssapi-krb5-2:amd64=1.17-6ubuntu4.2`
+- `libk5crypto3:amd64=1.17-6ubuntu4.2`
+- `libkrb5-3:amd64=1.17-6ubuntu4.2`
+- `libkrb5support0:amd64=1.17-6ubuntu4.2`
 
 Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris krb5=1.17-6ubuntu4.2
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17-6ubuntu4.2.dsc' krb5_1.17-6ubuntu4.2.dsc 3333 SHA512:8d5615ae42239eac937b7c84fedbb73e04a2cf07d7aa49f6c6f741d87fc66778b0e533f020dba1cf9c15f58f55aaba1b342214da007124514cbec130ebf5c706
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA512:7462a578b936bd17f155a362dbb5d388e157a80a096549028be6c55400b11361c7f8a28e424fd5674801873651df4e694d536cae66728b7ae5e840e532358c52
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17-6ubuntu4.2.debian.tar.xz' krb5_1.17-6ubuntu4.2.debian.tar.xz 146636 SHA512:646106fbcb40a804694110a4c98a265bda3432f82219272d91a65c409ce5222a5840f460166019b7cd18184c4ec58185bce2c23e92702182316831fdd4b9c2f5
+```
 
 ### `dpkg` source package: `libcap-ng=0.7.9-2.1build1`
 
@@ -1452,22 +1465,27 @@ $ apt-get source -qq --print-uris p11-kit=0.23.20-1ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.20-1ubuntu0.1.debian.tar.xz' p11-kit_0.23.20-1ubuntu0.1.debian.tar.xz 24592 SHA512:b30c6640bb02f0651955447da65911942cd2e302bc5af0ab96787646e776486e317420682dd644079a47ac48d4e2732218545af56da7ec3d3af5fd0c7e55fb21
 ```
 
-### `dpkg` source package: `pam=1.3.1-5ubuntu4.3`
+### `dpkg` source package: `pam=1.3.1-5ubuntu4.4`
 
 Binary Packages:
 
-- `libpam-modules:amd64=1.3.1-5ubuntu4.3`
-- `libpam-modules-bin=1.3.1-5ubuntu4.3`
-- `libpam-runtime=1.3.1-5ubuntu4.3`
-- `libpam0g:amd64=1.3.1-5ubuntu4.3`
+- `libpam-modules:amd64=1.3.1-5ubuntu4.4`
+- `libpam-modules-bin=1.3.1-5ubuntu4.4`
+- `libpam-runtime=1.3.1-5ubuntu4.4`
+- `libpam0g:amd64=1.3.1-5ubuntu4.4`
 
 Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/doc/libpam-modules-bin/copyright`, `/usr/share/doc/libpam-runtime/copyright`, `/usr/share/doc/libpam0g/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris pam=1.3.1-5ubuntu4.4
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.4.dsc' pam_1.3.1-5ubuntu4.4.dsc 2594 SHA512:9b3cfd9c1ef7609d9e6a166676bc3e2535c2c824722459c56bfd04b87706677684c8a96f73caa7e4623c10433627d25d8589c6c2fe3415d211f5ccbe870e4800
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1.orig.tar.xz' pam_1.3.1.orig.tar.xz 912332 SHA512:6bc8e2a5b64686f0a23846221c5228c88418ba485b17c53b3a12f91262b5bb73566d6b6a5daa1f63bbae54310aee918b987e44a72ce809b4e7c668f0fadfe08e
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.3.1-5ubuntu4.4.debian.tar.xz' pam_1.3.1-5ubuntu4.4.debian.tar.xz 172340 SHA512:c4fab8883bac4b35cf95a02d4cd3ffa4207d41c32d48ffcc10e03754180fcee923e6d9980e291adc6fae6bd144fd7742b3adcd9456a6f95a3ba5ee85a12499c5
+```
 
 ### `dpkg` source package: `pcre2=10.34-7ubuntu0.1`
 
@@ -1749,19 +1767,25 @@ $ apt-get source -qq --print-uris tar=1.30+dfsg-7ubuntu0.20.04.2
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.2.debian.tar.xz' tar_1.30+dfsg-7ubuntu0.20.04.2.debian.tar.xz 23580 SHA512:2c9999bff0257251eb7d09a702898e42ce45b117d8e3595d68bf0a6ffdeb1d4a1d69202a2674d93a9193576f65dad4de4e094479228bfb4efc4a7931f00d3875
 ```
 
-### `dpkg` source package: `tzdata=2022f-0ubuntu0.20.04.1`
+### `dpkg` source package: `tzdata=2022g-0ubuntu0.20.04.1`
 
 Binary Packages:
 
-- `tzdata=2022f-0ubuntu0.20.04.1`
+- `tzdata=2022g-0ubuntu0.20.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tzdata=2022g-0ubuntu0.20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g-0ubuntu0.20.04.1.dsc' tzdata_2022g-0ubuntu0.20.04.1.dsc 2427 SHA512:d4c80e2ed58b98b18199acb1baa7ec4e686c9a732aef6a004b35c2fd796d5aa5ef31b8984fdee6036ef3a0352d17ef44d500a9d0bb095d03d381cef952a1ece9
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g.orig.tar.gz' tzdata_2022g.orig.tar.gz 439731 SHA512:7f79394295e00e3a24ebdbf9af3bc454a65f432a93b517e7e96c7f9db9949f6f5fdae9892a9d3789ff44ae0eb1bfe4744d36976b4624659af951d26414f94e65
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g.orig.tar.gz.asc' tzdata_2022g.orig.tar.gz.asc 833 SHA512:3474a05373ec4397e17133c54708e1f9efd1f1c5e7ee6945f0972809ceda2214cc4962238773818d04ab4f29dcdf0b3e87247ab19795d06a62b8769dd85cf76b
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g-0ubuntu0.20.04.1.debian.tar.xz' tzdata_2022g-0ubuntu0.20.04.1.debian.tar.xz 166596 SHA512:0897a318912c1327850ebd38b32fc9b253b3f146e61f7eeb0070314c6f0ba51deda4aafdf1ef5db8a63d5dc076cdc1bfdecb54bcb2cf98d3bb18524285ceb914
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2020.02.11.4`
 
