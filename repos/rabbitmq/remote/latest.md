@@ -1,7 +1,7 @@
 ## `rabbitmq:latest`
 
 ```console
-$ docker pull rabbitmq@sha256:45415de80634fdc09040cad7677b034af9bbcae2b12aec7da7b8412e838ddc50
+$ docker pull rabbitmq@sha256:b83ed01330ae9a66bebc7ace9b47ace674431da59584b9525a048d9541e3c998
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,28 +15,28 @@ $ docker pull rabbitmq@sha256:45415de80634fdc09040cad7677b034af9bbcae2b12aec7da7
 ### `rabbitmq:latest` - linux; amd64
 
 ```console
-$ docker pull rabbitmq@sha256:451e4ced02a823ed1371f30e0df4e19a14cfcf6b6f01806229f196870ed959d2
+$ docker pull rabbitmq@sha256:d1116aee51446a7040ce4a973e537e32f3327a54798ceb812c665206cf4390b7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **105.4 MB (105377138 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:64e650a429c751a22629b45499a86284a2e0efbba62b7b19c7c7d60ae459bd7e`
+-	Image ID: `sha256:453ccf05ba0f56066fa7b08619f3d003c95e55f8c7493c733312bc5ec14e9046`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["rabbitmq-server"]`
 
 ```dockerfile
-# Thu, 26 Jan 2023 13:19:55 GMT
+# Wed, 01 Feb 2023 11:42:37 GMT
 ARG RELEASE
-# Thu, 26 Jan 2023 13:19:55 GMT
+# Wed, 01 Feb 2023 11:42:37 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 26 Jan 2023 13:19:55 GMT
+# Wed, 01 Feb 2023 11:42:37 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 26 Jan 2023 13:19:55 GMT
+# Wed, 01 Feb 2023 11:42:37 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 26 Jan 2023 13:19:57 GMT
+# Wed, 01 Feb 2023 11:42:39 GMT
 ADD file:8b180a9b4497de0c6e131d6b48cf5c69a885379e63033ab9639d1655991e626c in / 
-# Thu, 26 Jan 2023 13:19:57 GMT
+# Wed, 01 Feb 2023 11:42:39 GMT
 CMD ["/bin/bash"]
 # Wed, 01 Feb 2023 05:25:48 GMT
 COPY /usr/local/bin/ /usr/local/bin/ # buildkit
