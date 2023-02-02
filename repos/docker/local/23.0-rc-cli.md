@@ -1,18 +1,18 @@
-# `docker:23.0.0-rc.3-cli`
+# `docker:23.0.0-rc.4-cli`
 
 ## Docker Metadata
 
-- Image ID: `sha256:71b2ce0aa41a2b58f922469974d4033f267ea091961cb7f3ac2bbeb7fc39b1c3`
-- Created: `2023-01-27T23:23:59.283667473Z`
-- Virtual Size: ~ 141.25 Mb  
+- Image ID: `sha256:7fc04b1f9f54cbd46ef7a117f0dcd4206774e673e2f78e2927ea0a939560a5cd`
+- Created: `2023-02-02T01:03:03.106616716Z`
+- Virtual Size: ~ 141.27 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `DOCKER_VERSION=23.0.0-rc.3`
-  - `DOCKER_BUILDX_VERSION=0.10.1`
+  - `DOCKER_VERSION=23.0.0-rc.4`
+  - `DOCKER_BUILDX_VERSION=0.10.2`
   - `DOCKER_COMPOSE_VERSION=2.15.1`
   - `DOCKER_TLS_CERTDIR=/certs`
 
