@@ -1,7 +1,7 @@
 ## `clojure:temurin-17-lein-2.10.0-bullseye-slim`
 
 ```console
-$ docker pull clojure@sha256:1514e0b4ba71848dfda7ae6fc81f75c6a655005d0f7d4522a5afe2efab6cc4af
+$ docker pull clojure@sha256:a348a73f7423741858c7312c14292c838fd441e3b330141409975166c0c6fc55
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,70 +12,70 @@ $ docker pull clojure@sha256:1514e0b4ba71848dfda7ae6fc81f75c6a655005d0f7d4522a5a
 ### `clojure:temurin-17-lein-2.10.0-bullseye-slim` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:9a63583147afca26d677c169b4fd5b81d100ab0133879481d38d8183ceb88b88
+$ docker pull clojure@sha256:4e30f2d2f6614ca084efa91dba0f52db468843e1e9676f3ffba83604f2c8c840
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **240.8 MB (240810982 bytes)**  
+-	Total Size: **240.8 MB (240810987 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cf87ce7bc36483c128ce5d0c02b398565805358853c136c14cd20203e0279d5d`
+-	Image ID: `sha256:46623c5c3c7cfbdba32362d434ffe5fd2947ec48118314214cd6af8ac200d8b4`
 -	Entrypoint: `["entrypoint"]`
 -	Default Command: `["repl"]`
 
 ```dockerfile
-# Wed, 11 Jan 2023 02:34:44 GMT
-ADD file:e2398d0bf516084b2b37ba1bb76b86d56e66999831df692461679fbd6a5d8eb6 in / 
-# Wed, 11 Jan 2023 02:34:44 GMT
+# Sat, 04 Feb 2023 06:51:41 GMT
+ADD file:1d256392bb7afe6942d157db84ca62774ac4114f8a3816fd50bace8d73130b57 in / 
+# Sat, 04 Feb 2023 06:51:41 GMT
 CMD ["bash"]
-# Wed, 11 Jan 2023 03:20:05 GMT
+# Sat, 04 Feb 2023 14:06:07 GMT
 ENV JAVA_HOME=/opt/java/openjdk
-# Wed, 01 Feb 2023 03:18:17 GMT
+# Sat, 04 Feb 2023 14:12:04 GMT
 COPY dir:5cf52f938fe415b0022fbccb8cf978562c503c0b8313cc9dedf46c1c4edb35cf in /opt/java/openjdk 
-# Wed, 01 Feb 2023 03:18:19 GMT
+# Sat, 04 Feb 2023 14:12:05 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Feb 2023 03:20:03 GMT
+# Sat, 04 Feb 2023 14:13:06 GMT
 ENV LEIN_VERSION=2.10.0
-# Wed, 01 Feb 2023 03:20:03 GMT
+# Sat, 04 Feb 2023 14:13:06 GMT
 ENV LEIN_INSTALL=/usr/local/bin/
-# Wed, 01 Feb 2023 03:20:03 GMT
+# Sat, 04 Feb 2023 14:13:06 GMT
 WORKDIR /tmp
-# Wed, 01 Feb 2023 03:20:18 GMT
+# Sat, 04 Feb 2023 14:13:22 GMT
 RUN set -eux; apt-get update && apt-get install -y gnupg wget && rm -rf /var/lib/apt/lists/* && mkdir -p $LEIN_INSTALL && wget -q https://codeberg.org/leiningen/leiningen/raw/tag/$LEIN_VERSION/bin/lein-pkg && echo "Comparing lein-pkg checksum ..." && sha256sum lein-pkg && echo "b1757ce941e4cbf15cbf649b7b4f413365e612da892d22841ec1728391bb66af *lein-pkg" | sha256sum -c - && mv lein-pkg $LEIN_INSTALL/lein && chmod 0755 $LEIN_INSTALL/lein && export GNUPGHOME="$(mktemp -d)" && export FILENAME_EXT=jar && if printf '%s\n%s\n' "2.9.7" "$LEIN_VERSION" | sort -cV; then               gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys 6A2D483DB59437EBB97D09B1040193357D0606ED;             else               gpg --batch --keyserver hkps://keyserver.ubuntu.com --recv-keys 20242BACBBE95ADA22D0AFD7808A33D379C806C3;               FILENAME_EXT=zip;             fi && wget -q https://codeberg.org/leiningen/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT && wget -q https://codeberg.org/leiningen/leiningen/releases/download/$LEIN_VERSION/leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc && echo "Verifying file PGP signature..." && gpg --batch --verify leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT && gpgconf --kill all && rm -rf "$GNUPGHOME" leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT.asc && mkdir -p /usr/share/java && mv leiningen-$LEIN_VERSION-standalone.$FILENAME_EXT /usr/share/java/leiningen-$LEIN_VERSION-standalone.jar && apt-get purge -y --auto-remove gnupg wget
-# Wed, 01 Feb 2023 03:20:19 GMT
+# Sat, 04 Feb 2023 14:13:22 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Wed, 01 Feb 2023 03:20:19 GMT
+# Sat, 04 Feb 2023 14:13:22 GMT
 ENV LEIN_ROOT=1
-# Wed, 01 Feb 2023 03:20:21 GMT
+# Sat, 04 Feb 2023 14:13:24 GMT
 RUN echo '(defproject dummy "" :dependencies [[org.clojure/clojure "1.11.1"]])' > project.clj   && lein deps && rm project.clj
-# Wed, 01 Feb 2023 03:20:22 GMT
+# Sat, 04 Feb 2023 14:13:24 GMT
 COPY file:cf90f595e38d932dff3bdcd4221efe7c65fb3432787490053b55b6917f06e4cd in /usr/local/bin/entrypoint 
-# Wed, 01 Feb 2023 03:20:22 GMT
+# Sat, 04 Feb 2023 14:13:25 GMT
 ENTRYPOINT ["entrypoint"]
-# Wed, 01 Feb 2023 03:20:22 GMT
+# Sat, 04 Feb 2023 14:13:25 GMT
 CMD ["repl"]
 ```
 
 -	Layers:
-	-	`sha256:8740c948ffd4c816ea7ca963f99ca52f4788baa23f228da9581a9ea2edd3fcd7`  
-		Last Modified: Wed, 11 Jan 2023 02:39:07 GMT  
-		Size: 31.4 MB (31396972 bytes)  
+	-	`sha256:01b5b2efb836d74b8b49da819514eca52e25290d1688db59420ffb9c6b65a03c`  
+		Last Modified: Sat, 04 Feb 2023 06:56:17 GMT  
+		Size: 31.4 MB (31396919 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4dd5222c39363e9ad4cf3befb9bb980d24da88c73d38324ec54e4613c745a424`  
-		Last Modified: Wed, 01 Feb 2023 03:33:57 GMT  
-		Size: 192.4 MB (192438216 bytes)  
+	-	`sha256:a87fb4ccb46beb33988288373afc1f2c97de5052711ef02009468a1bea691666`  
+		Last Modified: Sat, 04 Feb 2023 14:24:01 GMT  
+		Size: 192.4 MB (192438215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3213f42300bc73442147740817a56704cec0356ecff1406fe4caed36abf23839`  
-		Last Modified: Wed, 01 Feb 2023 03:34:55 GMT  
-		Size: 12.6 MB (12576133 bytes)  
+	-	`sha256:0281a6f67dc2630abd6897554aeca5978250093f846bd4e669a13c1ffde03d20`  
+		Last Modified: Sat, 04 Feb 2023 14:24:26 GMT  
+		Size: 12.6 MB (12576178 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:848c98b390b2d3aa4a70aefdd3933c2d8caa8b0988854d524b1301dcb90b8dd3`  
-		Last Modified: Wed, 01 Feb 2023 03:34:54 GMT  
-		Size: 4.4 MB (4399261 bytes)  
+	-	`sha256:e7d2db97c6d30247b64e519d5bb93ef8ab3f92855f108bc73343af810f602f3e`  
+		Last Modified: Sat, 04 Feb 2023 14:24:25 GMT  
+		Size: 4.4 MB (4399274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b8807ba6d308603509428f657717082157eef5634032700fde2308e284e396c5`  
-		Last Modified: Wed, 01 Feb 2023 03:34:54 GMT  
-		Size: 400.0 B  
+	-	`sha256:836ac2a3db7557fb9794baa2d4f5d6f1dbd9581aa2f6151b73954c8a96ac7acd`  
+		Last Modified: Sat, 04 Feb 2023 14:24:25 GMT  
+		Size: 401.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:temurin-17-lein-2.10.0-bullseye-slim` - linux; arm64 variant v8
