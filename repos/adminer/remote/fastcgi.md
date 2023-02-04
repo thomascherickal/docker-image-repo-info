@@ -1,7 +1,7 @@
 ## `adminer:fastcgi`
 
 ```console
-$ docker pull adminer@sha256:0b058e1e2cd44e0117d81079da428c7a003c16524f9a901378019e040cdfb1c5
+$ docker pull adminer@sha256:8c722aa74c5e819299eced9f1a30a02b983d272545bf37ec6ff286ba143509ab
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -103,86 +103,86 @@ CMD ["php-fpm7.4"]
 ### `adminer:fastcgi` - linux; arm variant v5
 
 ```console
-$ docker pull adminer@sha256:8287931b11c6cf8718cf3a7069a8d77d22616e4737858015ee1002945e6d2447
+$ docker pull adminer@sha256:b0faee76d460250e5da70124df7400d6269459be2387a36fd70b4742cdb652f1
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **91.2 MB (91168805 bytes)**  
+-	Total Size: **91.2 MB (91168809 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:62b388e02cb22107f00749ac805b56ab75104384cc7244e7b2d9f91ead1127e2`
+-	Image ID: `sha256:686a1776dd4ebd5758ff511277a1ef3974927a6d48927cfd672cfe711b48901b`
 -	Entrypoint: `["entrypoint.sh"]`
 -	Default Command: `["php-fpm7.4"]`
 
 ```dockerfile
-# Wed, 11 Jan 2023 01:55:21 GMT
-ADD file:37f880fde966ca6538f60068c4025b396f3e23cdf2cbc8d99c7ab2f6bb46a82d in / 
-# Wed, 11 Jan 2023 01:55:22 GMT
+# Sat, 04 Feb 2023 02:46:21 GMT
+ADD file:1c80f7ec931ef9c6fa80892f75b88f6b3aebe7abe65f4a13b9371eb98475ca96 in / 
+# Sat, 04 Feb 2023 02:46:23 GMT
 CMD ["bash"]
-# Wed, 11 Jan 2023 02:19:08 GMT
+# Sat, 04 Feb 2023 03:10:13 GMT
 STOPSIGNAL SIGINT
-# Wed, 11 Jan 2023 02:19:39 GMT
+# Sat, 04 Feb 2023 03:10:42 GMT
 RUN export DEBIAN_FRONTEND="noninteractive" &&	set -x &&	apt-get update &&	apt-get install -y 		php7.4-cli 		php7.4-fpm 		php7.4-mbstring 		php7.4-mysql 		php7.4-odbc 		php7.4-pdo-dblib 		php7.4-pgsql 		php7.4-sqlite3 &&	rm -rf /var/lib/apt/lists/*
-# Wed, 11 Jan 2023 02:19:40 GMT
+# Sat, 04 Feb 2023 03:10:43 GMT
 RUN echo "upload_max_filesize = 128M" >> /etc/php/7.4/cli/conf.d/0-upload_large_dumps.ini &&	echo "post_max_size = 128M" >> /etc/php/7.4/cli/conf.d/0-upload_large_dumps.ini &&	echo "memory_limit = 1G" >> /etc/php/7.4/cli/conf.d/0-upload_large_dumps.ini &&	echo "max_execution_time = 600" >> /etc/php/7.4/cli/conf.d/0-upload_large_dumps.ini &&	echo "max_input_vars = 5000" >> /etc/php/7.4/cli/conf.d/0-upload_large_dumps.ini &&	echo "variables_order = \"EGPCS\"" >> /etc/php/7.4/cli/conf.d/0-env.ini &&	cp /etc/php/7.4/cli/conf.d/0-upload_large_dumps.ini /etc/php/7.4/fpm/conf.d/0-upload_large_dumps.ini
-# Wed, 11 Jan 2023 02:20:10 GMT
+# Sat, 04 Feb 2023 03:11:06 GMT
 RUN set -ex;	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; if we send this to /proc/self/fd/1, it never appears'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee /etc/php/7.4/fpm/pool.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee /etc/php/7.4/fpm/pool.d/zz-docker.conf; 	sed -i '/^pid =/d' /etc/php/7.4/fpm/php-fpm.conf
-# Wed, 11 Jan 2023 02:20:11 GMT
+# Sat, 04 Feb 2023 03:11:06 GMT
 RUN groupadd -r adminer &&	useradd -r -g adminer adminer &&	mkdir -p /var/www/html &&	mkdir /var/www/html/plugins-enabled &&	chown -R adminer:adminer /var/www/html
-# Wed, 11 Jan 2023 02:20:11 GMT
+# Sat, 04 Feb 2023 03:11:06 GMT
 WORKDIR /var/www/html
-# Wed, 11 Jan 2023 02:20:11 GMT
+# Sat, 04 Feb 2023 03:11:06 GMT
 COPY multi:8e2583c31626149dac766c1e81b6ba87f4289e683e42823f52b952fbab069922 in /var/www/html/ 
-# Wed, 11 Jan 2023 02:20:11 GMT
+# Sat, 04 Feb 2023 03:11:07 GMT
 ENV ADMINER_VERSION=4.8.1
-# Wed, 11 Jan 2023 02:20:11 GMT
+# Sat, 04 Feb 2023 03:11:07 GMT
 ENV ADMINER_DOWNLOAD_SHA256=2fd7e6d8f987b243ab1839249551f62adce19704c47d3d0c8dd9e57ea5b9c6b3
-# Wed, 11 Jan 2023 02:20:11 GMT
+# Sat, 04 Feb 2023 03:11:07 GMT
 ENV ADMINER_COMMIT=1f173e18bdf0be29182e0d67989df56eadea4754
-# Wed, 11 Jan 2023 02:20:26 GMT
+# Sat, 04 Feb 2023 03:11:21 GMT
 RUN export DEBIAN_FRONTEND="noninteractive" &&	set -x &&	buildDeps='git curl ca-certificates' &&	apt-get update &&	apt-get install -y $buildDeps --no-install-recommends &&	rm -rf /var/lib/apt/lists/* &&	curl -fsSL "https://github.com/vrana/adminer/releases/download/v$ADMINER_VERSION/adminer-$ADMINER_VERSION.php" -o adminer.php &&	echo "$ADMINER_DOWNLOAD_SHA256  adminer.php" |sha256sum -c - &&	git clone --recurse-submodules=designs --depth 1 --shallow-submodules --branch "v$ADMINER_VERSION" https://github.com/vrana/adminer.git /tmp/adminer &&	commit="$(git -C /tmp/adminer/ rev-parse HEAD)" &&	[ "$commit" = "$ADMINER_COMMIT" ] &&	cp -r /tmp/adminer/designs/ /tmp/adminer/plugins/ . &&	rm -rf /tmp/adminer/ &&	apt-get purge -y --auto-remove $buildDeps
-# Wed, 11 Jan 2023 02:20:26 GMT
+# Sat, 04 Feb 2023 03:11:21 GMT
 COPY file:5ff0be587f5dd9166f7a558457b0e656c889de46d3bb2afd41f1714ab2c02ceb in /usr/local/bin/ 
-# Wed, 11 Jan 2023 02:20:26 GMT
+# Sat, 04 Feb 2023 03:11:21 GMT
 ENTRYPOINT ["entrypoint.sh"]
-# Wed, 11 Jan 2023 02:20:26 GMT
+# Sat, 04 Feb 2023 03:11:21 GMT
 USER adminer
-# Wed, 11 Jan 2023 02:20:26 GMT
+# Sat, 04 Feb 2023 03:11:21 GMT
 CMD ["php-fpm7.4"]
 ```
 
 -	Layers:
-	-	`sha256:07e0d63e97bf89a5c9e120008604cfeebc92d155c136c0f88685e1f70c16fd1a`  
-		Last Modified: Wed, 11 Jan 2023 02:00:09 GMT  
-		Size: 52.5 MB (52529956 bytes)  
+	-	`sha256:193207e81b928808ec6f645dfaf0b61e74f80f891a3bad16651e923e85334c17`  
+		Last Modified: Sat, 04 Feb 2023 02:51:10 GMT  
+		Size: 52.5 MB (52530008 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:76b4009e413a9a86217e8b854a8850dbf62a1fa0b1c92749283586acf3714591`  
-		Last Modified: Wed, 11 Jan 2023 02:21:09 GMT  
-		Size: 37.2 MB (37246954 bytes)  
+	-	`sha256:3bf1e080dcd3cfdef2852c2a62475d65a3be37771728b0f57be08714f0c60e36`  
+		Last Modified: Sat, 04 Feb 2023 03:12:03 GMT  
+		Size: 37.2 MB (37246915 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:36a51df24c052470acbb5d60a7bbbd6fe979a4798a37265d3c8e880e0278fb83`  
-		Last Modified: Wed, 11 Jan 2023 02:21:00 GMT  
-		Size: 390.0 B  
+	-	`sha256:b4bb45667a6f38868757806bcd165542a734a196db03d91aabbef270ef54210e`  
+		Last Modified: Sat, 04 Feb 2023 03:11:53 GMT  
+		Size: 395.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cddcbeeae46a96d4f942a3f522451742543ddee1320b17b871f4ac4dfcc88050`  
-		Last Modified: Wed, 11 Jan 2023 02:21:34 GMT  
-		Size: 2.7 KB (2708 bytes)  
+	-	`sha256:b04c478a1338ba9cce40382cc051437bcb4eeebd188cdc41a2757609bd13a35d`  
+		Last Modified: Sat, 04 Feb 2023 03:12:27 GMT  
+		Size: 2.7 KB (2711 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65b814d49aa27085fb26d628bf67995b1bb783fbaa66f9d0ff19e02a2d49ee2e`  
-		Last Modified: Wed, 11 Jan 2023 02:21:33 GMT  
-		Size: 1.8 KB (1841 bytes)  
+	-	`sha256:60684a0e72468ee14fd8a78d38bafa1e47ffa59e928b5ca43b567296d4e2e5ec`  
+		Last Modified: Sat, 04 Feb 2023 03:12:27 GMT  
+		Size: 1.8 KB (1837 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:364316708e07827b0be14fd4c10ad62a1a4d72c01b3e239fb5c35c29cdd2039c`  
-		Last Modified: Wed, 11 Jan 2023 02:21:33 GMT  
-		Size: 1.5 KB (1480 bytes)  
+	-	`sha256:ded008237b3a29c4aade74186cfb2937b5bedaa8962a885c6f24fba730b1c8a0`  
+		Last Modified: Sat, 04 Feb 2023 03:12:27 GMT  
+		Size: 1.5 KB (1477 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b183474edaa22e4b032f8771427bd35f5c8850aa7a9deba7a413279a3eb93eb`  
-		Last Modified: Wed, 11 Jan 2023 02:21:34 GMT  
-		Size: 1.4 MB (1384985 bytes)  
+	-	`sha256:613048c62be0f9fe2d9baa69c469a56ce814e213ab521933ca34e2015c896df0`  
+		Last Modified: Sat, 04 Feb 2023 03:12:27 GMT  
+		Size: 1.4 MB (1384976 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:86e12fecaceaf5e8cb5cc6d943fec7114551c69e9830d79f94aadb44d5c42f87`  
-		Last Modified: Wed, 11 Jan 2023 02:21:33 GMT  
-		Size: 491.0 B  
+	-	`sha256:c141e4c1202dff4b82625db55bde8b836c1c3b6bb256de0b0d8517852a780b35`  
+		Last Modified: Sat, 04 Feb 2023 03:12:27 GMT  
+		Size: 490.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `adminer:fastcgi` - linux; arm variant v7
