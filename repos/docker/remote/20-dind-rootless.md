@@ -1,7 +1,7 @@
 ## `docker:20-dind-rootless`
 
 ```console
-$ docker pull docker@sha256:c16e490252d0d6439eaa7b41cb24b5b5c318e61b612c3112a48f925fdec2c3c7
+$ docker pull docker@sha256:1c23d55a14b9e2e8aac76ad47f6a132dcd5efd1daf4a19b4204785d72a727d1e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull docker@sha256:c16e490252d0d6439eaa7b41cb24b5b5c318e61b612c3112a48f
 ### `docker:20-dind-rootless` - linux; amd64
 
 ```console
-$ docker pull docker@sha256:eb14c1f101aa62eba00cf2d60d2178399f9ad95914b3909743428ef2982b1e48
+$ docker pull docker@sha256:fa3b0350444b894b19a0d1daa19e33caa0e895beb7ffcb3b5031f597655afa73
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **131.1 MB (131052772 bytes)**  
+-	Total Size: **131.1 MB (131052768 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e15f614d183abc83f854cc82c6c7574f6468cdce6de600ed013c5f7bf8bc3069`
+-	Image ID: `sha256:3d41e7bd5ff79bfde744abdbf543d8de35516e693dac9e4859d9c8dc4ec0e40c`
 -	Entrypoint: `["dockerd-entrypoint.sh"]`
 -	Default Command: `[]`
 
@@ -66,29 +66,29 @@ RUN set -eux; 		apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 	
 ENV DIND_COMMIT=1f32e3c95d72a29b3eaacba156ed675dba976cb5
 # Wed, 01 Feb 2023 04:05:26 GMT
 RUN set -eux; 	wget -O /usr/local/bin/dind "https://raw.githubusercontent.com/docker/docker/${DIND_COMMIT}/hack/dind"; 	chmod +x /usr/local/bin/dind
-# Wed, 01 Feb 2023 04:05:26 GMT
-COPY file:45c7926c5d79023b457ad24274c893b1fc21f241bed46421dc901b8237045f17 in /usr/local/bin/ 
-# Wed, 01 Feb 2023 04:05:26 GMT
+# Fri, 03 Feb 2023 23:19:43 GMT
+COPY file:28536baa0e5b063870353a5185ff0e75dd903c0d705a1ee9a896035a3d42a170 in /usr/local/bin/ 
+# Fri, 03 Feb 2023 23:19:43 GMT
 VOLUME [/var/lib/docker]
-# Wed, 01 Feb 2023 04:05:26 GMT
+# Fri, 03 Feb 2023 23:19:43 GMT
 EXPOSE 2375 2376
-# Wed, 01 Feb 2023 04:05:26 GMT
+# Fri, 03 Feb 2023 23:19:43 GMT
 ENTRYPOINT ["dockerd-entrypoint.sh"]
-# Wed, 01 Feb 2023 04:05:26 GMT
+# Fri, 03 Feb 2023 23:19:44 GMT
 CMD []
-# Wed, 01 Feb 2023 04:05:30 GMT
+# Fri, 03 Feb 2023 23:19:47 GMT
 RUN apk add --no-cache iproute2 fuse-overlayfs
-# Wed, 01 Feb 2023 04:05:31 GMT
+# Fri, 03 Feb 2023 23:19:48 GMT
 RUN mkdir /run/user && chmod 1777 /run/user
-# Wed, 01 Feb 2023 04:05:32 GMT
+# Fri, 03 Feb 2023 23:19:48 GMT
 RUN set -eux; 	adduser -h /home/rootless -g 'Rootless' -D -u 1000 rootless; 	echo 'rootless:100000:65536' >> /etc/subuid; 	echo 'rootless:100000:65536' >> /etc/subgid
-# Wed, 01 Feb 2023 04:05:34 GMT
+# Fri, 03 Feb 2023 23:19:50 GMT
 RUN set -eux; 		apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			url='https://download.docker.com/linux/static/stable/x86_64/docker-rootless-extras-20.10.23.tgz'; 			;; 		'aarch64') 			url='https://download.docker.com/linux/static/stable/aarch64/docker-rootless-extras-20.10.23.tgz'; 			;; 		*) echo >&2 "error: unsupported 'rootless.tgz' architecture ($apkArch)"; exit 1 ;; 	esac; 		wget -O 'rootless.tgz' "$url"; 		tar --extract 		--file rootless.tgz 		--strip-components 1 		--directory /usr/local/bin/ 		'docker-rootless-extras/rootlesskit' 		'docker-rootless-extras/rootlesskit-docker-proxy' 		'docker-rootless-extras/vpnkit' 	; 	rm rootless.tgz; 		rootlesskit --version; 	vpnkit --version
-# Wed, 01 Feb 2023 04:05:34 GMT
+# Fri, 03 Feb 2023 23:19:51 GMT
 RUN set -eux; 	mkdir -p /home/rootless/.local/share/docker; 	chown -R rootless:rootless /home/rootless/.local/share/docker
-# Wed, 01 Feb 2023 04:05:34 GMT
+# Fri, 03 Feb 2023 23:19:51 GMT
 VOLUME [/home/rootless/.local/share/docker]
-# Wed, 01 Feb 2023 04:05:35 GMT
+# Fri, 03 Feb 2023 23:19:51 GMT
 USER rootless
 ```
 
@@ -141,28 +141,28 @@ USER rootless
 		Last Modified: Wed, 01 Feb 2023 04:07:58 GMT  
 		Size: 1.0 KB (1045 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6660a3266d0004cbe28ac50821dc4043d1d25b5988c35a6d9df4ba9b3458ba7e`  
-		Last Modified: Wed, 01 Feb 2023 04:07:58 GMT  
-		Size: 2.7 KB (2746 bytes)  
+	-	`sha256:69d29220aa4f4187486749e269bb61bb4046c65f635ec607bf9f19b54f173513`  
+		Last Modified: Fri, 03 Feb 2023 23:21:22 GMT  
+		Size: 2.7 KB (2737 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fb764ad342644ff732b54b161e93ec3873477da2bf6346b1f1020d5ef810e563`  
-		Last Modified: Wed, 01 Feb 2023 04:08:22 GMT  
-		Size: 1.4 MB (1375668 bytes)  
+	-	`sha256:ca24832881e34390ab9c9010826ff18631c51ba249e0f5a6aa3ef05abcc7d0c9`  
+		Last Modified: Fri, 03 Feb 2023 23:21:35 GMT  
+		Size: 1.4 MB (1375673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d02a1aa44838b715c59cfa1b0dbcfd8ea07aa7e33df033855199029ea94d8cdf`  
-		Last Modified: Wed, 01 Feb 2023 04:08:22 GMT  
+	-	`sha256:b89fb2918add2837db47619c84e0e4cd64568963ac3dbe9cfef9a917bbc71927`  
+		Last Modified: Fri, 03 Feb 2023 23:21:34 GMT  
 		Size: 151.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:204c78b7022762a1c0760c2e99d4b25625148975da4789d8d1c05dd1a758d947`  
-		Last Modified: Wed, 01 Feb 2023 04:08:22 GMT  
-		Size: 1.3 KB (1348 bytes)  
+	-	`sha256:acc0b423fe05d17ad1912d5043368b5b3ed377567f5d529a8b8e915ff0cf163e`  
+		Last Modified: Fri, 03 Feb 2023 23:21:35 GMT  
+		Size: 1.4 KB (1355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8597899ad7865929af69069ce025eedae7e8986018b708b883ec907d5b41e6db`  
-		Last Modified: Wed, 01 Feb 2023 04:08:25 GMT  
-		Size: 19.9 MB (19909541 bytes)  
+	-	`sha256:2926d6e1be148e94fa323098a3909bca4ece1dd932e9dda86224753bbaee6753`  
+		Last Modified: Fri, 03 Feb 2023 23:21:38 GMT  
+		Size: 19.9 MB (19909534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10d1c4aa6615e34de84a9a9573c5a2365263508cc2a265c9c697fa86ce11e456`  
-		Last Modified: Wed, 01 Feb 2023 04:08:22 GMT  
+	-	`sha256:a7131206f847f4142280cb059631997942a8652c366cc1a36de4e19f2150cf81`  
+		Last Modified: Fri, 03 Feb 2023 23:21:34 GMT  
 		Size: 220.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
