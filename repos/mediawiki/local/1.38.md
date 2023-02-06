@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f68ccd317f6f5086ef2c14e084071e1e69f6335d421c578be4bde35b500b9d3e`
-- Created: `2023-01-11T23:57:04.91878199Z`
-- Virtual Size: ~ 813.17 Mb  
+- Image ID: `sha256:5443902841b59a71733c6cc2bf1c3a91497cbcc92bd23c1e95761febd87fb35b`
+- Created: `2023-02-05T04:08:13.562882596Z`
+- Virtual Size: ~ 813.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -618,13 +618,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.32-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.32-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.74.0-1.3+deb11u3`
+### `dpkg` source package: `curl=7.74.0-1.3+deb11u5`
 
 Binary Packages:
 
-- `curl=7.74.0-1.3+deb11u3`
-- `libcurl3-gnutls:amd64=7.74.0-1.3+deb11u3`
-- `libcurl4:amd64=7.74.0-1.3+deb11u3`
+- `curl=7.74.0-1.3+deb11u5`
+- `libcurl3-gnutls:amd64=7.74.0-1.3+deb11u5`
+- `libcurl4:amd64=7.74.0-1.3+deb11u5`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -638,17 +638,17 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.74.0-1.3+deb11u3
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3%2bdeb11u3.dsc' curl_7.74.0-1.3+deb11u3.dsc 2854 SHA256:7aadaae34631b7422de02c2fd2b7e5dff0fd9753bcc34a38c62c75bba4abe211
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3%2bdeb11u3.debian.tar.xz' curl_7.74.0-1.3+deb11u3.debian.tar.xz 57680 SHA256:6a4691f76b22a702d667079de7cb79c420b3a56b95ab9e9f1ee37c9b07a051dd
+$ apt-get source -qq --print-uris curl=7.74.0-1.3+deb11u5
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u5.dsc' curl_7.74.0-1.3+deb11u5.dsc 2699 SHA256:c43b937336f7efdcef923ff34cdf84d0aeda379e2fe1e3ae2f2762473ddd4c87
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u5.debian.tar.xz' curl_7.74.0-1.3+deb11u5.debian.tar.xz 60336 SHA256:e45ea76251781c469b1684b7c3986fb3acc6af0910dccae564f7d61eef83641f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u3/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u5/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2.1+deb11u1`
 
@@ -1319,12 +1319,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gdk-pixbuf/2.42.2+dfsg-1+deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gdk-pixbuf/2.42.2+dfsg-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `git=1:2.30.2-1`
+### `dpkg` source package: `git=1:2.30.2-1+deb11u1`
 
 Binary Packages:
 
-- `git=1:2.30.2-1`
-- `git-man=1:2.30.2-1`
+- `git=1:2.30.2-1+deb11u1`
+- `git-man=1:2.30.2-1+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -1349,17 +1349,17 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris git=1:2.30.2-1
-'http://deb.debian.org/debian/pool/main/g/git/git_2.30.2-1.dsc' git_2.30.2-1.dsc 2867 SHA256:3afa12a5b18f1bc35c24bc1aef1a6c71327069d9c0e8e8aae4f098f2ff308c3d
-'http://deb.debian.org/debian/pool/main/g/git/git_2.30.2.orig.tar.xz' git_2.30.2.orig.tar.xz 6329820 SHA256:41f7d90c71f9476cd387673fcb10ce09ccbed67332436a4cc58d7af32c355faa
-'http://deb.debian.org/debian/pool/main/g/git/git_2.30.2-1.debian.tar.xz' git_2.30.2-1.debian.tar.xz 670844 SHA256:53233ac9049ebe0bf406e780afebbff3d1845f4001083657c649b30d6c526093
+$ apt-get source -qq --print-uris git=1:2.30.2-1+deb11u1
+'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.30.2-1%2bdeb11u1.dsc' git_2.30.2-1+deb11u1.dsc 2525 SHA256:1d3c0316e32555fa14bb2af6379eb5b9442343162797c67f6e2616effca47663
+'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.30.2.orig.tar.xz' git_2.30.2.orig.tar.xz 6329820 SHA256:41f7d90c71f9476cd387673fcb10ce09ccbed67332436a4cc58d7af32c355faa
+'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.30.2-1%2bdeb11u1.debian.tar.xz' git_2.30.2-1+deb11u1.debian.tar.xz 692344 SHA256:ca4b7d68338a9c61a322294ea2d7fc52669e47b4904e1f694c6094acfcbc6037
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/git/1:2.30.2-1/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.30.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.30.2-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/git/1:2.30.2-1+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/git/1:2.30.2-1+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/git/1:2.30.2-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.66.8-1`
 
@@ -3154,11 +3154,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.158-2`
+### `dpkg` source package: `linux=5.10.162-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.158-2`
+- `linux-libc-dev:amd64=5.10.162-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3174,17 +3174,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.10.158-2
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.158-2.dsc' linux_5.10.158-2.dsc 197238 SHA256:938feb8baa4c955c3313eb4e6e03f3f556e86b8a74a578d91691edab29db07f3
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.158.orig.tar.xz' linux_5.10.158.orig.tar.xz 121806368 SHA256:a0791322c13f09ec855a0630a4764234308aafb4fe04540dde302b8cc21e052a
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.158-2.debian.tar.xz' linux_5.10.158-2.debian.tar.xz 3487356 SHA256:bfb86bb848fc869105455d59363f2323963278988168b32f54dc71f0eb246b69
+$ apt-get source -qq --print-uris linux=5.10.162-1
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.162-1.dsc' linux_5.10.162-1.dsc 197238 SHA256:798be0e726f7340d60bd66caea38e4825c9307cb7ff714c1edae68e991623481
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.162.orig.tar.xz' linux_5.10.162.orig.tar.xz 121818544 SHA256:23ce1f61a85438549cc84ddb81b036beb8b2670f18c6298ae7a658c429c19e90
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.162-1.debian.tar.xz' linux_5.10.162-1.debian.tar.xz 1571940 SHA256:59fab7dc23a56c8a691d2e9bea683dfa37458e2d11eaca2bcd6f39230225438e
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/5.10.158-2/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.158-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.158-2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/5.10.162-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.162-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.162-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -4374,11 +4374,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.34+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.34+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.2.0-1+deb11u1`
+### `dpkg` source package: `tiff=4.2.0-1+deb11u3`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.2.0-1+deb11u1`
+- `libtiff5:amd64=4.2.0-1+deb11u3`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
@@ -4387,18 +4387,18 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tiff=4.2.0-1+deb11u1
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0-1%2bdeb11u1.dsc' tiff_4.2.0-1+deb11u1.dsc 2461 SHA256:09c0d66b0f710bab934727529fcc418217588ccd62b7ebcbe1a1057bea6507e4
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0.orig.tar.gz' tiff_4.2.0.orig.tar.gz 2809373 SHA256:eb0484e568ead8fa23b513e9b0041df7e327f4ee2d22db5a533929dfc19633cb
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0.orig.tar.gz.asc' tiff_4.2.0.orig.tar.gz.asc 228 SHA256:119bb62934603ff4d3cd81c739d11904b28812a860773b9b2268cc96a339b14f
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0-1%2bdeb11u1.debian.tar.xz' tiff_4.2.0-1+deb11u1.debian.tar.xz 25188 SHA256:a0b8d4a231d97e0dbefde74fe5788d19429c4bcbfd32102a9d09fd6dc39273a0
+$ apt-get source -qq --print-uris tiff=4.2.0-1+deb11u3
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0-1%2bdeb11u3.dsc' tiff_4.2.0-1+deb11u3.dsc 2116 SHA256:75db70950d4b814e5a66ff7ba7869a6925c0c2db9c77f4d0dddc2c3334bb7073
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0.orig.tar.gz' tiff_4.2.0.orig.tar.gz 2809373 SHA256:eb0484e568ead8fa23b513e9b0041df7e327f4ee2d22db5a533929dfc19633cb
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0.orig.tar.gz.asc' tiff_4.2.0.orig.tar.gz.asc 228 SHA256:119bb62934603ff4d3cd81c739d11904b28812a860773b9b2268cc96a339b14f
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0-1%2bdeb11u3.debian.tar.xz' tiff_4.2.0-1+deb11u3.debian.tar.xz 38260 SHA256:249ae64ad51bb7650c0076ba931cbe4b725d542921f270c825b5540ce41966cb
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tiff/4.2.0-1+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.2.0-1+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tiff/4.2.0-1+deb11u3/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.2.0-1+deb11u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-1+deb11u8`
 
