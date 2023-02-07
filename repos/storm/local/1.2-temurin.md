@@ -1655,14 +1655,9 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.4.0-11ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.4.0-11ubuntu2.1.dsc' pam_1.4.0-11ubuntu2.1.dsc 2598 SHA512:98f0f30326494ccc5dffe2398b58bc0f827f5bc0f681ae21fc90beb920439ffca6858f7c551c8332509a1a071668fa3d2c6336f0e2dfc583d6a38c816775b9ba
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.4.0.orig.tar.xz' pam_1.4.0.orig.tar.xz 988908 SHA512:26eda95c45598a500bc142da4d1abf93d03b3bbb0f2390fa87c72dcbffa208dbfa115c0b411095c31ee9955e36422ccf3e2df3bd486818fafffef8c4310798c4
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.4.0-11ubuntu2.1.debian.tar.xz' pam_1.4.0-11ubuntu2.1.debian.tar.xz 168868 SHA512:caed640a893b657638dd9887499d300cc3a592016627bc6381fbd2bbdf921ce4c3b7f8e91281dba0f5a3b50bd65b59d391e381360a7ffc817f61d8700a7f061b
-```
 
 ### `dpkg` source package: `pcre2=10.39-3ubuntu0.1`
 
