@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0a15fa3936e0ae35470ef41a89ae57fc8bd0df5a12ed0e97ffd24db4cb281c26`
-- Created: `2023-01-12T00:25:36.589106823Z`
-- Virtual Size: ~ 468.50 Mb  
+- Image ID: `sha256:d4aae4707af26da54097f0c90d42758fc03f3b615faa2bf368e52e82069adbed`
+- Created: `2023-02-05T04:00:07.497804296Z`
+- Virtual Size: ~ 468.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -19,10 +19,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.14`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.14.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.14.tar.xz.asc`
-  - `PHP_SHA256=e16e47a872d58685913ac848ce92ec49f42c1828110c98c65fb6265a08724a1a`
+  - `PHP_VERSION=8.1.15`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.15.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.15.tar.xz.asc`
+  - `PHP_SHA256=cd450fb4ee50488c5bf5f08851f514e5a1cac18c9512234d9e16c3a1d35781a6`
   - `YOURLS_VERSION=1.9.1`
   - `YOURLS_SHA256=0bf53290e8f86ea2e0121aac70f7c64d70d3dfb54823acb9dcc343dd7c5f455a`
 - Labels:
@@ -572,12 +572,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.32-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.32-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.74.0-1.3+deb11u3`
+### `dpkg` source package: `curl=7.74.0-1.3+deb11u5`
 
 Binary Packages:
 
-- `curl=7.74.0-1.3+deb11u3`
-- `libcurl4:amd64=7.74.0-1.3+deb11u3`
+- `curl=7.74.0-1.3+deb11u5`
+- `libcurl4:amd64=7.74.0-1.3+deb11u5`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -591,17 +591,17 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.74.0-1.3+deb11u3
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3%2bdeb11u3.dsc' curl_7.74.0-1.3+deb11u3.dsc 2854 SHA256:7aadaae34631b7422de02c2fd2b7e5dff0fd9753bcc34a38c62c75bba4abe211
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.74.0-1.3%2bdeb11u3.debian.tar.xz' curl_7.74.0-1.3+deb11u3.debian.tar.xz 57680 SHA256:6a4691f76b22a702d667079de7cb79c420b3a56b95ab9e9f1ee37c9b07a051dd
+$ apt-get source -qq --print-uris curl=7.74.0-1.3+deb11u5
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u5.dsc' curl_7.74.0-1.3+deb11u5.dsc 2699 SHA256:c43b937336f7efdcef923ff34cdf84d0aeda379e2fe1e3ae2f2762473ddd4c87
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u5.debian.tar.xz' curl_7.74.0-1.3+deb11u5.debian.tar.xz 60336 SHA256:e45ea76251781c469b1684b7c3986fb3acc6af0910dccae564f7d61eef83641f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u3/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u5/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2.1+deb11u1`
 
@@ -2071,11 +2071,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.158-2`
+### `dpkg` source package: `linux=5.10.162-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.158-2`
+- `linux-libc-dev:amd64=5.10.162-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -2091,17 +2091,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.10.158-2
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.158-2.dsc' linux_5.10.158-2.dsc 197238 SHA256:938feb8baa4c955c3313eb4e6e03f3f556e86b8a74a578d91691edab29db07f3
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.158.orig.tar.xz' linux_5.10.158.orig.tar.xz 121806368 SHA256:a0791322c13f09ec855a0630a4764234308aafb4fe04540dde302b8cc21e052a
-'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.158-2.debian.tar.xz' linux_5.10.158-2.debian.tar.xz 3487356 SHA256:bfb86bb848fc869105455d59363f2323963278988168b32f54dc71f0eb246b69
+$ apt-get source -qq --print-uris linux=5.10.162-1
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.162-1.dsc' linux_5.10.162-1.dsc 197238 SHA256:798be0e726f7340d60bd66caea38e4825c9307cb7ff714c1edae68e991623481
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.162.orig.tar.xz' linux_5.10.162.orig.tar.xz 121818544 SHA256:23ce1f61a85438549cc84ddb81b036beb8b2670f18c6298ae7a658c429c19e90
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.162-1.debian.tar.xz' linux_5.10.162-1.debian.tar.xz 1571940 SHA256:59fab7dc23a56c8a691d2e9bea683dfa37458e2d11eaca2bcd6f39230225438e
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/5.10.158-2/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.158-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.158-2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/5.10.162-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.162-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.162-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
