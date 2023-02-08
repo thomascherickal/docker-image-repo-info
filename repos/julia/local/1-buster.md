@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7105e21859bbce81adf0d6d0022885b80772ee3126580352916b3054af1f8438`
-- Created: `2023-01-20T01:57:36.806758554Z`
+- Image ID: `sha256:37870c090815160e5863b60807a9d48f1512f7447e2309852700faa875dc11f8`
+- Created: `2023-02-04T14:33:00.774736668Z`
 - Virtual Size: ~ 547.09 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -328,12 +328,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.30-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.30-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.64.0-4+deb10u3`
+### `dpkg` source package: `curl=7.64.0-4+deb10u4`
 
 Binary Packages:
 
-- `curl=7.64.0-4+deb10u3`
-- `libcurl4:amd64=7.64.0-4+deb10u3`
+- `curl=7.64.0-4+deb10u4`
+- `libcurl4:amd64=7.64.0-4+deb10u4`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -344,13 +344,20 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u4
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u4.dsc' curl_7.64.0-4+deb10u4.dsc 2694 SHA256:ba385d7f1468f4bf309642218433f4975b9d5606410941bce7382b8cddebc273
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u4.debian.tar.xz' curl_7.64.0-4+deb10u4.debian.tar.xz 59080 SHA256:a6a0f1c45359fa262ae1612e9d3d3e185c88b4d87473e44557bcc0441a72f10c
+```
 
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u2`
 
@@ -1225,11 +1232,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libssh2/1.8.0-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libssh2/1.8.0-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libtasn1-6=4.13-3`
+### `dpkg` source package: `libtasn1-6=4.13-3+deb10u1`
 
 Binary Packages:
 
-- `libtasn1-6:amd64=4.13-3`
+- `libtasn1-6:amd64=4.13-3+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 
@@ -1241,18 +1248,17 @@ Licenses: (parsed from: `/usr/share/doc/libtasn1-6/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libtasn1-6=4.13-3
-'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.13-3.dsc' libtasn1-6_4.13-3.dsc 2574 SHA256:15a984daba0bc64819a1203cd28a1e869a30e0edde227237e4cdcfbc86131227
-'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.13.orig.tar.gz' libtasn1-6_4.13.orig.tar.gz 1891703 SHA256:7e528e8c317ddd156230c4e31d082cd13e7ddeb7a54824be82632209550c8cca
-'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.13.orig.tar.gz.asc' libtasn1-6_4.13.orig.tar.gz.asc 774 SHA256:90261376528edf44831d1369847088cc2fb48669860d343961daca42e674b226
-'http://deb.debian.org/debian/pool/main/libt/libtasn1-6/libtasn1-6_4.13-3.debian.tar.xz' libtasn1-6_4.13-3.debian.tar.xz 63384 SHA256:1428c31d3d900d8fa1946fc29d9d2839c73c7a4c0ebff7a2571c134aef53c310
+$ apt-get source -qq --print-uris libtasn1-6=4.13-3+deb10u1
+'http://deb.debian.org/debian-security/pool/updates/main/libt/libtasn1-6/libtasn1-6_4.13-3%2bdeb10u1.dsc' libtasn1-6_4.13-3+deb10u1.dsc 2356 SHA256:933482c3acb7b1983edc0e47f644daa2f1c0738107e22ac02bd30880ca6db8f1
+'http://deb.debian.org/debian-security/pool/updates/main/libt/libtasn1-6/libtasn1-6_4.13.orig.tar.gz' libtasn1-6_4.13.orig.tar.gz 1891703 SHA256:7e528e8c317ddd156230c4e31d082cd13e7ddeb7a54824be82632209550c8cca
+'http://deb.debian.org/debian-security/pool/updates/main/libt/libtasn1-6/libtasn1-6_4.13-3%2bdeb10u1.debian.tar.xz' libtasn1-6_4.13-3+deb10u1.debian.tar.xz 64024 SHA256:73593231706c7e01f12b0ce60b8e45c7beafefd8598678537c1a067727d0ff40
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libtasn1-6/4.13-3/ (for browsing the source)
-- https://sources.debian.net/src/libtasn1-6/4.13-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libtasn1-6/4.13-3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libtasn1-6/4.13-3+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/libtasn1-6/4.13-3+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libtasn1-6/4.13-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libunistring=0.9.10-1`
 
