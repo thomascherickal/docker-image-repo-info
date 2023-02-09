@@ -1,7 +1,7 @@
 ## `httpd:latest`
 
 ```console
-$ docker pull httpd@sha256:a54012ac8562ad4b00d2a7b119f8d11d2c50f26055ca2bf801b3bb121cebb5fa
+$ docker pull httpd@sha256:38f537a54b5222b05721304d1bf4401ac3c7198f8d8386f5e58ebcc0b7fd2aa8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -358,69 +358,69 @@ CMD ["httpd-foreground"]
 ### `httpd:latest` - linux; mips64le
 
 ```console
-$ docker pull httpd@sha256:89ef6a953173f48f138aad9415e87df5e89fb79e928c8ed2b92713191df1c56b
+$ docker pull httpd@sha256:a5e1ce666152bb8749bc65ccfc4476c6f6b614f4a352e47e170374382a05c613
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **55.1 MB (55103336 bytes)**  
+-	Total Size: **54.9 MB (54913006 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c69462536321e9c38719d20e223a75f28722ded969cd51207bf46aa10bff506b`
+-	Image ID: `sha256:62de79b696dae22ab93c40fbd218edd4c3fc9c9bb3579fb7b3ea77a392b8c9a6`
 -	Default Command: `["httpd-foreground"]`
 
 ```dockerfile
-# Sat, 04 Feb 2023 06:20:15 GMT
-ADD file:03d6cf2d45a21e59975a1d17c6ca9fc83bb7a0da235873315c9c7940245beb1e in / 
-# Sat, 04 Feb 2023 06:20:19 GMT
+# Thu, 09 Feb 2023 02:45:21 GMT
+ADD file:68e11645a37c49c8f8f9d79ba579d0d192aaab78bb28059f07d69d56aa5ace71 in / 
+# Thu, 09 Feb 2023 02:45:25 GMT
 CMD ["bash"]
-# Sat, 04 Feb 2023 08:01:05 GMT
+# Thu, 09 Feb 2023 08:15:00 GMT
 ENV HTTPD_PREFIX=/usr/local/apache2
-# Sat, 04 Feb 2023 08:01:07 GMT
+# Thu, 09 Feb 2023 08:15:03 GMT
 ENV PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 04 Feb 2023 08:01:12 GMT
+# Thu, 09 Feb 2023 08:15:08 GMT
 RUN mkdir -p "$HTTPD_PREFIX" 	&& chown www-data:www-data "$HTTPD_PREFIX"
-# Sat, 04 Feb 2023 08:01:15 GMT
+# Thu, 09 Feb 2023 08:15:10 GMT
 WORKDIR /usr/local/apache2
-# Sat, 04 Feb 2023 08:01:44 GMT
+# Thu, 09 Feb 2023 08:15:38 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		libaprutil1-ldap 		libldap-common 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 04 Feb 2023 08:01:46 GMT
+# Thu, 09 Feb 2023 08:15:41 GMT
 ENV HTTPD_VERSION=2.4.55
-# Sat, 04 Feb 2023 08:01:49 GMT
+# Thu, 09 Feb 2023 08:15:43 GMT
 ENV HTTPD_SHA256=11d6ba19e36c0b93ca62e47e6ffc2d2f2884942694bce0f23f39c71bdc5f69ac
-# Sat, 04 Feb 2023 08:01:52 GMT
+# Thu, 09 Feb 2023 08:15:46 GMT
 ENV HTTPD_PATCHES=
-# Sat, 04 Feb 2023 08:10:53 GMT
+# Thu, 09 Feb 2023 08:24:44 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		bzip2 		dirmngr 		dpkg-dev 		gcc 		gnupg 		libapr1-dev 		libaprutil1-dev 		libbrotli-dev 		libcurl4-openssl-dev 		libjansson-dev 		liblua5.2-dev 		libnghttp2-dev 		libpcre3-dev 		libssl-dev 		libxml2-dev 		make 		wget 		zlib1g-dev 	; 	rm -r /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://downloads.apache.org/ 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'httpd.tar.bz2' "httpd/httpd-$HTTPD_VERSION.tar.bz2"; 	echo "$HTTPD_SHA256 *httpd.tar.bz2" | sha256sum -c -; 		ddist 'httpd.tar.bz2.asc' "httpd/httpd-$HTTPD_VERSION.tar.bz2.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in 		DE29FB3971E71543FD2DC049508EAEC5302DA568 		13155B0E9E634F42BF6C163FDDBA64BA2C312D2F 		8B39757B1D8A994DF2433ED58B3A601F08C975E5 		31EE1A81B8D066548156D37B7D6DBFD1F08E012A 		A10208FEC3152DD7C0C9B59B361522D782AB7BD1 		3DE024AFDA7A4B15CB6C14410F81AA8AB0D5F771 		EB138C6AF0FC691001B16D93344A844D751D7F27 		CBA5A7C21EC143314C41393E5B968010E04F9A89 		3C016F2B764621BB549C66B516A96495E2226795 		937FB3994A242BA9BF49E93021454AF0CC8B0F7E 		EAD1359A4C0F2D37472AAF28F55DF0293A4E7AC9 		4C1EADADB4EF5007579C919C6635B6C0DE885DD3 		01E475360FCCF1D0F24B9D145D414AE1E005C9CB 		92CCEF0AA7DD46AC3A0F498BCA6939748103A37E 		D395C7573A68B9796D38C258153FA0CD75A67692 		FA39B617B61493FD283503E7EED1EA392261D073 		984FB3350C1D5C7A3282255BB31B213D208F5064 		FE7A49DAA875E890B4167F76CCB2EB46E76CF6D0 		39F6691A0ECF0C50E8BB849CF78875F642721F00 		29A2BA848177B73878277FA475CAA2A3F39B3750 		120A8667241AEDD4A78B46104C042818311A3DE5 		453510BDA6C5855624E009236D0BC73A40581837 		0DE5C55C6BF3B2352DABB89E13249B4FEC88A0BF 		7CDBED100806552182F98844E8E7E00B4DAA1988 		A8BA9617EF3BCCAC3B29B869EDB105896F9522D8 		3E6AC004854F3A7F03566B592FF06894E55B0D0E 		5B5181C2C0AB13E59DA3F7A3EC582EB639FF092C 		A93D62ECC3C8EA12DB220EC934EA76E6791485A8 		65B2D44FE74BD5E3DE3AC3F082781DE46D5954FA 		8935926745E1CE7E3ED748F6EC99EE267EB5F61A 		E3480043595621FE56105F112AB12A7ADC55C003 		93525CFCF6FDFFB3FD9700DD5A4B10AE43B56A27 		C55AB7B9139EB2263CD1AABC19B033D1760C227B 		26F51EF9A82F4ACB43F1903ED377C9E7D1944C66 	; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --verify httpd.tar.bz2.asc httpd.tar.bz2; 	command -v gpgconf && gpgconf --kill all || :; 	rm -rf "$GNUPGHOME" httpd.tar.bz2.asc; 		mkdir -p src; 	tar -xf httpd.tar.bz2 -C src --strip-components=1; 	rm httpd.tar.bz2; 	cd src; 		patches() { 		while [ "$#" -gt 0 ]; do 			local patchFile="$1"; shift; 			local patchSha256="$1"; shift; 			ddist "$patchFile" "httpd/patches/apply_to_$HTTPD_VERSION/$patchFile"; 			echo "$patchSha256 *$patchFile" | sha256sum -c -; 			patch -p0 < "$patchFile"; 			rm -f "$patchFile"; 		done; 	}; 	patches $HTTPD_PATCHES; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	CFLAGS="$(dpkg-buildflags --get CFLAGS)"; 	CPPFLAGS="$(dpkg-buildflags --get CPPFLAGS)"; 	LDFLAGS="$(dpkg-buildflags --get LDFLAGS)"; 	./configure 		--build="$gnuArch" 		--prefix="$HTTPD_PREFIX" 		--enable-mods-shared=reallyall 		--enable-mpms-shared=all 		--enable-pie 		CFLAGS="-pipe $CFLAGS" 		CPPFLAGS="$CPPFLAGS" 		LDFLAGS="-Wl,--as-needed $LDFLAGS" 	; 	make -j "$(nproc)"; 	make install; 		cd ..; 	rm -r src man manual; 		sed -ri 		-e 's!^(\s*CustomLog)\s+\S+!\1 /proc/self/fd/1!g' 		-e 's!^(\s*ErrorLog)\s+\S+!\1 /proc/self/fd/2!g' 		-e 's!^(\s*TransferLog)\s+\S+!\1 /proc/self/fd/1!g' 		-e 's!^(\s*User)\s+daemon\s*$!\1 www-data!g' 		-e 's!^(\s*Group)\s+daemon\s*$!\1 www-data!g' 		"$HTTPD_PREFIX/conf/httpd.conf" 		"$HTTPD_PREFIX/conf/extra/httpd-ssl.conf" 	; 	grep -E '^\s*User www-data$' "$HTTPD_PREFIX/conf/httpd.conf"; 	grep -E '^\s*Group www-data$' "$HTTPD_PREFIX/conf/httpd.conf"; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		httpd -v
-# Sat, 04 Feb 2023 08:10:56 GMT
+# Thu, 09 Feb 2023 08:24:47 GMT
 STOPSIGNAL SIGWINCH
-# Sat, 04 Feb 2023 08:10:58 GMT
+# Thu, 09 Feb 2023 08:24:49 GMT
 COPY file:c432ff61c4993ecdef4786f48d91a96f8f0707f6179816ccb98db661bfb96b90 in /usr/local/bin/ 
-# Sat, 04 Feb 2023 08:11:01 GMT
+# Thu, 09 Feb 2023 08:24:51 GMT
 EXPOSE 80
-# Sat, 04 Feb 2023 08:11:03 GMT
+# Thu, 09 Feb 2023 08:24:54 GMT
 CMD ["httpd-foreground"]
 ```
 
 -	Layers:
-	-	`sha256:aedd2a952aead0f89a308f23f44377263665bf76192d5542abd66473ea799d44`  
-		Last Modified: Sat, 04 Feb 2023 06:28:25 GMT  
-		Size: 29.6 MB (29619892 bytes)  
+	-	`sha256:1b5516936229d6629ab88588210eb90edc2613c94e5952fd1caf9200284f298a`  
+		Last Modified: Thu, 09 Feb 2023 02:53:48 GMT  
+		Size: 29.6 MB (29634449 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0eefd5acac63b0be91559ae4e63e454db1f86461e4d7f10e78054dde6ebc2400`  
-		Last Modified: Sat, 04 Feb 2023 08:11:29 GMT  
-		Size: 146.0 B  
+	-	`sha256:ae3be662cab69058b3966a5e32214704d9f10175739cf900254765b6860b436e`  
+		Last Modified: Thu, 09 Feb 2023 08:25:10 GMT  
+		Size: 145.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a79717540a152a60dfca604b093d0596330e60a398f25b093e1b22572cf85d18`  
-		Last Modified: Sat, 04 Feb 2023 08:11:30 GMT  
-		Size: 1.7 MB (1666849 bytes)  
+	-	`sha256:3ec876943e2520926c331d009cd2f658956ad88e96b986ccdad76152ef450347`  
+		Last Modified: Thu, 09 Feb 2023 08:25:11 GMT  
+		Size: 1.5 MB (1462001 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:37e500eedfb7e5ea8c0f950e65570627cc5d62bc076ea08dabeaa014a02c328d`  
-		Last Modified: Sat, 04 Feb 2023 08:11:43 GMT  
-		Size: 23.8 MB (23816151 bytes)  
+	-	`sha256:696d2880de0fcd833d03bd9d31a7fa20116348ca97b01a5ede90fea9f15c11f4`  
+		Last Modified: Thu, 09 Feb 2023 08:25:25 GMT  
+		Size: 23.8 MB (23816115 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:caa89e622c8bf7c58166a8bca85669d3b905ecddff7d267b635833b47e35c1da`  
-		Last Modified: Sat, 04 Feb 2023 08:11:28 GMT  
-		Size: 298.0 B  
+	-	`sha256:e5544a72aa6d206cc26ad1006ef01d813c7af82a046447804c458f2caae76b8c`  
+		Last Modified: Thu, 09 Feb 2023 08:25:10 GMT  
+		Size: 296.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `httpd:latest` - linux; ppc64le
