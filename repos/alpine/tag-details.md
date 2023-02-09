@@ -18,15 +18,17 @@
 ## `alpine:20230208`
 
 ```console
-$ docker pull alpine@sha256:c81e7dfe648796933572cab5e499820a04d7ed2dd1b088bd9f09af6055db24ef
+$ docker pull alpine@sha256:5bd9939b4140caa8c716499e53438053b4e1aa872a170f4399ec71c00e23b835
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 6
+-	Platforms: 8
 	-	linux; amd64
 	-	linux; arm variant v6
+	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; 386
+	-	linux; ppc64le
 	-	linux; riscv64
 	-	linux; s390x
 
@@ -82,6 +84,32 @@ CMD ["/bin/sh"]
 		Size: 3.1 MB (3109143 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `alpine:20230208` - linux; arm variant v7
+
+```console
+$ docker pull alpine@sha256:c1d0efecdce713529bda241b3cd0914b05145a26a06ca6b6e37576722136d168
+```
+
+-	Docker Version: 20.10.17
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.9 MB (2867978 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:bf2f2db5e48e0049cceae468c5145369286741d27e277fe45eb325631cd90ff5`
+-	Default Command: `["\/bin\/sh"]`
+
+```dockerfile
+# Thu, 09 Feb 2023 06:09:36 GMT
+ADD file:00e95512fafef4870c1ec8f4ce177313d838ede8211400ce8511312f6533733a in / 
+# Thu, 09 Feb 2023 06:09:37 GMT
+CMD ["/bin/sh"]
+```
+
+-	Layers:
+	-	`sha256:3aa1d6a7d9cc94acf699d3f712d0ea101bf32343858c44d12c3420f0f1c131ce`  
+		Last Modified: Thu, 09 Feb 2023 06:10:28 GMT  
+		Size: 2.9 MB (2867978 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ### `alpine:20230208` - linux; arm64 variant v8
 
 ```console
@@ -132,6 +160,32 @@ CMD ["/bin/sh"]
 	-	`sha256:202cc72952716e5c4f2f6f87674f57b1f2a6f7fe23765ef1cfe738d4be410d99`  
 		Last Modified: Thu, 09 Feb 2023 05:09:35 GMT  
 		Size: 3.4 MB (3409284 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `alpine:20230208` - linux; ppc64le
+
+```console
+$ docker pull alpine@sha256:9e35cad581de3234ddd11484aa25db05d004fcf531955b91e1969f8417512fba
+```
+
+-	Docker Version: 20.10.12
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **3.4 MB (3394758 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:5bccc17d2a5570a29bd13176afa6b2d6df19ee3f9798eb82bf134975aa396b20`
+-	Default Command: `["\/bin\/sh"]`
+
+```dockerfile
+# Thu, 09 Feb 2023 06:16:59 GMT
+ADD file:7b280862745356e8af7cfcd947055dbdb937eeb7663b8c20ed0cfaaa6f9d9c6e in / 
+# Thu, 09 Feb 2023 06:17:00 GMT
+CMD ["/bin/sh"]
+```
+
+-	Layers:
+	-	`sha256:fe95a36e46af57139fdb2cf19f8b2ad88b2fa43f747699710991f02cd401b346`  
+		Last Modified: Thu, 09 Feb 2023 06:17:44 GMT  
+		Size: 3.4 MB (3394758 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `alpine:20230208` - linux; riscv64
@@ -1971,7 +2025,7 @@ CMD ["/bin/sh"]
 ## `alpine:edge`
 
 ```console
-$ docker pull alpine@sha256:0b54becde038a7bae7662f6bea9cf2ff6a4d0a8d4b88af27197aee23162bd3f7
+$ docker pull alpine@sha256:5bd9939b4140caa8c716499e53438053b4e1aa872a170f4399ec71c00e23b835
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2040,27 +2094,27 @@ CMD ["/bin/sh"]
 ### `alpine:edge` - linux; arm variant v7
 
 ```console
-$ docker pull alpine@sha256:12a4ae02d47923f2406d891996c09dc642d4e378b70349bb68bcfcb452c35510
+$ docker pull alpine@sha256:c1d0efecdce713529bda241b3cd0914b05145a26a06ca6b6e37576722136d168
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.9 MB (2865640 bytes)**  
+-	Total Size: **2.9 MB (2867978 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:08b8ab49ab167618b9911f5650cdeb68c1797ddd026de64116a80d99ac6776f9`
+-	Image ID: `sha256:bf2f2db5e48e0049cceae468c5145369286741d27e277fe45eb325631cd90ff5`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 10 Nov 2022 19:57:22 GMT
-ADD file:eb72bb8afda085f5e36b9f439e4a84dbd23c6b921f15f7ffb3c4e767b3b703bf in / 
-# Thu, 10 Nov 2022 19:57:22 GMT
+# Thu, 09 Feb 2023 06:09:36 GMT
+ADD file:00e95512fafef4870c1ec8f4ce177313d838ede8211400ce8511312f6533733a in / 
+# Thu, 09 Feb 2023 06:09:37 GMT
 CMD ["/bin/sh"]
 ```
 
 -	Layers:
-	-	`sha256:810dd31423a9c6d0cf1afdb5e2d49569a7b57e8cc22f7061198b0acedab346ca`  
-		Last Modified: Thu, 10 Nov 2022 19:58:38 GMT  
-		Size: 2.9 MB (2865640 bytes)  
+	-	`sha256:3aa1d6a7d9cc94acf699d3f712d0ea101bf32343858c44d12c3420f0f1c131ce`  
+		Last Modified: Thu, 09 Feb 2023 06:10:28 GMT  
+		Size: 2.9 MB (2867978 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `alpine:edge` - linux; arm64 variant v8
@@ -2118,27 +2172,27 @@ CMD ["/bin/sh"]
 ### `alpine:edge` - linux; ppc64le
 
 ```console
-$ docker pull alpine@sha256:0b2843785a2777cc61e8ceab0dd43bb8c8dcfb25d8cf53b088f6f52c43ce7ade
+$ docker pull alpine@sha256:9e35cad581de3234ddd11484aa25db05d004fcf531955b91e1969f8417512fba
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **3.4 MB (3385016 bytes)**  
+-	Total Size: **3.4 MB (3394758 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e2c490fb3b3c9d5aaeb431e64441b018e491b2c713db2f795a7d940f397db4a0`
+-	Image ID: `sha256:5bccc17d2a5570a29bd13176afa6b2d6df19ee3f9798eb82bf134975aa396b20`
 -	Default Command: `["\/bin\/sh"]`
 
 ```dockerfile
-# Thu, 10 Nov 2022 20:16:51 GMT
-ADD file:380f4ac2dbd8a4e040f6b47073f9c29561c235b8001c7512997587e78aa7920c in / 
-# Thu, 10 Nov 2022 20:16:52 GMT
+# Thu, 09 Feb 2023 06:16:59 GMT
+ADD file:7b280862745356e8af7cfcd947055dbdb937eeb7663b8c20ed0cfaaa6f9d9c6e in / 
+# Thu, 09 Feb 2023 06:17:00 GMT
 CMD ["/bin/sh"]
 ```
 
 -	Layers:
-	-	`sha256:39190c17572682bb23d58d9e17d9989fd4026cb1c24db0caa462882434fd81f7`  
-		Last Modified: Thu, 10 Nov 2022 20:17:40 GMT  
-		Size: 3.4 MB (3385016 bytes)  
+	-	`sha256:fe95a36e46af57139fdb2cf19f8b2ad88b2fa43f747699710991f02cd401b346`  
+		Last Modified: Thu, 09 Feb 2023 06:17:44 GMT  
+		Size: 3.4 MB (3394758 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `alpine:edge` - linux; riscv64
