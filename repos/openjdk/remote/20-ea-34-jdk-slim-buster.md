@@ -1,7 +1,7 @@
 ## `openjdk:20-ea-34-jdk-slim-buster`
 
 ```console
-$ docker pull openjdk@sha256:59664c69d11773392014ac228a93ce994ffb476e1d2971df558ecaa76b11fa8b
+$ docker pull openjdk@sha256:1c3655f5ddfb6e881463215f81c9c9396def31053b7757e7d02f229d53851ed0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,49 +12,49 @@ $ docker pull openjdk@sha256:59664c69d11773392014ac228a93ce994ffb476e1d2971df558
 ### `openjdk:20-ea-34-jdk-slim-buster` - linux; amd64
 
 ```console
-$ docker pull openjdk@sha256:7b71110aa4fea56fa0d317495954712bea0cb70c8a78598601245dd7a2307c2d
+$ docker pull openjdk@sha256:d59ad618029bfe06965e50eff6df28f4ced4ed2f44ba1514adc75e9676967503
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **228.9 MB (228930279 bytes)**  
+-	Total Size: **228.9 MB (228930636 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5724213d4bc39ecee528e917410d8f2923467215a97d077b4f31cc14a4be8457`
+-	Image ID: `sha256:03f5bfeb279c2f039267f4058eeb70f845aafb8372ad9a5a1b58132fa7b85bce`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
-# Sat, 04 Feb 2023 06:52:07 GMT
-ADD file:4fbe1e3712cf37c85529cc81e0d03c82085203de00d64b0d669b5996e975925a in / 
-# Sat, 04 Feb 2023 06:52:07 GMT
+# Thu, 09 Feb 2023 03:20:48 GMT
+ADD file:6c5da7126f75c404a5d182eb6345153d6ea45be11da8be63a1bd355011412847 in / 
+# Thu, 09 Feb 2023 03:20:48 GMT
 CMD ["bash"]
-# Sat, 04 Feb 2023 15:06:25 GMT
+# Thu, 09 Feb 2023 10:48:19 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates p11-kit 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 04 Feb 2023 15:07:46 GMT
+# Thu, 09 Feb 2023 10:49:32 GMT
 ENV JAVA_HOME=/usr/local/openjdk-20
-# Sat, 04 Feb 2023 15:07:46 GMT
+# Thu, 09 Feb 2023 10:49:32 GMT
 ENV PATH=/usr/local/openjdk-20/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 04 Feb 2023 15:07:46 GMT
+# Thu, 09 Feb 2023 10:49:33 GMT
 ENV LANG=C.UTF-8
-# Sat, 04 Feb 2023 15:07:46 GMT
+# Thu, 09 Feb 2023 10:49:33 GMT
 ENV JAVA_VERSION=20-ea+34
-# Sat, 04 Feb 2023 15:07:59 GMT
+# Thu, 09 Feb 2023 10:49:46 GMT
 RUN set -eux; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			downloadUrl='https://download.java.net/java/early_access/jdk20/34/GPL/openjdk-20-ea+34_linux-x64_bin.tar.gz'; 			downloadSha256='1c8e4809d7444903dfde02ef45821c1206a5d98c241c04280434ef9b5aca15ad'; 			;; 		'arm64') 			downloadUrl='https://download.java.net/java/early_access/jdk20/34/GPL/openjdk-20-ea+34_linux-aarch64_bin.tar.gz'; 			downloadSha256='6e43b2f39d2b6359755a6cd26c01057b1b6d53c84d944fc3396500b2f21a15be'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		wget 	; 	rm -rf /var/lib/apt/lists/*; 		wget --progress=dot:giga -O openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		{ 		echo '#!/usr/bin/env bash'; 		echo 'set -Eeuo pipefail'; 		echo 'trust extract --overwrite --format=java-cacerts --filter=ca-anchors --purpose=server-auth "$JAVA_HOME/lib/security/cacerts"'; 	} > /etc/ca-certificates/update.d/docker-openjdk; 	chmod +x /etc/ca-certificates/update.d/docker-openjdk; 	/etc/ca-certificates/update.d/docker-openjdk; 		find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf; 	ldconfig; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Sat, 04 Feb 2023 15:08:00 GMT
+# Thu, 09 Feb 2023 10:49:47 GMT
 CMD ["jshell"]
 ```
 
 -	Layers:
-	-	`sha256:0cf508b37688dca559387b506062329202aaf08b48be5f55f9278b2a818ad2c9`  
-		Last Modified: Sat, 04 Feb 2023 06:56:58 GMT  
-		Size: 27.1 MB (27140353 bytes)  
+	-	`sha256:29cd48154c03e9242f1ff4f9895cf886a344fb94c9b71029455e76e11214328f`  
+		Last Modified: Thu, 09 Feb 2023 03:25:54 GMT  
+		Size: 27.1 MB (27140531 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8678f2fde91884990ecda287987ef64f313536e013e9f6fee77418c4769fa519`  
-		Last Modified: Sat, 04 Feb 2023 15:13:42 GMT  
-		Size: 3.3 MB (3275944 bytes)  
+	-	`sha256:a2663dab68577a1981f0b3fc37a5c844efdc4fe97f8c1484772876d35aa3400c`  
+		Last Modified: Thu, 09 Feb 2023 10:55:23 GMT  
+		Size: 3.3 MB (3275972 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cadbc24a0dd6044b83a2c051ea1b4d6a42462b0e2de0fd371c1bf1226090cf24`  
-		Last Modified: Sat, 04 Feb 2023 15:16:22 GMT  
-		Size: 198.5 MB (198513982 bytes)  
+	-	`sha256:8f13aad3d6e580febe68527ebfb3dbfb6528b82bc6b5967e7cf253f2d4737877`  
+		Last Modified: Thu, 09 Feb 2023 10:58:02 GMT  
+		Size: 198.5 MB (198514133 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `openjdk:20-ea-34-jdk-slim-buster` - linux; arm64 variant v8
