@@ -92,15 +92,9 @@ Licenses: (parsed from: `/usr/share/doc/libaprutil1/copyright`)
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apr-util=1.6.1-5.2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-5.2ubuntu1.dsc' apr-util_1.6.1-5.2ubuntu1.dsc 2906 SHA512:0b6b3e7f9edf9f79d62edad357e2a5939043a65de87364323dbc03a2b1e81c8b54f8353d2b92367b1b68bf29dbc27e62f29af95f846f5160fbb0edec726286e8
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1.orig.tar.bz2' apr-util_1.6.1.orig.tar.bz2 428595 SHA512:40eff8a37c0634f7fdddd6ca5e596b38de15fd10767a34c30bbe49c632816e8f3e1e230678034f578dd5816a94f246fb5dfdf48d644829af13bf28de3225205d
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1.orig.tar.bz2.asc' apr-util_1.6.1.orig.tar.bz2.asc 801 SHA512:5e35b0fe15c520de909371461d3d858c4b2b76672338e6d2634c05da4a9894aad9ffba34a8c6fbd174543411fc451f3485d2077e324784265fae91d2abf0ce36
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-5.2ubuntu1.debian.tar.xz' apr-util_1.6.1-5.2ubuntu1.debian.tar.xz 343044 SHA512:7c5a695c2cc308ff956840bd4f69ea1b50d2faa51761e35925e034c9e46a17a683bcd592eae6ec1553477e9c369cb8887f79ea38ea12231ef2b6123adc89ca8e
-```
 
 ### `dpkg` source package: `apr=1.7.0-8build1`
 
@@ -1471,13 +1465,9 @@ Licenses: (parsed from: `/usr/share/doc/hostname/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris hostname=3.23ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/h/hostname/hostname_3.23ubuntu2.dsc' hostname_3.23ubuntu2.dsc 1085 SHA512:5e7f690bb67fcbc7521df55b69ce899ff005d24fb511c017d60ff5e4c9d9fc51271422bb81fc4998d90149cb814d2a209dc61db4d5073f72a37fb22af59827a0
-'http://archive.ubuntu.com/ubuntu/pool/main/h/hostname/hostname_3.23ubuntu2.tar.gz' hostname_3.23ubuntu2.tar.gz 13854 SHA512:28b80ea23cbde63af91912aef2773ce83d7f4d1c2c82beb59a86c0e6b11e276019c610a0a60e69947af2b9bc5f86e4f8f6d13c1cb1a9ce35f1e5cfb03e0dd582
-```
 
 ### `dpkg` source package: `icu=71.1-3ubuntu1`
 

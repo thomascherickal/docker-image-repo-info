@@ -1313,14 +1313,9 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris heimdal=7.5.0+dfsg-1ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg-1ubuntu0.3.dsc' heimdal_7.5.0+dfsg-1ubuntu0.3.dsc 3416 SHA512:a0f7654ddeecb4359abbb41a17137be3ba75bb9e100a88b30abaeffb98a9798f5585a618874cd734fb1fbcfd70f19cd9e2b6e00a30ab779b577ca74bd0c876e3
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg.orig.tar.gz' heimdal_7.5.0+dfsg.orig.tar.gz 8955005 SHA512:8ecd3514cb42c746769fb4c83896fc1258cc68ab606894e775e5f99075b6ff87d7024f144a6a369816572270b89e2eb59e8f8dc4384eea25863a90c905cdfa14
-'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg-1ubuntu0.3.debian.tar.xz' heimdal_7.5.0+dfsg-1ubuntu0.3.debian.tar.xz 331536 SHA512:c2dfc6c44eb1225fbaf18b2fe8a43b4d331779cf2884fe054e1f94e3743eb3e15e9d8c8f22b6929cdaad205a903ba09e4abab9d12709e433c1be09e2f5c2802e
-```
 
 ### `dpkg` source package: `hicolor-icon-theme=0.17-2`
 
@@ -1468,14 +1463,9 @@ Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/
 - `Perllikelicence`
 - `TatcherUlrichPublicDomain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris imagemagick=8:6.9.7.4+dfsg-16ubuntu6.14
-'http://archive.ubuntu.com/ubuntu/pool/main/i/imagemagick/imagemagick_6.9.7.4%2bdfsg-16ubuntu6.14.dsc' imagemagick_6.9.7.4+dfsg-16ubuntu6.14.dsc 5108 SHA512:1c2c315a2e33cac45f97817c92cdbb659545600c5ee149e27403fc662f7f1846d9b923646f67d713aa8ee84c3c14f4a106f481df73afc5022abfd4a0c05a531b
-'http://archive.ubuntu.com/ubuntu/pool/main/i/imagemagick/imagemagick_6.9.7.4%2bdfsg.orig.tar.xz' imagemagick_6.9.7.4+dfsg.orig.tar.xz 8929800 SHA512:c1696b80cb95f00c32079110b84df9a125730f336cca5c04caf4aeb4b2f48ba8014dfd808b8a5cef221d5be4da4ffa1472548aa6885c5f756f04db64baf6fbd3
-'http://archive.ubuntu.com/ubuntu/pool/main/i/imagemagick/imagemagick_6.9.7.4%2bdfsg-16ubuntu6.14.debian.tar.xz' imagemagick_6.9.7.4+dfsg-16ubuntu6.14.debian.tar.xz 317328 SHA512:619c90f7ec7c1649f40daf463b448106eaf89bcae03d4071d2c40c599e9223f845163252210175cae03eccd43a92e7569e5b569f8dc5ef00e2ce20900b337db4
-```
 
 ### `dpkg` source package: `init-system-helpers=1.51`
 
@@ -2643,14 +2633,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-202.213
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-202.213.dsc' linux_4.15.0-202.213.dsc 7060 SHA512:1bbf9c2c1b413124115faa9db545ded51a3dd1e4c087bbbfcf5ffe70a2aa5c18a13c8e27f07da5a32f9056ba201dd61354a6ea0caadd9ca98920f75916352f5f
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-202.213.diff.gz' linux_4.15.0-202.213.diff.gz 13431431 SHA512:a73dc4953c08f9e5b1f8eefa737acea8665fc5cd77f447efd6bfa305660a54df9d24066613f308064afd5972ab5bd017798708eb73dea1cb0cdcd87220104eb9
-```
 
 ### `dpkg` source package: `lsb=9.20170808ubuntu1`
 
@@ -3119,15 +3104,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl1.0=1.0.2n-1ubuntu5.10
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n-1ubuntu5.10.dsc' openssl1.0_1.0.2n-1ubuntu5.10.dsc 2717 SHA512:13a6733ba1d76e8a34dabb41bbf9793892c9d92714736811b1526321e29c6e516a3b07c97bfb9e191be06c7d22af1e9ae070f631d58f639226e088f8909c896f
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n.orig.tar.gz' openssl1.0_1.0.2n.orig.tar.gz 5375802 SHA512:144bf0d6aa27b4af01df0b7b734c39962649e1711554247d42e05e14d8945742b18745aefdba162e2dfc762b941fd7d3b2d5dc6a781ae4ba10a6f5a3cadb0687
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n.orig.tar.gz.asc' openssl1.0_1.0.2n.orig.tar.gz.asc 455 SHA512:7a4d82d1abbfdac92f87839321a40348099fa32193e97042c1d5ff0b0ac719104e0e2b079e0669e603c98c7d2313d0e0de4c1aec0c9180eadd1dd241e7f1985a
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/openssl1.0_1.0.2n-1ubuntu5.10.debian.tar.xz' openssl1.0_1.0.2n-1ubuntu5.10.debian.tar.xz 130496 SHA512:da9fe2c441f50af3e4aa861397ca1c43ab178a27e27e455d517b8e02c1cccee11162835c18275763ce1450f32846e00fe84133b71a21ef6e21eab094b7ac7942
-```
 
 ### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.20`
 
@@ -3141,14 +3120,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.20
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1%7e18.04.20.dsc' openssl_1.1.1-1ubuntu2.1~18.04.20.dsc 2514 SHA512:cf3b83b1ec29b576328faa6e2dd10e9b396afeafcd8277d008ef82f80f999834237cbc61b44b2d8684fbb7104e0b9c79a2878333c09027beed5fbf9a55916bcc
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1%7e18.04.20.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.20.debian.tar.xz 171540 SHA512:213a93d75c90436974dd9d8aa2fd12000a062ca089204ef8c86aee50952c86a32df5766a993b41029c650865d057ce728f14c117de0eaa5439c6503af1011e6a
-```
 
 ### `dpkg` source package: `p11-kit=0.23.9-2ubuntu0.1`
 
