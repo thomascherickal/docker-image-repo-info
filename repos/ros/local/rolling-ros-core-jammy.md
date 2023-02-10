@@ -1728,14 +1728,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.15.0-58.64
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-58.64.dsc' linux_5.15.0-58.64.dsc 7332 SHA512:2780c6dca0cdc17b50ea3177a7896eeba4c61ff2f25f40ebc036950f78f9747a5f7878209d98b1c0014a7be75f5375652c23937d0f6a31ff44193015f202b35c
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-58.64.diff.gz' linux_5.15.0-58.64.diff.gz 8562793 SHA512:c11fc571508d214ee7531deacf1014c8bb8b6bcd1c7867beec4483e09fbc07afd79e553cbad7d5e5496c0f90cf223581d43f9cdb9033f1e084953031c7b19e36
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu4`
 
@@ -2074,15 +2069,9 @@ Licenses: (parsed from: `/usr/share/doc/libssl-dev/copyright`, `/usr/share/doc/l
 - `GPL-1`
 - `GPL-1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=3.0.2-0ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.7.dsc' openssl_3.0.2-0ubuntu1.7.dsc 2726 SHA512:ccef1474135698d8a1c1c2d399032b45d86ab9f46160a51e688be0fcb3060695919bd78535e8bbcf30f4d7fe1e5cb46e13d48ec849ec54efe9a533b7992f1235
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2.orig.tar.gz' openssl_3.0.2.orig.tar.gz 15038141 SHA512:f986850d5be908b4d6b5fd7091bc4652d7378c9bccebfbc5becd7753843c04c1eb61a1749c432139d263dfac33df0b1f6c773664b485cad47542266823a4eb03
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2.orig.tar.gz.asc' openssl_3.0.2.orig.tar.gz.asc 488 SHA512:4303391a58107c76ad9b05510f5bfc95f687f4cb2f9ff5b03fb262ba99b573423ab83f0437471199954496799b343191b889ad9ef8fabdd7ee4ec3ec9b5f1d81
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.7.debian.tar.xz' openssl_3.0.2-0ubuntu1.7.debian.tar.xz 165180 SHA512:e77f2b0a6db63d2c8c38682da646df9c8b8bca3c40ad7a61ffb732e1aa682aa5297858531889bf93637fce84b8ab4479c6a5dbb79b376262048492eef0491f29
-```
 
 ### `dpkg` source package: `p11-kit=0.24.0-6build1`
 
