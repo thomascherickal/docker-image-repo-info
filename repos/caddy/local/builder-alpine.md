@@ -1,10 +1,10 @@
-# `caddy:2.6.2-builder-alpine`
+# `caddy:2.6.3-builder-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3b4b0a1d2ea950bfda824c94b469659a7a199d1d3e0165c6a6e8f9c36f1dd94e`
-- Created: `2023-01-11T00:26:45.94839817Z`
-- Virtual Size: ~ 364.95 Mb  
+- Image ID: `sha256:858147920561fe47255b181692d82558dbab931f4393f33ba8697b9c647f690e`
+- Created: `2023-02-09T03:18:19.335315688Z`
+- Virtual Size: ~ 365.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/sh"]`
@@ -12,9 +12,10 @@
   - `PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `GOLANG_VERSION=1.19.5`
   - `GOPATH=/go`
-  - `XCADDY_VERSION=v0.3.1`
-  - `CADDY_VERSION=v2.6.2`
+  - `XCADDY_VERSION=v0.3.2`
+  - `CADDY_VERSION=v2.6.3`
   - `XCADDY_SKIP_CLEANUP=1`
+  - `XCADDY_SETCAP=1`
 
 ## `apk` (`.apk`-based packages)
 
@@ -174,16 +175,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `git`
 
 ```console
-git-2.38.2-r0 description:
+git-2.38.3-r1 description:
 Distributed version control system
 
-git-2.38.2-r0 webpage:
+git-2.38.3-r1 webpage:
 https://www.git-scm.com/
 
-git-2.38.2-r0 installed size:
-6060 KiB
+git-2.38.3-r1 installed size:
+6068 KiB
 
-git-2.38.2-r0 license:
+git-2.38.3-r1 license:
 GPL-2.0-or-later
 
 ```
@@ -202,6 +203,57 @@ libc-utils-0.7.2-r3 installed size:
 
 libc-utils-0.7.2-r3 license:
 BSD-2-Clause AND BSD-3-Clause
+
+```
+
+### `apk` package: `libcap`
+
+```console
+libcap-2.66-r0 description:
+POSIX 1003.1e capabilities
+
+libcap-2.66-r0 webpage:
+https://sites.google.com/site/fullycapable/
+
+libcap-2.66-r0 installed size:
+12 KiB
+
+libcap-2.66-r0 license:
+BSD-3-Clause OR GPL-2.0-only
+
+```
+
+### `apk` package: `libcap-utils`
+
+```console
+libcap-utils-2.66-r0 description:
+POSIX 1003.1e capabilities (utils)
+
+libcap-utils-2.66-r0 webpage:
+https://sites.google.com/site/fullycapable/
+
+libcap-utils-2.66-r0 installed size:
+116 KiB
+
+libcap-utils-2.66-r0 license:
+BSD-3-Clause OR GPL-2.0-only
+
+```
+
+### `apk` package: `libcap2`
+
+```console
+libcap2-2.66-r0 description:
+POSIX 1003.1e capabilities (libraries)
+
+libcap2-2.66-r0 webpage:
+https://sites.google.com/site/fullycapable/
+
+libcap2-2.66-r0 installed size:
+76 KiB
+
+libcap2-2.66-r0 license:
+BSD-3-Clause OR GPL-2.0-only
 
 ```
 
@@ -225,16 +277,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.87.0-r0 description:
+libcurl-7.87.0-r1 description:
 The multiprotocol file transfer library
 
-libcurl-7.87.0-r0 webpage:
+libcurl-7.87.0-r1 webpage:
 https://curl.se/
 
-libcurl-7.87.0-r0 installed size:
+libcurl-7.87.0-r1 installed size:
 540 KiB
 
-libcurl-7.87.0-r0 license:
+libcurl-7.87.0-r1 license:
 curl
 
 ```
