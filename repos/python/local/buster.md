@@ -1,10 +1,10 @@
-# `python:3.11.1-buster`
+# `python:3.11.2-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b8ce78b91022e46e6998a4d4505c6de69dc7adbc960287450f253bcdcf60bf7e`
-- Created: `2023-02-04T11:35:49.079983368Z`
-- Virtual Size: ~ 895.60 Mb  
+- Image ID: `sha256:bb3d0eeb5675d41a169ea2a5e514b58a368e03b4aa40d67770c013566cd78672`
+- Created: `2023-02-09T01:00:39.38993058Z`
+- Virtual Size: ~ 895.89 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["python3"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D`
-  - `PYTHON_VERSION=3.11.1`
+  - `PYTHON_VERSION=3.11.2`
   - `PYTHON_PIP_VERSION=22.3.1`
   - `PYTHON_SETUPTOOLS_VERSION=65.5.1`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/1a96dc5acd0303c4700e02655aefd3bc68c78958/public/get-pip.py`
@@ -4574,20 +4574,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-11=11.18-0+deb10u1
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.18-0%2bdeb10u1.dsc' postgresql-11_11.18-0+deb10u1.dsc 3745 SHA256:483f81ea29e6032eb47d8e50ba0e8bed89f4c5ac630a7829af77471a54308344
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.18.orig.tar.bz2' postgresql-11_11.18.orig.tar.bz2 20428126 SHA256:d24f20efc52e918acfbcca21e9cea28e0e263b846a0c408fcfac3b3c4a0f7504
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.18-0%2bdeb10u1.debian.tar.xz' postgresql-11_11.18-0+deb10u1.debian.tar.xz 28456 SHA256:35c3caae0d201bbcd38d508f9a82883891122c20c1e163f95a4348397c87e89d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-11/11.18-0+deb10u1/
 
-- https://sources.debian.net/src/postgresql-11/11.18-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-11/11.18-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-11/11.18-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
 
