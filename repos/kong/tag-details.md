@@ -41,7 +41,7 @@
 ## `kong:2.5`
 
 ```console
-$ docker pull kong@sha256:4d459bf9f353e69df80d660a7544d29583e77d5292f827137f6add87f74d2364
+$ docker pull kong@sha256:12792221167be24aa5a24d925330a977c46e3a3928fe14a6659fc905390705e0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -126,75 +126,75 @@ CMD ["kong" "docker-start"]
 ### `kong:2.5` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:934f0f609894a62d5ab41685863f02b29e7aa7d454b8e00482ed493fa32aaed1
+$ docker pull kong@sha256:543149670f25f6e4dbb2355cf59a42010d017174c40eba02cc55c7413dbcd043
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.4 MB (48391762 bytes)**  
+-	Total Size: **48.4 MB (48401370 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4ddbd7a976f9e47f0c736179c4fe225a32899cb86cebf1dd093bf993018a77e6`
+-	Image ID: `sha256:457ae08c0385d6cffd7f43e3a61dec753a9823e01633e2fccada5dbfeb498288`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Thu, 10 Nov 2022 20:39:46 GMT
-ADD file:4b51a9d40f20d2beb29d0759b161d2b9403493453beb509de4e86a5d98513f16 in / 
-# Thu, 10 Nov 2022 20:39:46 GMT
+# Fri, 10 Feb 2023 21:24:16 GMT
+ADD file:a73970ac03f28a1d3b9aaee19e859d958867b42fb91f29efb1259fbddc66ffb1 in / 
+# Fri, 10 Feb 2023 21:24:16 GMT
 CMD ["/bin/sh"]
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 LABEL maintainer=Kong <support@konghq.com>
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ENV ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG EE_PORTS
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 COPY file:9073480627c34fa516ae48557d24314a31d17b88798bd04c46162029e368d39c in /tmp/kong.tar.gz 
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ARG KONG_VERSION=2.5.2
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ENV KONG_VERSION=2.5.2
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ARG KONG_AMD64_SHA=d4bc93bcb14cce8c37ced136632a290b441050c540db779e742bcd88e5cfd70d
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ARG KONG_ARM64_SHA=691e1dc29e96d6a95b60674513932c4f7547773014685ce0130549f980c1c46e
-# Thu, 10 Nov 2022 22:40:35 GMT
+# Fri, 10 Feb 2023 23:00:28 GMT
 # ARGS: KONG_AMD64_SHA=d4bc93bcb14cce8c37ced136632a290b441050c540db779e742bcd88e5cfd70d KONG_ARM64_SHA=691e1dc29e96d6a95b60674513932c4f7547773014685ce0130549f980c1c46e
 RUN set -eux;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) arch='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) arch='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "ce" ] ; then       apk add --no-cache --virtual .build-deps curl wget tar ca-certificates       && curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-$KONG_VERSION.$arch.apk.tar.gz" -o /tmp/kong.tar.gz       && echo "$KONG_SHA256  /tmp/kong.tar.gz" | sha256sum -c -       && apk del .build-deps;     else       apk upgrade;     fi;     mkdir /kong     && tar -C /kong -xzf /tmp/kong.tar.gz     && mv /kong/usr/local/* /usr/local     && mv /kong/etc/* /etc     && rm -rf /kong     && apk add --no-cache libstdc++ libgcc openssl pcre perl tzdata libcap zip bash zlib zlib-dev git ca-certificates     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && if [ "$ASSET" = "ce" ] ; then       kong version;     fi
-# Thu, 10 Nov 2022 22:40:35 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Thu, 10 Nov 2022 22:40:35 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 USER kong
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 EXPOSE 8000 8001 8443 8444
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 STOPSIGNAL SIGQUIT
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:47517142f6ba87eca6b7bdca1e0df160b74671c81e4b9605dad38c1862a43be3`  
-		Last Modified: Tue, 09 Aug 2022 17:40:55 GMT  
-		Size: 2.7 MB (2718439 bytes)  
+	-	`sha256:404f35918b797abb27547df3b530ec55a77c499c4dce88f3b90867115087f9e7`  
+		Last Modified: Fri, 10 Feb 2023 21:25:01 GMT  
+		Size: 2.7 MB (2721556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a9f5eba777c2192f562d24cd3da16152dec7d8942677370e1524b03a6e36a2b`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 127.0 B  
+	-	`sha256:d21dbecf80430775ed3b75443538d3568cb87cb087b86329bb313c2e1bc403a4`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:578c76f657afd39a075841d957e371975dda66e218c2055e95e692d64aa969ee`  
-		Last Modified: Thu, 10 Nov 2022 22:42:47 GMT  
-		Size: 45.7 MB (45672316 bytes)  
+	-	`sha256:593d0e5f72eaa84ac04715e11e5007224d439c9821e4ee7e7d1f9de85a86573f`  
+		Last Modified: Fri, 10 Feb 2023 23:02:40 GMT  
+		Size: 45.7 MB (45678804 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13ad9797993253de6ac3a029a742d251a5445f0acc9ac38af3e937ae07078d3f`  
-		Last Modified: Thu, 10 Nov 2022 22:42:40 GMT  
-		Size: 880.0 B  
+	-	`sha256:b6c5cc7d2a7a68555dce67f4d5d1dda5b175ab40bf44c6a21ed6050ecb86a3b4`  
+		Last Modified: Fri, 10 Feb 2023 23:02:33 GMT  
+		Size: 881.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:2.5-ubuntu`
@@ -371,7 +371,7 @@ CMD ["kong" "docker-start"]
 ## `kong:2.5.2`
 
 ```console
-$ docker pull kong@sha256:4d459bf9f353e69df80d660a7544d29583e77d5292f827137f6add87f74d2364
+$ docker pull kong@sha256:12792221167be24aa5a24d925330a977c46e3a3928fe14a6659fc905390705e0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -456,81 +456,81 @@ CMD ["kong" "docker-start"]
 ### `kong:2.5.2` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:934f0f609894a62d5ab41685863f02b29e7aa7d454b8e00482ed493fa32aaed1
+$ docker pull kong@sha256:543149670f25f6e4dbb2355cf59a42010d017174c40eba02cc55c7413dbcd043
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.4 MB (48391762 bytes)**  
+-	Total Size: **48.4 MB (48401370 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4ddbd7a976f9e47f0c736179c4fe225a32899cb86cebf1dd093bf993018a77e6`
+-	Image ID: `sha256:457ae08c0385d6cffd7f43e3a61dec753a9823e01633e2fccada5dbfeb498288`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Thu, 10 Nov 2022 20:39:46 GMT
-ADD file:4b51a9d40f20d2beb29d0759b161d2b9403493453beb509de4e86a5d98513f16 in / 
-# Thu, 10 Nov 2022 20:39:46 GMT
+# Fri, 10 Feb 2023 21:24:16 GMT
+ADD file:a73970ac03f28a1d3b9aaee19e859d958867b42fb91f29efb1259fbddc66ffb1 in / 
+# Fri, 10 Feb 2023 21:24:16 GMT
 CMD ["/bin/sh"]
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 LABEL maintainer=Kong <support@konghq.com>
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ENV ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG EE_PORTS
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 COPY file:9073480627c34fa516ae48557d24314a31d17b88798bd04c46162029e368d39c in /tmp/kong.tar.gz 
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ARG KONG_VERSION=2.5.2
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ENV KONG_VERSION=2.5.2
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ARG KONG_AMD64_SHA=d4bc93bcb14cce8c37ced136632a290b441050c540db779e742bcd88e5cfd70d
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ARG KONG_ARM64_SHA=691e1dc29e96d6a95b60674513932c4f7547773014685ce0130549f980c1c46e
-# Thu, 10 Nov 2022 22:40:35 GMT
+# Fri, 10 Feb 2023 23:00:28 GMT
 # ARGS: KONG_AMD64_SHA=d4bc93bcb14cce8c37ced136632a290b441050c540db779e742bcd88e5cfd70d KONG_ARM64_SHA=691e1dc29e96d6a95b60674513932c4f7547773014685ce0130549f980c1c46e
 RUN set -eux;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) arch='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) arch='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "ce" ] ; then       apk add --no-cache --virtual .build-deps curl wget tar ca-certificates       && curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-$KONG_VERSION.$arch.apk.tar.gz" -o /tmp/kong.tar.gz       && echo "$KONG_SHA256  /tmp/kong.tar.gz" | sha256sum -c -       && apk del .build-deps;     else       apk upgrade;     fi;     mkdir /kong     && tar -C /kong -xzf /tmp/kong.tar.gz     && mv /kong/usr/local/* /usr/local     && mv /kong/etc/* /etc     && rm -rf /kong     && apk add --no-cache libstdc++ libgcc openssl pcre perl tzdata libcap zip bash zlib zlib-dev git ca-certificates     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && if [ "$ASSET" = "ce" ] ; then       kong version;     fi
-# Thu, 10 Nov 2022 22:40:35 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Thu, 10 Nov 2022 22:40:35 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 USER kong
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 EXPOSE 8000 8001 8443 8444
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 STOPSIGNAL SIGQUIT
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:47517142f6ba87eca6b7bdca1e0df160b74671c81e4b9605dad38c1862a43be3`  
-		Last Modified: Tue, 09 Aug 2022 17:40:55 GMT  
-		Size: 2.7 MB (2718439 bytes)  
+	-	`sha256:404f35918b797abb27547df3b530ec55a77c499c4dce88f3b90867115087f9e7`  
+		Last Modified: Fri, 10 Feb 2023 21:25:01 GMT  
+		Size: 2.7 MB (2721556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a9f5eba777c2192f562d24cd3da16152dec7d8942677370e1524b03a6e36a2b`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 127.0 B  
+	-	`sha256:d21dbecf80430775ed3b75443538d3568cb87cb087b86329bb313c2e1bc403a4`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:578c76f657afd39a075841d957e371975dda66e218c2055e95e692d64aa969ee`  
-		Last Modified: Thu, 10 Nov 2022 22:42:47 GMT  
-		Size: 45.7 MB (45672316 bytes)  
+	-	`sha256:593d0e5f72eaa84ac04715e11e5007224d439c9821e4ee7e7d1f9de85a86573f`  
+		Last Modified: Fri, 10 Feb 2023 23:02:40 GMT  
+		Size: 45.7 MB (45678804 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13ad9797993253de6ac3a029a742d251a5445f0acc9ac38af3e937ae07078d3f`  
-		Last Modified: Thu, 10 Nov 2022 22:42:40 GMT  
-		Size: 880.0 B  
+	-	`sha256:b6c5cc7d2a7a68555dce67f4d5d1dda5b175ab40bf44c6a21ed6050ecb86a3b4`  
+		Last Modified: Fri, 10 Feb 2023 23:02:33 GMT  
+		Size: 881.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:2.5.2-alpine`
 
 ```console
-$ docker pull kong@sha256:4d459bf9f353e69df80d660a7544d29583e77d5292f827137f6add87f74d2364
+$ docker pull kong@sha256:12792221167be24aa5a24d925330a977c46e3a3928fe14a6659fc905390705e0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -615,75 +615,75 @@ CMD ["kong" "docker-start"]
 ### `kong:2.5.2-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:934f0f609894a62d5ab41685863f02b29e7aa7d454b8e00482ed493fa32aaed1
+$ docker pull kong@sha256:543149670f25f6e4dbb2355cf59a42010d017174c40eba02cc55c7413dbcd043
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **48.4 MB (48391762 bytes)**  
+-	Total Size: **48.4 MB (48401370 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4ddbd7a976f9e47f0c736179c4fe225a32899cb86cebf1dd093bf993018a77e6`
+-	Image ID: `sha256:457ae08c0385d6cffd7f43e3a61dec753a9823e01633e2fccada5dbfeb498288`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Thu, 10 Nov 2022 20:39:46 GMT
-ADD file:4b51a9d40f20d2beb29d0759b161d2b9403493453beb509de4e86a5d98513f16 in / 
-# Thu, 10 Nov 2022 20:39:46 GMT
+# Fri, 10 Feb 2023 21:24:16 GMT
+ADD file:a73970ac03f28a1d3b9aaee19e859d958867b42fb91f29efb1259fbddc66ffb1 in / 
+# Fri, 10 Feb 2023 21:24:16 GMT
 CMD ["/bin/sh"]
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 LABEL maintainer=Kong <support@konghq.com>
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ENV ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG EE_PORTS
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 COPY file:9073480627c34fa516ae48557d24314a31d17b88798bd04c46162029e368d39c in /tmp/kong.tar.gz 
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ARG KONG_VERSION=2.5.2
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ENV KONG_VERSION=2.5.2
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ARG KONG_AMD64_SHA=d4bc93bcb14cce8c37ced136632a290b441050c540db779e742bcd88e5cfd70d
-# Thu, 10 Nov 2022 22:40:29 GMT
+# Fri, 10 Feb 2023 23:00:22 GMT
 ARG KONG_ARM64_SHA=691e1dc29e96d6a95b60674513932c4f7547773014685ce0130549f980c1c46e
-# Thu, 10 Nov 2022 22:40:35 GMT
+# Fri, 10 Feb 2023 23:00:28 GMT
 # ARGS: KONG_AMD64_SHA=d4bc93bcb14cce8c37ced136632a290b441050c540db779e742bcd88e5cfd70d KONG_ARM64_SHA=691e1dc29e96d6a95b60674513932c4f7547773014685ce0130549f980c1c46e
 RUN set -eux;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) arch='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) arch='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "ce" ] ; then       apk add --no-cache --virtual .build-deps curl wget tar ca-certificates       && curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-$KONG_VERSION.$arch.apk.tar.gz" -o /tmp/kong.tar.gz       && echo "$KONG_SHA256  /tmp/kong.tar.gz" | sha256sum -c -       && apk del .build-deps;     else       apk upgrade;     fi;     mkdir /kong     && tar -C /kong -xzf /tmp/kong.tar.gz     && mv /kong/usr/local/* /usr/local     && mv /kong/etc/* /etc     && rm -rf /kong     && apk add --no-cache libstdc++ libgcc openssl pcre perl tzdata libcap zip bash zlib zlib-dev git ca-certificates     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && if [ "$ASSET" = "ce" ] ; then       kong version;     fi
-# Thu, 10 Nov 2022 22:40:35 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Thu, 10 Nov 2022 22:40:35 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 USER kong
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 EXPOSE 8000 8001 8443 8444
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 STOPSIGNAL SIGQUIT
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Thu, 10 Nov 2022 22:40:36 GMT
+# Fri, 10 Feb 2023 23:00:29 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:47517142f6ba87eca6b7bdca1e0df160b74671c81e4b9605dad38c1862a43be3`  
-		Last Modified: Tue, 09 Aug 2022 17:40:55 GMT  
-		Size: 2.7 MB (2718439 bytes)  
+	-	`sha256:404f35918b797abb27547df3b530ec55a77c499c4dce88f3b90867115087f9e7`  
+		Last Modified: Fri, 10 Feb 2023 21:25:01 GMT  
+		Size: 2.7 MB (2721556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a9f5eba777c2192f562d24cd3da16152dec7d8942677370e1524b03a6e36a2b`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 127.0 B  
+	-	`sha256:d21dbecf80430775ed3b75443538d3568cb87cb087b86329bb313c2e1bc403a4`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:578c76f657afd39a075841d957e371975dda66e218c2055e95e692d64aa969ee`  
-		Last Modified: Thu, 10 Nov 2022 22:42:47 GMT  
-		Size: 45.7 MB (45672316 bytes)  
+	-	`sha256:593d0e5f72eaa84ac04715e11e5007224d439c9821e4ee7e7d1f9de85a86573f`  
+		Last Modified: Fri, 10 Feb 2023 23:02:40 GMT  
+		Size: 45.7 MB (45678804 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13ad9797993253de6ac3a029a742d251a5445f0acc9ac38af3e937ae07078d3f`  
-		Last Modified: Thu, 10 Nov 2022 22:42:40 GMT  
-		Size: 880.0 B  
+	-	`sha256:b6c5cc7d2a7a68555dce67f4d5d1dda5b175ab40bf44c6a21ed6050ecb86a3b4`  
+		Last Modified: Fri, 10 Feb 2023 23:02:33 GMT  
+		Size: 881.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:2.5.2-ubuntu`
@@ -860,7 +860,7 @@ CMD ["kong" "docker-start"]
 ## `kong:2.6`
 
 ```console
-$ docker pull kong@sha256:62eb6d17133b007cbf5831b39197c669b8700c55283270395b876d1ecfd69a70
+$ docker pull kong@sha256:a7e5ea2d468a54d1802f2ec186d5be0f6580ab60c4a143d83233d8f03ec5a38c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -945,74 +945,74 @@ CMD ["kong" "docker-start"]
 ### `kong:2.6` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:607d9bdc48adf88bcee03b5dfa77a2d7d8293c803e12c97c897a129b27e6a669
+$ docker pull kong@sha256:0115f504d32a42f81f065dd114a4fd4447d80e57fc6de60534d65388565f6a45
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **49.6 MB (49626411 bytes)**  
+-	Total Size: **49.6 MB (49632904 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:119c7b9aedaeb47ed122d6ec970ab5c7214b29169221bfdb9cfe7a7602e49454`
+-	Image ID: `sha256:883dcd92b425d9c81b45219f73496285c49b93459e82a8eec1878887eae5d0b5`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Thu, 10 Nov 2022 20:39:46 GMT
-ADD file:4b51a9d40f20d2beb29d0759b161d2b9403493453beb509de4e86a5d98513f16 in / 
-# Thu, 10 Nov 2022 20:39:46 GMT
+# Fri, 10 Feb 2023 21:24:16 GMT
+ADD file:a73970ac03f28a1d3b9aaee19e859d958867b42fb91f29efb1259fbddc66ffb1 in / 
+# Fri, 10 Feb 2023 21:24:16 GMT
 CMD ["/bin/sh"]
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 LABEL maintainer=Kong <support@konghq.com>
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ENV ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG EE_PORTS
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 COPY file:9073480627c34fa516ae48557d24314a31d17b88798bd04c46162029e368d39c in /tmp/kong.tar.gz 
-# Thu, 10 Nov 2022 22:40:17 GMT
+# Fri, 10 Feb 2023 23:00:10 GMT
 ARG KONG_VERSION=2.6.1
-# Thu, 10 Nov 2022 22:40:17 GMT
+# Fri, 10 Feb 2023 23:00:10 GMT
 ENV KONG_VERSION=2.6.1
-# Thu, 10 Nov 2022 22:40:18 GMT
+# Fri, 10 Feb 2023 23:00:11 GMT
 ARG KONG_AMD64_SHA=9e7618ad06c148ed216be8bbf65a9c7cb95301e5349ef61b996fbb55ec4cfa87
-# Thu, 10 Nov 2022 22:40:18 GMT
+# Fri, 10 Feb 2023 23:00:11 GMT
 ARG KONG_ARM64_SHA=0fbf008685c6eac510d221595172e9e7bd51a846d410972d6950d9207cf400de
-# Thu, 10 Nov 2022 22:40:23 GMT
+# Fri, 10 Feb 2023 23:00:17 GMT
 # ARGS: KONG_AMD64_SHA=9e7618ad06c148ed216be8bbf65a9c7cb95301e5349ef61b996fbb55ec4cfa87 KONG_ARM64_SHA=0fbf008685c6eac510d221595172e9e7bd51a846d410972d6950d9207cf400de
 RUN set -eux;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) arch='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) arch='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "ce" ] ; then       apk add --no-cache --virtual .build-deps curl wget tar ca-certificates       && curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-$KONG_VERSION.$arch.apk.tar.gz" -o /tmp/kong.tar.gz       && echo "$KONG_SHA256  /tmp/kong.tar.gz" | sha256sum -c -       && apk del .build-deps;     else       apk upgrade;     fi;     mkdir /kong     && tar -C /kong -xzf /tmp/kong.tar.gz     && mv /kong/usr/local/* /usr/local     && mv /kong/etc/* /etc     && rm -rf /kong     && apk add --no-cache libstdc++ libgcc openssl pcre perl tzdata libcap zip bash zlib zlib-dev git ca-certificates     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && if [ "$ASSET" = "ce" ] ; then       kong version;     fi
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 USER kong
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 EXPOSE 8000 8001 8443 8444
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 STOPSIGNAL SIGQUIT
-# Thu, 10 Nov 2022 22:40:25 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Thu, 10 Nov 2022 22:40:25 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:47517142f6ba87eca6b7bdca1e0df160b74671c81e4b9605dad38c1862a43be3`  
-		Last Modified: Tue, 09 Aug 2022 17:40:55 GMT  
-		Size: 2.7 MB (2718439 bytes)  
+	-	`sha256:404f35918b797abb27547df3b530ec55a77c499c4dce88f3b90867115087f9e7`  
+		Last Modified: Fri, 10 Feb 2023 21:25:01 GMT  
+		Size: 2.7 MB (2721556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a9f5eba777c2192f562d24cd3da16152dec7d8942677370e1524b03a6e36a2b`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 127.0 B  
+	-	`sha256:d21dbecf80430775ed3b75443538d3568cb87cb087b86329bb313c2e1bc403a4`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f9dc6c1f293dd1473f1dd7e3176777c7089b6bdcebd2c879cbc2a0040daf2bf2`  
-		Last Modified: Thu, 10 Nov 2022 22:42:28 GMT  
-		Size: 46.9 MB (46906964 bytes)  
+	-	`sha256:d669d96f1c0e1a33e606d0744732ec0d6d5c3c3d8f5cb6782911fb9c8604e99e`  
+		Last Modified: Fri, 10 Feb 2023 23:02:21 GMT  
+		Size: 46.9 MB (46910338 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7605604f20571f531c42364dbfc0858fe97409b5faa3f8407a409e04c2946b7`  
-		Last Modified: Thu, 10 Nov 2022 22:42:21 GMT  
+	-	`sha256:bf6a17e6b4a2bce2274ce26992d266e7680b1d21f25d3340bbe10237ec10e22f`  
+		Last Modified: Fri, 10 Feb 2023 23:02:14 GMT  
 		Size: 881.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1190,7 +1190,7 @@ CMD ["kong" "docker-start"]
 ## `kong:2.6.1`
 
 ```console
-$ docker pull kong@sha256:62eb6d17133b007cbf5831b39197c669b8700c55283270395b876d1ecfd69a70
+$ docker pull kong@sha256:a7e5ea2d468a54d1802f2ec186d5be0f6580ab60c4a143d83233d8f03ec5a38c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1275,81 +1275,81 @@ CMD ["kong" "docker-start"]
 ### `kong:2.6.1` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:607d9bdc48adf88bcee03b5dfa77a2d7d8293c803e12c97c897a129b27e6a669
+$ docker pull kong@sha256:0115f504d32a42f81f065dd114a4fd4447d80e57fc6de60534d65388565f6a45
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **49.6 MB (49626411 bytes)**  
+-	Total Size: **49.6 MB (49632904 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:119c7b9aedaeb47ed122d6ec970ab5c7214b29169221bfdb9cfe7a7602e49454`
+-	Image ID: `sha256:883dcd92b425d9c81b45219f73496285c49b93459e82a8eec1878887eae5d0b5`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Thu, 10 Nov 2022 20:39:46 GMT
-ADD file:4b51a9d40f20d2beb29d0759b161d2b9403493453beb509de4e86a5d98513f16 in / 
-# Thu, 10 Nov 2022 20:39:46 GMT
+# Fri, 10 Feb 2023 21:24:16 GMT
+ADD file:a73970ac03f28a1d3b9aaee19e859d958867b42fb91f29efb1259fbddc66ffb1 in / 
+# Fri, 10 Feb 2023 21:24:16 GMT
 CMD ["/bin/sh"]
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 LABEL maintainer=Kong <support@konghq.com>
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ENV ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG EE_PORTS
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 COPY file:9073480627c34fa516ae48557d24314a31d17b88798bd04c46162029e368d39c in /tmp/kong.tar.gz 
-# Thu, 10 Nov 2022 22:40:17 GMT
+# Fri, 10 Feb 2023 23:00:10 GMT
 ARG KONG_VERSION=2.6.1
-# Thu, 10 Nov 2022 22:40:17 GMT
+# Fri, 10 Feb 2023 23:00:10 GMT
 ENV KONG_VERSION=2.6.1
-# Thu, 10 Nov 2022 22:40:18 GMT
+# Fri, 10 Feb 2023 23:00:11 GMT
 ARG KONG_AMD64_SHA=9e7618ad06c148ed216be8bbf65a9c7cb95301e5349ef61b996fbb55ec4cfa87
-# Thu, 10 Nov 2022 22:40:18 GMT
+# Fri, 10 Feb 2023 23:00:11 GMT
 ARG KONG_ARM64_SHA=0fbf008685c6eac510d221595172e9e7bd51a846d410972d6950d9207cf400de
-# Thu, 10 Nov 2022 22:40:23 GMT
+# Fri, 10 Feb 2023 23:00:17 GMT
 # ARGS: KONG_AMD64_SHA=9e7618ad06c148ed216be8bbf65a9c7cb95301e5349ef61b996fbb55ec4cfa87 KONG_ARM64_SHA=0fbf008685c6eac510d221595172e9e7bd51a846d410972d6950d9207cf400de
 RUN set -eux;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) arch='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) arch='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "ce" ] ; then       apk add --no-cache --virtual .build-deps curl wget tar ca-certificates       && curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-$KONG_VERSION.$arch.apk.tar.gz" -o /tmp/kong.tar.gz       && echo "$KONG_SHA256  /tmp/kong.tar.gz" | sha256sum -c -       && apk del .build-deps;     else       apk upgrade;     fi;     mkdir /kong     && tar -C /kong -xzf /tmp/kong.tar.gz     && mv /kong/usr/local/* /usr/local     && mv /kong/etc/* /etc     && rm -rf /kong     && apk add --no-cache libstdc++ libgcc openssl pcre perl tzdata libcap zip bash zlib zlib-dev git ca-certificates     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && if [ "$ASSET" = "ce" ] ; then       kong version;     fi
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 USER kong
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 EXPOSE 8000 8001 8443 8444
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 STOPSIGNAL SIGQUIT
-# Thu, 10 Nov 2022 22:40:25 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Thu, 10 Nov 2022 22:40:25 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:47517142f6ba87eca6b7bdca1e0df160b74671c81e4b9605dad38c1862a43be3`  
-		Last Modified: Tue, 09 Aug 2022 17:40:55 GMT  
-		Size: 2.7 MB (2718439 bytes)  
+	-	`sha256:404f35918b797abb27547df3b530ec55a77c499c4dce88f3b90867115087f9e7`  
+		Last Modified: Fri, 10 Feb 2023 21:25:01 GMT  
+		Size: 2.7 MB (2721556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a9f5eba777c2192f562d24cd3da16152dec7d8942677370e1524b03a6e36a2b`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 127.0 B  
+	-	`sha256:d21dbecf80430775ed3b75443538d3568cb87cb087b86329bb313c2e1bc403a4`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f9dc6c1f293dd1473f1dd7e3176777c7089b6bdcebd2c879cbc2a0040daf2bf2`  
-		Last Modified: Thu, 10 Nov 2022 22:42:28 GMT  
-		Size: 46.9 MB (46906964 bytes)  
+	-	`sha256:d669d96f1c0e1a33e606d0744732ec0d6d5c3c3d8f5cb6782911fb9c8604e99e`  
+		Last Modified: Fri, 10 Feb 2023 23:02:21 GMT  
+		Size: 46.9 MB (46910338 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7605604f20571f531c42364dbfc0858fe97409b5faa3f8407a409e04c2946b7`  
-		Last Modified: Thu, 10 Nov 2022 22:42:21 GMT  
+	-	`sha256:bf6a17e6b4a2bce2274ce26992d266e7680b1d21f25d3340bbe10237ec10e22f`  
+		Last Modified: Fri, 10 Feb 2023 23:02:14 GMT  
 		Size: 881.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:2.6.1-alpine`
 
 ```console
-$ docker pull kong@sha256:62eb6d17133b007cbf5831b39197c669b8700c55283270395b876d1ecfd69a70
+$ docker pull kong@sha256:a7e5ea2d468a54d1802f2ec186d5be0f6580ab60c4a143d83233d8f03ec5a38c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1434,74 +1434,74 @@ CMD ["kong" "docker-start"]
 ### `kong:2.6.1-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:607d9bdc48adf88bcee03b5dfa77a2d7d8293c803e12c97c897a129b27e6a669
+$ docker pull kong@sha256:0115f504d32a42f81f065dd114a4fd4447d80e57fc6de60534d65388565f6a45
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **49.6 MB (49626411 bytes)**  
+-	Total Size: **49.6 MB (49632904 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:119c7b9aedaeb47ed122d6ec970ab5c7214b29169221bfdb9cfe7a7602e49454`
+-	Image ID: `sha256:883dcd92b425d9c81b45219f73496285c49b93459e82a8eec1878887eae5d0b5`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Thu, 10 Nov 2022 20:39:46 GMT
-ADD file:4b51a9d40f20d2beb29d0759b161d2b9403493453beb509de4e86a5d98513f16 in / 
-# Thu, 10 Nov 2022 20:39:46 GMT
+# Fri, 10 Feb 2023 21:24:16 GMT
+ADD file:a73970ac03f28a1d3b9aaee19e859d958867b42fb91f29efb1259fbddc66ffb1 in / 
+# Fri, 10 Feb 2023 21:24:16 GMT
 CMD ["/bin/sh"]
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 LABEL maintainer=Kong <support@konghq.com>
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ENV ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG EE_PORTS
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 COPY file:9073480627c34fa516ae48557d24314a31d17b88798bd04c46162029e368d39c in /tmp/kong.tar.gz 
-# Thu, 10 Nov 2022 22:40:17 GMT
+# Fri, 10 Feb 2023 23:00:10 GMT
 ARG KONG_VERSION=2.6.1
-# Thu, 10 Nov 2022 22:40:17 GMT
+# Fri, 10 Feb 2023 23:00:10 GMT
 ENV KONG_VERSION=2.6.1
-# Thu, 10 Nov 2022 22:40:18 GMT
+# Fri, 10 Feb 2023 23:00:11 GMT
 ARG KONG_AMD64_SHA=9e7618ad06c148ed216be8bbf65a9c7cb95301e5349ef61b996fbb55ec4cfa87
-# Thu, 10 Nov 2022 22:40:18 GMT
+# Fri, 10 Feb 2023 23:00:11 GMT
 ARG KONG_ARM64_SHA=0fbf008685c6eac510d221595172e9e7bd51a846d410972d6950d9207cf400de
-# Thu, 10 Nov 2022 22:40:23 GMT
+# Fri, 10 Feb 2023 23:00:17 GMT
 # ARGS: KONG_AMD64_SHA=9e7618ad06c148ed216be8bbf65a9c7cb95301e5349ef61b996fbb55ec4cfa87 KONG_ARM64_SHA=0fbf008685c6eac510d221595172e9e7bd51a846d410972d6950d9207cf400de
 RUN set -eux;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) arch='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) arch='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "ce" ] ; then       apk add --no-cache --virtual .build-deps curl wget tar ca-certificates       && curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-$KONG_VERSION.$arch.apk.tar.gz" -o /tmp/kong.tar.gz       && echo "$KONG_SHA256  /tmp/kong.tar.gz" | sha256sum -c -       && apk del .build-deps;     else       apk upgrade;     fi;     mkdir /kong     && tar -C /kong -xzf /tmp/kong.tar.gz     && mv /kong/usr/local/* /usr/local     && mv /kong/etc/* /etc     && rm -rf /kong     && apk add --no-cache libstdc++ libgcc openssl pcre perl tzdata libcap zip bash zlib zlib-dev git ca-certificates     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && if [ "$ASSET" = "ce" ] ; then       kong version;     fi
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 USER kong
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 EXPOSE 8000 8001 8443 8444
-# Thu, 10 Nov 2022 22:40:24 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 STOPSIGNAL SIGQUIT
-# Thu, 10 Nov 2022 22:40:25 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Thu, 10 Nov 2022 22:40:25 GMT
+# Fri, 10 Feb 2023 23:00:18 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:47517142f6ba87eca6b7bdca1e0df160b74671c81e4b9605dad38c1862a43be3`  
-		Last Modified: Tue, 09 Aug 2022 17:40:55 GMT  
-		Size: 2.7 MB (2718439 bytes)  
+	-	`sha256:404f35918b797abb27547df3b530ec55a77c499c4dce88f3b90867115087f9e7`  
+		Last Modified: Fri, 10 Feb 2023 21:25:01 GMT  
+		Size: 2.7 MB (2721556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a9f5eba777c2192f562d24cd3da16152dec7d8942677370e1524b03a6e36a2b`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 127.0 B  
+	-	`sha256:d21dbecf80430775ed3b75443538d3568cb87cb087b86329bb313c2e1bc403a4`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f9dc6c1f293dd1473f1dd7e3176777c7089b6bdcebd2c879cbc2a0040daf2bf2`  
-		Last Modified: Thu, 10 Nov 2022 22:42:28 GMT  
-		Size: 46.9 MB (46906964 bytes)  
+	-	`sha256:d669d96f1c0e1a33e606d0744732ec0d6d5c3c3d8f5cb6782911fb9c8604e99e`  
+		Last Modified: Fri, 10 Feb 2023 23:02:21 GMT  
+		Size: 46.9 MB (46910338 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7605604f20571f531c42364dbfc0858fe97409b5faa3f8407a409e04c2946b7`  
-		Last Modified: Thu, 10 Nov 2022 22:42:21 GMT  
+	-	`sha256:bf6a17e6b4a2bce2274ce26992d266e7680b1d21f25d3340bbe10237ec10e22f`  
+		Last Modified: Fri, 10 Feb 2023 23:02:14 GMT  
 		Size: 881.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1679,7 +1679,7 @@ CMD ["kong" "docker-start"]
 ## `kong:2.7`
 
 ```console
-$ docker pull kong@sha256:95cbba86c8addbfee6726b5a7743ab9bb8158c4a801caa75aafe3fe03992f170
+$ docker pull kong@sha256:f43dc6114a8070af1d7a1bbb1a6f279067a64f4c2048bd17b5e60805732bab93
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1764,75 +1764,75 @@ CMD ["kong" "docker-start"]
 ### `kong:2.7` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:7c35b5df861fc05fc12db8f1c7f98f5b07d1490f9bce31d0a58edea1098c466c
+$ docker pull kong@sha256:a132ca607bbd412e018d4ac2770918fd4c16e8972234d0d1f0e10bfee7238d75
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **49.5 MB (49544935 bytes)**  
+-	Total Size: **49.6 MB (49554993 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ee3bd472c5d632ebf186555ef7b7d99ef7ba814308a256a1ec8a7367f9924db7`
+-	Image ID: `sha256:9265ff8b02ac2e5cba6bf015d6a35170bde9729a1b7e0d8d191a41551e950fac`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Thu, 10 Nov 2022 20:39:46 GMT
-ADD file:4b51a9d40f20d2beb29d0759b161d2b9403493453beb509de4e86a5d98513f16 in / 
-# Thu, 10 Nov 2022 20:39:46 GMT
+# Fri, 10 Feb 2023 21:24:16 GMT
+ADD file:a73970ac03f28a1d3b9aaee19e859d958867b42fb91f29efb1259fbddc66ffb1 in / 
+# Fri, 10 Feb 2023 21:24:16 GMT
 CMD ["/bin/sh"]
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 LABEL maintainer=Kong <support@konghq.com>
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ENV ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG EE_PORTS
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 COPY file:9073480627c34fa516ae48557d24314a31d17b88798bd04c46162029e368d39c in /tmp/kong.tar.gz 
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG KONG_VERSION=2.7.2
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:58 GMT
 ENV KONG_VERSION=2.7.2
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:58 GMT
 ARG KONG_AMD64_SHA=16990765aee26fc194992f0f90fc81e78a46d77cd0fc1e6670f3b2f797c1fe6b
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:58 GMT
 ARG KONG_ARM64_SHA=3e5dde2479d53299e81dd903a04e30302108b0864c996a3662fda24ca7aee9f6
-# Thu, 10 Nov 2022 22:40:11 GMT
+# Fri, 10 Feb 2023 23:00:04 GMT
 # ARGS: KONG_AMD64_SHA=16990765aee26fc194992f0f90fc81e78a46d77cd0fc1e6670f3b2f797c1fe6b KONG_ARM64_SHA=3e5dde2479d53299e81dd903a04e30302108b0864c996a3662fda24ca7aee9f6
 RUN set -eux;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) arch='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) arch='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "ce" ] ; then       apk add --no-cache --virtual .build-deps curl wget tar ca-certificates       && curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-$KONG_VERSION.$arch.apk.tar.gz" -o /tmp/kong.tar.gz       && echo "$KONG_SHA256  /tmp/kong.tar.gz" | sha256sum -c -       && apk del .build-deps;     else       apk upgrade;     fi;     mkdir /kong     && tar -C /kong -xzf /tmp/kong.tar.gz     && mv /kong/usr/local/* /usr/local     && mv /kong/etc/* /etc     && rm -rf /kong     && apk add --no-cache libstdc++ libgcc openssl pcre perl tzdata libcap zip bash zlib zlib-dev git ca-certificates     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && if [ "$ASSET" = "ce" ] ; then       kong version;     fi
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:04 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 USER kong
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 EXPOSE 8000 8001 8443 8444
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 STOPSIGNAL SIGQUIT
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:47517142f6ba87eca6b7bdca1e0df160b74671c81e4b9605dad38c1862a43be3`  
-		Last Modified: Tue, 09 Aug 2022 17:40:55 GMT  
-		Size: 2.7 MB (2718439 bytes)  
+	-	`sha256:404f35918b797abb27547df3b530ec55a77c499c4dce88f3b90867115087f9e7`  
+		Last Modified: Fri, 10 Feb 2023 21:25:01 GMT  
+		Size: 2.7 MB (2721556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a9f5eba777c2192f562d24cd3da16152dec7d8942677370e1524b03a6e36a2b`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 127.0 B  
+	-	`sha256:d21dbecf80430775ed3b75443538d3568cb87cb087b86329bb313c2e1bc403a4`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14140154bb3de6de0062d495454ecbf830c029091e8d80c241b3d684de9e2f6f`  
-		Last Modified: Thu, 10 Nov 2022 22:42:05 GMT  
-		Size: 46.8 MB (46825491 bytes)  
+	-	`sha256:b97913daff8998af5358c7169f83e4726d3a6ddf08054204d7e1b0dbdd5ed4c0`  
+		Last Modified: Fri, 10 Feb 2023 23:02:02 GMT  
+		Size: 46.8 MB (46832428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7424b484ab8703ef3d0f7813540b8ce7e9de2dc487b6d9ae31593abecc0b9f44`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 878.0 B  
+	-	`sha256:f4994686cdb433eeefe3e40c6b936f7ed28b535f38c1ac110983832b7fabd9b2`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:2.7-ubuntu`
@@ -2009,7 +2009,7 @@ CMD ["kong" "docker-start"]
 ## `kong:2.7.2`
 
 ```console
-$ docker pull kong@sha256:95cbba86c8addbfee6726b5a7743ab9bb8158c4a801caa75aafe3fe03992f170
+$ docker pull kong@sha256:f43dc6114a8070af1d7a1bbb1a6f279067a64f4c2048bd17b5e60805732bab93
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2094,81 +2094,81 @@ CMD ["kong" "docker-start"]
 ### `kong:2.7.2` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:7c35b5df861fc05fc12db8f1c7f98f5b07d1490f9bce31d0a58edea1098c466c
+$ docker pull kong@sha256:a132ca607bbd412e018d4ac2770918fd4c16e8972234d0d1f0e10bfee7238d75
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **49.5 MB (49544935 bytes)**  
+-	Total Size: **49.6 MB (49554993 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ee3bd472c5d632ebf186555ef7b7d99ef7ba814308a256a1ec8a7367f9924db7`
+-	Image ID: `sha256:9265ff8b02ac2e5cba6bf015d6a35170bde9729a1b7e0d8d191a41551e950fac`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Thu, 10 Nov 2022 20:39:46 GMT
-ADD file:4b51a9d40f20d2beb29d0759b161d2b9403493453beb509de4e86a5d98513f16 in / 
-# Thu, 10 Nov 2022 20:39:46 GMT
+# Fri, 10 Feb 2023 21:24:16 GMT
+ADD file:a73970ac03f28a1d3b9aaee19e859d958867b42fb91f29efb1259fbddc66ffb1 in / 
+# Fri, 10 Feb 2023 21:24:16 GMT
 CMD ["/bin/sh"]
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 LABEL maintainer=Kong <support@konghq.com>
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ENV ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG EE_PORTS
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 COPY file:9073480627c34fa516ae48557d24314a31d17b88798bd04c46162029e368d39c in /tmp/kong.tar.gz 
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG KONG_VERSION=2.7.2
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:58 GMT
 ENV KONG_VERSION=2.7.2
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:58 GMT
 ARG KONG_AMD64_SHA=16990765aee26fc194992f0f90fc81e78a46d77cd0fc1e6670f3b2f797c1fe6b
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:58 GMT
 ARG KONG_ARM64_SHA=3e5dde2479d53299e81dd903a04e30302108b0864c996a3662fda24ca7aee9f6
-# Thu, 10 Nov 2022 22:40:11 GMT
+# Fri, 10 Feb 2023 23:00:04 GMT
 # ARGS: KONG_AMD64_SHA=16990765aee26fc194992f0f90fc81e78a46d77cd0fc1e6670f3b2f797c1fe6b KONG_ARM64_SHA=3e5dde2479d53299e81dd903a04e30302108b0864c996a3662fda24ca7aee9f6
 RUN set -eux;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) arch='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) arch='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "ce" ] ; then       apk add --no-cache --virtual .build-deps curl wget tar ca-certificates       && curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-$KONG_VERSION.$arch.apk.tar.gz" -o /tmp/kong.tar.gz       && echo "$KONG_SHA256  /tmp/kong.tar.gz" | sha256sum -c -       && apk del .build-deps;     else       apk upgrade;     fi;     mkdir /kong     && tar -C /kong -xzf /tmp/kong.tar.gz     && mv /kong/usr/local/* /usr/local     && mv /kong/etc/* /etc     && rm -rf /kong     && apk add --no-cache libstdc++ libgcc openssl pcre perl tzdata libcap zip bash zlib zlib-dev git ca-certificates     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && if [ "$ASSET" = "ce" ] ; then       kong version;     fi
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:04 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 USER kong
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 EXPOSE 8000 8001 8443 8444
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 STOPSIGNAL SIGQUIT
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:47517142f6ba87eca6b7bdca1e0df160b74671c81e4b9605dad38c1862a43be3`  
-		Last Modified: Tue, 09 Aug 2022 17:40:55 GMT  
-		Size: 2.7 MB (2718439 bytes)  
+	-	`sha256:404f35918b797abb27547df3b530ec55a77c499c4dce88f3b90867115087f9e7`  
+		Last Modified: Fri, 10 Feb 2023 21:25:01 GMT  
+		Size: 2.7 MB (2721556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a9f5eba777c2192f562d24cd3da16152dec7d8942677370e1524b03a6e36a2b`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 127.0 B  
+	-	`sha256:d21dbecf80430775ed3b75443538d3568cb87cb087b86329bb313c2e1bc403a4`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14140154bb3de6de0062d495454ecbf830c029091e8d80c241b3d684de9e2f6f`  
-		Last Modified: Thu, 10 Nov 2022 22:42:05 GMT  
-		Size: 46.8 MB (46825491 bytes)  
+	-	`sha256:b97913daff8998af5358c7169f83e4726d3a6ddf08054204d7e1b0dbdd5ed4c0`  
+		Last Modified: Fri, 10 Feb 2023 23:02:02 GMT  
+		Size: 46.8 MB (46832428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7424b484ab8703ef3d0f7813540b8ce7e9de2dc487b6d9ae31593abecc0b9f44`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 878.0 B  
+	-	`sha256:f4994686cdb433eeefe3e40c6b936f7ed28b535f38c1ac110983832b7fabd9b2`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:2.7.2-alpine`
 
 ```console
-$ docker pull kong@sha256:95cbba86c8addbfee6726b5a7743ab9bb8158c4a801caa75aafe3fe03992f170
+$ docker pull kong@sha256:f43dc6114a8070af1d7a1bbb1a6f279067a64f4c2048bd17b5e60805732bab93
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2253,75 +2253,75 @@ CMD ["kong" "docker-start"]
 ### `kong:2.7.2-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:7c35b5df861fc05fc12db8f1c7f98f5b07d1490f9bce31d0a58edea1098c466c
+$ docker pull kong@sha256:a132ca607bbd412e018d4ac2770918fd4c16e8972234d0d1f0e10bfee7238d75
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **49.5 MB (49544935 bytes)**  
+-	Total Size: **49.6 MB (49554993 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ee3bd472c5d632ebf186555ef7b7d99ef7ba814308a256a1ec8a7367f9924db7`
+-	Image ID: `sha256:9265ff8b02ac2e5cba6bf015d6a35170bde9729a1b7e0d8d191a41551e950fac`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Thu, 10 Nov 2022 20:39:46 GMT
-ADD file:4b51a9d40f20d2beb29d0759b161d2b9403493453beb509de4e86a5d98513f16 in / 
-# Thu, 10 Nov 2022 20:39:46 GMT
+# Fri, 10 Feb 2023 21:24:16 GMT
+ADD file:a73970ac03f28a1d3b9aaee19e859d958867b42fb91f29efb1259fbddc66ffb1 in / 
+# Fri, 10 Feb 2023 21:24:16 GMT
 CMD ["/bin/sh"]
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 LABEL maintainer=Kong <support@konghq.com>
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ENV ASSET=ce
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG EE_PORTS
-# Thu, 10 Nov 2022 22:40:04 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 COPY file:9073480627c34fa516ae48557d24314a31d17b88798bd04c46162029e368d39c in /tmp/kong.tar.gz 
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:57 GMT
 ARG KONG_VERSION=2.7.2
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:58 GMT
 ENV KONG_VERSION=2.7.2
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:58 GMT
 ARG KONG_AMD64_SHA=16990765aee26fc194992f0f90fc81e78a46d77cd0fc1e6670f3b2f797c1fe6b
-# Thu, 10 Nov 2022 22:40:05 GMT
+# Fri, 10 Feb 2023 22:59:58 GMT
 ARG KONG_ARM64_SHA=3e5dde2479d53299e81dd903a04e30302108b0864c996a3662fda24ca7aee9f6
-# Thu, 10 Nov 2022 22:40:11 GMT
+# Fri, 10 Feb 2023 23:00:04 GMT
 # ARGS: KONG_AMD64_SHA=16990765aee26fc194992f0f90fc81e78a46d77cd0fc1e6670f3b2f797c1fe6b KONG_ARM64_SHA=3e5dde2479d53299e81dd903a04e30302108b0864c996a3662fda24ca7aee9f6
 RUN set -eux;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) arch='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) arch='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "ce" ] ; then       apk add --no-cache --virtual .build-deps curl wget tar ca-certificates       && curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-$KONG_VERSION.$arch.apk.tar.gz" -o /tmp/kong.tar.gz       && echo "$KONG_SHA256  /tmp/kong.tar.gz" | sha256sum -c -       && apk del .build-deps;     else       apk upgrade;     fi;     mkdir /kong     && tar -C /kong -xzf /tmp/kong.tar.gz     && mv /kong/usr/local/* /usr/local     && mv /kong/etc/* /etc     && rm -rf /kong     && apk add --no-cache libstdc++ libgcc openssl pcre perl tzdata libcap zip bash zlib zlib-dev git ca-certificates     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && if [ "$ASSET" = "ce" ] ; then       kong version;     fi
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:04 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 USER kong
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 EXPOSE 8000 8001 8443 8444
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 STOPSIGNAL SIGQUIT
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Thu, 10 Nov 2022 22:40:12 GMT
+# Fri, 10 Feb 2023 23:00:05 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:47517142f6ba87eca6b7bdca1e0df160b74671c81e4b9605dad38c1862a43be3`  
-		Last Modified: Tue, 09 Aug 2022 17:40:55 GMT  
-		Size: 2.7 MB (2718439 bytes)  
+	-	`sha256:404f35918b797abb27547df3b530ec55a77c499c4dce88f3b90867115087f9e7`  
+		Last Modified: Fri, 10 Feb 2023 21:25:01 GMT  
+		Size: 2.7 MB (2721556 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a9f5eba777c2192f562d24cd3da16152dec7d8942677370e1524b03a6e36a2b`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 127.0 B  
+	-	`sha256:d21dbecf80430775ed3b75443538d3568cb87cb087b86329bb313c2e1bc403a4`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 129.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14140154bb3de6de0062d495454ecbf830c029091e8d80c241b3d684de9e2f6f`  
-		Last Modified: Thu, 10 Nov 2022 22:42:05 GMT  
-		Size: 46.8 MB (46825491 bytes)  
+	-	`sha256:b97913daff8998af5358c7169f83e4726d3a6ddf08054204d7e1b0dbdd5ed4c0`  
+		Last Modified: Fri, 10 Feb 2023 23:02:02 GMT  
+		Size: 46.8 MB (46832428 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7424b484ab8703ef3d0f7813540b8ce7e9de2dc487b6d9ae31593abecc0b9f44`  
-		Last Modified: Thu, 10 Nov 2022 22:41:58 GMT  
-		Size: 878.0 B  
+	-	`sha256:f4994686cdb433eeefe3e40c6b936f7ed28b535f38c1ac110983832b7fabd9b2`  
+		Last Modified: Fri, 10 Feb 2023 23:01:55 GMT  
+		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:2.7.2-ubuntu`
@@ -3078,7 +3078,7 @@ CMD ["kong" "docker-start"]
 ## `kong:3`
 
 ```console
-$ docker pull kong@sha256:dcdba428472f86b8a9f347a7193dd53c9784f8b12b0202a7adea95705282da0d
+$ docker pull kong@sha256:a786dee47155a6c3ed793cdb038c35888884e05d1682736858a073e736ee0dc2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3161,79 +3161,79 @@ CMD ["kong" "docker-start"]
 ### `kong:3` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:2b1b75324a3021ab839cad67fcd4e9fa3576df5376a3b2435cd2a61dc1f19238
+$ docker pull kong@sha256:6cb2e58647fc834e751ed3ff2618757f854e8eea6baa9872b241a5b4922cd2f9
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.7 MB (73703801 bytes)**  
+-	Total Size: **73.7 MB (73705071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7a913906fe4dd3d3643e9e9162a080a80aaa4b642f20d10bc757058df3edce2a`
+-	Image ID: `sha256:b194d85727fe1e9c5e8b3df6cfc7434c14b7c9f32b9a179c5b02f56eeced8861`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Sat, 12 Nov 2022 03:39:38 GMT
-ADD file:57d621536158358b14d15155826ef2dd4ca034278044111ec0aaf6717016e569 in / 
-# Sat, 12 Nov 2022 03:39:38 GMT
+# Fri, 10 Feb 2023 21:24:13 GMT
+ADD file:738e640812bf6089767190a2976ceffc11f3e809be3e2b1ebb43c85ad3199fba in / 
+# Fri, 10 Feb 2023 21:24:13 GMT
 CMD ["/bin/sh"]
-# Sat, 12 Nov 2022 04:27:43 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 LABEL maintainer=Kong Docker Maintainers <docker@konghq.com> (@team-gateway-bot)
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ENV KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG ASSET=remote
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 ARG EE_PORTS
-# Mon, 12 Dec 2022 20:46:20 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 COPY file:7815b5fca0a34ed4a30931ccd9d4786733aecc9e9b2d4c363dee07e4a5c9b32f in /tmp/kong.apk.tar.gz 
-# Mon, 12 Dec 2022 20:46:25 GMT
+# Fri, 10 Feb 2023 22:57:31 GMT
 # ARGS: ASSET=remote KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
 RUN set -ex;     apk add --virtual .build-deps curl tar gzip ca-certificates;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) export ARCH='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) export ARCH='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "remote" ] ; then       curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-${KONG_VERSION}.${ARCH}.apk.tar.gz" -o /tmp/kong.apk.tar.gz       && echo "$KONG_SHA256  /tmp/kong.apk.tar.gz" | sha256sum -c -;     fi     && tar -C / -xzf /tmp/kong.apk.tar.gz     && apk add --no-cache libstdc++ libgcc pcre perl tzdata libcap zlib zlib-dev bash     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && apk del .build-deps     && kong version
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 USER kong
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 EXPOSE 8000 8001 8443 8444
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 STOPSIGNAL SIGQUIT
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:6875df1f535433e5affe18ecfde9acb7950ab5f76887980ff06c5cdd48cf98f4`  
-		Last Modified: Sat, 12 Nov 2022 03:40:05 GMT  
-		Size: 2.7 MB (2707756 bytes)  
+	-	`sha256:3760b48202b3e349986edb6fe5dd93cd003726b7c345d51f6fc4ace1b46fc2ba`  
+		Last Modified: Fri, 10 Feb 2023 21:24:52 GMT  
+		Size: 2.7 MB (2709502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aeff28f77ed1e045528bd0af2f7c16b98cb84035a76ab2e1986c9a39e2b05c69`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
-		Size: 132.0 B  
+	-	`sha256:bd7d673d809eb0c188ffdf72da404979eec54eac371b562252cfc579c3d1663f`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
+		Size: 135.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ec35e57c6aef4decd274441c8789b0036d9f06497f7c821653816583d576be4`  
-		Last Modified: Mon, 12 Dec 2022 20:50:15 GMT  
-		Size: 71.0 MB (70995033 bytes)  
+	-	`sha256:78fc02867f544f9cde11ef414aceb1bdd1235a8da723f6795fe0d358ecd90638`  
+		Last Modified: Fri, 10 Feb 2023 23:01:13 GMT  
+		Size: 71.0 MB (70994554 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a61994d980a524616d1c005e5c26edde7a13297ac2984b86f20f39b7aefa8375`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
+	-	`sha256:9ecf15059d665b9ba5f1604f250bc942cb91274a0115c4067ea8cc0887869519`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
 		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:3.0`
 
 ```console
-$ docker pull kong@sha256:41aeb18710f9f013ab100c64fcbcbf135f4bc86a02a223ea430eba5126ac4236
+$ docker pull kong@sha256:63cd2fbe840e0a385bc982add308b8555749a18a975d8dd99199ab64a92578a6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3316,79 +3316,79 @@ CMD ["kong" "docker-start"]
 ### `kong:3.0` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:3f03ac5beba7ca91712d42515ba227d6856212e0c0f85051382363e5834197fe
+$ docker pull kong@sha256:7df485332188842c5b2c958c4e261815f187b742c9b524876444a8b9d9e9d805
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.6 MB (73630764 bytes)**  
+-	Total Size: **73.6 MB (73632145 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c0691f183c15b7e3c985bf1e18778bc91a478585c6c1abb5c2368fc952e34647`
+-	Image ID: `sha256:7984ea834ae8b2ade0dd8bd6b1db4e9129712bb76067b9736052f34387190e23`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Sat, 12 Nov 2022 03:39:38 GMT
-ADD file:57d621536158358b14d15155826ef2dd4ca034278044111ec0aaf6717016e569 in / 
-# Sat, 12 Nov 2022 03:39:38 GMT
+# Fri, 10 Feb 2023 21:24:13 GMT
+ADD file:738e640812bf6089767190a2976ceffc11f3e809be3e2b1ebb43c85ad3199fba in / 
+# Fri, 10 Feb 2023 21:24:13 GMT
 CMD ["/bin/sh"]
-# Sat, 12 Nov 2022 04:27:43 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 LABEL maintainer=Kong Docker Maintainers <docker@konghq.com> (@team-gateway-bot)
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_VERSION=3.0.2
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ENV KONG_VERSION=3.0.2
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_AMD64_SHA=5f2f4c953cfc06c750614148b90f8216321b869ba44e1cf509f2dbbd9182516e
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_ARM64_SHA=049efeb9f82898a0c4b0e3257c3389a2cb8fbf51339b497cff78c2687106718b
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG ASSET=remote
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG EE_PORTS
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 COPY file:7815b5fca0a34ed4a30931ccd9d4786733aecc9e9b2d4c363dee07e4a5c9b32f in /tmp/kong.apk.tar.gz 
-# Mon, 12 Dec 2022 20:47:17 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 # ARGS: ASSET=remote KONG_AMD64_SHA=5f2f4c953cfc06c750614148b90f8216321b869ba44e1cf509f2dbbd9182516e KONG_ARM64_SHA=049efeb9f82898a0c4b0e3257c3389a2cb8fbf51339b497cff78c2687106718b
 RUN set -ex;     apk add --virtual .build-deps curl tar gzip ca-certificates;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) export ARCH='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) export ARCH='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "remote" ] ; then       curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-${KONG_VERSION}.${ARCH}.apk.tar.gz" -o /tmp/kong.apk.tar.gz       && echo "$KONG_SHA256  /tmp/kong.apk.tar.gz" | sha256sum -c -;     fi     && tar -C / -xzf /tmp/kong.apk.tar.gz     && apk add --no-cache libstdc++ libgcc pcre perl tzdata libcap zlib zlib-dev bash     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && apk del .build-deps     && kong version
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 USER kong
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 EXPOSE 8000 8001 8443 8444
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 STOPSIGNAL SIGQUIT
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:6875df1f535433e5affe18ecfde9acb7950ab5f76887980ff06c5cdd48cf98f4`  
-		Last Modified: Sat, 12 Nov 2022 03:40:05 GMT  
-		Size: 2.7 MB (2707756 bytes)  
+	-	`sha256:3760b48202b3e349986edb6fe5dd93cd003726b7c345d51f6fc4ace1b46fc2ba`  
+		Last Modified: Fri, 10 Feb 2023 21:24:52 GMT  
+		Size: 2.7 MB (2709502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a82accb5ba8bca390e42a33ef922d7b8d2ce4b36c10556c5cc2c22444691f375`  
-		Last Modified: Mon, 12 Dec 2022 20:50:52 GMT  
-		Size: 135.0 B  
+	-	`sha256:2ab4f79effaded08ffc458dcd0b8666b376c40b38d1f8fc32e985a36e40c3d3e`  
+		Last Modified: Fri, 10 Feb 2023 23:01:33 GMT  
+		Size: 132.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07788a5b24972181c810b4530c8dc927e43be9d6dc90d7aec7ab5912966448b9`  
-		Last Modified: Mon, 12 Dec 2022 20:50:59 GMT  
-		Size: 70.9 MB (70921992 bytes)  
+	-	`sha256:a60c99787c1181135a451bcc085437887f84003ec3641e2807e332331b11071c`  
+		Last Modified: Fri, 10 Feb 2023 23:01:41 GMT  
+		Size: 70.9 MB (70921631 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6cb4668e024363002d321f57f790c111fe2ce64400fac1f418be0089ae225115`  
-		Last Modified: Mon, 12 Dec 2022 20:50:52 GMT  
-		Size: 881.0 B  
+	-	`sha256:cf39f263f853308176746bf2be8939c16a2c9e1465efcdd42debcee7262357dc`  
+		Last Modified: Fri, 10 Feb 2023 23:01:34 GMT  
+		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:3.0-alpine`
 
 ```console
-$ docker pull kong@sha256:41aeb18710f9f013ab100c64fcbcbf135f4bc86a02a223ea430eba5126ac4236
+$ docker pull kong@sha256:63cd2fbe840e0a385bc982add308b8555749a18a975d8dd99199ab64a92578a6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3471,73 +3471,73 @@ CMD ["kong" "docker-start"]
 ### `kong:3.0-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:3f03ac5beba7ca91712d42515ba227d6856212e0c0f85051382363e5834197fe
+$ docker pull kong@sha256:7df485332188842c5b2c958c4e261815f187b742c9b524876444a8b9d9e9d805
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.6 MB (73630764 bytes)**  
+-	Total Size: **73.6 MB (73632145 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c0691f183c15b7e3c985bf1e18778bc91a478585c6c1abb5c2368fc952e34647`
+-	Image ID: `sha256:7984ea834ae8b2ade0dd8bd6b1db4e9129712bb76067b9736052f34387190e23`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Sat, 12 Nov 2022 03:39:38 GMT
-ADD file:57d621536158358b14d15155826ef2dd4ca034278044111ec0aaf6717016e569 in / 
-# Sat, 12 Nov 2022 03:39:38 GMT
+# Fri, 10 Feb 2023 21:24:13 GMT
+ADD file:738e640812bf6089767190a2976ceffc11f3e809be3e2b1ebb43c85ad3199fba in / 
+# Fri, 10 Feb 2023 21:24:13 GMT
 CMD ["/bin/sh"]
-# Sat, 12 Nov 2022 04:27:43 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 LABEL maintainer=Kong Docker Maintainers <docker@konghq.com> (@team-gateway-bot)
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_VERSION=3.0.2
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ENV KONG_VERSION=3.0.2
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_AMD64_SHA=5f2f4c953cfc06c750614148b90f8216321b869ba44e1cf509f2dbbd9182516e
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_ARM64_SHA=049efeb9f82898a0c4b0e3257c3389a2cb8fbf51339b497cff78c2687106718b
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG ASSET=remote
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG EE_PORTS
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 COPY file:7815b5fca0a34ed4a30931ccd9d4786733aecc9e9b2d4c363dee07e4a5c9b32f in /tmp/kong.apk.tar.gz 
-# Mon, 12 Dec 2022 20:47:17 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 # ARGS: ASSET=remote KONG_AMD64_SHA=5f2f4c953cfc06c750614148b90f8216321b869ba44e1cf509f2dbbd9182516e KONG_ARM64_SHA=049efeb9f82898a0c4b0e3257c3389a2cb8fbf51339b497cff78c2687106718b
 RUN set -ex;     apk add --virtual .build-deps curl tar gzip ca-certificates;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) export ARCH='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) export ARCH='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "remote" ] ; then       curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-${KONG_VERSION}.${ARCH}.apk.tar.gz" -o /tmp/kong.apk.tar.gz       && echo "$KONG_SHA256  /tmp/kong.apk.tar.gz" | sha256sum -c -;     fi     && tar -C / -xzf /tmp/kong.apk.tar.gz     && apk add --no-cache libstdc++ libgcc pcre perl tzdata libcap zlib zlib-dev bash     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && apk del .build-deps     && kong version
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 USER kong
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 EXPOSE 8000 8001 8443 8444
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 STOPSIGNAL SIGQUIT
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:6875df1f535433e5affe18ecfde9acb7950ab5f76887980ff06c5cdd48cf98f4`  
-		Last Modified: Sat, 12 Nov 2022 03:40:05 GMT  
-		Size: 2.7 MB (2707756 bytes)  
+	-	`sha256:3760b48202b3e349986edb6fe5dd93cd003726b7c345d51f6fc4ace1b46fc2ba`  
+		Last Modified: Fri, 10 Feb 2023 21:24:52 GMT  
+		Size: 2.7 MB (2709502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a82accb5ba8bca390e42a33ef922d7b8d2ce4b36c10556c5cc2c22444691f375`  
-		Last Modified: Mon, 12 Dec 2022 20:50:52 GMT  
-		Size: 135.0 B  
+	-	`sha256:2ab4f79effaded08ffc458dcd0b8666b376c40b38d1f8fc32e985a36e40c3d3e`  
+		Last Modified: Fri, 10 Feb 2023 23:01:33 GMT  
+		Size: 132.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07788a5b24972181c810b4530c8dc927e43be9d6dc90d7aec7ab5912966448b9`  
-		Last Modified: Mon, 12 Dec 2022 20:50:59 GMT  
-		Size: 70.9 MB (70921992 bytes)  
+	-	`sha256:a60c99787c1181135a451bcc085437887f84003ec3641e2807e332331b11071c`  
+		Last Modified: Fri, 10 Feb 2023 23:01:41 GMT  
+		Size: 70.9 MB (70921631 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6cb4668e024363002d321f57f790c111fe2ce64400fac1f418be0089ae225115`  
-		Last Modified: Mon, 12 Dec 2022 20:50:52 GMT  
-		Size: 881.0 B  
+	-	`sha256:cf39f263f853308176746bf2be8939c16a2c9e1465efcdd42debcee7262357dc`  
+		Last Modified: Fri, 10 Feb 2023 23:01:34 GMT  
+		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:3.0-ubuntu`
@@ -3718,7 +3718,7 @@ CMD ["kong" "docker-start"]
 ## `kong:3.0.2`
 
 ```console
-$ docker pull kong@sha256:41aeb18710f9f013ab100c64fcbcbf135f4bc86a02a223ea430eba5126ac4236
+$ docker pull kong@sha256:63cd2fbe840e0a385bc982add308b8555749a18a975d8dd99199ab64a92578a6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3801,79 +3801,79 @@ CMD ["kong" "docker-start"]
 ### `kong:3.0.2` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:3f03ac5beba7ca91712d42515ba227d6856212e0c0f85051382363e5834197fe
+$ docker pull kong@sha256:7df485332188842c5b2c958c4e261815f187b742c9b524876444a8b9d9e9d805
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.6 MB (73630764 bytes)**  
+-	Total Size: **73.6 MB (73632145 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c0691f183c15b7e3c985bf1e18778bc91a478585c6c1abb5c2368fc952e34647`
+-	Image ID: `sha256:7984ea834ae8b2ade0dd8bd6b1db4e9129712bb76067b9736052f34387190e23`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Sat, 12 Nov 2022 03:39:38 GMT
-ADD file:57d621536158358b14d15155826ef2dd4ca034278044111ec0aaf6717016e569 in / 
-# Sat, 12 Nov 2022 03:39:38 GMT
+# Fri, 10 Feb 2023 21:24:13 GMT
+ADD file:738e640812bf6089767190a2976ceffc11f3e809be3e2b1ebb43c85ad3199fba in / 
+# Fri, 10 Feb 2023 21:24:13 GMT
 CMD ["/bin/sh"]
-# Sat, 12 Nov 2022 04:27:43 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 LABEL maintainer=Kong Docker Maintainers <docker@konghq.com> (@team-gateway-bot)
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_VERSION=3.0.2
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ENV KONG_VERSION=3.0.2
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_AMD64_SHA=5f2f4c953cfc06c750614148b90f8216321b869ba44e1cf509f2dbbd9182516e
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_ARM64_SHA=049efeb9f82898a0c4b0e3257c3389a2cb8fbf51339b497cff78c2687106718b
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG ASSET=remote
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG EE_PORTS
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 COPY file:7815b5fca0a34ed4a30931ccd9d4786733aecc9e9b2d4c363dee07e4a5c9b32f in /tmp/kong.apk.tar.gz 
-# Mon, 12 Dec 2022 20:47:17 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 # ARGS: ASSET=remote KONG_AMD64_SHA=5f2f4c953cfc06c750614148b90f8216321b869ba44e1cf509f2dbbd9182516e KONG_ARM64_SHA=049efeb9f82898a0c4b0e3257c3389a2cb8fbf51339b497cff78c2687106718b
 RUN set -ex;     apk add --virtual .build-deps curl tar gzip ca-certificates;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) export ARCH='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) export ARCH='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "remote" ] ; then       curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-${KONG_VERSION}.${ARCH}.apk.tar.gz" -o /tmp/kong.apk.tar.gz       && echo "$KONG_SHA256  /tmp/kong.apk.tar.gz" | sha256sum -c -;     fi     && tar -C / -xzf /tmp/kong.apk.tar.gz     && apk add --no-cache libstdc++ libgcc pcre perl tzdata libcap zlib zlib-dev bash     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && apk del .build-deps     && kong version
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 USER kong
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 EXPOSE 8000 8001 8443 8444
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 STOPSIGNAL SIGQUIT
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:6875df1f535433e5affe18ecfde9acb7950ab5f76887980ff06c5cdd48cf98f4`  
-		Last Modified: Sat, 12 Nov 2022 03:40:05 GMT  
-		Size: 2.7 MB (2707756 bytes)  
+	-	`sha256:3760b48202b3e349986edb6fe5dd93cd003726b7c345d51f6fc4ace1b46fc2ba`  
+		Last Modified: Fri, 10 Feb 2023 21:24:52 GMT  
+		Size: 2.7 MB (2709502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a82accb5ba8bca390e42a33ef922d7b8d2ce4b36c10556c5cc2c22444691f375`  
-		Last Modified: Mon, 12 Dec 2022 20:50:52 GMT  
-		Size: 135.0 B  
+	-	`sha256:2ab4f79effaded08ffc458dcd0b8666b376c40b38d1f8fc32e985a36e40c3d3e`  
+		Last Modified: Fri, 10 Feb 2023 23:01:33 GMT  
+		Size: 132.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07788a5b24972181c810b4530c8dc927e43be9d6dc90d7aec7ab5912966448b9`  
-		Last Modified: Mon, 12 Dec 2022 20:50:59 GMT  
-		Size: 70.9 MB (70921992 bytes)  
+	-	`sha256:a60c99787c1181135a451bcc085437887f84003ec3641e2807e332331b11071c`  
+		Last Modified: Fri, 10 Feb 2023 23:01:41 GMT  
+		Size: 70.9 MB (70921631 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6cb4668e024363002d321f57f790c111fe2ce64400fac1f418be0089ae225115`  
-		Last Modified: Mon, 12 Dec 2022 20:50:52 GMT  
-		Size: 881.0 B  
+	-	`sha256:cf39f263f853308176746bf2be8939c16a2c9e1465efcdd42debcee7262357dc`  
+		Last Modified: Fri, 10 Feb 2023 23:01:34 GMT  
+		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:3.0.2-alpine`
 
 ```console
-$ docker pull kong@sha256:41aeb18710f9f013ab100c64fcbcbf135f4bc86a02a223ea430eba5126ac4236
+$ docker pull kong@sha256:63cd2fbe840e0a385bc982add308b8555749a18a975d8dd99199ab64a92578a6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3956,73 +3956,73 @@ CMD ["kong" "docker-start"]
 ### `kong:3.0.2-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:3f03ac5beba7ca91712d42515ba227d6856212e0c0f85051382363e5834197fe
+$ docker pull kong@sha256:7df485332188842c5b2c958c4e261815f187b742c9b524876444a8b9d9e9d805
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.6 MB (73630764 bytes)**  
+-	Total Size: **73.6 MB (73632145 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c0691f183c15b7e3c985bf1e18778bc91a478585c6c1abb5c2368fc952e34647`
+-	Image ID: `sha256:7984ea834ae8b2ade0dd8bd6b1db4e9129712bb76067b9736052f34387190e23`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Sat, 12 Nov 2022 03:39:38 GMT
-ADD file:57d621536158358b14d15155826ef2dd4ca034278044111ec0aaf6717016e569 in / 
-# Sat, 12 Nov 2022 03:39:38 GMT
+# Fri, 10 Feb 2023 21:24:13 GMT
+ADD file:738e640812bf6089767190a2976ceffc11f3e809be3e2b1ebb43c85ad3199fba in / 
+# Fri, 10 Feb 2023 21:24:13 GMT
 CMD ["/bin/sh"]
-# Sat, 12 Nov 2022 04:27:43 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 LABEL maintainer=Kong Docker Maintainers <docker@konghq.com> (@team-gateway-bot)
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_VERSION=3.0.2
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ENV KONG_VERSION=3.0.2
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_AMD64_SHA=5f2f4c953cfc06c750614148b90f8216321b869ba44e1cf509f2dbbd9182516e
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG KONG_ARM64_SHA=049efeb9f82898a0c4b0e3257c3389a2cb8fbf51339b497cff78c2687106718b
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG ASSET=remote
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 ARG EE_PORTS
-# Mon, 12 Dec 2022 20:47:10 GMT
+# Fri, 10 Feb 2023 22:57:37 GMT
 COPY file:7815b5fca0a34ed4a30931ccd9d4786733aecc9e9b2d4c363dee07e4a5c9b32f in /tmp/kong.apk.tar.gz 
-# Mon, 12 Dec 2022 20:47:17 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 # ARGS: ASSET=remote KONG_AMD64_SHA=5f2f4c953cfc06c750614148b90f8216321b869ba44e1cf509f2dbbd9182516e KONG_ARM64_SHA=049efeb9f82898a0c4b0e3257c3389a2cb8fbf51339b497cff78c2687106718b
 RUN set -ex;     apk add --virtual .build-deps curl tar gzip ca-certificates;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) export ARCH='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) export ARCH='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "remote" ] ; then       curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-${KONG_VERSION}.${ARCH}.apk.tar.gz" -o /tmp/kong.apk.tar.gz       && echo "$KONG_SHA256  /tmp/kong.apk.tar.gz" | sha256sum -c -;     fi     && tar -C / -xzf /tmp/kong.apk.tar.gz     && apk add --no-cache libstdc++ libgcc pcre perl tzdata libcap zlib zlib-dev bash     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && apk del .build-deps     && kong version
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:45 GMT
 USER kong
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 EXPOSE 8000 8001 8443 8444
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 STOPSIGNAL SIGQUIT
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Mon, 12 Dec 2022 20:47:18 GMT
+# Fri, 10 Feb 2023 22:57:46 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:6875df1f535433e5affe18ecfde9acb7950ab5f76887980ff06c5cdd48cf98f4`  
-		Last Modified: Sat, 12 Nov 2022 03:40:05 GMT  
-		Size: 2.7 MB (2707756 bytes)  
+	-	`sha256:3760b48202b3e349986edb6fe5dd93cd003726b7c345d51f6fc4ace1b46fc2ba`  
+		Last Modified: Fri, 10 Feb 2023 21:24:52 GMT  
+		Size: 2.7 MB (2709502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a82accb5ba8bca390e42a33ef922d7b8d2ce4b36c10556c5cc2c22444691f375`  
-		Last Modified: Mon, 12 Dec 2022 20:50:52 GMT  
-		Size: 135.0 B  
+	-	`sha256:2ab4f79effaded08ffc458dcd0b8666b376c40b38d1f8fc32e985a36e40c3d3e`  
+		Last Modified: Fri, 10 Feb 2023 23:01:33 GMT  
+		Size: 132.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:07788a5b24972181c810b4530c8dc927e43be9d6dc90d7aec7ab5912966448b9`  
-		Last Modified: Mon, 12 Dec 2022 20:50:59 GMT  
-		Size: 70.9 MB (70921992 bytes)  
+	-	`sha256:a60c99787c1181135a451bcc085437887f84003ec3641e2807e332331b11071c`  
+		Last Modified: Fri, 10 Feb 2023 23:01:41 GMT  
+		Size: 70.9 MB (70921631 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6cb4668e024363002d321f57f790c111fe2ce64400fac1f418be0089ae225115`  
-		Last Modified: Mon, 12 Dec 2022 20:50:52 GMT  
-		Size: 881.0 B  
+	-	`sha256:cf39f263f853308176746bf2be8939c16a2c9e1465efcdd42debcee7262357dc`  
+		Last Modified: Fri, 10 Feb 2023 23:01:34 GMT  
+		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:3.0.2-ubuntu`
@@ -4203,7 +4203,7 @@ CMD ["kong" "docker-start"]
 ## `kong:3.1`
 
 ```console
-$ docker pull kong@sha256:dcdba428472f86b8a9f347a7193dd53c9784f8b12b0202a7adea95705282da0d
+$ docker pull kong@sha256:a786dee47155a6c3ed793cdb038c35888884e05d1682736858a073e736ee0dc2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4286,72 +4286,72 @@ CMD ["kong" "docker-start"]
 ### `kong:3.1` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:2b1b75324a3021ab839cad67fcd4e9fa3576df5376a3b2435cd2a61dc1f19238
+$ docker pull kong@sha256:6cb2e58647fc834e751ed3ff2618757f854e8eea6baa9872b241a5b4922cd2f9
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.7 MB (73703801 bytes)**  
+-	Total Size: **73.7 MB (73705071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7a913906fe4dd3d3643e9e9162a080a80aaa4b642f20d10bc757058df3edce2a`
+-	Image ID: `sha256:b194d85727fe1e9c5e8b3df6cfc7434c14b7c9f32b9a179c5b02f56eeced8861`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Sat, 12 Nov 2022 03:39:38 GMT
-ADD file:57d621536158358b14d15155826ef2dd4ca034278044111ec0aaf6717016e569 in / 
-# Sat, 12 Nov 2022 03:39:38 GMT
+# Fri, 10 Feb 2023 21:24:13 GMT
+ADD file:738e640812bf6089767190a2976ceffc11f3e809be3e2b1ebb43c85ad3199fba in / 
+# Fri, 10 Feb 2023 21:24:13 GMT
 CMD ["/bin/sh"]
-# Sat, 12 Nov 2022 04:27:43 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 LABEL maintainer=Kong Docker Maintainers <docker@konghq.com> (@team-gateway-bot)
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ENV KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG ASSET=remote
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 ARG EE_PORTS
-# Mon, 12 Dec 2022 20:46:20 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 COPY file:7815b5fca0a34ed4a30931ccd9d4786733aecc9e9b2d4c363dee07e4a5c9b32f in /tmp/kong.apk.tar.gz 
-# Mon, 12 Dec 2022 20:46:25 GMT
+# Fri, 10 Feb 2023 22:57:31 GMT
 # ARGS: ASSET=remote KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
 RUN set -ex;     apk add --virtual .build-deps curl tar gzip ca-certificates;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) export ARCH='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) export ARCH='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "remote" ] ; then       curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-${KONG_VERSION}.${ARCH}.apk.tar.gz" -o /tmp/kong.apk.tar.gz       && echo "$KONG_SHA256  /tmp/kong.apk.tar.gz" | sha256sum -c -;     fi     && tar -C / -xzf /tmp/kong.apk.tar.gz     && apk add --no-cache libstdc++ libgcc pcre perl tzdata libcap zlib zlib-dev bash     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && apk del .build-deps     && kong version
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 USER kong
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 EXPOSE 8000 8001 8443 8444
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 STOPSIGNAL SIGQUIT
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:6875df1f535433e5affe18ecfde9acb7950ab5f76887980ff06c5cdd48cf98f4`  
-		Last Modified: Sat, 12 Nov 2022 03:40:05 GMT  
-		Size: 2.7 MB (2707756 bytes)  
+	-	`sha256:3760b48202b3e349986edb6fe5dd93cd003726b7c345d51f6fc4ace1b46fc2ba`  
+		Last Modified: Fri, 10 Feb 2023 21:24:52 GMT  
+		Size: 2.7 MB (2709502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aeff28f77ed1e045528bd0af2f7c16b98cb84035a76ab2e1986c9a39e2b05c69`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
-		Size: 132.0 B  
+	-	`sha256:bd7d673d809eb0c188ffdf72da404979eec54eac371b562252cfc579c3d1663f`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
+		Size: 135.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ec35e57c6aef4decd274441c8789b0036d9f06497f7c821653816583d576be4`  
-		Last Modified: Mon, 12 Dec 2022 20:50:15 GMT  
-		Size: 71.0 MB (70995033 bytes)  
+	-	`sha256:78fc02867f544f9cde11ef414aceb1bdd1235a8da723f6795fe0d358ecd90638`  
+		Last Modified: Fri, 10 Feb 2023 23:01:13 GMT  
+		Size: 71.0 MB (70994554 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a61994d980a524616d1c005e5c26edde7a13297ac2984b86f20f39b7aefa8375`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
+	-	`sha256:9ecf15059d665b9ba5f1604f250bc942cb91274a0115c4067ea8cc0887869519`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
 		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -4533,7 +4533,7 @@ CMD ["kong" "docker-start"]
 ## `kong:3.1.1`
 
 ```console
-$ docker pull kong@sha256:dcdba428472f86b8a9f347a7193dd53c9784f8b12b0202a7adea95705282da0d
+$ docker pull kong@sha256:a786dee47155a6c3ed793cdb038c35888884e05d1682736858a073e736ee0dc2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4616,79 +4616,79 @@ CMD ["kong" "docker-start"]
 ### `kong:3.1.1` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:2b1b75324a3021ab839cad67fcd4e9fa3576df5376a3b2435cd2a61dc1f19238
+$ docker pull kong@sha256:6cb2e58647fc834e751ed3ff2618757f854e8eea6baa9872b241a5b4922cd2f9
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.7 MB (73703801 bytes)**  
+-	Total Size: **73.7 MB (73705071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7a913906fe4dd3d3643e9e9162a080a80aaa4b642f20d10bc757058df3edce2a`
+-	Image ID: `sha256:b194d85727fe1e9c5e8b3df6cfc7434c14b7c9f32b9a179c5b02f56eeced8861`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Sat, 12 Nov 2022 03:39:38 GMT
-ADD file:57d621536158358b14d15155826ef2dd4ca034278044111ec0aaf6717016e569 in / 
-# Sat, 12 Nov 2022 03:39:38 GMT
+# Fri, 10 Feb 2023 21:24:13 GMT
+ADD file:738e640812bf6089767190a2976ceffc11f3e809be3e2b1ebb43c85ad3199fba in / 
+# Fri, 10 Feb 2023 21:24:13 GMT
 CMD ["/bin/sh"]
-# Sat, 12 Nov 2022 04:27:43 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 LABEL maintainer=Kong Docker Maintainers <docker@konghq.com> (@team-gateway-bot)
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ENV KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG ASSET=remote
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 ARG EE_PORTS
-# Mon, 12 Dec 2022 20:46:20 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 COPY file:7815b5fca0a34ed4a30931ccd9d4786733aecc9e9b2d4c363dee07e4a5c9b32f in /tmp/kong.apk.tar.gz 
-# Mon, 12 Dec 2022 20:46:25 GMT
+# Fri, 10 Feb 2023 22:57:31 GMT
 # ARGS: ASSET=remote KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
 RUN set -ex;     apk add --virtual .build-deps curl tar gzip ca-certificates;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) export ARCH='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) export ARCH='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "remote" ] ; then       curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-${KONG_VERSION}.${ARCH}.apk.tar.gz" -o /tmp/kong.apk.tar.gz       && echo "$KONG_SHA256  /tmp/kong.apk.tar.gz" | sha256sum -c -;     fi     && tar -C / -xzf /tmp/kong.apk.tar.gz     && apk add --no-cache libstdc++ libgcc pcre perl tzdata libcap zlib zlib-dev bash     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && apk del .build-deps     && kong version
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 USER kong
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 EXPOSE 8000 8001 8443 8444
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 STOPSIGNAL SIGQUIT
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:6875df1f535433e5affe18ecfde9acb7950ab5f76887980ff06c5cdd48cf98f4`  
-		Last Modified: Sat, 12 Nov 2022 03:40:05 GMT  
-		Size: 2.7 MB (2707756 bytes)  
+	-	`sha256:3760b48202b3e349986edb6fe5dd93cd003726b7c345d51f6fc4ace1b46fc2ba`  
+		Last Modified: Fri, 10 Feb 2023 21:24:52 GMT  
+		Size: 2.7 MB (2709502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aeff28f77ed1e045528bd0af2f7c16b98cb84035a76ab2e1986c9a39e2b05c69`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
-		Size: 132.0 B  
+	-	`sha256:bd7d673d809eb0c188ffdf72da404979eec54eac371b562252cfc579c3d1663f`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
+		Size: 135.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ec35e57c6aef4decd274441c8789b0036d9f06497f7c821653816583d576be4`  
-		Last Modified: Mon, 12 Dec 2022 20:50:15 GMT  
-		Size: 71.0 MB (70995033 bytes)  
+	-	`sha256:78fc02867f544f9cde11ef414aceb1bdd1235a8da723f6795fe0d358ecd90638`  
+		Last Modified: Fri, 10 Feb 2023 23:01:13 GMT  
+		Size: 71.0 MB (70994554 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a61994d980a524616d1c005e5c26edde7a13297ac2984b86f20f39b7aefa8375`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
+	-	`sha256:9ecf15059d665b9ba5f1604f250bc942cb91274a0115c4067ea8cc0887869519`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
 		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:3.1.1-alpine`
 
 ```console
-$ docker pull kong@sha256:dcdba428472f86b8a9f347a7193dd53c9784f8b12b0202a7adea95705282da0d
+$ docker pull kong@sha256:a786dee47155a6c3ed793cdb038c35888884e05d1682736858a073e736ee0dc2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4771,72 +4771,72 @@ CMD ["kong" "docker-start"]
 ### `kong:3.1.1-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:2b1b75324a3021ab839cad67fcd4e9fa3576df5376a3b2435cd2a61dc1f19238
+$ docker pull kong@sha256:6cb2e58647fc834e751ed3ff2618757f854e8eea6baa9872b241a5b4922cd2f9
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.7 MB (73703801 bytes)**  
+-	Total Size: **73.7 MB (73705071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7a913906fe4dd3d3643e9e9162a080a80aaa4b642f20d10bc757058df3edce2a`
+-	Image ID: `sha256:b194d85727fe1e9c5e8b3df6cfc7434c14b7c9f32b9a179c5b02f56eeced8861`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Sat, 12 Nov 2022 03:39:38 GMT
-ADD file:57d621536158358b14d15155826ef2dd4ca034278044111ec0aaf6717016e569 in / 
-# Sat, 12 Nov 2022 03:39:38 GMT
+# Fri, 10 Feb 2023 21:24:13 GMT
+ADD file:738e640812bf6089767190a2976ceffc11f3e809be3e2b1ebb43c85ad3199fba in / 
+# Fri, 10 Feb 2023 21:24:13 GMT
 CMD ["/bin/sh"]
-# Sat, 12 Nov 2022 04:27:43 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 LABEL maintainer=Kong Docker Maintainers <docker@konghq.com> (@team-gateway-bot)
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ENV KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG ASSET=remote
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 ARG EE_PORTS
-# Mon, 12 Dec 2022 20:46:20 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 COPY file:7815b5fca0a34ed4a30931ccd9d4786733aecc9e9b2d4c363dee07e4a5c9b32f in /tmp/kong.apk.tar.gz 
-# Mon, 12 Dec 2022 20:46:25 GMT
+# Fri, 10 Feb 2023 22:57:31 GMT
 # ARGS: ASSET=remote KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
 RUN set -ex;     apk add --virtual .build-deps curl tar gzip ca-certificates;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) export ARCH='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) export ARCH='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "remote" ] ; then       curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-${KONG_VERSION}.${ARCH}.apk.tar.gz" -o /tmp/kong.apk.tar.gz       && echo "$KONG_SHA256  /tmp/kong.apk.tar.gz" | sha256sum -c -;     fi     && tar -C / -xzf /tmp/kong.apk.tar.gz     && apk add --no-cache libstdc++ libgcc pcre perl tzdata libcap zlib zlib-dev bash     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && apk del .build-deps     && kong version
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 USER kong
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 EXPOSE 8000 8001 8443 8444
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 STOPSIGNAL SIGQUIT
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:6875df1f535433e5affe18ecfde9acb7950ab5f76887980ff06c5cdd48cf98f4`  
-		Last Modified: Sat, 12 Nov 2022 03:40:05 GMT  
-		Size: 2.7 MB (2707756 bytes)  
+	-	`sha256:3760b48202b3e349986edb6fe5dd93cd003726b7c345d51f6fc4ace1b46fc2ba`  
+		Last Modified: Fri, 10 Feb 2023 21:24:52 GMT  
+		Size: 2.7 MB (2709502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aeff28f77ed1e045528bd0af2f7c16b98cb84035a76ab2e1986c9a39e2b05c69`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
-		Size: 132.0 B  
+	-	`sha256:bd7d673d809eb0c188ffdf72da404979eec54eac371b562252cfc579c3d1663f`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
+		Size: 135.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ec35e57c6aef4decd274441c8789b0036d9f06497f7c821653816583d576be4`  
-		Last Modified: Mon, 12 Dec 2022 20:50:15 GMT  
-		Size: 71.0 MB (70995033 bytes)  
+	-	`sha256:78fc02867f544f9cde11ef414aceb1bdd1235a8da723f6795fe0d358ecd90638`  
+		Last Modified: Fri, 10 Feb 2023 23:01:13 GMT  
+		Size: 71.0 MB (70994554 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a61994d980a524616d1c005e5c26edde7a13297ac2984b86f20f39b7aefa8375`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
+	-	`sha256:9ecf15059d665b9ba5f1604f250bc942cb91274a0115c4067ea8cc0887869519`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
 		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -5018,7 +5018,7 @@ CMD ["kong" "docker-start"]
 ## `kong:alpine`
 
 ```console
-$ docker pull kong@sha256:dcdba428472f86b8a9f347a7193dd53c9784f8b12b0202a7adea95705282da0d
+$ docker pull kong@sha256:a786dee47155a6c3ed793cdb038c35888884e05d1682736858a073e736ee0dc2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5101,79 +5101,79 @@ CMD ["kong" "docker-start"]
 ### `kong:alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:2b1b75324a3021ab839cad67fcd4e9fa3576df5376a3b2435cd2a61dc1f19238
+$ docker pull kong@sha256:6cb2e58647fc834e751ed3ff2618757f854e8eea6baa9872b241a5b4922cd2f9
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.7 MB (73703801 bytes)**  
+-	Total Size: **73.7 MB (73705071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7a913906fe4dd3d3643e9e9162a080a80aaa4b642f20d10bc757058df3edce2a`
+-	Image ID: `sha256:b194d85727fe1e9c5e8b3df6cfc7434c14b7c9f32b9a179c5b02f56eeced8861`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Sat, 12 Nov 2022 03:39:38 GMT
-ADD file:57d621536158358b14d15155826ef2dd4ca034278044111ec0aaf6717016e569 in / 
-# Sat, 12 Nov 2022 03:39:38 GMT
+# Fri, 10 Feb 2023 21:24:13 GMT
+ADD file:738e640812bf6089767190a2976ceffc11f3e809be3e2b1ebb43c85ad3199fba in / 
+# Fri, 10 Feb 2023 21:24:13 GMT
 CMD ["/bin/sh"]
-# Sat, 12 Nov 2022 04:27:43 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 LABEL maintainer=Kong Docker Maintainers <docker@konghq.com> (@team-gateway-bot)
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ENV KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG ASSET=remote
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 ARG EE_PORTS
-# Mon, 12 Dec 2022 20:46:20 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 COPY file:7815b5fca0a34ed4a30931ccd9d4786733aecc9e9b2d4c363dee07e4a5c9b32f in /tmp/kong.apk.tar.gz 
-# Mon, 12 Dec 2022 20:46:25 GMT
+# Fri, 10 Feb 2023 22:57:31 GMT
 # ARGS: ASSET=remote KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
 RUN set -ex;     apk add --virtual .build-deps curl tar gzip ca-certificates;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) export ARCH='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) export ARCH='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "remote" ] ; then       curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-${KONG_VERSION}.${ARCH}.apk.tar.gz" -o /tmp/kong.apk.tar.gz       && echo "$KONG_SHA256  /tmp/kong.apk.tar.gz" | sha256sum -c -;     fi     && tar -C / -xzf /tmp/kong.apk.tar.gz     && apk add --no-cache libstdc++ libgcc pcre perl tzdata libcap zlib zlib-dev bash     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && apk del .build-deps     && kong version
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 USER kong
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 EXPOSE 8000 8001 8443 8444
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 STOPSIGNAL SIGQUIT
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:6875df1f535433e5affe18ecfde9acb7950ab5f76887980ff06c5cdd48cf98f4`  
-		Last Modified: Sat, 12 Nov 2022 03:40:05 GMT  
-		Size: 2.7 MB (2707756 bytes)  
+	-	`sha256:3760b48202b3e349986edb6fe5dd93cd003726b7c345d51f6fc4ace1b46fc2ba`  
+		Last Modified: Fri, 10 Feb 2023 21:24:52 GMT  
+		Size: 2.7 MB (2709502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aeff28f77ed1e045528bd0af2f7c16b98cb84035a76ab2e1986c9a39e2b05c69`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
-		Size: 132.0 B  
+	-	`sha256:bd7d673d809eb0c188ffdf72da404979eec54eac371b562252cfc579c3d1663f`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
+		Size: 135.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ec35e57c6aef4decd274441c8789b0036d9f06497f7c821653816583d576be4`  
-		Last Modified: Mon, 12 Dec 2022 20:50:15 GMT  
-		Size: 71.0 MB (70995033 bytes)  
+	-	`sha256:78fc02867f544f9cde11ef414aceb1bdd1235a8da723f6795fe0d358ecd90638`  
+		Last Modified: Fri, 10 Feb 2023 23:01:13 GMT  
+		Size: 71.0 MB (70994554 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a61994d980a524616d1c005e5c26edde7a13297ac2984b86f20f39b7aefa8375`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
+	-	`sha256:9ecf15059d665b9ba5f1604f250bc942cb91274a0115c4067ea8cc0887869519`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
 		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `kong:latest`
 
 ```console
-$ docker pull kong@sha256:dcdba428472f86b8a9f347a7193dd53c9784f8b12b0202a7adea95705282da0d
+$ docker pull kong@sha256:a786dee47155a6c3ed793cdb038c35888884e05d1682736858a073e736ee0dc2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5256,72 +5256,72 @@ CMD ["kong" "docker-start"]
 ### `kong:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull kong@sha256:2b1b75324a3021ab839cad67fcd4e9fa3576df5376a3b2435cd2a61dc1f19238
+$ docker pull kong@sha256:6cb2e58647fc834e751ed3ff2618757f854e8eea6baa9872b241a5b4922cd2f9
 ```
 
 -	Docker Version: 20.10.17
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.7 MB (73703801 bytes)**  
+-	Total Size: **73.7 MB (73705071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7a913906fe4dd3d3643e9e9162a080a80aaa4b642f20d10bc757058df3edce2a`
+-	Image ID: `sha256:b194d85727fe1e9c5e8b3df6cfc7434c14b7c9f32b9a179c5b02f56eeced8861`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["kong","docker-start"]`
 
 ```dockerfile
-# Sat, 12 Nov 2022 03:39:38 GMT
-ADD file:57d621536158358b14d15155826ef2dd4ca034278044111ec0aaf6717016e569 in / 
-# Sat, 12 Nov 2022 03:39:38 GMT
+# Fri, 10 Feb 2023 21:24:13 GMT
+ADD file:738e640812bf6089767190a2976ceffc11f3e809be3e2b1ebb43c85ad3199fba in / 
+# Fri, 10 Feb 2023 21:24:13 GMT
 CMD ["/bin/sh"]
-# Sat, 12 Nov 2022 04:27:43 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 LABEL maintainer=Kong Docker Maintainers <docker@konghq.com> (@team-gateway-bot)
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ENV KONG_VERSION=3.1.1
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:24 GMT
 ARG ASSET=remote
-# Mon, 12 Dec 2022 20:46:19 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 ARG EE_PORTS
-# Mon, 12 Dec 2022 20:46:20 GMT
+# Fri, 10 Feb 2023 22:57:25 GMT
 COPY file:7815b5fca0a34ed4a30931ccd9d4786733aecc9e9b2d4c363dee07e4a5c9b32f in /tmp/kong.apk.tar.gz 
-# Mon, 12 Dec 2022 20:46:25 GMT
+# Fri, 10 Feb 2023 22:57:31 GMT
 # ARGS: ASSET=remote KONG_AMD64_SHA=9194977814e91b6997ce4795957d9b4bcec9d220667e01a08ade7ac64704f57c KONG_ARM64_SHA=92d98307a3193602bbe4dbed2d099cde5404a8acd09d53f0b9a9f2bcf6038500
 RUN set -ex;     apk add --virtual .build-deps curl tar gzip ca-certificates;     arch="$(apk --print-arch)";     case "${arch}" in       x86_64) export ARCH='amd64'; KONG_SHA256=$KONG_AMD64_SHA ;;       aarch64) export ARCH='arm64'; KONG_SHA256=$KONG_ARM64_SHA ;;     esac;     if [ "$ASSET" = "remote" ] ; then       curl -fL "https://download.konghq.com/gateway-${KONG_VERSION%%.*}.x-alpine/kong-${KONG_VERSION}.${ARCH}.apk.tar.gz" -o /tmp/kong.apk.tar.gz       && echo "$KONG_SHA256  /tmp/kong.apk.tar.gz" | sha256sum -c -;     fi     && tar -C / -xzf /tmp/kong.apk.tar.gz     && apk add --no-cache libstdc++ libgcc pcre perl tzdata libcap zlib zlib-dev bash     && adduser -S kong     && addgroup -S kong     && mkdir -p "/usr/local/kong"     && chown -R kong:0 /usr/local/kong     && chown kong:0 /usr/local/bin/kong     && chmod -R g=u /usr/local/kong     && rm -rf /tmp/kong.tar.gz     && ln -s /usr/local/openresty/bin/resty /usr/local/bin/resty     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/luajit     && ln -s /usr/local/openresty/luajit/bin/luajit /usr/local/bin/lua     && ln -s /usr/local/openresty/nginx/sbin/nginx /usr/local/bin/nginx     && apk del .build-deps     && kong version
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 COPY file:df7f26941e26fd034e43646906785ecba3877cf078fa891fd1d304925f70408e in /docker-entrypoint.sh 
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 USER kong
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 EXPOSE 8000 8001 8443 8444
-# Mon, 12 Dec 2022 20:46:26 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 STOPSIGNAL SIGQUIT
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 HEALTHCHECK &{["CMD-SHELL" "kong health"] "10s" "10s" "0s" '\n'}
-# Mon, 12 Dec 2022 20:46:27 GMT
+# Fri, 10 Feb 2023 22:57:32 GMT
 CMD ["kong" "docker-start"]
 ```
 
 -	Layers:
-	-	`sha256:6875df1f535433e5affe18ecfde9acb7950ab5f76887980ff06c5cdd48cf98f4`  
-		Last Modified: Sat, 12 Nov 2022 03:40:05 GMT  
-		Size: 2.7 MB (2707756 bytes)  
+	-	`sha256:3760b48202b3e349986edb6fe5dd93cd003726b7c345d51f6fc4ace1b46fc2ba`  
+		Last Modified: Fri, 10 Feb 2023 21:24:52 GMT  
+		Size: 2.7 MB (2709502 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aeff28f77ed1e045528bd0af2f7c16b98cb84035a76ab2e1986c9a39e2b05c69`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
-		Size: 132.0 B  
+	-	`sha256:bd7d673d809eb0c188ffdf72da404979eec54eac371b562252cfc579c3d1663f`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
+		Size: 135.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ec35e57c6aef4decd274441c8789b0036d9f06497f7c821653816583d576be4`  
-		Last Modified: Mon, 12 Dec 2022 20:50:15 GMT  
-		Size: 71.0 MB (70995033 bytes)  
+	-	`sha256:78fc02867f544f9cde11ef414aceb1bdd1235a8da723f6795fe0d358ecd90638`  
+		Last Modified: Fri, 10 Feb 2023 23:01:13 GMT  
+		Size: 71.0 MB (70994554 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a61994d980a524616d1c005e5c26edde7a13297ac2984b86f20f39b7aefa8375`  
-		Last Modified: Mon, 12 Dec 2022 20:50:07 GMT  
+	-	`sha256:9ecf15059d665b9ba5f1604f250bc942cb91274a0115c4067ea8cc0887869519`  
+		Last Modified: Fri, 10 Feb 2023 23:01:05 GMT  
 		Size: 880.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
