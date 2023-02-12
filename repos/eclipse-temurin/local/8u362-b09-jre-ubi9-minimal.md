@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8e725599e1d8d63d822af3688fa650afc9c4312ef531c491407aa7967e0da242`
-- Created: `2023-01-25T19:21:04.229709174Z`
+- Image ID: `sha256:b853c53b6335799d5e3751657e9a8d119b8e4b0de1c0b376d10c533c77807a1c`
+- Created: `2023-02-11T04:37:43.477527595Z`
 - Virtual Size: ~ 282.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,21 +18,21 @@
   - `JAVA_VERSION=jdk8u362-b09`
 - Labels:
   - `architecture=x86_64`
-  - `build-date=2023-01-17T08:21:59`
+  - `build-date=2023-02-07T16:25:34`
   - `com.redhat.component=ubi9-minimal-container`
   - `com.redhat.license_terms=https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI`
   - `description=The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.`
   - `distribution-scope=public`
-  - `io.buildah.version=1.27.1`
+  - `io.buildah.version=1.27.3`
   - `io.k8s.description=The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.`
   - `io.k8s.display-name=Red Hat Universal Base Image 9 Minimal`
   - `io.openshift.expose-services=`
   - `io.openshift.tags=minimal rhel9`
   - `maintainer=Red Hat, Inc.`
   - `name=ubi9-minimal`
-  - `release=1760`
+  - `release=1760.1675784957`
   - `summary=Provides the latest release of the minimal Red Hat Universal Base Image 9.`
-  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.1.0-1760`
+  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.1.0-1760.1675784957`
   - `vcs-ref=befaf1f5ec7b874aef2651ee1384d51828504eb9`
   - `vcs-type=git`
   - `vendor=Red Hat, Inc.`
@@ -514,7 +514,7 @@ Licenses (from `rpm --query`): (GPLv2+ or LGPLv3+) and GPLv3+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libksba-1.5.1-5.el9_0.x86_64`
+### `rpm` package: `libksba-1.5.1-6.el9_1.x86_64`
 
 Licenses (from `rpm --query`): (LGPLv3+ or GPLv2+) and GPLv3+
 
