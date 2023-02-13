@@ -1,7 +1,7 @@
 ## `clojure:temurin-11-tools-deps-bullseye`
 
 ```console
-$ docker pull clojure@sha256:11dbcbf74e4f74e3fc8189a5810b213905df5beb8b27170631502d2e5f79c043
+$ docker pull clojure@sha256:70fb0d05fdc210bab8aa32f1a9fdb517711181e82e479214a69ac027fb177834
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull clojure@sha256:11dbcbf74e4f74e3fc8189a5810b213905df5beb8b271706315
 ### `clojure:temurin-11-tools-deps-bullseye` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:b7288d177e50441154c6ddd28079eb6cd90ca99f5473dbc813e0709f0229a388
+$ docker pull clojure@sha256:cf72a5fa468b4e5c630d708d7602800ce655d3d72166f2aff937c218e9538bcb
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **325.4 MB (325390937 bytes)**  
+-	Total Size: **325.4 MB (325400033 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:790256be9b6ac75ba8f35afc9d37643d6eebd957c7aa693c46dcbabcd7e95fa4`
+-	Image ID: `sha256:1bec7fd6a79facd8a1324f8128795c87f9a647ad6d9193eb0915a31893dc1327`
 -	Default Command: `["clj"]`
 
 ```dockerfile
@@ -33,15 +33,15 @@ ENV JAVA_HOME=/opt/java/openjdk
 COPY dir:fdbc5e9dec2946fa124877176e92a68dd3fe3a70def5bb906a6040c4a1303a2d in /opt/java/openjdk 
 # Thu, 09 Feb 2023 09:25:06 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 09 Feb 2023 09:27:08 GMT
-ENV CLOJURE_VERSION=1.11.1.1208
-# Thu, 09 Feb 2023 09:27:09 GMT
+# Mon, 13 Feb 2023 21:24:01 GMT
+ENV CLOJURE_VERSION=1.11.1.1224
+# Mon, 13 Feb 2023 21:24:01 GMT
 WORKDIR /tmp
-# Thu, 09 Feb 2023 09:27:26 GMT
-RUN apt-get update && apt-get install -y curl make git rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "4a3b1200c4d633202648dc3db6ed0a1311e75cc4baeee8fce32208c1eaa07537 *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Thu, 09 Feb 2023 09:27:27 GMT
+# Mon, 13 Feb 2023 21:24:19 GMT
+RUN apt-get update && apt-get install -y curl make git rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "3bbab4d253eda43e3122fd5705014a69c44944a6dee8ea4d7d567afe157eb4ef *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
+# Mon, 13 Feb 2023 21:24:19 GMT
 COPY file:b0aef3ea203de7b5c2ea645debf58c8231445a2e3070b72749b54614f4a89b82 in /usr/local/bin/rlwrap 
-# Thu, 09 Feb 2023 09:27:27 GMT
+# Mon, 13 Feb 2023 21:24:19 GMT
 CMD ["clj"]
 ```
 
@@ -54,13 +54,13 @@ CMD ["clj"]
 		Last Modified: Thu, 09 Feb 2023 09:38:26 GMT  
 		Size: 198.5 MB (198475422 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:445e49a3de549b96bddaf0c3c3144fe7cc28e2dbaf5ad4d21f2d44a2b483610e`  
-		Last Modified: Thu, 09 Feb 2023 09:39:29 GMT  
-		Size: 71.9 MB (71868124 bytes)  
+	-	`sha256:6ac05789f2c4a3d6396589779fa0ad238c3e12a2ead1d6495fc4ddaf9446cbf7`  
+		Last Modified: Mon, 13 Feb 2023 21:34:41 GMT  
+		Size: 71.9 MB (71877221 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a5f3af5454dc21787e776018a4b6b16978576ed57ac4ff6bdfa3bf113212a7a`  
-		Last Modified: Thu, 09 Feb 2023 09:39:21 GMT  
-		Size: 620.0 B  
+	-	`sha256:880854e91373f92692c8d858ce0432584d186fcd08d396adbc692cee5b9fccdb`  
+		Last Modified: Mon, 13 Feb 2023 21:34:32 GMT  
+		Size: 619.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `clojure:temurin-11-tools-deps-bullseye` - linux; arm64 variant v8
