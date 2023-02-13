@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:290f2c7d09415f1025c46ef26451df3246a538941b7f8b84ebe9a4918754c6f1`
-- Created: `2022-12-09T18:25:20.197398964Z`
-- Virtual Size: ~ 148.64 Mb  
+- Image ID: `sha256:45541146200b728770b957daefbda0600611245c5968004f3b9ebccc9ae92eac`
+- Created: `2023-02-11T14:11:04.089055123Z`
+- Virtual Size: ~ 148.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-varnish-entrypoint"]`
@@ -222,16 +222,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1q-r0 description:
+libcrypto1.1-1.1.1t-r1 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1q-r0 webpage:
+libcrypto1.1-1.1.1t-r1 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1q-r0 installed size:
-2676 KiB
+libcrypto1.1-1.1.1t-r1 installed size:
+2684 KiB
 
-libcrypto1.1-1.1.1q-r0 license:
+libcrypto1.1-1.1.1t-r1 license:
 OpenSSL
 
 ```
@@ -324,16 +324,16 @@ ISC AND (BSD-3-Clause OR MIT)
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1q-r0 description:
+libssl1.1-1.1.1t-r1 description:
 SSL shared libraries
 
-libssl1.1-1.1.1q-r0 webpage:
+libssl1.1-1.1.1t-r1 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1q-r0 installed size:
+libssl1.1-1.1.1t-r1 installed size:
 528 KiB
 
-libssl1.1-1.1.1q-r0 license:
+libssl1.1-1.1.1t-r1 license:
 OpenSSL
 
 ```
@@ -511,16 +511,16 @@ BSD-3-Clause
 ### `apk` package: `pkgconf`
 
 ```console
-pkgconf-1.8.0-r0 description:
+pkgconf-1.8.1-r0 description:
 development framework configuration tools
 
-pkgconf-1.8.0-r0 webpage:
+pkgconf-1.8.1-r0 webpage:
 https://git.sr.ht/~kaniini/pkgconf
 
-pkgconf-1.8.0-r0 installed size:
+pkgconf-1.8.1-r0 installed size:
 140 KiB
 
-pkgconf-1.8.0-r0 license:
+pkgconf-1.8.1-r0 license:
 ISC
 
 ```
