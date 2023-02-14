@@ -2,36 +2,37 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:15f226a764593cc5ddeb389fbb0b2d065a9e8d759bcd78aaa85046ced5514ed3`
-- Created: `2023-01-02T21:11:45.895968036Z`
-- Virtual Size: ~ 313.39 Mb  
+- Image ID: `sha256:1763d1f4fc25ccf2e37aa764a60d4162343431c08d923eb3a79539aee5a5add0`
+- Created: `2023-02-10T19:24:11.655321927Z`
+- Virtual Size: ~ 314.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/ibm/helpers/runtime/docker-server.sh"]`
 - Command: `["/opt/ibm/wlp/bin/server","run","defaultServer"]`
 - Environment:
-  - `PATH=/opt/ibm/wlp/bin:/opt/ibm/helpers/build:/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/ibm/wlp/bin:/opt/ibm/helpers/build`
   - `JAVA_VERSION=8.0.7.20`
   - `JAVA_HOME=/opt/ibm/java/jre`
   - `IBM_JAVA_OPTIONS=-Xshareclasses:name=liberty,readonly,nonfatal,cacheDir=/output/.classCache/ -Dosgi.checkConfiguration=false -XX:+UseContainerSupport`
-  - `LIBERTY_VERSION=22.0.0_13`
+  - `LIBERTY_VERSION=23.0.0_1`
   - `LOG_DIR=/logs`
   - `WLP_OUTPUT_DIR=/opt/ibm/wlp/output`
   - `OPENJ9_SCC=true`
   - `RANDFILE=/tmp/.rnd`
 - Labels:
-  - `BuildLabel=cl221320221205-1900`
+  - `BuildLabel=cl230120230123-2118`
   - `ProductID=fbf6a96d49214c0abc6a3bc5da6e48cd`
   - `ProductName=WebSphere Application Server Liberty`
-  - `ProductVersion=22.0.0.13`
+  - `ProductVersion=23.0.0.1`
   - `org.opencontainers.image.authors=Leo Christy Jesuraj, Arthur De Magalhaes, Chris Potter`
   - `org.opencontainers.image.description=This image contains the WebSphere Liberty runtime with IBM's Java and Ubuntu as the base OS.  For more information on this image please see https://github.com/WASdev/ci.docker#building-an-application-image`
   - `org.opencontainers.image.documentation=https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html`
-  - `org.opencontainers.image.revision=cl221320221205-1900`
+  - `org.opencontainers.image.ref.name=ubuntu`
+  - `org.opencontainers.image.revision=cl230120230123-2118`
   - `org.opencontainers.image.title=IBM WebSphere Liberty`
   - `org.opencontainers.image.url=http://wasdev.net`
   - `org.opencontainers.image.vendor=IBM`
-  - `org.opencontainers.image.version=22.0.0.13`
+  - `org.opencontainers.image.version=23.0.0.1`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1017,7 +1018,20 @@ $ apt-get source -qq --print-uris nettle=3.4.1-0ubuntu0.18.04.1
 Binary Packages:
 
 - `libssl1.1:amd64=1.1.1-1ubuntu2.1~18.04.20`
-- `openssl=1.1.1-1ubuntu2.1~18.04.20`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
+
+
+### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.21`
+
+Binary Packages:
+
+- `openssl=1.1.1-1ubuntu2.1~18.04.21`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1026,10 +1040,10 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.20
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1%7e18.04.20.dsc' openssl_1.1.1-1ubuntu2.1~18.04.20.dsc 2514 SHA512:cf3b83b1ec29b576328faa6e2dd10e9b396afeafcd8277d008ef82f80f999834237cbc61b44b2d8684fbb7104e0b9c79a2878333c09027beed5fbf9a55916bcc
+$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.21
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1%7e18.04.21.dsc' openssl_1.1.1-1ubuntu2.1~18.04.21.dsc 2514 SHA512:0f50629ed2140a046a20b8aa6267395986cdf213767182261794901e93fbf423a9383997cff5500d678fac53bdbf7a4c5b8338e30f2b0d94c9631cfc96c9f19d
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1%7e18.04.20.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.20.debian.tar.xz 171540 SHA512:213a93d75c90436974dd9d8aa2fd12000a062ca089204ef8c86aee50952c86a32df5766a993b41029c650865d057ce728f14c117de0eaa5439c6503af1011e6a
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1%7e18.04.21.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.21.debian.tar.xz 181060 SHA512:5ae7e97da27b274faef1dbcd74efb2483d059b4ed66ef510de1a321e1893253b53b9155407413c414b0bbb491e76125ffb367d58b6381fec0f9e480b6c6d8916
 ```
 
 ### `dpkg` source package: `p11-kit=0.23.9-2ubuntu0.1`
@@ -1056,14 +1070,14 @@ $ apt-get source -qq --print-uris p11-kit=0.23.9-2ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9-2ubuntu0.1.debian.tar.xz' p11-kit_0.23.9-2ubuntu0.1.debian.tar.xz 24380 SHA512:460f4179781768a4a4b686955f16f335565d50f7a2d74c298216fe6725ce4e04119f49605752026f65bf56e143e560718969c5983decc906d3246f0a01c46178
 ```
 
-### `dpkg` source package: `pam=1.1.8-3.6ubuntu2.18.04.3`
+### `dpkg` source package: `pam=1.1.8-3.6ubuntu2.18.04.4`
 
 Binary Packages:
 
-- `libpam-modules:amd64=1.1.8-3.6ubuntu2.18.04.3`
-- `libpam-modules-bin=1.1.8-3.6ubuntu2.18.04.3`
-- `libpam-runtime=1.1.8-3.6ubuntu2.18.04.3`
-- `libpam0g:amd64=1.1.8-3.6ubuntu2.18.04.3`
+- `libpam-modules:amd64=1.1.8-3.6ubuntu2.18.04.4`
+- `libpam-modules-bin=1.1.8-3.6ubuntu2.18.04.4`
+- `libpam-runtime=1.1.8-3.6ubuntu2.18.04.4`
+- `libpam0g:amd64=1.1.8-3.6ubuntu2.18.04.4`
 
 Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/doc/libpam-modules-bin/copyright`, `/usr/share/doc/libpam-runtime/copyright`, `/usr/share/doc/libpam0g/copyright`)
 
