@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d47a0124d4b8183719357b542498dd00498c8968c1c01308514b6afc990e92e3`
-- Created: `2023-02-04T07:42:50.260938175Z`
+- Image ID: `sha256:9242ac0e25303ea668ac3be9d18eb6aaa6906853ab623aa7c092f629fc39dfad`
+- Created: `2023-02-10T21:12:11.045530048Z`
 - Virtual Size: ~ 1.45 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -6803,13 +6803,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openssh/1:8.4p1-5+deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openssh/1:8.4p1-5+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.1n-0+deb11u3`
+### `dpkg` source package: `openssl=1.1.1n-0+deb11u4`
 
 Binary Packages:
 
-- `libssl-dev:amd64=1.1.1n-0+deb11u3`
-- `libssl1.1:amd64=1.1.1n-0+deb11u3`
-- `openssl=1.1.1n-0+deb11u3`
+- `libssl-dev:amd64=1.1.1n-0+deb11u4`
+- `libssl1.1:amd64=1.1.1n-0+deb11u4`
+- `openssl=1.1.1n-0+deb11u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -6818,18 +6818,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1n-0+deb11u3
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n-0%2bdeb11u3.dsc' openssl_1.1.1n-0+deb11u3.dsc 2655 SHA256:cbf06993d1dc8c4e59e2f7f0456cc07a005c17274a33eb29135e9fdd7f6b2941
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n.orig.tar.gz' openssl_1.1.1n.orig.tar.gz 9850712 SHA256:40dceb51a4f6a5275bde0e6bf20ef4b91bfc32ed57c0552e2e8e15463372b17a
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n.orig.tar.gz.asc' openssl_1.1.1n.orig.tar.gz.asc 488 SHA256:e0e89e9467102880ee6f2ee8c1413933eb1268969afb97b9bec61e2190a62fd0
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n-0%2bdeb11u3.debian.tar.xz' openssl_1.1.1n-0+deb11u3.debian.tar.xz 118952 SHA256:0eed2dc1f8d472291511f386fc0a3c5fe70ec50440b1c252fd99934bf2cddd4a
+$ apt-get source -qq --print-uris openssl=1.1.1n-0+deb11u4
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb11u4.dsc' openssl_1.1.1n-0+deb11u4.dsc 2655 SHA256:f89bc0e8d63e61b2abedcfb9a0888dfb4054c7ad602c3b076f4cd5f31013eb33
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz' openssl_1.1.1n.orig.tar.gz 9850712 SHA256:40dceb51a4f6a5275bde0e6bf20ef4b91bfc32ed57c0552e2e8e15463372b17a
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz.asc' openssl_1.1.1n.orig.tar.gz.asc 488 SHA256:e0e89e9467102880ee6f2ee8c1413933eb1268969afb97b9bec61e2190a62fd0
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb11u4.debian.tar.xz' openssl_1.1.1n-0+deb11u4.debian.tar.xz 131388 SHA256:c8c5ba101d3d048782f09beaf7e5a56833ffafb5506211bbb2fc726fba9d7d73
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u3/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1n-0+deb11u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u4/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.1n-0+deb11u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `opus=1.3.1-0.1`
 
@@ -8197,12 +8197,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/wayland/1.18.0-2~exp1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/wayland/1.18.0-2~exp1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `webkit2gtk=2.38.3-1~deb11u1`
+### `dpkg` source package: `webkit2gtk=2.38.4-2~deb11u1`
 
 Binary Packages:
 
-- `libjavascriptcoregtk-4.0-18:amd64=2.38.3-1~deb11u1`
-- `libwebkit2gtk-4.0-37:amd64=2.38.3-1~deb11u1`
+- `libjavascriptcoregtk-4.0-18:amd64=2.38.4-2~deb11u1`
+- `libwebkit2gtk-4.0-37:amd64=2.38.4-2~deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libjavascriptcoregtk-4.0-18/copyright`, `/usr/share/doc/libwebkit2gtk-4.0-37/copyright`)
 
@@ -8238,13 +8238,21 @@ Licenses: (parsed from: `/usr/share/doc/libjavascriptcoregtk-4.0-18/copyright`, 
 - `MPL-2.0`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris webkit2gtk=2.38.4-2~deb11u1
+'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.4-2%7edeb11u1.dsc' webkit2gtk_2.38.4-2~deb11u1.dsc 4118 SHA256:b616416c006381e32b07c20052fb490cf13bea5e30557a1eb0f4d9e1aa9533e2
+'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.4.orig.tar.xz' webkit2gtk_2.38.4.orig.tar.xz 32534100 SHA256:4f47ea29a2d4d5f15eef3dc9e2d6c6f067e8de863a3f64455e1ccf9693cc1d36
+'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.4.orig.tar.xz.asc' webkit2gtk_2.38.4.orig.tar.xz.asc 195 SHA256:aa8a50f4911211f48c68f3555f0d3f67c95d0b295ce006da8aaa986d6dde60b0
+'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.4-2%7edeb11u1.debian.tar.xz' webkit2gtk_2.38.4-2~deb11u1.debian.tar.xz 78244 SHA256:e2619d0d60cd494b4e2e57c3fafd4cccacd21089afd51cacd72283f0c40b35a8
+```
 
-- http://snapshot.debian.org/package/webkit2gtk/2.38.3-1~deb11u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/webkit2gtk/2.38.4-2~deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/webkit2gtk/2.38.4-2~deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/webkit2gtk/2.38.4-2~deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `wget=1.21-1+deb11u1`
 
