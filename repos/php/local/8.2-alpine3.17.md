@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8894f3d133e606eec7e136691ec88bb3675c5869516dde6b862f2678c45d002c`
-- Created: `2023-02-03T00:16:45.080442871Z`
-- Virtual Size: ~ 95.02 Mb  
+- Image ID: `sha256:c87d4dedd451256f74cd931d3586282f5591a4fb90a9980769e8c1661fd65975`
+- Created: `2023-02-11T10:21:09.030546338Z`
+- Virtual Size: ~ 94.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -197,16 +197,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.87.0-r0 description:
+curl-7.87.0-r1 description:
 URL retrival utility and library
 
-curl-7.87.0-r0 webpage:
+curl-7.87.0-r1 webpage:
 https://curl.se/
 
-curl-7.87.0-r0 installed size:
+curl-7.87.0-r1 installed size:
 264 KiB
 
-curl-7.87.0-r0 license:
+curl-7.87.0-r1 license:
 curl
 
 ```
@@ -265,16 +265,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.0.7-r2 description:
+libcrypto3-3.0.8-r0 description:
 Crypto library from openssl
 
-libcrypto3-3.0.7-r2 webpage:
+libcrypto3-3.0.8-r0 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.0.7-r2 installed size:
+libcrypto3-3.0.8-r0 installed size:
 4108 KiB
 
-libcrypto3-3.0.7-r2 license:
+libcrypto3-3.0.8-r0 license:
 Apache-2.0
 
 ```
@@ -333,16 +333,16 @@ ISC
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.0.7-r2 description:
+libssl3-3.0.8-r0 description:
 SSL shared libraries
 
-libssl3-3.0.7-r2 webpage:
+libssl3-3.0.8-r0 webpage:
 https://www.openssl.org/
 
-libssl3-3.0.7-r2 installed size:
+libssl3-3.0.8-r0 installed size:
 608 KiB
 
-libssl3-3.0.7-r2 license:
+libssl3-3.0.8-r0 license:
 Apache-2.0
 
 ```
@@ -469,16 +469,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-3.0.7-r2 description:
+openssl-3.0.8-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-3.0.7-r2 webpage:
+openssl-3.0.8-r0 webpage:
 https://www.openssl.org/
 
-openssl-3.0.7-r2 installed size:
+openssl-3.0.8-r0 installed size:
 868 KiB
 
-openssl-3.0.7-r2 license:
+openssl-3.0.8-r0 license:
 Apache-2.0
 
 ```
