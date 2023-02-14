@@ -53,19 +53,13 @@ Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris adduser=3.130
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.130.dsc' adduser_3.130.dsc 1671 SHA256:d5ab297aab740b1abcc24e20bf4b5534ab26ed1a1b67ee4f5707a9431e96ce2f
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.130.tar.xz' adduser_3.130.tar.xz 239024 SHA256:8d0c22438056493972bce5cc0e487826c8e85b5f6c57760a47030126dae5e2e1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/adduser/3.130/
 
-- https://sources.debian.net/src/adduser/3.130/ (for browsing the source)
-- https://sources.debian.net/src/adduser/3.130/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/adduser/3.130/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apr-util=1.6.3-1`
 
@@ -691,19 +685,13 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 - `GPL-2+`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.21.19
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.19.dsc' dpkg_1.21.19.dsc 3060 SHA256:2c7cf3f3d10473510515af27bd99bde56f1ec123ecff8e61869984d88fb8769d
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.21.19.tar.xz' dpkg_1.21.19.tar.xz 5360888 SHA256:cdfd0b36676a77a9cfc53597697c9096f3ffcbc25750944c34142af025101c92
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dpkg/1.21.19/
 
-- https://sources.debian.net/src/dpkg/1.21.19/ (for browsing the source)
-- https://sources.debian.net/src/dpkg/1.21.19/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dpkg/1.21.19/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `e2fsprogs=1.46.6-1`
 
@@ -2322,20 +2310,13 @@ Licenses: (parsed from: `/usr/share/doc/libldap-2.5-0/copyright`)
 - `UMich`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.5.13+dfsg-3
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.5.13%2bdfsg-3.dsc' openldap_2.5.13+dfsg-3.dsc 3224 SHA256:2c0381c357ce9c376b01086ec211ea2a9cbf1f6f7b692e4cf8fa79b928368a76
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.5.13%2bdfsg.orig.tar.xz' openldap_2.5.13+dfsg.orig.tar.xz 3727704 SHA256:1d95c400a3eae6730246614ef16883de3dbd1b14b01a1ebe3a9aa1ccad2c13ec
-'http://deb.debian.org/debian/pool/main/o/openldap/openldap_2.5.13%2bdfsg-3.debian.tar.xz' openldap_2.5.13+dfsg-3.debian.tar.xz 164116 SHA256:2d56d8083614e13809a4b2826acc00bc977a5d41fe8275861657e0249b73ad05
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openldap/2.5.13+dfsg-3/
 
-- https://sources.debian.net/src/openldap/2.5.13+dfsg-3/ (for browsing the source)
-- https://sources.debian.net/src/openldap/2.5.13+dfsg-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openldap/2.5.13+dfsg-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssh=1:9.1p1-2`
 
