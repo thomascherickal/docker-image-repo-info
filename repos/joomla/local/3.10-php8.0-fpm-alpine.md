@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a5039ea47cb1a428aac49fc898b8d26ac0901c4020d776121b2d51e3e0973737`
-- Created: `2023-01-06T03:37:33.402194696Z`
-- Virtual Size: ~ 276.10 Mb  
+- Image ID: `sha256:91b6a93f0ca6d6ed37c6ac7884ea1969b86565e0bcc0c66dc7355704388d6b44`
+- Created: `2023-02-15T01:49:41.178274135Z`
+- Virtual Size: ~ 274.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4`
-  - `PHP_VERSION=8.0.27`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.27.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.27.tar.xz.asc`
-  - `PHP_SHA256=f942cbfe2f7bacbb8039fb79bbec41c76ea779ac5c8157f21e1e0c1b28a5fc3a`
+  - `PHP_VERSION=8.0.28`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.28.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.28.tar.xz.asc`
+  - `PHP_SHA256=5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
   - `JOOMLA_VERSION=3.10.11`
   - `JOOMLA_SHA512=2c7db516ea07fa869cfff0ee01c9d141a8ac513c8040db6502e111a3d34cc681f6fee033006eeff0aa7f507a30280276c68af61c4d7595166bf9fd57728a9b44`
@@ -287,16 +287,16 @@ GPL-2.0-only
 ### `apk` package: `curl`
 
 ```console
-curl-7.83.1-r4 description:
+curl-7.83.1-r5 description:
 URL retrival utility and library
 
-curl-7.83.1-r4 webpage:
+curl-7.83.1-r5 webpage:
 https://curl.se/
 
-curl-7.83.1-r4 installed size:
+curl-7.83.1-r5 installed size:
 256 KiB
 
-curl-7.83.1-r4 license:
+curl-7.83.1-r5 license:
 curl
 
 ```
@@ -491,16 +491,16 @@ LGPL-2.1-or-later
 ### `apk` package: `gnutls`
 
 ```console
-gnutls-3.7.7-r0 description:
+gnutls-3.7.7-r1 description:
 TLS protocol implementation
 
-gnutls-3.7.7-r0 webpage:
+gnutls-3.7.7-r1 webpage:
 https://www.gnutls.org/
 
-gnutls-3.7.7-r0 installed size:
+gnutls-3.7.7-r1 installed size:
 1904 KiB
 
-gnutls-3.7.7-r0 license:
+gnutls-3.7.7-r1 license:
 LGPL-2.1-or-later
 
 ```
@@ -678,16 +678,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1s-r0 description:
+libcrypto1.1-1.1.1t-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1s-r0 webpage:
+libcrypto1.1-1.1.1t-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1s-r0 installed size:
-2708 KiB
+libcrypto1.1-1.1.1t-r0 installed size:
+2712 KiB
 
-libcrypto1.1-1.1.1s-r0 license:
+libcrypto1.1-1.1.1t-r0 license:
 OpenSSL
 
 ```
@@ -712,16 +712,16 @@ curl
 ### `apk` package: `libde265`
 
 ```console
-libde265-1.0.8-r2 description:
+libde265-1.0.11-r0 description:
 Open h.265 video codec implementation
 
-libde265-1.0.8-r2 webpage:
+libde265-1.0.11-r0 webpage:
 https://github.com/strukturag/libde265
 
-libde265-1.0.8-r2 installed size:
-788 KiB
+libde265-1.0.11-r0 installed size:
+432 KiB
 
-libde265-1.0.8-r2 license:
+libde265-1.0.11-r0 license:
 LGPL-3.0-or-later
 
 ```
@@ -950,16 +950,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-14.5-r0 description:
+libpq-14.7-r0 description:
 PostgreSQL client library
 
-libpq-14.5-r0 webpage:
+libpq-14.7-r0 webpage:
 https://www.postgresql.org/
 
-libpq-14.5-r0 installed size:
+libpq-14.7-r0 installed size:
 328 KiB
 
-libpq-14.5-r0 license:
+libpq-14.7-r0 license:
 PostgreSQL
 
 ```
@@ -1018,16 +1018,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1s-r0 description:
+libssl1.1-1.1.1t-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1s-r0 webpage:
+libssl1.1-1.1.1t-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1s-r0 installed size:
+libssl1.1-1.1.1t-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1s-r0 license:
+libssl1.1-1.1.1t-r0 license:
 OpenSSL
 
 ```
@@ -1273,16 +1273,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.3-r1 description:
+musl-utils-1.2.3-r2 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.3-r1 webpage:
+musl-utils-1.2.3-r2 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.3-r1 installed size:
+musl-utils-1.2.3-r2 installed size:
 132 KiB
 
-musl-utils-1.2.3-r1 license:
+musl-utils-1.2.3-r2 license:
 MIT BSD GPL2+
 
 ```
@@ -1392,16 +1392,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1s-r0 description:
+openssl-1.1.1t-r0 description:
 toolkit for transport layer security (TLS) - version 1.1
 
-openssl-1.1.1s-r0 webpage:
+openssl-1.1.1t-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1s-r0 installed size:
+openssl-1.1.1t-r0 installed size:
 660 KiB
 
-openssl-1.1.1s-r0 license:
+openssl-1.1.1t-r0 license:
 OpenSSL
 
 ```
@@ -1477,16 +1477,16 @@ MIT
 ### `apk` package: `pkgconf`
 
 ```console
-pkgconf-1.8.0-r1 description:
+pkgconf-1.8.1-r0 description:
 development framework configuration tools
 
-pkgconf-1.8.0-r1 webpage:
+pkgconf-1.8.1-r0 webpage:
 https://git.sr.ht/~kaniini/pkgconf
 
-pkgconf-1.8.0-r1 installed size:
+pkgconf-1.8.1-r0 installed size:
 140 KiB
 
-pkgconf-1.8.0-r1 license:
+pkgconf-1.8.1-r0 license:
 ISC
 
 ```
@@ -1528,16 +1528,16 @@ GPL-2.0-only
 ### `apk` package: `shared-mime-info`
 
 ```console
-shared-mime-info-2.2-r1 description:
+shared-mime-info-2.2-r2 description:
 Freedesktop.org Shared MIME Info
 
-shared-mime-info-2.2-r1 webpage:
+shared-mime-info-2.2-r2 webpage:
 http://freedesktop.org/Software/shared-mime-info
 
-shared-mime-info-2.2-r1 installed size:
+shared-mime-info-2.2-r2 installed size:
 2452 KiB
 
-shared-mime-info-2.2-r1 license:
+shared-mime-info-2.2-r2 license:
 GPL-2.0-or-later
 
 ```
