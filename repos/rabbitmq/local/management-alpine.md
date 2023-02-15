@@ -1,10 +1,10 @@
-# `rabbitmq:3.11.8-management-alpine`
+# `rabbitmq:3.11.9-management-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:59fdc90b9bf2b324452dfd9103f4cb691d8c5c5f2517617cf6153430b5a520a8`
-- Created: `2023-02-07T23:43:25.776836105Z`
-- Virtual Size: ~ 167.17 Mb  
+- Image ID: `sha256:f432dff6d7491b5cde97828e1d51d24f5b22b13956cb978f192b915360befa2c`
+- Created: `2023-02-13T22:21:43.144726585Z`
+- Virtual Size: ~ 167.24 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/opt/rabbitmq/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
-  - `RABBITMQ_VERSION=3.11.8`
+  - `RABBITMQ_VERSION=3.11.9`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
   - `RABBITMQ_HOME=/opt/rabbitmq`
   - `HOME=/var/lib/rabbitmq`
@@ -212,16 +212,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.0.7-r2 description:
+libcrypto3-3.0.8-r0 description:
 Crypto library from openssl
 
-libcrypto3-3.0.7-r2 webpage:
+libcrypto3-3.0.8-r0 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.0.7-r2 installed size:
+libcrypto3-3.0.8-r0 installed size:
 4108 KiB
 
-libcrypto3-3.0.7-r2 license:
+libcrypto3-3.0.8-r0 license:
 Apache-2.0
 
 ```
@@ -314,16 +314,16 @@ GPL-2.0-or-later AND LGPL-2.1-or-later
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.0.7-r2 description:
+libssl3-3.0.8-r0 description:
 SSL shared libraries
 
-libssl3-3.0.7-r2 webpage:
+libssl3-3.0.8-r0 webpage:
 https://www.openssl.org/
 
-libssl3-3.0.7-r2 installed size:
+libssl3-3.0.8-r0 installed size:
 608 KiB
 
-libssl3-3.0.7-r2 license:
+libssl3-3.0.8-r0 license:
 Apache-2.0
 
 ```
@@ -450,16 +450,16 @@ GPL-2.0-or-later AND LGPL-2.1-or-later
 ### `apk` package: `python3`
 
 ```console
-python3-3.10.9-r1 description:
+python3-3.10.10-r0 description:
 A high-level scripting language
 
-python3-3.10.9-r1 webpage:
+python3-3.10.10-r0 webpage:
 https://www.python.org/
 
-python3-3.10.9-r1 installed size:
+python3-3.10.10-r0 installed size:
 47 MiB
 
-python3-3.10.9-r1 license:
+python3-3.10.10-r0 license:
 PSF-2.0
 
 ```
