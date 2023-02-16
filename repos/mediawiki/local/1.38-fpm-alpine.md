@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3d996e2a5420f7bc4cada843cc2f3d7447a0942e6226deca0878d8f2c5f1d458`
-- Created: `2023-02-11T16:57:05.85962768Z`
+- Image ID: `sha256:6583272a14c2f31747d997e914df27cba17ea57c868b8830b03d63c9b8a56058`
+- Created: `2023-02-15T00:25:33.552150214Z`
 - Virtual Size: ~ 527.96 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4`
-  - `PHP_VERSION=8.0.27`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.27.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.27.tar.xz.asc`
-  - `PHP_SHA256=f942cbfe2f7bacbb8039fb79bbec41c76ea779ac5c8157f21e1e0c1b28a5fc3a`
+  - `PHP_VERSION=8.0.28`
+  - `PHP_URL=https://www.php.net/distributions/php-8.0.28.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.28.tar.xz.asc`
+  - `PHP_SHA256=5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd`
   - `MEDIAWIKI_MAJOR_VERSION=1.38`
   - `MEDIAWIKI_VERSION=1.38.5`
 
@@ -420,16 +420,16 @@ AGPL-3.0-or-later
 ### `apk` package: `git`
 
 ```console
-git-2.36.4-r0 description:
+git-2.36.5-r0 description:
 Distributed version control system
 
-git-2.36.4-r0 webpage:
+git-2.36.5-r0 webpage:
 https://www.git-scm.com/
 
-git-2.36.4-r0 installed size:
-10 MiB
+git-2.36.5-r0 installed size:
+11 MiB
 
-git-2.36.4-r0 license:
+git-2.36.5-r0 license:
 GPL-2.0-or-later
 
 ```
