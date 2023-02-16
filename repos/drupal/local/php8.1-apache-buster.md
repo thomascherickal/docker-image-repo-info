@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:07b8532f620c9756c46c736313e26dea0e351369a0fcbcf313b9d31b75fb9a2e`
-- Created: `2023-02-11T14:21:54.548593358Z`
-- Virtual Size: ~ 487.17 Mb  
+- Image ID: `sha256:a755dda603a9bc58da48ad29514ceafbc4aa3739003e0cbc8f1c4f19e1c0f544`
+- Created: `2023-02-16T02:06:44.392083604Z`
+- Virtual Size: ~ 487.11 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -19,10 +19,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.15`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.15.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.15.tar.xz.asc`
-  - `PHP_SHA256=cd450fb4ee50488c5bf5f08851f514e5a1cac18c9512234d9e16c3a1d35781a6`
+  - `PHP_VERSION=8.1.16`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.16.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.16.tar.xz.asc`
+  - `PHP_SHA256=d61f13d96a58b93c39672b58f25e1ee4ce88500f4acb1430cb01a514875c1258`
   - `DRUPAL_VERSION=10.0.3`
 
 ## `dpkg` (`.deb`-based packages)
@@ -2659,11 +2659,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pkg-config/0.29-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pkg-config/0.29-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-11=11.18-0+deb10u1`
+### `dpkg` source package: `postgresql-11=11.19-0+deb10u1`
 
 Binary Packages:
 
-- `libpq5:amd64=11.18-0+deb10u1`
+- `libpq5:amd64=11.19-0+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -2683,13 +2683,20 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 - `nagaysau-ishii`
 - `rijndael`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris postgresql-11=11.19-0+deb10u1
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.19-0%2bdeb10u1.dsc' postgresql-11_11.19-0+deb10u1.dsc 3745 SHA256:663f4e1d38c8efedf890dd95aa9d443e6e6ea24f73f22f520a8a185d4717fc98
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.19.orig.tar.bz2' postgresql-11_11.19.orig.tar.bz2 20457793 SHA256:13109e2b71f1139405c27201da3733a61ace72ee1c228d9c9f0320e06aee14c2
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.19-0%2bdeb10u1.debian.tar.xz' postgresql-11_11.19-0+deb10u1.debian.tar.xz 28740 SHA256:e874621849ec4696824b96cbc0d28bdd663d9ad1b9d97d5f273b3bb9774d9268
+```
 
-- http://snapshot.debian.org/package/postgresql-11/11.18-0+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/postgresql-11/11.19-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-11/11.19-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-11/11.19-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
 
