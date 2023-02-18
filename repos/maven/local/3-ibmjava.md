@@ -1,10 +1,10 @@
-# `maven:3.8.7-ibmjava-8`
+# `maven:3.9.0-ibmjava-8`
 
 ## Docker Metadata
 
-- Image ID: `sha256:865f6f18503b8cc512eb4cca899df4feea9a076a592d4f3ff696ab3aa2ce88a3`
-- Created: `2023-01-31T23:17:49.005274197Z`
-- Virtual Size: ~ 373.38 Mb  
+- Image ID: `sha256:44e2b194df5a077f636bae6ef33fc82b49f0c488d79ee0c4c3de5294ecddd84e`
+- Created: `2023-02-16T00:27:43.26567376Z`
+- Virtual Size: ~ 330.19 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
@@ -286,10 +286,9 @@ $ apt-get source -qq --print-uris curl=7.58.0-2ubuntu3.22
 Binary Packages:
 
 - `libsasl2-2:amd64=2.1.27~101-g0780600+dfsg-3ubuntu2.4`
-- `libsasl2-modules:amd64=2.1.27~101-g0780600+dfsg-3ubuntu2.4`
 - `libsasl2-modules-db:amd64=2.1.27~101-g0780600+dfsg-3ubuntu2.4`
 
-Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/libsasl2-modules/copyright`, `/usr/share/doc/libsasl2-modules-db/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/libsasl2-modules-db/copyright`)
 
 - `BSD-4-clause`
 - `GPL-3`
@@ -630,19 +629,19 @@ $ apt-get source -qq --print-uris gzip=1.6-5ubuntu1.2
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gzip/gzip_1.6-5ubuntu1.2.debian.tar.xz' gzip_1.6-5ubuntu1.2.debian.tar.xz 20408 SHA512:2253a804bcc3f13696ecef5bb6e5297f3902a471ba7ea239b4309c5fdf377197984f33fbff881f6f8d67540017bbf9f8234519fe332af6397c429454f32d5e13
 ```
 
-### `dpkg` source package: `heimdal=7.5.0+dfsg-1ubuntu0.3`
+### `dpkg` source package: `heimdal=7.5.0+dfsg-1ubuntu0.4`
 
 Binary Packages:
 
-- `libasn1-8-heimdal:amd64=7.5.0+dfsg-1ubuntu0.3`
-- `libgssapi3-heimdal:amd64=7.5.0+dfsg-1ubuntu0.3`
-- `libhcrypto4-heimdal:amd64=7.5.0+dfsg-1ubuntu0.3`
-- `libheimbase1-heimdal:amd64=7.5.0+dfsg-1ubuntu0.3`
-- `libheimntlm0-heimdal:amd64=7.5.0+dfsg-1ubuntu0.3`
-- `libhx509-5-heimdal:amd64=7.5.0+dfsg-1ubuntu0.3`
-- `libkrb5-26-heimdal:amd64=7.5.0+dfsg-1ubuntu0.3`
-- `libroken18-heimdal:amd64=7.5.0+dfsg-1ubuntu0.3`
-- `libwind0-heimdal:amd64=7.5.0+dfsg-1ubuntu0.3`
+- `libasn1-8-heimdal:amd64=7.5.0+dfsg-1ubuntu0.4`
+- `libgssapi3-heimdal:amd64=7.5.0+dfsg-1ubuntu0.4`
+- `libhcrypto4-heimdal:amd64=7.5.0+dfsg-1ubuntu0.4`
+- `libheimbase1-heimdal:amd64=7.5.0+dfsg-1ubuntu0.4`
+- `libheimntlm0-heimdal:amd64=7.5.0+dfsg-1ubuntu0.4`
+- `libhx509-5-heimdal:amd64=7.5.0+dfsg-1ubuntu0.4`
+- `libkrb5-26-heimdal:amd64=7.5.0+dfsg-1ubuntu0.4`
+- `libroken18-heimdal:amd64=7.5.0+dfsg-1ubuntu0.4`
+- `libwind0-heimdal:amd64=7.5.0+dfsg-1ubuntu0.4`
 
 Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/share/doc/libgssapi3-heimdal/copyright`, `/usr/share/doc/libhcrypto4-heimdal/copyright`, `/usr/share/doc/libheimbase1-heimdal/copyright`, `/usr/share/doc/libheimntlm0-heimdal/copyright`, `/usr/share/doc/libhx509-5-heimdal/copyright`, `/usr/share/doc/libkrb5-26-heimdal/copyright`, `/usr/share/doc/libroken18-heimdal/copyright`, `/usr/share/doc/libwind0-heimdal/copyright`)
 
@@ -652,9 +651,14 @@ Licenses: (parsed from: `/usr/share/doc/libasn1-8-heimdal/copyright`, `/usr/shar
 - `custom`
 - `none`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris heimdal=7.5.0+dfsg-1ubuntu0.4
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg-1ubuntu0.4.dsc' heimdal_7.5.0+dfsg-1ubuntu0.4.dsc 3416 SHA512:c6b32997f775fcee07f23db3862173e22854feb54df6259a5d48bd3620e73cd58d1eab0cda5c0d0c782601c57d3a42324f95948e1195d783a7bf922fdd8aded9
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg.orig.tar.gz' heimdal_7.5.0+dfsg.orig.tar.gz 8955005 SHA512:8ecd3514cb42c746769fb4c83896fc1258cc68ab606894e775e5f99075b6ff87d7024f144a6a369816572270b89e2eb59e8f8dc4384eea25863a90c905cdfa14
+'http://archive.ubuntu.com/ubuntu/pool/main/h/heimdal/heimdal_7.5.0%2bdfsg-1ubuntu0.4.debian.tar.xz' heimdal_7.5.0+dfsg-1ubuntu0.4.debian.tar.xz 331984 SHA512:02385d2c6d8911b20bb370e61b83e3c2906c165a43662c87b304c9bcfe2ca267e60a4430b1e48b2d00e523bc41f682a85f6ac5d4d01b9d9fdd3a135cdc25d308
+```
 
 ### `dpkg` source package: `hostname=3.20`
 
@@ -720,13 +724,12 @@ $ apt-get source -qq --print-uris keyutils=1.5.9-9.2ubuntu2.1
 
 Binary Packages:
 
-- `krb5-locales=1.16-2ubuntu0.3`
 - `libgssapi-krb5-2:amd64=1.16-2ubuntu0.3`
 - `libk5crypto3:amd64=1.16-2ubuntu0.3`
 - `libkrb5-3:amd64=1.16-2ubuntu0.3`
 - `libkrb5support0:amd64=1.16-2ubuntu0.3`
 
-Licenses: (parsed from: `/usr/share/doc/krb5-locales/copyright`, `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
 - `GPL-2`
 
