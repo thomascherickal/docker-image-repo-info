@@ -37493,51 +37493,111 @@ CMD ["perl5.37.8" "-de0"]
 
 ## `perl:5.37.9`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:5.37.9-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:5.37.9-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:5.37.9-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:5.37.9-slim-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:5.37.9-slim-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:5.37.9-slim-threaded`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:5.37.9-slim-threaded-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:5.37.9-slim-threaded-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:5.37.9-threaded`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:5.37.9-threaded-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:5.37.9-threaded-buster`
 
-**does not exist** (yet?)
+```console
+$ docker pull perl@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `perl:bullseye`
 
