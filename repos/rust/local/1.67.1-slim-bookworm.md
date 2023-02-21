@@ -57,19 +57,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.5.5
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.5.5.dsc' apt_2.5.5.dsc 2933 SHA256:67f87c1718fc664a2cd02dfee31faa436475bb9114cc5b66bb9a9ed370a672a4
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.5.5.tar.xz' apt_2.5.5.tar.xz 2323720 SHA256:711d22c529efca3e9943dad989e9715ebf097e630928daeedd2fbe587e0efd85
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.5.5/
 
-- https://sources.debian.net/src/apt/2.5.5/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.5.5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.5.5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-4`
 
@@ -113,20 +107,13 @@ Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris audit=1:3.0.7-1.1
-'http://deb.debian.org/debian/pool/main/a/audit/audit_3.0.7-1.1.dsc' audit_3.0.7-1.1.dsc 2500 SHA256:5b15ad446bf4904a985b9fd549341967b9b6c908a5096f4ebd02c0ad83ad00b7
-'http://deb.debian.org/debian/pool/main/a/audit/audit_3.0.7.orig.tar.gz' audit_3.0.7.orig.tar.gz 1180226 SHA256:8b4c78632a9301a1c7f859b0e38fc0b9c260b8214d6b7c771bf28b3d73a62597
-'http://deb.debian.org/debian/pool/main/a/audit/audit_3.0.7-1.1.debian.tar.xz' audit_3.0.7-1.1.debian.tar.xz 18668 SHA256:f78863e469f8768b403a1d406e56a720aeb168788cd3b3f4d771a12280d1c70e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/audit/1:3.0.7-1.1/
 
-- https://sources.debian.net/src/audit/1:3.0.7-1.1/ (for browsing the source)
-- https://sources.debian.net/src/audit/1:3.0.7-1.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/audit/1:3.0.7-1.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-files=12.3`
 
@@ -828,21 +815,13 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.7.8-4
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.8-4.dsc' gnutls28_3.7.8-4.dsc 3445 SHA256:aa807a59f8c7a6d9d7b034eb8e9665f4b232fc496ca89bb1b9fec39c8cf192d5
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.8.orig.tar.xz' gnutls28_3.7.8.orig.tar.xz 6029220 SHA256:c58ad39af0670efe6a8aee5e3a8b2331a1200418b64b7c51977fb396d4617114
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.8.orig.tar.xz.asc' gnutls28_3.7.8.orig.tar.xz.asc 1760 SHA256:796ac6a01ed73a96b6737c4ea2928ea99715ce922fd49fe6e81de2fc36dc5945
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.8-4.debian.tar.xz' gnutls28_3.7.8-4.debian.tar.xz 85632 SHA256:9b731ee77d3525885178096d44113e466f8033b35dd9df1540a8e7f5a488d5ad
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnutls28/3.7.8-4/
 
-- https://sources.debian.net/src/gnutls28/3.7.8-4/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.7.8-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.7.8-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `grep=3.8-5`
 
@@ -1792,21 +1771,13 @@ Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/open
 - `GPL-1`
 - `GPL-1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=3.0.7-2
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_3.0.7-2.dsc' openssl_3.0.7-2.dsc 2633 SHA256:315e64a49fefd18adcfd8ce67877928fe176060cd8ad45061b30dbb0651fe783
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_3.0.7.orig.tar.gz' openssl_3.0.7.orig.tar.gz 15107575 SHA256:83049d042a260e696f62406ac5c08bf706fd84383f945cf21bd61e9ed95c396e
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_3.0.7.orig.tar.gz.asc' openssl_3.0.7.orig.tar.gz.asc 858 SHA256:18be1d820b25ed5c7d8efe4fdba0b947925273ca114bbd78faecbd99a52df203
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_3.0.7-2.debian.tar.xz' openssl_3.0.7-2.debian.tar.xz 76900 SHA256:b8df69500198cc2bb9464a7997fb0a268c3a77b2d7342a684f42e0208888d67f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openssl/3.0.7-2/
 
-- https://sources.debian.net/src/openssl/3.0.7-2/ (for browsing the source)
-- https://sources.debian.net/src/openssl/3.0.7-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/3.0.7-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.24.1-2`
 
