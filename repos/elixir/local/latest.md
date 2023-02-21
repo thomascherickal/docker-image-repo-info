@@ -2,21 +2,21 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7770942456a46c17a6d4d4744c2830c8e4e5c628e6b620c46388759b81e91de8`
-- Created: `2023-02-11T04:13:37.125167571Z`
+- Image ID: `sha256:d39a37c7dc1daf6b0ddbabde659cbdead67be963645af84b805339753cb172eb`
+- Created: `2023-02-17T21:21:18.389585305Z`
 - Virtual Size: ~ 1.47 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["iex"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `OTP_VERSION=25.2.2`
+  - `OTP_VERSION=25.2.3`
   - `REBAR3_VERSION=3.19.0`
   - `REBAR_VERSION=2.6.4`
   - `ELIXIR_VERSION=v1.14.3`
   - `LANG=C.UTF-8`
 - Labels:
-  - `org.opencontainers.image.version=25.2.2`
+  - `org.opencontainers.image.version=25.2.3`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -8199,12 +8199,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/wayland/1.18.0-2~exp1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/wayland/1.18.0-2~exp1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `webkit2gtk=2.38.4-2~deb11u1`
+### `dpkg` source package: `webkit2gtk=2.38.5-1~deb11u1`
 
 Binary Packages:
 
-- `libjavascriptcoregtk-4.0-18:amd64=2.38.4-2~deb11u1`
-- `libwebkit2gtk-4.0-37:amd64=2.38.4-2~deb11u1`
+- `libjavascriptcoregtk-4.0-18:amd64=2.38.5-1~deb11u1`
+- `libwebkit2gtk-4.0-37:amd64=2.38.5-1~deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libjavascriptcoregtk-4.0-18/copyright`, `/usr/share/doc/libwebkit2gtk-4.0-37/copyright`)
 
@@ -8222,7 +8222,7 @@ Licenses: (parsed from: `/usr/share/doc/libjavascriptcoregtk-4.0-18/copyright`, 
 - `BSD-3-clause-microsoft`
 - `BSD-3-clause-motorola`
 - `BSD-3-clause-opera`
-- `BSD-valgrind`
+- `BSD-4-clause-valgrind`
 - `BSL-1.0`
 - `Expat`
 - `GPL-2`
@@ -8243,18 +8243,18 @@ Licenses: (parsed from: `/usr/share/doc/libjavascriptcoregtk-4.0-18/copyright`, 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris webkit2gtk=2.38.4-2~deb11u1
-'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.4-2%7edeb11u1.dsc' webkit2gtk_2.38.4-2~deb11u1.dsc 4118 SHA256:b616416c006381e32b07c20052fb490cf13bea5e30557a1eb0f4d9e1aa9533e2
-'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.4.orig.tar.xz' webkit2gtk_2.38.4.orig.tar.xz 32534100 SHA256:4f47ea29a2d4d5f15eef3dc9e2d6c6f067e8de863a3f64455e1ccf9693cc1d36
-'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.4.orig.tar.xz.asc' webkit2gtk_2.38.4.orig.tar.xz.asc 195 SHA256:aa8a50f4911211f48c68f3555f0d3f67c95d0b295ce006da8aaa986d6dde60b0
-'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.4-2%7edeb11u1.debian.tar.xz' webkit2gtk_2.38.4-2~deb11u1.debian.tar.xz 78244 SHA256:e2619d0d60cd494b4e2e57c3fafd4cccacd21089afd51cacd72283f0c40b35a8
+$ apt-get source -qq --print-uris webkit2gtk=2.38.5-1~deb11u1
+'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.5-1%7edeb11u1.dsc' webkit2gtk_2.38.5-1~deb11u1.dsc 4118 SHA256:b31626735d89dd409146602711087bbcc0422f617b3c76fead86d62527c17c63
+'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.5.orig.tar.xz' webkit2gtk_2.38.5.orig.tar.xz 33011600 SHA256:40c20c43022274df5893f22b1054fa894c3eea057389bb08aee08c5b0bb0c1a7
+'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.5.orig.tar.xz.asc' webkit2gtk_2.38.5.orig.tar.xz.asc 195 SHA256:b717cb6c96090b6f254b3fb3d5542a038ea2c5283a9e35ec337cdde6a0a7879a
+'http://deb.debian.org/debian-security/pool/updates/main/w/webkit2gtk/webkit2gtk_2.38.5-1%7edeb11u1.debian.tar.xz' webkit2gtk_2.38.5-1~deb11u1.debian.tar.xz 78156 SHA256:978659e148fc582b2b0ae7420c1e91da6b93645f8831e843e574a93bb771e02f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/webkit2gtk/2.38.4-2~deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/webkit2gtk/2.38.4-2~deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/webkit2gtk/2.38.4-2~deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/webkit2gtk/2.38.5-1~deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/webkit2gtk/2.38.5-1~deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/webkit2gtk/2.38.5-1~deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `wget=1.21-1+deb11u1`
 
