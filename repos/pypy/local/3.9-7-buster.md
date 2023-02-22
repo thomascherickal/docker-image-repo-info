@@ -3674,21 +3674,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.36-0+deb10u2
-'http://deb.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.36-0%2bdeb10u2.dsc' mariadb-10.3_10.3.36-0+deb10u2.dsc 4812 SHA256:c1d2adadc25876b48333249b7a6628501920ad310cffe10a7a1cf40f2b3855ed
-'http://deb.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.36.orig.tar.gz' mariadb-10.3_10.3.36.orig.tar.gz 73944352 SHA256:003c497c387a28184acfb4fd30e4150ea1f0300004845fdcf48e5122e36c5dc6
-'http://deb.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.36.orig.tar.gz.asc' mariadb-10.3_10.3.36.orig.tar.gz.asc 195 SHA256:fd6bcd9265d73201b19384d16d795ff709f0cad305e281b3c4f7e04541541f4a
-'http://deb.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.36-0%2bdeb10u2.debian.tar.xz' mariadb-10.3_10.3.36-0+deb10u2.debian.tar.xz 219712 SHA256:dd00709d450b9e64b9bfbdff2baf3f4b2e8cfe935de89ca4341fdaaf9e2721b1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.36-0+deb10u2/
 
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.36-0+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/mariadb-10.3/1:10.3.36-0+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.36-0+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
@@ -5131,20 +5123,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u6
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117-2%7edeb10u6.dsc' tiff_4.1.0+git191117-2~deb10u6.dsc 2303 SHA256:cfae550d5c75a647fa26ecacd9dbe00fd0332353c5fe986f072e1557175ab7f2
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117-2%7edeb10u6.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u6.debian.tar.xz 40408 SHA256:4a763002fe0241f1548f78fe48a11b535fa0131cd4025df7c520bdfb7532f00c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u6/
 
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u6/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tk8.6=8.6.9-2`
 
