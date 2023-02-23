@@ -1,10 +1,10 @@
-# `mediawiki:1.39.1-fpm`
+# `mediawiki:1.39.2-fpm`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d25928f2cdcf3eae851c80e701f0f3ae6a617595730bc27c9f7e7c2274786a46`
-- Created: `2023-02-16T03:41:40.865719648Z`
-- Virtual Size: ~ 807.44 Mb  
+- Image ID: `sha256:507fbcfd8b0728701e6bba3435d07cfbcec44129c6e15856674b8ecff13de290`
+- Created: `2023-02-23T19:33:51.086945555Z`
+- Virtual Size: ~ 808.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -22,7 +22,7 @@
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.16.tar.xz.asc`
   - `PHP_SHA256=d61f13d96a58b93c39672b58f25e1ee4ce88500f4acb1430cb01a514875c1258`
   - `MEDIAWIKI_MAJOR_VERSION=1.39`
-  - `MEDIAWIKI_VERSION=1.39.1`
+  - `MEDIAWIKI_VERSION=1.39.2`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1247,20 +1247,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.30.2-1+deb11u1
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.30.2-1%2bdeb11u1.dsc' git_2.30.2-1+deb11u1.dsc 2525 SHA256:1d3c0316e32555fa14bb2af6379eb5b9442343162797c67f6e2616effca47663
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.30.2.orig.tar.xz' git_2.30.2.orig.tar.xz 6329820 SHA256:41f7d90c71f9476cd387673fcb10ce09ccbed67332436a4cc58d7af32c355faa
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.30.2-1%2bdeb11u1.debian.tar.xz' git_2.30.2-1+deb11u1.debian.tar.xz 692344 SHA256:ca4b7d68338a9c61a322294ea2d7fc52669e47b4904e1f694c6094acfcbc6037
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.30.2-1+deb11u1/
 
-- https://sources.debian.net/src/git/1:2.30.2-1+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.30.2-1+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.30.2-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.66.8-1`
 
