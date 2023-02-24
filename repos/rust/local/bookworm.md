@@ -79,20 +79,13 @@ Licenses: (parsed from: `/usr/share/doc/libaom3/copyright`)
 - `ISC`
 - `public-domain-md5`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris aom=3.5.0-1
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.5.0-1.dsc' aom_3.5.0-1.dsc 2207 SHA256:c4b8f793a204a860eaf9406765c56e2268288419e245760d7e30a19df8c56c45
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.5.0.orig.tar.gz' aom_3.5.0.orig.tar.gz 5213077 SHA256:0189ea2f5ae6b883c83b245305de784f65c0461bcd700cc98bbdc58ab957c6e7
-'http://deb.debian.org/debian/pool/main/a/aom/aom_3.5.0-1.debian.tar.xz' aom_3.5.0-1.debian.tar.xz 18248 SHA256:af10d4d1f4c0bc90f124716a4d12cdf821b3e36cb796502771f7289e3c891908
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/aom/3.5.0-1/
 
-- https://sources.debian.net/src/aom/3.5.0-1/ (for browsing the source)
-- https://sources.debian.net/src/aom/3.5.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/aom/3.5.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apr-util=1.6.3-1`
 
@@ -1981,20 +1974,13 @@ Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/
 - `TatcherUlrichPublicDomain`
 - `aclocal`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris imagemagick=8:6.9.11.60+dfsg-1.5
-'http://deb.debian.org/debian/pool/main/i/imagemagick/imagemagick_6.9.11.60%2bdfsg-1.5.dsc' imagemagick_6.9.11.60+dfsg-1.5.dsc 5074 SHA256:21e3a4ede229ca2ebfc68cbad9ace30238d95a105e8f7ecc47d3dbfc703b408f
-'http://deb.debian.org/debian/pool/main/i/imagemagick/imagemagick_6.9.11.60%2bdfsg.orig.tar.xz' imagemagick_6.9.11.60+dfsg.orig.tar.xz 9395144 SHA256:472fb516df842ee9c819ed80099c188463b9e961303511c36ae24d0eaa8959c4
-'http://deb.debian.org/debian/pool/main/i/imagemagick/imagemagick_6.9.11.60%2bdfsg-1.5.debian.tar.xz' imagemagick_6.9.11.60+dfsg-1.5.debian.tar.xz 253360 SHA256:77c786e41d5922e9a13cd468342bf0896f4c7a3ba1c5873a456c0243c699ec83
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/imagemagick/8:6.9.11.60+dfsg-1.5/
 
-- https://sources.debian.net/src/imagemagick/8:6.9.11.60+dfsg-1.5/ (for browsing the source)
-- https://sources.debian.net/src/imagemagick/8:6.9.11.60+dfsg-1.5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/imagemagick/8:6.9.11.60+dfsg-1.5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `imath=3.1.6-1`
 
@@ -3064,20 +3050,13 @@ Licenses: (parsed from: `/usr/share/doc/libpsl5/copyright`)
 - `Chromium`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libpsl=0.21.0-1.2
-'http://deb.debian.org/debian/pool/main/libp/libpsl/libpsl_0.21.0-1.2.dsc' libpsl_0.21.0-1.2.dsc 2216 SHA256:d46b69dd1cb43dc48375d70c4895d0a0d5964131196a7de4e0ad1ea2912d6df4
-'http://deb.debian.org/debian/pool/main/libp/libpsl/libpsl_0.21.0.orig.tar.gz' libpsl_0.21.0.orig.tar.gz 8598583 SHA256:055aa87ec166c7afb985d0816c07ff440e1eb899881a318c51c69a0aeea8e279
-'http://deb.debian.org/debian/pool/main/libp/libpsl/libpsl_0.21.0-1.2.debian.tar.xz' libpsl_0.21.0-1.2.debian.tar.xz 12724 SHA256:012d3b6ec5634c59e6a4aa9f854d756ef23f08edf21d70ae5a888c55e95abd5d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libpsl/0.21.0-1.2/
 
-- https://sources.debian.net/src/libpsl/0.21.0-1.2/ (for browsing the source)
-- https://sources.debian.net/src/libpsl/0.21.0-1.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libpsl/0.21.0-1.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libpthread-stubs=0.4-1`
 
@@ -4083,19 +4062,13 @@ Licenses: (parsed from: `/usr/share/doc/media-types/copyright`)
 
 - `ad-hoc`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris media-types=8.0.0
-'http://deb.debian.org/debian/pool/main/m/media-types/media-types_8.0.0.dsc' media-types_8.0.0.dsc 1620 SHA256:e80b1ac65060ce4a6d12184ca9ee564f38073b736e4ddd473be081931b50ffed
-'http://deb.debian.org/debian/pool/main/m/media-types/media-types_8.0.0.tar.xz' media-types_8.0.0.tar.xz 56364 SHA256:85f9b3ccbb6bc8dc0fff47105726ca1877ac2011cc7e8244ab276d5583f4890e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/media-types/8.0.0/
 
-- https://sources.debian.net/src/media-types/8.0.0/ (for browsing the source)
-- https://sources.debian.net/src/media-types/8.0.0/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/media-types/8.0.0/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mercurial=6.3.1-2`
 
@@ -4111,21 +4084,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=6.3.1-2
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.3.1-2.dsc' mercurial_6.3.1-2.dsc 2848 SHA256:b50ccd69eedabc7eb2c88fdf185065628f68d95965ac36be708d1feb9755cdbd
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.3.1.orig.tar.gz' mercurial_6.3.1.orig.tar.gz 8089720 SHA256:6c39ab8732948d89cf1208751dd7d85d4042aa82153977451b9eb13367585072
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.3.1.orig.tar.gz.asc' mercurial_6.3.1.orig.tar.gz.asc 659 SHA256:79061d5dfa734f48e8aee56fbf4b6bc90655f28e96d4cf558bebb1ed4bc95214
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.3.1-2.debian.tar.xz' mercurial_6.3.1-2.debian.tar.xz 70616 SHA256:75ec52a259c6c7bdc39ffdd1b0953684226a97aad9a1710dc25221f5b9f576ab
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/6.3.1-2/
 
-- https://sources.debian.net/src/mercurial/6.3.1-2/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/6.3.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/6.3.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpclib3=1.3.1-1`
 
@@ -5017,20 +4982,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.11-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.11=3.11.1-2
-'http://deb.debian.org/debian/pool/main/p/python3.11/python3.11_3.11.1-2.dsc' python3.11_3.11.1-2.dsc 3632 SHA256:caa369c0eeba300de077b56211095a071bb30635c45bfcf72ece967542706492
-'http://deb.debian.org/debian/pool/main/p/python3.11/python3.11_3.11.1.orig.tar.xz' python3.11_3.11.1.orig.tar.xz 19856648 SHA256:85879192f2cffd56cb16c092905949ebf3e5e394b7f764723529637901dfb58f
-'http://deb.debian.org/debian/pool/main/p/python3.11/python3.11_3.11.1-2.debian.tar.xz' python3.11_3.11.1-2.debian.tar.xz 215500 SHA256:669c444f2586643639ddee338fc913ee20e202a619c28fe5b71f68a3df17f78f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.11/3.11.1-2/
 
-- https://sources.debian.net/src/python3.11/3.11.1-2/ (for browsing the source)
-- https://sources.debian.net/src/python3.11/3.11.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.11/3.11.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.2-1.3`
 
