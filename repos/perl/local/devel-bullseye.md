@@ -1,13 +1,13 @@
-# `perl:5.37.8`
+# `perl:5.37.9`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ba4174065cb2347e56571f5817c809301d70d145da3a7da854dd75562f136615`
-- Created: `2023-02-09T13:48:52.338943622Z`
-- Virtual Size: ~ 896.40 Mb  
+- Image ID: `sha256:9dece90c51aa9e4c0c84328c38d801d43de6c10f5862f352e9a9e1e900e390c8`
+- Created: `2023-02-21T21:26:02.435831468Z`
+- Virtual Size: ~ 896.54 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["perl5.37.8","-de0"]`
+- Command: `["perl5.37.9","-de0"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
@@ -1412,20 +1412,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.30.2-1+deb11u1
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.30.2-1%2bdeb11u1.dsc' git_2.30.2-1+deb11u1.dsc 2525 SHA256:1d3c0316e32555fa14bb2af6379eb5b9442343162797c67f6e2616effca47663
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.30.2.orig.tar.xz' git_2.30.2.orig.tar.xz 6329820 SHA256:41f7d90c71f9476cd387673fcb10ce09ccbed67332436a4cc58d7af32c355faa
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.30.2-1%2bdeb11u1.debian.tar.xz' git_2.30.2-1+deb11u1.debian.tar.xz 692344 SHA256:ca4b7d68338a9c61a322294ea2d7fc52669e47b4904e1f694c6094acfcbc6037
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.30.2-1+deb11u1/
 
-- https://sources.debian.net/src/git/1:2.30.2-1+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.30.2-1+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.30.2-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.66.8-1`
 

@@ -1,13 +1,13 @@
-# `perl:5.37.8-threaded-buster`
+# `perl:5.37.9-threaded-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:62df2488ecb03a716e5842badd7f2be9880f4833a4a766f5b490ae20b3107fa6`
-- Created: `2023-02-09T14:17:25.717793319Z`
-- Virtual Size: ~ 865.41 Mb  
+- Image ID: `sha256:1777322cbec100658d176732779312e15dbcd68c194defab1793a8177c670331`
+- Created: `2023-02-21T21:54:39.297511256Z`
+- Virtual Size: ~ 865.55 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["perl5.37.8","-de0"]`
+- Command: `["perl5.37.9","-de0"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
@@ -1283,20 +1283,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.20.1-2+deb10u7
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2%2bdeb10u7.dsc' git_2.20.1-2+deb10u7.dsc 2894 SHA256:5604b00ffaa0e19fa390c282f1da2adb3a00cc16aab73e55ebe29ce8a69a0c1f
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1.orig.tar.xz' git_2.20.1.orig.tar.xz 5359872 SHA256:9d2e91e2faa2ea61ba0a70201d023b36f54d846314591a002c610ea2ab81c3e9
-'http://deb.debian.org/debian-security/pool/updates/main/g/git/git_2.20.1-2%2bdeb10u7.debian.tar.xz' git_2.20.1-2+deb10u7.debian.tar.xz 693472 SHA256:a8787e368edcb5518d0d07ad60294d54981eaa890cad16b060fca3220e957d5d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u7/
 
-- https://sources.debian.net/src/git/1:2.20.1-2+deb10u7/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.20.1-2+deb10u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.20.1-2+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.58.3-2+deb10u4`
 
@@ -5043,20 +5036,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2~deb10u6
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117-2%7edeb10u6.dsc' tiff_4.1.0+git191117-2~deb10u6.dsc 2303 SHA256:cfae550d5c75a647fa26ecacd9dbe00fd0332353c5fe986f072e1557175ab7f2
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA256:67e1d045e994adb7144b0cca228d70dd6d520aaf8c75c342064bc0fd601e6e42
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.1.0%2bgit191117-2%7edeb10u6.debian.tar.xz' tiff_4.1.0+git191117-2~deb10u6.debian.tar.xz 40408 SHA256:4a763002fe0241f1548f78fe48a11b535fa0131cd4025df7c520bdfb7532f00c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u6/
 
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u6/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-0+deb10u8`
 
