@@ -1,7 +1,7 @@
 ## `tomcat:8-jre17-temurin-jammy`
 
 ```console
-$ docker pull tomcat@sha256:66bd3f440f18fb022aea8b747b85f766ec901cee4156154ebf6998e2d588d204
+$ docker pull tomcat@sha256:ec4fdb8ae7b5c956750885b0f92ddf1ce2134317526af007f203dd6ca1fb5d30
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -121,14 +121,14 @@ CMD ["catalina.sh" "run"]
 ### `tomcat:8-jre17-temurin-jammy` - linux; arm variant v7
 
 ```console
-$ docker pull tomcat@sha256:8ab0c10dd4517ba4f39224556258e8d40e7d0c14150ac71a0c5dc9cf28fd4356
+$ docker pull tomcat@sha256:172e083f2b01355b1dffe44f5e5d94d25045effdc5473ee47a9af43930d94f34
 ```
 
--	Docker Version: 20.10.17
+-	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **100.2 MB (100235980 bytes)**  
+-	Total Size: **102.3 MB (102265056 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:231ed1342b2d96b3ef58743013a2c9fc23f178eb6d6699f6d7a01aea0fd889ab`
+-	Image ID: `sha256:936998616a6941f9b0e369df113fcbcb45fd821660f99007ee4a0d1ccb28b7cf`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -158,35 +158,35 @@ ENV JAVA_VERSION=jdk-17.0.6+10
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='3797815cb853616b6415e1b8875cda4eaa004887561ea4ea2090d726b8d8582f';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.6%2B10/OpenJDK17U-jre_aarch64_linux_hotspot_17.0.6_10.tar.gz';          ;;        armhf|arm)          ESUM='bf7ef7ba477dc278f913e64174e76be9ae7f014c767352eae83b3f9581494fce';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.6%2B10/OpenJDK17U-jre_arm_linux_hotspot_17.0.6_10.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='f11b86bfd7fa4d7a0d05040ea235102296f03eaf064253f76d7ab94baa0352e3';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.6%2B10/OpenJDK17U-jre_ppc64le_linux_hotspot_17.0.6_10.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='21a7156a29e7921bc7c6eadecb8ee4ac7161921cea85b75b61f0376f9c725caa';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.6%2B10/OpenJDK17U-jre_s390x_linux_hotspot_17.0.6_10.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='fe669935609086e76cb0b829e92808766cbf8cb7bda57a76b47813b08584bfd2';          BINARY_URL='https://github.com/adoptium/temurin17-binaries/releases/download/jdk-17.0.6%2B10/OpenJDK17U-jre_x64_linux_hotspot_17.0.6_10.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
 # Tue, 31 Jan 2023 18:59:59 GMT
 RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Tue, 31 Jan 2023 20:22:39 GMT
+# Sat, 25 Feb 2023 06:00:57 GMT
 ENV CATALINA_HOME=/usr/local/tomcat
-# Tue, 31 Jan 2023 20:22:40 GMT
+# Sat, 25 Feb 2023 06:00:57 GMT
 ENV PATH=/usr/local/tomcat/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 31 Jan 2023 20:22:40 GMT
+# Sat, 25 Feb 2023 06:00:58 GMT
 RUN mkdir -p "$CATALINA_HOME"
-# Tue, 31 Jan 2023 20:22:40 GMT
+# Sat, 25 Feb 2023 06:00:58 GMT
 WORKDIR /usr/local/tomcat
-# Tue, 31 Jan 2023 20:22:40 GMT
+# Sat, 25 Feb 2023 06:00:58 GMT
 ENV TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib
-# Tue, 31 Jan 2023 20:22:40 GMT
+# Sat, 25 Feb 2023 06:00:58 GMT
 ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
-# Tue, 31 Jan 2023 20:32:11 GMT
+# Sat, 25 Feb 2023 06:09:11 GMT
 ENV GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 5C3C5F3E314C866292F359A8F3AD5C94A67F707E 765908099ACF92702C7D949BFA0C35EA8AA299F1 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
-# Tue, 31 Jan 2023 20:32:11 GMT
+# Sat, 25 Feb 2023 06:09:11 GMT
 ENV TOMCAT_MAJOR=8
-# Tue, 31 Jan 2023 20:32:11 GMT
-ENV TOMCAT_VERSION=8.5.85
-# Tue, 31 Jan 2023 20:32:11 GMT
-ENV TOMCAT_SHA512=0fc44133aff9e7e31d6dbb4b6e204d33bd0009b6bd089e5f8c8a1f7dfe7c5feff25d7f6404c4a3c5610e0960b5d0198580171212a2636816a23e21799a4c0467
-# Tue, 31 Jan 2023 20:32:12 GMT
-COPY dir:466a034e85396324564127e1c1591805f5a8a4dc836431dead449d03019b59ee in /usr/local/tomcat 
-# Tue, 31 Jan 2023 20:32:16 GMT
+# Sat, 25 Feb 2023 06:09:11 GMT
+ENV TOMCAT_VERSION=8.5.86
+# Sat, 25 Feb 2023 06:09:11 GMT
+ENV TOMCAT_SHA512=0fc6da94ec8c83dda6e5f0e7502e25eb35a62993f6ce362a395ce269fbd1a01bd4bc96a55debb49adc48c9647bee9743c5bed8cc2aba9d58968f8e3640b80d1b
+# Sat, 25 Feb 2023 06:09:12 GMT
+COPY dir:d3182e360c0ba4ec448d6afd69c197838e7d08576d3c79061ea945326f02a404 in /usr/local/tomcat 
+# Sat, 25 Feb 2023 06:09:16 GMT
 RUN set -eux; 	apt-get update; 	xargs -rt apt-get install -y --no-install-recommends < "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt"; 	rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 20:32:18 GMT
+# Sat, 25 Feb 2023 06:09:17 GMT
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Tue, 31 Jan 2023 20:32:18 GMT
+# Sat, 25 Feb 2023 06:09:17 GMT
 EXPOSE 8080
-# Tue, 31 Jan 2023 20:32:18 GMT
+# Sat, 25 Feb 2023 06:09:17 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -207,21 +207,21 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 31 Jan 2023 19:08:23 GMT  
 		Size: 159.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ad42f769015c21205e825dbe32e54bc63b44d59cf2c615a16324226335cb466f`  
-		Last Modified: Tue, 31 Jan 2023 20:47:33 GMT  
-		Size: 138.0 B  
+	-	`sha256:caefe5a2af87d50b8c6ad31c218eea09adb804b5161d193d1c3fd8632837fceb`  
+		Last Modified: Sat, 25 Feb 2023 06:22:29 GMT  
+		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b619c4e8f3605833e6c4164bd5c05401fa469d2f9e2dbf60103a65f6c056bd93`  
-		Last Modified: Tue, 31 Jan 2023 20:58:29 GMT  
-		Size: 11.2 MB (11163420 bytes)  
+	-	`sha256:606d2d58ec64f5ffe24efe9950535cdfd24b3db0e46f5692158dff395ac1522e`  
+		Last Modified: Sat, 25 Feb 2023 06:32:00 GMT  
+		Size: 11.2 MB (11171085 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec63a097e98e42cab987e2c67f6872c11297de2088f520e75b96c8662be00be6`  
-		Last Modified: Tue, 31 Jan 2023 20:58:28 GMT  
-		Size: 429.0 KB (429020 bytes)  
+	-	`sha256:c9991bbb72737e3ca2b387e5282387cda8ebc6726e0c06de7b2d3ff835a7c9de`  
+		Last Modified: Sat, 25 Feb 2023 06:32:00 GMT  
+		Size: 2.5 MB (2450398 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1626dcd85ef26067a47224c3853cc523341d5f3e7f09cb4faec3764e2d34f3f1`  
-		Last Modified: Tue, 31 Jan 2023 20:58:27 GMT  
-		Size: 131.0 B  
+	-	`sha256:a3d37759b02986e48d2aca8f504bc24fb3efeda019e8da90faf8b14f5571a4b4`  
+		Last Modified: Sat, 25 Feb 2023 06:31:59 GMT  
+		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `tomcat:8-jre17-temurin-jammy` - linux; arm64 variant v8
