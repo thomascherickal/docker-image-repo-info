@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:94ffe77084dbc8f79b40c60e9bb9561b93fabdf91b8eaa107adc0ec9b8274f54`
 - Created: `2023-02-15T00:08:34.351418144Z`
-- Virtual Size: ~ 640.63 Mb  
+- Virtual Size: ~ 640.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -3847,21 +3847,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.2.0-1+deb11u3
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0-1%2bdeb11u3.dsc' tiff_4.2.0-1+deb11u3.dsc 2116 SHA256:75db70950d4b814e5a66ff7ba7869a6925c0c2db9c77f4d0dddc2c3334bb7073
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0.orig.tar.gz' tiff_4.2.0.orig.tar.gz 2809373 SHA256:eb0484e568ead8fa23b513e9b0041df7e327f4ee2d22db5a533929dfc19633cb
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0.orig.tar.gz.asc' tiff_4.2.0.orig.tar.gz.asc 228 SHA256:119bb62934603ff4d3cd81c739d11904b28812a860773b9b2268cc96a339b14f
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0-1%2bdeb11u3.debian.tar.xz' tiff_4.2.0-1+deb11u3.debian.tar.xz 38260 SHA256:249ae64ad51bb7650c0076ba931cbe4b725d542921f270c825b5540ce41966cb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u3/
 
-- https://sources.debian.net/src/tiff/4.2.0-1+deb11u3/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.2.0-1+deb11u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tini=0.19.0-1`
 
