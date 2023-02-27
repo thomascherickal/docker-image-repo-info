@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:a7e948c6ad4f88e106c8ebb8e9ae04265328dc3fb23a75364b3aada404e8ea1a`
 - Created: `2023-02-09T07:14:53.213313927Z`
-- Virtual Size: ~ 547.09 Mb  
+- Virtual Size: ~ 547.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -344,20 +344,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u4
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u4.dsc' curl_7.64.0-4+deb10u4.dsc 2694 SHA256:ba385d7f1468f4bf309642218433f4975b9d5606410941bce7382b8cddebc273
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u4.debian.tar.xz' curl_7.64.0-4+deb10u4.debian.tar.xz 59080 SHA256:a6a0f1c45359fa262ae1612e9d3d3e185c88b4d87473e44557bcc0441a72f10c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u4/
 
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u4/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u2`
 
