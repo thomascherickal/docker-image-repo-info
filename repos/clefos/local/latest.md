@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:94f590ec5ee0bb869f2fe7446778f17352b131dece081a831638b38b42643c6e`
 - Created: `2022-01-21T18:55:39.356940175Z`
-- Virtual Size: ~ 166.82 Mb  
+- Virtual Size: ~ 166.83 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`s390x`
 - Command: `["/bin/bash"]`
