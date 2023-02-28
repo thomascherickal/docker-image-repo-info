@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:18f98a9398f4f68c7b11bf55df47d7feffd1adcdf379f76d557e8da055d6d09b`
 - Created: `2023-02-23T19:33:27.359405885Z`
-- Virtual Size: ~ 816.96 Mb  
+- Virtual Size: ~ 816.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -635,20 +635,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.74.0-1.3+deb11u5
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u5.dsc' curl_7.74.0-1.3+deb11u5.dsc 2699 SHA256:c43b937336f7efdcef923ff34cdf84d0aeda379e2fe1e3ae2f2762473ddd4c87
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u5.debian.tar.xz' curl_7.74.0-1.3+deb11u5.debian.tar.xz 60336 SHA256:e45ea76251781c469b1684b7c3986fb3acc6af0910dccae564f7d61eef83641f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u5/
 
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u5/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2.1+deb11u1`
 
@@ -4376,21 +4369,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.2.0-1+deb11u3
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0-1%2bdeb11u3.dsc' tiff_4.2.0-1+deb11u3.dsc 2116 SHA256:75db70950d4b814e5a66ff7ba7869a6925c0c2db9c77f4d0dddc2c3334bb7073
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0.orig.tar.gz' tiff_4.2.0.orig.tar.gz 2809373 SHA256:eb0484e568ead8fa23b513e9b0041df7e327f4ee2d22db5a533929dfc19633cb
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0.orig.tar.gz.asc' tiff_4.2.0.orig.tar.gz.asc 228 SHA256:119bb62934603ff4d3cd81c739d11904b28812a860773b9b2268cc96a339b14f
-'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0-1%2bdeb11u3.debian.tar.xz' tiff_4.2.0-1+deb11u3.debian.tar.xz 38260 SHA256:249ae64ad51bb7650c0076ba931cbe4b725d542921f270c825b5540ce41966cb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u3/
 
-- https://sources.debian.net/src/tiff/4.2.0-1+deb11u3/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.2.0-1+deb11u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-1+deb11u8`
 
