@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:0c3e7835dbaba9c69dab1c778a67af240ee10e219fd422d36e00e6d5bf08cd4b`
 - Created: `2023-02-11T13:26:50.975994099Z`
-- Virtual Size: ~ 114.41 Mb  
+- Virtual Size: ~ 114.42 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["raku"]`
