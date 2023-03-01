@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d8699c4d8ea4c21f8d00b82f56e7f4e49309e1d4ca1dd0879b19c499a369ab55`
-- Created: `2023-02-14T00:20:24.104080526Z`
-- Virtual Size: ~ 377.04 Mb  
+- Image ID: `sha256:fb727f6941990127afbb32353bfc6c703004be0fa8992fe49be4050d73c01f3a`
+- Created: `2023-02-28T01:37:15.249195816Z`
+- Virtual Size: ~ 377.11 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["telegraf"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `TELEGRAF_VERSION=1.25.2`
+  - `TELEGRAF_VERSION=1.25.3`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -368,20 +368,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.74.0-1.3+deb11u5
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u5.dsc' curl_7.74.0-1.3+deb11u5.dsc 2699 SHA256:c43b937336f7efdcef923ff34cdf84d0aeda379e2fe1e3ae2f2762473ddd4c87
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u5.debian.tar.xz' curl_7.74.0-1.3+deb11u5.debian.tar.xz 60336 SHA256:e45ea76251781c469b1684b7c3986fb3acc6af0910dccae564f7d61eef83641f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u5/
 
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u5/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2.1+deb11u1`
 
@@ -2511,11 +2504,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tcp-wrappers/7.6.q-31/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tcp-wrappers/7.6.q-31/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `telegraf=1.25.2-1`
+### `dpkg` source package: `telegraf=1.25.3-1`
 
 Binary Packages:
 
-- `telegraf=1.25.2-1`
+- `telegraf=1.25.3-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
