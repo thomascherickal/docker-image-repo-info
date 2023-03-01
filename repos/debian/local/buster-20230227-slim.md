@@ -1,10 +1,10 @@
-# `debian:oldstable-slim`
+# `debian:buster-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:aca0f2353393723e3865ee09e81ad69f277c3abd9dbb87f1a54bb35a908c5d75`
-- Created: `2023-02-09T03:21:16.897650815Z`
-- Virtual Size: ~ 69.25 Mb  
+- Image ID: `sha256:207e649c30bf0cdcaf122e250fb012f7fe74848803815e839975ce138d06590c`
+- Created: `2023-02-09T03:20:48.803885004Z`
+- Virtual Size: ~ 69.27 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`

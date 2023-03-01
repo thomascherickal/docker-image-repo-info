@@ -1,10 +1,10 @@
-# `debian:bookworm`
+# `debian:unstable-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:56c4616e839994a2e68610757c5c31d96334bae13c7b67ae3deab0d3137a36fd`
-- Created: `2023-02-09T03:19:37.374723144Z`
-- Virtual Size: ~ 115.01 Mb  
+- Image ID: `sha256:318ef173edc2d3b20596af92ab8123cd86c417114328f8261ac3f6178888052e`
+- Created: `2023-02-09T03:23:04.430980784Z`
+- Virtual Size: ~ 74.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -235,19 +235,13 @@ Licenses: (parsed from: `/usr/share/doc/libdebconfclient0/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.266
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.266.dsc' cdebconf_0.266.dsc 2707 SHA256:c3a832b3e02852aa223c8a79d06777dcb43e2e6e17e8271c26e83a4d513d2175
-'http://deb.debian.org/debian/pool/main/c/cdebconf/cdebconf_0.266.tar.xz' cdebconf_0.266.tar.xz 282380 SHA256:cabbc111ab1f3d1258252f04aa4313d2e2d6e0569001177717cfedc81641140b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cdebconf/0.266/
 
-- https://sources.debian.net/src/cdebconf/0.266/ (for browsing the source)
-- https://sources.debian.net/src/cdebconf/0.266/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cdebconf/0.266/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `coreutils=9.1-1`
 
@@ -420,11 +414,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/debianutils/5.7-0.4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/debianutils/5.7-0.4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `diffutils=1:3.8-3`
+### `dpkg` source package: `diffutils=1:3.8-4`
 
 Binary Packages:
 
-- `diffutils=1:3.8-3`
+- `diffutils=1:3.8-4`
 
 Licenses: (parsed from: `/usr/share/doc/diffutils/copyright`)
 
@@ -447,19 +441,27 @@ Licenses: (parsed from: `/usr/share/doc/diffutils/copyright`)
 - `X11`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris diffutils=1:3.8-4
+'http://deb.debian.org/debian/pool/main/d/diffutils/diffutils_3.8-4.dsc' diffutils_3.8-4.dsc 1705 SHA256:783af1a151c2a0f42a8a427693cc4bb16037c0d17282d28672d906f2eab424b8
+'http://deb.debian.org/debian/pool/main/d/diffutils/diffutils_3.8.orig.tar.xz' diffutils_3.8.orig.tar.xz 1585120 SHA256:a6bdd7d1b31266d11c4f4de6c1b748d4607ab0231af5188fc2533d0ae2438fec
+'http://deb.debian.org/debian/pool/main/d/diffutils/diffutils_3.8.orig.tar.xz.asc' diffutils_3.8.orig.tar.xz.asc 833 SHA256:500f423d0ffa8d28966d916ed5fc6b79fb160a20ed5cb74eeb1c94a30c340311
+'http://deb.debian.org/debian/pool/main/d/diffutils/diffutils_3.8-4.debian.tar.xz' diffutils_3.8-4.debian.tar.xz 14428 SHA256:36abe3a3174c32c3646ca6bad212169a322409086c4a98f967bb9ad58f11c8d4
+```
 
-- http://snapshot.debian.org/package/diffutils/1:3.8-3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/diffutils/1:3.8-4/ (for browsing the source)
+- https://sources.debian.net/src/diffutils/1:3.8-4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/diffutils/1:3.8-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `dpkg=1.21.19`
+### `dpkg` source package: `dpkg=1.21.20`
 
 Binary Packages:
 
-- `dpkg=1.21.19`
+- `dpkg=1.21.20`
 
 Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 
@@ -473,18 +475,18 @@ This is *usually* due to a new package version being released and the old versio
 
 The source package *may* still be available for download from:
 
-- http://snapshot.debian.org/package/dpkg/1.21.19/
+- http://snapshot.debian.org/package/dpkg/1.21.20/
 
 
-### `dpkg` source package: `e2fsprogs=1.46.6-1`
+### `dpkg` source package: `e2fsprogs=1.47.0-1`
 
 Binary Packages:
 
-- `e2fsprogs=1.46.6-1`
-- `libcom-err2:amd64=1.46.6-1`
-- `libext2fs2:amd64=1.46.6-1`
-- `libss2:amd64=1.46.6-1`
-- `logsave=1.46.6-1`
+- `e2fsprogs=1.47.0-1`
+- `libcom-err2:amd64=1.47.0-1`
+- `libext2fs2:amd64=1.47.0-1`
+- `libss2:amd64=1.47.0-1`
+- `logsave=1.47.0-1`
 
 Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/libcom-err2/copyright`, `/usr/share/doc/libext2fs2/copyright`, `/usr/share/doc/libss2/copyright`, `/usr/share/doc/logsave/copyright`)
 
@@ -503,18 +505,18 @@ Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/li
 Source:
 
 ```console
-$ apt-get source -qq --print-uris e2fsprogs=1.46.6-1
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6-1.dsc' e2fsprogs_1.46.6-1.dsc 2846 SHA256:33f4e8b8c4ec665e55b8717a311bf7224eb90531e12d7cea0f17ede439425e20
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6.orig.tar.gz' e2fsprogs_1.46.6.orig.tar.gz 9624228 SHA256:bf2fcc7ee5178fe73a3057f7e2aa3fe52e98b7bb461509c67b021ba00f94c6f7
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6.orig.tar.gz.asc' e2fsprogs_1.46.6.orig.tar.gz.asc 488 SHA256:92c5a2a9b0c3634862f72a8ee8d8090f93256185aa0df75d7f10e06b0f095a66
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6-1.debian.tar.xz' e2fsprogs_1.46.6-1.debian.tar.xz 86508 SHA256:a846e3acc8271b9d988dd0d292699f3705ccb13d0bdcbb9cee85f38ffe5d05ba
+$ apt-get source -qq --print-uris e2fsprogs=1.47.0-1
+'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.47.0-1.dsc' e2fsprogs_1.47.0-1.dsc 2846 SHA256:857e16b0376d33aa52e8221ecb5d9208302671c1de8aa1b8d64a45be88327812
+'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.47.0.orig.tar.gz' e2fsprogs_1.47.0.orig.tar.gz 9637717 SHA256:6667afde56eef0c6af26684974400e4d2288ea49e9441bf5e6229195d51a3578
+'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.47.0.orig.tar.gz.asc' e2fsprogs_1.47.0.orig.tar.gz.asc 488 SHA256:704928204a52ddaa0ac8ef549c1bfba3c38e66c361d3853c8a4c38e6082b90f1
+'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.47.0-1.debian.tar.xz' e2fsprogs_1.47.0-1.debian.tar.xz 86808 SHA256:c33f1e172a45649c2940caf0383fce5911bda3abac25ad0e037f697bb13d003e
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/e2fsprogs/1.46.6-1/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.46.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.46.6-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/e2fsprogs/1.47.0-1/ (for browsing the source)
+- https://sources.debian.net/src/e2fsprogs/1.47.0-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/e2fsprogs/1.47.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.9.0-4`
 
@@ -1252,21 +1254,13 @@ Licenses: (parsed from: `/usr/share/doc/libzstd1/copyright`)
 - `GPL-2`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libzstd=1.5.2+dfsg2-3
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.5.2%2bdfsg2-3.dsc' libzstd_1.5.2+dfsg2-3.dsc 2454 SHA256:219196056788aec348594d4483ec42883cada8c765ea00f591611747cebc3f9a
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.5.2%2bdfsg2.orig.tar.xz' libzstd_1.5.2+dfsg2.orig.tar.xz 1447608 SHA256:d2644154e546d07a39f18ba46031d3b487471e98df94a80b9f635077105c526e
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.5.2%2bdfsg2.orig.tar.xz.asc' libzstd_1.5.2+dfsg2.orig.tar.xz.asc 833 SHA256:e7091780473c28800d6ac6a3cc0b73081b8504d76f7ee0ae4c1915f7d3af507a
-'http://deb.debian.org/debian/pool/main/libz/libzstd/libzstd_1.5.2%2bdfsg2-3.debian.tar.xz' libzstd_1.5.2+dfsg2-3.debian.tar.xz 12944 SHA256:d294999c0e4cf871d4cde6fa6c7585c72a9f5dbf75f3ddbb711a258503f02c12
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libzstd/1.5.2+dfsg2-3/
 
-- https://sources.debian.net/src/libzstd/1.5.2+dfsg2-3/ (for browsing the source)
-- https://sources.debian.net/src/libzstd/1.5.2+dfsg2-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libzstd/1.5.2+dfsg2-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lz4=1.9.4-1`
 
@@ -1668,37 +1662,42 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/sysvinit/3.06-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/sysvinit/3.06-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tar=1.34+dfsg-1`
+### `dpkg` source package: `tar=1.34+dfsg-1.1`
 
 Binary Packages:
 
-- `tar=1.34+dfsg-1`
+- `tar=1.34+dfsg-1.1`
 
 Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 
 - `GPL-2`
+- `GPL-2+`
 - `GPL-3`
+- `GPL-3+`
+- `GPL-3+ with Bison exception`
+- `LGPL-3`
+- `LGPL-3+`
 
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tar=1.34+dfsg-1
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.34%2bdfsg-1.dsc' tar_1.34+dfsg-1.dsc 2015 SHA256:12d709cd77e38e5d1753325a9f266b340b5c095a426f438c677b42c031949d89
+$ apt-get source -qq --print-uris tar=1.34+dfsg-1.1
+'http://deb.debian.org/debian/pool/main/t/tar/tar_1.34%2bdfsg-1.1.dsc' tar_1.34+dfsg-1.1.dsc 1998 SHA256:fc218a0fc776da02565c875cdb0146783267ed9b608e87e04e185d43c9a4d442
 'http://deb.debian.org/debian/pool/main/t/tar/tar_1.34%2bdfsg.orig.tar.xz' tar_1.34+dfsg.orig.tar.xz 1981736 SHA256:7d57029540cb928394defb3b377b3531237c947e795b51aa8acac0c5ba0e4844
-'http://deb.debian.org/debian/pool/main/t/tar/tar_1.34%2bdfsg-1.debian.tar.xz' tar_1.34+dfsg-1.debian.tar.xz 19192 SHA256:7228f5cbd36f937dfc1fec042dee8b3e02d92a06afdd44c586c2c8cfb1905538
+'http://deb.debian.org/debian/pool/main/t/tar/tar_1.34%2bdfsg-1.1.debian.tar.xz' tar_1.34+dfsg-1.1.debian.tar.xz 20148 SHA256:dcd9c360b06bd7561b96d3c6cb97b3ed0273835a9812483dd8a23ea5a836ed59
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tar/1.34+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/tar/1.34+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tar/1.34+dfsg-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tar/1.34+dfsg-1.1/ (for browsing the source)
+- https://sources.debian.net/src/tar/1.34+dfsg-1.1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tar/1.34+dfsg-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2022g-2`
+### `dpkg` source package: `tzdata=2022g-3`
 
 Binary Packages:
 
-- `tzdata=2022g-2`
+- `tzdata=2022g-3`
 
 Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
@@ -1709,7 +1708,7 @@ This is *usually* due to a new package version being released and the old versio
 
 The source package *may* still be available for download from:
 
-- http://snapshot.debian.org/package/tzdata/2022g-2/
+- http://snapshot.debian.org/package/tzdata/2022g-3/
 
 
 ### `dpkg` source package: `usrmerge=35`
@@ -1834,21 +1833,13 @@ Licenses: (parsed from: `/usr/share/doc/liblzma5/copyright`)
 - `permissive-nowarranty`
 - `probably-PD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xz-utils=5.4.1-0.1
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.4.1-0.1.dsc' xz-utils_5.4.1-0.1.dsc 2447 SHA256:40de097c5225e2276fecf1b445adfbfcf2835cae349fa89ce8cdb93e0cb41be2
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.4.1.orig.tar.xz' xz-utils_5.4.1.orig.tar.xz 1485272 SHA256:5d9827aa1875b21c288f78864bb26d2650b436ea8d2cad364e4921eb6266a5a5
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.4.1.orig.tar.xz.asc' xz-utils_5.4.1.orig.tar.xz.asc 833 SHA256:4b0c7707114996092a5f75a98333de2102db83a27218e4903b8fb7c24a8d0233
-'http://deb.debian.org/debian/pool/main/x/xz-utils/xz-utils_5.4.1-0.1.debian.tar.xz' xz-utils_5.4.1-0.1.debian.tar.xz 78196 SHA256:697252618fcc1d3b734b4227fb03b28216b7cd4f48cbf21a3f0fbc5bc56186c0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xz-utils/5.4.1-0.1/
 
-- https://sources.debian.net/src/xz-utils/5.4.1-0.1/ (for browsing the source)
-- https://sources.debian.net/src/xz-utils/5.4.1-0.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xz-utils/5.4.1-0.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `zlib=1:1.2.13.dfsg-1`
 
