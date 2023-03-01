@@ -1,19 +1,19 @@
-# `ibm-semeru-runtimes:open-8u352-b08-jre-jammy`
+# `ibm-semeru-runtimes:open-11.0.18_10-jdk-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:9e948e12b348a6d0581559c49e264cc77810f5d200a2ea25abb1f1c15568a00a`
-- Created: `2023-01-31T18:23:36.811264339Z`
-- Virtual Size: ~ 255.04 Mb  
+- Image ID: `sha256:f7a602a3c2697e3c7f3be817fac63e540a46d04b5c1e8f4a9e65b641a0777a8c`
+- Created: `2023-03-01T01:40:30.825364327Z`
+- Virtual Size: ~ 470.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["/bin/bash"]`
+- Command: `["jshell"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk8u352-b08_openj9-0.35.0`
+  - `JAVA_VERSION=jdk-11.0.18+10_openj9-0.36.0`
   - `JAVA_HOME=/opt/java/openjdk`
   - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal`
 - Labels:
@@ -325,14 +325,9 @@ Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/l
 - `RSA-MD`
 - `SSLeay`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.27+dfsg2-3ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg2-3ubuntu1.1.dsc' cyrus-sasl2_2.1.27+dfsg2-3ubuntu1.1.dsc 3626 SHA512:a8ee401a45b2b45504bdc43fca0904578ec0ea25fb72140ddbb1545bf47a6f17f0b8650b5d185db51850a755d92417b61829632b27860e8df2a01b18d55e1944
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg2.orig.tar.xz' cyrus-sasl2_2.1.27+dfsg2.orig.tar.xz 829892 SHA512:13337dfcc57ea8fec471ee0f2a0f6b58fb92907ad0899a4a8afaba957c5da302924e71c9fc4a61bbc913a4ee2ea74b05772cb26ed58d5724a312bb20a8b6a4cb
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg2-3ubuntu1.1.debian.tar.xz' cyrus-sasl2_2.1.27+dfsg2-3ubuntu1.1.debian.tar.xz 98692 SHA512:68f13e92fce1073cb7e207e24c4e3569be7ba4c0d5e5a3a28141576028d6a1c6a0e0503ede5c42c8c7d9606470d0f6b09fe84d9c5b7d95ed9f6871eeea8972d6
-```
 
 ### `dpkg` source package: `dash=0.5.11+git20210903+057cd650a4ed-3build1`
 
@@ -724,15 +719,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.7.3-4ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3-4ubuntu1.1.dsc' gnutls28_3.7.3-4ubuntu1.1.dsc 3572 SHA512:272d0a1896f1e3180f44e507e0b1aaf104be6642c241e9b3071e97ac41a6d63e2bcbc423ff7fa7fef971261c5753a70045aeb953c5417f0bee74f063f9c75784
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3.orig.tar.xz' gnutls28_3.7.3.orig.tar.xz 6119292 SHA512:3ace744affe23e284342658d6d2d2de49dd50065489cbc8be18fc7d38187253e5268ca54027ce5cd517056c249ac039a7481e4548cec04325de37ae85617d077
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3.orig.tar.xz.asc' gnutls28_3.7.3.orig.tar.xz.asc 833 SHA512:cd0d30298377deddf20a835863b71e3f119588061f659906ad2684004758943179531508b1c77c730e930e2131148095e60ad9be365353cce772472d5f5345df
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3-4ubuntu1.1.debian.tar.xz' gnutls28_3.7.3-4ubuntu1.1.debian.tar.xz 74796 SHA512:34b84a690de05f59fa9f3323e39914a0639c253b5ea2b42d2a7d859d158ffdd82367cf1bab0a2e6bb6eb9a7f4e6b8d7a4192fc34c4f0bfcafee63a5c4b20d3ae
-```
 
 ### `dpkg` source package: `grep=3.7-1build1`
 

@@ -1,19 +1,19 @@
-# `ibm-semeru-runtimes:open-8u352-b08-jre-focal`
+# `ibm-semeru-runtimes:open-11.0.18_10-jdk-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c431152ace4c8e5b0d4ca972773b2faaafdabe7d2242e1bf6ecedc570ea93a48`
-- Created: `2023-02-01T19:02:48.158973887Z`
-- Virtual Size: ~ 259.36 Mb  
+- Image ID: `sha256:3bd99b205abfe542058223adcfb06468c8c5a5f36d99a00ef9f4b8d8cb58abfb`
+- Created: `2023-03-01T01:39:39.833232697Z`
+- Virtual Size: ~ 475.11 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["/bin/bash"]`
+- Command: `["jshell"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk8u352-b08_openj9-0.35.0`
+  - `JAVA_VERSION=jdk-11.0.18+10_openj9-0.36.0`
   - `JAVA_HOME=/opt/java/openjdk`
   - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal`
 - Labels:
@@ -708,15 +708,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.6.13-2ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.7.dsc' gnutls28_3.6.13-2ubuntu1.7.dsc 3594 SHA512:34dc7445af2c3e9a93a5afb8760b84e8821cfdca935fdd89d8a270a8e8a71a69d0ff7c5b393f0a31aa55a3b3dd94af13d82dda26ab50d07f4d3686a401c11fd2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz' gnutls28_3.6.13.orig.tar.xz 5958956 SHA512:23581952cb72c9a34f378c002bb62413d5a1243b74b48ad8dc49eaea4020d33c550f8dc1dd374cf7fbfa4187b0ca1c5698c8a0430398268a8b8a863f8633305c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz.asc' gnutls28_3.6.13.orig.tar.xz.asc 667 SHA512:b343a8ace6a5c81c0c44b2cb65d8e83dfe5963c9bab04d9131fa8fd03cdf0c6f990d720af8767084e01bf5f7a7dbd0f048aefe68c3b6f1dc1ea1899d567a72f7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.7.debian.tar.xz' gnutls28_3.6.13-2ubuntu1.7.debian.tar.xz 73256 SHA512:6927fc815c0358ee20ca5c851f97b524e62a292948812db58f60864d98993ba9ee5b7f443f6efd544e6cb379398d95c937f6c937bb8687694b17d237f4da6692
-```
 
 ### `dpkg` source package: `grep=3.4-1`
 
@@ -1706,14 +1700,9 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `GPL-2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.30+dfsg-7ubuntu0.20.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.2.dsc' tar_1.30+dfsg-7ubuntu0.20.04.2.dsc 1816 SHA512:41897fe2364f5eccabb92f551efe0008be995b6651c951c1c0f9e8272b8e92563b5a5ae360d9bb566976a8d0c32e67187599cb262a835ebce432ddf4bf925158
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg.orig.tar.xz' tar_1.30+dfsg.orig.tar.xz 1883220 SHA512:f9b3843bd4da03f58d6f88de70ecb36b8ac29312714fd2120ff00f17c99e6d77cc82a8f9de348f4c2bdba9a6cc8e8c6c78039b6c14cdee15d68f2517000c36f2
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.2.debian.tar.xz' tar_1.30+dfsg-7ubuntu0.20.04.2.debian.tar.xz 23580 SHA512:2c9999bff0257251eb7d09a702898e42ce45b117d8e3595d68bf0a6ffdeb1d4a1d69202a2674d93a9193576f65dad4de4e094479228bfb4efc4a7931f00d3875
-```
 
 ### `dpkg` source package: `tzdata=2022g-0ubuntu0.20.04.1`
 
