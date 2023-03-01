@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:91e5ac397660fa0e42a82c5d2c958cfbf284ecb17c8ad8d56145bc4b2cf8ea9c`
-- Created: `2023-02-09T10:11:04.987170103Z`
+- Image ID: `sha256:678a67ecc92d01f841de8bb9a80467bcf3c482ec115f2e939a993881e25cc3bb`
+- Created: `2023-03-01T04:36:48.682698232Z`
 - Virtual Size: ~ 250.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -878,11 +878,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gnupg2/2.2.27-2+deb11u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gnupg2/2.2.27-2+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gnutls28=3.7.1-5+deb11u2`
+### `dpkg` source package: `gnutls28=3.7.1-5+deb11u3`
 
 Binary Packages:
 
-- `libgnutls30:amd64=3.7.1-5+deb11u2`
+- `libgnutls30:amd64=3.7.1-5+deb11u3`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
@@ -903,18 +903,18 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gnutls28=3.7.1-5+deb11u2
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.1-5%2bdeb11u2.dsc' gnutls28_3.7.1-5+deb11u2.dsc 3674 SHA256:595e1121b264002001c4e38a431195788ba16c3ca1cca0bf2ee1d4c7983d4f78
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.1.orig.tar.xz' gnutls28_3.7.1.orig.tar.xz 6038388 SHA256:3777d7963eca5e06eb315686163b7b3f5045e2baac5e54e038ace9835e5cac6f
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.1.orig.tar.xz.asc' gnutls28_3.7.1.orig.tar.xz.asc 854 SHA256:13a683b12602c169a7ad7827ab0e3f35c8fa1f98675d0073cf7d54a8cd635582
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.1-5%2bdeb11u2.debian.tar.xz' gnutls28_3.7.1-5+deb11u2.debian.tar.xz 94568 SHA256:5c3ab8346540dd43457f51248f20a1bfd675f3cfe6a876a743b978039832c0d5
+$ apt-get source -qq --print-uris gnutls28=3.7.1-5+deb11u3
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.7.1-5%2bdeb11u3.dsc' gnutls28_3.7.1-5+deb11u3.dsc 3519 SHA256:df499cbaa4baeb694d3afe80a71ff8970b8555f1f9b5a85f1af04f0902000982
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.7.1.orig.tar.xz' gnutls28_3.7.1.orig.tar.xz 6038388 SHA256:3777d7963eca5e06eb315686163b7b3f5045e2baac5e54e038ace9835e5cac6f
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.7.1.orig.tar.xz.asc' gnutls28_3.7.1.orig.tar.xz.asc 854 SHA256:13a683b12602c169a7ad7827ab0e3f35c8fa1f98675d0073cf7d54a8cd635582
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.7.1-5%2bdeb11u3.debian.tar.xz' gnutls28_3.7.1-5+deb11u3.debian.tar.xz 95864 SHA256:ea249df89fa5a89b23f6ccca076c6d3f4a96b191389eb8999f479a7bfb24a08f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/gnutls28/3.7.1-5+deb11u2/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.7.1-5+deb11u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.7.1-5+deb11u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/gnutls28/3.7.1-5+deb11u3/ (for browsing the source)
+- https://sources.debian.net/src/gnutls28/3.7.1-5+deb11u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gnutls28/3.7.1-5+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gpm=1.20.7-8`
 
@@ -2262,22 +2262,22 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/php-defaults/76/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/php-defaults/76/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `php7.4=7.4.33-1+deb11u1`
+### `dpkg` source package: `php7.4=7.4.33-1+deb11u3`
 
 Binary Packages:
 
-- `php7.4-cli=7.4.33-1+deb11u1`
-- `php7.4-common=7.4.33-1+deb11u1`
-- `php7.4-fpm=7.4.33-1+deb11u1`
-- `php7.4-json=7.4.33-1+deb11u1`
-- `php7.4-mbstring=7.4.33-1+deb11u1`
-- `php7.4-mysql=7.4.33-1+deb11u1`
-- `php7.4-odbc=7.4.33-1+deb11u1`
-- `php7.4-opcache=7.4.33-1+deb11u1`
-- `php7.4-pgsql=7.4.33-1+deb11u1`
-- `php7.4-readline=7.4.33-1+deb11u1`
-- `php7.4-sqlite3=7.4.33-1+deb11u1`
-- `php7.4-sybase=7.4.33-1+deb11u1`
+- `php7.4-cli=7.4.33-1+deb11u3`
+- `php7.4-common=7.4.33-1+deb11u3`
+- `php7.4-fpm=7.4.33-1+deb11u3`
+- `php7.4-json=7.4.33-1+deb11u3`
+- `php7.4-mbstring=7.4.33-1+deb11u3`
+- `php7.4-mysql=7.4.33-1+deb11u3`
+- `php7.4-odbc=7.4.33-1+deb11u3`
+- `php7.4-opcache=7.4.33-1+deb11u3`
+- `php7.4-pgsql=7.4.33-1+deb11u3`
+- `php7.4-readline=7.4.33-1+deb11u3`
+- `php7.4-sqlite3=7.4.33-1+deb11u3`
+- `php7.4-sybase=7.4.33-1+deb11u3`
 
 Licenses: (parsed from: `/usr/share/doc/php7.4-cli/copyright`, `/usr/share/doc/php7.4-common/copyright`, `/usr/share/doc/php7.4-fpm/copyright`, `/usr/share/doc/php7.4-json/copyright`, `/usr/share/doc/php7.4-mbstring/copyright`, `/usr/share/doc/php7.4-mysql/copyright`, `/usr/share/doc/php7.4-odbc/copyright`, `/usr/share/doc/php7.4-opcache/copyright`, `/usr/share/doc/php7.4-pgsql/copyright`, `/usr/share/doc/php7.4-readline/copyright`, `/usr/share/doc/php7.4-sqlite3/copyright`, `/usr/share/doc/php7.4-sybase/copyright`)
 
@@ -2304,18 +2304,18 @@ Licenses: (parsed from: `/usr/share/doc/php7.4-cli/copyright`, `/usr/share/doc/p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris php7.4=7.4.33-1+deb11u1
-'http://deb.debian.org/debian/pool/main/p/php7.4/php7.4_7.4.33-1%2bdeb11u1.dsc' php7.4_7.4.33-1+deb11u1.dsc 5825 SHA256:c0ae0def44ccc2e04d4ab25248d4cc8142cdfcc254a4b7a44a8c6e727b56ce1a
-'http://deb.debian.org/debian/pool/main/p/php7.4/php7.4_7.4.33.orig.tar.xz' php7.4_7.4.33.orig.tar.xz 10420144 SHA256:924846abf93bc613815c55dd3f5809377813ac62a9ec4eb3778675b82a27b927
-'http://deb.debian.org/debian/pool/main/p/php7.4/php7.4_7.4.33.orig.tar.xz.asc' php7.4_7.4.33.orig.tar.xz.asc 833 SHA256:569a01c7c605a4571fdf7dfadfff4215cc4a63ea5d474c7ec92bd7b4fecfffcb
-'http://deb.debian.org/debian/pool/main/p/php7.4/php7.4_7.4.33-1%2bdeb11u1.debian.tar.xz' php7.4_7.4.33-1+deb11u1.debian.tar.xz 68684 SHA256:b848e074b010e38b026bd887c2a680b26031d460486c4773b80075088a9af490
+$ apt-get source -qq --print-uris php7.4=7.4.33-1+deb11u3
+'http://deb.debian.org/debian-security/pool/updates/main/p/php7.4/php7.4_7.4.33-1%2bdeb11u3.dsc' php7.4_7.4.33-1+deb11u3.dsc 5825 SHA256:a91c7cbcdc5a2528d1aaa13e2c82c6ef68b0548c163a9665b640e82a4059253b
+'http://deb.debian.org/debian-security/pool/updates/main/p/php7.4/php7.4_7.4.33.orig.tar.xz' php7.4_7.4.33.orig.tar.xz 10420144 SHA256:924846abf93bc613815c55dd3f5809377813ac62a9ec4eb3778675b82a27b927
+'http://deb.debian.org/debian-security/pool/updates/main/p/php7.4/php7.4_7.4.33.orig.tar.xz.asc' php7.4_7.4.33.orig.tar.xz.asc 833 SHA256:569a01c7c605a4571fdf7dfadfff4215cc4a63ea5d474c7ec92bd7b4fecfffcb
+'http://deb.debian.org/debian-security/pool/updates/main/p/php7.4/php7.4_7.4.33-1%2bdeb11u3.debian.tar.xz' php7.4_7.4.33-1+deb11u3.debian.tar.xz 75552 SHA256:5ab383611b38b05a838036a70bdfa7ba4970f2370f419a674ca8647cff511693
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/php7.4/7.4.33-1+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/php7.4/7.4.33-1+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/php7.4/7.4.33-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/php7.4/7.4.33-1+deb11u3/ (for browsing the source)
+- https://sources.debian.net/src/php7.4/7.4.33-1+deb11u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/php7.4/7.4.33-1+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `postgresql-13=13.9-0+deb11u1`
 
