@@ -4,7 +4,7 @@
 
 - Image ID: `sha256:0c45376c41a5b919bcb6f5a1e3b60655b0c0faf450d2fce07b7ebb816e8bd9da`
 - Created: `2023-02-10T19:42:55.110720089Z`
-- Virtual Size: ~ 751.63 Mb  
+- Virtual Size: ~ 751.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/ibm/helpers/runtime/docker-server.sh"]`
@@ -315,14 +315,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.15
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.15.dsc' curl_7.68.0-1ubuntu2.15.dsc 2737 SHA512:26c41b8eac11f5274527ae5b19f1cbaa529a8688f7196cf4dcc42f96a6bd10e236c205a311d2c14a323e44681a3f4ea6fb0d31dfb94f0ffe7add6f9bfdc2cc9f
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.15.debian.tar.xz' curl_7.68.0-1ubuntu2.15.debian.tar.xz 58376 SHA512:1f20c6fbcb594e6a79af4578029d840e5f054c1bacbed44cd16f6ed420cb6a55f383c09f2b0caf5b1cb3d82aa4ca6aa5dfbe3c1129c6e7511e7065b3738c6b62
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -731,15 +726,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.6.13-2ubuntu1.7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.7.dsc' gnutls28_3.6.13-2ubuntu1.7.dsc 3594 SHA512:34dc7445af2c3e9a93a5afb8760b84e8821cfdca935fdd89d8a270a8e8a71a69d0ff7c5b393f0a31aa55a3b3dd94af13d82dda26ab50d07f4d3686a401c11fd2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz' gnutls28_3.6.13.orig.tar.xz 5958956 SHA512:23581952cb72c9a34f378c002bb62413d5a1243b74b48ad8dc49eaea4020d33c550f8dc1dd374cf7fbfa4187b0ca1c5698c8a0430398268a8b8a863f8633305c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13.orig.tar.xz.asc' gnutls28_3.6.13.orig.tar.xz.asc 667 SHA512:b343a8ace6a5c81c0c44b2cb65d8e83dfe5963c9bab04d9131fa8fd03cdf0c6f990d720af8767084e01bf5f7a7dbd0f048aefe68c3b6f1dc1ea1899d567a72f7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.6.13-2ubuntu1.7.debian.tar.xz' gnutls28_3.6.13-2ubuntu1.7.debian.tar.xz 73256 SHA512:6927fc815c0358ee20ca5c851f97b524e62a292948812db58f60864d98993ba9ee5b7f443f6efd544e6cb379398d95c937f6c937bb8687694b17d237f4da6692
-```
 
 ### `dpkg` source package: `grep=3.4-1`
 
@@ -1747,14 +1736,9 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `GPL-2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.30+dfsg-7ubuntu0.20.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.2.dsc' tar_1.30+dfsg-7ubuntu0.20.04.2.dsc 1816 SHA512:41897fe2364f5eccabb92f551efe0008be995b6651c951c1c0f9e8272b8e92563b5a5ae360d9bb566976a8d0c32e67187599cb262a835ebce432ddf4bf925158
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg.orig.tar.xz' tar_1.30+dfsg.orig.tar.xz 1883220 SHA512:f9b3843bd4da03f58d6f88de70ecb36b8ac29312714fd2120ff00f17c99e6d77cc82a8f9de348f4c2bdba9a6cc8e8c6c78039b6c14cdee15d68f2517000c36f2
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.2.debian.tar.xz' tar_1.30+dfsg-7ubuntu0.20.04.2.debian.tar.xz 23580 SHA512:2c9999bff0257251eb7d09a702898e42ce45b117d8e3595d68bf0a6ffdeb1d4a1d69202a2674d93a9193576f65dad4de4e094479228bfb4efc4a7931f00d3875
-```
 
 ### `dpkg` source package: `tzdata=2022g-0ubuntu0.20.04.1`
 
