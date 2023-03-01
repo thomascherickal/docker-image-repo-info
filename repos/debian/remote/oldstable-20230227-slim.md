@@ -1,43 +1,16 @@
-## `debian:oldstable-slim`
+## `debian:oldstable-20230227-slim`
 
 ```console
-$ docker pull debian@sha256:4436b275637862fb5b90eec0fd0e9dc3abc9e9bbc320c617641f59e3ea19a9fd
+$ docker pull debian@sha256:2807c1a67698e839292074d0b20c5710963137cc0df4be75febca84e3487b20c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 4
-	-	linux; amd64
+-	Platforms: 3
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; 386
 
-### `debian:oldstable-slim` - linux; amd64
-
-```console
-$ docker pull debian@sha256:ada4f9a12ce1a640e54140d04636180c42e565ee3538aa62163aa7c586da3bef
-```
-
--	Docker Version: 20.10.12
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **27.1 MB (27140532 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:aca0f2353393723e3865ee09e81ad69f277c3abd9dbb87f1a54bb35a908c5d75`
--	Default Command: `["bash"]`
-
-```dockerfile
-# Thu, 09 Feb 2023 03:21:16 GMT
-ADD file:ed200c401b18b9d8f46d74a47d1824aaba685ca358cfb4f3955dd3fd59236d78 in / 
-# Thu, 09 Feb 2023 03:21:16 GMT
-CMD ["bash"]
-```
-
--	Layers:
-	-	`sha256:e8f2dd743b4788e5f765a389cb2d6d6f1ff6b269b894f135236e5a09d75f460d`  
-		Last Modified: Thu, 09 Feb 2023 03:26:31 GMT  
-		Size: 27.1 MB (27140532 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `debian:oldstable-slim` - linux; arm variant v7
+### `debian:oldstable-20230227-slim` - linux; arm variant v7
 
 ```console
 $ docker pull debian@sha256:1487a09ae23408e130d87aaf37f20f95a77d6f90154b088c8e6bb9b68b2ff7c1
@@ -63,7 +36,7 @@ CMD ["bash"]
 		Size: 22.7 MB (22748563 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:oldstable-slim` - linux; arm64 variant v8
+### `debian:oldstable-20230227-slim` - linux; arm64 variant v8
 
 ```console
 $ docker pull debian@sha256:6240c2c3f48b76ef99ef8cf17f4459ff848639baddc0e9d2b10f8ef58472cac1
@@ -89,7 +62,7 @@ CMD ["bash"]
 		Size: 25.9 MB (25922716 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:oldstable-slim` - linux; 386
+### `debian:oldstable-20230227-slim` - linux; 386
 
 ```console
 $ docker pull debian@sha256:9bd8a5d2167d98597d0becf893d8bb98333193c962bf46fe79d8e1fe59e73067
