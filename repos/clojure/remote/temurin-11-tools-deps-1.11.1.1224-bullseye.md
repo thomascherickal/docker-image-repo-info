@@ -1,7 +1,7 @@
 ## `clojure:temurin-11-tools-deps-1.11.1.1224-bullseye`
 
 ```console
-$ docker pull clojure@sha256:d431da35f773ee98fc2f10918fb61b9857e766e51032c8e554ca7db1dd60af54
+$ docker pull clojure@sha256:89cb690fd391a7acbd7f99d1017723e77e2036c3b852248a114122cee83cb862
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -66,14 +66,14 @@ CMD ["clj"]
 ### `clojure:temurin-11-tools-deps-1.11.1.1224-bullseye` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:5b5d39e38cabcd2dae9ed89f5d6bec1caa7cc1b03227825388ea0dd71b7931d9
+$ docker pull clojure@sha256:774163281879ef66e65bfb74712984377d52c64f483fc8de0f8f39e8bc316c45
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **320.9 MB (320934158 bytes)**  
+-	Total Size: **320.9 MB (320934071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e42902b4b0dc36a61968a694951c1d3368c8afcd5a8b59753191101e028bce8e`
+-	Image ID: `sha256:36a19d2feafd5e82583340f83dda4826dc854215636156cbcf3f3f038492f959`
 -	Default Command: `["clj"]`
 
 ```dockerfile
@@ -83,19 +83,19 @@ ADD file:a6a1df499d0d5b07fb366d776a11c42ddee6261e2425a921041b38e868192770 in /
 CMD ["bash"]
 # Wed, 01 Mar 2023 03:01:14 GMT
 ENV JAVA_HOME=/opt/java/openjdk
-# Wed, 01 Mar 2023 03:04:01 GMT
-COPY dir:b661686bf8d434588756c45f2ef6e7f314f32f753cf180ef8fb45397388f098c in /opt/java/openjdk 
-# Wed, 01 Mar 2023 03:04:05 GMT
+# Thu, 02 Mar 2023 07:02:06 GMT
+COPY dir:10bda54a6f055ef6cbbc2c7efdd1ef99bb798b3ae26972613c5ee4e57e620aeb in /opt/java/openjdk 
+# Thu, 02 Mar 2023 07:02:10 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Mar 2023 03:05:54 GMT
+# Thu, 02 Mar 2023 07:05:19 GMT
 ENV CLOJURE_VERSION=1.11.1.1224
-# Wed, 01 Mar 2023 03:05:54 GMT
+# Thu, 02 Mar 2023 07:05:19 GMT
 WORKDIR /tmp
-# Wed, 01 Mar 2023 03:06:08 GMT
+# Thu, 02 Mar 2023 07:05:38 GMT
 RUN apt-get update && apt-get install -y curl make git rlwrap wget && rm -rf /var/lib/apt/lists/* && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "3bbab4d253eda43e3122fd5705014a69c44944a6dee8ea4d7d567afe157eb4ef *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apt-get purge -y --auto-remove curl wget
-# Wed, 01 Mar 2023 03:06:09 GMT
+# Thu, 02 Mar 2023 07:05:39 GMT
 COPY file:b0aef3ea203de7b5c2ea645debf58c8231445a2e3070b72749b54614f4a89b82 in /usr/local/bin/rlwrap 
-# Wed, 01 Mar 2023 03:06:09 GMT
+# Thu, 02 Mar 2023 07:05:39 GMT
 CMD ["clj"]
 ```
 
@@ -104,15 +104,15 @@ CMD ["clj"]
 		Last Modified: Wed, 01 Mar 2023 02:23:53 GMT  
 		Size: 53.7 MB (53703215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3db5f99a046fb93d70e363d58ebe237b913e09a889f35b330f65e0bfa4627f3c`  
-		Last Modified: Wed, 01 Mar 2023 03:15:41 GMT  
-		Size: 195.2 MB (195240319 bytes)  
+	-	`sha256:2257672252a1a5ea1cc84b22bcdf9e8c2de57f555374ecbd0173cf802564a507`  
+		Last Modified: Thu, 02 Mar 2023 07:16:55 GMT  
+		Size: 195.2 MB (195240142 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4d7b422e650a03e8ef4b134306d372889444c822f14a6254398847aadf6d179c`  
-		Last Modified: Wed, 01 Mar 2023 03:16:38 GMT  
-		Size: 72.0 MB (71990008 bytes)  
+	-	`sha256:0ee87b448a31f592866cd53c73d0d7f28be4b604955dabf6089fd317adcecef3`  
+		Last Modified: Thu, 02 Mar 2023 07:18:43 GMT  
+		Size: 72.0 MB (71990095 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4af6f3d4bd6f3cbdfd1e65b14a3522bbe4c6c0fd9307d0bfb8070ce14b1d83fa`  
-		Last Modified: Wed, 01 Mar 2023 03:16:31 GMT  
-		Size: 616.0 B  
+	-	`sha256:5de725bc6c7a1c5f9a9df4f95b0136c5645146051222cc68ef2bbb7d8772e7a1`  
+		Last Modified: Thu, 02 Mar 2023 07:18:37 GMT  
+		Size: 619.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
