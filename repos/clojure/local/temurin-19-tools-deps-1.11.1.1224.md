@@ -353,14 +353,9 @@ Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/l
 - `RSA-MD`
 - `SSLeay`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.27+dfsg2-3ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg2-3ubuntu1.1.dsc' cyrus-sasl2_2.1.27+dfsg2-3ubuntu1.1.dsc 3626 SHA512:a8ee401a45b2b45504bdc43fca0904578ec0ea25fb72140ddbb1545bf47a6f17f0b8650b5d185db51850a755d92417b61829632b27860e8df2a01b18d55e1944
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg2.orig.tar.xz' cyrus-sasl2_2.1.27+dfsg2.orig.tar.xz 829892 SHA512:13337dfcc57ea8fec471ee0f2a0f6b58fb92907ad0899a4a8afaba957c5da302924e71c9fc4a61bbc913a4ee2ea74b05772cb26ed58d5724a312bb20a8b6a4cb
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg2-3ubuntu1.1.debian.tar.xz' cyrus-sasl2_2.1.27+dfsg2-3ubuntu1.1.debian.tar.xz 98692 SHA512:68f13e92fce1073cb7e207e24c4e3569be7ba4c0d5e5a3a28141576028d6a1c6a0e0503ede5c42c8c7d9606470d0f6b09fe84d9c5b7d95ed9f6871eeea8972d6
-```
 
 ### `dpkg` source package: `dash=0.5.11+git20210903+057cd650a4ed-3build1`
 
