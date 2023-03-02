@@ -1,7 +1,7 @@
 ## `ros:rolling-ros-core-jammy`
 
 ```console
-$ docker pull ros@sha256:7f2a3b8535a6ceea8415ff92355c7d8ffe1900d7ace1409f63f10d3089c89490
+$ docker pull ros@sha256:43519fc688be77eea9fbff958c3b9716d5080713b2038fa31400e0717f1239f5
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,82 +12,82 @@ $ docker pull ros@sha256:7f2a3b8535a6ceea8415ff92355c7d8ffe1900d7ace1409f63f10d3
 ### `ros:rolling-ros-core-jammy` - linux; amd64
 
 ```console
-$ docker pull ros@sha256:88d8e636517283d5770a6934daa23f3085df98f2a7399f947111b5f48ef741f1
+$ docker pull ros@sha256:683b8eea2e4131fdf2d527f3bdfbf71d4fb71549496d943707625c28d7a12954
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **154.9 MB (154922349 bytes)**  
+-	Total Size: **155.0 MB (155017230 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a07897d4d91378e7373d7bffa34dab18c8033a18f0d9288f05eaf42654eef357`
+-	Image ID: `sha256:eb30b6c74a0bb21c315d5aae7b23a7c42193c0fee72704a9e8805d3f9dcb39f7`
 -	Entrypoint: `["\/ros_entrypoint.sh"]`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Thu, 26 Jan 2023 04:57:59 GMT
+# Wed, 01 Mar 2023 04:38:47 GMT
 ARG RELEASE
-# Thu, 26 Jan 2023 04:57:59 GMT
+# Wed, 01 Mar 2023 04:38:47 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 26 Jan 2023 04:58:00 GMT
+# Wed, 01 Mar 2023 04:38:47 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 26 Jan 2023 04:58:00 GMT
+# Wed, 01 Mar 2023 04:38:47 GMT
 LABEL org.opencontainers.image.version=22.04
-# Thu, 26 Jan 2023 04:58:02 GMT
-ADD file:18e71f049606f6339ce7a995839623f50e6ec6474bfd0a3a7ca799db726f47f6 in / 
-# Thu, 26 Jan 2023 04:58:02 GMT
+# Wed, 01 Mar 2023 04:38:48 GMT
+ADD file:fb4c8244f4468cdd3f666932f05805a3882d34010d3a0c14b7c20589bf619a9c in / 
+# Wed, 01 Mar 2023 04:38:49 GMT
 CMD ["/bin/bash"]
-# Tue, 31 Jan 2023 19:46:19 GMT
+# Thu, 02 Mar 2023 07:43:55 GMT
 RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 19:46:37 GMT
+# Thu, 02 Mar 2023 07:44:13 GMT
 RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 19:46:38 GMT
+# Thu, 02 Mar 2023 07:44:13 GMT
 RUN echo "deb http://packages.ros.org/ros2/ubuntu jammy main" > /etc/apt/sources.list.d/ros2-latest.list
-# Tue, 31 Jan 2023 19:46:39 GMT
+# Thu, 02 Mar 2023 07:44:14 GMT
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-# Tue, 31 Jan 2023 19:46:39 GMT
+# Thu, 02 Mar 2023 07:44:14 GMT
 ENV LANG=C.UTF-8
-# Tue, 31 Jan 2023 19:46:39 GMT
+# Thu, 02 Mar 2023 07:44:15 GMT
 ENV LC_ALL=C.UTF-8
-# Tue, 31 Jan 2023 19:59:30 GMT
+# Thu, 02 Mar 2023 07:56:06 GMT
 ENV ROS_DISTRO=rolling
-# Tue, 31 Jan 2023 20:00:22 GMT
+# Thu, 02 Mar 2023 07:56:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-rolling-ros-core=0.10.0-1*     && rm -rf /var/lib/apt/lists/*
-# Tue, 31 Jan 2023 20:00:24 GMT
+# Thu, 02 Mar 2023 07:56:58 GMT
 COPY file:ec5b16a0e777d7d7d041a72ffc817bf5f7b375662afa0c404f3ca36fad1afb90 in / 
-# Tue, 31 Jan 2023 20:00:24 GMT
+# Thu, 02 Mar 2023 07:56:58 GMT
 ENTRYPOINT ["/ros_entrypoint.sh"]
-# Tue, 31 Jan 2023 20:00:24 GMT
+# Thu, 02 Mar 2023 07:56:58 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:10ac4908093d4325f2c94b2c9a571fa1071a17a72dd9c21c1ffb2c86f68ca028`  
-		Last Modified: Thu, 26 Jan 2023 08:46:26 GMT  
-		Size: 30.4 MB (30429004 bytes)  
+	-	`sha256:b65bcf19d1445822c0d6f15ea82c9ed82ac1d903cfd6c1284ba7b2409a092845`  
+		Last Modified: Wed, 01 Mar 2023 09:07:16 GMT  
+		Size: 30.4 MB (30430002 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:841d9fe8d0ff117e288a003adeabeb14357e33e4aaeb9257fa966be44f049e8e`  
-		Last Modified: Tue, 31 Jan 2023 20:12:32 GMT  
-		Size: 1.2 MB (1169563 bytes)  
+	-	`sha256:f2f8c551927da9bf0e6183ca57144eb52c4cfba7077e5cad6b6ba8cc924dfdf8`  
+		Last Modified: Thu, 02 Mar 2023 08:07:21 GMT  
+		Size: 1.2 MB (1169624 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c427b1bb1855b88b68681612cfd3c47ddc0f7bf0af96dfbe3f1180a6f2413a92`  
-		Last Modified: Tue, 31 Jan 2023 20:12:31 GMT  
-		Size: 3.8 MB (3828410 bytes)  
+	-	`sha256:92556ded650c06629c372b95a6fc958e129547cec3d2b44dbd493ec01e6a0269`  
+		Last Modified: Thu, 02 Mar 2023 08:07:19 GMT  
+		Size: 3.8 MB (3828401 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f78c7c7c697e8abb3149aa5d42619ca359de2bb03e4c2804b4136cc438866512`  
-		Last Modified: Tue, 31 Jan 2023 20:12:30 GMT  
-		Size: 231.0 B  
+	-	`sha256:9c2fa7334b1384d0dd1db04563b249d6ba14dba379e1bc922faf207237a97f16`  
+		Last Modified: Thu, 02 Mar 2023 08:07:18 GMT  
+		Size: 230.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:740dbc132b076b321e969fa6e07fa61d94522609befffcd4716b01ba43c7c191`  
-		Last Modified: Tue, 31 Jan 2023 20:12:30 GMT  
+	-	`sha256:3712ecf776b1c8f9d3a6e14b360d9f7c3f54e30ace3709ca57909b05d00c991c`  
+		Last Modified: Thu, 02 Mar 2023 08:07:18 GMT  
 		Size: 2.0 KB (1990 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff0639606d4c30abe710b02e4245b4fde0a8ee07b0486abb6ac2f74126a215dc`  
-		Last Modified: Tue, 31 Jan 2023 20:15:32 GMT  
-		Size: 119.5 MB (119492954 bytes)  
+	-	`sha256:597269e3fad2d81e51094a0db14d3edd235aa622fe24d229adad86fbd007619f`  
+		Last Modified: Thu, 02 Mar 2023 08:10:10 GMT  
+		Size: 119.6 MB (119586788 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65f96ec662a48c684ba70d75e56b6831b6097f50bb4c0a99dcae6d3cfbe82e36`  
-		Last Modified: Tue, 31 Jan 2023 20:15:12 GMT  
-		Size: 197.0 B  
+	-	`sha256:47883564c7696a74c435a12bfb19a30f1406dce6103413d70bb5b387b0f9fff8`  
+		Last Modified: Thu, 02 Mar 2023 08:09:51 GMT  
+		Size: 195.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ros:rolling-ros-core-jammy` - linux; arm64 variant v8
