@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e025c2e42b4b46b46942e3410178a2d4975175dbf826720a9e4b739bda8a1cd7`
-- Created: `2023-02-15T19:39:18.909514418Z`
+- Image ID: `sha256:f35a5be96a763cb11372406a6d77f2e60b8d31f7aab35123029e207623578f1f`
+- Created: `2023-03-02T00:41:09.171020201Z`
 - Virtual Size: ~ 478.72 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -434,12 +434,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.30-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.30-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.64.0-4+deb10u4`
+### `dpkg` source package: `curl=7.64.0-4+deb10u5`
 
 Binary Packages:
 
-- `curl=7.64.0-4+deb10u4`
-- `libcurl4:amd64=7.64.0-4+deb10u4`
+- `curl=7.64.0-4+deb10u5`
+- `libcurl4:amd64=7.64.0-4+deb10u5`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -450,13 +450,20 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u5
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u5.dsc' curl_7.64.0-4+deb10u5.dsc 2694 SHA256:9fa77b013454b7b5ef6ba5a77451cb13bd2d66c1b239f707afa556c24c745ed7
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u5.debian.tar.xz' curl_7.64.0-4+deb10u5.debian.tar.xz 59568 SHA256:3b5f383b1307c7bf6369110b9fa11b9c549312c5f06cc101e5448bdce829b7d8
+```
 
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u2`
 
@@ -1020,11 +1027,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gnupg2/2.2.12-1+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gnupg2/2.2.12-1+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gnutls28=3.6.7-4+deb10u9`
+### `dpkg` source package: `gnutls28=3.6.7-4+deb10u10`
 
 Binary Packages:
 
-- `libgnutls30:amd64=3.6.7-4+deb10u9`
+- `libgnutls30:amd64=3.6.7-4+deb10u10`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
@@ -1040,13 +1047,20 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `The MIT License (MIT)`
 - `The main library is licensed under GNU Lesser`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris gnutls28=3.6.7-4+deb10u10
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7-4%2bdeb10u10.dsc' gnutls28_3.6.7-4+deb10u10.dsc 3265 SHA256:12f471baebedb368b8ea0c85cfecdf16b4c2bb5b0ed191587fce28424d6ff46e
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz' gnutls28_3.6.7.orig.tar.xz 8153728 SHA256:5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7-4%2bdeb10u10.debian.tar.xz' gnutls28_3.6.7-4+deb10u10.debian.tar.xz 102420 SHA256:7f2bfec4727b90b7d81267098f997bf847494c0c9ff2906606398a40a730ec7f
+```
 
-- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u9/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u10/ (for browsing the source)
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u10/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `grep=3.3-1`
 
@@ -2180,12 +2194,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u7/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.1n-0+deb10u3`
+### `dpkg` source package: `openssl=1.1.1n-0+deb10u4`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1n-0+deb10u3`
-- `openssl=1.1.1n-0+deb10u3`
+- `libssl1.1:amd64=1.1.1n-0+deb10u4`
+- `openssl=1.1.1n-0+deb10u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -2194,18 +2208,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1n-0+deb10u3
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n-0%2bdeb10u3.dsc' openssl_1.1.1n-0+deb10u3.dsc 2649 SHA256:190bf508730e7c95342e726953f0551affd6dfe98a011f278b1cc19c9cfd0824
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n.orig.tar.gz' openssl_1.1.1n.orig.tar.gz 9850712 SHA256:40dceb51a4f6a5275bde0e6bf20ef4b91bfc32ed57c0552e2e8e15463372b17a
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n.orig.tar.gz.asc' openssl_1.1.1n.orig.tar.gz.asc 488 SHA256:e0e89e9467102880ee6f2ee8c1413933eb1268969afb97b9bec61e2190a62fd0
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n-0%2bdeb10u3.debian.tar.xz' openssl_1.1.1n-0+deb10u3.debian.tar.xz 118660 SHA256:629424b95612e36d45260bb0e3e4bb880cec355ae893ccd2294f642f82cca2a9
+$ apt-get source -qq --print-uris openssl=1.1.1n-0+deb10u4
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb10u4.dsc' openssl_1.1.1n-0+deb10u4.dsc 2649 SHA256:0625512a546b6d1e0a508b22c1df8e349e6fb52dd61a47186689b69fff6a906f
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz' openssl_1.1.1n.orig.tar.gz 9850712 SHA256:40dceb51a4f6a5275bde0e6bf20ef4b91bfc32ed57c0552e2e8e15463372b17a
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz.asc' openssl_1.1.1n.orig.tar.gz.asc 488 SHA256:e0e89e9467102880ee6f2ee8c1413933eb1268969afb97b9bec61e2190a62fd0
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb10u4.debian.tar.xz' openssl_1.1.1n-0+deb10u4.debian.tar.xz 131140 SHA256:5ad36ad381457ffce084f6c1373caff025027ef522d627d3eabf7a91b9ea684e
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl/1.1.1n-0+deb10u3/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1n-0+deb10u3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1n-0+deb10u3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl/1.1.1n-0+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.1n-0+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.1n-0+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.15-2+deb10u1`
 
