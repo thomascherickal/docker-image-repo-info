@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:154ba55bc0e297c9fb12b70cceafd72e5fb510e6be0838aeac5e673ba3eb83b0`
-- Created: `2023-01-31T17:52:23.458005428Z`
-- Virtual Size: ~ 95.86 Mb  
+- Image ID: `sha256:f070e17b881f324f200c61c5d2fbd431ae10cc95570becf16c69abab64af58b4`
+- Created: `2023-03-02T03:34:07.155517928Z`
+- Virtual Size: ~ 95.87 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -276,12 +276,12 @@ $ apt-get source -qq --print-uris coreutils=8.32-4.1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.32-4.1ubuntu1.debian.tar.xz' coreutils_8.32-4.1ubuntu1.debian.tar.xz 41096 SHA512:74adfa2f2a85af8d7024ad6d13942e915217dcb10e29caa9c314e0a15da6ec019e7aa52ac5351c35ccea1bace7a05c6dc7569b7b0487c8fcd46b3ba42d66d89d
 ```
 
-### `dpkg` source package: `curl=7.85.0-1ubuntu0.2`
+### `dpkg` source package: `curl=7.85.0-1ubuntu0.3`
 
 Binary Packages:
 
-- `curl=7.85.0-1ubuntu0.2`
-- `libcurl4:amd64=7.85.0-1ubuntu0.2`
+- `curl=7.85.0-1ubuntu0.3`
+- `libcurl4:amd64=7.85.0-1ubuntu0.3`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -297,9 +297,15 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `X11`
 - `curl`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.85.0-1ubuntu0.3
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.85.0-1ubuntu0.3.dsc' curl_7.85.0-1ubuntu0.3.dsc 3070 SHA512:3aed2778ed13469fe42f4ef1118e344ba1478acc5409e7139331ecbd91d245ad0e8222f25ccdf785e049a8a9db4c17288f19de174208391d4c76e0d270f018c3
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.85.0.orig.tar.gz' curl_7.85.0.orig.tar.gz 4182153 SHA512:bbad693bcde9c55e5942499950d76011f53ad43d3270eee2c8db486bcf46f5fc92b32dd8752caf4c5976fe493d083e2d34fa299cb96fb8e76d8f5fcc2cc56a36
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.85.0.orig.tar.gz.asc' curl_7.85.0.orig.tar.gz.asc 488 SHA512:2816f15dea2f564baae13e63bcb2881af4297f44b529631f1dc18839f2ada0a085e3033dfc177246a9f8229c7e0e4d28f41c12640544f047ddca6cebe38a63a7
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.85.0-1ubuntu0.3.debian.tar.xz' curl_7.85.0-1ubuntu0.3.debian.tar.xz 48908 SHA512:9f087064a06cfcde69e5b34d1031e46fd170e07248824609825d3af6d43cd0e42559babe531b2b8793fd503fb3c6b590374779119c7e17fde39331e84761ec0d
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-6ubuntu2`
 
@@ -1427,12 +1433,12 @@ $ apt-get source -qq --print-uris openldap=2.5.13+dfsg-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.13%2bdfsg-1ubuntu1.debian.tar.xz' openldap_2.5.13+dfsg-1ubuntu1.debian.tar.xz 177708 SHA512:e548569ddade30acbc621f194ffad3dab00b1af9734157bbeb3461e68ae5b39bb93a21aea51efebfbf72534f970c9b6b45cd387e94f5ea8bac9f7287099f32ff
 ```
 
-### `dpkg` source package: `openssl=3.0.5-2ubuntu2`
+### `dpkg` source package: `openssl=3.0.5-2ubuntu2.1`
 
 Binary Packages:
 
-- `libssl3:amd64=3.0.5-2ubuntu2`
-- `openssl=3.0.5-2ubuntu2`
+- `libssl3:amd64=3.0.5-2ubuntu2.1`
+- `openssl=3.0.5-2ubuntu2.1`
 
 Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/openssl/copyright`)
 
@@ -1441,9 +1447,15 @@ Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/open
 - `GPL-1`
 - `GPL-1+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssl=3.0.5-2ubuntu2.1
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.5-2ubuntu2.1.dsc' openssl_3.0.5-2ubuntu2.1.dsc 2726 SHA512:f7d28af8cceb411dd3dc62bc23c9763cb16bb100e950ba7da1f1a261e8080d79a64be8cfcd0b04f8167d73f1fb86864f38b5047c792270462f3529cfbc143b5b
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.5.orig.tar.gz' openssl_3.0.5.orig.tar.gz 15074407 SHA512:782b0df3d0252468aa696bd74a3b661810499819c0df849aa9698ba0e06a845820dc856aac650fced4be234f1271e576d4317ac3ab1406cf0ffe087d695d20fe
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.5.orig.tar.gz.asc' openssl_3.0.5.orig.tar.gz.asc 862 SHA512:516da9ef291601400576adaba7271854af3caa23dc1d70116004360f580e4c28fe61d51e86477d341e4c5bf0ca5f98db8264581ed6cc2c8df124da83ad3e40be
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.5-2ubuntu2.1.debian.tar.xz' openssl_3.0.5-2ubuntu2.1.debian.tar.xz 177888 SHA512:e9156a2397abb012d63f6637ccee6a333ed798126ab4bd62324fd69db2e4ed366e4940624e5993d858f3aad2e536adf0e2d1b8a099367343b8123620229f468e
+```
 
 ### `dpkg` source package: `p11-kit=0.24.1-1ubuntu2`
 
@@ -1472,22 +1484,27 @@ $ apt-get source -qq --print-uris p11-kit=0.24.1-1ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.24.1-1ubuntu2.debian.tar.xz' p11-kit_0.24.1-1ubuntu2.debian.tar.xz 31176 SHA512:f3b3fc21a270f22dd0679aaf1c87907fdd3914de261ad61406bb2392deb25688229af775e7b170201d85489cd7420c5e9bda23c8f95bc7e9d955f4eb508454d3
 ```
 
-### `dpkg` source package: `pam=1.5.2-2ubuntu1.1`
+### `dpkg` source package: `pam=1.5.2-2ubuntu1.3`
 
 Binary Packages:
 
-- `libpam-modules:amd64=1.5.2-2ubuntu1.1`
-- `libpam-modules-bin=1.5.2-2ubuntu1.1`
-- `libpam-runtime=1.5.2-2ubuntu1.1`
-- `libpam0g:amd64=1.5.2-2ubuntu1.1`
+- `libpam-modules:amd64=1.5.2-2ubuntu1.3`
+- `libpam-modules-bin=1.5.2-2ubuntu1.3`
+- `libpam-runtime=1.5.2-2ubuntu1.3`
+- `libpam0g:amd64=1.5.2-2ubuntu1.3`
 
 Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/doc/libpam-modules-bin/copyright`, `/usr/share/doc/libpam-runtime/copyright`, `/usr/share/doc/libpam0g/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris pam=1.5.2-2ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.5.2-2ubuntu1.3.dsc' pam_1.5.2-2ubuntu1.3.dsc 2496 SHA512:892c76b9b962c597ab86c9a67aff77b8c25079df247336c07f56fb2b864b8bcc765817140b09966c1bc27313e4463ee7e1bcf7f3a0f89a80e95cc822091127ff
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.5.2.orig.tar.xz' pam_1.5.2.orig.tar.xz 988784 SHA512:fa16350c132d3e5fb82b60d991768fb596582639841b8ece645c684705467305ccf1302a0147ec222ab78c01b2c9114c5496dc1ca565d2b56bf315f29a815144
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.5.2-2ubuntu1.3.debian.tar.xz' pam_1.5.2-2ubuntu1.3.debian.tar.xz 168236 SHA512:f5e999a52f87ea8fede350104db52f4408077bda09363b7ff554d76db5c281f49f4ae8794cd681f59b32fdeca708b7689ed3a8b053566bb1808160de21bc3a4a
+```
 
 ### `dpkg` source package: `pcre2=10.40-1ubuntu1`
 
