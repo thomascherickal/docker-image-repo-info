@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:44e2b194df5a077f636bae6ef33fc82b49f0c488d79ee0c4c3de5294ecddd84e`
-- Created: `2023-02-16T00:27:43.26567376Z`
-- Virtual Size: ~ 330.20 Mb  
+- Image ID: `sha256:835c0a4a31a7c6a3ca796fb406c96935271e38b5ab53e5063293f4121410eb39`
+- Created: `2023-03-02T09:53:33.74315361Z`
+- Virtual Size: ~ 330.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
@@ -256,12 +256,12 @@ $ apt-get source -qq --print-uris coreutils=8.28-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.28-1ubuntu1.debian.tar.xz' coreutils_8.28-1ubuntu1.debian.tar.xz 37940 SHA256:71ba2e83edc675a79e1e0556aff326ab2ae812332692e3db29615e8ed1b427f4
 ```
 
-### `dpkg` source package: `curl=7.58.0-2ubuntu3.22`
+### `dpkg` source package: `curl=7.58.0-2ubuntu3.23`
 
 Binary Packages:
 
-- `curl=7.58.0-2ubuntu3.22`
-- `libcurl4:amd64=7.58.0-2ubuntu3.22`
+- `curl=7.58.0-2ubuntu3.23`
+- `libcurl4:amd64=7.58.0-2ubuntu3.23`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -272,9 +272,14 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.58.0-2ubuntu3.23
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.23.dsc' curl_7.58.0-2ubuntu3.23.dsc 2781 SHA512:248561407f16c0dbdc18cf4bf2975b9f73e43129ada2063dfcc165519ebf237533cfb59202b8feead4560bcd2bbc74b06069efbc7dbb07ab739f8ee74cede0ec
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0.orig.tar.gz' curl_7.58.0.orig.tar.gz 3879728 SHA512:7b12b79107558bb266672d6e128615fe5a8149c37f4ae540197e3298f5d312beb2d78fbb23e3ea84ea7afc41549898a1e5cd38509f0388b11707b48d5efb8ca3
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.23.debian.tar.xz' curl_7.58.0-2ubuntu3.23.debian.tar.xz 74624 SHA512:b8c9b7c235ba5a10dc64cd334e9e0420975917eb323231fde51a36ba91f165edcc702604897e7661704c7a7ec9a4121342fcac1bc613ff8fad5515bf9bd038e7
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3ubuntu2.4`
 
@@ -1181,20 +1186,25 @@ $ apt-get source -qq --print-uris openldap=2.4.45+dfsg-1ubuntu1.11
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.45%2bdfsg-1ubuntu1.11.debian.tar.xz' openldap_2.4.45+dfsg-1ubuntu1.11.debian.tar.xz 185504 SHA512:f4552c4b7c4e8d21fadbcbdcc4a616756b75394d3fed9586e0ece9c3d20f8b40bd3c8b1e91f7391b0acdaaa4caa885978ba963498db94861abf9f726af282e38
 ```
 
-### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.20`
+### `dpkg` source package: `openssl=1.1.1-1ubuntu2.1~18.04.21`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1-1ubuntu2.1~18.04.20`
-- `openssl=1.1.1-1ubuntu2.1~18.04.20`
+- `libssl1.1:amd64=1.1.1-1ubuntu2.1~18.04.21`
+- `openssl=1.1.1-1ubuntu2.1~18.04.21`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1-1ubuntu2.1~18.04.21
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1%7e18.04.21.dsc' openssl_1.1.1-1ubuntu2.1~18.04.21.dsc 2514 SHA512:0f50629ed2140a046a20b8aa6267395986cdf213767182261794901e93fbf423a9383997cff5500d678fac53bdbf7a4c5b8338e30f2b0d94c9631cfc96c9f19d
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1.orig.tar.gz' openssl_1.1.1.orig.tar.gz 8337920 SHA512:c0284a4fe84bdf765ca5bc5148da4441ffc36392cfecaf9d372af00cf93b6de5681cab1248b6f8246474532155dc205da5ad49549ad7c61c07c917145e7c9c71
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1-1ubuntu2.1%7e18.04.21.debian.tar.xz' openssl_1.1.1-1ubuntu2.1~18.04.21.debian.tar.xz 181060 SHA512:5ae7e97da27b274faef1dbcd74efb2483d059b4ed66ef510de1a321e1893253b53b9155407413c414b0bbb491e76125ffb367d58b6381fec0f9e480b6c6d8916
+```
 
 ### `dpkg` source package: `p11-kit=0.23.9-2ubuntu0.1`
 
@@ -1220,22 +1230,26 @@ $ apt-get source -qq --print-uris p11-kit=0.23.9-2ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/p11-kit/p11-kit_0.23.9-2ubuntu0.1.debian.tar.xz' p11-kit_0.23.9-2ubuntu0.1.debian.tar.xz 24380 SHA512:460f4179781768a4a4b686955f16f335565d50f7a2d74c298216fe6725ce4e04119f49605752026f65bf56e143e560718969c5983decc906d3246f0a01c46178
 ```
 
-### `dpkg` source package: `pam=1.1.8-3.6ubuntu2.18.04.4`
+### `dpkg` source package: `pam=1.1.8-3.6ubuntu2.18.04.6`
 
 Binary Packages:
 
-- `libpam-modules:amd64=1.1.8-3.6ubuntu2.18.04.4`
-- `libpam-modules-bin=1.1.8-3.6ubuntu2.18.04.4`
-- `libpam-runtime=1.1.8-3.6ubuntu2.18.04.4`
-- `libpam0g:amd64=1.1.8-3.6ubuntu2.18.04.4`
+- `libpam-modules:amd64=1.1.8-3.6ubuntu2.18.04.6`
+- `libpam-modules-bin=1.1.8-3.6ubuntu2.18.04.6`
+- `libpam-runtime=1.1.8-3.6ubuntu2.18.04.6`
+- `libpam0g:amd64=1.1.8-3.6ubuntu2.18.04.6`
 
 Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/doc/libpam-modules-bin/copyright`, `/usr/share/doc/libpam-runtime/copyright`, `/usr/share/doc/libpam0g/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris pam=1.1.8-3.6ubuntu2.18.04.6
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.6.dsc' pam_1.1.8-3.6ubuntu2.18.04.6.dsc 2427 SHA512:f1399e2c117e951ac3dfc05e77c53ccb9d005de8b6ff2e968f5af8d86156a1ae326613615118230cf4f288c9cc4fadb265ebf97bd2e8f94cb91c53d45ed0fd30
+'http://archive.ubuntu.com/ubuntu/pool/main/p/pam/pam_1.1.8-3.6ubuntu2.18.04.6.tar.gz' pam_1.1.8-3.6ubuntu2.18.04.6.tar.gz 2012613 SHA512:b563fd87f5eba0ecc2be076c550fe5971b9b4037b25eb8df056c0cfc606258fa913d0fe164da43a6eefb8c04d1395b5086e85c70447d25e2d8ca511c3571627d
+```
 
 ### `dpkg` source package: `pcre3=2:8.39-9ubuntu0.1`
 
@@ -1476,20 +1490,25 @@ $ apt-get source -qq --print-uris sysvinit=2.88dsf-59.10ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.88dsf-59.10ubuntu1.debian.tar.xz' sysvinit_2.88dsf-59.10ubuntu1.debian.tar.xz 132736 SHA256:faee591309aa0065aa43f44a1e840eb01db7f55379af2b45949534bd0317b734
 ```
 
-### `dpkg` source package: `tar=1.29b-2ubuntu0.3`
+### `dpkg` source package: `tar=1.29b-2ubuntu0.4`
 
 Binary Packages:
 
-- `tar=1.29b-2ubuntu0.3`
+- `tar=1.29b-2ubuntu0.4`
 
 Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 
 - `GPL-2`
 - `GPL-3`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tar=1.29b-2ubuntu0.4
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b-2ubuntu0.4.dsc' tar_1.29b-2ubuntu0.4.dsc 2080 SHA512:873ed108d9c0588341bae81c298d973379b424fade7abf1c00f575ccb8e8b89fce430f4a3f20ff40f35b1f9428f69bb4f8a4bc728985ac2a9c928639edcb8f35
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b.orig.tar.xz' tar_1.29b.orig.tar.xz 1822008 SHA512:6814c906f3bf3d1421d46e63aff7921acffbd2b2a0a7e5c20b472a821eab839d6eab93653d964ae16376b65da223c57a92455f44793522c84c8b1343af20b106
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.29b-2ubuntu0.4.debian.tar.xz' tar_1.29b-2ubuntu0.4.debian.tar.xz 35476 SHA512:e9c79a862ecfb817a3c99cca29d14a6cbb3a2e9bbfc1b9cfb0f28270dbecc5aabe48ea8ae70c4ddf7b77b1c24005015e2f35ac0a0acf65ffa5c0ff41d4691507
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2018.09.18.1~18.04.2`
 
