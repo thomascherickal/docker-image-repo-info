@@ -1,22 +1,21 @@
-# `clojure:temurin-17-alpine`
+# `clojure:temurin-8-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a991ab579c823d1de29a0b6071674624a83d9a6e85849819e9f92495ca561555`
-- Created: `2023-02-13T21:25:57.404616752Z`
-- Virtual Size: ~ 393.95 Mb  
+- Image ID: `sha256:91f1e02a9aad02864be6de26941b20c7c40fc2526c049a4092d52ff7fafaf52a`
+- Created: `2023-03-03T19:21:07.932592176Z`
+- Virtual Size: ~ 215.43 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Entrypoint: `["entrypoint"]`
-- Command: `["-M","--repl"]`
+- Command: `["clj"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/opt/java/openjdk`
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.6+10`
-  - `CLOJURE_VERSION=1.11.1.1224`
+  - `JAVA_VERSION=jdk8u362-b09`
+  - `CLOJURE_VERSION=1.11.1.1237`
 
 ## `apk` (`.apk`-based packages)
 
@@ -261,16 +260,16 @@ FTL GPL-2.0-or-later
 ### `apk` package: `git`
 
 ```console
-git-2.38.3-r1 description:
+git-2.38.4-r1 description:
 Distributed version control system
 
-git-2.38.3-r1 webpage:
+git-2.38.4-r1 webpage:
 https://www.git-scm.com/
 
-git-2.38.3-r1 installed size:
+git-2.38.4-r1 installed size:
 6068 KiB
 
-git-2.38.3-r1 license:
+git-2.38.4-r1 license:
 GPL-2.0-or-later
 
 ```
@@ -329,16 +328,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.87.0-r1 description:
+libcurl-7.88.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.87.0-r1 webpage:
+libcurl-7.88.1-r0 webpage:
 https://curl.se/
 
-libcurl-7.87.0-r1 installed size:
-540 KiB
+libcurl-7.88.1-r0 installed size:
+552 KiB
 
-libcurl-7.87.0-r1 license:
+libcurl-7.88.1-r0 license:
 curl
 
 ```

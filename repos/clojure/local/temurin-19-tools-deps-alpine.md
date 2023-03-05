@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ced1b28be11ef3797c3c22c7069764f3adc29669549500302bca05cd91c1b510`
-- Created: `2023-02-13T21:27:56.421779056Z`
-- Virtual Size: ~ 410.89 Mb  
+- Image ID: `sha256:3d22c0283d90e31d5f066bb57c8292ef3b48a6e9a1b5d1646d5d793571ca3de3`
+- Created: `2023-03-03T19:27:42.497787145Z`
+- Virtual Size: ~ 410.91 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint"]`
@@ -16,7 +16,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-19.0.2+7`
-  - `CLOJURE_VERSION=1.11.1.1224`
+  - `CLOJURE_VERSION=1.11.1.1237`
 
 ## `apk` (`.apk`-based packages)
 
@@ -261,16 +261,16 @@ FTL GPL-2.0-or-later
 ### `apk` package: `git`
 
 ```console
-git-2.38.3-r1 description:
+git-2.38.4-r1 description:
 Distributed version control system
 
-git-2.38.3-r1 webpage:
+git-2.38.4-r1 webpage:
 https://www.git-scm.com/
 
-git-2.38.3-r1 installed size:
+git-2.38.4-r1 installed size:
 6068 KiB
 
-git-2.38.3-r1 license:
+git-2.38.4-r1 license:
 GPL-2.0-or-later
 
 ```
@@ -329,16 +329,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.87.0-r1 description:
+libcurl-7.88.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.87.0-r1 webpage:
+libcurl-7.88.1-r0 webpage:
 https://curl.se/
 
-libcurl-7.87.0-r1 installed size:
-540 KiB
+libcurl-7.88.1-r0 installed size:
+552 KiB
 
-libcurl-7.87.0-r1 license:
+libcurl-7.88.1-r0 license:
 curl
 
 ```
