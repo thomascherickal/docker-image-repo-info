@@ -785,14 +785,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.17.1-1ubuntu0.16
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.17.1-1ubuntu0.16.dsc' git_2.17.1-1ubuntu0.16.dsc 2963 SHA512:e22fb36a07adb132b0166dd960f8906fcf563248d64778f56322c92dd0fc676349a6552197f0e8da8e67150e2773bcecde6623021ac2b4bb5727117f7b35e2e7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.17.1.orig.tar.xz' git_2.17.1.orig.tar.xz 5015484 SHA512:77c27569d40fbae1842130baa0cdda674a02e384631bd8fb1f2ddf67ce372dd4903b2ce6b4283a4ae506cdedd5daa55baa2afe6a6689528511e24e4beb864960
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.17.1-1ubuntu0.16.debian.tar.xz' git_2.17.1-1ubuntu0.16.debian.tar.xz 665964 SHA512:0dad3c12ad6252151eb56fca18e706ab94bed8adfcb04105b460544a44a69c57744f462cba258ab13d83dd374d012b662a6f6ddfa00a81c741d5bbd80f02b508
-```
 
 ### `dpkg` source package: `glib2.0=2.56.4-0ubuntu0.18.04.9`
 
@@ -1935,14 +1930,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=4.15.0-204.215
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-204.215.dsc' linux_4.15.0-204.215.dsc 7415 SHA512:15283ef8b1dbe988c57c7dc65a640df81e746e31e5c6d12ccab903c40c2d80afb08a293a5c1f3343f1d34985d913ea08ada2d09327e6646445c29f5e060fac23
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0.orig.tar.gz' linux_4.15.0.orig.tar.gz 157656459 SHA512:0fab606a295e0857f774f8adaa9d56bf2cb227fbab2daed374415da216391b156f49e606ba37ac402987c5796d408807da5d1a42c0d85a8552f109a3e279443d
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_4.15.0-204.215.diff.gz' linux_4.15.0-204.215.diff.gz 13539103 SHA512:509314e16c461df5d9da5087fbe3b3a80e852d226b5c1c677495c9e35a835b53d7fa508addd9627afbb606a16350aca0074031a41edc6ff3e54166d020cc57c5
-```
 
 ### `dpkg` source package: `lsb=9.20170808ubuntu1`
 
