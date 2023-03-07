@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:93de2b2498becfe9cd1e639f8ddd17f1b2bc9601e3e39fd6553bef018e8d97c3`
-- Created: `2023-03-02T23:06:50.071399669Z`
+- Image ID: `sha256:bc65c7eef4c395929a84223b04faac98ea8d4803773cd0a7e625f1f5c222aacc`
+- Created: `2023-03-04T04:59:37.19935631Z`
 - Virtual Size: ~ 305.85 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -418,16 +418,16 @@ AGPL-3.0-or-later
 ### `apk` package: `glib`
 
 ```console
-glib-2.74.5-r0 description:
+glib-2.74.6-r0 description:
 Common C routines used by Gtk+ and other libs
 
-glib-2.74.5-r0 webpage:
+glib-2.74.6-r0 webpage:
 https://developer.gnome.org/glib/
 
-glib-2.74.5-r0 installed size:
+glib-2.74.6-r0 installed size:
 3396 KiB
 
-glib-2.74.5-r0 license:
+glib-2.74.6-r0 license:
 LGPL-2.1-or-later
 
 ```
@@ -1404,16 +1404,16 @@ BSD-3-Clause
 ### `apk` package: `pango`
 
 ```console
-pango-1.50.12-r0 description:
+pango-1.50.13-r0 description:
 library for layout and rendering of text
 
-pango-1.50.12-r0 webpage:
+pango-1.50.13-r0 webpage:
 https://www.pango.org/
 
-pango-1.50.12-r0 installed size:
+pango-1.50.13-r0 installed size:
 668 KiB
 
-pango-1.50.12-r0 license:
+pango-1.50.13-r0 license:
 LGPL-2.1-or-later
 
 ```
