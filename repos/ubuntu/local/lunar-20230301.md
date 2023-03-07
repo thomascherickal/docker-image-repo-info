@@ -992,13 +992,13 @@ Licenses: (parsed from: `/usr/share/doc/lsb-base/copyright`)
 - `BSD-3-clause`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lsb=11.5
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_11.5.dsc' lsb_11.5.dsc 1614 SHA512:1335711764722a7e00911ad0ee62a2e01a8b7567632ea30815cc046209ca44d631fa586fbc7dc9c5ae5af90b6728f6f4e9048eec46f75a5f7d006a424b652120
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lsb/lsb_11.5.tar.xz' lsb_11.5.tar.xz 38756 SHA512:87f7d1753de13a08cfc292ccc33dd94ffb0a0d7d9a634952a60da56c198791d76a5b6b2d4c59d7ae8bd5c35bfdb372a1d6e1466d80a9f12c24a876589d042d54
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/lsb/11.5/
+
 
 ### `dpkg` source package: `lz4=1.9.4-1`
 
@@ -1335,14 +1335,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=252.4-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_252.4-1ubuntu1.dsc' systemd_252.4-1ubuntu1.dsc 6601 SHA512:73583721109976bc851456ecbe461d7a501e089a97c407cf4077388c52245deb2ff0fe74b641fadb5719c56c8b7c1cfe10f13148500409416112c91a95c6bc4a
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_252.4.orig.tar.gz' systemd_252.4.orig.tar.gz 11753300 SHA512:d4e99a67c59091dae78f654433a6c5e114ae66256b72d9d43292c43a986ee6a58e2d06f12866cbd7ec821b61580ec003af1725f60fd4b038b4a981b3ca839ee2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_252.4-1ubuntu1.debian.tar.xz' systemd_252.4-1ubuntu1.debian.tar.xz 227284 SHA512:fb9cbea6acee6f4e0ce29612cae6866b6089c0b034b0c3ea14244bf2d6329a9276acd37183abf383b8b3b01ca3f1482b84a15d00339a355db824fde1cc526a00
-```
 
 ### `dpkg` source package: `sysvinit=3.05-7ubuntu2`
 
