@@ -1,7 +1,7 @@
 ## `geonetwork:3-postgres`
 
 ```console
-$ docker pull geonetwork@sha256:6419e0edbf016da425b277afadc9e613105bbfb73486cc25eefb67728be6a8a8
+$ docker pull geonetwork@sha256:17f6e5f93ea17ba66063048b5340ca6686890b055cc2c5b32faed5ae3ed9f3f6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,14 +14,14 @@ $ docker pull geonetwork@sha256:6419e0edbf016da425b277afadc9e613105bbfb73486cc25
 ### `geonetwork:3-postgres` - linux; amd64
 
 ```console
-$ docker pull geonetwork@sha256:489e1484b3ce7d3fb4fd183fcdc8aa049eaae2d6c53f38f4bcb40b71ab4e4879
+$ docker pull geonetwork@sha256:11f47419f1120269cb5d0171050447ba0118f86e08c5ff277562a60312b8d2d8
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **437.5 MB (437458043 bytes)**  
+-	Total Size: **437.5 MB (437455527 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7884b6948062b1f089dec8ef383eb9964415ab68470418168eac2e917978bdea`
+-	Image ID: `sha256:18091e21e126dac903fa9247bfa7a9c84e6fcf8dddfca3d7773c33eea8809857`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["catalina.sh","run"]`
 
@@ -86,33 +86,33 @@ ENV GN_FILE=geonetwork.war
 ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
 # Tue, 07 Mar 2023 00:11:10 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
-# Tue, 07 Mar 2023 00:11:10 GMT
-ENV GN_VERSION=3.12.8
-# Tue, 07 Mar 2023 00:11:10 GMT
-ENV GN_DOWNLOAD_MD5=378b70ee5c358a8db5659dafc8220e9f
-# Tue, 07 Mar 2023 00:11:10 GMT
+# Tue, 07 Mar 2023 19:44:26 GMT
+ENV GN_VERSION=3.12.9
+# Tue, 07 Mar 2023 19:44:26 GMT
+ENV GN_DOWNLOAD_MD5=cea7a8635cc73f31ea026f848216ae0e
+# Tue, 07 Mar 2023 19:44:26 GMT
 WORKDIR /usr/local/tomcat/webapps
-# Tue, 07 Mar 2023 00:11:44 GMT
+# Tue, 07 Mar 2023 19:45:42 GMT
 RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
-# Tue, 07 Mar 2023 00:11:45 GMT
+# Tue, 07 Mar 2023 19:45:43 GMT
 COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
-# Tue, 07 Mar 2023 00:11:45 GMT
+# Tue, 07 Mar 2023 19:45:43 GMT
 WORKDIR /usr/local/tomcat
-# Tue, 07 Mar 2023 00:11:45 GMT
+# Tue, 07 Mar 2023 19:45:44 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 07 Mar 2023 00:11:45 GMT
+# Tue, 07 Mar 2023 19:45:44 GMT
 CMD ["catalina.sh" "run"]
-# Tue, 07 Mar 2023 00:11:58 GMT
+# Tue, 07 Mar 2023 19:45:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client &&     rm -rf /var/lib/apt/lists/*
-# Tue, 07 Mar 2023 00:11:59 GMT
+# Tue, 07 Mar 2023 19:45:57 GMT
 RUN sed -i -e 's#<import resource="../config-db/${geonetwork.db.type:h2}.xml"/>#<!--<import resource="../config-db/${geonetwork.db.type:h2}.xml"/-->#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml" && sed -i -e 's#<!--<import resource="../config-db/postgres.xml"/>-->#<import resource="../config-db/postgres.xml"/>#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml"
-# Tue, 07 Mar 2023 00:11:59 GMT
+# Tue, 07 Mar 2023 19:45:58 GMT
 COPY file:83f69d2041e5fb378033b0db57e096c81ba0725102ab4da4f089685e748fcce3 in /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-db/jdbc.properties 
-# Tue, 07 Mar 2023 00:11:59 GMT
+# Tue, 07 Mar 2023 19:45:58 GMT
 COPY file:c88411abba7ad9b7bb75019f08755dbfa163d2fc7fdd80676bf9350c4c56a19c in /entrypoint.sh 
-# Tue, 07 Mar 2023 00:11:59 GMT
+# Tue, 07 Mar 2023 19:45:58 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 07 Mar 2023 00:11:59 GMT
+# Tue, 07 Mar 2023 19:45:58 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -145,29 +145,29 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Mon, 06 Mar 2023 23:54:24 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3689067774c83364ced370cc274263ed71f5664b0d462b3d8def227fc43113cd`  
-		Last Modified: Tue, 07 Mar 2023 00:12:37 GMT  
-		Size: 314.6 MB (314555956 bytes)  
+	-	`sha256:108c16fbac7ac8dd6fae13f18018a0d974be08b2d21c8b8f10fa1081ff0bb859`  
+		Last Modified: Tue, 07 Mar 2023 19:47:04 GMT  
+		Size: 314.6 MB (314553362 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3f18ee4fdaafc7341bcffc6fd5997fa3623ccd254f9b3a215a6db9e4a7dfdc0`  
-		Last Modified: Tue, 07 Mar 2023 00:12:19 GMT  
+	-	`sha256:976e85f05c4306bb1b502e0d96da6554f0800ec8365c06dec3197d8d9199281a`  
+		Last Modified: Tue, 07 Mar 2023 19:46:46 GMT  
 		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:59dde1e3bd3ea79a70c12189c55aa45744b5e22a6dea1c0668e9657a4b30a0f9`  
-		Last Modified: Tue, 07 Mar 2023 00:12:50 GMT  
-		Size: 13.7 MB (13694190 bytes)  
+	-	`sha256:b0ea372fc5e2523c33d4b6b80c269950d786524666baa6dc1bdfa9ed3eeee279`  
+		Last Modified: Tue, 07 Mar 2023 19:47:18 GMT  
+		Size: 13.7 MB (13694281 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f245eda9c3be456cefbe978dfdd2b9d3957db96dfa2e62e5170bc1a042c3846`  
-		Last Modified: Tue, 07 Mar 2023 00:12:47 GMT  
-		Size: 1.3 KB (1275 bytes)  
+	-	`sha256:fad8e509539ef640ee3bd6cb5b8f97eb28a1fd933152bd151c29275e976c3584`  
+		Last Modified: Tue, 07 Mar 2023 19:47:16 GMT  
+		Size: 1.3 KB (1271 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0d76985df0ddcc4fe25b46f4c77cd8c3829da95b1b8eeda594967c4894610530`  
-		Last Modified: Tue, 07 Mar 2023 00:12:47 GMT  
-		Size: 1.1 KB (1133 bytes)  
+	-	`sha256:49f2dec9d767f06ca7177eded2b55deb82bfd4744958ef3b186f9496c6a026e4`  
+		Last Modified: Tue, 07 Mar 2023 19:47:16 GMT  
+		Size: 1.1 KB (1125 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:367d6ce46624c11c04b33ee4e158b0854469e5791c35478b4c8b6a4eae267d48`  
-		Last Modified: Tue, 07 Mar 2023 00:12:47 GMT  
-		Size: 973.0 B  
+	-	`sha256:c5baa9f7520b1738c4d2477b21c187262769c92bb6f5aac4a6cd9629d9f58efc`  
+		Last Modified: Tue, 07 Mar 2023 19:47:16 GMT  
+		Size: 972.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `geonetwork:3-postgres` - linux; arm variant v7
@@ -491,14 +491,14 @@ CMD ["catalina.sh" "run"]
 ### `geonetwork:3-postgres` - linux; ppc64le
 
 ```console
-$ docker pull geonetwork@sha256:fa7ba1490fce7ed9e430733f09e862029e4eb2e84176529806bde6fe6d1fa9d4
+$ docker pull geonetwork@sha256:7129e762cac952bd779c08566ca96af6c60e88f36ff7c8568e5dcbdae656e2a0
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **441.6 MB (441641060 bytes)**  
+-	Total Size: **441.6 MB (441638996 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d58339b7725d624a00b27644f9572e21a8aa265ef35217481fd65156b19a6171`
+-	Image ID: `sha256:1d0c575376cb41ef04e493867466cf31800c8dd76874c6fdd1de1fef440fc98b`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["catalina.sh","run"]`
 
@@ -563,33 +563,33 @@ ENV GN_FILE=geonetwork.war
 ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
 # Tue, 07 Mar 2023 00:33:50 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
-# Tue, 07 Mar 2023 00:33:53 GMT
-ENV GN_VERSION=3.12.8
-# Tue, 07 Mar 2023 00:33:54 GMT
-ENV GN_DOWNLOAD_MD5=378b70ee5c358a8db5659dafc8220e9f
-# Tue, 07 Mar 2023 00:33:54 GMT
+# Tue, 07 Mar 2023 19:16:37 GMT
+ENV GN_VERSION=3.12.9
+# Tue, 07 Mar 2023 19:16:37 GMT
+ENV GN_DOWNLOAD_MD5=cea7a8635cc73f31ea026f848216ae0e
+# Tue, 07 Mar 2023 19:16:38 GMT
 WORKDIR /usr/local/tomcat/webapps
-# Tue, 07 Mar 2023 00:34:38 GMT
+# Tue, 07 Mar 2023 19:19:49 GMT
 RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
-# Tue, 07 Mar 2023 00:34:43 GMT
+# Tue, 07 Mar 2023 19:19:57 GMT
 COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
-# Tue, 07 Mar 2023 00:34:44 GMT
+# Tue, 07 Mar 2023 19:19:57 GMT
 WORKDIR /usr/local/tomcat
-# Tue, 07 Mar 2023 00:34:45 GMT
+# Tue, 07 Mar 2023 19:19:57 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 07 Mar 2023 00:34:45 GMT
+# Tue, 07 Mar 2023 19:19:58 GMT
 CMD ["catalina.sh" "run"]
-# Tue, 07 Mar 2023 00:35:23 GMT
+# Tue, 07 Mar 2023 19:20:39 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client &&     rm -rf /var/lib/apt/lists/*
-# Tue, 07 Mar 2023 00:35:25 GMT
+# Tue, 07 Mar 2023 19:20:42 GMT
 RUN sed -i -e 's#<import resource="../config-db/${geonetwork.db.type:h2}.xml"/>#<!--<import resource="../config-db/${geonetwork.db.type:h2}.xml"/-->#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml" && sed -i -e 's#<!--<import resource="../config-db/postgres.xml"/>-->#<import resource="../config-db/postgres.xml"/>#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml"
-# Tue, 07 Mar 2023 00:35:26 GMT
+# Tue, 07 Mar 2023 19:20:43 GMT
 COPY file:83f69d2041e5fb378033b0db57e096c81ba0725102ab4da4f089685e748fcce3 in /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-db/jdbc.properties 
-# Tue, 07 Mar 2023 00:35:26 GMT
+# Tue, 07 Mar 2023 19:20:43 GMT
 COPY file:c88411abba7ad9b7bb75019f08755dbfa163d2fc7fdd80676bf9350c4c56a19c in /entrypoint.sh 
-# Tue, 07 Mar 2023 00:35:26 GMT
+# Tue, 07 Mar 2023 19:20:44 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 07 Mar 2023 00:35:27 GMT
+# Tue, 07 Mar 2023 19:20:45 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -622,27 +622,27 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 07 Mar 2023 00:16:56 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:42805ff9cd5abbcebd062b2a38e5437b5f170715a80145445dff9e051ee7f7b5`  
-		Last Modified: Tue, 07 Mar 2023 00:36:23 GMT  
-		Size: 314.6 MB (314592280 bytes)  
+	-	`sha256:9a5847f1fdaed2269934d7e23b1326f5ea8bbb47aba2eca2d49360039e06e932`  
+		Last Modified: Tue, 07 Mar 2023 19:21:40 GMT  
+		Size: 314.6 MB (314590218 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:051aa6fed988f312f31e877bc27441f5854616892ee1205e6345a2db6f078044`  
-		Last Modified: Tue, 07 Mar 2023 00:35:52 GMT  
+	-	`sha256:6ab82000bf0afb67b6f627729b985a305999cdb7ae802f607653ef31f9b71748`  
+		Last Modified: Tue, 07 Mar 2023 19:21:08 GMT  
 		Size: 249.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:98c97e50b984e20f5bbc99922e9b74938475484efdf421426e3511afe7fe0344`  
-		Last Modified: Tue, 07 Mar 2023 00:36:42 GMT  
-		Size: 14.2 MB (14209359 bytes)  
+	-	`sha256:ff0e3bb6302f70ed4d10934afd6563351d48b1f911022a5cbe200a75e367154c`  
+		Last Modified: Tue, 07 Mar 2023 19:22:00 GMT  
+		Size: 14.2 MB (14209358 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:aa51ec857daf661dec0e1beff48249a5c0fd81fa5aabc84e2aca46edb4bf2e9d`  
-		Last Modified: Tue, 07 Mar 2023 00:36:37 GMT  
-		Size: 1.3 KB (1274 bytes)  
+	-	`sha256:90554ed7d22e23a0f42975be66cfdf8e4ed7c05f825b83f76c88b0e727d527c2`  
+		Last Modified: Tue, 07 Mar 2023 19:21:55 GMT  
+		Size: 1.3 KB (1273 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a767cb9a6cd9c96ec95d8f3b562f997887bbd0fd82327a8a16d0c2e9535a708`  
-		Last Modified: Tue, 07 Mar 2023 00:36:37 GMT  
+	-	`sha256:23f69522570c329e4a41e73a1d48956e84a7a27ae323edfd1da4d6d3bf1e1463`  
+		Last Modified: Tue, 07 Mar 2023 19:21:55 GMT  
 		Size: 1.1 KB (1129 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2132b61cd3b2f7e295df073bf2866eb384b539e20bce41df6f9e8b12fc4eb885`  
-		Last Modified: Tue, 07 Mar 2023 00:36:37 GMT  
+	-	`sha256:87e5ca1bbf1c50ca0e092a069f0be5a0cca347363f11ddc859249789414fdb91`  
+		Last Modified: Tue, 07 Mar 2023 19:21:55 GMT  
 		Size: 973.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
