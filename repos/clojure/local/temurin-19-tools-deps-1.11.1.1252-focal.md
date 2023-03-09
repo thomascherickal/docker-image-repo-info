@@ -1,10 +1,10 @@
-# `clojure:temurin-17-focal`
+# `clojure:temurin-19-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:68b3bb440f7dcab4eb09871fc4e408c14eb0099d6dbd154e3ac3407a26c698ba`
-- Created: `2023-03-03T19:26:47.661398643Z`
-- Virtual Size: ~ 604.10 Mb  
+- Image ID: `sha256:a1394f5a016b1718a2893e2a5686d1a5c031e1d645006d621d56e4204ce04990`
+- Created: `2023-03-07T19:28:35.272433474Z`
+- Virtual Size: ~ 621.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint"]`
@@ -15,8 +15,8 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.6+10`
-  - `CLOJURE_VERSION=1.11.1.1237`
+  - `JAVA_VERSION=jdk-19.0.2+7`
+  - `CLOJURE_VERSION=1.11.1.1252`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=20.04`
@@ -2281,14 +2281,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.19
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.19.dsc' systemd_245.4-4ubuntu3.19.dsc 5262 SHA512:aca2dbafb5592e58c927579f33e8640e38fb060a64a810cff913bfdd98e027ecae5721d1e0297a4ec92ea59c5741a79b688953f6ae97a0c9fdc62a02108a3bd3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.19.debian.tar.xz' systemd_245.4-4ubuntu3.19.debian.tar.xz 283052 SHA512:449accbf74d703448dec6ebdcefcb51c56d921f13799843ffbbccaecddef6a117fceb353f13f3e24516da978e0b19daee1de64b4a38382f15913cbf3fb896ba8
-```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
 

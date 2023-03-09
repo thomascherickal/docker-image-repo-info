@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3727721663dfbdd4f48c499a01b99368f2076ff09560a06073e08daf54452910`
-- Created: `2023-03-03T19:27:09.04971534Z`
-- Virtual Size: ~ 579.92 Mb  
+- Image ID: `sha256:82fe8fc0f0355c748293a8279bde4f9b80fde25b7b86e525d04e82c79bc74d71`
+- Created: `2023-03-07T19:26:52.613313575Z`
+- Virtual Size: ~ 579.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint"]`
@@ -16,7 +16,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-17.0.6+10`
-  - `CLOJURE_VERSION=1.11.1.1237`
+  - `CLOJURE_VERSION=1.11.1.1252`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=22.04`
@@ -2368,14 +2368,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=249.11-0ubuntu3.6
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.6.dsc' systemd_249.11-0ubuntu3.6.dsc 5903 SHA512:566d0b0ad0291049e0341d707945791c76a0e537e49ea68f8971bacb4420c17674d0675b03f3902ab11612dc66c7e2cc667186e1c20821d5230026cf6d122820
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11.orig.tar.gz' systemd_249.11.orig.tar.gz 10622702 SHA512:fed7f81933648945a4bfac9fb12150ecd84d32181f79be0e14e0b3a789343a87569f868670e0b8dfc2801fab39f7490f95ee8c29ba831d7611f78c14ace5ddd8
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.6.debian.tar.xz' systemd_249.11-0ubuntu3.6.debian.tar.xz 236508 SHA512:6100ead57f27e5b965ff2849db45c67e6885c45db022356c5a9a67055199bc667692967cde4b416038fe37e2b82efdd6d6777bbc65a3fa2aeb0b909d76efc2bc
-```
 
 ### `dpkg` source package: `sysvinit=3.01-1ubuntu1`
 

@@ -1,22 +1,21 @@
-# `clojure:temurin-17-jammy`
+# `clojure:temurin-8-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3727721663dfbdd4f48c499a01b99368f2076ff09560a06073e08daf54452910`
-- Created: `2023-03-03T19:27:09.04971534Z`
-- Virtual Size: ~ 579.92 Mb  
+- Image ID: `sha256:3db49da511265be65623e1d77ff79c66cd1a730a94a3c586de7ec980362de1ca`
+- Created: `2023-03-07T19:22:51.677465713Z`
+- Virtual Size: ~ 388.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Entrypoint: `["entrypoint"]`
-- Command: `["-M","--repl"]`
+- Command: `["clj"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/opt/java/openjdk`
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.6+10`
-  - `CLOJURE_VERSION=1.11.1.1237`
+  - `JAVA_VERSION=jdk8u362-b09`
+  - `CLOJURE_VERSION=1.11.1.1252`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=22.04`
@@ -183,32 +182,6 @@ $ apt-get source -qq --print-uris bash=5.1-6ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.dsc' bash_5.1-6ubuntu1.dsc 2426 SHA512:9c808b5b8a281e01c5a4a503eca84fca8b21a2153dc4e7abbedda21346ae4005c806ffe7afd689b7ff66af8d431b9b4bebf2f1324745c01ed5f3ee219a515a88
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA512:95d3acc542231cb893e1347c7d9dd66687f68cd347a0e9e126fde2d14e68c5b5530d1a5866eafa781e88aa013fcf72b4ad56d2e484c2ac7a69bd90bb149a9b86
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.debian.tar.xz' bash_5.1-6ubuntu1.debian.tar.xz 99652 SHA512:da77655882d0977656b75c750589307c54c7d5dd28b1cfc357d4a474ebf26399a91cfa19c4ba381e0a59a8f115f8381d432e82f2e659cb9bcbebf3fa0cd77bc1
-```
-
-### `dpkg` source package: `binutils=2.38-4ubuntu2.1`
-
-Binary Packages:
-
-- `binutils=2.38-4ubuntu2.1`
-- `binutils-common:amd64=2.38-4ubuntu2.1`
-- `binutils-x86-64-linux-gnu=2.38-4ubuntu2.1`
-- `libbinutils:amd64=2.38-4ubuntu2.1`
-- `libctf-nobfd0:amd64=2.38-4ubuntu2.1`
-- `libctf0:amd64=2.38-4ubuntu2.1`
-
-Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`, `/usr/share/doc/libctf-nobfd0/copyright`, `/usr/share/doc/libctf0/copyright`)
-
-- `GFDL`
-- `GPL`
-- `LGPL`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris binutils=2.38-4ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-4ubuntu2.1.dsc' binutils_2.38-4ubuntu2.1.dsc 8861 SHA512:fe634cc317cc0773d21e482750877a1561d4783dffd0f1ddca5b4409fee6409cbbd8e22fbc373b6582381f9d7f50a3cb48913707390165e91b0611db10cd84cd
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38.orig.tar.xz' binutils_2.38.orig.tar.xz 23651408 SHA512:8bf0b0d193c9c010e0518ee2b2e5a830898af206510992483b427477ed178396cd210235e85fd7bd99a96fc6d5eedbeccbd48317a10f752b7336ada8b2bb826d
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-4ubuntu2.1.debian.tar.xz' binutils_2.38-4ubuntu2.1.debian.tar.xz 289140 SHA512:7e92fadaad3ed3483e8765668f285f9fd60492caf96c1092d5fe3b91d83984d66d3188b35486cf6a6168e70a3ecd545fb5fa4c0cbf9568e032c73fe489c57982
 ```
 
 ### `dpkg` source package: `brotli=1.0.9-2build6`
@@ -2368,14 +2341,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=249.11-0ubuntu3.6
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.6.dsc' systemd_249.11-0ubuntu3.6.dsc 5903 SHA512:566d0b0ad0291049e0341d707945791c76a0e537e49ea68f8971bacb4420c17674d0675b03f3902ab11612dc66c7e2cc667186e1c20821d5230026cf6d122820
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11.orig.tar.gz' systemd_249.11.orig.tar.gz 10622702 SHA512:fed7f81933648945a4bfac9fb12150ecd84d32181f79be0e14e0b3a789343a87569f868670e0b8dfc2801fab39f7490f95ee8c29ba831d7611f78c14ace5ddd8
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.6.debian.tar.xz' systemd_249.11-0ubuntu3.6.debian.tar.xz 236508 SHA512:6100ead57f27e5b965ff2849db45c67e6885c45db022356c5a9a67055199bc667692967cde4b416038fe37e2b82efdd6d6777bbc65a3fa2aeb0b909d76efc2bc
-```
 
 ### `dpkg` source package: `sysvinit=3.01-1ubuntu1`
 
