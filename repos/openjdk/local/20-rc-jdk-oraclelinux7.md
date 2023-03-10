@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d910e5307811a84c7d6b8d6c4700ea7265f4bfd8c44aa74e3c9a24be5c7ff338`
-- Created: `2023-02-16T00:39:56.876604894Z`
+- Image ID: `sha256:9afcd3614227f398410e27c3ca81678d5bf416710c4897dacd699292fedd7230`
+- Created: `2023-03-08T20:55:18.499011955Z`
 - Virtual Size: ~ 518.78 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -159,15 +159,15 @@ $ dnf --quiet download --source --url dejavu-sans-fonts-2.33-6.el7.noarch
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/dejavu-fonts-2.33-6.el7.src.rpm
 ```
 
-### `rpm` package: `diffutils-3.3-5.el7.x86_64`
+### `rpm` package: `diffutils-3.3-6.el7_9.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url diffutils-3.3-5.el7
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/diffutils-3.3-5.el7.src.rpm
+$ dnf --quiet download --source --url diffutils-3.3-6.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/diffutils-3.3-6.el7_9.src.rpm
 ```
 
 ### `rpm` package: `elfutils-libelf-0.176-5.el7.x86_64`
@@ -1271,13 +1271,13 @@ $ dnf --quiet download --source --url yum-utils-1.1.31-54.0.1.el7_8.noarch
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/yum-utils-1.1.31-54.0.1.el7_8.src.rpm
 ```
 
-### `rpm` package: `zlib-1.2.7-20.0.1.el7_9.x86_64`
+### `rpm` package: `zlib-1.2.7-21.el7_9.x86_64`
 
 Licenses (from `rpm --query`): zlib and Boost
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url zlib-1.2.7-20.0.1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/zlib-1.2.7-20.0.1.el7_9.src.rpm
+$ dnf --quiet download --source --url zlib-1.2.7-21.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/zlib-1.2.7-21.el7_9.src.rpm
 ```

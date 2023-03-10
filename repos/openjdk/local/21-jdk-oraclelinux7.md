@@ -1,10 +1,10 @@
-# `openjdk:21-ea-12-jdk-oraclelinux7`
+# `openjdk:21-ea-13-jdk-oraclelinux7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:cdefac679b3aea4809ed6d7e44e0e08ce6f1bbbba9df7a19388bceef3aabdf36`
-- Created: `2023-03-04T00:26:58.707987509Z`
-- Virtual Size: ~ 520.77 Mb  
+- Image ID: `sha256:edcc14f6a48b4a5c752ddc579f4591751352fd367c03635025441d68c5d7c2e5`
+- Created: `2023-03-09T23:27:01.983899771Z`
+- Virtual Size: ~ 520.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-21/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/java/openjdk-21`
   - `LANG=en_US.UTF-8`
-  - `JAVA_VERSION=21-ea+12`
+  - `JAVA_VERSION=21-ea+13`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -159,15 +159,15 @@ $ dnf --quiet download --source --url dejavu-sans-fonts-2.33-6.el7.noarch
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/dejavu-fonts-2.33-6.el7.src.rpm
 ```
 
-### `rpm` package: `diffutils-3.3-5.el7.x86_64`
+### `rpm` package: `diffutils-3.3-6.el7_9.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url diffutils-3.3-5.el7
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/diffutils-3.3-5.el7.src.rpm
+$ dnf --quiet download --source --url diffutils-3.3-6.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/diffutils-3.3-6.el7_9.src.rpm
 ```
 
 ### `rpm` package: `elfutils-libelf-0.176-5.el7.x86_64`
@@ -1271,13 +1271,13 @@ $ dnf --quiet download --source --url yum-utils-1.1.31-54.0.1.el7_8.noarch
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/yum-utils-1.1.31-54.0.1.el7_8.src.rpm
 ```
 
-### `rpm` package: `zlib-1.2.7-20.0.1.el7_9.x86_64`
+### `rpm` package: `zlib-1.2.7-21.el7_9.x86_64`
 
 Licenses (from `rpm --query`): zlib and Boost
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url zlib-1.2.7-20.0.1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/zlib-1.2.7-20.0.1.el7_9.src.rpm
+$ dnf --quiet download --source --url zlib-1.2.7-21.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/zlib-1.2.7-21.el7_9.src.rpm
 ```
