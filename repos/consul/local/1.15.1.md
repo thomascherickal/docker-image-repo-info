@@ -1,10 +1,10 @@
-# `consul:1.15.0`
+# `consul:1.15.1`
 
 ## Docker Metadata
 
-- Image ID: `sha256:cb9976413d3a8199bbdc513bff41028d8b638395ea76387dc3e9989316ba6936`
-- Created: `2023-02-25T00:36:46.807772604Z`
-- Virtual Size: ~ 152.62 Mb  
+- Image ID: `sha256:abeb15b9ddc0e40def7b19f8d3ce62b59b01b91eab2842c688806ce07b56a0f1`
+- Created: `2023-03-08T20:19:32.674588538Z`
+- Virtual Size: ~ 153.26 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -20,7 +20,7 @@
   - `org.opencontainers.image.title=consul`
   - `org.opencontainers.image.url=https://www.consul.io/`
   - `org.opencontainers.image.vendor=HashiCorp`
-  - `org.opencontainers.image.version=1.15.0`
+  - `org.opencontainers.image.version=1.15.1`
 
 ## `apk` (`.apk`-based packages)
 
@@ -248,16 +248,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libc6-compat`
 
 ```console
-libc6-compat-1.2.2-r7 description:
+libc6-compat-1.2.2-r8 description:
 compatibility libraries for glibc
 
-libc6-compat-1.2.2-r7 webpage:
+libc6-compat-1.2.2-r8 webpage:
 https://musl.libc.org/
 
-libc6-compat-1.2.2-r7 installed size:
+libc6-compat-1.2.2-r8 installed size:
 12 KiB
 
-libc6-compat-1.2.2-r7 license:
+libc6-compat-1.2.2-r8 license:
 MIT
 
 ```
@@ -384,16 +384,16 @@ OpenSSL
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.2-r7 description:
+musl-1.2.2-r8 description:
 the musl c library (libc) implementation
 
-musl-1.2.2-r7 webpage:
+musl-1.2.2-r8 webpage:
 https://musl.libc.org/
 
-musl-1.2.2-r7 installed size:
+musl-1.2.2-r8 installed size:
 608 KiB
 
-musl-1.2.2-r7 license:
+musl-1.2.2-r8 license:
 MIT
 
 ```
