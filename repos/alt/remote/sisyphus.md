@@ -1,7 +1,7 @@
 ## `alt:sisyphus`
 
 ```console
-$ docker pull alt@sha256:7ef584814021b6b98564215dfe4a4b51a51cea9bf80bcc6de1ce2e9d273b44ed
+$ docker pull alt@sha256:0f54a13afa45aa350f713dede5bf4b8d4bff029db11da20eb1b8e757bb8abe7b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -49,24 +49,24 @@ CMD ["/bin/bash"]
 ### `alt:sisyphus` - linux; arm variant v7
 
 ```console
-$ docker pull alt@sha256:3052e8b08f5790cf54886173ef3d76761bcf656e03a07d01b0d59f1a7b0a0b4d
+$ docker pull alt@sha256:43070dcde5bde43ae7f688cd13e6d47d730d16e736fb6fca4cb128d36c915d59
 ```
 
--	Docker Version: 20.10.17
+-	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **36.6 MB (36565979 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c78f82a54eeeec3d4fbc8141c3c949f548163099184f14c1be9fe4b2c17332a6`
+-	Image ID: `sha256:5cbfaefb0178fb4546f4bc0eb0338a2a0e9116b378474d772f887d2b8a404e68`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Tue, 15 Nov 2022 00:57:20 GMT
+# Mon, 13 Mar 2023 16:13:31 GMT
 MAINTAINER [Alexey Shabalin <shaba@altlinux.org>] [Mikhail Gordeev <obirvalger@altlinux.org]
-# Tue, 15 Nov 2022 00:57:47 GMT
+# Mon, 13 Mar 2023 16:13:55 GMT
 ADD file:68303bcb4e6e46984292cc1bcd76c055370bcb8130fd91060a88cf3b213cc6b9 in / 
-# Tue, 15 Nov 2022 00:57:48 GMT
+# Mon, 13 Mar 2023 16:13:56 GMT
 RUN true > /etc/security/limits.d/50-defaults.conf
-# Tue, 15 Nov 2022 00:57:48 GMT
+# Mon, 13 Mar 2023 16:13:56 GMT
 CMD ["/bin/bash"]
 ```
 
@@ -75,8 +75,8 @@ CMD ["/bin/bash"]
 		Last Modified: Tue, 15 Nov 2022 00:58:45 GMT  
 		Size: 36.6 MB (36565786 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:703ebe3f1790394fe341d6cb9515e21dac29645f45aab7ce8e8d2532458da704`  
-		Last Modified: Tue, 15 Nov 2022 00:58:38 GMT  
+	-	`sha256:43076048366bea9e5f72f3bee8224c27ff7c3909d1978646b79511e7a689bf1f`  
+		Last Modified: Mon, 13 Mar 2023 16:14:41 GMT  
 		Size: 193.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
