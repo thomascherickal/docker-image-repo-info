@@ -11,7 +11,7 @@
 ## `archlinux:base`
 
 ```console
-$ docker pull archlinux@sha256:30365f3f73505e0ef43b91981a6a5cd95c5d62494458117157cdf36ee0e78267
+$ docker pull archlinux@sha256:979eb993b12e665fcf0c7e454c406ed68e596f3669844f66a56ca859225e7058
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -21,50 +21,85 @@ $ docker pull archlinux@sha256:30365f3f73505e0ef43b91981a6a5cd95c5d6249445811715
 ### `archlinux:base` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:a65f53f97982062eadc297a145b6d4fbb7e59dfd61e1cec0e906435741595c3e
+$ docker pull archlinux@sha256:4a1f1f983df03a1cee7bc7813f79889cd4386c71f8590397d283f925c0a7422d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **142.2 MB (142248323 bytes)**  
+-	Total Size: **142.2 MB (142242227 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:99ae5175e028d2a534a76f7af729d0f50fa5be4fcd7233e09bc5a1dcc753990d`
+-	Image ID: `sha256:cff75e574221db7a20bc04e1d20d5d5151b20b30f5ad85f97758859613f92a3b`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
-# Mon, 06 Mar 2023 20:20:06 GMT
-COPY dir:fb86575c29a95c41862e97a810a71a359414ece74fbbacbaaaa83aa57811007a in / 
-# Mon, 06 Mar 2023 20:20:08 GMT
+# Mon, 13 Mar 2023 20:20:05 GMT
+COPY dir:afee26977378a8da2f08119e932279bd8af167ac19027b4b157f1d10cf254fab in / 
+# Mon, 13 Mar 2023 20:20:06 GMT
 RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=TEMPLATE_VERSION_ID' /etc/os-release
-# Mon, 06 Mar 2023 20:20:08 GMT
+# Mon, 13 Mar 2023 20:20:06 GMT
 ENV LANG=C.UTF-8
-# Mon, 06 Mar 2023 20:20:08 GMT
+# Mon, 13 Mar 2023 20:20:07 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:f13ce42b43249e06dbc68212e727fb44794adcf8a88d2351fba0101c01a7b929`  
-		Last Modified: Mon, 06 Mar 2023 20:21:39 GMT  
-		Size: 142.2 MB (142240383 bytes)  
+	-	`sha256:d24ecaff127acda26655a6338c1604a6b28e6fd6e8fc8fd33b75437fe51f078e`  
+		Last Modified: Mon, 13 Mar 2023 20:21:41 GMT  
+		Size: 142.2 MB (142234280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:06e62cddd826166f44ecdc4776ec30cf2cf75dd8b564658436a102ce7478d335`  
-		Last Modified: Mon, 06 Mar 2023 20:21:19 GMT  
-		Size: 7.9 KB (7940 bytes)  
+	-	`sha256:024146e6ccb67f2e2267f1ecc87275ff2283583ac0feab1395bd6fd0abd5c026`  
+		Last Modified: Mon, 13 Mar 2023 20:21:22 GMT  
+		Size: 7.9 KB (7947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `archlinux:base-20230312.0.133040`
 
 ```console
-$ docker pull archlinux@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+$ docker pull archlinux@sha256:979eb993b12e665fcf0c7e454c406ed68e596f3669844f66a56ca859225e7058
 ```
 
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	linux; amd64
+
+### `archlinux:base-20230312.0.133040` - linux; amd64
+
+```console
+$ docker pull archlinux@sha256:4a1f1f983df03a1cee7bc7813f79889cd4386c71f8590397d283f925c0a7422d
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **142.2 MB (142242227 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:cff75e574221db7a20bc04e1d20d5d5151b20b30f5ad85f97758859613f92a3b`
+-	Default Command: `["\/usr\/bin\/bash"]`
+
+```dockerfile
+# Mon, 13 Mar 2023 20:20:05 GMT
+COPY dir:afee26977378a8da2f08119e932279bd8af167ac19027b4b157f1d10cf254fab in / 
+# Mon, 13 Mar 2023 20:20:06 GMT
+RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=TEMPLATE_VERSION_ID' /etc/os-release
+# Mon, 13 Mar 2023 20:20:06 GMT
+ENV LANG=C.UTF-8
+# Mon, 13 Mar 2023 20:20:07 GMT
+CMD ["/usr/bin/bash"]
+```
+
+-	Layers:
+	-	`sha256:d24ecaff127acda26655a6338c1604a6b28e6fd6e8fc8fd33b75437fe51f078e`  
+		Last Modified: Mon, 13 Mar 2023 20:21:41 GMT  
+		Size: 142.2 MB (142234280 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:024146e6ccb67f2e2267f1ecc87275ff2283583ac0feab1395bd6fd0abd5c026`  
+		Last Modified: Mon, 13 Mar 2023 20:21:22 GMT  
+		Size: 7.9 KB (7947 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `archlinux:base-devel`
 
 ```console
-$ docker pull archlinux@sha256:da2cfd0975150f4fa2091141e6362e9630e0bb8fb20840c47fd6fa9bf0f0122b
+$ docker pull archlinux@sha256:a1a2a043d8da23e7b5dc4ed317eb347fdba2bbfb1ef16a0f4a3b11af079fe4fa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -74,50 +109,85 @@ $ docker pull archlinux@sha256:da2cfd0975150f4fa2091141e6362e9630e0bb8fb20840c47
 ### `archlinux:base-devel` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:9988f99b27c40c82c00ff138c9541d3bbbb8d05bfbe678211c5a6923a4e84772
+$ docker pull archlinux@sha256:22c7ac88ee00e5be95c044b4dae7776e02d695399556ed7c3496384a49c6d8d9
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **245.2 MB (245230845 bytes)**  
+-	Total Size: **245.2 MB (245231648 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:97342c4da63f8760b15bb7ad2028f7ede20591bdff0d1048974e6ec8f202f7bc`
+-	Image ID: `sha256:974c348c74f0463466776cfe512ee909b9f9ab937eb3a0fbd9954379db7ba06f`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
-# Mon, 06 Mar 2023 20:21:05 GMT
-COPY dir:85e801d5104e24925c4ba0a585ff1227475b04c7885fc0d6a7b36658158629f6 in / 
-# Mon, 06 Mar 2023 20:21:09 GMT
+# Mon, 13 Mar 2023 20:21:07 GMT
+COPY dir:6cd30a0c7a3ffa597ef65b4f3d914b13d51c8e2a70299f0eec09c6804be58e74 in / 
+# Mon, 13 Mar 2023 20:21:10 GMT
 RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=TEMPLATE_VERSION_ID' /etc/os-release
-# Mon, 06 Mar 2023 20:21:09 GMT
+# Mon, 13 Mar 2023 20:21:11 GMT
 ENV LANG=C.UTF-8
-# Mon, 06 Mar 2023 20:21:09 GMT
+# Mon, 13 Mar 2023 20:21:11 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:6df10e147b58b3665928d52d81decc4a5f82594edb43f401e10cdc3f33b8e778`  
-		Last Modified: Mon, 06 Mar 2023 20:22:24 GMT  
-		Size: 245.2 MB (245222117 bytes)  
+	-	`sha256:1c7df861908c5cdc63525ce742a3331ef82e3d297ab2950091737a8bdd823c1a`  
+		Last Modified: Mon, 13 Mar 2023 20:22:25 GMT  
+		Size: 245.2 MB (245222932 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d6a5e71ef32dcb7dbb34eb6268fc2fa886886227cd4a7f461151e750440b8c7b`  
-		Last Modified: Mon, 06 Mar 2023 20:21:49 GMT  
-		Size: 8.7 KB (8728 bytes)  
+	-	`sha256:95ae8051f50ebcbcea2f4dd988a67851d02e9ddbe134e3539dbe69ef14416256`  
+		Last Modified: Mon, 13 Mar 2023 20:21:52 GMT  
+		Size: 8.7 KB (8716 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `archlinux:base-devel-20230312.0.133040`
 
 ```console
-$ docker pull archlinux@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+$ docker pull archlinux@sha256:a1a2a043d8da23e7b5dc4ed317eb347fdba2bbfb1ef16a0f4a3b11af079fe4fa
 ```
 
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	linux; amd64
+
+### `archlinux:base-devel-20230312.0.133040` - linux; amd64
+
+```console
+$ docker pull archlinux@sha256:22c7ac88ee00e5be95c044b4dae7776e02d695399556ed7c3496384a49c6d8d9
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **245.2 MB (245231648 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:974c348c74f0463466776cfe512ee909b9f9ab937eb3a0fbd9954379db7ba06f`
+-	Default Command: `["\/usr\/bin\/bash"]`
+
+```dockerfile
+# Mon, 13 Mar 2023 20:21:07 GMT
+COPY dir:6cd30a0c7a3ffa597ef65b4f3d914b13d51c8e2a70299f0eec09c6804be58e74 in / 
+# Mon, 13 Mar 2023 20:21:10 GMT
+RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=TEMPLATE_VERSION_ID' /etc/os-release
+# Mon, 13 Mar 2023 20:21:11 GMT
+ENV LANG=C.UTF-8
+# Mon, 13 Mar 2023 20:21:11 GMT
+CMD ["/usr/bin/bash"]
+```
+
+-	Layers:
+	-	`sha256:1c7df861908c5cdc63525ce742a3331ef82e3d297ab2950091737a8bdd823c1a`  
+		Last Modified: Mon, 13 Mar 2023 20:22:25 GMT  
+		Size: 245.2 MB (245222932 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:95ae8051f50ebcbcea2f4dd988a67851d02e9ddbe134e3539dbe69ef14416256`  
+		Last Modified: Mon, 13 Mar 2023 20:21:52 GMT  
+		Size: 8.7 KB (8716 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `archlinux:latest`
 
 ```console
-$ docker pull archlinux@sha256:30365f3f73505e0ef43b91981a6a5cd95c5d62494458117157cdf36ee0e78267
+$ docker pull archlinux@sha256:979eb993b12e665fcf0c7e454c406ed68e596f3669844f66a56ca859225e7058
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -127,33 +197,33 @@ $ docker pull archlinux@sha256:30365f3f73505e0ef43b91981a6a5cd95c5d6249445811715
 ### `archlinux:latest` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:a65f53f97982062eadc297a145b6d4fbb7e59dfd61e1cec0e906435741595c3e
+$ docker pull archlinux@sha256:4a1f1f983df03a1cee7bc7813f79889cd4386c71f8590397d283f925c0a7422d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **142.2 MB (142248323 bytes)**  
+-	Total Size: **142.2 MB (142242227 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:99ae5175e028d2a534a76f7af729d0f50fa5be4fcd7233e09bc5a1dcc753990d`
+-	Image ID: `sha256:cff75e574221db7a20bc04e1d20d5d5151b20b30f5ad85f97758859613f92a3b`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
-# Mon, 06 Mar 2023 20:20:06 GMT
-COPY dir:fb86575c29a95c41862e97a810a71a359414ece74fbbacbaaaa83aa57811007a in / 
-# Mon, 06 Mar 2023 20:20:08 GMT
+# Mon, 13 Mar 2023 20:20:05 GMT
+COPY dir:afee26977378a8da2f08119e932279bd8af167ac19027b4b157f1d10cf254fab in / 
+# Mon, 13 Mar 2023 20:20:06 GMT
 RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=TEMPLATE_VERSION_ID' /etc/os-release
-# Mon, 06 Mar 2023 20:20:08 GMT
+# Mon, 13 Mar 2023 20:20:06 GMT
 ENV LANG=C.UTF-8
-# Mon, 06 Mar 2023 20:20:08 GMT
+# Mon, 13 Mar 2023 20:20:07 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:f13ce42b43249e06dbc68212e727fb44794adcf8a88d2351fba0101c01a7b929`  
-		Last Modified: Mon, 06 Mar 2023 20:21:39 GMT  
-		Size: 142.2 MB (142240383 bytes)  
+	-	`sha256:d24ecaff127acda26655a6338c1604a6b28e6fd6e8fc8fd33b75437fe51f078e`  
+		Last Modified: Mon, 13 Mar 2023 20:21:41 GMT  
+		Size: 142.2 MB (142234280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:06e62cddd826166f44ecdc4776ec30cf2cf75dd8b564658436a102ce7478d335`  
-		Last Modified: Mon, 06 Mar 2023 20:21:19 GMT  
-		Size: 7.9 KB (7940 bytes)  
+	-	`sha256:024146e6ccb67f2e2267f1ecc87275ff2283583ac0feab1395bd6fd0abd5c026`  
+		Last Modified: Mon, 13 Mar 2023 20:21:22 GMT  
+		Size: 7.9 KB (7947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
