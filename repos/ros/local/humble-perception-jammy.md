@@ -174,15 +174,9 @@ Licenses: (parsed from: `/usr/share/doc/libapparmor1/copyright`)
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apparmor=3.0.4-2ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apparmor/apparmor_3.0.4-2ubuntu2.1.dsc' apparmor_3.0.4-2ubuntu2.1.dsc 3256 SHA512:b565764305bb21f1d2aa140fda7b0323e650c01ae9b08ebb1641e2aaef921fce6610760c7762458e900a311d773fc3f1bd56a172bbcc7cbcc7c2633196b8d468
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apparmor/apparmor_3.0.4.orig.tar.gz' apparmor_3.0.4.orig.tar.gz 7796852 SHA512:1edd800771f46fab9bc5274842e64482b7fd4a5ba4de9855d621baf1d08c8236bfa7752dd9ab3dee095f8e0798129241a9aebf68ed1c994ae5597086a4a1a8ca
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apparmor/apparmor_3.0.4.orig.tar.gz.asc' apparmor_3.0.4.orig.tar.gz.asc 870 SHA512:870d3037562ae003e642adcd244b74191e9108cebd18e6a925959e595b5a375e2dbfda686349e4cc980981cdd38239a099d3e32f1e824b4a9b477584c8d311a9
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apparmor/apparmor_3.0.4-2ubuntu2.1.debian.tar.xz' apparmor_3.0.4-2ubuntu2.1.debian.tar.xz 94372 SHA512:bd2de31e6d6216a7e7993bc92ccdfdff015dba53f84d8f9c3e6f0ccc6f7a2ca0641014771f5d0e231adf7e063d236b3e71260714c34997beef6d53d44c62eadc
-```
 
 ### `dpkg` source package: `apt=2.4.8`
 
