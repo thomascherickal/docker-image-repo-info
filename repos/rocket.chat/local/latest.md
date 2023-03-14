@@ -1,18 +1,18 @@
-# `rocket.chat:5.4.0`
+# `rocket.chat:6.0.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1626d4ea0fa51197280a1c045f4efe91427d81b83caf9fdee8f216ef7a05df32`
-- Created: `2023-03-01T16:50:02.092067319Z`
-- Virtual Size: ~ 1.19 Gb  
+- Image ID: `sha256:7a2253e1d2c626ec13415db4a9fa81da63f2330463532076e43cd6404ef6b2c6`
+- Created: `2023-03-10T22:19:07.833906275Z`
+- Virtual Size: ~ 1.30 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["node","main.js"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `NODE_ENV=production`
-  - `NODE_VERSION=14.19.3`
-  - `RC_VERSION=5.4.0`
+  - `NODE_VERSION=14.21.2`
+  - `RC_VERSION=6.0.0`
   - `DEPLOY_METHOD=docker-official`
   - `MONGO_URL=mongodb://db:27017/meteor`
   - `HOME=/tmp`
