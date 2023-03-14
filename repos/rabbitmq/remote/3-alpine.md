@@ -1,7 +1,7 @@
 ## `rabbitmq:3-alpine`
 
 ```console
-$ docker pull rabbitmq@sha256:4de162c9cc42767ac008073744ea4e1d6376ea22850fd063f21b4a70bb0fa11b
+$ docker pull rabbitmq@sha256:28bc80729711cb8784b41c1f34cfa10bdf0f87eeb1fc77028be2476530e16ec1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -119,20 +119,20 @@ CMD ["rabbitmq-server"]
 ### `rabbitmq:3-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull rabbitmq@sha256:ba7c649042219b03c72b6b8a4f39b1410989ac589dbc83c0788c6d2909bd9db7
+$ docker pull rabbitmq@sha256:c5b7ebc5904fd8663b4fdcde99953a18c515707fe694d0e8fcd8d319ecc7c362
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **63.8 MB (63758729 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a5e120356c34d206b6cd2ab73a1edce1905c743cf7e6211de8b3c0c7a37b370a`
+-	Image ID: `sha256:c7a7c8b0bf4371262fba393f3d705e7b0816dece3d4ee606a87be0b71219043b`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["rabbitmq-server"]`
 
 ```dockerfile
-# Fri, 10 Feb 2023 20:49:28 GMT
+# Mon, 13 Mar 2023 16:12:44 GMT
 ADD file:d825d9aef59df0df23c0140a490998407ee0a62a051699b5c050aef7cb03f042 in / 
-# Fri, 10 Feb 2023 20:49:28 GMT
+# Mon, 13 Mar 2023 16:12:44 GMT
 CMD ["/bin/sh"]
 # Thu, 02 Mar 2023 23:20:13 GMT
 COPY /usr/local/bin/ /usr/local/bin/ # buildkit
