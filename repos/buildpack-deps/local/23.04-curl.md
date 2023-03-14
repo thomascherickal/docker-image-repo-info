@@ -252,13 +252,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cdebconf=0.264ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cdebconf/cdebconf_0.264ubuntu1.dsc' cdebconf_0.264ubuntu1.dsc 2898 SHA512:f34fac21b8ef101bf2e2503aa55964be0050c1fb0d689034a1b3d9df5181acacd497e44c3f2e83898b461f6fa44043cf99d757412fbf7761c8e946182acc3331
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cdebconf/cdebconf_0.264ubuntu1.tar.xz' cdebconf_0.264ubuntu1.tar.xz 282992 SHA512:5a6683e2e5f42747558a4f333ff50ac6acec3b7e4dae48aafdd48a721ccfc2fc4c1666038df9879a494df4ab08c3095f813f94d71864cba9a174c7c674f89c3f
-```
 
 ### `dpkg` source package: `coreutils=9.1-1ubuntu2`
 
@@ -306,15 +302,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `X11`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.87.0-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.87.0-1ubuntu1.dsc' curl_7.87.0-1ubuntu1.dsc 3107 SHA512:59f98f1adb587cce5bb46a88f7f479687720d845c2328ed760791868ed68da87f773d54a7ec0adc08666deed1d75a3dda23babe842d5d0fb42d49f6a91fd0649
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.87.0.orig.tar.gz' curl_7.87.0.orig.tar.gz 4291127 SHA512:939be5a7d82f7ed4e96173639aa50f5e6748b387d3f458f3845c584ad24d15d77b8cd64f4f2dc11bcc207b097d125d1dc713a9769964e3d4766182a217e9898d
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.87.0.orig.tar.gz.asc' curl_7.87.0.orig.tar.gz.asc 488 SHA512:de7405f14bf4e2573a3070fba9ead65bef3e5bbe3911175aa7d5152c84ee28137d5c07f4827d51c63fc9057a8106cf8f169ecc6e9f5d1a8a9b092d26d744f3f9
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.87.0-1ubuntu1.debian.tar.xz' curl_7.87.0-1ubuntu1.debian.tar.xz 39424 SHA512:a6d239ae89ad4768777dfb7653029d2b866cafdfaf3a8fcd19c34e5e97793b7c1fdf6979b4f6a0a96bd28df4de2049d75c796c09fe8f437320121a2a8d8f2303
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-10`
 
@@ -579,15 +569,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.36-0ubuntu4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36-0ubuntu4.dsc' glibc_2.36-0ubuntu4.dsc 8718 SHA512:c731c14abae40b97be15d00a53ba478862e32dbd21e3a859220d4d08e56e300236c9dc12f7646d14bfd70a3b83fe720e5198defab0fac7f860b4b13c10f08874
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36.orig.tar.xz' glibc_2.36.orig.tar.xz 18610836 SHA512:9ea0bbda32f83a85b7da0c34f169607fb8a102f0a11a914e6bf531be47d1bef4f5307128286cffa1e2dc5879f0e6ccaef527dd353486883fa332a0b44bde8b3e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36.orig.tar.xz.asc' glibc_2.36.orig.tar.xz.asc 833 SHA512:b6999ebc4067e08950207e9c67f5172c6d43144e6680677bf3d93093c2270cb4c6e75f9ad37a60e7fec243141fd64b4348782c5794fcf03be363adf0b4543d53
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.36-0ubuntu4.debian.tar.xz' glibc_2.36-0ubuntu4.debian.tar.xz 931048 SHA512:6a70647fceb9f8db048865685f0101b45a87291bbd0b10780ed45a0e9c8ff353edd31ade36976e05cf7e95d479e24d08b7d0eb972330bc9d806be461d58baa66
-```
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg1-1.1ubuntu1`
 
@@ -1063,15 +1047,9 @@ Licenses: (parsed from: `/usr/share/doc/libseccomp2/copyright`)
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libseccomp=2.5.4-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.4-1ubuntu2.dsc' libseccomp_2.5.4-1ubuntu2.dsc 2799 SHA512:4fca61fc6e892446a4926f920a9f428aa34536346ccb4f2a7866b321893eeff5b8c009937e6270675329e1fde515630346ff4fa60ed8a10d2a1f0d3bf918636f
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.4.orig.tar.gz' libseccomp_2.5.4.orig.tar.gz 637228 SHA512:92650bd7d1d48b383f402a536b97a017fd0f6ad1234daf4b938d01c92e8d134a01d2f2dd45fd9e2d025d7556bd1386ec360402145a87f20580c85949d62cea0e
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.4.orig.tar.gz.asc' libseccomp_2.5.4.orig.tar.gz.asc 833 SHA512:10ce632da2762e3b5acb468194b2424d80bab786cc5923a8ee0b0684290282ef2f0a17192680afb36626c82e73a3ba64e73f248ed63cd3e55c3cf8cee4e1e447
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libseccomp/libseccomp_2.5.4-1ubuntu2.debian.tar.xz' libseccomp_2.5.4-1ubuntu2.debian.tar.xz 23632 SHA512:81a06032af40f3638dc603941f586bab9c66d866f6632478c49f7e82ac07702db76981439bceea81f1129a9ba324db05e30845ba74ebe1fcb08de179aa702b22
-```
 
 ### `dpkg` source package: `libselinux=3.4-1build3`
 
@@ -1825,14 +1803,9 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-3`
 - `GPL-3.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=3.05-7ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_3.05-7ubuntu2.dsc' sysvinit_3.05-7ubuntu2.dsc 2466 SHA512:417a2e7412d0f35c290fde8a163eb91dcabafb3ec1c34e094053bb05453271288f4b82fa92c707b8c75a6b0b9b7b952571ff55b3e1d85e7e5a22fbd0fe4d9e62
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_3.05.orig.tar.gz' sysvinit_3.05.orig.tar.gz 435554 SHA512:7939a959e60108ac0ebe9504c3cf472a7c24711063da0d01d9dbdbe8e4db018d9b4d7313a4552ac5032af61db71f18f30608e362ca8563003bfe2d9edb66cfba
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_3.05-7ubuntu2.debian.tar.xz' sysvinit_3.05-7ubuntu2.debian.tar.xz 135292 SHA512:9456dd0fb150403c94e0b5f25c2664b5a705aa813fdbc1efa564e24a5f9d958009faf4e17140cff81e240a7b9e164883ac359684222ff05d19e34af363fc6b78
-```
 
 ### `dpkg` source package: `tar=1.34+dfsg-1.1`
 
