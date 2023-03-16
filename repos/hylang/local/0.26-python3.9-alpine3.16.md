@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1a4e0a617dd58022d4ad62dff0e0435f6404a68eb4c8e5d9abd80dba8d9a68c5`
-- Created: `2023-02-24T23:56:33.696975927Z`
+- Image ID: `sha256:243726bac6c90f5891156f3eba30f5d52d57cc1b13e715b613c5ac7b423f06ba`
+- Created: `2023-03-14T04:54:36.774021793Z`
 - Virtual Size: ~ 55.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -263,16 +263,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcom_err`
 
 ```console
-libcom_err-1.46.5-r0 description:
+libcom_err-1.46.6-r0 description:
 Common error description library
 
-libcom_err-1.46.5-r0 webpage:
+libcom_err-1.46.6-r0 webpage:
 http://e2fsprogs.sourceforge.net
 
-libcom_err-1.46.5-r0 installed size:
+libcom_err-1.46.6-r0 installed size:
 24 KiB
 
-libcom_err-1.46.5-r0 license:
+libcom_err-1.46.6-r0 license:
 GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT
 
 ```
