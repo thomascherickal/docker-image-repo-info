@@ -1,7 +1,7 @@
 ## `ubuntu:bionic`
 
 ```console
-$ docker pull ubuntu@sha256:d8e140ad8a0bbe4c30f341c83eda9747032c5d344cad955d4a0be7dc4c209a4d
+$ docker pull ubuntu@sha256:8aa9c2798215f99544d1ce7439ea9c3a6dfd82de607da1cec3a8a2fae005931b
 ```
 
 -	Manifest MIME: `application/vnd.oci.image.index.v1+json`
@@ -50,35 +50,35 @@ CMD ["/bin/bash"]
 ### `ubuntu:bionic` - linux; arm variant v7
 
 ```console
-$ docker pull ubuntu@sha256:d85f9e8f65828689ef2c9054d751a5842e870835f950d0a406e0b64988130661
+$ docker pull ubuntu@sha256:715ddeafc950876ef9451c460d43ac1ba3e90655f582d845c7f656ee557bd2b2
 ```
 
 -	Docker Version: 20.10.12
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **21.4 MB (21393555 bytes)**  
+-	Total Size: **21.4 MB (21394593 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:023593b1fda853a972410780b2f6e27925b41ea3cd504f278230c5c4b814eb1c`
+-	Image ID: `sha256:c0feaeaa2e651a8712ecfc0727458ba88952949b4b9136d20f0e7adb6a743c1f`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:12:28 GMT
+# Wed, 08 Mar 2023 03:27:01 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:12:28 GMT
+# Wed, 08 Mar 2023 03:27:01 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:12:28 GMT
+# Wed, 08 Mar 2023 03:27:01 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:12:28 GMT
+# Wed, 08 Mar 2023 03:27:01 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:12:32 GMT
-ADD file:69c0e030717df18a709c66c528354d7f774a9ec9299f6492fb8ee79990ae36ff in / 
-# Wed, 01 Mar 2023 03:12:32 GMT
+# Wed, 08 Mar 2023 03:27:08 GMT
+ADD file:21d7947367fe1aa8cc668c943d11c4841b0ead14b9103ef46fb8db8084603a75 in / 
+# Wed, 08 Mar 2023 03:27:09 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:103c14aa01473dfa662a8cba7d45692d6fefb30485916950f6d4ec51a4b43fd7`  
-		Last Modified: Wed, 01 Mar 2023 03:48:58 GMT  
-		Size: 21.4 MB (21393555 bytes)  
+	-	`sha256:55e299352d1e9c6f1d6e7aee23f9204c8e147eec9fb877be5649ad7f1af58bca`  
+		Last Modified: Wed, 08 Mar 2023 03:59:37 GMT  
+		Size: 21.4 MB (21394593 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
 ### `ubuntu:bionic` - linux; arm64 variant v8
