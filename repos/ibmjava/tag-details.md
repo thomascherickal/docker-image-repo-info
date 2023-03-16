@@ -14,7 +14,7 @@
 ## `ibmjava:8`
 
 ```console
-$ docker pull ibmjava@sha256:d33a8a01f6426c8e074e6fe7fc99307f6f69bade276cbc2500d2a8222cd82054
+$ docker pull ibmjava@sha256:a40f2d5d3cc1ef095f9a266fb84243936208e2189934f783a1afef4fa50ce88f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -27,53 +27,53 @@ $ docker pull ibmjava@sha256:d33a8a01f6426c8e074e6fe7fc99307f6f69bade276cbc2500d
 ### `ibmjava:8` - linux; amd64
 
 ```console
-$ docker pull ibmjava@sha256:0994a6bdad1423486d18d20b54e995104607b4e99d4baf0ca22896279ef6d687
+$ docker pull ibmjava@sha256:0e8e121a85d0c9b9f369a65959ab3279c9d8de1b3525c2c76a736692cff5c2fc
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **159.0 MB (158986201 bytes)**  
+-	Total Size: **159.0 MB (158985786 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ffcaf7abe8538e3490f63ea51ff7fd7462468d220bbeabb61dae7b8ed4afcefc`
+-	Image ID: `sha256:33b342131977ecc271be3175935d02504ab65b9a9d9e53e3c5f086731495d73e`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:02 GMT
-ADD file:66eb2ef5574cdf80bc0cb3af1637407620c1869f58cc7514395e3f5aea45cc3b in / 
-# Wed, 01 Mar 2023 03:18:02 GMT
+# Wed, 08 Mar 2023 03:22:44 GMT
+ADD file:4560926e076acae6b8396a9f1e760eee0f53e22e90ce8554dda57f1103547795 in / 
+# Wed, 08 Mar 2023 03:22:44 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 04:33:47 GMT
+# Thu, 16 Mar 2023 03:36:37 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 04:34:53 GMT
+# Thu, 16 Mar 2023 03:37:44 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='4abf605bdffc703f48c506177ee874da9498a4ee5ef322bfb9b4170b097bf2a8';          YML_FILE='8.0/jre/linux/x86_64/index.yml';          ;;        i386)          ESUM='225a8406e9a3134eb8674206caa131a7d5f528de96797a7a0cf69e292465d205';          YML_FILE='8.0/jre/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='052efe7ee98f17af3f027c11b9ef57edd136bf9431b8264a790d48cce905fffd';          YML_FILE='8.0/jre/linux/ppc64le/index.yml';          ;;        s390)          ESUM='47384a0933d2a60b0126eeb49c44be66124320f70355cd09a238a830906819ff';          YML_FILE='8.0/jre/linux/s390/index.yml';          ;;        s390x)          ESUM='bea07ae6d8d56ad7ae2d4937bed352d39622d364be848a036b111fdf15e50cab';          YML_FILE='8.0/jre/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 04:34:54 GMT
+# Thu, 16 Mar 2023 03:37:44 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:0064b1b97ec0775813740e8cb92821a6d84fd38eee70bafba9c12d9c37534661`  
-		Last Modified: Wed, 01 Mar 2023 13:18:18 GMT  
-		Size: 26.7 MB (26711153 bytes)  
+	-	`sha256:cd150c608fee7837e3a5b28be5c7b540eaf4efa27b3b755d55326470691ce2df`  
+		Last Modified: Sun, 12 Mar 2023 07:24:55 GMT  
+		Size: 26.7 MB (26710746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4584491976e0a2288553243d3caf1fc9a32b4827c131397e78d378040794a302`  
-		Last Modified: Thu, 02 Mar 2023 04:37:19 GMT  
-		Size: 3.0 MB (2952434 bytes)  
+	-	`sha256:fe43ddc3a069d2f66d64b9128ad2efde0e85efb6f720a7c7be3af6c784fe4211`  
+		Last Modified: Thu, 16 Mar 2023 03:40:10 GMT  
+		Size: 3.0 MB (2952384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:238eab0aea5a72c0181d2465938a0dd5d6bab89c961d28625b89db693305b8ec`  
-		Last Modified: Thu, 02 Mar 2023 04:37:27 GMT  
-		Size: 129.3 MB (129322614 bytes)  
+	-	`sha256:53675c23cb3388a8e2418ba7a5a3f50b9e98313c6f68ae7895f0d2bd0774facc`  
+		Last Modified: Thu, 16 Mar 2023 03:40:19 GMT  
+		Size: 129.3 MB (129322656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ibmjava:8` - linux; 386
@@ -183,59 +183,59 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/
 ### `ibmjava:8` - linux; s390x
 
 ```console
-$ docker pull ibmjava@sha256:ceab38e1c632c83c0664d16ed5288764d28457f46df1b24de1824147409dec0d
+$ docker pull ibmjava@sha256:79c81466121507572a2ff5b058d5ffec51fa7842ea57895a4af86042dcc8fbb0
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **154.5 MB (154513094 bytes)**  
+-	Total Size: **154.5 MB (154512564 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:efb1b58a416fc4340f49e5028cc0dab0d8bcc85981a32978aef3f8d3cbdc502d`
+-	Image ID: `sha256:47b8d1ec228f7082de46e90a51c6e32b5aab4c8f6c47b92fd928db69e65dd9ce`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:11 GMT
-ADD file:49b5368b8703fe0aa128fe923b83da7ab2a30a7a1c0395682c905b9271e7f503 in / 
-# Wed, 01 Mar 2023 03:18:11 GMT
+# Wed, 08 Mar 2023 03:23:31 GMT
+ADD file:a6309e462d28398152cb726a11615118d79858da963b8c614772b87d87465967 in / 
+# Wed, 08 Mar 2023 03:23:31 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 03:01:51 GMT
+# Thu, 16 Mar 2023 02:38:18 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 03:01:59 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 03:02:00 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 03:02:48 GMT
+# Thu, 16 Mar 2023 02:39:39 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='4abf605bdffc703f48c506177ee874da9498a4ee5ef322bfb9b4170b097bf2a8';          YML_FILE='8.0/jre/linux/x86_64/index.yml';          ;;        i386)          ESUM='225a8406e9a3134eb8674206caa131a7d5f528de96797a7a0cf69e292465d205';          YML_FILE='8.0/jre/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='052efe7ee98f17af3f027c11b9ef57edd136bf9431b8264a790d48cce905fffd';          YML_FILE='8.0/jre/linux/ppc64le/index.yml';          ;;        s390)          ESUM='47384a0933d2a60b0126eeb49c44be66124320f70355cd09a238a830906819ff';          YML_FILE='8.0/jre/linux/s390/index.yml';          ;;        s390x)          ESUM='bea07ae6d8d56ad7ae2d4937bed352d39622d364be848a036b111fdf15e50cab';          YML_FILE='8.0/jre/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 03:02:51 GMT
+# Thu, 16 Mar 2023 02:39:42 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:306d1b363f89f239f5dc6314e0033094c067617b584ce004fd8db99402dab321`  
-		Last Modified: Thu, 02 Mar 2023 02:21:31 GMT  
-		Size: 25.4 MB (25371412 bytes)  
+	-	`sha256:3a2279f06ab19f0d57823e69b999f54a344e28bd9f955b4db9a5875c0caa543a`  
+		Last Modified: Thu, 16 Mar 2023 02:01:03 GMT  
+		Size: 25.4 MB (25370993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7fe795fb99ed72a95436de37d2cdb8fbd2edb3445e421c880c502757fb41be9`  
-		Last Modified: Thu, 02 Mar 2023 03:05:21 GMT  
-		Size: 2.7 MB (2669070 bytes)  
+	-	`sha256:40c6fa88382e166a9b693d8b861f913ff7b356af9dff894ad987e650a41f3335`  
+		Last Modified: Thu, 16 Mar 2023 02:44:12 GMT  
+		Size: 2.7 MB (2668974 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a71635f0577860033cfd705acd9dc1da98523ce13547ace36963fa5a22b5c36e`  
-		Last Modified: Thu, 02 Mar 2023 03:05:30 GMT  
-		Size: 126.5 MB (126472612 bytes)  
+	-	`sha256:01be997ed4400e0fe5d3afd8cadfefcdd5752b094e25e29a3d047c35b373d2d7`  
+		Last Modified: Thu, 16 Mar 2023 02:44:20 GMT  
+		Size: 126.5 MB (126472597 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ibmjava:8-jre`
 
 ```console
-$ docker pull ibmjava@sha256:d33a8a01f6426c8e074e6fe7fc99307f6f69bade276cbc2500d2a8222cd82054
+$ docker pull ibmjava@sha256:a40f2d5d3cc1ef095f9a266fb84243936208e2189934f783a1afef4fa50ce88f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -248,53 +248,53 @@ $ docker pull ibmjava@sha256:d33a8a01f6426c8e074e6fe7fc99307f6f69bade276cbc2500d
 ### `ibmjava:8-jre` - linux; amd64
 
 ```console
-$ docker pull ibmjava@sha256:0994a6bdad1423486d18d20b54e995104607b4e99d4baf0ca22896279ef6d687
+$ docker pull ibmjava@sha256:0e8e121a85d0c9b9f369a65959ab3279c9d8de1b3525c2c76a736692cff5c2fc
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **159.0 MB (158986201 bytes)**  
+-	Total Size: **159.0 MB (158985786 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ffcaf7abe8538e3490f63ea51ff7fd7462468d220bbeabb61dae7b8ed4afcefc`
+-	Image ID: `sha256:33b342131977ecc271be3175935d02504ab65b9a9d9e53e3c5f086731495d73e`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:02 GMT
-ADD file:66eb2ef5574cdf80bc0cb3af1637407620c1869f58cc7514395e3f5aea45cc3b in / 
-# Wed, 01 Mar 2023 03:18:02 GMT
+# Wed, 08 Mar 2023 03:22:44 GMT
+ADD file:4560926e076acae6b8396a9f1e760eee0f53e22e90ce8554dda57f1103547795 in / 
+# Wed, 08 Mar 2023 03:22:44 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 04:33:47 GMT
+# Thu, 16 Mar 2023 03:36:37 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 04:34:53 GMT
+# Thu, 16 Mar 2023 03:37:44 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='4abf605bdffc703f48c506177ee874da9498a4ee5ef322bfb9b4170b097bf2a8';          YML_FILE='8.0/jre/linux/x86_64/index.yml';          ;;        i386)          ESUM='225a8406e9a3134eb8674206caa131a7d5f528de96797a7a0cf69e292465d205';          YML_FILE='8.0/jre/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='052efe7ee98f17af3f027c11b9ef57edd136bf9431b8264a790d48cce905fffd';          YML_FILE='8.0/jre/linux/ppc64le/index.yml';          ;;        s390)          ESUM='47384a0933d2a60b0126eeb49c44be66124320f70355cd09a238a830906819ff';          YML_FILE='8.0/jre/linux/s390/index.yml';          ;;        s390x)          ESUM='bea07ae6d8d56ad7ae2d4937bed352d39622d364be848a036b111fdf15e50cab';          YML_FILE='8.0/jre/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 04:34:54 GMT
+# Thu, 16 Mar 2023 03:37:44 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:0064b1b97ec0775813740e8cb92821a6d84fd38eee70bafba9c12d9c37534661`  
-		Last Modified: Wed, 01 Mar 2023 13:18:18 GMT  
-		Size: 26.7 MB (26711153 bytes)  
+	-	`sha256:cd150c608fee7837e3a5b28be5c7b540eaf4efa27b3b755d55326470691ce2df`  
+		Last Modified: Sun, 12 Mar 2023 07:24:55 GMT  
+		Size: 26.7 MB (26710746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4584491976e0a2288553243d3caf1fc9a32b4827c131397e78d378040794a302`  
-		Last Modified: Thu, 02 Mar 2023 04:37:19 GMT  
-		Size: 3.0 MB (2952434 bytes)  
+	-	`sha256:fe43ddc3a069d2f66d64b9128ad2efde0e85efb6f720a7c7be3af6c784fe4211`  
+		Last Modified: Thu, 16 Mar 2023 03:40:10 GMT  
+		Size: 3.0 MB (2952384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:238eab0aea5a72c0181d2465938a0dd5d6bab89c961d28625b89db693305b8ec`  
-		Last Modified: Thu, 02 Mar 2023 04:37:27 GMT  
-		Size: 129.3 MB (129322614 bytes)  
+	-	`sha256:53675c23cb3388a8e2418ba7a5a3f50b9e98313c6f68ae7895f0d2bd0774facc`  
+		Last Modified: Thu, 16 Mar 2023 03:40:19 GMT  
+		Size: 129.3 MB (129322656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ibmjava:8-jre` - linux; 386
@@ -404,59 +404,59 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/
 ### `ibmjava:8-jre` - linux; s390x
 
 ```console
-$ docker pull ibmjava@sha256:ceab38e1c632c83c0664d16ed5288764d28457f46df1b24de1824147409dec0d
+$ docker pull ibmjava@sha256:79c81466121507572a2ff5b058d5ffec51fa7842ea57895a4af86042dcc8fbb0
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **154.5 MB (154513094 bytes)**  
+-	Total Size: **154.5 MB (154512564 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:efb1b58a416fc4340f49e5028cc0dab0d8bcc85981a32978aef3f8d3cbdc502d`
+-	Image ID: `sha256:47b8d1ec228f7082de46e90a51c6e32b5aab4c8f6c47b92fd928db69e65dd9ce`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:11 GMT
-ADD file:49b5368b8703fe0aa128fe923b83da7ab2a30a7a1c0395682c905b9271e7f503 in / 
-# Wed, 01 Mar 2023 03:18:11 GMT
+# Wed, 08 Mar 2023 03:23:31 GMT
+ADD file:a6309e462d28398152cb726a11615118d79858da963b8c614772b87d87465967 in / 
+# Wed, 08 Mar 2023 03:23:31 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 03:01:51 GMT
+# Thu, 16 Mar 2023 02:38:18 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 03:01:59 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 03:02:00 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 03:02:48 GMT
+# Thu, 16 Mar 2023 02:39:39 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='4abf605bdffc703f48c506177ee874da9498a4ee5ef322bfb9b4170b097bf2a8';          YML_FILE='8.0/jre/linux/x86_64/index.yml';          ;;        i386)          ESUM='225a8406e9a3134eb8674206caa131a7d5f528de96797a7a0cf69e292465d205';          YML_FILE='8.0/jre/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='052efe7ee98f17af3f027c11b9ef57edd136bf9431b8264a790d48cce905fffd';          YML_FILE='8.0/jre/linux/ppc64le/index.yml';          ;;        s390)          ESUM='47384a0933d2a60b0126eeb49c44be66124320f70355cd09a238a830906819ff';          YML_FILE='8.0/jre/linux/s390/index.yml';          ;;        s390x)          ESUM='bea07ae6d8d56ad7ae2d4937bed352d39622d364be848a036b111fdf15e50cab';          YML_FILE='8.0/jre/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 03:02:51 GMT
+# Thu, 16 Mar 2023 02:39:42 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:306d1b363f89f239f5dc6314e0033094c067617b584ce004fd8db99402dab321`  
-		Last Modified: Thu, 02 Mar 2023 02:21:31 GMT  
-		Size: 25.4 MB (25371412 bytes)  
+	-	`sha256:3a2279f06ab19f0d57823e69b999f54a344e28bd9f955b4db9a5875c0caa543a`  
+		Last Modified: Thu, 16 Mar 2023 02:01:03 GMT  
+		Size: 25.4 MB (25370993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7fe795fb99ed72a95436de37d2cdb8fbd2edb3445e421c880c502757fb41be9`  
-		Last Modified: Thu, 02 Mar 2023 03:05:21 GMT  
-		Size: 2.7 MB (2669070 bytes)  
+	-	`sha256:40c6fa88382e166a9b693d8b861f913ff7b356af9dff894ad987e650a41f3335`  
+		Last Modified: Thu, 16 Mar 2023 02:44:12 GMT  
+		Size: 2.7 MB (2668974 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a71635f0577860033cfd705acd9dc1da98523ce13547ace36963fa5a22b5c36e`  
-		Last Modified: Thu, 02 Mar 2023 03:05:30 GMT  
-		Size: 126.5 MB (126472612 bytes)  
+	-	`sha256:01be997ed4400e0fe5d3afd8cadfefcdd5752b094e25e29a3d047c35b373d2d7`  
+		Last Modified: Thu, 16 Mar 2023 02:44:20 GMT  
+		Size: 126.5 MB (126472597 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ibmjava:8-sdk`
 
 ```console
-$ docker pull ibmjava@sha256:3cc9f1281d385e327f7d88162cdd94625801376a1a7a5d1c56e6bd4ffd0c6acf
+$ docker pull ibmjava@sha256:9e63c023c48f5caecb9fc31b1fb4c261522420f44c966a7730bac0f41e73f35b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -469,53 +469,53 @@ $ docker pull ibmjava@sha256:3cc9f1281d385e327f7d88162cdd94625801376a1a7a5d1c56e
 ### `ibmjava:8-sdk` - linux; amd64
 
 ```console
-$ docker pull ibmjava@sha256:fa52c51c364e5e94b769f757cbce8d1bb350064b2ebf7d688a3effb01604a0b3
+$ docker pull ibmjava@sha256:31ae6fbf168d8747a7358a35eb04e5a31c1c98b9c7125170c2b75e543213e8e9
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **196.1 MB (196139045 bytes)**  
+-	Total Size: **196.1 MB (196137355 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a4a6261a03fcd5ccfd1284cbc51a0e996c2ae3da8e259f1595df2a2d197a17aa`
+-	Image ID: `sha256:56cbeb54700901bd7b09a2fe5e44834b13cf086e4ac4c3be85ede6ca11c2eab4`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:02 GMT
-ADD file:66eb2ef5574cdf80bc0cb3af1637407620c1869f58cc7514395e3f5aea45cc3b in / 
-# Wed, 01 Mar 2023 03:18:02 GMT
+# Wed, 08 Mar 2023 03:22:44 GMT
+ADD file:4560926e076acae6b8396a9f1e760eee0f53e22e90ce8554dda57f1103547795 in / 
+# Wed, 08 Mar 2023 03:22:44 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 04:33:47 GMT
+# Thu, 16 Mar 2023 03:36:37 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 04:36:55 GMT
+# Thu, 16 Mar 2023 03:39:44 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='0f6aef4c3550a8f85288da8bc6fada405b0ce2226d6b1b57d0aae98cd5eef5e4';          YML_FILE='8.0/sdk/linux/x86_64/index.yml';          ;;        i386)          ESUM='fa7661c2eb2982c4fb85c6894e7a975970b27b6ee82d5facb352f075cc1dfca3';          YML_FILE='8.0/sdk/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='a56803671fe7d1c85f18d566dbcb7fbaf1d60c6f1d6de34e35a257e0c8095f9b';          YML_FILE='8.0/sdk/linux/ppc64le/index.yml';          ;;        s390)          ESUM='71c913a1eed7daae952657e18eb9a2e71723106b6e7b56373f18564db77f551e';          YML_FILE='8.0/sdk/linux/s390/index.yml';          ;;        s390x)          ESUM='c8641bc22443ebccaedf1822a12ec1303d89577d45c875702e1f628066c7f383';          YML_FILE='8.0/sdk/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 04:36:55 GMT
+# Thu, 16 Mar 2023 03:39:45 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:0064b1b97ec0775813740e8cb92821a6d84fd38eee70bafba9c12d9c37534661`  
-		Last Modified: Wed, 01 Mar 2023 13:18:18 GMT  
-		Size: 26.7 MB (26711153 bytes)  
+	-	`sha256:cd150c608fee7837e3a5b28be5c7b540eaf4efa27b3b755d55326470691ce2df`  
+		Last Modified: Sun, 12 Mar 2023 07:24:55 GMT  
+		Size: 26.7 MB (26710746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4584491976e0a2288553243d3caf1fc9a32b4827c131397e78d378040794a302`  
-		Last Modified: Thu, 02 Mar 2023 04:37:19 GMT  
-		Size: 3.0 MB (2952434 bytes)  
+	-	`sha256:fe43ddc3a069d2f66d64b9128ad2efde0e85efb6f720a7c7be3af6c784fe4211`  
+		Last Modified: Thu, 16 Mar 2023 03:40:10 GMT  
+		Size: 3.0 MB (2952384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49e80434905a67b8436af9db87a072f9e63fdccce65f0c273baafb2cc459457f`  
-		Last Modified: Thu, 02 Mar 2023 04:38:06 GMT  
-		Size: 166.5 MB (166475458 bytes)  
+	-	`sha256:754e7019336ab7b425ccedb413d2212e49ac0b5c3e991b6d0215379733f80ab4`  
+		Last Modified: Thu, 16 Mar 2023 03:40:56 GMT  
+		Size: 166.5 MB (166474225 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ibmjava:8-sdk` - linux; 386
@@ -625,59 +625,59 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/loca
 ### `ibmjava:8-sdk` - linux; s390x
 
 ```console
-$ docker pull ibmjava@sha256:90e85adeb1522f5cbcc2f9319494532d95f8f9c5935942b20e8d88314338d0de
+$ docker pull ibmjava@sha256:e48e27c40694f2f1e0043ea47bed61efa2460ceba7ed7384ed16d8825fb07ec2
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.8 MB (184804744 bytes)**  
+-	Total Size: **184.8 MB (184804076 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6b79d2fe5ac5614d0be3f633b9a34b90bf148e5e323fd32401f7d771639622fd`
+-	Image ID: `sha256:a7432079aca0b1081227fd25bd8327e2cca3c2a494d5ceff82a038e723e29f69`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:11 GMT
-ADD file:49b5368b8703fe0aa128fe923b83da7ab2a30a7a1c0395682c905b9271e7f503 in / 
-# Wed, 01 Mar 2023 03:18:11 GMT
+# Wed, 08 Mar 2023 03:23:31 GMT
+ADD file:a6309e462d28398152cb726a11615118d79858da963b8c614772b87d87465967 in / 
+# Wed, 08 Mar 2023 03:23:31 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 03:01:51 GMT
+# Thu, 16 Mar 2023 02:38:18 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 03:01:59 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 03:02:00 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 03:04:40 GMT
+# Thu, 16 Mar 2023 02:43:39 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='0f6aef4c3550a8f85288da8bc6fada405b0ce2226d6b1b57d0aae98cd5eef5e4';          YML_FILE='8.0/sdk/linux/x86_64/index.yml';          ;;        i386)          ESUM='fa7661c2eb2982c4fb85c6894e7a975970b27b6ee82d5facb352f075cc1dfca3';          YML_FILE='8.0/sdk/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='a56803671fe7d1c85f18d566dbcb7fbaf1d60c6f1d6de34e35a257e0c8095f9b';          YML_FILE='8.0/sdk/linux/ppc64le/index.yml';          ;;        s390)          ESUM='71c913a1eed7daae952657e18eb9a2e71723106b6e7b56373f18564db77f551e';          YML_FILE='8.0/sdk/linux/s390/index.yml';          ;;        s390x)          ESUM='c8641bc22443ebccaedf1822a12ec1303d89577d45c875702e1f628066c7f383';          YML_FILE='8.0/sdk/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 03:04:44 GMT
+# Thu, 16 Mar 2023 02:43:42 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:306d1b363f89f239f5dc6314e0033094c067617b584ce004fd8db99402dab321`  
-		Last Modified: Thu, 02 Mar 2023 02:21:31 GMT  
-		Size: 25.4 MB (25371412 bytes)  
+	-	`sha256:3a2279f06ab19f0d57823e69b999f54a344e28bd9f955b4db9a5875c0caa543a`  
+		Last Modified: Thu, 16 Mar 2023 02:01:03 GMT  
+		Size: 25.4 MB (25370993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7fe795fb99ed72a95436de37d2cdb8fbd2edb3445e421c880c502757fb41be9`  
-		Last Modified: Thu, 02 Mar 2023 03:05:21 GMT  
-		Size: 2.7 MB (2669070 bytes)  
+	-	`sha256:40c6fa88382e166a9b693d8b861f913ff7b356af9dff894ad987e650a41f3335`  
+		Last Modified: Thu, 16 Mar 2023 02:44:12 GMT  
+		Size: 2.7 MB (2668974 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f1faca277882f5361876339ebbf10a447709eb207e81aea404f21a9db495ec02`  
-		Last Modified: Thu, 02 Mar 2023 03:06:04 GMT  
-		Size: 156.8 MB (156764262 bytes)  
+	-	`sha256:395f1e8a910b3d6d2bc060348c48a8dccc7e4e86819d1685d9ac354bc1c41dbb`  
+		Last Modified: Thu, 16 Mar 2023 02:44:52 GMT  
+		Size: 156.8 MB (156764109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ibmjava:8-sfj`
 
 ```console
-$ docker pull ibmjava@sha256:9304e2a34f3e303c41b5a3ea5766552afd62902401302a6d4e38e25f79b299de
+$ docker pull ibmjava@sha256:a8a45e8e02190ddd63b8024fe72ac221d1cd22bf6c3ebf8b44c4bdaeebd0617d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -690,53 +690,53 @@ $ docker pull ibmjava@sha256:9304e2a34f3e303c41b5a3ea5766552afd62902401302a6d4e3
 ### `ibmjava:8-sfj` - linux; amd64
 
 ```console
-$ docker pull ibmjava@sha256:eb83d3ae5dee67e2d6fd6bed2bda03cf9d23e84796dd5ff26f3c6d14e61ca2ff
+$ docker pull ibmjava@sha256:005ebb02b50059a72c21aba4e5c72f56265faacdef0394a303a7c3844a1589bf
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.7 MB (94672471 bytes)**  
+-	Total Size: **94.7 MB (94672008 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cf9869b49854ab5c444a3c78fffe5e3613c4814117e1abbbdb709c79af959837`
+-	Image ID: `sha256:5a656f42c4272ed1c32961ed5b836e0b20a1395eaedcb51cd91aebba64463335`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:02 GMT
-ADD file:66eb2ef5574cdf80bc0cb3af1637407620c1869f58cc7514395e3f5aea45cc3b in / 
-# Wed, 01 Mar 2023 03:18:02 GMT
+# Wed, 08 Mar 2023 03:22:44 GMT
+ADD file:4560926e076acae6b8396a9f1e760eee0f53e22e90ce8554dda57f1103547795 in / 
+# Wed, 08 Mar 2023 03:22:44 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 04:33:47 GMT
+# Thu, 16 Mar 2023 03:36:37 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 04:35:36 GMT
+# Thu, 16 Mar 2023 03:38:26 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='bb548976980c436b15e59e0db7b4e99a7ed273df39e17db60047f950c2863c1b';          YML_FILE='8.0/sfj/linux/x86_64/index.yml';          ;;        i386)          ESUM='768e6f8df5c9735d703f2dd5352b7c063949d59c6e15bc7d5c31d7ac667a241a';          YML_FILE='8.0/sfj/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='1ce92e9c420b2d081c8cd63c8441b324e49348360490d61e08a0908b830748cb';          YML_FILE='8.0/sfj/linux/ppc64le/index.yml';          ;;        s390)          ESUM='e790dc7707417153227e1f3164db1c699e3b6b9f697d9e1c9c9142bc0e3d3409';          YML_FILE='8.0/sfj/linux/s390/index.yml';          ;;        s390x)          ESUM='bfac3d6409a7996301d948faedfd4c19920dbb667ba699b7fd4719188366be8b';          YML_FILE='8.0/sfj/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 04:35:36 GMT
+# Thu, 16 Mar 2023 03:38:26 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:0064b1b97ec0775813740e8cb92821a6d84fd38eee70bafba9c12d9c37534661`  
-		Last Modified: Wed, 01 Mar 2023 13:18:18 GMT  
-		Size: 26.7 MB (26711153 bytes)  
+	-	`sha256:cd150c608fee7837e3a5b28be5c7b540eaf4efa27b3b755d55326470691ce2df`  
+		Last Modified: Sun, 12 Mar 2023 07:24:55 GMT  
+		Size: 26.7 MB (26710746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4584491976e0a2288553243d3caf1fc9a32b4827c131397e78d378040794a302`  
-		Last Modified: Thu, 02 Mar 2023 04:37:19 GMT  
-		Size: 3.0 MB (2952434 bytes)  
+	-	`sha256:fe43ddc3a069d2f66d64b9128ad2efde0e85efb6f720a7c7be3af6c784fe4211`  
+		Last Modified: Thu, 16 Mar 2023 03:40:10 GMT  
+		Size: 3.0 MB (2952384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a2cf3fecd4a80ac236f33c4cb1c95a942528d93566ba88c8cedecffbfbcbceb1`  
-		Last Modified: Thu, 02 Mar 2023 04:37:45 GMT  
-		Size: 65.0 MB (65008884 bytes)  
+	-	`sha256:70d18a8662bad714fe454a9ca739a7d914a30780b6921353bb1a33d5b6754fe9`  
+		Last Modified: Thu, 16 Mar 2023 03:40:37 GMT  
+		Size: 65.0 MB (65008878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ibmjava:8-sfj` - linux; 386
@@ -846,59 +846,59 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/
 ### `ibmjava:8-sfj` - linux; s390x
 
 ```console
-$ docker pull ibmjava@sha256:f7d0e2c77007bc0673c6b98ebcc2416773bf4949b5db48d2adb15d4de16da86b
+$ docker pull ibmjava@sha256:776e43d1866c5c8f51998fec550086763a0cb31708c6e877e1443ff6ad0e7458
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.2 MB (94163617 bytes)**  
+-	Total Size: **94.2 MB (94163138 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0b466f1fe7c37894f07123127150ceee65a03d6f2d2a658976d2bd48b8f0c690`
+-	Image ID: `sha256:fbdaf7c8d66b0512d1e6c507dbe1156d9c7452c2d9386c680ba35959884fdd5a`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:11 GMT
-ADD file:49b5368b8703fe0aa128fe923b83da7ab2a30a7a1c0395682c905b9271e7f503 in / 
-# Wed, 01 Mar 2023 03:18:11 GMT
+# Wed, 08 Mar 2023 03:23:31 GMT
+ADD file:a6309e462d28398152cb726a11615118d79858da963b8c614772b87d87465967 in / 
+# Wed, 08 Mar 2023 03:23:31 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 03:01:51 GMT
+# Thu, 16 Mar 2023 02:38:18 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 03:01:59 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 03:02:00 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 03:03:34 GMT
+# Thu, 16 Mar 2023 02:42:23 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='bb548976980c436b15e59e0db7b4e99a7ed273df39e17db60047f950c2863c1b';          YML_FILE='8.0/sfj/linux/x86_64/index.yml';          ;;        i386)          ESUM='768e6f8df5c9735d703f2dd5352b7c063949d59c6e15bc7d5c31d7ac667a241a';          YML_FILE='8.0/sfj/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='1ce92e9c420b2d081c8cd63c8441b324e49348360490d61e08a0908b830748cb';          YML_FILE='8.0/sfj/linux/ppc64le/index.yml';          ;;        s390)          ESUM='e790dc7707417153227e1f3164db1c699e3b6b9f697d9e1c9c9142bc0e3d3409';          YML_FILE='8.0/sfj/linux/s390/index.yml';          ;;        s390x)          ESUM='bfac3d6409a7996301d948faedfd4c19920dbb667ba699b7fd4719188366be8b';          YML_FILE='8.0/sfj/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 03:03:36 GMT
+# Thu, 16 Mar 2023 02:42:24 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:306d1b363f89f239f5dc6314e0033094c067617b584ce004fd8db99402dab321`  
-		Last Modified: Thu, 02 Mar 2023 02:21:31 GMT  
-		Size: 25.4 MB (25371412 bytes)  
+	-	`sha256:3a2279f06ab19f0d57823e69b999f54a344e28bd9f955b4db9a5875c0caa543a`  
+		Last Modified: Thu, 16 Mar 2023 02:01:03 GMT  
+		Size: 25.4 MB (25370993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7fe795fb99ed72a95436de37d2cdb8fbd2edb3445e421c880c502757fb41be9`  
-		Last Modified: Thu, 02 Mar 2023 03:05:21 GMT  
-		Size: 2.7 MB (2669070 bytes)  
+	-	`sha256:40c6fa88382e166a9b693d8b861f913ff7b356af9dff894ad987e650a41f3335`  
+		Last Modified: Thu, 16 Mar 2023 02:44:12 GMT  
+		Size: 2.7 MB (2668974 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff637b5ce43a2ff1c562d9e5cf98e491a6facbc722aaf3f68d7821b234976e2e`  
-		Last Modified: Thu, 02 Mar 2023 03:05:46 GMT  
-		Size: 66.1 MB (66123135 bytes)  
+	-	`sha256:013f30cbf3e7c3ee71d1119f036e3f0065b72d61bead1f68d07633dbf386b3d8`  
+		Last Modified: Thu, 16 Mar 2023 02:44:36 GMT  
+		Size: 66.1 MB (66123171 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ibmjava:jre`
 
 ```console
-$ docker pull ibmjava@sha256:d33a8a01f6426c8e074e6fe7fc99307f6f69bade276cbc2500d2a8222cd82054
+$ docker pull ibmjava@sha256:a40f2d5d3cc1ef095f9a266fb84243936208e2189934f783a1afef4fa50ce88f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -911,53 +911,53 @@ $ docker pull ibmjava@sha256:d33a8a01f6426c8e074e6fe7fc99307f6f69bade276cbc2500d
 ### `ibmjava:jre` - linux; amd64
 
 ```console
-$ docker pull ibmjava@sha256:0994a6bdad1423486d18d20b54e995104607b4e99d4baf0ca22896279ef6d687
+$ docker pull ibmjava@sha256:0e8e121a85d0c9b9f369a65959ab3279c9d8de1b3525c2c76a736692cff5c2fc
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **159.0 MB (158986201 bytes)**  
+-	Total Size: **159.0 MB (158985786 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ffcaf7abe8538e3490f63ea51ff7fd7462468d220bbeabb61dae7b8ed4afcefc`
+-	Image ID: `sha256:33b342131977ecc271be3175935d02504ab65b9a9d9e53e3c5f086731495d73e`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:02 GMT
-ADD file:66eb2ef5574cdf80bc0cb3af1637407620c1869f58cc7514395e3f5aea45cc3b in / 
-# Wed, 01 Mar 2023 03:18:02 GMT
+# Wed, 08 Mar 2023 03:22:44 GMT
+ADD file:4560926e076acae6b8396a9f1e760eee0f53e22e90ce8554dda57f1103547795 in / 
+# Wed, 08 Mar 2023 03:22:44 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 04:33:47 GMT
+# Thu, 16 Mar 2023 03:36:37 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 04:34:53 GMT
+# Thu, 16 Mar 2023 03:37:44 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='4abf605bdffc703f48c506177ee874da9498a4ee5ef322bfb9b4170b097bf2a8';          YML_FILE='8.0/jre/linux/x86_64/index.yml';          ;;        i386)          ESUM='225a8406e9a3134eb8674206caa131a7d5f528de96797a7a0cf69e292465d205';          YML_FILE='8.0/jre/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='052efe7ee98f17af3f027c11b9ef57edd136bf9431b8264a790d48cce905fffd';          YML_FILE='8.0/jre/linux/ppc64le/index.yml';          ;;        s390)          ESUM='47384a0933d2a60b0126eeb49c44be66124320f70355cd09a238a830906819ff';          YML_FILE='8.0/jre/linux/s390/index.yml';          ;;        s390x)          ESUM='bea07ae6d8d56ad7ae2d4937bed352d39622d364be848a036b111fdf15e50cab';          YML_FILE='8.0/jre/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 04:34:54 GMT
+# Thu, 16 Mar 2023 03:37:44 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:0064b1b97ec0775813740e8cb92821a6d84fd38eee70bafba9c12d9c37534661`  
-		Last Modified: Wed, 01 Mar 2023 13:18:18 GMT  
-		Size: 26.7 MB (26711153 bytes)  
+	-	`sha256:cd150c608fee7837e3a5b28be5c7b540eaf4efa27b3b755d55326470691ce2df`  
+		Last Modified: Sun, 12 Mar 2023 07:24:55 GMT  
+		Size: 26.7 MB (26710746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4584491976e0a2288553243d3caf1fc9a32b4827c131397e78d378040794a302`  
-		Last Modified: Thu, 02 Mar 2023 04:37:19 GMT  
-		Size: 3.0 MB (2952434 bytes)  
+	-	`sha256:fe43ddc3a069d2f66d64b9128ad2efde0e85efb6f720a7c7be3af6c784fe4211`  
+		Last Modified: Thu, 16 Mar 2023 03:40:10 GMT  
+		Size: 3.0 MB (2952384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:238eab0aea5a72c0181d2465938a0dd5d6bab89c961d28625b89db693305b8ec`  
-		Last Modified: Thu, 02 Mar 2023 04:37:27 GMT  
-		Size: 129.3 MB (129322614 bytes)  
+	-	`sha256:53675c23cb3388a8e2418ba7a5a3f50b9e98313c6f68ae7895f0d2bd0774facc`  
+		Last Modified: Thu, 16 Mar 2023 03:40:19 GMT  
+		Size: 129.3 MB (129322656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ibmjava:jre` - linux; 386
@@ -1067,59 +1067,59 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/
 ### `ibmjava:jre` - linux; s390x
 
 ```console
-$ docker pull ibmjava@sha256:ceab38e1c632c83c0664d16ed5288764d28457f46df1b24de1824147409dec0d
+$ docker pull ibmjava@sha256:79c81466121507572a2ff5b058d5ffec51fa7842ea57895a4af86042dcc8fbb0
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **154.5 MB (154513094 bytes)**  
+-	Total Size: **154.5 MB (154512564 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:efb1b58a416fc4340f49e5028cc0dab0d8bcc85981a32978aef3f8d3cbdc502d`
+-	Image ID: `sha256:47b8d1ec228f7082de46e90a51c6e32b5aab4c8f6c47b92fd928db69e65dd9ce`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:11 GMT
-ADD file:49b5368b8703fe0aa128fe923b83da7ab2a30a7a1c0395682c905b9271e7f503 in / 
-# Wed, 01 Mar 2023 03:18:11 GMT
+# Wed, 08 Mar 2023 03:23:31 GMT
+ADD file:a6309e462d28398152cb726a11615118d79858da963b8c614772b87d87465967 in / 
+# Wed, 08 Mar 2023 03:23:31 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 03:01:51 GMT
+# Thu, 16 Mar 2023 02:38:18 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 03:01:59 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 03:02:00 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 03:02:48 GMT
+# Thu, 16 Mar 2023 02:39:39 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='4abf605bdffc703f48c506177ee874da9498a4ee5ef322bfb9b4170b097bf2a8';          YML_FILE='8.0/jre/linux/x86_64/index.yml';          ;;        i386)          ESUM='225a8406e9a3134eb8674206caa131a7d5f528de96797a7a0cf69e292465d205';          YML_FILE='8.0/jre/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='052efe7ee98f17af3f027c11b9ef57edd136bf9431b8264a790d48cce905fffd';          YML_FILE='8.0/jre/linux/ppc64le/index.yml';          ;;        s390)          ESUM='47384a0933d2a60b0126eeb49c44be66124320f70355cd09a238a830906819ff';          YML_FILE='8.0/jre/linux/s390/index.yml';          ;;        s390x)          ESUM='bea07ae6d8d56ad7ae2d4937bed352d39622d364be848a036b111fdf15e50cab';          YML_FILE='8.0/jre/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 03:02:51 GMT
+# Thu, 16 Mar 2023 02:39:42 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:306d1b363f89f239f5dc6314e0033094c067617b584ce004fd8db99402dab321`  
-		Last Modified: Thu, 02 Mar 2023 02:21:31 GMT  
-		Size: 25.4 MB (25371412 bytes)  
+	-	`sha256:3a2279f06ab19f0d57823e69b999f54a344e28bd9f955b4db9a5875c0caa543a`  
+		Last Modified: Thu, 16 Mar 2023 02:01:03 GMT  
+		Size: 25.4 MB (25370993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7fe795fb99ed72a95436de37d2cdb8fbd2edb3445e421c880c502757fb41be9`  
-		Last Modified: Thu, 02 Mar 2023 03:05:21 GMT  
-		Size: 2.7 MB (2669070 bytes)  
+	-	`sha256:40c6fa88382e166a9b693d8b861f913ff7b356af9dff894ad987e650a41f3335`  
+		Last Modified: Thu, 16 Mar 2023 02:44:12 GMT  
+		Size: 2.7 MB (2668974 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a71635f0577860033cfd705acd9dc1da98523ce13547ace36963fa5a22b5c36e`  
-		Last Modified: Thu, 02 Mar 2023 03:05:30 GMT  
-		Size: 126.5 MB (126472612 bytes)  
+	-	`sha256:01be997ed4400e0fe5d3afd8cadfefcdd5752b094e25e29a3d047c35b373d2d7`  
+		Last Modified: Thu, 16 Mar 2023 02:44:20 GMT  
+		Size: 126.5 MB (126472597 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ibmjava:latest`
 
 ```console
-$ docker pull ibmjava@sha256:d33a8a01f6426c8e074e6fe7fc99307f6f69bade276cbc2500d2a8222cd82054
+$ docker pull ibmjava@sha256:a40f2d5d3cc1ef095f9a266fb84243936208e2189934f783a1afef4fa50ce88f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1132,53 +1132,53 @@ $ docker pull ibmjava@sha256:d33a8a01f6426c8e074e6fe7fc99307f6f69bade276cbc2500d
 ### `ibmjava:latest` - linux; amd64
 
 ```console
-$ docker pull ibmjava@sha256:0994a6bdad1423486d18d20b54e995104607b4e99d4baf0ca22896279ef6d687
+$ docker pull ibmjava@sha256:0e8e121a85d0c9b9f369a65959ab3279c9d8de1b3525c2c76a736692cff5c2fc
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **159.0 MB (158986201 bytes)**  
+-	Total Size: **159.0 MB (158985786 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ffcaf7abe8538e3490f63ea51ff7fd7462468d220bbeabb61dae7b8ed4afcefc`
+-	Image ID: `sha256:33b342131977ecc271be3175935d02504ab65b9a9d9e53e3c5f086731495d73e`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:02 GMT
-ADD file:66eb2ef5574cdf80bc0cb3af1637407620c1869f58cc7514395e3f5aea45cc3b in / 
-# Wed, 01 Mar 2023 03:18:02 GMT
+# Wed, 08 Mar 2023 03:22:44 GMT
+ADD file:4560926e076acae6b8396a9f1e760eee0f53e22e90ce8554dda57f1103547795 in / 
+# Wed, 08 Mar 2023 03:22:44 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 04:33:47 GMT
+# Thu, 16 Mar 2023 03:36:37 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 04:34:53 GMT
+# Thu, 16 Mar 2023 03:37:44 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='4abf605bdffc703f48c506177ee874da9498a4ee5ef322bfb9b4170b097bf2a8';          YML_FILE='8.0/jre/linux/x86_64/index.yml';          ;;        i386)          ESUM='225a8406e9a3134eb8674206caa131a7d5f528de96797a7a0cf69e292465d205';          YML_FILE='8.0/jre/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='052efe7ee98f17af3f027c11b9ef57edd136bf9431b8264a790d48cce905fffd';          YML_FILE='8.0/jre/linux/ppc64le/index.yml';          ;;        s390)          ESUM='47384a0933d2a60b0126eeb49c44be66124320f70355cd09a238a830906819ff';          YML_FILE='8.0/jre/linux/s390/index.yml';          ;;        s390x)          ESUM='bea07ae6d8d56ad7ae2d4937bed352d39622d364be848a036b111fdf15e50cab';          YML_FILE='8.0/jre/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 04:34:54 GMT
+# Thu, 16 Mar 2023 03:37:44 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:0064b1b97ec0775813740e8cb92821a6d84fd38eee70bafba9c12d9c37534661`  
-		Last Modified: Wed, 01 Mar 2023 13:18:18 GMT  
-		Size: 26.7 MB (26711153 bytes)  
+	-	`sha256:cd150c608fee7837e3a5b28be5c7b540eaf4efa27b3b755d55326470691ce2df`  
+		Last Modified: Sun, 12 Mar 2023 07:24:55 GMT  
+		Size: 26.7 MB (26710746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4584491976e0a2288553243d3caf1fc9a32b4827c131397e78d378040794a302`  
-		Last Modified: Thu, 02 Mar 2023 04:37:19 GMT  
-		Size: 3.0 MB (2952434 bytes)  
+	-	`sha256:fe43ddc3a069d2f66d64b9128ad2efde0e85efb6f720a7c7be3af6c784fe4211`  
+		Last Modified: Thu, 16 Mar 2023 03:40:10 GMT  
+		Size: 3.0 MB (2952384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:238eab0aea5a72c0181d2465938a0dd5d6bab89c961d28625b89db693305b8ec`  
-		Last Modified: Thu, 02 Mar 2023 04:37:27 GMT  
-		Size: 129.3 MB (129322614 bytes)  
+	-	`sha256:53675c23cb3388a8e2418ba7a5a3f50b9e98313c6f68ae7895f0d2bd0774facc`  
+		Last Modified: Thu, 16 Mar 2023 03:40:19 GMT  
+		Size: 129.3 MB (129322656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ibmjava:latest` - linux; 386
@@ -1288,59 +1288,59 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/
 ### `ibmjava:latest` - linux; s390x
 
 ```console
-$ docker pull ibmjava@sha256:ceab38e1c632c83c0664d16ed5288764d28457f46df1b24de1824147409dec0d
+$ docker pull ibmjava@sha256:79c81466121507572a2ff5b058d5ffec51fa7842ea57895a4af86042dcc8fbb0
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **154.5 MB (154513094 bytes)**  
+-	Total Size: **154.5 MB (154512564 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:efb1b58a416fc4340f49e5028cc0dab0d8bcc85981a32978aef3f8d3cbdc502d`
+-	Image ID: `sha256:47b8d1ec228f7082de46e90a51c6e32b5aab4c8f6c47b92fd928db69e65dd9ce`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:11 GMT
-ADD file:49b5368b8703fe0aa128fe923b83da7ab2a30a7a1c0395682c905b9271e7f503 in / 
-# Wed, 01 Mar 2023 03:18:11 GMT
+# Wed, 08 Mar 2023 03:23:31 GMT
+ADD file:a6309e462d28398152cb726a11615118d79858da963b8c614772b87d87465967 in / 
+# Wed, 08 Mar 2023 03:23:31 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 03:01:51 GMT
+# Thu, 16 Mar 2023 02:38:18 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 03:01:59 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 03:02:00 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 03:02:48 GMT
+# Thu, 16 Mar 2023 02:39:39 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='4abf605bdffc703f48c506177ee874da9498a4ee5ef322bfb9b4170b097bf2a8';          YML_FILE='8.0/jre/linux/x86_64/index.yml';          ;;        i386)          ESUM='225a8406e9a3134eb8674206caa131a7d5f528de96797a7a0cf69e292465d205';          YML_FILE='8.0/jre/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='052efe7ee98f17af3f027c11b9ef57edd136bf9431b8264a790d48cce905fffd';          YML_FILE='8.0/jre/linux/ppc64le/index.yml';          ;;        s390)          ESUM='47384a0933d2a60b0126eeb49c44be66124320f70355cd09a238a830906819ff';          YML_FILE='8.0/jre/linux/s390/index.yml';          ;;        s390x)          ESUM='bea07ae6d8d56ad7ae2d4937bed352d39622d364be848a036b111fdf15e50cab';          YML_FILE='8.0/jre/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 03:02:51 GMT
+# Thu, 16 Mar 2023 02:39:42 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:306d1b363f89f239f5dc6314e0033094c067617b584ce004fd8db99402dab321`  
-		Last Modified: Thu, 02 Mar 2023 02:21:31 GMT  
-		Size: 25.4 MB (25371412 bytes)  
+	-	`sha256:3a2279f06ab19f0d57823e69b999f54a344e28bd9f955b4db9a5875c0caa543a`  
+		Last Modified: Thu, 16 Mar 2023 02:01:03 GMT  
+		Size: 25.4 MB (25370993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7fe795fb99ed72a95436de37d2cdb8fbd2edb3445e421c880c502757fb41be9`  
-		Last Modified: Thu, 02 Mar 2023 03:05:21 GMT  
-		Size: 2.7 MB (2669070 bytes)  
+	-	`sha256:40c6fa88382e166a9b693d8b861f913ff7b356af9dff894ad987e650a41f3335`  
+		Last Modified: Thu, 16 Mar 2023 02:44:12 GMT  
+		Size: 2.7 MB (2668974 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a71635f0577860033cfd705acd9dc1da98523ce13547ace36963fa5a22b5c36e`  
-		Last Modified: Thu, 02 Mar 2023 03:05:30 GMT  
-		Size: 126.5 MB (126472612 bytes)  
+	-	`sha256:01be997ed4400e0fe5d3afd8cadfefcdd5752b094e25e29a3d047c35b373d2d7`  
+		Last Modified: Thu, 16 Mar 2023 02:44:20 GMT  
+		Size: 126.5 MB (126472597 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ibmjava:sdk`
 
 ```console
-$ docker pull ibmjava@sha256:3cc9f1281d385e327f7d88162cdd94625801376a1a7a5d1c56e6bd4ffd0c6acf
+$ docker pull ibmjava@sha256:9e63c023c48f5caecb9fc31b1fb4c261522420f44c966a7730bac0f41e73f35b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1353,53 +1353,53 @@ $ docker pull ibmjava@sha256:3cc9f1281d385e327f7d88162cdd94625801376a1a7a5d1c56e
 ### `ibmjava:sdk` - linux; amd64
 
 ```console
-$ docker pull ibmjava@sha256:fa52c51c364e5e94b769f757cbce8d1bb350064b2ebf7d688a3effb01604a0b3
+$ docker pull ibmjava@sha256:31ae6fbf168d8747a7358a35eb04e5a31c1c98b9c7125170c2b75e543213e8e9
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **196.1 MB (196139045 bytes)**  
+-	Total Size: **196.1 MB (196137355 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a4a6261a03fcd5ccfd1284cbc51a0e996c2ae3da8e259f1595df2a2d197a17aa`
+-	Image ID: `sha256:56cbeb54700901bd7b09a2fe5e44834b13cf086e4ac4c3be85ede6ca11c2eab4`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:02 GMT
-ADD file:66eb2ef5574cdf80bc0cb3af1637407620c1869f58cc7514395e3f5aea45cc3b in / 
-# Wed, 01 Mar 2023 03:18:02 GMT
+# Wed, 08 Mar 2023 03:22:44 GMT
+ADD file:4560926e076acae6b8396a9f1e760eee0f53e22e90ce8554dda57f1103547795 in / 
+# Wed, 08 Mar 2023 03:22:44 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 04:33:47 GMT
+# Thu, 16 Mar 2023 03:36:37 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 04:36:55 GMT
+# Thu, 16 Mar 2023 03:39:44 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='0f6aef4c3550a8f85288da8bc6fada405b0ce2226d6b1b57d0aae98cd5eef5e4';          YML_FILE='8.0/sdk/linux/x86_64/index.yml';          ;;        i386)          ESUM='fa7661c2eb2982c4fb85c6894e7a975970b27b6ee82d5facb352f075cc1dfca3';          YML_FILE='8.0/sdk/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='a56803671fe7d1c85f18d566dbcb7fbaf1d60c6f1d6de34e35a257e0c8095f9b';          YML_FILE='8.0/sdk/linux/ppc64le/index.yml';          ;;        s390)          ESUM='71c913a1eed7daae952657e18eb9a2e71723106b6e7b56373f18564db77f551e';          YML_FILE='8.0/sdk/linux/s390/index.yml';          ;;        s390x)          ESUM='c8641bc22443ebccaedf1822a12ec1303d89577d45c875702e1f628066c7f383';          YML_FILE='8.0/sdk/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 04:36:55 GMT
+# Thu, 16 Mar 2023 03:39:45 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:0064b1b97ec0775813740e8cb92821a6d84fd38eee70bafba9c12d9c37534661`  
-		Last Modified: Wed, 01 Mar 2023 13:18:18 GMT  
-		Size: 26.7 MB (26711153 bytes)  
+	-	`sha256:cd150c608fee7837e3a5b28be5c7b540eaf4efa27b3b755d55326470691ce2df`  
+		Last Modified: Sun, 12 Mar 2023 07:24:55 GMT  
+		Size: 26.7 MB (26710746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4584491976e0a2288553243d3caf1fc9a32b4827c131397e78d378040794a302`  
-		Last Modified: Thu, 02 Mar 2023 04:37:19 GMT  
-		Size: 3.0 MB (2952434 bytes)  
+	-	`sha256:fe43ddc3a069d2f66d64b9128ad2efde0e85efb6f720a7c7be3af6c784fe4211`  
+		Last Modified: Thu, 16 Mar 2023 03:40:10 GMT  
+		Size: 3.0 MB (2952384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49e80434905a67b8436af9db87a072f9e63fdccce65f0c273baafb2cc459457f`  
-		Last Modified: Thu, 02 Mar 2023 04:38:06 GMT  
-		Size: 166.5 MB (166475458 bytes)  
+	-	`sha256:754e7019336ab7b425ccedb413d2212e49ac0b5c3e991b6d0215379733f80ab4`  
+		Last Modified: Thu, 16 Mar 2023 03:40:56 GMT  
+		Size: 166.5 MB (166474225 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ibmjava:sdk` - linux; 386
@@ -1509,59 +1509,59 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/loca
 ### `ibmjava:sdk` - linux; s390x
 
 ```console
-$ docker pull ibmjava@sha256:90e85adeb1522f5cbcc2f9319494532d95f8f9c5935942b20e8d88314338d0de
+$ docker pull ibmjava@sha256:e48e27c40694f2f1e0043ea47bed61efa2460ceba7ed7384ed16d8825fb07ec2
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **184.8 MB (184804744 bytes)**  
+-	Total Size: **184.8 MB (184804076 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6b79d2fe5ac5614d0be3f633b9a34b90bf148e5e323fd32401f7d771639622fd`
+-	Image ID: `sha256:a7432079aca0b1081227fd25bd8327e2cca3c2a494d5ceff82a038e723e29f69`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:11 GMT
-ADD file:49b5368b8703fe0aa128fe923b83da7ab2a30a7a1c0395682c905b9271e7f503 in / 
-# Wed, 01 Mar 2023 03:18:11 GMT
+# Wed, 08 Mar 2023 03:23:31 GMT
+ADD file:a6309e462d28398152cb726a11615118d79858da963b8c614772b87d87465967 in / 
+# Wed, 08 Mar 2023 03:23:31 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 03:01:51 GMT
+# Thu, 16 Mar 2023 02:38:18 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 03:01:59 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 03:02:00 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 03:04:40 GMT
+# Thu, 16 Mar 2023 02:43:39 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='0f6aef4c3550a8f85288da8bc6fada405b0ce2226d6b1b57d0aae98cd5eef5e4';          YML_FILE='8.0/sdk/linux/x86_64/index.yml';          ;;        i386)          ESUM='fa7661c2eb2982c4fb85c6894e7a975970b27b6ee82d5facb352f075cc1dfca3';          YML_FILE='8.0/sdk/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='a56803671fe7d1c85f18d566dbcb7fbaf1d60c6f1d6de34e35a257e0c8095f9b';          YML_FILE='8.0/sdk/linux/ppc64le/index.yml';          ;;        s390)          ESUM='71c913a1eed7daae952657e18eb9a2e71723106b6e7b56373f18564db77f551e';          YML_FILE='8.0/sdk/linux/s390/index.yml';          ;;        s390x)          ESUM='c8641bc22443ebccaedf1822a12ec1303d89577d45c875702e1f628066c7f383';          YML_FILE='8.0/sdk/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 03:04:44 GMT
+# Thu, 16 Mar 2023 02:43:42 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:306d1b363f89f239f5dc6314e0033094c067617b584ce004fd8db99402dab321`  
-		Last Modified: Thu, 02 Mar 2023 02:21:31 GMT  
-		Size: 25.4 MB (25371412 bytes)  
+	-	`sha256:3a2279f06ab19f0d57823e69b999f54a344e28bd9f955b4db9a5875c0caa543a`  
+		Last Modified: Thu, 16 Mar 2023 02:01:03 GMT  
+		Size: 25.4 MB (25370993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7fe795fb99ed72a95436de37d2cdb8fbd2edb3445e421c880c502757fb41be9`  
-		Last Modified: Thu, 02 Mar 2023 03:05:21 GMT  
-		Size: 2.7 MB (2669070 bytes)  
+	-	`sha256:40c6fa88382e166a9b693d8b861f913ff7b356af9dff894ad987e650a41f3335`  
+		Last Modified: Thu, 16 Mar 2023 02:44:12 GMT  
+		Size: 2.7 MB (2668974 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f1faca277882f5361876339ebbf10a447709eb207e81aea404f21a9db495ec02`  
-		Last Modified: Thu, 02 Mar 2023 03:06:04 GMT  
-		Size: 156.8 MB (156764262 bytes)  
+	-	`sha256:395f1e8a910b3d6d2bc060348c48a8dccc7e4e86819d1685d9ac354bc1c41dbb`  
+		Last Modified: Thu, 16 Mar 2023 02:44:52 GMT  
+		Size: 156.8 MB (156764109 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `ibmjava:sfj`
 
 ```console
-$ docker pull ibmjava@sha256:9304e2a34f3e303c41b5a3ea5766552afd62902401302a6d4e38e25f79b299de
+$ docker pull ibmjava@sha256:a8a45e8e02190ddd63b8024fe72ac221d1cd22bf6c3ebf8b44c4bdaeebd0617d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1574,53 +1574,53 @@ $ docker pull ibmjava@sha256:9304e2a34f3e303c41b5a3ea5766552afd62902401302a6d4e3
 ### `ibmjava:sfj` - linux; amd64
 
 ```console
-$ docker pull ibmjava@sha256:eb83d3ae5dee67e2d6fd6bed2bda03cf9d23e84796dd5ff26f3c6d14e61ca2ff
+$ docker pull ibmjava@sha256:005ebb02b50059a72c21aba4e5c72f56265faacdef0394a303a7c3844a1589bf
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.7 MB (94672471 bytes)**  
+-	Total Size: **94.7 MB (94672008 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cf9869b49854ab5c444a3c78fffe5e3613c4814117e1abbbdb709c79af959837`
+-	Image ID: `sha256:5a656f42c4272ed1c32961ed5b836e0b20a1395eaedcb51cd91aebba64463335`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:00 GMT
+# Wed, 08 Mar 2023 03:22:42 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:02 GMT
-ADD file:66eb2ef5574cdf80bc0cb3af1637407620c1869f58cc7514395e3f5aea45cc3b in / 
-# Wed, 01 Mar 2023 03:18:02 GMT
+# Wed, 08 Mar 2023 03:22:44 GMT
+ADD file:4560926e076acae6b8396a9f1e760eee0f53e22e90ce8554dda57f1103547795 in / 
+# Wed, 08 Mar 2023 03:22:44 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 04:33:47 GMT
+# Thu, 16 Mar 2023 03:36:37 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 04:33:55 GMT
+# Thu, 16 Mar 2023 03:36:47 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 04:35:36 GMT
+# Thu, 16 Mar 2023 03:38:26 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='bb548976980c436b15e59e0db7b4e99a7ed273df39e17db60047f950c2863c1b';          YML_FILE='8.0/sfj/linux/x86_64/index.yml';          ;;        i386)          ESUM='768e6f8df5c9735d703f2dd5352b7c063949d59c6e15bc7d5c31d7ac667a241a';          YML_FILE='8.0/sfj/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='1ce92e9c420b2d081c8cd63c8441b324e49348360490d61e08a0908b830748cb';          YML_FILE='8.0/sfj/linux/ppc64le/index.yml';          ;;        s390)          ESUM='e790dc7707417153227e1f3164db1c699e3b6b9f697d9e1c9c9142bc0e3d3409';          YML_FILE='8.0/sfj/linux/s390/index.yml';          ;;        s390x)          ESUM='bfac3d6409a7996301d948faedfd4c19920dbb667ba699b7fd4719188366be8b';          YML_FILE='8.0/sfj/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 04:35:36 GMT
+# Thu, 16 Mar 2023 03:38:26 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:0064b1b97ec0775813740e8cb92821a6d84fd38eee70bafba9c12d9c37534661`  
-		Last Modified: Wed, 01 Mar 2023 13:18:18 GMT  
-		Size: 26.7 MB (26711153 bytes)  
+	-	`sha256:cd150c608fee7837e3a5b28be5c7b540eaf4efa27b3b755d55326470691ce2df`  
+		Last Modified: Sun, 12 Mar 2023 07:24:55 GMT  
+		Size: 26.7 MB (26710746 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4584491976e0a2288553243d3caf1fc9a32b4827c131397e78d378040794a302`  
-		Last Modified: Thu, 02 Mar 2023 04:37:19 GMT  
-		Size: 3.0 MB (2952434 bytes)  
+	-	`sha256:fe43ddc3a069d2f66d64b9128ad2efde0e85efb6f720a7c7be3af6c784fe4211`  
+		Last Modified: Thu, 16 Mar 2023 03:40:10 GMT  
+		Size: 3.0 MB (2952384 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a2cf3fecd4a80ac236f33c4cb1c95a942528d93566ba88c8cedecffbfbcbceb1`  
-		Last Modified: Thu, 02 Mar 2023 04:37:45 GMT  
-		Size: 65.0 MB (65008884 bytes)  
+	-	`sha256:70d18a8662bad714fe454a9ca739a7d914a30780b6921353bb1a33d5b6754fe9`  
+		Last Modified: Thu, 16 Mar 2023 03:40:37 GMT  
+		Size: 65.0 MB (65008878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ibmjava:sfj` - linux; 386
@@ -1730,51 +1730,51 @@ ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/
 ### `ibmjava:sfj` - linux; s390x
 
 ```console
-$ docker pull ibmjava@sha256:f7d0e2c77007bc0673c6b98ebcc2416773bf4949b5db48d2adb15d4de16da86b
+$ docker pull ibmjava@sha256:776e43d1866c5c8f51998fec550086763a0cb31708c6e877e1443ff6ad0e7458
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **94.2 MB (94163617 bytes)**  
+-	Total Size: **94.2 MB (94163138 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0b466f1fe7c37894f07123127150ceee65a03d6f2d2a658976d2bd48b8f0c690`
+-	Image ID: `sha256:fbdaf7c8d66b0512d1e6c507dbe1156d9c7452c2d9386c680ba35959884fdd5a`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG RELEASE
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 01 Mar 2023 03:18:09 GMT
+# Wed, 08 Mar 2023 03:23:29 GMT
 LABEL org.opencontainers.image.version=18.04
-# Wed, 01 Mar 2023 03:18:11 GMT
-ADD file:49b5368b8703fe0aa128fe923b83da7ab2a30a7a1c0395682c905b9271e7f503 in / 
-# Wed, 01 Mar 2023 03:18:11 GMT
+# Wed, 08 Mar 2023 03:23:31 GMT
+ADD file:a6309e462d28398152cb726a11615118d79858da963b8c614772b87d87465967 in / 
+# Wed, 08 Mar 2023 03:23:31 GMT
 CMD ["/bin/bash"]
-# Thu, 02 Mar 2023 03:01:51 GMT
+# Thu, 16 Mar 2023 02:38:18 GMT
 MAINTAINER Jayashree Gopi <jayasg12@in.ibm.com> (@jayasg12)
-# Thu, 02 Mar 2023 03:01:59 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends wget ca-certificates     && rm -rf /var/lib/apt/lists/*
-# Thu, 02 Mar 2023 03:02:00 GMT
+# Thu, 16 Mar 2023 02:38:24 GMT
 ENV JAVA_VERSION=8.0.7.20
-# Thu, 02 Mar 2023 03:03:34 GMT
+# Thu, 16 Mar 2023 02:42:23 GMT
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='bb548976980c436b15e59e0db7b4e99a7ed273df39e17db60047f950c2863c1b';          YML_FILE='8.0/sfj/linux/x86_64/index.yml';          ;;        i386)          ESUM='768e6f8df5c9735d703f2dd5352b7c063949d59c6e15bc7d5c31d7ac667a241a';          YML_FILE='8.0/sfj/linux/i386/index.yml';          ;;        ppc64el|ppc64le)          ESUM='1ce92e9c420b2d081c8cd63c8441b324e49348360490d61e08a0908b830748cb';          YML_FILE='8.0/sfj/linux/ppc64le/index.yml';          ;;        s390)          ESUM='e790dc7707417153227e1f3164db1c699e3b6b9f697d9e1c9c9142bc0e3d3409';          YML_FILE='8.0/sfj/linux/s390/index.yml';          ;;        s390x)          ESUM='bfac3d6409a7996301d948faedfd4c19920dbb667ba699b7fd4719188366be8b';          YML_FILE='8.0/sfj/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
-# Thu, 02 Mar 2023 03:03:36 GMT
+# Thu, 16 Mar 2023 02:42:24 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
 ```
 
 -	Layers:
-	-	`sha256:306d1b363f89f239f5dc6314e0033094c067617b584ce004fd8db99402dab321`  
-		Last Modified: Thu, 02 Mar 2023 02:21:31 GMT  
-		Size: 25.4 MB (25371412 bytes)  
+	-	`sha256:3a2279f06ab19f0d57823e69b999f54a344e28bd9f955b4db9a5875c0caa543a`  
+		Last Modified: Thu, 16 Mar 2023 02:01:03 GMT  
+		Size: 25.4 MB (25370993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c7fe795fb99ed72a95436de37d2cdb8fbd2edb3445e421c880c502757fb41be9`  
-		Last Modified: Thu, 02 Mar 2023 03:05:21 GMT  
-		Size: 2.7 MB (2669070 bytes)  
+	-	`sha256:40c6fa88382e166a9b693d8b861f913ff7b356af9dff894ad987e650a41f3335`  
+		Last Modified: Thu, 16 Mar 2023 02:44:12 GMT  
+		Size: 2.7 MB (2668974 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff637b5ce43a2ff1c562d9e5cf98e491a6facbc722aaf3f68d7821b234976e2e`  
-		Last Modified: Thu, 02 Mar 2023 03:05:46 GMT  
-		Size: 66.1 MB (66123135 bytes)  
+	-	`sha256:013f30cbf3e7c3ee71d1119f036e3f0065b72d61bead1f68d07633dbf386b3d8`  
+		Last Modified: Thu, 16 Mar 2023 02:44:36 GMT  
+		Size: 66.1 MB (66123171 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
