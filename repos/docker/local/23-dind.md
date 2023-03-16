@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c365741dcfc2b1d1fd3dbd7ded480a147a334836444f0335456f3e7e1b363505`
-- Created: `2023-03-07T19:40:15.98022695Z`
-- Virtual Size: ~ 310.92 Mb  
+- Image ID: `sha256:9e089f49ffe8007e577f62ce60af5eb4eae58816a2ea9cd16ec360f2422f68eb`
+- Created: `2023-03-14T00:20:01.203895109Z`
+- Virtual Size: ~ 310.91 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
@@ -372,23 +372,6 @@ libc-utils-0.7.2-r3 installed size:
 
 libc-utils-0.7.2-r3 license:
 BSD-2-Clause AND BSD-3-Clause
-
-```
-
-### `apk` package: `libc6-compat`
-
-```console
-libc6-compat-1.2.3-r4 description:
-compatibility libraries for glibc
-
-libc6-compat-1.2.3-r4 webpage:
-https://musl.libc.org/
-
-libc6-compat-1.2.3-r4 installed size:
-12 KiB
-
-libc6-compat-1.2.3-r4 license:
-MIT
 
 ```
 
