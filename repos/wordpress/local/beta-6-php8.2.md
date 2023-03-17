@@ -1,10 +1,10 @@
-# `wordpress:beta-6.2-RC1-php8.2-apache`
+# `wordpress:beta-6.2-RC2-php8.2-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6a9f63ef93d89809a5a4ffad4204cd9fabee9f2bd2df46d3b8b2b4d2016fae8f`
-- Created: `2023-03-09T22:32:30.396134097Z`
-- Virtual Size: ~ 620.13 Mb  
+- Image ID: `sha256:e1662d0cbdcdf18952f1baf5f4e193bc75e8cd3c7b0a5edb4252fea4fab48bc6`
+- Created: `2023-03-17T01:23:12.061264885Z`
+- Virtual Size: ~ 620.36 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -19,10 +19,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC`
-  - `PHP_VERSION=8.2.3`
-  - `PHP_URL=https://www.php.net/distributions/php-8.2.3.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.2.3.tar.xz.asc`
-  - `PHP_SHA256=b9b566686e351125d67568a33291650eb8dfa26614d205d70d82e6e92613d457`
+  - `PHP_VERSION=8.2.4`
+  - `PHP_URL=https://www.php.net/distributions/php-8.2.4.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.2.4.tar.xz.asc`
+  - `PHP_SHA256=bc7bf4ca7ed0dd17647e3ea870b6f062fcb56b243bfdef3f59ff7f94e96176a8`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -179,11 +179,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/apr-util/1.6.1-5+deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/apr-util/1.6.1-5+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `apr=1.7.0-6+deb11u1`
+### `dpkg` source package: `apr=1.7.0-6+deb11u2`
 
 Binary Packages:
 
-- `libapr1:amd64=1.7.0-6+deb11u1`
+- `libapr1:amd64=1.7.0-6+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 
@@ -192,18 +192,17 @@ Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apr=1.7.0-6+deb11u1
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0-6%2bdeb11u1.dsc' apr_1.7.0-6+deb11u1.dsc 2282 SHA256:561d329f77659ea05d7303776b76922c4c13c5647b5f9205a3d6637976f345df
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0.orig.tar.bz2' apr_1.7.0.orig.tar.bz2 872238 SHA256:e2e148f0b2e99b8e5c6caa09f6d4fb4dd3e83f744aa72a952f94f5a14436f7ea
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0.orig.tar.bz2.asc' apr_1.7.0.orig.tar.bz2.asc 801 SHA256:5a6c4e721ed82116d7877254ae11c076014040af2ff816ea15ec81e77a4a7d43
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0-6%2bdeb11u1.debian.tar.xz' apr_1.7.0-6+deb11u1.debian.tar.xz 214884 SHA256:7352919715fe985ccfee1953a85a051e16cd4af0c739c0f827e508a309ee5e06
+$ apt-get source -qq --print-uris apr=1.7.0-6+deb11u2
+'http://deb.debian.org/debian-security/pool/updates/main/a/apr/apr_1.7.0-6%2bdeb11u2.dsc' apr_1.7.0-6+deb11u2.dsc 2202 SHA256:9736c0926998f8ca24f96a88c935f323127817400184b4040e52456e483eacb1
+'http://deb.debian.org/debian-security/pool/updates/main/a/apr/apr_1.7.0.orig.tar.bz2' apr_1.7.0.orig.tar.bz2 872238 SHA256:e2e148f0b2e99b8e5c6caa09f6d4fb4dd3e83f744aa72a952f94f5a14436f7ea
+'http://deb.debian.org/debian-security/pool/updates/main/a/apr/apr_1.7.0-6%2bdeb11u2.debian.tar.xz' apr_1.7.0-6+deb11u2.debian.tar.xz 225364 SHA256:b90bcafcb6061f1685473f8c48e26c0916c8a312542eb25dca852c730a4dae64
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/apr/1.7.0-6+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/apr/1.7.0-6+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apr/1.7.0-6+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/apr/1.7.0-6+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/apr/1.7.0-6+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/apr/1.7.0-6+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apt=2.2.4`
 

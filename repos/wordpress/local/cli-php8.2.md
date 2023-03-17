@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d9402d26af3016fea8d3e1c1fc7f341764de2dc241b73ad01037aa085a3d73ab`
-- Created: `2023-02-15T01:16:20.995710834Z`
-- Virtual Size: ~ 160.40 Mb  
+- Image ID: `sha256:7d9250a5401634b9602fae09b2678daea94e2c83db307229353be510506e7fe8`
+- Created: `2023-03-17T01:22:34.349908005Z`
+- Virtual Size: ~ 160.90 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC`
-  - `PHP_VERSION=8.2.3`
-  - `PHP_URL=https://www.php.net/distributions/php-8.2.3.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.2.3.tar.xz.asc`
-  - `PHP_SHA256=b9b566686e351125d67568a33291650eb8dfa26614d205d70d82e6e92613d457`
+  - `PHP_VERSION=8.2.4`
+  - `PHP_URL=https://www.php.net/distributions/php-8.2.4.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.2.4.tar.xz.asc`
+  - `PHP_SHA256=bc7bf4ca7ed0dd17647e3ea870b6f062fcb56b243bfdef3f59ff7f94e96176a8`
   - `WORDPRESS_CLI_GPG_KEY=63AF7AA15067C05616FDDD88A3A2E8F226F0BC06`
   - `WORDPRESS_CLI_VERSION=2.7.1`
   - `WORDPRESS_CLI_SHA512=956b5e3e1a076bd5441c082ee754e3ff4517ec965b93c621f455c2bf5719358c36e67d52f676492700b59d42cacb34a50d382535c035f19da7a0b98bc41860de`
@@ -455,16 +455,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.87.0-r1 description:
+libcurl-7.88.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.87.0-r1 webpage:
+libcurl-7.88.1-r0 webpage:
 https://curl.se/
 
-libcurl-7.87.0-r1 installed size:
-540 KiB
+libcurl-7.88.1-r0 installed size:
+552 KiB
 
-libcurl-7.87.0-r1 license:
+libcurl-7.88.1-r0 license:
 curl
 
 ```
