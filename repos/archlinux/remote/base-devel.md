@@ -1,7 +1,7 @@
 ## `archlinux:base-devel`
 
 ```console
-$ docker pull archlinux@sha256:a1a2a043d8da23e7b5dc4ed317eb347fdba2bbfb1ef16a0f4a3b11af079fe4fa
+$ docker pull archlinux@sha256:3683088c11c40a3e6958e1f57451cd70e50bee379327a6dc51a2d52990e9389a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,33 +11,33 @@ $ docker pull archlinux@sha256:a1a2a043d8da23e7b5dc4ed317eb347fdba2bbfb1ef16a0f4
 ### `archlinux:base-devel` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:22c7ac88ee00e5be95c044b4dae7776e02d695399556ed7c3496384a49c6d8d9
+$ docker pull archlinux@sha256:8734c79fdf12c2f2fff9b84b956206b53bc9c635ab3a39d7959a1eb8ae4cbb46
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **245.2 MB (245231648 bytes)**  
+-	Total Size: **245.4 MB (245353458 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:974c348c74f0463466776cfe512ee909b9f9ab937eb3a0fbd9954379db7ba06f`
+-	Image ID: `sha256:36842c45cfb121c045c9d768f7d265878b3338262889a0d5b54828d3ef4c8721`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
-# Mon, 13 Mar 2023 20:21:07 GMT
-COPY dir:6cd30a0c7a3ffa597ef65b4f3d914b13d51c8e2a70299f0eec09c6804be58e74 in / 
-# Mon, 13 Mar 2023 20:21:10 GMT
+# Mon, 20 Mar 2023 23:28:52 GMT
+COPY dir:c59c7a69f5d4c27fcd3f871aa78a03d141f6be13ec1cb78c292d7b4cd5ebde15 in / 
+# Mon, 20 Mar 2023 23:28:55 GMT
 RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=TEMPLATE_VERSION_ID' /etc/os-release
-# Mon, 13 Mar 2023 20:21:11 GMT
+# Mon, 20 Mar 2023 23:28:55 GMT
 ENV LANG=C.UTF-8
-# Mon, 13 Mar 2023 20:21:11 GMT
+# Mon, 20 Mar 2023 23:28:55 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:1c7df861908c5cdc63525ce742a3331ef82e3d297ab2950091737a8bdd823c1a`  
-		Last Modified: Mon, 13 Mar 2023 20:22:25 GMT  
-		Size: 245.2 MB (245222932 bytes)  
+	-	`sha256:147eb476785b20920ffcf09ebbaa213e0bbd9220a7f9608a87411b521a49e739`  
+		Last Modified: Mon, 20 Mar 2023 23:30:09 GMT  
+		Size: 245.3 MB (245344740 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:95ae8051f50ebcbcea2f4dd988a67851d02e9ddbe134e3539dbe69ef14416256`  
-		Last Modified: Mon, 13 Mar 2023 20:21:52 GMT  
-		Size: 8.7 KB (8716 bytes)  
+	-	`sha256:b635d85a76f3903b23e4d023dc6c521310ffc530cdd383eee32e7f40087b4622`  
+		Last Modified: Mon, 20 Mar 2023 23:29:37 GMT  
+		Size: 8.7 KB (8718 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
