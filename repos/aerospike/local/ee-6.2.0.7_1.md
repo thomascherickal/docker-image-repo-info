@@ -1,10 +1,10 @@
-# `aerospike:ee-6.2.0.3`
+# `aerospike:ee-6.2.0.7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:810901d4f7f6675d83eefed900b070ff43850e8ff91ba7254647b6a2cb4ea9cc`
-- Created: `2023-03-01T04:38:13.414844488Z`
-- Virtual Size: ~ 219.02 Mb  
+- Image ID: `sha256:269f12eff770af87403446484bea0313f640d842c03f9b4fdc074c75c08bb129`
+- Created: `2023-03-20T22:19:42.862963548Z`
+- Virtual Size: ~ 189.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/bin/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","/entrypoint.sh"]`
@@ -67,11 +67,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.118/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.118/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `aerospike-server-enterprise=6.2.0.3-1`
+### `dpkg` source package: `aerospike-server-enterprise=6.2.0.7-1`
 
 Binary Packages:
 
-- `aerospike-server-enterprise=6.2.0.3-1`
+- `aerospike-server-enterprise=6.2.0.7-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -611,31 +611,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.46.2-2/ (for browsing the source)
 - https://sources.debian.net/src/e2fsprogs/1.46.2-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.46.2-2/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `expat=2.2.10-2+deb11u5`
-
-Binary Packages:
-
-- `libexpat1:amd64=2.2.10-2+deb11u5`
-
-Licenses: (parsed from: `/usr/share/doc/libexpat1/copyright`)
-
-- `MIT`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris expat=2.2.10-2+deb11u5
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10-2%2bdeb11u5.dsc' expat_2.2.10-2+deb11u5.dsc 2175 SHA256:5bbf7d1df4aa4fb5d31141b58dc08a687918c1685c48300bc3f67a8f56fe3071
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10.orig.tar.gz' expat_2.2.10.orig.tar.gz 8276395 SHA256:62e280f5fd29a5b70973f623e20a7412c3e3912c2684cb0e462e2c881be129e1
-'http://deb.debian.org/debian/pool/main/e/expat/expat_2.2.10-2%2bdeb11u5.debian.tar.xz' expat_2.2.10-2+deb11u5.debian.tar.xz 29468 SHA256:b24f586a155c207b2dbf6db1b6e4106427150acdd3a654c00c52d400da70d23d
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/expat/2.2.10-2+deb11u5/ (for browsing the source)
-- https://sources.debian.net/src/expat/2.2.10-2+deb11u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/expat/2.2.10-2+deb11u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.8.0-1`
 
@@ -1583,57 +1558,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/mawk/1.3.4.20200120-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/mawk/1.3.4.20200120-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `media-types=4.0.0`
-
-Binary Packages:
-
-- `media-types=4.0.0`
-
-Licenses: (parsed from: `/usr/share/doc/media-types/copyright`)
-
-- `ad-hoc`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris media-types=4.0.0
-'http://deb.debian.org/debian/pool/main/m/media-types/media-types_4.0.0.dsc' media-types_4.0.0.dsc 1620 SHA256:422edc1275dcc6bf07ac1b30612f501624cba04cfca2331eb87f1ca3af89e701
-'http://deb.debian.org/debian/pool/main/m/media-types/media-types_4.0.0.tar.xz' media-types_4.0.0.tar.xz 33988 SHA256:b5eb14fd6addb8f10c1665ebaa113cd0ebfb47f692cf27d9ac47405b13ce4e31
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/media-types/4.0.0/ (for browsing the source)
-- https://sources.debian.net/src/media-types/4.0.0/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/media-types/4.0.0/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `mpdecimal=2.5.1-1`
-
-Binary Packages:
-
-- `libmpdec3:amd64=2.5.1-1`
-
-Licenses: (parsed from: `/usr/share/doc/libmpdec3/copyright`)
-
-- `BSD`
-- `GPL-2`
-- `GPL-2+`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris mpdecimal=2.5.1-1
-'http://deb.debian.org/debian/pool/main/m/mpdecimal/mpdecimal_2.5.1-1.dsc' mpdecimal_2.5.1-1.dsc 1919 SHA256:5b4e5bc4d714b76af72bc4eaad2ac7feeb08ac5ee9fa5318f91edebe118ab6f9
-'http://deb.debian.org/debian/pool/main/m/mpdecimal/mpdecimal_2.5.1.orig.tar.gz' mpdecimal_2.5.1.orig.tar.gz 2584021 SHA256:9f9cd4c041f99b5c49ffb7b59d9f12d95b683d88585608aa56a6307667b2b21f
-'http://deb.debian.org/debian/pool/main/m/mpdecimal/mpdecimal_2.5.1-1.debian.tar.xz' mpdecimal_2.5.1-1.debian.tar.xz 6444 SHA256:e46140b8e665aee3058d0b2fb4fa44bde600251c8471de73711fa23ac573ee8a
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/mpdecimal/2.5.1-1/ (for browsing the source)
-- https://sources.debian.net/src/mpdecimal/2.5.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mpdecimal/2.5.1-1/ (for access to the source package after it no longer exists in the archive)
-
 ### `dpkg` source package: `ncurses=6.2+20201114-2`
 
 Binary Packages:
@@ -1976,129 +1900,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/procps/2:3.3.17-5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/procps/2:3.3.17-5/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `python3-defaults=3.9.2-3`
-
-Binary Packages:
-
-- `libpython3-stdlib:amd64=3.9.2-3`
-- `python3=3.9.2-3`
-- `python3-minimal=3.9.2-3`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris python3-defaults=3.9.2-3
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.9.2-3.dsc' python3-defaults_3.9.2-3.dsc 2879 SHA256:625d69b163c4ba751d717ccd4e4202f6c3132a4734f0d083ae11dea465cc7760
-'http://deb.debian.org/debian/pool/main/p/python3-defaults/python3-defaults_3.9.2-3.tar.gz' python3-defaults_3.9.2-3.tar.gz 140929 SHA256:64a82311e46c734a897e408cad11d17e5631ec3ec889ae90948111150e8f18ce
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/python3-defaults/3.9.2-3/ (for browsing the source)
-- https://sources.debian.net/src/python3-defaults/3.9.2-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-defaults/3.9.2-3/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `python3-stdlib-extensions=3.9.2-1`
-
-Binary Packages:
-
-- `python3-distutils=3.9.2-1`
-- `python3-lib2to3=3.9.2-1`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris python3-stdlib-extensions=3.9.2-1
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.2-1.dsc' python3-stdlib-extensions_3.9.2-1.dsc 2450 SHA256:bc55bb6577ada0315f267035d658b8aeeb78f6089987418a75156f7e10ebf8c8
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.2.orig.tar.xz' python3-stdlib-extensions_3.9.2.orig.tar.xz 1103424 SHA256:4c77b2e3f2d9518767f2bf0b58bfafd7560fdd4aebc162a642d7a7af748f9d07
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.9.2-1.debian.tar.xz' python3-stdlib-extensions_3.9.2-1.debian.tar.xz 18832 SHA256:46c8a5f71adde687b71a0aa39177d74cc355255f40121e64a30a7dc30c4e3ce5
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/python3-stdlib-extensions/3.9.2-1/ (for browsing the source)
-- https://sources.debian.net/src/python3-stdlib-extensions/3.9.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-stdlib-extensions/3.9.2-1/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `python3.9=3.9.2-1`
-
-Binary Packages:
-
-- `libpython3.9-minimal:amd64=3.9.2-1`
-- `libpython3.9-stdlib:amd64=3.9.2-1`
-- `python3.9=3.9.2-1`
-- `python3.9-minimal=3.9.2-1`
-
-Licenses: (parsed from: `/usr/share/doc/libpython3.9-minimal/copyright`, `/usr/share/doc/libpython3.9-stdlib/copyright`, `/usr/share/doc/python3.9/copyright`, `/usr/share/doc/python3.9-minimal/copyright`)
-
-- `* Permission to use this software in any way is granted without`
-- `By obtaining, using, and/or copying this software and/or its`
-- `GPL-2`
-- `Permission  is  hereby granted,  free  of charge,  to  any person`
-- `Permission is hereby granted, free of charge, to any person obtaining`
-- `Permission to use, copy, modify,`
-- `Redistribution`
-- `This software is provided 'as-is', without any express`
-- `This software is provided as-is, without express`
-- `binary forms, with`
-- `distribute this software`
-- `distribute this software and`
-- `distribute this software for any`
-- `implied`
-- `its`
-- `use in source`
-- `without`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris python3.9=3.9.2-1
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.2-1.dsc' python3.9_3.9.2-1.dsc 3493 SHA256:63bc63b864067e7f993be8bc9bf2a08363fde05895bea86961fc5d781e42b68b
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.2.orig.tar.xz' python3.9_3.9.2.orig.tar.xz 18889164 SHA256:3c2034c54f811448f516668dce09d24008a0716c3a794dd8639b5388cbde247d
-'http://deb.debian.org/debian/pool/main/p/python3.9/python3.9_3.9.2-1.debian.tar.xz' python3.9_3.9.2-1.debian.tar.xz 211484 SHA256:b8b9e1710ca5dc5b0f0d9734494024ea11f560e36c34eb9191ccb0605798a490
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/python3.9/3.9.2-1/ (for browsing the source)
-- https://sources.debian.net/src/python3.9/3.9.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.9/3.9.2-1/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `readline=8.1-1`
-
-Binary Packages:
-
-- `libreadline8:amd64=8.1-1`
-- `readline-common=8.1-1`
-
-Licenses: (parsed from: `/usr/share/doc/libreadline8/copyright`, `/usr/share/doc/readline-common/copyright`)
-
-- `GFDL`
-- `GPL-3`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris readline=8.1-1
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1-1.dsc' readline_8.1-1.dsc 2418 SHA256:53356fdf2ee122ab75c7b535d292385311f7dea425ccc42143d2b9a2accfc657
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1.orig.tar.gz' readline_8.1.orig.tar.gz 2993288 SHA256:f8ceb4ee131e3232226a17f51b164afc46cd0b9e6cef344be87c65962cb82b02
-'http://deb.debian.org/debian/pool/main/r/readline/readline_8.1-1.debian.tar.xz' readline_8.1-1.debian.tar.xz 29220 SHA256:852267a95aeec23b267c838469fee346e83a29e7a08071178dc87682591cffbf
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/readline/8.1-1/ (for browsing the source)
-- https://sources.debian.net/src/readline/8.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/readline/8.1-1/ (for access to the source package after it no longer exists in the archive)
-
 ### `dpkg` source package: `rtmpdump=2.4+20151223.gitfa8646d.1-2`
 
 Binary Packages:
@@ -2175,34 +1976,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/shadow/1:4.8.1-1/ (for browsing the source)
 - https://sources.debian.net/src/shadow/1:4.8.1-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/shadow/1:4.8.1-1/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `sqlite3=3.34.1-3`
-
-Binary Packages:
-
-- `libsqlite3-0:amd64=3.34.1-3`
-
-Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
-
-- `GPL-2`
-- `GPL-2+`
-- `public-domain`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris sqlite3=3.34.1-3
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.34.1-3.dsc' sqlite3_3.34.1-3.dsc 2410 SHA256:bee4705c6a1332c1ecb299e23b54cfe04b63ea5a163be1d211fa676595686cbf
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.34.1.orig-www.tar.xz' sqlite3_3.34.1.orig-www.tar.xz 5581512 SHA256:c63647f3fb6c4b0620d6587e2a744021401df92c307b55e236a7eb28c5000fa7
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.34.1.orig.tar.xz' sqlite3_3.34.1.orig.tar.xz 7343284 SHA256:082f583440c662cb484ae1c124ffe285b587bbb7837e095e693026e6df50334d
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.34.1-3.debian.tar.xz' sqlite3_3.34.1-3.debian.tar.xz 22828 SHA256:aefed33ed3e388d46cd35ab865b5fffe028b7511c0211f8521eacb8562fec0aa
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/sqlite3/3.34.1-3/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.34.1-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.34.1-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=247.3-7+deb11u1`
 
