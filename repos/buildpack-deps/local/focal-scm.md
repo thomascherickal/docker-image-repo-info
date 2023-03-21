@@ -387,14 +387,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.16
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.16.dsc' curl_7.68.0-1ubuntu2.16.dsc 2737 SHA512:084010e4474492ba4c675f00002a08f9632714cbf4641447db08fc804fdf3184ff69b9c62818bedb60a8b7093550e8ae39deca7b826c0134dc1065aa8d419aab
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.16.debian.tar.xz' curl_7.68.0-1ubuntu2.16.debian.tar.xz 58988 SHA512:2cd8b40e90e1cfd369d138ec42934d128cfdbd15eaf7cc5e1156b69288b0ed5fc171fe7312cbb397fc36bb740b756a647c9ea4d6a4d427b516320c14a0619419
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -2123,14 +2118,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.8=3.8.10-0ubuntu1~20.04.6
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1%7e20.04.6.dsc' python3.8_3.8.10-0ubuntu1~20.04.6.dsc 3504 SHA512:f6bfc8939d2a04e0d58db66ddb68afbe66688a24a59ccf9b692c336026a57341b1ad9e29575a23b8bbccad6d48ea5f530ff6b22189238b3b2df37c28209bb0a1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10.orig.tar.xz' python3.8_3.8.10.orig.tar.xz 18433456 SHA512:0be69705483ff9692e12048a96180e586f9d84c8d53066629f7fb2389585eb75c0f3506bb8182936e322508f58b71f4d8c6dfebbab9049b31b49da11d3b98e80
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1%7e20.04.6.debian.tar.xz' python3.8_3.8.10-0ubuntu1~20.04.6.debian.tar.xz 220316 SHA512:394532719e9c667e0fa24adfb4509f30718bd08748680328b683e69ec9a505fc8ae4fe1d4b06c4f411460d8e60f84470243dc0bee11c8a724cfccee4924ff21d
-```
 
 ### `dpkg` source package: `readline=8.0-4`
 

@@ -493,15 +493,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `X11`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.85.0-1ubuntu0.3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.85.0-1ubuntu0.3.dsc' curl_7.85.0-1ubuntu0.3.dsc 3070 SHA512:3aed2778ed13469fe42f4ef1118e344ba1478acc5409e7139331ecbd91d245ad0e8222f25ccdf785e049a8a9db4c17288f19de174208391d4c76e0d270f018c3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.85.0.orig.tar.gz' curl_7.85.0.orig.tar.gz 4182153 SHA512:bbad693bcde9c55e5942499950d76011f53ad43d3270eee2c8db486bcf46f5fc92b32dd8752caf4c5976fe493d083e2d34fa299cb96fb8e76d8f5fcc2cc56a36
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.85.0.orig.tar.gz.asc' curl_7.85.0.orig.tar.gz.asc 488 SHA512:2816f15dea2f564baae13e63bcb2881af4297f44b529631f1dc18839f2ada0a085e3033dfc177246a9f8229c7e0e4d28f41c12640544f047ddca6cebe38a63a7
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.85.0-1ubuntu0.3.debian.tar.xz' curl_7.85.0-1ubuntu0.3.debian.tar.xz 48908 SHA512:9f087064a06cfcde69e5b34d1031e46fd170e07248824609825d3af6d43cd0e42559babe531b2b8793fd503fb3c6b590374779119c7e17fde39331e84761ec0d
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-6ubuntu2`
 
@@ -1540,14 +1534,9 @@ Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/
 - `TatcherUlrichPublicDomain`
 - `aclocal`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris imagemagick=8:6.9.11.60+dfsg-1.3ubuntu0.22.10.2
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imagemagick/imagemagick_6.9.11.60%2bdfsg-1.3ubuntu0.22.10.2.dsc' imagemagick_6.9.11.60+dfsg-1.3ubuntu0.22.10.2.dsc 5246 SHA512:c9ca9828a4be1ed3e84a3fa8656af645715407aa384a5777fa8f94a6da6afbf95d37d7bbedf867ddc55af042bbe8104c205933d56ea6a6fc722a1709ba6029fa
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imagemagick/imagemagick_6.9.11.60%2bdfsg.orig.tar.xz' imagemagick_6.9.11.60+dfsg.orig.tar.xz 9395144 SHA512:345a23eda96516fc7a213bd4a322bca4c8b690efe40ff7b498a448f8cedd7f0d600fae2cb6fff45bc995779a90d8c04b58288273eee97833ddebb4f9f2a3d14c
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imagemagick/imagemagick_6.9.11.60%2bdfsg-1.3ubuntu0.22.10.2.debian.tar.xz' imagemagick_6.9.11.60+dfsg-1.3ubuntu0.22.10.2.debian.tar.xz 254288 SHA512:69a3f4de1eafa90259978b872f40b1e60a010168a778c921b7fcc839d4e0cdde0dcfd9caa6ccfe650f187027d0789bd57a97cb50c6b148154226e9d8e366709d
-```
 
 ### `dpkg` source package: `imath=3.1.5-1ubuntu2`
 
@@ -4029,14 +4018,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.10=3.10.7-1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.7-1ubuntu0.2.dsc' python3.10_3.10.7-1ubuntu0.2.dsc 3734 SHA512:176ba0a93bdda077fca7827a56944308195b95f18007c9dad99bc1516a1d11359217fe256f77bf457904594dd5afbccd1fa99a6743ffb9e1f2ef1b636ef6bf35
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.7.orig.tar.xz' python3.10_3.10.7.orig.tar.xz 19618696 SHA512:dc3432d72ee7382617318c9645204876d13bb61d4caf3fbbb65e6b14897261123c743049657c95e159e5566daf4dcde613d2e393f025de758f610b44eb958313
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.7-1ubuntu0.2.debian.tar.xz' python3.10_3.10.7-1ubuntu0.2.debian.tar.xz 223004 SHA512:a08ef81ff7175832248af3a6f7ded6c1de3503b2dabbd83169079e225b14d61df5b4fd562b3527b09ac3802f4fcaa22dce59f74a73f58e7d7fb08cc54e54f803
-```
 
 ### `dpkg` source package: `readline=8.2-1`
 

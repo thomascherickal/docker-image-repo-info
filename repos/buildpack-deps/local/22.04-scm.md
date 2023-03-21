@@ -331,15 +331,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.81.0-1ubuntu1.8
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.8.dsc' curl_7.81.0-1ubuntu1.8.dsc 3139 SHA512:b3861b53cea4965e165cb7cf53570c0e7a55e4f8cfc3b34d0ee289e1e759145c188572c3393d9afe91c5939055e5042850cf88ac19137a73f11cbfdc9025bb37
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz' curl_7.81.0.orig.tar.gz 4188040 SHA512:e3084f0fa083f7f93eac923edbfdddb5fd0a372b94673ba9d4427a2b95508898c15ecdf63b99a1c1f6cf3215e27b06cbaa2b7073df038d43b362e586f92495d3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz.asc' curl_7.81.0.orig.tar.gz.asc 488 SHA512:92bc5ede831551285d67b03abe8400c609ad31c9d33e324ee5c41b92dd5c2a0245a09a396bd76807b3e44bcfef944b1e16ac266264f7b85d27cc1c072a6e82bd
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.8.debian.tar.xz' curl_7.81.0-1ubuntu1.8.debian.tar.xz 60296 SHA512:010bc7eebf117a2ca4b7bfb4449cfd6bd76a2847226f0ea93107b9d3090408a9f93200648a51d6144b9345cb3a14ea0836c071b54d9c4666ba9531dc285e6589
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg2-3ubuntu1.2`
 
@@ -2047,14 +2041,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.10=3.10.6-1~22.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.2.dsc' python3.10_3.10.6-1~22.04.2.dsc 3646 SHA512:251b8d75657cfeac261c5b1d78a63827d2610a2a44fbd95db9072b93a4b1cc81ee723fb8ace323cc395ff837ffa391d03b89ef980f93475e1a1cc63d7e2c2ab5
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6.orig.tar.xz' python3.10_3.10.6.orig.tar.xz 19600672 SHA512:f2bf424bf4f4caa524ee1248b431e8e06d0745c3fc3ba457710d75f3698e653733feb4b059cd124f1de2a9e851c30d847f567aa47abef12898c9dc8a6507b476
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.6-1%7e22.04.2.debian.tar.xz' python3.10_3.10.6-1~22.04.2.debian.tar.xz 222940 SHA512:79fec6ee9082b979fa69bc78a454f155c01928e9a93b0512fd567075faa4f89be9363fc3921fffa4109ddcd9eda56a82de237e5783e58f4100ebc86ec30a255b
-```
 
 ### `dpkg` source package: `readline=8.1.2-1`
 

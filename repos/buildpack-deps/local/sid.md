@@ -1449,20 +1449,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.39.2-1.1
-'http://deb.debian.org/debian/pool/main/g/git/git_2.39.2-1.1.dsc' git_2.39.2-1.1.dsc 2947 SHA256:9044b496d6b97a28c59dcafb6af46507bfb189377cb90a54c0b4db1b8bc33b7c
-'http://deb.debian.org/debian/pool/main/g/git/git_2.39.2.orig.tar.xz' git_2.39.2.orig.tar.xz 7163224 SHA256:475f75f1373b2cd4e438706185175966d5c11f68c4db1e48c26257c43ddcf2d6
-'http://deb.debian.org/debian/pool/main/g/git/git_2.39.2-1.1.debian.tar.xz' git_2.39.2-1.1.debian.tar.xz 740476 SHA256:3d2ee93fb994e58a1535a052ed2995dd8902c3a8dabbff7073452f70496a5b3a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.39.2-1.1/
 
-- https://sources.debian.net/src/git/1:2.39.2-1.1/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.39.2-1.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.39.2-1.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glib2.0=2.74.5-1`
 

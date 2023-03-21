@@ -473,14 +473,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.58.0-2ubuntu3.23
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.23.dsc' curl_7.58.0-2ubuntu3.23.dsc 2781 SHA512:248561407f16c0dbdc18cf4bf2975b9f73e43129ada2063dfcc165519ebf237533cfb59202b8feead4560bcd2bbc74b06069efbc7dbb07ab739f8ee74cede0ec
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0.orig.tar.gz' curl_7.58.0.orig.tar.gz 3879728 SHA512:7b12b79107558bb266672d6e128615fe5a8149c37f4ae540197e3298f5d312beb2d78fbb23e3ea84ea7afc41549898a1e5cd38509f0388b11707b48d5efb8ca3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.58.0-2ubuntu3.23.debian.tar.xz' curl_7.58.0-2ubuntu3.23.debian.tar.xz 74624 SHA512:b8c9b7c235ba5a10dc64cd334e9e0420975917eb323231fde51a36ba91f165edcc702604897e7661704c7a7ec9a4121342fcac1bc613ff8fad5515bf9bd038e7
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27~101-g0780600+dfsg-3ubuntu2.4`
 
@@ -3473,14 +3468,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 - `implied`
 - `see above, some license as Python`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python2.7=2.7.17-1~18.04ubuntu1.10
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1%7e18.04ubuntu1.10.dsc' python2.7_2.7.17-1~18.04ubuntu1.10.dsc 3487 SHA512:cae83b4698aa976ec3c98f11be1c970ad4aee8e7fd3a394f674ecdc92d5ca7f76fd24d2538e1a73c746a8ea52d2a7a5ffab7b5431f98fccb32fddbbc43394c94
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17.orig.tar.gz' python2.7_2.7.17.orig.tar.gz 17535962 SHA512:f526baff7f1a9451244edb04e2aca63336b656aac178f4f64c135390b5b1185990ccff0c48f602914dd1c49c9e075951d372b4f2daac39e336c23ae84ef4ca16
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python2.7/python2.7_2.7.17-1%7e18.04ubuntu1.10.diff.gz' python2.7_2.7.17-1~18.04ubuntu1.10.diff.gz 305168 SHA512:b9656b2e96971b43b9535a5b29f1c290a9949cee7bad579a1029a6165b3327a557ff024b59562eb5e5335a37ef981c823d8699c0030351c79bd10535ad7dd19e
-```
 
 ### `dpkg` source package: `python3-defaults=3.6.7-1~18.04`
 
@@ -3551,14 +3541,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.6-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.6=3.6.9-1~18.04ubuntu1.10
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1%7e18.04ubuntu1.10.dsc' python3.6_3.6.9-1~18.04ubuntu1.10.dsc 3474 SHA512:8d856398ab36482104d8503b0590b341df526f5670abca9416ea43d7b116f5ab464a1df92b2b5deb081c7639b69b3d45a874f1323ae42712c49a37b30796f3a2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9.orig.tar.xz' python3.6_3.6.9.orig.tar.xz 17212164 SHA512:05de9c6f44d96a52bfce10ede4312de892573edaf8bece65926d19973a3a800d65eed7a857af945f69efcfb25efa3788e7a54016b03d80b611eb51c3ea074819
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.6/python3.6_3.6.9-1%7e18.04ubuntu1.10.debian.tar.xz' python3.6_3.6.9-1~18.04ubuntu1.10.debian.tar.xz 232900 SHA512:7e79bebe4d46ad37a75ebc44449abf8d0be8bbf56f0ed8b4f19e240e91a3eefba0d98eb1adbd65ea6b5daf8555b5f43dc4c16445ccbb895f211b971419dfa58b
-```
 
 ### `dpkg` source package: `readline=7.0-3`
 

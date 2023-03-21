@@ -510,15 +510,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `X11`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.88.1-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.88.1-1ubuntu1.dsc' curl_7.88.1-1ubuntu1.dsc 3070 SHA512:c75672f7752297bedde5c47d795d3518db43e1b037f2456f40aab2f61fd58394206daf929e512cac113fc963743fc81476d762a86e7cdb679df27e69373156ec
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.88.1.orig.tar.gz' curl_7.88.1.orig.tar.gz 4343562 SHA512:67701d458548712bbfaa55f2ebefbf87cdbba01b7b1200f608b1c3af67e8dd8e243fa89f256446d217d658a5a1242331d8b0168ab600351e74ee0e2511e79dae
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.88.1.orig.tar.gz.asc' curl_7.88.1.orig.tar.gz.asc 488 SHA512:90029e6304d7ece487594d9192101084e3b0419c9e4296a76b9d32f44d2fb98753ddc6b0b50c2ffc16ab3b04222af607ca4c813d2c01bf1fd1b670d4d7e39404
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.88.1-1ubuntu1.debian.tar.xz' curl_7.88.1-1ubuntu1.debian.tar.xz 40028 SHA512:533163b91ad1d1dc117b666f408d024e9d01fa02c8133c6fd2149475b3012e220cbd49fe12f691345974af0cd986322cc03c0d84ece3a9ae6b5efade1f8487c3
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-10`
 
@@ -788,14 +782,9 @@ Licenses: (parsed from: `/usr/share/doc/comerr-dev/copyright`, `/usr/share/doc/e
 - `GPL-2`
 - `LGPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.46.6~rc1-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.6%7erc1-1ubuntu1.dsc' e2fsprogs_1.46.6~rc1-1ubuntu1.dsc 2957 SHA512:053deb1cadfbb95b9894216ec1a1fb90d32cba597dfd3da9e2b3895b032fa4c1ed2eaa3434158db46775a40a0296d60e9f1383905331827221df50807a9475bf
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.6%7erc1.orig.tar.gz' e2fsprogs_1.46.6~rc1.orig.tar.gz 9615342 SHA512:2b6afe2f8b5c83fd061bf72fe507bdc22206b1a781d3baecca693a6744f203715e8e6dd6e7864dfa853c85e72f4e94a813ff362ea8e43c0443025ab644550648
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.46.6%7erc1-1ubuntu1.debian.tar.xz' e2fsprogs_1.46.6~rc1-1ubuntu1.debian.tar.xz 85224 SHA512:d9ee270014468c1a00b7ada6715e3b3479b6d2f3bd3c6b044aad670304cfad4ab1bf275bc359642ca0c4d2c4d46ced52ba7740b3711ea974a75e11240d908dbd
-```
 
 ### `dpkg` source package: `elfutils=0.188-2.1`
 
@@ -2094,14 +2083,9 @@ Licenses: (parsed from: `/usr/share/doc/libevent-2.1-7a/copyright`, `/usr/share/
 - `ISC`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libevent=2.1.12-stable-5ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevent/libevent_2.1.12-stable-5ubuntu1.dsc' libevent_2.1.12-stable-5ubuntu1.dsc 2492 SHA512:2f36aa1ebb97c708395c97da1c23f2e9b191ac4a18d955769fb63aef4b4c53a1b1a9c792ad09e95f93e1e76a7321595ef02f4839b0a9ba634cfba56e4372296c
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevent/libevent_2.1.12-stable.orig.tar.gz' libevent_2.1.12-stable.orig.tar.gz 1100847 SHA512:88d8944cd75cbe78bc4e56a6741ca67c017a3686d5349100f1c74f8a68ac0b6410ce64dff160be4a4ba0696ee29540dfed59aaf3c9a02f0c164b00307fcfe84f
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevent/libevent_2.1.12-stable-5ubuntu1.debian.tar.xz' libevent_2.1.12-stable-5ubuntu1.debian.tar.xz 17148 SHA512:312e91309028c036a9a6c3e98a3989beb372960e00e8b4a2223fcf04abd9b432156ae55b24df289baf3c06a7cbd52fa29ee792091ac7493268c05e7be776ec85
-```
 
 ### `dpkg` source package: `libexif=0.6.24-1build1`
 
@@ -3132,15 +3116,13 @@ Licenses: (parsed from: `/usr/share/doc/libzstd-dev/copyright`, `/usr/share/doc/
 - `GPL-2`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libzstd=1.5.2+dfsg2-3
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.5.2%2bdfsg2-3.dsc' libzstd_1.5.2+dfsg2-3.dsc 2454 SHA512:8782bcc326da99d585106640cea59fe66a702f895e8e6978e8df7ba93e028086ea12e9afe920c1b7f9c2de621fd3d6bbdc7b2cc90d069c04a7d7915a020c0f49
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.5.2%2bdfsg2.orig.tar.xz' libzstd_1.5.2+dfsg2.orig.tar.xz 1447608 SHA512:f41580b7fd64b5265f2e4dbe4161108091397f7f9b416e8f412b22de1c8687d41f094f58e77f5c4daa9c7842841c5729da1381173e8ad722a5531f6c01008fdf
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.5.2%2bdfsg2.orig.tar.xz.asc' libzstd_1.5.2+dfsg2.orig.tar.xz.asc 833 SHA512:ec83cbdd8d1f21f2c64b4a8ac51b47582eef2ab9a189a9c32fd496e31f5a73dac21f8ffe38dcfec3e67beeed3634bb5979c1a0009eeaac05aaa4e4168991ed5b
-'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.5.2%2bdfsg2-3.debian.tar.xz' libzstd_1.5.2+dfsg2-3.debian.tar.xz 12944 SHA512:cc874345995a2309735ebde048653bd880deaf9fa6cb18bf5838afdab6d00e7f2344ab07a9b4048902574879e730ff07a3abce5cfd66d8b1750d65bab129d46b
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libzstd/1.5.2+dfsg2-3/
+
 
 ### `dpkg` source package: `linux=6.1.0-16.16`
 
@@ -3360,9 +3342,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris mpdecimal=2.5.1-2build2
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.5.1-2build2.dsc' mpdecimal_2.5.1-2build2.dsc 2026 SHA512:2f930154a94b9b4090f18e848ea94d115304827e351abc9141ef8646b9937a0f93eb2517790b661b0569e22bb498497c03972233e1ace6bdd85c9fc6922e7e70
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.5.1.orig.tar.gz' mpdecimal_2.5.1.orig.tar.gz 2584021 SHA512:710cb5cb71dbcf3e170ca15869c148df0547b848400c6b6dd70c67d9961dbe1190af8fb4d1623bfb0ca2afe44f369a42e311ab5225ed89d4031cb49a3bd70f30
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpdecimal/mpdecimal_2.5.1-2build2.debian.tar.xz' mpdecimal_2.5.1-2build2.debian.tar.xz 6860 SHA512:261ab28a609fbcff2b9561f1b1e484500c5652e48bd0abc4f8c5df73b7e00333b80f1fe416c84800690d13d52d2af72d97503dcd0afa61073ee5610d62a52a02
+'http://archive.ubuntu.com/ubuntu/pool/universe/m/mpdecimal/mpdecimal_2.5.1-2build2.dsc' mpdecimal_2.5.1-2build2.dsc 2026 SHA512:2f930154a94b9b4090f18e848ea94d115304827e351abc9141ef8646b9937a0f93eb2517790b661b0569e22bb498497c03972233e1ace6bdd85c9fc6922e7e70
+'http://archive.ubuntu.com/ubuntu/pool/universe/m/mpdecimal/mpdecimal_2.5.1.orig.tar.gz' mpdecimal_2.5.1.orig.tar.gz 2584021 SHA512:710cb5cb71dbcf3e170ca15869c148df0547b848400c6b6dd70c67d9961dbe1190af8fb4d1623bfb0ca2afe44f369a42e311ab5225ed89d4031cb49a3bd70f30
+'http://archive.ubuntu.com/ubuntu/pool/universe/m/mpdecimal/mpdecimal_2.5.1-2build2.debian.tar.xz' mpdecimal_2.5.1-2build2.debian.tar.xz 6860 SHA512:261ab28a609fbcff2b9561f1b1e484500c5652e48bd0abc4f8c5df73b7e00333b80f1fe416c84800690d13d52d2af72d97503dcd0afa61073ee5610d62a52a02
 ```
 
 ### `dpkg` source package: `mpfr4=4.2.0-1`
