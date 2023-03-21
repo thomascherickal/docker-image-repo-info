@@ -478,14 +478,9 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.16
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.16.dsc' curl_7.68.0-1ubuntu2.16.dsc 2737 SHA512:084010e4474492ba4c675f00002a08f9632714cbf4641447db08fc804fdf3184ff69b9c62818bedb60a8b7093550e8ae39deca7b826c0134dc1065aa8d419aab
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.16.debian.tar.xz' curl_7.68.0-1ubuntu2.16.debian.tar.xz 58988 SHA512:2cd8b40e90e1cfd369d138ec42934d128cfdbd15eaf7cc5e1156b69288b0ed5fc171fe7312cbb397fc36bb740b756a647c9ea4d6a4d427b516320c14a0619419
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -4299,14 +4294,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-rosdep-modules=0.22.1-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep-modules/python3-rosdep-modules_0.22.1-1.debian.tar.xz' python3-rosdep-modules_0.22.1-1.debian.tar.xz 2036 SHA512:125a93c4646c2fbebc9f41b88bccdc749a13e5cd1da6bb27552748be60a2959efade21121dab204199034eef0f1c5d90ccdab0625c59f25fe8f3676924601b3a
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep-modules/python3-rosdep-modules_0.22.1-1.dsc' python3-rosdep-modules_0.22.1-1.dsc 997 SHA512:0e23f8ca249e75379f8473f9d41b30aff1b8fa36ba41f18108f748afff448088e1b102fdc8f5800a826f4a733a67bcdedf1e9afd3ce43efb047ab18074589612
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep-modules/python3-rosdep-modules_0.22.1.orig.tar.gz' python3-rosdep-modules_0.22.1.orig.tar.gz 94004 SHA512:7d02ce48ccb625495993cc146b6665689ff30a8049f66ecaf608ac7dc24512ee2a1a12647b3b241753a0ce9524447d4f3eda01b72e5ea09ea59600503d8c6eeb
-```
 
 ### `dpkg` source package: `python3-rosdep=0.22.1-1`
 
@@ -4318,14 +4308,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-rosdep=0.22.1-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep/python3-rosdep_0.22.1-1.debian.tar.xz' python3-rosdep_0.22.1-1.debian.tar.xz 1976 SHA512:84223b9af4d04ce7ac64c3fba694ca557087ac08e4d042eab1205340a1a0ef1a9d4548e9a8c23fad3b11619a37d086390a85ecda98b7fcb2e499af5a2a24fe72
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep/python3-rosdep_0.22.1-1.dsc' python3-rosdep_0.22.1-1.dsc 925 SHA512:c06131310ec608027d481343d38b3f1c7c0052844f7c8448374ead35a50b53d5c273f8c4851636742e139e51c1be65407c0e3cf9ca2f2b0a5c0e6e9211e3701a
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rosdep/python3-rosdep_0.22.1.orig.tar.gz' python3-rosdep_0.22.1.orig.tar.gz 33617 SHA512:ca219c171c28ac363f4ba758d3a225b75ed36157febcd8edd9f29dc82619236bc811ef3ea5309f8f6fa4c8d33ec3c6a666f2469cf8295a16911cf6c0212e6234
-```
 
 ### `dpkg` source package: `python3-rosdistro-modules=0.9.0-1`
 
@@ -4356,14 +4341,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-rospkg-modules=1.4.0-1
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rospkg-modules/python3-rospkg-modules_1.4.0-1.debian.tar.xz' python3-rospkg-modules_1.4.0-1.debian.tar.xz 1168 SHA512:8a17ebdfedf766ae6043759606e19126f8cfec3d93eb28162a316b0a5d64e98d52acdd47d599e1e3625015caacdc4f0f32c51484d783389919e6f8ce6ca5c18b
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rospkg-modules/python3-rospkg-modules_1.4.0-1.dsc' python3-rospkg-modules_1.4.0-1.dsc 973 SHA512:b309e62c393e33076bc010c275da1c51e4fed2c5531d423b9596e54cf478fffb8abeb501d93f48b0f5e98e8f1b036155ee7495f3f03ebb35b7f57deef6fdcfcc
-'http://packages.ros.org/ros2/ubuntu/pool/main/p/python3-rospkg-modules/python3-rospkg-modules_1.4.0.orig.tar.gz' python3-rospkg-modules_1.4.0.orig.tar.gz 41508 SHA512:f8e5fd41d03cfb6d675fcd6a2735a7d38dda6a7b94eec140b9c3b31a6db385c86d35ac13cce39539abc6d41f567de454a9c3304f058edcba66ddb816237e69ba
-```
 
 ### `dpkg` source package: `python3-stdlib-extensions=3.8.10-0ubuntu1~20.04`
 
@@ -4436,14 +4416,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.8/copyright`, `/usr/share/doc
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.8=3.8.10-0ubuntu1~20.04.6
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1%7e20.04.6.dsc' python3.8_3.8.10-0ubuntu1~20.04.6.dsc 3504 SHA512:f6bfc8939d2a04e0d58db66ddb68afbe66688a24a59ccf9b692c336026a57341b1ad9e29575a23b8bbccad6d48ea5f530ff6b22189238b3b2df37c28209bb0a1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10.orig.tar.xz' python3.8_3.8.10.orig.tar.xz 18433456 SHA512:0be69705483ff9692e12048a96180e586f9d84c8d53066629f7fb2389585eb75c0f3506bb8182936e322508f58b71f4d8c6dfebbab9049b31b49da11d3b98e80
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1%7e20.04.6.debian.tar.xz' python3.8_3.8.10-0ubuntu1~20.04.6.debian.tar.xz 220316 SHA512:394532719e9c667e0fa24adfb4509f30718bd08748680328b683e69ec9a505fc8ae4fe1d4b06c4f411460d8e60f84470243dc0bee11c8a724cfccee4924ff21d
-```
 
 ### `dpkg` source package: `pyyaml=5.3.1-1ubuntu0.1`
 
