@@ -1,10 +1,10 @@
-# `groovy:4.0.8-jdk11`
+# `groovy:4.0.10-jdk11`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1d84c933bc7f9757badb63d73897e1f8e2acc9589fbc02697ff1f8406df43ebc`
-- Created: `2023-03-02T10:32:28.534655776Z`
-- Virtual Size: ~ 488.92 Mb  
+- Image ID: `sha256:d0ae1a7abd687cbb0018ecaa52ad7f338d61575ebe37432b483e1174e2037e3b`
+- Created: `2023-03-16T06:49:37.688481341Z`
+- Virtual Size: ~ 488.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["groovysh"]`
@@ -16,7 +16,7 @@
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-11.0.18+10`
   - `GROOVY_HOME=/opt/groovy`
-  - `GROOVY_VERSION=4.0.8`
+  - `GROOVY_VERSION=4.0.10`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=22.04`
@@ -298,15 +298,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.81.0-1ubuntu1.8
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.8.dsc' curl_7.81.0-1ubuntu1.8.dsc 3139 SHA512:b3861b53cea4965e165cb7cf53570c0e7a55e4f8cfc3b34d0ee289e1e759145c188572c3393d9afe91c5939055e5042850cf88ac19137a73f11cbfdc9025bb37
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz' curl_7.81.0.orig.tar.gz 4188040 SHA512:e3084f0fa083f7f93eac923edbfdddb5fd0a372b94673ba9d4427a2b95508898c15ecdf63b99a1c1f6cf3215e27b06cbaa2b7073df038d43b362e586f92495d3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz.asc' curl_7.81.0.orig.tar.gz.asc 488 SHA512:92bc5ede831551285d67b03abe8400c609ad31c9d33e324ee5c41b92dd5c2a0245a09a396bd76807b3e44bcfef944b1e16ac266264f7b85d27cc1c072a6e82bd
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.8.debian.tar.xz' curl_7.81.0-1ubuntu1.8.debian.tar.xz 60296 SHA512:010bc7eebf117a2ca4b7bfb4449cfd6bd76a2847226f0ea93107b9d3090408a9f93200648a51d6144b9345cb3a14ea0836c071b54d9c4666ba9531dc285e6589
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg2-3ubuntu1.2`
 
@@ -1542,14 +1536,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.5.13+dfsg-0ubuntu0.22.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.13%2bdfsg-0ubuntu0.22.04.1.dsc' openldap_2.5.13+dfsg-0ubuntu0.22.04.1.dsc 3310 SHA512:8162af449738240c5556873f27aff88da64cb37dbea09bf0b31930ea4be9cdb2e2ed733c33eaa616a85783a6fe60a07603136eeb449927079a45628fed89f456
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.13%2bdfsg.orig.tar.gz' openldap_2.5.13+dfsg.orig.tar.gz 5617769 SHA512:2d781539942d5a497b1c56bdf69ed3fa39e44178716e295e37c2f10ccccb1ba39c8b27c8c3aa69da14bde98f013278e9ed9a4746ef31d96aace3a96f063e5dfe
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.13%2bdfsg-0ubuntu0.22.04.1.debian.tar.xz' openldap_2.5.13+dfsg-0ubuntu0.22.04.1.debian.tar.xz 171328 SHA512:d87cc91a1ea87442fcdec494b59e54daa31804123101e1c378baa310141cc8352ab4b4efa7a5539dde69ad50023058241c73158081916ef5f7e2516996a7c94f
-```
 
 ### `dpkg` source package: `openssl=3.0.2-0ubuntu1.8`
 
@@ -1882,12 +1871,12 @@ $ apt-get source -qq --print-uris sqlite3=3.37.2-2ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.37.2-2ubuntu0.1.debian.tar.xz' sqlite3_3.37.2-2ubuntu0.1.debian.tar.xz 29208 SHA512:db22aee842a2bbeae82d43909e357fb8e0985b1410decf82240d1f86939fd5ac10b116512566d87f2250e7a99e36c3736675d23111e851a7c1cb0d0192157955
 ```
 
-### `dpkg` source package: `systemd=249.11-0ubuntu3.6`
+### `dpkg` source package: `systemd=249.11-0ubuntu3.7`
 
 Binary Packages:
 
-- `libsystemd0:amd64=249.11-0ubuntu3.6`
-- `libudev1:amd64=249.11-0ubuntu3.6`
+- `libsystemd0:amd64=249.11-0ubuntu3.7`
+- `libudev1:amd64=249.11-0ubuntu3.7`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1900,9 +1889,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=249.11-0ubuntu3.7
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.7.dsc' systemd_249.11-0ubuntu3.7.dsc 5773 SHA512:2a69592b5dcf3ae0204bfb0664c1678d7847b68261a4f3dab11f810535414f7c403428b9fd7987a9044822bb21b5380e14050428b0ef54a212daf00c8249294a
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11.orig.tar.gz' systemd_249.11.orig.tar.gz 10622702 SHA512:fed7f81933648945a4bfac9fb12150ecd84d32181f79be0e14e0b3a789343a87569f868670e0b8dfc2801fab39f7490f95ee8c29ba831d7611f78c14ace5ddd8
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.7.debian.tar.xz' systemd_249.11-0ubuntu3.7.debian.tar.xz 240216 SHA512:8760b64af10b8bbd81444aedaca44936852d8e939cfd7111172f391fae011cabe30a6e11613a4ebe1794ac252ca65141082e62f3a76ae75736d080c20e26199a
+```
 
 ### `dpkg` source package: `sysvinit=3.01-1ubuntu1`
 
