@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:81657f4e42021b061d02d4ec68ab037fd384223d68e212e723bc5ab5b13edb84`
-- Created: `2023-03-01T18:20:33.374138166Z`
-- Virtual Size: ~ 272.16 Mb  
+- Image ID: `sha256:7a8d5690ee4d009d1abc0f4765cc44d495ddcc5cf1c099161806ac0a9736aa75`
+- Created: `2023-03-23T08:41:47.110562326Z`
+- Virtual Size: ~ 272.54 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-varnish-entrypoint"]`
@@ -2999,11 +2999,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/util-linux/2.36.1-8+deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/util-linux/2.36.1-8+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `varnish=7.1.2`
+### `dpkg` source package: `varnish=7.2.1`
 
 Binary Packages:
 
-- `varnish=7.1.2`
+- `varnish=7.2.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.

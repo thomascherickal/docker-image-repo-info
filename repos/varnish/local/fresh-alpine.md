@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:45541146200b728770b957daefbda0600611245c5968004f3b9ebccc9ae92eac`
-- Created: `2023-02-11T14:11:04.089055123Z`
-- Virtual Size: ~ 148.66 Mb  
+- Image ID: `sha256:7b8c7bfbcc73177042f953412f48cad2a7a185d7d268f931ae770ac2cb362d68`
+- Created: `2023-03-22T00:25:24.72462139Z`
+- Virtual Size: ~ 149.26 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-varnish-entrypoint"]`
@@ -409,16 +409,16 @@ LGPL-3.0-or-later
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.2-r7 description:
+musl-1.2.2-r8 description:
 the musl c library (libc) implementation
 
-musl-1.2.2-r7 webpage:
+musl-1.2.2-r8 webpage:
 https://musl.libc.org/
 
-musl-1.2.2-r7 installed size:
+musl-1.2.2-r8 installed size:
 608 KiB
 
-musl-1.2.2-r7 license:
+musl-1.2.2-r8 license:
 MIT
 
 ```
@@ -426,16 +426,16 @@ MIT
 ### `apk` package: `musl-dev`
 
 ```console
-musl-dev-1.2.2-r7 description:
+musl-dev-1.2.2-r8 description:
 the musl c library (libc) implementation (development files)
 
-musl-dev-1.2.2-r7 webpage:
+musl-dev-1.2.2-r8 webpage:
 https://musl.libc.org/
 
-musl-dev-1.2.2-r7 installed size:
+musl-dev-1.2.2-r8 installed size:
 10 MiB
 
-musl-dev-1.2.2-r7 license:
+musl-dev-1.2.2-r8 license:
 MIT
 
 ```
@@ -562,16 +562,16 @@ GPL-2.0-only
 ### `apk` package: `varnish`
 
 ```console
-varnish-7.2.1-r1 description:
+varnish-7.3.0-r1 description:
 High-performance HTTP accelerator
 
-varnish-7.2.1-r1 webpage:
+varnish-7.3.0-r1 webpage:
 http://www.varnish-cache.org/
 
-varnish-7.2.1-r1 installed size:
-2392 KiB
+varnish-7.3.0-r1 installed size:
+2408 KiB
 
-varnish-7.2.1-r1 license:
+varnish-7.3.0-r1 license:
 BSD
 
 ```
@@ -579,16 +579,16 @@ BSD
 ### `apk` package: `varnish-dbg`
 
 ```console
-varnish-dbg-7.2.1-r1 description:
+varnish-dbg-7.3.0-r1 description:
 High-performance HTTP accelerator (debug symbols)
 
-varnish-dbg-7.2.1-r1 webpage:
+varnish-dbg-7.3.0-r1 webpage:
 http://www.varnish-cache.org/
 
-varnish-dbg-7.2.1-r1 installed size:
-6564 KiB
+varnish-dbg-7.3.0-r1 installed size:
+6604 KiB
 
-varnish-dbg-7.2.1-r1 license:
+varnish-dbg-7.3.0-r1 license:
 BSD
 
 ```
@@ -596,16 +596,16 @@ BSD
 ### `apk` package: `varnish-dev`
 
 ```console
-varnish-dev-7.2.1-r1 description:
+varnish-dev-7.3.0-r1 description:
 High-performance HTTP accelerator (development files)
 
-varnish-dev-7.2.1-r1 webpage:
+varnish-dev-7.3.0-r1 webpage:
 http://www.varnish-cache.org/
 
-varnish-dev-7.2.1-r1 installed size:
-668 KiB
+varnish-dev-7.3.0-r1 installed size:
+684 KiB
 
-varnish-dev-7.2.1-r1 license:
+varnish-dev-7.3.0-r1 license:
 BSD
 
 ```
@@ -613,16 +613,16 @@ BSD
 ### `apk` package: `varnish-doc`
 
 ```console
-varnish-doc-7.2.1-r1 description:
+varnish-doc-7.3.0-r1 description:
 High-performance HTTP accelerator (documentation)
 
-varnish-doc-7.2.1-r1 webpage:
+varnish-doc-7.3.0-r1 webpage:
 http://www.varnish-cache.org/
 
-varnish-doc-7.2.1-r1 installed size:
+varnish-doc-7.3.0-r1 installed size:
 228 KiB
 
-varnish-doc-7.2.1-r1 license:
+varnish-doc-7.3.0-r1 license:
 BSD
 
 ```
@@ -630,16 +630,16 @@ BSD
 ### `apk` package: `varnish-libs`
 
 ```console
-varnish-libs-7.2.1-r1 description:
+varnish-libs-7.3.0-r1 description:
 High-performance HTTP accelerator (libraries)
 
-varnish-libs-7.2.1-r1 webpage:
+varnish-libs-7.3.0-r1 webpage:
 http://www.varnish-cache.org/
 
-varnish-libs-7.2.1-r1 installed size:
+varnish-libs-7.3.0-r1 installed size:
 208 KiB
 
-varnish-libs-7.2.1-r1 license:
+varnish-libs-7.3.0-r1 license:
 BSD
 
 ```
