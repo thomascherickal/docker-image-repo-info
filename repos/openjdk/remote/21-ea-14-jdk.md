@@ -1,7 +1,7 @@
 ## `openjdk:21-ea-14-jdk`
 
 ```console
-$ docker pull openjdk@sha256:24cc5e1b742e537550bcb67ebb948478526ea739a82464a4e1732282dce2e9d6
+$ docker pull openjdk@sha256:db67ae060ba64633550ad36a696baeaf9caf9175271fb7f9e225db6ef35624ea
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -62,49 +62,49 @@ CMD ["jshell"]
 ### `openjdk:21-ea-14-jdk` - linux; arm64 variant v8
 
 ```console
-$ docker pull openjdk@sha256:e10cc801ae726a3955b82e1a68bd4ce14bad1d9277184b4907e78cc294ff84b1
+$ docker pull openjdk@sha256:2ff8c3b50cbad6486240ea3f5371c9fa62f8f79e6af88669dbe430a8cff20367
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **259.2 MB (259209179 bytes)**  
+-	Total Size: **259.2 MB (259212996 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:04bb9d7e4846d4b62d0a9fe665d9fe4204240305a7d76427a4a95f6f3722bc0c`
+-	Image ID: `sha256:e9677ba1bc7186fb6e5c92f24c86df26d0cc8f4b103b96fba5fbde3f5fec5d36`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
-# Wed, 08 Mar 2023 21:02:19 GMT
-ADD file:18f4bd510f88f32e538884e4e633449c2c8dbf8a5f88b6b6b165ab05872d9507 in / 
-# Wed, 08 Mar 2023 21:02:19 GMT
+# Wed, 22 Mar 2023 23:59:36 GMT
+ADD file:b4a46acde2a8ffdb8874f11aadcfc90177b15422278a1b8fa87e7ed9c97cf2a4 in / 
+# Wed, 22 Mar 2023 23:59:36 GMT
 CMD ["/bin/bash"]
-# Wed, 08 Mar 2023 21:19:53 GMT
+# Thu, 23 Mar 2023 00:23:23 GMT
 RUN set -eux; 	microdnf install 		gzip 		tar 				binutils 		freetype fontconfig 	; 	microdnf clean all
-# Wed, 08 Mar 2023 21:19:53 GMT
+# Thu, 23 Mar 2023 00:23:24 GMT
 ENV JAVA_HOME=/usr/java/openjdk-21
-# Wed, 08 Mar 2023 21:19:53 GMT
+# Thu, 23 Mar 2023 00:23:24 GMT
 ENV PATH=/usr/java/openjdk-21/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 08 Mar 2023 21:19:53 GMT
+# Thu, 23 Mar 2023 00:23:24 GMT
 ENV LANG=C.UTF-8
-# Mon, 20 Mar 2023 23:58:55 GMT
+# Thu, 23 Mar 2023 00:23:24 GMT
 ENV JAVA_VERSION=21-ea+14
-# Mon, 20 Mar 2023 23:59:08 GMT
+# Thu, 23 Mar 2023 00:23:36 GMT
 RUN set -eux; 		arch="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		'i386:x86-64') 			downloadUrl='https://download.java.net/java/early_access/jdk21/14/GPL/openjdk-21-ea+14_linux-x64_bin.tar.gz'; 			downloadSha256='5ff9e95f12627e7f9c4b2e61d4ddfa5eb224f6106eff7620a487244be71d9787'; 			;; 		'aarch64') 			downloadUrl='https://download.java.net/java/early_access/jdk21/14/GPL/openjdk-21-ea+14_linux-aarch64_bin.tar.gz'; 			downloadSha256='32b9ef0cafec4114aac8917e9ad754c7a3bdcfbc47143e4e5182757a0311ae66'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Mon, 20 Mar 2023 23:59:10 GMT
+# Thu, 23 Mar 2023 00:23:38 GMT
 CMD ["jshell"]
 ```
 
 -	Layers:
-	-	`sha256:8ff0c9d62930fe3f55e00ba3be2db6be3643b07da9804d1c9b83b0d3181f0df5`  
-		Last Modified: Wed, 08 Mar 2023 21:03:40 GMT  
-		Size: 43.5 MB (43456139 bytes)  
+	-	`sha256:40ffb7074955cd4f083dfcadee0a1ef1e12dbe031bdf2325c8bae38711b1f70f`  
+		Last Modified: Thu, 23 Mar 2023 00:00:22 GMT  
+		Size: 43.5 MB (43460037 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec39ece690c19b75d657ca26bf156e883914c8bea4948e081819aff289dc43c5`  
-		Last Modified: Wed, 08 Mar 2023 21:22:51 GMT  
-		Size: 15.8 MB (15834481 bytes)  
+	-	`sha256:dafbc18f0b64482aa39e4830fa399092a7a9f9a39c37c154966aa80bef2ece45`  
+		Last Modified: Thu, 23 Mar 2023 00:24:08 GMT  
+		Size: 15.8 MB (15834377 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d85701e1e0c0aabac13b2c5f39905e1716e4ef8152fa38dfb2ef510906a7da60`  
-		Last Modified: Tue, 21 Mar 2023 00:02:38 GMT  
-		Size: 199.9 MB (199918559 bytes)  
+	-	`sha256:37091e4ad405d038b50bdb2a8957e0af6b472f5fa50eac4031fe4c801fcc7e29`  
+		Last Modified: Thu, 23 Mar 2023 00:24:18 GMT  
+		Size: 199.9 MB (199918582 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `openjdk:21-ea-14-jdk` - windows version 10.0.20348.1607; amd64
