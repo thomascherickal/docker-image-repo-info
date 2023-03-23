@@ -34,6 +34,14 @@
 -	[`redis:7.0.10-alpine`](#redis7010-alpine)
 -	[`redis:7.0.10-alpine3.17`](#redis7010-alpine317)
 -	[`redis:7.0.10-bullseye`](#redis7010-bullseye)
+-	[`redis:7.2-rc`](#redis72-rc)
+-	[`redis:7.2-rc-alpine`](#redis72-rc-alpine)
+-	[`redis:7.2-rc-alpine3.17`](#redis72-rc-alpine317)
+-	[`redis:7.2-rc-bullseye`](#redis72-rc-bullseye)
+-	[`redis:7.2-rc1`](#redis72-rc1)
+-	[`redis:7.2-rc1-alpine`](#redis72-rc1-alpine)
+-	[`redis:7.2-rc1-alpine3.17`](#redis72-rc1-alpine317)
+-	[`redis:7.2-rc1-bullseye`](#redis72-rc1-bullseye)
 -	[`redis:alpine`](#redisalpine)
 -	[`redis:alpine3.17`](#redisalpine317)
 -	[`redis:bullseye`](#redisbullseye)
@@ -18342,6 +18350,38 @@ CMD ["redis-server"]
 		Last Modified: Tue, 21 Mar 2023 00:17:19 GMT  
 		Size: 575.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `redis:7.2-rc`
+
+**does not exist** (yet?)
+
+## `redis:7.2-rc-alpine`
+
+**does not exist** (yet?)
+
+## `redis:7.2-rc-alpine3.17`
+
+**does not exist** (yet?)
+
+## `redis:7.2-rc-bullseye`
+
+**does not exist** (yet?)
+
+## `redis:7.2-rc1`
+
+**does not exist** (yet?)
+
+## `redis:7.2-rc1-alpine`
+
+**does not exist** (yet?)
+
+## `redis:7.2-rc1-alpine3.17`
+
+**does not exist** (yet?)
+
+## `redis:7.2-rc1-bullseye`
+
+**does not exist** (yet?)
 
 ## `redis:alpine`
 
