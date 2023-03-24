@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a8405b7e74cfd825621793b3448c3786d578dc2df4a4694e7dd8c2df40f1f7c5`
-- Created: `2023-03-14T01:37:02.489862455Z`
-- Virtual Size: ~ 920.60 Mb  
+- Image ID: `sha256:df3e9d105d6c5f8aa4410ba84b570db5f9fefbf14020b70fb63c8e7c32e51fb0`
+- Created: `2023-03-23T06:02:39Z`
+- Virtual Size: ~ 920.70 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["python3"]`
@@ -128,11 +128,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/apr-util/1.6.1-5+deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/apr-util/1.6.1-5+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `apr=1.7.0-6+deb11u1`
+### `dpkg` source package: `apr=1.7.0-6+deb11u2`
 
 Binary Packages:
 
-- `libapr1:amd64=1.7.0-6+deb11u1`
+- `libapr1:amd64=1.7.0-6+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 
@@ -141,18 +141,17 @@ Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apr=1.7.0-6+deb11u1
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0-6%2bdeb11u1.dsc' apr_1.7.0-6+deb11u1.dsc 2282 SHA256:561d329f77659ea05d7303776b76922c4c13c5647b5f9205a3d6637976f345df
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0.orig.tar.bz2' apr_1.7.0.orig.tar.bz2 872238 SHA256:e2e148f0b2e99b8e5c6caa09f6d4fb4dd3e83f744aa72a952f94f5a14436f7ea
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0.orig.tar.bz2.asc' apr_1.7.0.orig.tar.bz2.asc 801 SHA256:5a6c4e721ed82116d7877254ae11c076014040af2ff816ea15ec81e77a4a7d43
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0-6%2bdeb11u1.debian.tar.xz' apr_1.7.0-6+deb11u1.debian.tar.xz 214884 SHA256:7352919715fe985ccfee1953a85a051e16cd4af0c739c0f827e508a309ee5e06
+$ apt-get source -qq --print-uris apr=1.7.0-6+deb11u2
+'http://deb.debian.org/debian-security/pool/updates/main/a/apr/apr_1.7.0-6%2bdeb11u2.dsc' apr_1.7.0-6+deb11u2.dsc 2202 SHA256:9736c0926998f8ca24f96a88c935f323127817400184b4040e52456e483eacb1
+'http://deb.debian.org/debian-security/pool/updates/main/a/apr/apr_1.7.0.orig.tar.bz2' apr_1.7.0.orig.tar.bz2 872238 SHA256:e2e148f0b2e99b8e5c6caa09f6d4fb4dd3e83f744aa72a952f94f5a14436f7ea
+'http://deb.debian.org/debian-security/pool/updates/main/a/apr/apr_1.7.0-6%2bdeb11u2.debian.tar.xz' apr_1.7.0-6+deb11u2.debian.tar.xz 225364 SHA256:b90bcafcb6061f1685473f8c48e26c0916c8a312542eb25dca852c730a4dae64
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/apr/1.7.0-6+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/apr/1.7.0-6+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apr/1.7.0-6+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/apr/1.7.0-6+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/apr/1.7.0-6+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/apr/1.7.0-6+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apt=2.2.4`
 
