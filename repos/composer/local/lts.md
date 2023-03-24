@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:717110b944f16952ab4ed50e067b9a348b32fbb6b671454bb5892e45b55a3278`
+- Image ID: `sha256:a378109be7d45c17539cec6f967407a55f30c1deb7998493ef2ba3f716ce7aad`
 - Created: `2023-03-16T21:50:01Z`
-- Virtual Size: ~ 193.65 Mb  
+- Virtual Size: ~ 199.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -404,16 +404,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.0.8-r0 description:
+libcrypto3-3.0.8-r1 description:
 Crypto library from openssl
 
-libcrypto3-3.0.8-r0 webpage:
+libcrypto3-3.0.8-r1 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.0.8-r0 installed size:
+libcrypto3-3.0.8-r1 installed size:
 4108 KiB
 
-libcrypto3-3.0.8-r0 license:
+libcrypto3-3.0.8-r1 license:
 Apache-2.0
 
 ```
@@ -540,16 +540,16 @@ ISC
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.0.8-r0 description:
+libssl3-3.0.8-r1 description:
 SSL shared libraries
 
-libssl3-3.0.8-r0 webpage:
+libssl3-3.0.8-r1 webpage:
 https://www.openssl.org/
 
-libssl3-3.0.8-r0 installed size:
+libssl3-3.0.8-r1 installed size:
 608 KiB
 
-libssl3-3.0.8-r0 license:
+libssl3-3.0.8-r1 license:
 Apache-2.0
 
 ```
@@ -846,16 +846,16 @@ BSD
 ### `apk` package: `openssl`
 
 ```console
-openssl-3.0.8-r0 description:
+openssl-3.0.8-r1 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-3.0.8-r0 webpage:
+openssl-3.0.8-r1 webpage:
 https://www.openssl.org/
 
-openssl-3.0.8-r0 installed size:
+openssl-3.0.8-r1 installed size:
 868 KiB
 
-openssl-3.0.8-r0 license:
+openssl-3.0.8-r1 license:
 Apache-2.0
 
 ```
