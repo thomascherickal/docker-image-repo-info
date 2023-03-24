@@ -50,7 +50,7 @@
 ## `rust:1`
 
 ```console
-$ docker pull rust@sha256:ddd3f5e4627096269f4d098d9489d98d193ea3efc5469355421658b7b985f6d2
+$ docker pull rust@sha256:516b40867bdc4431399b787f3b6143d5ae4fb50eee6156e10b83fd3bffee286f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -237,14 +237,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:1` - linux; 386
 
 ```console
-$ docker pull rust@sha256:747573f57f791f153612fa190d29de813ea30d2b1ab730e5da97927d1d10f449
+$ docker pull rust@sha256:4ededa210a768024d64c2b1981e22754ded60d8a41d7ceb66b9511d1e0714c11
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **520.6 MB (520634410 bytes)**  
+-	Total Size: **520.7 MB (520651430 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:47a68d82b4d362be762e78512a3cb4b8abc86ced46f83ab09acefb06e649c57f`
+-	Image ID: `sha256:4d7a7b0fdb4b58e0e16ffed5a4ea469f1bf8ffa7bc30d1e4e8089e7f8afcb14c`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -260,9 +260,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:46:57 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:08:32 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:08:56 GMT
+# Fri, 24 Mar 2023 04:53:05 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:53:24 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -287,9 +287,9 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:54:18 GMT  
 		Size: 199.7 MB (199723737 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12c0dccaff974c583764b11a324bba40734927941f8e23e0015cfbe9aa458dcc`  
-		Last Modified: Thu, 23 Mar 2023 21:13:56 GMT  
-		Size: 192.4 MB (192416523 bytes)  
+	-	`sha256:93d2ac7bfe4c3362ff5f613548e3f81e2b2aaa491defa6667406457daac93148`  
+		Last Modified: Fri, 24 Mar 2023 04:58:24 GMT  
+		Size: 192.4 MB (192433543 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1-alpine`
@@ -568,7 +568,7 @@ RUN set -eux;     apkArch="$(apk --print-arch)";     case "$apkArch" in         
 ## `rust:1-bookworm`
 
 ```console
-$ docker pull rust@sha256:dfd1f510e48104c662cca8682dbfb06db279da854f2817a3c692aafcbf090988
+$ docker pull rust@sha256:6270806a1ea71a5abd437ab3830e6731ba845266b3c0678219a605c363b15c53
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -755,14 +755,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:1-bookworm` - linux; 386
 
 ```console
-$ docker pull rust@sha256:cdec63a780232197d5a0f5e628f567bd58d9c6154f54a63d399cdd29e63662c7
+$ docker pull rust@sha256:90b879709fb29330dfd562d21acfffc153972e86e28f3153488c546ba6a886ed
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **539.6 MB (539623966 bytes)**  
+-	Total Size: **539.6 MB (539640784 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:883081ae1785927c03eab749ecc9e134e8f827f77e86c65c54fd4dcc8b98fc03`
+-	Image ID: `sha256:8cb55b2e356b8f56948820fa0dc099ad439a470c353c25bb91e7353a3c07ac16`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -778,9 +778,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:45:10 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:09:53 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:10:13 GMT
+# Fri, 24 Mar 2023 04:54:20 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:41 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -805,15 +805,15 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:53:01 GMT  
 		Size: 209.9 MB (209857051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c6c7438aabd87505ee9b7022be2969099c29485c45baac5786dc43da59f74b99`  
-		Last Modified: Thu, 23 Mar 2023 21:15:58 GMT  
-		Size: 192.4 MB (192416652 bytes)  
+	-	`sha256:f8226843357a865e3d647e64464943e26c49ab760e7ab1246257054f3a920313`  
+		Last Modified: Fri, 24 Mar 2023 05:00:25 GMT  
+		Size: 192.4 MB (192433470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1-bullseye`
 
 ```console
-$ docker pull rust@sha256:ddd3f5e4627096269f4d098d9489d98d193ea3efc5469355421658b7b985f6d2
+$ docker pull rust@sha256:516b40867bdc4431399b787f3b6143d5ae4fb50eee6156e10b83fd3bffee286f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1000,14 +1000,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:1-bullseye` - linux; 386
 
 ```console
-$ docker pull rust@sha256:747573f57f791f153612fa190d29de813ea30d2b1ab730e5da97927d1d10f449
+$ docker pull rust@sha256:4ededa210a768024d64c2b1981e22754ded60d8a41d7ceb66b9511d1e0714c11
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **520.6 MB (520634410 bytes)**  
+-	Total Size: **520.7 MB (520651430 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:47a68d82b4d362be762e78512a3cb4b8abc86ced46f83ab09acefb06e649c57f`
+-	Image ID: `sha256:4d7a7b0fdb4b58e0e16ffed5a4ea469f1bf8ffa7bc30d1e4e8089e7f8afcb14c`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -1023,9 +1023,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:46:57 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:08:32 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:08:56 GMT
+# Fri, 24 Mar 2023 04:53:05 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:53:24 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -1050,15 +1050,15 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:54:18 GMT  
 		Size: 199.7 MB (199723737 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12c0dccaff974c583764b11a324bba40734927941f8e23e0015cfbe9aa458dcc`  
-		Last Modified: Thu, 23 Mar 2023 21:13:56 GMT  
-		Size: 192.4 MB (192416523 bytes)  
+	-	`sha256:93d2ac7bfe4c3362ff5f613548e3f81e2b2aaa491defa6667406457daac93148`  
+		Last Modified: Fri, 24 Mar 2023 04:58:24 GMT  
+		Size: 192.4 MB (192433543 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1-buster`
 
 ```console
-$ docker pull rust@sha256:9f10f45497cc65d717d0c0a4116525724a63e1d2df6197ced9d0344478399ebe
+$ docker pull rust@sha256:8ef7af8618f0235a242118ae41eb29c325566e28c62e7420f346f96cd5f48765
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1245,14 +1245,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:1-buster` - linux; 386
 
 ```console
-$ docker pull rust@sha256:2fdb9d5cc7850ebdf08ab0c3a7158387c13e9cad0c13445b6aa084ada66476ad
+$ docker pull rust@sha256:32dd9a5f8c8fd8c953a00c575164ebd56417b52899aa1487a55da1c719b0b784
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **513.9 MB (513878377 bytes)**  
+-	Total Size: **513.9 MB (513895205 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9c1b0af9db2b3227f93017a2cebd6b2b0053f932d1874418d85c87f3734c6f29`
+-	Image ID: `sha256:3c5a691310d0c83cc1dda00e5613b405ed85a6d42dea5c9d2d525fd7c9b8b133`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -1268,9 +1268,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:49:38 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:07:11 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:07:35 GMT
+# Fri, 24 Mar 2023 04:51:50 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:52:10 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -1295,15 +1295,15 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:55:30 GMT  
 		Size: 198.4 MB (198404320 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b27a40b4e9062f9adfd11adc5b98ccd7441153ab43bb3ead6589a0139defd47`  
-		Last Modified: Thu, 23 Mar 2023 21:12:12 GMT  
-		Size: 192.4 MB (192416538 bytes)  
+	-	`sha256:825e6b03aab668e26222148cc4ec3a1302b0c375a0179281b577361af2daed39`  
+		Last Modified: Fri, 24 Mar 2023 04:56:40 GMT  
+		Size: 192.4 MB (192433366 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1-slim`
 
 ```console
-$ docker pull rust@sha256:ccad6d1002b3a8b23932d5459739586bc9bc4fa9f02ad40259b5fc662f2521dd
+$ docker pull rust@sha256:9858a025b676b2970bc9af4f27fe5801c229ebef84082653c1371f9b0e0ca929
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1418,14 +1418,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:1-slim` - linux; 386
 
 ```console
-$ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec2226d8614fc4
+$ docker pull rust@sha256:3d232552a2d7739b6c493b2706575d63ef6533ff1f23e15a3d9438d583028c33
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **285.6 MB (285595097 bytes)**  
+-	Total Size: **285.6 MB (285602532 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e543a904e4631517da7e2fe503e4f84249a22cd1cf5082098fcf068a64ccae0b`
+-	Image ID: `sha256:356b7b36ef64994a96342c60b96d02d96b66e29984611dfe0dccba46ba9f4815`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -1433,9 +1433,9 @@ $ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec22
 ADD file:315d843eefd4a8bb2345366dcd6bab00a06fca4a7970e220ae8946123d07d7ed in / 
 # Thu, 23 Mar 2023 00:39:19 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:09:05 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:09:41 GMT
+# Fri, 24 Mar 2023 04:53:33 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:15 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -1444,15 +1444,15 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:43:09 GMT  
 		Size: 32.4 MB (32396277 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc4dcf7d8c3d94d27b6d0f528ea8a5d5e44fef46f8350518ceaf8e316c62850c`  
-		Last Modified: Thu, 23 Mar 2023 21:15:02 GMT  
-		Size: 253.2 MB (253198820 bytes)  
+	-	`sha256:3041f43a369256ba0f124ab04af6f6bedaef6047ad3ef50aee470056939e8704`  
+		Last Modified: Fri, 24 Mar 2023 04:59:31 GMT  
+		Size: 253.2 MB (253206255 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1-slim-bookworm`
 
 ```console
-$ docker pull rust@sha256:a29cf906e754b0d15de79948c2bd2189d8b8a9eaed5d54639f250047d3346d09
+$ docker pull rust@sha256:26e2eadb404be7ddf123b821a9af32865894c21ad8066ab70722c1c7d04d64f4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1567,14 +1567,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:1-slim-bookworm` - linux; 386
 
 ```console
-$ docker pull rust@sha256:d90754795003c049e0c6660df0bb05cb9f06348452e312b1fbcb886df2433951
+$ docker pull rust@sha256:5d646b43b89aeda7f007ba7fbbf21572ec0de9a4d1650af5c1389f5a73ea9cca
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **290.1 MB (290112379 bytes)**  
+-	Total Size: **290.1 MB (290123177 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2c0f901e0d4903a64a45e1cb897d754eb456941e2bcbb6bc329921f4ba19528`
+-	Image ID: `sha256:7b8321fba80cf0b36e35c11546a6a42b07ef8ff752459f419540b66c3adbfc84`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -1582,9 +1582,9 @@ $ docker pull rust@sha256:d90754795003c049e0c6660df0bb05cb9f06348452e312b1fbcb88
 ADD file:6c9e0efe1662b8e2fdc9cf2609c3258578c9f7ff6383768c1d15bbeaaf0a2241 in / 
 # Thu, 23 Mar 2023 00:38:56 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:10:21 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:11:06 GMT
+# Fri, 24 Mar 2023 04:54:48 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:55:35 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -1593,15 +1593,15 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:42:26 GMT  
 		Size: 30.1 MB (30104962 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a22fd5c92636b8de2314e4f81796bcb302c7759652b3f0594a7e5130e01aa661`  
-		Last Modified: Thu, 23 Mar 2023 21:16:58 GMT  
-		Size: 260.0 MB (260007417 bytes)  
+	-	`sha256:85ed282937ae8146f0e3b7db4c93b372def65ef08c91ba689e0054e372cbef0d`  
+		Last Modified: Fri, 24 Mar 2023 05:01:26 GMT  
+		Size: 260.0 MB (260018215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1-slim-bullseye`
 
 ```console
-$ docker pull rust@sha256:ccad6d1002b3a8b23932d5459739586bc9bc4fa9f02ad40259b5fc662f2521dd
+$ docker pull rust@sha256:9858a025b676b2970bc9af4f27fe5801c229ebef84082653c1371f9b0e0ca929
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1716,14 +1716,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:1-slim-bullseye` - linux; 386
 
 ```console
-$ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec2226d8614fc4
+$ docker pull rust@sha256:3d232552a2d7739b6c493b2706575d63ef6533ff1f23e15a3d9438d583028c33
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **285.6 MB (285595097 bytes)**  
+-	Total Size: **285.6 MB (285602532 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e543a904e4631517da7e2fe503e4f84249a22cd1cf5082098fcf068a64ccae0b`
+-	Image ID: `sha256:356b7b36ef64994a96342c60b96d02d96b66e29984611dfe0dccba46ba9f4815`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -1731,9 +1731,9 @@ $ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec22
 ADD file:315d843eefd4a8bb2345366dcd6bab00a06fca4a7970e220ae8946123d07d7ed in / 
 # Thu, 23 Mar 2023 00:39:19 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:09:05 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:09:41 GMT
+# Fri, 24 Mar 2023 04:53:33 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:15 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -1742,15 +1742,15 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:43:09 GMT  
 		Size: 32.4 MB (32396277 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc4dcf7d8c3d94d27b6d0f528ea8a5d5e44fef46f8350518ceaf8e316c62850c`  
-		Last Modified: Thu, 23 Mar 2023 21:15:02 GMT  
-		Size: 253.2 MB (253198820 bytes)  
+	-	`sha256:3041f43a369256ba0f124ab04af6f6bedaef6047ad3ef50aee470056939e8704`  
+		Last Modified: Fri, 24 Mar 2023 04:59:31 GMT  
+		Size: 253.2 MB (253206255 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1-slim-buster`
 
 ```console
-$ docker pull rust@sha256:2f102497e8a6ec8ffbab07d32141a82b38c8924cd88b1c013c5b19fc55aecd7b
+$ docker pull rust@sha256:d8fd07b533024ae741fd790e869665f7db78097147e85247b29daaa06a484b21
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1865,14 +1865,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:1-slim-buster` - linux; 386
 
 ```console
-$ docker pull rust@sha256:6327d474ca349df39280484ec4238c5b5dde1092b1df748cd7d1b65b853e66f5
+$ docker pull rust@sha256:71e43343096f6063f4a3ae19e40e802687206a49418351a00b93cb1822b142f7
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **270.2 MB (270236705 bytes)**  
+-	Total Size: **270.2 MB (270245500 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f7f6e15777415c764594776e35db420f7993ad74e39d8e7ea848a73b445b9b1c`
+-	Image ID: `sha256:b617a61a2b8d8001ec2c900e004e1dd7284fedcc60b32ba2094267d67aa25b18`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -1880,9 +1880,9 @@ $ docker pull rust@sha256:6327d474ca349df39280484ec4238c5b5dde1092b1df748cd7d1b6
 ADD file:5743625b778ab9036f4eae3e44da6b59db355d7d6d7b8f42fbb71f2b8c428dd7 in / 
 # Thu, 23 Mar 2023 00:39:40 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:07:45 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:08:25 GMT
+# Fri, 24 Mar 2023 04:52:17 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:52:57 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -1891,15 +1891,15 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:43:56 GMT  
 		Size: 27.8 MB (27798660 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a6fefcdf063c412a9aee40c4c18e7ab722e4acce023962dd930f545e2bd4549`  
-		Last Modified: Thu, 23 Mar 2023 21:13:08 GMT  
-		Size: 242.4 MB (242438045 bytes)  
+	-	`sha256:b4da4725d11401dd66f710d6c98c81a546d525a4100fcb7e39dc2627d6007d39`  
+		Last Modified: Fri, 24 Mar 2023 04:57:37 GMT  
+		Size: 242.4 MB (242446840 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1.68`
 
 ```console
-$ docker pull rust@sha256:ddd3f5e4627096269f4d098d9489d98d193ea3efc5469355421658b7b985f6d2
+$ docker pull rust@sha256:516b40867bdc4431399b787f3b6143d5ae4fb50eee6156e10b83fd3bffee286f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2086,14 +2086,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:1.68` - linux; 386
 
 ```console
-$ docker pull rust@sha256:747573f57f791f153612fa190d29de813ea30d2b1ab730e5da97927d1d10f449
+$ docker pull rust@sha256:4ededa210a768024d64c2b1981e22754ded60d8a41d7ceb66b9511d1e0714c11
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **520.6 MB (520634410 bytes)**  
+-	Total Size: **520.7 MB (520651430 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:47a68d82b4d362be762e78512a3cb4b8abc86ced46f83ab09acefb06e649c57f`
+-	Image ID: `sha256:4d7a7b0fdb4b58e0e16ffed5a4ea469f1bf8ffa7bc30d1e4e8089e7f8afcb14c`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -2109,9 +2109,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:46:57 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:08:32 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:08:56 GMT
+# Fri, 24 Mar 2023 04:53:05 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:53:24 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -2136,9 +2136,9 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:54:18 GMT  
 		Size: 199.7 MB (199723737 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12c0dccaff974c583764b11a324bba40734927941f8e23e0015cfbe9aa458dcc`  
-		Last Modified: Thu, 23 Mar 2023 21:13:56 GMT  
-		Size: 192.4 MB (192416523 bytes)  
+	-	`sha256:93d2ac7bfe4c3362ff5f613548e3f81e2b2aaa491defa6667406457daac93148`  
+		Last Modified: Fri, 24 Mar 2023 04:58:24 GMT  
+		Size: 192.4 MB (192433543 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1.68-alpine`
@@ -2417,7 +2417,7 @@ RUN set -eux;     apkArch="$(apk --print-arch)";     case "$apkArch" in         
 ## `rust:1.68-bookworm`
 
 ```console
-$ docker pull rust@sha256:dfd1f510e48104c662cca8682dbfb06db279da854f2817a3c692aafcbf090988
+$ docker pull rust@sha256:6270806a1ea71a5abd437ab3830e6731ba845266b3c0678219a605c363b15c53
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2604,14 +2604,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:1.68-bookworm` - linux; 386
 
 ```console
-$ docker pull rust@sha256:cdec63a780232197d5a0f5e628f567bd58d9c6154f54a63d399cdd29e63662c7
+$ docker pull rust@sha256:90b879709fb29330dfd562d21acfffc153972e86e28f3153488c546ba6a886ed
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **539.6 MB (539623966 bytes)**  
+-	Total Size: **539.6 MB (539640784 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:883081ae1785927c03eab749ecc9e134e8f827f77e86c65c54fd4dcc8b98fc03`
+-	Image ID: `sha256:8cb55b2e356b8f56948820fa0dc099ad439a470c353c25bb91e7353a3c07ac16`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -2627,9 +2627,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:45:10 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:09:53 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:10:13 GMT
+# Fri, 24 Mar 2023 04:54:20 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:41 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -2654,15 +2654,15 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:53:01 GMT  
 		Size: 209.9 MB (209857051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c6c7438aabd87505ee9b7022be2969099c29485c45baac5786dc43da59f74b99`  
-		Last Modified: Thu, 23 Mar 2023 21:15:58 GMT  
-		Size: 192.4 MB (192416652 bytes)  
+	-	`sha256:f8226843357a865e3d647e64464943e26c49ab760e7ab1246257054f3a920313`  
+		Last Modified: Fri, 24 Mar 2023 05:00:25 GMT  
+		Size: 192.4 MB (192433470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1.68-bullseye`
 
 ```console
-$ docker pull rust@sha256:ddd3f5e4627096269f4d098d9489d98d193ea3efc5469355421658b7b985f6d2
+$ docker pull rust@sha256:516b40867bdc4431399b787f3b6143d5ae4fb50eee6156e10b83fd3bffee286f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2849,14 +2849,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:1.68-bullseye` - linux; 386
 
 ```console
-$ docker pull rust@sha256:747573f57f791f153612fa190d29de813ea30d2b1ab730e5da97927d1d10f449
+$ docker pull rust@sha256:4ededa210a768024d64c2b1981e22754ded60d8a41d7ceb66b9511d1e0714c11
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **520.6 MB (520634410 bytes)**  
+-	Total Size: **520.7 MB (520651430 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:47a68d82b4d362be762e78512a3cb4b8abc86ced46f83ab09acefb06e649c57f`
+-	Image ID: `sha256:4d7a7b0fdb4b58e0e16ffed5a4ea469f1bf8ffa7bc30d1e4e8089e7f8afcb14c`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -2872,9 +2872,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:46:57 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:08:32 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:08:56 GMT
+# Fri, 24 Mar 2023 04:53:05 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:53:24 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -2899,15 +2899,15 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:54:18 GMT  
 		Size: 199.7 MB (199723737 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12c0dccaff974c583764b11a324bba40734927941f8e23e0015cfbe9aa458dcc`  
-		Last Modified: Thu, 23 Mar 2023 21:13:56 GMT  
-		Size: 192.4 MB (192416523 bytes)  
+	-	`sha256:93d2ac7bfe4c3362ff5f613548e3f81e2b2aaa491defa6667406457daac93148`  
+		Last Modified: Fri, 24 Mar 2023 04:58:24 GMT  
+		Size: 192.4 MB (192433543 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1.68-buster`
 
 ```console
-$ docker pull rust@sha256:9f10f45497cc65d717d0c0a4116525724a63e1d2df6197ced9d0344478399ebe
+$ docker pull rust@sha256:8ef7af8618f0235a242118ae41eb29c325566e28c62e7420f346f96cd5f48765
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3094,14 +3094,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:1.68-buster` - linux; 386
 
 ```console
-$ docker pull rust@sha256:2fdb9d5cc7850ebdf08ab0c3a7158387c13e9cad0c13445b6aa084ada66476ad
+$ docker pull rust@sha256:32dd9a5f8c8fd8c953a00c575164ebd56417b52899aa1487a55da1c719b0b784
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **513.9 MB (513878377 bytes)**  
+-	Total Size: **513.9 MB (513895205 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9c1b0af9db2b3227f93017a2cebd6b2b0053f932d1874418d85c87f3734c6f29`
+-	Image ID: `sha256:3c5a691310d0c83cc1dda00e5613b405ed85a6d42dea5c9d2d525fd7c9b8b133`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -3117,9 +3117,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:49:38 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:07:11 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:07:35 GMT
+# Fri, 24 Mar 2023 04:51:50 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:52:10 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -3144,15 +3144,15 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:55:30 GMT  
 		Size: 198.4 MB (198404320 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b27a40b4e9062f9adfd11adc5b98ccd7441153ab43bb3ead6589a0139defd47`  
-		Last Modified: Thu, 23 Mar 2023 21:12:12 GMT  
-		Size: 192.4 MB (192416538 bytes)  
+	-	`sha256:825e6b03aab668e26222148cc4ec3a1302b0c375a0179281b577361af2daed39`  
+		Last Modified: Fri, 24 Mar 2023 04:56:40 GMT  
+		Size: 192.4 MB (192433366 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1.68-slim`
 
 ```console
-$ docker pull rust@sha256:ccad6d1002b3a8b23932d5459739586bc9bc4fa9f02ad40259b5fc662f2521dd
+$ docker pull rust@sha256:9858a025b676b2970bc9af4f27fe5801c229ebef84082653c1371f9b0e0ca929
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3267,14 +3267,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:1.68-slim` - linux; 386
 
 ```console
-$ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec2226d8614fc4
+$ docker pull rust@sha256:3d232552a2d7739b6c493b2706575d63ef6533ff1f23e15a3d9438d583028c33
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **285.6 MB (285595097 bytes)**  
+-	Total Size: **285.6 MB (285602532 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e543a904e4631517da7e2fe503e4f84249a22cd1cf5082098fcf068a64ccae0b`
+-	Image ID: `sha256:356b7b36ef64994a96342c60b96d02d96b66e29984611dfe0dccba46ba9f4815`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -3282,9 +3282,9 @@ $ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec22
 ADD file:315d843eefd4a8bb2345366dcd6bab00a06fca4a7970e220ae8946123d07d7ed in / 
 # Thu, 23 Mar 2023 00:39:19 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:09:05 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:09:41 GMT
+# Fri, 24 Mar 2023 04:53:33 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:15 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -3293,15 +3293,15 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:43:09 GMT  
 		Size: 32.4 MB (32396277 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc4dcf7d8c3d94d27b6d0f528ea8a5d5e44fef46f8350518ceaf8e316c62850c`  
-		Last Modified: Thu, 23 Mar 2023 21:15:02 GMT  
-		Size: 253.2 MB (253198820 bytes)  
+	-	`sha256:3041f43a369256ba0f124ab04af6f6bedaef6047ad3ef50aee470056939e8704`  
+		Last Modified: Fri, 24 Mar 2023 04:59:31 GMT  
+		Size: 253.2 MB (253206255 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1.68-slim-bookworm`
 
 ```console
-$ docker pull rust@sha256:a29cf906e754b0d15de79948c2bd2189d8b8a9eaed5d54639f250047d3346d09
+$ docker pull rust@sha256:26e2eadb404be7ddf123b821a9af32865894c21ad8066ab70722c1c7d04d64f4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3416,14 +3416,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:1.68-slim-bookworm` - linux; 386
 
 ```console
-$ docker pull rust@sha256:d90754795003c049e0c6660df0bb05cb9f06348452e312b1fbcb886df2433951
+$ docker pull rust@sha256:5d646b43b89aeda7f007ba7fbbf21572ec0de9a4d1650af5c1389f5a73ea9cca
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **290.1 MB (290112379 bytes)**  
+-	Total Size: **290.1 MB (290123177 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2c0f901e0d4903a64a45e1cb897d754eb456941e2bcbb6bc329921f4ba19528`
+-	Image ID: `sha256:7b8321fba80cf0b36e35c11546a6a42b07ef8ff752459f419540b66c3adbfc84`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -3431,9 +3431,9 @@ $ docker pull rust@sha256:d90754795003c049e0c6660df0bb05cb9f06348452e312b1fbcb88
 ADD file:6c9e0efe1662b8e2fdc9cf2609c3258578c9f7ff6383768c1d15bbeaaf0a2241 in / 
 # Thu, 23 Mar 2023 00:38:56 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:10:21 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:11:06 GMT
+# Fri, 24 Mar 2023 04:54:48 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:55:35 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -3442,15 +3442,15 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:42:26 GMT  
 		Size: 30.1 MB (30104962 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a22fd5c92636b8de2314e4f81796bcb302c7759652b3f0594a7e5130e01aa661`  
-		Last Modified: Thu, 23 Mar 2023 21:16:58 GMT  
-		Size: 260.0 MB (260007417 bytes)  
+	-	`sha256:85ed282937ae8146f0e3b7db4c93b372def65ef08c91ba689e0054e372cbef0d`  
+		Last Modified: Fri, 24 Mar 2023 05:01:26 GMT  
+		Size: 260.0 MB (260018215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1.68-slim-bullseye`
 
 ```console
-$ docker pull rust@sha256:ccad6d1002b3a8b23932d5459739586bc9bc4fa9f02ad40259b5fc662f2521dd
+$ docker pull rust@sha256:9858a025b676b2970bc9af4f27fe5801c229ebef84082653c1371f9b0e0ca929
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3565,14 +3565,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:1.68-slim-bullseye` - linux; 386
 
 ```console
-$ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec2226d8614fc4
+$ docker pull rust@sha256:3d232552a2d7739b6c493b2706575d63ef6533ff1f23e15a3d9438d583028c33
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **285.6 MB (285595097 bytes)**  
+-	Total Size: **285.6 MB (285602532 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e543a904e4631517da7e2fe503e4f84249a22cd1cf5082098fcf068a64ccae0b`
+-	Image ID: `sha256:356b7b36ef64994a96342c60b96d02d96b66e29984611dfe0dccba46ba9f4815`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -3580,9 +3580,9 @@ $ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec22
 ADD file:315d843eefd4a8bb2345366dcd6bab00a06fca4a7970e220ae8946123d07d7ed in / 
 # Thu, 23 Mar 2023 00:39:19 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:09:05 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:09:41 GMT
+# Fri, 24 Mar 2023 04:53:33 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:15 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -3591,15 +3591,15 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:43:09 GMT  
 		Size: 32.4 MB (32396277 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc4dcf7d8c3d94d27b6d0f528ea8a5d5e44fef46f8350518ceaf8e316c62850c`  
-		Last Modified: Thu, 23 Mar 2023 21:15:02 GMT  
-		Size: 253.2 MB (253198820 bytes)  
+	-	`sha256:3041f43a369256ba0f124ab04af6f6bedaef6047ad3ef50aee470056939e8704`  
+		Last Modified: Fri, 24 Mar 2023 04:59:31 GMT  
+		Size: 253.2 MB (253206255 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1.68-slim-buster`
 
 ```console
-$ docker pull rust@sha256:2f102497e8a6ec8ffbab07d32141a82b38c8924cd88b1c013c5b19fc55aecd7b
+$ docker pull rust@sha256:d8fd07b533024ae741fd790e869665f7db78097147e85247b29daaa06a484b21
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3714,14 +3714,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:1.68-slim-buster` - linux; 386
 
 ```console
-$ docker pull rust@sha256:6327d474ca349df39280484ec4238c5b5dde1092b1df748cd7d1b65b853e66f5
+$ docker pull rust@sha256:71e43343096f6063f4a3ae19e40e802687206a49418351a00b93cb1822b142f7
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **270.2 MB (270236705 bytes)**  
+-	Total Size: **270.2 MB (270245500 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f7f6e15777415c764594776e35db420f7993ad74e39d8e7ea848a73b445b9b1c`
+-	Image ID: `sha256:b617a61a2b8d8001ec2c900e004e1dd7284fedcc60b32ba2094267d67aa25b18`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -3729,9 +3729,9 @@ $ docker pull rust@sha256:6327d474ca349df39280484ec4238c5b5dde1092b1df748cd7d1b6
 ADD file:5743625b778ab9036f4eae3e44da6b59db355d7d6d7b8f42fbb71f2b8c428dd7 in / 
 # Thu, 23 Mar 2023 00:39:40 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:07:45 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:08:25 GMT
+# Fri, 24 Mar 2023 04:52:17 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:52:57 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -3740,22 +3740,23 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:43:56 GMT  
 		Size: 27.8 MB (27798660 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a6fefcdf063c412a9aee40c4c18e7ab722e4acce023962dd930f545e2bd4549`  
-		Last Modified: Thu, 23 Mar 2023 21:13:08 GMT  
-		Size: 242.4 MB (242438045 bytes)  
+	-	`sha256:b4da4725d11401dd66f710d6c98c81a546d525a4100fcb7e39dc2627d6007d39`  
+		Last Modified: Fri, 24 Mar 2023 04:57:37 GMT  
+		Size: 242.4 MB (242446840 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1.68.1`
 
 ```console
-$ docker pull rust@sha256:b5c6a1f95397a4035ac362c112083b0363df14d9f114a197244915c5b0b71ee8
+$ docker pull rust@sha256:516b40867bdc4431399b787f3b6143d5ae4fb50eee6156e10b83fd3bffee286f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 3
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; 386
 
 ### `rust:1.68.1` - linux; amd64
 
@@ -3929,6 +3930,64 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 	-	`sha256:ffaf974fbdd91d06933c2d8e2710e2e4c77f6326548afee2507761f9e2ccf383`  
 		Last Modified: Thu, 23 Mar 2023 22:39:38 GMT  
 		Size: 243.2 MB (243215103 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `rust:1.68.1` - linux; 386
+
+```console
+$ docker pull rust@sha256:4ededa210a768024d64c2b1981e22754ded60d8a41d7ceb66b9511d1e0714c11
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **520.7 MB (520651430 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:4d7a7b0fdb4b58e0e16ffed5a4ea469f1bf8ffa7bc30d1e4e8089e7f8afcb14c`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 23 Mar 2023 00:39:08 GMT
+ADD file:f331251c4c21fceff56d13f76442a6334dc355c29ec7450768c1c86a3db1adab in / 
+# Thu, 23 Mar 2023 00:39:09 GMT
+CMD ["bash"]
+# Thu, 23 Mar 2023 13:45:31 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
+# Thu, 23 Mar 2023 13:45:37 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+# Thu, 23 Mar 2023 13:45:58 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+# Thu, 23 Mar 2023 13:46:57 GMT
+RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
+# Fri, 24 Mar 2023 04:53:05 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:53:24 GMT
+RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
+```
+
+-	Layers:
+	-	`sha256:c1bb878cff31d37952c5c73ed15c167f599bb7f97b3eeaa1a17352b2473b3394`  
+		Last Modified: Thu, 23 Mar 2023 00:42:44 GMT  
+		Size: 56.0 MB (56027911 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:dfb49b37bb40497ba503cfdfd4d3835c15c09b5d63b2c0ae0e955d449abd0382`  
+		Last Modified: Thu, 23 Mar 2023 13:53:13 GMT  
+		Size: 5.3 MB (5293608 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0a0818bf9e1a1c115af7736f4509cfd0ec35b366f341130156f48e64a89d7e19`  
+		Last Modified: Thu, 23 Mar 2023 13:53:13 GMT  
+		Size: 11.2 MB (11249830 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:02db5ed4065161ad85308e48d48bc6104392f259ddc7d2864075ad5705e95862`  
+		Last Modified: Thu, 23 Mar 2023 13:53:35 GMT  
+		Size: 55.9 MB (55922801 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:83d20da4060bf4c77e5920d4528c4eb19ddbb5f4ff1621172dfdf8b09da17c7f`  
+		Last Modified: Thu, 23 Mar 2023 13:54:18 GMT  
+		Size: 199.7 MB (199723737 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:93d2ac7bfe4c3362ff5f613548e3f81e2b2aaa491defa6667406457daac93148`  
+		Last Modified: Fri, 24 Mar 2023 04:58:24 GMT  
+		Size: 192.4 MB (192433543 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:1.68.1-alpine`
@@ -4207,14 +4266,15 @@ RUN set -eux;     apkArch="$(apk --print-arch)";     case "$apkArch" in         
 ## `rust:1.68.1-bookworm`
 
 ```console
-$ docker pull rust@sha256:2a16c3a174b3633d46c8a715b2b117424233823e3c0bef02d0ba0ab64967f066
+$ docker pull rust@sha256:6270806a1ea71a5abd437ab3830e6731ba845266b3c0678219a605c363b15c53
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 3
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; 386
 
 ### `rust:1.68.1-bookworm` - linux; amd64
 
@@ -4390,17 +4450,76 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Size: 243.2 MB (243215244 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `rust:1.68.1-bookworm` - linux; 386
+
+```console
+$ docker pull rust@sha256:90b879709fb29330dfd562d21acfffc153972e86e28f3153488c546ba6a886ed
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **539.6 MB (539640784 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:8cb55b2e356b8f56948820fa0dc099ad439a470c353c25bb91e7353a3c07ac16`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 23 Mar 2023 00:38:46 GMT
+ADD file:a8b128db07f7f5c47ccd2afe2595fdf9b31844beff2d07ae2ea0e204e2aef4c9 in / 
+# Thu, 23 Mar 2023 00:38:47 GMT
+CMD ["bash"]
+# Thu, 23 Mar 2023 13:42:11 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
+# Thu, 23 Mar 2023 13:42:25 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+# Thu, 23 Mar 2023 13:42:58 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+# Thu, 23 Mar 2023 13:45:10 GMT
+RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
+# Fri, 24 Mar 2023 04:54:20 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:41 GMT
+RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
+```
+
+-	Layers:
+	-	`sha256:4dc30e65d953c72fa1dd5a25980f7eeea620434c102211fdb72a04706c06dd96`  
+		Last Modified: Thu, 23 Mar 2023 00:42:07 GMT  
+		Size: 50.3 MB (50323933 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ba4e857b25978a7d4a42bbc134bf1ee209791d8f3fff94cb3745d9753472886a`  
+		Last Modified: Thu, 23 Mar 2023 13:51:54 GMT  
+		Size: 9.3 MB (9261870 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:845682110df86e268754e9c3ecfa5297b566a487052aaf7766ae3e9bb0cfe5bb`  
+		Last Modified: Thu, 23 Mar 2023 13:51:54 GMT  
+		Size: 11.8 MB (11809101 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:344955241ef85247f437d61d4cb8379bff720c035818b5d81495909e577561fe`  
+		Last Modified: Thu, 23 Mar 2023 13:52:16 GMT  
+		Size: 66.0 MB (65955359 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f83d29f4ffabb43db0e6af5373532c55e664f263df93209d6ca4a6e2858f33b8`  
+		Last Modified: Thu, 23 Mar 2023 13:53:01 GMT  
+		Size: 209.9 MB (209857051 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f8226843357a865e3d647e64464943e26c49ab760e7ab1246257054f3a920313`  
+		Last Modified: Fri, 24 Mar 2023 05:00:25 GMT  
+		Size: 192.4 MB (192433470 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `rust:1.68.1-bullseye`
 
 ```console
-$ docker pull rust@sha256:b5c6a1f95397a4035ac362c112083b0363df14d9f114a197244915c5b0b71ee8
+$ docker pull rust@sha256:516b40867bdc4431399b787f3b6143d5ae4fb50eee6156e10b83fd3bffee286f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 3
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; 386
 
 ### `rust:1.68.1-bullseye` - linux; amd64
 
@@ -4576,17 +4695,76 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Size: 243.2 MB (243215103 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `rust:1.68.1-bullseye` - linux; 386
+
+```console
+$ docker pull rust@sha256:4ededa210a768024d64c2b1981e22754ded60d8a41d7ceb66b9511d1e0714c11
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **520.7 MB (520651430 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:4d7a7b0fdb4b58e0e16ffed5a4ea469f1bf8ffa7bc30d1e4e8089e7f8afcb14c`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 23 Mar 2023 00:39:08 GMT
+ADD file:f331251c4c21fceff56d13f76442a6334dc355c29ec7450768c1c86a3db1adab in / 
+# Thu, 23 Mar 2023 00:39:09 GMT
+CMD ["bash"]
+# Thu, 23 Mar 2023 13:45:31 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
+# Thu, 23 Mar 2023 13:45:37 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+# Thu, 23 Mar 2023 13:45:58 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+# Thu, 23 Mar 2023 13:46:57 GMT
+RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
+# Fri, 24 Mar 2023 04:53:05 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:53:24 GMT
+RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
+```
+
+-	Layers:
+	-	`sha256:c1bb878cff31d37952c5c73ed15c167f599bb7f97b3eeaa1a17352b2473b3394`  
+		Last Modified: Thu, 23 Mar 2023 00:42:44 GMT  
+		Size: 56.0 MB (56027911 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:dfb49b37bb40497ba503cfdfd4d3835c15c09b5d63b2c0ae0e955d449abd0382`  
+		Last Modified: Thu, 23 Mar 2023 13:53:13 GMT  
+		Size: 5.3 MB (5293608 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0a0818bf9e1a1c115af7736f4509cfd0ec35b366f341130156f48e64a89d7e19`  
+		Last Modified: Thu, 23 Mar 2023 13:53:13 GMT  
+		Size: 11.2 MB (11249830 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:02db5ed4065161ad85308e48d48bc6104392f259ddc7d2864075ad5705e95862`  
+		Last Modified: Thu, 23 Mar 2023 13:53:35 GMT  
+		Size: 55.9 MB (55922801 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:83d20da4060bf4c77e5920d4528c4eb19ddbb5f4ff1621172dfdf8b09da17c7f`  
+		Last Modified: Thu, 23 Mar 2023 13:54:18 GMT  
+		Size: 199.7 MB (199723737 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:93d2ac7bfe4c3362ff5f613548e3f81e2b2aaa491defa6667406457daac93148`  
+		Last Modified: Fri, 24 Mar 2023 04:58:24 GMT  
+		Size: 192.4 MB (192433543 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `rust:1.68.1-buster`
 
 ```console
-$ docker pull rust@sha256:908575256c1e38f6c19ac9bef8a366064b30f2ea3b44eda2f7b532fe5dfc6771
+$ docker pull rust@sha256:8ef7af8618f0235a242118ae41eb29c325566e28c62e7420f346f96cd5f48765
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 3
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; 386
 
 ### `rust:1.68.1-buster` - linux; amd64
 
@@ -4762,17 +4940,76 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Size: 243.2 MB (243215147 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `rust:1.68.1-buster` - linux; 386
+
+```console
+$ docker pull rust@sha256:32dd9a5f8c8fd8c953a00c575164ebd56417b52899aa1487a55da1c719b0b784
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **513.9 MB (513895205 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:3c5a691310d0c83cc1dda00e5613b405ed85a6d42dea5c9d2d525fd7c9b8b133`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 23 Mar 2023 00:39:29 GMT
+ADD file:b1ee2e3a45801f9bc3a5b377c91d729589265495607481a83edb501aacee34e7 in / 
+# Thu, 23 Mar 2023 00:39:30 GMT
+CMD ["bash"]
+# Thu, 23 Mar 2023 13:47:16 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
+# Thu, 23 Mar 2023 13:47:23 GMT
+RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
+# Thu, 23 Mar 2023 13:47:50 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+# Thu, 23 Mar 2023 13:49:38 GMT
+RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
+# Fri, 24 Mar 2023 04:51:50 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:52:10 GMT
+RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
+```
+
+-	Layers:
+	-	`sha256:e3f08b81fb272fb973474eec1fcbeccf665d7941774b72a1e9448a5daba9682d`  
+		Last Modified: Thu, 23 Mar 2023 00:43:29 GMT  
+		Size: 51.2 MB (51207106 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cd932bf97a5034f015d0289b8e85e4850b34a0e0e316b8be505798e29445b795`  
+		Last Modified: Thu, 23 Mar 2023 13:54:30 GMT  
+		Size: 8.0 MB (8033906 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a235a06e0c6cba8982980dec3a4574d2f2fa3258419845bb5d6d3b303bae6d89`  
+		Last Modified: Thu, 23 Mar 2023 13:54:30 GMT  
+		Size: 10.3 MB (10345713 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:24f9f146634a33f6edc08520903923b5e9e1b7ac3449d3de0a4a2fe056491568`  
+		Last Modified: Thu, 23 Mar 2023 13:54:49 GMT  
+		Size: 53.5 MB (53470794 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:88a653bae5b6d1e8d98d63f15c688d82aebefe9e71affd9fd31b4b043d4cddce`  
+		Last Modified: Thu, 23 Mar 2023 13:55:30 GMT  
+		Size: 198.4 MB (198404320 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:825e6b03aab668e26222148cc4ec3a1302b0c375a0179281b577361af2daed39`  
+		Last Modified: Fri, 24 Mar 2023 04:56:40 GMT  
+		Size: 192.4 MB (192433366 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `rust:1.68.1-slim`
 
 ```console
-$ docker pull rust@sha256:e3d6bb0224e6a97560f6d3aa90f6d1f861e23bf1041b45b1e4208a90aafb2121
+$ docker pull rust@sha256:9858a025b676b2970bc9af4f27fe5801c229ebef84082653c1371f9b0e0ca929
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 3
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; 386
 
 ### `rust:1.68.1-slim` - linux; amd64
 
@@ -4876,17 +5113,52 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Size: 298.9 MB (298934902 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `rust:1.68.1-slim` - linux; 386
+
+```console
+$ docker pull rust@sha256:3d232552a2d7739b6c493b2706575d63ef6533ff1f23e15a3d9438d583028c33
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **285.6 MB (285602532 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:356b7b36ef64994a96342c60b96d02d96b66e29984611dfe0dccba46ba9f4815`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 23 Mar 2023 00:39:18 GMT
+ADD file:315d843eefd4a8bb2345366dcd6bab00a06fca4a7970e220ae8946123d07d7ed in / 
+# Thu, 23 Mar 2023 00:39:19 GMT
+CMD ["bash"]
+# Fri, 24 Mar 2023 04:53:33 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:15 GMT
+RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
+```
+
+-	Layers:
+	-	`sha256:3e638a975ea99fe8646002726dcb1ccdccc49ad33967b30337b9b2413e0619b5`  
+		Last Modified: Thu, 23 Mar 2023 00:43:09 GMT  
+		Size: 32.4 MB (32396277 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3041f43a369256ba0f124ab04af6f6bedaef6047ad3ef50aee470056939e8704`  
+		Last Modified: Fri, 24 Mar 2023 04:59:31 GMT  
+		Size: 253.2 MB (253206255 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `rust:1.68.1-slim-bookworm`
 
 ```console
-$ docker pull rust@sha256:2f657399e9c35bc796a1c062a859dec676da23a3f9f1e81da2b29c479350513c
+$ docker pull rust@sha256:26e2eadb404be7ddf123b821a9af32865894c21ad8066ab70722c1c7d04d64f4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 3
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; 386
 
 ### `rust:1.68.1-slim-bookworm` - linux; amd64
 
@@ -4990,17 +5262,52 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Size: 309.0 MB (309043476 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `rust:1.68.1-slim-bookworm` - linux; 386
+
+```console
+$ docker pull rust@sha256:5d646b43b89aeda7f007ba7fbbf21572ec0de9a4d1650af5c1389f5a73ea9cca
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **290.1 MB (290123177 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:7b8321fba80cf0b36e35c11546a6a42b07ef8ff752459f419540b66c3adbfc84`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 23 Mar 2023 00:38:56 GMT
+ADD file:6c9e0efe1662b8e2fdc9cf2609c3258578c9f7ff6383768c1d15bbeaaf0a2241 in / 
+# Thu, 23 Mar 2023 00:38:56 GMT
+CMD ["bash"]
+# Fri, 24 Mar 2023 04:54:48 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:55:35 GMT
+RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
+```
+
+-	Layers:
+	-	`sha256:4c769a1c6b01d4570b6cf392bd1d972d4b964ad818a2f349fddd8089db9b735c`  
+		Last Modified: Thu, 23 Mar 2023 00:42:26 GMT  
+		Size: 30.1 MB (30104962 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:85ed282937ae8146f0e3b7db4c93b372def65ef08c91ba689e0054e372cbef0d`  
+		Last Modified: Fri, 24 Mar 2023 05:01:26 GMT  
+		Size: 260.0 MB (260018215 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `rust:1.68.1-slim-bullseye`
 
 ```console
-$ docker pull rust@sha256:e3d6bb0224e6a97560f6d3aa90f6d1f861e23bf1041b45b1e4208a90aafb2121
+$ docker pull rust@sha256:9858a025b676b2970bc9af4f27fe5801c229ebef84082653c1371f9b0e0ca929
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 3
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; 386
 
 ### `rust:1.68.1-slim-bullseye` - linux; amd64
 
@@ -5104,17 +5411,52 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Size: 298.9 MB (298934902 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `rust:1.68.1-slim-bullseye` - linux; 386
+
+```console
+$ docker pull rust@sha256:3d232552a2d7739b6c493b2706575d63ef6533ff1f23e15a3d9438d583028c33
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **285.6 MB (285602532 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:356b7b36ef64994a96342c60b96d02d96b66e29984611dfe0dccba46ba9f4815`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 23 Mar 2023 00:39:18 GMT
+ADD file:315d843eefd4a8bb2345366dcd6bab00a06fca4a7970e220ae8946123d07d7ed in / 
+# Thu, 23 Mar 2023 00:39:19 GMT
+CMD ["bash"]
+# Fri, 24 Mar 2023 04:53:33 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:15 GMT
+RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
+```
+
+-	Layers:
+	-	`sha256:3e638a975ea99fe8646002726dcb1ccdccc49ad33967b30337b9b2413e0619b5`  
+		Last Modified: Thu, 23 Mar 2023 00:43:09 GMT  
+		Size: 32.4 MB (32396277 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3041f43a369256ba0f124ab04af6f6bedaef6047ad3ef50aee470056939e8704`  
+		Last Modified: Fri, 24 Mar 2023 04:59:31 GMT  
+		Size: 253.2 MB (253206255 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `rust:1.68.1-slim-buster`
 
 ```console
-$ docker pull rust@sha256:25b66d44796b8adec1e0884fea946cb0432a0b312d15d1539267183168eaf30e
+$ docker pull rust@sha256:d8fd07b533024ae741fd790e869665f7db78097147e85247b29daaa06a484b21
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 3
+-	Platforms: 4
 	-	linux; amd64
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; 386
 
 ### `rust:1.68.1-slim-buster` - linux; amd64
 
@@ -5216,6 +5558,40 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 	-	`sha256:d8f2c37d10cd4481c2895f7690e31b1f562e49eb2e578198e9b077cf178ecb6e`  
 		Last Modified: Thu, 23 Mar 2023 22:39:00 GMT  
 		Size: 283.4 MB (283437909 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `rust:1.68.1-slim-buster` - linux; 386
+
+```console
+$ docker pull rust@sha256:71e43343096f6063f4a3ae19e40e802687206a49418351a00b93cb1822b142f7
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **270.2 MB (270245500 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:b617a61a2b8d8001ec2c900e004e1dd7284fedcc60b32ba2094267d67aa25b18`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 23 Mar 2023 00:39:40 GMT
+ADD file:5743625b778ab9036f4eae3e44da6b59db355d7d6d7b8f42fbb71f2b8c428dd7 in / 
+# Thu, 23 Mar 2023 00:39:40 GMT
+CMD ["bash"]
+# Fri, 24 Mar 2023 04:52:17 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:52:57 GMT
+RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
+```
+
+-	Layers:
+	-	`sha256:0a3d55947c3a2af51034409d456cfd83f620450381a4b036d86b0db1b8b0aaf8`  
+		Last Modified: Thu, 23 Mar 2023 00:43:56 GMT  
+		Size: 27.8 MB (27798660 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b4da4725d11401dd66f710d6c98c81a546d525a4100fcb7e39dc2627d6007d39`  
+		Last Modified: Fri, 24 Mar 2023 04:57:37 GMT  
+		Size: 242.4 MB (242446840 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:alpine`
@@ -5494,7 +5870,7 @@ RUN set -eux;     apkArch="$(apk --print-arch)";     case "$apkArch" in         
 ## `rust:bookworm`
 
 ```console
-$ docker pull rust@sha256:dfd1f510e48104c662cca8682dbfb06db279da854f2817a3c692aafcbf090988
+$ docker pull rust@sha256:6270806a1ea71a5abd437ab3830e6731ba845266b3c0678219a605c363b15c53
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5681,14 +6057,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:bookworm` - linux; 386
 
 ```console
-$ docker pull rust@sha256:cdec63a780232197d5a0f5e628f567bd58d9c6154f54a63d399cdd29e63662c7
+$ docker pull rust@sha256:90b879709fb29330dfd562d21acfffc153972e86e28f3153488c546ba6a886ed
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **539.6 MB (539623966 bytes)**  
+-	Total Size: **539.6 MB (539640784 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:883081ae1785927c03eab749ecc9e134e8f827f77e86c65c54fd4dcc8b98fc03`
+-	Image ID: `sha256:8cb55b2e356b8f56948820fa0dc099ad439a470c353c25bb91e7353a3c07ac16`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -5704,9 +6080,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:45:10 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:09:53 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:10:13 GMT
+# Fri, 24 Mar 2023 04:54:20 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:41 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -5731,15 +6107,15 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:53:01 GMT  
 		Size: 209.9 MB (209857051 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c6c7438aabd87505ee9b7022be2969099c29485c45baac5786dc43da59f74b99`  
-		Last Modified: Thu, 23 Mar 2023 21:15:58 GMT  
-		Size: 192.4 MB (192416652 bytes)  
+	-	`sha256:f8226843357a865e3d647e64464943e26c49ab760e7ab1246257054f3a920313`  
+		Last Modified: Fri, 24 Mar 2023 05:00:25 GMT  
+		Size: 192.4 MB (192433470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:bullseye`
 
 ```console
-$ docker pull rust@sha256:ddd3f5e4627096269f4d098d9489d98d193ea3efc5469355421658b7b985f6d2
+$ docker pull rust@sha256:516b40867bdc4431399b787f3b6143d5ae4fb50eee6156e10b83fd3bffee286f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5926,14 +6302,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:bullseye` - linux; 386
 
 ```console
-$ docker pull rust@sha256:747573f57f791f153612fa190d29de813ea30d2b1ab730e5da97927d1d10f449
+$ docker pull rust@sha256:4ededa210a768024d64c2b1981e22754ded60d8a41d7ceb66b9511d1e0714c11
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **520.6 MB (520634410 bytes)**  
+-	Total Size: **520.7 MB (520651430 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:47a68d82b4d362be762e78512a3cb4b8abc86ced46f83ab09acefb06e649c57f`
+-	Image ID: `sha256:4d7a7b0fdb4b58e0e16ffed5a4ea469f1bf8ffa7bc30d1e4e8089e7f8afcb14c`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -5949,9 +6325,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:46:57 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:08:32 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:08:56 GMT
+# Fri, 24 Mar 2023 04:53:05 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:53:24 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -5976,15 +6352,15 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:54:18 GMT  
 		Size: 199.7 MB (199723737 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12c0dccaff974c583764b11a324bba40734927941f8e23e0015cfbe9aa458dcc`  
-		Last Modified: Thu, 23 Mar 2023 21:13:56 GMT  
-		Size: 192.4 MB (192416523 bytes)  
+	-	`sha256:93d2ac7bfe4c3362ff5f613548e3f81e2b2aaa491defa6667406457daac93148`  
+		Last Modified: Fri, 24 Mar 2023 04:58:24 GMT  
+		Size: 192.4 MB (192433543 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:buster`
 
 ```console
-$ docker pull rust@sha256:9f10f45497cc65d717d0c0a4116525724a63e1d2df6197ced9d0344478399ebe
+$ docker pull rust@sha256:8ef7af8618f0235a242118ae41eb29c325566e28c62e7420f346f96cd5f48765
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6171,14 +6547,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:buster` - linux; 386
 
 ```console
-$ docker pull rust@sha256:2fdb9d5cc7850ebdf08ab0c3a7158387c13e9cad0c13445b6aa084ada66476ad
+$ docker pull rust@sha256:32dd9a5f8c8fd8c953a00c575164ebd56417b52899aa1487a55da1c719b0b784
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **513.9 MB (513878377 bytes)**  
+-	Total Size: **513.9 MB (513895205 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9c1b0af9db2b3227f93017a2cebd6b2b0053f932d1874418d85c87f3734c6f29`
+-	Image ID: `sha256:3c5a691310d0c83cc1dda00e5613b405ed85a6d42dea5c9d2d525fd7c9b8b133`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -6194,9 +6570,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:49:38 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:07:11 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:07:35 GMT
+# Fri, 24 Mar 2023 04:51:50 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:52:10 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -6221,15 +6597,15 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:55:30 GMT  
 		Size: 198.4 MB (198404320 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b27a40b4e9062f9adfd11adc5b98ccd7441153ab43bb3ead6589a0139defd47`  
-		Last Modified: Thu, 23 Mar 2023 21:12:12 GMT  
-		Size: 192.4 MB (192416538 bytes)  
+	-	`sha256:825e6b03aab668e26222148cc4ec3a1302b0c375a0179281b577361af2daed39`  
+		Last Modified: Fri, 24 Mar 2023 04:56:40 GMT  
+		Size: 192.4 MB (192433366 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:latest`
 
 ```console
-$ docker pull rust@sha256:ddd3f5e4627096269f4d098d9489d98d193ea3efc5469355421658b7b985f6d2
+$ docker pull rust@sha256:516b40867bdc4431399b787f3b6143d5ae4fb50eee6156e10b83fd3bffee286f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6416,14 +6792,14 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 ### `rust:latest` - linux; 386
 
 ```console
-$ docker pull rust@sha256:747573f57f791f153612fa190d29de813ea30d2b1ab730e5da97927d1d10f449
+$ docker pull rust@sha256:4ededa210a768024d64c2b1981e22754ded60d8a41d7ceb66b9511d1e0714c11
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **520.6 MB (520634410 bytes)**  
+-	Total Size: **520.7 MB (520651430 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:47a68d82b4d362be762e78512a3cb4b8abc86ced46f83ab09acefb06e649c57f`
+-	Image ID: `sha256:4d7a7b0fdb4b58e0e16ffed5a4ea469f1bf8ffa7bc30d1e4e8089e7f8afcb14c`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -6439,9 +6815,9 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
 # Thu, 23 Mar 2023 13:46:57 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 23 Mar 2023 21:08:32 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:08:56 GMT
+# Fri, 24 Mar 2023 04:53:05 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:53:24 GMT
 RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;
 ```
 
@@ -6466,15 +6842,15 @@ RUN set -eux;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch#
 		Last Modified: Thu, 23 Mar 2023 13:54:18 GMT  
 		Size: 199.7 MB (199723737 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:12c0dccaff974c583764b11a324bba40734927941f8e23e0015cfbe9aa458dcc`  
-		Last Modified: Thu, 23 Mar 2023 21:13:56 GMT  
-		Size: 192.4 MB (192416523 bytes)  
+	-	`sha256:93d2ac7bfe4c3362ff5f613548e3f81e2b2aaa491defa6667406457daac93148`  
+		Last Modified: Fri, 24 Mar 2023 04:58:24 GMT  
+		Size: 192.4 MB (192433543 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:slim`
 
 ```console
-$ docker pull rust@sha256:ccad6d1002b3a8b23932d5459739586bc9bc4fa9f02ad40259b5fc662f2521dd
+$ docker pull rust@sha256:9858a025b676b2970bc9af4f27fe5801c229ebef84082653c1371f9b0e0ca929
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6589,14 +6965,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:slim` - linux; 386
 
 ```console
-$ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec2226d8614fc4
+$ docker pull rust@sha256:3d232552a2d7739b6c493b2706575d63ef6533ff1f23e15a3d9438d583028c33
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **285.6 MB (285595097 bytes)**  
+-	Total Size: **285.6 MB (285602532 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e543a904e4631517da7e2fe503e4f84249a22cd1cf5082098fcf068a64ccae0b`
+-	Image ID: `sha256:356b7b36ef64994a96342c60b96d02d96b66e29984611dfe0dccba46ba9f4815`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -6604,9 +6980,9 @@ $ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec22
 ADD file:315d843eefd4a8bb2345366dcd6bab00a06fca4a7970e220ae8946123d07d7ed in / 
 # Thu, 23 Mar 2023 00:39:19 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:09:05 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:09:41 GMT
+# Fri, 24 Mar 2023 04:53:33 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:15 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -6615,15 +6991,15 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:43:09 GMT  
 		Size: 32.4 MB (32396277 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc4dcf7d8c3d94d27b6d0f528ea8a5d5e44fef46f8350518ceaf8e316c62850c`  
-		Last Modified: Thu, 23 Mar 2023 21:15:02 GMT  
-		Size: 253.2 MB (253198820 bytes)  
+	-	`sha256:3041f43a369256ba0f124ab04af6f6bedaef6047ad3ef50aee470056939e8704`  
+		Last Modified: Fri, 24 Mar 2023 04:59:31 GMT  
+		Size: 253.2 MB (253206255 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:slim-bookworm`
 
 ```console
-$ docker pull rust@sha256:a29cf906e754b0d15de79948c2bd2189d8b8a9eaed5d54639f250047d3346d09
+$ docker pull rust@sha256:26e2eadb404be7ddf123b821a9af32865894c21ad8066ab70722c1c7d04d64f4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6738,14 +7114,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:slim-bookworm` - linux; 386
 
 ```console
-$ docker pull rust@sha256:d90754795003c049e0c6660df0bb05cb9f06348452e312b1fbcb886df2433951
+$ docker pull rust@sha256:5d646b43b89aeda7f007ba7fbbf21572ec0de9a4d1650af5c1389f5a73ea9cca
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **290.1 MB (290112379 bytes)**  
+-	Total Size: **290.1 MB (290123177 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2c0f901e0d4903a64a45e1cb897d754eb456941e2bcbb6bc329921f4ba19528`
+-	Image ID: `sha256:7b8321fba80cf0b36e35c11546a6a42b07ef8ff752459f419540b66c3adbfc84`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -6753,9 +7129,9 @@ $ docker pull rust@sha256:d90754795003c049e0c6660df0bb05cb9f06348452e312b1fbcb88
 ADD file:6c9e0efe1662b8e2fdc9cf2609c3258578c9f7ff6383768c1d15bbeaaf0a2241 in / 
 # Thu, 23 Mar 2023 00:38:56 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:10:21 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:11:06 GMT
+# Fri, 24 Mar 2023 04:54:48 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:55:35 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -6764,15 +7140,15 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:42:26 GMT  
 		Size: 30.1 MB (30104962 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a22fd5c92636b8de2314e4f81796bcb302c7759652b3f0594a7e5130e01aa661`  
-		Last Modified: Thu, 23 Mar 2023 21:16:58 GMT  
-		Size: 260.0 MB (260007417 bytes)  
+	-	`sha256:85ed282937ae8146f0e3b7db4c93b372def65ef08c91ba689e0054e372cbef0d`  
+		Last Modified: Fri, 24 Mar 2023 05:01:26 GMT  
+		Size: 260.0 MB (260018215 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:slim-bullseye`
 
 ```console
-$ docker pull rust@sha256:ccad6d1002b3a8b23932d5459739586bc9bc4fa9f02ad40259b5fc662f2521dd
+$ docker pull rust@sha256:9858a025b676b2970bc9af4f27fe5801c229ebef84082653c1371f9b0e0ca929
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6887,14 +7263,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:slim-bullseye` - linux; 386
 
 ```console
-$ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec2226d8614fc4
+$ docker pull rust@sha256:3d232552a2d7739b6c493b2706575d63ef6533ff1f23e15a3d9438d583028c33
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **285.6 MB (285595097 bytes)**  
+-	Total Size: **285.6 MB (285602532 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e543a904e4631517da7e2fe503e4f84249a22cd1cf5082098fcf068a64ccae0b`
+-	Image ID: `sha256:356b7b36ef64994a96342c60b96d02d96b66e29984611dfe0dccba46ba9f4815`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -6902,9 +7278,9 @@ $ docker pull rust@sha256:c0344a55d4ed19d36e1c490c6d9ee7ec843a97afef5d7ddd9cec22
 ADD file:315d843eefd4a8bb2345366dcd6bab00a06fca4a7970e220ae8946123d07d7ed in / 
 # Thu, 23 Mar 2023 00:39:19 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:09:05 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:09:41 GMT
+# Fri, 24 Mar 2023 04:53:33 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:54:15 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -6913,15 +7289,15 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:43:09 GMT  
 		Size: 32.4 MB (32396277 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc4dcf7d8c3d94d27b6d0f528ea8a5d5e44fef46f8350518ceaf8e316c62850c`  
-		Last Modified: Thu, 23 Mar 2023 21:15:02 GMT  
-		Size: 253.2 MB (253198820 bytes)  
+	-	`sha256:3041f43a369256ba0f124ab04af6f6bedaef6047ad3ef50aee470056939e8704`  
+		Last Modified: Fri, 24 Mar 2023 04:59:31 GMT  
+		Size: 253.2 MB (253206255 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `rust:slim-buster`
 
 ```console
-$ docker pull rust@sha256:2f102497e8a6ec8ffbab07d32141a82b38c8924cd88b1c013c5b19fc55aecd7b
+$ docker pull rust@sha256:d8fd07b533024ae741fd790e869665f7db78097147e85247b29daaa06a484b21
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7036,14 +7412,14 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 ### `rust:slim-buster` - linux; 386
 
 ```console
-$ docker pull rust@sha256:6327d474ca349df39280484ec4238c5b5dde1092b1df748cd7d1b65b853e66f5
+$ docker pull rust@sha256:71e43343096f6063f4a3ae19e40e802687206a49418351a00b93cb1822b142f7
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **270.2 MB (270236705 bytes)**  
+-	Total Size: **270.2 MB (270245500 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f7f6e15777415c764594776e35db420f7993ad74e39d8e7ea848a73b445b9b1c`
+-	Image ID: `sha256:b617a61a2b8d8001ec2c900e004e1dd7284fedcc60b32ba2094267d67aa25b18`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -7051,9 +7427,9 @@ $ docker pull rust@sha256:6327d474ca349df39280484ec4238c5b5dde1092b1df748cd7d1b6
 ADD file:5743625b778ab9036f4eae3e44da6b59db355d7d6d7b8f42fbb71f2b8c428dd7 in / 
 # Thu, 23 Mar 2023 00:39:40 GMT
 CMD ["bash"]
-# Thu, 23 Mar 2023 21:07:45 GMT
-ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.0
-# Thu, 23 Mar 2023 21:08:25 GMT
+# Fri, 24 Mar 2023 04:52:17 GMT
+ENV RUSTUP_HOME=/usr/local/rustup CARGO_HOME=/usr/local/cargo PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin RUST_VERSION=1.68.1
+# Fri, 24 Mar 2023 04:52:57 GMT
 RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends         ca-certificates         gcc         libc6-dev         wget         ;     dpkgArch="$(dpkg --print-architecture)";     case "${dpkgArch##*-}" in         amd64) rustArch='x86_64-unknown-linux-gnu'; rustupSha256='bb31eaf643926b2ee9f4d8d6fc0e2835e03c0a60f34d324048aa194f0b29a71c' ;;         armhf) rustArch='armv7-unknown-linux-gnueabihf'; rustupSha256='6626b90205d7fe7058754c8e993b7efd91dedc6833a11a225b296b7c2941194f' ;;         arm64) rustArch='aarch64-unknown-linux-gnu'; rustupSha256='4ccaa7de6b8be1569f6b764acc28e84f5eca342f5162cd5c810891bff7ed7f74' ;;         i386) rustArch='i686-unknown-linux-gnu'; rustupSha256='34392b53a25c56435b411d3e575b63aab962034dd1409ba405e708610c829607' ;;         *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac;     url="https://static.rust-lang.org/rustup/archive/1.25.2/${rustArch}/rustup-init";     wget "$url";     echo "${rustupSha256} *rustup-init" | sha256sum -c -;     chmod +x rustup-init;     ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch};     rm rustup-init;     chmod -R a+w $RUSTUP_HOME $CARGO_HOME;     rustup --version;     cargo --version;     rustc --version;     apt-get remove -y --auto-remove         wget         ;     rm -rf /var/lib/apt/lists/*;
 ```
 
@@ -7062,7 +7438,7 @@ RUN set -eux;     apt-get update;     apt-get install -y --no-install-recommends
 		Last Modified: Thu, 23 Mar 2023 00:43:56 GMT  
 		Size: 27.8 MB (27798660 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a6fefcdf063c412a9aee40c4c18e7ab722e4acce023962dd930f545e2bd4549`  
-		Last Modified: Thu, 23 Mar 2023 21:13:08 GMT  
-		Size: 242.4 MB (242438045 bytes)  
+	-	`sha256:b4da4725d11401dd66f710d6c98c81a546d525a4100fcb7e39dc2627d6007d39`  
+		Last Modified: Fri, 24 Mar 2023 04:57:37 GMT  
+		Size: 242.4 MB (242446840 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
