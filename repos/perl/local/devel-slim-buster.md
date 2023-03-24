@@ -1,13 +1,13 @@
-# `perl:5.37.9-slim-buster`
+# `perl:5.37.10-slim-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:149b90954aecf4f6d31eaede7f12c08ffffa3694100f8b8d623f7d935b9cce51`
-- Created: `2023-03-01T11:29:22.264290961Z`
-- Virtual Size: ~ 169.95 Mb  
+- Image ID: `sha256:083d07f1999fbbc767e8efc5d058fcf429249de9007cf6443ddfdbda0373a817`
+- Created: `2023-03-23T13:48:14.297089889Z`
+- Virtual Size: ~ 170.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["perl5.37.9","-de0"]`
+- Command: `["perl5.37.10","-de0"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:

@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:68d2b5dcd4d82b688b6923960924a2655e42d029e9cc9224e94b6971f4763d70`
-- Created: `2023-03-01T09:01:32.73941128Z`
-- Virtual Size: ~ 863.36 Mb  
+- Image ID: `sha256:78a5fa2a71a8eb3c85a291ac95239f2f98fdef8c709020836e53ac17d5756550`
+- Created: `2023-03-23T11:21:28.912669492Z`
+- Virtual Size: ~ 863.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["perl5.36.0","-de0"]`
@@ -1723,23 +1723,23 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/ilmbase/2.2.1-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/ilmbase/2.2.1-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `imagemagick=8:6.9.10.23+dfsg-2.1+deb10u1`
+### `dpkg` source package: `imagemagick=8:6.9.10.23+dfsg-2.1+deb10u4`
 
 Binary Packages:
 
-- `imagemagick=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `imagemagick-6-common=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `imagemagick-6.q16=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `libmagickcore-6-arch-config:amd64=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `libmagickcore-6-headers=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `libmagickcore-6.q16-6:amd64=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `libmagickcore-6.q16-6-extra:amd64=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `libmagickcore-6.q16-dev:amd64=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `libmagickcore-dev=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `libmagickwand-6-headers=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `libmagickwand-6.q16-6:amd64=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `libmagickwand-6.q16-dev:amd64=8:6.9.10.23+dfsg-2.1+deb10u1`
-- `libmagickwand-dev=8:6.9.10.23+dfsg-2.1+deb10u1`
+- `imagemagick=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `imagemagick-6-common=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `imagemagick-6.q16=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `libmagickcore-6-arch-config:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `libmagickcore-6-headers=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `libmagickcore-6.q16-6:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `libmagickcore-6.q16-6-extra:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `libmagickcore-6.q16-dev:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `libmagickcore-dev=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `libmagickwand-6-headers=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `libmagickwand-6.q16-6:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `libmagickwand-6.q16-dev:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `libmagickwand-dev=8:6.9.10.23+dfsg-2.1+deb10u4`
 
 Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/imagemagick-6-common/copyright`, `/usr/share/doc/imagemagick-6.q16/copyright`, `/usr/share/doc/libmagickcore-6-arch-config/copyright`, `/usr/share/doc/libmagickcore-6-headers/copyright`, `/usr/share/doc/libmagickcore-6.q16-6/copyright`, `/usr/share/doc/libmagickcore-6.q16-6-extra/copyright`, `/usr/share/doc/libmagickcore-6.q16-dev/copyright`, `/usr/share/doc/libmagickcore-dev/copyright`, `/usr/share/doc/libmagickwand-6-headers/copyright`, `/usr/share/doc/libmagickwand-6.q16-6/copyright`, `/usr/share/doc/libmagickwand-6.q16-dev/copyright`, `/usr/share/doc/libmagickwand-dev/copyright`)
 
@@ -1773,17 +1773,17 @@ Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris imagemagick=8:6.9.10.23+dfsg-2.1+deb10u1
-'http://deb.debian.org/debian/pool/main/i/imagemagick/imagemagick_6.9.10.23%2bdfsg-2.1%2bdeb10u1.dsc' imagemagick_6.9.10.23+dfsg-2.1+deb10u1.dsc 5162 SHA256:7981932a55bdef29fe5815fcad267933603c5aa7530ba4f3e42fafc3abfff394
-'http://deb.debian.org/debian/pool/main/i/imagemagick/imagemagick_6.9.10.23%2bdfsg.orig.tar.xz' imagemagick_6.9.10.23+dfsg.orig.tar.xz 9081188 SHA256:44249112b624f2cc315573fa96685e547da27ebb321432259290c407023c531e
-'http://deb.debian.org/debian/pool/main/i/imagemagick/imagemagick_6.9.10.23%2bdfsg-2.1%2bdeb10u1.debian.tar.xz' imagemagick_6.9.10.23+dfsg-2.1+deb10u1.debian.tar.xz 237856 SHA256:a713bde913942f58fa7a6f004c12ce6fe94342a0befc47ef27d948f3007d45a2
+$ apt-get source -qq --print-uris imagemagick=8:6.9.10.23+dfsg-2.1+deb10u4
+'http://deb.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.10.23%2bdfsg-2.1%2bdeb10u4.dsc' imagemagick_6.9.10.23+dfsg-2.1+deb10u4.dsc 5213 SHA256:85d696c8a24f56b5e5426169d2a62ee0384eb6510da9f63cb0977d18f6b7b30c
+'http://deb.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.10.23%2bdfsg.orig.tar.xz' imagemagick_6.9.10.23+dfsg.orig.tar.xz 9081188 SHA256:44249112b624f2cc315573fa96685e547da27ebb321432259290c407023c531e
+'http://deb.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.10.23%2bdfsg-2.1%2bdeb10u4.debian.tar.xz' imagemagick_6.9.10.23+dfsg-2.1+deb10u4.debian.tar.xz 250344 SHA256:620c138bdb37cdba07ce7f5047452b37092f2a5746fff8fd17e4cb5f99e2f2bb
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/imagemagick/8:6.9.10.23+dfsg-2.1+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/imagemagick/8:6.9.10.23+dfsg-2.1+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/imagemagick/8:6.9.10.23+dfsg-2.1+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/imagemagick/8:6.9.10.23+dfsg-2.1+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/imagemagick/8:6.9.10.23+dfsg-2.1+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/imagemagick/8:6.9.10.23+dfsg-2.1+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `init-system-helpers=1.56+nmu1`
 
@@ -2220,11 +2220,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libdatrie/0.2.12-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libdatrie/0.2.12-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libde265=1.0.3-1+deb10u3`
+### `dpkg` source package: `libde265=1.0.11-0+deb10u4`
 
 Binary Packages:
 
-- `libde265-0:amd64=1.0.3-1+deb10u3`
+- `libde265-0:amd64=1.0.11-0+deb10u4`
 
 Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 
@@ -2235,15 +2235,21 @@ Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 - `LGPL-3+`
 - `other-1`
 - `public-domain-1`
-- `public-domain-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libde265=1.0.11-0+deb10u4
+'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.11-0%2bdeb10u4.dsc' libde265_1.0.11-0+deb10u4.dsc 2252 SHA256:ba727f2d4c780fc3df3d6146c3ee310eac4478211ef562d3ff59be6b98f4db1e
+'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.11.orig.tar.gz' libde265_1.0.11.orig.tar.gz 845996 SHA256:2f8f12cabbdb15e53532b7c1eb964d4e15d444db1be802505e6ac97a25035bab
+'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.11-0%2bdeb10u4.debian.tar.xz' libde265_1.0.11-0+deb10u4.debian.tar.xz 13672 SHA256:47135d99d518677711697a94f954595cd406be6d73aa80848c795ac3eac4ff9f
+```
 
-- http://snapshot.debian.org/package/libde265/1.0.3-1+deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libde265/1.0.11-0+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/libde265/1.0.11-0+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libde265/1.0.11-0+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libedit=3.1-20181209-1`
 
@@ -4287,11 +4293,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/patch/2.7.6-3+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/patch/2.7.6-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `pcre2=10.32-5`
+### `dpkg` source package: `pcre2=10.32-5+deb10u1`
 
 Binary Packages:
 
-- `libpcre2-8-0:amd64=10.32-5`
+- `libpcre2-8-0:amd64=10.32-5+deb10u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -4300,17 +4306,17 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris pcre2=10.32-5
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.32-5.dsc' pcre2_10.32-5.dsc 2342 SHA256:df327f59608e018603b138cf5a557fe5febfa5f24281152d68f3a52ba542d504
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.32.orig.tar.gz' pcre2_10.32.orig.tar.gz 2169349 SHA256:9ca9be72e1a04f22be308323caa8c06ebd0c51efe99ee11278186cafbc4fe3af
-'http://deb.debian.org/debian/pool/main/p/pcre2/pcre2_10.32-5.diff.gz' pcre2_10.32-5.diff.gz 5187 SHA256:bfe23d2661bf5727a10a1c1e49660c35afc0a4ad1c151bdcefb7c5a52e71e685
+$ apt-get source -qq --print-uris pcre2=10.32-5+deb10u1
+'http://deb.debian.org/debian-security/pool/updates/main/p/pcre2/pcre2_10.32-5%2bdeb10u1.dsc' pcre2_10.32-5+deb10u1.dsc 2234 SHA256:84b64673e5b8f4d2f2b75e293a151df97020ecc32871961a6dfc30a588f5fc57
+'http://deb.debian.org/debian-security/pool/updates/main/p/pcre2/pcre2_10.32.orig.tar.gz' pcre2_10.32.orig.tar.gz 2169349 SHA256:9ca9be72e1a04f22be308323caa8c06ebd0c51efe99ee11278186cafbc4fe3af
+'http://deb.debian.org/debian-security/pool/updates/main/p/pcre2/pcre2_10.32-5%2bdeb10u1.diff.gz' pcre2_10.32-5+deb10u1.diff.gz 9691 SHA256:1a425dd654d2ffd1e7e3456865a0d0ec2fd04639469a2f73f18138f01df1377b
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/pcre2/10.32-5/ (for browsing the source)
-- https://sources.debian.net/src/pcre2/10.32-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pcre2/10.32-5/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/pcre2/10.32-5+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/pcre2/10.32-5+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/pcre2/10.32-5+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pcre3=2:8.39-12`
 

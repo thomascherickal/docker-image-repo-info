@@ -1,13 +1,13 @@
-# `perl:5.37.9-slim-threaded-buster`
+# `perl:5.37.10-slim-threaded-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2f4ab9c3e8a64315e7d53e5dd3e747c1d6858696318be656d1e971a3c86ff886`
-- Created: `2023-03-01T11:53:44.200378064Z`
-- Virtual Size: ~ 170.15 Mb  
+- Image ID: `sha256:08987c6860fdad53e7bb0ae8dba2394ab1c91c814b8126ea6c8b74efb62de3fd`
+- Created: `2023-03-23T14:12:15.897527507Z`
+- Virtual Size: ~ 170.23 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["perl5.37.9","-de0"]`
+- Command: `["perl5.37.10","-de0"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
