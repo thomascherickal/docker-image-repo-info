@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:32c13e95e754d7f850dd28660f10cde3719306db802655570fd809de75a0e653`
-- Created: `2023-03-08T22:25:27.30250642Z`
+- Image ID: `sha256:950ed2724e56a1e262cea18a8100997c3ac9891d934f72245ed2e930cbe42b1d`
+- Created: `2023-03-23T09:15:48.942843676Z`
 - Virtual Size: ~ 596.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1859,20 +1859,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u8
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u8.dsc' tzdata_2021a-0+deb10u8.dsc 2023 SHA256:8d17f1f3620ef11e275fde3693f1f22495da66cdc40f2ec95ab804c7f4d56471
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u8.debian.tar.xz' tzdata_2021a-0+deb10u8.debian.tar.xz 115632 SHA256:e14dc836022592a32b8a99d33f9105e4a31258da39704e022a61a3c07824e49f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u8/
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u8/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.33.1-0.1`
 
