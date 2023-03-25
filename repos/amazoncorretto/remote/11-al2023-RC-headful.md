@@ -1,12 +1,52 @@
 ## `amazoncorretto:11-al2023-RC-headful`
 
 ```console
-$ docker pull amazoncorretto@sha256:8a18a38ec9931f53d6c0f0f4371bb031d524d18b21de50c40e8edd19389932a5
+$ docker pull amazoncorretto@sha256:ad939d5299118d92c6cddabb4706234b683852eab9cadf2fa919424973a4080c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Platforms: 2
+	-	linux; amd64
 	-	linux; arm64 variant v8
+
+### `amazoncorretto:11-al2023-RC-headful` - linux; amd64
+
+```console
+$ docker pull amazoncorretto@sha256:88c5e5e4c3fb6684742d052cbca5bd0e1f1ec9cbcb27a1fc7285928939a59a09
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **128.8 MB (128789999 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:1a68b822715b489f62c2f986b43ba188cfd6a57354f196cc33be37f4247a41fc`
+-	Default Command: `["\/bin\/bash"]`
+
+```dockerfile
+# Wed, 15 Mar 2023 23:27:36 GMT
+COPY dir:42fc532f6972d7f1219ad34006b64c07b3ddb71b58ff263ab8c6aa98dab00541 in / 
+# Wed, 15 Mar 2023 23:27:37 GMT
+CMD ["/bin/bash"]
+# Fri, 24 Mar 2023 23:20:20 GMT
+ARG version=11.0.18.10-1
+# Fri, 24 Mar 2023 23:21:07 GMT
+# ARGS: version=11.0.18.10-1
+RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-11-amazon-corretto-headless-$version.amzn2023.$(uname -m).rpm" "java-11-amazon-corretto-$version.amzn2023.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-11-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
+# Fri, 24 Mar 2023 23:21:07 GMT
+ENV LANG=C.UTF-8
+# Fri, 24 Mar 2023 23:21:07 GMT
+ENV JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto
+```
+
+-	Layers:
+	-	`sha256:b76f3b09316a1df6bfea69401870e8b9b4b467d535795e2ba0908c4d3bd438b9`  
+		Last Modified: Wed, 15 Mar 2023 23:27:59 GMT  
+		Size: 52.3 MB (52268492 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7d789698b37e7f9347119f428361ace6b29220f6dfe9a3a330828e1112208d24`  
+		Last Modified: Fri, 24 Mar 2023 23:25:07 GMT  
+		Size: 76.5 MB (76521507 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `amazoncorretto:11-al2023-RC-headful` - linux; arm64 variant v8
 
