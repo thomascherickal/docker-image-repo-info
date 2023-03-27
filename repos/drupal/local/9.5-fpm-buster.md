@@ -1,10 +1,10 @@
-# `drupal:9.5.5-php8.1-fpm-buster`
+# `drupal:9.5.7-php8.1-fpm-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8528e002982fa466c5b063060422278721e9e4176f5440963d010e4fdc7c7c29`
-- Created: `2023-03-21T20:25:40.474804384Z`
-- Virtual Size: ~ 496.06 Mb  
+- Image ID: `sha256:67473ccb31b5db3668fc7f100e8d96751451c3604b9480115da6af43806ef0b3`
+- Created: `2023-03-25T00:23:26.452545393Z`
+- Virtual Size: ~ 496.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -21,7 +21,7 @@
   - `PHP_URL=https://www.php.net/distributions/php-8.1.17.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.17.tar.xz.asc`
   - `PHP_SHA256=b5c48f95b8e1d8624dd05fc2eab7be13277f9a203ccba97bdca5a1a0fb4a1460`
-  - `DRUPAL_VERSION=9.5.5`
+  - `DRUPAL_VERSION=9.5.7`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -2703,20 +2703,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u8
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u8.dsc' tzdata_2021a-0+deb10u8.dsc 2023 SHA256:8d17f1f3620ef11e275fde3693f1f22495da66cdc40f2ec95ab804c7f4d56471
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u8.debian.tar.xz' tzdata_2021a-0+deb10u8.debian.tar.xz 115632 SHA256:e14dc836022592a32b8a99d33f9105e4a31258da39704e022a61a3c07824e49f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u8/
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u8/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u8/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u8/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.33.1-0.1`
 

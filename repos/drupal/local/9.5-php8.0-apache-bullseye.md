@@ -1,10 +1,10 @@
-# `drupal:9.5.5-php8.0-apache-bullseye`
+# `drupal:9.5.7-php8.0-apache-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:15c9e3d81849ea98b5f480a13ee21bb64ce34c3a71a14fdac29586cf380146ae`
-- Created: `2023-03-21T20:26:25.983813896Z`
-- Virtual Size: ~ 556.74 Mb  
+- Image ID: `sha256:fe6755fc31002df6405892aa1ee26a4f486230ed6c855e0859f50113eef9d51b`
+- Created: `2023-03-25T00:24:12.40296491Z`
+- Virtual Size: ~ 556.83 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -23,7 +23,7 @@
   - `PHP_URL=https://www.php.net/distributions/php-8.0.28.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.28.tar.xz.asc`
   - `PHP_SHA256=5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd`
-  - `DRUPAL_VERSION=9.5.5`
+  - `DRUPAL_VERSION=9.5.7`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -80,14 +80,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.118/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.118/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `apache2=2.4.54-1~deb11u1`
+### `dpkg` source package: `apache2=2.4.56-1~deb11u1`
 
 Binary Packages:
 
-- `apache2=2.4.54-1~deb11u1`
-- `apache2-bin=2.4.54-1~deb11u1`
-- `apache2-data=2.4.54-1~deb11u1`
-- `apache2-utils=2.4.54-1~deb11u1`
+- `apache2=2.4.56-1~deb11u1`
+- `apache2-bin=2.4.56-1~deb11u1`
+- `apache2-data=2.4.56-1~deb11u1`
+- `apache2-utils=2.4.56-1~deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/apache2/copyright`, `/usr/share/doc/apache2-bin/copyright`, `/usr/share/doc/apache2-data/copyright`, `/usr/share/doc/apache2-utils/copyright`)
 
@@ -110,18 +110,18 @@ Licenses: (parsed from: `/usr/share/doc/apache2/copyright`, `/usr/share/doc/apac
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apache2=2.4.54-1~deb11u1
-'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.54-1%7edeb11u1.dsc' apache2_2.4.54-1~deb11u1.dsc 3539 SHA256:a019ec1ca8130e8fdbde9ee198ed551a114961a32a37b9775d944659bfeaaae5
-'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.54.orig.tar.gz' apache2_2.4.54.orig.tar.gz 9743277 SHA256:c687b99c446c0ef345e7d86c21a8e15fc074b7d5152c4fe22b0463e2be346ffb
-'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.54.orig.tar.gz.asc' apache2_2.4.54.orig.tar.gz.asc 874 SHA256:d3855dc59d3e6ceaddd6d224aa9a33eef554c2706ccee5894e54f2b229ee800a
-'http://deb.debian.org/debian/pool/main/a/apache2/apache2_2.4.54-1%7edeb11u1.debian.tar.xz' apache2_2.4.54-1~deb11u1.debian.tar.xz 894208 SHA256:89189e18b964f58a7943024bb40af782fce654149d11c3be872af6ca73388117
+$ apt-get source -qq --print-uris apache2=2.4.56-1~deb11u1
+'http://deb.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.56-1%7edeb11u1.dsc' apache2_2.4.56-1~deb11u1.dsc 3539 SHA256:751eea360cd53cc4186c64a621390f9f4fd721d366cc809ff110109bb14a8f1d
+'http://deb.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.56.orig.tar.gz' apache2_2.4.56.orig.tar.gz 9769650 SHA256:db0d4c76007b231fd3ab41b580548dc798ae3844bb7c3d5ce1e4174ca2364698
+'http://deb.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.56.orig.tar.gz.asc' apache2_2.4.56.orig.tar.gz.asc 833 SHA256:b53aaa7b05c6888a9cacbbeb100790772f8a8b042f0f308f4aeee60a21e8e44c
+'http://deb.debian.org/debian-security/pool/updates/main/a/apache2/apache2_2.4.56-1%7edeb11u1.debian.tar.xz' apache2_2.4.56-1~deb11u1.debian.tar.xz 894512 SHA256:37fda9dab3acfe683ff88aa472372eafb1c651a31f03dac5882d13c94bb93e32
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/apache2/2.4.54-1~deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/apache2/2.4.54-1~deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apache2/2.4.54-1~deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/apache2/2.4.56-1~deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/apache2/2.4.56-1~deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/apache2/2.4.56-1~deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apr-util=1.6.1-5+deb11u1`
 
@@ -150,11 +150,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/apr-util/1.6.1-5+deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/apr-util/1.6.1-5+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `apr=1.7.0-6+deb11u1`
+### `dpkg` source package: `apr=1.7.0-6+deb11u2`
 
 Binary Packages:
 
-- `libapr1:amd64=1.7.0-6+deb11u1`
+- `libapr1:amd64=1.7.0-6+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 
@@ -163,18 +163,17 @@ Licenses: (parsed from: `/usr/share/doc/libapr1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apr=1.7.0-6+deb11u1
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0-6%2bdeb11u1.dsc' apr_1.7.0-6+deb11u1.dsc 2282 SHA256:561d329f77659ea05d7303776b76922c4c13c5647b5f9205a3d6637976f345df
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0.orig.tar.bz2' apr_1.7.0.orig.tar.bz2 872238 SHA256:e2e148f0b2e99b8e5c6caa09f6d4fb4dd3e83f744aa72a952f94f5a14436f7ea
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0.orig.tar.bz2.asc' apr_1.7.0.orig.tar.bz2.asc 801 SHA256:5a6c4e721ed82116d7877254ae11c076014040af2ff816ea15ec81e77a4a7d43
-'http://deb.debian.org/debian/pool/main/a/apr/apr_1.7.0-6%2bdeb11u1.debian.tar.xz' apr_1.7.0-6+deb11u1.debian.tar.xz 214884 SHA256:7352919715fe985ccfee1953a85a051e16cd4af0c739c0f827e508a309ee5e06
+$ apt-get source -qq --print-uris apr=1.7.0-6+deb11u2
+'http://deb.debian.org/debian-security/pool/updates/main/a/apr/apr_1.7.0-6%2bdeb11u2.dsc' apr_1.7.0-6+deb11u2.dsc 2202 SHA256:9736c0926998f8ca24f96a88c935f323127817400184b4040e52456e483eacb1
+'http://deb.debian.org/debian-security/pool/updates/main/a/apr/apr_1.7.0.orig.tar.bz2' apr_1.7.0.orig.tar.bz2 872238 SHA256:e2e148f0b2e99b8e5c6caa09f6d4fb4dd3e83f744aa72a952f94f5a14436f7ea
+'http://deb.debian.org/debian-security/pool/updates/main/a/apr/apr_1.7.0-6%2bdeb11u2.debian.tar.xz' apr_1.7.0-6+deb11u2.debian.tar.xz 225364 SHA256:b90bcafcb6061f1685473f8c48e26c0916c8a312542eb25dca852c730a4dae64
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/apr/1.7.0-6+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/apr/1.7.0-6+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apr/1.7.0-6+deb11u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/apr/1.7.0-6+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/apr/1.7.0-6+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/apr/1.7.0-6+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apt=2.2.4`
 
