@@ -1,7 +1,7 @@
 ## `golang:1-bullseye`
 
 ```console
-$ docker pull golang@sha256:a38a465d0a3d9d13dce6c8a4d293f4014a345723741afaf2f05ee330e631fb40
+$ docker pull golang@sha256:cb95e56313475447c4f1ba5262ddd7c6ba2c66cdb62c0c699001e8fa1755480f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -18,14 +18,14 @@ $ docker pull golang@sha256:a38a465d0a3d9d13dce6c8a4d293f4014a345723741afaf2f05e
 ### `golang:1-bullseye` - linux; amd64
 
 ```console
-$ docker pull golang@sha256:a78b213b71d9382d72aeb1e1370d339e9cd03d1f35af9c11306d690dc2215da6
+$ docker pull golang@sha256:2101aa981e68ab1e06e3d4ac35ae75ed122f0380e5331e3ae4ba7e811bf9d256
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **311.8 MB (311767432 bytes)**  
+-	Total Size: **311.8 MB (311767434 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:aba10049833c9a24b00dd62d214131ce9872b1918f00bc27c62cadd7740ca28b`
+-	Image ID: `sha256:74b93dfc9812a94044b5ec30ae6b81bdd704c140b40eb391899dc2fbe83bc49d`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -51,9 +51,9 @@ RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	
 ENV GOPATH=/go
 # Thu, 23 Mar 2023 18:33:32 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Mar 2023 18:33:33 GMT
-RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 23 Mar 2023 18:33:33 GMT
+# Mon, 27 Mar 2023 22:26:56 GMT
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
+# Mon, 27 Mar 2023 22:26:56 GMT
 WORKDIR /go
 ```
 
@@ -82,9 +82,9 @@ WORKDIR /go
 		Last Modified: Thu, 23 Mar 2023 18:35:10 GMT  
 		Size: 100.1 MB (100108882 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:28b555baed3607650eb0f64792c630238f5e4b88652e7f5b899588faf36d55b8`  
-		Last Modified: Thu, 23 Mar 2023 18:34:57 GMT  
-		Size: 154.0 B  
+	-	`sha256:c453747a077b91c8a2ff79e9b4dc7b87e2ff96d97b127aac577076f4e4ce6923`  
+		Last Modified: Mon, 27 Mar 2023 22:27:31 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-bullseye` - linux; arm variant v5
@@ -234,14 +234,14 @@ WORKDIR /go
 ### `golang:1-bullseye` - linux; arm64 variant v8
 
 ```console
-$ docker pull golang@sha256:b27263832e7336f7034f5a31309bd0bb70a22aa5c683aa314b8abf62ab4f84db
+$ docker pull golang@sha256:2b66aad188b275018254d2877159381a05013fc8c5f695e9595a56fcfc83d995
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **301.2 MB (301244243 bytes)**  
+-	Total Size: **301.2 MB (301244241 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7e10c4c3487c82e4303720bdfe9c6c5fbb065a52f606b82298be53c257783a73`
+-	Image ID: `sha256:c71f9fb2e04f15678dce86f541ed19b3efcab89391403f5e40d74440a7b53902`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -267,9 +267,9 @@ RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	
 ENV GOPATH=/go
 # Thu, 23 Mar 2023 18:49:39 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Mar 2023 18:49:39 GMT
-RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 23 Mar 2023 18:49:39 GMT
+# Mon, 27 Mar 2023 22:45:18 GMT
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
+# Mon, 27 Mar 2023 22:45:18 GMT
 WORKDIR /go
 ```
 
@@ -298,22 +298,22 @@ WORKDIR /go
 		Last Modified: Thu, 23 Mar 2023 18:51:10 GMT  
 		Size: 95.4 MB (95435810 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23b719e10464e4c2474146ae92e950047f69922ab408472e8ab552bf18433378`  
-		Last Modified: Thu, 23 Mar 2023 18:51:01 GMT  
-		Size: 157.0 B  
+	-	`sha256:736f744dca4b3638f729576aaa1cbaf29bc6a628d8522b638bc7509f9612d2fd`  
+		Last Modified: Mon, 27 Mar 2023 22:45:48 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-bullseye` - linux; 386
 
 ```console
-$ docker pull golang@sha256:94506bb5b538bd7a0ec40c7962858d7bf96af3e3694b3d96ca0da0868dab156d
+$ docker pull golang@sha256:5c3c6546290acfd0c5de02eae32fac9711d2831c3ad6f74fefa872981bf9cff7
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **316.4 MB (316411265 bytes)**  
+-	Total Size: **316.4 MB (316411267 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:415c0452a246c11b368809068f7df406308c307c79f1dd2929cf54be415b263e`
+-	Image ID: `sha256:a3d1f647caeabd5918843626faeb8a497953f695602db089936246b4f8c37cd1`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -339,9 +339,9 @@ RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	
 ENV GOPATH=/go
 # Fri, 24 Mar 2023 02:58:25 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 24 Mar 2023 02:58:25 GMT
-RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Fri, 24 Mar 2023 02:58:25 GMT
+# Mon, 27 Mar 2023 22:38:18 GMT
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
+# Mon, 27 Mar 2023 22:38:18 GMT
 WORKDIR /go
 ```
 
@@ -370,9 +370,9 @@ WORKDIR /go
 		Last Modified: Fri, 24 Mar 2023 03:00:37 GMT  
 		Size: 100.5 MB (100507757 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9209e8c636134b2b5bd5e99ab93a98ec18533571212bc4611f78281e50be3038`  
-		Last Modified: Fri, 24 Mar 2023 03:00:17 GMT  
-		Size: 154.0 B  
+	-	`sha256:c00a23437ae6b9e7fc2751156e5932f379ff0f2ac7333c1a65df8a62081c2b40`  
+		Last Modified: Mon, 27 Mar 2023 22:38:50 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-bullseye` - linux; mips64le
@@ -450,14 +450,14 @@ WORKDIR /go
 ### `golang:1-bullseye` - linux; ppc64le
 
 ```console
-$ docker pull golang@sha256:493a084496ec3250cbfb50e44c108826b7df458d6b00e5bf970d7df2f54df375
+$ docker pull golang@sha256:bc132b45576c6861711461ad85cd0102d8b0b69fa8f528fb7dbdcd2724bf7032
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **311.2 MB (311221045 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:aa5f6ea7fa84f7902aff5fc224ade18ea5816299caf352fb1c6f75e8c1f3d74e`
+-	Image ID: `sha256:71a874074af63336ed6330bee15880aa60e0947968c00fb24b1bbde17f334d54`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -483,9 +483,9 @@ RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	
 ENV GOPATH=/go
 # Thu, 23 Mar 2023 23:43:11 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Mar 2023 23:43:13 GMT
-RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 23 Mar 2023 23:43:13 GMT
+# Mon, 27 Mar 2023 22:22:00 GMT
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
+# Mon, 27 Mar 2023 22:22:01 GMT
 WORKDIR /go
 ```
 
@@ -514,22 +514,22 @@ WORKDIR /go
 		Last Modified: Thu, 23 Mar 2023 23:44:43 GMT  
 		Size: 95.9 MB (95944787 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a34a2e9d1f29e1d5271aea47a13f6afb0733f6acb971c9f891538271cf555332`  
-		Last Modified: Thu, 23 Mar 2023 23:44:22 GMT  
+	-	`sha256:bea2916e20b3281c735e5bc44bc06a8f2b8655046acc8aa4a9e0337f56ae16f8`  
+		Last Modified: Mon, 27 Mar 2023 22:22:50 GMT  
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-bullseye` - linux; s390x
 
 ```console
-$ docker pull golang@sha256:89d34cf213445d543c130a045aa88352346d388c19d30ab8508ded9c5fb0c7be
+$ docker pull golang@sha256:e00815ce8623ac5fe2aea3cf76e5379bed8d3424451538af7fe95091852bc6c5
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **289.1 MB (289146608 bytes)**  
+-	Total Size: **289.1 MB (289146607 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7030de74df0effe20d8071f289a36ab7928f5f9ba6ee7668b5d59bf7c48bd6ff`
+-	Image ID: `sha256:8b21fbe4d3eb11b3ea29062e1f86438d2dcebe633ee4dd330108d103e1587242`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -555,9 +555,9 @@ RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	
 ENV GOPATH=/go
 # Thu, 23 Mar 2023 15:56:31 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Mar 2023 15:56:31 GMT
-RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 777 "$GOPATH"
-# Thu, 23 Mar 2023 15:56:31 GMT
+# Mon, 27 Mar 2023 22:43:20 GMT
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
+# Mon, 27 Mar 2023 22:43:20 GMT
 WORKDIR /go
 ```
 
@@ -586,7 +586,7 @@ WORKDIR /go
 		Last Modified: Thu, 23 Mar 2023 15:57:54 GMT  
 		Size: 100.2 MB (100202278 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f29545f3820ecd418a04608911dbc6bb2bdf9a979c0b2a39af709454020bfa9`  
-		Last Modified: Thu, 23 Mar 2023 15:57:41 GMT  
-		Size: 156.0 B  
+	-	`sha256:10e8d184723506e222e50083039c5bce16f0f3f8c974bbae739f1f6440bed1e3`  
+		Last Modified: Mon, 27 Mar 2023 22:44:06 GMT  
+		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
