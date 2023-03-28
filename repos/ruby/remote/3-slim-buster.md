@@ -1,7 +1,7 @@
 ## `ruby:3-slim-buster`
 
 ```console
-$ docker pull ruby@sha256:09d629be021fc955816944c3699d007f88b77b4248cd92b5796ac0a728480206
+$ docker pull ruby@sha256:02c17502bb841ff94e30de07338ac8927cdbe89305f2885c2214da0432804fe4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,14 +14,14 @@ $ docker pull ruby@sha256:09d629be021fc955816944c3699d007f88b77b4248cd92b5796ac0
 ### `ruby:3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull ruby@sha256:9e187bf5e39354a3139c31e1319f5f1482374c292feb3c3cc1be8fff3c853669
+$ docker pull ruby@sha256:287d618c44bc8d1fbf9b622021bc2680bf6610defa6dd709911dbcb764d9aefc
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **74.0 MB (74008998 bytes)**  
+-	Total Size: **74.0 MB (74009001 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:35572a94cb3fff750f9b12a974827cb6a0ad18c28ae4cff03dc3cfa17019cc4e`
+-	Image ID: `sha256:323520a2237c040854852ed5f4360d2b858705ba94b86a4c8d971b943756cf02`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -49,9 +49,9 @@ ENV GEM_HOME=/usr/local/bundle
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
 # Thu, 23 Mar 2023 16:14:00 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Mar 2023 16:14:00 GMT
-RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Thu, 23 Mar 2023 16:14:00 GMT
+# Tue, 28 Mar 2023 01:09:02 GMT
+RUN mkdir -p "$GEM_HOME" && chmod 1777 "$GEM_HOME"
+# Tue, 28 Mar 2023 01:09:03 GMT
 CMD ["irb"]
 ```
 
@@ -72,9 +72,9 @@ CMD ["irb"]
 		Last Modified: Thu, 23 Mar 2023 16:40:40 GMT  
 		Size: 34.3 MB (34287490 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0ad7d4ab471194dd62580c8ef07f8e35aebd1fe70c29697f8106445ff2feaea2`  
-		Last Modified: Thu, 23 Mar 2023 16:40:36 GMT  
-		Size: 174.0 B  
+	-	`sha256:c5ed725ac98f870fb76db1ca992a6c42d5348a584068bc0018bea00c0cc060df`  
+		Last Modified: Tue, 28 Mar 2023 01:11:16 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ruby:3-slim-buster` - linux; arm variant v7
@@ -146,14 +146,14 @@ CMD ["irb"]
 ### `ruby:3-slim-buster` - linux; arm64 variant v8
 
 ```console
-$ docker pull ruby@sha256:0df9f87d7f27653ac696ffae6d4239d8f3ad065f9df90ef62a7bcd886d5384f7
+$ docker pull ruby@sha256:2ffc3d77288f91d99c93a6f2fc7914abf2a08cbd1b216adbb65e4e81b60486fd
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **71.4 MB (71428548 bytes)**  
+-	Total Size: **71.4 MB (71428550 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cc7ca3273cefadc83845f31ea8544aed84f764d8f34ddd222e601c1f53063700`
+-	Image ID: `sha256:d0c4c39a8d93269644ad3fe7544a7e8e6cbae120d29eec1b3cb6172b007a70c9`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -181,9 +181,9 @@ ENV GEM_HOME=/usr/local/bundle
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
 # Thu, 23 Mar 2023 06:17:51 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Mar 2023 06:17:52 GMT
-RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Thu, 23 Mar 2023 06:17:52 GMT
+# Tue, 28 Mar 2023 01:23:11 GMT
+RUN mkdir -p "$GEM_HOME" && chmod 1777 "$GEM_HOME"
+# Tue, 28 Mar 2023 01:23:12 GMT
 CMD ["irb"]
 ```
 
@@ -204,9 +204,9 @@ CMD ["irb"]
 		Last Modified: Thu, 23 Mar 2023 06:29:27 GMT  
 		Size: 34.2 MB (34223686 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:87de2ff9ecccdcac48ab51f9e78dbfe49f58b80a7d367f97c5ec713a9f7630a0`  
-		Last Modified: Thu, 23 Mar 2023 06:29:24 GMT  
-		Size: 175.0 B  
+	-	`sha256:1674dd2c0834b14e7c54defd613a4a7b2ed4a99ed7816297d179e5b24e29894a`  
+		Last Modified: Tue, 28 Mar 2023 01:25:03 GMT  
+		Size: 177.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ruby:3-slim-buster` - linux; 386
