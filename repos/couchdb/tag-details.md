@@ -656,7 +656,7 @@ CMD ["/opt/couchdb/bin/couchdb"]
 ## `couchdb:3`
 
 ```console
-$ docker pull couchdb@sha256:ed783920c79dc77a540cd781e2cb0b55f5cd3f73406248442d8b4861f0f7348b
+$ docker pull couchdb@sha256:8ce476fe6b8b35ce832975e5d939b549bac95758180c67a8e8e8c6865f742086
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -870,14 +870,14 @@ CMD ["/opt/couchdb/bin/couchdb"]
 ### `couchdb:3` - linux; ppc64le
 
 ```console
-$ docker pull couchdb@sha256:268fee0a6560149a39675241c8b219fbfe6302e7d7fc30512971eb40e6b10792
+$ docker pull couchdb@sha256:5e55ccae68b16be2f006024bd6fe20d7e360ecd3a593bdc58cbfa4d7890cd9d1
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **95.8 MB (95828918 bytes)**  
+-	Total Size: **95.8 MB (95828939 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a2830074ded2781f3d4599f983649a74b13572a70a5c019845eefe9b28512c07`
+-	Image ID: `sha256:b0d438d66e59e61a0215d65cac76fc59d710d226a36ee012fd5515f21d0eaadd`
 -	Entrypoint: `["tini","--","\/docker-entrypoint.sh"]`
 -	Default Command: `["\/opt\/couchdb\/bin\/couchdb"]`
 
@@ -908,17 +908,17 @@ RUN set -eux;     apt-get update;         echo "couchdb couchdb/mode select none
 COPY --chown=couchdb:couchdbfile:459581cb8ff69dbc1cb246db7b488d5b6127e57fcbb0d0df1288722b5cd25111 in /opt/couchdb/etc/default.d/ 
 # Thu, 23 Mar 2023 13:29:23 GMT
 COPY --chown=couchdb:couchdbfile:ef998123ee941cb75b9e8f8c244fd9e244aff7d6394013d8db7515f50882f0cd in /opt/couchdb/etc/ 
-# Thu, 23 Mar 2023 13:29:23 GMT
-COPY file:4f56a6457d04af3aef6fcaf07a864b915c40e6514919d19a783d4be98fe5bc89 in /usr/local/bin 
-# Thu, 23 Mar 2023 13:29:24 GMT
+# Tue, 28 Mar 2023 22:16:24 GMT
+COPY file:cb88dd5d91ff7eac8d8abd6ec372df4f0e05b7787b7d3622916ee9dbe8ea0c85 in /usr/local/bin 
+# Tue, 28 Mar 2023 22:16:25 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:25 GMT
 ENTRYPOINT ["tini" "--" "/docker-entrypoint.sh"]
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:25 GMT
 VOLUME [/opt/couchdb/data]
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:26 GMT
 EXPOSE 4369 5984 9100
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:26 GMT
 CMD ["/opt/couchdb/bin/couchdb"]
 ```
 
@@ -959,12 +959,12 @@ CMD ["/opt/couchdb/bin/couchdb"]
 		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
 		Size: 1.0 KB (1001 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb70cdb2ff36487a93ab6f6c19cbf1323a21c74d659991330a4047c092486095`  
-		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
-		Size: 2.2 KB (2207 bytes)  
+	-	`sha256:6bccd1544b83d012a35e53196df3b474db7c88911964af7648fdb7c520803aa9`  
+		Last Modified: Tue, 28 Mar 2023 22:16:41 GMT  
+		Size: 2.2 KB (2228 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:761ef6e3b34f225996ef1654bd36e4cf35ab953d29b72915e658f4c0234c6f5d`  
-		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
+	-	`sha256:29b1dd1214b7c873d5119e167b6674ff08970c879fb33604314e473a5b80833f`  
+		Last Modified: Tue, 28 Mar 2023 22:16:41 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1397,7 +1397,7 @@ CMD ["/opt/couchdb/bin/couchdb"]
 ## `couchdb:3.2`
 
 ```console
-$ docker pull couchdb@sha256:22c2795e9c901edd0f70330cbc46db3b7c3b13016e6b526f745bcb0fe1f28288
+$ docker pull couchdb@sha256:bd22ac9ed0ef5da920d8acfa5287bdce9a93698dfa3368fb70227e940d845325
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1611,14 +1611,14 @@ CMD ["/opt/couchdb/bin/couchdb"]
 ### `couchdb:3.2` - linux; ppc64le
 
 ```console
-$ docker pull couchdb@sha256:789c388fa655abe95b2fb0b4f84afe4b6fd1230f96c36dd727f096a03fd2b12c
+$ docker pull couchdb@sha256:df3a80841cffeba37a76e6b58e83b9be2c60dc8366ca4dd0095721dcdee1c1da
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **92.4 MB (92380011 bytes)**  
+-	Total Size: **92.4 MB (92380030 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:143736c232f08052947a1f3248b6d64b3286057dd7a5785821b642d43c72bf35`
+-	Image ID: `sha256:33ced65e491079a85581d0214cf7a25d61bf731fe67e242a43dc05ba8bd4738e`
 -	Entrypoint: `["tini","--","\/docker-entrypoint.sh"]`
 -	Default Command: `["\/opt\/couchdb\/bin\/couchdb"]`
 
@@ -1649,17 +1649,17 @@ RUN set -eux;     apt-get update;         echo "couchdb couchdb/mode select none
 COPY --chown=couchdb:couchdbfile:459581cb8ff69dbc1cb246db7b488d5b6127e57fcbb0d0df1288722b5cd25111 in /opt/couchdb/etc/default.d/ 
 # Thu, 23 Mar 2023 13:29:57 GMT
 COPY --chown=couchdb:couchdbfile:f98e48e4254cb3ec4a766f3b9bd3260f16676a310eb0356ee9775c62edb3e8f3 in /opt/couchdb/etc/ 
-# Thu, 23 Mar 2023 13:29:57 GMT
-COPY file:4f56a6457d04af3aef6fcaf07a864b915c40e6514919d19a783d4be98fe5bc89 in /usr/local/bin 
-# Thu, 23 Mar 2023 13:29:58 GMT
+# Tue, 28 Mar 2023 22:16:29 GMT
+COPY file:cb88dd5d91ff7eac8d8abd6ec372df4f0e05b7787b7d3622916ee9dbe8ea0c85 in /usr/local/bin 
+# Tue, 28 Mar 2023 22:16:30 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Thu, 23 Mar 2023 13:29:59 GMT
+# Tue, 28 Mar 2023 22:16:30 GMT
 ENTRYPOINT ["tini" "--" "/docker-entrypoint.sh"]
-# Thu, 23 Mar 2023 13:29:59 GMT
+# Tue, 28 Mar 2023 22:16:30 GMT
 VOLUME [/opt/couchdb/data]
-# Thu, 23 Mar 2023 13:29:59 GMT
+# Tue, 28 Mar 2023 22:16:31 GMT
 EXPOSE 4369 5984 9100
-# Thu, 23 Mar 2023 13:30:00 GMT
+# Tue, 28 Mar 2023 22:16:31 GMT
 CMD ["/opt/couchdb/bin/couchdb"]
 ```
 
@@ -1700,19 +1700,19 @@ CMD ["/opt/couchdb/bin/couchdb"]
 		Last Modified: Thu, 23 Mar 2023 13:30:38 GMT  
 		Size: 763.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:309d6eab02d526c4d36cba4a207b4bec3e75a8975bec03345191dce4080e5a58`  
-		Last Modified: Thu, 23 Mar 2023 13:30:38 GMT  
-		Size: 2.2 KB (2208 bytes)  
+	-	`sha256:d192a8bbc09526b5389d24f2f8cdee3d4e608a51526cbb59822819ef27e2edd5`  
+		Last Modified: Tue, 28 Mar 2023 22:16:55 GMT  
+		Size: 2.2 KB (2227 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b819b86381d749cf2421eb3aec4e6372c547459020f2386fed3ab00278709f6`  
-		Last Modified: Thu, 23 Mar 2023 13:30:38 GMT  
+	-	`sha256:49065007d8be6182686632cc059276bac1e7721fbfb18c5b8eac1b9feb8e7c16`  
+		Last Modified: Tue, 28 Mar 2023 22:16:55 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `couchdb:3.2.2`
 
 ```console
-$ docker pull couchdb@sha256:22c2795e9c901edd0f70330cbc46db3b7c3b13016e6b526f745bcb0fe1f28288
+$ docker pull couchdb@sha256:bd22ac9ed0ef5da920d8acfa5287bdce9a93698dfa3368fb70227e940d845325
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1926,14 +1926,14 @@ CMD ["/opt/couchdb/bin/couchdb"]
 ### `couchdb:3.2.2` - linux; ppc64le
 
 ```console
-$ docker pull couchdb@sha256:789c388fa655abe95b2fb0b4f84afe4b6fd1230f96c36dd727f096a03fd2b12c
+$ docker pull couchdb@sha256:df3a80841cffeba37a76e6b58e83b9be2c60dc8366ca4dd0095721dcdee1c1da
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **92.4 MB (92380011 bytes)**  
+-	Total Size: **92.4 MB (92380030 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:143736c232f08052947a1f3248b6d64b3286057dd7a5785821b642d43c72bf35`
+-	Image ID: `sha256:33ced65e491079a85581d0214cf7a25d61bf731fe67e242a43dc05ba8bd4738e`
 -	Entrypoint: `["tini","--","\/docker-entrypoint.sh"]`
 -	Default Command: `["\/opt\/couchdb\/bin\/couchdb"]`
 
@@ -1964,17 +1964,17 @@ RUN set -eux;     apt-get update;         echo "couchdb couchdb/mode select none
 COPY --chown=couchdb:couchdbfile:459581cb8ff69dbc1cb246db7b488d5b6127e57fcbb0d0df1288722b5cd25111 in /opt/couchdb/etc/default.d/ 
 # Thu, 23 Mar 2023 13:29:57 GMT
 COPY --chown=couchdb:couchdbfile:f98e48e4254cb3ec4a766f3b9bd3260f16676a310eb0356ee9775c62edb3e8f3 in /opt/couchdb/etc/ 
-# Thu, 23 Mar 2023 13:29:57 GMT
-COPY file:4f56a6457d04af3aef6fcaf07a864b915c40e6514919d19a783d4be98fe5bc89 in /usr/local/bin 
-# Thu, 23 Mar 2023 13:29:58 GMT
+# Tue, 28 Mar 2023 22:16:29 GMT
+COPY file:cb88dd5d91ff7eac8d8abd6ec372df4f0e05b7787b7d3622916ee9dbe8ea0c85 in /usr/local/bin 
+# Tue, 28 Mar 2023 22:16:30 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Thu, 23 Mar 2023 13:29:59 GMT
+# Tue, 28 Mar 2023 22:16:30 GMT
 ENTRYPOINT ["tini" "--" "/docker-entrypoint.sh"]
-# Thu, 23 Mar 2023 13:29:59 GMT
+# Tue, 28 Mar 2023 22:16:30 GMT
 VOLUME [/opt/couchdb/data]
-# Thu, 23 Mar 2023 13:29:59 GMT
+# Tue, 28 Mar 2023 22:16:31 GMT
 EXPOSE 4369 5984 9100
-# Thu, 23 Mar 2023 13:30:00 GMT
+# Tue, 28 Mar 2023 22:16:31 GMT
 CMD ["/opt/couchdb/bin/couchdb"]
 ```
 
@@ -2015,19 +2015,19 @@ CMD ["/opt/couchdb/bin/couchdb"]
 		Last Modified: Thu, 23 Mar 2023 13:30:38 GMT  
 		Size: 763.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:309d6eab02d526c4d36cba4a207b4bec3e75a8975bec03345191dce4080e5a58`  
-		Last Modified: Thu, 23 Mar 2023 13:30:38 GMT  
-		Size: 2.2 KB (2208 bytes)  
+	-	`sha256:d192a8bbc09526b5389d24f2f8cdee3d4e608a51526cbb59822819ef27e2edd5`  
+		Last Modified: Tue, 28 Mar 2023 22:16:55 GMT  
+		Size: 2.2 KB (2227 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b819b86381d749cf2421eb3aec4e6372c547459020f2386fed3ab00278709f6`  
-		Last Modified: Thu, 23 Mar 2023 13:30:38 GMT  
+	-	`sha256:49065007d8be6182686632cc059276bac1e7721fbfb18c5b8eac1b9feb8e7c16`  
+		Last Modified: Tue, 28 Mar 2023 22:16:55 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `couchdb:3.3`
 
 ```console
-$ docker pull couchdb@sha256:ed783920c79dc77a540cd781e2cb0b55f5cd3f73406248442d8b4861f0f7348b
+$ docker pull couchdb@sha256:8ce476fe6b8b35ce832975e5d939b549bac95758180c67a8e8e8c6865f742086
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2241,14 +2241,14 @@ CMD ["/opt/couchdb/bin/couchdb"]
 ### `couchdb:3.3` - linux; ppc64le
 
 ```console
-$ docker pull couchdb@sha256:268fee0a6560149a39675241c8b219fbfe6302e7d7fc30512971eb40e6b10792
+$ docker pull couchdb@sha256:5e55ccae68b16be2f006024bd6fe20d7e360ecd3a593bdc58cbfa4d7890cd9d1
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **95.8 MB (95828918 bytes)**  
+-	Total Size: **95.8 MB (95828939 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a2830074ded2781f3d4599f983649a74b13572a70a5c019845eefe9b28512c07`
+-	Image ID: `sha256:b0d438d66e59e61a0215d65cac76fc59d710d226a36ee012fd5515f21d0eaadd`
 -	Entrypoint: `["tini","--","\/docker-entrypoint.sh"]`
 -	Default Command: `["\/opt\/couchdb\/bin\/couchdb"]`
 
@@ -2279,17 +2279,17 @@ RUN set -eux;     apt-get update;         echo "couchdb couchdb/mode select none
 COPY --chown=couchdb:couchdbfile:459581cb8ff69dbc1cb246db7b488d5b6127e57fcbb0d0df1288722b5cd25111 in /opt/couchdb/etc/default.d/ 
 # Thu, 23 Mar 2023 13:29:23 GMT
 COPY --chown=couchdb:couchdbfile:ef998123ee941cb75b9e8f8c244fd9e244aff7d6394013d8db7515f50882f0cd in /opt/couchdb/etc/ 
-# Thu, 23 Mar 2023 13:29:23 GMT
-COPY file:4f56a6457d04af3aef6fcaf07a864b915c40e6514919d19a783d4be98fe5bc89 in /usr/local/bin 
-# Thu, 23 Mar 2023 13:29:24 GMT
+# Tue, 28 Mar 2023 22:16:24 GMT
+COPY file:cb88dd5d91ff7eac8d8abd6ec372df4f0e05b7787b7d3622916ee9dbe8ea0c85 in /usr/local/bin 
+# Tue, 28 Mar 2023 22:16:25 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:25 GMT
 ENTRYPOINT ["tini" "--" "/docker-entrypoint.sh"]
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:25 GMT
 VOLUME [/opt/couchdb/data]
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:26 GMT
 EXPOSE 4369 5984 9100
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:26 GMT
 CMD ["/opt/couchdb/bin/couchdb"]
 ```
 
@@ -2330,19 +2330,19 @@ CMD ["/opt/couchdb/bin/couchdb"]
 		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
 		Size: 1.0 KB (1001 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb70cdb2ff36487a93ab6f6c19cbf1323a21c74d659991330a4047c092486095`  
-		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
-		Size: 2.2 KB (2207 bytes)  
+	-	`sha256:6bccd1544b83d012a35e53196df3b474db7c88911964af7648fdb7c520803aa9`  
+		Last Modified: Tue, 28 Mar 2023 22:16:41 GMT  
+		Size: 2.2 KB (2228 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:761ef6e3b34f225996ef1654bd36e4cf35ab953d29b72915e658f4c0234c6f5d`  
-		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
+	-	`sha256:29b1dd1214b7c873d5119e167b6674ff08970c879fb33604314e473a5b80833f`  
+		Last Modified: Tue, 28 Mar 2023 22:16:41 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `couchdb:3.3.1`
 
 ```console
-$ docker pull couchdb@sha256:ed783920c79dc77a540cd781e2cb0b55f5cd3f73406248442d8b4861f0f7348b
+$ docker pull couchdb@sha256:8ce476fe6b8b35ce832975e5d939b549bac95758180c67a8e8e8c6865f742086
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2556,14 +2556,14 @@ CMD ["/opt/couchdb/bin/couchdb"]
 ### `couchdb:3.3.1` - linux; ppc64le
 
 ```console
-$ docker pull couchdb@sha256:268fee0a6560149a39675241c8b219fbfe6302e7d7fc30512971eb40e6b10792
+$ docker pull couchdb@sha256:5e55ccae68b16be2f006024bd6fe20d7e360ecd3a593bdc58cbfa4d7890cd9d1
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **95.8 MB (95828918 bytes)**  
+-	Total Size: **95.8 MB (95828939 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a2830074ded2781f3d4599f983649a74b13572a70a5c019845eefe9b28512c07`
+-	Image ID: `sha256:b0d438d66e59e61a0215d65cac76fc59d710d226a36ee012fd5515f21d0eaadd`
 -	Entrypoint: `["tini","--","\/docker-entrypoint.sh"]`
 -	Default Command: `["\/opt\/couchdb\/bin\/couchdb"]`
 
@@ -2594,17 +2594,17 @@ RUN set -eux;     apt-get update;         echo "couchdb couchdb/mode select none
 COPY --chown=couchdb:couchdbfile:459581cb8ff69dbc1cb246db7b488d5b6127e57fcbb0d0df1288722b5cd25111 in /opt/couchdb/etc/default.d/ 
 # Thu, 23 Mar 2023 13:29:23 GMT
 COPY --chown=couchdb:couchdbfile:ef998123ee941cb75b9e8f8c244fd9e244aff7d6394013d8db7515f50882f0cd in /opt/couchdb/etc/ 
-# Thu, 23 Mar 2023 13:29:23 GMT
-COPY file:4f56a6457d04af3aef6fcaf07a864b915c40e6514919d19a783d4be98fe5bc89 in /usr/local/bin 
-# Thu, 23 Mar 2023 13:29:24 GMT
+# Tue, 28 Mar 2023 22:16:24 GMT
+COPY file:cb88dd5d91ff7eac8d8abd6ec372df4f0e05b7787b7d3622916ee9dbe8ea0c85 in /usr/local/bin 
+# Tue, 28 Mar 2023 22:16:25 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:25 GMT
 ENTRYPOINT ["tini" "--" "/docker-entrypoint.sh"]
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:25 GMT
 VOLUME [/opt/couchdb/data]
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:26 GMT
 EXPOSE 4369 5984 9100
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:26 GMT
 CMD ["/opt/couchdb/bin/couchdb"]
 ```
 
@@ -2645,19 +2645,19 @@ CMD ["/opt/couchdb/bin/couchdb"]
 		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
 		Size: 1.0 KB (1001 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb70cdb2ff36487a93ab6f6c19cbf1323a21c74d659991330a4047c092486095`  
-		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
-		Size: 2.2 KB (2207 bytes)  
+	-	`sha256:6bccd1544b83d012a35e53196df3b474db7c88911964af7648fdb7c520803aa9`  
+		Last Modified: Tue, 28 Mar 2023 22:16:41 GMT  
+		Size: 2.2 KB (2228 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:761ef6e3b34f225996ef1654bd36e4cf35ab953d29b72915e658f4c0234c6f5d`  
-		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
+	-	`sha256:29b1dd1214b7c873d5119e167b6674ff08970c879fb33604314e473a5b80833f`  
+		Last Modified: Tue, 28 Mar 2023 22:16:41 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `couchdb:latest`
 
 ```console
-$ docker pull couchdb@sha256:ed783920c79dc77a540cd781e2cb0b55f5cd3f73406248442d8b4861f0f7348b
+$ docker pull couchdb@sha256:8ce476fe6b8b35ce832975e5d939b549bac95758180c67a8e8e8c6865f742086
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2871,14 +2871,14 @@ CMD ["/opt/couchdb/bin/couchdb"]
 ### `couchdb:latest` - linux; ppc64le
 
 ```console
-$ docker pull couchdb@sha256:268fee0a6560149a39675241c8b219fbfe6302e7d7fc30512971eb40e6b10792
+$ docker pull couchdb@sha256:5e55ccae68b16be2f006024bd6fe20d7e360ecd3a593bdc58cbfa4d7890cd9d1
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **95.8 MB (95828918 bytes)**  
+-	Total Size: **95.8 MB (95828939 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a2830074ded2781f3d4599f983649a74b13572a70a5c019845eefe9b28512c07`
+-	Image ID: `sha256:b0d438d66e59e61a0215d65cac76fc59d710d226a36ee012fd5515f21d0eaadd`
 -	Entrypoint: `["tini","--","\/docker-entrypoint.sh"]`
 -	Default Command: `["\/opt\/couchdb\/bin\/couchdb"]`
 
@@ -2909,17 +2909,17 @@ RUN set -eux;     apt-get update;         echo "couchdb couchdb/mode select none
 COPY --chown=couchdb:couchdbfile:459581cb8ff69dbc1cb246db7b488d5b6127e57fcbb0d0df1288722b5cd25111 in /opt/couchdb/etc/default.d/ 
 # Thu, 23 Mar 2023 13:29:23 GMT
 COPY --chown=couchdb:couchdbfile:ef998123ee941cb75b9e8f8c244fd9e244aff7d6394013d8db7515f50882f0cd in /opt/couchdb/etc/ 
-# Thu, 23 Mar 2023 13:29:23 GMT
-COPY file:4f56a6457d04af3aef6fcaf07a864b915c40e6514919d19a783d4be98fe5bc89 in /usr/local/bin 
-# Thu, 23 Mar 2023 13:29:24 GMT
+# Tue, 28 Mar 2023 22:16:24 GMT
+COPY file:cb88dd5d91ff7eac8d8abd6ec372df4f0e05b7787b7d3622916ee9dbe8ea0c85 in /usr/local/bin 
+# Tue, 28 Mar 2023 22:16:25 GMT
 RUN ln -s usr/local/bin/docker-entrypoint.sh /docker-entrypoint.sh # backwards compat
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:25 GMT
 ENTRYPOINT ["tini" "--" "/docker-entrypoint.sh"]
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:25 GMT
 VOLUME [/opt/couchdb/data]
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:26 GMT
 EXPOSE 4369 5984 9100
-# Thu, 23 Mar 2023 13:29:25 GMT
+# Tue, 28 Mar 2023 22:16:26 GMT
 CMD ["/opt/couchdb/bin/couchdb"]
 ```
 
@@ -2960,11 +2960,11 @@ CMD ["/opt/couchdb/bin/couchdb"]
 		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
 		Size: 1.0 KB (1001 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb70cdb2ff36487a93ab6f6c19cbf1323a21c74d659991330a4047c092486095`  
-		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
-		Size: 2.2 KB (2207 bytes)  
+	-	`sha256:6bccd1544b83d012a35e53196df3b474db7c88911964af7648fdb7c520803aa9`  
+		Last Modified: Tue, 28 Mar 2023 22:16:41 GMT  
+		Size: 2.2 KB (2228 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:761ef6e3b34f225996ef1654bd36e4cf35ab953d29b72915e658f4c0234c6f5d`  
-		Last Modified: Thu, 23 Mar 2023 13:30:15 GMT  
+	-	`sha256:29b1dd1214b7c873d5119e167b6674ff08970c879fb33604314e473a5b80833f`  
+		Last Modified: Tue, 28 Mar 2023 22:16:41 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
