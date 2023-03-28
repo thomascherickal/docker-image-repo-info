@@ -1,7 +1,7 @@
 ## `postgres:11-bullseye`
 
 ```console
-$ docker pull postgres@sha256:d61f8bbb330315d28228808c3cb7aede2f901d90a6e7fc9640a20675b04a5333
+$ docker pull postgres@sha256:1aa14e526574c08ce1ffec8669c85d69e7d0e49487168602fa74cb8c30779ef1
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -381,14 +381,14 @@ CMD ["postgres"]
 ### `postgres:11-bullseye` - linux; arm64 variant v8
 
 ```console
-$ docker pull postgres@sha256:e61248af057f4dd4a1e9874cbee25830566feba0ef7573eec124f31dcdaa1bd2
+$ docker pull postgres@sha256:f3c53c4f6f27519ca15707a9b2fac5401a6ffd605f56c5c7c0e02e9aece33d01
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **130.4 MB (130448433 bytes)**  
+-	Total Size: **130.4 MB (130448442 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6566e1abd4c2574f26129a676752fcb0c73684144cd6e977d11c83673543ef6e`
+-	Image ID: `sha256:4a5196664000229f3188814efa91eb208182ac3796f5e83b72018622c53a56f4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
@@ -433,15 +433,15 @@ ENV PGDATA=/var/lib/postgresql/data
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
 # Thu, 23 Mar 2023 13:30:36 GMT
 VOLUME [/var/lib/postgresql/data]
-# Thu, 23 Mar 2023 13:30:36 GMT
-COPY file:d4c2ceee202d1390df115217c6e567abc1da7a31572f20a840d966332148ebe4 in /usr/local/bin/ 
-# Thu, 23 Mar 2023 13:30:36 GMT
+# Tue, 28 Mar 2023 01:20:38 GMT
+COPY file:512acb0aab31f9e5d908f16e2f4478f65cddd5d4e555a02a1551074bb16f54d7 in /usr/local/bin/ 
+# Tue, 28 Mar 2023 01:20:38 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 23 Mar 2023 13:30:36 GMT
+# Tue, 28 Mar 2023 01:20:38 GMT
 STOPSIGNAL SIGINT
-# Thu, 23 Mar 2023 13:30:36 GMT
+# Tue, 28 Mar 2023 01:20:38 GMT
 EXPOSE 5432
-# Thu, 23 Mar 2023 13:30:36 GMT
+# Tue, 28 Mar 2023 01:20:38 GMT
 CMD ["postgres"]
 ```
 
@@ -494,9 +494,9 @@ CMD ["postgres"]
 		Last Modified: Thu, 23 Mar 2023 13:32:39 GMT  
 		Size: 199.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e01a9e52aae7d9e0b2ac7008de946475af9b3d1196cd79159fcc7e0f63311a3e`  
-		Last Modified: Thu, 23 Mar 2023 13:32:39 GMT  
-		Size: 4.8 KB (4777 bytes)  
+	-	`sha256:02db77ef3209fe54620b4a28b528bcf90a64d9b2ee3a61957da9fe2d5658f0c5`  
+		Last Modified: Tue, 28 Mar 2023 01:22:41 GMT  
+		Size: 4.8 KB (4786 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postgres:11-bullseye` - linux; 386
@@ -623,14 +623,14 @@ CMD ["postgres"]
 ### `postgres:11-bullseye` - linux; mips64le
 
 ```console
-$ docker pull postgres@sha256:4ce7237a771d7ddafff0afef0e70dfe6f8e48f486765d7a2f6a72093062d866d
+$ docker pull postgres@sha256:99bbc234fbf485c07cbb71ce3590d114cfcee2d0e76a57a59bde768f88711ef7
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **129.7 MB (129734977 bytes)**  
+-	Total Size: **129.7 MB (129734979 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b8439ca13331ca801108c0860cc4e24969d39badddbd35c979a0cd05e53b4b3a`
+-	Image ID: `sha256:2ccab84ccebdefc92d77e0bfa59ec7f08e5419369ee9c296207e1e7709cc637f`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["postgres"]`
 
@@ -675,15 +675,15 @@ ENV PGDATA=/var/lib/postgresql/data
 RUN mkdir -p "$PGDATA" && chown -R postgres:postgres "$PGDATA" && chmod 777 "$PGDATA"
 # Fri, 24 Mar 2023 04:53:16 GMT
 VOLUME [/var/lib/postgresql/data]
-# Fri, 24 Mar 2023 04:53:18 GMT
-COPY file:d4c2ceee202d1390df115217c6e567abc1da7a31572f20a840d966332148ebe4 in /usr/local/bin/ 
-# Fri, 24 Mar 2023 04:53:22 GMT
+# Tue, 28 Mar 2023 01:11:48 GMT
+COPY file:512acb0aab31f9e5d908f16e2f4478f65cddd5d4e555a02a1551074bb16f54d7 in /usr/local/bin/ 
+# Tue, 28 Mar 2023 01:11:51 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 24 Mar 2023 04:53:25 GMT
+# Tue, 28 Mar 2023 01:11:55 GMT
 STOPSIGNAL SIGINT
-# Fri, 24 Mar 2023 04:53:29 GMT
+# Tue, 28 Mar 2023 01:11:58 GMT
 EXPOSE 5432
-# Fri, 24 Mar 2023 04:53:32 GMT
+# Tue, 28 Mar 2023 01:12:01 GMT
 CMD ["postgres"]
 ```
 
@@ -736,9 +736,9 @@ CMD ["postgres"]
 		Last Modified: Fri, 24 Mar 2023 04:58:47 GMT  
 		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c68cecec5371bcc7d43724bf2557abbd47c868fb01bcfc190137836d99703138`  
-		Last Modified: Fri, 24 Mar 2023 04:58:47 GMT  
-		Size: 4.8 KB (4779 bytes)  
+	-	`sha256:72dd89a722f439bcb09bbd59ccb98d438a56394ba0a907cdbd6dd9a204998121`  
+		Last Modified: Tue, 28 Mar 2023 01:13:27 GMT  
+		Size: 4.8 KB (4781 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postgres:11-bullseye` - linux; ppc64le
