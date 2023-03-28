@@ -1,7 +1,7 @@
 ## `ruby:2-alpine3.16`
 
 ```console
-$ docker pull ruby@sha256:d2ac9c576bc35a8f290b9b2b0e7353e4e8305a1132fcce41acf9afedbcdecfd5
+$ docker pull ruby@sha256:98343869b3ac2e712d01913e4a8197a7df1e079e7ee9c006c6d520a862b3b059
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -413,14 +413,14 @@ CMD ["irb"]
 ### `ruby:2-alpine3.16` - linux; s390x
 
 ```console
-$ docker pull ruby@sha256:96ac606dadd7e47fd51932964922d947e7252c7614824d63429af8316136082f
+$ docker pull ruby@sha256:38ef6b7ef841b2d9dc8ee4c49476a248114ec14dd393da6d1793fb5945abf0b0
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **20.4 MB (20360253 bytes)**  
+-	Total Size: **20.4 MB (20360258 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8ed167b3aa38f0256313a2f549ae14211890b452ca1b617cc1b91d18c4081a68`
+-	Image ID: `sha256:4eeb67fb61c8fdefd3617ac7b25ece4d0b07815413b0ae22b6c63b10d0240ca4`
 -	Default Command: `["irb"]`
 
 ```dockerfile
@@ -448,9 +448,9 @@ ENV GEM_HOME=/usr/local/bundle
 ENV BUNDLE_SILENCE_ROOT_WARNING=1 BUNDLE_APP_CONFIG=/usr/local/bundle
 # Sat, 11 Feb 2023 11:05:20 GMT
 ENV PATH=/usr/local/bundle/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Sat, 11 Feb 2023 11:05:20 GMT
-RUN mkdir -p "$GEM_HOME" && chmod 777 "$GEM_HOME"
-# Sat, 11 Feb 2023 11:05:20 GMT
+# Tue, 28 Mar 2023 00:12:50 GMT
+RUN mkdir -p "$GEM_HOME" && chmod 1777 "$GEM_HOME"
+# Tue, 28 Mar 2023 00:12:50 GMT
 CMD ["irb"]
 ```
 
@@ -471,7 +471,7 @@ CMD ["irb"]
 		Last Modified: Sat, 11 Feb 2023 11:09:35 GMT  
 		Size: 13.8 MB (13825210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b1bf5f20c2a79e0d80362142742cdea4614781c6e7b9a3c44193ce7a7101fc30`  
-		Last Modified: Sat, 11 Feb 2023 11:09:34 GMT  
-		Size: 173.0 B  
+	-	`sha256:7cdee10af8232b58f0037097a4c370320d7a865f7033907ecc8c967bc9042038`  
+		Last Modified: Tue, 28 Mar 2023 00:15:14 GMT  
+		Size: 178.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
