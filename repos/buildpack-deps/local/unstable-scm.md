@@ -445,21 +445,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `X11`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.88.1-7
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1-7.dsc' curl_7.88.1-7.dsc 3104 SHA256:53d5c6a90af0ed94020cb89b5e65c9a79e6467be090663aee3d3bc7e2b356024
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1.orig.tar.gz' curl_7.88.1.orig.tar.gz 4343562 SHA256:cdb38b72e36bc5d33d5b8810f8018ece1baa29a8f215b4495e495ded82bbf3c7
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1.orig.tar.gz.asc' curl_7.88.1.orig.tar.gz.asc 488 SHA256:7a5a55d7123149a1b357f298cf895bd0a601e3a2807005ef6c95f3752803485f
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1-7.debian.tar.xz' curl_7.88.1-7.debian.tar.xz 44908 SHA256:c874bb1abc1d4074749f711ebd4fc82331c5933f6420d2889d3d094ff92308ed
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.88.1-7/
 
-- https://sources.debian.net/src/curl/7.88.1-7/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.88.1-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.88.1-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-11`
 
@@ -1029,10 +1021,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris gnupg2=2.2.40-1
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.dsc' gnupg2_2.2.40-1.dsc 3219 SHA256:2e07176a2a1c7f98ac9713d2b99b1c77f310d67b67a2f51faea1ed676b858bc5
+'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.1.dsc' gnupg2_2.2.40-1.1.dsc 3832 SHA256:89bdffd4176066d37fb5d250a1e5512c428529d10f13413a12893f86a757697f
 'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40.orig.tar.bz2' gnupg2_2.2.40.orig.tar.bz2 7301631 SHA256:1164b29a75e8ab93ea15033300149e1872a7ef6bdda3d7c78229a735f8204c28
 'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40.orig.tar.bz2.asc' gnupg2_2.2.40.orig.tar.bz2.asc 228 SHA256:3907dc165299cd53c0b4aec862323c3bce6037c411600ec87dc5eed7a55eba4a
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.debian.tar.xz' gnupg2_2.2.40-1.debian.tar.xz 62220 SHA256:b398070b061dcf035da6e97576512ab7a0e13a48ab0364850be67a439e519706
+'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.1.debian.tar.xz' gnupg2_2.2.40-1.1.debian.tar.xz 62368 SHA256:356b7c86afdbaab286c5b92816cd1e1f4616cb67d22407c616618ef4d1680a9b
 ```
 
 Other potentially useful URLs:
