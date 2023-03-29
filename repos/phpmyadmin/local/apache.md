@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1588162bb484750a5161c2763ed9d46d600067c267d10d3778c5ff998a2c9f19`
-- Created: `2023-03-24T00:40:54.914341793Z`
+- Image ID: `sha256:604b7c1c3ded26fd99dd8614cbf8963e04eca87ac8a8abc293b9bbe6f6278378`
+- Created: `2023-03-28T04:58:59.45653677Z`
 - Virtual Size: ~ 517.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -26,6 +26,7 @@
   - `MAX_EXECUTION_TIME=600`
   - `MEMORY_LIMIT=512M`
   - `UPLOAD_LIMIT=2048K`
+  - `TZ=UTC`
   - `VERSION=5.2.1`
   - `SHA256=373f9599dfbd96d6fe75316d5dad189e68c305f297edf42377db9dd6b41b2557`
   - `URL=https://files.phpmyadmin.net/phpMyAdmin/5.2.1/phpMyAdmin-5.2.1-all-languages.tar.xz`
