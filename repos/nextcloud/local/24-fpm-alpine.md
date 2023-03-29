@@ -1,10 +1,10 @@
-# `nextcloud:24.0.10-fpm-alpine`
+# `nextcloud:24.0.11-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4782438d596d671a6922849ac8653132d1f0a82657317b353dc20dd0cd3ce709`
-- Created: `2023-03-23T00:38:46.459138452Z`
-- Virtual Size: ~ 618.01 Mb  
+- Image ID: `sha256:b21ea51442566f41ead687028494f81a4e31b6e1bfd0f688aa9b432ff5387f86`
+- Created: `2023-03-28T04:31:26.328123268Z`
+- Virtual Size: ~ 619.39 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=5e07278a1f315a67d36a676c01343ca2d4da5ec5bdb15d018e4248b3012bc0cd`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
-  - `NEXTCLOUD_VERSION=24.0.10`
+  - `NEXTCLOUD_VERSION=24.0.11`
 
 ## `apk` (`.apk`-based packages)
 
@@ -710,16 +710,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r5 description:
+libcurl-7.83.1-r6 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r5 webpage:
+libcurl-7.83.1-r6 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r5 installed size:
-512 KiB
+libcurl-7.83.1-r6 installed size:
+516 KiB
 
-libcurl-7.83.1-r5 license:
+libcurl-7.83.1-r6 license:
 curl
 
 ```
@@ -1645,16 +1645,16 @@ GPL-3.0-or-later
 ### `apk` package: `tiff`
 
 ```console
-tiff-4.4.0-r0 description:
+tiff-4.4.0-r1 description:
 Provides support for the Tag Image File Format or TIFF
 
-tiff-4.4.0-r0 webpage:
+tiff-4.4.0-r1 webpage:
 https://gitlab.com/libtiff/libtiff
 
-tiff-4.4.0-r0 installed size:
+tiff-4.4.0-r1 installed size:
 480 KiB
 
-tiff-4.4.0-r0 license:
+tiff-4.4.0-r1 license:
 libtiff
 
 ```

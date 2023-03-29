@@ -1,10 +1,10 @@
-# `nextcloud:25.0.4-fpm-alpine`
+# `nextcloud:25.0.5-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3c13f388bcc9aeb3554e6087bbd7bf80edc13ffb493ef0256308d17f63683fff`
-- Created: `2023-03-23T00:49:48.326358856Z`
-- Virtual Size: ~ 714.53 Mb  
+- Image ID: `sha256:efc6679ee7b64bba8d295338456c85c6ca12ddab1c26518e878253e0f919be16`
+- Created: `2023-03-28T04:42:14.166680761Z`
+- Virtual Size: ~ 714.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=b5c48f95b8e1d8624dd05fc2eab7be13277f9a203ccba97bdca5a1a0fb4a1460`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
-  - `NEXTCLOUD_VERSION=25.0.4`
+  - `NEXTCLOUD_VERSION=25.0.5`
 
 ## `apk` (`.apk`-based packages)
 
@@ -1645,16 +1645,16 @@ GPL-3.0-or-later
 ### `apk` package: `tiff`
 
 ```console
-tiff-4.4.0-r0 description:
+tiff-4.4.0-r1 description:
 Provides support for the Tag Image File Format or TIFF
 
-tiff-4.4.0-r0 webpage:
+tiff-4.4.0-r1 webpage:
 https://gitlab.com/libtiff/libtiff
 
-tiff-4.4.0-r0 installed size:
+tiff-4.4.0-r1 installed size:
 480 KiB
 
-tiff-4.4.0-r0 license:
+tiff-4.4.0-r1 license:
 libtiff
 
 ```
