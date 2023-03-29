@@ -1,10 +1,10 @@
-# `amazoncorretto:11-al2023`
+# `amazoncorretto:11-al2023-headful`
 
 ## Docker Metadata
 
-- Image ID: `sha256:585dcb6aa5a1bf87b9a36c2562c9ead4614b639322452606177ef4ecd996c24e`
-- Created: `2023-03-28T19:11:04.480047459Z`
-- Virtual Size: ~ 357.58 Mb  
+- Image ID: `sha256:844830e4c312d52f5ebb52de8a7e75ea45b5b884be1e4d916472feeaf91166e4`
+- Created: `2023-03-28T19:11:39.445656731Z`
+- Virtual Size: ~ 355.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -491,17 +491,6 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url java-11-amazon-corretto-11.0.18+10-1.amzn2023
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/05cbec796e6587f8557da00c7941611274aa0cb595aeef1810a22ae28fe83727/java-11-amazon-corretto-11.0.18+10-1.amzn2023.src.rpm
-```
-
-### `rpm` package: `java-11-amazon-corretto-devel-11.0.18+10-1.amzn2023.x86_64`
-
-Licenses (from `rpm --query`): ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv2.0 and Public Domain and W3C and zlib and ISC and FTL and RSA.
-
-Source:
-
-```console
-$ dnf --quiet download --source --url java-11-amazon-corretto-devel-11.0.18+10-1.amzn2023
 https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/05cbec796e6587f8557da00c7941611274aa0cb595aeef1810a22ae28fe83727/java-11-amazon-corretto-11.0.18+10-1.amzn2023.src.rpm
 ```
 

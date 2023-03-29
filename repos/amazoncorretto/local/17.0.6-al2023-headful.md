@@ -1,17 +1,17 @@
-# `amazoncorretto:11-al2023`
+# `amazoncorretto:17-al2023-headful`
 
 ## Docker Metadata
 
-- Image ID: `sha256:585dcb6aa5a1bf87b9a36c2562c9ead4614b639322452606177ef4ecd996c24e`
-- Created: `2023-03-28T19:11:04.480047459Z`
-- Virtual Size: ~ 357.58 Mb  
+- Image ID: `sha256:dc01732f154d194963100297899e09b6125be34a559dc3025f61f80c8e8a5131`
+- Created: `2023-03-28T19:13:08.091074854Z`
+- Virtual Size: ~ 372.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
-  - `JAVA_HOME=/usr/lib/jvm/java-11-amazon-corretto`
+  - `JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -483,37 +483,26 @@ $ dnf --quiet download --source --url harfbuzz-7.0.0-2.amzn2023.0.1
 https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/d70feb6e7549ac8924e67a88f2fbdf3020857ac13bf8c72e9c5ac6161381f302/harfbuzz-7.0.0-2.amzn2023.0.1.src.rpm
 ```
 
-### `rpm` package: `java-11-amazon-corretto-11.0.18+10-1.amzn2023.x86_64`
+### `rpm` package: `java-17-amazon-corretto-17.0.6+10-1.amzn2023.1.x86_64`
 
 Licenses (from `rpm --query`): ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv2.0 and Public Domain and W3C and zlib and ISC and FTL and RSA.
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url java-11-amazon-corretto-11.0.18+10-1.amzn2023
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/05cbec796e6587f8557da00c7941611274aa0cb595aeef1810a22ae28fe83727/java-11-amazon-corretto-11.0.18+10-1.amzn2023.src.rpm
+$ dnf --quiet download --source --url java-17-amazon-corretto-17.0.6+10-1.amzn2023.1
+https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/80c949f810758935fe00196df63393c7de5a6c0b5476b354f87f9e068e271d61/java-17-amazon-corretto-17.0.6+10-1.amzn2023.1.src.rpm
 ```
 
-### `rpm` package: `java-11-amazon-corretto-devel-11.0.18+10-1.amzn2023.x86_64`
+### `rpm` package: `java-17-amazon-corretto-headless-17.0.6+10-1.amzn2023.1.x86_64`
 
 Licenses (from `rpm --query`): ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv2.0 and Public Domain and W3C and zlib and ISC and FTL and RSA.
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url java-11-amazon-corretto-devel-11.0.18+10-1.amzn2023
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/05cbec796e6587f8557da00c7941611274aa0cb595aeef1810a22ae28fe83727/java-11-amazon-corretto-11.0.18+10-1.amzn2023.src.rpm
-```
-
-### `rpm` package: `java-11-amazon-corretto-headless-11.0.18+10-1.amzn2023.x86_64`
-
-Licenses (from `rpm --query`): ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv2.0 and Public Domain and W3C and zlib and ISC and FTL and RSA.
-
-Source:
-
-```console
-$ dnf --quiet download --source --url java-11-amazon-corretto-headless-11.0.18+10-1.amzn2023
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/05cbec796e6587f8557da00c7941611274aa0cb595aeef1810a22ae28fe83727/java-11-amazon-corretto-11.0.18+10-1.amzn2023.src.rpm
+$ dnf --quiet download --source --url java-17-amazon-corretto-headless-17.0.6+10-1.amzn2023.1
+https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/80c949f810758935fe00196df63393c7de5a6c0b5476b354f87f9e068e271d61/java-17-amazon-corretto-17.0.6+10-1.amzn2023.1.src.rpm
 ```
 
 ### `rpm` package: `javapackages-filesystem-6.0.0-7.amzn2023.0.5.noarch`

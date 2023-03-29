@@ -1,10 +1,10 @@
-# `amazoncorretto:11-al2023`
+# `amazoncorretto:11-al2023-headless`
 
 ## Docker Metadata
 
-- Image ID: `sha256:585dcb6aa5a1bf87b9a36c2562c9ead4614b639322452606177ef4ecd996c24e`
-- Created: `2023-03-28T19:11:04.480047459Z`
-- Virtual Size: ~ 357.58 Mb  
+- Image ID: `sha256:58b8bb35a3743c38a4f02873129fb524637289bdaee1124c300d0d79b41f0d9e`
+- Created: `2023-03-28T19:11:23.074744741Z`
+- Virtual Size: ~ 353.81 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -334,17 +334,6 @@ $ dnf --quiet download --source --url gdbm-libs-1.19-2.amzn2023.0.2
 https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/7289cdd6f7a54c962de48a332d2b471deb0ec6e3aa1fa98c21c9f9ba12870417/gdbm-1.19-2.amzn2023.0.2.src.rpm
 ```
 
-### `rpm` package: `giflib-5.2.1-9.amzn2023.x86_64`
-
-Licenses (from `rpm --query`): MIT
-
-Source:
-
-```console
-$ dnf --quiet download --source --url giflib-5.2.1-9.amzn2023
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/bc577ddc9ac0d3685273d05d1302a8dc54f1298f7d89c3e74c5ce7126c9140fd/giflib-5.2.1-9.amzn2023.src.rpm
-```
-
 ### `rpm` package: `glib2-2.73.2-680.amzn2023.0.3.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
@@ -483,28 +472,6 @@ $ dnf --quiet download --source --url harfbuzz-7.0.0-2.amzn2023.0.1
 https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/d70feb6e7549ac8924e67a88f2fbdf3020857ac13bf8c72e9c5ac6161381f302/harfbuzz-7.0.0-2.amzn2023.0.1.src.rpm
 ```
 
-### `rpm` package: `java-11-amazon-corretto-11.0.18+10-1.amzn2023.x86_64`
-
-Licenses (from `rpm --query`): ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv2.0 and Public Domain and W3C and zlib and ISC and FTL and RSA.
-
-Source:
-
-```console
-$ dnf --quiet download --source --url java-11-amazon-corretto-11.0.18+10-1.amzn2023
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/05cbec796e6587f8557da00c7941611274aa0cb595aeef1810a22ae28fe83727/java-11-amazon-corretto-11.0.18+10-1.amzn2023.src.rpm
-```
-
-### `rpm` package: `java-11-amazon-corretto-devel-11.0.18+10-1.amzn2023.x86_64`
-
-Licenses (from `rpm --query`): ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv2.0 and Public Domain and W3C and zlib and ISC and FTL and RSA.
-
-Source:
-
-```console
-$ dnf --quiet download --source --url java-11-amazon-corretto-devel-11.0.18+10-1.amzn2023
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/05cbec796e6587f8557da00c7941611274aa0cb595aeef1810a22ae28fe83727/java-11-amazon-corretto-11.0.18+10-1.amzn2023.src.rpm
-```
-
 ### `rpm` package: `java-11-amazon-corretto-headless-11.0.18+10-1.amzn2023.x86_64`
 
 Licenses (from `rpm --query`): ASL 1.1 and ASL 2.0 and BSD and BSD with advertising and GPL+ and GPLv2 and GPLv2 with exceptions and IJG and LGPLv2+ and MIT and MPLv2.0 and Public Domain and W3C and zlib and ISC and FTL and RSA.
@@ -571,28 +538,6 @@ $ dnf --quiet download --source --url langpacks-core-font-en-3.0-21.amzn2023.0.4
 https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/cf2d1ff906ce456120e2791e4a176b956260aa96a907ac65c37dd3eb357918d7/langpacks-3.0-21.amzn2023.0.4.src.rpm
 ```
 
-### `rpm` package: `libICE-1.0.10-6.amzn2023.0.2.x86_64`
-
-Licenses (from `rpm --query`): MIT
-
-Source:
-
-```console
-$ dnf --quiet download --source --url libICE-1.0.10-6.amzn2023.0.2
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/58d8646d5b32ea42ef10e05fb569ac027ae80a6823394ea6bb06d6a6c55b748c/libICE-1.0.10-6.amzn2023.0.2.src.rpm
-```
-
-### `rpm` package: `libSM-1.2.3-8.amzn2023.0.2.x86_64`
-
-Licenses (from `rpm --query`): MIT
-
-Source:
-
-```console
-$ dnf --quiet download --source --url libSM-1.2.3-8.amzn2023.0.2
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/f9e9f75f9f1208c45c6cf569d24e190ddea8fadba96804240ce325854310d0d1/libSM-1.2.3-8.amzn2023.0.2.src.rpm
-```
-
 ### `rpm` package: `libX11-1.7.2-3.amzn2023.0.2.x86_64`
 
 Licenses (from `rpm --query`): MIT
@@ -637,39 +582,6 @@ $ dnf --quiet download --source --url libXext-1.3.4-6.amzn2023.0.2
 https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/a7e8e5c1db4214a6b78989af3d58dceceb039c02d3b4f88cfd88b35b4b02ca88/libXext-1.3.4-6.amzn2023.0.2.src.rpm
 ```
 
-### `rpm` package: `libXi-1.7.10-6.amzn2023.0.2.x86_64`
-
-Licenses (from `rpm --query`): MIT
-
-Source:
-
-```console
-$ dnf --quiet download --source --url libXi-1.7.10-6.amzn2023.0.2
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/19594fa2eae65889e6060740bd79191b002bcd21e7bfef4ea23a6960391aa896/libXi-1.7.10-6.amzn2023.0.2.src.rpm
-```
-
-### `rpm` package: `libXinerama-1.1.4-8.amzn2023.0.2.x86_64`
-
-Licenses (from `rpm --query`): MIT
-
-Source:
-
-```console
-$ dnf --quiet download --source --url libXinerama-1.1.4-8.amzn2023.0.2
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/f029205f979be21aa8f2bd691fff1210d7d8f242a567742197e147757b2c1799/libXinerama-1.1.4-8.amzn2023.0.2.src.rpm
-```
-
-### `rpm` package: `libXrandr-1.5.2-6.amzn2023.0.2.x86_64`
-
-Licenses (from `rpm --query`): MIT
-
-Source:
-
-```console
-$ dnf --quiet download --source --url libXrandr-1.5.2-6.amzn2023.0.2
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/38c4966b9aafcefb0464ed8c5156e299f842e1a8fb953c93d160c177d1e33cfa/libXrandr-1.5.2-6.amzn2023.0.2.src.rpm
-```
-
 ### `rpm` package: `libXrender-0.9.10-14.amzn2023.0.2.x86_64`
 
 Licenses (from `rpm --query`): MIT
@@ -679,28 +591,6 @@ Source:
 ```console
 $ dnf --quiet download --source --url libXrender-0.9.10-14.amzn2023.0.2
 https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/7b8f644e3ee7a7355cc04ee6e0c593bf1ef70e4c53f18d831d526a33294a0909/libXrender-0.9.10-14.amzn2023.0.2.src.rpm
-```
-
-### `rpm` package: `libXt-1.2.0-4.amzn2023.0.2.x86_64`
-
-Licenses (from `rpm --query`): MIT
-
-Source:
-
-```console
-$ dnf --quiet download --source --url libXt-1.2.0-4.amzn2023.0.2
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/b94074be3e52b497b09c73b85416245359d1b6370db7d4bf4324fd035d5cf9b6/libXt-1.2.0-4.amzn2023.0.2.src.rpm
-```
-
-### `rpm` package: `libXtst-1.2.3-14.amzn2023.0.2.x86_64`
-
-Licenses (from `rpm --query`): MIT
-
-Source:
-
-```console
-$ dnf --quiet download --source --url libXtst-1.2.3-14.amzn2023.0.2
-https://cdn.amazonlinux.com/al2023/core/guids/c21f02b8b6bcdc9593b87e257d8839676b3e1bd5ac90e4a9cabdceada709cc2a/SRPMS/../../../../blobstore/6ad7b36dc497c7c2b8a27523ec1989f462e093e9a3fdd40164df0fd81f9e103e/libXtst-1.2.3-14.amzn2023.0.2.src.rpm
 ```
 
 ### `rpm` package: `libacl-2.3.1-2.amzn2023.0.2.x86_64`
