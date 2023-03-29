@@ -1,7 +1,7 @@
 ## `irssi:alpine`
 
 ```console
-$ docker pull irssi@sha256:f0da6e558926647dc0a5211d8e8a7763b158ab5c635d74030cfd0bee001ac88c
+$ docker pull irssi@sha256:b0c054f7f3218865e6b15df4a3797932e2c99f675c2fb82ff34f11b9b5d48e6e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -353,55 +353,55 @@ CMD ["irssi"]
 ### `irssi:alpine` - linux; s390x
 
 ```console
-$ docker pull irssi@sha256:04752c9953bdcbc7d579d47321c533ae73edb16ea327c540196086769002f93f
+$ docker pull irssi@sha256:2e60e6e239481450d54db34d86510c666412f2707203f468e64352ffe3e9beea
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **17.7 MB (17704240 bytes)**  
+-	Total Size: **17.7 MB (17704051 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f7e7622484510c53f4b3e6f6b0beb5dfae86c41ad33bd23851da569592d01ce8`
+-	Image ID: `sha256:43c9949e1344fe9af302ed763b04ad9d1fca84e80dd4f0b6455115f95461bd62`
 -	Default Command: `["irssi"]`
 
 ```dockerfile
-# Fri, 10 Feb 2023 21:41:31 GMT
-ADD file:17af250b49631cf2acf655c85df90977eddab4c9afd67bda3c577db5200364f1 in / 
-# Fri, 10 Feb 2023 21:41:32 GMT
+# Wed, 29 Mar 2023 17:42:02 GMT
+ADD file:6c3b2d8f192a3a12e6df8bc7130bbc723b1a39aa71809d23b15cf80bc5135096 in / 
+# Wed, 29 Mar 2023 17:42:02 GMT
 CMD ["/bin/sh"]
-# Fri, 10 Feb 2023 22:42:06 GMT
+# Wed, 29 Mar 2023 18:47:06 GMT
 RUN apk add --no-cache 		ca-certificates 		perl-libwww
-# Fri, 10 Feb 2023 22:42:07 GMT
+# Wed, 29 Mar 2023 18:47:07 GMT
 ENV HOME=/home/user
-# Fri, 10 Feb 2023 22:42:08 GMT
+# Wed, 29 Mar 2023 18:47:07 GMT
 RUN set -eux; 	adduser -u 1001 -D -h "$HOME" user; 	mkdir "$HOME/.irssi"; 	chown -R user:user "$HOME"
-# Fri, 10 Feb 2023 22:42:08 GMT
+# Wed, 29 Mar 2023 18:47:07 GMT
 ENV LANG=C.UTF-8
-# Fri, 10 Feb 2023 22:42:08 GMT
+# Wed, 29 Mar 2023 18:47:07 GMT
 ENV IRSSI_VERSION=1.4.3
-# Fri, 10 Feb 2023 22:42:29 GMT
+# Wed, 29 Mar 2023 18:47:29 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		gcc 		glib-dev 		gnupg 		libc-dev 		libtool 		lynx 		meson 		ncurses-dev 		ninja 		openssl 		openssl-dev 		perl-dev 		pkgconf 		tar 		xz 	; 		wget "https://github.com/irssi/irssi/releases/download/${IRSSI_VERSION}/irssi-${IRSSI_VERSION}.tar.xz" -O /tmp/irssi.tar.xz; 	wget "https://github.com/irssi/irssi/releases/download/${IRSSI_VERSION}/irssi-${IRSSI_VERSION}.tar.xz.asc" -O /tmp/irssi.tar.xz.asc; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 7EE65E3082A5FB06AC7C368D00CCB587DDBEF0E1; 	gpg --batch --verify /tmp/irssi.tar.xz.asc /tmp/irssi.tar.xz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" /tmp/irssi.tar.xz.asc; 		mkdir -p /usr/src/irssi; 	tar -xf /tmp/irssi.tar.xz -C /usr/src/irssi --strip-components 1; 	rm /tmp/irssi.tar.xz; 		cd /usr/src/irssi; 	meson 		-Denable-true-color=yes 		-Dwith-bot=yes 		-Dwith-perl=yes 		-Dwith-proxy=yes 		Build 	; 	ninja -C Build -j "$(nproc)"; 	ninja -C Build install; 		cd /; 	rm -rf /usr/src/irssi; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .irssi-rundeps $runDeps; 	apk del --no-network .build-deps; 		irssi --version
-# Fri, 10 Feb 2023 22:42:30 GMT
+# Wed, 29 Mar 2023 18:47:29 GMT
 WORKDIR /home/user
-# Fri, 10 Feb 2023 22:42:30 GMT
+# Wed, 29 Mar 2023 18:47:30 GMT
 USER user
-# Fri, 10 Feb 2023 22:42:30 GMT
+# Wed, 29 Mar 2023 18:47:30 GMT
 CMD ["irssi"]
 ```
 
 -	Layers:
-	-	`sha256:667d93a24f321610e24486f3148545191f113ab9ab2444804087dd65ebbda9ed`  
-		Last Modified: Fri, 10 Feb 2023 21:42:26 GMT  
-		Size: 2.6 MB (2593581 bytes)  
+	-	`sha256:95cbbfdf0c760cbcde91603c8eee15ec60d4aa5f874b4a538babcd2df1709174`  
+		Last Modified: Wed, 29 Mar 2023 17:42:37 GMT  
+		Size: 2.6 MB (2593389 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:af35b68c6d46b1021f86df04be4f381cbff5d1f68541354c51de7866d09479c9`  
-		Last Modified: Fri, 10 Feb 2023 22:43:02 GMT  
-		Size: 10.1 MB (10079021 bytes)  
+	-	`sha256:06c03195f7041f32a296c69af1282b626f998bc2dbefe179029374aba4b33a8e`  
+		Last Modified: Wed, 29 Mar 2023 18:47:51 GMT  
+		Size: 10.1 MB (10079011 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35f437444fa55b99bd71a865a625b8d995ac2ac84db2c7ac88250c2143d816ba`  
-		Last Modified: Fri, 10 Feb 2023 22:43:01 GMT  
-		Size: 1.3 KB (1282 bytes)  
+	-	`sha256:144be28453822317c17c0cb1711ca490599a6e30f212d0c3aa3d8f59f45091f6`  
+		Last Modified: Wed, 29 Mar 2023 18:47:49 GMT  
+		Size: 1.3 KB (1284 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fdf4292d04dbbf765026607dffb0c588341f6d84cfd80193af57c49980870652`  
-		Last Modified: Fri, 10 Feb 2023 22:43:01 GMT  
-		Size: 5.0 MB (5030356 bytes)  
+	-	`sha256:f976c958bb772c9bb3bb1e4c6c9d983ee4a8553b914ddf4985106426914139bb`  
+		Last Modified: Wed, 29 Mar 2023 18:47:50 GMT  
+		Size: 5.0 MB (5030367 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
