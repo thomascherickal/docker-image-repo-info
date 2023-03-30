@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e014cdd25b3d73a93fd4639396e800bf2a597d284f5b3bdee5a6cd8df753f42c`
-- Created: `2023-03-04T04:46:02.05755826Z`
-- Virtual Size: ~ 527.98 Mb  
+- Image ID: `sha256:66f33e432e0c66ab46790c15bbc2d4f6c693257df81dde4a404494d240d85c5a`
+- Created: `2023-03-30T05:07:43.81588801Z`
+- Virtual Size: ~ 527.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -267,16 +267,16 @@ GPL-2.0-only
 ### `apk` package: `curl`
 
 ```console
-curl-7.83.1-r5 description:
+curl-7.83.1-r6 description:
 URL retrival utility and library
 
-curl-7.83.1-r5 webpage:
+curl-7.83.1-r6 webpage:
 https://curl.se/
 
-curl-7.83.1-r5 installed size:
+curl-7.83.1-r6 installed size:
 256 KiB
 
-curl-7.83.1-r5 license:
+curl-7.83.1-r6 license:
 curl
 
 ```
@@ -709,16 +709,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1t-r0 description:
+libcrypto1.1-1.1.1t-r2 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1t-r0 webpage:
+libcrypto1.1-1.1.1t-r2 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1t-r0 installed size:
+libcrypto1.1-1.1.1t-r2 installed size:
 2712 KiB
 
-libcrypto1.1-1.1.1t-r0 license:
+libcrypto1.1-1.1.1t-r2 license:
 OpenSSL
 
 ```
@@ -726,16 +726,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r5 description:
+libcurl-7.83.1-r6 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r5 webpage:
+libcurl-7.83.1-r6 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r5 installed size:
-512 KiB
+libcurl-7.83.1-r6 installed size:
+516 KiB
 
-libcurl-7.83.1-r5 license:
+libcurl-7.83.1-r6 license:
 curl
 
 ```
@@ -743,16 +743,16 @@ curl
 ### `apk` package: `libde265`
 
 ```console
-libde265-1.0.11-r0 description:
+libde265-1.0.11-r1 description:
 Open h.265 video codec implementation
 
-libde265-1.0.11-r0 webpage:
+libde265-1.0.11-r1 webpage:
 https://github.com/strukturag/libde265
 
-libde265-1.0.11-r0 installed size:
+libde265-1.0.11-r1 installed size:
 432 KiB
 
-libde265-1.0.11-r0 license:
+libde265-1.0.11-r1 license:
 LGPL-3.0-or-later
 
 ```
@@ -947,16 +947,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1t-r0 description:
+libssl1.1-1.1.1t-r2 description:
 SSL shared libraries
 
-libssl1.1-1.1.1t-r0 webpage:
+libssl1.1-1.1.1t-r2 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1t-r0 installed size:
+libssl1.1-1.1.1t-r2 installed size:
 528 KiB
 
-libssl1.1-1.1.1t-r0 license:
+libssl1.1-1.1.1t-r2 license:
 OpenSSL
 
 ```
@@ -1321,16 +1321,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1t-r0 description:
+openssl-1.1.1t-r2 description:
 toolkit for transport layer security (TLS) - version 1.1
 
-openssl-1.1.1t-r0 webpage:
+openssl-1.1.1t-r2 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1t-r0 installed size:
+openssl-1.1.1t-r2 installed size:
 660 KiB
 
-openssl-1.1.1t-r0 license:
+openssl-1.1.1t-r2 license:
 OpenSSL
 
 ```
@@ -1542,16 +1542,16 @@ GPL-2.0-only
 ### `apk` package: `tar`
 
 ```console
-tar-1.34-r0 description:
+tar-1.34-r1 description:
 Utility used to store, backup, and transport files
 
-tar-1.34-r0 webpage:
+tar-1.34-r1 webpage:
 https://www.gnu.org/software/tar/
 
-tar-1.34-r0 installed size:
+tar-1.34-r1 installed size:
 488 KiB
 
-tar-1.34-r0 license:
+tar-1.34-r1 license:
 GPL-3.0-or-later
 
 ```
@@ -1559,16 +1559,16 @@ GPL-3.0-or-later
 ### `apk` package: `tiff`
 
 ```console
-tiff-4.4.0-r0 description:
+tiff-4.4.0-r1 description:
 Provides support for the Tag Image File Format or TIFF
 
-tiff-4.4.0-r0 webpage:
+tiff-4.4.0-r1 webpage:
 https://gitlab.com/libtiff/libtiff
 
-tiff-4.4.0-r0 installed size:
+tiff-4.4.0-r1 installed size:
 480 KiB
 
-tiff-4.4.0-r0 license:
+tiff-4.4.0-r1 license:
 libtiff
 
 ```
