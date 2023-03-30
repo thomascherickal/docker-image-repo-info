@@ -667,11 +667,21 @@ RUN set -eux;     case "$(dpkg --print-architecture)" in         amd64)         
 
 ## `dart:2.19.6`
 
-**does not exist** (yet?)
+```console
+$ docker pull dart@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `dart:2.19.6-sdk`
 
-**does not exist** (yet?)
+```console
+$ docker pull dart@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `dart:3.0.0-290.3.beta`
 
