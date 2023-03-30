@@ -5,7 +5,7 @@
 -	[`arangodb:3.10`](#arangodb310)
 -	[`arangodb:3.10.5`](#arangodb3105)
 -	[`arangodb:3.8`](#arangodb38)
--	[`arangodb:3.8.8`](#arangodb388)
+-	[`arangodb:3.8.9`](#arangodb389)
 -	[`arangodb:3.9`](#arangodb39)
 -	[`arangodb:3.9.10`](#arangodb3910)
 -	[`arangodb:latest`](#arangodblatest)
@@ -375,88 +375,9 @@ CMD ["arangod"]
 		Size: 260.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `arangodb:3.8.8`
+## `arangodb:3.8.9`
 
-```console
-$ docker pull arangodb@sha256:4599a1892dcce060f1ffa4d87480f045f0a3e5047ba8e4a8c3b87496ef83c12a
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
-	-	linux; amd64
-
-### `arangodb:3.8.8` - linux; amd64
-
-```console
-$ docker pull arangodb@sha256:fd11a1507ae8241bf4cf97d6c6ee662efb147e7f3a160c518a6bd5b74e249dcd
-```
-
--	Docker Version: 20.10.23
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **195.6 MB (195637472 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e98b83e2ecdcb912cdb5758ba77dc47ab197110348c2ef320d8ba6161ba6e11d`
--	Entrypoint: `["\/entrypoint.sh"]`
--	Default Command: `["arangod"]`
-
-```dockerfile
-# Wed, 29 Mar 2023 18:19:37 GMT
-ADD file:9663235f252e072c52b0f9e25845841e4321cce2caa7467a0d736c6003b05c00 in / 
-# Wed, 29 Mar 2023 18:19:37 GMT
-CMD ["/bin/sh"]
-# Wed, 29 Mar 2023 19:34:12 GMT
-MAINTAINER Frank Celler <info@arangodb.com>
-# Wed, 29 Mar 2023 19:34:12 GMT
-ENV ARANGO_VERSION=3.8.8
-# Wed, 29 Mar 2023 19:34:12 GMT
-ENV ARANGO_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64
-# Wed, 29 Mar 2023 19:34:12 GMT
-ENV ARANGO_PACKAGE=arangodb3_3.8.8-1_amd64.deb
-# Wed, 29 Mar 2023 19:34:12 GMT
-ENV ARANGO_PACKAGE_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64/arangodb3_3.8.8-1_amd64.deb
-# Wed, 29 Mar 2023 19:34:12 GMT
-ENV ARANGO_SIGNATURE_URL=https://download.arangodb.com/arangodb38/DEBIAN/amd64/arangodb3_3.8.8-1_amd64.deb.asc
-# Wed, 29 Mar 2023 19:34:38 GMT
-RUN apk add --no-cache gnupg pwgen binutils numactl numactl-tools nodejs yarn &&     yarn global add foxx-cli@2.0.1 &&     apk del yarn &&     gpg --batch --keyserver keys.openpgp.org --recv-keys CD8CB0F1E0AD5B52E93F41E7EA93F5E56E751E9B &&     mkdir /docker-entrypoint-initdb.d &&     cd /tmp                                &&     wget ${ARANGO_SIGNATURE_URL}           &&     wget ${ARANGO_PACKAGE_URL}             &&     gpg --verify ${ARANGO_PACKAGE}.asc     &&     ar x ${ARANGO_PACKAGE} data.tar.gz     &&     tar -C / -x -z -f data.tar.gz          &&     sed -ri         -e 's!127\.0\.0\.1!0.0.0.0!g'         -e 's!^(file\s*=\s*).*!\1 -!'         -e 's!^\s*uid\s*=.*!!'         /etc/arangodb3/arangod.conf        &&     chgrp -R 0 /var/lib/arangodb3 /var/lib/arangodb3-apps &&     chmod -R 775 /var/lib/arangodb3 /var/lib/arangodb3-apps &&     rm -f /usr/bin/foxx &&     rm -f ${ARANGO_PACKAGE}* data.tar.gz &&     apk del gnupg
-# Wed, 29 Mar 2023 19:34:40 GMT
-ENV GLIBCXX_FORCE_NEW=1
-# Wed, 29 Mar 2023 19:34:40 GMT
-RUN echo "UTC" > /etc/timezone
-# Wed, 29 Mar 2023 19:34:41 GMT
-VOLUME [/var/lib/arangodb3 /var/lib/arangodb3-apps]
-# Wed, 29 Mar 2023 19:34:41 GMT
-COPY file:5186b735a7f691f0963e16d7add12851632ad73eceed0dc74092096025935cb4 in /entrypoint.sh 
-# Wed, 29 Mar 2023 19:34:41 GMT
-COPY file:e891c9dc63d937e22dc27abb45afa31518cd659993e0c54dab0f6cde8d994063 in /usr/bin/foxx 
-# Wed, 29 Mar 2023 19:34:41 GMT
-ENTRYPOINT ["/entrypoint.sh"]
-# Wed, 29 Mar 2023 19:34:41 GMT
-EXPOSE 8529
-# Wed, 29 Mar 2023 19:34:41 GMT
-CMD ["arangod"]
-```
-
--	Layers:
-	-	`sha256:f7dab3ab2d6ec29aa28769bec35331fb485b5837501b1e8556413d8b5a79c9c8`  
-		Last Modified: Wed, 29 Mar 2023 18:20:25 GMT  
-		Size: 2.8 MB (2829647 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:788734dd5c7a16dddcf81dd8bfed3ea8a753c21dcd2c8e616eddaf7cd5ca702a`  
-		Last Modified: Wed, 29 Mar 2023 19:36:21 GMT  
-		Size: 192.8 MB (192805346 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb696b4d8dcee7e85b14dc832a29deda61fd3d9cf7dda0194ce38145aeebffa0`  
-		Last Modified: Wed, 29 Mar 2023 19:36:00 GMT  
-		Size: 136.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:24f60f14960428012314921b2e703ab6ef07f6c553826b314e4c1d6aafe578ec`  
-		Last Modified: Wed, 29 Mar 2023 19:36:00 GMT  
-		Size: 2.1 KB (2083 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a24afa3fd8cdd1918546850cee68062db89ab17bdc2d48b87dd6d923f82bfa0e`  
-		Last Modified: Wed, 29 Mar 2023 19:36:00 GMT  
-		Size: 260.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+**does not exist** (yet?)
 
 ## `arangodb:3.9`
 
