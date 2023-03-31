@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a43883a890beebcadb8837cf149c47c333c0c3967f4a4e9e7c5078f668ca4f15`
-- Created: `2023-03-27T23:22:44.356952567Z`
-- Virtual Size: ~ 74.84 Mb  
+- Image ID: `sha256:b24eac0b84fe56d165c6d5964d841529c5c8707baab77639441f6e720ef1d628`
+- Created: `2023-03-29T23:04:05.009833496Z`
+- Virtual Size: ~ 70.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -180,16 +180,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.83.1-r5 description:
+curl-7.83.1-r6 description:
 URL retrival utility and library
 
-curl-7.83.1-r5 webpage:
+curl-7.83.1-r6 webpage:
 https://curl.se/
 
-curl-7.83.1-r5 installed size:
+curl-7.83.1-r6 installed size:
 256 KiB
 
-curl-7.83.1-r5 license:
+curl-7.83.1-r6 license:
 curl
 
 ```
@@ -248,16 +248,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1t-r1 description:
+libcrypto1.1-1.1.1t-r2 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1t-r1 webpage:
+libcrypto1.1-1.1.1t-r2 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1t-r1 installed size:
+libcrypto1.1-1.1.1t-r2 installed size:
 2712 KiB
 
-libcrypto1.1-1.1.1t-r1 license:
+libcrypto1.1-1.1.1t-r2 license:
 OpenSSL
 
 ```
@@ -316,16 +316,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1t-r1 description:
+libssl1.1-1.1.1t-r2 description:
 SSL shared libraries
 
-libssl1.1-1.1.1t-r1 webpage:
+libssl1.1-1.1.1t-r2 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1t-r1 installed size:
+libssl1.1-1.1.1t-r2 installed size:
 528 KiB
 
-libssl1.1-1.1.1t-r1 license:
+libssl1.1-1.1.1t-r2 license:
 OpenSSL
 
 ```
@@ -452,16 +452,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1t-r0 description:
+openssl-1.1.1t-r2 description:
 toolkit for transport layer security (TLS) - version 1.1
 
-openssl-1.1.1t-r0 webpage:
+openssl-1.1.1t-r2 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1t-r0 installed size:
+openssl-1.1.1t-r2 installed size:
 660 KiB
 
-openssl-1.1.1t-r0 license:
+openssl-1.1.1t-r2 license:
 OpenSSL
 
 ```
@@ -537,16 +537,16 @@ GPL-2.0-only
 ### `apk` package: `tar`
 
 ```console
-tar-1.34-r0 description:
+tar-1.34-r1 description:
 Utility used to store, backup, and transport files
 
-tar-1.34-r0 webpage:
+tar-1.34-r1 webpage:
 https://www.gnu.org/software/tar/
 
-tar-1.34-r0 installed size:
+tar-1.34-r1 installed size:
 488 KiB
 
-tar-1.34-r0 license:
+tar-1.34-r1 license:
 GPL-3.0-or-later
 
 ```
