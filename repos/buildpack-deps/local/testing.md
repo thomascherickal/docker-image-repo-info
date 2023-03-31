@@ -1644,10 +1644,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris gnupg2=2.2.40-1
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.dsc' gnupg2_2.2.40-1.dsc 3219 SHA256:2e07176a2a1c7f98ac9713d2b99b1c77f310d67b67a2f51faea1ed676b858bc5
+'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.1.dsc' gnupg2_2.2.40-1.1.dsc 3832 SHA256:89bdffd4176066d37fb5d250a1e5512c428529d10f13413a12893f86a757697f
 'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40.orig.tar.bz2' gnupg2_2.2.40.orig.tar.bz2 7301631 SHA256:1164b29a75e8ab93ea15033300149e1872a7ef6bdda3d7c78229a735f8204c28
 'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40.orig.tar.bz2.asc' gnupg2_2.2.40.orig.tar.bz2.asc 228 SHA256:3907dc165299cd53c0b4aec862323c3bce6037c411600ec87dc5eed7a55eba4a
-'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.debian.tar.xz' gnupg2_2.2.40-1.debian.tar.xz 62220 SHA256:b398070b061dcf035da6e97576512ab7a0e13a48ab0364850be67a439e519706
+'http://deb.debian.org/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.1.debian.tar.xz' gnupg2_2.2.40-1.1.debian.tar.xz 62368 SHA256:356b7c86afdbaab286c5b92816cd1e1f4616cb67d22407c616618ef4d1680a9b
 ```
 
 Other potentially useful URLs:
@@ -3900,20 +3900,13 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `Unicode-data`
 - `Xen-interface`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=6.1.15-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.15-1.dsc' linux_6.1.15-1.dsc 276923 SHA256:8c54b120a93c1a8003c22e19e62e644ce9fd576c658f1f1d8c495ec8e28cf78d
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.15.orig.tar.xz' linux_6.1.15.orig.tar.xz 137262704 SHA256:87a40972c5b572a71f59f285cfe5751952ba3b4b1c2e7343523131ff940c753d
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.15-1.debian.tar.xz' linux_6.1.15-1.debian.tar.xz 1421552 SHA256:1486d33a1d6a3daf5bc160cfd1ba01f873598ab5252f86fb2b7b069a990c82d8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/linux/6.1.15-1/
 
-- https://sources.debian.net/src/linux/6.1.15-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/6.1.15-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/6.1.15-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lz4=1.9.4-1`
 
