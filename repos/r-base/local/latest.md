@@ -1081,10 +1081,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris gnupg2=2.2.40-1
-'http://http.debian.net/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.dsc' gnupg2_2.2.40-1.dsc 3219 SHA256:2e07176a2a1c7f98ac9713d2b99b1c77f310d67b67a2f51faea1ed676b858bc5
+'http://http.debian.net/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.1.dsc' gnupg2_2.2.40-1.1.dsc 3832 SHA256:89bdffd4176066d37fb5d250a1e5512c428529d10f13413a12893f86a757697f
 'http://http.debian.net/debian/pool/main/g/gnupg2/gnupg2_2.2.40.orig.tar.bz2' gnupg2_2.2.40.orig.tar.bz2 7301631 SHA256:1164b29a75e8ab93ea15033300149e1872a7ef6bdda3d7c78229a735f8204c28
 'http://http.debian.net/debian/pool/main/g/gnupg2/gnupg2_2.2.40.orig.tar.bz2.asc' gnupg2_2.2.40.orig.tar.bz2.asc 228 SHA256:3907dc165299cd53c0b4aec862323c3bce6037c411600ec87dc5eed7a55eba4a
-'http://http.debian.net/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.debian.tar.xz' gnupg2_2.2.40-1.debian.tar.xz 62220 SHA256:b398070b061dcf035da6e97576512ab7a0e13a48ab0364850be67a439e519706
+'http://http.debian.net/debian/pool/main/g/gnupg2/gnupg2_2.2.40-1.1.debian.tar.xz' gnupg2_2.2.40-1.1.debian.tar.xz 62368 SHA256:356b7c86afdbaab286c5b92816cd1e1f4616cb67d22407c616618ef4d1680a9b
 ```
 
 ### `dpkg` source package: `gnutls28=3.7.9-1`
@@ -2394,20 +2394,13 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `Unicode-data`
 - `Xen-interface`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=6.1.15-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.15-1.dsc' linux_6.1.15-1.dsc 276923 SHA256:8c54b120a93c1a8003c22e19e62e644ce9fd576c658f1f1d8c495ec8e28cf78d
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.15.orig.tar.xz' linux_6.1.15.orig.tar.xz 137262704 SHA256:87a40972c5b572a71f59f285cfe5751952ba3b4b1c2e7343523131ff940c753d
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.15-1.debian.tar.xz' linux_6.1.15-1.debian.tar.xz 1421552 SHA256:1486d33a1d6a3daf5bc160cfd1ba01f873598ab5252f86fb2b7b069a990c82d8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/linux/6.1.15-1/
 
-- https://sources.debian.net/src/linux/6.1.15-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/6.1.15-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/6.1.15-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `littler=0.3.17-1`
 
@@ -2505,10 +2498,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris mgcv=1.8-41-1
-'http://http.debian.net/debian/pool/main/m/mgcv/mgcv_1.8-41-1.dsc' mgcv_1.8-41-1.dsc 1833 SHA256:636a642de933e2b15c3910cc3dc231bef6243272185f024879eefab0cd5d9a46
-'http://http.debian.net/debian/pool/main/m/mgcv/mgcv_1.8-41.orig.tar.gz' mgcv_1.8-41.orig.tar.gz 1072476 SHA256:2f7a030fe2be75edef6bd96147df46c2262f3cdc44c383d8f82b401df44fe690
-'http://http.debian.net/debian/pool/main/m/mgcv/mgcv_1.8-41-1.debian.tar.xz' mgcv_1.8-41-1.debian.tar.xz 5456 SHA256:04e21c268348d0c834057051b46a7bce8b3ec98aa215c985eaa178f32a92aa16
+'http://deb.debian.org/debian/pool/main/m/mgcv/mgcv_1.8-41-1.dsc' mgcv_1.8-41-1.dsc 1833 SHA256:636a642de933e2b15c3910cc3dc231bef6243272185f024879eefab0cd5d9a46
+'http://deb.debian.org/debian/pool/main/m/mgcv/mgcv_1.8-41.orig.tar.gz' mgcv_1.8-41.orig.tar.gz 1072476 SHA256:2f7a030fe2be75edef6bd96147df46c2262f3cdc44c383d8f82b401df44fe690
+'http://deb.debian.org/debian/pool/main/m/mgcv/mgcv_1.8-41-1.debian.tar.xz' mgcv_1.8-41-1.debian.tar.xz 5456 SHA256:04e21c268348d0c834057051b46a7bce8b3ec98aa215c985eaa178f32a92aa16
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/mgcv/1.8-41-1/ (for browsing the source)
+- https://sources.debian.net/src/mgcv/1.8-41-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mgcv/1.8-41-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mpclib3=1.3.1-1`
 
@@ -3394,10 +3393,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris sysvinit=3.06-2
-'http://http.debian.net/debian/pool/main/s/sysvinit/sysvinit_3.06-2.dsc' sysvinit_3.06-2.dsc 2359 SHA256:1f0d7c230727b4d0253c9085fac872e3e915b4c226220c6a67a658bd1d016291
-'http://http.debian.net/debian/pool/main/s/sysvinit/sysvinit_3.06.orig.tar.gz' sysvinit_3.06.orig.tar.gz 466092 SHA256:233d784ca152ce2b4b42a0723948f0cd2d36d4eae5acb9dab1457c1dd85b1a66
-'http://http.debian.net/debian/pool/main/s/sysvinit/sysvinit_3.06-2.debian.tar.xz' sysvinit_3.06-2.debian.tar.xz 133592 SHA256:562e71d3f189221e910e8e25959e5dcbbea6a892d5cbfad24c5a336efa96c4e0
+'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.06-2.dsc' sysvinit_3.06-2.dsc 2359 SHA256:1f0d7c230727b4d0253c9085fac872e3e915b4c226220c6a67a658bd1d016291
+'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.06.orig.tar.gz' sysvinit_3.06.orig.tar.gz 466092 SHA256:233d784ca152ce2b4b42a0723948f0cd2d36d4eae5acb9dab1457c1dd85b1a66
+'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.06-2.debian.tar.xz' sysvinit_3.06-2.debian.tar.xz 133592 SHA256:562e71d3f189221e910e8e25959e5dcbbea6a892d5cbfad24c5a336efa96c4e0
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/sysvinit/3.06-2/ (for browsing the source)
+- https://sources.debian.net/src/sysvinit/3.06-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sysvinit/3.06-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1`
 
