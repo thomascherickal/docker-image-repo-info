@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ba519c213c411b11ce57576af792d48625e9d7bbc2388be00bc49f989fbbadae`
-- Created: `2023-03-28T05:01:15.174920301Z`
-- Virtual Size: ~ 144.01 Mb  
+- Image ID: `sha256:ff2e2f16d8068a4b5120818640b70059691a6198cd0739755e5cd02edbf6d176`
+- Created: `2023-03-30T04:51:32.40320654Z`
+- Virtual Size: ~ 138.53 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -231,16 +231,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.87.0-r1 description:
+curl-7.88.1-r1 description:
 URL retrival utility and library
 
-curl-7.87.0-r1 webpage:
+curl-7.88.1-r1 webpage:
 https://curl.se/
 
-curl-7.87.0-r1 installed size:
+curl-7.88.1-r1 installed size:
 264 KiB
 
-curl-7.87.0-r1 license:
+curl-7.88.1-r1 license:
 curl
 
 ```
@@ -350,16 +350,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.0.8-r1 description:
+libcrypto3-3.0.8-r3 description:
 Crypto library from openssl
 
-libcrypto3-3.0.8-r1 webpage:
+libcrypto3-3.0.8-r3 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.0.8-r1 installed size:
+libcrypto3-3.0.8-r3 installed size:
 4108 KiB
 
-libcrypto3-3.0.8-r1 license:
+libcrypto3-3.0.8-r3 license:
 Apache-2.0
 
 ```
@@ -503,16 +503,16 @@ ISC
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.0.8-r1 description:
+libssl3-3.0.8-r3 description:
 SSL shared libraries
 
-libssl3-3.0.8-r1 webpage:
+libssl3-3.0.8-r3 webpage:
 https://www.openssl.org/
 
-libssl3-3.0.8-r1 installed size:
+libssl3-3.0.8-r3 installed size:
 608 KiB
 
-libssl3-3.0.8-r1 license:
+libssl3-3.0.8-r3 license:
 Apache-2.0
 
 ```
@@ -809,16 +809,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-3.0.8-r0 description:
+openssl-3.0.8-r3 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-3.0.8-r0 webpage:
+openssl-3.0.8-r3 webpage:
 https://www.openssl.org/
 
-openssl-3.0.8-r0 installed size:
+openssl-3.0.8-r3 installed size:
 868 KiB
 
-openssl-3.0.8-r0 license:
+openssl-3.0.8-r3 license:
 Apache-2.0
 
 ```
@@ -894,16 +894,16 @@ GPL-2.0-only
 ### `apk` package: `tar`
 
 ```console
-tar-1.34-r1 description:
+tar-1.34-r2 description:
 Utility used to store, backup, and transport files
 
-tar-1.34-r1 webpage:
+tar-1.34-r2 webpage:
 https://www.gnu.org/software/tar/
 
-tar-1.34-r1 installed size:
+tar-1.34-r2 installed size:
 488 KiB
 
-tar-1.34-r1 license:
+tar-1.34-r2 license:
 GPL-3.0-or-later
 
 ```
@@ -911,16 +911,16 @@ GPL-3.0-or-later
 ### `apk` package: `tzdata`
 
 ```console
-tzdata-2023b-r1 description:
+tzdata-2023c-r0 description:
 Timezone data
 
-tzdata-2023b-r1 webpage:
+tzdata-2023c-r0 webpage:
 https://www.iana.org/time-zones
 
-tzdata-2023b-r1 installed size:
+tzdata-2023c-r0 installed size:
 3068 KiB
 
-tzdata-2023b-r1 license:
+tzdata-2023c-r0 license:
 Public-Domain
 
 ```
