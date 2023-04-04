@@ -1,7 +1,7 @@
 ## `notary:signer-0.7.0`
 
 ```console
-$ docker pull notary@sha256:3ea3cb69a6a813503c6689daed6d81cb392a893b463484d5c939888302fa5ff4
+$ docker pull notary@sha256:406003ab82570040c77414264a95843d3b056ec906dc3a64e0057e24a950e837
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -16,13 +16,13 @@ $ docker pull notary@sha256:3ea3cb69a6a813503c6689daed6d81cb392a893b463484d5c939
 ### `notary:signer-0.7.0` - linux; amd64
 
 ```console
-$ docker pull notary@sha256:0f2bf9479cb96b68dcdaec6d8d80b60d87c2634607602a67ae6280b3d14f452a
+$ docker pull notary@sha256:36d5c10b7fde28f47fce62d458a8398e81195cb9085a9a5afcfe8792e92ae8db
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **7.6 MB (7571285 bytes)**  
+-	Total Size: **7.6 MB (7572717 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5a44bd89ec153013898fbef4675fc6fecd63ebcb330805921f15a61cb9ce69ab`
+-	Image ID: `sha256:a5a03dacf3a641aed14323882cef198c3d6da241e873ed59268098f825d1756e`
 -	Entrypoint: `["entrypoint.sh"]`
 -	Default Command: `["notary-signer","--version"]`
 
@@ -31,31 +31,31 @@ $ docker pull notary@sha256:0f2bf9479cb96b68dcdaec6d8d80b60d87c2634607602a67ae62
 ADD file:970e6b2578ef73457ffed1189e8ba128b0211cabd3174b8c7d3afd8fb58ad614 in / 
 # Wed, 29 Mar 2023 18:19:28 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 RUN adduser -D -H -g "" notary # buildkit
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 EXPOSE map[4444/tcp:{}]
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 EXPOSE map[7899/tcp:{}]
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 ENV INSTALLDIR=/notary/signer
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/notary/signer
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 WORKDIR /notary/signer
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 COPY /notary-signer ./ # buildkit
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 RUN ./notary-signer --version # buildkit
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 COPY ./signer-config.json . # buildkit
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 COPY ./entrypoint.sh . # buildkit
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 USER notary
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 ENTRYPOINT ["entrypoint.sh"]
-# Wed, 29 Mar 2023 20:40:38 GMT
+# Tue, 04 Apr 2023 18:32:09 GMT
 CMD ["notary-signer" "--version"]
 ```
 
@@ -72,21 +72,21 @@ CMD ["notary-signer" "--version"]
 		Last Modified: Wed, 29 Mar 2023 19:32:02 GMT  
 		Size: 148.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a8aabcde76944ad29949574fa85bd40ff75967331889c667388270bb3d9aa7db`  
-		Last Modified: Thu, 30 Mar 2023 03:57:40 GMT  
-		Size: 4.8 MB (4761335 bytes)  
+	-	`sha256:3162af884d4105a755eb0eaecb14228b81920360fc42fdf7484389c692fc9a92`  
+		Last Modified: Tue, 04 Apr 2023 18:52:38 GMT  
+		Size: 4.8 MB (4762756 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:74cf7cd6b50ab33c61022be140d86c687c274e70a626c611ca2d491ec8adf162`  
-		Last Modified: Thu, 30 Mar 2023 03:57:39 GMT  
+	-	`sha256:21466f806fbddbee778d9c699e8a1de7dd4920b00014a19a6bf10214585f9f98`  
+		Last Modified: Tue, 04 Apr 2023 18:52:37 GMT  
 		Size: 92.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b872af879f30f6fb0cbdbaecdff20ceb7ea87a569d66d6d72700892327f4817d`  
-		Last Modified: Thu, 30 Mar 2023 03:57:39 GMT  
-		Size: 349.0 B  
+	-	`sha256:6ea38bb7e276ef7634747a41ca594dc90d953dde8269c78b6ede293baafd7bde`  
+		Last Modified: Tue, 04 Apr 2023 18:52:37 GMT  
+		Size: 353.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dbd1f5bcd19ae46f0fe7dbae2711efc2bc4170f6d348768af3ff9275a23aa698`  
-		Last Modified: Thu, 30 Mar 2023 03:57:39 GMT  
-		Size: 374.0 B  
+	-	`sha256:4b9a1b8810ef4a9ade9f4871d3847a80e805bd0491587276bf2cca651fed662b`  
+		Last Modified: Tue, 04 Apr 2023 18:52:37 GMT  
+		Size: 381.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `notary:signer-0.7.0` - linux; arm variant v6
@@ -168,13 +168,13 @@ CMD ["notary-signer" "--version"]
 ### `notary:signer-0.7.0` - linux; arm64 variant v8
 
 ```console
-$ docker pull notary@sha256:9c970915d52478a188dfc247a8f12792e6085b92a5e30dfcbae1802c118e6a49
+$ docker pull notary@sha256:0fcf82f13d8b2b6fcd735afc36a393df135d47feac65320974799fc96d9ebcaa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **7.1 MB (7101589 bytes)**  
+-	Total Size: **7.1 MB (7103769 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:80691f4f9ede851fb8c362eeb20c7876b995405efd768cdbd18c046a9a339dff`
+-	Image ID: `sha256:aea1cfecae4d2efef3cb3614c16f8712bb6d628cc768a9b11c20ceb04314617d`
 -	Entrypoint: `["entrypoint.sh"]`
 -	Default Command: `["notary-signer","--version"]`
 
@@ -183,31 +183,31 @@ $ docker pull notary@sha256:9c970915d52478a188dfc247a8f12792e6085b92a5e30dfcbae1
 ADD file:a6a2f69b60d7d27bc6e2b9b7e9910dabdc3f5e3702c2345d26a7dc8c603ae595 in / 
 # Wed, 29 Mar 2023 17:39:20 GMT
 CMD ["/bin/sh"]
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 RUN adduser -D -H -g "" notary # buildkit
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 EXPOSE map[4444/tcp:{}]
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 EXPOSE map[7899/tcp:{}]
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 ENV INSTALLDIR=/notary/signer
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/notary/signer
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 WORKDIR /notary/signer
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 COPY /notary-signer ./ # buildkit
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 RUN ./notary-signer --version # buildkit
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 COPY ./signer-config.json . # buildkit
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 COPY ./entrypoint.sh . # buildkit
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 USER notary
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 ENTRYPOINT ["entrypoint.sh"]
-# Thu, 30 Mar 2023 04:03:56 GMT
+# Tue, 04 Apr 2023 18:31:29 GMT
 CMD ["notary-signer" "--version"]
 ```
 
@@ -224,33 +224,33 @@ CMD ["notary-signer" "--version"]
 		Last Modified: Wed, 29 Mar 2023 21:25:38 GMT  
 		Size: 149.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:42ef1b8fe35ed915c089fc44fbf2c8571200bc911793a779ac05f81d8ac06e77`  
-		Last Modified: Thu, 30 Mar 2023 07:47:47 GMT  
-		Size: 4.4 MB (4390084 bytes)  
+	-	`sha256:15ded91381c6b10246e8fe33e83d363b0b8989c23c3300cdb0011578847230a4`  
+		Last Modified: Tue, 04 Apr 2023 18:51:12 GMT  
+		Size: 4.4 MB (4392261 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4562d6ddf1199ce724325b4ca8443047244166b5c25ce61a3cd6cdd1796a20e7`  
-		Last Modified: Thu, 30 Mar 2023 07:47:46 GMT  
+	-	`sha256:81fdff19ed1adf1e41ddc030af19dd548c16c0fb71a13bd886d31baf1155cb50`  
+		Last Modified: Tue, 04 Apr 2023 18:51:11 GMT  
 		Size: 92.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c9c3fbb1d63c193db2abe041dfa66b797274e44935438008359e216222e5e22`  
-		Last Modified: Thu, 30 Mar 2023 07:47:46 GMT  
-		Size: 354.0 B  
+	-	`sha256:354cb6183cd1e5f3260e888b2fa003d25601630afd351a6ccc02109f1fc1db6d`  
+		Last Modified: Tue, 04 Apr 2023 18:51:11 GMT  
+		Size: 356.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:28ecc8ddf6e36fe1f9188496e2a317b40ef4bba1e52f235295693808ae4d1b6d`  
-		Last Modified: Thu, 30 Mar 2023 07:47:46 GMT  
-		Size: 381.0 B  
+	-	`sha256:ed5532397d492b525c603a77b1872616c6e6d9f6d0d040416ac98e8d63f2ca37`  
+		Last Modified: Tue, 04 Apr 2023 18:51:11 GMT  
+		Size: 382.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `notary:signer-0.7.0` - linux; 386
 
 ```console
-$ docker pull notary@sha256:4abeddf0514a353212971d22dac3dcd0f362eb5673c5dee566a64a66dd0112f2
+$ docker pull notary@sha256:bee5c7dc5937c6037312775c3a6251b8033bea7daca2e4f3d0081f4268be62fc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **7.4 MB (7388858 bytes)**  
+-	Total Size: **7.4 MB (7391088 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:86e928c18ae2b7afcf2dea0e43582ea72f94f386a85415c22902a8b67b189c34`
+-	Image ID: `sha256:3774259b3895c88596a21a9a8cac6cde603b64ec9805b266f98d03488652d54a`
 -	Entrypoint: `["entrypoint.sh"]`
 -	Default Command: `["notary-signer","--version"]`
 
@@ -259,31 +259,31 @@ $ docker pull notary@sha256:4abeddf0514a353212971d22dac3dcd0f362eb5673c5dee566a6
 ADD file:c9d37b1a7eee54b1a8c1ebde284829510ec289f7b7db2c16059b26f01b416fe0 in / 
 # Wed, 29 Mar 2023 17:38:33 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 RUN adduser -D -H -g "" notary # buildkit
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 EXPOSE map[4444/tcp:{}]
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 EXPOSE map[7899/tcp:{}]
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 ENV INSTALLDIR=/notary/signer
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/notary/signer
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 WORKDIR /notary/signer
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 COPY /notary-signer ./ # buildkit
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 RUN ./notary-signer --version # buildkit
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 COPY ./signer-config.json . # buildkit
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 COPY ./entrypoint.sh . # buildkit
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 USER notary
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 ENTRYPOINT ["entrypoint.sh"]
-# Wed, 29 Mar 2023 18:08:35 GMT
+# Tue, 04 Apr 2023 18:38:09 GMT
 CMD ["notary-signer" "--version"]
 ```
 
@@ -300,33 +300,33 @@ CMD ["notary-signer" "--version"]
 		Last Modified: Wed, 29 Mar 2023 20:02:14 GMT  
 		Size: 151.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a22b0bd116bf381f3b9b420f35e74669226ff0912664b3b7952bba9201986614`  
-		Last Modified: Wed, 29 Mar 2023 20:02:15 GMT  
-		Size: 4.6 MB (4575891 bytes)  
+	-	`sha256:46856f637b7a93b957c804e390f837a183801519d18fc07bf5aa637df2ce30b7`  
+		Last Modified: Tue, 04 Apr 2023 18:59:07 GMT  
+		Size: 4.6 MB (4578107 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ea7b49dc7a7633c397ab80131dd1867ed00c1370efa343eda4422598ee41df9`  
-		Last Modified: Wed, 29 Mar 2023 20:02:14 GMT  
+	-	`sha256:912db02b25431d058cb884e1a4b8b417675456b236ccd6f7dea77dd6576e832c`  
+		Last Modified: Tue, 04 Apr 2023 18:59:06 GMT  
 		Size: 92.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c35c4944b89fc1336c998b8f12403111ec969b6da3225128d43e94385d8af41b`  
-		Last Modified: Wed, 29 Mar 2023 20:02:14 GMT  
-		Size: 350.0 B  
+	-	`sha256:c2cd65501f2bc844c4b770e4eacca5f926e2d6be106b2af3e6be140ec06d0c32`  
+		Last Modified: Tue, 04 Apr 2023 18:59:06 GMT  
+		Size: 357.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3ba9413a1ce459d7b222d8aa6ca7717f479471558ba35680a895fa2e0f51c372`  
-		Last Modified: Wed, 29 Mar 2023 20:02:14 GMT  
-		Size: 375.0 B  
+	-	`sha256:314bf5225f62fb57bacf859ead575260ab141868300e9786e1cd8fdff6472b08`  
+		Last Modified: Tue, 04 Apr 2023 18:59:06 GMT  
+		Size: 382.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `notary:signer-0.7.0` - linux; ppc64le
 
 ```console
-$ docker pull notary@sha256:e80460b7847b5104d54eeefe9c396c797eaf2dc97de96e661ebc62387f50f834
+$ docker pull notary@sha256:1bd32d013e4ee806d728d076008dae95de9e5ca1c9bf529db71ce43c761c12fb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **7.1 MB (7102948 bytes)**  
+-	Total Size: **7.1 MB (7103340 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:035c16fe2b95fd82b280c1c25a1e6223084b277faee39fe5000e649efe3a7c8d`
+-	Image ID: `sha256:07348a6922db2deaff97e4d1ad35de2caa2f8f3aad997dd77d49bfea8b68079e`
 -	Entrypoint: `["entrypoint.sh"]`
 -	Default Command: `["notary-signer","--version"]`
 
@@ -335,31 +335,31 @@ $ docker pull notary@sha256:e80460b7847b5104d54eeefe9c396c797eaf2dc97de96e661ebc
 ADD file:00a20a25a46ff8ebd9bc78b5b8c6fc5b1dc8ae73d5a42048fa5769a2b2e717c7 in / 
 # Wed, 29 Mar 2023 18:16:34 GMT
 CMD ["/bin/sh"]
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 RUN adduser -D -H -g "" notary # buildkit
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 EXPOSE map[4444/tcp:{}]
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 EXPOSE map[7899/tcp:{}]
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 ENV INSTALLDIR=/notary/signer
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/notary/signer
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 WORKDIR /notary/signer
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 COPY /notary-signer ./ # buildkit
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 RUN ./notary-signer --version # buildkit
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 COPY ./signer-config.json . # buildkit
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 COPY ./entrypoint.sh . # buildkit
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 USER notary
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 ENTRYPOINT ["entrypoint.sh"]
-# Thu, 30 Mar 2023 05:28:15 GMT
+# Tue, 04 Apr 2023 18:38:42 GMT
 CMD ["notary-signer" "--version"]
 ```
 
@@ -376,33 +376,33 @@ CMD ["notary-signer" "--version"]
 		Last Modified: Wed, 29 Mar 2023 22:35:51 GMT  
 		Size: 151.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0e72f2c8014af8ab3b9f3a9591ef0a90a6fb4837336ec44f3298d42b96110717`  
-		Last Modified: Thu, 30 Mar 2023 08:44:31 GMT  
-		Size: 4.3 MB (4296110 bytes)  
+	-	`sha256:0ff1714e341c85dd971ba41d74bdaa073d525ccbf8c33cd6d3467a1699212201`  
+		Last Modified: Tue, 04 Apr 2023 19:00:02 GMT  
+		Size: 4.3 MB (4296501 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b9db734178eb8ea3db31ccadbc4ad3d43474baa0105e55b6a738b4901341060e`  
-		Last Modified: Thu, 30 Mar 2023 08:44:30 GMT  
+	-	`sha256:7034896014762380cb09a2ba85d5e418a6b40e06496d7a3b0fc3c9aa6ff60a5f`  
+		Last Modified: Tue, 04 Apr 2023 19:00:01 GMT  
 		Size: 92.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3f3b63d984876e04a0b660bc96b526082e98e4876b9789f3245e7a56166b24f8`  
-		Last Modified: Thu, 30 Mar 2023 08:44:30 GMT  
-		Size: 355.0 B  
+	-	`sha256:0a292ccb70d0c5d4c4be697b830a2ac21033613d93dc32e7e068c06cdf83b94b`  
+		Last Modified: Tue, 04 Apr 2023 19:00:01 GMT  
+		Size: 357.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:512b5cb89352a8c198c73b07a82156513cf7eff2305b9f597e6d2f546ad40e73`  
-		Last Modified: Thu, 30 Mar 2023 08:44:30 GMT  
-		Size: 383.0 B  
+	-	`sha256:b2b686f2dafaa4a0757515ba98efc1351c5ec1e1e277ed9adef82ca916037300`  
+		Last Modified: Tue, 04 Apr 2023 19:00:01 GMT  
+		Size: 382.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `notary:signer-0.7.0` - linux; s390x
 
 ```console
-$ docker pull notary@sha256:28d65546cc44a6dfc83a0e965fad7242b77ff31606c34122fd9265743ed751de
+$ docker pull notary@sha256:334366b6fd0f9b2475e52ae2b224c68c8a0e343854ad92d170b1a5dcec69d716
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **7.2 MB (7200811 bytes)**  
+-	Total Size: **7.2 MB (7202063 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5f8fc7db32d4edb6c9a40d4fa559490156325344b89d7b825906fd577e16c990`
+-	Image ID: `sha256:8426d7573f81420d78a45ca52eeb30a7619203e49f37300559c5dfa07b4d656d`
 -	Entrypoint: `["entrypoint.sh"]`
 -	Default Command: `["notary-signer","--version"]`
 
@@ -411,31 +411,31 @@ $ docker pull notary@sha256:28d65546cc44a6dfc83a0e965fad7242b77ff31606c34122fd92
 ADD file:6c3b2d8f192a3a12e6df8bc7130bbc723b1a39aa71809d23b15cf80bc5135096 in / 
 # Wed, 29 Mar 2023 17:42:02 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 RUN adduser -D -H -g "" notary # buildkit
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 EXPOSE map[4444/tcp:{}]
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 EXPOSE map[7899/tcp:{}]
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 ENV INSTALLDIR=/notary/signer
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/notary/signer
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 WORKDIR /notary/signer
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 COPY /notary-signer ./ # buildkit
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 RUN ./notary-signer --version # buildkit
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 COPY ./signer-config.json . # buildkit
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 COPY ./entrypoint.sh . # buildkit
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 USER notary
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 ENTRYPOINT ["entrypoint.sh"]
-# Wed, 29 Mar 2023 23:05:50 GMT
+# Tue, 04 Apr 2023 18:33:21 GMT
 CMD ["notary-signer" "--version"]
 ```
 
@@ -452,19 +452,19 @@ CMD ["notary-signer" "--version"]
 		Last Modified: Wed, 29 Mar 2023 19:02:18 GMT  
 		Size: 151.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3b66ebc5bf43547a0b3d18343a506b2fe82ff53f2f13f07ad02fb4a5ebe03bb`  
-		Last Modified: Thu, 30 Mar 2023 05:00:04 GMT  
-		Size: 4.6 MB (4605266 bytes)  
+	-	`sha256:6d65ac856817c57ca3a19cb326e4cde24a9e96e836b9e0fa903a1501aa7965dd`  
+		Last Modified: Tue, 04 Apr 2023 18:52:59 GMT  
+		Size: 4.6 MB (4606507 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4daf0f3398223518d55aae06f1ddd2509deab4fd21967079f6b5045ec8fbcc62`  
-		Last Modified: Thu, 30 Mar 2023 05:00:03 GMT  
-		Size: 90.0 B  
+	-	`sha256:3e7e63347de19b00def29df66f6b46ab2d2cc1087eeedeb1481df8e3d1e0b4be`  
+		Last Modified: Tue, 04 Apr 2023 18:52:58 GMT  
+		Size: 92.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0b1986357c23063241c28fc4601b777e64b9afee96a2b157d910977c62964636`  
-		Last Modified: Thu, 30 Mar 2023 05:00:03 GMT  
-		Size: 353.0 B  
+	-	`sha256:5a05482ca17b13a4443a2e11ff755118c6c2146cceb13673dafe958752e57aaf`  
+		Last Modified: Tue, 04 Apr 2023 18:52:58 GMT  
+		Size: 357.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6e01526cc6d8dc2c2d59834a29982b132720ac4f5ada52ea826bd120ef95dcb0`  
-		Last Modified: Thu, 30 Mar 2023 05:00:03 GMT  
-		Size: 377.0 B  
+	-	`sha256:79085d620222e4c4888f18334b2b3a46ab823fe7f8c4371127f020681195a0db`  
+		Last Modified: Tue, 04 Apr 2023 18:52:58 GMT  
+		Size: 382.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
