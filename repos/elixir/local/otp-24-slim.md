@@ -1,10 +1,10 @@
-# `elixir:1.14.3-otp-24-slim`
+# `elixir:1.14.4-otp-24-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:be6c49fb22397a32ba7c8461b8d904d6bfc57e21d627a9474b208af540e0fa6e`
-- Created: `2023-03-23T22:38:28.802294627Z`
-- Virtual Size: ~ 290.46 Mb  
+- Image ID: `sha256:5ac4314406ac3ad326b154cdec756fe9a9a238878215b81dd2cca5aeb550ebc8`
+- Created: `2023-04-04T00:18:39.932466415Z`
+- Virtual Size: ~ 290.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["iex"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `OTP_VERSION=24.3.4.10`
   - `REBAR3_VERSION=3.20.0`
-  - `ELIXIR_VERSION=v1.14.3`
+  - `ELIXIR_VERSION=v1.14.4`
   - `LANG=C.UTF-8`
 - Labels:
   - `org.opencontainers.image.version=24.3.4.10`
