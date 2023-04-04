@@ -1,7 +1,7 @@
 ## `mediawiki:stable-fpm-alpine`
 
 ```console
-$ docker pull mediawiki@sha256:6d456ebab092231d6d796451b79355c356c974e25c097813e8f894054cec4a35
+$ docker pull mediawiki@sha256:c3fe41f1d3b089cb8c5e3d5709259af9f95662114ccbeec2bf35fdbc2c390a00
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -306,14 +306,14 @@ CMD ["php-fpm"]
 ### `mediawiki:stable-fpm-alpine` - linux; arm variant v7
 
 ```console
-$ docker pull mediawiki@sha256:34203c3a1a01aad2e64cd5270cb56b7066046288bbc6a7112d2ff68c87e7ed55
+$ docker pull mediawiki@sha256:cb8424b9b66537655a1da7f795586d53851b12cadb571d45d36860ee534eb6e7
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **146.0 MB (145950337 bytes)**  
+-	Total Size: **146.0 MB (146031642 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c4ca829ddb55f163a054141faa4ee868ec3ab31243fe3e2e2a2109c6df4587fd`
+-	Image ID: `sha256:f0f85ffd6e57a15e6592b01518df1642b9675cc082f05d1dfed8040d8ccdc975`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -378,11 +378,11 @@ RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_
 RUN set -eux; 	mkdir -p /var/www/data; 	chown -R www-data:www-data /var/www/data
 # Fri, 31 Mar 2023 23:57:24 GMT
 ENV MEDIAWIKI_MAJOR_VERSION=1.39
-# Fri, 31 Mar 2023 23:57:24 GMT
-ENV MEDIAWIKI_VERSION=1.39.2
-# Fri, 31 Mar 2023 23:57:41 GMT
+# Tue, 04 Apr 2023 00:48:03 GMT
+ENV MEDIAWIKI_VERSION=1.39.3
+# Tue, 04 Apr 2023 00:48:20 GMT
 RUN set -eux; 	apk add --no-cache --virtual .fetch-deps 		bzip2 		gnupg 	; 		curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 		441276E9CCD15F44F6D97D18C119E1A64D70938E 		F7F780D82EBFB8A56556E7EE82403E59F9F8CD79 		1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 	; 	gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; 	tar -x --strip-components=1 -f mediawiki.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; 	chown -R www-data:www-data extensions skins cache images; 		apk del .fetch-deps
-# Fri, 31 Mar 2023 23:57:42 GMT
+# Tue, 04 Apr 2023 00:48:22 GMT
 CMD ["php-fpm"]
 ```
 
@@ -443,9 +443,9 @@ CMD ["php-fpm"]
 		Last Modified: Fri, 31 Mar 2023 23:59:49 GMT  
 		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19441235865d049e4f57cdb58ca1e11367ced7546fd207ec11cf969ed6445206`  
-		Last Modified: Sat, 01 Apr 2023 00:00:04 GMT  
-		Size: 56.1 MB (56061115 bytes)  
+	-	`sha256:42406ed42030f88699a739c2ea6967e278f6193566fdadff57d6823754dc630d`  
+		Last Modified: Tue, 04 Apr 2023 00:53:58 GMT  
+		Size: 56.1 MB (56142420 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mediawiki:stable-fpm-alpine` - linux; arm64 variant v8
@@ -596,14 +596,14 @@ CMD ["php-fpm"]
 ### `mediawiki:stable-fpm-alpine` - linux; 386
 
 ```console
-$ docker pull mediawiki@sha256:0b8d295c14e4523fd7dd69135271b8ca291dba3867251f74589c46d18b91f430
+$ docker pull mediawiki@sha256:42c676124ff6857a3e7cb8eafcfaf103ece3a5324b57f6263c971a95c43a2d47
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **155.7 MB (155691325 bytes)**  
+-	Total Size: **155.8 MB (155772146 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:35231a3d2591a305513859fbaf5ae24aa7a7dd0e398e7254bc6421e93729d0f6`
+-	Image ID: `sha256:c3b746b1f1e2b39ec8e7d34f1dd9fb3548eb1b82a83e7ae7eefbf2a293d2ecd7`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -668,11 +668,11 @@ RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_
 RUN set -eux; 	mkdir -p /var/www/data; 	chown -R www-data:www-data /var/www/data
 # Thu, 30 Mar 2023 02:14:04 GMT
 ENV MEDIAWIKI_MAJOR_VERSION=1.39
-# Thu, 30 Mar 2023 02:14:05 GMT
-ENV MEDIAWIKI_VERSION=1.39.2
-# Thu, 30 Mar 2023 02:14:23 GMT
+# Tue, 04 Apr 2023 00:58:45 GMT
+ENV MEDIAWIKI_VERSION=1.39.3
+# Tue, 04 Apr 2023 00:59:03 GMT
 RUN set -eux; 	apk add --no-cache --virtual .fetch-deps 		bzip2 		gnupg 	; 		curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 		441276E9CCD15F44F6D97D18C119E1A64D70938E 		F7F780D82EBFB8A56556E7EE82403E59F9F8CD79 		1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 	; 	gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; 	tar -x --strip-components=1 -f mediawiki.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; 	chown -R www-data:www-data extensions skins cache images; 		apk del .fetch-deps
-# Thu, 30 Mar 2023 02:14:24 GMT
+# Tue, 04 Apr 2023 00:59:04 GMT
 CMD ["php-fpm"]
 ```
 
@@ -733,9 +733,9 @@ CMD ["php-fpm"]
 		Last Modified: Thu, 30 Mar 2023 02:17:41 GMT  
 		Size: 169.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9e241d32f59d81810b06ecf90fb1e3a18f6f84515a91b07d44e4d31aeb84940f`  
-		Last Modified: Thu, 30 Mar 2023 02:18:01 GMT  
-		Size: 56.1 MB (56061720 bytes)  
+	-	`sha256:74b7af08a67b40ce41240d26770c19e93a6072a589aee8454cd529a0812f85f5`  
+		Last Modified: Tue, 04 Apr 2023 01:03:21 GMT  
+		Size: 56.1 MB (56142541 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mediawiki:stable-fpm-alpine` - linux; ppc64le

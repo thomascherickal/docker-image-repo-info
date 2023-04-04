@@ -1,7 +1,7 @@
 ## `mediawiki:stable`
 
 ```console
-$ docker pull mediawiki@sha256:b7f354b7980216767e2fe00053ca1848b6de0f5599f538b264c41fbede4c6f61
+$ docker pull mediawiki@sha256:a425da15a75b7f9c69e621bccd311cc0fd501476405dc083e53340e02a42dfda
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -374,14 +374,14 @@ CMD ["apache2-foreground"]
 ### `mediawiki:stable` - linux; arm variant v7
 
 ```console
-$ docker pull mediawiki@sha256:8c049d2f2b13fc6df7ce787c99d3f726a4fa66e958814d380b326dfe66367441
+$ docker pull mediawiki@sha256:b11f21dcd104b1152456f3d3d11a63488a67b1202b33ee77e7a38e83c3517eca
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **228.9 MB (228939597 bytes)**  
+-	Total Size: **229.0 MB (229031698 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:066e6a191bfa9f69bbf0665fca7c7eb2684deae0fc6eb54acd6f40ae4329b6bb`
+-	Image ID: `sha256:b04fe4857b5b0f82be2a0588a645bdcdf9187bcbe5d6b74e636e400a32258092`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -460,11 +460,11 @@ RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_
 RUN set -eux; 	mkdir -p /var/www/data; 	chown -R www-data:www-data /var/www/data
 # Tue, 28 Mar 2023 07:12:46 GMT
 ENV MEDIAWIKI_MAJOR_VERSION=1.39
-# Tue, 28 Mar 2023 07:12:47 GMT
-ENV MEDIAWIKI_VERSION=1.39.2
-# Tue, 28 Mar 2023 07:13:08 GMT
+# Tue, 04 Apr 2023 00:47:08 GMT
+ENV MEDIAWIKI_VERSION=1.39.3
+# Tue, 04 Apr 2023 00:47:28 GMT
 RUN set -eux; 	fetchDeps=" 		gnupg 		dirmngr 	"; 	apt-get update; 	apt-get install -y --no-install-recommends $fetchDeps; 		curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 		441276E9CCD15F44F6D97D18C119E1A64D70938E 		F7F780D82EBFB8A56556E7EE82403E59F9F8CD79 		1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 	; 	gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; 	tar -x --strip-components=1 -f mediawiki.tar.gz; 	gpgconf --kill all; 	rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; 	chown -R www-data:www-data extensions skins cache images; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 28 Mar 2023 07:13:09 GMT
+# Tue, 04 Apr 2023 00:47:30 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -545,9 +545,9 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 28 Mar 2023 07:21:52 GMT  
 		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d15160b03e1a5d21876e304f5ce37068603efbb3ed0c890e1201b73d2c7dcfb2`  
-		Last Modified: Tue, 28 Mar 2023 07:22:06 GMT  
-		Size: 56.3 MB (56348025 bytes)  
+	-	`sha256:5a480f12af7f5dadd1c2c3d18ba38827a676780688e21623d686f087d15788f3`  
+		Last Modified: Tue, 04 Apr 2023 00:52:59 GMT  
+		Size: 56.4 MB (56440126 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mediawiki:stable` - linux; arm64 variant v8
@@ -732,14 +732,14 @@ CMD ["apache2-foreground"]
 ### `mediawiki:stable` - linux; 386
 
 ```console
-$ docker pull mediawiki@sha256:08dca03d90cad14dc538758e816db0dc70be3c5ea37dc9b46984e5cede383c61
+$ docker pull mediawiki@sha256:95ff799f5f99770c63f131a4b11b6c374d5487bfda2eff2bba3c6983b4f2b700
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.1 MB (269136631 bytes)**  
+-	Total Size: **269.2 MB (269226783 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fd094960ddb1b25a02a34298609f485a0cf4b9934be2e0154234b8f8cda70708`
+-	Image ID: `sha256:f09c3089ff7cf337e223be8963cf30bfbab4ddd41b2c3927ea6fe1bf21b1e0de`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -818,11 +818,11 @@ RUN { 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_
 RUN set -eux; 	mkdir -p /var/www/data; 	chown -R www-data:www-data /var/www/data
 # Tue, 28 Mar 2023 03:21:20 GMT
 ENV MEDIAWIKI_MAJOR_VERSION=1.39
-# Tue, 28 Mar 2023 03:21:20 GMT
-ENV MEDIAWIKI_VERSION=1.39.2
-# Tue, 28 Mar 2023 03:21:44 GMT
+# Tue, 04 Apr 2023 00:57:49 GMT
+ENV MEDIAWIKI_VERSION=1.39.3
+# Tue, 04 Apr 2023 00:58:13 GMT
 RUN set -eux; 	fetchDeps=" 		gnupg 		dirmngr 	"; 	apt-get update; 	apt-get install -y --no-install-recommends $fetchDeps; 		curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz" -o mediawiki.tar.gz; 	curl -fSL "https://releases.wikimedia.org/mediawiki/${MEDIAWIKI_MAJOR_VERSION}/mediawiki-${MEDIAWIKI_VERSION}.tar.gz.sig" -o mediawiki.tar.gz.sig; 	export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 		D7D6767D135A514BEB86E9BA75682B08E8A3FEC4 		441276E9CCD15F44F6D97D18C119E1A64D70938E 		F7F780D82EBFB8A56556E7EE82403E59F9F8CD79 		1D98867E82982C8FE0ABC25F9B69B3109D3BB7B0 	; 	gpg --batch --verify mediawiki.tar.gz.sig mediawiki.tar.gz; 	tar -x --strip-components=1 -f mediawiki.tar.gz; 	gpgconf --kill all; 	rm -r "$GNUPGHOME" mediawiki.tar.gz.sig mediawiki.tar.gz; 	chown -R www-data:www-data extensions skins cache images; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false $fetchDeps; 	rm -rf /var/lib/apt/lists/*
-# Tue, 28 Mar 2023 03:21:45 GMT
+# Tue, 04 Apr 2023 00:58:15 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -903,9 +903,9 @@ CMD ["apache2-foreground"]
 		Last Modified: Tue, 28 Mar 2023 03:34:38 GMT  
 		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6ef1b6c3ca3c18522079031452a27a2f0b9dfae7f02c3e51b76a18e137025a20`  
-		Last Modified: Tue, 28 Mar 2023 03:34:56 GMT  
-		Size: 56.4 MB (56352332 bytes)  
+	-	`sha256:c3ba21005e836390d1b9c877651dd7d761efe5209646dd94fe913cdb2e57fe74`  
+		Last Modified: Tue, 04 Apr 2023 01:02:15 GMT  
+		Size: 56.4 MB (56442484 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mediawiki:stable` - linux; ppc64le
