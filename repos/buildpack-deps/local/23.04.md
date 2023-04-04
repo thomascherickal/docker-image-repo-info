@@ -1293,15 +1293,9 @@ Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnup
 - `TinySCHEME`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnupg2=2.2.40-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.40-1ubuntu2.dsc' gnupg2_2.2.40-1ubuntu2.dsc 3949 SHA512:5024ecb689bd1761b0a339f5a7b84abf09d74d19919eff7e2963c03f778736428c0e9b90a814bbeb1ab76be9f5ea781b3b8b8b2325ead1f7abce371a8fe2080f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.40.orig.tar.bz2' gnupg2_2.2.40.orig.tar.bz2 7301631 SHA512:4c2f5fbf37ba6fbad0045aad23129186963010c673ea0b81801adc4f98efe14d6c7228e22815b6b26307c1fe5bb51cd088aa6a0f06a9325d3c021849ef81c594
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.40.orig.tar.bz2.asc' gnupg2_2.2.40.orig.tar.bz2.asc 228 SHA512:50e8abae322430bf4d3230d0291ca519663a1397fe0d0b8df29076808504b5fea2b984952d6dc51ecc239c12af8ecd5d93b88dd1c6bc0babf0b48a5a840b8ada
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.40-1ubuntu2.debian.tar.xz' gnupg2_2.2.40-1ubuntu2.debian.tar.xz 65128 SHA512:052a619ac71b39e2ed5e8f5390b6fcdbacf3c98247a71a2026980c9640e0f0b717b2053e93c3f57590323f35973110a53fa50d31ec963c840d14dd4de7e87307
-```
 
 ### `dpkg` source package: `gnutls28=3.7.8-5ubuntu1`
 
@@ -3313,14 +3307,9 @@ Licenses: (parsed from: `/usr/share/doc/libmpdec3/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mpdecimal=2.5.1-2build2
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mpdecimal/mpdecimal_2.5.1-2build2.dsc' mpdecimal_2.5.1-2build2.dsc 2026 SHA512:2f930154a94b9b4090f18e848ea94d115304827e351abc9141ef8646b9937a0f93eb2517790b661b0569e22bb498497c03972233e1ace6bdd85c9fc6922e7e70
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mpdecimal/mpdecimal_2.5.1.orig.tar.gz' mpdecimal_2.5.1.orig.tar.gz 2584021 SHA512:710cb5cb71dbcf3e170ca15869c148df0547b848400c6b6dd70c67d9961dbe1190af8fb4d1623bfb0ca2afe44f369a42e311ab5225ed89d4031cb49a3bd70f30
-'http://archive.ubuntu.com/ubuntu/pool/universe/m/mpdecimal/mpdecimal_2.5.1-2build2.debian.tar.xz' mpdecimal_2.5.1-2build2.debian.tar.xz 6860 SHA512:261ab28a609fbcff2b9561f1b1e484500c5652e48bd0abc4f8c5df73b7e00333b80f1fe416c84800690d13d52d2af72d97503dcd0afa61073ee5610d62a52a02
-```
 
 ### `dpkg` source package: `mpfr4=4.2.0-1`
 
@@ -4378,14 +4367,9 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.5.0-4ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.5.0-4ubuntu1.dsc' tiff_4.5.0-4ubuntu1.dsc 2368 SHA512:5c8fbe5fdd6d26aed008fc0826b7ceac9576cc57a5a9d0b26ece228f46a3a28a7f0c824b24da182ce307ea4f020a051cedc032486b48a1929b7a3b4adee51230
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.5.0.orig.tar.bz2' tiff_4.5.0.orig.tar.bz2 2050377 SHA512:75da6117546c2a27b6756209435b22ef8a2ca30d84ca30e09ae50a4911bee786c4010dc03636ed6e31c9b3079313efaa7bb383496d12fff3edfb749e5986ad63
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.5.0-4ubuntu1.debian.tar.xz' tiff_4.5.0-4ubuntu1.debian.tar.xz 23000 SHA512:5a0d7e0140a903f163a625e023a4c21e61bc71aa9d1f930bc5f4115a55fccafb4b66b68988297aaf04ffafc3490b93bebf7055e68d9c28a4ad14c3042f9d0b8e
-```
 
 ### `dpkg` source package: `tzdata=2022g-2ubuntu1`
 
