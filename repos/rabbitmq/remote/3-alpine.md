@@ -1,7 +1,7 @@
 ## `rabbitmq:3-alpine`
 
 ```console
-$ docker pull rabbitmq@sha256:bde186d4711b4a7197bf098cd1c53ae1bb4d889045afe4a1ab003614a31796b1
+$ docker pull rabbitmq@sha256:d0d39bfe44a4c9ac2a844bac226402a0a986e69ddc97047dd0f8f222d3c36a4b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -425,13 +425,13 @@ CMD ["rabbitmq-server"]
 ### `rabbitmq:3-alpine` - linux; 386
 
 ```console
-$ docker pull rabbitmq@sha256:b91fbb95c1352451d90fdf9d7402398307fff400f4b42ef55de0bfe06c705103
+$ docker pull rabbitmq@sha256:0572322502b566f37c65ae3cb16b6b527569fcdb9631eba8c332d6ab4fe559c8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **71.4 MB (71382684 bytes)**  
+-	Total Size: **71.4 MB (71387101 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8a467ad114c0ac2d9079fc8facfccfefa6f9a41cab82f4dbeb1cdc30d9a7a76b`
+-	Image ID: `sha256:188f3afbbeaecb44ab855c241d3f071b0fb6873a56f415d691bfbc8510bfedd0`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["rabbitmq-server"]`
 
@@ -440,45 +440,45 @@ $ docker pull rabbitmq@sha256:b91fbb95c1352451d90fdf9d7402398307fff400f4b42ef55d
 ADD file:61bc44c9685b610d18bddd05d2ea1e57b4313f5f433a0a0b7e5269ec24f108b0 in / 
 # Wed, 29 Mar 2023 17:38:30 GMT
 CMD ["/bin/sh"]
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 COPY /usr/local/bin/ /usr/local/bin/ # buildkit
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 COPY /usr/local/etc/ssl/ /usr/local/etc/ssl/ # buildkit
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 COPY /usr/local/lib/ /usr/local/lib/ # buildkit
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 ENV RABBITMQ_DATA_DIR=/var/lib/rabbitmq
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 RUN set -eux; 	ln -vsf /etc/ssl/certs /etc/ssl/private /usr/local/etc/ssl; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("test -e /usr/local/lib/" $1) == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache --virtual .otp-run-deps $runDeps; 		sed -i.ORIG -e '/\.include.*fips/s/.*/.include \/usr\/local\/etc\/ssl\/fipsmodule.cnf/' 	    -e '/# fips =/s/.*/fips = fips_sect/' /usr/local/etc/ssl/openssl.cnf; 	sed -i.ORIG -e '/^activate/s/^/#/' /usr/local/etc/ssl/fipsmodule.cnf; 	openssl version; 	openssl version -d; 		erl -noshell -eval 'ok = crypto:start(), ok = io:format("~p~n~n~p~n~n", [crypto:supports(), ssl:versions()]), init:stop().'; 		addgroup -g 101 -S rabbitmq; 	adduser -u 100 -S -h "$RABBITMQ_DATA_DIR" -G rabbitmq rabbitmq; 	mkdir -p "$RABBITMQ_DATA_DIR" /etc/rabbitmq /etc/rabbitmq/conf.d /tmp/rabbitmq-ssl /var/log/rabbitmq; 	chown -fR rabbitmq:rabbitmq "$RABBITMQ_DATA_DIR" /etc/rabbitmq /etc/rabbitmq/conf.d /tmp/rabbitmq-ssl /var/log/rabbitmq; 	chmod 1777 "$RABBITMQ_DATA_DIR" /etc/rabbitmq /etc/rabbitmq/conf.d /tmp/rabbitmq-ssl /var/log/rabbitmq; 	ln -sf "$RABBITMQ_DATA_DIR/.erlang.cookie" /root/.erlang.cookie; 		apk add --no-cache 		'su-exec>=0.2' 		bash 		procps 		tzdata # buildkit
-# Wed, 29 Mar 2023 17:38:30 GMT
-ENV RABBITMQ_VERSION=3.11.11
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
+ENV RABBITMQ_VERSION=3.11.13
+# Fri, 31 Mar 2023 23:05:17 GMT
 ENV RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 ENV RABBITMQ_HOME=/opt/rabbitmq
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 ENV PATH=/opt/rabbitmq/sbin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 RUN set -eux; 	mkdir -p /usr/local/src; 		apk add --no-cache --virtual .build-deps 		gnupg 		xz 	; 		RABBITMQ_SOURCE_URL="https://github.com/rabbitmq/rabbitmq-server/releases/download/v$RABBITMQ_VERSION/rabbitmq-server-generic-unix-latest-toolchain-$RABBITMQ_VERSION.tar.xz"; 	RABBITMQ_PATH="/usr/local/src/rabbitmq-$RABBITMQ_VERSION"; 		wget --output-document "$RABBITMQ_PATH.tar.xz.asc" "$RABBITMQ_SOURCE_URL.asc"; 	wget --output-document "$RABBITMQ_PATH.tar.xz" "$RABBITMQ_SOURCE_URL"; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$RABBITMQ_PGP_KEY_ID"; 	gpg --batch --verify "$RABBITMQ_PATH.tar.xz.asc" "$RABBITMQ_PATH.tar.xz"; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mkdir -p "$RABBITMQ_HOME"; 	tar --extract --file "$RABBITMQ_PATH.tar.xz" --directory "$RABBITMQ_HOME" --strip-components 1; 	rm -rf "$RABBITMQ_PATH"*; 	grep -qE '^SYS_PREFIX=\$\{RABBITMQ_HOME\}$' "$RABBITMQ_HOME/sbin/rabbitmq-defaults"; 	sed -i 's/^SYS_PREFIX=.*$/SYS_PREFIX=/' "$RABBITMQ_HOME/sbin/rabbitmq-defaults"; 	grep -qE '^SYS_PREFIX=$' "$RABBITMQ_HOME/sbin/rabbitmq-defaults"; 	chown -R rabbitmq:rabbitmq "$RABBITMQ_HOME"; 		apk del --no-network .build-deps; 		[ ! -e "$RABBITMQ_DATA_DIR/.erlang.cookie" ]; 	su-exec rabbitmq rabbitmqctl help; 	su-exec rabbitmq rabbitmqctl list_ciphers; 	su-exec rabbitmq rabbitmq-plugins list; 	rm "$RABBITMQ_DATA_DIR/.erlang.cookie" # buildkit
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 RUN su-exec rabbitmq rabbitmq-plugins enable --offline rabbitmq_prometheus # buildkit
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 RUN ln -sf /opt/rabbitmq/plugins /plugins # buildkit
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 ENV HOME=/var/lib/rabbitmq
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 VOLUME [/var/lib/rabbitmq]
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 ENV LANG=C.UTF-8 LANGUAGE=C.UTF-8 LC_ALL=C.UTF-8
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 COPY 10-defaults.conf 20-management_agent.disable_metrics_collector.conf /etc/rabbitmq/conf.d/ # buildkit
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 COPY docker-entrypoint.sh /usr/local/bin/ # buildkit
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 EXPOSE map[15691/tcp:{} 15692/tcp:{} 25672/tcp:{} 4369/tcp:{} 5671/tcp:{} 5672/tcp:{}]
-# Wed, 29 Mar 2023 17:38:30 GMT
+# Fri, 31 Mar 2023 23:05:17 GMT
 CMD ["rabbitmq-server"]
 ```
 
@@ -503,25 +503,25 @@ CMD ["rabbitmq-server"]
 		Last Modified: Thu, 30 Mar 2023 01:01:33 GMT  
 		Size: 1.5 MB (1495892 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6bd012d66ea2cbc9a8ac256cd4b5b5439239140498e11be1b8752357205ca146`  
-		Last Modified: Thu, 30 Mar 2023 01:02:01 GMT  
-		Size: 22.9 MB (22917692 bytes)  
+	-	`sha256:6293a870c51c9c9d9faf995f884bde607c897d343bd401a9a937e7f0c7fd1c39`  
+		Last Modified: Tue, 04 Apr 2023 01:23:10 GMT  
+		Size: 22.9 MB (22922105 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bbfeb60e1f2b83b402c84fe5b1a291b43d7480bcb0539ed1c4db45cbba77dfcf`  
-		Last Modified: Thu, 30 Mar 2023 01:01:59 GMT  
+	-	`sha256:744336f538dcdbc1fa093469b75d8f3df3a9f6e760452b04b392ff6727de0f93`  
+		Last Modified: Tue, 04 Apr 2023 01:23:08 GMT  
 		Size: 192.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:99cbe24c885e70278028232da92fd05dd5689854d6c307ca67fa90c6afd0ce2e`  
-		Last Modified: Thu, 30 Mar 2023 01:01:59 GMT  
-		Size: 135.0 B  
+	-	`sha256:e4e94161c28fb8d01db4662d3d6edc55592b69c89571069c04d09028155fc815`  
+		Last Modified: Tue, 04 Apr 2023 01:23:07 GMT  
+		Size: 136.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc802dab7c091d7812ce9fcefb7c02cfccc6be04c973a7977b5631cfe9db891c`  
-		Last Modified: Thu, 30 Mar 2023 01:01:59 GMT  
+	-	`sha256:8ba248362313989e5aaf77d82dbb0d9cc470bf5b1e8e076f1e1b820137d0029b`  
+		Last Modified: Tue, 04 Apr 2023 01:23:08 GMT  
 		Size: 615.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3f59de89fd299ca9d05b969a26b68a879199db6959ca61bb754cec07ebe4129d`  
-		Last Modified: Thu, 30 Mar 2023 01:01:59 GMT  
-		Size: 828.0 B  
+	-	`sha256:11235853caa0d2c831f4841e6fe2bf81f64b5305d7f560559149a035b40855f0`  
+		Last Modified: Tue, 04 Apr 2023 01:23:08 GMT  
+		Size: 831.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rabbitmq:3-alpine` - linux; ppc64le
