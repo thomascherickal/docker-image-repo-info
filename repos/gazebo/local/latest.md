@@ -1104,13 +1104,9 @@ Licenses: (parsed from: `/usr/share/doc/distro-info-data/copyright`)
 
 - `ISC`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris distro-info-data=0.43ubuntu1.11
-'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.43ubuntu1.11.dsc' distro-info-data_0.43ubuntu1.11.dsc 1767 SHA512:c5877eebb9cb3a55d22991b4125ea767d454363525aebcd76b8390d76c4c77fb3790968d33ffd98e560c21506da6229188a19deca9e8f3005673c68334b9c382
-'http://archive.ubuntu.com/ubuntu/pool/main/d/distro-info-data/distro-info-data_0.43ubuntu1.11.tar.xz' distro-info-data_0.43ubuntu1.11.tar.xz 7912 SHA512:c69f7ed97f4b0cf329a04bb86c720c941a9dd2a7f793783b3819f2396256997dcbd3c8d2075a75275b142d74c557f91989076623f0f83fda25d60245c830db95
-```
 
 ### `dpkg` source package: `double-conversion=3.1.5-4ubuntu1`
 
