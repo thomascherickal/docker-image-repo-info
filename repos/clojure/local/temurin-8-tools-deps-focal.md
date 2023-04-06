@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5ea34e0656895b983df21c05878019fae389d1d023bc7051eb9a852648131601`
-- Created: `2023-03-16T20:22:03.299917743Z`
-- Virtual Size: ~ 413.55 Mb  
+- Image ID: `sha256:9bc050ef32ce594068da2473a9008a83e0e1136790439d4291b1d504d28ec8ba`
+- Created: `2023-04-03T23:57:48.654613635Z`
+- Virtual Size: ~ 413.56 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["clj"]`
@@ -15,7 +15,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk8u362-b09`
-  - `CLOJURE_VERSION=1.11.1.1257`
+  - `CLOJURE_VERSION=1.11.1.1267`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=20.04`
@@ -282,10 +282,9 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 Binary Packages:
 
 - `curl=7.68.0-1ubuntu2.16`
-- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.16`
 - `libcurl4:amd64=7.68.0-1ubuntu2.16`
 
-Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
+Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
 - `BSD-3-Clause`
 - `BSD-4-Clause`
@@ -297,6 +296,30 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 **WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
 This is *usually* due to a new package version being released and the old version being removed.
 
+
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.18`
+
+Binary Packages:
+
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.18`
+
+Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`)
+
+- `BSD-3-Clause`
+- `BSD-4-Clause`
+- `ISC`
+- `curl`
+- `other`
+- `public-domain`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.18
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.18.dsc' curl_7.68.0-1ubuntu2.18.dsc 2737 SHA512:1a9aa9b127213eacb633d647066b42499322df142652642cc9146d8d8c9d3adf701fbc9ff85d0476c343b99f99901092af25f570f1c6d4dfb095d5c89d371650
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.18.debian.tar.xz' curl_7.68.0-1ubuntu2.18.debian.tar.xz 63092 SHA512:e4730c22be99e19d7ed0e2b26c52b98e8e8d02cc8a45217aac38a91ebe3f513d11be731df15631a18167b0196b4edaae74fe5153d697c19c1bc3508bbb136513
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -2038,14 +2061,14 @@ $ apt-get source -qq --print-uris python3-defaults=3.8.2-0ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-defaults/python3-defaults_3.8.2-0ubuntu2.tar.gz' python3-defaults_3.8.2-0ubuntu2.tar.gz 138226 SHA256:e4969a54306421ebfd195d0c064935db7c53f9f152d8abaae63da33819235e9a
 ```
 
-### `dpkg` source package: `python3.8=3.8.10-0ubuntu1~20.04.6`
+### `dpkg` source package: `python3.8=3.8.10-0ubuntu1~20.04.7`
 
 Binary Packages:
 
-- `libpython3.8-minimal:amd64=3.8.10-0ubuntu1~20.04.6`
-- `libpython3.8-stdlib:amd64=3.8.10-0ubuntu1~20.04.6`
-- `python3.8=3.8.10-0ubuntu1~20.04.6`
-- `python3.8-minimal=3.8.10-0ubuntu1~20.04.6`
+- `libpython3.8-minimal:amd64=3.8.10-0ubuntu1~20.04.7`
+- `libpython3.8-stdlib:amd64=3.8.10-0ubuntu1~20.04.7`
+- `python3.8=3.8.10-0ubuntu1~20.04.7`
+- `python3.8-minimal=3.8.10-0ubuntu1~20.04.7`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/share/doc/libpython3.8-stdlib/copyright`, `/usr/share/doc/python3.8/copyright`, `/usr/share/doc/python3.8-minimal/copyright`)
 
@@ -2067,9 +2090,14 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.8-minimal/copyright`, `/usr/s
 - `use in source`
 - `without`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris python3.8=3.8.10-0ubuntu1~20.04.7
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1%7e20.04.7.dsc' python3.8_3.8.10-0ubuntu1~20.04.7.dsc 3504 SHA512:bd4dde46c31a4854bb003ff51069fbd7cb25f587f5c9fbfb2cee239d6361aa844801eff8d19565bca083dea8c4919100d5919a3026a9ed582d2e0ccc36b23c11
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10.orig.tar.xz' python3.8_3.8.10.orig.tar.xz 18433456 SHA512:0be69705483ff9692e12048a96180e586f9d84c8d53066629f7fb2389585eb75c0f3506bb8182936e322508f58b71f4d8c6dfebbab9049b31b49da11d3b98e80
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.8/python3.8_3.8.10-0ubuntu1%7e20.04.7.debian.tar.xz' python3.8_3.8.10-0ubuntu1~20.04.7.debian.tar.xz 221092 SHA512:e2a2344f4672bb122931460ec5917d53397cf1340082604d4f32ee61b1362e7a79e8882451c3c057a0a28fcfff6176ca40b118f2276ccb685ab59dee764360e6
+```
 
 ### `dpkg` source package: `readline=8.0-4`
 

@@ -1,24 +1,21 @@
-# `clojure:latest`
+# `clojure:temurin-20-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:db534ba6e15ec9968ad4e0dd3f320edb3678180b240ce8c8865ed4db7ef72e61`
-- Created: `2023-04-03T23:55:49.256017848Z`
-- Virtual Size: ~ 594.24 Mb  
+- Image ID: `sha256:d9f7adc0acd9e482be66f7fc0af928480bb4926b39a6e70a8b4f27e24d2d3cc3`
+- Created: `2023-04-04T00:04:06.616195686Z`
+- Virtual Size: ~ 599.95 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint"]`
 - Command: `["-M","--repl"]`
 - Environment:
-  - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
+  - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/opt/java/openjdk`
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.6+10`
-  - `LEIN_VERSION=2.10.0`
-  - `LEIN_INSTALL=/usr/local/bin/`
-  - `LEIN_ROOT=1`
+  - `JAVA_VERSION=jdk-20+36`
   - `CLOJURE_VERSION=1.11.1.1267`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`

@@ -1,22 +1,24 @@
-# `clojure:temurin-17-alpine`
+# `clojure:temurin-20-lein-2.10.0-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e1a4cb991700fdc962f66582f55ad0086551023ff88eecb8b879aa42aa9c30cb`
-- Created: `2023-04-04T00:00:08.127567565Z`
-- Virtual Size: ~ 393.98 Mb  
+- Image ID: `sha256:f40a9276d5a5282b4d354346beb5767b509bf5391f9b1b20a5cbed62de02c413`
+- Created: `2023-04-04T00:01:39.547873634Z`
+- Virtual Size: ~ 398.16 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint"]`
-- Command: `["-M","--repl"]`
+- Command: `["repl"]`
 - Environment:
-  - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
+  - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/`
   - `JAVA_HOME=/opt/java/openjdk`
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.6+10`
-  - `CLOJURE_VERSION=1.11.1.1267`
+  - `JAVA_VERSION=jdk-20+36`
+  - `LEIN_VERSION=2.10.0`
+  - `LEIN_INSTALL=/usr/local/bin/`
+  - `LEIN_ROOT=1`
 
 ## `apk` (`.apk`-based packages)
 
@@ -156,23 +158,6 @@ GPL-2.0-only
 
 ```
 
-### `apk` package: `ca-certificates`
-
-```console
-ca-certificates-20220614-r4 description:
-Common CA certificates PEM files from Mozilla
-
-ca-certificates-20220614-r4 webpage:
-https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
-
-ca-certificates-20220614-r4 installed size:
-688 KiB
-
-ca-certificates-20220614-r4 license:
-MPL-2.0 AND MIT
-
-```
-
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
@@ -258,23 +243,6 @@ FTL GPL-2.0-or-later
 
 ```
 
-### `apk` package: `git`
-
-```console
-git-2.38.4-r1 description:
-Distributed version control system
-
-git-2.38.4-r1 webpage:
-https://www.git-scm.com/
-
-git-2.38.4-r1 installed size:
-6068 KiB
-
-git-2.38.4-r1 license:
-GPL-2.0-or-later
-
-```
-
 ### `apk` package: `libbz2`
 
 ```console
@@ -323,23 +291,6 @@ libcrypto3-3.0.8-r3 installed size:
 
 libcrypto3-3.0.8-r3 license:
 Apache-2.0
-
-```
-
-### `apk` package: `libcurl`
-
-```console
-libcurl-7.88.1-r1 description:
-The multiprotocol file transfer library
-
-libcurl-7.88.1-r1 webpage:
-https://curl.se/
-
-libcurl-7.88.1-r1 installed size:
-552 KiB
-
-libcurl-7.88.1-r1 license:
-curl
 
 ```
 
@@ -425,23 +376,6 @@ libssl3-3.0.8-r3 installed size:
 
 libssl3-3.0.8-r3 license:
 Apache-2.0
-
-```
-
-### `apk` package: `make`
-
-```console
-make-4.3-r1 description:
-GNU make utility to maintain groups of programs
-
-make-4.3-r1 webpage:
-https://www.gnu.org/software/make
-
-make-4.3-r1 installed size:
-232 KiB
-
-make-4.3-r1 license:
-GPL-3.0-or-later
 
 ```
 
@@ -561,40 +495,6 @@ ncurses-terminfo-base-6.3_p20221119-r0 installed size:
 
 ncurses-terminfo-base-6.3_p20221119-r0 license:
 MIT
-
-```
-
-### `apk` package: `nghttp2-libs`
-
-```console
-nghttp2-libs-1.51.0-r0 description:
-Experimental HTTP/2 client, server and proxy (libraries)
-
-nghttp2-libs-1.51.0-r0 webpage:
-https://nghttp2.org
-
-nghttp2-libs-1.51.0-r0 installed size:
-172 KiB
-
-nghttp2-libs-1.51.0-r0 license:
-MIT
-
-```
-
-### `apk` package: `pcre2`
-
-```console
-pcre2-10.42-r0 description:
-Perl-compatible regular expression library
-
-pcre2-10.42-r0 webpage:
-https://pcre.org/
-
-pcre2-10.42-r0 installed size:
-672 KiB
-
-pcre2-10.42-r0 license:
-BSD-3-Clause
 
 ```
 
