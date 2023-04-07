@@ -53,19 +53,13 @@ Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris adduser=3.131
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.131.dsc' adduser_3.131.dsc 1671 SHA256:7d35ef9de3217237d4a86e5d5e607c3b55c6857a783f2b1067fd210c1a62e63f
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.131.tar.xz' adduser_3.131.tar.xz 267980 SHA256:92e4dee7321c3b6099d7d0a35b96be14109b00dcda3de5e498afaf08a38ccd4b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/adduser/3.131/
 
-- https://sources.debian.net/src/adduser/3.131/ (for browsing the source)
-- https://sources.debian.net/src/adduser/3.131/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/adduser/3.131/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apt=2.6.0`
 
