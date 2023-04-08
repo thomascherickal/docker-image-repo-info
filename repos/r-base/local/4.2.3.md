@@ -1842,19 +1842,13 @@ Licenses: (parsed from: `/usr/share/doc/libpaper-utils/copyright`, `/usr/share/d
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libpaper=1.1.28
-'http://deb.debian.org/debian/pool/main/libp/libpaper/libpaper_1.1.28.dsc' libpaper_1.1.28.dsc 1633 SHA256:298d6347d84ece2f55088e371facc13362c8f4731d80f94c6ad84190309de8b4
-'http://deb.debian.org/debian/pool/main/libp/libpaper/libpaper_1.1.28.tar.gz' libpaper_1.1.28.tar.gz 42356 SHA256:c8bb946ec93d3c2c72bbb1d7257e90172a22a44a07a07fb6b802a5bb2c95fddc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libpaper/1.1.28/
 
-- https://sources.debian.net/src/libpaper/1.1.28/ (for browsing the source)
-- https://sources.debian.net/src/libpaper/1.1.28/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libpaper/1.1.28/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libpng1.6=1.6.39-2`
 
@@ -3658,20 +3652,13 @@ Licenses: (parsed from: `/usr/share/doc/vim-common/copyright`, `/usr/share/doc/v
 - `XPM`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris vim=2:9.0.1000-4
-'http://deb.debian.org/debian/pool/main/v/vim/vim_9.0.1000-4.dsc' vim_9.0.1000-4.dsc 3177 SHA256:710892a773b48b0d00446884f1dea2b8193a26ee422c284580d637293f1f553c
-'http://deb.debian.org/debian/pool/main/v/vim/vim_9.0.1000.orig.tar.xz' vim_9.0.1000.orig.tar.xz 11016004 SHA256:7cad71aa4285f827ea324dbb2453ed88ecb228fe10f258683f78560aa42f6743
-'http://deb.debian.org/debian/pool/main/v/vim/vim_9.0.1000-4.debian.tar.xz' vim_9.0.1000-4.debian.tar.xz 174648 SHA256:721972909d10b1212b93f41110cf3ab1fa405c487f228c59e636f828510a5a92
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/vim/2:9.0.1000-4/
 
-- https://sources.debian.net/src/vim/2:9.0.1000-4/ (for browsing the source)
-- https://sources.debian.net/src/vim/2:9.0.1000-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/vim/2:9.0.1000-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `wget=1.21.3-1`
 
