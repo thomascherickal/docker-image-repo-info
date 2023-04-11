@@ -3123,13 +3123,9 @@ Licenses: (parsed from: `/usr/share/doc/lto-disabled-list/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris lto-disabled-list=38
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lto-disabled-list/lto-disabled-list_38.dsc' lto-disabled-list_38.dsc 1435 SHA512:4d1fd697a403b8b60e663e7580d5057086ff68fc5aacc774560faf2d3aa5391c14191372e51ef01ed4139c58419da1d63bb293756be5c870dba0692c3ec32afd
-'http://archive.ubuntu.com/ubuntu/pool/main/l/lto-disabled-list/lto-disabled-list_38.tar.xz' lto-disabled-list_38.tar.xz 13108 SHA512:104bb8a84f037859d4115cf52f29762ea7e3f25c9214b825b4c9e2d2bc9d24bff09628148de0ef76eb0b58d6ef8b110b046acb6804d52455e8bca5bee1ac723b
-```
 
 ### `dpkg` source package: `lz4=1.9.4-1`
 
@@ -4346,14 +4342,13 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `LGPL-3`
 - `LGPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.34+dfsg-1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1.1.dsc' tar_1.34+dfsg-1.1.dsc 1998 SHA512:ce74c0853397e8d1b047612d5208299ce7e2a635285686245d93f43d3bf2ed980df3c000769ff3c00b946e321273efe57d9a1e8f8ca012e23b1a256a837a1c8d
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg.orig.tar.xz' tar_1.34+dfsg.orig.tar.xz 1981736 SHA512:ec5553c53c4a5f523f872a8095f699c17bf41400fbe2f0f8b45291ccbaf9ac51dea8445c81bd95697f8853c95dcad3250071d23dbbcab857a428ee92e647bde9
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1.1.debian.tar.xz' tar_1.34+dfsg-1.1.debian.tar.xz 20148 SHA512:9b473bd6e3d84fc066e28006dcc33a9542f96ea2469f87987e60a8d1c7d7d190478c597fb76630f799d925b570645469bfda71067e2918d1108ece804b88fb41
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/tar/1.34+dfsg-1.1/
+
 
 ### `dpkg` source package: `tiff=4.5.0-4ubuntu1`
 

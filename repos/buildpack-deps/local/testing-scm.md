@@ -719,21 +719,13 @@ Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/li
 - `Latex2e`
 - `MIT-US-export`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.46.6-1
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6-1.dsc' e2fsprogs_1.46.6-1.dsc 2846 SHA256:33f4e8b8c4ec665e55b8717a311bf7224eb90531e12d7cea0f17ede439425e20
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6.orig.tar.gz' e2fsprogs_1.46.6.orig.tar.gz 9624228 SHA256:bf2fcc7ee5178fe73a3057f7e2aa3fe52e98b7bb461509c67b021ba00f94c6f7
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6.orig.tar.gz.asc' e2fsprogs_1.46.6.orig.tar.gz.asc 488 SHA256:92c5a2a9b0c3634862f72a8ee8d8090f93256185aa0df75d7f10e06b0f095a66
-'http://deb.debian.org/debian/pool/main/e/e2fsprogs/e2fsprogs_1.46.6-1.debian.tar.xz' e2fsprogs_1.46.6-1.debian.tar.xz 86508 SHA256:a846e3acc8271b9d988dd0d292699f3705ccb13d0bdcbb9cee85f38ffe5d05ba
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/e2fsprogs/1.46.6-1/
 
-- https://sources.debian.net/src/e2fsprogs/1.46.6-1/ (for browsing the source)
-- https://sources.debian.net/src/e2fsprogs/1.46.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/e2fsprogs/1.46.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `expat=2.5.0-1`
 
