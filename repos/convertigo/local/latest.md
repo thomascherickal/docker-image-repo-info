@@ -1853,14 +1853,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sudo=1.8.31-1ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.31-1ubuntu1.4.dsc' sudo_1.8.31-1ubuntu1.4.dsc 2088 SHA512:7442d2143a530d5efb9712d1a6966f12cf59a6f544d16d36ce026a107a2ddb6a06f8bc6fb7fa1d9b7e1c2ccdf12a1dda9c08a0a64827eee9abd7d7c9d55207b3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.31.orig.tar.gz' sudo_1.8.31.orig.tar.gz 3350674 SHA512:b9e408a322938c7a712458e9012d8a5f648fba5b23a5057cf5d8372c7f931262595f1575c32c32b9cb1a04af670ff4611e7df48d197e5c4cc038d6b65439a28a
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sudo/sudo_1.8.31-1ubuntu1.4.debian.tar.xz' sudo_1.8.31-1ubuntu1.4.debian.tar.xz 37888 SHA512:526ac2913a2d6ccb01978d5ebe5f7862a43b76b0820633b17f1f1ca2c8a23a1e91841bf3da4688f1f86da7e21242d495d075d5eebc9374b1a524b326e176a08c
-```
 
 ### `dpkg` source package: `systemd=245.4-4ubuntu3.20`
 
@@ -1884,9 +1879,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.20
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.20.dsc' systemd_245.4-4ubuntu3.20.dsc 5132 SHA512:c2abc0869d8e4200d5a3989a1c27a90f39d1c24eb00abfa6471d891f8de190f755e80990614699917893fa9f94028c42f0b939ed31a46c05066ed970928fde5f
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.20.debian.tar.xz' systemd_245.4-4ubuntu3.20.debian.tar.xz 286732 SHA512:604967de8b405dd9a7597640967d29f3dd9fc57f1e7d78cbaf09c5bf010851ef3c826bcf5a3a7e5f1903c2c622d1bdb0f7f48a9bcb3f7d340c0fb221b79dfa75
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.20.dsc' systemd_245.4-4ubuntu3.20.dsc 5132 SHA512:c2abc0869d8e4200d5a3989a1c27a90f39d1c24eb00abfa6471d891f8de190f755e80990614699917893fa9f94028c42f0b939ed31a46c05066ed970928fde5f
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.20.debian.tar.xz' systemd_245.4-4ubuntu3.20.debian.tar.xz 286732 SHA512:604967de8b405dd9a7597640967d29f3dd9fc57f1e7d78cbaf09c5bf010851ef3c826bcf5a3a7e5f1903c2c622d1bdb0f7f48a9bcb3f7d340c0fb221b79dfa75
 ```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
