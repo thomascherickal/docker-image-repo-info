@@ -1,7 +1,7 @@
 ## `buildpack-deps:buster-curl`
 
 ```console
-$ docker pull buildpack-deps@sha256:640a378736a09f13765f1e7113e5082c0e5afbad023a3bc5fd16061f36d68106
+$ docker pull buildpack-deps@sha256:aced785a2513d8727060141156b30a8a3081d95054e1196da909d83c1c6d1203
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -52,39 +52,39 @@ RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get 
 ### `buildpack-deps:buster-curl` - linux; arm variant v7
 
 ```console
-$ docker pull buildpack-deps@sha256:8c8d5fcfcee6383cfd57156be5815dd7406a36072a56878ea28be0754c13d629
+$ docker pull buildpack-deps@sha256:076bc54af0ee3f4cc5de008a85e1e66f5f01d819b9bdf9ed313c1c1b88928e78
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **62.4 MB (62418794 bytes)**  
+-	Total Size: **62.4 MB (62419121 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c27f682abc8f89b3916f2a6eeef8f25431524f50af3bac2d7eccbba6aea38a8b`
+-	Image ID: `sha256:79aebda5e687723c136aae0676cad834f015f5bb039f4857700bf9dba626b13f`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Fri, 24 Mar 2023 23:23:23 GMT
-ADD file:dabb9dad1d8086faa890c6425e759e27f1052d9677aa640dd310def49d8a5bc5 in / 
-# Fri, 24 Mar 2023 23:23:24 GMT
+# Tue, 11 Apr 2023 23:59:53 GMT
+ADD file:3f6ca36ec4fbf50ab85c907c089dbb0618c73393c07a5841b922145b17795552 in / 
+# Tue, 11 Apr 2023 23:59:54 GMT
 CMD ["bash"]
-# Sat, 25 Mar 2023 01:03:31 GMT
+# Wed, 12 Apr 2023 09:37:30 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Sat, 25 Mar 2023 01:03:38 GMT
+# Wed, 12 Apr 2023 09:37:35 GMT
 RUN set -ex; 	if ! command -v gpg > /dev/null; then 		apt-get update; 		apt-get install -y --no-install-recommends 			gnupg 			dirmngr 		; 		rm -rf /var/lib/apt/lists/*; 	fi
 ```
 
 -	Layers:
-	-	`sha256:09b82635e0c9396d28359dea2597b070f13d2e7fbdd1b9cb395b7f7a1cd09d59`  
-		Last Modified: Fri, 24 Mar 2023 23:28:44 GMT  
-		Size: 45.9 MB (45915861 bytes)  
+	-	`sha256:166ef90dbaeab03f451f526d325c57795001e25f10c984c334a82d174b3c554b`  
+		Last Modified: Wed, 12 Apr 2023 00:03:36 GMT  
+		Size: 45.9 MB (45916201 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0be96c3cc707a08b828f7785eb0ec3a8a556466f537aa6de458e43a19667d155`  
-		Last Modified: Fri, 07 Apr 2023 23:18:28 GMT  
-		Size: 7.2 MB (7153944 bytes)  
+	-	`sha256:84460c1688b734c8075a939aae674e32cf7240a0d3a2fa0602a9a9fd472ffe1e`  
+		Last Modified: Wed, 12 Apr 2023 09:46:16 GMT  
+		Size: 7.2 MB (7153935 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e65e90f973c6f54fcc28489eb109e74c36765dd1293a930f62889f9f1ac1f75`  
-		Last Modified: Fri, 07 Apr 2023 23:18:28 GMT  
-		Size: 9.3 MB (9348989 bytes)  
+	-	`sha256:0ed4779654861d62e5bc31eea7bacd2c7bbfdb617dd9dc01e2afd24a4baedf7f`  
+		Last Modified: Wed, 12 Apr 2023 09:46:17 GMT  
+		Size: 9.3 MB (9348985 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:buster-curl` - linux; arm64 variant v8
