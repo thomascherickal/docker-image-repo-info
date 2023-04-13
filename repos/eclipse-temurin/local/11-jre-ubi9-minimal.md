@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d7cb68181edaaf705d3aad71f8394dba8b401b010007e3a5a72357b4cbc8d935`
-- Created: `2023-03-01T00:14:58.816486944Z`
-- Virtual Size: ~ 303.18 Mb  
+- Image ID: `sha256:3f8c07208f49b23c0edffcedf27b4c6384a2a2a5eda37af96e52d6a85b194290`
+- Created: `2023-04-13T00:01:06.185179714Z`
+- Virtual Size: ~ 303.17 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -18,7 +18,7 @@
   - `JAVA_VERSION=jdk-11.0.18+10`
 - Labels:
   - `architecture=x86_64`
-  - `build-date=2023-02-22T09:23:20`
+  - `build-date=2023-04-04T12:58:00`
   - `com.redhat.component=ubi9-minimal-container`
   - `com.redhat.license_terms=https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI`
   - `description=The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.`
@@ -30,9 +30,9 @@
   - `io.openshift.tags=minimal rhel9`
   - `maintainer=Red Hat, Inc.`
   - `name=ubi9-minimal`
-  - `release=1793`
+  - `release=1829`
   - `summary=Provides the latest release of the minimal Red Hat Universal Base Image 9.`
-  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.1.0-1793`
+  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.1.0-1829`
   - `vcs-ref=befaf1f5ec7b874aef2651ee1384d51828504eb9`
   - `vcs-type=git`
   - `vendor=Red Hat, Inc.`
@@ -124,7 +124,7 @@ Licenses (from `rpm --query`): GPLv2+ and LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `curl-minimal-7.76.1-19.el9_1.1.x86_64`
+### `rpm` package: `curl-minimal-7.76.1-19.el9_1.2.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -292,7 +292,7 @@ Licenses (from `rpm --query`): GPLv3+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `gnutls-3.7.6-12.el9_0.x86_64`
+### `rpm` package: `gnutls-3.7.6-18.el9_1.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+ and LGPLv2+
 
@@ -448,7 +448,7 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libcurl-minimal-7.76.1-19.el9_1.1.x86_64`
+### `rpm` package: `libcurl-minimal-7.76.1-19.el9_1.2.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -496,7 +496,7 @@ Licenses (from `rpm --query`): GPLv3+ and GPLv3+ with exceptions and GPLv2+ with
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libgcrypt-1.10.0-8.el9_0.x86_64`
+### `rpm` package: `libgcrypt-1.10.0-10.el9_1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
@@ -892,7 +892,7 @@ Licenses (from `rpm --query`): GPLv3+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `tzdata-2022g-1.el9_1.noarch`
+### `rpm` package: `tzdata-2023c-1.el9.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
