@@ -1801,9 +1801,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.20
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.20.dsc' systemd_245.4-4ubuntu3.20.dsc 5132 SHA512:c2abc0869d8e4200d5a3989a1c27a90f39d1c24eb00abfa6471d891f8de190f755e80990614699917893fa9f94028c42f0b939ed31a46c05066ed970928fde5f
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.20.debian.tar.xz' systemd_245.4-4ubuntu3.20.debian.tar.xz 286732 SHA512:604967de8b405dd9a7597640967d29f3dd9fc57f1e7d78cbaf09c5bf010851ef3c826bcf5a3a7e5f1903c2c622d1bdb0f7f48a9bcb3f7d340c0fb221b79dfa75
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.20.dsc' systemd_245.4-4ubuntu3.20.dsc 5132 SHA512:c2abc0869d8e4200d5a3989a1c27a90f39d1c24eb00abfa6471d891f8de190f755e80990614699917893fa9f94028c42f0b939ed31a46c05066ed970928fde5f
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
+'http://security.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.20.debian.tar.xz' systemd_245.4-4ubuntu3.20.debian.tar.xz 286732 SHA512:604967de8b405dd9a7597640967d29f3dd9fc57f1e7d78cbaf09c5bf010851ef3c826bcf5a3a7e5f1903c2c622d1bdb0f7f48a9bcb3f7d340c0fb221b79dfa75
 ```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
@@ -1857,15 +1857,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022g-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g-0ubuntu0.20.04.1.dsc' tzdata_2022g-0ubuntu0.20.04.1.dsc 2427 SHA512:d4c80e2ed58b98b18199acb1baa7ec4e686c9a732aef6a004b35c2fd796d5aa5ef31b8984fdee6036ef3a0352d17ef44d500a9d0bb095d03d381cef952a1ece9
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g.orig.tar.gz' tzdata_2022g.orig.tar.gz 439731 SHA512:7f79394295e00e3a24ebdbf9af3bc454a65f432a93b517e7e96c7f9db9949f6f5fdae9892a9d3789ff44ae0eb1bfe4744d36976b4624659af951d26414f94e65
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g.orig.tar.gz.asc' tzdata_2022g.orig.tar.gz.asc 833 SHA512:3474a05373ec4397e17133c54708e1f9efd1f1c5e7ee6945f0972809ceda2214cc4962238773818d04ab4f29dcdf0b3e87247ab19795d06a62b8769dd85cf76b
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g-0ubuntu0.20.04.1.debian.tar.xz' tzdata_2022g-0ubuntu0.20.04.1.debian.tar.xz 166596 SHA512:0897a318912c1327850ebd38b32fc9b253b3f146e61f7eeb0070314c6f0ba51deda4aafdf1ef5db8a63d5dc076cdc1bfdecb54bcb2cf98d3bb18524285ceb914
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2020.02.11.4`
 
