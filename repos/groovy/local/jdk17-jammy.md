@@ -1974,15 +1974,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2022g-0ubuntu0.22.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g-0ubuntu0.22.04.1.dsc' tzdata_2022g-0ubuntu0.22.04.1.dsc 2427 SHA512:9532ce1454a6757b42dbaf93e436e5a363720d58d2a4064f1efee2bd15ffb7bb4155a500abea2bba949b04c848148d28d39a08ebd1a4e633ce38ff37720371fa
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g.orig.tar.gz' tzdata_2022g.orig.tar.gz 439731 SHA512:7f79394295e00e3a24ebdbf9af3bc454a65f432a93b517e7e96c7f9db9949f6f5fdae9892a9d3789ff44ae0eb1bfe4744d36976b4624659af951d26414f94e65
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g.orig.tar.gz.asc' tzdata_2022g.orig.tar.gz.asc 833 SHA512:3474a05373ec4397e17133c54708e1f9efd1f1c5e7ee6945f0972809ceda2214cc4962238773818d04ab4f29dcdf0b3e87247ab19795d06a62b8769dd85cf76b
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2022g-0ubuntu0.22.04.1.debian.tar.xz' tzdata_2022g-0ubuntu0.22.04.1.debian.tar.xz 171720 SHA512:edeaa04867819bd3945256d8458f10d0bb73251a7a476a446f9e3c6523b75b67312e88835d404a4ccd4438e6860324794f47515f26327d5861c8f845b0f2eeed
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2021.03.26`
 
