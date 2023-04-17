@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1f1994afc45c9e31c1373d795fa092d9c7af50a462ce83aea4a1df1acc4a9afe`
-- Created: `2023-03-30T04:13:32.515061812Z`
-- Virtual Size: ~ 157.14 Mb  
+- Image ID: `sha256:e1cc961d79012d62fcd81848209f3459bbe52cd91b43145bdf026e5260a137ee`
+- Created: `2023-04-14T19:40:33.168583809Z`
+- Virtual Size: ~ 157.69 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC`
-  - `PHP_VERSION=8.2.4`
-  - `PHP_URL=https://www.php.net/distributions/php-8.2.4.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.2.4.tar.xz.asc`
-  - `PHP_SHA256=bc7bf4ca7ed0dd17647e3ea870b6f062fcb56b243bfdef3f59ff7f94e96176a8`
+  - `PHP_VERSION=8.2.5`
+  - `PHP_URL=https://www.php.net/distributions/php-8.2.5.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.2.5.tar.xz.asc`
+  - `PHP_SHA256=800738c359b7f1e67e40c22713d2d90276bc85ba1c21b43d99edd43c254c5f76`
   - `DRUPAL_VERSION=10.0.7`
 
 ## `apk` (`.apk`-based packages)
@@ -300,16 +300,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.83.1-r6 description:
+libcurl-8.0.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.83.1-r6 webpage:
+libcurl-8.0.1-r0 webpage:
 https://curl.se/
 
-libcurl-7.83.1-r6 installed size:
-516 KiB
+libcurl-8.0.1-r0 installed size:
+548 KiB
 
-libcurl-7.83.1-r6 license:
+libcurl-8.0.1-r0 license:
 curl
 
 ```
