@@ -1,7 +1,7 @@
 ## `clojure:temurin-8-alpine`
 
 ```console
-$ docker pull clojure@sha256:47872e481e8203038c2be9cceebef25fb8ea128381655127ab8bf03e5ec7fb89
+$ docker pull clojure@sha256:8bf72ddb279fbef55aef0942a1746ab1ca8f54062c2612ffe50d2395673697a6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull clojure@sha256:47872e481e8203038c2be9cceebef25fb8ea128381655127ab8
 ### `clojure:temurin-8-alpine` - linux; amd64
 
 ```console
-$ docker pull clojure@sha256:572f79029aab0e228b98c0009dea103db4d1a9dd64add8e069493b0bbb76a6fc
+$ docker pull clojure@sha256:a506b348e2514c1b0c8ee10af42a291d70f08fa895cfa41c2d3a1840cb96e7b7
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **95.3 MB (95266907 bytes)**  
+-	Total Size: **95.3 MB (95267683 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:745abe66a0eca1e2978c65db025d523aca7696988260f816b4fbb2f8b4c894e6`
+-	Image ID: `sha256:4b16c2685954c872d627d61ed2b12d5b86adb5c34294d09c2474588d3d6e6554`
 -	Default Command: `["clj"]`
 
 ```dockerfile
@@ -40,15 +40,15 @@ ENV JAVA_VERSION=jdk8u362-b09
 RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='389c0d2ea59742103f46f1dd6d2c83e43e9f935f3f0485b1f9e74ac4e8c5ce47';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jdk_x64_alpine-linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;
 # Wed, 29 Mar 2023 19:49:04 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Mon, 03 Apr 2023 23:56:09 GMT
-ENV CLOJURE_VERSION=1.11.1.1267
-# Mon, 03 Apr 2023 23:56:09 GMT
+# Mon, 17 Apr 2023 22:20:45 GMT
+ENV CLOJURE_VERSION=1.11.1.1273
+# Mon, 17 Apr 2023 22:20:45 GMT
 WORKDIR /tmp
-# Mon, 03 Apr 2023 23:56:14 GMT
-RUN apk add --no-cache curl bash make git && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "c949c9ba24ee46a2c57c6e6aeff262ebb0ff8112ee2367b3dbabd2f2df75380a *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apk del curl
-# Mon, 03 Apr 2023 23:56:14 GMT
+# Mon, 17 Apr 2023 22:20:50 GMT
+RUN apk add --no-cache curl bash make git && wget https://download.clojure.org/install/linux-install-$CLOJURE_VERSION.sh && sha256sum linux-install-$CLOJURE_VERSION.sh && echo "4938afe6c0690d2a6553141857742d94a7350c02b4fa57cd6a9c1b7cbe66492e *linux-install-$CLOJURE_VERSION.sh" | sha256sum -c - && chmod +x linux-install-$CLOJURE_VERSION.sh && ./linux-install-$CLOJURE_VERSION.sh && rm linux-install-$CLOJURE_VERSION.sh && clojure -e "(clojure-version)" && apk del curl
+# Mon, 17 Apr 2023 22:20:50 GMT
 COPY file:b0aef3ea203de7b5c2ea645debf58c8231445a2e3070b72749b54614f4a89b82 in /usr/local/bin/rlwrap 
-# Mon, 03 Apr 2023 23:56:14 GMT
+# Mon, 17 Apr 2023 22:20:50 GMT
 CMD ["clj"]
 ```
 
@@ -69,11 +69,11 @@ CMD ["clj"]
 		Last Modified: Wed, 29 Mar 2023 19:52:02 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:68d0163aaacc8d0d18c88805b11305167fffc2428c3735db0f646301070a8024`  
-		Last Modified: Tue, 04 Apr 2023 00:05:42 GMT  
-		Size: 27.3 MB (27330453 bytes)  
+	-	`sha256:22b0185d42b0bf346873b1a1bddccd66cf21b1ffdb6ff4e552ffb3ebe1b8766d`  
+		Last Modified: Mon, 17 Apr 2023 22:28:48 GMT  
+		Size: 27.3 MB (27331230 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f870860dbdec6cf3c552cc2f19ba4ef8bcb918b673a15b5dc3ccdbaa5f362b5c`  
-		Last Modified: Tue, 04 Apr 2023 00:05:40 GMT  
-		Size: 622.0 B  
+	-	`sha256:42e237208b8aedcfb67daade8258124cce8a2b92c93b7905505ae1d3ec52f54d`  
+		Last Modified: Mon, 17 Apr 2023 22:28:46 GMT  
+		Size: 621.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
