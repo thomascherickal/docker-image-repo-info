@@ -1439,14 +1439,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mysql-community=5.7.41-1debian10
-'http://repo.mysql.com/apt/debian/pool/mysql-5.7/m/mysql-community/mysql-community_5.7.41-1debian10.dsc' mysql-community_5.7.41-1debian10.dsc 2818 SHA256:dd6bc849ee38593aea0a523297a88d30378f393c82d4ed683fba6d797960fcc9
-'http://repo.mysql.com/apt/debian/pool/mysql-5.7/m/mysql-community/mysql-community_5.7.41.orig.tar.gz' mysql-community_5.7.41.orig.tar.gz 56535698 SHA256:4ffaf01240feefce69be94ea539bf40578cc1c0d1a67fdc50e76f00bf94c6a7b
-'http://repo.mysql.com/apt/debian/pool/mysql-5.7/m/mysql-community/mysql-community_5.7.41-1debian10.debian.tar.xz' mysql-community_5.7.41-1debian10.debian.tar.xz 16584 SHA256:b87dbfffabdc6dae9cd48a597a16de1d5f0bc5dd9f45e21e90cecd5158f71e28
-```
 
 ### `dpkg` source package: `mysql-defaults=1.0.5`
 
