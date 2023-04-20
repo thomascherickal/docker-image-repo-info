@@ -76,13 +76,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.4.8
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.8.dsc' apt_2.4.8.dsc 2805 SHA512:c8abaefa3aa3c43ecfbfeb76be4df92cb036e44ee33d1fc06b9e77ee092436124fbee4a827a691d13881849f7f4d22b49394a67fc6aa318444b1e4104d52afea
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.8.tar.xz' apt_2.4.8.tar.xz 2317680 SHA512:e79afc0912235522c2a25b360ced63e13797660eb3004d0deec73c8610327495092c77069044a1b4be6a749ab733c5fdbae4eaca9a26a43517ebb09fe8a3ea43
-```
 
 ### `dpkg` source package: `attr=1:2.5.1-1build1`
 
@@ -1992,14 +1988,9 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libx
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.13+dfsg-1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.13%2bdfsg-1ubuntu0.2.dsc' libxml2_2.9.13+dfsg-1ubuntu0.2.dsc 3030 SHA512:3279b1f64a595177883173b2fb348261a7cb6ee82ef32ace6b1f3c87508e693eed564bb880394a49617cbd0c8a8a24c57c4d7f5e346e3fc98656c9e8c7045fe9
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.13%2bdfsg.orig.tar.xz' libxml2_2.9.13+dfsg.orig.tar.xz 2351356 SHA512:6283071de4934c856c7ff5202ac1a2ed5892d7fcde82a364d40c8bc2bf3d3201fbcbb5f6983d8bf6b962026bc216b8182d71efe280f1dcef2931b277314e6e89
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.13%2bdfsg-1ubuntu0.2.debian.tar.xz' libxml2_2.9.13+dfsg-1ubuntu0.2.debian.tar.xz 35160 SHA512:84a5b4edad3593e2caca5526017e785811671e8893876ba593cf70eb37d557d163ee35ff2e27386fe504fa130dacc2c139cbfeb5b8778760f18ef62bffdc1c35
-```
 
 ### `dpkg` source package: `libxmu=2:1.1.3-3`
 
@@ -2071,14 +2062,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.15.0-69.76
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-69.76.dsc' linux_5.15.0-69.76.dsc 7342 SHA512:e874b2ad7954bafce5729f1b5fdf31a5d57d507ba338af64e5a3f4bb6c36708a6a18468aede5fb356f829ff029ac815e201eb55170c624627b379722d5b6d737
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-69.76.diff.gz' linux_5.15.0-69.76.diff.gz 9474981 SHA512:b452235e02df734dd22b7f9c3a0cb84e7ac7c3f0f87b7f44319e9a39dfff3c7a2815dc5edb54d470133caf7b8b89cbc835b9fba05f8c5755fa9b9a7f010f0078
-```
 
 ### `dpkg` source package: `llvm-toolchain-13=1:13.0.1-2ubuntu2.1`
 
