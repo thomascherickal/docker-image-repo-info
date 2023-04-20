@@ -1,10 +1,10 @@
-# `clojure:temurin-20-jammy`
+# `clojure:temurin-17-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d9f7adc0acd9e482be66f7fc0af928480bb4926b39a6e70a8b4f27e24d2d3cc3`
-- Created: `2023-04-04T00:04:06.616195686Z`
-- Virtual Size: ~ 599.95 Mb  
+- Image ID: `sha256:f2bc0a15ee41121134ff180833c33d68a23eb0d264c19c24ef925fab128feb30`
+- Created: `2023-04-17T22:26:07.214509863Z`
+- Virtual Size: ~ 579.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint"]`
@@ -15,8 +15,8 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-20+36`
-  - `CLOJURE_VERSION=1.11.1.1267`
+  - `JAVA_VERSION=jdk-17.0.6+10`
+  - `CLOJURE_VERSION=1.11.1.1273`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=22.04`
@@ -76,13 +76,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.4.8
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.8.dsc' apt_2.4.8.dsc 2805 SHA512:c8abaefa3aa3c43ecfbfeb76be4df92cb036e44ee33d1fc06b9e77ee092436124fbee4a827a691d13881849f7f4d22b49394a67fc6aa318444b1e4104d52afea
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.8.tar.xz' apt_2.4.8.tar.xz 2317680 SHA512:e79afc0912235522c2a25b360ced63e13797660eb3004d0deec73c8610327495092c77069044a1b4be6a749ab733c5fdbae4eaca9a26a43517ebb09fe8a3ea43
-```
 
 ### `dpkg` source package: `attr=1:2.5.1-1build1`
 
