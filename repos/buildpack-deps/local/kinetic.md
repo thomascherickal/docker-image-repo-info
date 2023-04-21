@@ -2919,14 +2919,9 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libx
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.14+dfsg-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.14%2bdfsg-1ubuntu0.1.dsc' libxml2_2.9.14+dfsg-1ubuntu0.1.dsc 3030 SHA512:2485703a66f0d061185452ad4e9e9d8c46177c1d329945f9662631371ed1206ab9f19dff938b887d384cfda0d55d40c416c6c70f61c1a26e890960651c9b0fe8
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.14%2bdfsg.orig.tar.xz' libxml2_2.9.14+dfsg.orig.tar.xz 2351200 SHA512:1eacc9ac2cd8d38b8466659b3b9d84b94eb765c8f869d6cca0da131060bbc35c2b31c6148d59690547871a20cea339eac8fbe953b4fe37cf0900862f3fd9621b
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxml2/libxml2_2.9.14%2bdfsg-1ubuntu0.1.debian.tar.xz' libxml2_2.9.14+dfsg-1ubuntu0.1.debian.tar.xz 33072 SHA512:33097eb392e9d0dbbe12635fcddf0c8368a9255efff263741437cc0795e96d1fc00b83bd475fb3bf8c6e0393bb3a569a936d62b984e7563c5d4bac1935a6c46c
-```
 
 ### `dpkg` source package: `libxrender=1:0.9.10-1.1`
 
@@ -3043,14 +3038,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.19.0-38.39
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.19.0-38.39.dsc' linux_5.19.0-38.39.dsc 8835 SHA512:96e28a8e9de6ac586720f3ea0ccb35f4d8792269d91f1ec445f1fd96cc5206dac21e5ab59c855ac49e39ac10eb46918c6596659afc5c0f16568d600f14e05aa7
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.19.0.orig.tar.gz' linux_5.19.0.orig.tar.gz 208263574 SHA512:9c018ef5d2b3f861f721a4541e547eb712352e8d6cfd4a6803c5a7ce96ce2a7e7baf1d83f9963f2244e7fae420731d95d198bf222e2b5079da624df0e0c78668
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.19.0-38.39.diff.gz' linux_5.19.0-38.39.diff.gz 5613143 SHA512:df744e0d6335c45f8f7616bb1d21fc9032d6c9dafe6231f85e98777d27f70c4da92b339787de76ba3fbc298f1df5266fad6cd48ee75e2b423bcf148ccb29eb1a
-```
 
 ### `dpkg` source package: `lsb=11.2ubuntu1`
 
