@@ -1,17 +1,17 @@
-# `node:19-buster`
+# `node:20-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3038c4e5092fbf8fcaf135df683804285256b5822c5dbadba4399d053e26010a`
-- Created: `2023-04-12T09:05:57.979071517Z`
-- Virtual Size: ~ 967.32 Mb  
+- Image ID: `sha256:742a89ea930ad31582719dfe40197f482359110d80b661837c14ef8482bd2fbb`
+- Created: `2023-04-20T20:25:28.373979713Z`
+- Virtual Size: ~ 969.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["node"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=19.9.0`
+  - `NODE_VERSION=20.0.0`
   - `YARN_VERSION=1.22.19`
 
 ## `dpkg` (`.deb`-based packages)
@@ -553,20 +553,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u5
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u5.dsc' curl_7.64.0-4+deb10u5.dsc 2694 SHA256:9fa77b013454b7b5ef6ba5a77451cb13bd2d66c1b239f707afa556c24c745ed7
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u5.debian.tar.xz' curl_7.64.0-4+deb10u5.debian.tar.xz 59568 SHA256:3b5f383b1307c7bf6369110b9fa11b9c549312c5f06cc101e5448bdce829b7d8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u5/
 
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u5/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u2`
 
