@@ -826,7 +826,7 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ## `unit:1.29.1-perl5.36`
 
 ```console
-$ docker pull unit@sha256:29e4754f6828a1fea6b66848d64ee15b776dec8077d9ca48a940ab005913c4c4
+$ docker pull unit@sha256:420f98af0226514db85686a388e86139922ca2f753f946e5ddf8715a212b7c64
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -837,14 +837,14 @@ $ docker pull unit@sha256:29e4754f6828a1fea6b66848d64ee15b776dec8077d9ca48a940ab
 ### `unit:1.29.1-perl5.36` - linux; amd64
 
 ```console
-$ docker pull unit@sha256:a95143cf4743a16ac4d27df0339ca8fdcf067e4351853c9cd1ddf2c4ceae2c99
+$ docker pull unit@sha256:d4bc63977d8d16f22ef444c4656159277a8e1a4a04a8b4faab7eaf70b3b57a4d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **347.7 MB (347732905 bytes)**  
+-	Total Size: **347.7 MB (347733677 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a18464f608eb8ecdd45db3d9ec76b9ed97908bbcbdae27aa17cdd772a98d1cb3`
+-	Image ID: `sha256:2734b6f87da50e07c339b743e10bcc2fc2afcf97dba9aff0bbbf8183af056e9a`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -865,35 +865,35 @@ RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		auto
 LABEL maintainer=Peter Martini <PeterCMartini@GMail.com>, Zak B. Elep <zakame@cpan.org>
 # Wed, 12 Apr 2023 20:55:29 GMT
 WORKDIR /usr/src/perl
-# Wed, 12 Apr 2023 21:00:45 GMT
-RUN true     && curl -fL https://www.cpan.org/src/5.0/perl-5.36.0.tar.xz -o perl-5.36.0.tar.xz     && echo '0f386dccbee8e26286404b2cca144e1005be65477979beb9b1ba272d4819bcf0 *perl-5.36.0.tar.xz' | sha256sum --strict --check -     && tar --strip-components=1 -xaf perl-5.36.0.tar.xz -C /usr/src/perl     && rm perl-5.36.0.tar.xz     && cat *.patch | patch -p1     && gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"     && archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"     && archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"     && ./Configure -Darchname="$gnuArch" "$archFlag" -Duseshrplib -Dvendorprefix=/usr/local  -des     && make -j$(nproc)     && TEST_JOBS=$(nproc) make test_harness     && make install     && cd /usr/src     && curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz     && echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check -     && tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd /root     && cpanm IO::Socket::SSL     && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm     && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -     && chmod +x /usr/local/bin/cpm     && true     && rm -fr /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7046* /tmp/*     && cpanm --version && cpm --version
-# Wed, 12 Apr 2023 21:00:45 GMT
+# Mon, 24 Apr 2023 19:33:01 GMT
+RUN true     && curl -fL https://www.cpan.org/src/5.0/perl-5.36.1.tar.xz -o perl-5.36.1.tar.xz     && echo 'bd91217ea8a8c8b81f21ebbb6cefdf0d13ae532013f944cdece2cd51aef4b6a7 *perl-5.36.1.tar.xz' | sha256sum --strict --check -     && tar --strip-components=1 -xaf perl-5.36.1.tar.xz -C /usr/src/perl     && rm perl-5.36.1.tar.xz     && cat *.patch | patch -p1     && gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"     && archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"     && archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"     && ./Configure -Darchname="$gnuArch" "$archFlag" -Duseshrplib -Dvendorprefix=/usr/local  -des     && make -j$(nproc)     && TEST_JOBS=$(nproc) make test_harness     && make install     && cd /usr/src     && curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz     && echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check -     && tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd /root     && cpanm IO::Socket::SSL     && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm     && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -     && chmod +x /usr/local/bin/cpm     && true     && rm -fr /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7046* /tmp/*     && cpanm --version && cpm --version
+# Mon, 24 Apr 2023 19:33:02 GMT
 WORKDIR /
-# Wed, 12 Apr 2023 21:00:45 GMT
-CMD ["perl5.36.0" "-de0"]
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 19:33:02 GMT
+CMD ["perl5.36.1" "-de0"]
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:05 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure perl     && make -j $NCPU perl-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure perl     && make -j $NCPU perl-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 23:10:39 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 23:10:39 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -922,17 +922,17 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 22:26:31 GMT  
 		Size: 166.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7293e79f128ea9c23fc4af20cbfe8ba9fb3c0b7ca094d76de221a2045a307b7a`  
-		Last Modified: Wed, 12 Apr 2023 22:26:34 GMT  
-		Size: 15.2 MB (15231644 bytes)  
+	-	`sha256:443c8dd177f3f10c09a9864f7d0ea6a5383391cda51882a17b0ab5b389337ead`  
+		Last Modified: Mon, 24 Apr 2023 20:15:31 GMT  
+		Size: 15.2 MB (15230197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8ff66daeaed1d016a806919a835fc21bdcbb80ee8184525feb6cb596ab7b5d3e`  
-		Last Modified: Wed, 12 Apr 2023 23:12:12 GMT  
-		Size: 10.0 MB (10007420 bytes)  
+	-	`sha256:7d5068ca679f160f952cf92ecf1cbfe3159ddcb05a36de596f1edbe69a9bd99a`  
+		Last Modified: Mon, 24 Apr 2023 20:35:16 GMT  
+		Size: 10.0 MB (10009634 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:09746cf0f28c36ebc0224967962fb92d42aa87e3eac59e75aa8756b416bcc727`  
-		Last Modified: Wed, 12 Apr 2023 23:12:11 GMT  
-		Size: 1.2 KB (1190 bytes)  
+	-	`sha256:6c447bfd58f20b1d8cfaa4c535603620e64526bfec745da0a4727865be9e6da7`  
+		Last Modified: Mon, 24 Apr 2023 20:35:15 GMT  
+		Size: 1.2 KB (1195 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `unit:1.29.1-perl5.36` - linux; arm64 variant v8
@@ -3490,7 +3490,7 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ## `unit:perl`
 
 ```console
-$ docker pull unit@sha256:29e4754f6828a1fea6b66848d64ee15b776dec8077d9ca48a940ab005913c4c4
+$ docker pull unit@sha256:420f98af0226514db85686a388e86139922ca2f753f946e5ddf8715a212b7c64
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3501,14 +3501,14 @@ $ docker pull unit@sha256:29e4754f6828a1fea6b66848d64ee15b776dec8077d9ca48a940ab
 ### `unit:perl` - linux; amd64
 
 ```console
-$ docker pull unit@sha256:a95143cf4743a16ac4d27df0339ca8fdcf067e4351853c9cd1ddf2c4ceae2c99
+$ docker pull unit@sha256:d4bc63977d8d16f22ef444c4656159277a8e1a4a04a8b4faab7eaf70b3b57a4d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **347.7 MB (347732905 bytes)**  
+-	Total Size: **347.7 MB (347733677 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a18464f608eb8ecdd45db3d9ec76b9ed97908bbcbdae27aa17cdd772a98d1cb3`
+-	Image ID: `sha256:2734b6f87da50e07c339b743e10bcc2fc2afcf97dba9aff0bbbf8183af056e9a`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -3529,35 +3529,35 @@ RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		auto
 LABEL maintainer=Peter Martini <PeterCMartini@GMail.com>, Zak B. Elep <zakame@cpan.org>
 # Wed, 12 Apr 2023 20:55:29 GMT
 WORKDIR /usr/src/perl
-# Wed, 12 Apr 2023 21:00:45 GMT
-RUN true     && curl -fL https://www.cpan.org/src/5.0/perl-5.36.0.tar.xz -o perl-5.36.0.tar.xz     && echo '0f386dccbee8e26286404b2cca144e1005be65477979beb9b1ba272d4819bcf0 *perl-5.36.0.tar.xz' | sha256sum --strict --check -     && tar --strip-components=1 -xaf perl-5.36.0.tar.xz -C /usr/src/perl     && rm perl-5.36.0.tar.xz     && cat *.patch | patch -p1     && gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"     && archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"     && archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"     && ./Configure -Darchname="$gnuArch" "$archFlag" -Duseshrplib -Dvendorprefix=/usr/local  -des     && make -j$(nproc)     && TEST_JOBS=$(nproc) make test_harness     && make install     && cd /usr/src     && curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz     && echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check -     && tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd /root     && cpanm IO::Socket::SSL     && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm     && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -     && chmod +x /usr/local/bin/cpm     && true     && rm -fr /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7046* /tmp/*     && cpanm --version && cpm --version
-# Wed, 12 Apr 2023 21:00:45 GMT
+# Mon, 24 Apr 2023 19:33:01 GMT
+RUN true     && curl -fL https://www.cpan.org/src/5.0/perl-5.36.1.tar.xz -o perl-5.36.1.tar.xz     && echo 'bd91217ea8a8c8b81f21ebbb6cefdf0d13ae532013f944cdece2cd51aef4b6a7 *perl-5.36.1.tar.xz' | sha256sum --strict --check -     && tar --strip-components=1 -xaf perl-5.36.1.tar.xz -C /usr/src/perl     && rm perl-5.36.1.tar.xz     && cat *.patch | patch -p1     && gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"     && archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"     && archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"     && ./Configure -Darchname="$gnuArch" "$archFlag" -Duseshrplib -Dvendorprefix=/usr/local  -des     && make -j$(nproc)     && TEST_JOBS=$(nproc) make test_harness     && make install     && cd /usr/src     && curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz     && echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check -     && tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd /root     && cpanm IO::Socket::SSL     && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm     && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -     && chmod +x /usr/local/bin/cpm     && true     && rm -fr /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7046* /tmp/*     && cpanm --version && cpm --version
+# Mon, 24 Apr 2023 19:33:02 GMT
 WORKDIR /
-# Wed, 12 Apr 2023 21:00:45 GMT
-CMD ["perl5.36.0" "-de0"]
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 19:33:02 GMT
+CMD ["perl5.36.1" "-de0"]
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:05 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure perl     && make -j $NCPU perl-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure perl     && make -j $NCPU perl-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 23:10:39 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 23:10:39 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -3586,17 +3586,17 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 22:26:31 GMT  
 		Size: 166.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7293e79f128ea9c23fc4af20cbfe8ba9fb3c0b7ca094d76de221a2045a307b7a`  
-		Last Modified: Wed, 12 Apr 2023 22:26:34 GMT  
-		Size: 15.2 MB (15231644 bytes)  
+	-	`sha256:443c8dd177f3f10c09a9864f7d0ea6a5383391cda51882a17b0ab5b389337ead`  
+		Last Modified: Mon, 24 Apr 2023 20:15:31 GMT  
+		Size: 15.2 MB (15230197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8ff66daeaed1d016a806919a835fc21bdcbb80ee8184525feb6cb596ab7b5d3e`  
-		Last Modified: Wed, 12 Apr 2023 23:12:12 GMT  
-		Size: 10.0 MB (10007420 bytes)  
+	-	`sha256:7d5068ca679f160f952cf92ecf1cbfe3159ddcb05a36de596f1edbe69a9bd99a`  
+		Last Modified: Mon, 24 Apr 2023 20:35:16 GMT  
+		Size: 10.0 MB (10009634 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:09746cf0f28c36ebc0224967962fb92d42aa87e3eac59e75aa8756b416bcc727`  
-		Last Modified: Wed, 12 Apr 2023 23:12:11 GMT  
-		Size: 1.2 KB (1190 bytes)  
+	-	`sha256:6c447bfd58f20b1d8cfaa4c535603620e64526bfec745da0a4727865be9e6da7`  
+		Last Modified: Mon, 24 Apr 2023 20:35:15 GMT  
+		Size: 1.2 KB (1195 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `unit:perl` - linux; arm64 variant v8
@@ -3703,7 +3703,7 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ## `unit:perl5`
 
 ```console
-$ docker pull unit@sha256:29e4754f6828a1fea6b66848d64ee15b776dec8077d9ca48a940ab005913c4c4
+$ docker pull unit@sha256:420f98af0226514db85686a388e86139922ca2f753f946e5ddf8715a212b7c64
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3714,14 +3714,14 @@ $ docker pull unit@sha256:29e4754f6828a1fea6b66848d64ee15b776dec8077d9ca48a940ab
 ### `unit:perl5` - linux; amd64
 
 ```console
-$ docker pull unit@sha256:a95143cf4743a16ac4d27df0339ca8fdcf067e4351853c9cd1ddf2c4ceae2c99
+$ docker pull unit@sha256:d4bc63977d8d16f22ef444c4656159277a8e1a4a04a8b4faab7eaf70b3b57a4d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **347.7 MB (347732905 bytes)**  
+-	Total Size: **347.7 MB (347733677 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a18464f608eb8ecdd45db3d9ec76b9ed97908bbcbdae27aa17cdd772a98d1cb3`
+-	Image ID: `sha256:2734b6f87da50e07c339b743e10bcc2fc2afcf97dba9aff0bbbf8183af056e9a`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -3742,35 +3742,35 @@ RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		auto
 LABEL maintainer=Peter Martini <PeterCMartini@GMail.com>, Zak B. Elep <zakame@cpan.org>
 # Wed, 12 Apr 2023 20:55:29 GMT
 WORKDIR /usr/src/perl
-# Wed, 12 Apr 2023 21:00:45 GMT
-RUN true     && curl -fL https://www.cpan.org/src/5.0/perl-5.36.0.tar.xz -o perl-5.36.0.tar.xz     && echo '0f386dccbee8e26286404b2cca144e1005be65477979beb9b1ba272d4819bcf0 *perl-5.36.0.tar.xz' | sha256sum --strict --check -     && tar --strip-components=1 -xaf perl-5.36.0.tar.xz -C /usr/src/perl     && rm perl-5.36.0.tar.xz     && cat *.patch | patch -p1     && gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"     && archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"     && archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"     && ./Configure -Darchname="$gnuArch" "$archFlag" -Duseshrplib -Dvendorprefix=/usr/local  -des     && make -j$(nproc)     && TEST_JOBS=$(nproc) make test_harness     && make install     && cd /usr/src     && curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz     && echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check -     && tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd /root     && cpanm IO::Socket::SSL     && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm     && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -     && chmod +x /usr/local/bin/cpm     && true     && rm -fr /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7046* /tmp/*     && cpanm --version && cpm --version
-# Wed, 12 Apr 2023 21:00:45 GMT
+# Mon, 24 Apr 2023 19:33:01 GMT
+RUN true     && curl -fL https://www.cpan.org/src/5.0/perl-5.36.1.tar.xz -o perl-5.36.1.tar.xz     && echo 'bd91217ea8a8c8b81f21ebbb6cefdf0d13ae532013f944cdece2cd51aef4b6a7 *perl-5.36.1.tar.xz' | sha256sum --strict --check -     && tar --strip-components=1 -xaf perl-5.36.1.tar.xz -C /usr/src/perl     && rm perl-5.36.1.tar.xz     && cat *.patch | patch -p1     && gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"     && archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"     && archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"     && ./Configure -Darchname="$gnuArch" "$archFlag" -Duseshrplib -Dvendorprefix=/usr/local  -des     && make -j$(nproc)     && TEST_JOBS=$(nproc) make test_harness     && make install     && cd /usr/src     && curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz     && echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check -     && tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd /root     && cpanm IO::Socket::SSL     && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm     && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -     && chmod +x /usr/local/bin/cpm     && true     && rm -fr /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7046* /tmp/*     && cpanm --version && cpm --version
+# Mon, 24 Apr 2023 19:33:02 GMT
 WORKDIR /
-# Wed, 12 Apr 2023 21:00:45 GMT
-CMD ["perl5.36.0" "-de0"]
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 19:33:02 GMT
+CMD ["perl5.36.1" "-de0"]
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:05 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure perl     && make -j $NCPU perl-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure perl     && make -j $NCPU perl-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 23:10:39 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 23:10:39 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -3799,17 +3799,17 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 22:26:31 GMT  
 		Size: 166.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7293e79f128ea9c23fc4af20cbfe8ba9fb3c0b7ca094d76de221a2045a307b7a`  
-		Last Modified: Wed, 12 Apr 2023 22:26:34 GMT  
-		Size: 15.2 MB (15231644 bytes)  
+	-	`sha256:443c8dd177f3f10c09a9864f7d0ea6a5383391cda51882a17b0ab5b389337ead`  
+		Last Modified: Mon, 24 Apr 2023 20:15:31 GMT  
+		Size: 15.2 MB (15230197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8ff66daeaed1d016a806919a835fc21bdcbb80ee8184525feb6cb596ab7b5d3e`  
-		Last Modified: Wed, 12 Apr 2023 23:12:12 GMT  
-		Size: 10.0 MB (10007420 bytes)  
+	-	`sha256:7d5068ca679f160f952cf92ecf1cbfe3159ddcb05a36de596f1edbe69a9bd99a`  
+		Last Modified: Mon, 24 Apr 2023 20:35:16 GMT  
+		Size: 10.0 MB (10009634 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:09746cf0f28c36ebc0224967962fb92d42aa87e3eac59e75aa8756b416bcc727`  
-		Last Modified: Wed, 12 Apr 2023 23:12:11 GMT  
-		Size: 1.2 KB (1190 bytes)  
+	-	`sha256:6c447bfd58f20b1d8cfaa4c535603620e64526bfec745da0a4727865be9e6da7`  
+		Last Modified: Mon, 24 Apr 2023 20:35:15 GMT  
+		Size: 1.2 KB (1195 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `unit:perl5` - linux; arm64 variant v8
@@ -3916,7 +3916,7 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ## `unit:perl5.36`
 
 ```console
-$ docker pull unit@sha256:29e4754f6828a1fea6b66848d64ee15b776dec8077d9ca48a940ab005913c4c4
+$ docker pull unit@sha256:420f98af0226514db85686a388e86139922ca2f753f946e5ddf8715a212b7c64
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3927,14 +3927,14 @@ $ docker pull unit@sha256:29e4754f6828a1fea6b66848d64ee15b776dec8077d9ca48a940ab
 ### `unit:perl5.36` - linux; amd64
 
 ```console
-$ docker pull unit@sha256:a95143cf4743a16ac4d27df0339ca8fdcf067e4351853c9cd1ddf2c4ceae2c99
+$ docker pull unit@sha256:d4bc63977d8d16f22ef444c4656159277a8e1a4a04a8b4faab7eaf70b3b57a4d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **347.7 MB (347732905 bytes)**  
+-	Total Size: **347.7 MB (347733677 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a18464f608eb8ecdd45db3d9ec76b9ed97908bbcbdae27aa17cdd772a98d1cb3`
+-	Image ID: `sha256:2734b6f87da50e07c339b743e10bcc2fc2afcf97dba9aff0bbbf8183af056e9a`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -3955,35 +3955,35 @@ RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		auto
 LABEL maintainer=Peter Martini <PeterCMartini@GMail.com>, Zak B. Elep <zakame@cpan.org>
 # Wed, 12 Apr 2023 20:55:29 GMT
 WORKDIR /usr/src/perl
-# Wed, 12 Apr 2023 21:00:45 GMT
-RUN true     && curl -fL https://www.cpan.org/src/5.0/perl-5.36.0.tar.xz -o perl-5.36.0.tar.xz     && echo '0f386dccbee8e26286404b2cca144e1005be65477979beb9b1ba272d4819bcf0 *perl-5.36.0.tar.xz' | sha256sum --strict --check -     && tar --strip-components=1 -xaf perl-5.36.0.tar.xz -C /usr/src/perl     && rm perl-5.36.0.tar.xz     && cat *.patch | patch -p1     && gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"     && archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"     && archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"     && ./Configure -Darchname="$gnuArch" "$archFlag" -Duseshrplib -Dvendorprefix=/usr/local  -des     && make -j$(nproc)     && TEST_JOBS=$(nproc) make test_harness     && make install     && cd /usr/src     && curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz     && echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check -     && tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd /root     && cpanm IO::Socket::SSL     && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm     && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -     && chmod +x /usr/local/bin/cpm     && true     && rm -fr /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7046* /tmp/*     && cpanm --version && cpm --version
-# Wed, 12 Apr 2023 21:00:45 GMT
+# Mon, 24 Apr 2023 19:33:01 GMT
+RUN true     && curl -fL https://www.cpan.org/src/5.0/perl-5.36.1.tar.xz -o perl-5.36.1.tar.xz     && echo 'bd91217ea8a8c8b81f21ebbb6cefdf0d13ae532013f944cdece2cd51aef4b6a7 *perl-5.36.1.tar.xz' | sha256sum --strict --check -     && tar --strip-components=1 -xaf perl-5.36.1.tar.xz -C /usr/src/perl     && rm perl-5.36.1.tar.xz     && cat *.patch | patch -p1     && gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"     && archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"     && archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"     && ./Configure -Darchname="$gnuArch" "$archFlag" -Duseshrplib -Dvendorprefix=/usr/local  -des     && make -j$(nproc)     && TEST_JOBS=$(nproc) make test_harness     && make install     && cd /usr/src     && curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7046.tar.gz     && echo '3e8c9d9b44a7348f9acc917163dbfc15bd5ea72501492cea3a35b346440ff862 *App-cpanminus-1.7046.tar.gz' | sha256sum --strict --check -     && tar -xzf App-cpanminus-1.7046.tar.gz && cd App-cpanminus-1.7046 && perl bin/cpanm . && cd /root     && cpanm IO::Socket::SSL     && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm     && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -     && chmod +x /usr/local/bin/cpm     && true     && rm -fr /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7046* /tmp/*     && cpanm --version && cpm --version
+# Mon, 24 Apr 2023 19:33:02 GMT
 WORKDIR /
-# Wed, 12 Apr 2023 21:00:45 GMT
-CMD ["perl5.36.0" "-de0"]
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 19:33:02 GMT
+CMD ["perl5.36.1" "-de0"]
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 23:09:58 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:04 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 23:09:59 GMT
+# Mon, 24 Apr 2023 20:34:05 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure perl     && make -j $NCPU perl-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure perl     && make -j $NCPU perl-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 23:10:38 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 23:10:39 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 23:10:39 GMT
+# Mon, 24 Apr 2023 20:34:46 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -4012,17 +4012,17 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 22:26:31 GMT  
 		Size: 166.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7293e79f128ea9c23fc4af20cbfe8ba9fb3c0b7ca094d76de221a2045a307b7a`  
-		Last Modified: Wed, 12 Apr 2023 22:26:34 GMT  
-		Size: 15.2 MB (15231644 bytes)  
+	-	`sha256:443c8dd177f3f10c09a9864f7d0ea6a5383391cda51882a17b0ab5b389337ead`  
+		Last Modified: Mon, 24 Apr 2023 20:15:31 GMT  
+		Size: 15.2 MB (15230197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8ff66daeaed1d016a806919a835fc21bdcbb80ee8184525feb6cb596ab7b5d3e`  
-		Last Modified: Wed, 12 Apr 2023 23:12:12 GMT  
-		Size: 10.0 MB (10007420 bytes)  
+	-	`sha256:7d5068ca679f160f952cf92ecf1cbfe3159ddcb05a36de596f1edbe69a9bd99a`  
+		Last Modified: Mon, 24 Apr 2023 20:35:16 GMT  
+		Size: 10.0 MB (10009634 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:09746cf0f28c36ebc0224967962fb92d42aa87e3eac59e75aa8756b416bcc727`  
-		Last Modified: Wed, 12 Apr 2023 23:12:11 GMT  
-		Size: 1.2 KB (1190 bytes)  
+	-	`sha256:6c447bfd58f20b1d8cfaa4c535603620e64526bfec745da0a4727865be9e6da7`  
+		Last Modified: Mon, 24 Apr 2023 20:35:15 GMT  
+		Size: 1.2 KB (1195 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `unit:perl5.36` - linux; arm64 variant v8
