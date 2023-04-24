@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1be445cc553ebefc75d9f4917065d9e94c21bc731bdffab90cde482469d9e4a7`
-- Created: `2023-04-17T23:04:22Z`
-- Virtual Size: ~ 318.10 Mb  
+- Image ID: `sha256:7918c105b85a93f5031aef9fddfe4c05247861b4de6a74e2a39f2ff221bda139`
+- Created: `2023-04-20T17:06:00Z`
+- Virtual Size: ~ 318.11 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `DOCKER_VERSION=23.0.4`
   - `DOCKER_BUILDX_VERSION=0.10.4`
-  - `DOCKER_COMPOSE_VERSION=2.17.2`
+  - `DOCKER_COMPOSE_VERSION=2.17.3`
   - `DOCKER_TLS_CERTDIR=/certs`
   - `DIND_COMMIT=1f32e3c95d72a29b3eaacba156ed675dba976cb5`
 
@@ -718,16 +718,16 @@ BSD
 ### `apk` package: `openssl`
 
 ```console
-openssl-3.0.8-r3 description:
+openssl-3.0.8-r4 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-3.0.8-r3 webpage:
+openssl-3.0.8-r4 webpage:
 https://www.openssl.org/
 
-openssl-3.0.8-r3 installed size:
+openssl-3.0.8-r4 installed size:
 868 KiB
 
-openssl-3.0.8-r3 license:
+openssl-3.0.8-r4 license:
 Apache-2.0
 
 ```

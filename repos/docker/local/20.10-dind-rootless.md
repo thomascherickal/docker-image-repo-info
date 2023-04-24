@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9a71742096b4c3e269ff671b212c1cca3e78dc1cb256f8e37a0f125d643af8db`
-- Created: `2023-04-04T21:27:52Z`
-- Virtual Size: ~ 391.71 Mb  
+- Image ID: `sha256:4b358cd2e4ab0b3afb526993834e85a3f545b417c413c96a1a2ec7522e12501b`
+- Created: `2023-04-20T17:04:13Z`
+- Virtual Size: ~ 391.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `DOCKER_VERSION=20.10.24`
   - `DOCKER_BUILDX_VERSION=0.10.4`
-  - `DOCKER_COMPOSE_VERSION=2.17.2`
+  - `DOCKER_COMPOSE_VERSION=2.17.3`
   - `DOCKER_TLS_CERTDIR=/certs`
   - `DIND_COMMIT=1f32e3c95d72a29b3eaacba156ed675dba976cb5`
 
@@ -939,16 +939,16 @@ BSD
 ### `apk` package: `openssl`
 
 ```console
-openssl-3.0.8-r3 description:
+openssl-3.0.8-r4 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-3.0.8-r3 webpage:
+openssl-3.0.8-r4 webpage:
 https://www.openssl.org/
 
-openssl-3.0.8-r3 installed size:
+openssl-3.0.8-r4 installed size:
 868 KiB
 
-openssl-3.0.8-r3 license:
+openssl-3.0.8-r4 license:
 Apache-2.0
 
 ```
@@ -1160,16 +1160,16 @@ Zlib
 ### `apk` package: `zstd-libs`
 
 ```console
-zstd-libs-1.5.2-r9 description:
+zstd-libs-1.5.5-r0 description:
 Zstandard - Fast real-time compression algorithm (libraries)
 
-zstd-libs-1.5.2-r9 webpage:
+zstd-libs-1.5.5-r0 webpage:
 https://www.zstd.net/
 
-zstd-libs-1.5.2-r9 installed size:
-488 KiB
+zstd-libs-1.5.5-r0 installed size:
+520 KiB
 
-zstd-libs-1.5.2-r9 license:
+zstd-libs-1.5.5-r0 license:
 BSD-3-Clause GPL-2.0-or-later
 
 ```
