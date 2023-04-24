@@ -1,10 +1,10 @@
-# `drupal:10.0.7-php8.2-fpm-buster`
+# `drupal:10.0.8-php8.2-fpm-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:9dc5cc479f9ee62868dca0a02e4e823cc68c1021f77b54f67ec473e993111c9e`
-- Created: `2023-04-14T19:37:46.442683492Z`
-- Virtual Size: ~ 478.78 Mb  
+- Image ID: `sha256:4ea5f256b32f4bceab6a1b1663f94a307506663f1d3dc4e3eb263238b220d5c8`
+- Created: `2023-04-20T22:20:28.059008812Z`
+- Virtual Size: ~ 478.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -21,7 +21,7 @@
   - `PHP_URL=https://www.php.net/distributions/php-8.2.5.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.2.5.tar.xz.asc`
   - `PHP_SHA256=800738c359b7f1e67e40c22713d2d90276bc85ba1c21b43d99edd43c254c5f76`
-  - `DRUPAL_VERSION=10.0.7`
+  - `DRUPAL_VERSION=10.0.8`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -450,20 +450,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u5
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u5.dsc' curl_7.64.0-4+deb10u5.dsc 2694 SHA256:9fa77b013454b7b5ef6ba5a77451cb13bd2d66c1b239f707afa556c24c745ed7
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u5.debian.tar.xz' curl_7.64.0-4+deb10u5.debian.tar.xz 59568 SHA256:3b5f383b1307c7bf6369110b9fa11b9c549312c5f06cc101e5448bdce829b7d8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u5/
 
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u5/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u2`
 
