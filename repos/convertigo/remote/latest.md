@@ -1,7 +1,7 @@
 ## `convertigo:latest`
 
 ```console
-$ docker pull convertigo@sha256:668566271809994e017f2d8cc4d76becbc254b15c72078e9af2270cc63ca8429
+$ docker pull convertigo@sha256:1466281ec390fa6cb4a9122f7c1d2b486a055cce2e36951bbad5b8e9bd24a26d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull convertigo@sha256:668566271809994e017f2d8cc4d76becbc254b15c72078e9
 ### `convertigo:latest` - linux; amd64
 
 ```console
-$ docker pull convertigo@sha256:5ce1a7c0067518d48e39b195e4b09c28022192b4be3d6c0fb74d193ed7a53feb
+$ docker pull convertigo@sha256:66aa8e30e99cdfb6ea5438ddf22a4ae4730b63f9715b096d95f5fe74804d38a2
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **354.9 MB (354903763 bytes)**  
+-	Total Size: **355.5 MB (355540260 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1a13ee5ac69efa3c5db10ea4ec1510790a9137fe053d9b97587b36e226cf9ba2`
+-	Image ID: `sha256:39f9f46780e5dea53075e9c23bb4ed2c7d714401d4085de0ea9b902b73b3e31c`
 -	Entrypoint: `["tini","--","\/docker-entrypoint.sh"]`
 -	Default Command: `["convertigo"]`
 
@@ -101,31 +101,31 @@ ENV TINI_VERSION=0.19.0
 ENV TINI_GPG_KEYS=6380DC428747F6C393FEACA59A84159D7001A4E5
 # Tue, 18 Apr 2023 18:58:11 GMT
 RUN export GNUPGHOME="$(mktemp -d)"   && ( gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$GOSU_GPG_KEYS"   || gpg --batch --keyserver keyserver.pgp.com --recv-keys "$GOSU_GPG_KEYS" )   && curl -o /usr/local/bin/gosu -fSL "https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-$(dpkg --print-architecture | awk -F- '{ print $NF }')"   && curl -o /usr/local/bin/gosu.asc -fSL "https://github.com/tianon/gosu/releases/download/${GOSU_VERSION}/gosu-$(dpkg --print-architecture | awk -F- '{ print $NF }').asc"   && gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu   && rm /usr/local/bin/gosu.asc   && chmod +x /usr/local/bin/gosu   && ( gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$TINI_GPG_KEYS"   || gpg --batch --keyserver keyserver.pgp.com --recv-keys "$TINI_GPG_KEYS" )   && curl -o /usr/local/bin/tini -fSL "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini-$(dpkg --print-architecture | awk -F- '{ print $NF }')"   && curl -o /usr/local/bin/tini.asc -fSL "https://github.com/krallin/tini/releases/download/v${TINI_VERSION}/tini-$(dpkg --print-architecture | awk -F- '{ print $NF }').asc"   && gpg --batch --verify /usr/local/bin/tini.asc /usr/local/bin/tini   && rm /usr/local/bin/tini.asc   && chmod +x /usr/local/bin/tini   && rm -rf /tmp/*
-# Tue, 18 Apr 2023 18:58:11 GMT
-RUN useradd -s /bin/false -m convertigo     && mkdir -p /workspace/lib /workspace/classes     && chown -R convertigo:convertigo /workspace     && echo "convertigo ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/convertigo     && chmod 0440 /etc/sudoers.d/convertigo
-# Tue, 18 Apr 2023 18:58:12 GMT
-RUN sed -i.bak         -e '/protocol="AJP/d'         -e '/JasperListener/d'         -e 's/port="8080"/port="28080" maxThreads="64000" relaxedQueryChars="{}[]|"/'         -e 's,</Host>,  <Valve className="org.apache.catalina.valves.RemoteIpValve" />\n      </Host>,'         -e 's,</Service>,<!--SSL<Connector port="28443" protocol="org.apache.coyote.http11.Http11AprProtocol" SSLEnabled="true" maxThreads="64000" relaxedQueryChars="{}[]|">\n      <UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" />\n      <SSLHostConfig>\n        <Certificate certificateKeyFile="/certs/key.pem"\n                     certificateFile="/certs/cert.pem"\n                     certificateChainFile="/certs/chain.pem"\n                     type="RSA" />\n      </SSLHostConfig>\n    </Connector>SSL-->\n  </Service>,'         conf/server.xml     && sed -i.bak         -e 's,<Context>,<Context sessionCookiePath="/">,'         -e 's,</Context>,<Manager pathname="" /><CookieProcessor sameSiteCookies="unset" /></Context>,'         conf/context.xml     && rm -rf webapps/* bin/*.bat conf/server.xml.bak /tmp/*     && mkdir webapps/ROOT     && chown -R convertigo:convertigo conf temp work logs     && chmod -w conf/*
-# Tue, 18 Apr 2023 18:58:12 GMT
-ENV CONVERTIGO_VERSION=8.1.0
-# Tue, 18 Apr 2023 18:58:12 GMT
-ENV CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/8.1.0/convertigo-8.1.0.war
-# Tue, 18 Apr 2023 18:58:12 GMT
+# Mon, 24 Apr 2023 22:20:11 GMT
+RUN useradd -s /bin/false -m convertigo     && mkdir -p /workspace     && chown -R convertigo:convertigo /workspace     && chmod -R 777 /workspace     && echo "convertigo ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/convertigo     && chmod 0440 /etc/sudoers.d/convertigo
+# Mon, 24 Apr 2023 22:20:11 GMT
+RUN sed -i.bak         -e '/protocol="AJP/d'         -e '/JasperListener/d'         -e 's/port="8080"/port="28080" maxThreads="64000" relaxedQueryChars="{}[]|"/'         -e 's,</Host>,  <Valve className="org.apache.catalina.valves.RemoteIpValve" />\n        <Valve className="org.apache.catalina.valves.ErrorReportValve"  errorCode.404="webapps/convertigo/404.html" errorCode.0="webapps/convertigo/error.html" showReport="false" showServerInfo="false" />\n      </Host>,'         -e 's,</Service>,<!--SSL<Connector port="28443" protocol="org.apache.coyote.http11.Http11AprProtocol" SSLEnabled="true" maxThreads="64000" relaxedQueryChars="{}[]|">\n      <UpgradeProtocol className="org.apache.coyote.http2.Http2Protocol" />\n      <SSLHostConfig>\n        <Certificate certificateKeyFile="/certs/key.pem"\n                     certificateFile="/certs/cert.pem"\n                     certificateChainFile="/certs/chain.pem"\n                     type="RSA" />\n      </SSLHostConfig>\n    </Connector>SSL-->\n  </Service>,'         conf/server.xml     && sed -i.bak         -e 's,<Context>,<Context sessionCookiePath="/">,'         -e 's,</Context>,<Manager pathname="" /><CookieProcessor sameSiteCookies="unset" /></Context>,'         conf/context.xml     && rm -rf webapps/* bin/*.bat conf/server.xml.bak /tmp/*     && mkdir webapps/ROOT     && chown -R convertigo:convertigo conf temp work logs     && chmod -w conf/*     && chmod 777 conf/context.xml conf/server.xml
+# Mon, 24 Apr 2023 22:20:11 GMT
+ENV CONVERTIGO_VERSION=8.2.0
+# Mon, 24 Apr 2023 22:20:11 GMT
+ENV CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/8.2.0/convertigo-8.2.0.war
+# Mon, 24 Apr 2023 22:20:12 GMT
 ENV CONVERTIGO_GPG_KEYS=6A7779BB78FE368DF74B708FD4DA8FBEB64BF75F
-# Tue, 18 Apr 2023 18:58:18 GMT
-RUN export GNUPGHOME="$(mktemp -d)"     && ( gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$CONVERTIGO_GPG_KEYS"     || gpg --batch --keyserver keyserver.pgp.com --recv-keys "$CONVERTIGO_GPG_KEYS" )     && curl -fSL -o /tmp/convertigo.war $CONVERTIGO_WAR_URL     && curl -fSL -o /tmp/convertigo.war.asc $CONVERTIGO_WAR_URL.asc     && gpg --batch --verify /tmp/convertigo.war.asc /tmp/convertigo.war     && mkdir -p webapps/ROOT webapps/convertigo     && mkdir /certs     && (cd webapps/convertigo         && unzip -q /tmp/convertigo.war         && (chmod -f a+x WEB-INF/xvnc/* || true)         && (test "$(dpkg --print-architecture)" != "i386" && rm -rf WEB-INF/xulrunner WEB-INF/xvnc WEB-INF/lib/swt_* || true)         && rm -rf /tmp/*)
-# Tue, 18 Apr 2023 18:58:18 GMT
-COPY file:394d5b837e94d77b6fb87e0ca8bd50995186aaed1c5f3ab5bc0b482f0f769cc3 in webapps/ROOT/index.html 
-# Tue, 18 Apr 2023 18:58:18 GMT
-COPY file:40e66800235c89768f5b8eac3270bd5566fed223b3756435078348512ce00756 in / 
-# Tue, 18 Apr 2023 18:58:18 GMT
+# Mon, 24 Apr 2023 22:20:18 GMT
+RUN export GNUPGHOME="$(mktemp -d)"     && ( gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$CONVERTIGO_GPG_KEYS"     || gpg --batch --keyserver keyserver.pgp.com --recv-keys "$CONVERTIGO_GPG_KEYS" )     && curl -fSL -o /tmp/convertigo.war $CONVERTIGO_WAR_URL     && curl -fSL -o /tmp/convertigo.war.asc $CONVERTIGO_WAR_URL.asc     && gpg --batch --verify /tmp/convertigo.war.asc /tmp/convertigo.war     && mkdir -p webapps/ROOT webapps/convertigo     && mkdir /certs && chmod 777 /certs     && (cd webapps/convertigo         && unzip -q /tmp/convertigo.war         && (chmod -f a+x WEB-INF/xvnc/* || true)         && (test "$(dpkg --print-architecture)" != "i386" && rm -rf WEB-INF/xulrunner WEB-INF/xvnc WEB-INF/lib/swt_* || true)         && chmod 777 WEB-INF/web.xml WEB-INF/lib WEB-INF/classes         && rm -rf /tmp/*)
+# Mon, 24 Apr 2023 22:20:18 GMT
+COPY file:a8c73db31af1c6589d48a2342d8673de69087696e5f19812fc67f887368ccae8 in webapps/ROOT/index.html 
+# Mon, 24 Apr 2023 22:20:18 GMT
+COPY file:19bfd27811b4342a8176c5bd6d59d8b7fdd35d70aa6d0b1b7e3dbfa499c2a016 in / 
+# Mon, 24 Apr 2023 22:20:18 GMT
 WORKDIR /workspace
-# Tue, 18 Apr 2023 18:58:18 GMT
+# Mon, 24 Apr 2023 22:20:18 GMT
 VOLUME [/workspace]
-# Tue, 18 Apr 2023 18:58:18 GMT
+# Mon, 24 Apr 2023 22:20:18 GMT
 EXPOSE 28080
-# Tue, 18 Apr 2023 18:58:18 GMT
+# Mon, 24 Apr 2023 22:20:18 GMT
 ENTRYPOINT ["tini" "--" "/docker-entrypoint.sh"]
-# Tue, 18 Apr 2023 18:58:19 GMT
+# Mon, 24 Apr 2023 22:20:19 GMT
 CMD ["convertigo"]
 ```
 
@@ -166,23 +166,23 @@ CMD ["convertigo"]
 		Last Modified: Tue, 18 Apr 2023 18:58:30 GMT  
 		Size: 938.7 KB (938673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:25a8b559aa22ab7e00b0400222f572596af85b23c12eecd74ac12ec0f31c93c6`  
-		Last Modified: Tue, 18 Apr 2023 18:58:28 GMT  
-		Size: 4.6 KB (4584 bytes)  
+	-	`sha256:4f71406e64cffe4f197ce4c975984209185b7d0f040b53d4d97cddea38256d3c`  
+		Last Modified: Mon, 24 Apr 2023 22:20:28 GMT  
+		Size: 4.6 KB (4552 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:972642f925309c81a9fb6f55ad1c6c3e6ee1e3700376e891e2f91e7e62be5b6f`  
-		Last Modified: Tue, 18 Apr 2023 18:58:28 GMT  
-		Size: 27.8 KB (27809 bytes)  
+	-	`sha256:83001f52d23274b1391ce42e82113e07ac7527aa84faed416765069b839a7657`  
+		Last Modified: Mon, 24 Apr 2023 22:20:29 GMT  
+		Size: 27.9 KB (27888 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc108aa2f31015992d25e083e5b5d90e7e3ecf1073cd035822e21c8aca8bfbda`  
-		Last Modified: Tue, 18 Apr 2023 18:58:33 GMT  
-		Size: 95.6 MB (95643781 bytes)  
+	-	`sha256:3425605414a4955886dcc655a0488aa72cbe0c3a40d5559d10bd5d9ec83268b0`  
+		Last Modified: Mon, 24 Apr 2023 22:20:34 GMT  
+		Size: 96.3 MB (96280162 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:34558f7c5224adb8adc64b266a10bc43f889f379eb189f8e6c7d5f65358712b4`  
-		Last Modified: Tue, 18 Apr 2023 18:58:28 GMT  
+	-	`sha256:00104f4cf8de9556b7d44ce3f12ab8addc16adedbd501622ab7a3a8971a32298`  
+		Last Modified: Mon, 24 Apr 2023 22:20:29 GMT  
 		Size: 452.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9f2647945bfabb7d326cb2b9f6ef27cff8132d98afadd4b0bb6717fb28d4ca86`  
-		Last Modified: Tue, 18 Apr 2023 18:58:28 GMT  
-		Size: 2.2 KB (2173 bytes)  
+	-	`sha256:4cdbeb311a2a9a5d38302399cd03026e335aa4d9f6bc0bcee73716284029fba3`  
+		Last Modified: Mon, 24 Apr 2023 22:20:29 GMT  
+		Size: 2.2 KB (2242 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
