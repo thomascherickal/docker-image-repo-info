@@ -1687,21 +1687,13 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.7.9-1
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9-1.dsc' gnutls28_3.7.9-1.dsc 3386 SHA256:6d8f16e98f74421ff459e81244de340d85f359b9ef8248ed300d84a38ad10c9a
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9.orig.tar.xz' gnutls28_3.7.9.orig.tar.xz 6377212 SHA256:aaa03416cdbd54eb155187b359e3ec3ed52ec73df4df35a0edd49429ff64d844
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9.orig.tar.xz.asc' gnutls28_3.7.9.orig.tar.xz.asc 996 SHA256:da4a96b14edd3cd44971a36ba1e976af1057e57a2d6c21b0cc7025c983ee84cc
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9-1.debian.tar.xz' gnutls28_3.7.9-1.debian.tar.xz 85804 SHA256:cea9b352d2eec06333448773f36b0de2462ea41465fd21785c345cb7c0342b26
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnutls28/3.7.9-1/
 
-- https://sources.debian.net/src/gnutls28/3.7.9-1/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.7.9-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.7.9-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gobject-introspection=1.74.0-3`
 
@@ -3749,20 +3741,13 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libx
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.14+dfsg-1.1
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.14%2bdfsg-1.1.dsc' libxml2_2.9.14+dfsg-1.1.dsc 3078 SHA256:ed31c56a4ecec3acbed5012fa5f1a2e23059d89eab938d5c66e809d9ae9bbf8d
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.14%2bdfsg.orig.tar.xz' libxml2_2.9.14+dfsg.orig.tar.xz 2351200 SHA256:4fe913dec8b1ab89d13b489b419a8203176ea39e931eaa0d25b17eafb9c279e9
-'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.14%2bdfsg-1.1.debian.tar.xz' libxml2_2.9.14+dfsg-1.1.debian.tar.xz 32820 SHA256:9a6d8cfcd1cab9ef2130c6e28e2d63c9eb789c3f6e8d25e2e702694f3049ef9a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxml2/2.9.14+dfsg-1.1/
 
-- https://sources.debian.net/src/libxml2/2.9.14+dfsg-1.1/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.14+dfsg-1.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.14+dfsg-1.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxrender=1:0.9.10-1.1`
 
@@ -5480,21 +5465,13 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2023c-2
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c-2.dsc' tzdata_2023c-2.dsc 2332 SHA256:3c4c8d81c7b57dad577bd21fbb7eea93e9ac37b38b33ab52621a1016ec12ccde
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz' tzdata_2023c.orig.tar.gz 443902 SHA256:3f510b5d1b4ae9bb38e485aa302a776b317fb3637bdb6404c4adf7b6cadd965c
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz.asc' tzdata_2023c.orig.tar.gz.asc 833 SHA256:d5ec7b6ceddc46aa137c0ef85fa5c87445509d7997c067ee0fd2e2a23f833557
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c-2.debian.tar.xz' tzdata_2023c-2.debian.tar.xz 117956 SHA256:e886e6b1faf63e27636eacba708b8e5935ec971d5ad6210bf960e9caa9db1b2e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2023c-2/
 
-- https://sources.debian.net/src/tzdata/2023c-2/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2023c-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2023c-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043+nmu1`
 
