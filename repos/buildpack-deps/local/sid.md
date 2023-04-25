@@ -1684,21 +1684,13 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.7.9-1
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9-1.dsc' gnutls28_3.7.9-1.dsc 3386 SHA256:6d8f16e98f74421ff459e81244de340d85f359b9ef8248ed300d84a38ad10c9a
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9.orig.tar.xz' gnutls28_3.7.9.orig.tar.xz 6377212 SHA256:aaa03416cdbd54eb155187b359e3ec3ed52ec73df4df35a0edd49429ff64d844
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9.orig.tar.xz.asc' gnutls28_3.7.9.orig.tar.xz.asc 996 SHA256:da4a96b14edd3cd44971a36ba1e976af1057e57a2d6c21b0cc7025c983ee84cc
-'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9-1.debian.tar.xz' gnutls28_3.7.9-1.debian.tar.xz 85804 SHA256:cea9b352d2eec06333448773f36b0de2462ea41465fd21785c345cb7c0342b26
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnutls28/3.7.9-1/
 
-- https://sources.debian.net/src/gnutls28/3.7.9-1/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.7.9-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.7.9-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gobject-introspection=1.74.0-3`
 
@@ -4056,21 +4048,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb=1:10.11.2-2
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.2-2.dsc' mariadb_10.11.2-2.dsc 5213 SHA256:5f3615a973491de1ec9f97a58af9849cfcb47e7c3a158564a6cfd6e619d7ec89
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.2.orig.tar.gz' mariadb_10.11.2.orig.tar.gz 92963269 SHA256:290e712dd79ec9c8a61be1d4ff7a7dd314605261a928ac5eb129a056cf4d4042
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.2.orig.tar.gz.asc' mariadb_10.11.2.orig.tar.gz.asc 833 SHA256:aec016d463832a89652332f38eeb165c9e950fb62ea4d524448aa81a3c3b4c08
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.2-2.debian.tar.xz' mariadb_10.11.2-2.debian.tar.xz 398748 SHA256:8f89e3148733803b307b5512767220605c6b0f4ef15fc76131a582ffc56cc656
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb/1:10.11.2-2/
 
-- https://sources.debian.net/src/mariadb/1:10.11.2-2/ (for browsing the source)
-- https://sources.debian.net/src/mariadb/1:10.11.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb/1:10.11.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-3.1`
 
@@ -4421,21 +4405,13 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr-3-1-30/copyright`, `/usr/shar
 - `BSD-3-clause`
 - `openexr`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openexr=3.1.5-4
-'http://deb.debian.org/debian/pool/main/o/openexr/openexr_3.1.5-4.dsc' openexr_3.1.5-4.dsc 2506 SHA256:d9a02deed821f31f01dadf8ca284c058437cc76b2d6b374686f73b514c1dd0b7
-'http://deb.debian.org/debian/pool/main/o/openexr/openexr_3.1.5.orig.tar.gz' openexr_3.1.5.orig.tar.gz 20327926 SHA256:93925805c1fc4f8162b35f0ae109c4a75344e6decae5a240afdfce25f8a433ec
-'http://deb.debian.org/debian/pool/main/o/openexr/openexr_3.1.5.orig.tar.gz.asc' openexr_3.1.5.orig.tar.gz.asc 287 SHA256:a2c4ac5151789903ca8ab3093a2798491463ccf2abfd003a20f96453e505dd5f
-'http://deb.debian.org/debian/pool/main/o/openexr/openexr_3.1.5-4.debian.tar.xz' openexr_3.1.5-4.debian.tar.xz 18152 SHA256:d13236dee40357dbcca99312935d112a8f62aa1e9e4b025af354b8df3dbd58c8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openexr/3.1.5-4/
 
-- https://sources.debian.net/src/openexr/3.1.5-4/ (for browsing the source)
-- https://sources.debian.net/src/openexr/3.1.5-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openexr/3.1.5-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openjpeg2=2.5.0-1`
 
