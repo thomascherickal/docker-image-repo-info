@@ -1,7 +1,7 @@
 ## `eclipse-temurin:20-jre-windowsservercore-ltsc2022`
 
 ```console
-$ docker pull eclipse-temurin@sha256:9b2c3ec74989a4bcfa463783470936b8ed6be09ab206485a45955f788746b577
+$ docker pull eclipse-temurin@sha256:dba01820e9b316b65b610ddafa7af38e37d370f0a90a2fe86fe84e0a5c338dbb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull eclipse-temurin@sha256:9b2c3ec74989a4bcfa463783470936b8ed6be09ab20
 ### `eclipse-temurin:20-jre-windowsservercore-ltsc2022` - windows version 10.0.20348.1668; amd64
 
 ```console
-$ docker pull eclipse-temurin@sha256:ee4482e1570cbf06c5bbe28663f1be41bb1b3c313371c2d0bf78e27c2360d119
+$ docker pull eclipse-temurin@sha256:7212c89948ce1077dfcd78de2c94febcdfc60b49ef1d841faf37fa1a4593a565
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **1.8 GB (1841964361 bytes)**  
+-	Total Size: **1.8 GB (1841984013 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a9d0e061c075bee1fda683469ebba9a5237f446cd0712802659eb7de10ddb43a`
+-	Image ID: `sha256:61a5621ffd83d8b8ae614ca333cc74b533acab84f3d3d13295c613bc92b7af76`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -29,11 +29,11 @@ RUN Apply image 10.0.20348.1487
 RUN Install update 10.0.20348.1668
 # Tue, 11 Apr 2023 23:37:41 GMT
 SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
-# Wed, 12 Apr 2023 01:31:00 GMT
-ENV JAVA_VERSION=jdk-20+36
-# Wed, 12 Apr 2023 01:38:22 GMT
-RUN Write-Host ('Downloading https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20%2B36/OpenJDK20U-jre_x64_windows_hotspot_20_36.msi ...');     curl.exe -LfsSo openjdk.msi https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20%2B36/OpenJDK20U-jre_x64_windows_hotspot_20_36.msi ;     Write-Host ('Verifying sha256 (b8e923bcd2f03fa84887c14fec0c573b843c6d4b9671c3044e41706c579b4547) ...');     if ((Get-FileHash openjdk.msi -Algorithm sha256).Hash -ne 'b8e923bcd2f03fa84887c14fec0c573b843c6d4b9671c3044e41706c579b4547') {         Write-Host 'FAILED!';         exit 1;     };         New-Item -ItemType Directory -Path C:\temp | Out-Null;         Write-Host 'Installing using MSI ...';     $proc = Start-Process -FilePath "msiexec.exe" -ArgumentList '/i', 'openjdk.msi', '/L*V', 'C:\temp\OpenJDK.log',     '/quiet', 'ADDLOCAL=FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome', 'INSTALLDIR=C:\openjdk-20' -Wait -Passthru;     $proc.WaitForExit() ;     if ($proc.ExitCode -ne 0) {         Write-Host 'FAILED installing MSI!' ;         exit 1;     };         Remove-Item -Path C:\temp -Recurse | Out-Null;     Write-Host 'Removing openjdk.msi ...';     Remove-Item openjdk.msi -Force
-# Wed, 12 Apr 2023 01:38:47 GMT
+# Wed, 26 Apr 2023 19:42:58 GMT
+ENV JAVA_VERSION=jdk-20.0.1+9
+# Wed, 26 Apr 2023 19:48:43 GMT
+RUN Write-Host ('Downloading https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20.0.1%2B9/OpenJDK20U-jre_x64_windows_hotspot_20.0.1_9.msi ...');     curl.exe -LfsSo openjdk.msi https://github.com/adoptium/temurin20-binaries/releases/download/jdk-20.0.1%2B9/OpenJDK20U-jre_x64_windows_hotspot_20.0.1_9.msi ;     Write-Host ('Verifying sha256 (2fe49a1545c1f478fae75de7cdbdec8f4301e9917ff3d4598512994205a0cd94) ...');     if ((Get-FileHash openjdk.msi -Algorithm sha256).Hash -ne '2fe49a1545c1f478fae75de7cdbdec8f4301e9917ff3d4598512994205a0cd94') {         Write-Host 'FAILED!';         exit 1;     };         New-Item -ItemType Directory -Path C:\temp | Out-Null;         Write-Host 'Installing using MSI ...';     $proc = Start-Process -FilePath "msiexec.exe" -ArgumentList '/i', 'openjdk.msi', '/L*V', 'C:\temp\OpenJDK.log',     '/quiet', 'ADDLOCAL=FeatureEnvironment,FeatureJarFileRunWith,FeatureJavaHome', 'INSTALLDIR=C:\openjdk-20' -Wait -Passthru;     $proc.WaitForExit() ;     if ($proc.ExitCode -ne 0) {         Write-Host 'FAILED installing MSI!' ;         exit 1;     };         Remove-Item -Path C:\temp -Recurse | Out-Null;     Write-Host 'Removing openjdk.msi ...';     Remove-Item openjdk.msi -Force
+# Wed, 26 Apr 2023 19:49:02 GMT
 RUN Write-Host 'Verifying install ...';     Write-Host 'java --version'; java --version;         Write-Host 'Complete.'
 ```
 
@@ -50,15 +50,15 @@ RUN Write-Host 'Verifying install ...';     Write-Host 'java --version'; java --
 		Last Modified: Wed, 12 Apr 2023 00:49:03 GMT  
 		Size: 1.4 KB (1430 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b4086f086999d8787241aff1518ecfc09777cdd59e5f95d44204903bf8ab90c1`  
-		Last Modified: Wed, 12 Apr 2023 09:42:28 GMT  
-		Size: 1.3 KB (1312 bytes)  
+	-	`sha256:d27beaa95a0c096910ae8d4d2dd22d091669923845bc36613ef961363444a9ee`  
+		Last Modified: Wed, 26 Apr 2023 20:06:49 GMT  
+		Size: 1.4 KB (1416 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4078bb0e78f5d970e2cb8687df50554529a9f78b5fd6eff80dd06ae1e7151bd2`  
-		Last Modified: Wed, 12 Apr 2023 09:44:50 GMT  
-		Size: 78.8 MB (78802251 bytes)  
+	-	`sha256:c56a868c6fb7cb8f331303aca54d6b35c23ed7038c9a7583792c5468711509f4`  
+		Last Modified: Wed, 26 Apr 2023 20:08:49 GMT  
+		Size: 78.8 MB (78821916 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:403bda842ebb1641e78cb03d92c84d8a01b83ce97bfb2180a5d9db399fefb0f6`  
-		Last Modified: Wed, 12 Apr 2023 09:44:39 GMT  
-		Size: 557.3 KB (557275 bytes)  
+	-	`sha256:45c41b8eebea9404e8edc641d7f68dee7038b2be1c04060c21ee73b7d68bff1d`  
+		Last Modified: Wed, 26 Apr 2023 20:08:39 GMT  
+		Size: 557.2 KB (557158 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
