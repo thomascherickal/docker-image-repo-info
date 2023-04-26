@@ -1,7 +1,7 @@
 ## `flink:java8`
 
 ```console
-$ docker pull flink@sha256:be39853512737514480234318316c4031fc95b3ecd7a8beece291afc82663a5a
+$ docker pull flink@sha256:d37a0ea519ecd6e97439ca5e973ea66722109d48475c3a3c78c6ba89212a037d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -123,14 +123,14 @@ CMD ["help"]
 ### `flink:java8` - linux; arm64 variant v8
 
 ```console
-$ docker pull flink@sha256:4b766d26333d3d7488aa68db0d521f369949bcf72f8748ef9ec207abc7930ff8
+$ docker pull flink@sha256:6419cc56bf63bd91b2ca8159df48115b00a4a2506b6b32ce83f895e93f04c1c6
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **556.9 MB (556915377 bytes)**  
+-	Total Size: **556.9 MB (556928885 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:12364728e968cfeffa79e628743fd74d35f566830d08861a25ba43b167709da4`
+-	Image ID: `sha256:4d827f40d63de8fe63e4443e3233a7175ca9a999e24798e669e3ef85bd197cca`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["help"]`
 
@@ -155,37 +155,37 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Thu, 16 Mar 2023 01:52:57 GMT
 RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Thu, 16 Mar 2023 01:52:57 GMT
-ENV JAVA_VERSION=jdk8u362-b09
-# Thu, 16 Mar 2023 01:53:17 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='cbe45788fa2d9d04d6b10f8aec7dbb15a018dbafe897ed75e31876d0367d56a5';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_aarch64_linux_hotspot_8u362b09.tar.gz';          ;;        armhf|arm)          ESUM='82d8524838b07ee438d42f4c33b6ecfe89ae83efac9af0605c76d75195bdcd99';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_arm_linux_hotspot_8u362b09.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='5ec3e07126fedc23b58bb0f5b2dd05b5e9599ce1a3567fc2c7b27587f39faa3b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_ppc64le_linux_hotspot_8u362b09.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='c8c4e180f915fc7c163240bf363dcdf2b481cd2723fabfc3d08ccf12e049611f';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u362-b09/OpenJDK8U-jre_x64_linux_hotspot_8u362b09.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
-# Thu, 16 Mar 2023 01:53:18 GMT
+# Wed, 26 Apr 2023 19:39:36 GMT
+ENV JAVA_VERSION=jdk8u372-b07
+# Wed, 26 Apr 2023 19:40:03 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='f8e440273c8feb3fcfaca88ba18fec291deae18a548adde8a37cd1db08107b95';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_aarch64_linux_hotspot_8u372b07.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='ba5f8141a16722e39576bf42b69d2b8ebf95fc2c05441e3200f609af4dd9f1ea';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_ppc64le_linux_hotspot_8u372b07.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b6fdfe32085a884c11b31f66aa67ac62811df7112fb6fb08beea61376a86fbb4';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_x64_linux_hotspot_8u372b07.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Wed, 26 Apr 2023 19:40:03 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
-# Thu, 16 Mar 2023 05:13:15 GMT
+# Wed, 26 Apr 2023 22:37:30 GMT
 RUN set -ex;   apt-get update;   apt-get -y install gpg libsnappy1v5 gettext-base libjemalloc-dev;   rm -rf /var/lib/apt/lists/*
-# Thu, 16 Mar 2023 05:13:15 GMT
+# Wed, 26 Apr 2023 22:37:30 GMT
 ENV GOSU_VERSION=1.11
-# Thu, 16 Mar 2023 05:13:33 GMT
+# Wed, 26 Apr 2023 22:37:36 GMT
 RUN set -ex;   wget -nv -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture)";   wget -nv -O /usr/local/bin/gosu.asc "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$(dpkg --print-architecture).asc";   export GNUPGHOME="$(mktemp -d)";   for server in ha.pool.sks-keyservers.net $(shuf -e                           hkp://p80.pool.sks-keyservers.net:80                           keyserver.ubuntu.com                           hkp://keyserver.ubuntu.com:80                           pgp.mit.edu) ; do       gpg --batch --keyserver "$server" --recv-keys B42F6819007F00F88E364FD4036A9C25BF357DD4 && break || : ;   done &&   gpg --batch --verify /usr/local/bin/gosu.asc /usr/local/bin/gosu;   gpgconf --kill all;   rm -rf "$GNUPGHOME" /usr/local/bin/gosu.asc;   chmod +x /usr/local/bin/gosu;   gosu nobody true
-# Thu, 23 Mar 2023 22:07:14 GMT
+# Wed, 26 Apr 2023 22:37:36 GMT
 ENV FLINK_TGZ_URL=https://www.apache.org/dyn/closer.cgi?action=download&filename=flink/flink-1.17.0/flink-1.17.0-bin-scala_2.12.tgz FLINK_ASC_URL=https://www.apache.org/dist/flink/flink-1.17.0/flink-1.17.0-bin-scala_2.12.tgz.asc GPG_KEY=A1BD477F79D036D2C30CA7DBCA8AEEC2F6EB040B CHECK_GPG=true
-# Thu, 23 Mar 2023 22:07:14 GMT
+# Wed, 26 Apr 2023 22:37:36 GMT
 ENV FLINK_HOME=/opt/flink
-# Thu, 23 Mar 2023 22:07:14 GMT
+# Wed, 26 Apr 2023 22:37:36 GMT
 ENV PATH=/opt/flink/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 23 Mar 2023 22:07:14 GMT
+# Wed, 26 Apr 2023 22:37:36 GMT
 RUN groupadd --system --gid=9999 flink &&     useradd --system --home-dir $FLINK_HOME --uid=9999 --gid=flink flink
-# Thu, 23 Mar 2023 22:07:15 GMT
+# Wed, 26 Apr 2023 22:37:37 GMT
 WORKDIR /opt/flink
-# Thu, 23 Mar 2023 22:07:45 GMT
+# Wed, 26 Apr 2023 22:38:09 GMT
 RUN set -ex;   wget -nv -O flink.tgz "$FLINK_TGZ_URL";     if [ "$CHECK_GPG" = "true" ]; then     wget -nv -O flink.tgz.asc "$FLINK_ASC_URL";     export GNUPGHOME="$(mktemp -d)";     for server in ha.pool.sks-keyservers.net $(shuf -e                             hkp://p80.pool.sks-keyservers.net:80                             keyserver.ubuntu.com                             hkp://keyserver.ubuntu.com:80                             pgp.mit.edu) ; do         gpg --batch --keyserver "$server" --recv-keys "$GPG_KEY" && break || : ;     done &&     gpg --batch --verify flink.tgz.asc flink.tgz;     gpgconf --kill all;     rm -rf "$GNUPGHOME" flink.tgz.asc;   fi;     tar -xf flink.tgz --strip-components=1;   rm flink.tgz;     chown -R flink:flink .;     sed -i 's/rest.address: localhost/rest.address: 0.0.0.0/g' $FLINK_HOME/conf/flink-conf.yaml;   sed -i 's/rest.bind-address: localhost/rest.bind-address: 0.0.0.0/g' $FLINK_HOME/conf/flink-conf.yaml;   sed -i 's/jobmanager.bind-host: localhost/jobmanager.bind-host: 0.0.0.0/g' $FLINK_HOME/conf/flink-conf.yaml;   sed -i 's/taskmanager.bind-host: localhost/taskmanager.bind-host: 0.0.0.0/g' $FLINK_HOME/conf/flink-conf.yaml;   sed -i '/taskmanager.host: localhost/d' $FLINK_HOME/conf/flink-conf.yaml;
-# Thu, 23 Mar 2023 22:07:48 GMT
+# Wed, 26 Apr 2023 22:38:13 GMT
 COPY file:ab8cf5711c2ee73018994cee7133a7f61b2e5fca388abbb79b5eac61bf7f4fa3 in / 
-# Thu, 23 Mar 2023 22:07:49 GMT
+# Wed, 26 Apr 2023 22:38:13 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 23 Mar 2023 22:07:49 GMT
+# Wed, 26 Apr 2023 22:38:13 GMT
 EXPOSE 6123 8081
-# Thu, 23 Mar 2023 22:07:49 GMT
+# Wed, 26 Apr 2023 22:38:13 GMT
 CMD ["help"]
 ```
 
@@ -198,35 +198,35 @@ CMD ["help"]
 		Last Modified: Thu, 16 Mar 2023 01:58:19 GMT  
 		Size: 12.4 MB (12389767 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:152af1a9cbde48b51c20b7a1c2b0b3b37f1fc53f0cac876e115ee4a1111a8833`  
-		Last Modified: Thu, 16 Mar 2023 01:58:51 GMT  
-		Size: 40.8 MB (40807784 bytes)  
+	-	`sha256:a47ca5cb79255a274feebf796ab149792301dcad10fa48e3d1a760e36bf3c651`  
+		Last Modified: Wed, 26 Apr 2023 19:45:40 GMT  
+		Size: 40.8 MB (40821065 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7d3db1828ae58f408ce72b2ba4feec378517ceaa250235b897cf24ca9767869a`  
-		Last Modified: Thu, 16 Mar 2023 01:58:48 GMT  
-		Size: 162.0 B  
+	-	`sha256:9de4b1da7645a10df3190eee9b3841c00a638402a61566f9109ef3aae6d3858a`  
+		Last Modified: Wed, 26 Apr 2023 19:45:36 GMT  
+		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:26b776d2331341d200675ddf6bacbe8eb55acb1066985409811388b242365761`  
-		Last Modified: Thu, 16 Mar 2023 05:16:41 GMT  
-		Size: 4.5 MB (4502450 bytes)  
+	-	`sha256:c7569247a18ba237c25cb906dd273cdfd40a83d9c7516140d69840f2cfe1480d`  
+		Last Modified: Wed, 26 Apr 2023 22:44:52 GMT  
+		Size: 4.5 MB (4502420 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:25d5ebabd75ef2d9407ab8d168c5cc68069b5b3764163096fc53a95af4937525`  
-		Last Modified: Thu, 16 Mar 2023 05:16:38 GMT  
-		Size: 835.4 KB (835388 bytes)  
+	-	`sha256:1b5f367fe6714544892ec18accb23aeb54b5de46492220b73e41cd95f0d65594`  
+		Last Modified: Wed, 26 Apr 2023 22:44:50 GMT  
+		Size: 835.4 KB (835390 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:002ed9376bdfbff89e0e3a2ce8e8df7acc532243f6ce6b6ff604b6a97ebc299e`  
-		Last Modified: Thu, 23 Mar 2023 22:08:45 GMT  
-		Size: 4.7 KB (4652 bytes)  
+	-	`sha256:6dcb49887a38aad53e8215588f528e0bcec4eb2cef10a9691038b6ca77c23674`  
+		Last Modified: Wed, 26 Apr 2023 22:44:49 GMT  
+		Size: 4.7 KB (4650 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:085f161f757d63bede981cd7a6da9114538c33ecb8e6a99ece9a2c59f0d7f444`  
-		Last Modified: Thu, 23 Mar 2023 22:08:45 GMT  
+	-	`sha256:a68f2775b3d62f32f016725109ffd30e6f57cf6fcbd185cf5c3186ecf5ebfc97`  
+		Last Modified: Wed, 26 Apr 2023 22:44:49 GMT  
 		Size: 148.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db011d9920fdbec3a0e426d64d76e0b2cd3ac2f741d984671b07240a98d027cf`  
-		Last Modified: Thu, 23 Mar 2023 22:09:01 GMT  
-		Size: 470.0 MB (469985363 bytes)  
+	-	`sha256:30611ae5e8fa81deb16ee7fab605104cee14b63cf37ea44a3c45b8654a790f87`  
+		Last Modified: Wed, 26 Apr 2023 22:45:06 GMT  
+		Size: 470.0 MB (469985623 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9036de4bea16af69180380cf6507a4a5e8332d284cfdca91b003a99ff927c7dc`  
-		Last Modified: Thu, 23 Mar 2023 22:08:45 GMT  
-		Size: 2.1 KB (2109 bytes)  
+	-	`sha256:1c0370f0e3507a2f60a91d33ed3fb03aaa6c966317539b51a788e0e816144646`  
+		Last Modified: Wed, 26 Apr 2023 22:44:50 GMT  
+		Size: 2.1 KB (2108 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
