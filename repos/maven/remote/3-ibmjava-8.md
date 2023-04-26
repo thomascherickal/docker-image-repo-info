@@ -1,7 +1,7 @@
 ## `maven:3-ibmjava-8`
 
 ```console
-$ docker pull maven@sha256:41ba75ce1e95ee0c7403b27d011b6684c3097914c7c2e1ae9eef3b92b244b13e
+$ docker pull maven@sha256:df66dd15f5fbe4b9e0c0ef0bceb8ae85b0a844543bf067fcbd364560fd54d103
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,13 +13,13 @@ $ docker pull maven@sha256:41ba75ce1e95ee0c7403b27d011b6684c3097914c7c2e1ae9eef3
 ### `maven:3-ibmjava-8` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:facf617c68561c39a4bd4f0bb9cdea821970f5196aaadf1cc30ff188eaf8380c
+$ docker pull maven@sha256:4e98b651e853b5cb56ae9cc585d80ec8d6af98c2b4114a7aa7e2196b04be1f26
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **213.7 MB (213681353 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:498e3f549db109b2e9a74d0fed6579d38d1097065718eaf867dec2858d2b049b`
+-	Image ID: `sha256:dc1059b94df88fc519119c9625319e418ac5bc036250cbfe3b0704644699a453`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -46,27 +46,27 @@ ENV JAVA_VERSION=8.0.8.0
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        amd64|x86_64)          ESUM='8a1dfef941fc2e43fcd8143960d2c3a82e283695eff893923cb05c226bcdd0a0';          YML_FILE='8.0/sdk/linux/x86_64/index.yml';          ;;        ppc64el|ppc64le)          ESUM='5a3d2ef0ad3687b34e1df3854b45d2e00a034724fe70a0e5bf14b2eebca1fe9b';          YML_FILE='8.0/sdk/linux/ppc64le/index.yml';          ;;        s390)          ESUM='f361174227db6e6e1b067b8085549fd2f7ba63a73752a2db7be260e438ef39eb';          YML_FILE='8.0/sdk/linux/s390/index.yml';          ;;        s390x)          ESUM='974c339555e219ea93198316f6a33ee8243481e568a730d68b467c79f7caa5bc';          YML_FILE='8.0/sdk/linux/s390x/index.yml';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     BASE_URL="https://public.dhe.ibm.com/ibmdl/export/pub/systems/cloud/runtimes/java/meta/";     wget -q -U UA_IBM_JAVA_Docker -O /tmp/index.yml ${BASE_URL}/${YML_FILE};     JAVA_URL=$(sed -n '/^'${JAVA_VERSION}:'/{n;s/\s*uri:\s//p}'< /tmp/index.yml);     wget -q -U UA_IBM_JAVA_Docker -O /tmp/ibm-java.bin ${JAVA_URL};     echo "${ESUM}  /tmp/ibm-java.bin" | sha256sum -c -;     echo "INSTALLER_UI=silent" > /tmp/response.properties;     echo "USER_INSTALL_DIR=/opt/ibm/java" >> /tmp/response.properties;     echo "LICENSE_ACCEPTED=TRUE" >> /tmp/response.properties;     mkdir -p /opt/ibm;     chmod +x /tmp/ibm-java.bin;     /tmp/ibm-java.bin -i silent -f /tmp/response.properties;     rm -f /tmp/response.properties;     rm -f /tmp/index.yml;     rm -f /tmp/ibm-java.bin;
 # Fri, 31 Mar 2023 22:22:44 GMT
 ENV JAVA_HOME=/opt/ibm/java/jre PATH=/opt/ibm/java/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin IBM_JAVA_OPTIONS=-XX:+UseContainerSupport
-# Sun, 02 Apr 2023 19:35:52 GMT
+# Wed, 26 Apr 2023 19:21:32 GMT
 RUN apt-get update   && apt-get install -y ca-certificates curl --no-install-recommends   && rm -rf /var/lib/apt/lists/* # buildkit
-# Sun, 02 Apr 2023 19:35:52 GMT
+# Wed, 26 Apr 2023 19:21:32 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Sun, 02 Apr 2023 19:35:52 GMT
+# Wed, 26 Apr 2023 19:21:32 GMT
 COPY /usr/share/maven /usr/share/maven # buildkit
-# Sun, 02 Apr 2023 19:35:52 GMT
+# Wed, 26 Apr 2023 19:21:32 GMT
 COPY /usr/local/bin/mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh # buildkit
-# Sun, 02 Apr 2023 19:35:52 GMT
+# Wed, 26 Apr 2023 19:21:32 GMT
 COPY /usr/share/maven/ref/settings-docker.xml /usr/share/maven/ref/settings-docker.xml # buildkit
-# Sun, 02 Apr 2023 19:35:52 GMT
+# Wed, 26 Apr 2023 19:21:32 GMT
 RUN ln -s ${MAVEN_HOME}/bin/mvn /usr/bin/mvn # buildkit
-# Sun, 02 Apr 2023 19:35:52 GMT
+# Wed, 26 Apr 2023 19:21:32 GMT
 ARG MAVEN_VERSION=3.9.1
-# Sun, 02 Apr 2023 19:35:52 GMT
+# Wed, 26 Apr 2023 19:21:32 GMT
 ARG USER_HOME_DIR=/root
-# Sun, 02 Apr 2023 19:35:52 GMT
+# Wed, 26 Apr 2023 19:21:32 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Sun, 02 Apr 2023 19:35:52 GMT
+# Wed, 26 Apr 2023 19:21:32 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Sun, 02 Apr 2023 19:35:52 GMT
+# Wed, 26 Apr 2023 19:21:32 GMT
 CMD ["mvn"]
 ```
 
