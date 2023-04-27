@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9e01f3b166a88cd4e134a4df24afab00fce7d6085a901ec8b4c3f2b7b18fd887`
-- Created: `2023-04-17T22:24:50.768265644Z`
-- Virtual Size: ~ 393.98 Mb  
+- Image ID: `sha256:989844f173963e757878160cc4d42e92241aa0a34fcfc305b879f8541c84c3dd`
+- Created: `2023-04-26T20:12:05.699793277Z`
+- Virtual Size: ~ 394.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint"]`
@@ -15,7 +15,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.6+10`
+  - `JAVA_VERSION=jdk-17.0.7+7`
   - `CLOJURE_VERSION=1.11.1.1273`
 
 ## `apk` (`.apk`-based packages)
@@ -261,16 +261,16 @@ FTL GPL-2.0-or-later
 ### `apk` package: `git`
 
 ```console
-git-2.38.4-r1 description:
+git-2.38.5-r0 description:
 Distributed version control system
 
-git-2.38.4-r1 webpage:
+git-2.38.5-r0 webpage:
 https://www.git-scm.com/
 
-git-2.38.4-r1 installed size:
+git-2.38.5-r0 installed size:
 6068 KiB
 
-git-2.38.4-r1 license:
+git-2.38.5-r0 license:
 GPL-2.0-or-later
 
 ```
