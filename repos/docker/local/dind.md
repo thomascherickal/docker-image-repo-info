@@ -1,16 +1,16 @@
-# `docker:23.0.4-dind`
+# `docker:23.0.5-dind`
 
 ## Docker Metadata
 
-- Image ID: `sha256:7918c105b85a93f5031aef9fddfe4c05247861b4de6a74e2a39f2ff221bda139`
-- Created: `2023-04-20T17:06:00Z`
-- Virtual Size: ~ 318.11 Mb  
+- Image ID: `sha256:70cbbc2855e3073ff9bc102e3a9f8e08707e256264c0aa2bc4db179199c045e3`
+- Created: `2023-04-26T20:00:03Z`
+- Virtual Size: ~ 318.12 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `DOCKER_VERSION=23.0.4`
+  - `DOCKER_VERSION=23.0.5`
   - `DOCKER_BUILDX_VERSION=0.10.4`
   - `DOCKER_COMPOSE_VERSION=2.17.3`
   - `DOCKER_TLS_CERTDIR=/certs`
