@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:573192b86bbb81814dd5b556db67d82d916c5a0d2d6923f1373114d199ef9658`
-- Created: `2023-04-22T01:20:38.322661549Z`
-- Virtual Size: ~ 586.43 Mb  
+- Image ID: `sha256:2d5d0d475f903b464225d876cd39aec1340a3410f99d1bc59f00fb3018baa661`
+- Created: `2023-04-26T20:43:47.594948092Z`
+- Virtual Size: ~ 586.73 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.6+10`
+  - `JAVA_VERSION=jdk-17.0.7+7`
   - `GRADLE_HOME=/opt/gradle`
   - `GRADLE_VERSION=8.1.1`
 
@@ -295,16 +295,16 @@ GPL-3.0-or-later
 ### `apk` package: `git`
 
 ```console
-git-2.38.4-r1 description:
+git-2.38.5-r0 description:
 Distributed version control system
 
-git-2.38.4-r1 webpage:
+git-2.38.5-r0 webpage:
 https://www.git-scm.com/
 
-git-2.38.4-r1 installed size:
+git-2.38.5-r0 installed size:
 6068 KiB
 
-git-2.38.4-r1 license:
+git-2.38.5-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -312,16 +312,16 @@ GPL-2.0-or-later
 ### `apk` package: `git-lfs`
 
 ```console
-git-lfs-3.2.0-r4 description:
+git-lfs-3.2.0-r5 description:
 Git extension for versioning large files
 
-git-lfs-3.2.0-r4 webpage:
+git-lfs-3.2.0-r5 webpage:
 https://git-lfs.github.io/
 
-git-lfs-3.2.0-r4 installed size:
+git-lfs-3.2.0-r5 installed size:
 11 MiB
 
-git-lfs-3.2.0-r4 license:
+git-lfs-3.2.0-r5 license:
 MIT
 
 ```
@@ -380,16 +380,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.88.1-r1 description:
+libcurl-8.0.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.88.1-r1 webpage:
+libcurl-8.0.1-r0 webpage:
 https://curl.se/
 
-libcurl-7.88.1-r1 installed size:
-552 KiB
+libcurl-8.0.1-r0 installed size:
+556 KiB
 
-libcurl-7.88.1-r1 license:
+libcurl-8.0.1-r0 license:
 curl
 
 ```
@@ -771,16 +771,16 @@ BSD-3-Clause
 ### `apk` package: `python3`
 
 ```console
-python3-3.10.10-r0 description:
+python3-3.10.11-r0 description:
 A high-level scripting language
 
-python3-3.10.10-r0 webpage:
+python3-3.10.11-r0 webpage:
 https://www.python.org/
 
-python3-3.10.10-r0 installed size:
+python3-3.10.11-r0 installed size:
 47 MiB
 
-python3-3.10.10-r0 license:
+python3-3.10.11-r0 license:
 PSF-2.0
 
 ```
