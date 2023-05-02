@@ -4400,21 +4400,13 @@ Licenses: (parsed from: `/usr/share/doc/libopenexr-3-1-30/copyright`, `/usr/shar
 - `BSD-3-clause`
 - `openexr`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openexr=3.1.5-4
-'http://deb.debian.org/debian/pool/main/o/openexr/openexr_3.1.5-4.dsc' openexr_3.1.5-4.dsc 2506 SHA256:d9a02deed821f31f01dadf8ca284c058437cc76b2d6b374686f73b514c1dd0b7
-'http://deb.debian.org/debian/pool/main/o/openexr/openexr_3.1.5.orig.tar.gz' openexr_3.1.5.orig.tar.gz 20327926 SHA256:93925805c1fc4f8162b35f0ae109c4a75344e6decae5a240afdfce25f8a433ec
-'http://deb.debian.org/debian/pool/main/o/openexr/openexr_3.1.5.orig.tar.gz.asc' openexr_3.1.5.orig.tar.gz.asc 287 SHA256:a2c4ac5151789903ca8ab3093a2798491463ccf2abfd003a20f96453e505dd5f
-'http://deb.debian.org/debian/pool/main/o/openexr/openexr_3.1.5-4.debian.tar.xz' openexr_3.1.5-4.debian.tar.xz 18152 SHA256:d13236dee40357dbcca99312935d112a8f62aa1e9e4b025af354b8df3dbd58c8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openexr/3.1.5-4/
 
-- https://sources.debian.net/src/openexr/3.1.5-4/ (for browsing the source)
-- https://sources.debian.net/src/openexr/3.1.5-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openexr/3.1.5-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openjpeg2=2.5.0-1`
 
