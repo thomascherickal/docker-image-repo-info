@@ -3341,20 +3341,13 @@ Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libx
 - `ISC`
 - `MIT-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-7+deb10u5
-'http://deb.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-7%2bdeb10u5.dsc' libxml2_2.9.4+dfsg1-7+deb10u5.dsc 3159 SHA256:6303e2cd44297bc4217a383ee9689d21405fe76a55e3ca1117777aa459a890e3
-'http://deb.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA256:a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e
-'http://deb.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-7%2bdeb10u5.debian.tar.xz' libxml2_2.9.4+dfsg1-7+deb10u5.debian.tar.xz 48120 SHA256:4fe41d5913d7c93847d34a575489eccc56cffdb927b2128e26f297885a8f7528
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-7+deb10u5/
 
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-7+deb10u5/ (for browsing the source)
-- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-7+deb10u5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-7+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxrender=1:0.9.10-1`
 
@@ -5227,20 +5220,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u10
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u10.dsc' tzdata_2021a-0+deb10u10.dsc 2071 SHA256:b1e9f40310065275618eab96b3f64800fa9574665682ed37bb9b055f31464711
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u10.debian.tar.xz' tzdata_2021a-0+deb10u10.debian.tar.xz 122884 SHA256:b9669552330f3654f84a7079b56d1b1f856f9022a802d5a7f9c9148ae1645999
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u10/
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u10/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
