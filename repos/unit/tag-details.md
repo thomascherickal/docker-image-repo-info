@@ -34,7 +34,7 @@
 ## `unit:1.29.1-go1.20`
 
 ```console
-$ docker pull unit@sha256:cff3e9e7b277aa5cf199bcb6e70869c4df810221a4ff2d119914181f6867c81a
+$ docker pull unit@sha256:37552547a8e12ed89d69eda8bb7ee84146fd6639bdde0e0505e6d7a26e8820dc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -45,14 +45,14 @@ $ docker pull unit@sha256:cff3e9e7b277aa5cf199bcb6e70869c4df810221a4ff2d11991418
 ### `unit:1.29.1-go1.20` - linux; amd64
 
 ```console
-$ docker pull unit@sha256:88da829b992e1697c385b1841c43abe901921c7d7597c4b97b7b8e89de94cd5e
+$ docker pull unit@sha256:9a4537eb638f90c1a0099e3af3fc011429d84efff718daa7ea79f085a3d4500b
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **321.9 MB (321882093 bytes)**  
+-	Total Size: **331.6 MB (331556075 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e3e1102d8fb62c7b573967a0f206c64735b00475b2b9d4c9c64218e26ae36eee`
+-	Image ID: `sha256:3ed5aa6234fbebc3d516011956677a8e0209b6ccbd20c32dd49110c307d8ad45`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -71,41 +71,41 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Wed, 12 Apr 2023 19:45:35 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 19:45:35 GMT
-ENV GOLANG_VERSION=1.20.3
-# Wed, 12 Apr 2023 19:45:44 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz'; 			sha256='979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.3.linux-armv6l.tar.gz'; 			sha256='b421e90469a83671641f81b6e20df6500f033e9523e89cbe7b7223704dd1035c'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.3.linux-arm64.tar.gz'; 			sha256='eb186529f13f901e7a2c4438a05c2cd90d74706aaa0a888469b2a4a617b6ee54'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.3.linux-386.tar.gz'; 			sha256='e12384311403f1389d14cc1c1295bfb4e0dd5ab919403b80da429f671a223507'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.3.linux-ppc64le.tar.gz'; 			sha256='943c89aa1624ea544a022b31e3d6e16a037200e436370bdd5fd67f3fa60be282'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.3.linux-s390x.tar.gz'; 			sha256='126cf823a5634ef2544b866db107b9d351d3ea70d9e240b0bdcfb46f4dcae54b'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.3.src.tar.gz'; 		sha256='e447b498cde50215c4f7619e5124b0fc4e25fb5d16ea47271c47f278e7aa763a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Wed, 12 Apr 2023 19:45:45 GMT
+# Tue, 02 May 2023 18:36:43 GMT
+ENV GOLANG_VERSION=1.20.4
+# Tue, 02 May 2023 18:36:52 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz'; 			sha256='698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.4.linux-armv6l.tar.gz'; 			sha256='0b75ca23061a9996840111f5f19092a1bdbc42ec1ae25237ed2eec1c838bd819'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.4.linux-arm64.tar.gz'; 			sha256='105889992ee4b1d40c7c108555222ca70ae43fccb42e20fbf1eebb822f5e72c6'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.4.linux-386.tar.gz'; 			sha256='5dfa3db9433ef6a2d3803169fb4bd2f4505414881516eb9972d76ab2e22335a7'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.4.linux-ppc64le.tar.gz'; 			sha256='8c6f44b96c2719c90eebabe2dd866f9c39538648f7897a212cac448587e9a408'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.4.linux-s390x.tar.gz'; 			sha256='57f999a4e605b1dfa4e7e58c7dbae47d370ea240879edba8001ab33c9a963ebf'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.4.src.tar.gz'; 		sha256='9f34ace128764b7a3a4b238b805856cc1b2184304df9e5690825b0710f4202d6'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 02 May 2023 18:36:52 GMT
 ENV GOPATH=/go
-# Wed, 12 Apr 2023 19:45:45 GMT
+# Tue, 02 May 2023 18:36:52 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 19:45:46 GMT
+# Tue, 02 May 2023 18:36:53 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Wed, 12 Apr 2023 19:45:46 GMT
+# Tue, 02 May 2023 18:36:53 GMT
 WORKDIR /go
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:35 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:35 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:22 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:22 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -130,34 +130,34 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 19:47:31 GMT  
 		Size: 86.0 MB (85986138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:28b9642b26541791df806ca798ac3d02bed9379c4945a1dfed80e2768bcead73`  
-		Last Modified: Wed, 12 Apr 2023 19:47:32 GMT  
-		Size: 100.1 MB (100143792 bytes)  
+	-	`sha256:900e43bb46d4441e8a7177438bbe76c97fd6380f4582fe8b2e5445ab055d9569`  
+		Last Modified: Tue, 02 May 2023 18:46:26 GMT  
+		Size: 100.1 MB (100149130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94ffa0dd0d53ec79db46d23854e0d4826253b23ef3ab5f6c3cc020013e34d9da`  
-		Last Modified: Wed, 12 Apr 2023 19:47:20 GMT  
-		Size: 155.0 B  
+	-	`sha256:c2198c19510e3227bc798fca3ff4bc9a7cb773720e71c2864e543f313ad5d9dc`  
+		Last Modified: Tue, 02 May 2023 18:46:15 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:abb966b36c719fc824839743562c6e6c569eb05aa1b841c08ce3732768ff2ae7`  
-		Last Modified: Wed, 12 Apr 2023 23:11:56 GMT  
-		Size: 10.1 MB (10069831 bytes)  
+	-	`sha256:6b906c92b4afc3d68d9406b1122a1d8c568782d02383576238d083b05f089252`  
+		Last Modified: Tue, 02 May 2023 20:12:53 GMT  
+		Size: 19.7 MB (19738470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d5d998e4bbdf6725f63bf440a4f7bfb0ab72a1d239a628fa2551300af22de15`  
-		Last Modified: Wed, 12 Apr 2023 23:11:54 GMT  
-		Size: 1.2 KB (1195 bytes)  
+	-	`sha256:bf6359a38adbc9e947f039ee8b252f4b099d6cae05361d09422cc4cfbf62919f`  
+		Last Modified: Tue, 02 May 2023 20:12:51 GMT  
+		Size: 1.2 KB (1199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `unit:1.29.1-go1.20` - linux; arm64 variant v8
 
 ```console
-$ docker pull unit@sha256:40cd98d82d3955485453675172397aec2017f5766450d8575497e1c81a12d3d1
+$ docker pull unit@sha256:379febd12b936a5a63117e81c1917eaea14e551c98514b865bfc258173d07a21
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **311.2 MB (311161315 bytes)**  
+-	Total Size: **319.4 MB (319360216 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:23e82068469717e9ff9d91fb168e8db1de109c037e2d8db30860dff6a704e010`
+-	Image ID: `sha256:7000b6bd3cf935d717bdc78fafc6a4222c0891ae490d799690a2c144b424882d`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -176,41 +176,41 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Wed, 12 Apr 2023 15:24:59 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 15:24:59 GMT
-ENV GOLANG_VERSION=1.20.3
-# Wed, 12 Apr 2023 15:25:07 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz'; 			sha256='979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.3.linux-armv6l.tar.gz'; 			sha256='b421e90469a83671641f81b6e20df6500f033e9523e89cbe7b7223704dd1035c'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.3.linux-arm64.tar.gz'; 			sha256='eb186529f13f901e7a2c4438a05c2cd90d74706aaa0a888469b2a4a617b6ee54'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.3.linux-386.tar.gz'; 			sha256='e12384311403f1389d14cc1c1295bfb4e0dd5ab919403b80da429f671a223507'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.3.linux-ppc64le.tar.gz'; 			sha256='943c89aa1624ea544a022b31e3d6e16a037200e436370bdd5fd67f3fa60be282'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.3.linux-s390x.tar.gz'; 			sha256='126cf823a5634ef2544b866db107b9d351d3ea70d9e240b0bdcfb46f4dcae54b'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.3.src.tar.gz'; 		sha256='e447b498cde50215c4f7619e5124b0fc4e25fb5d16ea47271c47f278e7aa763a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:35:54 GMT
+ENV GOLANG_VERSION=1.20.4
+# Tue, 02 May 2023 18:36:05 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz'; 			sha256='698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.4.linux-armv6l.tar.gz'; 			sha256='0b75ca23061a9996840111f5f19092a1bdbc42ec1ae25237ed2eec1c838bd819'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.4.linux-arm64.tar.gz'; 			sha256='105889992ee4b1d40c7c108555222ca70ae43fccb42e20fbf1eebb822f5e72c6'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.4.linux-386.tar.gz'; 			sha256='5dfa3db9433ef6a2d3803169fb4bd2f4505414881516eb9972d76ab2e22335a7'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.4.linux-ppc64le.tar.gz'; 			sha256='8c6f44b96c2719c90eebabe2dd866f9c39538648f7897a212cac448587e9a408'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.4.linux-s390x.tar.gz'; 			sha256='57f999a4e605b1dfa4e7e58c7dbae47d370ea240879edba8001ab33c9a963ebf'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.4.src.tar.gz'; 		sha256='9f34ace128764b7a3a4b238b805856cc1b2184304df9e5690825b0710f4202d6'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 02 May 2023 18:36:06 GMT
 ENV GOPATH=/go
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:06 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:07 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:07 GMT
 WORKDIR /go
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 16:31:29 GMT
+# Tue, 02 May 2023 20:01:18 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:18 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -235,20 +235,20 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 15:26:55 GMT  
 		Size: 81.4 MB (81402863 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e674eb0be8ba89b1be881f27765e57c0ba1f99c9ba25ffe9d5fcbd0003ebed8`  
-		Last Modified: Wed, 12 Apr 2023 15:26:56 GMT  
-		Size: 95.4 MB (95438702 bytes)  
+	-	`sha256:76851201b5654e1072487894994f13198d7206a8adaa7b0362c8574d93b087ea`  
+		Last Modified: Tue, 02 May 2023 18:43:07 GMT  
+		Size: 95.5 MB (95469774 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a3f85fa5fea0527605546d7324a29e8beeebb43c46cf797c0a6e40e687ea7bd`  
-		Last Modified: Wed, 12 Apr 2023 15:26:47 GMT  
-		Size: 154.0 B  
+	-	`sha256:5780c900c62021856d5e20d6d349ceec04b1f5150858c5ba02a745d46c2e2725`  
+		Last Modified: Tue, 02 May 2023 18:42:58 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df1ded58e07ab9d07254b30affe6b4148451caa50ae15df729020eb2df5a46b3`  
-		Last Modified: Wed, 12 Apr 2023 16:34:46 GMT  
-		Size: 9.9 MB (9910425 bytes)  
+	-	`sha256:d137ad05a802fb4ac83328620a3449673bdf0adc903d973f499fcfcda33f77f2`  
+		Last Modified: Tue, 02 May 2023 20:01:52 GMT  
+		Size: 18.1 MB (18078252 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4ae52269b9971d571c88d41b3a25094d2ab2c46b77a5971bd0324d147804a71`  
-		Last Modified: Wed, 12 Apr 2023 16:34:45 GMT  
+	-	`sha256:de65643b60d5f0f3fd2cbcc94086a1eea9d1af4b493c28a1f09fba098cc59348`  
+		Last Modified: Tue, 02 May 2023 20:01:50 GMT  
 		Size: 1.2 KB (1197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1814,7 +1814,7 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ## `unit:go`
 
 ```console
-$ docker pull unit@sha256:cff3e9e7b277aa5cf199bcb6e70869c4df810221a4ff2d119914181f6867c81a
+$ docker pull unit@sha256:37552547a8e12ed89d69eda8bb7ee84146fd6639bdde0e0505e6d7a26e8820dc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1825,14 +1825,14 @@ $ docker pull unit@sha256:cff3e9e7b277aa5cf199bcb6e70869c4df810221a4ff2d11991418
 ### `unit:go` - linux; amd64
 
 ```console
-$ docker pull unit@sha256:88da829b992e1697c385b1841c43abe901921c7d7597c4b97b7b8e89de94cd5e
+$ docker pull unit@sha256:9a4537eb638f90c1a0099e3af3fc011429d84efff718daa7ea79f085a3d4500b
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **321.9 MB (321882093 bytes)**  
+-	Total Size: **331.6 MB (331556075 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e3e1102d8fb62c7b573967a0f206c64735b00475b2b9d4c9c64218e26ae36eee`
+-	Image ID: `sha256:3ed5aa6234fbebc3d516011956677a8e0209b6ccbd20c32dd49110c307d8ad45`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -1851,41 +1851,41 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Wed, 12 Apr 2023 19:45:35 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 19:45:35 GMT
-ENV GOLANG_VERSION=1.20.3
-# Wed, 12 Apr 2023 19:45:44 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz'; 			sha256='979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.3.linux-armv6l.tar.gz'; 			sha256='b421e90469a83671641f81b6e20df6500f033e9523e89cbe7b7223704dd1035c'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.3.linux-arm64.tar.gz'; 			sha256='eb186529f13f901e7a2c4438a05c2cd90d74706aaa0a888469b2a4a617b6ee54'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.3.linux-386.tar.gz'; 			sha256='e12384311403f1389d14cc1c1295bfb4e0dd5ab919403b80da429f671a223507'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.3.linux-ppc64le.tar.gz'; 			sha256='943c89aa1624ea544a022b31e3d6e16a037200e436370bdd5fd67f3fa60be282'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.3.linux-s390x.tar.gz'; 			sha256='126cf823a5634ef2544b866db107b9d351d3ea70d9e240b0bdcfb46f4dcae54b'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.3.src.tar.gz'; 		sha256='e447b498cde50215c4f7619e5124b0fc4e25fb5d16ea47271c47f278e7aa763a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Wed, 12 Apr 2023 19:45:45 GMT
+# Tue, 02 May 2023 18:36:43 GMT
+ENV GOLANG_VERSION=1.20.4
+# Tue, 02 May 2023 18:36:52 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz'; 			sha256='698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.4.linux-armv6l.tar.gz'; 			sha256='0b75ca23061a9996840111f5f19092a1bdbc42ec1ae25237ed2eec1c838bd819'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.4.linux-arm64.tar.gz'; 			sha256='105889992ee4b1d40c7c108555222ca70ae43fccb42e20fbf1eebb822f5e72c6'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.4.linux-386.tar.gz'; 			sha256='5dfa3db9433ef6a2d3803169fb4bd2f4505414881516eb9972d76ab2e22335a7'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.4.linux-ppc64le.tar.gz'; 			sha256='8c6f44b96c2719c90eebabe2dd866f9c39538648f7897a212cac448587e9a408'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.4.linux-s390x.tar.gz'; 			sha256='57f999a4e605b1dfa4e7e58c7dbae47d370ea240879edba8001ab33c9a963ebf'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.4.src.tar.gz'; 		sha256='9f34ace128764b7a3a4b238b805856cc1b2184304df9e5690825b0710f4202d6'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 02 May 2023 18:36:52 GMT
 ENV GOPATH=/go
-# Wed, 12 Apr 2023 19:45:45 GMT
+# Tue, 02 May 2023 18:36:52 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 19:45:46 GMT
+# Tue, 02 May 2023 18:36:53 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Wed, 12 Apr 2023 19:45:46 GMT
+# Tue, 02 May 2023 18:36:53 GMT
 WORKDIR /go
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:35 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:35 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:22 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:22 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -1910,34 +1910,34 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 19:47:31 GMT  
 		Size: 86.0 MB (85986138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:28b9642b26541791df806ca798ac3d02bed9379c4945a1dfed80e2768bcead73`  
-		Last Modified: Wed, 12 Apr 2023 19:47:32 GMT  
-		Size: 100.1 MB (100143792 bytes)  
+	-	`sha256:900e43bb46d4441e8a7177438bbe76c97fd6380f4582fe8b2e5445ab055d9569`  
+		Last Modified: Tue, 02 May 2023 18:46:26 GMT  
+		Size: 100.1 MB (100149130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94ffa0dd0d53ec79db46d23854e0d4826253b23ef3ab5f6c3cc020013e34d9da`  
-		Last Modified: Wed, 12 Apr 2023 19:47:20 GMT  
-		Size: 155.0 B  
+	-	`sha256:c2198c19510e3227bc798fca3ff4bc9a7cb773720e71c2864e543f313ad5d9dc`  
+		Last Modified: Tue, 02 May 2023 18:46:15 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:abb966b36c719fc824839743562c6e6c569eb05aa1b841c08ce3732768ff2ae7`  
-		Last Modified: Wed, 12 Apr 2023 23:11:56 GMT  
-		Size: 10.1 MB (10069831 bytes)  
+	-	`sha256:6b906c92b4afc3d68d9406b1122a1d8c568782d02383576238d083b05f089252`  
+		Last Modified: Tue, 02 May 2023 20:12:53 GMT  
+		Size: 19.7 MB (19738470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d5d998e4bbdf6725f63bf440a4f7bfb0ab72a1d239a628fa2551300af22de15`  
-		Last Modified: Wed, 12 Apr 2023 23:11:54 GMT  
-		Size: 1.2 KB (1195 bytes)  
+	-	`sha256:bf6359a38adbc9e947f039ee8b252f4b099d6cae05361d09422cc4cfbf62919f`  
+		Last Modified: Tue, 02 May 2023 20:12:51 GMT  
+		Size: 1.2 KB (1199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `unit:go` - linux; arm64 variant v8
 
 ```console
-$ docker pull unit@sha256:40cd98d82d3955485453675172397aec2017f5766450d8575497e1c81a12d3d1
+$ docker pull unit@sha256:379febd12b936a5a63117e81c1917eaea14e551c98514b865bfc258173d07a21
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **311.2 MB (311161315 bytes)**  
+-	Total Size: **319.4 MB (319360216 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:23e82068469717e9ff9d91fb168e8db1de109c037e2d8db30860dff6a704e010`
+-	Image ID: `sha256:7000b6bd3cf935d717bdc78fafc6a4222c0891ae490d799690a2c144b424882d`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -1956,41 +1956,41 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Wed, 12 Apr 2023 15:24:59 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 15:24:59 GMT
-ENV GOLANG_VERSION=1.20.3
-# Wed, 12 Apr 2023 15:25:07 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz'; 			sha256='979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.3.linux-armv6l.tar.gz'; 			sha256='b421e90469a83671641f81b6e20df6500f033e9523e89cbe7b7223704dd1035c'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.3.linux-arm64.tar.gz'; 			sha256='eb186529f13f901e7a2c4438a05c2cd90d74706aaa0a888469b2a4a617b6ee54'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.3.linux-386.tar.gz'; 			sha256='e12384311403f1389d14cc1c1295bfb4e0dd5ab919403b80da429f671a223507'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.3.linux-ppc64le.tar.gz'; 			sha256='943c89aa1624ea544a022b31e3d6e16a037200e436370bdd5fd67f3fa60be282'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.3.linux-s390x.tar.gz'; 			sha256='126cf823a5634ef2544b866db107b9d351d3ea70d9e240b0bdcfb46f4dcae54b'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.3.src.tar.gz'; 		sha256='e447b498cde50215c4f7619e5124b0fc4e25fb5d16ea47271c47f278e7aa763a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:35:54 GMT
+ENV GOLANG_VERSION=1.20.4
+# Tue, 02 May 2023 18:36:05 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz'; 			sha256='698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.4.linux-armv6l.tar.gz'; 			sha256='0b75ca23061a9996840111f5f19092a1bdbc42ec1ae25237ed2eec1c838bd819'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.4.linux-arm64.tar.gz'; 			sha256='105889992ee4b1d40c7c108555222ca70ae43fccb42e20fbf1eebb822f5e72c6'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.4.linux-386.tar.gz'; 			sha256='5dfa3db9433ef6a2d3803169fb4bd2f4505414881516eb9972d76ab2e22335a7'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.4.linux-ppc64le.tar.gz'; 			sha256='8c6f44b96c2719c90eebabe2dd866f9c39538648f7897a212cac448587e9a408'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.4.linux-s390x.tar.gz'; 			sha256='57f999a4e605b1dfa4e7e58c7dbae47d370ea240879edba8001ab33c9a963ebf'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.4.src.tar.gz'; 		sha256='9f34ace128764b7a3a4b238b805856cc1b2184304df9e5690825b0710f4202d6'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 02 May 2023 18:36:06 GMT
 ENV GOPATH=/go
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:06 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:07 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:07 GMT
 WORKDIR /go
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 16:31:29 GMT
+# Tue, 02 May 2023 20:01:18 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:18 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -2015,27 +2015,27 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 15:26:55 GMT  
 		Size: 81.4 MB (81402863 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e674eb0be8ba89b1be881f27765e57c0ba1f99c9ba25ffe9d5fcbd0003ebed8`  
-		Last Modified: Wed, 12 Apr 2023 15:26:56 GMT  
-		Size: 95.4 MB (95438702 bytes)  
+	-	`sha256:76851201b5654e1072487894994f13198d7206a8adaa7b0362c8574d93b087ea`  
+		Last Modified: Tue, 02 May 2023 18:43:07 GMT  
+		Size: 95.5 MB (95469774 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a3f85fa5fea0527605546d7324a29e8beeebb43c46cf797c0a6e40e687ea7bd`  
-		Last Modified: Wed, 12 Apr 2023 15:26:47 GMT  
-		Size: 154.0 B  
+	-	`sha256:5780c900c62021856d5e20d6d349ceec04b1f5150858c5ba02a745d46c2e2725`  
+		Last Modified: Tue, 02 May 2023 18:42:58 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df1ded58e07ab9d07254b30affe6b4148451caa50ae15df729020eb2df5a46b3`  
-		Last Modified: Wed, 12 Apr 2023 16:34:46 GMT  
-		Size: 9.9 MB (9910425 bytes)  
+	-	`sha256:d137ad05a802fb4ac83328620a3449673bdf0adc903d973f499fcfcda33f77f2`  
+		Last Modified: Tue, 02 May 2023 20:01:52 GMT  
+		Size: 18.1 MB (18078252 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4ae52269b9971d571c88d41b3a25094d2ab2c46b77a5971bd0324d147804a71`  
-		Last Modified: Wed, 12 Apr 2023 16:34:45 GMT  
+	-	`sha256:de65643b60d5f0f3fd2cbcc94086a1eea9d1af4b493c28a1f09fba098cc59348`  
+		Last Modified: Tue, 02 May 2023 20:01:50 GMT  
 		Size: 1.2 KB (1197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `unit:go1`
 
 ```console
-$ docker pull unit@sha256:cff3e9e7b277aa5cf199bcb6e70869c4df810221a4ff2d119914181f6867c81a
+$ docker pull unit@sha256:37552547a8e12ed89d69eda8bb7ee84146fd6639bdde0e0505e6d7a26e8820dc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2046,14 +2046,14 @@ $ docker pull unit@sha256:cff3e9e7b277aa5cf199bcb6e70869c4df810221a4ff2d11991418
 ### `unit:go1` - linux; amd64
 
 ```console
-$ docker pull unit@sha256:88da829b992e1697c385b1841c43abe901921c7d7597c4b97b7b8e89de94cd5e
+$ docker pull unit@sha256:9a4537eb638f90c1a0099e3af3fc011429d84efff718daa7ea79f085a3d4500b
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **321.9 MB (321882093 bytes)**  
+-	Total Size: **331.6 MB (331556075 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e3e1102d8fb62c7b573967a0f206c64735b00475b2b9d4c9c64218e26ae36eee`
+-	Image ID: `sha256:3ed5aa6234fbebc3d516011956677a8e0209b6ccbd20c32dd49110c307d8ad45`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -2072,41 +2072,41 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Wed, 12 Apr 2023 19:45:35 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 19:45:35 GMT
-ENV GOLANG_VERSION=1.20.3
-# Wed, 12 Apr 2023 19:45:44 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz'; 			sha256='979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.3.linux-armv6l.tar.gz'; 			sha256='b421e90469a83671641f81b6e20df6500f033e9523e89cbe7b7223704dd1035c'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.3.linux-arm64.tar.gz'; 			sha256='eb186529f13f901e7a2c4438a05c2cd90d74706aaa0a888469b2a4a617b6ee54'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.3.linux-386.tar.gz'; 			sha256='e12384311403f1389d14cc1c1295bfb4e0dd5ab919403b80da429f671a223507'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.3.linux-ppc64le.tar.gz'; 			sha256='943c89aa1624ea544a022b31e3d6e16a037200e436370bdd5fd67f3fa60be282'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.3.linux-s390x.tar.gz'; 			sha256='126cf823a5634ef2544b866db107b9d351d3ea70d9e240b0bdcfb46f4dcae54b'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.3.src.tar.gz'; 		sha256='e447b498cde50215c4f7619e5124b0fc4e25fb5d16ea47271c47f278e7aa763a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Wed, 12 Apr 2023 19:45:45 GMT
+# Tue, 02 May 2023 18:36:43 GMT
+ENV GOLANG_VERSION=1.20.4
+# Tue, 02 May 2023 18:36:52 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz'; 			sha256='698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.4.linux-armv6l.tar.gz'; 			sha256='0b75ca23061a9996840111f5f19092a1bdbc42ec1ae25237ed2eec1c838bd819'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.4.linux-arm64.tar.gz'; 			sha256='105889992ee4b1d40c7c108555222ca70ae43fccb42e20fbf1eebb822f5e72c6'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.4.linux-386.tar.gz'; 			sha256='5dfa3db9433ef6a2d3803169fb4bd2f4505414881516eb9972d76ab2e22335a7'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.4.linux-ppc64le.tar.gz'; 			sha256='8c6f44b96c2719c90eebabe2dd866f9c39538648f7897a212cac448587e9a408'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.4.linux-s390x.tar.gz'; 			sha256='57f999a4e605b1dfa4e7e58c7dbae47d370ea240879edba8001ab33c9a963ebf'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.4.src.tar.gz'; 		sha256='9f34ace128764b7a3a4b238b805856cc1b2184304df9e5690825b0710f4202d6'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 02 May 2023 18:36:52 GMT
 ENV GOPATH=/go
-# Wed, 12 Apr 2023 19:45:45 GMT
+# Tue, 02 May 2023 18:36:52 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 19:45:46 GMT
+# Tue, 02 May 2023 18:36:53 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Wed, 12 Apr 2023 19:45:46 GMT
+# Tue, 02 May 2023 18:36:53 GMT
 WORKDIR /go
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:35 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:35 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:22 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:22 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -2131,34 +2131,34 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 19:47:31 GMT  
 		Size: 86.0 MB (85986138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:28b9642b26541791df806ca798ac3d02bed9379c4945a1dfed80e2768bcead73`  
-		Last Modified: Wed, 12 Apr 2023 19:47:32 GMT  
-		Size: 100.1 MB (100143792 bytes)  
+	-	`sha256:900e43bb46d4441e8a7177438bbe76c97fd6380f4582fe8b2e5445ab055d9569`  
+		Last Modified: Tue, 02 May 2023 18:46:26 GMT  
+		Size: 100.1 MB (100149130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94ffa0dd0d53ec79db46d23854e0d4826253b23ef3ab5f6c3cc020013e34d9da`  
-		Last Modified: Wed, 12 Apr 2023 19:47:20 GMT  
-		Size: 155.0 B  
+	-	`sha256:c2198c19510e3227bc798fca3ff4bc9a7cb773720e71c2864e543f313ad5d9dc`  
+		Last Modified: Tue, 02 May 2023 18:46:15 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:abb966b36c719fc824839743562c6e6c569eb05aa1b841c08ce3732768ff2ae7`  
-		Last Modified: Wed, 12 Apr 2023 23:11:56 GMT  
-		Size: 10.1 MB (10069831 bytes)  
+	-	`sha256:6b906c92b4afc3d68d9406b1122a1d8c568782d02383576238d083b05f089252`  
+		Last Modified: Tue, 02 May 2023 20:12:53 GMT  
+		Size: 19.7 MB (19738470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d5d998e4bbdf6725f63bf440a4f7bfb0ab72a1d239a628fa2551300af22de15`  
-		Last Modified: Wed, 12 Apr 2023 23:11:54 GMT  
-		Size: 1.2 KB (1195 bytes)  
+	-	`sha256:bf6359a38adbc9e947f039ee8b252f4b099d6cae05361d09422cc4cfbf62919f`  
+		Last Modified: Tue, 02 May 2023 20:12:51 GMT  
+		Size: 1.2 KB (1199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `unit:go1` - linux; arm64 variant v8
 
 ```console
-$ docker pull unit@sha256:40cd98d82d3955485453675172397aec2017f5766450d8575497e1c81a12d3d1
+$ docker pull unit@sha256:379febd12b936a5a63117e81c1917eaea14e551c98514b865bfc258173d07a21
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **311.2 MB (311161315 bytes)**  
+-	Total Size: **319.4 MB (319360216 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:23e82068469717e9ff9d91fb168e8db1de109c037e2d8db30860dff6a704e010`
+-	Image ID: `sha256:7000b6bd3cf935d717bdc78fafc6a4222c0891ae490d799690a2c144b424882d`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -2177,41 +2177,41 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Wed, 12 Apr 2023 15:24:59 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 15:24:59 GMT
-ENV GOLANG_VERSION=1.20.3
-# Wed, 12 Apr 2023 15:25:07 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz'; 			sha256='979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.3.linux-armv6l.tar.gz'; 			sha256='b421e90469a83671641f81b6e20df6500f033e9523e89cbe7b7223704dd1035c'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.3.linux-arm64.tar.gz'; 			sha256='eb186529f13f901e7a2c4438a05c2cd90d74706aaa0a888469b2a4a617b6ee54'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.3.linux-386.tar.gz'; 			sha256='e12384311403f1389d14cc1c1295bfb4e0dd5ab919403b80da429f671a223507'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.3.linux-ppc64le.tar.gz'; 			sha256='943c89aa1624ea544a022b31e3d6e16a037200e436370bdd5fd67f3fa60be282'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.3.linux-s390x.tar.gz'; 			sha256='126cf823a5634ef2544b866db107b9d351d3ea70d9e240b0bdcfb46f4dcae54b'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.3.src.tar.gz'; 		sha256='e447b498cde50215c4f7619e5124b0fc4e25fb5d16ea47271c47f278e7aa763a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:35:54 GMT
+ENV GOLANG_VERSION=1.20.4
+# Tue, 02 May 2023 18:36:05 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz'; 			sha256='698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.4.linux-armv6l.tar.gz'; 			sha256='0b75ca23061a9996840111f5f19092a1bdbc42ec1ae25237ed2eec1c838bd819'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.4.linux-arm64.tar.gz'; 			sha256='105889992ee4b1d40c7c108555222ca70ae43fccb42e20fbf1eebb822f5e72c6'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.4.linux-386.tar.gz'; 			sha256='5dfa3db9433ef6a2d3803169fb4bd2f4505414881516eb9972d76ab2e22335a7'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.4.linux-ppc64le.tar.gz'; 			sha256='8c6f44b96c2719c90eebabe2dd866f9c39538648f7897a212cac448587e9a408'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.4.linux-s390x.tar.gz'; 			sha256='57f999a4e605b1dfa4e7e58c7dbae47d370ea240879edba8001ab33c9a963ebf'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.4.src.tar.gz'; 		sha256='9f34ace128764b7a3a4b238b805856cc1b2184304df9e5690825b0710f4202d6'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 02 May 2023 18:36:06 GMT
 ENV GOPATH=/go
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:06 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:07 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:07 GMT
 WORKDIR /go
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 16:31:29 GMT
+# Tue, 02 May 2023 20:01:18 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:18 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -2236,27 +2236,27 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 15:26:55 GMT  
 		Size: 81.4 MB (81402863 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e674eb0be8ba89b1be881f27765e57c0ba1f99c9ba25ffe9d5fcbd0003ebed8`  
-		Last Modified: Wed, 12 Apr 2023 15:26:56 GMT  
-		Size: 95.4 MB (95438702 bytes)  
+	-	`sha256:76851201b5654e1072487894994f13198d7206a8adaa7b0362c8574d93b087ea`  
+		Last Modified: Tue, 02 May 2023 18:43:07 GMT  
+		Size: 95.5 MB (95469774 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a3f85fa5fea0527605546d7324a29e8beeebb43c46cf797c0a6e40e687ea7bd`  
-		Last Modified: Wed, 12 Apr 2023 15:26:47 GMT  
-		Size: 154.0 B  
+	-	`sha256:5780c900c62021856d5e20d6d349ceec04b1f5150858c5ba02a745d46c2e2725`  
+		Last Modified: Tue, 02 May 2023 18:42:58 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df1ded58e07ab9d07254b30affe6b4148451caa50ae15df729020eb2df5a46b3`  
-		Last Modified: Wed, 12 Apr 2023 16:34:46 GMT  
-		Size: 9.9 MB (9910425 bytes)  
+	-	`sha256:d137ad05a802fb4ac83328620a3449673bdf0adc903d973f499fcfcda33f77f2`  
+		Last Modified: Tue, 02 May 2023 20:01:52 GMT  
+		Size: 18.1 MB (18078252 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4ae52269b9971d571c88d41b3a25094d2ab2c46b77a5971bd0324d147804a71`  
-		Last Modified: Wed, 12 Apr 2023 16:34:45 GMT  
+	-	`sha256:de65643b60d5f0f3fd2cbcc94086a1eea9d1af4b493c28a1f09fba098cc59348`  
+		Last Modified: Tue, 02 May 2023 20:01:50 GMT  
 		Size: 1.2 KB (1197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `unit:go1.20`
 
 ```console
-$ docker pull unit@sha256:cff3e9e7b277aa5cf199bcb6e70869c4df810221a4ff2d119914181f6867c81a
+$ docker pull unit@sha256:37552547a8e12ed89d69eda8bb7ee84146fd6639bdde0e0505e6d7a26e8820dc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2267,14 +2267,14 @@ $ docker pull unit@sha256:cff3e9e7b277aa5cf199bcb6e70869c4df810221a4ff2d11991418
 ### `unit:go1.20` - linux; amd64
 
 ```console
-$ docker pull unit@sha256:88da829b992e1697c385b1841c43abe901921c7d7597c4b97b7b8e89de94cd5e
+$ docker pull unit@sha256:9a4537eb638f90c1a0099e3af3fc011429d84efff718daa7ea79f085a3d4500b
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **321.9 MB (321882093 bytes)**  
+-	Total Size: **331.6 MB (331556075 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e3e1102d8fb62c7b573967a0f206c64735b00475b2b9d4c9c64218e26ae36eee`
+-	Image ID: `sha256:3ed5aa6234fbebc3d516011956677a8e0209b6ccbd20c32dd49110c307d8ad45`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -2293,41 +2293,41 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Wed, 12 Apr 2023 19:45:35 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 19:45:35 GMT
-ENV GOLANG_VERSION=1.20.3
-# Wed, 12 Apr 2023 19:45:44 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz'; 			sha256='979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.3.linux-armv6l.tar.gz'; 			sha256='b421e90469a83671641f81b6e20df6500f033e9523e89cbe7b7223704dd1035c'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.3.linux-arm64.tar.gz'; 			sha256='eb186529f13f901e7a2c4438a05c2cd90d74706aaa0a888469b2a4a617b6ee54'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.3.linux-386.tar.gz'; 			sha256='e12384311403f1389d14cc1c1295bfb4e0dd5ab919403b80da429f671a223507'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.3.linux-ppc64le.tar.gz'; 			sha256='943c89aa1624ea544a022b31e3d6e16a037200e436370bdd5fd67f3fa60be282'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.3.linux-s390x.tar.gz'; 			sha256='126cf823a5634ef2544b866db107b9d351d3ea70d9e240b0bdcfb46f4dcae54b'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.3.src.tar.gz'; 		sha256='e447b498cde50215c4f7619e5124b0fc4e25fb5d16ea47271c47f278e7aa763a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Wed, 12 Apr 2023 19:45:45 GMT
+# Tue, 02 May 2023 18:36:43 GMT
+ENV GOLANG_VERSION=1.20.4
+# Tue, 02 May 2023 18:36:52 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz'; 			sha256='698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.4.linux-armv6l.tar.gz'; 			sha256='0b75ca23061a9996840111f5f19092a1bdbc42ec1ae25237ed2eec1c838bd819'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.4.linux-arm64.tar.gz'; 			sha256='105889992ee4b1d40c7c108555222ca70ae43fccb42e20fbf1eebb822f5e72c6'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.4.linux-386.tar.gz'; 			sha256='5dfa3db9433ef6a2d3803169fb4bd2f4505414881516eb9972d76ab2e22335a7'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.4.linux-ppc64le.tar.gz'; 			sha256='8c6f44b96c2719c90eebabe2dd866f9c39538648f7897a212cac448587e9a408'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.4.linux-s390x.tar.gz'; 			sha256='57f999a4e605b1dfa4e7e58c7dbae47d370ea240879edba8001ab33c9a963ebf'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.4.src.tar.gz'; 		sha256='9f34ace128764b7a3a4b238b805856cc1b2184304df9e5690825b0710f4202d6'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 02 May 2023 18:36:52 GMT
 ENV GOPATH=/go
-# Wed, 12 Apr 2023 19:45:45 GMT
+# Tue, 02 May 2023 18:36:52 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 19:45:46 GMT
+# Tue, 02 May 2023 18:36:53 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Wed, 12 Apr 2023 19:45:46 GMT
+# Tue, 02 May 2023 18:36:53 GMT
 WORKDIR /go
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:35 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:35 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 23:09:07 GMT
+# Tue, 02 May 2023 20:11:36 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:21 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:22 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 23:09:48 GMT
+# Tue, 02 May 2023 20:12:22 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -2352,34 +2352,34 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 19:47:31 GMT  
 		Size: 86.0 MB (85986138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:28b9642b26541791df806ca798ac3d02bed9379c4945a1dfed80e2768bcead73`  
-		Last Modified: Wed, 12 Apr 2023 19:47:32 GMT  
-		Size: 100.1 MB (100143792 bytes)  
+	-	`sha256:900e43bb46d4441e8a7177438bbe76c97fd6380f4582fe8b2e5445ab055d9569`  
+		Last Modified: Tue, 02 May 2023 18:46:26 GMT  
+		Size: 100.1 MB (100149130 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94ffa0dd0d53ec79db46d23854e0d4826253b23ef3ab5f6c3cc020013e34d9da`  
-		Last Modified: Wed, 12 Apr 2023 19:47:20 GMT  
-		Size: 155.0 B  
+	-	`sha256:c2198c19510e3227bc798fca3ff4bc9a7cb773720e71c2864e543f313ad5d9dc`  
+		Last Modified: Tue, 02 May 2023 18:46:15 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:abb966b36c719fc824839743562c6e6c569eb05aa1b841c08ce3732768ff2ae7`  
-		Last Modified: Wed, 12 Apr 2023 23:11:56 GMT  
-		Size: 10.1 MB (10069831 bytes)  
+	-	`sha256:6b906c92b4afc3d68d9406b1122a1d8c568782d02383576238d083b05f089252`  
+		Last Modified: Tue, 02 May 2023 20:12:53 GMT  
+		Size: 19.7 MB (19738470 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d5d998e4bbdf6725f63bf440a4f7bfb0ab72a1d239a628fa2551300af22de15`  
-		Last Modified: Wed, 12 Apr 2023 23:11:54 GMT  
-		Size: 1.2 KB (1195 bytes)  
+	-	`sha256:bf6359a38adbc9e947f039ee8b252f4b099d6cae05361d09422cc4cfbf62919f`  
+		Last Modified: Tue, 02 May 2023 20:12:51 GMT  
+		Size: 1.2 KB (1199 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `unit:go1.20` - linux; arm64 variant v8
 
 ```console
-$ docker pull unit@sha256:40cd98d82d3955485453675172397aec2017f5766450d8575497e1c81a12d3d1
+$ docker pull unit@sha256:379febd12b936a5a63117e81c1917eaea14e551c98514b865bfc258173d07a21
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **311.2 MB (311161315 bytes)**  
+-	Total Size: **319.4 MB (319360216 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:23e82068469717e9ff9d91fb168e8db1de109c037e2d8db30860dff6a704e010`
+-	Image ID: `sha256:7000b6bd3cf935d717bdc78fafc6a4222c0891ae490d799690a2c144b424882d`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -2398,41 +2398,41 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Wed, 12 Apr 2023 15:24:59 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 15:24:59 GMT
-ENV GOLANG_VERSION=1.20.3
-# Wed, 12 Apr 2023 15:25:07 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.3.linux-amd64.tar.gz'; 			sha256='979694c2c25c735755bf26f4f45e19e64e4811d661dd07b8c010f7a8e18adfca'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.3.linux-armv6l.tar.gz'; 			sha256='b421e90469a83671641f81b6e20df6500f033e9523e89cbe7b7223704dd1035c'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.3.linux-arm64.tar.gz'; 			sha256='eb186529f13f901e7a2c4438a05c2cd90d74706aaa0a888469b2a4a617b6ee54'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.3.linux-386.tar.gz'; 			sha256='e12384311403f1389d14cc1c1295bfb4e0dd5ab919403b80da429f671a223507'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.3.linux-ppc64le.tar.gz'; 			sha256='943c89aa1624ea544a022b31e3d6e16a037200e436370bdd5fd67f3fa60be282'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.3.linux-s390x.tar.gz'; 			sha256='126cf823a5634ef2544b866db107b9d351d3ea70d9e240b0bdcfb46f4dcae54b'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.3.src.tar.gz'; 		sha256='e447b498cde50215c4f7619e5124b0fc4e25fb5d16ea47271c47f278e7aa763a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:35:54 GMT
+ENV GOLANG_VERSION=1.20.4
+# Tue, 02 May 2023 18:36:05 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.4.linux-amd64.tar.gz'; 			sha256='698ef3243972a51ddb4028e4a1ac63dc6d60821bf18e59a807e051fee0a385bd'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.4.linux-armv6l.tar.gz'; 			sha256='0b75ca23061a9996840111f5f19092a1bdbc42ec1ae25237ed2eec1c838bd819'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.4.linux-arm64.tar.gz'; 			sha256='105889992ee4b1d40c7c108555222ca70ae43fccb42e20fbf1eebb822f5e72c6'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.4.linux-386.tar.gz'; 			sha256='5dfa3db9433ef6a2d3803169fb4bd2f4505414881516eb9972d76ab2e22335a7'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.4.linux-ppc64le.tar.gz'; 			sha256='8c6f44b96c2719c90eebabe2dd866f9c39538648f7897a212cac448587e9a408'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.4.linux-s390x.tar.gz'; 			sha256='57f999a4e605b1dfa4e7e58c7dbae47d370ea240879edba8001ab33c9a963ebf'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.4.src.tar.gz'; 		sha256='9f34ace128764b7a3a4b238b805856cc1b2184304df9e5690825b0710f4202d6'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 02 May 2023 18:36:06 GMT
 ENV GOPATH=/go
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:06 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:07 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Wed, 12 Apr 2023 15:25:09 GMT
+# Tue, 02 May 2023 18:36:07 GMT
 WORKDIR /go
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.title=Unit
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Wed, 12 Apr 2023 16:30:57 GMT
+# Tue, 02 May 2023 20:00:40 GMT
 LABEL org.opencontainers.image.version=1.29.1
-# Wed, 12 Apr 2023 16:31:29 GMT
+# Tue, 02 May 2023 20:01:18 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && hg clone -u 1.29.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS="--prefix=/usr                 --state=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --pid=/var/run/unit.pid                 --log=/var/log/unit.log                 --tmp=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modules=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/unitd /usr/sbin/unitd     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/debug-modules --debug     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --modules=/usr/lib/unit/modules     && ./configure go --go-path=$GOPATH     && make -j $NCPU go-install-src libunit-install     && cd     && rm -rf unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:18 GMT
 COPY file:952dd3fe197ec3c69c75729eed06a3581063d4c1ed92bf889cf007c89efb3ae8 in /usr/local/bin/ 
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 STOPSIGNAL SIGTERM
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Wed, 12 Apr 2023 16:31:30 GMT
+# Tue, 02 May 2023 20:01:19 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -2457,20 +2457,20 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Wed, 12 Apr 2023 15:26:55 GMT  
 		Size: 81.4 MB (81402863 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e674eb0be8ba89b1be881f27765e57c0ba1f99c9ba25ffe9d5fcbd0003ebed8`  
-		Last Modified: Wed, 12 Apr 2023 15:26:56 GMT  
-		Size: 95.4 MB (95438702 bytes)  
+	-	`sha256:76851201b5654e1072487894994f13198d7206a8adaa7b0362c8574d93b087ea`  
+		Last Modified: Tue, 02 May 2023 18:43:07 GMT  
+		Size: 95.5 MB (95469774 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a3f85fa5fea0527605546d7324a29e8beeebb43c46cf797c0a6e40e687ea7bd`  
-		Last Modified: Wed, 12 Apr 2023 15:26:47 GMT  
-		Size: 154.0 B  
+	-	`sha256:5780c900c62021856d5e20d6d349ceec04b1f5150858c5ba02a745d46c2e2725`  
+		Last Modified: Tue, 02 May 2023 18:42:58 GMT  
+		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df1ded58e07ab9d07254b30affe6b4148451caa50ae15df729020eb2df5a46b3`  
-		Last Modified: Wed, 12 Apr 2023 16:34:46 GMT  
-		Size: 9.9 MB (9910425 bytes)  
+	-	`sha256:d137ad05a802fb4ac83328620a3449673bdf0adc903d973f499fcfcda33f77f2`  
+		Last Modified: Tue, 02 May 2023 20:01:52 GMT  
+		Size: 18.1 MB (18078252 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4ae52269b9971d571c88d41b3a25094d2ab2c46b77a5971bd0324d147804a71`  
-		Last Modified: Wed, 12 Apr 2023 16:34:45 GMT  
+	-	`sha256:de65643b60d5f0f3fd2cbcc94086a1eea9d1af4b493c28a1f09fba098cc59348`  
+		Last Modified: Tue, 02 May 2023 20:01:50 GMT  
 		Size: 1.2 KB (1197 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
