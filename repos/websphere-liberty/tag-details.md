@@ -14,6 +14,12 @@
 -	[`websphere-liberty:23.0.0.3-kernel-java11-openj9`](#websphere-liberty23003-kernel-java11-openj9)
 -	[`websphere-liberty:23.0.0.3-kernel-java17-openj9`](#websphere-liberty23003-kernel-java17-openj9)
 -	[`websphere-liberty:23.0.0.3-kernel-java8-ibmjava`](#websphere-liberty23003-kernel-java8-ibmjava)
+-	[`websphere-liberty:23.0.0.4-full-java11-openj9`](#websphere-liberty23004-full-java11-openj9)
+-	[`websphere-liberty:23.0.0.4-full-java17-openj9`](#websphere-liberty23004-full-java17-openj9)
+-	[`websphere-liberty:23.0.0.4-full-java8-ibmjava`](#websphere-liberty23004-full-java8-ibmjava)
+-	[`websphere-liberty:23.0.0.4-kernel-java11-openj9`](#websphere-liberty23004-kernel-java11-openj9)
+-	[`websphere-liberty:23.0.0.4-kernel-java17-openj9`](#websphere-liberty23004-kernel-java17-openj9)
+-	[`websphere-liberty:23.0.0.4-kernel-java8-ibmjava`](#websphere-liberty23004-kernel-java8-ibmjava)
 -	[`websphere-liberty:full`](#websphere-libertyfull)
 -	[`websphere-liberty:full-java11-openj9`](#websphere-libertyfull-java11-openj9)
 -	[`websphere-liberty:full-java17-openj9`](#websphere-libertyfull-java17-openj9)
@@ -5361,6 +5367,60 @@ CMD ["/opt/ibm/wlp/bin/server" "run" "defaultServer"]
 		Last Modified: Tue, 11 Apr 2023 23:38:17 GMT  
 		Size: 6.1 MB (6112481 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `websphere-liberty:23.0.0.4-full-java11-openj9`
+
+```console
+$ docker pull websphere-liberty@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
+
+## `websphere-liberty:23.0.0.4-full-java17-openj9`
+
+```console
+$ docker pull websphere-liberty@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
+
+## `websphere-liberty:23.0.0.4-full-java8-ibmjava`
+
+```console
+$ docker pull websphere-liberty@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
+
+## `websphere-liberty:23.0.0.4-kernel-java11-openj9`
+
+```console
+$ docker pull websphere-liberty@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
+
+## `websphere-liberty:23.0.0.4-kernel-java17-openj9`
+
+```console
+$ docker pull websphere-liberty@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
+
+## `websphere-liberty:23.0.0.4-kernel-java8-ibmjava`
+
+```console
+$ docker pull websphere-liberty@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `websphere-liberty:full`
 
