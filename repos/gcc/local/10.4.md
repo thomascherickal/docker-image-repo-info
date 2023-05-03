@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1a68378bb731c6719e3fdea030060bd38839943a786b4e0b97b6e0a621c209dd`
-- Created: `2023-04-27T03:00:52.600648592Z`
-- Virtual Size: ~ 1.22 Gb  
+- Image ID: `sha256:b3294c0f0bb6a61addb2fece69d6e4f3c08c75ec46b18eeefc83c3513364d30b`
+- Created: `2023-05-03T03:22:49.814178556Z`
+- Virtual Size: ~ 1.23 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -1450,11 +1450,8 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libc-bin=2.31-13+deb11u5`
-- `libc-dev-bin=2.31-13+deb11u5`
-- `libc6:amd64=2.31-13+deb11u5`
-- `libc6-dev:amd64=2.31-13+deb11u5`
 
-Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
@@ -1473,6 +1470,34 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/glibc/2.31-13+deb11u5/ (for browsing the source)
 - https://sources.debian.net/src/glibc/2.31-13+deb11u5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/glibc/2.31-13+deb11u5/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `glibc=2.31-13+deb11u6`
+
+Binary Packages:
+
+- `libc-dev-bin=2.31-13+deb11u6`
+- `libc6:amd64=2.31-13+deb11u6`
+- `libc6-dev:amd64=2.31-13+deb11u6`
+
+Licenses: (parsed from: `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`)
+
+- `GPL-2`
+- `LGPL-2.1`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris glibc=2.31-13+deb11u6
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.31-13%2bdeb11u6.dsc' glibc_2.31-13+deb11u6.dsc 8347 SHA256:91e3d1642d89cfee914fea10dcd5872ba8e1b7d6e15246c3dfdf9b41e40ff7dc
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17254692 SHA256:3dc7704b6166839c37d7047626fd199f3d4c09aca0d90e48c51c31c967dce34e
+'http://deb.debian.org/debian/pool/main/g/glibc/glibc_2.31-13%2bdeb11u6.debian.tar.xz' glibc_2.31-13+deb11u6.debian.tar.xz 959940 SHA256:dc69cbf1ac3adab46438df372a6416c10869bc9d72aeb4afae66fe111b432ddd
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/glibc/2.31-13+deb11u6/ (for browsing the source)
+- https://sources.debian.net/src/glibc/2.31-13+deb11u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/glibc/2.31-13+deb11u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg-1+deb11u1`
 
@@ -3502,25 +3527,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libxext/2:1.3.3-1.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libxext/2:1.3.3-1.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libxml2=2.9.10+dfsg-6.7+deb11u3`
+### `dpkg` source package: `libxml2=2.9.10+dfsg-6.7+deb11u4`
 
 Binary Packages:
 
-- `libxml2:amd64=2.9.10+dfsg-6.7+deb11u3`
-- `libxml2-dev:amd64=2.9.10+dfsg-6.7+deb11u3`
+- `libxml2:amd64=2.9.10+dfsg-6.7+deb11u4`
+- `libxml2-dev:amd64=2.9.10+dfsg-6.7+deb11u4`
 
 Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`, `/usr/share/doc/libxml2-dev/copyright`)
 
 - `ISC`
 - `MIT-1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libxml2=2.9.10+dfsg-6.7+deb11u4
+'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u4.dsc' libxml2_2.9.10+dfsg-6.7+deb11u4.dsc 2859 SHA256:db8806a35ae170159cf267bb83296f1fd6310dedab53450e4d3f5e8af2937c4a
+'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg.orig.tar.xz' libxml2_2.9.10+dfsg.orig.tar.xz 2503560 SHA256:65ee7a2f5e100c64ddf7beb92297c9b2a30b994a76cd1fab67470cf22db6b7d0
+'http://deb.debian.org/debian/pool/main/libx/libxml2/libxml2_2.9.10%2bdfsg-6.7%2bdeb11u4.debian.tar.xz' libxml2_2.9.10+dfsg-6.7+deb11u4.debian.tar.xz 41904 SHA256:62037376765cc8e5961771d758b8efa9fddce3cce6fd67c31bc111ddff656654
+```
 
-- http://snapshot.debian.org/package/libxml2/2.9.10+dfsg-6.7+deb11u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.7+deb11u4/ (for browsing the source)
+- https://sources.debian.net/src/libxml2/2.9.10+dfsg-6.7+deb11u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libxml2/2.9.10+dfsg-6.7+deb11u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxrender=1:0.9.10-1`
 
@@ -3657,11 +3689,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.162-1`
+### `dpkg` source package: `linux=5.10.178-3`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.162-1`
+- `linux-libc-dev:amd64=5.10.178-3`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3677,17 +3709,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.10.162-1
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.162-1.dsc' linux_5.10.162-1.dsc 197238 SHA256:798be0e726f7340d60bd66caea38e4825c9307cb7ff714c1edae68e991623481
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.162.orig.tar.xz' linux_5.10.162.orig.tar.xz 121818544 SHA256:23ce1f61a85438549cc84ddb81b036beb8b2670f18c6298ae7a658c429c19e90
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.162-1.debian.tar.xz' linux_5.10.162-1.debian.tar.xz 1571940 SHA256:59fab7dc23a56c8a691d2e9bea683dfa37458e2d11eaca2bcd6f39230225438e
+$ apt-get source -qq --print-uris linux=5.10.178-3
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.178-3.dsc' linux_5.10.178-3.dsc 197238 SHA256:8137c4ab5f56e7a998cbcdd807b92c7fc9fb2f6b2bf28f2bbb855c441f8db147
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.178.orig.tar.xz' linux_5.10.178.orig.tar.xz 121884100 SHA256:fbe0da13d8833aff65017c9ce6e8cced3149a30a57bd75ec3dc623fb1caa63c4
+'http://deb.debian.org/debian/pool/main/l/linux/linux_5.10.178-3.debian.tar.xz' linux_5.10.178-3.debian.tar.xz 1593060 SHA256:a59d73b37a027d470ad333ffc289c8211d266f7665fddd45006cba89e82a06bf
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/5.10.162-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.162-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.162-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/5.10.178-3/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.178-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.178-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
@@ -3820,14 +3852,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/make-dfsg/4.3-4.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/make-dfsg/4.3-4.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `mariadb-10.5=1:10.5.18-0+deb11u1`
+### `dpkg` source package: `mariadb-10.5=1:10.5.19-0+deb11u2`
 
 Binary Packages:
 
-- `libmariadb-dev=1:10.5.18-0+deb11u1`
-- `libmariadb-dev-compat:amd64=1:10.5.18-0+deb11u1`
-- `libmariadb3:amd64=1:10.5.18-0+deb11u1`
-- `mariadb-common=1:10.5.18-0+deb11u1`
+- `libmariadb-dev=1:10.5.19-0+deb11u2`
+- `libmariadb-dev-compat:amd64=1:10.5.19-0+deb11u2`
+- `libmariadb3:amd64=1:10.5.19-0+deb11u2`
+- `mariadb-common=1:10.5.19-0+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/doc/libmariadb-dev-compat/copyright`, `/usr/share/doc/libmariadb3/copyright`, `/usr/share/doc/mariadb-common/copyright`)
 
@@ -3852,13 +3884,21 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris mariadb-10.5=1:10.5.19-0+deb11u2
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.19-0%2bdeb11u2.dsc' mariadb-10.5_10.5.19-0+deb11u2.dsc 4814 SHA256:e6978639d40cf14d6861dc83484e89b1ae75deec420e1496385fc01e288e0824
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.19.orig.tar.gz' mariadb-10.5_10.5.19.orig.tar.gz 111958233 SHA256:244c4a24249064106623cb84aa6de514ddf1787de86664075282bba8ec5757f4
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.19.orig.tar.gz.asc' mariadb-10.5_10.5.19.orig.tar.gz.asc 833 SHA256:cfa3ff96afc4196dabec3f52365eab0df40e7bc5a45a5756dc1fc83a77d66205
+'http://deb.debian.org/debian/pool/main/m/mariadb-10.5/mariadb-10.5_10.5.19-0%2bdeb11u2.debian.tar.xz' mariadb-10.5_10.5.19-0+deb11u2.debian.tar.xz 229336 SHA256:0bdf0a48b466ad8f77f0c2618b7ac4a8a76b26f2dfe83f9820666e2b8b2b0335
+```
 
-- http://snapshot.debian.org/package/mariadb-10.5/1:10.5.18-0+deb11u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/mariadb-10.5/1:10.5.19-0+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/mariadb-10.5/1:10.5.19-0+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mariadb-10.5/1:10.5.19-0+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-2`
 
@@ -4047,16 +4087,10 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libncurses-dev:amd64=6.2+20201114-2`
-- `libncurses5-dev:amd64=6.2+20201114-2`
-- `libncurses6:amd64=6.2+20201114-2`
-- `libncursesw5-dev:amd64=6.2+20201114-2`
-- `libncursesw6:amd64=6.2+20201114-2`
-- `libtinfo6:amd64=6.2+20201114-2`
 - `ncurses-base=6.2+20201114-2`
 - `ncurses-bin=6.2+20201114-2`
 
-Licenses: (parsed from: `/usr/share/doc/libncurses-dev/copyright`, `/usr/share/doc/libncurses5-dev/copyright`, `/usr/share/doc/libncurses6/copyright`, `/usr/share/doc/libncursesw5-dev/copyright`, `/usr/share/doc/libncursesw6/copyright`, `/usr/share/doc/libtinfo6/copyright`, `/usr/share/doc/ncurses-base/copyright`, `/usr/share/doc/ncurses-bin/copyright`)
+Licenses: (parsed from: `/usr/share/doc/ncurses-base/copyright`, `/usr/share/doc/ncurses-bin/copyright`)
 
 - `BSD-3-clause`
 - `MIT/X11`
@@ -4077,6 +4111,39 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/ncurses/6.2+20201114-2/ (for browsing the source)
 - https://sources.debian.net/src/ncurses/6.2+20201114-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/ncurses/6.2+20201114-2/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `ncurses=6.2+20201114-2+deb11u1`
+
+Binary Packages:
+
+- `libncurses-dev:amd64=6.2+20201114-2+deb11u1`
+- `libncurses5-dev:amd64=6.2+20201114-2+deb11u1`
+- `libncurses6:amd64=6.2+20201114-2+deb11u1`
+- `libncursesw5-dev:amd64=6.2+20201114-2+deb11u1`
+- `libncursesw6:amd64=6.2+20201114-2+deb11u1`
+- `libtinfo6:amd64=6.2+20201114-2+deb11u1`
+
+Licenses: (parsed from: `/usr/share/doc/libncurses-dev/copyright`, `/usr/share/doc/libncurses5-dev/copyright`, `/usr/share/doc/libncurses6/copyright`, `/usr/share/doc/libncursesw5-dev/copyright`, `/usr/share/doc/libncursesw6/copyright`, `/usr/share/doc/libtinfo6/copyright`)
+
+- `BSD-3-clause`
+- `MIT/X11`
+- `X11`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris ncurses=6.2+20201114-2+deb11u1
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2%2b20201114-2%2bdeb11u1.dsc' ncurses_6.2+20201114-2+deb11u1.dsc 4138 SHA256:7ba568bfdd893cf88fe48093273d168a3fda1e74f9fdd7af5a8970baeab55011
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2%2b20201114.orig.tar.gz' ncurses_6.2+20201114.orig.tar.gz 3539796 SHA256:aa3f8cfaff2a2b78f184274ec43d9da910c864e4b4d80fc47b5b48cba9154cd2
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2%2b20201114.orig.tar.gz.asc' ncurses_6.2+20201114.orig.tar.gz.asc 265 SHA256:91615d9d5575f9e974e78c6aca55e1885f42d1b2600cebec407be4471bb7a27d
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2%2b20201114-2%2bdeb11u1.debian.tar.xz' ncurses_6.2+20201114-2+deb11u1.debian.tar.xz 53556 SHA256:24f38ec08bc231c7cd5f598b50e10a00b10b46b50aef9c05b9379dc361aed537
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/ncurses/6.2+20201114-2+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/ncurses/6.2+20201114-2+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ncurses/6.2+20201114-2+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=6.3`
 
@@ -4679,12 +4746,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pkg-config/0.29.2-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pkg-config/0.29.2-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-13=13.9-0+deb11u1`
+### `dpkg` source package: `postgresql-13=13.10-0+deb11u1`
 
 Binary Packages:
 
-- `libpq-dev=13.9-0+deb11u1`
-- `libpq5:amd64=13.9-0+deb11u1`
+- `libpq-dev=13.10-0+deb11u1`
+- `libpq5:amd64=13.10-0+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/libpq5/copyright`)
 
@@ -4704,13 +4771,20 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris postgresql-13=13.10-0+deb11u1
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.10-0%2bdeb11u1.dsc' postgresql-13_13.10-0+deb11u1.dsc 3703 SHA256:2b23229ab9a89c2df6c2e6301177c7b09106386e744d92dd301a8c445093b46d
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.10.orig.tar.bz2' postgresql-13_13.10.orig.tar.bz2 21457594 SHA256:5bbcf5a56d85c44f3a8b058fb46862ff49cbc91834d07e295d02e6de3c216df2
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.10-0%2bdeb11u1.debian.tar.xz' postgresql-13_13.10-0+deb11u1.debian.tar.xz 29704 SHA256:360305293cf52bb73973596aba091a00de6da371713d87bcf5f0f79c3966f670
+```
 
-- http://snapshot.debian.org/package/postgresql-13/13.9-0+deb11u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/postgresql-13/13.10-0+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-13/13.10-0+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-13/13.10-0+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.17-5`
 
