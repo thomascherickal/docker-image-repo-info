@@ -1,7 +1,7 @@
 ## `maven:3-amazoncorretto-19-debian`
 
 ```console
-$ docker pull maven@sha256:34f059d227104337f417a60a66c734b77896c5fb95c4be696ad5fee5fd60f9b8
+$ docker pull maven@sha256:227d75091f2ca5510aa18ba6910aeb8e18ec4d857dfa89d5ac777df70f363266
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,13 +12,13 @@ $ docker pull maven@sha256:34f059d227104337f417a60a66c734b77896c5fb95c4be696ad5f
 ### `maven:3-amazoncorretto-19-debian` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:819b98439b74de050d79aa7a70953aacc49aa0ca1800195d3b9f032072995853
+$ docker pull maven@sha256:ba68abce39a9d801e45d77ef57aa27029bfd6c2636d16b9a58078e0eaa7d800b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **244.3 MB (244340285 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4cabf1e8bb4484771827f5050f922e50a7f2b6193338c3a6708224be5625f24a`
+-	Image ID: `sha256:574f18ff258a96931984179d1286f02d22133a80474f4d7b171174e688095e16`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -27,27 +27,27 @@ $ docker pull maven@sha256:819b98439b74de050d79aa7a70953aacc49aa0ca1800195d3b9f0
 ADD file:a2378c1b12e95db69e24b9d347441678c6f23239292cce3c822b1524992b6ec4 in / 
 # Tue, 02 May 2023 23:47:00 GMT
 CMD ["bash"]
-# Tue, 02 May 2023 23:47:00 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 RUN apt-get update   && apt-get install -y curl gnupg   && export GNUPGHOME="$(mktemp -d)"   && curl -fL https://apt.corretto.aws/corretto.key | gpg --batch --import   && gpg --batch --export '6DC3636DAE534049C8B94623A122542AB04F24E3' > /usr/share/keyrings/corretto.gpg   && rm -r "$GNUPGHOME"   && unset GNUPGHOME   && echo "deb [signed-by=/usr/share/keyrings/corretto.gpg] https://apt.corretto.aws stable main" > /etc/apt/sources.list.d/corretto.list   && apt-get update   && apt-get remove --purge --autoremove -y curl gnupg   && apt-get install -y java-19-amazon-corretto-jdk   && rm -rf /var/lib/apt/lists/* # buildkit
-# Tue, 02 May 2023 23:47:00 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Tue, 02 May 2023 23:47:00 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 COPY /usr/share/maven /usr/share/maven # buildkit
-# Tue, 02 May 2023 23:47:00 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 COPY /usr/local/bin/mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh # buildkit
-# Tue, 02 May 2023 23:47:00 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 COPY /usr/share/maven/ref/settings-docker.xml /usr/share/maven/ref/settings-docker.xml # buildkit
-# Tue, 02 May 2023 23:47:00 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 RUN ln -s ${MAVEN_HOME}/bin/mvn /usr/bin/mvn # buildkit
-# Tue, 02 May 2023 23:47:00 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 ARG MAVEN_VERSION=3.9.1
-# Tue, 02 May 2023 23:47:00 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 ARG USER_HOME_DIR=/root
-# Tue, 02 May 2023 23:47:00 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Tue, 02 May 2023 23:47:00 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Tue, 02 May 2023 23:47:00 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 CMD ["mvn"]
 ```
 

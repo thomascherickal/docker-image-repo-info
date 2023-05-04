@@ -1,7 +1,7 @@
 ## `maven:3-eclipse-temurin-8-alpine`
 
 ```console
-$ docker pull maven@sha256:3e0a5ef709a3fda4ccacfd50003e79da3faa50b489acadb22afdc87e897efece
+$ docker pull maven@sha256:c1159cd4ac7a937a4d56835bdb970c6b7ca82672d745f00931f4a7dd5a5a1173
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,13 +11,13 @@ $ docker pull maven@sha256:3e0a5ef709a3fda4ccacfd50003e79da3faa50b489acadb22afdc
 ### `maven:3-eclipse-temurin-8-alpine` - linux; amd64
 
 ```console
-$ docker pull maven@sha256:72b197987c8554d147a41c0d5d6ca073053b8d4f24ccfb50e77528419f37e7f8
+$ docker pull maven@sha256:a24f0826c426912bc5a339c96df289d8d68431790459520d463e570406f3c6a9
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **79.2 MB (79200294 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4e2900cbc7e5b004fb365601be9cb5fb5804f04c50de6041026d57950fbbbb62`
+-	Image ID: `sha256:22de06bf81fc374a46af191c5fd1e75864044ed612fd44020b7ba1b996427224`
 -	Entrypoint: `["\/usr\/local\/bin\/mvn-entrypoint.sh"]`
 -	Default Command: `["mvn"]`
 
@@ -40,27 +40,27 @@ ENV JAVA_VERSION=jdk8u372-b07
 RUN set -eux;     ARCH="$(apk --print-arch)";     case "${ARCH}" in        amd64|x86_64)          ESUM='cfdf8e07c8eeb087b7a2895b90fc0a19986bcff85006f1e2b708e3964909aa8e';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jdk_x64_alpine-linux_hotspot_8u372b07.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;
 # Wed, 26 Apr 2023 19:19:48 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Wed, 26 Apr 2023 19:21:32 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 RUN apk add --no-cache bash procps curl tar # buildkit
-# Wed, 26 Apr 2023 19:21:32 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 ENV MAVEN_HOME=/usr/share/maven
-# Wed, 26 Apr 2023 19:21:32 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 COPY /usr/share/maven /usr/share/maven # buildkit
-# Wed, 26 Apr 2023 19:21:32 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 COPY /usr/local/bin/mvn-entrypoint.sh /usr/local/bin/mvn-entrypoint.sh # buildkit
-# Wed, 26 Apr 2023 19:21:32 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 COPY /usr/share/maven/ref/settings-docker.xml /usr/share/maven/ref/settings-docker.xml # buildkit
-# Wed, 26 Apr 2023 19:21:32 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 RUN ln -s ${MAVEN_HOME}/bin/mvn /usr/bin/mvn # buildkit
-# Wed, 26 Apr 2023 19:21:32 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 ARG MAVEN_VERSION=3.9.1
-# Wed, 26 Apr 2023 19:21:32 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 ARG USER_HOME_DIR=/root
-# Wed, 26 Apr 2023 19:21:32 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 ENV MAVEN_CONFIG=/root/.m2
-# Wed, 26 Apr 2023 19:21:32 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 ENTRYPOINT ["/usr/local/bin/mvn-entrypoint.sh"]
-# Wed, 26 Apr 2023 19:21:32 GMT
+# Thu, 04 May 2023 07:27:26 GMT
 CMD ["mvn"]
 ```
 
