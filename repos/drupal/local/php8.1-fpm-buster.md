@@ -1,10 +1,10 @@
-# `drupal:10.0.8-php8.1-fpm-buster`
+# `drupal:10.0.9-php8.1-fpm-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d03b4bb9f102623ffed20cd329b7770a3f4a312cdb4285e2534d764773ca89ed`
-- Created: `2023-04-20T22:21:50.983465712Z`
-- Virtual Size: ~ 478.42 Mb  
+- Image ID: `sha256:54321abb4feaadb22fb6c54f0d7b603d41d0fb44ccee6cf3a0c36bcb59dc9008`
+- Created: `2023-05-04T04:58:41.882040417Z`
+- Virtual Size: ~ 478.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -21,7 +21,7 @@
   - `PHP_URL=https://www.php.net/distributions/php-8.1.18.tar.xz`
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.18.tar.xz.asc`
   - `PHP_SHA256=f3553370f8ba42729a9ce75eed17a2111d32433a43b615694f6a571b8bad0e39`
-  - `DRUPAL_VERSION=10.0.8`
+  - `DRUPAL_VERSION=10.0.9`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -434,12 +434,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.30-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.30-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.64.0-4+deb10u5`
+### `dpkg` source package: `curl=7.64.0-4+deb10u6`
 
 Binary Packages:
 
-- `curl=7.64.0-4+deb10u5`
-- `libcurl4:amd64=7.64.0-4+deb10u5`
+- `curl=7.64.0-4+deb10u6`
+- `libcurl4:amd64=7.64.0-4+deb10u6`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -450,13 +450,20 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u6
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u6.dsc' curl_7.64.0-4+deb10u6.dsc 2845 SHA256:ce14e22c43f23f505624b39b8bc0225ecd6ee8dbdd84ac5bd47cd9df5779648e
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u6.debian.tar.xz' curl_7.64.0-4+deb10u6.debian.tar.xz 62540 SHA256:63c961ed2d37600d6cd904dd5723409af60c0e9483341c9c1de39bf6da62f550
+```
 
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u6/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u2`
 
@@ -1797,24 +1804,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libwebp/0.6.1-2+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libwebp/0.6.1-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libxml2=2.9.4+dfsg1-7+deb10u5`
+### `dpkg` source package: `libxml2=2.9.4+dfsg1-7+deb10u6`
 
 Binary Packages:
 
-- `libxml2:amd64=2.9.4+dfsg1-7+deb10u5`
+- `libxml2:amd64=2.9.4+dfsg1-7+deb10u6`
 
 Licenses: (parsed from: `/usr/share/doc/libxml2/copyright`)
 
 - `ISC`
 - `MIT-1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libxml2=2.9.4+dfsg1-7+deb10u6
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-7%2bdeb10u6.dsc' libxml2_2.9.4+dfsg1-7+deb10u6.dsc 3167 SHA256:e89bdec872e1236bbc1b2ecb87a82a199a5dc36a4ddfe387d8b8324da8ba86c0
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1.orig.tar.xz' libxml2_2.9.4+dfsg1.orig.tar.xz 2446412 SHA256:a74ad55e346aa0b2b41903e66d21f8f3d2a736b3f41e32496376861ab484184e
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libxml2/libxml2_2.9.4%2bdfsg1-7%2bdeb10u6.debian.tar.xz' libxml2_2.9.4+dfsg1-7+deb10u6.debian.tar.xz 49836 SHA256:39fc9c3e5949c175ac6ecc8016d641978c3edcebf5cb6c9512b0b61e449cd8c1
+```
 
-- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-7+deb10u5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-7+deb10u6/ (for browsing the source)
+- https://sources.debian.net/src/libxml2/2.9.4+dfsg1-7+deb10u6/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libxml2/2.9.4+dfsg1-7+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libzip=1.5.1-4`
 
@@ -1870,11 +1884,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.3.8+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.19.269-1`
+### `dpkg` source package: `linux=4.19.282-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.19.269-1`
+- `linux-libc-dev:amd64=4.19.282-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1889,17 +1903,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.19.269-1
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.269-1.dsc' linux_4.19.269-1.dsc 191175 SHA256:d0ae91ec3417756b99dad1f2b809a6761f2d9582ef4b65de157e615c153428c6
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.269.orig.tar.xz' linux_4.19.269.orig.tar.xz 107667056 SHA256:4eeb8209a8454d497de3b9d02d94f329394691d80482833c58985ecc6c53a2a8
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.269-1.debian.tar.xz' linux_4.19.269-1.debian.tar.xz 1569132 SHA256:03d425fbb17bba30403d1e25c0a7ed41a5d8de893f82cd569ba13a055ae5bee2
+$ apt-get source -qq --print-uris linux=4.19.282-1
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.282-1.dsc' linux_4.19.282-1.dsc 191175 SHA256:bbeb315958c6f263ab2cca7a1d94e20e692fead32b5af29cba65761285bb04b2
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.282.orig.tar.xz' linux_4.19.282.orig.tar.xz 107691628 SHA256:854ad29b296cd876d19c13977680207f0ae93d2d4ee09296afe0a7190debf960
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.282-1.debian.tar.xz' linux_4.19.282-1.debian.tar.xz 1583640 SHA256:36a21bf9e36271d546ca21cdf553432d518c852e6f9a11f356b1cc0572b364bc
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.19.269-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.19.269-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.19.269-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.19.282-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.19.282-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.19.282-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lz4=1.8.3-1+deb10u1`
 
@@ -2689,20 +2703,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u10
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u10.dsc' tzdata_2021a-0+deb10u10.dsc 2071 SHA256:b1e9f40310065275618eab96b3f64800fa9574665682ed37bb9b055f31464711
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u10.debian.tar.xz' tzdata_2021a-0+deb10u10.debian.tar.xz 122884 SHA256:b9669552330f3654f84a7079b56d1b1f856f9022a802d5a7f9c9148ae1645999
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u10/
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u10/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.33.1-0.1`
 
