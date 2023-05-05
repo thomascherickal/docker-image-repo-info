@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b4b522ebe198f06c943b262dd0e9c875ebab5c694b919062d54684cb4610e354`
-- Created: `2023-04-20T20:19:55.74251671Z`
-- Virtual Size: ~ 477.33 Mb  
+- Image ID: `sha256:1e85ab24ec06082598abbdb3d3d0934d57f00c38eece633c1aac5892ca1b28e8`
+- Created: `2023-05-04T17:35:48.005835656Z`
+- Virtual Size: ~ 477.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["arangod"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `ARANGO_VERSION=3.10.5.2`
+  - `ARANGO_VERSION=3.10.6`
   - `GLIBCXX_FORCE_NEW=1`
 
 ## `apk` (`.apk`-based packages)
