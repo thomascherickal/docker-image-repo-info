@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4a4ea65924177c346f6834e9668c649dba32f90943e83c3880dff1f696a192b8`
-- Created: `2023-04-18T06:56:17.23510202Z`
-- Virtual Size: ~ 314.62 Mb  
+- Image ID: `sha256:148b10e24d31a72f03f0081bc2357ef297ac905534474567f354522e4f7c49be`
+- Created: `2023-05-04T16:31:47.814092057Z`
+- Virtual Size: ~ 315.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/ibm/helpers/runtime/docker-server.sh"]`
@@ -17,26 +17,26 @@
   - `JAVA_VERSION=jdk-11.0.18+10_openj9-0.36.0`
   - `JAVA_HOME=/opt/java/openjdk`
   - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal`
-  - `LIBERTY_VERSION=23.0.0_03`
+  - `LIBERTY_VERSION=23.0.0_04`
   - `LOG_DIR=/logs`
   - `WLP_OUTPUT_DIR=/opt/ibm/wlp/output`
   - `OPENJ9_SCC=true`
   - `RANDFILE=/tmp/.rnd`
   - `OPENJ9_JAVA_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal -Dosgi.checkConfiguration=false`
 - Labels:
-  - `BuildLabel=cl230320230319-1900`
+  - `BuildLabel=cl230420230418-0035`
   - `ProductID=fbf6a96d49214c0abc6a3bc5da6e48cd`
   - `ProductName=WebSphere Application Server Liberty`
-  - `ProductVersion=23.0.0.3`
+  - `ProductVersion=23.0.0.4`
   - `org.opencontainers.image.authors=Arthur De Magalhaes, Chris Potter, Christy Jesuraj`
   - `org.opencontainers.image.description=This image contains the WebSphere Liberty runtime with IBM Semeru Runtime Open Edition OpenJDK with OpenJ9 and Ubuntu as the base OS.  For more information on this image please see https://github.com/WASdev/ci.docker#building-an-application-image`
   - `org.opencontainers.image.documentation=https://www.ibm.com/support/knowledgecenter/SSAW57_liberty/com.ibm.websphere.wlp.nd.multiplatform.doc/ae/cwlp_about.html`
   - `org.opencontainers.image.ref.name=ubuntu`
-  - `org.opencontainers.image.revision=cl230320230319-1900`
+  - `org.opencontainers.image.revision=cl230420230418-0035`
   - `org.opencontainers.image.title=IBM WebSphere Liberty`
   - `org.opencontainers.image.url=http://wasdev.net`
   - `org.opencontainers.image.vendor=IBM`
-  - `org.opencontainers.image.version=23.0.0.3`
+  - `org.opencontainers.image.version=23.0.0.4`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1412,7 +1412,6 @@ $ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2ubuntu1.9
 Binary Packages:
 
 - `libssl1.1:amd64=1.1.1f-1ubuntu2.17`
-- `openssl=1.1.1f-1ubuntu2.17`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1421,6 +1420,25 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 **WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
 This is *usually* due to a new package version being released and the old version being removed.
 
+
+### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.18`
+
+Binary Packages:
+
+- `openssl=1.1.1f-1ubuntu2.18`
+
+**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
+If source is available (seen below), check the contents of `debian/copyright` within it.
+
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.18
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.18.dsc' openssl_1.1.1f-1ubuntu2.18.dsc 2174 SHA512:5f6df9e7fe6a881d201e5a189a1cb8d180809ad3955fabd81312e4f2539896aa60c105cae7a8beebecc94388a19143ea4370b698f19156827df94e10975d6c21
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.18.debian.tar.xz' openssl_1.1.1f-1ubuntu2.18.debian.tar.xz 232664 SHA512:f19a5fcf067e4b7d1f83353473dd0f38d7f2a51ca431882cb4b9260e28de19ad426245b9b8c23780798b97b1a272267a4d3bc42bbd2d19f81b36ae6b2aff9311
+```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
 
