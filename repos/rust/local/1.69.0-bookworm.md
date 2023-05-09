@@ -5019,20 +5019,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3-stdlib-extensions=3.11.2-2
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.11.2-2.dsc' python3-stdlib-extensions_3.11.2-2.dsc 2485 SHA256:4a5aade65a00ea9c9bb4c45564d9a655cf0419eba3ed71fcdaa9f8014a751a74
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.11.2.orig.tar.xz' python3-stdlib-extensions_3.11.2.orig.tar.xz 1120876 SHA256:bd96f9aedb530633ead00fbbeb5223c9dd85ba492c78e506ca329f3df5841f3e
-'http://deb.debian.org/debian/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.11.2-2.debian.tar.xz' python3-stdlib-extensions_3.11.2-2.debian.tar.xz 25920 SHA256:041cf876666e7e4fdf28417669e8dcf0938d4c727b2ae11f9a42818ab0522d94
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3-stdlib-extensions/3.11.2-2/
 
-- https://sources.debian.net/src/python3-stdlib-extensions/3.11.2-2/ (for browsing the source)
-- https://sources.debian.net/src/python3-stdlib-extensions/3.11.2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3-stdlib-extensions/3.11.2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3.11=3.11.2-6`
 
