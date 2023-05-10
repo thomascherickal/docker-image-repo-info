@@ -3576,7 +3576,7 @@ CMD ["catalina.sh" "run"]
 ## `geonetwork:4`
 
 ```console
-$ docker pull geonetwork@sha256:fb60cb2a7e51c97d280658de4573a063ad49277ddfbf65122d96befec7d9931a
+$ docker pull geonetwork@sha256:aad38616fd3164de6f8f3980aa0fb67a63c176f8cf18bbf2f70efb7991005d40
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3587,14 +3587,14 @@ $ docker pull geonetwork@sha256:fb60cb2a7e51c97d280658de4573a063ad49277ddfbf6512
 ### `geonetwork:4` - linux; amd64
 
 ```console
-$ docker pull geonetwork@sha256:f9ba956ea5ad906f458130837ff799f7de4ba8bc96f709e2f116f59dac6a4e6c
+$ docker pull geonetwork@sha256:a9d4c99f62d03ab1950b1655ea7d74d533a29d8b31ef473a2fc109d72b2b34ff
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **456.7 MB (456671906 bytes)**  
+-	Total Size: **456.7 MB (456671965 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0566b976c07c4f85de2442ea9be64128ff77dbcd69239dfe3398548236e70930`
+-	Image ID: `sha256:2ff1fa7e4d7445fb38a15a12b7a586ea29fefd30755223c98c0d0738ec293cd4`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -3643,41 +3643,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 14:29:08 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 14:29:08 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:48:56 GMT
 USER jetty
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:57 GMT
 USER root
-# Thu, 04 May 2023 17:58:44 GMT
+# Wed, 10 May 2023 01:03:34 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 17:58:44 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 USER jetty
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_VERSION=4.2.3
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_DOWNLOAD_MD5=1e0f4c7a76a3860d6b7ca6995c1eb102
-# Thu, 04 May 2023 17:59:14 GMT
+# Wed, 10 May 2023 01:04:25 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 COPY file:ee50548f90174fcbec925e62c4a2db15e8eb83e581b0f78e369d30fd096dcd23 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:59:16 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -3702,34 +3702,34 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 14:33:48 GMT  
 		Size: 10.2 MB (10238742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c44ba786f55c91ac0d1710cb4b53c17884eef0a501f906099c953ee25779c13`  
-		Last Modified: Thu, 04 May 2023 14:33:47 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:8ff37665540ca4fb77b6ae3ca9ca9740989f19ab7af3a8b93e8f30b207b6abae`  
+		Last Modified: Wed, 10 May 2023 00:53:11 GMT  
+		Size: 1.6 KB (1613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df3dab3fb81cc0874497232f8943c40dac0e9acdc70d48ed284bf5a44579b4eb`  
-		Last Modified: Thu, 04 May 2023 18:00:45 GMT  
-		Size: 481.8 KB (481756 bytes)  
+	-	`sha256:0f853c6b5fe8f455a9292f1d79fe2a203106dc379b72373df5222277b1350ecb`  
+		Last Modified: Wed, 10 May 2023 01:05:17 GMT  
+		Size: 481.8 KB (481761 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:267514691f286765a9e824d8a03273ce5248ebbadae19eec5969b9c05a893439`  
-		Last Modified: Thu, 04 May 2023 18:01:02 GMT  
-		Size: 346.4 MB (346376914 bytes)  
+	-	`sha256:e1b1797d0adeba171660b605b499ee7a5c227ce9ddb36c71913d996fe92ee803`  
+		Last Modified: Wed, 10 May 2023 01:05:35 GMT  
+		Size: 346.4 MB (346376904 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:606441277cece494d44592822a056f9f4a8d3e41414dfa3a553d7bbfd36b228b`  
-		Last Modified: Thu, 04 May 2023 18:00:45 GMT  
+	-	`sha256:c54c7d986dd47e292d08352b23ef6f6ff2ba26c5cbf23ffced56e0d88de4adce`  
+		Last Modified: Wed, 10 May 2023 01:05:17 GMT  
 		Size: 966.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `geonetwork:4` - linux; arm64 variant v8
 
 ```console
-$ docker pull geonetwork@sha256:a4893792fcb56562136eb883006fa99f39f46c38cec934448fd2d429b46f4168
+$ docker pull geonetwork@sha256:9584f5ab0cfaf65d03b01428d0f13fffdbc471982ff85dbcd8e74a6e2e11dcf1
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **454.3 MB (454253209 bytes)**  
+-	Total Size: **454.3 MB (454253220 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4ba6341606f74718db81b1e38730958f7235461292539926af3e4f4abad26d11`
+-	Image ID: `sha256:7b4c4d25c58593b0a4968e33260e82766c512afaf315396040fd4219b5614faf`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -3778,41 +3778,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 10:50:57 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 10:50:57 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:48 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:41:49 GMT
 USER jetty
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 USER root
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 USER jetty
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_VERSION=4.2.3
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_DOWNLOAD_MD5=1e0f4c7a76a3860d6b7ca6995c1eb102
-# Thu, 04 May 2023 12:41:05 GMT
+# Wed, 10 May 2023 01:04:38 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 COPY file:ee50548f90174fcbec925e62c4a2db15e8eb83e581b0f78e369d30fd096dcd23 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -3837,27 +3837,27 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 10:54:06 GMT  
 		Size: 10.2 MB (10239099 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:871955ede07cbb343b26ce14def0e5d86b2ba2591a402bfee68f0f6768f2bcfb`  
-		Last Modified: Thu, 04 May 2023 10:54:05 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:7336af97821f11f93d3a459ba9bb2d4eeccbe1d4356f058ed40d6aef7eb2917f`  
+		Last Modified: Wed, 10 May 2023 00:43:52 GMT  
+		Size: 1.6 KB (1612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfd391f9705e502c459fef101559fbd22c0f4459000512e364421adf8be955ba`  
-		Last Modified: Thu, 04 May 2023 12:42:18 GMT  
-		Size: 480.1 KB (480109 bytes)  
+	-	`sha256:ebb6848b1f1fd8cc409fbbf32b86aa031f86496a26d1037d4c786af3581355e4`  
+		Last Modified: Wed, 10 May 2023 01:05:20 GMT  
+		Size: 480.1 KB (480125 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:40dd5156b9bbbcb09c896df56e09aa20db65ac709e39660807458c78aa9534ce`  
-		Last Modified: Thu, 04 May 2023 12:42:32 GMT  
-		Size: 346.4 MB (346377021 bytes)  
+	-	`sha256:336136a575074e28e2c33b15e48c24960f27dc9b5ebfd899862bfc2a493a4bf1`  
+		Last Modified: Wed, 10 May 2023 01:05:34 GMT  
+		Size: 346.4 MB (346376952 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2425fe327e4de6da2d64435800153ff86c9ea169ae433f300f0ae9358261732`  
-		Last Modified: Thu, 04 May 2023 12:42:17 GMT  
-		Size: 966.0 B  
+	-	`sha256:97daf529b8b8c5d62da59eb986b744c933d7699a16844d8e8226f578affe2d4c`  
+		Last Modified: Wed, 10 May 2023 01:05:20 GMT  
+		Size: 967.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `geonetwork:4.0`
 
 ```console
-$ docker pull geonetwork@sha256:e3ec805c4e3750c3a008b34ac130bf0626db27bed870ae8e3726b5743ff04d0a
+$ docker pull geonetwork@sha256:069248287d7c4f253d9f63a05d1c63cadf611300a99a7e926736d878181ce281
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3868,14 +3868,14 @@ $ docker pull geonetwork@sha256:e3ec805c4e3750c3a008b34ac130bf0626db27bed870ae8e
 ### `geonetwork:4.0` - linux; amd64
 
 ```console
-$ docker pull geonetwork@sha256:b9ed03136113ff6ff8de1321ccf7ab695b540b80f99a027dbc5d7c4c7699426f
+$ docker pull geonetwork@sha256:6a6399239cc4b4190115fc360097b545836f7e6395bcfe2ceaa183bab8038169
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **466.7 MB (466659049 bytes)**  
+-	Total Size: **466.7 MB (466659123 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0f59ea113f9cb698cf8eff5d6b4aac1558fbcc5cad4616d2a7776ac96e73d0c1`
+-	Image ID: `sha256:fefc5c1ef3ec5ca411e1f12b31f48c4fd51f6d6b2644fcd3663e1745d753e949`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -3924,41 +3924,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 14:29:08 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 14:29:08 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:48:56 GMT
 USER jetty
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:57 GMT
 USER root
-# Thu, 04 May 2023 17:58:18 GMT
+# Wed, 10 May 2023 01:03:05 GMT
 RUN apt-get -y update &&     apt-get -y install         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p /${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 17:58:18 GMT
+# Wed, 10 May 2023 01:03:05 GMT
 USER jetty
-# Thu, 04 May 2023 17:58:18 GMT
+# Wed, 10 May 2023 01:03:05 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 17:58:18 GMT
+# Wed, 10 May 2023 01:03:05 GMT
 ENV GN_VERSION=4.0.6
-# Thu, 04 May 2023 17:58:18 GMT
+# Wed, 10 May 2023 01:03:05 GMT
 ENV GN_DOWNLOAD_MD5=793732cb9c723e73857a4da73b78451b
-# Thu, 04 May 2023 17:58:36 GMT
+# Wed, 10 May 2023 01:03:27 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 17:58:37 GMT
+# Wed, 10 May 2023 01:03:28 GMT
 COPY file:ca46ab251df3dfc253cb04cf962e7266e42428fab31ad2f583a7c86b06d5f778 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 17:58:38 GMT
+# Wed, 10 May 2023 01:03:28 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 17:58:38 GMT
+# Wed, 10 May 2023 01:03:28 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:58:38 GMT
+# Wed, 10 May 2023 01:03:28 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -3983,34 +3983,34 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 14:33:48 GMT  
 		Size: 10.2 MB (10238742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c44ba786f55c91ac0d1710cb4b53c17884eef0a501f906099c953ee25779c13`  
-		Last Modified: Thu, 04 May 2023 14:33:47 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:8ff37665540ca4fb77b6ae3ca9ca9740989f19ab7af3a8b93e8f30b207b6abae`  
+		Last Modified: Wed, 10 May 2023 00:53:11 GMT  
+		Size: 1.6 KB (1613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4fdfa095313928c23ba68d4c43f656b039d6673e87973aa729af4188b420c7fe`  
-		Last Modified: Thu, 04 May 2023 18:00:19 GMT  
-		Size: 481.8 KB (481759 bytes)  
+	-	`sha256:c40d26c267924ee56fe7f7e3b73d0e55424e77939b6d37a41b698a0d714e91af`  
+		Last Modified: Wed, 10 May 2023 01:04:51 GMT  
+		Size: 481.8 KB (481771 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a5153473ac4d111a0c1842b843d2bc1ec29cb7a0c212e49228559fa7d259e107`  
-		Last Modified: Thu, 04 May 2023 18:00:36 GMT  
+	-	`sha256:27360494b9ea1001824ccc7bbab6386516c922677e4075cffe5e9acfc27b68b5`  
+		Last Modified: Wed, 10 May 2023 01:05:08 GMT  
 		Size: 356.4 MB (356364062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b10bb6ecd861b2ad664714e259445619b8e48a8eceedc5bfb5195eff100f7a7`  
-		Last Modified: Thu, 04 May 2023 18:00:19 GMT  
-		Size: 958.0 B  
+	-	`sha256:c319205cf107eb8778e08f92e36c3afc98ec1515d20af68da94df519999ce919`  
+		Last Modified: Wed, 10 May 2023 01:04:51 GMT  
+		Size: 956.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `geonetwork:4.0` - linux; arm64 variant v8
 
 ```console
-$ docker pull geonetwork@sha256:849a5efddb5a16c1ff5c1a9d1090d10a099f15163deb11b5757d2bc72d2298fd
+$ docker pull geonetwork@sha256:0131348b98c62ffe622d8d354e8e4572100a0a0d21ab030df4e5953fc2671e12
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **464.2 MB (464240231 bytes)**  
+-	Total Size: **464.2 MB (464240356 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2b6678f104b6babb8aa69c1646dfb6b1d90767fc11fe95ea745a99ab7341849f`
+-	Image ID: `sha256:c765e74dfe485b98f58a486192b90558002ed802f49599930068490db8952755`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -4059,41 +4059,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 10:50:57 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 10:50:57 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:48 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:41:49 GMT
 USER jetty
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 USER root
-# Thu, 04 May 2023 12:35:31 GMT
+# Wed, 10 May 2023 01:03:48 GMT
 RUN apt-get -y update &&     apt-get -y install         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p /${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 12:35:31 GMT
+# Wed, 10 May 2023 01:03:48 GMT
 USER jetty
-# Thu, 04 May 2023 12:35:31 GMT
+# Wed, 10 May 2023 01:03:48 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 12:35:31 GMT
+# Wed, 10 May 2023 01:03:49 GMT
 ENV GN_VERSION=4.0.6
-# Thu, 04 May 2023 12:35:32 GMT
+# Wed, 10 May 2023 01:03:49 GMT
 ENV GN_DOWNLOAD_MD5=793732cb9c723e73857a4da73b78451b
-# Thu, 04 May 2023 12:40:14 GMT
+# Wed, 10 May 2023 01:04:08 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 12:40:17 GMT
+# Wed, 10 May 2023 01:04:11 GMT
 COPY file:ca46ab251df3dfc253cb04cf962e7266e42428fab31ad2f583a7c86b06d5f778 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 12:40:17 GMT
+# Wed, 10 May 2023 01:04:11 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 12:40:17 GMT
+# Wed, 10 May 2023 01:04:11 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:40:18 GMT
+# Wed, 10 May 2023 01:04:11 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -4118,27 +4118,27 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 10:54:06 GMT  
 		Size: 10.2 MB (10239099 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:871955ede07cbb343b26ce14def0e5d86b2ba2591a402bfee68f0f6768f2bcfb`  
-		Last Modified: Thu, 04 May 2023 10:54:05 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:7336af97821f11f93d3a459ba9bb2d4eeccbe1d4356f058ed40d6aef7eb2917f`  
+		Last Modified: Wed, 10 May 2023 00:43:52 GMT  
+		Size: 1.6 KB (1612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d92aa21a8bc32925751fc29fe991d9bcdb7bf26798c928172a300cb3c92235ae`  
-		Last Modified: Thu, 04 May 2023 12:41:55 GMT  
-		Size: 480.1 KB (480111 bytes)  
+	-	`sha256:f0f361226ddb13e1367477ccba6cc52b6987801ada4d023def1de0701ad56cad`  
+		Last Modified: Wed, 10 May 2023 01:04:52 GMT  
+		Size: 480.1 KB (480124 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7caa056a2a4720c83b1e11335fe0eadb8a04f56dd9842ab42bac720f48f21e43`  
-		Last Modified: Thu, 04 May 2023 12:42:09 GMT  
-		Size: 356.4 MB (356364049 bytes)  
+	-	`sha256:2444363841b5753eb5b561b4d2a43c6a7010d7af27a46a4bac8ec0c13525d179`  
+		Last Modified: Wed, 10 May 2023 01:05:07 GMT  
+		Size: 356.4 MB (356364098 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:83d5a233a57c8c2c30ae8838b1b4c6f795e312be593ba6b86bf1407a2f590750`  
-		Last Modified: Thu, 04 May 2023 12:41:55 GMT  
+	-	`sha256:53c892d6364d929e496a0ff53c123383dd1189be6f65b724c1ccf38ca3ef2456`  
+		Last Modified: Wed, 10 May 2023 01:04:52 GMT  
 		Size: 958.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `geonetwork:4.0.6`
 
 ```console
-$ docker pull geonetwork@sha256:e3ec805c4e3750c3a008b34ac130bf0626db27bed870ae8e3726b5743ff04d0a
+$ docker pull geonetwork@sha256:069248287d7c4f253d9f63a05d1c63cadf611300a99a7e926736d878181ce281
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4149,14 +4149,14 @@ $ docker pull geonetwork@sha256:e3ec805c4e3750c3a008b34ac130bf0626db27bed870ae8e
 ### `geonetwork:4.0.6` - linux; amd64
 
 ```console
-$ docker pull geonetwork@sha256:b9ed03136113ff6ff8de1321ccf7ab695b540b80f99a027dbc5d7c4c7699426f
+$ docker pull geonetwork@sha256:6a6399239cc4b4190115fc360097b545836f7e6395bcfe2ceaa183bab8038169
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **466.7 MB (466659049 bytes)**  
+-	Total Size: **466.7 MB (466659123 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0f59ea113f9cb698cf8eff5d6b4aac1558fbcc5cad4616d2a7776ac96e73d0c1`
+-	Image ID: `sha256:fefc5c1ef3ec5ca411e1f12b31f48c4fd51f6d6b2644fcd3663e1745d753e949`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -4205,41 +4205,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 14:29:08 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 14:29:08 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:48:56 GMT
 USER jetty
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:57 GMT
 USER root
-# Thu, 04 May 2023 17:58:18 GMT
+# Wed, 10 May 2023 01:03:05 GMT
 RUN apt-get -y update &&     apt-get -y install         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p /${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 17:58:18 GMT
+# Wed, 10 May 2023 01:03:05 GMT
 USER jetty
-# Thu, 04 May 2023 17:58:18 GMT
+# Wed, 10 May 2023 01:03:05 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 17:58:18 GMT
+# Wed, 10 May 2023 01:03:05 GMT
 ENV GN_VERSION=4.0.6
-# Thu, 04 May 2023 17:58:18 GMT
+# Wed, 10 May 2023 01:03:05 GMT
 ENV GN_DOWNLOAD_MD5=793732cb9c723e73857a4da73b78451b
-# Thu, 04 May 2023 17:58:36 GMT
+# Wed, 10 May 2023 01:03:27 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 17:58:37 GMT
+# Wed, 10 May 2023 01:03:28 GMT
 COPY file:ca46ab251df3dfc253cb04cf962e7266e42428fab31ad2f583a7c86b06d5f778 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 17:58:38 GMT
+# Wed, 10 May 2023 01:03:28 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 17:58:38 GMT
+# Wed, 10 May 2023 01:03:28 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:58:38 GMT
+# Wed, 10 May 2023 01:03:28 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -4264,34 +4264,34 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 14:33:48 GMT  
 		Size: 10.2 MB (10238742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c44ba786f55c91ac0d1710cb4b53c17884eef0a501f906099c953ee25779c13`  
-		Last Modified: Thu, 04 May 2023 14:33:47 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:8ff37665540ca4fb77b6ae3ca9ca9740989f19ab7af3a8b93e8f30b207b6abae`  
+		Last Modified: Wed, 10 May 2023 00:53:11 GMT  
+		Size: 1.6 KB (1613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4fdfa095313928c23ba68d4c43f656b039d6673e87973aa729af4188b420c7fe`  
-		Last Modified: Thu, 04 May 2023 18:00:19 GMT  
-		Size: 481.8 KB (481759 bytes)  
+	-	`sha256:c40d26c267924ee56fe7f7e3b73d0e55424e77939b6d37a41b698a0d714e91af`  
+		Last Modified: Wed, 10 May 2023 01:04:51 GMT  
+		Size: 481.8 KB (481771 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a5153473ac4d111a0c1842b843d2bc1ec29cb7a0c212e49228559fa7d259e107`  
-		Last Modified: Thu, 04 May 2023 18:00:36 GMT  
+	-	`sha256:27360494b9ea1001824ccc7bbab6386516c922677e4075cffe5e9acfc27b68b5`  
+		Last Modified: Wed, 10 May 2023 01:05:08 GMT  
 		Size: 356.4 MB (356364062 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2b10bb6ecd861b2ad664714e259445619b8e48a8eceedc5bfb5195eff100f7a7`  
-		Last Modified: Thu, 04 May 2023 18:00:19 GMT  
-		Size: 958.0 B  
+	-	`sha256:c319205cf107eb8778e08f92e36c3afc98ec1515d20af68da94df519999ce919`  
+		Last Modified: Wed, 10 May 2023 01:04:51 GMT  
+		Size: 956.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `geonetwork:4.0.6` - linux; arm64 variant v8
 
 ```console
-$ docker pull geonetwork@sha256:849a5efddb5a16c1ff5c1a9d1090d10a099f15163deb11b5757d2bc72d2298fd
+$ docker pull geonetwork@sha256:0131348b98c62ffe622d8d354e8e4572100a0a0d21ab030df4e5953fc2671e12
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **464.2 MB (464240231 bytes)**  
+-	Total Size: **464.2 MB (464240356 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2b6678f104b6babb8aa69c1646dfb6b1d90767fc11fe95ea745a99ab7341849f`
+-	Image ID: `sha256:c765e74dfe485b98f58a486192b90558002ed802f49599930068490db8952755`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -4340,41 +4340,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 10:50:57 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 10:50:57 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:48 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:41:49 GMT
 USER jetty
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 USER root
-# Thu, 04 May 2023 12:35:31 GMT
+# Wed, 10 May 2023 01:03:48 GMT
 RUN apt-get -y update &&     apt-get -y install         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p /${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 12:35:31 GMT
+# Wed, 10 May 2023 01:03:48 GMT
 USER jetty
-# Thu, 04 May 2023 12:35:31 GMT
+# Wed, 10 May 2023 01:03:48 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 12:35:31 GMT
+# Wed, 10 May 2023 01:03:49 GMT
 ENV GN_VERSION=4.0.6
-# Thu, 04 May 2023 12:35:32 GMT
+# Wed, 10 May 2023 01:03:49 GMT
 ENV GN_DOWNLOAD_MD5=793732cb9c723e73857a4da73b78451b
-# Thu, 04 May 2023 12:40:14 GMT
+# Wed, 10 May 2023 01:04:08 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 12:40:17 GMT
+# Wed, 10 May 2023 01:04:11 GMT
 COPY file:ca46ab251df3dfc253cb04cf962e7266e42428fab31ad2f583a7c86b06d5f778 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 12:40:17 GMT
+# Wed, 10 May 2023 01:04:11 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 12:40:17 GMT
+# Wed, 10 May 2023 01:04:11 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:40:18 GMT
+# Wed, 10 May 2023 01:04:11 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -4399,27 +4399,27 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 10:54:06 GMT  
 		Size: 10.2 MB (10239099 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:871955ede07cbb343b26ce14def0e5d86b2ba2591a402bfee68f0f6768f2bcfb`  
-		Last Modified: Thu, 04 May 2023 10:54:05 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:7336af97821f11f93d3a459ba9bb2d4eeccbe1d4356f058ed40d6aef7eb2917f`  
+		Last Modified: Wed, 10 May 2023 00:43:52 GMT  
+		Size: 1.6 KB (1612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d92aa21a8bc32925751fc29fe991d9bcdb7bf26798c928172a300cb3c92235ae`  
-		Last Modified: Thu, 04 May 2023 12:41:55 GMT  
-		Size: 480.1 KB (480111 bytes)  
+	-	`sha256:f0f361226ddb13e1367477ccba6cc52b6987801ada4d023def1de0701ad56cad`  
+		Last Modified: Wed, 10 May 2023 01:04:52 GMT  
+		Size: 480.1 KB (480124 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7caa056a2a4720c83b1e11335fe0eadb8a04f56dd9842ab42bac720f48f21e43`  
-		Last Modified: Thu, 04 May 2023 12:42:09 GMT  
-		Size: 356.4 MB (356364049 bytes)  
+	-	`sha256:2444363841b5753eb5b561b4d2a43c6a7010d7af27a46a4bac8ec0c13525d179`  
+		Last Modified: Wed, 10 May 2023 01:05:07 GMT  
+		Size: 356.4 MB (356364098 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:83d5a233a57c8c2c30ae8838b1b4c6f795e312be593ba6b86bf1407a2f590750`  
-		Last Modified: Thu, 04 May 2023 12:41:55 GMT  
+	-	`sha256:53c892d6364d929e496a0ff53c123383dd1189be6f65b724c1ccf38ca3ef2456`  
+		Last Modified: Wed, 10 May 2023 01:04:52 GMT  
 		Size: 958.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `geonetwork:4.2`
 
 ```console
-$ docker pull geonetwork@sha256:fb60cb2a7e51c97d280658de4573a063ad49277ddfbf65122d96befec7d9931a
+$ docker pull geonetwork@sha256:aad38616fd3164de6f8f3980aa0fb67a63c176f8cf18bbf2f70efb7991005d40
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4430,14 +4430,14 @@ $ docker pull geonetwork@sha256:fb60cb2a7e51c97d280658de4573a063ad49277ddfbf6512
 ### `geonetwork:4.2` - linux; amd64
 
 ```console
-$ docker pull geonetwork@sha256:f9ba956ea5ad906f458130837ff799f7de4ba8bc96f709e2f116f59dac6a4e6c
+$ docker pull geonetwork@sha256:a9d4c99f62d03ab1950b1655ea7d74d533a29d8b31ef473a2fc109d72b2b34ff
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **456.7 MB (456671906 bytes)**  
+-	Total Size: **456.7 MB (456671965 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0566b976c07c4f85de2442ea9be64128ff77dbcd69239dfe3398548236e70930`
+-	Image ID: `sha256:2ff1fa7e4d7445fb38a15a12b7a586ea29fefd30755223c98c0d0738ec293cd4`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -4486,41 +4486,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 14:29:08 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 14:29:08 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:48:56 GMT
 USER jetty
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:57 GMT
 USER root
-# Thu, 04 May 2023 17:58:44 GMT
+# Wed, 10 May 2023 01:03:34 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 17:58:44 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 USER jetty
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_VERSION=4.2.3
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_DOWNLOAD_MD5=1e0f4c7a76a3860d6b7ca6995c1eb102
-# Thu, 04 May 2023 17:59:14 GMT
+# Wed, 10 May 2023 01:04:25 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 COPY file:ee50548f90174fcbec925e62c4a2db15e8eb83e581b0f78e369d30fd096dcd23 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:59:16 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -4545,34 +4545,34 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 14:33:48 GMT  
 		Size: 10.2 MB (10238742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c44ba786f55c91ac0d1710cb4b53c17884eef0a501f906099c953ee25779c13`  
-		Last Modified: Thu, 04 May 2023 14:33:47 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:8ff37665540ca4fb77b6ae3ca9ca9740989f19ab7af3a8b93e8f30b207b6abae`  
+		Last Modified: Wed, 10 May 2023 00:53:11 GMT  
+		Size: 1.6 KB (1613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df3dab3fb81cc0874497232f8943c40dac0e9acdc70d48ed284bf5a44579b4eb`  
-		Last Modified: Thu, 04 May 2023 18:00:45 GMT  
-		Size: 481.8 KB (481756 bytes)  
+	-	`sha256:0f853c6b5fe8f455a9292f1d79fe2a203106dc379b72373df5222277b1350ecb`  
+		Last Modified: Wed, 10 May 2023 01:05:17 GMT  
+		Size: 481.8 KB (481761 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:267514691f286765a9e824d8a03273ce5248ebbadae19eec5969b9c05a893439`  
-		Last Modified: Thu, 04 May 2023 18:01:02 GMT  
-		Size: 346.4 MB (346376914 bytes)  
+	-	`sha256:e1b1797d0adeba171660b605b499ee7a5c227ce9ddb36c71913d996fe92ee803`  
+		Last Modified: Wed, 10 May 2023 01:05:35 GMT  
+		Size: 346.4 MB (346376904 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:606441277cece494d44592822a056f9f4a8d3e41414dfa3a553d7bbfd36b228b`  
-		Last Modified: Thu, 04 May 2023 18:00:45 GMT  
+	-	`sha256:c54c7d986dd47e292d08352b23ef6f6ff2ba26c5cbf23ffced56e0d88de4adce`  
+		Last Modified: Wed, 10 May 2023 01:05:17 GMT  
 		Size: 966.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `geonetwork:4.2` - linux; arm64 variant v8
 
 ```console
-$ docker pull geonetwork@sha256:a4893792fcb56562136eb883006fa99f39f46c38cec934448fd2d429b46f4168
+$ docker pull geonetwork@sha256:9584f5ab0cfaf65d03b01428d0f13fffdbc471982ff85dbcd8e74a6e2e11dcf1
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **454.3 MB (454253209 bytes)**  
+-	Total Size: **454.3 MB (454253220 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4ba6341606f74718db81b1e38730958f7235461292539926af3e4f4abad26d11`
+-	Image ID: `sha256:7b4c4d25c58593b0a4968e33260e82766c512afaf315396040fd4219b5614faf`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -4621,41 +4621,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 10:50:57 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 10:50:57 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:48 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:41:49 GMT
 USER jetty
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 USER root
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 USER jetty
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_VERSION=4.2.3
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_DOWNLOAD_MD5=1e0f4c7a76a3860d6b7ca6995c1eb102
-# Thu, 04 May 2023 12:41:05 GMT
+# Wed, 10 May 2023 01:04:38 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 COPY file:ee50548f90174fcbec925e62c4a2db15e8eb83e581b0f78e369d30fd096dcd23 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -4680,27 +4680,27 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 10:54:06 GMT  
 		Size: 10.2 MB (10239099 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:871955ede07cbb343b26ce14def0e5d86b2ba2591a402bfee68f0f6768f2bcfb`  
-		Last Modified: Thu, 04 May 2023 10:54:05 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:7336af97821f11f93d3a459ba9bb2d4eeccbe1d4356f058ed40d6aef7eb2917f`  
+		Last Modified: Wed, 10 May 2023 00:43:52 GMT  
+		Size: 1.6 KB (1612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfd391f9705e502c459fef101559fbd22c0f4459000512e364421adf8be955ba`  
-		Last Modified: Thu, 04 May 2023 12:42:18 GMT  
-		Size: 480.1 KB (480109 bytes)  
+	-	`sha256:ebb6848b1f1fd8cc409fbbf32b86aa031f86496a26d1037d4c786af3581355e4`  
+		Last Modified: Wed, 10 May 2023 01:05:20 GMT  
+		Size: 480.1 KB (480125 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:40dd5156b9bbbcb09c896df56e09aa20db65ac709e39660807458c78aa9534ce`  
-		Last Modified: Thu, 04 May 2023 12:42:32 GMT  
-		Size: 346.4 MB (346377021 bytes)  
+	-	`sha256:336136a575074e28e2c33b15e48c24960f27dc9b5ebfd899862bfc2a493a4bf1`  
+		Last Modified: Wed, 10 May 2023 01:05:34 GMT  
+		Size: 346.4 MB (346376952 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2425fe327e4de6da2d64435800153ff86c9ea169ae433f300f0ae9358261732`  
-		Last Modified: Thu, 04 May 2023 12:42:17 GMT  
-		Size: 966.0 B  
+	-	`sha256:97daf529b8b8c5d62da59eb986b744c933d7699a16844d8e8226f578affe2d4c`  
+		Last Modified: Wed, 10 May 2023 01:05:20 GMT  
+		Size: 967.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `geonetwork:4.2.3`
 
 ```console
-$ docker pull geonetwork@sha256:fb60cb2a7e51c97d280658de4573a063ad49277ddfbf65122d96befec7d9931a
+$ docker pull geonetwork@sha256:aad38616fd3164de6f8f3980aa0fb67a63c176f8cf18bbf2f70efb7991005d40
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4711,14 +4711,14 @@ $ docker pull geonetwork@sha256:fb60cb2a7e51c97d280658de4573a063ad49277ddfbf6512
 ### `geonetwork:4.2.3` - linux; amd64
 
 ```console
-$ docker pull geonetwork@sha256:f9ba956ea5ad906f458130837ff799f7de4ba8bc96f709e2f116f59dac6a4e6c
+$ docker pull geonetwork@sha256:a9d4c99f62d03ab1950b1655ea7d74d533a29d8b31ef473a2fc109d72b2b34ff
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **456.7 MB (456671906 bytes)**  
+-	Total Size: **456.7 MB (456671965 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0566b976c07c4f85de2442ea9be64128ff77dbcd69239dfe3398548236e70930`
+-	Image ID: `sha256:2ff1fa7e4d7445fb38a15a12b7a586ea29fefd30755223c98c0d0738ec293cd4`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -4767,41 +4767,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 14:29:08 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 14:29:08 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:48:56 GMT
 USER jetty
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:57 GMT
 USER root
-# Thu, 04 May 2023 17:58:44 GMT
+# Wed, 10 May 2023 01:03:34 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 17:58:44 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 USER jetty
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_VERSION=4.2.3
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_DOWNLOAD_MD5=1e0f4c7a76a3860d6b7ca6995c1eb102
-# Thu, 04 May 2023 17:59:14 GMT
+# Wed, 10 May 2023 01:04:25 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 COPY file:ee50548f90174fcbec925e62c4a2db15e8eb83e581b0f78e369d30fd096dcd23 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:59:16 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -4826,34 +4826,34 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 14:33:48 GMT  
 		Size: 10.2 MB (10238742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c44ba786f55c91ac0d1710cb4b53c17884eef0a501f906099c953ee25779c13`  
-		Last Modified: Thu, 04 May 2023 14:33:47 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:8ff37665540ca4fb77b6ae3ca9ca9740989f19ab7af3a8b93e8f30b207b6abae`  
+		Last Modified: Wed, 10 May 2023 00:53:11 GMT  
+		Size: 1.6 KB (1613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df3dab3fb81cc0874497232f8943c40dac0e9acdc70d48ed284bf5a44579b4eb`  
-		Last Modified: Thu, 04 May 2023 18:00:45 GMT  
-		Size: 481.8 KB (481756 bytes)  
+	-	`sha256:0f853c6b5fe8f455a9292f1d79fe2a203106dc379b72373df5222277b1350ecb`  
+		Last Modified: Wed, 10 May 2023 01:05:17 GMT  
+		Size: 481.8 KB (481761 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:267514691f286765a9e824d8a03273ce5248ebbadae19eec5969b9c05a893439`  
-		Last Modified: Thu, 04 May 2023 18:01:02 GMT  
-		Size: 346.4 MB (346376914 bytes)  
+	-	`sha256:e1b1797d0adeba171660b605b499ee7a5c227ce9ddb36c71913d996fe92ee803`  
+		Last Modified: Wed, 10 May 2023 01:05:35 GMT  
+		Size: 346.4 MB (346376904 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:606441277cece494d44592822a056f9f4a8d3e41414dfa3a553d7bbfd36b228b`  
-		Last Modified: Thu, 04 May 2023 18:00:45 GMT  
+	-	`sha256:c54c7d986dd47e292d08352b23ef6f6ff2ba26c5cbf23ffced56e0d88de4adce`  
+		Last Modified: Wed, 10 May 2023 01:05:17 GMT  
 		Size: 966.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `geonetwork:4.2.3` - linux; arm64 variant v8
 
 ```console
-$ docker pull geonetwork@sha256:a4893792fcb56562136eb883006fa99f39f46c38cec934448fd2d429b46f4168
+$ docker pull geonetwork@sha256:9584f5ab0cfaf65d03b01428d0f13fffdbc471982ff85dbcd8e74a6e2e11dcf1
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **454.3 MB (454253209 bytes)**  
+-	Total Size: **454.3 MB (454253220 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4ba6341606f74718db81b1e38730958f7235461292539926af3e4f4abad26d11`
+-	Image ID: `sha256:7b4c4d25c58593b0a4968e33260e82766c512afaf315396040fd4219b5614faf`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -4902,41 +4902,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 10:50:57 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 10:50:57 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:48 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:41:49 GMT
 USER jetty
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 USER root
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 USER jetty
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_VERSION=4.2.3
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_DOWNLOAD_MD5=1e0f4c7a76a3860d6b7ca6995c1eb102
-# Thu, 04 May 2023 12:41:05 GMT
+# Wed, 10 May 2023 01:04:38 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 COPY file:ee50548f90174fcbec925e62c4a2db15e8eb83e581b0f78e369d30fd096dcd23 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -4961,27 +4961,27 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 10:54:06 GMT  
 		Size: 10.2 MB (10239099 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:871955ede07cbb343b26ce14def0e5d86b2ba2591a402bfee68f0f6768f2bcfb`  
-		Last Modified: Thu, 04 May 2023 10:54:05 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:7336af97821f11f93d3a459ba9bb2d4eeccbe1d4356f058ed40d6aef7eb2917f`  
+		Last Modified: Wed, 10 May 2023 00:43:52 GMT  
+		Size: 1.6 KB (1612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfd391f9705e502c459fef101559fbd22c0f4459000512e364421adf8be955ba`  
-		Last Modified: Thu, 04 May 2023 12:42:18 GMT  
-		Size: 480.1 KB (480109 bytes)  
+	-	`sha256:ebb6848b1f1fd8cc409fbbf32b86aa031f86496a26d1037d4c786af3581355e4`  
+		Last Modified: Wed, 10 May 2023 01:05:20 GMT  
+		Size: 480.1 KB (480125 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:40dd5156b9bbbcb09c896df56e09aa20db65ac709e39660807458c78aa9534ce`  
-		Last Modified: Thu, 04 May 2023 12:42:32 GMT  
-		Size: 346.4 MB (346377021 bytes)  
+	-	`sha256:336136a575074e28e2c33b15e48c24960f27dc9b5ebfd899862bfc2a493a4bf1`  
+		Last Modified: Wed, 10 May 2023 01:05:34 GMT  
+		Size: 346.4 MB (346376952 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2425fe327e4de6da2d64435800153ff86c9ea169ae433f300f0ae9358261732`  
-		Last Modified: Thu, 04 May 2023 12:42:17 GMT  
-		Size: 966.0 B  
+	-	`sha256:97daf529b8b8c5d62da59eb986b744c933d7699a16844d8e8226f578affe2d4c`  
+		Last Modified: Wed, 10 May 2023 01:05:20 GMT  
+		Size: 967.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `geonetwork:latest`
 
 ```console
-$ docker pull geonetwork@sha256:fb60cb2a7e51c97d280658de4573a063ad49277ddfbf65122d96befec7d9931a
+$ docker pull geonetwork@sha256:aad38616fd3164de6f8f3980aa0fb67a63c176f8cf18bbf2f70efb7991005d40
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4992,14 +4992,14 @@ $ docker pull geonetwork@sha256:fb60cb2a7e51c97d280658de4573a063ad49277ddfbf6512
 ### `geonetwork:latest` - linux; amd64
 
 ```console
-$ docker pull geonetwork@sha256:f9ba956ea5ad906f458130837ff799f7de4ba8bc96f709e2f116f59dac6a4e6c
+$ docker pull geonetwork@sha256:a9d4c99f62d03ab1950b1655ea7d74d533a29d8b31ef473a2fc109d72b2b34ff
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **456.7 MB (456671906 bytes)**  
+-	Total Size: **456.7 MB (456671965 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0566b976c07c4f85de2442ea9be64128ff77dbcd69239dfe3398548236e70930`
+-	Image ID: `sha256:2ff1fa7e4d7445fb38a15a12b7a586ea29fefd30755223c98c0d0738ec293cd4`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -5048,41 +5048,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 14:29:08 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 14:29:08 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:48:56 GMT
 USER jetty
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 14:29:08 GMT
+# Wed, 10 May 2023 00:48:56 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:56 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 17:58:12 GMT
+# Wed, 10 May 2023 01:02:57 GMT
 USER root
-# Thu, 04 May 2023 17:58:44 GMT
+# Wed, 10 May 2023 01:03:34 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 17:58:44 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 USER jetty
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_VERSION=4.2.3
-# Thu, 04 May 2023 17:58:45 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV GN_DOWNLOAD_MD5=1e0f4c7a76a3860d6b7ca6995c1eb102
-# Thu, 04 May 2023 17:59:14 GMT
+# Wed, 10 May 2023 01:04:25 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 COPY file:ee50548f90174fcbec925e62c4a2db15e8eb83e581b0f78e369d30fd096dcd23 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 17:59:15 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 17:59:16 GMT
+# Wed, 10 May 2023 01:04:27 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -5107,34 +5107,34 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 14:33:48 GMT  
 		Size: 10.2 MB (10238742 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9c44ba786f55c91ac0d1710cb4b53c17884eef0a501f906099c953ee25779c13`  
-		Last Modified: Thu, 04 May 2023 14:33:47 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:8ff37665540ca4fb77b6ae3ca9ca9740989f19ab7af3a8b93e8f30b207b6abae`  
+		Last Modified: Wed, 10 May 2023 00:53:11 GMT  
+		Size: 1.6 KB (1613 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:df3dab3fb81cc0874497232f8943c40dac0e9acdc70d48ed284bf5a44579b4eb`  
-		Last Modified: Thu, 04 May 2023 18:00:45 GMT  
-		Size: 481.8 KB (481756 bytes)  
+	-	`sha256:0f853c6b5fe8f455a9292f1d79fe2a203106dc379b72373df5222277b1350ecb`  
+		Last Modified: Wed, 10 May 2023 01:05:17 GMT  
+		Size: 481.8 KB (481761 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:267514691f286765a9e824d8a03273ce5248ebbadae19eec5969b9c05a893439`  
-		Last Modified: Thu, 04 May 2023 18:01:02 GMT  
-		Size: 346.4 MB (346376914 bytes)  
+	-	`sha256:e1b1797d0adeba171660b605b499ee7a5c227ce9ddb36c71913d996fe92ee803`  
+		Last Modified: Wed, 10 May 2023 01:05:35 GMT  
+		Size: 346.4 MB (346376904 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:606441277cece494d44592822a056f9f4a8d3e41414dfa3a553d7bbfd36b228b`  
-		Last Modified: Thu, 04 May 2023 18:00:45 GMT  
+	-	`sha256:c54c7d986dd47e292d08352b23ef6f6ff2ba26c5cbf23ffced56e0d88de4adce`  
+		Last Modified: Wed, 10 May 2023 01:05:17 GMT  
 		Size: 966.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `geonetwork:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull geonetwork@sha256:a4893792fcb56562136eb883006fa99f39f46c38cec934448fd2d429b46f4168
+$ docker pull geonetwork@sha256:9584f5ab0cfaf65d03b01428d0f13fffdbc471982ff85dbcd8e74a6e2e11dcf1
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **454.3 MB (454253209 bytes)**  
+-	Total Size: **454.3 MB (454253220 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4ba6341606f74718db81b1e38730958f7235461292539926af3e4f4abad26d11`
+-	Image ID: `sha256:7b4c4d25c58593b0a4968e33260e82766c512afaf315396040fd4219b5614faf`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -5183,41 +5183,41 @@ ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA870
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="server,http,deploy,jsp,jstl,ext,resources,websocket" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
 # Thu, 04 May 2023 10:50:57 GMT
 WORKDIR /var/lib/jetty
-# Thu, 04 May 2023 10:50:57 GMT
-COPY multi:3772e82b7a226c88950ac6f41de72f5073a10dcc30ed75546216af96428dc261 in / 
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:48 GMT
+COPY multi:88ca540b9901ef22d614e919524f1d550a54166ea9880b0aa9695f8e0470c8f7 in / 
+# Wed, 10 May 2023 00:41:49 GMT
 USER jetty
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 EXPOSE 8080
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Thu, 04 May 2023 10:50:57 GMT
+# Wed, 10 May 2023 00:41:49 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV DATA_DIR=/catalogue-data
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 ENV JAVA_OPTS=-Dorg.eclipse.jetty.annotations.AnnotationParser.LEVEL=OFF         -Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC         -Dgeonetwork.resources.dir=/catalogue-data/resources         -Dgeonetwork.data.dir=/catalogue-data         -Dgeonetwork.codeList.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/codelist         -Dgeonetwork.schema.dir=/var/lib/jetty/webapps/geonetwork/WEB-INF/data/config/schema_plugins
-# Thu, 04 May 2023 12:35:22 GMT
+# Wed, 10 May 2023 01:03:35 GMT
 USER root
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /var/lib/jetty/webapps/geonetwork &&     chown -R jetty:jetty /var/lib/jetty/webapps/geonetwork
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 USER jetty
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_FILE=geonetwork.war
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_VERSION=4.2.3
-# Thu, 04 May 2023 12:40:34 GMT
+# Wed, 10 May 2023 01:04:18 GMT
 ENV GN_DOWNLOAD_MD5=1e0f4c7a76a3860d6b7ca6995c1eb102
-# Thu, 04 May 2023 12:41:05 GMT
+# Wed, 10 May 2023 01:04:38 GMT
 RUN cd /var/lib/jetty/webapps/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 COPY file:ee50548f90174fcbec925e62c4a2db15e8eb83e581b0f78e369d30fd096dcd23 in /geonetwork-entrypoint.sh 
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Thu, 04 May 2023 12:41:08 GMT
+# Wed, 10 May 2023 01:04:41 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -5242,19 +5242,19 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 04 May 2023 10:54:06 GMT  
 		Size: 10.2 MB (10239099 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:871955ede07cbb343b26ce14def0e5d86b2ba2591a402bfee68f0f6768f2bcfb`  
-		Last Modified: Thu, 04 May 2023 10:54:05 GMT  
-		Size: 1.5 KB (1549 bytes)  
+	-	`sha256:7336af97821f11f93d3a459ba9bb2d4eeccbe1d4356f058ed40d6aef7eb2917f`  
+		Last Modified: Wed, 10 May 2023 00:43:52 GMT  
+		Size: 1.6 KB (1612 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cfd391f9705e502c459fef101559fbd22c0f4459000512e364421adf8be955ba`  
-		Last Modified: Thu, 04 May 2023 12:42:18 GMT  
-		Size: 480.1 KB (480109 bytes)  
+	-	`sha256:ebb6848b1f1fd8cc409fbbf32b86aa031f86496a26d1037d4c786af3581355e4`  
+		Last Modified: Wed, 10 May 2023 01:05:20 GMT  
+		Size: 480.1 KB (480125 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:40dd5156b9bbbcb09c896df56e09aa20db65ac709e39660807458c78aa9534ce`  
-		Last Modified: Thu, 04 May 2023 12:42:32 GMT  
-		Size: 346.4 MB (346377021 bytes)  
+	-	`sha256:336136a575074e28e2c33b15e48c24960f27dc9b5ebfd899862bfc2a493a4bf1`  
+		Last Modified: Wed, 10 May 2023 01:05:34 GMT  
+		Size: 346.4 MB (346376952 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2425fe327e4de6da2d64435800153ff86c9ea169ae433f300f0ae9358261732`  
-		Last Modified: Thu, 04 May 2023 12:42:17 GMT  
-		Size: 966.0 B  
+	-	`sha256:97daf529b8b8c5d62da59eb986b744c933d7699a16844d8e8226f578affe2d4c`  
+		Last Modified: Wed, 10 May 2023 01:05:20 GMT  
+		Size: 967.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
