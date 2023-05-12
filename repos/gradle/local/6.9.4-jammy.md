@@ -746,18 +746,9 @@ Licenses: (parsed from: `/usr/share/doc/libfreetype6/copyright`)
 - `Public-Domain`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris freetype=2.11.1+dfsg-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.11.1%2bdfsg-1ubuntu0.1.dsc' freetype_2.11.1+dfsg-1ubuntu0.1.dsc 3791 SHA512:48a31e81514083ce2589d37ef1444646b4e1c39b1c2cb559e5179e7e3ed6cce4b05249b2af597080d42ed5af20751976b6902ee0420fdc694544a58b0f90c492
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.11.1%2bdfsg.orig-ft2demos.tar.xz' freetype_2.11.1+dfsg.orig-ft2demos.tar.xz 257240 SHA512:93d68daefa8a49b4fc987a7356133299fe2a8e012415ea09ad7616ececcfd978fdf9fc7a2d855f7488f51a497d019acb89ef5774484babae66357b3083a883c5
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.11.1%2bdfsg.orig-ft2demos.tar.xz.asc' freetype_2.11.1+dfsg.orig-ft2demos.tar.xz.asc 195 SHA512:407ffade07cc62c8838d26670dffc7c26b9baf4984c42b2b2467279dabda855536b403f5a7e9dc64a787163657ca81019fef6d1879973faf180d6230ab17cd05
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.11.1%2bdfsg.orig-ft2docs.tar.xz' freetype_2.11.1+dfsg.orig-ft2docs.tar.xz 2038348 SHA512:c5e19d98425491682edc58230c48390925cc4b466169f655cf3b8575ba787a70feecdeb7a16224b132dcc32f17b041483d84056cda8e3132d98b531e46a26c36
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.11.1%2bdfsg.orig-ft2docs.tar.xz.asc' freetype_2.11.1+dfsg.orig-ft2docs.tar.xz.asc 195 SHA512:df946695a1fbaa71009f48a8f0860177984728ec1c73385d1e55c07be027dd6a5e634c9dcbb49c51f8143b0d56a6cbf06393403341fb28cea7a8a2cc9a9c5592
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.11.1%2bdfsg.orig.tar.xz' freetype_2.11.1+dfsg.orig.tar.xz 1988020 SHA512:6a9a0379679abf127761cabb2da39b8faf2ca4c322075da9b86d93363ac81ce909b9544377a784118ba91ca008baa680b9da474bd2da1bfe928d5a4c9114cb08
-'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.11.1%2bdfsg-1ubuntu0.1.debian.tar.xz' freetype_2.11.1+dfsg-1ubuntu0.1.debian.tar.xz 41556 SHA512:8a815e90c643b0d8f347509661a6422f16b3b9bce36838d5bfc5e1bb6aaa49f31391deb253b1b935da33c6818aebff6bdac6f4e0bfd6801302bdece4091b2f26
-```
 
 ### `dpkg` source package: `gcc-12=12.1.0-2ubuntu1~22.04`
 
@@ -1095,10 +1086,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris krb5=1.19.2-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2-2ubuntu0.1.dsc' krb5_1.19.2-2ubuntu0.1.dsc 3586 SHA512:bee512e467600717265810880b3323b0881710d0790c25b3eacda916c52dcdb4de986b018a18dadd8a299fe366a0bb7daacf2e704065db1bb0f1b8ac25008ac3
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2.orig.tar.gz' krb5_1.19.2.orig.tar.gz 8741053 SHA512:b90d6ed0e1e8a87eb5cb2c36d88b823a6a6caabf85e5d419adb8a930f7eea09a5f8491464e7e454cca7ba88be09d19415962fe0036ad2e31fc584f9fc0bbd470
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2.orig.tar.gz.asc' krb5_1.19.2.orig.tar.gz.asc 833 SHA512:87c4d096dbb6821401125b8f8a315ce1aac029744ba9670a4f8a2a680e6dd5798e1c6d5d2b68b17fd9a4b3b9c6ff111cd1dcac42f934d48fb20381b3765e0f64
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2-2ubuntu0.1.debian.tar.xz' krb5_1.19.2-2ubuntu0.1.debian.tar.xz 108128 SHA512:8d5e8eaf772e624d4cec35d96d76ec385a01653b0f0e271b5c0a8ca80e4f6ab9543d5d11736001966f6596c02210024b32ee2e7fa5a398db074762cf8ba08df1
+'http://security.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2-2ubuntu0.1.dsc' krb5_1.19.2-2ubuntu0.1.dsc 3586 SHA512:bee512e467600717265810880b3323b0881710d0790c25b3eacda916c52dcdb4de986b018a18dadd8a299fe366a0bb7daacf2e704065db1bb0f1b8ac25008ac3
+'http://security.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2.orig.tar.gz' krb5_1.19.2.orig.tar.gz 8741053 SHA512:b90d6ed0e1e8a87eb5cb2c36d88b823a6a6caabf85e5d419adb8a930f7eea09a5f8491464e7e454cca7ba88be09d19415962fe0036ad2e31fc584f9fc0bbd470
+'http://security.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2.orig.tar.gz.asc' krb5_1.19.2.orig.tar.gz.asc 833 SHA512:87c4d096dbb6821401125b8f8a315ce1aac029744ba9670a4f8a2a680e6dd5798e1c6d5d2b68b17fd9a4b3b9c6ff111cd1dcac42f934d48fb20381b3765e0f64
+'http://security.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2-2ubuntu0.1.debian.tar.xz' krb5_1.19.2-2ubuntu0.1.debian.tar.xz 108128 SHA512:8d5e8eaf772e624d4cec35d96d76ec385a01653b0f0e271b5c0a8ca80e4f6ab9543d5d11736001966f6596c02210024b32ee2e7fa5a398db074762cf8ba08df1
 ```
 
 ### `dpkg` source package: `libbsd=0.11.5-1`
