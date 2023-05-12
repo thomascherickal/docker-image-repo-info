@@ -4506,20 +4506,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-11=11.19-0+deb10u1
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.19-0%2bdeb10u1.dsc' postgresql-11_11.19-0+deb10u1.dsc 3745 SHA256:663f4e1d38c8efedf890dd95aa9d443e6e6ea24f73f22f520a8a185d4717fc98
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.19.orig.tar.bz2' postgresql-11_11.19.orig.tar.bz2 20457793 SHA256:13109e2b71f1139405c27201da3733a61ace72ee1c228d9c9f0320e06aee14c2
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.19-0%2bdeb10u1.debian.tar.xz' postgresql-11_11.19-0+deb10u1.debian.tar.xz 28740 SHA256:e874621849ec4696824b96cbc0d28bdd663d9ad1b9d97d5f273b3bb9774d9268
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-11/11.19-0+deb10u1/
 
-- https://sources.debian.net/src/postgresql-11/11.19-0+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-11/11.19-0+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-11/11.19-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
 
