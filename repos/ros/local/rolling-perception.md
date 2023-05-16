@@ -5789,9 +5789,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=5.15.0-71.78
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-71.78.dsc' linux_5.15.0-71.78.dsc 7374 SHA512:9910e1107bfb68883189222334a26627acb1c6bf1c7a97143baf8c70afc081f95c8fe5d4480b8edce88eb3704b93d105b67f59bb527e287c77d9a42ab73fc3b6
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-71.78.diff.gz' linux_5.15.0-71.78.diff.gz 9653725 SHA512:7a8135a0a29106483fb554b2ce4c950395d721706c7985483020e87343945d8fdcbf058aaa24b5963a29b66f5b6b2af886149b40a4f31fd90ab662697792ef3e
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-71.78.dsc' linux_5.15.0-71.78.dsc 7374 SHA512:9910e1107bfb68883189222334a26627acb1c6bf1c7a97143baf8c70afc081f95c8fe5d4480b8edce88eb3704b93d105b67f59bb527e287c77d9a42ab73fc3b6
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-71.78.diff.gz' linux_5.15.0-71.78.diff.gz 9653725 SHA512:7a8135a0a29106483fb554b2ce4c950395d721706c7985483020e87343945d8fdcbf058aaa24b5963a29b66f5b6b2af886149b40a4f31fd90ab662697792ef3e
 ```
 
 ### `dpkg` source package: `llvm-toolchain-14=1:14.0.0-1ubuntu1`
