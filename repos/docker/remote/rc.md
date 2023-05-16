@@ -1,7 +1,7 @@
 ## `docker:rc`
 
 ```console
-$ docker pull docker@sha256:602925f2f555a4fe86a23cca0b578bfffd7e9a8f3fadf66e0c64348041ee3562
+$ docker pull docker@sha256:fbdea261565a4579af4527b9088d2e8ff289acde622882f113052923a3fa7154
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,13 +12,13 @@ $ docker pull docker@sha256:602925f2f555a4fe86a23cca0b578bfffd7e9a8f3fadf66e0c64
 ### `docker:rc` - linux; amd64
 
 ```console
-$ docker pull docker@sha256:6b199b8ca0f66de4fef267f57b5f4bcd96300644bd5d1eb1ba1b9a8ad90bc5c0
+$ docker pull docker@sha256:c286e59386b4cd75cd5a8f0e95785974a2c70fcb077db994f8e3367b97da8d85
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **115.2 MB (115228223 bytes)**  
+-	Total Size: **115.2 MB (115228205 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:04c1cab6b51588096724ccba206cee6e74d7db9e0b9d96e717e9891d305e2786`
+-	Image ID: `sha256:abb65e95897a45185d68cdfd13a49296d6aefb1a385f6d6a48fee72e99df18a8`
 -	Entrypoint: `["dockerd-entrypoint.sh"]`
 
 ```dockerfile
@@ -54,25 +54,25 @@ RUN mkdir /certs /certs/client && chmod 1777 /certs /certs/client # buildkit
 ENTRYPOINT ["docker-entrypoint.sh"]
 # Fri, 12 May 2023 22:34:53 GMT
 CMD ["sh"]
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 RUN set -eux; 	apk add --no-cache 		btrfs-progs 		e2fsprogs 		e2fsprogs-extra 		ip6tables 		iptables 		openssl 		shadow-uidmap 		xfsprogs 		xz 		pigz 	; 	if zfs="$(apk info --no-cache --quiet zfs)" && [ -n "$zfs" ]; then 		apk add --no-cache zfs; 	fi # buildkit
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 RUN set -eux; 	addgroup -S dockremap; 	adduser -S -G dockremap dockremap; 	echo 'dockremap:165536:65536' >> /etc/subuid; 	echo 'dockremap:165536:65536' >> /etc/subgid # buildkit
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 RUN set -eux; 		apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			url='https://download.docker.com/linux/static/test/x86_64/docker-24.0.0-rc.4.tgz'; 			;; 		'armhf') 			url='https://download.docker.com/linux/static/test/armel/docker-24.0.0-rc.4.tgz'; 			;; 		'armv7') 			url='https://download.docker.com/linux/static/test/armhf/docker-24.0.0-rc.4.tgz'; 			;; 		'aarch64') 			url='https://download.docker.com/linux/static/test/aarch64/docker-24.0.0-rc.4.tgz'; 			;; 		*) echo >&2 "error: unsupported 'docker.tgz' architecture ($apkArch)"; exit 1 ;; 	esac; 		wget -O 'docker.tgz' "$url"; 		tar --extract 		--file docker.tgz 		--strip-components 1 		--directory /usr/local/bin/ 		--no-same-owner 		--exclude 'docker/docker' 	; 	rm docker.tgz; 		dockerd --version; 	containerd --version; 	ctr --version; 	runc --version # buildkit
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 ENV DIND_COMMIT=1f32e3c95d72a29b3eaacba156ed675dba976cb5
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 RUN set -eux; 	wget -O /usr/local/bin/dind "https://raw.githubusercontent.com/docker/docker/${DIND_COMMIT}/hack/dind"; 	chmod +x /usr/local/bin/dind # buildkit
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 COPY dockerd-entrypoint.sh /usr/local/bin/ # buildkit
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 VOLUME [/var/lib/docker]
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 EXPOSE map[2375/tcp:{} 2376/tcp:{}]
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 ENTRYPOINT ["dockerd-entrypoint.sh"]
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 CMD []
 ```
 
@@ -129,21 +129,21 @@ CMD []
 		Last Modified: Sat, 13 May 2023 00:24:32 GMT  
 		Size: 1.1 KB (1050 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a203cb2e171c74b435ba53c64d7b86304b489197d5b5369632c711ec025dc2d2`  
-		Last Modified: Sat, 13 May 2023 00:24:33 GMT  
-		Size: 2.8 KB (2814 bytes)  
+	-	`sha256:8fdffb8c8783bbc25768591310ba74a3173b34180cbd0011028fa60075b77921`  
+		Last Modified: Tue, 16 May 2023 00:20:18 GMT  
+		Size: 2.8 KB (2796 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `docker:rc` - linux; arm64 variant v8
 
 ```console
-$ docker pull docker@sha256:a290b3cb115c042d775b35f7f70b230f90bf0b534dc29c59d32ff6231269a4c2
+$ docker pull docker@sha256:ac976bb2c0b8729c28798ad9054020f8b2ba08516357c08735b1c99b0bbe474f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **106.7 MB (106656468 bytes)**  
+-	Total Size: **106.7 MB (106656445 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:70ae4161d6cf3b9bdcf310cdbeed98e5da0ab3ae7daab2290bc62ec53645239e`
+-	Image ID: `sha256:1f0961b8f8fac2b216ffc463194fc95a516b9a9430d1803196553b0f00b67455`
 -	Entrypoint: `["dockerd-entrypoint.sh"]`
 
 ```dockerfile
@@ -179,25 +179,25 @@ RUN mkdir /certs /certs/client && chmod 1777 /certs /certs/client # buildkit
 ENTRYPOINT ["docker-entrypoint.sh"]
 # Fri, 12 May 2023 22:34:53 GMT
 CMD ["sh"]
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 RUN set -eux; 	apk add --no-cache 		btrfs-progs 		e2fsprogs 		e2fsprogs-extra 		ip6tables 		iptables 		openssl 		shadow-uidmap 		xfsprogs 		xz 		pigz 	; 	if zfs="$(apk info --no-cache --quiet zfs)" && [ -n "$zfs" ]; then 		apk add --no-cache zfs; 	fi # buildkit
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 RUN set -eux; 	addgroup -S dockremap; 	adduser -S -G dockremap dockremap; 	echo 'dockremap:165536:65536' >> /etc/subuid; 	echo 'dockremap:165536:65536' >> /etc/subgid # buildkit
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 RUN set -eux; 		apkArch="$(apk --print-arch)"; 	case "$apkArch" in 		'x86_64') 			url='https://download.docker.com/linux/static/test/x86_64/docker-24.0.0-rc.4.tgz'; 			;; 		'armhf') 			url='https://download.docker.com/linux/static/test/armel/docker-24.0.0-rc.4.tgz'; 			;; 		'armv7') 			url='https://download.docker.com/linux/static/test/armhf/docker-24.0.0-rc.4.tgz'; 			;; 		'aarch64') 			url='https://download.docker.com/linux/static/test/aarch64/docker-24.0.0-rc.4.tgz'; 			;; 		*) echo >&2 "error: unsupported 'docker.tgz' architecture ($apkArch)"; exit 1 ;; 	esac; 		wget -O 'docker.tgz' "$url"; 		tar --extract 		--file docker.tgz 		--strip-components 1 		--directory /usr/local/bin/ 		--no-same-owner 		--exclude 'docker/docker' 	; 	rm docker.tgz; 		dockerd --version; 	containerd --version; 	ctr --version; 	runc --version # buildkit
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 ENV DIND_COMMIT=1f32e3c95d72a29b3eaacba156ed675dba976cb5
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 RUN set -eux; 	wget -O /usr/local/bin/dind "https://raw.githubusercontent.com/docker/docker/${DIND_COMMIT}/hack/dind"; 	chmod +x /usr/local/bin/dind # buildkit
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 COPY dockerd-entrypoint.sh /usr/local/bin/ # buildkit
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 VOLUME [/var/lib/docker]
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 EXPOSE map[2375/tcp:{} 2376/tcp:{}]
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 ENTRYPOINT ["dockerd-entrypoint.sh"]
-# Fri, 12 May 2023 22:34:53 GMT
+# Mon, 15 May 2023 22:39:50 GMT
 CMD []
 ```
 
@@ -254,7 +254,7 @@ CMD []
 		Last Modified: Sat, 13 May 2023 00:41:09 GMT  
 		Size: 1.0 KB (1049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:358e9427ce5989ccbcb808b24a10331244e06080196d3f07ea782f0be4a27286`  
-		Last Modified: Sat, 13 May 2023 00:41:09 GMT  
-		Size: 2.8 KB (2813 bytes)  
+	-	`sha256:6b551e23aa305e54aaeefa2641079dd3caa26729ca272fa1bb7a04cb5870ee4d`  
+		Last Modified: Tue, 16 May 2023 00:40:07 GMT  
+		Size: 2.8 KB (2790 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
