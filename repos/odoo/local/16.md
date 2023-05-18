@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5e3e3639d93ff78bb635679fb408e88919d0cf8a1f14079823de89b03190a724`
-- Created: `2023-05-03T22:14:23.942724427Z`
-- Virtual Size: ~ 1.63 Gb  
+- Image ID: `sha256:ae1e3d1b02514be4c731b0fa7658c8478a03da20984502ef7eccbe21ea6b67ff`
+- Created: `2023-05-17T20:24:16.483333059Z`
+- Virtual Size: ~ 1.66 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -8025,11 +8025,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.6-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.6-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `odoo=16.0.20230430`
+### `dpkg` source package: `odoo=16.0.20230517`
 
 Binary Packages:
 
-- `odoo=16.0.20230430`
+- `odoo=16.0.20230517`
 
 Licenses: (parsed from: `/usr/share/doc/odoo/copyright`)
 
