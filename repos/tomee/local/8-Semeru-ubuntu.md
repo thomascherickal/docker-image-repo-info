@@ -1,10 +1,10 @@
-# `tomee:8.0.14-jre17-Semeru-ubuntu-webprofile`
+# `tomee:8.0.15-jre17-Semeru-ubuntu-webprofile`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3c241e7da639a92a69a885a1f4d37d73a5886beaa7655f0317d11513eade3bc2`
-- Created: `2023-05-02T19:03:21.207770561Z`
-- Virtual Size: ~ 338.53 Mb  
+- Image ID: `sha256:41426578fa70ddd160b2c2793b71e13d521f1f0be4fcde25d7cd1a3f49335842`
+- Created: `2023-05-18T17:26:42.784943603Z`
+- Virtual Size: ~ 340.13 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk-17.0.6+10_openj9-0.36.0`
   - `JAVA_HOME=/opt/java/openjdk`
   - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal`
-  - `TOMEE_VER=8.0.14`
+  - `TOMEE_VER=8.0.15`
   - `TOMEE_BUILD=webprofile`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`

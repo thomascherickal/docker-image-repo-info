@@ -1,10 +1,10 @@
-# `tomee:8.0.14-jre17-Temurin-ubuntu-webprofile`
+# `tomee:8.0.15-jre17-Temurin-ubuntu-webprofile`
 
 ## Docker Metadata
 
-- Image ID: `sha256:5f2be16b0a58a41cb6243c712b1c83424ad5185e4dd7d6e53b10f98cc2b76279`
-- Created: `2023-05-02T19:00:23.223897743Z`
-- Virtual Size: ~ 330.88 Mb  
+- Image ID: `sha256:1503c800fcb33d91cd9e5914df06c5868b0c1493d1b34afbe35dd87d2910be29`
+- Created: `2023-05-18T17:22:36.212412896Z`
+- Virtual Size: ~ 332.48 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -15,7 +15,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-17.0.7+7`
-  - `TOMEE_VER=8.0.14`
+  - `TOMEE_VER=8.0.15`
   - `TOMEE_BUILD=webprofile`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`

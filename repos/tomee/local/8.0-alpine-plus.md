@@ -1,10 +1,10 @@
-# `tomee:8.0.14-jre17-Temurin-alpine-plus`
+# `tomee:8.0.15-jre17-Temurin-alpine-plus`
 
 ## Docker Metadata
 
-- Image ID: `sha256:604575091b540b21c7da92e669d5f507b6cfab5b8e7264bb6b66c677577dbf85`
-- Created: `2023-04-26T22:02:42.87768925Z`
-- Virtual Size: ~ 265.60 Mb  
+- Image ID: `sha256:197638acb1a1f7ea36c45543f7b4c820764ce12405531c6ee95ffaa495a052ef`
+- Created: `2023-05-18T17:23:52.230862446Z`
+- Virtual Size: ~ 265.41 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -15,7 +15,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-17.0.7+7`
-  - `TOMEE_VER=8.0.14`
+  - `TOMEE_VER=8.0.15`
   - `TOMEE_BUILD=plus`
 
 ## `apk` (`.apk`-based packages)
