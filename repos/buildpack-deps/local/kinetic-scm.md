@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a2d7ab602eaae747a1f031cbfe90ce88c013d501794705d98a8257df656992f6`
-- Created: `2023-05-02T23:31:14.795005974Z`
-- Virtual Size: ~ 218.29 Mb  
+- Image ID: `sha256:c04cc858fd291286b7aacae4ac2aef55f45e8680541080c61e96ddd768db539b`
+- Created: `2023-05-17T00:26:36.309220984Z`
+- Virtual Size: ~ 229.45 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -2155,6 +2155,26 @@ $ apt-get source -qq --print-uris rtmpdump=2.4+20151223.gitfa8646d.1-2build4
 'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4%2b20151223.gitfa8646d.1-2build4.dsc' rtmpdump_2.4+20151223.gitfa8646d.1-2build4.dsc 2431 SHA512:7536b21c9c8be02e06171db49bf0b653e4b7738e6c01f74b0b7433c2986c731eafd1743f87836e7250a744d0e34dc700685bbe7128956a274e9a9832d32c891e
 'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4%2b20151223.gitfa8646d.1.orig.tar.gz' rtmpdump_2.4+20151223.gitfa8646d.1.orig.tar.gz 142213 SHA512:bdfcbab73179d614a295a7b136ea4c9d0ce4620883b493f298362784d245608cd6ad4b0ad30f94ed73a086b4555399521ae9e95b6375fce75e455ae68c055e7b
 'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4%2b20151223.gitfa8646d.1-2build4.debian.tar.xz' rtmpdump_2.4+20151223.gitfa8646d.1-2build4.debian.tar.xz 8376 SHA512:b01ac33a7251e3c0fad21897d31710766136027b656cb29903cf8f695893648631037a96fa18aa40eae7ad363394344aad4f2fae152622618b88f22133c03578
+```
+
+### `dpkg` source package: `rust-sequoia-sq=0.27.0-1`
+
+Binary Packages:
+
+- `sq=0.27.0-1`
+
+Licenses: (parsed from: `/usr/share/doc/sq/copyright`)
+
+- `GPL-2`
+- `GPL-2.0-or-later`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris rust-sequoia-sq=0.27.0-1
+'http://archive.ubuntu.com/ubuntu/pool/universe/r/rust-sequoia-sq/rust-sequoia-sq_0.27.0-1.dsc' rust-sequoia-sq_0.27.0-1.dsc 2454 SHA512:015809b4dc5df536fbe401664923d420f7d6c0bc92f91395efc5eadc6e5376373edf9594eb283d91c7e5880643520d712419503a96d7d3f1c7ba1ad6b363fbc3
+'http://archive.ubuntu.com/ubuntu/pool/universe/r/rust-sequoia-sq/rust-sequoia-sq_0.27.0.orig.tar.gz' rust-sequoia-sq_0.27.0.orig.tar.gz 196791 SHA512:af86f5f4d868b970bfe9d027415fb7eda4a03963603bab2987f82b7a31decaec87b64578e9d6d6ce7bbffcb4563824aca715f58b28aaf92925ed2584dcb2f5ba
+'http://archive.ubuntu.com/ubuntu/pool/universe/r/rust-sequoia-sq/rust-sequoia-sq_0.27.0-1.debian.tar.xz' rust-sequoia-sq_0.27.0-1.debian.tar.xz 4144 SHA512:580dfe3420fd8c13746186a21ce06c4bd10c86489a4249ad057ef1e12e7b2df0cea089900e2bd346752d848f41a74c513f9479fbad8cecc75e3de212b402616f
 ```
 
 ### `dpkg` source package: `sed=4.8-1ubuntu2`
