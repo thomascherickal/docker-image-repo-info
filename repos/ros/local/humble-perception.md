@@ -830,13 +830,9 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates-java/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ca-certificates-java=20190909ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates-java/ca-certificates-java_20190909ubuntu1.1.dsc' ca-certificates-java_20190909ubuntu1.1.dsc 1880 SHA512:1151c5d5b7e442256817ab619a11113e3ec505acb9e94bbc0201be3f88451b4d3c82e311f5e22009ddf104a6af9f7bd51522a6ee177ed6ddc031b121c29f1418
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates-java/ca-certificates-java_20190909ubuntu1.1.tar.xz' ca-certificates-java_20190909ubuntu1.1.tar.xz 16736 SHA512:3f6cb74f75a803c098d7ef70d1516169f4b756895d4e508a6e388fb268560b02a4bba7ca4e126178ffeb9173d6118f5bbacae14aa71c97c77a6dd10465419e61
-```
 
 ### `dpkg` source package: `ca-certificates=20211016ubuntu0.22.04.1`
 
@@ -5755,14 +5751,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.15.0-71.78
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-71.78.dsc' linux_5.15.0-71.78.dsc 7374 SHA512:9910e1107bfb68883189222334a26627acb1c6bf1c7a97143baf8c70afc081f95c8fe5d4480b8edce88eb3704b93d105b67f59bb527e287c77d9a42ab73fc3b6
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-71.78.diff.gz' linux_5.15.0-71.78.diff.gz 9653725 SHA512:7a8135a0a29106483fb554b2ce4c950395d721706c7985483020e87343945d8fdcbf058aaa24b5963a29b66f5b6b2af886149b40a4f31fd90ab662697792ef3e
-```
 
 ### `dpkg` source package: `llvm-toolchain-14=1:14.0.0-1ubuntu1`
 
@@ -6807,14 +6798,9 @@ Licenses: (parsed from: `/usr/share/doc/openjdk-11-jdk/copyright`, `/usr/share/d
 - `LGPL-2`
 - `LGPL-2-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openjdk-lts=11.0.18+10-0ubuntu1~22.04
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openjdk-lts/openjdk-lts_11.0.18%2b10-0ubuntu1%7e22.04.dsc' openjdk-lts_11.0.18+10-0ubuntu1~22.04.dsc 4590 SHA512:4f1e7eb6ff4b3fa4ea7a85af53a8fe98cae49312a0c803212e74606d92bfe323c7e1f851ebd8b7e78f0562a023aba830c4a23f887d422404b7231d5cef34703e
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openjdk-lts/openjdk-lts_11.0.18%2b10.orig.tar.gz' openjdk-lts_11.0.18+10.orig.tar.gz 125314904 SHA512:96c500bd2f7c1c5ef2abfc1eb24c930d95e4234cb8dea25151eb57b35d3c99e11761b454f07c532f58d39d5ddb6ef41bc54287940f0a4b8cd7cc570f8e4857a1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openjdk-lts/openjdk-lts_11.0.18%2b10-0ubuntu1%7e22.04.debian.tar.xz' openjdk-lts_11.0.18+10-0ubuntu1~22.04.debian.tar.xz 157528 SHA512:6f62cd82f2dc9bdb6d8980020ffe6a9dfd2dec7c4d363a7cd85584ba2fe70b92182bdd735cebf1c059460ab5f0f1f751899ebd0cf7727a9dd6e9ec192a5b7008
-```
 
 ### `dpkg` source package: `openjpeg2=2.4.0-6`
 
