@@ -1,10 +1,10 @@
-# `ibm-semeru-runtimes:open-18.0.2_9-jdk-jammy`
+# `ibm-semeru-runtimes:open-19.0.2_7-jdk-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2c68a44a9138a107d47c17b2b39f4750bf9c6393b0bbcb409fd84e1c6d6fd7cf`
-- Created: `2023-05-04T07:40:22.08044419Z`
-- Virtual Size: ~ 495.46 Mb  
+- Image ID: `sha256:9c30ebd6cf308a4bc12d941d79a9de25c03371e376646c8f242d645d3bd5084e`
+- Created: `2023-05-17T22:25:24.159804502Z`
+- Virtual Size: ~ 493.19 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -13,7 +13,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-18.0.2+9_openj9-0.33.1`
+  - `JAVA_VERSION=jdk-19.0.2+7_openj9-0.37.0`
   - `JAVA_HOME=/opt/java/openjdk`
   - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal`
 - Labels:
@@ -182,32 +182,6 @@ $ apt-get source -qq --print-uris bash=5.1-6ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.dsc' bash_5.1-6ubuntu1.dsc 2426 SHA512:9c808b5b8a281e01c5a4a503eca84fca8b21a2153dc4e7abbedda21346ae4005c806ffe7afd689b7ff66af8d431b9b4bebf2f1324745c01ed5f3ee219a515a88
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA512:95d3acc542231cb893e1347c7d9dd66687f68cd347a0e9e126fde2d14e68c5b5530d1a5866eafa781e88aa013fcf72b4ad56d2e484c2ac7a69bd90bb149a9b86
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.debian.tar.xz' bash_5.1-6ubuntu1.debian.tar.xz 99652 SHA512:da77655882d0977656b75c750589307c54c7d5dd28b1cfc357d4a474ebf26399a91cfa19c4ba381e0a59a8f115f8381d432e82f2e659cb9bcbebf3fa0cd77bc1
-```
-
-### `dpkg` source package: `binutils=2.38-4ubuntu2.1`
-
-Binary Packages:
-
-- `binutils=2.38-4ubuntu2.1`
-- `binutils-common:amd64=2.38-4ubuntu2.1`
-- `binutils-x86-64-linux-gnu=2.38-4ubuntu2.1`
-- `libbinutils:amd64=2.38-4ubuntu2.1`
-- `libctf-nobfd0:amd64=2.38-4ubuntu2.1`
-- `libctf0:amd64=2.38-4ubuntu2.1`
-
-Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`, `/usr/share/doc/libctf-nobfd0/copyright`, `/usr/share/doc/libctf0/copyright`)
-
-- `GFDL`
-- `GPL`
-- `LGPL`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris binutils=2.38-4ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-4ubuntu2.1.dsc' binutils_2.38-4ubuntu2.1.dsc 8861 SHA512:fe634cc317cc0773d21e482750877a1561d4783dffd0f1ddca5b4409fee6409cbbd8e22fbc373b6582381f9d7f50a3cb48913707390165e91b0611db10cd84cd
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38.orig.tar.xz' binutils_2.38.orig.tar.xz 23651408 SHA512:8bf0b0d193c9c010e0518ee2b2e5a830898af206510992483b427477ed178396cd210235e85fd7bd99a96fc6d5eedbeccbd48317a10f752b7336ada8b2bb826d
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-4ubuntu2.1.debian.tar.xz' binutils_2.38-4ubuntu2.1.debian.tar.xz 289140 SHA512:7e92fadaad3ed3483e8765668f285f9fd60492caf96c1092d5fe3b91d83984d66d3188b35486cf6a6168e70a3ecd545fb5fa4c0cbf9568e032c73fe489c57982
 ```
 
 ### `dpkg` source package: `brotli=1.0.9-2build6`
