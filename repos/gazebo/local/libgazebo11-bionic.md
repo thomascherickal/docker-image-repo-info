@@ -6747,14 +6747,9 @@ Licenses: (parsed from: `/usr/share/doc/libruby2.5/copyright`, `/usr/share/doc/r
 - `Unicode`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ruby2.5=2.5.1-1ubuntu1.15
-'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.5/ruby2.5_2.5.1-1ubuntu1.15.dsc' ruby2.5_2.5.1-1ubuntu1.15.dsc 2523 SHA512:f294035632ad64426789c3eaee7db208928c4f3380c586943bd397c72b3359ccc255bf37ad349cdd62459e6264125862628f7abfc4de3b7810800284cfb9f5b4
-'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.5/ruby2.5_2.5.1.orig.tar.gz' ruby2.5_2.5.1.orig.tar.gz 15669354 SHA512:c6f418653f46efd9980a5f19c8f31b626ab6a0473f59cc4c136a13e4bc5f2cac672341224f0d8c0739bcf9260f20db901b42d6f02e5c91daadb04c67613ed03e
-'http://archive.ubuntu.com/ubuntu/pool/main/r/ruby2.5/ruby2.5_2.5.1-1ubuntu1.15.debian.tar.xz' ruby2.5_2.5.1-1ubuntu1.15.debian.tar.xz 164792 SHA512:16aaea39448cbb9f7e60ebe6447bf8c3471a3cd3cdd9043bc5ec5c51ab9d259fa0d8604287106761ad157f545317c7b8fb19727c00d5f49d341d33c58c5d8b61
-```
 
 ### `dpkg` source package: `rubygems-integration=1.11`
 
