@@ -1,19 +1,19 @@
-# `nginx:1.23.4-alpine`
+# `nginx:1.25.0-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8e75cbc5b25c8438fcfe2e7c12c98409d5f161cbb668d6c444e02796691ada70`
-- Created: `2023-03-29T22:31:35.828698308Z`
-- Virtual Size: ~ 41.00 Mb  
+- Image ID: `sha256:fe7edaf8a8dcf9af72f49cf0a0219e3ace17667bafc537f0d4a0ab1bd7f10467`
+- Created: `2023-05-24T22:44:24.67421172Z`
+- Virtual Size: ~ 41.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
 - Command: `["nginx","-g","daemon off;"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NGINX_VERSION=1.23.4`
+  - `NGINX_VERSION=1.25.0`
   - `PKG_RELEASE=1`
-  - `NJS_VERSION=0.7.11`
+  - `NJS_VERSION=0.7.12`
 - Labels:
   - `maintainer=NGINX Docker Maintainers <docker-maint@nginx.com>`
 
@@ -158,16 +158,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20220614-r4 description:
+ca-certificates-20230506-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20220614-r4 webpage:
+ca-certificates-20230506-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20220614-r4 installed size:
-688 KiB
+ca-certificates-20230506-r0 installed size:
+692 KiB
 
-ca-certificates-20220614-r4 license:
+ca-certificates-20230506-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -192,16 +192,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-7.88.1-r1 description:
+curl-8.1.1-r0 description:
 URL retrival utility and library
 
-curl-7.88.1-r1 webpage:
+curl-8.1.1-r0 webpage:
 https://curl.se/
 
-curl-7.88.1-r1 installed size:
-264 KiB
+curl-8.1.1-r0 installed size:
+268 KiB
 
-curl-7.88.1-r1 license:
+curl-8.1.1-r0 license:
 curl
 
 ```
@@ -345,16 +345,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-7.88.1-r1 description:
+libcurl-8.1.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-7.88.1-r1 webpage:
+libcurl-8.1.1-r0 webpage:
 https://curl.se/
 
-libcurl-7.88.1-r1 installed size:
-552 KiB
+libcurl-8.1.1-r0 installed size:
+576 KiB
 
-libcurl-7.88.1-r1 license:
+libcurl-8.1.1-r0 license:
 curl
 
 ```
@@ -600,16 +600,16 @@ BSD-3-Clause
 ### `apk` package: `libwebp`
 
 ```console
-libwebp-1.2.4-r1 description:
+libwebp-1.2.4-r2 description:
 Libraries for working with WebP images
 
-libwebp-1.2.4-r1 webpage:
+libwebp-1.2.4-r2 webpage:
 https://developers.google.com/speed/webp
 
-libwebp-1.2.4-r1 installed size:
+libwebp-1.2.4-r2 installed size:
 584 KiB
 
-libwebp-1.2.4-r1 license:
+libwebp-1.2.4-r2 license:
 BSD-3-Clause
 
 ```
@@ -702,16 +702,16 @@ MIT
 ### `apk` package: `libxml2`
 
 ```console
-libxml2-2.10.3-r1 description:
+libxml2-2.10.4-r0 description:
 XML parsing library, version 2
 
-libxml2-2.10.3-r1 webpage:
+libxml2-2.10.4-r0 webpage:
 http://www.xmlsoft.org/
 
-libxml2-2.10.3-r1 installed size:
+libxml2-2.10.4-r0 installed size:
 1188 KiB
 
-libxml2-2.10.3-r1 license:
+libxml2-2.10.4-r0 license:
 MIT
 
 ```
@@ -855,16 +855,16 @@ MIT
 ### `apk` package: `nginx`
 
 ```console
-nginx-1.23.4-r1 description:
+nginx-1.25.0-r1 description:
 High performance web server
 
-nginx-1.23.4-r1 webpage:
+nginx-1.25.0-r1 webpage:
 https://nginx.org/
 
-nginx-1.23.4-r1 installed size:
-2608 KiB
+nginx-1.25.0-r1 installed size:
+2904 KiB
 
-nginx-1.23.4-r1 license:
+nginx-1.25.0-r1 license:
 2-clause BSD-like license
 
 ```
@@ -872,16 +872,16 @@ nginx-1.23.4-r1 license:
 ### `apk` package: `nginx-module-geoip`
 
 ```console
-nginx-module-geoip-1.23.4-r1 description:
+nginx-module-geoip-1.25.0-r1 description:
 nginx GeoIP dynamic modules
 
-nginx-module-geoip-1.23.4-r1 webpage:
+nginx-module-geoip-1.25.0-r1 webpage:
 https://nginx.org/
 
-nginx-module-geoip-1.23.4-r1 installed size:
+nginx-module-geoip-1.25.0-r1 installed size:
 116 KiB
 
-nginx-module-geoip-1.23.4-r1 license:
+nginx-module-geoip-1.25.0-r1 license:
 2-clause BSD-like license
 
 ```
@@ -889,16 +889,16 @@ nginx-module-geoip-1.23.4-r1 license:
 ### `apk` package: `nginx-module-image-filter`
 
 ```console
-nginx-module-image-filter-1.23.4-r1 description:
+nginx-module-image-filter-1.25.0-r1 description:
 nginx image filter dynamic module
 
-nginx-module-image-filter-1.23.4-r1 webpage:
+nginx-module-image-filter-1.25.0-r1 webpage:
 https://nginx.org/
 
-nginx-module-image-filter-1.23.4-r1 installed size:
+nginx-module-image-filter-1.25.0-r1 installed size:
 88 KiB
 
-nginx-module-image-filter-1.23.4-r1 license:
+nginx-module-image-filter-1.25.0-r1 license:
 2-clause BSD-like license
 
 ```
@@ -906,16 +906,16 @@ nginx-module-image-filter-1.23.4-r1 license:
 ### `apk` package: `nginx-module-njs`
 
 ```console
-nginx-module-njs-1.23.4.0.7.11-r1 description:
+nginx-module-njs-1.25.0.0.7.12-r1 description:
 nginx njs dynamic modules
 
-nginx-module-njs-1.23.4.0.7.11-r1 webpage:
+nginx-module-njs-1.25.0.0.7.12-r1 webpage:
 https://nginx.org/
 
-nginx-module-njs-1.23.4.0.7.11-r1 installed size:
-4208 KiB
+nginx-module-njs-1.25.0.0.7.12-r1 installed size:
+4252 KiB
 
-nginx-module-njs-1.23.4.0.7.11-r1 license:
+nginx-module-njs-1.25.0.0.7.12-r1 license:
 2-clause BSD-like license
 
 ```
@@ -923,16 +923,16 @@ nginx-module-njs-1.23.4.0.7.11-r1 license:
 ### `apk` package: `nginx-module-xslt`
 
 ```console
-nginx-module-xslt-1.23.4-r1 description:
+nginx-module-xslt-1.25.0-r1 description:
 nginx xslt dynamic module
 
-nginx-module-xslt-1.23.4-r1 webpage:
+nginx-module-xslt-1.25.0-r1 webpage:
 https://nginx.org/
 
-nginx-module-xslt-1.23.4-r1 installed size:
+nginx-module-xslt-1.25.0-r1 installed size:
 84 KiB
 
-nginx-module-xslt-1.23.4-r1 license:
+nginx-module-xslt-1.25.0-r1 license:
 2-clause BSD-like license
 
 ```
@@ -1059,16 +1059,16 @@ Zlib
 ### `apk` package: `zstd-libs`
 
 ```console
-zstd-libs-1.5.2-r9 description:
+zstd-libs-1.5.5-r0 description:
 Zstandard - Fast real-time compression algorithm (libraries)
 
-zstd-libs-1.5.2-r9 webpage:
+zstd-libs-1.5.5-r0 webpage:
 https://www.zstd.net/
 
-zstd-libs-1.5.2-r9 installed size:
-488 KiB
+zstd-libs-1.5.5-r0 installed size:
+520 KiB
 
-zstd-libs-1.5.2-r9 license:
+zstd-libs-1.5.5-r0 license:
 BSD-3-Clause GPL-2.0-or-later
 
 ```
