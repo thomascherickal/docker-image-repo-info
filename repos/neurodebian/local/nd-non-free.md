@@ -53,19 +53,13 @@ Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris adduser=3.133
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.133.dsc' adduser_3.133.dsc 1685 SHA256:0fab4750b83040fe077d5bc0c5571b498f1a8b2f853d7636300498d0eb5eec75
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.133.tar.xz' adduser_3.133.tar.xz 272068 SHA256:522b69ae5b10496004e4699ca2bc5a38f3c38ad5fe07dec34d0252cf069f2a06
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/adduser/3.133/
 
-- https://sources.debian.net/src/adduser/3.133/ (for browsing the source)
-- https://sources.debian.net/src/adduser/3.133/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/adduser/3.133/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apt=2.6.0`
 
@@ -81,19 +75,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.6.0
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.6.0.dsc' apt_2.6.0.dsc 2933 SHA256:abadebf55073af5acc2c39d069d5d3889e02e3e3955880dcd471ff906ab59077
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.6.0.tar.xz' apt_2.6.0.tar.xz 2328252 SHA256:43467d1ca7de6c0955fd991925433e22fa66230870e5f66c4498675d01776c2a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.6.0/
 
-- https://sources.debian.net/src/apt/2.6.0/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.6.0/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.6.0/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-4`
 
