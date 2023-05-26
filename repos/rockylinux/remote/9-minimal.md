@@ -1,14 +1,13 @@
 ## `rockylinux:9-minimal`
 
 ```console
-$ docker pull rockylinux@sha256:9da6a8917c8cc0d429eb08ed1a4ba8588ba81807664853cd86c642a75ca91cfe
+$ docker pull rockylinux@sha256:2cbdb643f72b88e86221f79a56392b116b99bb9e8857286d1c270489d67f8abf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 4
+-	Platforms: 3
 	-	linux; amd64
 	-	linux; arm64 variant v8
-	-	linux; ppc64le
 	-	linux; s390x
 
 ### `rockylinux:9-minimal` - linux; amd64
@@ -40,77 +39,51 @@ CMD ["/bin/bash"]
 ### `rockylinux:9-minimal` - linux; arm64 variant v8
 
 ```console
-$ docker pull rockylinux@sha256:059b7e5e96ff84aed9853fa7663d7c6ed2867d190d5334b472a0c92912aa0083
+$ docker pull rockylinux@sha256:8a14a313d4a6c3963c498de541415e0c2a122241e87f6835ae6a2511f858a916
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **45.3 MB (45309144 bytes)**  
+-	Total Size: **45.4 MB (45352838 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f3c9c6e61531a9aa9b27f0568a0753dc0019c79948c3beb26dbf45ad2d05b67e`
+-	Image ID: `sha256:d9b75e8902806fac51a750a4adadc2b71e127ef0fc85de150787d1d6d9530417`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Tue, 21 Feb 2023 23:11:17 GMT
-ADD file:676936d4deff55b3a6c922fe37c8aa1215f223f1d9d1bd5927cbeb0c314e7846 in / 
-# Tue, 21 Feb 2023 23:11:17 GMT
+# Fri, 26 May 2023 19:55:26 GMT
+ADD file:8cfd4a4814d62ff710325313c2547d9422685a051c3985deb361c26970a0a891 in / 
+# Fri, 26 May 2023 19:55:27 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:eef9fc884e2c1fedd5cf49ed57c9253a7cb36a98189ec214a91e977a12e43457`  
-		Last Modified: Tue, 21 Feb 2023 23:12:13 GMT  
-		Size: 45.3 MB (45309144 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `rockylinux:9-minimal` - linux; ppc64le
-
-```console
-$ docker pull rockylinux@sha256:ed6cffe4a0599ef6404c1cc407f114e477a1b9863b174f19599a98846ddea3f9
-```
-
--	Docker Version: 20.10.23
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **50.4 MB (50388885 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7327b046c499a7ddf594a27943b3cc3135bd946c5b92e34671dc815a43b503eb`
--	Default Command: `["\/bin\/bash"]`
-
-```dockerfile
-# Tue, 21 Feb 2023 23:45:13 GMT
-ADD file:c8d431b4eee1438af0599399cfb6dcc7f4d5004d8f04b240e673a6e1fe18a404 in / 
-# Tue, 21 Feb 2023 23:45:16 GMT
-CMD ["/bin/bash"]
-```
-
--	Layers:
-	-	`sha256:a7d160814aff2e9595f37e0d4df01230fb1d35e7c9bc1e1ae6f91adbd51b0f21`  
-		Last Modified: Tue, 21 Feb 2023 23:46:20 GMT  
-		Size: 50.4 MB (50388885 bytes)  
+	-	`sha256:4f60d4ceb52011254bd59f80b63334bd0234d6d814f784b3a99a7e7961183a7b`  
+		Last Modified: Fri, 26 May 2023 19:56:20 GMT  
+		Size: 45.4 MB (45352838 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rockylinux:9-minimal` - linux; s390x
 
 ```console
-$ docker pull rockylinux@sha256:09953e0ac782610391122d607e7a312d39e44d7eca92476ad6f43dff0d409eb6
+$ docker pull rockylinux@sha256:154391af9402337eeb0a8f160b986d615c26867f3a645404caf46cf09dcd6523
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **44.8 MB (44795545 bytes)**  
+-	Total Size: **44.8 MB (44842408 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5aeacf7b4c0b1755de18b734803268518c9d16e4f627501d714f5cb9bd2bbe25`
+-	Image ID: `sha256:b025607635260c7635d2d9bdc8ef7be4021d0aeedc9fa9fb3989113bbfa608a5`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Tue, 21 Feb 2023 23:57:36 GMT
-ADD file:8ea2db67de3284f801cf838bcc9b404428eb5f2f29828a8b2265fd48780d505b in / 
-# Tue, 21 Feb 2023 23:57:38 GMT
+# Fri, 26 May 2023 19:43:42 GMT
+ADD file:d2a0bc2d142524249d469ceb9759a8d5878a0c661a8e8f4199bdd8a5515f34e9 in / 
+# Fri, 26 May 2023 19:43:44 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:f2607746ebc040a9afc80d8c0ddad688b4130520c76acc0ee4dc58ec55e2e56a`  
-		Last Modified: Tue, 21 Feb 2023 23:58:21 GMT  
-		Size: 44.8 MB (44795545 bytes)  
+	-	`sha256:e6c7d5016b7d1d9a097fbac187bab76f6aa528ecb9af526c75dec51ea31bc684`  
+		Last Modified: Fri, 26 May 2023 19:44:14 GMT  
+		Size: 44.8 MB (44842408 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip

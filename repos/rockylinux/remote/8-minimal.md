@@ -1,7 +1,7 @@
 ## `rockylinux:8-minimal`
 
 ```console
-$ docker pull rockylinux@sha256:2f33f22f7dce27cd6712d2f43c12b945474d3463b4a2f47b4f69588cb439106a
+$ docker pull rockylinux@sha256:641d860e3949c1a179c9cdc6e8453cdd6f42e76c5d10cc481247de9b0886f8e8
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -38,25 +38,25 @@ CMD ["/bin/bash"]
 ### `rockylinux:8-minimal` - linux; arm64 variant v8
 
 ```console
-$ docker pull rockylinux@sha256:bb68803cf5b13d73fd47fdd4bd21351c96e3c1633d839d476e5e5df1967ddc80
+$ docker pull rockylinux@sha256:f46c264048a04784e202ca98106330ed60d2ea8d2dbb418df878bba298790577
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **35.4 MB (35387810 bytes)**  
+-	Total Size: **35.4 MB (35404859 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dff356b32bf321a91ed31da7c019f21d3c19d0b43876f1fd2a163dacd03ccfc3`
+-	Image ID: `sha256:a3160453d0d0ff74dc1ad0765d61af89245112268529ec7a10783e2d5678878f`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Tue, 21 Feb 2023 23:11:31 GMT
-ADD file:fe1b42ad198993fde7060d43c8388a9b6b49121074a885bf1c783668ae116ee1 in / 
-# Tue, 21 Feb 2023 23:11:32 GMT
+# Fri, 26 May 2023 19:55:43 GMT
+ADD file:52a42a47fc7da773a9e9aaaac7059f37ed29d558660de252c91c2b3933e60c37 in / 
+# Fri, 26 May 2023 19:55:43 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:0c04ff83bfe4dbdfe2b311b2df275e203892d021d09d971a15fca6b7bd0374fc`  
-		Last Modified: Tue, 21 Feb 2023 23:12:47 GMT  
-		Size: 35.4 MB (35387810 bytes)  
+	-	`sha256:c2ec253e65569013eb0b5629bdeff58ec7720aacdb22136b6621f005c07a3173`  
+		Last Modified: Fri, 26 May 2023 19:56:55 GMT  
+		Size: 35.4 MB (35404859 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
