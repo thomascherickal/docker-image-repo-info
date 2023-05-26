@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:88d8bad24fd14ee86bb72f3d96a4b37234f954c7630fd8f1613d9469d166e5aa`
-- Created: `2023-05-04T13:44:20.964475567Z`
+- Image ID: `sha256:55b1ef2e8d73a3318e633dc442c6397b628c88911700db0536ab4fada197d006`
+- Created: `2023-05-23T15:08:40.1503806Z`
 - Virtual Size: ~ 1.35 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1724,23 +1724,23 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/ilmbase/2.2.1-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/ilmbase/2.2.1-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `imagemagick=8:6.9.10.23+dfsg-2.1+deb10u4`
+### `dpkg` source package: `imagemagick=8:6.9.10.23+dfsg-2.1+deb10u5`
 
 Binary Packages:
 
-- `imagemagick=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `imagemagick-6-common=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `imagemagick-6.q16=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `libmagickcore-6-arch-config:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `libmagickcore-6-headers=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `libmagickcore-6.q16-6:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `libmagickcore-6.q16-6-extra:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `libmagickcore-6.q16-dev:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `libmagickcore-dev=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `libmagickwand-6-headers=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `libmagickwand-6.q16-6:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `libmagickwand-6.q16-dev:amd64=8:6.9.10.23+dfsg-2.1+deb10u4`
-- `libmagickwand-dev=8:6.9.10.23+dfsg-2.1+deb10u4`
+- `imagemagick=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `imagemagick-6-common=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `imagemagick-6.q16=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `libmagickcore-6-arch-config:amd64=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `libmagickcore-6-headers=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `libmagickcore-6.q16-6:amd64=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `libmagickcore-6.q16-6-extra:amd64=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `libmagickcore-6.q16-dev:amd64=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `libmagickcore-dev=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `libmagickwand-6-headers=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `libmagickwand-6.q16-6:amd64=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `libmagickwand-6.q16-dev:amd64=8:6.9.10.23+dfsg-2.1+deb10u5`
+- `libmagickwand-dev=8:6.9.10.23+dfsg-2.1+deb10u5`
 
 Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/imagemagick-6-common/copyright`, `/usr/share/doc/imagemagick-6.q16/copyright`, `/usr/share/doc/libmagickcore-6-arch-config/copyright`, `/usr/share/doc/libmagickcore-6-headers/copyright`, `/usr/share/doc/libmagickcore-6.q16-6/copyright`, `/usr/share/doc/libmagickcore-6.q16-6-extra/copyright`, `/usr/share/doc/libmagickcore-6.q16-dev/copyright`, `/usr/share/doc/libmagickcore-dev/copyright`, `/usr/share/doc/libmagickwand-6-headers/copyright`, `/usr/share/doc/libmagickwand-6.q16-6/copyright`, `/usr/share/doc/libmagickwand-6.q16-dev/copyright`, `/usr/share/doc/libmagickwand-dev/copyright`)
 
@@ -1771,13 +1771,20 @@ Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/
 - `TatcherUlrichPublicDomain`
 - `aclocal`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris imagemagick=8:6.9.10.23+dfsg-2.1+deb10u5
+'http://deb.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.10.23%2bdfsg-2.1%2bdeb10u5.dsc' imagemagick_6.9.10.23+dfsg-2.1+deb10u5.dsc 5213 SHA256:99c0c70e45aba343da29ed550c5dc64828619f39d048b96ee5ab632942955536
+'http://deb.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.10.23%2bdfsg.orig.tar.xz' imagemagick_6.9.10.23+dfsg.orig.tar.xz 9081188 SHA256:44249112b624f2cc315573fa96685e547da27ebb321432259290c407023c531e
+'http://deb.debian.org/debian-security/pool/updates/main/i/imagemagick/imagemagick_6.9.10.23%2bdfsg-2.1%2bdeb10u5.debian.tar.xz' imagemagick_6.9.10.23+dfsg-2.1+deb10u5.debian.tar.xz 255776 SHA256:156f75576b8a12e3107258489b2c6229538c64053d3fe0d523e499c8bb382422
+```
 
-- http://snapshot.debian.org/package/imagemagick/8:6.9.10.23+dfsg-2.1+deb10u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/imagemagick/8:6.9.10.23+dfsg-2.1+deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/imagemagick/8:6.9.10.23+dfsg-2.1+deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/imagemagick/8:6.9.10.23+dfsg-2.1+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `init-system-helpers=1.56+nmu1`
 
@@ -4477,12 +4484,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pkg-config/0.29-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pkg-config/0.29-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-11=11.19-0+deb10u1`
+### `dpkg` source package: `postgresql-11=11.20-0+deb10u1`
 
 Binary Packages:
 
-- `libpq-dev=11.19-0+deb10u1`
-- `libpq5:amd64=11.19-0+deb10u1`
+- `libpq-dev=11.20-0+deb10u1`
+- `libpq5:amd64=11.20-0+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/libpq5/copyright`)
 
@@ -4502,13 +4509,20 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris postgresql-11=11.20-0+deb10u1
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.20-0%2bdeb10u1.dsc' postgresql-11_11.20-0+deb10u1.dsc 3745 SHA256:d5afb436da0171c8d48e59c084104c4addbdf0b39038e952754a6899573821df
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.20.orig.tar.bz2' postgresql-11_11.20.orig.tar.bz2 20456483 SHA256:3d7c8882f64a7e98534a044257dfee7abad77a5b7da12508d85d722b98b5acce
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.20-0%2bdeb10u1.debian.tar.xz' postgresql-11_11.20-0+deb10u1.debian.tar.xz 29104 SHA256:b48baa5a6ccd911a907bdcd2bf092bb1eea46dada7d55e153fb2c719115f021b
+```
 
-- http://snapshot.debian.org/package/postgresql-11/11.19-0+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/postgresql-11/11.20-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-11/11.20-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-11/11.20-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
 
@@ -5066,23 +5080,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tiff/4.1.0+git191117-2~deb10u7/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tiff/4.1.0+git191117-2~deb10u7/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-0+deb10u10`
+### `dpkg` source package: `tzdata=2021a-0+deb10u11`
 
 Binary Packages:
 
-- `tzdata=2021a-0+deb10u10`
+- `tzdata=2021a-0+deb10u11`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u11
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u11.dsc' tzdata_2021a-0+deb10u11.dsc 2071 SHA256:fded995a1d0bbc9582e8655f3ba944e4dfe60d28b9cf19f14ad9626dc75ea432
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u11.debian.tar.xz' tzdata_2021a-0+deb10u11.debian.tar.xz 125268 SHA256:69f2530f28967f31e7bc4e8f9b928e66b205463608c0430971bc56f55e715e57
+```
 
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u10/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u11/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u11/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
