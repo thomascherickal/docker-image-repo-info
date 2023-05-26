@@ -551,14 +551,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.38-4ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-4ubuntu2.1.dsc' binutils_2.38-4ubuntu2.1.dsc 8861 SHA512:fe634cc317cc0773d21e482750877a1561d4783dffd0f1ddca5b4409fee6409cbbd8e22fbc373b6582381f9d7f50a3cb48913707390165e91b0611db10cd84cd
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38.orig.tar.xz' binutils_2.38.orig.tar.xz 23651408 SHA512:8bf0b0d193c9c010e0518ee2b2e5a830898af206510992483b427477ed178396cd210235e85fd7bd99a96fc6d5eedbeccbd48317a10f752b7336ada8b2bb826d
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-4ubuntu2.1.debian.tar.xz' binutils_2.38-4ubuntu2.1.debian.tar.xz 289140 SHA512:7e92fadaad3ed3483e8765668f285f9fd60492caf96c1092d5fe3b91d83984d66d3188b35486cf6a6168e70a3ecd545fb5fa4c0cbf9568e032c73fe489c57982
-```
 
 ### `dpkg` source package: `boost-defaults=1.74.0.3ubuntu7`
 
@@ -846,13 +841,9 @@ Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
 - `GPL-2+`
 - `MPL-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ca-certificates=20211016ubuntu0.22.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016ubuntu0.22.04.1.dsc' ca-certificates_20211016ubuntu0.22.04.1.dsc 1878 SHA512:7be5940a426fc66bd93ad2c9675242a62df40f617f35e6d3520909ce27d953cde7c516b74b7da442eef8408a7c3dc023ef7af9d2ec78838d074119bc04bea932
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016ubuntu0.22.04.1.tar.xz' ca-certificates_20211016ubuntu0.22.04.1.tar.xz 239584 SHA512:4000767458dd5e296ee0ad0f009bea7a2086414fc204a1cd6aea85a7028d61284d6acfadcfd92bfc72415ce646ecb79598883aad17b5c65b2ebd0538da33c89e
-```
 
 ### `dpkg` source package: `cairo=1.16.0-5ubuntu2`
 
@@ -6051,14 +6042,9 @@ Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc
 - `MLAA`
 - `SGI`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mesa=22.2.5-0ubuntu0.1~22.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_22.2.5-0ubuntu0.1%7e22.04.1.dsc' mesa_22.2.5-0ubuntu0.1~22.04.1.dsc 5511 SHA512:20b9daed82b436e073e81f130610a59beaced5403ccc62ac06ebadf99b088ef14bfe899e1ea05058f9e4921d9f1db8b786164015c6b753ac5321bbb5c5c6cdd6
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_22.2.5.orig.tar.gz' mesa_22.2.5.orig.tar.gz 26307331 SHA512:87f8d2e712a7529ac4a9d7be6798cf68b915ae9b0ce517ceaf4f31562e4dc40bef453d7804467df794a9455d78c75b2a9b35e4065242414ae03ef86920e65301
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_22.2.5-0ubuntu0.1%7e22.04.1.diff.gz' mesa_22.2.5-0ubuntu0.1~22.04.1.diff.gz 115036 SHA512:ed4321e4fac4ecfbdd75d104a24bea2688ae40069bc1438fc3defa2b85aab505df9c58f801734cf3755e50208f6dd25b750d0b5fe8fd71262c2be3d626af7408
-```
 
 ### `dpkg` source package: `minizip=1.1-8build1`
 
@@ -7434,14 +7420,9 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-14=14.7-0ubuntu0.22.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.7-0ubuntu0.22.04.1.dsc' postgresql-14_14.7-0ubuntu0.22.04.1.dsc 3857 SHA512:8fac817415ead254258c031a065bcaf0e4e1f23cd1946df52cc8d9e8a89ecd04d23c9423189e8d841410eab05770cb3298f74a70329c5b766ce1f320181881fd
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.7.orig.tar.gz' postgresql-14_14.7.orig.tar.gz 29070900 SHA512:64e3faed5dd8c996043fc3e71823074e4a5a637be8c8a2d8001b6ff1a4dffd90b445dca434defe660cee378609e52edd1561c68df015e973d889f0db75186bb9
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.7-0ubuntu0.22.04.1.debian.tar.xz' postgresql-14_14.7-0ubuntu0.22.04.1.debian.tar.xz 24864 SHA512:0e8dfb77cf9fe0bd3cc352a628d2a9376182f010b4c71e7499e7617fdd4924c8f536a375115a45b54bfefdf2762d7cc32ab79662591e369c548fbe15ca273fd5
-```
 
 ### `dpkg` source package: `procps=2:3.3.17-6ubuntu2`
 
