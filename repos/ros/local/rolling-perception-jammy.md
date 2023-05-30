@@ -6100,9 +6100,14 @@ Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc
 - `MLAA`
 - `SGI`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris mesa=22.2.5-0ubuntu0.1~22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_22.2.5-0ubuntu0.1%7e22.04.1.dsc' mesa_22.2.5-0ubuntu0.1~22.04.1.dsc 5511 SHA512:20b9daed82b436e073e81f130610a59beaced5403ccc62ac06ebadf99b088ef14bfe899e1ea05058f9e4921d9f1db8b786164015c6b753ac5321bbb5c5c6cdd6
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_22.2.5.orig.tar.gz' mesa_22.2.5.orig.tar.gz 26307331 SHA512:87f8d2e712a7529ac4a9d7be6798cf68b915ae9b0ce517ceaf4f31562e4dc40bef453d7804467df794a9455d78c75b2a9b35e4065242414ae03ef86920e65301
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_22.2.5-0ubuntu0.1%7e22.04.1.diff.gz' mesa_22.2.5-0ubuntu0.1~22.04.1.diff.gz 115036 SHA512:ed4321e4fac4ecfbdd75d104a24bea2688ae40069bc1438fc3defa2b85aab505df9c58f801734cf3755e50208f6dd25b750d0b5fe8fd71262c2be3d626af7408
+```
 
 ### `dpkg` source package: `minizip=1.1-8build1`
 
