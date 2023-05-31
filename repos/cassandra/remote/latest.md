@@ -1,7 +1,7 @@
 ## `cassandra:latest`
 
 ```console
-$ docker pull cassandra@sha256:5b3ee8dc2e89323ccf3a3ef1c05b6ca8cac49d7e03e30aa324a8c850425ff713
+$ docker pull cassandra@sha256:63f6e18ad5ed3fdaa16d36e175260fe2fd9c944cb7aa9833558c2de68e56753d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,14 +15,14 @@ $ docker pull cassandra@sha256:5b3ee8dc2e89323ccf3a3ef1c05b6ca8cac49d7e03e30aa32
 ### `cassandra:latest` - linux; amd64
 
 ```console
-$ docker pull cassandra@sha256:7da9eef9e4fe3aa1178efee2e14b09cea2ca93703743ae3b68d210364fa53651
+$ docker pull cassandra@sha256:49177bc18d72f7caf1a4876f60700096edb60de25b2a37fbd6aee11f58b5e9e5
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **155.9 MB (155937715 bytes)**  
+-	Total Size: **156.7 MB (156700955 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:0c83c76478c89579fd80b2e6b09dd303268db25c472795ab4b086c24e9ed8daf`
+-	Image ID: `sha256:2458f287ee0423ac82344665ccb59631bfb0adffb93e0080439296e0078bfee4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["cassandra","-f"]`
 
@@ -69,21 +69,21 @@ ENV CASSANDRA_CONF=/etc/cassandra
 ENV PATH=/opt/cassandra/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Tue, 02 May 2023 23:07:37 GMT
 ENV GPG_KEYS=CEC86BB4A0BA9D0F90397CAEF8358FA2F2833C93 	C4965EE9E3015D192CCCF2B6F758CE318D77295D 	5AED1BF378E9A19DADE1BCB34BD736A82B5C1B00 	514A2AD631A57A16DD0047EC749D6EEC0353B12C 	A26E528B271F19B9E5D8E19EA278B781FE4B2BDA 	A4C465FEA0C552561A392A61E91335D77E3E87CB 	9E66CEC6106D578D0B1EB9BFF1000962B7F6840C 	C4009872C59B49561310D966D0062876AF30F054 	B7842CDAF36E6A3214FAE35D5E85B9AE0B84C041 	3E9C876907A560ACA00964F363E9BAD215BBF5F0 	F8B7FD00E05C932991A2CD6150EE103D162C5A55 	7464AAD9068241C50BA6A26232F35CB2F546D93E 	CEC5C50B9C629EF0F5AB2706650B72EB14CCD622
-# Tue, 02 May 2023 23:07:37 GMT
-ENV CASSANDRA_VERSION=4.1.1
-# Tue, 02 May 2023 23:07:37 GMT
-ENV CASSANDRA_SHA512=dc11ce5c0485d2d54d0fff3ae35d1b7f1c3e32055c0699206f59a5bbe983b50972ceb4638bfe65a7c80a6db5052b70ad75718525eef812ba9ae6a301fd5bc8be
-# Tue, 02 May 2023 23:07:55 GMT
+# Tue, 30 May 2023 23:21:39 GMT
+ENV CASSANDRA_VERSION=4.1.2
+# Tue, 30 May 2023 23:21:39 GMT
+ENV CASSANDRA_SHA512=e6ba9efc46743547130cbcd0e174d6761e442f97b17732df8f15d25c9dcf5eaf009e0ac550aad3e34e5f8fc1b300062ad248def3ca85ef372d20d745698f01f9
+# Tue, 30 May 2023 23:22:11 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates gnupg wget; 	rm -rf /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget --progress=dot:giga -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'cassandra-bin.tgz' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz"; 	echo "$CASSANDRA_SHA512 *cassandra-bin.tgz" | sha512sum --check --strict -; 		ddist 'cassandra-bin.tgz.asc' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --verify cassandra-bin.tgz.asc cassandra-bin.tgz; 	rm -rf "$GNUPGHOME"; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		mkdir -p "$CASSANDRA_HOME"; 	tar --extract --file cassandra-bin.tgz --directory "$CASSANDRA_HOME" --strip-components 1; 	rm cassandra-bin.tgz*; 		[ ! -e "$CASSANDRA_CONF" ]; 	mv "$CASSANDRA_HOME/conf" "$CASSANDRA_CONF"; 	ln -sT "$CASSANDRA_CONF" "$CASSANDRA_HOME/conf"; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		ppc64el) 			grep -- '^-Xss256k$' "$CASSANDRA_CONF/jvm-server.options"; 			sed -ri 's/^-Xss256k$/-Xss512k/' "$CASSANDRA_CONF/jvm-server.options"; 			grep -- '^-Xss512k$' "$CASSANDRA_CONF/jvm-server.options"; 			;; 	esac; 		mkdir -p "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chown -R cassandra:cassandra "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chmod 1777 "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chmod -R a+rwX "$CASSANDRA_CONF"; 	ln -sT /var/lib/cassandra "$CASSANDRA_HOME/data"; 	ln -sT /var/log/cassandra "$CASSANDRA_HOME/logs"; 		cassandra -v
-# Tue, 02 May 2023 23:07:55 GMT
+# Tue, 30 May 2023 23:22:11 GMT
 VOLUME [/var/lib/cassandra]
-# Tue, 02 May 2023 23:07:55 GMT
+# Tue, 30 May 2023 23:22:11 GMT
 COPY file:a8d4fc10252d8783a105c235b3eef2315dbe3b0b1be0f1e4650f19fa5a56ab29 in /usr/local/bin/ 
-# Tue, 02 May 2023 23:07:55 GMT
+# Tue, 30 May 2023 23:22:11 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 02 May 2023 23:07:55 GMT
+# Tue, 30 May 2023 23:22:11 GMT
 EXPOSE 7000 7001 7199 9042 9160
-# Tue, 02 May 2023 23:07:55 GMT
+# Tue, 30 May 2023 23:22:11 GMT
 CMD ["cassandra" "-f"]
 ```
 
@@ -116,13 +116,13 @@ CMD ["cassandra" "-f"]
 		Last Modified: Tue, 02 May 2023 23:09:24 GMT  
 		Size: 1.3 MB (1338033 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:96f9824d6a5998f6c8f222fb689b4f3063a6a6db8b3229f5cfbaf1ec581a879b`  
-		Last Modified: Tue, 02 May 2023 23:09:26 GMT  
-		Size: 52.1 MB (52054510 bytes)  
+	-	`sha256:f2ee33e4006d6cd205c04fc8518d30c172411dfa788a3376c06fe8bbeb8a9cc6`  
+		Last Modified: Tue, 30 May 2023 23:23:00 GMT  
+		Size: 52.8 MB (52817754 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:17164d712a2d0e3194b76d5b3404e47feb6c97339263212d79f31aa92845ca73`  
-		Last Modified: Tue, 02 May 2023 23:09:23 GMT  
-		Size: 1.2 KB (1223 bytes)  
+	-	`sha256:25577cbc0305cf73ff46b1dfc2d85e81bcb271a0e608b81d18fbd847f32f3897`  
+		Last Modified: Tue, 30 May 2023 23:22:57 GMT  
+		Size: 1.2 KB (1219 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `cassandra:latest` - linux; arm variant v7
@@ -354,14 +354,14 @@ CMD ["cassandra" "-f"]
 ### `cassandra:latest` - linux; ppc64le
 
 ```console
-$ docker pull cassandra@sha256:47694e1e5c3aee5e532194741121000762eff2f32209620b8890b2a0899cb3e9
+$ docker pull cassandra@sha256:da9dc892b6f932e93c2e01b68ee87ef4a5e3fcbc61e641572a783e28ed72ece2
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **158.3 MB (158256131 bytes)**  
+-	Total Size: **159.0 MB (159019415 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4a1a5a2b28639dcb1e2f5eedf76112b9f23bade4b43d686cca72c30b6ce8e07b`
+-	Image ID: `sha256:579340c12e93fac24bdc6e9a29cae9635e9cf006ab84c136e8727c9a6a9bc2c4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["cassandra","-f"]`
 
@@ -408,21 +408,21 @@ ENV CASSANDRA_CONF=/etc/cassandra
 ENV PATH=/opt/cassandra/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Wed, 03 May 2023 00:24:07 GMT
 ENV GPG_KEYS=CEC86BB4A0BA9D0F90397CAEF8358FA2F2833C93 	C4965EE9E3015D192CCCF2B6F758CE318D77295D 	5AED1BF378E9A19DADE1BCB34BD736A82B5C1B00 	514A2AD631A57A16DD0047EC749D6EEC0353B12C 	A26E528B271F19B9E5D8E19EA278B781FE4B2BDA 	A4C465FEA0C552561A392A61E91335D77E3E87CB 	9E66CEC6106D578D0B1EB9BFF1000962B7F6840C 	C4009872C59B49561310D966D0062876AF30F054 	B7842CDAF36E6A3214FAE35D5E85B9AE0B84C041 	3E9C876907A560ACA00964F363E9BAD215BBF5F0 	F8B7FD00E05C932991A2CD6150EE103D162C5A55 	7464AAD9068241C50BA6A26232F35CB2F546D93E 	CEC5C50B9C629EF0F5AB2706650B72EB14CCD622
-# Wed, 03 May 2023 00:24:07 GMT
-ENV CASSANDRA_VERSION=4.1.1
-# Wed, 03 May 2023 00:24:08 GMT
-ENV CASSANDRA_SHA512=dc11ce5c0485d2d54d0fff3ae35d1b7f1c3e32055c0699206f59a5bbe983b50972ceb4638bfe65a7c80a6db5052b70ad75718525eef812ba9ae6a301fd5bc8be
-# Wed, 03 May 2023 00:24:50 GMT
+# Tue, 30 May 2023 23:19:16 GMT
+ENV CASSANDRA_VERSION=4.1.2
+# Tue, 30 May 2023 23:19:17 GMT
+ENV CASSANDRA_SHA512=e6ba9efc46743547130cbcd0e174d6761e442f97b17732df8f15d25c9dcf5eaf009e0ac550aad3e34e5f8fc1b300062ad248def3ca85ef372d20d745698f01f9
+# Tue, 30 May 2023 23:20:23 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends ca-certificates gnupg wget; 	rm -rf /var/lib/apt/lists/*; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local success=; 		local distUrl=; 		for distUrl in 			'https://www.apache.org/dyn/closer.cgi?action=download&filename=' 			https://www-us.apache.org/dist/ 			https://www.apache.org/dist/ 			https://archive.apache.org/dist/ 		; do 			if wget --progress=dot:giga -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'cassandra-bin.tgz' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz"; 	echo "$CASSANDRA_SHA512 *cassandra-bin.tgz" | sha512sum --check --strict -; 		ddist 'cassandra-bin.tgz.asc' "cassandra/$CASSANDRA_VERSION/apache-cassandra-$CASSANDRA_VERSION-bin.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --verify cassandra-bin.tgz.asc cassandra-bin.tgz; 	rm -rf "$GNUPGHOME"; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		mkdir -p "$CASSANDRA_HOME"; 	tar --extract --file cassandra-bin.tgz --directory "$CASSANDRA_HOME" --strip-components 1; 	rm cassandra-bin.tgz*; 		[ ! -e "$CASSANDRA_CONF" ]; 	mv "$CASSANDRA_HOME/conf" "$CASSANDRA_CONF"; 	ln -sT "$CASSANDRA_CONF" "$CASSANDRA_HOME/conf"; 		dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		ppc64el) 			grep -- '^-Xss256k$' "$CASSANDRA_CONF/jvm-server.options"; 			sed -ri 's/^-Xss256k$/-Xss512k/' "$CASSANDRA_CONF/jvm-server.options"; 			grep -- '^-Xss512k$' "$CASSANDRA_CONF/jvm-server.options"; 			;; 	esac; 		mkdir -p "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chown -R cassandra:cassandra "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chmod 1777 "$CASSANDRA_CONF" /var/lib/cassandra /var/log/cassandra; 	chmod -R a+rwX "$CASSANDRA_CONF"; 	ln -sT /var/lib/cassandra "$CASSANDRA_HOME/data"; 	ln -sT /var/log/cassandra "$CASSANDRA_HOME/logs"; 		cassandra -v
-# Wed, 03 May 2023 00:24:51 GMT
+# Tue, 30 May 2023 23:20:24 GMT
 VOLUME [/var/lib/cassandra]
-# Wed, 03 May 2023 00:24:51 GMT
+# Tue, 30 May 2023 23:20:24 GMT
 COPY file:a8d4fc10252d8783a105c235b3eef2315dbe3b0b1be0f1e4650f19fa5a56ab29 in /usr/local/bin/ 
-# Wed, 03 May 2023 00:24:52 GMT
+# Tue, 30 May 2023 23:20:25 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 03 May 2023 00:24:52 GMT
+# Tue, 30 May 2023 23:20:26 GMT
 EXPOSE 7000 7001 7199 9042 9160
-# Wed, 03 May 2023 00:24:52 GMT
+# Tue, 30 May 2023 23:20:26 GMT
 CMD ["cassandra" "-f"]
 ```
 
@@ -455,13 +455,13 @@ CMD ["cassandra" "-f"]
 		Last Modified: Wed, 03 May 2023 00:28:17 GMT  
 		Size: 1.3 MB (1259799 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e354e522f6d9eb1d85d91b02d607232eed3483ff5711664ecac3772588907a64`  
-		Last Modified: Wed, 03 May 2023 00:28:22 GMT  
-		Size: 52.1 MB (52055180 bytes)  
+	-	`sha256:f88837d6ab9988e1a23708dec59f5714d89caf1c616682629adcc5cf2e60f3f9`  
+		Last Modified: Tue, 30 May 2023 23:21:50 GMT  
+		Size: 52.8 MB (52818462 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:62899cd321e515b98bd9c77df11cb869cef4ef2ee5cbf4e1864df2259dddac92`  
-		Last Modified: Wed, 03 May 2023 00:28:17 GMT  
-		Size: 1.2 KB (1218 bytes)  
+	-	`sha256:9616ea125064e8daafdce4bd34e0924f7cba67e0df7ebf65e1242ec27996511b`  
+		Last Modified: Tue, 30 May 2023 23:21:45 GMT  
+		Size: 1.2 KB (1220 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `cassandra:latest` - linux; s390x
