@@ -1450,14 +1450,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.18
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.18.dsc' openssl_1.1.1f-1ubuntu2.18.dsc 2174 SHA512:5f6df9e7fe6a881d201e5a189a1cb8d180809ad3955fabd81312e4f2539896aa60c105cae7a8beebecc94388a19143ea4370b698f19156827df94e10975d6c21
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.18.debian.tar.xz' openssl_1.1.1f-1ubuntu2.18.debian.tar.xz 232664 SHA512:f19a5fcf067e4b7d1f83353473dd0f38d7f2a51ca431882cb4b9260e28de19ad426245b9b8c23780798b97b1a272267a4d3bc42bbd2d19f81b36ae6b2aff9311
-```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
 
@@ -1859,15 +1854,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `ICU`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2023c-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2023c-0ubuntu0.20.04.1.dsc' tzdata_2023c-0ubuntu0.20.04.1.dsc 2524 SHA512:ed5561549bff8c3d5118650843852a230fea9b22e5eecd905f75407f33d676d7443d07bbb2cb04f7a985910ac29aef45d656f7b99fd0a383dc7a82fa7c36948e
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz' tzdata_2023c.orig.tar.gz 443902 SHA512:608bd286ebcbd0004cfdc1da183273f08aff61f90c8867661154453d77a05d421e4c46ad6d066a1fe2e87d5c82ec0f1c0224667a3b35f3180a3eb7f6ff84cbf5
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz.asc' tzdata_2023c.orig.tar.gz.asc 833 SHA512:15da6e01a12a0390f736fe5bacf27595c8f7080a4b27eccfae7f244bc38d5839e7d25622e325f874db17f9e723777e9cfe0f460fbd595b66772f1642dd603b6b
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2023c-0ubuntu0.20.04.1.debian.tar.xz' tzdata_2023c-0ubuntu0.20.04.1.debian.tar.xz 169816 SHA512:e29ee951998790f3c90542209a185911fb7612fdfd40bdbb3bc7e99b2383683c1964bd53a58b54af7b45c6ea5a01a37eeadb26128fa437da0f226a42f47fb48b
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2020.02.11.4`
 
