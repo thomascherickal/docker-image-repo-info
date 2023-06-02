@@ -503,14 +503,9 @@ Licenses: (parsed from: `/usr/share/doc/libavahi-client3/copyright`, `/usr/share
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris avahi=0.7-4ubuntu7.1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/avahi/avahi_0.7-4ubuntu7.1.dsc' avahi_0.7-4ubuntu7.1.dsc 4171 SHA512:073a4f11bf28de71ff5d013d3ad6c7e9b86282b1f0067d97360c3d36776c3e21720ba08a636fcfe172692fded74a1a66a13f667839727f202cfc298f24cc3054
-'http://archive.ubuntu.com/ubuntu/pool/main/a/avahi/avahi_0.7.orig.tar.gz' avahi_0.7.orig.tar.gz 1333400 SHA512:bae5a1e9204aca90b90e7fd223d19e809e3514d03ba5fa2da1e55bf1d72d3d3b98567f357900c36393613dc17dc98e15ff3ebf0f226f2f6b9766e592452a6ce7
-'http://archive.ubuntu.com/ubuntu/pool/main/a/avahi/avahi_0.7-4ubuntu7.1.debian.tar.xz' avahi_0.7-4ubuntu7.1.debian.tar.xz 36940 SHA512:b6bff1f8e7ea7f9fc7ef228036091d9529e9a8f8960cf2f1ac8b21f8f2cd77e327538aed9477ba823ede215ef8a8767db2339d55c70e6b267e3bbdbc4e14a78e
-```
 
 ### `dpkg` source package: `base-files=11ubuntu5.7`
 
@@ -1093,15 +1088,9 @@ Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`)
 - `FSFUL`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cups=2.3.1-9ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1-9ubuntu1.2.dsc' cups_2.3.1-9ubuntu1.2.dsc 3415 SHA512:570e8d356d3bc9a481d94474a7ae53e9f7c64bc834dcd6cf5f596e5fc64b64caeadd1d5000caff96a156555c8ea7462d040b9d846625c6b87dc1abc1fae8ceec
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1.orig.tar.gz' cups_2.3.1.orig.tar.gz 8135891 SHA512:e3f3ad9e78c1c723d46cc2276957ac67495483882f639421203d9dad227eacbb1259717a92489e710995fdc89e2d575202e4b43117aff08ff1230dcf06674376
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1.orig.tar.gz.asc' cups_2.3.1.orig.tar.gz.asc 858 SHA512:a9770f3346229c687b6ec1a5b42231e68ec547339f7d5b29467014d13a2706daf6f5aa9cdc0dd24efd386bdf966890e927cbab61d7a461612f075127c24a2b28
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1-9ubuntu1.2.debian.tar.xz' cups_2.3.1-9ubuntu1.2.debian.tar.xz 358188 SHA512:373f7992c0daac0d3576908eb5657dcebf9c313ad07356af04b23be0d83de35ee78bee03f5655bd408750e0d9abe5d65d415a0bfccfd45c22b0b1963e8edc198
-```
 
 ### `dpkg` source package: `curl=7.68.0-1ubuntu2.18`
 
