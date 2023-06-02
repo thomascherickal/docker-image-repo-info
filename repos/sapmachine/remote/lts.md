@@ -1,7 +1,7 @@
 ## `sapmachine:lts`
 
 ```console
-$ docker pull sapmachine@sha256:08cb0fa6b3cc601e121f493bd95e6457518dff3016998139cb385955747135af
+$ docker pull sapmachine@sha256:c4bebd66741b9086d4aaa13cb3dc16d8b56d94931075ac7bbec8e40c8f983a81
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,51 +13,51 @@ $ docker pull sapmachine@sha256:08cb0fa6b3cc601e121f493bd95e6457518dff3016998139
 ### `sapmachine:lts` - linux; amd64
 
 ```console
-$ docker pull sapmachine@sha256:56f40686af62650ce2069fde9bb73eb836b37b28757d06c03d49f75aec5840e6
+$ docker pull sapmachine@sha256:9d7eca2a99ecd9fdc4494ae50d12a7e0e7ef5f00122305e99c16492c61ae8532
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **233.6 MB (233550634 bytes)**  
+-	Total Size: **233.6 MB (233572392 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:81ccc8b69ed523298311349918ee06bf8d31e87abf89877661bc3cde871442cf`
+-	Image ID: `sha256:b96cd452036c076a59c629ef8ebe4ec3aa48466adfda510e224e1751c35b189c`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
-# Tue, 25 Apr 2023 17:30:47 GMT
+# Mon, 22 May 2023 17:45:50 GMT
 ARG RELEASE
-# Tue, 25 Apr 2023 17:30:47 GMT
+# Mon, 22 May 2023 17:45:50 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Tue, 25 Apr 2023 17:30:47 GMT
+# Mon, 22 May 2023 17:45:50 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Tue, 25 Apr 2023 17:30:47 GMT
+# Mon, 22 May 2023 17:45:50 GMT
 LABEL org.opencontainers.image.version=22.04
-# Tue, 25 Apr 2023 17:30:49 GMT
-ADD file:2fc6364d149eccc7f94ead482a0dcf24b0e44cc0d00ac6a2c1797776153e9608 in / 
-# Tue, 25 Apr 2023 17:30:49 GMT
+# Mon, 22 May 2023 17:45:52 GMT
+ADD file:2fd2684e989d275c95e18b6f6e9ccf57ca1382ecd8faf4a66961ede28102dedf in / 
+# Mon, 22 May 2023 17:45:52 GMT
 CMD ["/bin/bash"]
-# Thu, 04 May 2023 07:57:14 GMT
+# Fri, 02 Jun 2023 02:27:26 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends ca-certificates gnupg2     && rm -rf /var/lib/apt/lists/*
-# Thu, 04 May 2023 07:58:15 GMT
+# Fri, 02 Jun 2023 02:28:33 GMT
 RUN export GNUPGHOME="$(mktemp -d)"     && gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys CACB9FE09150307D1D22D82962754C3B3ABCFE23     && gpg --batch --export --armor 'CACB 9FE0 9150 307D 1D22 D829 6275 4C3B 3ABC FE23' > /etc/apt/trusted.gpg.d/sapmachine.gpg.asc     && gpgconf --kill all && rm -rf "$GNUPGHOME"     && echo "deb http://dist.sapmachine.io/debian/$(dpkg --print-architecture)/ ./" > /etc/apt/sources.list.d/sapmachine.list     && apt-get update     && apt-get -y --no-install-recommends install sapmachine-17-jdk=17.0.7     && rm -rf /var/lib/apt/lists/*
-# Thu, 04 May 2023 07:58:16 GMT
+# Fri, 02 Jun 2023 02:28:34 GMT
 ENV JAVA_HOME=/usr/lib/jvm/sapmachine-17
-# Thu, 04 May 2023 07:58:16 GMT
+# Fri, 02 Jun 2023 02:28:34 GMT
 CMD ["jshell"]
 ```
 
 -	Layers:
-	-	`sha256:1bc677758ad7fa4503417ae5be18809c5a8679b5b36fcd1464d5a8e41cb13305`  
-		Last Modified: Tue, 25 Apr 2023 22:54:44 GMT  
-		Size: 30.4 MB (30430220 bytes)  
+	-	`sha256:d1669123f28121211977ed38e663dca1a397c0c001e5386598b96c89b1b1cd51`  
+		Last Modified: Mon, 22 May 2023 20:49:59 GMT  
+		Size: 30.4 MB (30430275 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c784977e5405d72688134091c673e277bd1f3cd52a1496859fa004d779cdfb9b`  
-		Last Modified: Thu, 04 May 2023 07:59:02 GMT  
-		Size: 4.6 MB (4592347 bytes)  
+	-	`sha256:45d0a4ad67997a2f0570b8a4da432a7f62b7b5bd94f3ca9c0e36d42c84398d1d`  
+		Last Modified: Fri, 02 Jun 2023 02:29:20 GMT  
+		Size: 4.6 MB (4613892 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8c6bf4ae7177e8a13297ae4010e1b36d4af3f4cba5cd19fb2811621b02901b20`  
-		Last Modified: Thu, 04 May 2023 07:59:41 GMT  
-		Size: 198.5 MB (198528067 bytes)  
+	-	`sha256:29f29b0bb354e79a69d64a073b70fb3aba383c98d50a29000b84ef6fc312df5d`  
+		Last Modified: Fri, 02 Jun 2023 02:29:54 GMT  
+		Size: 198.5 MB (198528225 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `sapmachine:lts` - linux; arm64 variant v8
