@@ -395,8 +395,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url gmp-6.0.0-15.el7
-https://yum.oracle.com/repo/OracleLinux/OL7/8/security/validation/x86_64/getPackageSource/gmp-6.0.0-15.el7.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/gmp-6.0.0-15.el7.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL7/8/security/validation/x86_64/getPackageSource/gmp-6.0.0-15.el7.src.rpm
 ```
 
 ### `rpm` package: `gnupg2-2.0.22-5.el7_5.x86_64`
@@ -683,8 +683,8 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url libgcrypt-1.5.3-14.el7
-https://yum.oracle.com/repo/OracleLinux/OL7/8/security/validation/x86_64/getPackageSource/libgcrypt-1.5.3-14.el7.src.rpm
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/libgcrypt-1.5.3-14.el7.src.rpm
+https://yum.oracle.com/repo/OracleLinux/OL7/8/security/validation/x86_64/getPackageSource/libgcrypt-1.5.3-14.el7.src.rpm
 ```
 
 ### `rpm` package: `libgpg-error-1.12-3.el7.x86_64`
