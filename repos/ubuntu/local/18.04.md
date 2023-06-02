@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:97ba4bbc97fcec201c950799697650b5cd8e5de150322c4ec76e74e79f32522a`
-- Created: `2023-05-12T09:41:53.213402954Z`
+- Image ID: `sha256:f9a80a55f492e823bf5d51f1bd5f87ea3eed1cb31788686aa99a2fb61a27af6a`
+- Created: `2023-05-30T09:32:09.432301537Z`
 - Virtual Size: ~ 63.16 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -919,23 +919,29 @@ $ apt-get source -qq --print-uris mawk=1.3.3-17ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.3-17ubuntu3.diff.gz' mawk_1.3.3-17ubuntu3.diff.gz 64052 SHA256:d1be148525885cb1869e35514f55005b5043f3310b08c444625005a3e14c81fc
 ```
 
-### `dpkg` source package: `ncurses=6.1-1ubuntu1.18.04`
+### `dpkg` source package: `ncurses=6.1-1ubuntu1.18.04.1`
 
 Binary Packages:
 
-- `libncurses5:amd64=6.1-1ubuntu1.18.04`
-- `libncursesw5:amd64=6.1-1ubuntu1.18.04`
-- `libtinfo5:amd64=6.1-1ubuntu1.18.04`
-- `ncurses-base=6.1-1ubuntu1.18.04`
-- `ncurses-bin=6.1-1ubuntu1.18.04`
+- `libncurses5:amd64=6.1-1ubuntu1.18.04.1`
+- `libncursesw5:amd64=6.1-1ubuntu1.18.04.1`
+- `libtinfo5:amd64=6.1-1ubuntu1.18.04.1`
+- `ncurses-base=6.1-1ubuntu1.18.04.1`
+- `ncurses-bin=6.1-1ubuntu1.18.04.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris ncurses=6.1-1ubuntu1.18.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.1-1ubuntu1.18.04.1.dsc' ncurses_6.1-1ubuntu1.18.04.1.dsc 4389 SHA512:461545bf9c09f11c43ca43615ea5625b59e9ea6b8901296340a4eb114f97a7ec96789a1933126253a8a8b7df56ccf2fc8bc4e91a907d457af20b5417e3f86ccf
+'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.1.orig.tar.gz' ncurses_6.1.orig.tar.gz 3365395 SHA512:e308af43f8b7e01e98a55f4f6c4ee4d1c39ce09d95399fa555b3f0cdf5fd0db0f4c4d820b4af78a63f6cf6d8627587114a40af48cfc066134b600520808a77ee
+'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.1.orig.tar.gz.asc' ncurses_6.1.orig.tar.gz.asc 251 SHA512:53659ddf0890683f1d9bf895d7d5b0693d95e102cde4440685a3d0c97230c4930203a9383bd9833ba4639713a12b0afd2b3ebecd9fa5640fb6f2b5fa8e662441
+'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.1-1ubuntu1.18.04.1.debian.tar.xz' ncurses_6.1-1ubuntu1.18.04.1.debian.tar.xz 60936 SHA512:66e09ad619ffdfe883a110d95c355e612c371ddff51184d4335d86adbd81d7a70a8dae2356df18009b74bfd62e541deac3f3f8aaf12a2fc45fe7ac2ebfb6e3e4
+```
 
 ### `dpkg` source package: `nettle=3.4.1-0ubuntu0.18.04.1`
 
@@ -1031,11 +1037,11 @@ $ apt-get source -qq --print-uris pcre3=2:8.39-9ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39-9ubuntu0.1.debian.tar.gz' pcre3_8.39-9ubuntu0.1.debian.tar.gz 27241 SHA512:31396aa4ad4077c702cb28c3611e58605e04a45f0d0c6e3ef6158324ee6703784c53a9b2b84959defa3bef96ea5754420016bb15ca6dd0bcfe3b1cf37a025c43
 ```
 
-### `dpkg` source package: `perl=5.26.1-6ubuntu0.6`
+### `dpkg` source package: `perl=5.26.1-6ubuntu0.7`
 
 Binary Packages:
 
-- `perl-base=5.26.1-6ubuntu0.6`
+- `perl-base=5.26.1-6ubuntu0.7`
 
 Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 
@@ -1068,9 +1074,15 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris perl=5.26.1-6ubuntu0.7
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1-6ubuntu0.7.dsc' perl_5.26.1-6ubuntu0.7.dsc 2472 SHA512:b25ba09d13317b88653ae5746e3d96c4084a2e31baaf2c4d6aef919866b8f8f74b75af9abeae1f965a8c5618a4abf888447b35252837a6013f9205ddf15a3f47
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1.orig-regen-configure.tar.gz' perl_5.26.1.orig-regen-configure.tar.gz 712883 SHA512:3a8ecf16483d87d40bf428e952a3f5c287af8e4f64977133b61188855120d5896b3c5af845a19ad1912f469d9345dddd728708f6171498a7fd0dd0f56b463139
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1.orig.tar.xz' perl_5.26.1.orig.tar.xz 11922848 SHA512:13faa7bcd7ed8c490c37e9032c115af06c9b8152b75f8062409dd72d263d1314480e8a9a883490de1b448b2e6d53b6a87d108e2eceb17de2524d5857c6a7d300
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.26.1-6ubuntu0.7.debian.tar.xz' perl_5.26.1-6ubuntu0.7.debian.tar.xz 182164 SHA512:4d1cdb1f399b218eaefda2451bc58aa1ecb1f5748093cfcd74341eec20e749b4854ddef2063904d54ce81898fcfa214d08ffcb0f4db164fb8c53e2108c4b2ecd
+```
 
 ### `dpkg` source package: `procps=2:3.3.12-3ubuntu1.2`
 
