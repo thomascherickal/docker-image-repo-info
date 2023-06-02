@@ -1,7 +1,7 @@
 ## `swift:focal`
 
 ```console
-$ docker pull swift@sha256:5223566c9e5c491dc37f06ea2d608146d56211304d443b491d5ea7659afa3d9b
+$ docker pull swift@sha256:ab72433a024e07fb66e7d3b280b13fea6eed959880fff2772124069a03aaf291
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -80,14 +80,14 @@ RUN swift --version
 ### `swift:focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull swift@sha256:de5c1f317d8ca5a1b9499b305a55bf9a698c10fc981707cdf393fa4865797565
+$ docker pull swift@sha256:c6e8473e337a64130cf181152c6b4f9c25757ea010bb722ddce406d0b4ecf4a6
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **666.9 MB (666883182 bytes)**  
+-	Total Size: **669.8 MB (669767146 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:575a24eba93d1bdffd64d8d9aac060a7186ed0e959c3424e49cb2cae7b8b4b31`
+-	Image ID: `sha256:6099536781b67b41bed05d5501ecfc096c492528c5b4a6edc7a8a022d5a36188`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -113,17 +113,17 @@ RUN export DEBIAN_FRONTEND=noninteractive DEBCONF_NONINTERACTIVE_SEEN=true && ap
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
 # Tue, 18 Apr 2023 01:10:22 GMT
 ARG SWIFT_PLATFORM=ubuntu20.04
-# Tue, 18 Apr 2023 01:10:22 GMT
-ARG SWIFT_BRANCH=swift-5.8-release
-# Tue, 18 Apr 2023 01:10:23 GMT
-ARG SWIFT_VERSION=swift-5.8-RELEASE
-# Tue, 18 Apr 2023 01:10:23 GMT
+# Fri, 02 Jun 2023 18:51:47 GMT
+ARG SWIFT_BRANCH=swift-5.8.1-release
+# Fri, 02 Jun 2023 18:51:48 GMT
+ARG SWIFT_VERSION=swift-5.8.1-RELEASE
+# Fri, 02 Jun 2023 18:51:48 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Tue, 18 Apr 2023 01:10:23 GMT
-ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubuntu20.04 SWIFT_BRANCH=swift-5.8-release SWIFT_VERSION=swift-5.8-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Tue, 18 Apr 2023 01:11:46 GMT
+# Fri, 02 Jun 2023 18:51:48 GMT
+ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubuntu20.04 SWIFT_BRANCH=swift-5.8.1-release SWIFT_VERSION=swift-5.8.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
+# Fri, 02 Jun 2023 18:52:28 GMT
 RUN set -e;     ARCH_NAME="$(dpkg --print-architecture)";     url=;     case "${ARCH_NAME##*-}" in         'amd64')             OS_ARCH_SUFFIX='';             ;;         'arm64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export DEBIAN_FRONTEND=noninteractive     && apt-get -q update && apt-get -q install -y curl && rm -rf /var/lib/apt/lists/*     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz     && apt-get purge --auto-remove -y curl
-# Tue, 18 Apr 2023 01:11:57 GMT
+# Fri, 02 Jun 2023 18:52:40 GMT
 RUN swift --version
 ```
 
@@ -136,11 +136,11 @@ RUN swift --version
 		Last Modified: Tue, 18 Apr 2023 01:16:25 GMT  
 		Size: 117.0 MB (117005118 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:924a1d9e520e499074c7e7b6c8fd35400e8af5eea4992cf01391dfd61d0ef8a6`  
-		Last Modified: Tue, 18 Apr 2023 01:17:03 GMT  
-		Size: 522.7 MB (522681439 bytes)  
+	-	`sha256:0f94b203d0b3814eb274ee8b7edb6851ede76411c4bac41e3caf56ea2c01170f`  
+		Last Modified: Fri, 02 Jun 2023 18:58:59 GMT  
+		Size: 525.6 MB (525565405 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ff86b7eefe401f7d44f601098ad9b79d1a62a8b8040051317ee9a5516dcea45c`  
-		Last Modified: Tue, 18 Apr 2023 01:16:12 GMT  
-		Size: 229.0 B  
+	-	`sha256:9b66ca0249b9f5edc66b1a8054cde135863a322990032d0321a34bd28d767350`  
+		Last Modified: Fri, 02 Jun 2023 18:58:09 GMT  
+		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
