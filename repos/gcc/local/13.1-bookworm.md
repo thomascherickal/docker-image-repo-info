@@ -622,21 +622,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `X11`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.88.1-9
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1-9.dsc' curl_7.88.1-9.dsc 3159 SHA256:ea17267b98b453fa7f0629f62a0302cbc56385701c9d31ecc50bfa7fb2425a9d
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1.orig.tar.gz' curl_7.88.1.orig.tar.gz 4343562 SHA256:cdb38b72e36bc5d33d5b8810f8018ece1baa29a8f215b4495e495ded82bbf3c7
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1.orig.tar.gz.asc' curl_7.88.1.orig.tar.gz.asc 488 SHA256:7a5a55d7123149a1b357f298cf895bd0a601e3a2807005ef6c95f3752803485f
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1-9.debian.tar.xz' curl_7.88.1-9.debian.tar.xz 47920 SHA256:b1bac4b0deb1488f2b0d39f8bf990067080a5abfc7efaf938cec1267e0333030
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.88.1-9/
 
-- https://sources.debian.net/src/curl/7.88.1-9/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.88.1-9/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.88.1-9/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-10`
 
@@ -4020,20 +4012,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb=1:10.11.2-1
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.2-1.dsc' mariadb_10.11.2-1.dsc 5004 SHA256:0a1d9629e2fe6dbf0898c079e3a69d12c8ba7062569e1868d629a0a119b4cc5e
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.2.orig.tar.gz' mariadb_10.11.2.orig.tar.gz 92963269 SHA256:290e712dd79ec9c8a61be1d4ff7a7dd314605261a928ac5eb129a056cf4d4042
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.2-1.debian.tar.xz' mariadb_10.11.2-1.debian.tar.xz 266600 SHA256:90712fa0f2c218e7fa00ae2e0c4ff92826ab614d74a1b1c07b9712a1b95adefe
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb/1:10.11.2-1/
 
-- https://sources.debian.net/src/mariadb/1:10.11.2-1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb/1:10.11.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb/1:10.11.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20200120-3.1`
 
@@ -4419,20 +4404,13 @@ Licenses: (parsed from: `/usr/share/doc/libopenjp2-7/copyright`, `/usr/share/doc
 - `ZLIB`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openjpeg2=2.5.0-1
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.5.0-1.dsc' openjpeg2_2.5.0-1.dsc 2698 SHA256:20f7ef8b33624c06cfd55b57dbc2652bc0f90cb2bbd2295847279e7cb050cc8c
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.5.0.orig.tar.xz' openjpeg2_2.5.0.orig.tar.xz 1221108 SHA256:007e19d772c8b6b22e35379630b06ff3549e49ba719d96453607a36ad7b4de73
-'http://deb.debian.org/debian/pool/main/o/openjpeg2/openjpeg2_2.5.0-1.debian.tar.xz' openjpeg2_2.5.0-1.debian.tar.xz 17336 SHA256:308e70b4cc65809ec69121aa39dcb06d14fde0e9dc76bcaec718838a263a04a5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openjpeg2/2.5.0-1/
 
-- https://sources.debian.net/src/openjpeg2/2.5.0-1/ (for browsing the source)
-- https://sources.debian.net/src/openjpeg2/2.5.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openjpeg2/2.5.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.5.13+dfsg-5`
 
