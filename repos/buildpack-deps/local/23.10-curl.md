@@ -1494,14 +1494,9 @@ Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/open
 - `GPL-1`
 - `GPL-1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=3.0.8-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.8-1ubuntu2.dsc' openssl_3.0.8-1ubuntu2.dsc 2474 SHA512:5ed5be5d41da45d8b47fc7d832e09188f5dd1807208cf0b209ccc5f870a96f8c4d9f7872948e4bfabe5421c1f60bdbee90918562c08839f5dfe1b75fd790c8ce
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.8.orig.tar.gz' openssl_3.0.8.orig.tar.gz 15151328 SHA512:8ce10be000d7d4092c8efc5b96b1d2f7da04c1c3a624d3a7923899c6b1de06f369016be957e36e8ab6d4c9102eaeec5d1973295d547f7893a7f11f132ae42b0d
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.8-1ubuntu2.debian.tar.xz' openssl_3.0.8-1ubuntu2.debian.tar.xz 120880 SHA512:3b359f4b7bbaff70bbb44fc187b1384a9f4bd81318c90483575be986d9b498f96fc26fe5674ce5820ab667d54a8c4fff3fdbbfdbdd9c9f045342d315e16ac6b1
-```
 
 ### `dpkg` source package: `p11-kit=0.24.1-2ubuntu1`
 
@@ -1625,10 +1620,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris perl=5.36.0-7
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7.dsc' perl_5.36.0-7.dsc 2886 SHA512:2a84ec712340a3f125aa3853ae3c0a0933138de1fe226b520b7c9ea7ed2b70a7e10fe94a265699a212b3f943cf61302cf05c756d92eb7671d6cc21e490ea2b78
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7ubuntu1.dsc' perl_5.36.0-7ubuntu1.dsc 2968 SHA512:74c9b60640c71820ef6654e6a4439220dddc4ce1c4fcf04e470395e189d1ea66a47cbfc5ff2a9dcb9cd288b629b5afa4cc0cbf0f2f3eb2950ef175d39535647c
 'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig-regen-configure.tar.xz' perl_5.36.0.orig-regen-configure.tar.xz 417784 SHA512:4d16685f569a5b1dea79d607b6d62718111c32efaf5547bb9e1528bd755acf0c8fc74a1cc1f4d68fcb10aef9da7d8fea17a5cc10dabce6efa4721ab45ab03a65
 'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig.tar.xz' perl_5.36.0.orig.tar.xz 13051500 SHA512:6dd6ac2a77566c173c5ab9c238cf555f2c3e592e89abb5600bc23ce1cbd0c349e0233f6417cbbf1f6d0aefc6a734ba491285af0d3dc68a605b658b65c89f1dab
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7.debian.tar.xz' perl_5.36.0-7.debian.tar.xz 169288 SHA512:366489ee981c62a22f19883f67dfe2f0b972a0a0e276c4a40a02df31661171260ad9fdaa180089f0f51ade46b8bf6c02c560691c58426baea5885ec550c435c5
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7ubuntu1.debian.tar.xz' perl_5.36.0-7ubuntu1.debian.tar.xz 169744 SHA512:7859f20b2d168d3fb77f8aec0223548f6616c1954f443296fb711680063d188a3534374541e93dafc4212583453edb8d4668420839156a582f16a8dc3dc33c16
 ```
 
 ### `dpkg` source package: `pinentry=1.2.1-1ubuntu1`

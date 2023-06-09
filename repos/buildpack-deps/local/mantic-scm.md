@@ -703,14 +703,9 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.39.2-1ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.39.2-1ubuntu1.1.dsc' git_2.39.2-1ubuntu1.1.dsc 2927 SHA512:a94e19ad95267f23156a2e06251ae85b44cd9f47b9a014e0bf490f7cbaa873891d7b8f57b0742a83e6a46ba836ffbfd20c2fd7351fd94fa123fced1708f33c57
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.39.2.orig.tar.xz' git_2.39.2.orig.tar.xz 7163224 SHA512:fdca70bee19401c5c7a6d2f3d70bd80b6ba99f6a9f97947de31d4366ee3a78a18d5298abb25727ec8ef67131bca673e48dff2a5a050b6e032884ab04066b20cb
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.39.2-1ubuntu1.1.debian.tar.xz' git_2.39.2-1ubuntu1.1.debian.tar.xz 747932 SHA512:167feb2de5d2e93ca1799a6adb3e4a3b172c35a1ab533d18b9c38bf171a7fa98da5e5cf769d369d3d77cd2b59cc019c613d72f11386b54433dc7cbeadebdf4f1
-```
 
 ### `dpkg` source package: `glibc=2.37-0ubuntu2`
 
@@ -1855,14 +1850,9 @@ Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/open
 - `GPL-1`
 - `GPL-1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=3.0.8-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.8-1ubuntu2.dsc' openssl_3.0.8-1ubuntu2.dsc 2474 SHA512:5ed5be5d41da45d8b47fc7d832e09188f5dd1807208cf0b209ccc5f870a96f8c4d9f7872948e4bfabe5421c1f60bdbee90918562c08839f5dfe1b75fd790c8ce
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.8.orig.tar.gz' openssl_3.0.8.orig.tar.gz 15151328 SHA512:8ce10be000d7d4092c8efc5b96b1d2f7da04c1c3a624d3a7923899c6b1de06f369016be957e36e8ab6d4c9102eaeec5d1973295d547f7893a7f11f132ae42b0d
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.8-1ubuntu2.debian.tar.xz' openssl_3.0.8-1ubuntu2.debian.tar.xz 120880 SHA512:3b359f4b7bbaff70bbb44fc187b1384a9f4bd81318c90483575be986d9b498f96fc26fe5674ce5820ab667d54a8c4fff3fdbbfdbdd9c9f045342d315e16ac6b1
-```
 
 ### `dpkg` source package: `p11-kit=0.24.1-2ubuntu1`
 
@@ -1985,15 +1975,13 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.36/copyright`, `/usr/share/doc/
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.36.0-7
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7.dsc' perl_5.36.0-7.dsc 2886 SHA512:2a84ec712340a3f125aa3853ae3c0a0933138de1fe226b520b7c9ea7ed2b70a7e10fe94a265699a212b3f943cf61302cf05c756d92eb7671d6cc21e490ea2b78
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig-regen-configure.tar.xz' perl_5.36.0.orig-regen-configure.tar.xz 417784 SHA512:4d16685f569a5b1dea79d607b6d62718111c32efaf5547bb9e1528bd755acf0c8fc74a1cc1f4d68fcb10aef9da7d8fea17a5cc10dabce6efa4721ab45ab03a65
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig.tar.xz' perl_5.36.0.orig.tar.xz 13051500 SHA512:6dd6ac2a77566c173c5ab9c238cf555f2c3e592e89abb5600bc23ce1cbd0c349e0233f6417cbbf1f6d0aefc6a734ba491285af0d3dc68a605b658b65c89f1dab
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7.debian.tar.xz' perl_5.36.0-7.debian.tar.xz 169288 SHA512:366489ee981c62a22f19883f67dfe2f0b972a0a0e276c4a40a02df31661171260ad9fdaa180089f0f51ade46b8bf6c02c560691c58426baea5885ec550c435c5
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/perl/5.36.0-7/
+
 
 ### `dpkg` source package: `pinentry=1.2.1-1ubuntu1`
 
@@ -2093,14 +2081,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.11-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.11=3.11.3-1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.11/python3.11_3.11.3-1.dsc' python3.11_3.11.3-1.dsc 3636 SHA512:d389cbf1367ec89d232682095d0d2b18734fe379d06f184b5d485db6527d3992ffd99f0ef86b42dfcc8c65695d19ab1bf49b515fa5fe4f389018c6e8fdc48006
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.11/python3.11_3.11.3.orig.tar.xz' python3.11_3.11.3.orig.tar.xz 19906156 SHA512:a3bba4b69322a47bfeefe42ba0fd7331b5b67fd2ab41441e2219d16ef8c6f307f1a48977afd073c18cfd24ec6cb1bfe0c4bb4b273031eb524dc7e9fb5fbcc3b6
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.11/python3.11_3.11.3-1.debian.tar.xz' python3.11_3.11.3-1.debian.tar.xz 213168 SHA512:2880678a7176e42f87cabca91179a643d6bd75ed4b1226c3d7a0cdf9c16f42ef9da052a41a798f056d21d9cb96e406fbd18b10c698e6473d53b5b1a3caa8dce6
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/python3.11/3.11.3-1/
+
 
 ### `dpkg` source package: `readline=8.2-1.3`
 
