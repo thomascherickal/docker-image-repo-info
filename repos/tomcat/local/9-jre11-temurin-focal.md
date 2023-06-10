@@ -1,10 +1,10 @@
-# `tomcat:9.0.75-jre11-temurin-focal`
+# `tomcat:9.0.76-jre11-temurin-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:73f97238c55db69440cb75c0353f094eb513e3f1d2b616e3e8b6ca2bbc3ddce7`
-- Created: `2023-05-10T18:02:06.535709866Z`
-- Virtual Size: ~ 281.94 Mb  
+- Image ID: `sha256:59da910cf39cf234d1dbd37ce2af5b3ae5469acac4e70c9fd055610325103502`
+- Created: `2023-06-10T00:38:36.31449936Z`
+- Virtual Size: ~ 281.98 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -20,8 +20,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=48F8E69F6390C9F25CFEDCD268248959359E722B A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.75`
-  - `TOMCAT_SHA512=e29905e693598b64d958dd22b8d866590163917bdc6e1cfd363a8a06f97ecc89284b863b3ab2448f43903623564c3fd952c7a9bd33df8476d57f6873c2d463c7`
+  - `TOMCAT_VERSION=9.0.76`
+  - `TOMCAT_SHA512=028163cbe15367f0ab60e086b0ebc8d774e62d126d82ae9152f863d4680e280b11c9503e3b51ee7089ca9bea1bfa5b535b244a727a3021e5fa72dd7e9569af9a`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=20.04`
@@ -1410,19 +1410,24 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.18`
+### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.19`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1f-1ubuntu2.18`
+- `libssl1.1:amd64=1.1.1f-1ubuntu2.19`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.19
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.19.dsc' openssl_1.1.1f-1ubuntu2.19.dsc 2470 SHA512:fa922964acbb2d91ac24f0d1868fe33b26c42d3ed9bf8aa699c87cf1ec6892cfb441b36d41880e50b8b14e1606895202b949e4d501ba9d4f01cb4ca7374bff5c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.19.debian.tar.xz' openssl_1.1.1f-1ubuntu2.19.debian.tar.xz 231564 SHA512:7b18f6bebdc34bbc08dd18ca9415e6316e1355286a7c7153ca95b744501aac8a41ddb847ef930ae4ba9dbd531f6594ed74d79e8d5588caabcac96ce3e2ad5a1a
+```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
 
