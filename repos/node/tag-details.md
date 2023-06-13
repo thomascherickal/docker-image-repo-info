@@ -1402,11 +1402,21 @@ CMD ["node"]
 
 ## `node:16-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:16-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:16-bullseye`
 
@@ -3981,11 +3991,21 @@ CMD ["node"]
 
 ## `node:16.20-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:16.20-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:16.20-bullseye`
 
@@ -6560,11 +6580,21 @@ CMD ["node"]
 
 ## `node:16.20.0-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:16.20.0-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:16.20.0-bullseye`
 
@@ -9295,11 +9325,21 @@ CMD ["node"]
 
 ## `node:18-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:18-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:18-bullseye`
 
@@ -12150,11 +12190,21 @@ CMD ["node"]
 
 ## `node:18.16-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:18.16-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:18.16-bullseye`
 
@@ -15005,11 +15055,21 @@ CMD ["node"]
 
 ## `node:18.16.0-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:18.16.0-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:18.16.0-bullseye`
 
@@ -17860,11 +17920,21 @@ CMD ["node"]
 
 ## `node:20-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:20-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:20-bullseye`
 
@@ -20415,11 +20485,21 @@ CMD ["node"]
 
 ## `node:20.3-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:20.3-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:20.3-bullseye`
 
@@ -22970,11 +23050,21 @@ CMD ["node"]
 
 ## `node:20.3.0-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:20.3.0-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:20.3.0-bullseye`
 
@@ -25288,11 +25378,21 @@ CMD ["node"]
 
 ## `node:bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:bullseye`
 
@@ -27840,11 +27940,21 @@ CMD ["node"]
 
 ## `node:current-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:current-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:current-bullseye`
 
@@ -30545,11 +30655,21 @@ CMD ["node"]
 
 ## `node:gallium-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:gallium-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:gallium-bullseye`
 
@@ -33280,11 +33400,21 @@ CMD ["node"]
 
 ## `node:hydrogen-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:hydrogen-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:hydrogen-bullseye`
 
@@ -36534,11 +36664,21 @@ CMD ["node"]
 
 ## `node:lts-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:lts-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull node@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `node:lts-bullseye`
 
