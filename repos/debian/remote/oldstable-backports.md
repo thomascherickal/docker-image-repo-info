@@ -1,7 +1,7 @@
 ## `debian:oldstable-backports`
 
 ```console
-$ docker pull debian@sha256:3cec2570043c9670137e6cdbee123c0e01a89fbcebc3c60fdc277582f2a7b002
+$ docker pull debian@sha256:29f0141efa692175c841dfe70006d839933c5a58a9841fc62d14daaf3467814d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -242,31 +242,31 @@ RUN echo 'deb http://deb.debian.org/debian oldstable-backports main' > /etc/apt/
 ### `debian:oldstable-backports` - linux; s390x
 
 ```console
-$ docker pull debian@sha256:71b8997cb396131ebf391aaf8a720376b5bcc07f1c7ce8933a5d4ba713ecd222
+$ docker pull debian@sha256:57429b419587fb224d09ee540df09dc86742450adb00ab222f8e355f5d6a83a0
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **49.0 MB (49007515 bytes)**  
+-	Total Size: **53.3 MB (53288263 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:180f96fdcb68553ba913e3a71b39d51b7ac1c1b5177f7927629e660915ec67f8`
+-	Image ID: `sha256:e7a8b4b038f8b9ac5f887f12b0db3728ee7d4a3734fba3141f0d70e8ac41b690`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Tue, 02 Aug 2022 00:43:08 GMT
-ADD file:f1312a5e33cdcca200c1f8a80bfb9e3f50674f7c475879b46a254f46f6ce33ee in / 
-# Tue, 02 Aug 2022 00:43:11 GMT
+# Tue, 13 Jun 2023 04:30:24 GMT
+ADD file:dbd155532e76eaf9a1a1d0264e9b100a173a947f266e18de89072fb812b4adfa in / 
+# Tue, 13 Jun 2023 04:30:27 GMT
 CMD ["bash"]
-# Tue, 02 Aug 2022 00:43:17 GMT
+# Tue, 13 Jun 2023 04:30:33 GMT
 RUN echo 'deb http://deb.debian.org/debian oldstable-backports main' > /etc/apt/sources.list.d/backports.list
 ```
 
 -	Layers:
-	-	`sha256:22d1a970475335255aadaa454f5b87a34505c8c050d61be5e83d8f90e5c70b22`  
-		Last Modified: Tue, 02 Aug 2022 00:48:51 GMT  
-		Size: 49.0 MB (49007290 bytes)  
+	-	`sha256:b65851d7a61a8e4602882ddf076cc95a597019b416e23170f30d27d780731b8a`  
+		Last Modified: Tue, 13 Jun 2023 04:35:03 GMT  
+		Size: 53.3 MB (53288042 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6dc33e533d05cd27a6099a38841d3bd33b60ae4bea83f77a6a96f7b6713d7972`  
-		Last Modified: Tue, 02 Aug 2022 00:48:58 GMT  
-		Size: 225.0 B  
+	-	`sha256:b36506b0b5bba5138668e591f5a81a2f94a354983ffb6c11d2396091651f7fd7`  
+		Last Modified: Tue, 13 Jun 2023 04:35:09 GMT  
+		Size: 221.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
