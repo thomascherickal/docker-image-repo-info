@@ -1,7 +1,7 @@
 ## `python:3-slim-buster`
 
 ```console
-$ docker pull python@sha256:af5e4b9e8b2f7c6188ad389a0cc4f0f78c7262928e6ce92ead73d5b6ba883a68
+$ docker pull python@sha256:a2c33b249db6baf80e0bde00cac51e3537881a259bf3fed06b3425e35d197002
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,19 +14,19 @@ $ docker pull python@sha256:af5e4b9e8b2f7c6188ad389a0cc4f0f78c7262928e6ce92ead73
 ### `python:3-slim-buster` - linux; amd64
 
 ```console
-$ docker pull python@sha256:393195c807ea730a8498b4ba6745a44a6455ea7eb4adf981b49cc2f64a6fcfe9
+$ docker pull python@sha256:b94af75d4ff65c50bf1b2119bca6d0ba707037bacd0cb75314801a6953c03241
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **45.3 MB (45297697 bytes)**  
+-	Total Size: **45.3 MB (45296866 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4fe2c1b721ad38c7f0fabf9e52928b94f3ec530e2eda960bb75b7b9835f5046d`
+-	Image ID: `sha256:db841a2e8ab326bf1101c5714186094fa05d3277c5b2dbcec943dade361b269f`
 -	Default Command: `["python3"]`
 
 ```dockerfile
-# Tue, 23 May 2023 01:20:37 GMT
-ADD file:2058e04b33179527a56999678c1c62dfcf76944675afcd77b5163141fb025f8c in / 
-# Tue, 23 May 2023 01:20:37 GMT
+# Mon, 12 Jun 2023 23:21:32 GMT
+ADD file:2818e508d01da2188fb234b38fb19aa1ea9eeeae92d361ecdf49318d949f51a9 in / 
+# Mon, 12 Jun 2023 23:21:32 GMT
 CMD ["bash"]
 # Wed, 07 Jun 2023 09:49:17 GMT
 ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -57,25 +57,25 @@ CMD ["python3"]
 ```
 
 -	Layers:
-	-	`sha256:99bf4787315b60d97d860ac6d006b7835b2241a601e93c2da4af6ca554be8704`  
-		Last Modified: Tue, 23 May 2023 01:24:47 GMT  
-		Size: 27.1 MB (27138577 bytes)  
+	-	`sha256:8b91b88d557765cd8c6802668755a3f6dc4337b6ce15a17e4857139e5fc964f3`  
+		Last Modified: Mon, 12 Jun 2023 23:27:09 GMT  
+		Size: 27.1 MB (27138450 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a8a848364b534984e122a8bff364f2cf36055a35950c378b336f878b75c8612a`  
-		Last Modified: Tue, 23 May 2023 15:03:14 GMT  
-		Size: 2.8 MB (2782226 bytes)  
+	-	`sha256:824416e234237961c9c5d4f41dfe5b295a3c35a671ee52889bfb08d8e257ec4c`  
+		Last Modified: Tue, 13 Jun 2023 16:46:32 GMT  
+		Size: 2.8 MB (2781342 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fd881b910e033d3a157b5eff3e9ceeef9310826cb16c67ff2c3cfb93066f6e50`  
-		Last Modified: Wed, 07 Jun 2023 20:50:26 GMT  
-		Size: 12.0 MB (11996514 bytes)  
+	-	`sha256:482d64d97d4e63625e51301e23ca7ff526afaf40710da26704d9ce2e1a6168fa`  
+		Last Modified: Tue, 13 Jun 2023 16:47:33 GMT  
+		Size: 12.0 MB (11996761 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1e47f92de1fd43fafe5e4714b62dc9f1d9b426625d05cf28c47c061af5a19223`  
-		Last Modified: Wed, 07 Jun 2023 20:50:24 GMT  
-		Size: 245.0 B  
+	-	`sha256:c87b3089b2ed5584d9a52ddf02017556958f287dd63945476fbcd191954e6faf`  
+		Last Modified: Tue, 13 Jun 2023 16:47:31 GMT  
+		Size: 244.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1bec564348b891cf9260dcd6d4ca2a7ab2d8a87673e1737fe68b737e1d93c43b`  
-		Last Modified: Wed, 07 Jun 2023 20:50:25 GMT  
-		Size: 3.4 MB (3380135 bytes)  
+	-	`sha256:91bdacd599c69598dd6fbd7f97f7059b565f6f3015a04b6ab9e8db254a41652c`  
+		Last Modified: Tue, 13 Jun 2023 16:47:32 GMT  
+		Size: 3.4 MB (3380069 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `python:3-slim-buster` - linux; arm variant v7
