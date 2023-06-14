@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e8f0c828a0f0102fdb775a4b3eb3d39357030932be9a2d9f39bf729188b00149`
-- Created: `2023-06-09T22:13:08.791788999Z`
-- Virtual Size: ~ 969.52 Mb  
+- Image ID: `sha256:274637d97c470d486f81955cc0df98fd40fb0376e9a60ba05cf0c2e21d21dd68`
+- Created: `2023-06-13T17:29:48.023027796Z`
+- Virtual Size: ~ 969.51 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -3110,14 +3110,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libunistring/0.9.10-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libunistring/0.9.10-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libwebp=0.6.1-2+deb10u1`
+### `dpkg` source package: `libwebp=0.6.1-2+deb10u2`
 
 Binary Packages:
 
-- `libwebp-dev:amd64=0.6.1-2+deb10u1`
-- `libwebp6:amd64=0.6.1-2+deb10u1`
-- `libwebpdemux2:amd64=0.6.1-2+deb10u1`
-- `libwebpmux3:amd64=0.6.1-2+deb10u1`
+- `libwebp-dev:amd64=0.6.1-2+deb10u2`
+- `libwebp6:amd64=0.6.1-2+deb10u2`
+- `libwebpdemux2:amd64=0.6.1-2+deb10u2`
+- `libwebpmux3:amd64=0.6.1-2+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libwebp-dev/copyright`, `/usr/share/doc/libwebp6/copyright`, `/usr/share/doc/libwebpdemux2/copyright`, `/usr/share/doc/libwebpmux3/copyright`)
 
@@ -3126,17 +3126,17 @@ Licenses: (parsed from: `/usr/share/doc/libwebp-dev/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libwebp=0.6.1-2+deb10u1
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1-2%2bdeb10u1.dsc' libwebp_0.6.1-2+deb10u1.dsc 2078 SHA256:8e049c4699d3e1196642782f14052d8558225d1c713fe1718d21f23524b81bd5
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1.orig.tar.gz' libwebp_0.6.1.orig.tar.gz 3554290 SHA256:a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_0.6.1-2%2bdeb10u1.debian.tar.xz' libwebp_0.6.1-2+deb10u1.debian.tar.xz 13612 SHA256:35121925b3a22ee41f4704f0118d30dae58f642e76565ab73d427b3e648d7961
+$ apt-get source -qq --print-uris libwebp=0.6.1-2+deb10u2
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2%2bdeb10u2.dsc' libwebp_0.6.1-2+deb10u2.dsc 2078 SHA256:e57554e788414a5b38c1d31844bb0c56694bcc8cb1bde282432d7796333d7e75
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1.orig.tar.gz' libwebp_0.6.1.orig.tar.gz 3554290 SHA256:a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2%2bdeb10u2.debian.tar.xz' libwebp_0.6.1-2+deb10u2.debian.tar.xz 14396 SHA256:f84d655f88949b4a38ef09c28adf864423f9a35a9ef4f9342495e7cce985118e
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libwebp/0.6.1-2+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/libwebp/0.6.1-2+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libwebp/0.6.1-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libwebp/0.6.1-2+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/libwebp/0.6.1-2+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libwebp/0.6.1-2+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libwmf=0.2.8.4-14`
 
@@ -3622,14 +3622,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/make-dfsg/4.2.1-1.2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/make-dfsg/4.2.1-1.2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `mariadb-10.3=1:10.3.38-0+deb10u1`
+### `dpkg` source package: `mariadb-10.3=1:10.3.39-0+deb10u1`
 
 Binary Packages:
 
-- `libmariadb-dev=1:10.3.38-0+deb10u1`
-- `libmariadb-dev-compat:amd64=1:10.3.38-0+deb10u1`
-- `libmariadb3:amd64=1:10.3.38-0+deb10u1`
-- `mariadb-common=1:10.3.38-0+deb10u1`
+- `libmariadb-dev=1:10.3.39-0+deb10u1`
+- `libmariadb-dev-compat:amd64=1:10.3.39-0+deb10u1`
+- `libmariadb3:amd64=1:10.3.39-0+deb10u1`
+- `mariadb-common=1:10.3.39-0+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/doc/libmariadb-dev-compat/copyright`, `/usr/share/doc/libmariadb3/copyright`, `/usr/share/doc/mariadb-common/copyright`)
 
@@ -3653,13 +3653,21 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris mariadb-10.3=1:10.3.39-0+deb10u1
+'http://deb.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.39-0%2bdeb10u1.dsc' mariadb-10.3_10.3.39-0+deb10u1.dsc 4812 SHA256:1de6109f7add1c78acc27f684953b9ec9b1d3e72da0bd22884ac78545a41430c
+'http://deb.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.39.orig.tar.gz' mariadb-10.3_10.3.39.orig.tar.gz 74469177 SHA256:18bd51c847565af4da18748b052ab9bcbb569ab6e6766ca8da7dcca1f941f876
+'http://deb.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.39.orig.tar.gz.asc' mariadb-10.3_10.3.39.orig.tar.gz.asc 833 SHA256:c7ae557f5d41c280da680be37e554c49d0512a28bda695cace61eab14ebe01d5
+'http://deb.debian.org/debian-security/pool/updates/main/m/mariadb-10.3/mariadb-10.3_10.3.39-0%2bdeb10u1.debian.tar.xz' mariadb-10.3_10.3.39-0+deb10u1.debian.tar.xz 230756 SHA256:342c3969406ee6b4b9087e50d5c8b71b53a12eef195b9f797b4553a328c4e034
+```
 
-- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.38-0+deb10u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/mariadb-10.3/1:10.3.39-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/mariadb-10.3/1:10.3.39-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mariadb-10.3/1:10.3.39-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.3-17`
 
@@ -4142,25 +4150,33 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openssh/1:7.9p1-10+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openssh/1:7.9p1-10+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.1n-0+deb10u4`
+### `dpkg` source package: `openssl=1.1.1n-0+deb10u5`
 
 Binary Packages:
 
-- `libssl-dev:amd64=1.1.1n-0+deb10u4`
-- `libssl1.1:amd64=1.1.1n-0+deb10u4`
-- `openssl=1.1.1n-0+deb10u4`
+- `libssl-dev:amd64=1.1.1n-0+deb10u5`
+- `libssl1.1:amd64=1.1.1n-0+deb10u5`
+- `openssl=1.1.1n-0+deb10u5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1n-0+deb10u5
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb10u5.dsc' openssl_1.1.1n-0+deb10u5.dsc 2649 SHA256:e3425b95ac7d834456045c3404067d494e8592ca74ee893bb5c603a124778668
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz' openssl_1.1.1n.orig.tar.gz 9850712 SHA256:40dceb51a4f6a5275bde0e6bf20ef4b91bfc32ed57c0552e2e8e15463372b17a
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz.asc' openssl_1.1.1n.orig.tar.gz.asc 488 SHA256:e0e89e9467102880ee6f2ee8c1413933eb1268969afb97b9bec61e2190a62fd0
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb10u5.debian.tar.xz' openssl_1.1.1n-0+deb10u5.debian.tar.xz 141656 SHA256:3eea17893cc08d1c10abee2e99ec7b5d91aec0ac3d3367e7db8aab0e26fec771
+```
 
-- http://snapshot.debian.org/package/openssl/1.1.1n-0+deb10u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/openssl/1.1.1n-0+deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.1n-0+deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.1n-0+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.15-2+deb10u1`
 
@@ -4568,14 +4584,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python-defaults/2.7.16-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python-defaults/2.7.16-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `python2.7=2.7.16-2+deb10u1`
+### `dpkg` source package: `python2.7=2.7.16-2+deb10u2`
 
 Binary Packages:
 
-- `libpython2.7-minimal:amd64=2.7.16-2+deb10u1`
-- `libpython2.7-stdlib:amd64=2.7.16-2+deb10u1`
-- `python2.7=2.7.16-2+deb10u1`
-- `python2.7-minimal=2.7.16-2+deb10u1`
+- `libpython2.7-minimal:amd64=2.7.16-2+deb10u2`
+- `libpython2.7-stdlib:amd64=2.7.16-2+deb10u2`
+- `python2.7=2.7.16-2+deb10u2`
+- `python2.7-minimal=2.7.16-2+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/share/doc/libpython2.7-stdlib/copyright`, `/usr/share/doc/python2.7/copyright`, `/usr/share/doc/python2.7-minimal/copyright`)
 
@@ -4599,17 +4615,17 @@ Licenses: (parsed from: `/usr/share/doc/libpython2.7-minimal/copyright`, `/usr/s
 Source:
 
 ```console
-$ apt-get source -qq --print-uris python2.7=2.7.16-2+deb10u1
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.16-2%2bdeb10u1.dsc' python2.7_2.7.16-2+deb10u1.dsc 3362 SHA256:c976ba9e854cf611131aacb06f3ddca206b5c799871cb269dbef1ee629be6066
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.16.orig.tar.gz' python2.7_2.7.16.orig.tar.gz 17431748 SHA256:01da813a3600876f03f46db11cc5c408175e99f03af2ba942ef324389a83bad5
-'http://deb.debian.org/debian/pool/main/p/python2.7/python2.7_2.7.16-2%2bdeb10u1.diff.gz' python2.7_2.7.16-2+deb10u1.diff.gz 293706 SHA256:37150412430a010c1f0cd816ff1c2b0d90459ecc37c8aa5df5d68f698ececeed
+$ apt-get source -qq --print-uris python2.7=2.7.16-2+deb10u2
+'http://deb.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.16-2%2bdeb10u2.dsc' python2.7_2.7.16-2+deb10u2.dsc 3362 SHA256:ed151f77cef4975e2bfdc160bb74bcc77f22166df6a2203bc65c3e9b3b6f337c
+'http://deb.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.16.orig.tar.gz' python2.7_2.7.16.orig.tar.gz 17431748 SHA256:01da813a3600876f03f46db11cc5c408175e99f03af2ba942ef324389a83bad5
+'http://deb.debian.org/debian-security/pool/updates/main/p/python2.7/python2.7_2.7.16-2%2bdeb10u2.diff.gz' python2.7_2.7.16-2+deb10u2.diff.gz 312327 SHA256:731d6555fae2ab902cca90dfb555a4807ffde06314c1071c5921722dc8c1d0bc
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/python2.7/2.7.16-2+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/python2.7/2.7.16-2+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python2.7/2.7.16-2+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/python2.7/2.7.16-2+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/python2.7/2.7.16-2+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python2.7/2.7.16-2+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python3-defaults=3.7.3-1`
 
