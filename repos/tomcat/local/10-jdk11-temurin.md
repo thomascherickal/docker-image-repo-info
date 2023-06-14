@@ -1,10 +1,10 @@
-# `tomcat:10.1.9-jdk11-temurin-jammy`
+# `tomcat:10.1.10-jdk11-temurin-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8a74a223508d451501937bc93d60b3f0e4d9778ecf9fbde25754c3a2756af30d`
-- Created: `2023-06-04T16:55:28.668717Z`
-- Virtual Size: ~ 473.10 Mb  
+- Image ID: `sha256:3c3309b6b8d5da669e8fb45f949275266ce2f1f63811801afe65eb1d6fb8a7b2`
+- Created: `2023-06-13T03:05:10.749778371Z`
+- Virtual Size: ~ 480.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -20,8 +20,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=5C3C5F3E314C866292F359A8F3AD5C94A67F707E A9C5DF4D22E99998D9875A5110C01C5A2F6059E7`
   - `TOMCAT_MAJOR=10`
-  - `TOMCAT_VERSION=10.1.9`
-  - `TOMCAT_SHA512=cfdc182e62b33b98ce61f084f51c9cf0bcc5e5f4fff341d6e8bcb7c54b12c058faa2e164a587100ba1c6172b9ae2b32ff4a7193a859b368d1f67baca6aa1680f`
+  - `TOMCAT_VERSION=10.1.10`
+  - `TOMCAT_SHA512=be35edeb7f63be2d087da6b5cf3c1250eb5fbaa484ba788870780109278d1f5607bf8dfb40f718beda82352109c131fc97f7907f5521dc462bd60773b33e2c68`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=22.04`
@@ -1604,11 +1604,11 @@ $ apt-get source -qq --print-uris pcre3=2:8.39-13ubuntu0.22.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre3/pcre3_8.39-13ubuntu0.22.04.1.debian.tar.gz' pcre3_8.39-13ubuntu0.22.04.1.debian.tar.gz 28251 SHA512:50aa437187fd45632213fe7b09a69dfbe2a58ad568a7f71c47ddab204db49850b732f17c8295788afd0c58d8134620a11aaa9fa259a980a0ab85ce043098a659
 ```
 
-### `dpkg` source package: `perl=5.34.0-3ubuntu1.1`
+### `dpkg` source package: `perl=5.34.0-3ubuntu1.2`
 
 Binary Packages:
 
-- `perl-base=5.34.0-3ubuntu1.1`
+- `perl-base=5.34.0-3ubuntu1.2`
 
 Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 
@@ -1640,9 +1640,15 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris perl=5.34.0-3ubuntu1.2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-3ubuntu1.2.dsc' perl_5.34.0-3ubuntu1.2.dsc 2680 SHA512:131b69ef0a8a3135a801330858876af2de664d8565491f09246c362258f786d8720c815a95cb7333567ff8d7f911f822b0e3b3045b99008de0625981f5cf15e4
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0.orig-regen-configure.tar.xz' perl_5.34.0.orig-regen-configure.tar.xz 415412 SHA512:2581152e0747105314c4fa4167f1f97d286436b996341b9b75e4099ba18f15eb0d2b42888622fbe9b5499d3fe304bc8aa9ad207a945f590135beccfb68ea28b0
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0.orig.tar.xz' perl_5.34.0.orig.tar.xz 12881416 SHA512:691b4b31eacec357191fba777612b4e3eae59e946a22998a50766697c0d61db1d42a9b3bc1e41abf0d1ca1893e4a7c06d7bf3290480cf03d7f79befd7a8a3267
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-3ubuntu1.2.debian.tar.xz' perl_5.34.0-3ubuntu1.2.debian.tar.xz 192372 SHA512:bbe3da1c08d92640bb3877babc77ca0a012614acba47cb9bff1e4bd3d439f571848a655789ac157944e90b5b0df1c2a3b78c41480e2e796ea0c7b14647edcf5b
+```
 
 ### `dpkg` source package: `procps=2:3.3.17-6ubuntu2`
 
