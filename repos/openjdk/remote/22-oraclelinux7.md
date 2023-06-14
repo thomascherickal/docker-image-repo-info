@@ -1,7 +1,7 @@
 ## `openjdk:22-oraclelinux7`
 
 ```console
-$ docker pull openjdk@sha256:fe2f7ebb42bae31e61941d9540b7ee87ded0160977357b54bece2a81d2989623
+$ docker pull openjdk@sha256:8875f55c5bafa77cd651f68a343e92e4f3a20f778d5a18f389c716305b7a5dab
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -60,47 +60,47 @@ CMD ["jshell"]
 ### `openjdk:22-oraclelinux7` - linux; arm64 variant v8
 
 ```console
-$ docker pull openjdk@sha256:46a2eb8e9a34a36333fea7cd7ca27d3b6a8d6b2be4beccb84759519d7cb397f3
+$ docker pull openjdk@sha256:35b8fcf09e592ac66fc67198fd2f93db3f007e41a8c5165e5ec01d7605f2fa9f
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **269.3 MB (269347189 bytes)**  
+-	Total Size: **269.3 MB (269344405 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3813d9622eb114c45f8891da92f51b0064165504ca95e63077099cd6a664994d`
+-	Image ID: `sha256:b29269f4189067383854aadd4146f09aef651f55fa9bab822fae49570747389f`
 -	Default Command: `["jshell"]`
 
 ```dockerfile
-# Fri, 31 Mar 2023 21:40:35 GMT
-ADD file:4fe62bcdc8f181de8e01e791570bbb89f29712a9aef0b329febd817f4fef8887 in / 
-# Fri, 31 Mar 2023 21:40:36 GMT
+# Wed, 14 Jun 2023 03:45:43 GMT
+ADD file:a9ba9c7acb256e802c7248b56f377a6f0ea08b1b61e11e482516633a13f4d686 in / 
+# Wed, 14 Jun 2023 03:45:44 GMT
 CMD ["/bin/bash"]
-# Fri, 31 Mar 2023 22:08:06 GMT
+# Wed, 14 Jun 2023 04:08:20 GMT
 RUN set -eux; 	yum install -y --setopt=skip_missing_names_on_install=False 		gzip 		tar 				binutils 		freetype fontconfig 	; 	rm -rf /var/cache/yum
-# Mon, 12 Jun 2023 21:46:01 GMT
+# Wed, 14 Jun 2023 04:08:20 GMT
 ENV JAVA_HOME=/usr/java/openjdk-22
-# Mon, 12 Jun 2023 21:46:01 GMT
+# Wed, 14 Jun 2023 04:08:20 GMT
 ENV PATH=/usr/java/openjdk-22/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Mon, 12 Jun 2023 21:46:01 GMT
+# Wed, 14 Jun 2023 04:08:20 GMT
 ENV LANG=en_US.UTF-8
-# Mon, 12 Jun 2023 21:46:01 GMT
+# Wed, 14 Jun 2023 04:08:21 GMT
 ENV JAVA_VERSION=22-ea+1
-# Mon, 12 Jun 2023 21:46:15 GMT
+# Wed, 14 Jun 2023 04:08:34 GMT
 RUN set -eux; 		arch="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')"; 	case "$arch" in 		'i386:x86-64') 			downloadUrl='https://download.java.net/java/early_access/jdk22/1/GPL/openjdk-22-ea+1_linux-x64_bin.tar.gz'; 			downloadSha256='50bf6303955ea128be3eb7ad9bc10f5e7eeacf9d3f81349a4d60a164fe7d0318'; 			;; 		'aarch64') 			downloadUrl='https://download.java.net/java/early_access/jdk22/1/GPL/openjdk-22-ea+1_linux-aarch64_bin.tar.gz'; 			downloadSha256='6ca14677cb2db094acbc9b084d0a85c9e004aff9826977e0b9b35e5f9a55b550'; 			;; 		*) echo >&2 "error: unsupported architecture: '$arch'"; exit 1 ;; 	esac; 		curl -fL -o openjdk.tgz "$downloadUrl"; 	echo "$downloadSha256 *openjdk.tgz" | sha256sum --strict --check -; 		mkdir -p "$JAVA_HOME"; 	tar --extract 		--file openjdk.tgz 		--directory "$JAVA_HOME" 		--strip-components 1 		--no-same-owner 	; 	rm openjdk.tgz*; 		rm -rf "$JAVA_HOME/lib/security/cacerts"; 	ln -sT /etc/pki/ca-trust/extracted/java/cacerts "$JAVA_HOME/lib/security/cacerts"; 		ln -sfT "$JAVA_HOME" /usr/java/default; 	ln -sfT "$JAVA_HOME" /usr/java/latest; 	for bin in "$JAVA_HOME/bin/"*; do 		base="$(basename "$bin")"; 		[ ! -e "/usr/bin/$base" ]; 		alternatives --install "/usr/bin/$base" "$base" "$bin" 20000; 	done; 		java -Xshare:dump; 		fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java; 	javac --version; 	java --version
-# Mon, 12 Jun 2023 21:46:17 GMT
+# Wed, 14 Jun 2023 04:08:36 GMT
 CMD ["jshell"]
 ```
 
 -	Layers:
-	-	`sha256:a138fe98397d054834e86c902a0b929bd7cf0261ac671e779f872176569996ab`  
-		Last Modified: Fri, 31 Mar 2023 21:42:01 GMT  
-		Size: 51.1 MB (51054832 bytes)  
+	-	`sha256:52fd87ed40fcddc3fe63b876d1f94f6edae688637a5cc56983dced68a50c953e`  
+		Last Modified: Wed, 14 Jun 2023 03:46:28 GMT  
+		Size: 51.1 MB (51052081 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:61213d9405aef8db0237e9542508819c698c4d8293ccbd8799a36206032fdd7c`  
-		Last Modified: Fri, 31 Mar 2023 22:09:32 GMT  
-		Size: 15.2 MB (15237973 bytes)  
+	-	`sha256:39aeb39f5d39e6fb51e698f8f5e6416d0689047f9392a9bd3f97f28c4d5d5596`  
+		Last Modified: Wed, 14 Jun 2023 04:10:01 GMT  
+		Size: 15.2 MB (15238146 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:54ad2954d00d1982187ad3da557a36ebf3d145ad1c89397d883fac50e7ffcc36`  
-		Last Modified: Mon, 12 Jun 2023 21:49:40 GMT  
-		Size: 203.1 MB (203054384 bytes)  
+	-	`sha256:55b3228bd9a5ca2d10ce26835789b60484c3462243c09b1b8bb88fb0226f2823`  
+		Last Modified: Wed, 14 Jun 2023 04:10:12 GMT  
+		Size: 203.1 MB (203054178 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
