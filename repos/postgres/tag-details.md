@@ -5,59 +5,71 @@
 -	[`postgres:11-alpine`](#postgres11-alpine)
 -	[`postgres:11-alpine3.17`](#postgres11-alpine317)
 -	[`postgres:11-alpine3.18`](#postgres11-alpine318)
+-	[`postgres:11-bookworm`](#postgres11-bookworm)
 -	[`postgres:11-bullseye`](#postgres11-bullseye)
 -	[`postgres:11.20-alpine`](#postgres1120-alpine)
 -	[`postgres:11.20-alpine3.17`](#postgres1120-alpine317)
 -	[`postgres:11.20-alpine3.18`](#postgres1120-alpine318)
+-	[`postgres:11.20-bookworm`](#postgres1120-bookworm)
 -	[`postgres:11.20-bullseye`](#postgres1120-bullseye)
 -	[`postgres:12`](#postgres12)
 -	[`postgres:12-alpine`](#postgres12-alpine)
 -	[`postgres:12-alpine3.17`](#postgres12-alpine317)
 -	[`postgres:12-alpine3.18`](#postgres12-alpine318)
+-	[`postgres:12-bookworm`](#postgres12-bookworm)
 -	[`postgres:12-bullseye`](#postgres12-bullseye)
 -	[`postgres:12.15`](#postgres1215)
 -	[`postgres:12.15-alpine`](#postgres1215-alpine)
 -	[`postgres:12.15-alpine3.17`](#postgres1215-alpine317)
 -	[`postgres:12.15-alpine3.18`](#postgres1215-alpine318)
+-	[`postgres:12.15-bookworm`](#postgres1215-bookworm)
 -	[`postgres:12.15-bullseye`](#postgres1215-bullseye)
 -	[`postgres:13`](#postgres13)
 -	[`postgres:13-alpine`](#postgres13-alpine)
 -	[`postgres:13-alpine3.17`](#postgres13-alpine317)
 -	[`postgres:13-alpine3.18`](#postgres13-alpine318)
+-	[`postgres:13-bookworm`](#postgres13-bookworm)
 -	[`postgres:13-bullseye`](#postgres13-bullseye)
 -	[`postgres:13.11`](#postgres1311)
 -	[`postgres:13.11-alpine`](#postgres1311-alpine)
 -	[`postgres:13.11-alpine3.17`](#postgres1311-alpine317)
 -	[`postgres:13.11-alpine3.18`](#postgres1311-alpine318)
+-	[`postgres:13.11-bookworm`](#postgres1311-bookworm)
 -	[`postgres:13.11-bullseye`](#postgres1311-bullseye)
 -	[`postgres:14`](#postgres14)
 -	[`postgres:14-alpine`](#postgres14-alpine)
 -	[`postgres:14-alpine3.17`](#postgres14-alpine317)
 -	[`postgres:14-alpine3.18`](#postgres14-alpine318)
+-	[`postgres:14-bookworm`](#postgres14-bookworm)
 -	[`postgres:14-bullseye`](#postgres14-bullseye)
 -	[`postgres:14.8`](#postgres148)
 -	[`postgres:14.8-alpine`](#postgres148-alpine)
 -	[`postgres:14.8-alpine3.17`](#postgres148-alpine317)
 -	[`postgres:14.8-alpine3.18`](#postgres148-alpine318)
+-	[`postgres:14.8-bookworm`](#postgres148-bookworm)
 -	[`postgres:14.8-bullseye`](#postgres148-bullseye)
 -	[`postgres:15`](#postgres15)
 -	[`postgres:15-alpine`](#postgres15-alpine)
 -	[`postgres:15-alpine3.17`](#postgres15-alpine317)
 -	[`postgres:15-alpine3.18`](#postgres15-alpine318)
+-	[`postgres:15-bookworm`](#postgres15-bookworm)
 -	[`postgres:15-bullseye`](#postgres15-bullseye)
 -	[`postgres:15.3`](#postgres153)
 -	[`postgres:15.3-alpine`](#postgres153-alpine)
 -	[`postgres:15.3-alpine3.17`](#postgres153-alpine317)
 -	[`postgres:15.3-alpine3.18`](#postgres153-alpine318)
+-	[`postgres:15.3-bookworm`](#postgres153-bookworm)
 -	[`postgres:15.3-bullseye`](#postgres153-bullseye)
 -	[`postgres:16beta1`](#postgres16beta1)
 -	[`postgres:16beta1-alpine`](#postgres16beta1-alpine)
 -	[`postgres:16beta1-alpine3.17`](#postgres16beta1-alpine317)
 -	[`postgres:16beta1-alpine3.18`](#postgres16beta1-alpine318)
+-	[`postgres:16beta1-bookworm`](#postgres16beta1-bookworm)
 -	[`postgres:16beta1-bullseye`](#postgres16beta1-bullseye)
 -	[`postgres:alpine`](#postgresalpine)
 -	[`postgres:alpine3.17`](#postgresalpine317)
 -	[`postgres:alpine3.18`](#postgresalpine318)
+-	[`postgres:bookworm`](#postgresbookworm)
 -	[`postgres:bullseye`](#postgresbullseye)
 -	[`postgres:latest`](#postgreslatest)
 
@@ -2019,6 +2031,10 @@ CMD ["postgres"]
 		Last Modified: Fri, 19 May 2023 18:17:07 GMT  
 		Size: 4.8 KB (4790 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `postgres:11-bookworm`
+
+**does not exist** (yet?)
 
 ## `postgres:11-bullseye`
 
@@ -4963,6 +4979,10 @@ CMD ["postgres"]
 		Last Modified: Fri, 19 May 2023 18:17:07 GMT  
 		Size: 4.8 KB (4790 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `postgres:11.20-bookworm`
+
+**does not exist** (yet?)
 
 ## `postgres:11.20-bullseye`
 
@@ -8893,6 +8913,10 @@ CMD ["postgres"]
 		Size: 4.8 KB (4789 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `postgres:12-bookworm`
+
+**does not exist** (yet?)
+
 ## `postgres:12-bullseye`
 
 ```console
@@ -12821,6 +12845,10 @@ CMD ["postgres"]
 		Last Modified: Fri, 19 May 2023 18:16:25 GMT  
 		Size: 4.8 KB (4789 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `postgres:12.15-bookworm`
+
+**does not exist** (yet?)
 
 ## `postgres:12.15-bullseye`
 
@@ -16751,6 +16779,10 @@ CMD ["postgres"]
 		Size: 4.8 KB (4788 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `postgres:13-bookworm`
+
+**does not exist** (yet?)
+
 ## `postgres:13-bullseye`
 
 ```console
@@ -20679,6 +20711,10 @@ CMD ["postgres"]
 		Last Modified: Fri, 19 May 2023 18:15:49 GMT  
 		Size: 4.8 KB (4788 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `postgres:13.11-bookworm`
+
+**does not exist** (yet?)
 
 ## `postgres:13.11-bullseye`
 
@@ -24609,6 +24645,10 @@ CMD ["postgres"]
 		Size: 4.8 KB (4792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `postgres:14-bookworm`
+
+**does not exist** (yet?)
+
 ## `postgres:14-bullseye`
 
 ```console
@@ -28537,6 +28577,10 @@ CMD ["postgres"]
 		Last Modified: Fri, 19 May 2023 18:15:11 GMT  
 		Size: 4.8 KB (4792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `postgres:14.8-bookworm`
+
+**does not exist** (yet?)
 
 ## `postgres:14.8-bullseye`
 
@@ -32467,6 +32511,10 @@ CMD ["postgres"]
 		Size: 4.8 KB (4789 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `postgres:15-bookworm`
+
+**does not exist** (yet?)
+
 ## `postgres:15-bullseye`
 
 ```console
@@ -36395,6 +36443,10 @@ CMD ["postgres"]
 		Last Modified: Fri, 19 May 2023 18:14:27 GMT  
 		Size: 4.8 KB (4789 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `postgres:15.3-bookworm`
+
+**does not exist** (yet?)
 
 ## `postgres:15.3-bullseye`
 
@@ -40325,6 +40377,10 @@ CMD ["postgres"]
 		Size: 4.8 KB (4789 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `postgres:16beta1-bookworm`
+
+**does not exist** (yet?)
+
 ## `postgres:16beta1-bullseye`
 
 ```console
@@ -43268,6 +43324,10 @@ CMD ["postgres"]
 		Last Modified: Fri, 19 May 2023 18:14:27 GMT  
 		Size: 4.8 KB (4789 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `postgres:bookworm`
+
+**does not exist** (yet?)
 
 ## `postgres:bullseye`
 
