@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:79fe439d8cfc71750bbea1c6c2e64ac086ce3d8ccaa37c5f07a4122298d80d08`
-- Created: `2023-05-30T22:23:10.245012305Z`
-- Virtual Size: ~ 1.64 Gb  
+- Image ID: `sha256:7751cf537987c6c7cfc02d948dc60780524386d8b8cd18b8c9c46c37773892b4`
+- Created: `2023-06-14T04:29:16.979857533Z`
+- Virtual Size: ~ 1.66 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -357,11 +357,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/bzip2/1.0.8-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/bzip2/1.0.8-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `c-ares=1.17.1-1+deb11u2`
+### `dpkg` source package: `c-ares=1.17.1-1+deb11u3`
 
 Binary Packages:
 
-- `libc-ares2:amd64=1.17.1-1+deb11u2`
+- `libc-ares2:amd64=1.17.1-1+deb11u3`
 
 Licenses: (parsed from: `/usr/share/doc/libc-ares2/copyright`)
 
@@ -370,18 +370,18 @@ Licenses: (parsed from: `/usr/share/doc/libc-ares2/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris c-ares=1.17.1-1+deb11u2
-'http://deb.debian.org/debian/pool/main/c/c-ares/c-ares_1.17.1-1%2bdeb11u2.dsc' c-ares_1.17.1-1+deb11u2.dsc 2182 SHA256:722ba16daf51ec3f462707ca48dcf1ded89a4d1f3941418ae31c6cd1086287dc
-'http://deb.debian.org/debian/pool/main/c/c-ares/c-ares_1.17.1.orig.tar.gz' c-ares_1.17.1.orig.tar.gz 1518701 SHA256:d73dd0f6de824afd407ce10750ea081af47eba52b8a6cb307d220131ad93fc40
-'http://deb.debian.org/debian/pool/main/c/c-ares/c-ares_1.17.1.orig.tar.gz.asc' c-ares_1.17.1.orig.tar.gz.asc 488 SHA256:2dac298ea5c1add08bfcacc65bf879016c7f9e2ab54ca4f92f83c2b5681b4c60
-'http://deb.debian.org/debian/pool/main/c/c-ares/c-ares_1.17.1-1%2bdeb11u2.debian.tar.xz' c-ares_1.17.1-1+deb11u2.debian.tar.xz 10576 SHA256:5287aeb8f59fb03b6833e1b62b18a04c02d964b557936ea6b1968cf624d86ce3
+$ apt-get source -qq --print-uris c-ares=1.17.1-1+deb11u3
+'http://deb.debian.org/debian-security/pool/updates/main/c/c-ares/c-ares_1.17.1-1%2bdeb11u3.dsc' c-ares_1.17.1-1+deb11u3.dsc 1804 SHA256:34bf095afbff0bfa36279a4ac7dafb6cc39e2a50f066334d49366e7ad69d56a3
+'http://deb.debian.org/debian-security/pool/updates/main/c/c-ares/c-ares_1.17.1.orig.tar.gz' c-ares_1.17.1.orig.tar.gz 1518701 SHA256:d73dd0f6de824afd407ce10750ea081af47eba52b8a6cb307d220131ad93fc40
+'http://deb.debian.org/debian-security/pool/updates/main/c/c-ares/c-ares_1.17.1.orig.tar.gz.asc' c-ares_1.17.1.orig.tar.gz.asc 488 SHA256:2dac298ea5c1add08bfcacc65bf879016c7f9e2ab54ca4f92f83c2b5681b4c60
+'http://deb.debian.org/debian-security/pool/updates/main/c/c-ares/c-ares_1.17.1-1%2bdeb11u3.debian.tar.xz' c-ares_1.17.1-1+deb11u3.debian.tar.xz 13912 SHA256:23b0e3ce14ed28918367f2dea872faf3629a440e904b6dd735d8c64490d6bd6c
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/c-ares/1.17.1-1+deb11u2/ (for browsing the source)
-- https://sources.debian.net/src/c-ares/1.17.1-1+deb11u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/c-ares/1.17.1-1+deb11u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/c-ares/1.17.1-1+deb11u3/ (for browsing the source)
+- https://sources.debian.net/src/c-ares/1.17.1-1+deb11u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/c-ares/1.17.1-1+deb11u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ca-certificates=20210119`
 
@@ -909,6 +909,37 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/expat/2.2.10-2+deb11u5/ (for browsing the source)
 - https://sources.debian.net/src/expat/2.2.10-2+deb11u5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/expat/2.2.10-2+deb11u5/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `file=1:5.39-3`
+
+Binary Packages:
+
+- `libmagic-mgc=1:5.39-3`
+- `libmagic1:amd64=1:5.39-3`
+
+Licenses: (parsed from: `/usr/share/doc/libmagic-mgc/copyright`, `/usr/share/doc/libmagic1/copyright`)
+
+- `BSD-2-Clause-alike`
+- `BSD-2-Clause-netbsd`
+- `BSD-2-Clause-regents`
+- `MIT-Old-Style-with-legal-disclaimer-2`
+- `public-domain`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris file=1:5.39-3
+'http://deb.debian.org/debian/pool/main/f/file/file_5.39-3.dsc' file_5.39-3.dsc 2237 SHA256:19952c131cffa14cf4b64f3fa2d35c975388985e5b5ee154e2e0cef5ccde697e
+'http://deb.debian.org/debian/pool/main/f/file/file_5.39.orig.tar.gz' file_5.39.orig.tar.gz 954266 SHA256:f05d286a76d9556243d0cb05814929c2ecf3a5ba07963f8f70bfaaa70517fad1
+'http://deb.debian.org/debian/pool/main/f/file/file_5.39.orig.tar.gz.asc' file_5.39.orig.tar.gz.asc 169 SHA256:409232b54cabe3082f38f1e7ec4c69e7d937f26d039da691f7349d142b48df83
+'http://deb.debian.org/debian/pool/main/f/file/file_5.39-3.debian.tar.xz' file_5.39-3.debian.tar.xz 34420 SHA256:92657787e04b444d7ec3b6cac0519d1655cb6fc2ae08de76bc3f4f90acf0c545
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/file/1:5.39-3/ (for browsing the source)
+- https://sources.debian.net/src/file/1:5.39-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/file/1:5.39-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.8.0-1`
 
@@ -8025,11 +8056,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/npth/1.6-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/npth/1.6-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `odoo=16.0.20230530`
+### `dpkg` source package: `odoo=16.0.20230613`
 
 Binary Packages:
 
-- `odoo=16.0.20230530`
+- `odoo=16.0.20230613`
 
 Licenses: (parsed from: `/usr/share/doc/odoo/copyright`)
 
@@ -8074,13 +8105,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openldap/2.4.57+dfsg-3+deb11u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openldap/2.4.57+dfsg-3+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssl=1.1.1n-0+deb11u4`
+### `dpkg` source package: `openssl=1.1.1n-0+deb11u5`
 
 Binary Packages:
 
-- `libssl-dev:amd64=1.1.1n-0+deb11u4`
-- `libssl1.1:amd64=1.1.1n-0+deb11u4`
-- `openssl=1.1.1n-0+deb11u4`
+- `libssl-dev:amd64=1.1.1n-0+deb11u5`
+- `libssl1.1:amd64=1.1.1n-0+deb11u5`
+- `openssl=1.1.1n-0+deb11u5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -8089,18 +8120,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssl=1.1.1n-0+deb11u4
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n-0%2bdeb11u4.dsc' openssl_1.1.1n-0+deb11u4.dsc 2655 SHA256:f89bc0e8d63e61b2abedcfb9a0888dfb4054c7ad602c3b076f4cd5f31013eb33
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n.orig.tar.gz' openssl_1.1.1n.orig.tar.gz 9850712 SHA256:40dceb51a4f6a5275bde0e6bf20ef4b91bfc32ed57c0552e2e8e15463372b17a
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n.orig.tar.gz.asc' openssl_1.1.1n.orig.tar.gz.asc 488 SHA256:e0e89e9467102880ee6f2ee8c1413933eb1268969afb97b9bec61e2190a62fd0
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_1.1.1n-0%2bdeb11u4.debian.tar.xz' openssl_1.1.1n-0+deb11u4.debian.tar.xz 131388 SHA256:c8c5ba101d3d048782f09beaf7e5a56833ffafb5506211bbb2fc726fba9d7d73
+$ apt-get source -qq --print-uris openssl=1.1.1n-0+deb11u5
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb11u5.dsc' openssl_1.1.1n-0+deb11u5.dsc 2481 SHA256:412c88207a7108507f015cd0ac5ee38fa99e5919f2704d4422f9a21a3760667b
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz' openssl_1.1.1n.orig.tar.gz 9850712 SHA256:40dceb51a4f6a5275bde0e6bf20ef4b91bfc32ed57c0552e2e8e15463372b17a
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n.orig.tar.gz.asc' openssl_1.1.1n.orig.tar.gz.asc 488 SHA256:e0e89e9467102880ee6f2ee8c1413933eb1268969afb97b9bec61e2190a62fd0
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssl/openssl_1.1.1n-0%2bdeb11u5.debian.tar.xz' openssl_1.1.1n-0+deb11u5.debian.tar.xz 141712 SHA256:b9e6eb5bd11c2bafb63a6df6f786cc72f9d94b16b66ceadaf3a2971127a31836
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u4/ (for browsing the source)
-- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/1.1.1n-0+deb11u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u5/ (for browsing the source)
+- https://sources.debian.net/src/openssl/1.1.1n-0+deb11u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssl/1.1.1n-0+deb11u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.23.22-1`
 
@@ -8458,12 +8489,12 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postg
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `postgresql-common=249.pgdg110+1`
+### `dpkg` source package: `postgresql-common=250.pgdg110+1`
 
 Binary Packages:
 
-- `postgresql-client=15+249.pgdg110+1`
-- `postgresql-client-common=249.pgdg110+1`
+- `postgresql-client=15+250.pgdg110+1`
+- `postgresql-client-common=250.pgdg110+1`
 
 Licenses: (parsed from: `/usr/share/doc/postgresql-client/copyright`, `/usr/share/doc/postgresql-client-common/copyright`)
 
@@ -9037,6 +9068,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python-ldap/3.2.0-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python-ldap/3.2.0-4/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `python-magic=2:0.4.20-3`
+
+Binary Packages:
+
+- `python3-magic=2:0.4.20-3`
+
+Licenses: (parsed from: `/usr/share/doc/python3-magic/copyright`)
+
+- `BSD-2-Clause-alike`
+- `MIT`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python-magic=2:0.4.20-3
+'http://deb.debian.org/debian/pool/main/p/python-magic/python-magic_0.4.20-3.dsc' python-magic_0.4.20-3.dsc 2005 SHA256:ec88ccdbd3bb9d500db14b16bc9befbf0664c2d9aea60479283c403c49a78d6f
+'http://deb.debian.org/debian/pool/main/p/python-magic/python-magic_0.4.20.orig.tar.gz' python-magic_0.4.20.orig.tar.gz 863539 SHA256:9822826e6629305da894278c595d561bff3f6b87bd7542e4d3d081159406b229
+'http://deb.debian.org/debian/pool/main/p/python-magic/python-magic_0.4.20-3.debian.tar.xz' python-magic_0.4.20-3.debian.tar.xz 3444 SHA256:4dc53ac610aad2458a137a76ad6f60a4cb8e9cde6c6cd734b89f1fc9206e1d5e
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/python-magic/2:0.4.20-3/ (for browsing the source)
+- https://sources.debian.net/src/python-magic/2:0.4.20-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python-magic/2:0.4.20-3/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `python-num2words=0.5.9-1`
 
 Binary Packages:
@@ -9062,6 +9119,37 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/python-num2words/0.5.9-1/ (for browsing the source)
 - https://sources.debian.net/src/python-num2words/0.5.9-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/python-num2words/0.5.9-1/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `python-odf=1.4.1-1`
+
+Binary Packages:
+
+- `python3-odf=1.4.1-1`
+
+Licenses: (parsed from: `/usr/share/doc/python3-odf/copyright`)
+
+- `Apache-2`
+- `Apache-2.0`
+- `CC-BY-SA-3.0`
+- `GPL-2`
+- `GPL-2+`
+- `LGPL-2`
+- `LGPL-2.1+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris python-odf=1.4.1-1
+'http://deb.debian.org/debian/pool/main/p/python-odf/python-odf_1.4.1-1.dsc' python-odf_1.4.1-1.dsc 2248 SHA256:6fd9cd497e309f25c1037c815373fa54be43a0f16fc810953d9f70204d2543b3
+'http://deb.debian.org/debian/pool/main/p/python-odf/python-odf_1.4.1.orig.tar.gz' python-odf_1.4.1.orig.tar.gz 10064589 SHA256:9f97e4c808f656ce22739eec43a7c1741f645b7decef37d4fb048edb33e8caad
+'http://deb.debian.org/debian/pool/main/p/python-odf/python-odf_1.4.1-1.debian.tar.xz' python-odf_1.4.1-1.debian.tar.xz 15476 SHA256:5dc844815254e418ba7cc08f7acb812b68c82c7f89b089d51808e2ef9c5c8399
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/python-odf/1.4.1-1/ (for browsing the source)
+- https://sources.debian.net/src/python-odf/1.4.1-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/python-odf/1.4.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `python-ofxparse=0.19-2`
 
