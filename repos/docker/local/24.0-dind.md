@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:881c987bf80d40ddcc0f01d845242611380eba9115d9eeab12713c5215c21959`
+- Image ID: `sha256:d688977ba8f6f675a75f6291be6c98ffd034900c989b8d5531bd3cddca457b8c`
 - Created: `2023-05-30T23:05:39Z`
-- Virtual Size: ~ 323.50 Mb  
+- Virtual Size: ~ 328.78 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `DOCKER_VERSION=24.0.2`
-  - `DOCKER_BUILDX_VERSION=0.10.5`
+  - `DOCKER_BUILDX_VERSION=0.11.0`
   - `DOCKER_COMPOSE_VERSION=2.18.1`
   - `DOCKER_TLS_CERTDIR=/certs`
   - `DIND_COMMIT=d58df1fc6c866447ce2cd129af10e5b507705624`
@@ -72,16 +72,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.14.0-r0 description:
+apk-tools-2.14.0-r2 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.14.0-r0 webpage:
+apk-tools-2.14.0-r2 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.14.0-r0 installed size:
+apk-tools-2.14.0-r2 installed size:
 304 KiB
 
-apk-tools-2.14.0-r0 license:
+apk-tools-2.14.0-r2 license:
 GPL-2.0-only
 
 ```
@@ -89,16 +89,16 @@ GPL-2.0-only
 ### `apk` package: `btrfs-progs`
 
 ```console
-btrfs-progs-6.3-r0 description:
+btrfs-progs-6.3.1-r0 description:
 BTRFS filesystem utilities
 
-btrfs-progs-6.3-r0 webpage:
+btrfs-progs-6.3.1-r0 webpage:
 https://btrfs.wiki.kernel.org
 
-btrfs-progs-6.3-r0 installed size:
-1392 KiB
+btrfs-progs-6.3.1-r0 installed size:
+1508 KiB
 
-btrfs-progs-6.3-r0 license:
+btrfs-progs-6.3.1-r0 license:
 GPL-2.0-or-later
 
 ```
@@ -106,16 +106,16 @@ GPL-2.0-or-later
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.36.0-r9 description:
+busybox-1.36.1-r0 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.36.0-r9 webpage:
+busybox-1.36.1-r0 webpage:
 https://busybox.net/
 
-busybox-1.36.0-r9 installed size:
+busybox-1.36.1-r0 installed size:
 924 KiB
 
-busybox-1.36.0-r9 license:
+busybox-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -123,16 +123,16 @@ GPL-2.0-only
 ### `apk` package: `busybox-binsh`
 
 ```console
-busybox-binsh-1.36.0-r9 description:
+busybox-binsh-1.36.1-r0 description:
 busybox ash /bin/sh
 
-busybox-binsh-1.36.0-r9 webpage:
+busybox-binsh-1.36.1-r0 webpage:
 https://busybox.net/
 
-busybox-binsh-1.36.0-r9 installed size:
+busybox-binsh-1.36.1-r0 installed size:
 8192 B
 
-busybox-binsh-1.36.0-r9 license:
+busybox-binsh-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -344,16 +344,16 @@ MIT
 ### `apk` package: `libblkid`
 
 ```console
-libblkid-2.38.1-r7 description:
+libblkid-2.38.1-r8 description:
 Block device identification library from util-linux
 
-libblkid-2.38.1-r7 webpage:
+libblkid-2.38.1-r8 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
-libblkid-2.38.1-r7 installed size:
+libblkid-2.38.1-r8 installed size:
 300 KiB
 
-libblkid-2.38.1-r7 license:
+libblkid-2.38.1-r8 license:
 LGPL-2.1-or-later
 
 ```
@@ -395,16 +395,16 @@ GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.1.0-r4 description:
+libcrypto3-3.1.1-r1 description:
 Crypto library from openssl
 
-libcrypto3-3.1.0-r4 webpage:
+libcrypto3-3.1.1-r1 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.1.0-r4 installed size:
-4460 KiB
+libcrypto3-3.1.1-r1 installed size:
+4464 KiB
 
-libcrypto3-3.1.0-r4 license:
+libcrypto3-3.1.1-r1 license:
 Apache-2.0
 
 ```
@@ -497,16 +497,16 @@ GPL-2.0-or-later
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.1.0-r4 description:
+libssl3-3.1.1-r1 description:
 SSL shared libraries
 
-libssl3-3.1.0-r4 webpage:
+libssl3-3.1.1-r1 webpage:
 https://www.openssl.org/
 
-libssl3-3.1.0-r4 installed size:
+libssl3-3.1.1-r1 installed size:
 552 KiB
 
-libssl3-3.1.0-r4 license:
+libssl3-3.1.1-r1 license:
 Apache-2.0
 
 ```
@@ -548,16 +548,16 @@ BSD-3-Clause
 ### `apk` package: `libuuid`
 
 ```console
-libuuid-2.38.1-r7 description:
+libuuid-2.38.1-r8 description:
 DCE compatible Universally Unique Identifier library
 
-libuuid-2.38.1-r7 webpage:
+libuuid-2.38.1-r8 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
-libuuid-2.38.1-r7 installed size:
+libuuid-2.38.1-r8 installed size:
 40 KiB
 
-libuuid-2.38.1-r7 license:
+libuuid-2.38.1-r8 license:
 BSD-3-Clause
 
 ```
@@ -718,16 +718,16 @@ BSD
 ### `apk` package: `openssl`
 
 ```console
-openssl-3.1.0-r4 description:
+openssl-3.1.1-r1 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-3.1.0-r4 webpage:
+openssl-3.1.1-r1 webpage:
 https://www.openssl.org/
 
-openssl-3.1.0-r4 installed size:
+openssl-3.1.1-r1 installed size:
 748 KiB
 
-openssl-3.1.0-r4 license:
+openssl-3.1.1-r1 license:
 Apache-2.0
 
 ```
@@ -769,16 +769,16 @@ GPL-2.0-only
 ### `apk` package: `shadow-libs`
 
 ```console
-shadow-libs-4.13-r2 description:
+shadow-libs-4.13-r4 description:
 PAM-using login and passwd utilities (usermod, useradd, ...) (libraries)
 
-shadow-libs-4.13-r2 webpage:
+shadow-libs-4.13-r4 webpage:
 https://github.com/shadow-maint/shadow
 
-shadow-libs-4.13-r2 installed size:
+shadow-libs-4.13-r4 installed size:
 128 KiB
 
-shadow-libs-4.13-r2 license:
+shadow-libs-4.13-r4 license:
 BSD-3-Clause
 
 ```
@@ -786,16 +786,16 @@ BSD-3-Clause
 ### `apk` package: `shadow-subids`
 
 ```console
-shadow-subids-4.13-r2 description:
+shadow-subids-4.13-r4 description:
 Utilities for using subordinate UIDs and GIDs
 
-shadow-subids-4.13-r2 webpage:
+shadow-subids-4.13-r4 webpage:
 https://github.com/shadow-maint/shadow
 
-shadow-subids-4.13-r2 installed size:
+shadow-subids-4.13-r4 installed size:
 132 KiB
 
-shadow-subids-4.13-r2 license:
+shadow-subids-4.13-r4 license:
 BSD-3-Clause
 
 ```
@@ -803,16 +803,16 @@ BSD-3-Clause
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.36.0-r9 description:
+ssl_client-1.36.1-r0 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.36.0-r9 webpage:
+ssl_client-1.36.1-r0 webpage:
 https://busybox.net/
 
-ssl_client-1.36.0-r9 installed size:
+ssl_client-1.36.1-r0 installed size:
 28 KiB
 
-ssl_client-1.36.0-r9 license:
+ssl_client-1.36.1-r0 license:
 GPL-2.0-only
 
 ```

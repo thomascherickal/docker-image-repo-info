@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3881fc1266148372f542994988546021911ed074ce929bbae6ea3f006c222c8a`
-- Created: `2023-05-22T23:04:13Z`
-- Virtual Size: ~ 151.14 Mb  
+- Image ID: `sha256:de51649111a57c3eef413eb4e5d669c0cd8fa682306ddbbfaf7faaf1f0d9de6c`
+- Created: `2023-06-13T17:04:14Z`
+- Virtual Size: ~ 156.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -12,7 +12,7 @@
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `DOCKER_VERSION=23.0.6`
-  - `DOCKER_BUILDX_VERSION=0.10.5`
+  - `DOCKER_BUILDX_VERSION=0.11.0`
   - `DOCKER_COMPOSE_VERSION=2.18.1`
   - `DOCKER_TLS_CERTDIR=/certs`
 
@@ -72,16 +72,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.14.0-r0 description:
+apk-tools-2.14.0-r2 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.14.0-r0 webpage:
+apk-tools-2.14.0-r2 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.14.0-r0 installed size:
+apk-tools-2.14.0-r2 installed size:
 304 KiB
 
-apk-tools-2.14.0-r0 license:
+apk-tools-2.14.0-r2 license:
 GPL-2.0-only
 
 ```
@@ -89,16 +89,16 @@ GPL-2.0-only
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.36.0-r9 description:
+busybox-1.36.1-r0 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.36.0-r9 webpage:
+busybox-1.36.1-r0 webpage:
 https://busybox.net/
 
-busybox-1.36.0-r9 installed size:
+busybox-1.36.1-r0 installed size:
 924 KiB
 
-busybox-1.36.0-r9 license:
+busybox-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -106,16 +106,16 @@ GPL-2.0-only
 ### `apk` package: `busybox-binsh`
 
 ```console
-busybox-binsh-1.36.0-r9 description:
+busybox-binsh-1.36.1-r0 description:
 busybox ash /bin/sh
 
-busybox-binsh-1.36.0-r9 webpage:
+busybox-binsh-1.36.1-r0 webpage:
 https://busybox.net/
 
-busybox-binsh-1.36.0-r9 installed size:
+busybox-binsh-1.36.1-r0 installed size:
 8192 B
 
-busybox-binsh-1.36.0-r9 license:
+busybox-binsh-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -174,16 +174,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.1.0-r4 description:
+libcrypto3-3.1.1-r1 description:
 Crypto library from openssl
 
-libcrypto3-3.1.0-r4 webpage:
+libcrypto3-3.1.1-r1 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.1.0-r4 installed size:
-4460 KiB
+libcrypto3-3.1.1-r1 installed size:
+4464 KiB
 
-libcrypto3-3.1.0-r4 license:
+libcrypto3-3.1.1-r1 license:
 Apache-2.0
 
 ```
@@ -225,16 +225,16 @@ X11
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.1.0-r4 description:
+libssl3-3.1.1-r1 description:
 SSL shared libraries
 
-libssl3-3.1.0-r4 webpage:
+libssl3-3.1.1-r1 webpage:
 https://www.openssl.org/
 
-libssl3-3.1.0-r4 installed size:
+libssl3-3.1.1-r1 installed size:
 552 KiB
 
-libssl3-3.1.0-r4 license:
+libssl3-3.1.1-r1 license:
 Apache-2.0
 
 ```
@@ -361,16 +361,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.36.0-r9 description:
+ssl_client-1.36.1-r0 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.36.0-r9 webpage:
+ssl_client-1.36.1-r0 webpage:
 https://busybox.net/
 
-ssl_client-1.36.0-r9 installed size:
+ssl_client-1.36.1-r0 installed size:
 28 KiB
 
-ssl_client-1.36.0-r9 license:
+ssl_client-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
