@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5ceaf0c2705c4b262abc503628b9df35246d5b625ab33539bc6b2f095b09b45a`
-- Created: `2023-06-09T00:48:25.245222005Z`
-- Virtual Size: ~ 80.66 Mb  
+- Image ID: `sha256:551b79f699e50682e8d3778fe883f7724f62a6591667d18c945e2e7b44d1b28c`
+- Created: `2023-06-15T01:05:35.774162369Z`
+- Virtual Size: ~ 74.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -78,16 +78,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.14.0-r0 description:
+apk-tools-2.14.0-r2 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.14.0-r0 webpage:
+apk-tools-2.14.0-r2 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.14.0-r0 installed size:
+apk-tools-2.14.0-r2 installed size:
 304 KiB
 
-apk-tools-2.14.0-r0 license:
+apk-tools-2.14.0-r2 license:
 GPL-2.0-only
 
 ```
@@ -129,16 +129,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.36.0-r9 description:
+busybox-1.36.1-r0 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.36.0-r9 webpage:
+busybox-1.36.1-r0 webpage:
 https://busybox.net/
 
-busybox-1.36.0-r9 installed size:
+busybox-1.36.1-r0 installed size:
 924 KiB
 
-busybox-1.36.0-r9 license:
+busybox-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -146,16 +146,16 @@ GPL-2.0-only
 ### `apk` package: `busybox-binsh`
 
 ```console
-busybox-binsh-1.36.0-r9 description:
+busybox-binsh-1.36.1-r0 description:
 busybox ash /bin/sh
 
-busybox-binsh-1.36.0-r9 webpage:
+busybox-binsh-1.36.1-r0 webpage:
 https://busybox.net/
 
-busybox-binsh-1.36.0-r9 installed size:
+busybox-binsh-1.36.1-r0 installed size:
 8192 B
 
-busybox-binsh-1.36.0-r9 license:
+busybox-binsh-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -503,16 +503,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-3.1.0-r4 description:
+openssl-3.1.1-r1 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-3.1.0-r4 webpage:
+openssl-3.1.1-r1 webpage:
 https://www.openssl.org/
 
-openssl-3.1.0-r4 installed size:
+openssl-3.1.1-r1 installed size:
 748 KiB
 
-openssl-3.1.0-r4 license:
+openssl-3.1.1-r1 license:
 Apache-2.0
 
 ```
@@ -571,16 +571,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.36.0-r9 description:
+ssl_client-1.36.1-r0 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.36.0-r9 webpage:
+ssl_client-1.36.1-r0 webpage:
 https://busybox.net/
 
-ssl_client-1.36.0-r9 installed size:
+ssl_client-1.36.1-r0 installed size:
 28 KiB
 
-ssl_client-1.36.0-r9 license:
+ssl_client-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
