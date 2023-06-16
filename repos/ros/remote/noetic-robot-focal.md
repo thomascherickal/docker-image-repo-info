@@ -1,7 +1,7 @@
 ## `ros:noetic-robot-focal`
 
 ```console
-$ docker pull ros@sha256:2a5be4e870a59103e458c9c54ee5c792edbbeac65b05870c1af81d348f48f48d
+$ docker pull ros@sha256:c322379d563382d5b307b09a4783205c4f1cf8fcaa8a8b15dd1f74113bf57990
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -223,104 +223,104 @@ RUN apt-get update && apt-get install -y --no-install-recommends     ros-noetic-
 ### `ros:noetic-robot-focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull ros@sha256:2533f69247833764ddf7afe4f4b5770c9971b5019b470c911984e636b0eb80f5
+$ docker pull ros@sha256:aaa16ee2386152940990c1eea8db66d40fbb79187f45cda6055360abf39d0029
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **338.3 MB (338295210 bytes)**  
+-	Total Size: **338.4 MB (338411235 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:31c9e708cb7b236b8280bc2e38de11314a901ffc5f631038fc3baa6b87df7d70`
+-	Image ID: `sha256:37de2da2b87b1a4c91b41c110c0665bd787fb4b6b035cf24e10b346628d6a2fd`
 -	Entrypoint: `["\/ros_entrypoint.sh"]`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Thu, 13 Apr 2023 13:09:50 GMT
+# Mon, 05 Jun 2023 17:07:59 GMT
 ARG RELEASE
-# Thu, 13 Apr 2023 13:09:50 GMT
+# Mon, 05 Jun 2023 17:07:59 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 13 Apr 2023 13:09:50 GMT
+# Mon, 05 Jun 2023 17:07:59 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 13 Apr 2023 13:09:51 GMT
+# Mon, 05 Jun 2023 17:07:59 GMT
 LABEL org.opencontainers.image.version=20.04
-# Thu, 13 Apr 2023 13:09:59 GMT
-ADD file:0150fa02321f8be160e90ff64583d263fe651b5d418ab65f05ba604449ab47c6 in / 
-# Thu, 13 Apr 2023 13:10:00 GMT
+# Mon, 05 Jun 2023 17:08:02 GMT
+ADD file:6c0661b94e27ede70ca2a8842bdab5bc26b9ae4760b17870eda9d595672795ff in / 
+# Mon, 05 Jun 2023 17:08:02 GMT
 CMD ["/bin/bash"]
-# Tue, 18 Apr 2023 02:06:50 GMT
+# Fri, 16 Jun 2023 01:04:59 GMT
 RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 02:06:55 GMT
+# Fri, 16 Jun 2023 01:05:24 GMT
 RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     && rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 02:06:56 GMT
+# Fri, 16 Jun 2023 01:05:24 GMT
 RUN echo "deb http://packages.ros.org/ros/ubuntu focal main" > /etc/apt/sources.list.d/ros1-latest.list
-# Tue, 18 Apr 2023 02:06:57 GMT
+# Fri, 16 Jun 2023 01:05:25 GMT
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-# Tue, 18 Apr 2023 02:06:57 GMT
+# Fri, 16 Jun 2023 01:05:25 GMT
 ENV LANG=C.UTF-8
-# Tue, 18 Apr 2023 02:06:57 GMT
+# Fri, 16 Jun 2023 01:05:25 GMT
 ENV LC_ALL=C.UTF-8
-# Tue, 18 Apr 2023 02:06:57 GMT
+# Fri, 16 Jun 2023 01:05:25 GMT
 ENV ROS_DISTRO=noetic
-# Tue, 18 Apr 2023 02:08:54 GMT
+# Fri, 16 Jun 2023 01:08:17 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-noetic-ros-core=1.5.0-1*     && rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 02:08:59 GMT
+# Fri, 16 Jun 2023 01:08:23 GMT
 COPY file:b48a3fff5008212a0bcdc238d0e8be930aa89d2336e357e1f628c98db523efeb in / 
-# Tue, 18 Apr 2023 02:09:00 GMT
+# Fri, 16 Jun 2023 01:08:23 GMT
 ENTRYPOINT ["/ros_entrypoint.sh"]
-# Tue, 18 Apr 2023 02:09:00 GMT
+# Fri, 16 Jun 2023 01:08:23 GMT
 CMD ["bash"]
-# Tue, 18 Apr 2023 02:09:17 GMT
+# Fri, 16 Jun 2023 01:09:04 GMT
 RUN apt-get update && apt-get install --no-install-recommends -y     build-essential     python3-rosdep     python3-rosinstall     python3-vcstools     && rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 02:09:22 GMT
+# Fri, 16 Jun 2023 01:09:09 GMT
 RUN rosdep init &&   rosdep update --rosdistro $ROS_DISTRO
-# Tue, 18 Apr 2023 02:10:45 GMT
+# Fri, 16 Jun 2023 01:10:45 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-noetic-ros-base=1.5.0-1*     && rm -rf /var/lib/apt/lists/*
-# Tue, 18 Apr 2023 02:11:30 GMT
+# Fri, 16 Jun 2023 01:11:45 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-noetic-robot=1.5.0-1*     && rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
-	-	`sha256:2378679266ac5157323158b6e52e7a884e559db5217037e57992e47a1667d525`  
-		Last Modified: Fri, 14 Apr 2023 07:39:20 GMT  
-		Size: 27.2 MB (27196396 bytes)  
+	-	`sha256:29c851dfb906fc3c51d9a9d53a0cfa8ea88e10040baaf47155e04bf87ce3f3a5`  
+		Last Modified: Fri, 09 Jun 2023 02:40:24 GMT  
+		Size: 27.2 MB (27200436 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21d6dffce030c2c6f198ef16ad47e4720f0a13e866894c874704a268d67d9457`  
-		Last Modified: Tue, 18 Apr 2023 02:22:04 GMT  
-		Size: 1.2 MB (1157932 bytes)  
+	-	`sha256:4e8ce101c5379362c5d849146976146cdb15940589c3378f71530e726706b160`  
+		Last Modified: Fri, 16 Jun 2023 01:43:18 GMT  
+		Size: 1.2 MB (1199977 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7244b6de4ee8515b3ee22913bcbdc5c6e96a2254103d3e5c26708af6de8624e7`  
-		Last Modified: Tue, 18 Apr 2023 02:22:02 GMT  
-		Size: 5.5 MB (5532603 bytes)  
+	-	`sha256:dde7326ceba9de7061d919892605fd699e778fbaf87d16a5e3c3506e23a475fa`  
+		Last Modified: Fri, 16 Jun 2023 01:43:16 GMT  
+		Size: 5.5 MB (5533346 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89011a19d825c31dd1ecdacfff5418ea066cc6c3d8b16aa5495409bae017b1f1`  
-		Last Modified: Tue, 18 Apr 2023 02:22:01 GMT  
+	-	`sha256:8660fa6a9889b47b0cdedcd38551c4c097b74330bc7a35fd279ee17d32d7d67e`  
+		Last Modified: Fri, 16 Jun 2023 01:43:15 GMT  
 		Size: 228.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6fcf18013b664813b5e2ac52cbfde90f06a51486a530223919716ad97cb24c2a`  
-		Last Modified: Tue, 18 Apr 2023 02:22:01 GMT  
-		Size: 2.0 KB (1984 bytes)  
+	-	`sha256:5097712cf91a87b7360886785f2a964a56ce10c8e4f3a77000f83523967fa20a`  
+		Last Modified: Fri, 16 Jun 2023 01:43:15 GMT  
+		Size: 2.0 KB (1990 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3d1809be61e23432d56e45874bfae781cc545d2889cf2d4a4ec837bbe62c12ae`  
-		Last Modified: Tue, 18 Apr 2023 02:22:22 GMT  
-		Size: 171.5 MB (171472211 bytes)  
+	-	`sha256:10ff70657adfd24e02a562b4b09fdd26c26299a6001899ed61f0a8d56fb4e6f7`  
+		Last Modified: Fri, 16 Jun 2023 01:43:49 GMT  
+		Size: 171.5 MB (171538574 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:29476e1a64f98957516be750445e8fe8dab41029f42b326871dad7c15a5002f4`  
-		Last Modified: Tue, 18 Apr 2023 02:22:01 GMT  
-		Size: 196.0 B  
+	-	`sha256:e9a43a9a62bd1e51770b576e70e4a54589303e48ac0c92cd9b8e010d58561397`  
+		Last Modified: Fri, 16 Jun 2023 01:43:16 GMT  
+		Size: 195.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c9778a01d5ceece6c4f0c2c0c02cc6f090ecb6a15e4ae5b1ae330ee94589a570`  
-		Last Modified: Tue, 18 Apr 2023 02:22:36 GMT  
-		Size: 45.2 MB (45203703 bytes)  
+	-	`sha256:b3b2416bfb26d974c3da81f7eee6b7acfdb4eccae5aa2c72651e419946abed85`  
+		Last Modified: Fri, 16 Jun 2023 01:44:03 GMT  
+		Size: 45.2 MB (45205161 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7fdd76f4f02f17a00aaef729800e659e052bf15f73a3a5e03cdb8c835a754761`  
-		Last Modified: Tue, 18 Apr 2023 02:22:31 GMT  
-		Size: 297.1 KB (297141 bytes)  
+	-	`sha256:1c1bfa67a8583b7c003a10dc5da1e0a39d70b559bb0ef4854efb785d8a227d1e`  
+		Last Modified: Fri, 16 Jun 2023 01:43:58 GMT  
+		Size: 300.9 KB (300915 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e54f09767fc16c06e81dd2dc318f6e7d1bb01562aefaaed477349db702168210`  
-		Last Modified: Tue, 18 Apr 2023 02:22:38 GMT  
-		Size: 72.0 MB (71974377 bytes)  
+	-	`sha256:4152459f508eaf13deb06ac7708780ad620739b8cd3b7719a65bc728be19dd88`  
+		Last Modified: Fri, 16 Jun 2023 01:44:06 GMT  
+		Size: 72.0 MB (71971225 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:89aca94dfd1aa81009c8bae0863333e2be4a9b32f240850a23ccb3a28917a43d`  
-		Last Modified: Tue, 18 Apr 2023 02:22:52 GMT  
-		Size: 15.5 MB (15458439 bytes)  
+	-	`sha256:da7bdc321a49b00d166ccf367c13b2b415ca1c5ddcbc9c4f3547e683beea5c2c`  
+		Last Modified: Fri, 16 Jun 2023 01:44:20 GMT  
+		Size: 15.5 MB (15459188 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
