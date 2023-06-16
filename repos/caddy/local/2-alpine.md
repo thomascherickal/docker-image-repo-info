@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:86ab4e60cac2e943fc115f5a9ec4f7b91ee165fbabc01b3f00963ce6319d1101`
-- Created: `2023-03-29T19:40:52.762423651Z`
+- Image ID: `sha256:050db1833a9c3bee6699e344442199769ebfd076525de385a1eb47318b900119`
+- Created: `2023-06-15T05:29:50.925896872Z`
 - Virtual Size: ~ 46.01 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -113,16 +113,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20220614-r0 description:
+ca-certificates-20230506-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20220614-r0 webpage:
+ca-certificates-20230506-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20220614-r0 installed size:
-688 KiB
+ca-certificates-20230506-r0 installed size:
+692 KiB
 
-ca-certificates-20220614-r0 license:
+ca-certificates-20230506-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -130,16 +130,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20220614-r0 description:
+ca-certificates-bundle-20230506-r0 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20220614-r0 webpage:
+ca-certificates-bundle-20230506-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20220614-r0 installed size:
+ca-certificates-bundle-20230506-r0 installed size:
 228 KiB
 
-ca-certificates-bundle-20220614-r0 license:
+ca-certificates-bundle-20230506-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -164,16 +164,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcap`
 
 ```console
-libcap-2.64-r0 description:
+libcap-2.64-r1 description:
 POSIX 1003.1e capabilities
 
-libcap-2.64-r0 webpage:
+libcap-2.64-r1 webpage:
 https://sites.google.com/site/fullycapable/
 
-libcap-2.64-r0 installed size:
+libcap-2.64-r1 installed size:
 184 KiB
 
-libcap-2.64-r0 license:
+libcap-2.64-r1 license:
 BSD-3-Clause OR GPL-2.0-only
 
 ```
@@ -181,16 +181,16 @@ BSD-3-Clause OR GPL-2.0-only
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1t-r2 description:
+libcrypto1.1-1.1.1u-r1 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1t-r2 webpage:
+libcrypto1.1-1.1.1u-r1 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1t-r2 installed size:
-2712 KiB
+libcrypto1.1-1.1.1u-r1 installed size:
+2708 KiB
 
-libcrypto1.1-1.1.1t-r2 license:
+libcrypto1.1-1.1.1u-r1 license:
 OpenSSL
 
 ```
@@ -198,16 +198,16 @@ OpenSSL
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1t-r2 description:
+libssl1.1-1.1.1u-r1 description:
 SSL shared libraries
 
-libssl1.1-1.1.1t-r2 webpage:
+libssl1.1-1.1.1u-r1 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1t-r2 installed size:
+libssl1.1-1.1.1u-r1 installed size:
 528 KiB
 
-libssl1.1-1.1.1t-r2 license:
+libssl1.1-1.1.1u-r1 license:
 OpenSSL
 
 ```
@@ -215,16 +215,16 @@ OpenSSL
 ### `apk` package: `mailcap`
 
 ```console
-mailcap-2.1.53-r0 description:
+mailcap-2.1.54-r0 description:
 Helper application and MIME type associations for file types
 
-mailcap-2.1.53-r0 webpage:
+mailcap-2.1.54-r0 webpage:
 https://pagure.io/mailcap
 
-mailcap-2.1.53-r0 installed size:
-84 KiB
+mailcap-2.1.54-r0 installed size:
+88 KiB
 
-mailcap-2.1.53-r0 license:
+mailcap-2.1.54-r0 license:
 Public-Domain and MIT
 
 ```
@@ -232,16 +232,16 @@ Public-Domain and MIT
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.3-r2 description:
+musl-1.2.3-r3 description:
 the musl c library (libc) implementation
 
-musl-1.2.3-r2 webpage:
+musl-1.2.3-r3 webpage:
 https://musl.libc.org/
 
-musl-1.2.3-r2 installed size:
+musl-1.2.3-r3 installed size:
 608 KiB
 
-musl-1.2.3-r2 license:
+musl-1.2.3-r3 license:
 MIT
 
 ```
@@ -249,16 +249,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.3-r2 description:
+musl-utils-1.2.3-r3 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.3-r2 webpage:
+musl-utils-1.2.3-r3 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.3-r2 installed size:
+musl-utils-1.2.3-r3 installed size:
 132 KiB
 
-musl-utils-1.2.3-r2 license:
+musl-utils-1.2.3-r3 license:
 MIT BSD GPL2+
 
 ```
