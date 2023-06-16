@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:02f1f2f7a74cdfc42d3e43b8e40a631c07e37b52fd248f04a68059f1ee5f16e7`
+- Image ID: `sha256:ca4277e001e73745365306b106e15d8e5ef19532a821c5c2ee181bf657fbadc7`
 - Created: `2023-06-07T09:49:17Z`
-- Virtual Size: ~ 57.49 Mb  
+- Virtual Size: ~ 51.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["python3"]`
@@ -125,16 +125,16 @@ GPL-2.0-only
 ### `apk` package: `ca-certificates`
 
 ```console
-ca-certificates-20220614-r4 description:
+ca-certificates-20230506-r0 description:
 Common CA certificates PEM files from Mozilla
 
-ca-certificates-20220614-r4 webpage:
+ca-certificates-20230506-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-20220614-r4 installed size:
-688 KiB
+ca-certificates-20230506-r0 installed size:
+692 KiB
 
-ca-certificates-20220614-r4 license:
+ca-certificates-20230506-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -142,16 +142,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `ca-certificates-bundle`
 
 ```console
-ca-certificates-bundle-20220614-r4 description:
+ca-certificates-bundle-20230506-r0 description:
 Pre generated bundle of Mozilla certificates
 
-ca-certificates-bundle-20220614-r4 webpage:
+ca-certificates-bundle-20230506-r0 webpage:
 https://www.mozilla.org/en-US/about/governance/policies/security-group/certs/
 
-ca-certificates-bundle-20220614-r4 installed size:
+ca-certificates-bundle-20230506-r0 installed size:
 232 KiB
 
-ca-certificates-bundle-20220614-r4 license:
+ca-certificates-bundle-20230506-r0 license:
 MPL-2.0 AND MIT
 
 ```
@@ -465,16 +465,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.3-r4 description:
+musl-utils-1.2.3-r5 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.3-r4 webpage:
+musl-utils-1.2.3-r5 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.3-r4 installed size:
+musl-utils-1.2.3-r5 installed size:
 132 KiB
 
-musl-utils-1.2.3-r4 license:
+musl-utils-1.2.3-r5 license:
 MIT AND BSD-2-Clause AND GPL-2.0-or-later
 
 ```
