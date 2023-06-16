@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:023c8a0b9f204c01b0abc93c0a6595bd687c1b72c9fe4531419b04ebceec5f6e`
-- Created: `2023-06-09T06:14:15.786071001Z`
-- Virtual Size: ~ 309.06 Mb  
+- Image ID: `sha256:1a47bdb3d0c8a743731dfee413691a945b7810c301c8e1bed2e7cffad9c3b2c0`
+- Created: `2023-06-15T08:17:38.374963905Z`
+- Virtual Size: ~ 303.05 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -95,16 +95,16 @@ BSD-2-Clause AND custom
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.14.0-r0 description:
+apk-tools-2.14.0-r2 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.14.0-r0 webpage:
+apk-tools-2.14.0-r2 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.14.0-r0 installed size:
+apk-tools-2.14.0-r2 installed size:
 304 KiB
 
-apk-tools-2.14.0-r0 license:
+apk-tools-2.14.0-r2 license:
 GPL-2.0-only
 
 ```
@@ -180,16 +180,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.36.0-r9 description:
+busybox-1.36.1-r0 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.36.0-r9 webpage:
+busybox-1.36.1-r0 webpage:
 https://busybox.net/
 
-busybox-1.36.0-r9 installed size:
+busybox-1.36.1-r0 installed size:
 924 KiB
 
-busybox-1.36.0-r9 license:
+busybox-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -197,16 +197,16 @@ GPL-2.0-only
 ### `apk` package: `busybox-binsh`
 
 ```console
-busybox-binsh-1.36.0-r9 description:
+busybox-binsh-1.36.1-r0 description:
 busybox ash /bin/sh
 
-busybox-binsh-1.36.0-r9 webpage:
+busybox-binsh-1.36.1-r0 webpage:
 https://busybox.net/
 
-busybox-binsh-1.36.0-r9 installed size:
+busybox-binsh-1.36.1-r0 installed size:
 8192 B
 
-busybox-binsh-1.36.0-r9 license:
+busybox-binsh-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -282,16 +282,16 @@ LGPL-2.1-or-later OR MPL-1.1
 ### `apk` package: `cups-libs`
 
 ```console
-cups-libs-2.4.4-r0 description:
+cups-libs-2.4.5-r0 description:
 CUPS libraries
 
-cups-libs-2.4.4-r0 webpage:
+cups-libs-2.4.5-r0 webpage:
 https://github.com/OpenPrinting/cups/
 
-cups-libs-2.4.4-r0 installed size:
+cups-libs-2.4.5-r0 installed size:
 576 KiB
 
-cups-libs-2.4.4-r0 license:
+cups-libs-2.4.5-r0 license:
 Apache-2.0
 
 ```
@@ -520,16 +520,16 @@ MIT
 ### `apk` package: `icu-data-en`
 
 ```console
-icu-data-en-73.1-r1 description:
+icu-data-en-73.2-r0 description:
 Stripped down ICU data with only en_US/GB locale and no legacy charset converters
 
-icu-data-en-73.1-r1 webpage:
+icu-data-en-73.2-r0 webpage:
 https://icu.unicode.org/
 
-icu-data-en-73.1-r1 installed size:
+icu-data-en-73.2-r0 installed size:
 3016 KiB
 
-icu-data-en-73.1-r1 license:
+icu-data-en-73.2-r0 license:
 ICU
 
 ```
@@ -537,16 +537,16 @@ ICU
 ### `apk` package: `icu-libs`
 
 ```console
-icu-libs-73.1-r1 description:
+icu-libs-73.2-r0 description:
 International Components for Unicode library (libraries)
 
-icu-libs-73.1-r1 webpage:
+icu-libs-73.2-r0 webpage:
 https://icu.unicode.org/
 
-icu-libs-73.1-r1 installed size:
+icu-libs-73.2-r0 installed size:
 4328 KiB
 
-icu-libs-73.1-r1 license:
+icu-libs-73.2-r0 license:
 ICU
 
 ```
@@ -741,16 +741,16 @@ curl
 ### `apk` package: `libde265`
 
 ```console
-libde265-1.0.11-r2 description:
+libde265-1.0.12-r0 description:
 Open h.265 video codec implementation
 
-libde265-1.0.11-r2 webpage:
+libde265-1.0.12-r0 webpage:
 https://github.com/strukturag/libde265
 
-libde265-1.0.11-r2 installed size:
+libde265-1.0.12-r0 installed size:
 436 KiB
 
-libde265-1.0.11-r2 license:
+libde265-1.0.12-r0 license:
 LGPL-3.0-or-later
 
 ```
@@ -894,16 +894,16 @@ LGPL-2.1-or-later
 ### `apk` package: `libjpeg-turbo`
 
 ```console
-libjpeg-turbo-2.1.5.1-r2 description:
+libjpeg-turbo-2.1.5.1-r3 description:
 Accelerated baseline JPEG compression and decompression library
 
-libjpeg-turbo-2.1.5.1-r2 webpage:
+libjpeg-turbo-2.1.5.1-r3 webpage:
 https://libjpeg-turbo.org/
 
-libjpeg-turbo-2.1.5.1-r2 installed size:
+libjpeg-turbo-2.1.5.1-r3 installed size:
 1112 KiB
 
-libjpeg-turbo-2.1.5.1-r2 license:
+libjpeg-turbo-2.1.5.1-r3 license:
 BSD-3-Clause AND IJG AND Zlib
 
 ```
@@ -911,16 +911,16 @@ BSD-3-Clause AND IJG AND Zlib
 ### `apk` package: `libjxl`
 
 ```console
-libjxl-0.8.1-r5 description:
+libjxl-0.8.2-r0 description:
 JPEG XL image format reference implementation
 
-libjxl-0.8.1-r5 webpage:
+libjxl-0.8.2-r0 webpage:
 https://github.com/libjxl/libjxl
 
-libjxl-0.8.1-r5 installed size:
+libjxl-0.8.2-r0 installed size:
 4148 KiB
 
-libjxl-0.8.1-r5 license:
+libjxl-0.8.2-r0 license:
 Apache-2.0
 
 ```
@@ -1421,16 +1421,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-3.1.0-r4 description:
+openssl-3.1.1-r1 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-3.1.0-r4 webpage:
+openssl-3.1.1-r1 webpage:
 https://www.openssl.org/
 
-openssl-3.1.0-r4 installed size:
+openssl-3.1.1-r1 installed size:
 748 KiB
 
-openssl-3.1.0-r4 license:
+openssl-3.1.1-r1 license:
 Apache-2.0
 
 ```
@@ -1591,16 +1591,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.36.0-r9 description:
+ssl_client-1.36.1-r0 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.36.0-r9 webpage:
+ssl_client-1.36.1-r0 webpage:
 https://busybox.net/
 
-ssl_client-1.36.0-r9 installed size:
+ssl_client-1.36.1-r0 installed size:
 28 KiB
 
-ssl_client-1.36.0-r9 license:
+ssl_client-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -1625,16 +1625,16 @@ GPL-3.0-or-later
 ### `apk` package: `tiff`
 
 ```console
-tiff-4.5.0-r6 description:
+tiff-4.5.1-r0 description:
 Provides support for the Tag Image File Format or TIFF
 
-tiff-4.5.0-r6 webpage:
+tiff-4.5.1-r0 webpage:
 https://gitlab.com/libtiff/libtiff
 
-tiff-4.5.0-r6 installed size:
+tiff-4.5.1-r0 installed size:
 448 KiB
 
-tiff-4.5.0-r6 license:
+tiff-4.5.1-r0 license:
 libtiff
 
 ```
