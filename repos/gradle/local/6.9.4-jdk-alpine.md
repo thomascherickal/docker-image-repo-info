@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:19b7ae28d454e0bd911ad053668ffe92c7e1ccdb4fb7cdf1a581ec0e356b7226`
-- Created: `2023-05-25T00:17:56.167083348Z`
-- Virtual Size: ~ 563.25 Mb  
+- Image ID: `sha256:425f989d89f5c08110c8bade88a1264cbc6ffe887dbcc28324c810ffe17fa275`
+- Created: `2023-06-15T09:11:04.91891495Z`
+- Virtual Size: ~ 563.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["gradle"]`
@@ -74,16 +74,16 @@ MIT
 ### `apk` package: `apk-tools`
 
 ```console
-apk-tools-2.14.0-r0 description:
+apk-tools-2.14.0-r2 description:
 Alpine Package Keeper - package manager for alpine
 
-apk-tools-2.14.0-r0 webpage:
+apk-tools-2.14.0-r2 webpage:
 https://gitlab.alpinelinux.org/alpine/apk-tools
 
-apk-tools-2.14.0-r0 installed size:
+apk-tools-2.14.0-r2 installed size:
 304 KiB
 
-apk-tools-2.14.0-r0 license:
+apk-tools-2.14.0-r2 license:
 GPL-2.0-only
 
 ```
@@ -142,16 +142,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.36.0-r9 description:
+busybox-1.36.1-r0 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.36.0-r9 webpage:
+busybox-1.36.1-r0 webpage:
 https://busybox.net/
 
-busybox-1.36.0-r9 installed size:
+busybox-1.36.1-r0 installed size:
 924 KiB
 
-busybox-1.36.0-r9 license:
+busybox-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -159,16 +159,16 @@ GPL-2.0-only
 ### `apk` package: `busybox-binsh`
 
 ```console
-busybox-binsh-1.36.0-r9 description:
+busybox-binsh-1.36.1-r0 description:
 busybox ash /bin/sh
 
-busybox-binsh-1.36.0-r9 webpage:
+busybox-binsh-1.36.1-r0 webpage:
 https://busybox.net/
 
-busybox-binsh-1.36.0-r9 installed size:
+busybox-binsh-1.36.1-r0 installed size:
 8192 B
 
-busybox-binsh-1.36.0-r9 license:
+busybox-binsh-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
@@ -363,16 +363,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.1.0-r4 description:
+libcrypto3-3.1.1-r1 description:
 Crypto library from openssl
 
-libcrypto3-3.1.0-r4 webpage:
+libcrypto3-3.1.1-r1 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.1.0-r4 installed size:
-4460 KiB
+libcrypto3-3.1.1-r1 installed size:
+4464 KiB
 
-libcrypto3-3.1.0-r4 license:
+libcrypto3-3.1.1-r1 license:
 Apache-2.0
 
 ```
@@ -380,16 +380,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.1.1-r0 description:
+libcurl-8.1.2-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.1.1-r0 webpage:
+libcurl-8.1.2-r0 webpage:
 https://curl.se/
 
-libcurl-8.1.1-r0 installed size:
-552 KiB
+libcurl-8.1.2-r0 installed size:
+548 KiB
 
-libcurl-8.1.1-r0 license:
+libcurl-8.1.2-r0 license:
 curl
 
 ```
@@ -584,16 +584,16 @@ custom
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.1.0-r4 description:
+libssl3-3.1.1-r1 description:
 SSL shared libraries
 
-libssl3-3.1.0-r4 webpage:
+libssl3-3.1.1-r1 webpage:
 https://www.openssl.org/
 
-libssl3-3.1.0-r4 installed size:
+libssl3-3.1.1-r1 installed size:
 552 KiB
 
-libssl3-3.1.0-r4 license:
+libssl3-3.1.1-r1 license:
 Apache-2.0
 
 ```
@@ -635,16 +635,16 @@ GPL-2.0-or-later OR LGPL-3.0-or-later
 ### `apk` package: `libuuid`
 
 ```console
-libuuid-2.38.1-r7 description:
+libuuid-2.38.1-r8 description:
 DCE compatible Universally Unique Identifier library
 
-libuuid-2.38.1-r7 webpage:
+libuuid-2.38.1-r8 webpage:
 https://git.kernel.org/cgit/utils/util-linux/util-linux.git
 
-libuuid-2.38.1-r7 installed size:
+libuuid-2.38.1-r8 installed size:
 40 KiB
 
-libuuid-2.38.1-r7 license:
+libuuid-2.38.1-r8 license:
 BSD-3-Clause
 
 ```
@@ -873,16 +873,16 @@ MIT
 ### `apk` package: `python3`
 
 ```console
-python3-3.11.3-r11 description:
-A high-level scripting language
+python3-3.11.4-r0 description:
+High-level scripting language
 
-python3-3.11.3-r11 webpage:
+python3-3.11.4-r0 webpage:
 https://www.python.org/
 
-python3-3.11.3-r11 installed size:
+python3-3.11.4-r0 installed size:
 24 MiB
 
-python3-3.11.3-r11 license:
+python3-3.11.4-r0 license:
 PSF-2.0
 
 ```
@@ -890,16 +890,16 @@ PSF-2.0
 ### `apk` package: `python3-pyc`
 
 ```console
-python3-pyc-3.11.3-r11 description:
-A high-level scripting language (install .pyc cache files)
+python3-pyc-3.11.4-r0 description:
+High-level scripting language (install .pyc cache files)
 
-python3-pyc-3.11.3-r11 webpage:
+python3-pyc-3.11.4-r0 webpage:
 https://www.python.org/
 
-python3-pyc-3.11.3-r11 installed size:
+python3-pyc-3.11.4-r0 installed size:
 4096 B
 
-python3-pyc-3.11.3-r11 license:
+python3-pyc-3.11.4-r0 license:
 PSF-2.0
 
 ```
@@ -907,16 +907,16 @@ PSF-2.0
 ### `apk` package: `python3-pycache-pyc0`
 
 ```console
-python3-pycache-pyc0-3.11.3-r11 description:
-A high-level scripting language (.pyc pycache files)
+python3-pycache-pyc0-3.11.4-r0 description:
+High-level scripting language (.pyc pycache files)
 
-python3-pycache-pyc0-3.11.3-r11 webpage:
+python3-pycache-pyc0-3.11.4-r0 webpage:
 https://www.python.org/
 
-python3-pycache-pyc0-3.11.3-r11 installed size:
+python3-pycache-pyc0-3.11.4-r0 installed size:
 13 MiB
 
-python3-pycache-pyc0-3.11.3-r11 license:
+python3-pycache-pyc0-3.11.4-r0 license:
 PSF-2.0
 
 ```
@@ -958,16 +958,16 @@ GPL-2.0-only
 ### `apk` package: `serf`
 
 ```console
-serf-1.3.9-r12 description:
+serf-1.3.10-r0 description:
 High-Performance Asynchronous HTTP Client Library
 
-serf-1.3.9-r12 webpage:
+serf-1.3.10-r0 webpage:
 https://serf.apache.org/
 
-serf-1.3.9-r12 installed size:
+serf-1.3.10-r0 installed size:
 124 KiB
 
-serf-1.3.9-r12 license:
+serf-1.3.10-r0 license:
 Apache-2.0
 
 ```
@@ -992,16 +992,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.36.0-r9 description:
+ssl_client-1.36.1-r0 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.36.0-r9 webpage:
+ssl_client-1.36.1-r0 webpage:
 https://busybox.net/
 
-ssl_client-1.36.0-r9 installed size:
+ssl_client-1.36.1-r0 installed size:
 28 KiB
 
-ssl_client-1.36.0-r9 license:
+ssl_client-1.36.1-r0 license:
 GPL-2.0-only
 
 ```
