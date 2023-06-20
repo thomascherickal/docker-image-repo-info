@@ -1,7 +1,7 @@
 ## `r-base:latest`
 
 ```console
-$ docker pull r-base@sha256:5c2fc4ae3c6cb185d5e9e352f5e6add83f800d0e12b9f1074d038152ddfa0998
+$ docker pull r-base@sha256:11fdec71b25ef271e3309f056310fc3475b2693aba74c36ae0502cb7208cab20
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -158,14 +158,14 @@ CMD ["R"]
 ### `r-base:latest` - linux; ppc64le
 
 ```console
-$ docker pull r-base@sha256:ef829cbbae72bd2206db7f5558f3c10521892fb5ea56e9292143eff41ce4dd6e
+$ docker pull r-base@sha256:20b9ee3f6ca171833cb3f181e13c3bd8e9d9e1217fb97383fe4fed335fdd52c0
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **339.4 MB (339392415 bytes)**  
+-	Total Size: **339.6 MB (339627090 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ef1b4e129a9c9dc69aa8dfc6edc40a9369aed587d24b223b73264d009884163b`
+-	Image ID: `sha256:99c7dac40d82e0dfec54b074f580f0dea9a0f84357b48e893a81f5ffdf3a7329`
 -	Default Command: `["R"]`
 
 ```dockerfile
@@ -187,13 +187,11 @@ ENV LC_ALL=en_US.UTF-8
 ENV LANG=en_US.UTF-8
 # Tue, 13 Jun 2023 07:01:53 GMT
 RUN echo "deb http://http.debian.net/debian sid main" > /etc/apt/sources.list.d/debian-unstable.list         && echo 'APT::Default-Release "testing";' > /etc/apt/apt.conf.d/default         && echo 'APT::Install-Recommends "false";' > /etc/apt/apt.conf.d/90local-no-recommends
-# Tue, 13 Jun 2023 07:01:54 GMT
-ENV R_BASE_VERSION=4.3.0
-# Tue, 13 Jun 2023 07:01:55 GMT
-RUN echo "deb http://deb.debian.org/debian experimental main" > /etc/apt/sources.list.d/experimental.list     && echo "deb [trusted=yes] https://eddelbuettel.github.io/ppaR400 ./" > /etc/apt/sources.list.d/edd-r4.list
-# Tue, 13 Jun 2023 07:04:43 GMT
+# Tue, 20 Jun 2023 22:17:36 GMT
+ENV R_BASE_VERSION=4.3.1
+# Tue, 20 Jun 2023 22:21:59 GMT
 RUN apt-get update         && apt-get install -y --no-install-recommends                 libopenblas0-pthread 		littler                 r-cran-docopt                 r-cran-littler 		r-base=${R_BASE_VERSION}-* 		r-base-dev=${R_BASE_VERSION}-*                 r-base-core=${R_BASE_VERSION}-* 		r-recommended=${R_BASE_VERSION}-* 	&& chown root:staff "/usr/local/lib/R/site-library" 	&& chmod g+ws "/usr/local/lib/R/site-library" 	&& ln -s /usr/lib/R/site-library/littler/examples/install.r /usr/local/bin/install.r 	&& ln -s /usr/lib/R/site-library/littler/examples/install2.r /usr/local/bin/install2.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installBioc.r /usr/local/bin/installBioc.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installDeps.r /usr/local/bin/installDeps.r 	&& ln -s /usr/lib/R/site-library/littler/examples/installGithub.r /usr/local/bin/installGithub.r 	&& ln -s /usr/lib/R/site-library/littler/examples/testInstalled.r /usr/local/bin/testInstalled.r 	&& rm -rf /tmp/downloaded_packages/ /tmp/*.rds 	&& rm -rf /var/lib/apt/lists/*
-# Tue, 13 Jun 2023 07:04:51 GMT
+# Tue, 20 Jun 2023 22:22:12 GMT
 CMD ["R"]
 ```
 
@@ -218,13 +216,9 @@ CMD ["R"]
 		Last Modified: Tue, 13 Jun 2023 07:05:11 GMT  
 		Size: 349.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e476441b15561442564f98ee4e908884c9c1a58fc4ab86c5c4dc28f1cdef3a6`  
-		Last Modified: Tue, 13 Jun 2023 07:05:11 GMT  
-		Size: 291.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:673849be497f45b195ab40705053bb83ac7e0c012eeab154a00481ba140448b9`  
-		Last Modified: Tue, 13 Jun 2023 07:06:04 GMT  
-		Size: 259.4 MB (259407339 bytes)  
+	-	`sha256:440ef8655cf83730c53a4341be03a450079d6625702dcad71a6019fa253f3433`  
+		Last Modified: Tue, 20 Jun 2023 22:23:15 GMT  
+		Size: 259.6 MB (259642305 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `r-base:latest` - linux; s390x
