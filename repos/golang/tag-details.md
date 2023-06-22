@@ -62,6 +62,30 @@
 -	[`golang:1.20.5-windowsservercore`](#golang1205-windowsservercore)
 -	[`golang:1.20.5-windowsservercore-1809`](#golang1205-windowsservercore-1809)
 -	[`golang:1.20.5-windowsservercore-ltsc2022`](#golang1205-windowsservercore-ltsc2022)
+-	[`golang:1.21-rc`](#golang121-rc)
+-	[`golang:1.21-rc-alpine`](#golang121-rc-alpine)
+-	[`golang:1.21-rc-alpine3.17`](#golang121-rc-alpine317)
+-	[`golang:1.21-rc-alpine3.18`](#golang121-rc-alpine318)
+-	[`golang:1.21-rc-bookworm`](#golang121-rc-bookworm)
+-	[`golang:1.21-rc-bullseye`](#golang121-rc-bullseye)
+-	[`golang:1.21-rc-nanoserver`](#golang121-rc-nanoserver)
+-	[`golang:1.21-rc-nanoserver-1809`](#golang121-rc-nanoserver-1809)
+-	[`golang:1.21-rc-nanoserver-ltsc2022`](#golang121-rc-nanoserver-ltsc2022)
+-	[`golang:1.21-rc-windowsservercore`](#golang121-rc-windowsservercore)
+-	[`golang:1.21-rc-windowsservercore-1809`](#golang121-rc-windowsservercore-1809)
+-	[`golang:1.21-rc-windowsservercore-ltsc2022`](#golang121-rc-windowsservercore-ltsc2022)
+-	[`golang:1.21rc2`](#golang121rc2)
+-	[`golang:1.21rc2-alpine`](#golang121rc2-alpine)
+-	[`golang:1.21rc2-alpine3.17`](#golang121rc2-alpine317)
+-	[`golang:1.21rc2-alpine3.18`](#golang121rc2-alpine318)
+-	[`golang:1.21rc2-bookworm`](#golang121rc2-bookworm)
+-	[`golang:1.21rc2-bullseye`](#golang121rc2-bullseye)
+-	[`golang:1.21rc2-nanoserver`](#golang121rc2-nanoserver)
+-	[`golang:1.21rc2-nanoserver-1809`](#golang121rc2-nanoserver-1809)
+-	[`golang:1.21rc2-nanoserver-ltsc2022`](#golang121rc2-nanoserver-ltsc2022)
+-	[`golang:1.21rc2-windowsservercore`](#golang121rc2-windowsservercore)
+-	[`golang:1.21rc2-windowsservercore-1809`](#golang121rc2-windowsservercore-1809)
+-	[`golang:1.21rc2-windowsservercore-ltsc2022`](#golang121rc2-windowsservercore-ltsc2022)
 -	[`golang:alpine`](#golangalpine)
 -	[`golang:alpine3.17`](#golangalpine317)
 -	[`golang:alpine3.18`](#golangalpine318)
@@ -18789,6 +18813,102 @@ WORKDIR C:\go
 		Last Modified: Wed, 14 Jun 2023 19:08:28 GMT  
 		Size: 1.4 KB (1425 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `golang:1.21-rc`
+
+**does not exist** (yet?)
+
+## `golang:1.21-rc-alpine`
+
+**does not exist** (yet?)
+
+## `golang:1.21-rc-alpine3.17`
+
+**does not exist** (yet?)
+
+## `golang:1.21-rc-alpine3.18`
+
+**does not exist** (yet?)
+
+## `golang:1.21-rc-bookworm`
+
+**does not exist** (yet?)
+
+## `golang:1.21-rc-bullseye`
+
+**does not exist** (yet?)
+
+## `golang:1.21-rc-nanoserver`
+
+**does not exist** (yet?)
+
+## `golang:1.21-rc-nanoserver-1809`
+
+**does not exist** (yet?)
+
+## `golang:1.21-rc-nanoserver-ltsc2022`
+
+**does not exist** (yet?)
+
+## `golang:1.21-rc-windowsservercore`
+
+**does not exist** (yet?)
+
+## `golang:1.21-rc-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `golang:1.21-rc-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2-alpine`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2-alpine3.17`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2-alpine3.18`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2-bookworm`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2-bullseye`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2-nanoserver`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2-nanoserver-1809`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2-nanoserver-ltsc2022`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2-windowsservercore`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2-windowsservercore-1809`
+
+**does not exist** (yet?)
+
+## `golang:1.21rc2-windowsservercore-ltsc2022`
+
+**does not exist** (yet?)
 
 ## `golang:alpine`
 
