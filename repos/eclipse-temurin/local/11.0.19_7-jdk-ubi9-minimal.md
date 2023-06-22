@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:95d9f1b798bf4a64c7a999ac08356e419dc1c279ffe47b6e39bf86c06c8548e6`
-- Created: `2023-05-10T01:18:15.836428367Z`
-- Virtual Size: ~ 494.63 Mb  
+- Image ID: `sha256:4432aa7376be23c5cbf721da7b7eae0217057e9c844f83845546fe9b6d48e93f`
+- Created: `2023-06-22T01:09:11.182239015Z`
+- Virtual Size: ~ 494.64 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -18,21 +18,21 @@
   - `JAVA_VERSION=jdk-11.0.19+7`
 - Labels:
   - `architecture=x86_64`
-  - `build-date=2023-05-03T08:55:50`
+  - `build-date=2023-06-15T01:42:07`
   - `com.redhat.component=ubi9-minimal-container`
   - `com.redhat.license_terms=https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI`
   - `description=The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.`
   - `distribution-scope=public`
-  - `io.buildah.version=1.27.3`
+  - `io.buildah.version=1.29.0`
   - `io.k8s.description=The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.`
   - `io.k8s.display-name=Red Hat Universal Base Image 9 Minimal`
   - `io.openshift.expose-services=`
   - `io.openshift.tags=minimal rhel9`
   - `maintainer=Red Hat, Inc.`
   - `name=ubi9-minimal`
-  - `release=484`
+  - `release=691`
   - `summary=Provides the latest release of the minimal Red Hat Universal Base Image 9.`
-  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.2-484`
+  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.2-691`
   - `vcs-ref=7ef59505f75bf0c11c8d3addefebee5ceaaf4c41`
   - `vcs-type=git`
   - `vendor=Red Hat, Inc.`
@@ -352,7 +352,7 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `krb5-libs-1.20.1-8.el9.x86_64`
+### `rpm` package: `krb5-libs-1.20.1-9.el9_2.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -730,13 +730,13 @@ Licenses (from `rpm --query`): OpenLDAP
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `openssl-3.0.7-6.el9_2.x86_64`
+### `rpm` package: `openssl-3.0.7-16.el9_2.x86_64`
 
 Licenses (from `rpm --query`): ASL 2.0
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `openssl-libs-3.0.7-6.el9_2.x86_64`
+### `rpm` package: `openssl-libs-3.0.7-16.el9_2.x86_64`
 
 Licenses (from `rpm --query`): ASL 2.0
 
@@ -844,25 +844,25 @@ Licenses (from `rpm --query`): Public Domain
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `systemd-252-13.el9_2.x86_64`
+### `rpm` package: `systemd-252-14.el9_2.1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT and GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `systemd-libs-252-13.el9_2.x86_64`
+### `rpm` package: `systemd-libs-252-14.el9_2.1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `systemd-pam-252-13.el9_2.x86_64`
+### `rpm` package: `systemd-pam-252-14.el9_2.1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT and GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `systemd-rpm-macros-252-13.el9_2.noarch`
+### `rpm` package: `systemd-rpm-macros-252-14.el9_2.1.noarch`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT and GPLv2+
 
