@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:38c3d0fcd60dff99eceba6a556ae9d02a40203867bd893988f9de9a27d50d376`
-- Created: `2023-06-14T09:19:06.0678833Z`
-- Virtual Size: ~ 505.50 Mb  
+- Image ID: `sha256:89f3fa1a65675564ecd0131aba0ac4618e496eda9c29617570811f9ad6434613`
+- Created: `2023-06-22T22:51:22.703072033Z`
+- Virtual Size: ~ 506.64 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-entrypoint.sh"]`
@@ -2834,6 +2834,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/sed/4.9-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/sed/4.9-1/ (for access to the source package after it no longer exists in the archive)
 
+### `dpkg` source package: `sgml-base=1.31`
+
+Binary Packages:
+
+- `sgml-base=1.31`
+
+Licenses: (parsed from: `/usr/share/doc/sgml-base/copyright`)
+
+- `GPL-2`
+- `GPL-2+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris sgml-base=1.31
+'http://deb.debian.org/debian/pool/main/s/sgml-base/sgml-base_1.31.dsc' sgml-base_1.31.dsc 1541 SHA256:5bc1878461ec10333c7a99aeeec997e7263c92afba2c4f6fb518a8f4e5b3d9cc
+'http://deb.debian.org/debian/pool/main/s/sgml-base/sgml-base_1.31.tar.xz' sgml-base_1.31.tar.xz 12756 SHA256:12e204449d060d65b97ed329d2feed0cdbf2a62a4186b436e9b9b3fff7416147
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/sgml-base/1.31/ (for browsing the source)
+- https://sources.debian.net/src/sgml-base/1.31/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sgml-base/1.31/ (for access to the source package after it no longer exists in the archive)
+
 ### `dpkg` source package: `shadow=1:4.13+dfsg1-1`
 
 Binary Packages:
@@ -3082,6 +3107,34 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/util-linux/2.38.1-5/ (for browsing the source)
 - https://sources.debian.net/src/util-linux/2.38.1-5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/util-linux/2.38.1-5/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `uw-imap=8:2007f~dfsg-7`
+
+Binary Packages:
+
+- `libc-client2007e=8:2007f~dfsg-7+b2`
+- `mlock=8:2007f~dfsg-7+b2`
+
+Licenses: (parsed from: `/usr/share/doc/libc-client2007e/copyright`, `/usr/share/doc/mlock/copyright`)
+
+- `Apache-2.0`
+- `GPL-2`
+- `GPL-2+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris uw-imap=8:2007f~dfsg-7
+'http://deb.debian.org/debian/pool/main/u/uw-imap/uw-imap_2007f%7edfsg-7.dsc' uw-imap_2007f~dfsg-7.dsc 2128 SHA256:86a0c3a178101a682ef3f594ef2829413a81e906d7f5b26ffadc7cfd91bac200
+'http://deb.debian.org/debian/pool/main/u/uw-imap/uw-imap_2007f%7edfsg.orig.tar.gz' uw-imap_2007f~dfsg.orig.tar.gz 1607992 SHA256:4fdec0b5a085a7269db87214276e14ce79afdf7efec2ca8d431ab176b9062a8a
+'http://deb.debian.org/debian/pool/main/u/uw-imap/uw-imap_2007f%7edfsg-7.debian.tar.xz' uw-imap_2007f~dfsg-7.debian.tar.xz 44960 SHA256:9d778c6de093abf9d07164d6ad074bfe4c2ab38934283741b006f9537f6e896c
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/uw-imap/8:2007f~dfsg-7/ (for browsing the source)
+- https://sources.debian.net/src/uw-imap/8:2007f~dfsg-7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/uw-imap/8:2007f~dfsg-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xxhash=0.8.1-1`
 
