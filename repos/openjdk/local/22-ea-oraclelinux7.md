@@ -1,10 +1,10 @@
-# `openjdk:22-ea-1-jdk-oraclelinux7`
+# `openjdk:22-ea-3-jdk-oraclelinux7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:573a5dbf2fdf44ab1b691dd23805a4bea05531fa53d6c3990f9322fc4437a906`
-- Created: `2023-06-14T09:57:01.348102199Z`
-- Virtual Size: ~ 530.22 Mb  
+- Image ID: `sha256:5b3764014f6fee848fde611ceace0f907327036f274b8876d575854bc9671153`
+- Created: `2023-06-23T00:26:12.827491038Z`
+- Virtual Size: ~ 529.98 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-22/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/java/openjdk-22`
   - `LANG=en_US.UTF-8`
-  - `JAVA_VERSION=22-ea+1`
+  - `JAVA_VERSION=22-ea+3`
 
 ## `rpm` (`.rpm`-based packages)
 
