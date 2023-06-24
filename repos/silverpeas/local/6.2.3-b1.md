@@ -829,15 +829,9 @@ Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`)
 - `FSFUL`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cups=2.3.1-9ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1-9ubuntu1.3.dsc' cups_2.3.1-9ubuntu1.3.dsc 3415 SHA512:fbf448fecad86d0e2655f1c4657ddd56ccc3f70f95e6d29289dc3c49f55b00dcaaf1a625e613e7fbbd73dea8a090e8951480fc14e5fbd0ed667b96638738c30c
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1.orig.tar.gz' cups_2.3.1.orig.tar.gz 8135891 SHA512:e3f3ad9e78c1c723d46cc2276957ac67495483882f639421203d9dad227eacbb1259717a92489e710995fdc89e2d575202e4b43117aff08ff1230dcf06674376
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1.orig.tar.gz.asc' cups_2.3.1.orig.tar.gz.asc 858 SHA512:a9770f3346229c687b6ec1a5b42231e68ec547339f7d5b29467014d13a2706daf6f5aa9cdc0dd24efd386bdf966890e927cbab61d7a461612f075127c24a2b28
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1-9ubuntu1.3.debian.tar.xz' cups_2.3.1-9ubuntu1.3.debian.tar.xz 358436 SHA512:62dab776fb15e6645d3ef01c206f4e02596cb74cb08a0a743fe4aeae1b7f6c887e44b676284abe61dfb6d97fe69fb1a949cf46527313f098b795a0f82758cc33
-```
 
 ### `dpkg` source package: `curl=7.68.0-1ubuntu2.18`
 
