@@ -275,9 +275,15 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris build-essential=12.9
-'http://http.debian.net/debian/pool/main/b/build-essential/build-essential_12.9.dsc' build-essential_12.9.dsc 2220 SHA256:1e4ad67c69001a162b2eb3a2019f037e53c8a1e312073ba1a2110d1e21971555
-'http://http.debian.net/debian/pool/main/b/build-essential/build-essential_12.9.tar.xz' build-essential_12.9.tar.xz 51532 SHA256:938da370b4ef883687d141723d1b7470ad76bec7a54158d3d6b9b38f9c9eedb2
+'http://deb.debian.org/debian/pool/main/b/build-essential/build-essential_12.9.dsc' build-essential_12.9.dsc 2220 SHA256:1e4ad67c69001a162b2eb3a2019f037e53c8a1e312073ba1a2110d1e21971555
+'http://deb.debian.org/debian/pool/main/b/build-essential/build-essential_12.9.tar.xz' build-essential_12.9.tar.xz 51532 SHA256:938da370b4ef883687d141723d1b7470ad76bec7a54158d3d6b9b38f9c9eedb2
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/build-essential/12.9/ (for browsing the source)
+- https://sources.debian.net/src/build-essential/12.9/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/build-essential/12.9/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bzip2=1.0.8-5`
 
@@ -504,20 +510,13 @@ Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dash=0.5.12-2
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.12-2.dsc' dash_0.5.12-2.dsc 1520 SHA256:25c0fb805c735fdb7470ce485ce76dae1a7b6c04efdfb0fdac5eab921cbd78a5
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.12.orig.tar.gz' dash_0.5.12.orig.tar.gz 246054 SHA256:6a474ac46e8b0b32916c4c60df694c82058d3297d8b385b74508030ca4a8f28a
-'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.12-2.debian.tar.xz' dash_0.5.12-2.debian.tar.xz 38512 SHA256:bddd9129215eb60f4cc43a0ffdcc42d8f25e0bd09730520d599a2b7bc492e375
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dash/0.5.12-2/
 
-- https://sources.debian.net/src/dash/0.5.12-2/ (for browsing the source)
-- https://sources.debian.net/src/dash/0.5.12-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dash/0.5.12-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `db5.3=5.3.28+dfsg2-1`
 
@@ -945,9 +944,15 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris gcc-defaults=1.203
-'http://http.debian.net/debian/pool/main/g/gcc-defaults/gcc-defaults_1.203.dsc' gcc-defaults_1.203.dsc 12592 SHA256:39417c8e6cf5bfa22b1c58f004e9f7630725ace3138a216ba64ec75d83c3fceb
-'http://http.debian.net/debian/pool/main/g/gcc-defaults/gcc-defaults_1.203.tar.xz' gcc-defaults_1.203.tar.xz 45208 SHA256:bbf861f5502592b91602392123b482f9fb521948a8994057d152486f78b200b0
+'http://deb.debian.org/debian/pool/main/g/gcc-defaults/gcc-defaults_1.203.dsc' gcc-defaults_1.203.dsc 12592 SHA256:39417c8e6cf5bfa22b1c58f004e9f7630725ace3138a216ba64ec75d83c3fceb
+'http://deb.debian.org/debian/pool/main/g/gcc-defaults/gcc-defaults_1.203.tar.xz' gcc-defaults_1.203.tar.xz 45208 SHA256:bbf861f5502592b91602392123b482f9fb521948a8994057d152486f78b200b0
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/gcc-defaults/1.203/ (for browsing the source)
+- https://sources.debian.net/src/gcc-defaults/1.203/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gcc-defaults/1.203/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gdbm=1.23-3`
 
@@ -3058,10 +3063,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris r-cran-class=7.3-21-1
-'http://http.debian.net/debian/pool/main/r/r-cran-class/r-cran-class_7.3-21-1.dsc' r-cran-class_7.3-21-1.dsc 1873 SHA256:10ae439e889843ad9717de58086cac9930bf2162c491a6d6a281f9bad33fed15
-'http://http.debian.net/debian/pool/main/r/r-cran-class/r-cran-class_7.3-21.orig.tar.gz' r-cran-class_7.3-21.orig.tar.gz 20812 SHA256:0c19404aa4d2da61a62495e788b07c8e429c4c5ee64486ea5e6dd347bcaecddf
-'http://http.debian.net/debian/pool/main/r/r-cran-class/r-cran-class_7.3-21-1.debian.tar.xz' r-cran-class_7.3-21-1.debian.tar.xz 3240 SHA256:b04341e179c40c56ad93116a1dc4e4386f03792101643ed796d768f4b346f160
+'http://deb.debian.org/debian/pool/main/r/r-cran-class/r-cran-class_7.3-21-1.dsc' r-cran-class_7.3-21-1.dsc 1873 SHA256:10ae439e889843ad9717de58086cac9930bf2162c491a6d6a281f9bad33fed15
+'http://deb.debian.org/debian/pool/main/r/r-cran-class/r-cran-class_7.3-21.orig.tar.gz' r-cran-class_7.3-21.orig.tar.gz 20812 SHA256:0c19404aa4d2da61a62495e788b07c8e429c4c5ee64486ea5e6dd347bcaecddf
+'http://deb.debian.org/debian/pool/main/r/r-cran-class/r-cran-class_7.3-21-1.debian.tar.xz' r-cran-class_7.3-21-1.debian.tar.xz 3240 SHA256:b04341e179c40c56ad93116a1dc4e4386f03792101643ed796d768f4b346f160
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/r-cran-class/7.3-21-1/ (for browsing the source)
+- https://sources.debian.net/src/r-cran-class/7.3-21-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/r-cran-class/7.3-21-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-docopt=0.7.1-2`
 
@@ -3097,10 +3108,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris r-cran-mass=7.3-58.3-1
-'http://http.debian.net/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-58.3-1.dsc' r-cran-mass_7.3-58.3-1.dsc 1865 SHA256:41ab43f5839d1b1af4923b82bf0fa764b339f28ce67108ff7eaca5e98a12dcc2
-'http://http.debian.net/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-58.3.orig.tar.gz' r-cran-mass_7.3-58.3.orig.tar.gz 516025 SHA256:42e5599582dca0d32bc9c709216ddc71df1761af23f11cfa25d582212a5c79ae
-'http://http.debian.net/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-58.3-1.debian.tar.xz' r-cran-mass_7.3-58.3-1.debian.tar.xz 6500 SHA256:41677413c97bfdfb17d0e07020771a44fe24fd350d76a4a23fcd7089968b0705
+'http://deb.debian.org/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-58.3-1.dsc' r-cran-mass_7.3-58.3-1.dsc 1865 SHA256:41ab43f5839d1b1af4923b82bf0fa764b339f28ce67108ff7eaca5e98a12dcc2
+'http://deb.debian.org/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-58.3.orig.tar.gz' r-cran-mass_7.3-58.3.orig.tar.gz 516025 SHA256:42e5599582dca0d32bc9c709216ddc71df1761af23f11cfa25d582212a5c79ae
+'http://deb.debian.org/debian/pool/main/r/r-cran-mass/r-cran-mass_7.3-58.3-1.debian.tar.xz' r-cran-mass_7.3-58.3-1.debian.tar.xz 6500 SHA256:41677413c97bfdfb17d0e07020771a44fe24fd350d76a4a23fcd7089968b0705
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/r-cran-mass/7.3-58.3-1/ (for browsing the source)
+- https://sources.debian.net/src/r-cran-mass/7.3-58.3-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/r-cran-mass/7.3-58.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-nnet=7.3-18-1`
 
@@ -3117,10 +3134,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris r-cran-nnet=7.3-18-1
-'http://http.debian.net/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-18-1.dsc' r-cran-nnet_7.3-18-1.dsc 1848 SHA256:72f8e7ab7bd771fe59dc7a5ab09d0bece9cd3d45e818edb36f72e316c92fc5ed
-'http://http.debian.net/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-18.orig.tar.gz' r-cran-nnet_7.3-18.orig.tar.gz 29146 SHA256:d29aebfb5cb00071eecf754d55db5d474a6fda88860df5c9d31ba89aa8d9e3d0
-'http://http.debian.net/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-18-1.debian.tar.xz' r-cran-nnet_7.3-18-1.debian.tar.xz 3268 SHA256:030e75928fbdff50c16adf02c0ad967878c7cd77a487f8ebad4f2aa88b202eb8
+'http://deb.debian.org/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-18-1.dsc' r-cran-nnet_7.3-18-1.dsc 1848 SHA256:72f8e7ab7bd771fe59dc7a5ab09d0bece9cd3d45e818edb36f72e316c92fc5ed
+'http://deb.debian.org/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-18.orig.tar.gz' r-cran-nnet_7.3-18.orig.tar.gz 29146 SHA256:d29aebfb5cb00071eecf754d55db5d474a6fda88860df5c9d31ba89aa8d9e3d0
+'http://deb.debian.org/debian/pool/main/r/r-cran-nnet/r-cran-nnet_7.3-18-1.debian.tar.xz' r-cran-nnet_7.3-18-1.debian.tar.xz 3268 SHA256:030e75928fbdff50c16adf02c0ad967878c7cd77a487f8ebad4f2aa88b202eb8
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/r-cran-nnet/7.3-18-1/ (for browsing the source)
+- https://sources.debian.net/src/r-cran-nnet/7.3-18-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/r-cran-nnet/7.3-18-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `r-cran-spatial=7.3-16-1`
 
@@ -3482,10 +3505,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris tiff=4.5.1~rc3-1
-'http://http.debian.net/debian/pool/main/t/tiff/tiff_4.5.1%7erc3-1.dsc' tiff_4.5.1~rc3-1.dsc 2283 SHA256:c9f5ab085dacbd5e2d90236db420428906c33a6e79681484a553b37ed3c3ceaa
-'http://http.debian.net/debian/pool/main/t/tiff/tiff_4.5.1%7erc3.orig.tar.bz2' tiff_4.5.1~rc3.orig.tar.bz2 2059965 SHA256:dee24a6f0d4ff10ddc8afe16e731bb622bbdec4ce64d9e01f6515df0a7aabe50
-'http://http.debian.net/debian/pool/main/t/tiff/tiff_4.5.1%7erc3-1.debian.tar.xz' tiff_4.5.1~rc3-1.debian.tar.xz 21800 SHA256:39bb39d826e401a6b40ef22388dbc023eda5ba417ce6781d716292532c2117c2
+'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.5.1%7erc3-1.dsc' tiff_4.5.1~rc3-1.dsc 2283 SHA256:c9f5ab085dacbd5e2d90236db420428906c33a6e79681484a553b37ed3c3ceaa
+'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.5.1%7erc3.orig.tar.bz2' tiff_4.5.1~rc3.orig.tar.bz2 2059965 SHA256:dee24a6f0d4ff10ddc8afe16e731bb622bbdec4ce64d9e01f6515df0a7aabe50
+'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.5.1%7erc3-1.debian.tar.xz' tiff_4.5.1~rc3-1.debian.tar.xz 21800 SHA256:39bb39d826e401a6b40ef22388dbc023eda5ba417ce6781d716292532c2117c2
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/tiff/4.5.1~rc3-1/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.5.1~rc3-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.5.1~rc3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tk8.6=8.6.13-2`
 
@@ -3516,21 +3545,13 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2023c-5
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c-5.dsc' tzdata_2023c-5.dsc 2364 SHA256:fab47ca607365c4d5039f8849e715decfd8cc4c5a1b6f258e02faf6a2eb1252b
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz' tzdata_2023c.orig.tar.gz 443902 SHA256:3f510b5d1b4ae9bb38e485aa302a776b317fb3637bdb6404c4adf7b6cadd965c
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz.asc' tzdata_2023c.orig.tar.gz.asc 833 SHA256:d5ec7b6ceddc46aa137c0ef85fa5c87445509d7997c067ee0fd2e2a23f833557
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c-5.debian.tar.xz' tzdata_2023c-5.debian.tar.xz 119752 SHA256:8bbc24e081d08d48badaf0db7c7a3672ef53708b409c1c7c036264db5583bbc6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2023c-5/
 
-- https://sources.debian.net/src/tzdata/2023c-5/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2023c-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2023c-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043+nmu1`
 
