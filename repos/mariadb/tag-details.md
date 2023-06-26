@@ -46,7 +46,7 @@
 ## `mariadb:10`
 
 ```console
-$ docker pull mariadb@sha256:d7fc6651c88b98384a93f8b270fbe6a0b1b7b169ad7b1266b47aad569dd0e1ac
+$ docker pull mariadb@sha256:8db9b9ba5de195eca2c2a2f052f0ab438ecd7eddea437087fa60285d31637f1a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -162,14 +162,14 @@ CMD ["mariadbd"]
 ### `mariadb:10` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:feb13ef2aa4591b577c2ddb3d2256e2b589a7291cb26afd8b37adbae9b766dab
+$ docker pull mariadb@sha256:5fd6061badec786f9112fc509a0e7425ebba50a6b61a5b23b2098f3844b1eb74
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117613769 bytes)**  
+-	Total Size: **117.6 MB (117614005 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d7d1ed89fa120fc8a7644f4aca5ed1c5263b3f76d14ad2204bb446d545f910bb`
+-	Image ID: `sha256:bc1ac9f163ddf9c086f5ff38af41a821e6b4c566ed2fa47dbf4042cac3abc9fb`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -211,20 +211,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:11 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:29 GMT
+# Mon, 26 Jun 2023 21:40:50 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:30 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:52 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:30 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:31 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:52 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 CMD ["mariadbd"]
 ```
 
@@ -249,17 +249,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
 		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c00dea8e2d2121db3688f2c1094e0b5d1d68cd49d0d9d6acbfbed34d7498016`  
-		Last Modified: Fri, 16 Jun 2023 03:38:20 GMT  
-		Size: 83.8 MB (83805727 bytes)  
+	-	`sha256:771ac932193ae00759bb3abebdfa99638b592769ff1f49ca1f1dc0afc28f9ec2`  
+		Last Modified: Mon, 26 Jun 2023 21:44:29 GMT  
+		Size: 83.8 MB (83805673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80fc6c52580f35e25a307e162bc9533341acc2564f8f00d706edf358e6268fbe`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:d7279dc082fc8e1a2dfd7840251700f4c5c06594dd81994ae3958cc246e4ac74`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d64bc679a120a79c175360e84f3381103acd7ac9068b44fdb9bb3425759e665`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:1942227a9fbdb8ea52795fc23928fc408fba31f7eb87a17300ca743c03891bc0`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10` - linux; ppc64le
@@ -471,7 +471,7 @@ CMD ["mariadbd"]
 ## `mariadb:10-jammy`
 
 ```console
-$ docker pull mariadb@sha256:d7fc6651c88b98384a93f8b270fbe6a0b1b7b169ad7b1266b47aad569dd0e1ac
+$ docker pull mariadb@sha256:8db9b9ba5de195eca2c2a2f052f0ab438ecd7eddea437087fa60285d31637f1a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -587,14 +587,14 @@ CMD ["mariadbd"]
 ### `mariadb:10-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:feb13ef2aa4591b577c2ddb3d2256e2b589a7291cb26afd8b37adbae9b766dab
+$ docker pull mariadb@sha256:5fd6061badec786f9112fc509a0e7425ebba50a6b61a5b23b2098f3844b1eb74
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117613769 bytes)**  
+-	Total Size: **117.6 MB (117614005 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d7d1ed89fa120fc8a7644f4aca5ed1c5263b3f76d14ad2204bb446d545f910bb`
+-	Image ID: `sha256:bc1ac9f163ddf9c086f5ff38af41a821e6b4c566ed2fa47dbf4042cac3abc9fb`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -636,20 +636,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:11 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:29 GMT
+# Mon, 26 Jun 2023 21:40:50 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:30 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:52 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:30 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:31 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:52 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 CMD ["mariadbd"]
 ```
 
@@ -674,17 +674,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
 		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c00dea8e2d2121db3688f2c1094e0b5d1d68cd49d0d9d6acbfbed34d7498016`  
-		Last Modified: Fri, 16 Jun 2023 03:38:20 GMT  
-		Size: 83.8 MB (83805727 bytes)  
+	-	`sha256:771ac932193ae00759bb3abebdfa99638b592769ff1f49ca1f1dc0afc28f9ec2`  
+		Last Modified: Mon, 26 Jun 2023 21:44:29 GMT  
+		Size: 83.8 MB (83805673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80fc6c52580f35e25a307e162bc9533341acc2564f8f00d706edf358e6268fbe`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:d7279dc082fc8e1a2dfd7840251700f4c5c06594dd81994ae3958cc246e4ac74`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d64bc679a120a79c175360e84f3381103acd7ac9068b44fdb9bb3425759e665`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:1942227a9fbdb8ea52795fc23928fc408fba31f7eb87a17300ca743c03891bc0`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10-jammy` - linux; ppc64le
@@ -896,7 +896,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.10`
 
 ```console
-$ docker pull mariadb@sha256:f3f1229598fa01d69db1e1920ff3c1d3718a33e53c8d27d4dc1d9400b3dbd38f
+$ docker pull mariadb@sha256:6fbc8c07168850d79a56c2fef196c4edc7951921580a33cf889485c3ef457d38
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1012,14 +1012,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.10` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:04a204d3b85244376b0cb259c4992c163d26e7a08d9c2fee6b52e15edc078015
+$ docker pull mariadb@sha256:787ab068bb7c6110fd3cdd58a654fd46151955985a7f0c41ef2b88d2db749b07
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117552529 bytes)**  
+-	Total Size: **117.6 MB (117553494 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25a5b934f95f858c614605f137431a9da640e2fe8aebb815665e4288c756200d`
+-	Image ID: `sha256:f9ab64d6d64526fc554516f277342902ed40569c0d7dd44216e78c0417fc01d0`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -1061,20 +1061,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:34 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:52 GMT
+# Mon, 26 Jun 2023 21:41:10 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:54 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:41:11 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:54 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:54 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:11 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:41:11 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:41:11 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:12 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:12 GMT
 CMD ["mariadbd"]
 ```
 
@@ -1099,17 +1099,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ca4c29667a67d67f0a6fe37978d66c63d7a4ce8e0b7bc3c16af7dd70d22d6422`  
-		Last Modified: Fri, 16 Jun 2023 03:38:50 GMT  
-		Size: 83.7 MB (83744491 bytes)  
+	-	`sha256:c2e9b3542c51c9a54a9dd8e8b5a1e5c3d67232991bdb6784dc3600608cc24cbd`  
+		Last Modified: Mon, 26 Jun 2023 21:44:58 GMT  
+		Size: 83.7 MB (83745160 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7aa4b3f2a64231b83582619981c81243d8de4c0cb1dcc4f4d8a3d092f5c2a7cd`  
-		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
-		Size: 3.5 KB (3527 bytes)  
+	-	`sha256:b562e9ea62fda23261762d0c98742e1f77abe8b0d63aba95209f0c3963b57c7f`  
+		Last Modified: Mon, 26 Jun 2023 21:44:48 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23b3ec8b8e75bca4899c051c7c19d2afba7f96db7ae0855eb51f3b0bfce69284`  
-		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
-		Size: 7.3 KB (7309 bytes)  
+	-	`sha256:e584bc67f568611a1e8693b885e542020d81cb3a53fcae4ae3b68caabe082b5d`  
+		Last Modified: Mon, 26 Jun 2023 21:44:48 GMT  
+		Size: 7.6 KB (7568 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.10` - linux; ppc64le
@@ -1321,7 +1321,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.10-jammy`
 
 ```console
-$ docker pull mariadb@sha256:f3f1229598fa01d69db1e1920ff3c1d3718a33e53c8d27d4dc1d9400b3dbd38f
+$ docker pull mariadb@sha256:6fbc8c07168850d79a56c2fef196c4edc7951921580a33cf889485c3ef457d38
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1437,14 +1437,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.10-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:04a204d3b85244376b0cb259c4992c163d26e7a08d9c2fee6b52e15edc078015
+$ docker pull mariadb@sha256:787ab068bb7c6110fd3cdd58a654fd46151955985a7f0c41ef2b88d2db749b07
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117552529 bytes)**  
+-	Total Size: **117.6 MB (117553494 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25a5b934f95f858c614605f137431a9da640e2fe8aebb815665e4288c756200d`
+-	Image ID: `sha256:f9ab64d6d64526fc554516f277342902ed40569c0d7dd44216e78c0417fc01d0`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -1486,20 +1486,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:34 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:52 GMT
+# Mon, 26 Jun 2023 21:41:10 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:54 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:41:11 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:54 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:54 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:11 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:41:11 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:41:11 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:12 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:12 GMT
 CMD ["mariadbd"]
 ```
 
@@ -1524,17 +1524,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ca4c29667a67d67f0a6fe37978d66c63d7a4ce8e0b7bc3c16af7dd70d22d6422`  
-		Last Modified: Fri, 16 Jun 2023 03:38:50 GMT  
-		Size: 83.7 MB (83744491 bytes)  
+	-	`sha256:c2e9b3542c51c9a54a9dd8e8b5a1e5c3d67232991bdb6784dc3600608cc24cbd`  
+		Last Modified: Mon, 26 Jun 2023 21:44:58 GMT  
+		Size: 83.7 MB (83745160 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7aa4b3f2a64231b83582619981c81243d8de4c0cb1dcc4f4d8a3d092f5c2a7cd`  
-		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
-		Size: 3.5 KB (3527 bytes)  
+	-	`sha256:b562e9ea62fda23261762d0c98742e1f77abe8b0d63aba95209f0c3963b57c7f`  
+		Last Modified: Mon, 26 Jun 2023 21:44:48 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23b3ec8b8e75bca4899c051c7c19d2afba7f96db7ae0855eb51f3b0bfce69284`  
-		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
-		Size: 7.3 KB (7309 bytes)  
+	-	`sha256:e584bc67f568611a1e8693b885e542020d81cb3a53fcae4ae3b68caabe082b5d`  
+		Last Modified: Mon, 26 Jun 2023 21:44:48 GMT  
+		Size: 7.6 KB (7568 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.10-jammy` - linux; ppc64le
@@ -1746,7 +1746,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.10.5`
 
 ```console
-$ docker pull mariadb@sha256:8de5c8b7b6919ec1c7460dcfa08181a0afbf2b3688f1727df56c86fc39e9c78c
+$ docker pull mariadb@sha256:1677f228e2fce2fbac9b8f7bbc5108b65ea6ade7026f6f978d4b38aa86d36faf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1861,14 +1861,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.10.5` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:04a204d3b85244376b0cb259c4992c163d26e7a08d9c2fee6b52e15edc078015
+$ docker pull mariadb@sha256:787ab068bb7c6110fd3cdd58a654fd46151955985a7f0c41ef2b88d2db749b07
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117552529 bytes)**  
+-	Total Size: **117.6 MB (117553494 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25a5b934f95f858c614605f137431a9da640e2fe8aebb815665e4288c756200d`
+-	Image ID: `sha256:f9ab64d6d64526fc554516f277342902ed40569c0d7dd44216e78c0417fc01d0`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -1910,20 +1910,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:34 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:52 GMT
+# Mon, 26 Jun 2023 21:41:10 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:54 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:41:11 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:54 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:54 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:11 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:41:11 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:41:11 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:12 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:12 GMT
 CMD ["mariadbd"]
 ```
 
@@ -1948,17 +1948,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ca4c29667a67d67f0a6fe37978d66c63d7a4ce8e0b7bc3c16af7dd70d22d6422`  
-		Last Modified: Fri, 16 Jun 2023 03:38:50 GMT  
-		Size: 83.7 MB (83744491 bytes)  
+	-	`sha256:c2e9b3542c51c9a54a9dd8e8b5a1e5c3d67232991bdb6784dc3600608cc24cbd`  
+		Last Modified: Mon, 26 Jun 2023 21:44:58 GMT  
+		Size: 83.7 MB (83745160 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7aa4b3f2a64231b83582619981c81243d8de4c0cb1dcc4f4d8a3d092f5c2a7cd`  
-		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
-		Size: 3.5 KB (3527 bytes)  
+	-	`sha256:b562e9ea62fda23261762d0c98742e1f77abe8b0d63aba95209f0c3963b57c7f`  
+		Last Modified: Mon, 26 Jun 2023 21:44:48 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23b3ec8b8e75bca4899c051c7c19d2afba7f96db7ae0855eb51f3b0bfce69284`  
-		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
-		Size: 7.3 KB (7309 bytes)  
+	-	`sha256:e584bc67f568611a1e8693b885e542020d81cb3a53fcae4ae3b68caabe082b5d`  
+		Last Modified: Mon, 26 Jun 2023 21:44:48 GMT  
+		Size: 7.6 KB (7568 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.10.5` - linux; ppc64le
@@ -2067,7 +2067,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.10.5-jammy`
 
 ```console
-$ docker pull mariadb@sha256:8de5c8b7b6919ec1c7460dcfa08181a0afbf2b3688f1727df56c86fc39e9c78c
+$ docker pull mariadb@sha256:1677f228e2fce2fbac9b8f7bbc5108b65ea6ade7026f6f978d4b38aa86d36faf
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2182,14 +2182,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.10.5-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:04a204d3b85244376b0cb259c4992c163d26e7a08d9c2fee6b52e15edc078015
+$ docker pull mariadb@sha256:787ab068bb7c6110fd3cdd58a654fd46151955985a7f0c41ef2b88d2db749b07
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117552529 bytes)**  
+-	Total Size: **117.6 MB (117553494 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25a5b934f95f858c614605f137431a9da640e2fe8aebb815665e4288c756200d`
+-	Image ID: `sha256:f9ab64d6d64526fc554516f277342902ed40569c0d7dd44216e78c0417fc01d0`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -2231,20 +2231,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:34 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:52 GMT
+# Mon, 26 Jun 2023 21:41:10 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.10.5/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:54 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:41:11 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:54 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:54 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:11 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:41:11 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:41:11 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:12 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:54 GMT
+# Mon, 26 Jun 2023 21:41:12 GMT
 CMD ["mariadbd"]
 ```
 
@@ -2269,17 +2269,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ca4c29667a67d67f0a6fe37978d66c63d7a4ce8e0b7bc3c16af7dd70d22d6422`  
-		Last Modified: Fri, 16 Jun 2023 03:38:50 GMT  
-		Size: 83.7 MB (83744491 bytes)  
+	-	`sha256:c2e9b3542c51c9a54a9dd8e8b5a1e5c3d67232991bdb6784dc3600608cc24cbd`  
+		Last Modified: Mon, 26 Jun 2023 21:44:58 GMT  
+		Size: 83.7 MB (83745160 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7aa4b3f2a64231b83582619981c81243d8de4c0cb1dcc4f4d8a3d092f5c2a7cd`  
-		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
-		Size: 3.5 KB (3527 bytes)  
+	-	`sha256:b562e9ea62fda23261762d0c98742e1f77abe8b0d63aba95209f0c3963b57c7f`  
+		Last Modified: Mon, 26 Jun 2023 21:44:48 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:23b3ec8b8e75bca4899c051c7c19d2afba7f96db7ae0855eb51f3b0bfce69284`  
-		Last Modified: Fri, 16 Jun 2023 03:38:40 GMT  
-		Size: 7.3 KB (7309 bytes)  
+	-	`sha256:e584bc67f568611a1e8693b885e542020d81cb3a53fcae4ae3b68caabe082b5d`  
+		Last Modified: Mon, 26 Jun 2023 21:44:48 GMT  
+		Size: 7.6 KB (7568 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.10.5-jammy` - linux; ppc64le
@@ -2388,7 +2388,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.11`
 
 ```console
-$ docker pull mariadb@sha256:d7fc6651c88b98384a93f8b270fbe6a0b1b7b169ad7b1266b47aad569dd0e1ac
+$ docker pull mariadb@sha256:8db9b9ba5de195eca2c2a2f052f0ab438ecd7eddea437087fa60285d31637f1a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2504,14 +2504,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.11` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:feb13ef2aa4591b577c2ddb3d2256e2b589a7291cb26afd8b37adbae9b766dab
+$ docker pull mariadb@sha256:5fd6061badec786f9112fc509a0e7425ebba50a6b61a5b23b2098f3844b1eb74
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117613769 bytes)**  
+-	Total Size: **117.6 MB (117614005 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d7d1ed89fa120fc8a7644f4aca5ed1c5263b3f76d14ad2204bb446d545f910bb`
+-	Image ID: `sha256:bc1ac9f163ddf9c086f5ff38af41a821e6b4c566ed2fa47dbf4042cac3abc9fb`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -2553,20 +2553,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:11 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:29 GMT
+# Mon, 26 Jun 2023 21:40:50 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:30 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:52 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:30 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:31 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:52 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 CMD ["mariadbd"]
 ```
 
@@ -2591,17 +2591,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
 		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c00dea8e2d2121db3688f2c1094e0b5d1d68cd49d0d9d6acbfbed34d7498016`  
-		Last Modified: Fri, 16 Jun 2023 03:38:20 GMT  
-		Size: 83.8 MB (83805727 bytes)  
+	-	`sha256:771ac932193ae00759bb3abebdfa99638b592769ff1f49ca1f1dc0afc28f9ec2`  
+		Last Modified: Mon, 26 Jun 2023 21:44:29 GMT  
+		Size: 83.8 MB (83805673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80fc6c52580f35e25a307e162bc9533341acc2564f8f00d706edf358e6268fbe`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:d7279dc082fc8e1a2dfd7840251700f4c5c06594dd81994ae3958cc246e4ac74`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d64bc679a120a79c175360e84f3381103acd7ac9068b44fdb9bb3425759e665`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:1942227a9fbdb8ea52795fc23928fc408fba31f7eb87a17300ca743c03891bc0`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.11` - linux; ppc64le
@@ -2813,7 +2813,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.11-jammy`
 
 ```console
-$ docker pull mariadb@sha256:d7fc6651c88b98384a93f8b270fbe6a0b1b7b169ad7b1266b47aad569dd0e1ac
+$ docker pull mariadb@sha256:8db9b9ba5de195eca2c2a2f052f0ab438ecd7eddea437087fa60285d31637f1a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2929,14 +2929,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.11-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:feb13ef2aa4591b577c2ddb3d2256e2b589a7291cb26afd8b37adbae9b766dab
+$ docker pull mariadb@sha256:5fd6061badec786f9112fc509a0e7425ebba50a6b61a5b23b2098f3844b1eb74
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117613769 bytes)**  
+-	Total Size: **117.6 MB (117614005 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d7d1ed89fa120fc8a7644f4aca5ed1c5263b3f76d14ad2204bb446d545f910bb`
+-	Image ID: `sha256:bc1ac9f163ddf9c086f5ff38af41a821e6b4c566ed2fa47dbf4042cac3abc9fb`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -2978,20 +2978,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:11 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:29 GMT
+# Mon, 26 Jun 2023 21:40:50 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:30 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:52 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:30 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:31 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:52 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 CMD ["mariadbd"]
 ```
 
@@ -3016,17 +3016,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
 		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c00dea8e2d2121db3688f2c1094e0b5d1d68cd49d0d9d6acbfbed34d7498016`  
-		Last Modified: Fri, 16 Jun 2023 03:38:20 GMT  
-		Size: 83.8 MB (83805727 bytes)  
+	-	`sha256:771ac932193ae00759bb3abebdfa99638b592769ff1f49ca1f1dc0afc28f9ec2`  
+		Last Modified: Mon, 26 Jun 2023 21:44:29 GMT  
+		Size: 83.8 MB (83805673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80fc6c52580f35e25a307e162bc9533341acc2564f8f00d706edf358e6268fbe`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:d7279dc082fc8e1a2dfd7840251700f4c5c06594dd81994ae3958cc246e4ac74`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d64bc679a120a79c175360e84f3381103acd7ac9068b44fdb9bb3425759e665`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:1942227a9fbdb8ea52795fc23928fc408fba31f7eb87a17300ca743c03891bc0`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.11-jammy` - linux; ppc64le
@@ -3238,7 +3238,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.11.4`
 
 ```console
-$ docker pull mariadb@sha256:a035db50f9aa2fe4f68244c6de6b6c655e16500bee521df98a735cc4216fc756
+$ docker pull mariadb@sha256:9f89775e1d00e1b1c14c03d77efb32dc90dec6e3c82af81165b8ebeef5b84622
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3353,14 +3353,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.11.4` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:feb13ef2aa4591b577c2ddb3d2256e2b589a7291cb26afd8b37adbae9b766dab
+$ docker pull mariadb@sha256:5fd6061badec786f9112fc509a0e7425ebba50a6b61a5b23b2098f3844b1eb74
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117613769 bytes)**  
+-	Total Size: **117.6 MB (117614005 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d7d1ed89fa120fc8a7644f4aca5ed1c5263b3f76d14ad2204bb446d545f910bb`
+-	Image ID: `sha256:bc1ac9f163ddf9c086f5ff38af41a821e6b4c566ed2fa47dbf4042cac3abc9fb`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -3402,20 +3402,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:11 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:29 GMT
+# Mon, 26 Jun 2023 21:40:50 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:30 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:52 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:30 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:31 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:52 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 CMD ["mariadbd"]
 ```
 
@@ -3440,17 +3440,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
 		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c00dea8e2d2121db3688f2c1094e0b5d1d68cd49d0d9d6acbfbed34d7498016`  
-		Last Modified: Fri, 16 Jun 2023 03:38:20 GMT  
-		Size: 83.8 MB (83805727 bytes)  
+	-	`sha256:771ac932193ae00759bb3abebdfa99638b592769ff1f49ca1f1dc0afc28f9ec2`  
+		Last Modified: Mon, 26 Jun 2023 21:44:29 GMT  
+		Size: 83.8 MB (83805673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80fc6c52580f35e25a307e162bc9533341acc2564f8f00d706edf358e6268fbe`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:d7279dc082fc8e1a2dfd7840251700f4c5c06594dd81994ae3958cc246e4ac74`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d64bc679a120a79c175360e84f3381103acd7ac9068b44fdb9bb3425759e665`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:1942227a9fbdb8ea52795fc23928fc408fba31f7eb87a17300ca743c03891bc0`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.11.4` - linux; ppc64le
@@ -3559,7 +3559,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.11.4-jammy`
 
 ```console
-$ docker pull mariadb@sha256:a035db50f9aa2fe4f68244c6de6b6c655e16500bee521df98a735cc4216fc756
+$ docker pull mariadb@sha256:9f89775e1d00e1b1c14c03d77efb32dc90dec6e3c82af81165b8ebeef5b84622
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3674,14 +3674,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.11.4-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:feb13ef2aa4591b577c2ddb3d2256e2b589a7291cb26afd8b37adbae9b766dab
+$ docker pull mariadb@sha256:5fd6061badec786f9112fc509a0e7425ebba50a6b61a5b23b2098f3844b1eb74
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117613769 bytes)**  
+-	Total Size: **117.6 MB (117614005 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d7d1ed89fa120fc8a7644f4aca5ed1c5263b3f76d14ad2204bb446d545f910bb`
+-	Image ID: `sha256:bc1ac9f163ddf9c086f5ff38af41a821e6b4c566ed2fa47dbf4042cac3abc9fb`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -3723,20 +3723,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:11 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:29 GMT
+# Mon, 26 Jun 2023 21:40:50 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:30 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:52 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:30 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:31 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:52 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 CMD ["mariadbd"]
 ```
 
@@ -3761,17 +3761,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
 		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c00dea8e2d2121db3688f2c1094e0b5d1d68cd49d0d9d6acbfbed34d7498016`  
-		Last Modified: Fri, 16 Jun 2023 03:38:20 GMT  
-		Size: 83.8 MB (83805727 bytes)  
+	-	`sha256:771ac932193ae00759bb3abebdfa99638b592769ff1f49ca1f1dc0afc28f9ec2`  
+		Last Modified: Mon, 26 Jun 2023 21:44:29 GMT  
+		Size: 83.8 MB (83805673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80fc6c52580f35e25a307e162bc9533341acc2564f8f00d706edf358e6268fbe`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:d7279dc082fc8e1a2dfd7840251700f4c5c06594dd81994ae3958cc246e4ac74`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d64bc679a120a79c175360e84f3381103acd7ac9068b44fdb9bb3425759e665`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:1942227a9fbdb8ea52795fc23928fc408fba31f7eb87a17300ca743c03891bc0`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.11.4-jammy` - linux; ppc64le
@@ -3880,7 +3880,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.4`
 
 ```console
-$ docker pull mariadb@sha256:ffe2c11fab42fb66e712a0c27f8c1d92dcb41f817d292a01e4e897662136b809
+$ docker pull mariadb@sha256:79ded8e38a24e59e858d04a8dc8d977f71751b118e908839cfe4a8da7aad3406
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4006,14 +4006,14 @@ CMD ["mysqld"]
 ### `mariadb:10.4` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:559482ffccc9c0f216046fb2c541512b52676a881fe99371d444b410c28f4504
+$ docker pull mariadb@sha256:5566dc65c4aeefe292f28d54395288ab87bb7161f63eb58b66f05c0e3a5e99c7
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **116.6 MB (116592555 bytes)**  
+-	Total Size: **116.6 MB (116592993 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a352b8725885de10cb3ac7d7d83cd2cb06b8e8053a43308a19ece5dd8199e5ed`
+-	Image ID: `sha256:1bb52c1d11461c6d09bc7a455c46672a5f32da2a23d8bea520746bcb071bda2c`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -4059,23 +4059,23 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:36:32 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:52 GMT
+# Mon, 26 Jun 2023 21:43:02 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:53 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:43:03 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:53 GMT
-COPY file:797eec99bf55d77c916c240bbbe1453b1ba37340268a58d0681bf242c87643e5 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:54 GMT
-COPY file:c4b65f2af3baa2c3084f00a699409d48c1e5dac4e836b5677135f4a30f08ac73 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:03 GMT
+COPY file:d65903e94113c393feb7ef4923c78c7301c6c5d74bc2880bab1896f045005757 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:43:03 GMT
+COPY file:c949c618eecc4586318fb3f361ab47de11ceab74d2492c4f13f302e2a793ea31 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:43:04 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
 RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 CMD ["mysqld"]
 ```
 
@@ -4100,20 +4100,20 @@ CMD ["mysqld"]
 		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
 		Size: 325.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d504a9dc28e42df31714e4492ffdf4c8000fb1574105ce0d037060fbf82cbe66`  
-		Last Modified: Fri, 16 Jun 2023 03:40:16 GMT  
-		Size: 82.5 MB (82529176 bytes)  
+	-	`sha256:c38bba76c321f03e1418ba1257f435c05d3c3c405b1115142761b77efd00c6ea`  
+		Last Modified: Mon, 26 Jun 2023 21:46:25 GMT  
+		Size: 82.5 MB (82529317 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f161901e4d4fbf09c871b7a359b2aac22ee8004c4b2e1addddbb361f6d1d1ec2`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
-		Size: 3.5 KB (3533 bytes)  
+	-	`sha256:dd7f474fad3d3d07a9eb476706a69dc0043fc81cc33730a9ce01a41a46e2a000`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
+		Size: 3.6 KB (3574 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a0eb1e31cc369a61a26d5ba2e7378752d8b2881c85f951885020c00cee4876a`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
-		Size: 7.3 KB (7289 bytes)  
+	-	`sha256:50bf5770e9660c333ff68885d3bda2fc75789d467b8731b42dfdb2eeded322b8`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
+		Size: 7.5 KB (7545 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c268dd2e47a99d2be0a70122b8514c011c2cd63feea125702f5bd83832a1f45`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
+	-	`sha256:0666359ca1468d8cd96f1a17b43e67e8eb73c374f80ec945e77109d262705b59`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -4234,7 +4234,7 @@ CMD ["mysqld"]
 ## `mariadb:10.4-focal`
 
 ```console
-$ docker pull mariadb@sha256:ffe2c11fab42fb66e712a0c27f8c1d92dcb41f817d292a01e4e897662136b809
+$ docker pull mariadb@sha256:79ded8e38a24e59e858d04a8dc8d977f71751b118e908839cfe4a8da7aad3406
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4360,14 +4360,14 @@ CMD ["mysqld"]
 ### `mariadb:10.4-focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:559482ffccc9c0f216046fb2c541512b52676a881fe99371d444b410c28f4504
+$ docker pull mariadb@sha256:5566dc65c4aeefe292f28d54395288ab87bb7161f63eb58b66f05c0e3a5e99c7
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **116.6 MB (116592555 bytes)**  
+-	Total Size: **116.6 MB (116592993 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a352b8725885de10cb3ac7d7d83cd2cb06b8e8053a43308a19ece5dd8199e5ed`
+-	Image ID: `sha256:1bb52c1d11461c6d09bc7a455c46672a5f32da2a23d8bea520746bcb071bda2c`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -4413,23 +4413,23 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:36:32 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:52 GMT
+# Mon, 26 Jun 2023 21:43:02 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:53 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:43:03 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:53 GMT
-COPY file:797eec99bf55d77c916c240bbbe1453b1ba37340268a58d0681bf242c87643e5 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:54 GMT
-COPY file:c4b65f2af3baa2c3084f00a699409d48c1e5dac4e836b5677135f4a30f08ac73 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:03 GMT
+COPY file:d65903e94113c393feb7ef4923c78c7301c6c5d74bc2880bab1896f045005757 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:43:03 GMT
+COPY file:c949c618eecc4586318fb3f361ab47de11ceab74d2492c4f13f302e2a793ea31 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:43:04 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
 RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 CMD ["mysqld"]
 ```
 
@@ -4454,20 +4454,20 @@ CMD ["mysqld"]
 		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
 		Size: 325.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d504a9dc28e42df31714e4492ffdf4c8000fb1574105ce0d037060fbf82cbe66`  
-		Last Modified: Fri, 16 Jun 2023 03:40:16 GMT  
-		Size: 82.5 MB (82529176 bytes)  
+	-	`sha256:c38bba76c321f03e1418ba1257f435c05d3c3c405b1115142761b77efd00c6ea`  
+		Last Modified: Mon, 26 Jun 2023 21:46:25 GMT  
+		Size: 82.5 MB (82529317 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f161901e4d4fbf09c871b7a359b2aac22ee8004c4b2e1addddbb361f6d1d1ec2`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
-		Size: 3.5 KB (3533 bytes)  
+	-	`sha256:dd7f474fad3d3d07a9eb476706a69dc0043fc81cc33730a9ce01a41a46e2a000`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
+		Size: 3.6 KB (3574 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a0eb1e31cc369a61a26d5ba2e7378752d8b2881c85f951885020c00cee4876a`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
-		Size: 7.3 KB (7289 bytes)  
+	-	`sha256:50bf5770e9660c333ff68885d3bda2fc75789d467b8731b42dfdb2eeded322b8`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
+		Size: 7.5 KB (7545 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c268dd2e47a99d2be0a70122b8514c011c2cd63feea125702f5bd83832a1f45`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
+	-	`sha256:0666359ca1468d8cd96f1a17b43e67e8eb73c374f80ec945e77109d262705b59`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -4588,7 +4588,7 @@ CMD ["mysqld"]
 ## `mariadb:10.4.30`
 
 ```console
-$ docker pull mariadb@sha256:ffe2c11fab42fb66e712a0c27f8c1d92dcb41f817d292a01e4e897662136b809
+$ docker pull mariadb@sha256:79ded8e38a24e59e858d04a8dc8d977f71751b118e908839cfe4a8da7aad3406
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4714,14 +4714,14 @@ CMD ["mysqld"]
 ### `mariadb:10.4.30` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:559482ffccc9c0f216046fb2c541512b52676a881fe99371d444b410c28f4504
+$ docker pull mariadb@sha256:5566dc65c4aeefe292f28d54395288ab87bb7161f63eb58b66f05c0e3a5e99c7
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **116.6 MB (116592555 bytes)**  
+-	Total Size: **116.6 MB (116592993 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a352b8725885de10cb3ac7d7d83cd2cb06b8e8053a43308a19ece5dd8199e5ed`
+-	Image ID: `sha256:1bb52c1d11461c6d09bc7a455c46672a5f32da2a23d8bea520746bcb071bda2c`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -4767,23 +4767,23 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:36:32 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:52 GMT
+# Mon, 26 Jun 2023 21:43:02 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:53 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:43:03 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:53 GMT
-COPY file:797eec99bf55d77c916c240bbbe1453b1ba37340268a58d0681bf242c87643e5 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:54 GMT
-COPY file:c4b65f2af3baa2c3084f00a699409d48c1e5dac4e836b5677135f4a30f08ac73 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:03 GMT
+COPY file:d65903e94113c393feb7ef4923c78c7301c6c5d74bc2880bab1896f045005757 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:43:03 GMT
+COPY file:c949c618eecc4586318fb3f361ab47de11ceab74d2492c4f13f302e2a793ea31 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:43:04 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
 RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 CMD ["mysqld"]
 ```
 
@@ -4808,20 +4808,20 @@ CMD ["mysqld"]
 		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
 		Size: 325.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d504a9dc28e42df31714e4492ffdf4c8000fb1574105ce0d037060fbf82cbe66`  
-		Last Modified: Fri, 16 Jun 2023 03:40:16 GMT  
-		Size: 82.5 MB (82529176 bytes)  
+	-	`sha256:c38bba76c321f03e1418ba1257f435c05d3c3c405b1115142761b77efd00c6ea`  
+		Last Modified: Mon, 26 Jun 2023 21:46:25 GMT  
+		Size: 82.5 MB (82529317 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f161901e4d4fbf09c871b7a359b2aac22ee8004c4b2e1addddbb361f6d1d1ec2`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
-		Size: 3.5 KB (3533 bytes)  
+	-	`sha256:dd7f474fad3d3d07a9eb476706a69dc0043fc81cc33730a9ce01a41a46e2a000`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
+		Size: 3.6 KB (3574 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a0eb1e31cc369a61a26d5ba2e7378752d8b2881c85f951885020c00cee4876a`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
-		Size: 7.3 KB (7289 bytes)  
+	-	`sha256:50bf5770e9660c333ff68885d3bda2fc75789d467b8731b42dfdb2eeded322b8`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
+		Size: 7.5 KB (7545 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c268dd2e47a99d2be0a70122b8514c011c2cd63feea125702f5bd83832a1f45`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
+	-	`sha256:0666359ca1468d8cd96f1a17b43e67e8eb73c374f80ec945e77109d262705b59`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -4942,7 +4942,7 @@ CMD ["mysqld"]
 ## `mariadb:10.4.30-focal`
 
 ```console
-$ docker pull mariadb@sha256:ffe2c11fab42fb66e712a0c27f8c1d92dcb41f817d292a01e4e897662136b809
+$ docker pull mariadb@sha256:79ded8e38a24e59e858d04a8dc8d977f71751b118e908839cfe4a8da7aad3406
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5068,14 +5068,14 @@ CMD ["mysqld"]
 ### `mariadb:10.4.30-focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:559482ffccc9c0f216046fb2c541512b52676a881fe99371d444b410c28f4504
+$ docker pull mariadb@sha256:5566dc65c4aeefe292f28d54395288ab87bb7161f63eb58b66f05c0e3a5e99c7
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **116.6 MB (116592555 bytes)**  
+-	Total Size: **116.6 MB (116592993 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a352b8725885de10cb3ac7d7d83cd2cb06b8e8053a43308a19ece5dd8199e5ed`
+-	Image ID: `sha256:1bb52c1d11461c6d09bc7a455c46672a5f32da2a23d8bea520746bcb071bda2c`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -5121,23 +5121,23 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:36:32 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:52 GMT
+# Mon, 26 Jun 2023 21:43:02 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:53 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:43:03 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:53 GMT
-COPY file:797eec99bf55d77c916c240bbbe1453b1ba37340268a58d0681bf242c87643e5 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:54 GMT
-COPY file:c4b65f2af3baa2c3084f00a699409d48c1e5dac4e836b5677135f4a30f08ac73 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:03 GMT
+COPY file:d65903e94113c393feb7ef4923c78c7301c6c5d74bc2880bab1896f045005757 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:43:03 GMT
+COPY file:c949c618eecc4586318fb3f361ab47de11ceab74d2492c4f13f302e2a793ea31 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:43:04 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.4.30/repo/ubuntu/ focal main
 RUN ln -s usr/local/bin/docker-entrypoint.sh / # backwards compat
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:54 GMT
+# Mon, 26 Jun 2023 21:43:04 GMT
 CMD ["mysqld"]
 ```
 
@@ -5162,20 +5162,20 @@ CMD ["mysqld"]
 		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
 		Size: 325.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d504a9dc28e42df31714e4492ffdf4c8000fb1574105ce0d037060fbf82cbe66`  
-		Last Modified: Fri, 16 Jun 2023 03:40:16 GMT  
-		Size: 82.5 MB (82529176 bytes)  
+	-	`sha256:c38bba76c321f03e1418ba1257f435c05d3c3c405b1115142761b77efd00c6ea`  
+		Last Modified: Mon, 26 Jun 2023 21:46:25 GMT  
+		Size: 82.5 MB (82529317 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f161901e4d4fbf09c871b7a359b2aac22ee8004c4b2e1addddbb361f6d1d1ec2`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
-		Size: 3.5 KB (3533 bytes)  
+	-	`sha256:dd7f474fad3d3d07a9eb476706a69dc0043fc81cc33730a9ce01a41a46e2a000`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
+		Size: 3.6 KB (3574 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a0eb1e31cc369a61a26d5ba2e7378752d8b2881c85f951885020c00cee4876a`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
-		Size: 7.3 KB (7289 bytes)  
+	-	`sha256:50bf5770e9660c333ff68885d3bda2fc75789d467b8731b42dfdb2eeded322b8`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
+		Size: 7.5 KB (7545 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c268dd2e47a99d2be0a70122b8514c011c2cd63feea125702f5bd83832a1f45`  
-		Last Modified: Fri, 16 Jun 2023 03:40:07 GMT  
+	-	`sha256:0666359ca1468d8cd96f1a17b43e67e8eb73c374f80ec945e77109d262705b59`  
+		Last Modified: Mon, 26 Jun 2023 21:46:15 GMT  
 		Size: 121.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -5296,7 +5296,7 @@ CMD ["mysqld"]
 ## `mariadb:10.5`
 
 ```console
-$ docker pull mariadb@sha256:4f19c17686b5f445a680afb7c90147e732222f603394d553c8257255172b64f2
+$ docker pull mariadb@sha256:f333ffe108ed8197bd363f230cde27096806cd5c0a00bc2fede835c2fae4ed08
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5416,14 +5416,14 @@ CMD ["mysqld"]
 ### `mariadb:10.5` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:bef54c22d172f1253e6581290387132a821d4ace9557af4550b0072051b83698
+$ docker pull mariadb@sha256:c2dcb083504fc5a107701f1cdee481ed87ce81d450f0605a0b137b3a078d3226
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **118.8 MB (118778444 bytes)**  
+-	Total Size: **118.8 MB (118778869 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c29e7a83c98438e0835135237994f4909d3537510f9bf904408e14ce173a3b97`
+-	Image ID: `sha256:f6a9d2384ec54d6d5e5237e72c957323c3b909aa8492e0553ef3ea763a3d3096`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -5469,20 +5469,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:36:09 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:26 GMT
+# Mon, 26 Jun 2023 21:42:39 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:28 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:42:40 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:28 GMT
-COPY file:797eec99bf55d77c916c240bbbe1453b1ba37340268a58d0681bf242c87643e5 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:28 GMT
-COPY file:23e0272c6087d45cf907c2c393d97cd55e521584b9431415ec688d6388d4330a in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:40 GMT
+COPY file:c534033a3ab62fadd9805cf9184c056c4e093e40393ab02a2d4200993557f120 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:42:41 GMT
+COPY file:84de1d17cf262b8374dbb86e2371b6d0b6f46c2b7dc9d6dda45d43f280afb75f in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:42:41 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:41 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:41 GMT
 CMD ["mysqld"]
 ```
 
@@ -5507,17 +5507,17 @@ CMD ["mysqld"]
 		Last Modified: Fri, 16 Jun 2023 03:39:45 GMT  
 		Size: 327.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:460014c42f05515c9d99ecf71595f1c62ccdb31f2665c2aff5f2a2b9c5eb6f26`  
-		Last Modified: Fri, 16 Jun 2023 03:39:54 GMT  
-		Size: 84.7 MB (84715188 bytes)  
+	-	`sha256:db421ea4d6a4c1b29fe7b469447919658547e65c5c64e37c8b893716b950d0f3`  
+		Last Modified: Mon, 26 Jun 2023 21:46:03 GMT  
+		Size: 84.7 MB (84715325 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bac4b788e6265a09d59f5b29dfd24e689f5b17f0a71511a94af18d9a7596e586`  
-		Last Modified: Fri, 16 Jun 2023 03:39:44 GMT  
-		Size: 3.5 KB (3532 bytes)  
+	-	`sha256:7208fbf45e1ab5ac88c1b0de6f352c3f2d6d603801ce2ca37212e32d2388e0e7`  
+		Last Modified: Mon, 26 Jun 2023 21:45:53 GMT  
+		Size: 3.6 KB (3568 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a00b2ed992f532115eef08d6d9820efcd3ae99662247dc171a6e7498ebf2b2df`  
-		Last Modified: Fri, 16 Jun 2023 03:39:44 GMT  
-		Size: 7.3 KB (7286 bytes)  
+	-	`sha256:f79681292768e7a795a307fd22fc8ba028c6d6d9fbcca1be03bb59546df99562`  
+		Last Modified: Mon, 26 Jun 2023 21:45:53 GMT  
+		Size: 7.5 KB (7538 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.5` - linux; ppc64le
@@ -5737,7 +5737,7 @@ CMD ["mysqld"]
 ## `mariadb:10.5-focal`
 
 ```console
-$ docker pull mariadb@sha256:4f19c17686b5f445a680afb7c90147e732222f603394d553c8257255172b64f2
+$ docker pull mariadb@sha256:f333ffe108ed8197bd363f230cde27096806cd5c0a00bc2fede835c2fae4ed08
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5857,14 +5857,14 @@ CMD ["mysqld"]
 ### `mariadb:10.5-focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:bef54c22d172f1253e6581290387132a821d4ace9557af4550b0072051b83698
+$ docker pull mariadb@sha256:c2dcb083504fc5a107701f1cdee481ed87ce81d450f0605a0b137b3a078d3226
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **118.8 MB (118778444 bytes)**  
+-	Total Size: **118.8 MB (118778869 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c29e7a83c98438e0835135237994f4909d3537510f9bf904408e14ce173a3b97`
+-	Image ID: `sha256:f6a9d2384ec54d6d5e5237e72c957323c3b909aa8492e0553ef3ea763a3d3096`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -5910,20 +5910,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:36:09 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:26 GMT
+# Mon, 26 Jun 2023 21:42:39 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:28 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:42:40 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:28 GMT
-COPY file:797eec99bf55d77c916c240bbbe1453b1ba37340268a58d0681bf242c87643e5 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:28 GMT
-COPY file:23e0272c6087d45cf907c2c393d97cd55e521584b9431415ec688d6388d4330a in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:40 GMT
+COPY file:c534033a3ab62fadd9805cf9184c056c4e093e40393ab02a2d4200993557f120 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:42:41 GMT
+COPY file:84de1d17cf262b8374dbb86e2371b6d0b6f46c2b7dc9d6dda45d43f280afb75f in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:42:41 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:41 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:41 GMT
 CMD ["mysqld"]
 ```
 
@@ -5948,17 +5948,17 @@ CMD ["mysqld"]
 		Last Modified: Fri, 16 Jun 2023 03:39:45 GMT  
 		Size: 327.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:460014c42f05515c9d99ecf71595f1c62ccdb31f2665c2aff5f2a2b9c5eb6f26`  
-		Last Modified: Fri, 16 Jun 2023 03:39:54 GMT  
-		Size: 84.7 MB (84715188 bytes)  
+	-	`sha256:db421ea4d6a4c1b29fe7b469447919658547e65c5c64e37c8b893716b950d0f3`  
+		Last Modified: Mon, 26 Jun 2023 21:46:03 GMT  
+		Size: 84.7 MB (84715325 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bac4b788e6265a09d59f5b29dfd24e689f5b17f0a71511a94af18d9a7596e586`  
-		Last Modified: Fri, 16 Jun 2023 03:39:44 GMT  
-		Size: 3.5 KB (3532 bytes)  
+	-	`sha256:7208fbf45e1ab5ac88c1b0de6f352c3f2d6d603801ce2ca37212e32d2388e0e7`  
+		Last Modified: Mon, 26 Jun 2023 21:45:53 GMT  
+		Size: 3.6 KB (3568 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a00b2ed992f532115eef08d6d9820efcd3ae99662247dc171a6e7498ebf2b2df`  
-		Last Modified: Fri, 16 Jun 2023 03:39:44 GMT  
-		Size: 7.3 KB (7286 bytes)  
+	-	`sha256:f79681292768e7a795a307fd22fc8ba028c6d6d9fbcca1be03bb59546df99562`  
+		Last Modified: Mon, 26 Jun 2023 21:45:53 GMT  
+		Size: 7.5 KB (7538 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.5-focal` - linux; ppc64le
@@ -6178,7 +6178,7 @@ CMD ["mysqld"]
 ## `mariadb:10.5.21`
 
 ```console
-$ docker pull mariadb@sha256:4f19c17686b5f445a680afb7c90147e732222f603394d553c8257255172b64f2
+$ docker pull mariadb@sha256:f333ffe108ed8197bd363f230cde27096806cd5c0a00bc2fede835c2fae4ed08
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6298,14 +6298,14 @@ CMD ["mysqld"]
 ### `mariadb:10.5.21` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:bef54c22d172f1253e6581290387132a821d4ace9557af4550b0072051b83698
+$ docker pull mariadb@sha256:c2dcb083504fc5a107701f1cdee481ed87ce81d450f0605a0b137b3a078d3226
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **118.8 MB (118778444 bytes)**  
+-	Total Size: **118.8 MB (118778869 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c29e7a83c98438e0835135237994f4909d3537510f9bf904408e14ce173a3b97`
+-	Image ID: `sha256:f6a9d2384ec54d6d5e5237e72c957323c3b909aa8492e0553ef3ea763a3d3096`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -6351,20 +6351,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:36:09 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:26 GMT
+# Mon, 26 Jun 2023 21:42:39 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:28 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:42:40 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:28 GMT
-COPY file:797eec99bf55d77c916c240bbbe1453b1ba37340268a58d0681bf242c87643e5 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:28 GMT
-COPY file:23e0272c6087d45cf907c2c393d97cd55e521584b9431415ec688d6388d4330a in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:40 GMT
+COPY file:c534033a3ab62fadd9805cf9184c056c4e093e40393ab02a2d4200993557f120 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:42:41 GMT
+COPY file:84de1d17cf262b8374dbb86e2371b6d0b6f46c2b7dc9d6dda45d43f280afb75f in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:42:41 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:41 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:41 GMT
 CMD ["mysqld"]
 ```
 
@@ -6389,17 +6389,17 @@ CMD ["mysqld"]
 		Last Modified: Fri, 16 Jun 2023 03:39:45 GMT  
 		Size: 327.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:460014c42f05515c9d99ecf71595f1c62ccdb31f2665c2aff5f2a2b9c5eb6f26`  
-		Last Modified: Fri, 16 Jun 2023 03:39:54 GMT  
-		Size: 84.7 MB (84715188 bytes)  
+	-	`sha256:db421ea4d6a4c1b29fe7b469447919658547e65c5c64e37c8b893716b950d0f3`  
+		Last Modified: Mon, 26 Jun 2023 21:46:03 GMT  
+		Size: 84.7 MB (84715325 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bac4b788e6265a09d59f5b29dfd24e689f5b17f0a71511a94af18d9a7596e586`  
-		Last Modified: Fri, 16 Jun 2023 03:39:44 GMT  
-		Size: 3.5 KB (3532 bytes)  
+	-	`sha256:7208fbf45e1ab5ac88c1b0de6f352c3f2d6d603801ce2ca37212e32d2388e0e7`  
+		Last Modified: Mon, 26 Jun 2023 21:45:53 GMT  
+		Size: 3.6 KB (3568 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a00b2ed992f532115eef08d6d9820efcd3ae99662247dc171a6e7498ebf2b2df`  
-		Last Modified: Fri, 16 Jun 2023 03:39:44 GMT  
-		Size: 7.3 KB (7286 bytes)  
+	-	`sha256:f79681292768e7a795a307fd22fc8ba028c6d6d9fbcca1be03bb59546df99562`  
+		Last Modified: Mon, 26 Jun 2023 21:45:53 GMT  
+		Size: 7.5 KB (7538 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.5.21` - linux; ppc64le
@@ -6619,7 +6619,7 @@ CMD ["mysqld"]
 ## `mariadb:10.5.21-focal`
 
 ```console
-$ docker pull mariadb@sha256:4f19c17686b5f445a680afb7c90147e732222f603394d553c8257255172b64f2
+$ docker pull mariadb@sha256:f333ffe108ed8197bd363f230cde27096806cd5c0a00bc2fede835c2fae4ed08
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -6739,14 +6739,14 @@ CMD ["mysqld"]
 ### `mariadb:10.5.21-focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:bef54c22d172f1253e6581290387132a821d4ace9557af4550b0072051b83698
+$ docker pull mariadb@sha256:c2dcb083504fc5a107701f1cdee481ed87ce81d450f0605a0b137b3a078d3226
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **118.8 MB (118778444 bytes)**  
+-	Total Size: **118.8 MB (118778869 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c29e7a83c98438e0835135237994f4909d3537510f9bf904408e14ce173a3b97`
+-	Image ID: `sha256:f6a9d2384ec54d6d5e5237e72c957323c3b909aa8492e0553ef3ea763a3d3096`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mysqld"]`
 
@@ -6792,20 +6792,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:36:09 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:26 GMT
+# Mon, 26 Jun 2023 21:42:39 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.5.21/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:28 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:42:40 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:28 GMT
-COPY file:797eec99bf55d77c916c240bbbe1453b1ba37340268a58d0681bf242c87643e5 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:28 GMT
-COPY file:23e0272c6087d45cf907c2c393d97cd55e521584b9431415ec688d6388d4330a in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:40 GMT
+COPY file:c534033a3ab62fadd9805cf9184c056c4e093e40393ab02a2d4200993557f120 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:42:41 GMT
+COPY file:84de1d17cf262b8374dbb86e2371b6d0b6f46c2b7dc9d6dda45d43f280afb75f in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:42:41 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:41 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:28 GMT
+# Mon, 26 Jun 2023 21:42:41 GMT
 CMD ["mysqld"]
 ```
 
@@ -6830,17 +6830,17 @@ CMD ["mysqld"]
 		Last Modified: Fri, 16 Jun 2023 03:39:45 GMT  
 		Size: 327.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:460014c42f05515c9d99ecf71595f1c62ccdb31f2665c2aff5f2a2b9c5eb6f26`  
-		Last Modified: Fri, 16 Jun 2023 03:39:54 GMT  
-		Size: 84.7 MB (84715188 bytes)  
+	-	`sha256:db421ea4d6a4c1b29fe7b469447919658547e65c5c64e37c8b893716b950d0f3`  
+		Last Modified: Mon, 26 Jun 2023 21:46:03 GMT  
+		Size: 84.7 MB (84715325 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bac4b788e6265a09d59f5b29dfd24e689f5b17f0a71511a94af18d9a7596e586`  
-		Last Modified: Fri, 16 Jun 2023 03:39:44 GMT  
-		Size: 3.5 KB (3532 bytes)  
+	-	`sha256:7208fbf45e1ab5ac88c1b0de6f352c3f2d6d603801ce2ca37212e32d2388e0e7`  
+		Last Modified: Mon, 26 Jun 2023 21:45:53 GMT  
+		Size: 3.6 KB (3568 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a00b2ed992f532115eef08d6d9820efcd3ae99662247dc171a6e7498ebf2b2df`  
-		Last Modified: Fri, 16 Jun 2023 03:39:44 GMT  
-		Size: 7.3 KB (7286 bytes)  
+	-	`sha256:f79681292768e7a795a307fd22fc8ba028c6d6d9fbcca1be03bb59546df99562`  
+		Last Modified: Mon, 26 Jun 2023 21:45:53 GMT  
+		Size: 7.5 KB (7538 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.5.21-focal` - linux; ppc64le
@@ -7060,7 +7060,7 @@ CMD ["mysqld"]
 ## `mariadb:10.6`
 
 ```console
-$ docker pull mariadb@sha256:86b3f2e9ebd8fa02055f80201eb607823d8fdec8b51b650acc791d32a56780b2
+$ docker pull mariadb@sha256:9de17c26a739a47c4a0d1382ed5accde5fad63f80419e41b6ede92abdffd8c29
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7180,14 +7180,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.6` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:a297b03fffc9570571e778ba833cba45c05c33536c04a6efbba3b26f9ac16756
+$ docker pull mariadb@sha256:d7a05d328d60ba29fa63b07786c92d1b94438a89ef5a630662256dee094c9422
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **118.9 MB (118945939 bytes)**  
+-	Total Size: **118.9 MB (118946325 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:12693de75b688fbbdd87763a64b4f7c73bea4f36c47d26853e91b021849870a8`
+-	Image ID: `sha256:ef311372d0d999ca41637df9726af2de6c99c4a5ef91e983f5296a101f2d61d3`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -7233,20 +7233,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:35:39 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:02 GMT
+# Mon, 26 Jun 2023 21:42:16 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:04 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:42:18 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:04 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:04 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:04 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:42:18 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:42:18 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:04 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:05 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
 CMD ["mariadbd"]
 ```
 
@@ -7271,17 +7271,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd53a91192120781864faf6ada69bbde0bde46b5c33c22cbc54b9b0e3c47256a`  
-		Last Modified: Fri, 16 Jun 2023 03:39:32 GMT  
-		Size: 84.9 MB (84882658 bytes)  
+	-	`sha256:6fa335c4c55c2a87089f4da634c7d96b53a295aa9a76ef2ed1125808814e4c31`  
+		Last Modified: Mon, 26 Jun 2023 21:45:41 GMT  
+		Size: 84.9 MB (84882749 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4aea326f1438e41e4b5f9d51f2cadeeb8f7a84f87a788ad2e6bbb79ae11fbbef`  
-		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:691ecf0d6708c60c3bc1203707416fa7dc392d3b2f0aebc025eccfd0551ed32e`  
+		Last Modified: Mon, 26 Jun 2023 21:45:32 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:965a9675a27388609341a9e9a2e1f0c42a4fec649b9eb971233bf4b7a58fbc0a`  
-		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:fb2a83823ed01478bfd3898074960a9002eed89f5dc12f5c8ea4da994425414d`  
+		Last Modified: Mon, 26 Jun 2023 21:45:32 GMT  
+		Size: 7.6 KB (7570 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.6` - linux; ppc64le
@@ -7501,7 +7501,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.6-focal`
 
 ```console
-$ docker pull mariadb@sha256:86b3f2e9ebd8fa02055f80201eb607823d8fdec8b51b650acc791d32a56780b2
+$ docker pull mariadb@sha256:9de17c26a739a47c4a0d1382ed5accde5fad63f80419e41b6ede92abdffd8c29
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7621,14 +7621,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.6-focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:a297b03fffc9570571e778ba833cba45c05c33536c04a6efbba3b26f9ac16756
+$ docker pull mariadb@sha256:d7a05d328d60ba29fa63b07786c92d1b94438a89ef5a630662256dee094c9422
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **118.9 MB (118945939 bytes)**  
+-	Total Size: **118.9 MB (118946325 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:12693de75b688fbbdd87763a64b4f7c73bea4f36c47d26853e91b021849870a8`
+-	Image ID: `sha256:ef311372d0d999ca41637df9726af2de6c99c4a5ef91e983f5296a101f2d61d3`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -7674,20 +7674,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:35:39 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:02 GMT
+# Mon, 26 Jun 2023 21:42:16 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:04 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:42:18 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:04 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:04 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:04 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:42:18 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:42:18 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:04 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:05 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
 CMD ["mariadbd"]
 ```
 
@@ -7712,17 +7712,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd53a91192120781864faf6ada69bbde0bde46b5c33c22cbc54b9b0e3c47256a`  
-		Last Modified: Fri, 16 Jun 2023 03:39:32 GMT  
-		Size: 84.9 MB (84882658 bytes)  
+	-	`sha256:6fa335c4c55c2a87089f4da634c7d96b53a295aa9a76ef2ed1125808814e4c31`  
+		Last Modified: Mon, 26 Jun 2023 21:45:41 GMT  
+		Size: 84.9 MB (84882749 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4aea326f1438e41e4b5f9d51f2cadeeb8f7a84f87a788ad2e6bbb79ae11fbbef`  
-		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:691ecf0d6708c60c3bc1203707416fa7dc392d3b2f0aebc025eccfd0551ed32e`  
+		Last Modified: Mon, 26 Jun 2023 21:45:32 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:965a9675a27388609341a9e9a2e1f0c42a4fec649b9eb971233bf4b7a58fbc0a`  
-		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:fb2a83823ed01478bfd3898074960a9002eed89f5dc12f5c8ea4da994425414d`  
+		Last Modified: Mon, 26 Jun 2023 21:45:32 GMT  
+		Size: 7.6 KB (7570 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.6-focal` - linux; ppc64le
@@ -7942,7 +7942,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.6.14`
 
 ```console
-$ docker pull mariadb@sha256:86b3f2e9ebd8fa02055f80201eb607823d8fdec8b51b650acc791d32a56780b2
+$ docker pull mariadb@sha256:9de17c26a739a47c4a0d1382ed5accde5fad63f80419e41b6ede92abdffd8c29
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8062,14 +8062,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.6.14` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:a297b03fffc9570571e778ba833cba45c05c33536c04a6efbba3b26f9ac16756
+$ docker pull mariadb@sha256:d7a05d328d60ba29fa63b07786c92d1b94438a89ef5a630662256dee094c9422
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **118.9 MB (118945939 bytes)**  
+-	Total Size: **118.9 MB (118946325 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:12693de75b688fbbdd87763a64b4f7c73bea4f36c47d26853e91b021849870a8`
+-	Image ID: `sha256:ef311372d0d999ca41637df9726af2de6c99c4a5ef91e983f5296a101f2d61d3`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -8115,20 +8115,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:35:39 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:02 GMT
+# Mon, 26 Jun 2023 21:42:16 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:04 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:42:18 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:04 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:04 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:04 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:42:18 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:42:18 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:04 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:05 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
 CMD ["mariadbd"]
 ```
 
@@ -8153,17 +8153,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd53a91192120781864faf6ada69bbde0bde46b5c33c22cbc54b9b0e3c47256a`  
-		Last Modified: Fri, 16 Jun 2023 03:39:32 GMT  
-		Size: 84.9 MB (84882658 bytes)  
+	-	`sha256:6fa335c4c55c2a87089f4da634c7d96b53a295aa9a76ef2ed1125808814e4c31`  
+		Last Modified: Mon, 26 Jun 2023 21:45:41 GMT  
+		Size: 84.9 MB (84882749 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4aea326f1438e41e4b5f9d51f2cadeeb8f7a84f87a788ad2e6bbb79ae11fbbef`  
-		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:691ecf0d6708c60c3bc1203707416fa7dc392d3b2f0aebc025eccfd0551ed32e`  
+		Last Modified: Mon, 26 Jun 2023 21:45:32 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:965a9675a27388609341a9e9a2e1f0c42a4fec649b9eb971233bf4b7a58fbc0a`  
-		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:fb2a83823ed01478bfd3898074960a9002eed89f5dc12f5c8ea4da994425414d`  
+		Last Modified: Mon, 26 Jun 2023 21:45:32 GMT  
+		Size: 7.6 KB (7570 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.6.14` - linux; ppc64le
@@ -8383,7 +8383,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.6.14-focal`
 
 ```console
-$ docker pull mariadb@sha256:86b3f2e9ebd8fa02055f80201eb607823d8fdec8b51b650acc791d32a56780b2
+$ docker pull mariadb@sha256:9de17c26a739a47c4a0d1382ed5accde5fad63f80419e41b6ede92abdffd8c29
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8503,14 +8503,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.6.14-focal` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:a297b03fffc9570571e778ba833cba45c05c33536c04a6efbba3b26f9ac16756
+$ docker pull mariadb@sha256:d7a05d328d60ba29fa63b07786c92d1b94438a89ef5a630662256dee094c9422
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **118.9 MB (118945939 bytes)**  
+-	Total Size: **118.9 MB (118946325 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:12693de75b688fbbdd87763a64b4f7c73bea4f36c47d26853e91b021849870a8`
+-	Image ID: `sha256:ef311372d0d999ca41637df9726af2de6c99c4a5ef91e983f5296a101f2d61d3`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -8556,20 +8556,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal mai
 # Fri, 16 Jun 2023 03:35:39 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:36:02 GMT
+# Mon, 26 Jun 2023 21:42:16 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.6.14/repo/ubuntu/ focal main
-RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:36:04 GMT
+RUN set -ex; 	{ 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password password 'unused'; 		echo "mariadb-server-$MARIADB_MAJOR" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:42:18 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:36:04 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:36:04 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:36:04 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:42:18 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:42:18 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:36:04 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:36:05 GMT
+# Mon, 26 Jun 2023 21:42:18 GMT
 CMD ["mariadbd"]
 ```
 
@@ -8594,17 +8594,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd53a91192120781864faf6ada69bbde0bde46b5c33c22cbc54b9b0e3c47256a`  
-		Last Modified: Fri, 16 Jun 2023 03:39:32 GMT  
-		Size: 84.9 MB (84882658 bytes)  
+	-	`sha256:6fa335c4c55c2a87089f4da634c7d96b53a295aa9a76ef2ed1125808814e4c31`  
+		Last Modified: Mon, 26 Jun 2023 21:45:41 GMT  
+		Size: 84.9 MB (84882749 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4aea326f1438e41e4b5f9d51f2cadeeb8f7a84f87a788ad2e6bbb79ae11fbbef`  
-		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:691ecf0d6708c60c3bc1203707416fa7dc392d3b2f0aebc025eccfd0551ed32e`  
+		Last Modified: Mon, 26 Jun 2023 21:45:32 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:965a9675a27388609341a9e9a2e1f0c42a4fec649b9eb971233bf4b7a58fbc0a`  
-		Last Modified: Fri, 16 Jun 2023 03:39:23 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:fb2a83823ed01478bfd3898074960a9002eed89f5dc12f5c8ea4da994425414d`  
+		Last Modified: Mon, 26 Jun 2023 21:45:32 GMT  
+		Size: 7.6 KB (7570 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.6.14-focal` - linux; ppc64le
@@ -8824,7 +8824,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.9`
 
 ```console
-$ docker pull mariadb@sha256:90a1391d642e954e00e02827de084ead672703f25474eaa4c64a33775fd2b0f1
+$ docker pull mariadb@sha256:a6b48a18dc4d3aeac61d14baf84ad00abe4858fab607a04efb2d63803ab1952e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8940,14 +8940,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.9` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:368a7c1b964c4b73b83edcde13b36bc4dcdc3b8b4baaeb56b9227d6ec49726e4
+$ docker pull mariadb@sha256:e64b496bbcd00b2b57d20327152d37e5077618d494e1997d794fcf4bc4280b0a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **114.0 MB (113972607 bytes)**  
+-	Total Size: **114.0 MB (113973160 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ea953c93de2d75a1cd3fa2e8ed027ef85e93f9eb400d2cd20ea6f91ed6c20e60`
+-	Image ID: `sha256:5f56bfd9ba32b34083d5206af3288b1593eb30e5262da762d58d515d976b3538`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -8989,20 +8989,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:34:58 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:35:15 GMT
+# Mon, 26 Jun 2023 21:41:28 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:35:16 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:41:30 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:35:16 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:35:17 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:41:30 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:41:30 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
 CMD ["mariadbd"]
 ```
 
@@ -9027,17 +9027,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
 		Size: 327.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb087baf58167463d9e70415838993d1ada94a28433c33686209e7f03a29f7c3`  
-		Last Modified: Fri, 16 Jun 2023 03:39:11 GMT  
-		Size: 80.2 MB (80164571 bytes)  
+	-	`sha256:0c3708c4691abca45bac9abd6a6a4ff5eaf1c97e3c6edd2561249234fa1bbf33`  
+		Last Modified: Mon, 26 Jun 2023 21:45:20 GMT  
+		Size: 80.2 MB (80164828 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3bbfabed28ca4c54d57580f9219a3c4ff2191643bef53deab15182bbcbb4c853`  
-		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:fd5ff7468e4d510f8a20dc42d469da51902a2aca3cba7d1ef6e5e8edc035f16a`  
+		Last Modified: Mon, 26 Jun 2023 21:45:11 GMT  
+		Size: 3.6 KB (3565 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec539f6fe5d31dbb58ac1b50886fbc3d9a950f60855fd8dc5862b69c0a7a7a8f`  
-		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
-		Size: 7.3 KB (7310 bytes)  
+	-	`sha256:6e52bb0d983dfc38c6a527c30e7e9a040f5bfd022f9f3933122a22e0886ab03a`  
+		Last Modified: Mon, 26 Jun 2023 21:45:11 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.9` - linux; ppc64le
@@ -9249,7 +9249,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.9-jammy`
 
 ```console
-$ docker pull mariadb@sha256:90a1391d642e954e00e02827de084ead672703f25474eaa4c64a33775fd2b0f1
+$ docker pull mariadb@sha256:a6b48a18dc4d3aeac61d14baf84ad00abe4858fab607a04efb2d63803ab1952e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9365,14 +9365,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.9-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:368a7c1b964c4b73b83edcde13b36bc4dcdc3b8b4baaeb56b9227d6ec49726e4
+$ docker pull mariadb@sha256:e64b496bbcd00b2b57d20327152d37e5077618d494e1997d794fcf4bc4280b0a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **114.0 MB (113972607 bytes)**  
+-	Total Size: **114.0 MB (113973160 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ea953c93de2d75a1cd3fa2e8ed027ef85e93f9eb400d2cd20ea6f91ed6c20e60`
+-	Image ID: `sha256:5f56bfd9ba32b34083d5206af3288b1593eb30e5262da762d58d515d976b3538`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -9414,20 +9414,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:34:58 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:35:15 GMT
+# Mon, 26 Jun 2023 21:41:28 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:35:16 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:41:30 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:35:16 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:35:17 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:41:30 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:41:30 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
 CMD ["mariadbd"]
 ```
 
@@ -9452,17 +9452,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
 		Size: 327.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb087baf58167463d9e70415838993d1ada94a28433c33686209e7f03a29f7c3`  
-		Last Modified: Fri, 16 Jun 2023 03:39:11 GMT  
-		Size: 80.2 MB (80164571 bytes)  
+	-	`sha256:0c3708c4691abca45bac9abd6a6a4ff5eaf1c97e3c6edd2561249234fa1bbf33`  
+		Last Modified: Mon, 26 Jun 2023 21:45:20 GMT  
+		Size: 80.2 MB (80164828 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3bbfabed28ca4c54d57580f9219a3c4ff2191643bef53deab15182bbcbb4c853`  
-		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:fd5ff7468e4d510f8a20dc42d469da51902a2aca3cba7d1ef6e5e8edc035f16a`  
+		Last Modified: Mon, 26 Jun 2023 21:45:11 GMT  
+		Size: 3.6 KB (3565 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec539f6fe5d31dbb58ac1b50886fbc3d9a950f60855fd8dc5862b69c0a7a7a8f`  
-		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
-		Size: 7.3 KB (7310 bytes)  
+	-	`sha256:6e52bb0d983dfc38c6a527c30e7e9a040f5bfd022f9f3933122a22e0886ab03a`  
+		Last Modified: Mon, 26 Jun 2023 21:45:11 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.9-jammy` - linux; ppc64le
@@ -9674,7 +9674,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.9.7`
 
 ```console
-$ docker pull mariadb@sha256:22bdc36233ff10a2597432e984ed461098946448ae3980554cc3a6b9b6b0e7ac
+$ docker pull mariadb@sha256:a5544dd96720a681916327b6caf56cc7692a32da01e3b2a2f97e90821c9ed464
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9789,14 +9789,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.9.7` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:368a7c1b964c4b73b83edcde13b36bc4dcdc3b8b4baaeb56b9227d6ec49726e4
+$ docker pull mariadb@sha256:e64b496bbcd00b2b57d20327152d37e5077618d494e1997d794fcf4bc4280b0a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **114.0 MB (113972607 bytes)**  
+-	Total Size: **114.0 MB (113973160 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ea953c93de2d75a1cd3fa2e8ed027ef85e93f9eb400d2cd20ea6f91ed6c20e60`
+-	Image ID: `sha256:5f56bfd9ba32b34083d5206af3288b1593eb30e5262da762d58d515d976b3538`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -9838,20 +9838,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:34:58 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:35:15 GMT
+# Mon, 26 Jun 2023 21:41:28 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:35:16 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:41:30 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:35:16 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:35:17 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:41:30 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:41:30 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
 CMD ["mariadbd"]
 ```
 
@@ -9876,17 +9876,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
 		Size: 327.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb087baf58167463d9e70415838993d1ada94a28433c33686209e7f03a29f7c3`  
-		Last Modified: Fri, 16 Jun 2023 03:39:11 GMT  
-		Size: 80.2 MB (80164571 bytes)  
+	-	`sha256:0c3708c4691abca45bac9abd6a6a4ff5eaf1c97e3c6edd2561249234fa1bbf33`  
+		Last Modified: Mon, 26 Jun 2023 21:45:20 GMT  
+		Size: 80.2 MB (80164828 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3bbfabed28ca4c54d57580f9219a3c4ff2191643bef53deab15182bbcbb4c853`  
-		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:fd5ff7468e4d510f8a20dc42d469da51902a2aca3cba7d1ef6e5e8edc035f16a`  
+		Last Modified: Mon, 26 Jun 2023 21:45:11 GMT  
+		Size: 3.6 KB (3565 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec539f6fe5d31dbb58ac1b50886fbc3d9a950f60855fd8dc5862b69c0a7a7a8f`  
-		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
-		Size: 7.3 KB (7310 bytes)  
+	-	`sha256:6e52bb0d983dfc38c6a527c30e7e9a040f5bfd022f9f3933122a22e0886ab03a`  
+		Last Modified: Mon, 26 Jun 2023 21:45:11 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.9.7` - linux; ppc64le
@@ -9995,7 +9995,7 @@ CMD ["mariadbd"]
 ## `mariadb:10.9.7-jammy`
 
 ```console
-$ docker pull mariadb@sha256:22bdc36233ff10a2597432e984ed461098946448ae3980554cc3a6b9b6b0e7ac
+$ docker pull mariadb@sha256:a5544dd96720a681916327b6caf56cc7692a32da01e3b2a2f97e90821c9ed464
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10110,14 +10110,14 @@ CMD ["mariadbd"]
 ### `mariadb:10.9.7-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:368a7c1b964c4b73b83edcde13b36bc4dcdc3b8b4baaeb56b9227d6ec49726e4
+$ docker pull mariadb@sha256:e64b496bbcd00b2b57d20327152d37e5077618d494e1997d794fcf4bc4280b0a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **114.0 MB (113972607 bytes)**  
+-	Total Size: **114.0 MB (113973160 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:ea953c93de2d75a1cd3fa2e8ed027ef85e93f9eb400d2cd20ea6f91ed6c20e60`
+-	Image ID: `sha256:5f56bfd9ba32b34083d5206af3288b1593eb30e5262da762d58d515d976b3538`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -10159,20 +10159,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:34:58 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:35:15 GMT
+# Mon, 26 Jun 2023 21:41:28 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.9.7/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:35:16 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:41:30 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:35:16 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:35:17 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:41:30 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:41:30 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:35:17 GMT
+# Mon, 26 Jun 2023 21:41:30 GMT
 CMD ["mariadbd"]
 ```
 
@@ -10197,17 +10197,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
 		Size: 327.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb087baf58167463d9e70415838993d1ada94a28433c33686209e7f03a29f7c3`  
-		Last Modified: Fri, 16 Jun 2023 03:39:11 GMT  
-		Size: 80.2 MB (80164571 bytes)  
+	-	`sha256:0c3708c4691abca45bac9abd6a6a4ff5eaf1c97e3c6edd2561249234fa1bbf33`  
+		Last Modified: Mon, 26 Jun 2023 21:45:20 GMT  
+		Size: 80.2 MB (80164828 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3bbfabed28ca4c54d57580f9219a3c4ff2191643bef53deab15182bbcbb4c853`  
-		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:fd5ff7468e4d510f8a20dc42d469da51902a2aca3cba7d1ef6e5e8edc035f16a`  
+		Last Modified: Mon, 26 Jun 2023 21:45:11 GMT  
+		Size: 3.6 KB (3565 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec539f6fe5d31dbb58ac1b50886fbc3d9a950f60855fd8dc5862b69c0a7a7a8f`  
-		Last Modified: Fri, 16 Jun 2023 03:39:01 GMT  
-		Size: 7.3 KB (7310 bytes)  
+	-	`sha256:6e52bb0d983dfc38c6a527c30e7e9a040f5bfd022f9f3933122a22e0886ab03a`  
+		Last Modified: Mon, 26 Jun 2023 21:45:11 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:10.9.7-jammy` - linux; ppc64le
@@ -10316,7 +10316,7 @@ CMD ["mariadbd"]
 ## `mariadb:11`
 
 ```console
-$ docker pull mariadb@sha256:228396b810760b959bc99fd03d2a5fec0b056ceaef9e525a12e9b3c4b883a3af
+$ docker pull mariadb@sha256:1bd4944e050de21af88ea1467e989c70d1b34896099ec6da8705ddc70d66514f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10431,14 +10431,14 @@ CMD ["mariadbd"]
 ### `mariadb:11` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:923082cff2f27c8f48b921cbffaf34d1850a201cdad518fe1667a2df27fa9d4b
+$ docker pull mariadb@sha256:5a01dba1fcd35c5f643e6c59734a2623ccb48a57146dd1cf5e0510c16197174a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117616233 bytes)**  
+-	Total Size: **117.6 MB (117616384 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a73600e45a7f1c28b03fe7331377899efaa6bd4c78e973c55c661d8c05dd1fd`
+-	Image ID: `sha256:8795cbbe985c6398fcf63e12daeaa47d06841e6b7ddc055a334322af675fedc1`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -10480,20 +10480,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:48 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:05 GMT
+# Mon, 26 Jun 2023 21:40:31 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:07 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:32 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:33 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 CMD ["mariadbd"]
 ```
 
@@ -10518,17 +10518,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b46a2b6ea7583e24e61ff4c8960e3022be444ca8728bd2f9df39362ead694908`  
-		Last Modified: Fri, 16 Jun 2023 03:37:51 GMT  
-		Size: 83.8 MB (83808194 bytes)  
+	-	`sha256:59d8f4a32a3969b24e289267403b05d6fb1169ef752ed642f3423b1e63a0151e`  
+		Last Modified: Mon, 26 Jun 2023 21:43:59 GMT  
+		Size: 83.8 MB (83808049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4d7d84249f7fd06a549b21d9c853d4934095f9be7c03414d597b44d4f279add`  
-		Last Modified: Fri, 16 Jun 2023 03:37:42 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:44711010ede491566dcc11b1e739284c2a3976d5091ca532dcffa613eed3d734`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92bfc7286387e901eb4898bb6b10bf3048c10a2143cd05c35a56da78b455ddb7`  
-		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
-		Size: 7.3 KB (7311 bytes)  
+	-	`sha256:bd0ae9ddf32a8a6c26e8a9db659c6708ca1bb8f7b79c501a5eb60f96412edad3`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:11` - linux; ppc64le
@@ -10637,7 +10637,7 @@ CMD ["mariadbd"]
 ## `mariadb:11-jammy`
 
 ```console
-$ docker pull mariadb@sha256:228396b810760b959bc99fd03d2a5fec0b056ceaef9e525a12e9b3c4b883a3af
+$ docker pull mariadb@sha256:1bd4944e050de21af88ea1467e989c70d1b34896099ec6da8705ddc70d66514f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10752,14 +10752,14 @@ CMD ["mariadbd"]
 ### `mariadb:11-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:923082cff2f27c8f48b921cbffaf34d1850a201cdad518fe1667a2df27fa9d4b
+$ docker pull mariadb@sha256:5a01dba1fcd35c5f643e6c59734a2623ccb48a57146dd1cf5e0510c16197174a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117616233 bytes)**  
+-	Total Size: **117.6 MB (117616384 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a73600e45a7f1c28b03fe7331377899efaa6bd4c78e973c55c661d8c05dd1fd`
+-	Image ID: `sha256:8795cbbe985c6398fcf63e12daeaa47d06841e6b7ddc055a334322af675fedc1`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -10801,20 +10801,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:48 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:05 GMT
+# Mon, 26 Jun 2023 21:40:31 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:07 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:32 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:33 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 CMD ["mariadbd"]
 ```
 
@@ -10839,17 +10839,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b46a2b6ea7583e24e61ff4c8960e3022be444ca8728bd2f9df39362ead694908`  
-		Last Modified: Fri, 16 Jun 2023 03:37:51 GMT  
-		Size: 83.8 MB (83808194 bytes)  
+	-	`sha256:59d8f4a32a3969b24e289267403b05d6fb1169ef752ed642f3423b1e63a0151e`  
+		Last Modified: Mon, 26 Jun 2023 21:43:59 GMT  
+		Size: 83.8 MB (83808049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4d7d84249f7fd06a549b21d9c853d4934095f9be7c03414d597b44d4f279add`  
-		Last Modified: Fri, 16 Jun 2023 03:37:42 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:44711010ede491566dcc11b1e739284c2a3976d5091ca532dcffa613eed3d734`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92bfc7286387e901eb4898bb6b10bf3048c10a2143cd05c35a56da78b455ddb7`  
-		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
-		Size: 7.3 KB (7311 bytes)  
+	-	`sha256:bd0ae9ddf32a8a6c26e8a9db659c6708ca1bb8f7b79c501a5eb60f96412edad3`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:11-jammy` - linux; ppc64le
@@ -10958,7 +10958,7 @@ CMD ["mariadbd"]
 ## `mariadb:11.0`
 
 ```console
-$ docker pull mariadb@sha256:228396b810760b959bc99fd03d2a5fec0b056ceaef9e525a12e9b3c4b883a3af
+$ docker pull mariadb@sha256:1bd4944e050de21af88ea1467e989c70d1b34896099ec6da8705ddc70d66514f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11073,14 +11073,14 @@ CMD ["mariadbd"]
 ### `mariadb:11.0` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:923082cff2f27c8f48b921cbffaf34d1850a201cdad518fe1667a2df27fa9d4b
+$ docker pull mariadb@sha256:5a01dba1fcd35c5f643e6c59734a2623ccb48a57146dd1cf5e0510c16197174a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117616233 bytes)**  
+-	Total Size: **117.6 MB (117616384 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a73600e45a7f1c28b03fe7331377899efaa6bd4c78e973c55c661d8c05dd1fd`
+-	Image ID: `sha256:8795cbbe985c6398fcf63e12daeaa47d06841e6b7ddc055a334322af675fedc1`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -11122,20 +11122,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:48 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:05 GMT
+# Mon, 26 Jun 2023 21:40:31 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:07 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:32 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:33 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 CMD ["mariadbd"]
 ```
 
@@ -11160,17 +11160,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b46a2b6ea7583e24e61ff4c8960e3022be444ca8728bd2f9df39362ead694908`  
-		Last Modified: Fri, 16 Jun 2023 03:37:51 GMT  
-		Size: 83.8 MB (83808194 bytes)  
+	-	`sha256:59d8f4a32a3969b24e289267403b05d6fb1169ef752ed642f3423b1e63a0151e`  
+		Last Modified: Mon, 26 Jun 2023 21:43:59 GMT  
+		Size: 83.8 MB (83808049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4d7d84249f7fd06a549b21d9c853d4934095f9be7c03414d597b44d4f279add`  
-		Last Modified: Fri, 16 Jun 2023 03:37:42 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:44711010ede491566dcc11b1e739284c2a3976d5091ca532dcffa613eed3d734`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92bfc7286387e901eb4898bb6b10bf3048c10a2143cd05c35a56da78b455ddb7`  
-		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
-		Size: 7.3 KB (7311 bytes)  
+	-	`sha256:bd0ae9ddf32a8a6c26e8a9db659c6708ca1bb8f7b79c501a5eb60f96412edad3`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:11.0` - linux; ppc64le
@@ -11279,7 +11279,7 @@ CMD ["mariadbd"]
 ## `mariadb:11.0-jammy`
 
 ```console
-$ docker pull mariadb@sha256:228396b810760b959bc99fd03d2a5fec0b056ceaef9e525a12e9b3c4b883a3af
+$ docker pull mariadb@sha256:1bd4944e050de21af88ea1467e989c70d1b34896099ec6da8705ddc70d66514f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11394,14 +11394,14 @@ CMD ["mariadbd"]
 ### `mariadb:11.0-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:923082cff2f27c8f48b921cbffaf34d1850a201cdad518fe1667a2df27fa9d4b
+$ docker pull mariadb@sha256:5a01dba1fcd35c5f643e6c59734a2623ccb48a57146dd1cf5e0510c16197174a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117616233 bytes)**  
+-	Total Size: **117.6 MB (117616384 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a73600e45a7f1c28b03fe7331377899efaa6bd4c78e973c55c661d8c05dd1fd`
+-	Image ID: `sha256:8795cbbe985c6398fcf63e12daeaa47d06841e6b7ddc055a334322af675fedc1`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -11443,20 +11443,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:48 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:05 GMT
+# Mon, 26 Jun 2023 21:40:31 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:07 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:32 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:33 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 CMD ["mariadbd"]
 ```
 
@@ -11481,17 +11481,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b46a2b6ea7583e24e61ff4c8960e3022be444ca8728bd2f9df39362ead694908`  
-		Last Modified: Fri, 16 Jun 2023 03:37:51 GMT  
-		Size: 83.8 MB (83808194 bytes)  
+	-	`sha256:59d8f4a32a3969b24e289267403b05d6fb1169ef752ed642f3423b1e63a0151e`  
+		Last Modified: Mon, 26 Jun 2023 21:43:59 GMT  
+		Size: 83.8 MB (83808049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4d7d84249f7fd06a549b21d9c853d4934095f9be7c03414d597b44d4f279add`  
-		Last Modified: Fri, 16 Jun 2023 03:37:42 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:44711010ede491566dcc11b1e739284c2a3976d5091ca532dcffa613eed3d734`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92bfc7286387e901eb4898bb6b10bf3048c10a2143cd05c35a56da78b455ddb7`  
-		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
-		Size: 7.3 KB (7311 bytes)  
+	-	`sha256:bd0ae9ddf32a8a6c26e8a9db659c6708ca1bb8f7b79c501a5eb60f96412edad3`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:11.0-jammy` - linux; ppc64le
@@ -11600,7 +11600,7 @@ CMD ["mariadbd"]
 ## `mariadb:11.0.2`
 
 ```console
-$ docker pull mariadb@sha256:228396b810760b959bc99fd03d2a5fec0b056ceaef9e525a12e9b3c4b883a3af
+$ docker pull mariadb@sha256:1bd4944e050de21af88ea1467e989c70d1b34896099ec6da8705ddc70d66514f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11715,14 +11715,14 @@ CMD ["mariadbd"]
 ### `mariadb:11.0.2` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:923082cff2f27c8f48b921cbffaf34d1850a201cdad518fe1667a2df27fa9d4b
+$ docker pull mariadb@sha256:5a01dba1fcd35c5f643e6c59734a2623ccb48a57146dd1cf5e0510c16197174a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117616233 bytes)**  
+-	Total Size: **117.6 MB (117616384 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a73600e45a7f1c28b03fe7331377899efaa6bd4c78e973c55c661d8c05dd1fd`
+-	Image ID: `sha256:8795cbbe985c6398fcf63e12daeaa47d06841e6b7ddc055a334322af675fedc1`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -11764,20 +11764,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:48 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:05 GMT
+# Mon, 26 Jun 2023 21:40:31 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:07 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:32 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:33 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 CMD ["mariadbd"]
 ```
 
@@ -11802,17 +11802,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b46a2b6ea7583e24e61ff4c8960e3022be444ca8728bd2f9df39362ead694908`  
-		Last Modified: Fri, 16 Jun 2023 03:37:51 GMT  
-		Size: 83.8 MB (83808194 bytes)  
+	-	`sha256:59d8f4a32a3969b24e289267403b05d6fb1169ef752ed642f3423b1e63a0151e`  
+		Last Modified: Mon, 26 Jun 2023 21:43:59 GMT  
+		Size: 83.8 MB (83808049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4d7d84249f7fd06a549b21d9c853d4934095f9be7c03414d597b44d4f279add`  
-		Last Modified: Fri, 16 Jun 2023 03:37:42 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:44711010ede491566dcc11b1e739284c2a3976d5091ca532dcffa613eed3d734`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92bfc7286387e901eb4898bb6b10bf3048c10a2143cd05c35a56da78b455ddb7`  
-		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
-		Size: 7.3 KB (7311 bytes)  
+	-	`sha256:bd0ae9ddf32a8a6c26e8a9db659c6708ca1bb8f7b79c501a5eb60f96412edad3`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:11.0.2` - linux; ppc64le
@@ -11921,7 +11921,7 @@ CMD ["mariadbd"]
 ## `mariadb:11.0.2-jammy`
 
 ```console
-$ docker pull mariadb@sha256:228396b810760b959bc99fd03d2a5fec0b056ceaef9e525a12e9b3c4b883a3af
+$ docker pull mariadb@sha256:1bd4944e050de21af88ea1467e989c70d1b34896099ec6da8705ddc70d66514f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12036,14 +12036,14 @@ CMD ["mariadbd"]
 ### `mariadb:11.0.2-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:923082cff2f27c8f48b921cbffaf34d1850a201cdad518fe1667a2df27fa9d4b
+$ docker pull mariadb@sha256:5a01dba1fcd35c5f643e6c59734a2623ccb48a57146dd1cf5e0510c16197174a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117616233 bytes)**  
+-	Total Size: **117.6 MB (117616384 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a73600e45a7f1c28b03fe7331377899efaa6bd4c78e973c55c661d8c05dd1fd`
+-	Image ID: `sha256:8795cbbe985c6398fcf63e12daeaa47d06841e6b7ddc055a334322af675fedc1`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -12085,20 +12085,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:48 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:05 GMT
+# Mon, 26 Jun 2023 21:40:31 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:07 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:32 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:33 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 CMD ["mariadbd"]
 ```
 
@@ -12123,17 +12123,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b46a2b6ea7583e24e61ff4c8960e3022be444ca8728bd2f9df39362ead694908`  
-		Last Modified: Fri, 16 Jun 2023 03:37:51 GMT  
-		Size: 83.8 MB (83808194 bytes)  
+	-	`sha256:59d8f4a32a3969b24e289267403b05d6fb1169ef752ed642f3423b1e63a0151e`  
+		Last Modified: Mon, 26 Jun 2023 21:43:59 GMT  
+		Size: 83.8 MB (83808049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4d7d84249f7fd06a549b21d9c853d4934095f9be7c03414d597b44d4f279add`  
-		Last Modified: Fri, 16 Jun 2023 03:37:42 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:44711010ede491566dcc11b1e739284c2a3976d5091ca532dcffa613eed3d734`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92bfc7286387e901eb4898bb6b10bf3048c10a2143cd05c35a56da78b455ddb7`  
-		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
-		Size: 7.3 KB (7311 bytes)  
+	-	`sha256:bd0ae9ddf32a8a6c26e8a9db659c6708ca1bb8f7b79c501a5eb60f96412edad3`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:11.0.2-jammy` - linux; ppc64le
@@ -12242,7 +12242,7 @@ CMD ["mariadbd"]
 ## `mariadb:11.1-rc`
 
 ```console
-$ docker pull mariadb@sha256:2b9adf0b6013850157417452b349a2254da267add0af0e1af89f6caa4c739a07
+$ docker pull mariadb@sha256:49d3f882d03ab3dc19a83dac95da6558a9c6db47236a458f24f04c5b7736bacc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12357,14 +12357,14 @@ CMD ["mariadbd"]
 ### `mariadb:11.1-rc` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:e39ae8d2550dea1a28435628081b068f49327d0dc58a1b5e83c4c2a033956aff
+$ docker pull mariadb@sha256:450f85eee7aed62f3d1fb38b8b15514dc5e6706e7ebbea6b440090dfcf60480c
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.7 MB (117692305 bytes)**  
+-	Total Size: **117.7 MB (117692613 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:db1e18d88c5ebe0f98f3c3a058f0bc3dc0893e17c2411247737277d5a328d494`
+-	Image ID: `sha256:13e27b88a426644ee378256b681995a4d553afe94df9c777d6161834bd3bf2d6`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -12406,20 +12406,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:17 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:33:41 GMT
+# Mon, 26 Jun 2023 21:40:08 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:33:43 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:10 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:33:43 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:33:43 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:10 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:10 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:10 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:10 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:11 GMT
 CMD ["mariadbd"]
 ```
 
@@ -12444,17 +12444,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
 		Size: 326.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ed2684157409213dd5b30d058c28e033f2e0b6c663b9301424551cb8adf32818`  
-		Last Modified: Fri, 16 Jun 2023 03:37:29 GMT  
-		Size: 83.9 MB (83884262 bytes)  
+	-	`sha256:8b10d632a77eb3a26db6818d91c03c870b843dfe13b4f4b1578a957279e70ba6`  
+		Last Modified: Mon, 26 Jun 2023 21:43:38 GMT  
+		Size: 83.9 MB (83884280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35296282fa3400abd492339f111f7f3d5aa2209377e07eb213c42d39cc3448d0`  
-		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
-		Size: 3.5 KB (3530 bytes)  
+	-	`sha256:1dad06a75ea9e609410ce86634f4f82fe87f700f70c09219f7798c4763d57a04`  
+		Last Modified: Mon, 26 Jun 2023 21:43:28 GMT  
+		Size: 3.6 KB (3565 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b904c321a9dfe59b25d3b693f5a230ff8e2b352e7657fdc7c613f51d611f7d3a`  
-		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
-		Size: 7.3 KB (7314 bytes)  
+	-	`sha256:024699ae509b3f7ede6ea6a4a4d9750cba5550b1e9e12307988126f3354ac810`  
+		Last Modified: Mon, 26 Jun 2023 21:43:28 GMT  
+		Size: 7.6 KB (7569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:11.1-rc` - linux; ppc64le
@@ -12563,7 +12563,7 @@ CMD ["mariadbd"]
 ## `mariadb:11.1-rc-jammy`
 
 ```console
-$ docker pull mariadb@sha256:2b9adf0b6013850157417452b349a2254da267add0af0e1af89f6caa4c739a07
+$ docker pull mariadb@sha256:49d3f882d03ab3dc19a83dac95da6558a9c6db47236a458f24f04c5b7736bacc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12678,14 +12678,14 @@ CMD ["mariadbd"]
 ### `mariadb:11.1-rc-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:e39ae8d2550dea1a28435628081b068f49327d0dc58a1b5e83c4c2a033956aff
+$ docker pull mariadb@sha256:450f85eee7aed62f3d1fb38b8b15514dc5e6706e7ebbea6b440090dfcf60480c
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.7 MB (117692305 bytes)**  
+-	Total Size: **117.7 MB (117692613 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:db1e18d88c5ebe0f98f3c3a058f0bc3dc0893e17c2411247737277d5a328d494`
+-	Image ID: `sha256:13e27b88a426644ee378256b681995a4d553afe94df9c777d6161834bd3bf2d6`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -12727,20 +12727,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:17 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:33:41 GMT
+# Mon, 26 Jun 2023 21:40:08 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:33:43 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:10 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:33:43 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:33:43 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:10 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:10 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:10 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:10 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:11 GMT
 CMD ["mariadbd"]
 ```
 
@@ -12765,17 +12765,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
 		Size: 326.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ed2684157409213dd5b30d058c28e033f2e0b6c663b9301424551cb8adf32818`  
-		Last Modified: Fri, 16 Jun 2023 03:37:29 GMT  
-		Size: 83.9 MB (83884262 bytes)  
+	-	`sha256:8b10d632a77eb3a26db6818d91c03c870b843dfe13b4f4b1578a957279e70ba6`  
+		Last Modified: Mon, 26 Jun 2023 21:43:38 GMT  
+		Size: 83.9 MB (83884280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35296282fa3400abd492339f111f7f3d5aa2209377e07eb213c42d39cc3448d0`  
-		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
-		Size: 3.5 KB (3530 bytes)  
+	-	`sha256:1dad06a75ea9e609410ce86634f4f82fe87f700f70c09219f7798c4763d57a04`  
+		Last Modified: Mon, 26 Jun 2023 21:43:28 GMT  
+		Size: 3.6 KB (3565 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b904c321a9dfe59b25d3b693f5a230ff8e2b352e7657fdc7c613f51d611f7d3a`  
-		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
-		Size: 7.3 KB (7314 bytes)  
+	-	`sha256:024699ae509b3f7ede6ea6a4a4d9750cba5550b1e9e12307988126f3354ac810`  
+		Last Modified: Mon, 26 Jun 2023 21:43:28 GMT  
+		Size: 7.6 KB (7569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:11.1-rc-jammy` - linux; ppc64le
@@ -12884,7 +12884,7 @@ CMD ["mariadbd"]
 ## `mariadb:11.1.1-rc`
 
 ```console
-$ docker pull mariadb@sha256:2b9adf0b6013850157417452b349a2254da267add0af0e1af89f6caa4c739a07
+$ docker pull mariadb@sha256:49d3f882d03ab3dc19a83dac95da6558a9c6db47236a458f24f04c5b7736bacc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12999,14 +12999,14 @@ CMD ["mariadbd"]
 ### `mariadb:11.1.1-rc` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:e39ae8d2550dea1a28435628081b068f49327d0dc58a1b5e83c4c2a033956aff
+$ docker pull mariadb@sha256:450f85eee7aed62f3d1fb38b8b15514dc5e6706e7ebbea6b440090dfcf60480c
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.7 MB (117692305 bytes)**  
+-	Total Size: **117.7 MB (117692613 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:db1e18d88c5ebe0f98f3c3a058f0bc3dc0893e17c2411247737277d5a328d494`
+-	Image ID: `sha256:13e27b88a426644ee378256b681995a4d553afe94df9c777d6161834bd3bf2d6`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -13048,20 +13048,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:17 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:33:41 GMT
+# Mon, 26 Jun 2023 21:40:08 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:33:43 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:10 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:33:43 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:33:43 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:10 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:10 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:10 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:10 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:11 GMT
 CMD ["mariadbd"]
 ```
 
@@ -13086,17 +13086,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
 		Size: 326.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ed2684157409213dd5b30d058c28e033f2e0b6c663b9301424551cb8adf32818`  
-		Last Modified: Fri, 16 Jun 2023 03:37:29 GMT  
-		Size: 83.9 MB (83884262 bytes)  
+	-	`sha256:8b10d632a77eb3a26db6818d91c03c870b843dfe13b4f4b1578a957279e70ba6`  
+		Last Modified: Mon, 26 Jun 2023 21:43:38 GMT  
+		Size: 83.9 MB (83884280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35296282fa3400abd492339f111f7f3d5aa2209377e07eb213c42d39cc3448d0`  
-		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
-		Size: 3.5 KB (3530 bytes)  
+	-	`sha256:1dad06a75ea9e609410ce86634f4f82fe87f700f70c09219f7798c4763d57a04`  
+		Last Modified: Mon, 26 Jun 2023 21:43:28 GMT  
+		Size: 3.6 KB (3565 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b904c321a9dfe59b25d3b693f5a230ff8e2b352e7657fdc7c613f51d611f7d3a`  
-		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
-		Size: 7.3 KB (7314 bytes)  
+	-	`sha256:024699ae509b3f7ede6ea6a4a4d9750cba5550b1e9e12307988126f3354ac810`  
+		Last Modified: Mon, 26 Jun 2023 21:43:28 GMT  
+		Size: 7.6 KB (7569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:11.1.1-rc` - linux; ppc64le
@@ -13205,7 +13205,7 @@ CMD ["mariadbd"]
 ## `mariadb:11.1.1-rc-jammy`
 
 ```console
-$ docker pull mariadb@sha256:2b9adf0b6013850157417452b349a2254da267add0af0e1af89f6caa4c739a07
+$ docker pull mariadb@sha256:49d3f882d03ab3dc19a83dac95da6558a9c6db47236a458f24f04c5b7736bacc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13320,14 +13320,14 @@ CMD ["mariadbd"]
 ### `mariadb:11.1.1-rc-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:e39ae8d2550dea1a28435628081b068f49327d0dc58a1b5e83c4c2a033956aff
+$ docker pull mariadb@sha256:450f85eee7aed62f3d1fb38b8b15514dc5e6706e7ebbea6b440090dfcf60480c
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.7 MB (117692305 bytes)**  
+-	Total Size: **117.7 MB (117692613 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:db1e18d88c5ebe0f98f3c3a058f0bc3dc0893e17c2411247737277d5a328d494`
+-	Image ID: `sha256:13e27b88a426644ee378256b681995a4d553afe94df9c777d6161834bd3bf2d6`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -13369,20 +13369,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:17 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:33:41 GMT
+# Mon, 26 Jun 2023 21:40:08 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.1.1/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:33:43 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:10 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:33:43 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:33:43 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:10 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:10 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:10 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:10 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:33:43 GMT
+# Mon, 26 Jun 2023 21:40:11 GMT
 CMD ["mariadbd"]
 ```
 
@@ -13407,17 +13407,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
 		Size: 326.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ed2684157409213dd5b30d058c28e033f2e0b6c663b9301424551cb8adf32818`  
-		Last Modified: Fri, 16 Jun 2023 03:37:29 GMT  
-		Size: 83.9 MB (83884262 bytes)  
+	-	`sha256:8b10d632a77eb3a26db6818d91c03c870b843dfe13b4f4b1578a957279e70ba6`  
+		Last Modified: Mon, 26 Jun 2023 21:43:38 GMT  
+		Size: 83.9 MB (83884280 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:35296282fa3400abd492339f111f7f3d5aa2209377e07eb213c42d39cc3448d0`  
-		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
-		Size: 3.5 KB (3530 bytes)  
+	-	`sha256:1dad06a75ea9e609410ce86634f4f82fe87f700f70c09219f7798c4763d57a04`  
+		Last Modified: Mon, 26 Jun 2023 21:43:28 GMT  
+		Size: 3.6 KB (3565 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b904c321a9dfe59b25d3b693f5a230ff8e2b352e7657fdc7c613f51d611f7d3a`  
-		Last Modified: Fri, 16 Jun 2023 03:37:19 GMT  
-		Size: 7.3 KB (7314 bytes)  
+	-	`sha256:024699ae509b3f7ede6ea6a4a4d9750cba5550b1e9e12307988126f3354ac810`  
+		Last Modified: Mon, 26 Jun 2023 21:43:28 GMT  
+		Size: 7.6 KB (7569 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:11.1.1-rc-jammy` - linux; ppc64le
@@ -13526,7 +13526,7 @@ CMD ["mariadbd"]
 ## `mariadb:jammy`
 
 ```console
-$ docker pull mariadb@sha256:962f0e4368b993d4e5df4cf49c3a343de8894a2686bc6bafccf4abdbfaec1a2a
+$ docker pull mariadb@sha256:ec416f27684ec3826556277ec14e359e485e466c8b2cf84e708518be47d6c966
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13642,14 +13642,14 @@ CMD ["mariadbd"]
 ### `mariadb:jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:923082cff2f27c8f48b921cbffaf34d1850a201cdad518fe1667a2df27fa9d4b
+$ docker pull mariadb@sha256:5a01dba1fcd35c5f643e6c59734a2623ccb48a57146dd1cf5e0510c16197174a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117616233 bytes)**  
+-	Total Size: **117.6 MB (117616384 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a73600e45a7f1c28b03fe7331377899efaa6bd4c78e973c55c661d8c05dd1fd`
+-	Image ID: `sha256:8795cbbe985c6398fcf63e12daeaa47d06841e6b7ddc055a334322af675fedc1`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -13691,20 +13691,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:48 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:05 GMT
+# Mon, 26 Jun 2023 21:40:31 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:07 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:32 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:33 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 CMD ["mariadbd"]
 ```
 
@@ -13729,17 +13729,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b46a2b6ea7583e24e61ff4c8960e3022be444ca8728bd2f9df39362ead694908`  
-		Last Modified: Fri, 16 Jun 2023 03:37:51 GMT  
-		Size: 83.8 MB (83808194 bytes)  
+	-	`sha256:59d8f4a32a3969b24e289267403b05d6fb1169ef752ed642f3423b1e63a0151e`  
+		Last Modified: Mon, 26 Jun 2023 21:43:59 GMT  
+		Size: 83.8 MB (83808049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4d7d84249f7fd06a549b21d9c853d4934095f9be7c03414d597b44d4f279add`  
-		Last Modified: Fri, 16 Jun 2023 03:37:42 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:44711010ede491566dcc11b1e739284c2a3976d5091ca532dcffa613eed3d734`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92bfc7286387e901eb4898bb6b10bf3048c10a2143cd05c35a56da78b455ddb7`  
-		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
-		Size: 7.3 KB (7311 bytes)  
+	-	`sha256:bd0ae9ddf32a8a6c26e8a9db659c6708ca1bb8f7b79c501a5eb60f96412edad3`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:jammy` - linux; ppc64le
@@ -13951,7 +13951,7 @@ CMD ["mariadbd"]
 ## `mariadb:latest`
 
 ```console
-$ docker pull mariadb@sha256:962f0e4368b993d4e5df4cf49c3a343de8894a2686bc6bafccf4abdbfaec1a2a
+$ docker pull mariadb@sha256:ec416f27684ec3826556277ec14e359e485e466c8b2cf84e708518be47d6c966
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14067,14 +14067,14 @@ CMD ["mariadbd"]
 ### `mariadb:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:923082cff2f27c8f48b921cbffaf34d1850a201cdad518fe1667a2df27fa9d4b
+$ docker pull mariadb@sha256:5a01dba1fcd35c5f643e6c59734a2623ccb48a57146dd1cf5e0510c16197174a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117616233 bytes)**  
+-	Total Size: **117.6 MB (117616384 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6a73600e45a7f1c28b03fe7331377899efaa6bd4c78e973c55c661d8c05dd1fd`
+-	Image ID: `sha256:8795cbbe985c6398fcf63e12daeaa47d06841e6b7ddc055a334322af675fedc1`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -14116,20 +14116,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 # Fri, 16 Jun 2023 03:33:48 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:05 GMT
+# Mon, 26 Jun 2023 21:40:31 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-11.0.2/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:07 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:32 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:835b387376a8b7e7292ae71352abf1c02fc75f579bcc76af370b0497b20be068 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:07 GMT
-COPY file:8a4258a11da28308d0b9b254da95e930f850bcec67d37cfb12bc00f5a37939bd in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:1980cab2a8b7fba7431710370aad263c40d659a4885e66510adf2002b57ddf4c in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:33 GMT
+COPY file:41cd6c305128c82d238b47cc775ecf2262c7b95806428fa87026c43a3d858b56 in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:33 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:07 GMT
+# Mon, 26 Jun 2023 21:40:33 GMT
 CMD ["mariadbd"]
 ```
 
@@ -14154,17 +14154,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
 		Size: 329.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b46a2b6ea7583e24e61ff4c8960e3022be444ca8728bd2f9df39362ead694908`  
-		Last Modified: Fri, 16 Jun 2023 03:37:51 GMT  
-		Size: 83.8 MB (83808194 bytes)  
+	-	`sha256:59d8f4a32a3969b24e289267403b05d6fb1169ef752ed642f3423b1e63a0151e`  
+		Last Modified: Mon, 26 Jun 2023 21:43:59 GMT  
+		Size: 83.8 MB (83808049 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e4d7d84249f7fd06a549b21d9c853d4934095f9be7c03414d597b44d4f279add`  
-		Last Modified: Fri, 16 Jun 2023 03:37:42 GMT  
-		Size: 3.5 KB (3526 bytes)  
+	-	`sha256:44711010ede491566dcc11b1e739284c2a3976d5091ca532dcffa613eed3d734`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 3.6 KB (3566 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92bfc7286387e901eb4898bb6b10bf3048c10a2143cd05c35a56da78b455ddb7`  
-		Last Modified: Fri, 16 Jun 2023 03:37:41 GMT  
-		Size: 7.3 KB (7311 bytes)  
+	-	`sha256:bd0ae9ddf32a8a6c26e8a9db659c6708ca1bb8f7b79c501a5eb60f96412edad3`  
+		Last Modified: Mon, 26 Jun 2023 21:43:49 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:latest` - linux; ppc64le
@@ -14376,7 +14376,7 @@ CMD ["mariadbd"]
 ## `mariadb:lts`
 
 ```console
-$ docker pull mariadb@sha256:a035db50f9aa2fe4f68244c6de6b6c655e16500bee521df98a735cc4216fc756
+$ docker pull mariadb@sha256:9f89775e1d00e1b1c14c03d77efb32dc90dec6e3c82af81165b8ebeef5b84622
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14491,14 +14491,14 @@ CMD ["mariadbd"]
 ### `mariadb:lts` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:feb13ef2aa4591b577c2ddb3d2256e2b589a7291cb26afd8b37adbae9b766dab
+$ docker pull mariadb@sha256:5fd6061badec786f9112fc509a0e7425ebba50a6b61a5b23b2098f3844b1eb74
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117613769 bytes)**  
+-	Total Size: **117.6 MB (117614005 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d7d1ed89fa120fc8a7644f4aca5ed1c5263b3f76d14ad2204bb446d545f910bb`
+-	Image ID: `sha256:bc1ac9f163ddf9c086f5ff38af41a821e6b4c566ed2fa47dbf4042cac3abc9fb`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -14540,20 +14540,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:11 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:29 GMT
+# Mon, 26 Jun 2023 21:40:50 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:30 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:52 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:30 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:31 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:52 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 CMD ["mariadbd"]
 ```
 
@@ -14578,17 +14578,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
 		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c00dea8e2d2121db3688f2c1094e0b5d1d68cd49d0d9d6acbfbed34d7498016`  
-		Last Modified: Fri, 16 Jun 2023 03:38:20 GMT  
-		Size: 83.8 MB (83805727 bytes)  
+	-	`sha256:771ac932193ae00759bb3abebdfa99638b592769ff1f49ca1f1dc0afc28f9ec2`  
+		Last Modified: Mon, 26 Jun 2023 21:44:29 GMT  
+		Size: 83.8 MB (83805673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80fc6c52580f35e25a307e162bc9533341acc2564f8f00d706edf358e6268fbe`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:d7279dc082fc8e1a2dfd7840251700f4c5c06594dd81994ae3958cc246e4ac74`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d64bc679a120a79c175360e84f3381103acd7ac9068b44fdb9bb3425759e665`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:1942227a9fbdb8ea52795fc23928fc408fba31f7eb87a17300ca743c03891bc0`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:lts` - linux; ppc64le
@@ -14697,7 +14697,7 @@ CMD ["mariadbd"]
 ## `mariadb:lts-jammy`
 
 ```console
-$ docker pull mariadb@sha256:a035db50f9aa2fe4f68244c6de6b6c655e16500bee521df98a735cc4216fc756
+$ docker pull mariadb@sha256:9f89775e1d00e1b1c14c03d77efb32dc90dec6e3c82af81165b8ebeef5b84622
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14812,14 +14812,14 @@ CMD ["mariadbd"]
 ### `mariadb:lts-jammy` - linux; arm64 variant v8
 
 ```console
-$ docker pull mariadb@sha256:feb13ef2aa4591b577c2ddb3d2256e2b589a7291cb26afd8b37adbae9b766dab
+$ docker pull mariadb@sha256:5fd6061badec786f9112fc509a0e7425ebba50a6b61a5b23b2098f3844b1eb74
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **117.6 MB (117613769 bytes)**  
+-	Total Size: **117.6 MB (117614005 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d7d1ed89fa120fc8a7644f4aca5ed1c5263b3f76d14ad2204bb446d545f910bb`
+-	Image ID: `sha256:bc1ac9f163ddf9c086f5ff38af41a821e6b4c566ed2fa47dbf4042cac3abc9fb`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["mariadbd"]`
 
@@ -14861,20 +14861,20 @@ ARG REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy mai
 # Fri, 16 Jun 2023 03:34:11 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
 RUN set -e;	echo "deb ${REPOSITORY}" > /etc/apt/sources.list.d/mariadb.list; 	{ 		echo 'Package: *'; 		echo 'Pin: release o=MariaDB'; 		echo 'Pin-Priority: 999'; 	} > /etc/apt/preferences.d/mariadb
-# Fri, 16 Jun 2023 03:34:29 GMT
+# Mon, 26 Jun 2023 21:40:50 GMT
 # ARGS: GPG_KEYS=177F4010FE56CA3336300305F1656F24C74CD1D8 REPOSITORY=http://archive.mariadb.org/mariadb-10.11.4/repo/ubuntu/ jammy main
-RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
-# Fri, 16 Jun 2023 03:34:30 GMT
+RUN set -ex; 	{ 		echo "mariadb-server" mysql-server/root_password password 'unused'; 		echo "mariadb-server" mysql-server/root_password_again password 'unused'; 	} | debconf-set-selections; 	apt-get update; 	mkdir -p /var/lib/mysql/mysql ; touch /var/lib/mysql/mysql/user.frm ; 	apt-get install -y --no-install-recommends mariadb-server="$MARIADB_VERSION" mariadb-backup socat 	; 	rm -rf /var/lib/apt/lists/*; 	rm -rf /var/lib/mysql; 	mkdir -p /var/lib/mysql /var/run/mysqld; 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld; 	chmod 777 /var/run/mysqld; 	find /etc/mysql/ -name '*.cnf' -print0 		| xargs -0 grep -lZE '^(bind-address|log|user\s)' 		| xargs -rt -0 sed -Ei 's/^(bind-address|log|user\s)/#&/'; 	printf "[mariadb]\nhost-cache-size=0\nskip-name-resolve\n" > /etc/mysql/mariadb.conf.d/05-skipcache.cnf; 	if [ -L /etc/mysql/my.cnf ]; then 		sed -i -e '/includedir/ {N;s/\(.*\)\n\(.*\)/\n\2\n\1/}' /etc/mysql/mariadb.cnf; 	fi
+# Mon, 26 Jun 2023 21:40:52 GMT
 VOLUME [/var/lib/mysql]
-# Fri, 16 Jun 2023 03:34:30 GMT
-COPY file:cee75098a882f7d33ad2c4c4325b29adc56fc66450e6cee3711d5a1af1bda714 in /usr/local/bin/healthcheck.sh 
-# Fri, 16 Jun 2023 03:34:31 GMT
-COPY file:cb2b72015a5493e1348f12f52b387586b863bcc87072708862e1aa2af0493eb9 in /usr/local/bin/ 
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:60282e2c078282f09827dfb0926d431a7ad71f6de3495a21fc8a846430fc5fc9 in /usr/local/bin/healthcheck.sh 
+# Mon, 26 Jun 2023 21:40:52 GMT
+COPY file:704c6685e9d99f08306a2726e0468f5a764a4040cc2eb6138c1be72ac2529bbc in /usr/local/bin/ 
+# Mon, 26 Jun 2023 21:40:52 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 EXPOSE 3306
-# Fri, 16 Jun 2023 03:34:31 GMT
+# Mon, 26 Jun 2023 21:40:52 GMT
 CMD ["mariadbd"]
 ```
 
@@ -14899,17 +14899,17 @@ CMD ["mariadbd"]
 		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
 		Size: 328.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c00dea8e2d2121db3688f2c1094e0b5d1d68cd49d0d9d6acbfbed34d7498016`  
-		Last Modified: Fri, 16 Jun 2023 03:38:20 GMT  
-		Size: 83.8 MB (83805727 bytes)  
+	-	`sha256:771ac932193ae00759bb3abebdfa99638b592769ff1f49ca1f1dc0afc28f9ec2`  
+		Last Modified: Mon, 26 Jun 2023 21:44:29 GMT  
+		Size: 83.8 MB (83805673 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80fc6c52580f35e25a307e162bc9533341acc2564f8f00d706edf358e6268fbe`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 3.5 KB (3529 bytes)  
+	-	`sha256:d7279dc082fc8e1a2dfd7840251700f4c5c06594dd81994ae3958cc246e4ac74`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 3.6 KB (3564 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8d64bc679a120a79c175360e84f3381103acd7ac9068b44fdb9bb3425759e665`  
-		Last Modified: Fri, 16 Jun 2023 03:38:10 GMT  
-		Size: 7.3 KB (7312 bytes)  
+	-	`sha256:1942227a9fbdb8ea52795fc23928fc408fba31f7eb87a17300ca743c03891bc0`  
+		Last Modified: Mon, 26 Jun 2023 21:44:19 GMT  
+		Size: 7.6 KB (7567 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `mariadb:lts-jammy` - linux; ppc64le
