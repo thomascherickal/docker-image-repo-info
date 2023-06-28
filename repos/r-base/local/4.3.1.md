@@ -59,9 +59,15 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris adduser=3.134
-'http://http.debian.net/debian/pool/main/a/adduser/adduser_3.134.dsc' adduser_3.134.dsc 1671 SHA256:608ed02073381a8af28f29c3a2e390ddff7caee6b013a533fffc16b660fa80a4
-'http://http.debian.net/debian/pool/main/a/adduser/adduser_3.134.tar.xz' adduser_3.134.tar.xz 272044 SHA256:ddfc63b55664381d326d98e7afcf5859a8f60d6d78d5d6941e491479a008b172
+'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.134.dsc' adduser_3.134.dsc 1671 SHA256:608ed02073381a8af28f29c3a2e390ddff7caee6b013a533fffc16b660fa80a4
+'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.134.tar.xz' adduser_3.134.tar.xz 272044 SHA256:ddfc63b55664381d326d98e7afcf5859a8f60d6d78d5d6941e491479a008b172
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/adduser/3.134/ (for browsing the source)
+- https://sources.debian.net/src/adduser/3.134/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/adduser/3.134/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apt=2.6.1`
 
@@ -940,19 +946,13 @@ Licenses: (parsed from: `/usr/share/doc/cpp/copyright`, `/usr/share/doc/g++/copy
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-defaults=1.203
-'http://deb.debian.org/debian/pool/main/g/gcc-defaults/gcc-defaults_1.203.dsc' gcc-defaults_1.203.dsc 12592 SHA256:39417c8e6cf5bfa22b1c58f004e9f7630725ace3138a216ba64ec75d83c3fceb
-'http://deb.debian.org/debian/pool/main/g/gcc-defaults/gcc-defaults_1.203.tar.xz' gcc-defaults_1.203.tar.xz 45208 SHA256:bbf861f5502592b91602392123b482f9fb521948a8994057d152486f78b200b0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gcc-defaults/1.203/
 
-- https://sources.debian.net/src/gcc-defaults/1.203/ (for browsing the source)
-- https://sources.debian.net/src/gcc-defaults/1.203/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gcc-defaults/1.203/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gdbm=1.23-3`
 
@@ -1322,20 +1322,13 @@ Licenses: (parsed from: `/usr/share/doc/libisl23/copyright`)
 - `LGPL-2.1+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris isl=0.26-2
-'http://deb.debian.org/debian/pool/main/i/isl/isl_0.26-2.dsc' isl_0.26-2.dsc 1832 SHA256:edee6b2c048453bfdff0f65f65674b227696bc8eb29ee73dd89305645a987c7e
-'http://deb.debian.org/debian/pool/main/i/isl/isl_0.26.orig.tar.xz' isl_0.26.orig.tar.xz 2035560 SHA256:a0b5cb06d24f9fa9e77b55fabbe9a3c94a336190345c2555f9915bb38e976504
-'http://deb.debian.org/debian/pool/main/i/isl/isl_0.26-2.debian.tar.xz' isl_0.26-2.debian.tar.xz 24752 SHA256:2bb18418fe46a6dee45ccbb0a41b2746b98513ed09f1a986e4cb842e6917f50c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/isl/0.26-2/
 
-- https://sources.debian.net/src/isl/0.26-2/ (for browsing the source)
-- https://sources.debian.net/src/isl/0.26-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/isl/0.26-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `jansson=2.14-2`
 
@@ -2048,11 +2041,17 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris libssh2=1.10.0-3
-'http://http.debian.net/debian/pool/main/libs/libssh2/libssh2_1.10.0-3.dsc' libssh2_1.10.0-3.dsc 2283 SHA256:a0fe68f402a2f44dd6bd2219457fb8677b2149a83e7b009e93ff0635de940766
-'http://http.debian.net/debian/pool/main/libs/libssh2/libssh2_1.10.0.orig.tar.gz' libssh2_1.10.0.orig.tar.gz 965044 SHA256:2d64e90f3ded394b91d3a2e774ca203a4179f69aebee03003e5a6fa621e41d51
-'http://http.debian.net/debian/pool/main/libs/libssh2/libssh2_1.10.0.orig.tar.gz.asc' libssh2_1.10.0.orig.tar.gz.asc 488 SHA256:75702eaf490fa8c1e69b889c5c6366c2c3f3b089bc715f9f9be081c88f115f81
-'http://http.debian.net/debian/pool/main/libs/libssh2/libssh2_1.10.0-3.debian.tar.xz' libssh2_1.10.0-3.debian.tar.xz 8416 SHA256:c0bea31fe565273656349484d1000b557e489ee322834b40c4d7d33317a56940
+'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2_1.10.0-3.dsc' libssh2_1.10.0-3.dsc 2283 SHA256:a0fe68f402a2f44dd6bd2219457fb8677b2149a83e7b009e93ff0635de940766
+'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2_1.10.0.orig.tar.gz' libssh2_1.10.0.orig.tar.gz 965044 SHA256:2d64e90f3ded394b91d3a2e774ca203a4179f69aebee03003e5a6fa621e41d51
+'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2_1.10.0.orig.tar.gz.asc' libssh2_1.10.0.orig.tar.gz.asc 488 SHA256:75702eaf490fa8c1e69b889c5c6366c2c3f3b089bc715f9f9be081c88f115f81
+'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2_1.10.0-3.debian.tar.xz' libssh2_1.10.0-3.debian.tar.xz 8416 SHA256:c0bea31fe565273656349484d1000b557e489ee322834b40c4d7d33317a56940
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libssh2/1.10.0-3/ (for browsing the source)
+- https://sources.debian.net/src/libssh2/1.10.0-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libssh2/1.10.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libtasn1-6=4.19.0-2`
 
@@ -3208,10 +3207,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris rmatrix=1.5-3-1
-'http://http.debian.net/debian/pool/main/r/rmatrix/rmatrix_1.5-3-1.dsc' rmatrix_1.5-3-1.dsc 1860 SHA256:a5d76f341039c2c96b0680c6f933c511e3ced02daaa40437294c4baac61ef1d1
-'http://http.debian.net/debian/pool/main/r/rmatrix/rmatrix_1.5-3.orig.tar.gz' rmatrix_1.5-3.orig.tar.gz 2163568 SHA256:4e720f4edc97b1c09646a445851b1ce955caf6b1de8306a2283328b526fee00d
-'http://http.debian.net/debian/pool/main/r/rmatrix/rmatrix_1.5-3-1.debian.tar.xz' rmatrix_1.5-3-1.debian.tar.xz 5760 SHA256:1041176f784dbbb40ac6d7e13a0789c103b6e1fedb3ff981c2e7b6eaa9a1bbeb
+'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.5-3-1.dsc' rmatrix_1.5-3-1.dsc 1860 SHA256:a5d76f341039c2c96b0680c6f933c511e3ced02daaa40437294c4baac61ef1d1
+'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.5-3.orig.tar.gz' rmatrix_1.5-3.orig.tar.gz 2163568 SHA256:4e720f4edc97b1c09646a445851b1ce955caf6b1de8306a2283328b526fee00d
+'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.5-3-1.debian.tar.xz' rmatrix_1.5-3-1.debian.tar.xz 5760 SHA256:1041176f784dbbb40ac6d7e13a0789c103b6e1fedb3ff981c2e7b6eaa9a1bbeb
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/rmatrix/1.5-3-1/ (for browsing the source)
+- https://sources.debian.net/src/rmatrix/1.5-3-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/rmatrix/1.5-3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rpart=4.1.19-1`
 
@@ -3370,10 +3375,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris survival=3.5-3-1
-'http://http.debian.net/debian/pool/main/s/survival/survival_3.5-3-1.dsc' survival_3.5-3-1.dsc 1861 SHA256:15f6d75cd992eb2b77f7f896390d4072fc8c6e255f95872061048a1aa1b6f057
-'http://http.debian.net/debian/pool/main/s/survival/survival_3.5-3.orig.tar.gz' survival_3.5-3.orig.tar.gz 6247942 SHA256:bfa082fd938760fa06f76d70fe2a613c70620e4d2870f14270d8e20f1fbc44c6
-'http://http.debian.net/debian/pool/main/s/survival/survival_3.5-3-1.debian.tar.xz' survival_3.5-3-1.debian.tar.xz 6244 SHA256:c8227f3ea3babc73fc7b0dad526c2188dd72574f0110cc3241a0b5e805494573
+'http://deb.debian.org/debian/pool/main/s/survival/survival_3.5-3-1.dsc' survival_3.5-3-1.dsc 1861 SHA256:15f6d75cd992eb2b77f7f896390d4072fc8c6e255f95872061048a1aa1b6f057
+'http://deb.debian.org/debian/pool/main/s/survival/survival_3.5-3.orig.tar.gz' survival_3.5-3.orig.tar.gz 6247942 SHA256:bfa082fd938760fa06f76d70fe2a613c70620e4d2870f14270d8e20f1fbc44c6
+'http://deb.debian.org/debian/pool/main/s/survival/survival_3.5-3-1.debian.tar.xz' survival_3.5-3-1.debian.tar.xz 6244 SHA256:c8227f3ea3babc73fc7b0dad526c2188dd72574f0110cc3241a0b5e805494573
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/survival/3.5-3-1/ (for browsing the source)
+- https://sources.debian.net/src/survival/3.5-3-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/survival/3.5-3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=252.6-1`
 
@@ -3501,20 +3512,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff6/copyright`)
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.5.1~rc3-1
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.5.1%7erc3-1.dsc' tiff_4.5.1~rc3-1.dsc 2283 SHA256:c9f5ab085dacbd5e2d90236db420428906c33a6e79681484a553b37ed3c3ceaa
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.5.1%7erc3.orig.tar.bz2' tiff_4.5.1~rc3.orig.tar.bz2 2059965 SHA256:dee24a6f0d4ff10ddc8afe16e731bb622bbdec4ce64d9e01f6515df0a7aabe50
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.5.1%7erc3-1.debian.tar.xz' tiff_4.5.1~rc3-1.debian.tar.xz 21800 SHA256:39bb39d826e401a6b40ef22388dbc023eda5ba417ce6781d716292532c2117c2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tiff/4.5.1~rc3-1/
 
-- https://sources.debian.net/src/tiff/4.5.1~rc3-1/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.5.1~rc3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.5.1~rc3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tk8.6=8.6.13-2`
 
