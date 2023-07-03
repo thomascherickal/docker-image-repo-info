@@ -1,7 +1,7 @@
 ## `archlinux:base-devel`
 
 ```console
-$ docker pull archlinux@sha256:811d77e132ea207feced7591c2bc9c6a08ae1699edf4ddfc74880001374d1c84
+$ docker pull archlinux@sha256:100638d64bf2fea01277c24ca93eecc0ffcce7bac17b39cdaad278a1bcb0907e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11,14 +11,14 @@ $ docker pull archlinux@sha256:811d77e132ea207feced7591c2bc9c6a08ae1699edf4ddfc7
 ### `archlinux:base-devel` - linux; amd64
 
 ```console
-$ docker pull archlinux@sha256:23ad4f5906a06a2a28e9757c3dbfb150a694f6e144676e30265c765c90a30cbb
+$ docker pull archlinux@sha256:0335bec3fb92997fcb416e3ee370a6f904a01931753fd8a42b58b117581cbe8a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **262.9 MB (262917667 bytes)**  
+-	Total Size: **263.5 MB (263467034 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:aeabcad2e34db4df48bb5d6d4c96d331a0d4356869351e21bf81fa6812814af0`
+-	Image ID: `sha256:abc75670fc6d2b6d24cac17e0248270899047e79f8a37f3a9366ce4de4ba9e6d`
 -	Default Command: `["\/usr\/bin\/bash"]`
 
 ```dockerfile
@@ -36,28 +36,28 @@ LABEL org.opencontainers.image.documentation=https://wiki.archlinux.org/title/Do
 LABEL org.opencontainers.image.source=https://gitlab.archlinux.org/archlinux/archlinux-docker
 # Mon, 12 Jun 2023 18:20:55 GMT
 LABEL org.opencontainers.image.licenses=GPL-3.0-or-later
-# Tue, 27 Jun 2023 01:01:40 GMT
-LABEL org.opencontainers.image.version=20230625.0.160368
-# Tue, 27 Jun 2023 01:01:40 GMT
-LABEL org.opencontainers.image.revision=e4875c7e3688c1c0863f1e70cdea9da73d03cbcd
-# Tue, 27 Jun 2023 01:01:41 GMT
-LABEL org.opencontainers.image.created=2023-06-25T00:07:48+00:00
-# Tue, 27 Jun 2023 01:01:51 GMT
-COPY dir:4072e12be121cb240c4731420fc55b0972a780cf05c2372dc0fda96d8ce7ef96 in / 
-# Tue, 27 Jun 2023 01:01:54 GMT
-RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=20230625.0.160368' /etc/os-release
-# Tue, 27 Jun 2023 01:01:54 GMT
+# Mon, 03 Jul 2023 19:19:38 GMT
+LABEL org.opencontainers.image.version=20230702.0.161694
+# Mon, 03 Jul 2023 19:19:38 GMT
+LABEL org.opencontainers.image.revision=301942f9e5995770cb5e4dedb4fe9166afa4806d
+# Mon, 03 Jul 2023 19:19:38 GMT
+LABEL org.opencontainers.image.created=2023-07-02T00:08:00+00:00
+# Mon, 03 Jul 2023 19:19:49 GMT
+COPY dir:237e0652b40ee6ad57dbab5012a67a578b9640e748113daa6b62d6bde6d5ce6a in / 
+# Mon, 03 Jul 2023 19:19:52 GMT
+RUN ldconfig &&     sed -i '/BUILD_ID/a VERSION_ID=20230702.0.161694' /etc/os-release
+# Mon, 03 Jul 2023 19:19:52 GMT
 ENV LANG=C.UTF-8
-# Tue, 27 Jun 2023 01:01:55 GMT
+# Mon, 03 Jul 2023 19:19:52 GMT
 CMD ["/usr/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:a158e4de0ce35b3c68e74275f4a480ed7f4e0f0a8915cf5a8a726e6a4e63323b`  
-		Last Modified: Mon, 26 Jun 2023 05:55:08 GMT  
-		Size: 262.9 MB (262908768 bytes)  
+	-	`sha256:0049f4cadd706ce3a3877bcc732ebbc18e87a54c674506a57e3a57f6568c652a`  
+		Last Modified: Mon, 03 Jul 2023 19:21:16 GMT  
+		Size: 263.5 MB (263458156 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6d9bc45e9bc54e13e90041cb280538dea4ceb31cd3dc6317c936e9b26a889bba`  
-		Last Modified: Tue, 27 Jun 2023 01:02:42 GMT  
-		Size: 8.9 KB (8899 bytes)  
+	-	`sha256:a04ca77e72839263b0ad71d0310f0411b8e2207e86c31fb7cc9a6ccd0930ea20`  
+		Last Modified: Mon, 03 Jul 2023 19:20:40 GMT  
+		Size: 8.9 KB (8878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
