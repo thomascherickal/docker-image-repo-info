@@ -1,7 +1,7 @@
 ## `gcc:bookworm`
 
 ```console
-$ docker pull gcc@sha256:d9889d4969ad958caf5586e0bfba46d33df14fd50bede115d39114cd8ccda442
+$ docker pull gcc@sha256:13e4b7110042062d9932ef79866929f8b7f246f631a5eae4e7f6f87684348d1b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -90,75 +90,75 @@ RUN set -ex; 	dpkg-divert --divert /usr/bin/gcc.orig --rename /usr/bin/gcc; 	dpk
 ### `gcc:bookworm` - linux; arm variant v5
 
 ```console
-$ docker pull gcc@sha256:cc23c108ad07d005cfb866685a127ace535079858e50f505e944a030bf6a112d
+$ docker pull gcc@sha256:2341a6ec26291c4f45e6f4ced1794f524799cf022222b5b021ae029f96796af8
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **434.1 MB (434125578 bytes)**  
+-	Total Size: **434.1 MB (434129101 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2020ffbdbeee7a2b034d36a075c4ce8947f164534db4cfdda209278fc15d32a6`
+-	Image ID: `sha256:196789fb731e86396b63508f739bfcdcd83d5bac457f2f348c5bb2fdceefbc9e`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Mon, 12 Jun 2023 23:48:22 GMT
-ADD file:501b903784636438cdb91607b6c13e72a99c6918c6d8d24620d21a6907b3c919 in / 
-# Mon, 12 Jun 2023 23:48:22 GMT
+# Tue, 04 Jul 2023 00:48:22 GMT
+ADD file:09001854dc5081f907ac2a66d301e4b3d6b4bf2c2483aad5395a535bf068698d in / 
+# Tue, 04 Jul 2023 00:48:22 GMT
 CMD ["bash"]
-# Tue, 13 Jun 2023 07:34:35 GMT
+# Tue, 04 Jul 2023 04:21:24 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 		netbase 		sq 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Jun 2023 07:35:04 GMT
+# Tue, 04 Jul 2023 04:21:57 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Tue, 13 Jun 2023 07:37:17 GMT
+# Tue, 04 Jul 2023 04:24:09 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 13 Jun 2023 10:50:28 GMT
+# Tue, 04 Jul 2023 13:37:53 GMT
 ENV GPG_KEYS=B215C1633BCA0477615F1B35A5B3A004745C015A 	B3C42148A44E6983B3E4CC0793FA9B1AB75C61B8 	90AA470469D3965A87A5DCB494D03953902C9419 	80F98B2E0DAB6C8281BDF541A7C8C3B2F71EDF1C 	7F74F97C103468EE5D750B583AB00996FC26A641 	33C235A34C46AA3FFB293709A328C3A2C3C45C06 	D3A93CAD751C2AF4F8C7AD516C35B99309B5FA62
-# Tue, 13 Jun 2023 10:50:38 GMT
+# Tue, 04 Jul 2023 13:38:02 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		gnupg 	; 	rm -rf /var/lib/apt/lists/*; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done
-# Tue, 13 Jun 2023 10:50:38 GMT
+# Tue, 04 Jul 2023 13:38:03 GMT
 ENV GCC_MIRRORS=https://ftpmirror.gnu.org/gcc 		https://mirrors.kernel.org/gnu/gcc 		https://bigsearcher.com/mirrors/gcc/releases 		http://www.netgull.com/gcc/releases 		https://ftpmirror.gnu.org/gcc 		ftp://ftp.gnu.org/gnu/gcc
-# Tue, 13 Jun 2023 10:50:38 GMT
+# Tue, 04 Jul 2023 13:38:03 GMT
 ENV GCC_VERSION=13.1.0
-# Tue, 13 Jun 2023 11:53:24 GMT
+# Tue, 04 Jul 2023 14:42:04 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		dpkg-dev 		flex 	; 	rm -r /var/lib/apt/lists/*; 		_fetch() { 		local fetch="$1"; shift; 		local file="$1"; shift; 		for mirror in $GCC_MIRRORS; do 			if curl -fL "$mirror/$fetch" -o "$file"; then 				return 0; 			fi; 		done; 		echo >&2 "error: failed to download '$fetch' from several mirrors"; 		return 1; 	}; 		_fetch "gcc-$GCC_VERSION/gcc-$GCC_VERSION.tar.xz.sig" 'gcc.tar.xz.sig'; 	_fetch "gcc-$GCC_VERSION/gcc-$GCC_VERSION.tar.xz" 'gcc.tar.xz'; 	gpg --batch --verify gcc.tar.xz.sig gcc.tar.xz; 	mkdir -p /usr/src/gcc; 	tar -xf gcc.tar.xz -C /usr/src/gcc --strip-components=1; 	rm gcc.tar.xz*; 		cd /usr/src/gcc; 		./contrib/download_prerequisites; 	{ rm *.tar.* || true; }; 		for f in config.guess config.sub; do 		wget -O "$f" "https://git.savannah.gnu.org/cgit/config.git/plain/$f?id=7d3d27baf8107b630586c962c057e22149653deb"; 		find -mindepth 2 -name "$f" -exec cp -v "$f" '{}' ';'; 	done; 		dir="$(mktemp -d)"; 	cd "$dir"; 		extraConfigureArgs=''; 	dpkgArch="$(dpkg --print-architecture)"; 	case "$dpkgArch" in 		armel) 			extraConfigureArgs="$extraConfigureArgs --with-arch=armv5te --with-float=soft" 			;; 		armhf) 			extraConfigureArgs="$extraConfigureArgs --with-arch=armv7-a+fp --with-float=hard --with-mode=thumb" 			;; 				i386) 			extraConfigureArgs="$extraConfigureArgs --with-arch-32=i686"; 			;; 	esac; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	/usr/src/gcc/configure 		--build="$gnuArch" 		--disable-multilib 		--enable-languages=c,c++,fortran,go 		$extraConfigureArgs 	; 	make -j "$(nproc)"; 	make install-strip; 		cd ..; 		rm -rf "$dir" /usr/src/gcc; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Sat, 24 Jun 2023 00:48:42 GMT
+# Tue, 04 Jul 2023 14:42:06 GMT
 RUN set -ex; 	{ echo '/usr/local/lib64'; echo '/usr/local/lib'; } > /etc/ld.so.conf.d/000-local-lib.conf; 	ldconfig -v; 	bash -Eeuo pipefail -xc ' 		deb="$(strings /usr/lib/*/libstdc++.so* | grep "^GLIBC" | sort -u)"; 		gcc="$(strings /usr/local/lib*/libstdc++.so | grep "^GLIBC" | sort -u)"; 		diff="$(comm -23 <(cat <<<"$deb") <(cat <<<"$gcc"))"; 		test -z "$diff"; 	'
-# Sat, 24 Jun 2023 00:48:43 GMT
+# Tue, 04 Jul 2023 14:42:07 GMT
 RUN set -ex; 	dpkg-divert --divert /usr/bin/gcc.orig --rename /usr/bin/gcc; 	dpkg-divert --divert /usr/bin/g++.orig --rename /usr/bin/g++; 	dpkg-divert --divert /usr/bin/gfortran.orig --rename /usr/bin/gfortran; 	update-alternatives --install /usr/bin/cc cc /usr/local/bin/gcc 999
 ```
 
 -	Layers:
-	-	`sha256:f33a06945c2ca0f2b7186e00c7917f40db046448f78cca610bfb4e899c54ccbf`  
-		Last Modified: Mon, 12 Jun 2023 23:51:03 GMT  
-		Size: 47.4 MB (47403230 bytes)  
+	-	`sha256:7e0a1f476b42bcc214197ec9c5ef753ddf2ab36a314416a6ac96cd921ff0d41d`  
+		Last Modified: Tue, 04 Jul 2023 00:51:29 GMT  
+		Size: 47.4 MB (47402786 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:39f479390cbb03a7de9ad2024cdc2ab36aa799790323a73bf16c6857910b0b03`  
-		Last Modified: Tue, 13 Jun 2023 07:42:18 GMT  
-		Size: 22.7 MB (22709047 bytes)  
+	-	`sha256:68311cc5ff511aa59283fdd7f1e25bc33dfc3ad9ae87e5c94447f36c3f7c4817`  
+		Last Modified: Tue, 04 Jul 2023 04:28:32 GMT  
+		Size: 22.7 MB (22708933 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5de063ff33c2c3393cf56cf40487ae6171e09c1e1707f6ec73f6177b6f86bdfd`  
-		Last Modified: Tue, 13 Jun 2023 07:42:38 GMT  
-		Size: 61.6 MB (61554406 bytes)  
+	-	`sha256:09518fc93ba137cac901dd7b0cc5fab1e20a21a7d6bbe3a35b7f921a069ddc5c`  
+		Last Modified: Tue, 04 Jul 2023 04:28:53 GMT  
+		Size: 61.6 MB (61553936 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5f84a840bd77b0c1d420e3c8936b1d9eb745b7f83bdb879a3bd64b6671901921`  
-		Last Modified: Tue, 13 Jun 2023 07:43:15 GMT  
-		Size: 184.3 MB (184303466 bytes)  
+	-	`sha256:6d0a9d5bee850aae2d389dee19882ddf586d298ba8cc4d4100b77a7bc33204f0`  
+		Last Modified: Tue, 04 Jul 2023 04:29:28 GMT  
+		Size: 184.3 MB (184308984 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:33ccaf6d6f7ef8e6c1b5632ec705ea3fb2481fd2c2f809bb4ae0ff1d577c7d7f`  
-		Last Modified: Tue, 13 Jun 2023 15:08:35 GMT  
-		Size: 17.1 KB (17145 bytes)  
+	-	`sha256:08323bf9e25617905b2f856e6e646590386956840073ccf5175cbdce5a4299c9`  
+		Last Modified: Tue, 04 Jul 2023 18:00:02 GMT  
+		Size: 17.1 KB (17146 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c48872449eb3e4067e0d6dee6447bdbbaa21cb39cec2f5fd4fee280f5983dd3e`  
-		Last Modified: Tue, 13 Jun 2023 15:08:55 GMT  
-		Size: 118.1 MB (118127275 bytes)  
+	-	`sha256:53c623e911a98b04ea6eaffdf2587b5ae466fb0ebc652b8f3ab23b9ad4b48a73`  
+		Last Modified: Tue, 04 Jul 2023 18:00:23 GMT  
+		Size: 118.1 MB (118126321 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c8058433cf5cbb38e1e5f02b4ca78887ceb7008916745adf835da4f0a2decc5`  
-		Last Modified: Sat, 24 Jun 2023 03:44:13 GMT  
-		Size: 9.2 KB (9219 bytes)  
+	-	`sha256:542bb465e1ae32dc36da37f30d2a425f8c4e8da2d338e4732dc86b63232e1257`  
+		Last Modified: Tue, 04 Jul 2023 18:00:02 GMT  
+		Size: 9.2 KB (9195 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e106c58db0880e285207f6ac1b23229788ddf9a76cec6af0e98d39651f313f02`  
-		Last Modified: Sat, 24 Jun 2023 03:44:13 GMT  
-		Size: 1.8 KB (1790 bytes)  
+	-	`sha256:0be20b98dee290431416a706cb27650aaba7ee3277ce949f462ca0d30b6bc755`  
+		Last Modified: Tue, 04 Jul 2023 18:00:02 GMT  
+		Size: 1.8 KB (1800 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `gcc:bookworm` - linux; arm variant v7
