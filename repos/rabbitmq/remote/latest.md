@@ -1,7 +1,7 @@
 ## `rabbitmq:latest`
 
 ```console
-$ docker pull rabbitmq@sha256:fb29a7b44566b3493e70fcdc50b3456c816e60b2b14bc98a2e2fb9587158a199
+$ docker pull rabbitmq@sha256:a9b9b2ff1faf292577974e9b39b6390540893fda93d35399194e8f156ec5a453
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,28 +15,28 @@ $ docker pull rabbitmq@sha256:fb29a7b44566b3493e70fcdc50b3456c816e60b2b14bc98a2e
 ### `rabbitmq:latest` - linux; amd64
 
 ```console
-$ docker pull rabbitmq@sha256:5a69e714973db3aca46b770a8c0eda405312ed5fc003e66c93d02ea194552783
+$ docker pull rabbitmq@sha256:b61f1648b6300b9a05bf1cb9a460c45584cfdd98987cf66e93a0ce49d523a699
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **106.5 MB (106490397 bytes)**  
+-	Total Size: **106.5 MB (106490582 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:29bf99354237ebb334b19e52dce20b8c6d0bcc928252aa3f9b9193ce915c1c37`
+-	Image ID: `sha256:bfca7aba7ebacfcdfb22d17d2ed1f644c2c32cd901f3f9419002d035c003babe`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["rabbitmq-server"]`
 
 ```dockerfile
-# Mon, 05 Jun 2023 17:00:37 GMT
+# Wed, 28 Jun 2023 08:37:40 GMT
 ARG RELEASE
-# Mon, 05 Jun 2023 17:00:37 GMT
+# Wed, 28 Jun 2023 08:37:40 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Mon, 05 Jun 2023 17:00:37 GMT
+# Wed, 28 Jun 2023 08:37:40 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Mon, 05 Jun 2023 17:00:37 GMT
+# Wed, 28 Jun 2023 08:37:40 GMT
 LABEL org.opencontainers.image.version=22.04
-# Mon, 05 Jun 2023 17:00:39 GMT
-ADD file:0ad2ee2cfb186802f49c9bf4148674d1c6fc201f83478ec01ffaa7086d491323 in / 
-# Mon, 05 Jun 2023 17:00:39 GMT
+# Wed, 28 Jun 2023 08:37:42 GMT
+ADD file:140fb5108b4a2861b5718ad03b4a5174bba03589ea8d4c053e6a0b282f439ff3 in / 
+# Wed, 28 Jun 2023 08:37:42 GMT
 CMD ["/bin/bash"]
 # Thu, 29 Jun 2023 20:21:48 GMT
 COPY /usr/local/bin/ /usr/local/bin/ # buildkit
@@ -81,45 +81,45 @@ CMD ["rabbitmq-server"]
 ```
 
 -	Layers:
-	-	`sha256:3f94e4e483ea634d7ab0b63649b8f72f8b721d4c626297fd0edae0abea1df9e9`  
-		Last Modified: Tue, 06 Jun 2023 11:46:33 GMT  
-		Size: 30.4 MB (30431039 bytes)  
+	-	`sha256:9d19ee268e0d7bcf6716e6658ee1b0384a71d6f2f9aa1ae2085610cf7c7b316f`  
+		Last Modified: Wed, 28 Jun 2023 11:50:41 GMT  
+		Size: 30.4 MB (30431229 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db610c556cbba7c80925a3c63541e67b83115ce413433a9ee10c814f81755df2`  
-		Last Modified: Wed, 21 Jun 2023 20:57:44 GMT  
-		Size: 429.0 KB (428952 bytes)  
+	-	`sha256:682a058fc094fd9749c8c405e022afecdd50962cc71c1e5c892a6ed3514ff92f`  
+		Last Modified: Tue, 04 Jul 2023 18:57:23 GMT  
+		Size: 429.0 KB (428956 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:046b2545f90296ab8ebbfe6f83bc8a6cb48d3b5687c63e0b876ba3e32a6198d7`  
-		Last Modified: Wed, 21 Jun 2023 20:57:44 GMT  
+	-	`sha256:c6f199470454ac1cffcd5757f4a38ed4690f5d01bfb77f344b0ef748508e5036`  
+		Last Modified: Tue, 04 Jul 2023 18:57:23 GMT  
 		Size: 10.2 KB (10168 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:05334b5c0ab2f134de891d9b64a83e2848298825f52547da53688e9d5c89d8f3`  
-		Last Modified: Thu, 29 Jun 2023 23:33:30 GMT  
-		Size: 55.1 MB (55145869 bytes)  
+	-	`sha256:e588fdd2bc1497f51d77ada425c47d65d7170a92ce284747b189bb9e766c794b`  
+		Last Modified: Tue, 04 Jul 2023 18:57:29 GMT  
+		Size: 55.1 MB (55145853 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:031bea6ad4ef8cc749cd26273d41a3218cdafdac11c03fa3da27a33179a42b1a`  
-		Last Modified: Thu, 29 Jun 2023 23:33:24 GMT  
-		Size: 11.0 KB (10974 bytes)  
+	-	`sha256:b2df8cdb38122975bbd5ccaf163d81f3e4be8226ece5d7ded5bb1271149d0e0f`  
+		Last Modified: Tue, 04 Jul 2023 18:57:23 GMT  
+		Size: 11.0 KB (10973 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:780ea26fcb30358014d710eaffb5c4196ba4f4305a13fdfc3a5d7956b704b1e6`  
-		Last Modified: Thu, 29 Jun 2023 23:33:25 GMT  
-		Size: 20.5 MB (20461642 bytes)  
+	-	`sha256:eec8ffe01a78c023ac8ec142b4b2777674b8d45d9ea5b39a83566edb7340b0fd`  
+		Last Modified: Tue, 04 Jul 2023 18:57:23 GMT  
+		Size: 20.5 MB (20461650 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fc87da560865232cf32450b24a4cb18dbafd735bf39d3764abdd520ad48cc1e1`  
-		Last Modified: Thu, 29 Jun 2023 23:33:23 GMT  
-		Size: 191.0 B  
+	-	`sha256:ef7e4d422ae76a9412d39d0c58e1f9554a5454f72bab551b70fa9e5aefbc43e8`  
+		Last Modified: Tue, 04 Jul 2023 18:57:21 GMT  
+		Size: 190.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a9cbc864398f488430365531d12827ac2dac5327cb62999c2c6dfffe5ba8d3f`  
-		Last Modified: Thu, 29 Jun 2023 23:33:23 GMT  
+	-	`sha256:a0337bb83298a962a7bd9286bf550bb2b609ec660aa1478a19b44e30e33bdc5e`  
+		Last Modified: Tue, 04 Jul 2023 18:57:21 GMT  
 		Size: 107.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:77dc307fbdf4b44e2bdaa02d93a2082f150e314cbd4853103d022d77c26541eb`  
-		Last Modified: Thu, 29 Jun 2023 23:33:23 GMT  
-		Size: 621.0 B  
+	-	`sha256:79a8a5649e7c71f43880bd99e7b05e4659058837e41928459f3269af43ec874a`  
+		Last Modified: Tue, 04 Jul 2023 18:57:21 GMT  
+		Size: 620.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9181bb340953ff1b5e7c01cff8cd13a09e2e1e98b42c67f82e7ae1710706050d`  
-		Last Modified: Thu, 29 Jun 2023 23:33:23 GMT  
-		Size: 834.0 B  
+	-	`sha256:15c297f005d6d09db96b83ca9e882fa34fdb70165b45b3a7ea944458d2e1c00e`  
+		Last Modified: Tue, 04 Jul 2023 18:57:21 GMT  
+		Size: 836.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rabbitmq:latest` - linux; arm variant v7
