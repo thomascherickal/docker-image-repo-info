@@ -1,9 +1,9 @@
-# `debian:testing-slim`
+# `debian:bookworm-slim`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ad31cf5afe1706b06a3351acb413fdba1c9d2e9c642001e22c3ceda2f5feda74`
-- Created: `2023-06-12T23:23:36.544740292Z`
+- Image ID: `sha256:dc29b27ee12fa143e61ee3c4d0b1eabf114ae5626311ee0a160da5e944abc5f6`
+- Created: `2023-07-04T01:19:58.477613601Z`
 - Virtual Size: ~ 74.76 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -162,13 +162,19 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris base-files=12.4
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_12.4.dsc' base-files_12.4.dsc 1101 SHA256:7aa2991f4996279d574cbfc001caf6693cab13ed5c94786fd85e9eff8bc65ff4
+'http://deb.debian.org/debian/pool/main/b/base-files/base-files_12.4.tar.xz' base-files_12.4.tar.xz 66024 SHA256:01d677e63939218e4115a1407b8807f1f6975757b19454b593b5857afc941104
+```
 
-- http://snapshot.debian.org/package/base-files/12.4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/base-files/12.4/ (for browsing the source)
+- https://sources.debian.net/src/base-files/12.4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/base-files/12.4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.6.1`
 
@@ -328,13 +334,20 @@ Licenses: (parsed from: `/usr/share/doc/dash/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris dash=0.5.12-2
+'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.12-2.dsc' dash_0.5.12-2.dsc 1520 SHA256:25c0fb805c735fdb7470ce485ce76dae1a7b6c04efdfb0fdac5eab921cbd78a5
+'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.12.orig.tar.gz' dash_0.5.12.orig.tar.gz 246054 SHA256:6a474ac46e8b0b32916c4c60df694c82058d3297d8b385b74508030ca4a8f28a
+'http://deb.debian.org/debian/pool/main/d/dash/dash_0.5.12-2.debian.tar.xz' dash_0.5.12-2.debian.tar.xz 38512 SHA256:bddd9129215eb60f4cc43a0ffdcc42d8f25e0bd09730520d599a2b7bc492e375
+```
 
-- http://snapshot.debian.org/package/dash/0.5.12-2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/dash/0.5.12-2/ (for browsing the source)
+- https://sources.debian.net/src/dash/0.5.12-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/dash/0.5.12-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `db5.3=5.3.28+dfsg2-1`
 
@@ -1359,13 +1372,20 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 - `GPL-2`
 - `X11`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris mawk=1.3.4.20200120-3.1
+'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20200120-3.1.dsc' mawk_1.3.4.20200120-3.1.dsc 1776 SHA256:ed0543e3111f718e918a73033292fe2616760c8791c13efa0da3818ca835cdc1
+'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20200120.orig.tar.gz' mawk_1.3.4.20200120.orig.tar.gz 468855 SHA256:7fd4cd1e1fae9290fe089171181bbc6291dfd9bca939ca804f0ddb851c8b8237
+'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20200120-3.1.debian.tar.xz' mawk_1.3.4.20200120-3.1.debian.tar.xz 14080 SHA256:7850d7c44aa826635c79a6666b0d457a03524bcb0307697b062dd717d6d9d491
+```
 
-- http://snapshot.debian.org/package/mawk/1.3.4.20200120-3.1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/mawk/1.3.4.20200120-3.1/ (for browsing the source)
+- https://sources.debian.net/src/mawk/1.3.4.20200120-3.1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mawk/1.3.4.20200120-3.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ncurses=6.4-4`
 
@@ -1754,13 +1774,21 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2023c-5
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c-5.dsc' tzdata_2023c-5.dsc 2364 SHA256:fab47ca607365c4d5039f8849e715decfd8cc4c5a1b6f258e02faf6a2eb1252b
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz' tzdata_2023c.orig.tar.gz 443902 SHA256:3f510b5d1b4ae9bb38e485aa302a776b317fb3637bdb6404c4adf7b6cadd965c
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz.asc' tzdata_2023c.orig.tar.gz.asc 833 SHA256:d5ec7b6ceddc46aa137c0ef85fa5c87445509d7997c067ee0fd2e2a23f833557
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c-5.debian.tar.xz' tzdata_2023c-5.debian.tar.xz 119752 SHA256:8bbc24e081d08d48badaf0db7c7a3672ef53708b409c1c7c036264db5583bbc6
+```
 
-- http://snapshot.debian.org/package/tzdata/2023c-5/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2023c-5/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2023c-5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2023c-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `usrmerge=35`
 
