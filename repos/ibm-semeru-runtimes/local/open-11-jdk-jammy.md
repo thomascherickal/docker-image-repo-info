@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d030589b6015cbcd2c8e610af59dbb4713c9ddbba5e59f6244e744f9cb69bc04`
-- Created: `2023-06-16T02:42:20.113593572Z`
+- Image ID: `sha256:f834eca22e3cbe6782c1e5eda5855cce2b8df820ff2fcb9a571aa3080cc02e2b`
+- Created: `2023-07-04T19:22:51.41090157Z`
 - Virtual Size: ~ 472.55 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -892,11 +892,11 @@ $ apt-get source -qq --print-uris libcap-ng=0.7.9-2.2build3
 'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9-2.2build3.debian.tar.xz' libcap-ng_0.7.9-2.2build3.debian.tar.xz 6432 SHA512:9ce3f52dc0c89739f0117ba7c1b8fdfcdb51ceb7cea7c00aa55522ba733efdb7a37a7f21a9bfd106e453a8477a759af0aaf4688e4b18c3c9cc659657aeb2c0bb
 ```
 
-### `dpkg` source package: `libcap2=1:2.44-1build3`
+### `dpkg` source package: `libcap2=1:2.44-1ubuntu0.22.04.1`
 
 Binary Packages:
 
-- `libcap2:amd64=1:2.44-1build3`
+- `libcap2:amd64=1:2.44-1ubuntu0.22.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libcap2/copyright`)
 
@@ -907,10 +907,10 @@ Licenses: (parsed from: `/usr/share/doc/libcap2/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libcap2=1:2.44-1build3
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44-1build3.dsc' libcap2_2.44-1build3.dsc 2311 SHA512:30fa503d6bffa093ceafc07a26f48b88da855c2957bc0bce99f83461dbf7e656b0460d58752eb60a3699c1c250e6135bb086461af5e3734f1802adbbd5d39be2
+$ apt-get source -qq --print-uris libcap2=1:2.44-1ubuntu0.22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44-1ubuntu0.22.04.1.dsc' libcap2_2.44-1ubuntu0.22.04.1.dsc 2318 SHA512:89673cbc25652c33df4477e5624827c55f6799cf8ee73248c8ec58a647aa66aca02d6342edcb18d9d5e4892b5c2f1e011157c854dbfe2d5f6b916f27346518c1
 'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44.orig.tar.xz' libcap2_2.44.orig.tar.xz 125568 SHA512:1bb323ca362923bd6bd0e2e4639cf8726975165a620a243b31e797056439eb7efb2bfbc8e5521636783a86c7415b2037b1638c98747b79183ca7d3d42a04ff20
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44-1build3.debian.tar.xz' libcap2_2.44-1build3.debian.tar.xz 21312 SHA512:b1c5c20092fe0cb13318f84e585ea9095dd552332a23c8d3162ca1013f02f3b16f7c5a94d407ef88aee62aadfa1f50e67959a3f5206653a801af878f8d89ce24
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44-1ubuntu0.22.04.1.debian.tar.xz' libcap2_2.44-1ubuntu0.22.04.1.debian.tar.xz 22564 SHA512:a526e48fe585b06d42bd2d1d241e16de4f9151c502ad1d54a1a07e73aee8e4c41009160c9b5fedadf9873b7eb9bf07b9a0c3ec56f854da59360aaf94589c1af8
 ```
 
 ### `dpkg` source package: `libffi=3.4.2-4`
