@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:46ac5c3d6929b19e745f738a7e38ffe7aac08c148cc07f5778b221c9c276ed78`
-- Created: `2023-06-16T03:03:01.645929857Z`
-- Virtual Size: ~ 231.56 Mb  
+- Image ID: `sha256:27891b72fb11814512dfd7f819d980b9af44f35dc071846c7bed9d2315c8818b`
+- Created: `2023-07-04T18:23:01.349773178Z`
+- Virtual Size: ~ 231.54 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -1022,11 +1022,11 @@ $ apt-get source -qq --print-uris libcap-ng=0.7.9-2.2build3
 'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9-2.2build3.debian.tar.xz' libcap-ng_0.7.9-2.2build3.debian.tar.xz 6432 SHA512:9ce3f52dc0c89739f0117ba7c1b8fdfcdb51ceb7cea7c00aa55522ba733efdb7a37a7f21a9bfd106e453a8477a759af0aaf4688e4b18c3c9cc659657aeb2c0bb
 ```
 
-### `dpkg` source package: `libcap2=1:2.44-1build3`
+### `dpkg` source package: `libcap2=1:2.44-1ubuntu0.22.04.1`
 
 Binary Packages:
 
-- `libcap2:amd64=1:2.44-1build3`
+- `libcap2:amd64=1:2.44-1ubuntu0.22.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libcap2/copyright`)
 
@@ -1037,10 +1037,10 @@ Licenses: (parsed from: `/usr/share/doc/libcap2/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libcap2=1:2.44-1build3
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44-1build3.dsc' libcap2_2.44-1build3.dsc 2311 SHA512:30fa503d6bffa093ceafc07a26f48b88da855c2957bc0bce99f83461dbf7e656b0460d58752eb60a3699c1c250e6135bb086461af5e3734f1802adbbd5d39be2
+$ apt-get source -qq --print-uris libcap2=1:2.44-1ubuntu0.22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44-1ubuntu0.22.04.1.dsc' libcap2_2.44-1ubuntu0.22.04.1.dsc 2318 SHA512:89673cbc25652c33df4477e5624827c55f6799cf8ee73248c8ec58a647aa66aca02d6342edcb18d9d5e4892b5c2f1e011157c854dbfe2d5f6b916f27346518c1
 'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44.orig.tar.xz' libcap2_2.44.orig.tar.xz 125568 SHA512:1bb323ca362923bd6bd0e2e4639cf8726975165a620a243b31e797056439eb7efb2bfbc8e5521636783a86c7415b2037b1638c98747b79183ca7d3d42a04ff20
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44-1build3.debian.tar.xz' libcap2_2.44-1build3.debian.tar.xz 21312 SHA512:b1c5c20092fe0cb13318f84e585ea9095dd552332a23c8d3162ca1013f02f3b16f7c5a94d407ef88aee62aadfa1f50e67959a3f5206653a801af878f8d89ce24
+'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44-1ubuntu0.22.04.1.debian.tar.xz' libcap2_2.44-1ubuntu0.22.04.1.debian.tar.xz 22564 SHA512:a526e48fe585b06d42bd2d1d241e16de4f9151c502ad1d54a1a07e73aee8e4c41009160c9b5fedadf9873b7eb9bf07b9a0c3ec56f854da59360aaf94589c1af8
 ```
 
 ### `dpkg` source package: `libdeflate=1.10-2`
@@ -1713,19 +1713,24 @@ $ apt-get source -qq --print-uris libzstd=1.4.8+dfsg-3build1
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.8%2bdfsg-3build1.debian.tar.xz' libzstd_1.4.8+dfsg-3build1.debian.tar.xz 12316 SHA512:8123965a6e73c5ddd8d535e78ed1074e2eabd7f8ed090d215a89feedffae9391cf472d2395242d3cb0351cbf76603448dae93ad70d0989806b42b03c65b22db0
 ```
 
-### `dpkg` source package: `linux=5.15.0-75.82`
+### `dpkg` source package: `linux=5.15.0-76.83`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.15.0-75.82`
+- `linux-libc-dev:amd64=5.15.0-76.83`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=5.15.0-76.83
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-76.83.dsc' linux_5.15.0-76.83.dsc 7374 SHA512:1c7094705352525e04163b28cc78079da190063bf4717d922d58d692db5e1d946fa4633ea62c085d2f286387d2306b73ad50e357d97ce3d2045a6956b9936fff
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-76.83.diff.gz' linux_5.15.0-76.83.diff.gz 9848570 SHA512:9adac0d447fcf53120d1d7c271af1c6644a75d24e14392907136ba5b87d48727f7bd39c6c3cad55313ba535f178936b34525518c382b768d3d099cff35125c66
+```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu4`
 
