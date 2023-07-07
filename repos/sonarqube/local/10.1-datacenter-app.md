@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0e7a81066babd3cff12346e6199a654959d97657d9f6e2ab6c13ec109e201b64`
-- Created: `2023-06-21T00:22:01.063739142Z`
+- Image ID: `sha256:5ab37611fc601ab5f15c2eeb8de910e5aeb7c972d45437d62ece416701bd836a`
+- Created: `2023-07-05T12:23:21.230115037Z`
 - Virtual Size: ~ 823.70 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1089,35 +1089,15 @@ $ apt-get source -qq --print-uris libcap-ng=0.7.9-2.2build3
 'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap-ng/libcap-ng_0.7.9-2.2build3.debian.tar.xz' libcap-ng_0.7.9-2.2build3.debian.tar.xz 6432 SHA512:9ce3f52dc0c89739f0117ba7c1b8fdfcdb51ceb7cea7c00aa55522ba733efdb7a37a7f21a9bfd106e453a8477a759af0aaf4688e4b18c3c9cc659657aeb2c0bb
 ```
 
-### `dpkg` source package: `libcap2=1:2.44-1build3`
-
-Binary Packages:
-
-- `libcap2:amd64=1:2.44-1build3`
-
-Licenses: (parsed from: `/usr/share/doc/libcap2/copyright`)
-
-- `BSD-3-clause`
-- `GPL-2`
-- `GPL-2+`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris libcap2=1:2.44-1build3
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44-1build3.dsc' libcap2_2.44-1build3.dsc 2311 SHA512:30fa503d6bffa093ceafc07a26f48b88da855c2957bc0bce99f83461dbf7e656b0460d58752eb60a3699c1c250e6135bb086461af5e3734f1802adbbd5d39be2
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44.orig.tar.xz' libcap2_2.44.orig.tar.xz 125568 SHA512:1bb323ca362923bd6bd0e2e4639cf8726975165a620a243b31e797056439eb7efb2bfbc8e5521636783a86c7415b2037b1638c98747b79183ca7d3d42a04ff20
-'http://archive.ubuntu.com/ubuntu/pool/main/libc/libcap2/libcap2_2.44-1build3.debian.tar.xz' libcap2_2.44-1build3.debian.tar.xz 21312 SHA512:b1c5c20092fe0cb13318f84e585ea9095dd552332a23c8d3162ca1013f02f3b16f7c5a94d407ef88aee62aadfa1f50e67959a3f5206653a801af878f8d89ce24
-```
-
 ### `dpkg` source package: `libcap2=1:2.44-1ubuntu0.22.04.1`
 
 Binary Packages:
 
+- `libcap2:amd64=1:2.44-1ubuntu0.22.04.1`
 - `libcap2-bin=1:2.44-1ubuntu0.22.04.1`
 - `libpam-cap:amd64=1:2.44-1ubuntu0.22.04.1`
 
-Licenses: (parsed from: `/usr/share/doc/libcap2-bin/copyright`, `/usr/share/doc/libpam-cap/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libcap2/copyright`, `/usr/share/doc/libcap2-bin/copyright`, `/usr/share/doc/libpam-cap/copyright`)
 
 - `BSD-3-clause`
 - `GPL-2`
