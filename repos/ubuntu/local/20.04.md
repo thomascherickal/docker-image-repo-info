@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:626a42b93d93241a6a48d81d921934891f73185547833a64dde06599cf3eafc2`
-- Created: `2023-06-05T17:08:58.938601289Z`
+- Image ID: `sha256:14be0685b7682b182af5b862c9638cb1cb4ca1a70bd5aa90deed96e9cca881e7`
+- Created: `2023-06-28T09:59:10.356889385Z`
 - Virtual Size: ~ 72.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1223,12 +1223,12 @@ $ apt-get source -qq --print-uris shadow=1:4.8.1-1ubuntu5.20.04.4
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.8.1-1ubuntu5.20.04.4.debian.tar.xz' shadow_4.8.1-1ubuntu5.20.04.4.debian.tar.xz 86684 SHA512:8e70ed00983db7bf2b182812cfa9d8c6151de836bacfdf23fbefea37419a72b6be0e126ad2f085ea46aff25de99e66470206cb91259a09b1f6852cb83ca1fb3f
 ```
 
-### `dpkg` source package: `systemd=245.4-4ubuntu3.21`
+### `dpkg` source package: `systemd=245.4-4ubuntu3.22`
 
 Binary Packages:
 
-- `libsystemd0:amd64=245.4-4ubuntu3.21`
-- `libudev1:amd64=245.4-4ubuntu3.21`
+- `libsystemd0:amd64=245.4-4ubuntu3.22`
+- `libudev1:amd64=245.4-4ubuntu3.22`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1241,9 +1241,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=245.4-4ubuntu3.22
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.22.dsc' systemd_245.4-4ubuntu3.22.dsc 5262 SHA512:3e6cca4e937752928cced4841732e52e047d9064fdec9fb8ed2664568d8a1458ab9f542215be4de049c74a1cd145cd4ac13f51ce9b3ec9580a5047fa1b2b8636
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4.orig.tar.gz' systemd_245.4.orig.tar.gz 9000780 SHA512:02036bb1ab05301a9d0dfdd4b9c9376e90134474482531e6e292122380be2f24f99177493dd3af6f8af1a8ed2599ee0996da91a3b1b7872bbfaf26a1c3e61b4c
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_245.4-4ubuntu3.22.debian.tar.xz' systemd_245.4-4ubuntu3.22.debian.tar.xz 289380 SHA512:25e2b13f146a56f8623f40ac04b141e03f79a120347128dee639ed836ed0051cdde5336d64d78ef1e360fb9b5ca35576f550d1038abc6cd99f113f28bc5f93d7
+```
 
 ### `dpkg` source package: `sysvinit=2.96-2.1ubuntu1`
 
@@ -1304,19 +1309,19 @@ $ apt-get source -qq --print-uris ubuntu-keyring=2020.02.11.4
 'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2020.02.11.4.tar.gz' ubuntu-keyring_2020.02.11.4.tar.gz 39250 SHA512:318562b6892dad995e334ec44f08f065b4c6abed2d29c1f96f6ee0fa4d91a5cedc9b62a152c56cdf26a30c3ea97a58c1d037e892d155af5593a4e26b9a25a1ae
 ```
 
-### `dpkg` source package: `util-linux=2.34-0.1ubuntu9.3`
+### `dpkg` source package: `util-linux=2.34-0.1ubuntu9.4`
 
 Binary Packages:
 
-- `bsdutils=1:2.34-0.1ubuntu9.3`
-- `fdisk=2.34-0.1ubuntu9.3`
-- `libblkid1:amd64=2.34-0.1ubuntu9.3`
-- `libfdisk1:amd64=2.34-0.1ubuntu9.3`
-- `libmount1:amd64=2.34-0.1ubuntu9.3`
-- `libsmartcols1:amd64=2.34-0.1ubuntu9.3`
-- `libuuid1:amd64=2.34-0.1ubuntu9.3`
-- `mount=2.34-0.1ubuntu9.3`
-- `util-linux=2.34-0.1ubuntu9.3`
+- `bsdutils=1:2.34-0.1ubuntu9.4`
+- `fdisk=2.34-0.1ubuntu9.4`
+- `libblkid1:amd64=2.34-0.1ubuntu9.4`
+- `libfdisk1:amd64=2.34-0.1ubuntu9.4`
+- `libmount1:amd64=2.34-0.1ubuntu9.4`
+- `libsmartcols1:amd64=2.34-0.1ubuntu9.4`
+- `libuuid1:amd64=2.34-0.1ubuntu9.4`
+- `mount=2.34-0.1ubuntu9.4`
+- `util-linux=2.34-0.1ubuntu9.4`
 
 Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdisk/copyright`, `/usr/share/doc/libblkid1/copyright`, `/usr/share/doc/libfdisk1/copyright`, `/usr/share/doc/libmount1/copyright`, `/usr/share/doc/libsmartcols1/copyright`, `/usr/share/doc/libuuid1/copyright`, `/usr/share/doc/mount/copyright`, `/usr/share/doc/util-linux/copyright`)
 
@@ -1340,10 +1345,10 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/fdi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu9.3
-'http://security.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.3.dsc' util-linux_2.34-0.1ubuntu9.3.dsc 4042 SHA512:e65684c641d175110008f865369c35adb734f8a80626c0eb3b3f3f47e05c1a6277c9f92b4032e30bb69711d67c2a5ad651adb3ec9ac4ef67d45a2858ce48cc6a
-'http://security.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34.orig.tar.xz' util-linux_2.34.orig.tar.xz 4974812 SHA512:2d0b76f63d32e7afb7acf61a83fabbfd58baa34ab78b3a331ce87f9c676a5fd71c56a493ded95039540d2c46b6048caaa38d7fb4491eb3d52d7b09dc54655cd7
-'http://security.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.3.debian.tar.xz' util-linux_2.34-0.1ubuntu9.3.debian.tar.xz 94976 SHA512:b6e55588aea32de6481dad01f194e6f71b8a859019e5c8d6d816c65f32c8b31821d1ab73f13ec34c5d3551311c43b7e24ac01c2af5878a85df72326293c3a71a
+$ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu9.4
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.4.dsc' util-linux_2.34-0.1ubuntu9.4.dsc 4067 SHA512:c5aac721638d7cf7187143a62ab03530c4feb9fe63767762db1a75a4cbb07ca078e45696d3a663945bd6fcbfcdded98a926f479cf69e335b4f4130e78565282d
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34.orig.tar.xz' util-linux_2.34.orig.tar.xz 4974812 SHA512:2d0b76f63d32e7afb7acf61a83fabbfd58baa34ab78b3a331ce87f9c676a5fd71c56a493ded95039540d2c46b6048caaa38d7fb4491eb3d52d7b09dc54655cd7
+'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.4.debian.tar.xz' util-linux_2.34-0.1ubuntu9.4.debian.tar.xz 98148 SHA512:4e1c5e0d1c8fcd735bbab4418a16dbd60280a6707ceb41338bf7d25f0991139b569e42e713c9f33b3e924116c638480f8cf2a92b16c9584f5a845086e1858b69
 ```
 
 ### `dpkg` source package: `xz-utils=5.2.4-1ubuntu1.1`

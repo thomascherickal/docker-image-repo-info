@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ce0fd6ed554b4fa85755cd2f9fefc45a1bff5e640b1090f4573997837f6c46b2`
-- Created: `2023-06-07T04:39:10.724746666Z`
-- Virtual Size: ~ 70.39 Mb  
+- Image ID: `sha256:3732473f881aa819c8754dc83b3bc7afc00361ea6090c135c72ccd38c9fd3637`
+- Created: `2023-06-28T08:23:24.651574943Z`
+- Virtual Size: ~ 70.41 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -106,19 +106,23 @@ $ apt-get source -qq --print-uris audit=1:3.0.9-1
 'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_3.0.9-1.debian.tar.xz' audit_3.0.9-1.debian.tar.xz 18784 SHA512:4369817e498acc2f59efac80e646e0b0ebc84bc03bbf17ecc1c41f2a5a611dad413f86441c2f375002364a30ac55f8b248e370cbedf0e8c22d71d4195763841c
 ```
 
-### `dpkg` source package: `base-files=12.3ubuntu3`
+### `dpkg` source package: `base-files=13ubuntu1`
 
 Binary Packages:
 
-- `base-files=12.3ubuntu3`
+- `base-files=13ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris base-files=13ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_13ubuntu1.dsc' base-files_13ubuntu1.dsc 1613 SHA512:64c1efe75319a5cbf1baa91c0fd085772df3bc74dd1d3f3c73cf98c6a06d2775c8aa192c2df0f73496aaeaec8e11a1c353ac0c6cc2a422ee1fed8db14e88cd0f
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_13ubuntu1.tar.xz' base-files_13ubuntu1.tar.xz 93176 SHA512:617ecd27787efcfd8d26bbf3afa42822cab7e9bcbe062c8c97029bf2531c67eeb6bfc0e7c8c23a6e6177327a49d6c9d8d92fad755d1721f66794c82dbaeb4985
+```
 
 ### `dpkg` source package: `base-passwd=3.6.1`
 
@@ -445,22 +449,17 @@ Licenses: (parsed from: `/usr/share/doc/findutils/copyright`)
 - `X11`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris findutils=4.9.0-4ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.9.0-4ubuntu1.dsc' findutils_4.9.0-4ubuntu1.dsc 2161 SHA512:93e5dab8b1209122f866793d02b506d84aa6e64540440b36a1e536934927c07cf13fa5e9b79add7a6c8114d90996fbe2d42dbaa8d88cd9b1344be109fea0d6d2
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.9.0.orig.tar.xz' findutils_4.9.0.orig.tar.xz 2046252 SHA512:ba4844f4403de0148ad14b46a3dbefd5a721f6257c864bf41a6789b11705408524751c627420b15a52af95564d8e5b52f0978474f640a62ab86a41d20cf14be9
-'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.9.0-4ubuntu1.debian.tar.xz' findutils_4.9.0-4ubuntu1.debian.tar.xz 33712 SHA512:060ea45c12bc8d56ec614262dd5f4097748c86ef86b9abb7d002b6d6bb6ea31acbdf3dc3b4638d46002c28bc7bd642462d5e0ae7ce41ffb0185313da4d893754
-```
 
-### `dpkg` source package: `gcc-13=13.1.0-2ubuntu2`
+### `dpkg` source package: `gcc-13=13.1.0-6ubuntu1`
 
 Binary Packages:
 
-- `gcc-13-base:amd64=13.1.0-2ubuntu2`
-- `libgcc-s1:amd64=13.1.0-2ubuntu2`
-- `libstdc++6:amd64=13.1.0-2ubuntu2`
+- `gcc-13-base:amd64=13.1.0-6ubuntu1`
+- `libgcc-s1:amd64=13.1.0-6ubuntu1`
+- `libstdc++6:amd64=13.1.0-6ubuntu1`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-13-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -471,9 +470,14 @@ Licenses: (parsed from: `/usr/share/doc/gcc-13-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-13=13.1.0-6ubuntu1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13.1.0-6ubuntu1.dsc' gcc-13_13.1.0-6ubuntu1.dsc 27910 SHA512:0a32cdf878d6b754f9342e8425f30a5335e04e3d8c8d9d4b2a3400aae4e1dfdffa5dd4cbd702167916bf79c3b343613870b6bdf1f276e339c36bf65bb66e805d
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13.1.0.orig.tar.gz' gcc-13_13.1.0.orig.tar.gz 92188593 SHA512:81da5b2e1447652f895cc90ae6b7f106d0bb8e7d4741396ddea0e23fe06a13208469fcbefa6affe7b17271af9efb64464cbd5c76bba283b8f3710843a739b687
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13.1.0-6ubuntu1.debian.tar.xz' gcc-13_13.1.0-6ubuntu1.debian.tar.xz 1277788 SHA512:309dfd7e6ae80a36ec6e95ed667e03d8a1323b4c40d66cd36c3d18dccbdbe78f5bd5af3b390fe585d079b77dc639ac3af1a3d5be8014fcaa9731ecaf78be1770
+```
 
 ### `dpkg` source package: `glibc=2.37-0ubuntu2`
 
@@ -811,11 +815,11 @@ $ apt-get source -qq --print-uris libidn2=2.3.3-1build1
 'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.3.3-1build1.debian.tar.xz' libidn2_2.3.3-1build1.debian.tar.xz 16092 SHA512:a7e7c19d48b676b7b083c6f55a3cc9880dec316e4f28166255839d0824e2b67ff753509c627eb89a84e514d3661bd4d23800bb6cea0c902d7bbb958e3e9083ba
 ```
 
-### `dpkg` source package: `libmd=1.0.4-2`
+### `dpkg` source package: `libmd=1.1.0-1`
 
 Binary Packages:
 
-- `libmd0:amd64=1.0.4-2`
+- `libmd0:amd64=1.1.0-1`
 
 Licenses: (parsed from: `/usr/share/doc/libmd0/copyright`)
 
@@ -829,13 +833,15 @@ Licenses: (parsed from: `/usr/share/doc/libmd0/copyright`)
 - `public-domain-md5`
 - `public-domain-sha1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/libmd/1.0.4-2/
-
+```console
+$ apt-get source -qq --print-uris libmd=1.1.0-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libm/libmd/libmd_1.1.0-1.dsc' libmd_1.1.0-1.dsc 2283 SHA512:0838dfa6755a4e0ce750bc31fa7db32e66000ebfae117b92ad7f1b81b89fbfd1e209ad6bf2d5e19df5ef7b5f4d057c39974f4c475626ea69cc93d05d7fd64ceb
+'http://archive.ubuntu.com/ubuntu/pool/main/libm/libmd/libmd_1.1.0.orig.tar.xz' libmd_1.1.0.orig.tar.xz 271228 SHA512:5d0da3337038e474fae7377bbc646d17214e72dc848a7aadc157f49333ce7b5ac1456e45d13674bd410ea08477c6115fc4282fed6c8e6a0bf63537a418c0df96
+'http://archive.ubuntu.com/ubuntu/pool/main/libm/libmd/libmd_1.1.0.orig.tar.xz.asc' libmd_1.1.0.orig.tar.xz.asc 833 SHA512:b0ff3baa7eedc205ee6f8b844859145fa6922c39e8f62f1e997851a65b2881649b438a37baa5800d140541da6f4dacc9f92a370f945d7461937b8cdedeca1cef
+'http://archive.ubuntu.com/ubuntu/pool/main/libm/libmd/libmd_1.1.0-1.debian.tar.xz' libmd_1.1.0-1.debian.tar.xz 8156 SHA512:d5e657388c32afaa86e1ff86f35f354202065534173eadcc7118afefd1a37fc7f9e97a76f121f20ac7be8c6d53b7eeab242f2f52062e6679e4d470b969fcc581
+```
 
 ### `dpkg` source package: `libseccomp=2.5.4-1ubuntu3`
 
@@ -975,23 +981,24 @@ $ apt-get source -qq --print-uris libunistring=1.0-2
 'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_1.0-2.debian.tar.xz' libunistring_1.0-2.debian.tar.xz 14520 SHA512:cae7a131985dd7d47248acd7fdd4d3332b804bb9d06c2e05c94507c4549a5c0d56a88c4657e09410cf98beedde104796b7a3e51d62290cc6465717cb0b20753d
 ```
 
-### `dpkg` source package: `libxcrypt=1:4.4.33-2`
+### `dpkg` source package: `libxcrypt=1:4.4.35-1`
 
 Binary Packages:
 
-- `libcrypt1:amd64=1:4.4.33-2`
+- `libcrypt1:amd64=1:4.4.35-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/libxcrypt/1:4.4.33-2/
-
+```console
+$ apt-get source -qq --print-uris libxcrypt=1:4.4.35-1
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.35-1.dsc' libxcrypt_4.4.35-1.dsc 1591 SHA512:59efeac61b1b9b9ee71dca981b88ed623df0e6ff6c70acd4a0542ac78741da5bc4f40f1ec9feb47375b51a8e54c9abab2305f87b59f717eabceab35d71473c8a
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.35.orig.tar.xz' libxcrypt_4.4.35.orig.tar.xz 393948 SHA512:bd58be6448057152b1bf5a7e8adbbecced16b4390ec4f6e2f845e048a305202f32519922f6f214acb85f3faa4b8a0b43938b2b63d63bf25165239b3a3cc8c632
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libxcrypt/libxcrypt_4.4.35-1.debian.tar.xz' libxcrypt_4.4.35-1.debian.tar.xz 8204 SHA512:dcc5c072a716986541c774430aa38c3f8ba31ead00a45792f92c2bab24001cd42773bb861d9722bf53df57a0981ae4a5cfec4290b1c43a68f1db9c0552a59b6c
+```
 
 ### `dpkg` source package: `libzstd=1.5.4+dfsg2-5`
 
@@ -1035,25 +1042,27 @@ $ apt-get source -qq --print-uris lz4=1.9.4-1
 'http://archive.ubuntu.com/ubuntu/pool/main/l/lz4/lz4_1.9.4-1.debian.tar.xz' lz4_1.9.4-1.debian.tar.xz 8128 SHA512:e89e2577dea9d76f6cac8c154c3fc6f77f501b5896ba949561e8a6a1e4982ad8de83d2deab8ca53dccab9856294dc2397d359cb0f4279b4f70b152c482043d88
 ```
 
-### `dpkg` source package: `mawk=1.3.4.20200120-3.1`
+### `dpkg` source package: `mawk=1.3.4.20230525-1`
 
 Binary Packages:
 
-- `mawk=1.3.4.20200120-3.1`
+- `mawk=1.3.4.20230525-1`
 
 Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 
 - `CC-BY-3.0`
 - `GPL-2`
+- `GPL-2.0-only`
 - `X11`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/mawk/1.3.4.20200120-3.1/
-
+```console
+$ apt-get source -qq --print-uris mawk=1.3.4.20230525-1
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20230525-1.dsc' mawk_1.3.4.20230525-1.dsc 1918 SHA512:395e31e96a38e80130fcd38d0d165d9a86d57ef3989d8a77fcbf944c160816ea1a2351df718b7c6ad7f09ecc612c07c3cc9603b70466db6367b51f85c4202ba8
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20230525.orig.tar.gz' mawk_1.3.4.20230525.orig.tar.gz 403222 SHA512:704c1a94569e8e953af7b00ea81efa20df03483f57e4183935e73df62309874644f2250a307b136af34ce3df62d90170d8afe7b3a86eeacb31cf5845056126cb
+'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20230525-1.debian.tar.xz' mawk_1.3.4.20230525-1.debian.tar.xz 14288 SHA512:bf68b5b7aec6c1a9257cf4071b6541f799f2f68c1bd6967e146fced2cc579a6c939014dc39a12bc71d70f84df109101e0e790b32f760d3eb894b37c991753f24
+```
 
 ### `dpkg` source package: `ncurses=6.4-4`
 
@@ -1293,11 +1302,11 @@ $ apt-get source -qq --print-uris sed=4.9-1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sed/sed_4.9-1.debian.tar.xz' sed_4.9-1.debian.tar.xz 62616 SHA512:5f10389226e093abdf014187dd1e097522938051594158265b0f294cea36b45043081f89a40ec8a91f7fb9a9b907699ca02752cbeac2a5b156f0f702e97881c8
 ```
 
-### `dpkg` source package: `sensible-utils=0.0.17+nmu1`
+### `dpkg` source package: `sensible-utils=0.0.20`
 
 Binary Packages:
 
-- `sensible-utils=0.0.17+nmu1`
+- `sensible-utils=0.0.20`
 
 Licenses: (parsed from: `/usr/share/doc/sensible-utils/copyright`)
 
@@ -1307,13 +1316,13 @@ Licenses: (parsed from: `/usr/share/doc/sensible-utils/copyright`)
 - `configure`
 - `installsh`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
-
-- http://snapshot.debian.org/package/sensible-utils/0.0.17+nmu1/
-
+```console
+$ apt-get source -qq --print-uris sensible-utils=0.0.20
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.20.dsc' sensible-utils_0.0.20.dsc 1737 SHA512:0b0267948347d7aace0c6117228ffa005e5c36e61c9289c409c33d78349fed34956db655541774ec161dc4497d95ccc9d609557f6aaf1d335ced3689ef16a744
+'http://archive.ubuntu.com/ubuntu/pool/main/s/sensible-utils/sensible-utils_0.0.20.tar.xz' sensible-utils_0.0.20.tar.xz 70608 SHA512:439b783003f9b9361baec01f2888f9638bf7d670b90e7262c50fdff2b724f53f83a776bda385003f61b0bbf37c3213208642e2f1289e93a1ba6b1da2107cb02f
+```
 
 ### `dpkg` source package: `shadow=1:4.13+dfsg1-1ubuntu1`
 
