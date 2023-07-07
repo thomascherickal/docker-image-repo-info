@@ -1,13 +1,13 @@
-# `perl:5.36.1-threaded`
+# `perl:5.38.0-threaded-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:60cd9f587dcd68843e6c20859cb93ca2841e4364f140b75d01d4f4ff2172b4b7`
-- Created: `2023-06-13T08:05:46.183186398Z`
-- Virtual Size: ~ 893.48 Mb  
+- Image ID: `sha256:30adf9de021cca55e1e033767d1421409e395aedacd808b3d249c03cd7d425de`
+- Created: `2023-07-05T19:21:45.828850558Z`
+- Virtual Size: ~ 895.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["perl5.36.1","-de0"]`
+- Command: `["perl5.38.0","-de0"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
@@ -3358,13 +3358,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libwmf/0.2.8.4-17/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libwmf/0.2.8.4-17/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libx11=2:1.7.2-1`
+### `dpkg` source package: `libx11=2:1.7.2-1+deb11u1`
 
 Binary Packages:
 
-- `libx11-6:amd64=2:1.7.2-1`
-- `libx11-data=2:1.7.2-1`
-- `libx11-dev:amd64=2:1.7.2-1`
+- `libx11-6:amd64=2:1.7.2-1+deb11u1`
+- `libx11-data=2:1.7.2-1+deb11u1`
+- `libx11-dev:amd64=2:1.7.2-1+deb11u1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -3373,18 +3373,18 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libx11=2:1.7.2-1
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.2-1.dsc' libx11_1.7.2-1.dsc 2539 SHA256:8db8a34ebf9782d4ef47cb28cfeae0b1bc737864a315a182871eeb29f7de7d90
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.2.orig.tar.gz' libx11_1.7.2.orig.tar.gz 3181228 SHA256:2c26ccd08f43a6214de89110554fbe97c71692eeb7e7d4829f3004ae6fafd2c0
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.2.orig.tar.gz.asc' libx11_1.7.2.orig.tar.gz.asc 833 SHA256:509d0ed983ff3aed0dbfb070dabfce82b5787e626f2fd0bfb2a5887918fcd967
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.7.2-1.diff.gz' libx11_1.7.2-1.diff.gz 76026 SHA256:7babff68e071a9e3f7bc6241a1a135e3a19c74314240764722a41b31f1e213c8
+$ apt-get source -qq --print-uris libx11=2:1.7.2-1+deb11u1
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.7.2-1%2bdeb11u1.dsc' libx11_1.7.2-1+deb11u1.dsc 2726 SHA256:ec0dcab068d361357957338097b8e5afea57d864c85485db57d74fefd133812d
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.7.2.orig.tar.gz' libx11_1.7.2.orig.tar.gz 3181228 SHA256:2c26ccd08f43a6214de89110554fbe97c71692eeb7e7d4829f3004ae6fafd2c0
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.7.2.orig.tar.gz.asc' libx11_1.7.2.orig.tar.gz.asc 833 SHA256:509d0ed983ff3aed0dbfb070dabfce82b5787e626f2fd0bfb2a5887918fcd967
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.7.2-1%2bdeb11u1.diff.gz' libx11_1.7.2-1+deb11u1.diff.gz 77935 SHA256:e1991b48759c51f7bfb765d582311d8ac2ef4b5d6aa951fec1608982e1d8cdcd
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libx11/2:1.7.2-1/ (for browsing the source)
-- https://sources.debian.net/src/libx11/2:1.7.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libx11/2:1.7.2-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libx11/2:1.7.2-1+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/libx11/2:1.7.2-1+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libx11/2:1.7.2-1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.9-1`
 
