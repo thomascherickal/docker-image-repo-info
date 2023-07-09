@@ -1,10 +1,10 @@
-# `hylang:0.26.0-python3.9-bookworm`
+# `hylang:0.27.0-python3.9-bookworm`
 
 ## Docker Metadata
 
-- Image ID: `sha256:33fc9a0e31ff1d58d5ec539f6198bd79c95e46eb94a7a11e6681d6a1c0988e7e`
-- Created: `2023-07-05T03:35:41.699743215Z`
-- Virtual Size: ~ 154.43 Mb  
+- Image ID: `sha256:a45edd6bcaf877a7a216646c0a27c3ae3e49396d9c9328d50a0947071b557423`
+- Created: `2023-07-07T00:22:18.248654158Z`
+- Virtual Size: ~ 154.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -17,8 +17,8 @@
   - `PYTHON_SETUPTOOLS_VERSION=58.1.0`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/0d8570dc44796f4369b652222cf176b3db6ac70e/public/get-pip.py`
   - `PYTHON_GET_PIP_SHA256=96461deced5c2a487ddc65207ec5a9cffeca0d34e7af7ea1afc470ff0d746207`
-  - `HY_VERSION=0.26.0`
-  - `HYRULE_VERSION=0.3.0`
+  - `HY_VERSION=0.27.0`
+  - `HYRULE_VERSION=0.4.0`
 
 ## `dpkg` (`.deb`-based packages)
 
