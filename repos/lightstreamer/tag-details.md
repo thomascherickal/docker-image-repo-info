@@ -10,6 +10,8 @@
 -	[`lightstreamer:7`](#lightstreamer7)
 -	[`lightstreamer:7-jdk11`](#lightstreamer7-jdk11)
 -	[`lightstreamer:7-jdk11-temurin`](#lightstreamer7-jdk11-temurin)
+-	[`lightstreamer:7-jdk17`](#lightstreamer7-jdk17)
+-	[`lightstreamer:7-jdk17-temurin`](#lightstreamer7-jdk17-temurin)
 -	[`lightstreamer:7-jdk8`](#lightstreamer7-jdk8)
 -	[`lightstreamer:7-jdk8-temurin`](#lightstreamer7-jdk8-temurin)
 -	[`lightstreamer:7.0`](#lightstreamer70)
@@ -45,13 +47,31 @@
 -	[`lightstreamer:7.3`](#lightstreamer73)
 -	[`lightstreamer:7.3-jdk11`](#lightstreamer73-jdk11)
 -	[`lightstreamer:7.3-jdk11-temurin`](#lightstreamer73-jdk11-temurin)
+-	[`lightstreamer:7.3-jdk17`](#lightstreamer73-jdk17)
+-	[`lightstreamer:7.3-jdk17-temurin`](#lightstreamer73-jdk17-temurin)
 -	[`lightstreamer:7.3-jdk8`](#lightstreamer73-jdk8)
 -	[`lightstreamer:7.3-jdk8-temurin`](#lightstreamer73-jdk8-temurin)
 -	[`lightstreamer:7.3.3`](#lightstreamer733)
 -	[`lightstreamer:7.3.3-jdk11`](#lightstreamer733-jdk11)
 -	[`lightstreamer:7.3.3-jdk11-temurin`](#lightstreamer733-jdk11-temurin)
+-	[`lightstreamer:7.3.3-jdk17`](#lightstreamer733-jdk17)
+-	[`lightstreamer:7.3.3-jdk17-temurin`](#lightstreamer733-jdk17-temurin)
 -	[`lightstreamer:7.3.3-jdk8`](#lightstreamer733-jdk8)
 -	[`lightstreamer:7.3.3-jdk8-temurin`](#lightstreamer733-jdk8-temurin)
+-	[`lightstreamer:7.4`](#lightstreamer74)
+-	[`lightstreamer:7.4-jdk11`](#lightstreamer74-jdk11)
+-	[`lightstreamer:7.4-jdk11-temurin`](#lightstreamer74-jdk11-temurin)
+-	[`lightstreamer:7.4-jdk17`](#lightstreamer74-jdk17)
+-	[`lightstreamer:7.4-jdk17-temurin`](#lightstreamer74-jdk17-temurin)
+-	[`lightstreamer:7.4-jdk8`](#lightstreamer74-jdk8)
+-	[`lightstreamer:7.4-jdk8-temurin`](#lightstreamer74-jdk8-temurin)
+-	[`lightstreamer:7.4.0`](#lightstreamer740)
+-	[`lightstreamer:7.4.0-jdk11`](#lightstreamer740-jdk11)
+-	[`lightstreamer:7.4.0-jdk11-temurin`](#lightstreamer740-jdk11-temurin)
+-	[`lightstreamer:7.4.0-jdk17`](#lightstreamer740-jdk17)
+-	[`lightstreamer:7.4.0-jdk17-temurin`](#lightstreamer740-jdk17-temurin)
+-	[`lightstreamer:7.4.0-jdk8`](#lightstreamer740-jdk8)
+-	[`lightstreamer:7.4.0-jdk8-temurin`](#lightstreamer740-jdk8-temurin)
 -	[`lightstreamer:latest`](#lightstreamerlatest)
 
 ## `lightstreamer:6`
@@ -1645,6 +1665,14 @@ CMD ["./LS.sh" "run"]
 		Last Modified: Wed, 05 Jul 2023 04:32:22 GMT  
 		Size: 57.8 MB (57845327 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `lightstreamer:7-jdk17`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7-jdk17-temurin`
+
+**does not exist** (yet?)
 
 ## `lightstreamer:7-jdk8`
 
@@ -8475,6 +8503,14 @@ CMD ["./LS.sh" "run"]
 		Size: 57.8 MB (57845327 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `lightstreamer:7.3-jdk17`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.3-jdk17-temurin`
+
+**does not exist** (yet?)
+
 ## `lightstreamer:7.3-jdk8`
 
 ```console
@@ -9462,6 +9498,14 @@ CMD ["./LS.sh" "run"]
 		Size: 57.8 MB (57845327 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `lightstreamer:7.3.3-jdk17`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.3.3-jdk17-temurin`
+
+**does not exist** (yet?)
+
 ## `lightstreamer:7.3.3-jdk8`
 
 ```console
@@ -9851,6 +9895,62 @@ CMD ["./LS.sh" "run"]
 		Last Modified: Wed, 05 Jul 2023 04:32:03 GMT  
 		Size: 57.8 MB (57845308 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `lightstreamer:7.4`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4-jdk11`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4-jdk11-temurin`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4-jdk17`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4-jdk17-temurin`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4-jdk8`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4-jdk8-temurin`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4.0`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4.0-jdk11`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4.0-jdk11-temurin`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4.0-jdk17`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4.0-jdk17-temurin`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4.0-jdk8`
+
+**does not exist** (yet?)
+
+## `lightstreamer:7.4.0-jdk8-temurin`
+
+**does not exist** (yet?)
 
 ## `lightstreamer:latest`
 
