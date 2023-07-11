@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:bbe288c9d4be557d2ad18bc6eebaddf4915e1164caaaa26ba47385a73d018092`
-- Created: `2023-06-15T07:51:11.419704159Z`
-- Virtual Size: ~ 228.93 Mb  
+- Image ID: `sha256:f1072bd670e9610a88668c581f0c9ccc58ae906818f7a5cddd348587bec2b41f`
+- Created: `2023-07-11T03:00:07.224758025Z`
+- Virtual Size: ~ 229.00 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.20`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.20.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.20.tar.xz.asc`
-  - `PHP_SHA256=4c9973f599e93ed5e8ce2b45ce1d41bb8fb54ce642824fd23e56b52fd75029a6`
+  - `PHP_VERSION=8.1.21`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.21.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.21.tar.xz.asc`
+  - `PHP_SHA256=e634a00b0c6a8cd39e840e9fb30b5227b820b7a9ace95b7b001053c1411c4821`
   - `PHP_OPCACHE_VALIDATE_TIMESTAMPS=0`
   - `PHP_OPCACHE_MAX_ACCELERATED_FILES=20000`
   - `PHP_OPCACHE_MEMORY_CONSUMPTION=192`
@@ -330,16 +330,16 @@ LGPL-2.1-or-later
 ### `apk` package: `icu-data-en`
 
 ```console
-icu-data-en-73.2-r0 description:
+icu-data-en-73.2-r1 description:
 Stripped down ICU data with only en_US/GB locale and no legacy charset converters
 
-icu-data-en-73.2-r0 webpage:
+icu-data-en-73.2-r1 webpage:
 https://icu.unicode.org/
 
-icu-data-en-73.2-r0 installed size:
+icu-data-en-73.2-r1 installed size:
 3016 KiB
 
-icu-data-en-73.2-r0 license:
+icu-data-en-73.2-r1 license:
 ICU
 
 ```
@@ -347,16 +347,16 @@ ICU
 ### `apk` package: `icu-libs`
 
 ```console
-icu-libs-73.2-r0 description:
+icu-libs-73.2-r1 description:
 International Components for Unicode library (libraries)
 
-icu-libs-73.2-r0 webpage:
+icu-libs-73.2-r1 webpage:
 https://icu.unicode.org/
 
-icu-libs-73.2-r0 installed size:
+icu-libs-73.2-r1 installed size:
 4328 KiB
 
-icu-libs-73.2-r0 license:
+icu-libs-73.2-r1 license:
 ICU
 
 ```
@@ -653,16 +653,16 @@ GPL-2.0-or-later OR LGPL-3.0-or-later
 ### `apk` package: `libwebp`
 
 ```console
-libwebp-1.3.0-r2 description:
+libwebp-1.3.1-r0 description:
 Libraries for working with WebP images
 
-libwebp-1.3.0-r2 webpage:
+libwebp-1.3.1-r0 webpage:
 https://developers.google.com/speed/webp
 
-libwebp-1.3.0-r2 installed size:
+libwebp-1.3.1-r0 installed size:
 596 KiB
 
-libwebp-1.3.0-r2 license:
+libwebp-1.3.1-r0 license:
 BSD-3-Clause
 
 ```
