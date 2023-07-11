@@ -1690,15 +1690,13 @@ Licenses: (parsed from: `/usr/share/doc/libncursesw6/copyright`, `/usr/share/doc
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.4-4
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.4-4.dsc' ncurses_6.4-4.dsc 4110 SHA512:fc0e44799b742b5d06136793e69cc714fc2f9b7470ad82d91876e6c6a02664a86185d6336ecbe58284cdbbf444650389c2bb493958a1b64558e2e500811b2771
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.4.orig.tar.gz' ncurses_6.4.orig.tar.gz 3612591 SHA512:1c2efff87a82a57e57b0c60023c87bae93f6718114c8f9dc010d4c21119a2f7576d0225dab5f0a227c2cfc6fb6bdbd62728e407f35fce5bf351bb50cf9e0fd34
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.4.orig.tar.gz.asc' ncurses_6.4.orig.tar.gz.asc 729 SHA512:8ee8b4b1ff3f804085a4f09aa8be1cf93d8633f7a6c7bcb079556c0a3fb2f4be8886c18c22dbc4f01fa03f88dc682ebce27459f9110909f72133f3685df2eb41
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.4-4.debian.tar.xz' ncurses_6.4-4.debian.tar.xz 56556 SHA512:54b8ba2b89d77e1f2b09b90663f0bbde3b95d00ef89d0f6e7a9b5ce0ccc874e057adb4bcc5ddc66f3cbe58de37ae4a842bd32dd159ec77bf99e82a15c17e8292
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/ncurses/6.4-4/
+
 
 ### `dpkg` source package: `netbase=6.4`
 
@@ -2296,15 +2294,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.40.1-2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.1-2.dsc' sqlite3_3.40.1-2.dsc 2487 SHA512:c1c9464a3a07f2bc40c024ba19da6b1ef1c268fcc31bcf02791b6457f4752749dc1418c3134a8f5a400cafe6134db2a88fb940514d9a26123c9270fe5a034bb3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.1.orig-www.tar.xz' sqlite3_3.40.1.orig-www.tar.xz 5865720 SHA512:2815637c8aa553351303e44c8348d510dc9a5f7c4fca973e000b491e8607525f8a6d5a842c0cb708d510bcb2a3e491b2384d6b13693a1e4b63fab54029017093
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.1.orig.tar.xz' sqlite3_3.40.1.orig.tar.xz 8019048 SHA512:83f88923aa2922d9067c7f322bc020a8aed9b1002e236281dc2be5cc895bb2cffaae2f2d37585369ccfaa0107640541552c14d36f8923e762366a97b4ce67df6
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.1-2.debian.tar.xz' sqlite3_3.40.1-2.debian.tar.xz 29944 SHA512:8805fd5e86699d15e08ff685409803c6facf053750a6fbdf720af72452cf253bf93638349ce8155ed8de39f14701a174f01444418e25102c2102e8a4c8b4a6d7
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/sqlite3/3.40.1-2/
+
 
 ### `dpkg` source package: `subversion=1.14.2-4build2`
 

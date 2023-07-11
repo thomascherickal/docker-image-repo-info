@@ -431,14 +431,13 @@ Licenses: (parsed from: `/usr/share/doc/libcairo-gobject2/copyright`, `/usr/shar
 
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cairo=1.16.0-7
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cairo/cairo_1.16.0-7.dsc' cairo_1.16.0-7.dsc 2823 SHA512:f70441caf095f1c012046222af2564ce7e1e57436849323935e5f533c09a83d1c12e963c57db4d007a77e39d7462fdfbcb23a4a2df2d7a631d2607e500804579
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cairo/cairo_1.16.0.orig.tar.xz' cairo_1.16.0.orig.tar.xz 41997432 SHA512:9eb27c4cf01c0b8b56f2e15e651f6d4e52c99d0005875546405b64f1132aed12fbf84727273f493d84056a13105e065009d89e94a8bfaf2be2649e232b82377f
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cairo/cairo_1.16.0-7.debian.tar.xz' cairo_1.16.0-7.debian.tar.xz 33816 SHA512:ab54fe20d5bbb7d03685087bb62a55a825d1a1e65572ae657f28e04d5ecbb2f2677d094d65ec4731db0ddb9e74c911a7efbfad3208f0dace3747f47835eb0011
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/cairo/1.16.0-7/
+
 
 ### `dpkg` source package: `cdebconf=0.267ubuntu1`
 
@@ -1053,14 +1052,9 @@ Licenses: (parsed from: `/usr/share/doc/cpp-12/copyright`, `/usr/share/doc/g++-1
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-12=12.3.0-3ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.3.0-3ubuntu1.dsc' gcc-12_12.3.0-3ubuntu1.dsc 22292 SHA512:53a655a210b01f3de81c20a0e552363a1db4985e5eb7d9eaa6da4f87cbeca8827836531d372fc48ba5f9b0a6a5056397152ab9fc122e96f7161f1980c2033c7c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.3.0.orig.tar.gz' gcc-12_12.3.0.orig.tar.gz 91555468 SHA512:a33ce506594e13cf96f0419e6d62b71f8906c87c69426218bf8679d281865f1b170bc2f7379216ae1d6ad9f6bdbf5819c34c65c7537fdb74179c27b0d4ab7b48
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.3.0-3ubuntu1.debian.tar.xz' gcc-12_12.3.0-3ubuntu1.debian.tar.xz 756404 SHA512:22b390a388130fb201b47d496347a7d2bb4864af31853d0fb8bf798b66515035c68576f7263b7c47fd36e94f1be755c888d08c5a9f8c2d860b8012616a683690
-```
 
 ### `dpkg` source package: `gcc-13=13.1.0-6ubuntu1`
 
@@ -1643,14 +1637,13 @@ Licenses: (parsed from: `/usr/share/doc/imagemagick/copyright`, `/usr/share/doc/
 - `TatcherUlrichPublicDomain`
 - `aclocal`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris imagemagick=8:6.9.11.60+dfsg-1.6
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imagemagick/imagemagick_6.9.11.60%2bdfsg-1.6.dsc' imagemagick_6.9.11.60+dfsg-1.6.dsc 5074 SHA512:f65462ca8faa4b02a3b810a1d68c3573720b305a8df70408a0eda3b62776fa8e4e8025989708f7a750069f6b6d6048d3d1f7183b19f1aafe4b8de6c88bee8451
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imagemagick/imagemagick_6.9.11.60%2bdfsg.orig.tar.xz' imagemagick_6.9.11.60+dfsg.orig.tar.xz 9395144 SHA512:345a23eda96516fc7a213bd4a322bca4c8b690efe40ff7b498a448f8cedd7f0d600fae2cb6fff45bc995779a90d8c04b58288273eee97833ddebb4f9f2a3d14c
-'http://archive.ubuntu.com/ubuntu/pool/universe/i/imagemagick/imagemagick_6.9.11.60%2bdfsg-1.6.debian.tar.xz' imagemagick_6.9.11.60+dfsg-1.6.debian.tar.xz 253928 SHA512:422d67ed8cbfd9b80dc71cc6562926dbd85c5102ed0f669d615ec554a91b31327b2ec9f9554770984e9be6400387c493c9acdf87bc6527a35aa45d13c588eece
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/imagemagick/8:6.9.11.60+dfsg-1.6/
+
 
 ### `dpkg` source package: `imath=3.1.6-1ubuntu1`
 
@@ -2262,14 +2255,13 @@ Licenses: (parsed from: `/usr/share/doc/libheif1/copyright`)
 - `LGPL-3+`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libheif=1.15.1-1
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.15.1-1.dsc' libheif_1.15.1-1.dsc 2290 SHA512:7e796d5543026966012323fc70a8aa88c83d92c32cacedb7e91e705553c282593b31a74602a74b15bd5a94411af487a5a20b73c4c4b56854a6807837e7349730
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.15.1.orig.tar.gz' libheif_1.15.1.orig.tar.gz 1749018 SHA512:057569fd95bed05d8543368202ea8881801978d7e21556a1f8b851ee2d40d2eecc94d2209d29a8cd555f588bf38078e382ef46c3d97a84fd598ea42a9e3de639
-'http://archive.ubuntu.com/ubuntu/pool/universe/libh/libheif/libheif_1.15.1-1.debian.tar.xz' libheif_1.15.1-1.debian.tar.xz 7780 SHA512:c5830d57e1bde6736ddc23d1211d88d4087f65f26a868304f8e4195cde1a5cd0beb1e3c08896f01b82fa161132335d5437e3e2e902b006c298d57eef5e64b55f
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/libheif/1.15.1-1/
+
 
 ### `dpkg` source package: `libice=2:1.0.10-1build2`
 
@@ -3460,15 +3452,13 @@ Licenses: (parsed from: `/usr/share/doc/libncurses-dev/copyright`, `/usr/share/d
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.4-4
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.4-4.dsc' ncurses_6.4-4.dsc 4110 SHA512:fc0e44799b742b5d06136793e69cc714fc2f9b7470ad82d91876e6c6a02664a86185d6336ecbe58284cdbbf444650389c2bb493958a1b64558e2e500811b2771
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.4.orig.tar.gz' ncurses_6.4.orig.tar.gz 3612591 SHA512:1c2efff87a82a57e57b0c60023c87bae93f6718114c8f9dc010d4c21119a2f7576d0225dab5f0a227c2cfc6fb6bdbd62728e407f35fce5bf351bb50cf9e0fd34
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.4.orig.tar.gz.asc' ncurses_6.4.orig.tar.gz.asc 729 SHA512:8ee8b4b1ff3f804085a4f09aa8be1cf93d8633f7a6c7bcb079556c0a3fb2f4be8886c18c22dbc4f01fa03f88dc682ebce27459f9110909f72133f3685df2eb41
-'http://archive.ubuntu.com/ubuntu/pool/main/n/ncurses/ncurses_6.4-4.debian.tar.xz' ncurses_6.4-4.debian.tar.xz 56556 SHA512:54b8ba2b89d77e1f2b09b90663f0bbde3b95d00ef89d0f6e7a9b5ce0ccc874e057adb4bcc5ddc66f3cbe58de37ae4a842bd32dd159ec77bf99e82a15c17e8292
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/ncurses/6.4-4/
+
 
 ### `dpkg` source package: `netbase=6.4`
 
@@ -4344,15 +4334,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.40.1-2
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.1-2.dsc' sqlite3_3.40.1-2.dsc 2487 SHA512:c1c9464a3a07f2bc40c024ba19da6b1ef1c268fcc31bcf02791b6457f4752749dc1418c3134a8f5a400cafe6134db2a88fb940514d9a26123c9270fe5a034bb3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.1.orig-www.tar.xz' sqlite3_3.40.1.orig-www.tar.xz 5865720 SHA512:2815637c8aa553351303e44c8348d510dc9a5f7c4fca973e000b491e8607525f8a6d5a842c0cb708d510bcb2a3e491b2384d6b13693a1e4b63fab54029017093
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.1.orig.tar.xz' sqlite3_3.40.1.orig.tar.xz 8019048 SHA512:83f88923aa2922d9067c7f322bc020a8aed9b1002e236281dc2be5cc895bb2cffaae2f2d37585369ccfaa0107640541552c14d36f8923e762366a97b4ce67df6
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.1-2.debian.tar.xz' sqlite3_3.40.1-2.debian.tar.xz 29944 SHA512:8805fd5e86699d15e08ff685409803c6facf053750a6fbdf720af72452cf253bf93638349ce8155ed8de39f14701a174f01444418e25102c2102e8a4c8b4a6d7
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/sqlite3/3.40.1-2/
+
 
 ### `dpkg` source package: `subversion=1.14.2-4build2`
 
