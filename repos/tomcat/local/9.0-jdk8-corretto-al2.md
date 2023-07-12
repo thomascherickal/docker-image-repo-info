@@ -1,10 +1,10 @@
-# `tomcat:9.0.76-jdk8-corretto-al2`
+# `tomcat:9.0.78-jdk8-corretto-al2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c2260515ab49c63a4c022ae45a93eab8c05c37205f483e4b611e271fdbda8c65`
-- Created: `2023-06-20T23:45:02.147526072Z`
-- Virtual Size: ~ 381.88 Mb  
+- Image ID: `sha256:071f2dd666a9160b6f72297687aa7cf1dfddc797b2f5cd2a2a824c4cf06bca0b`
+- Created: `2023-07-11T00:19:53.925815027Z`
+- Virtual Size: ~ 381.91 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -17,8 +17,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=48F8E69F6390C9F25CFEDCD268248959359E722B A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.76`
-  - `TOMCAT_SHA512=028163cbe15367f0ab60e086b0ebc8d774e62d126d82ae9152f863d4680e280b11c9503e3b51ee7089ca9bea1bfa5b535b244a727a3021e5fa72dd7e9569af9a`
+  - `TOMCAT_VERSION=9.0.78`
+  - `TOMCAT_SHA512=c9f2e60489d07f25b53f715918f4b082c5bb69dbc497e0a9d3d5e3a0d351ff2e0ec8dfc5657de840ee5b3dea6174b27630033b38e36fa4c06b08664e70dec8df`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -898,15 +898,15 @@ $ dnf --quiet download --source --url openssl-libs-1.0.2k-24.amzn2.0.7
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/95051b33cb06275a2be90f45ee8fbd12a95dc2afe7ba94bff90e197f4d6a9403/../../../../../blobstore/bdb579ed4566f2a0aefb855ff374d03fb4ebfd29d43251f881e358b66b2aff9a/openssl-1.0.2k-24.amzn2.0.7.src.rpm
 ```
 
-### `rpm` package: `openssl11-libs-1.1.1g-12.amzn2.0.14.x86_64`
+### `rpm` package: `openssl11-libs-1.1.1g-12.amzn2.0.15.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL and ASL 2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url openssl11-libs-1.1.1g-12.amzn2.0.14
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/95051b33cb06275a2be90f45ee8fbd12a95dc2afe7ba94bff90e197f4d6a9403/../../../../../blobstore/a556d2bdde36ad6eaf1e8be096c618341d2060ed865dbfd96785e10afcf52e37/openssl11-1.1.1g-12.amzn2.0.14.src.rpm
+$ dnf --quiet download --source --url openssl11-libs-1.1.1g-12.amzn2.0.15
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/95051b33cb06275a2be90f45ee8fbd12a95dc2afe7ba94bff90e197f4d6a9403/../../../../../blobstore/9bdae35dc2da50ef8dffc25663b8dd278dca6b3531d807996f08701823f00ae5/openssl11-1.1.1g-12.amzn2.0.15.src.rpm
 ```
 
 ### `rpm` package: `openssl11-pkcs11-0.4.10-6.amzn2.0.1.x86_64`

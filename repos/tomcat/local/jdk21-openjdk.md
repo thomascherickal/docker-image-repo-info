@@ -1,10 +1,10 @@
-# `tomcat:10.1.10-jdk21-openjdk-bookworm`
+# `tomcat:10.1.11-jdk21-openjdk-bookworm`
 
 ## Docker Metadata
 
-- Image ID: `sha256:7b6750145595b46e1599c824593d79a197494c5f6f9bc562f81f74599f3bb936`
-- Created: `2023-07-04T17:56:46.984762045Z`
-- Virtual Size: ~ 757.89 Mb  
+- Image ID: `sha256:970e4418805432726fd2e9da567e90b3dc5ae85c08c464fd5c0cbc3b403a59a9`
+- Created: `2023-07-11T00:08:31.749637208Z`
+- Virtual Size: ~ 757.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -12,14 +12,14 @@
   - `PATH=/usr/local/tomcat/bin:/usr/local/openjdk-21/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-21`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=21-ea+29`
+  - `JAVA_VERSION=21-ea+30`
   - `CATALINA_HOME=/usr/local/tomcat`
   - `TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib`
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=5C3C5F3E314C866292F359A8F3AD5C94A67F707E A9C5DF4D22E99998D9875A5110C01C5A2F6059E7`
   - `TOMCAT_MAJOR=10`
-  - `TOMCAT_VERSION=10.1.10`
-  - `TOMCAT_SHA512=be35edeb7f63be2d087da6b5cf3c1250eb5fbaa484ba788870780109278d1f5607bf8dfb40f718beda82352109c131fc97f7907f5521dc462bd60773b33e2c68`
+  - `TOMCAT_VERSION=10.1.11`
+  - `TOMCAT_SHA512=ad754aa695898cf8af5b64f4e29da7013fb39f808a90fa0e030228680a17c01b10bb0904762417ebac99b075947e4ea26f2f22f5da2aa4e399237468b76fa4fb`
 
 ## `dpkg` (`.deb`-based packages)
 
