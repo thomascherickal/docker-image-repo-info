@@ -1910,14 +1910,9 @@ Licenses: (parsed from: `/usr/share/doc/ghostscript/copyright`, `/usr/share/doc/
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ghostscript=9.50~dfsg-5ubuntu4.7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50%7edfsg-5ubuntu4.7.dsc' ghostscript_9.50~dfsg-5ubuntu4.7.dsc 2610 SHA512:2268d3fd4d94ebd276bbd8606bda97655570bc32898c5e7b2705fe872647de8347da1535e7cb52fee85f0f299b4327e6a357afb89690d95df56125466112966d
-'http://archive.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50%7edfsg.orig.tar.xz' ghostscript_9.50~dfsg.orig.tar.xz 19139148 SHA512:75730872b02fe7341bf6c84fc4b53002f88d2c4c538dee62f749816a4963740f2a369e3a3760175e0f5b73547d5df805a152f5f0120db79ffecc871f5f14be86
-'http://archive.ubuntu.com/ubuntu/pool/main/g/ghostscript/ghostscript_9.50%7edfsg-5ubuntu4.7.debian.tar.xz' ghostscript_9.50~dfsg-5ubuntu4.7.debian.tar.xz 133612 SHA512:79234e1047744d11b96461e23665816c9c2eb6ac1194d5bb24e64bfa3f6b641fdb567f9966a5909decc2f361b7b2b1d3788ed34c8fb77471a20b86f413040fa4
-```
 
 ### `dpkg` source package: `giflib=5.1.9-1`
 
