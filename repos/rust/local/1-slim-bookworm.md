@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:06aef7dc20f8e61e2d93adf9313aaaab0d6d4839e5dcda5965569f01e6979b9e`
-- Created: `2023-07-04T09:08:18.6964717Z`
-- Virtual Size: ~ 855.10 Mb  
+- Image ID: `sha256:c0a15ec6b61c537f4019e884bfb0c075c0aa60aa809a8911dee0b79c4880e55b`
+- Created: `2023-07-13T21:55:40.893389879Z`
+- Virtual Size: ~ 838.78 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `RUSTUP_HOME=/usr/local/rustup`
   - `CARGO_HOME=/usr/local/cargo`
-  - `RUST_VERSION=1.70.0`
+  - `RUST_VERSION=1.71.0`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1618,11 +1618,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.5.4+dfsg2-5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.5.4+dfsg2-5/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=6.1.27-1`
+### `dpkg` source package: `linux=6.1.37-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=6.1.27-1`
+- `linux-libc-dev:amd64=6.1.37-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1637,17 +1637,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=6.1.27-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.27-1.dsc' linux_6.1.27-1.dsc 287311 SHA256:a7387da34728c5f8bd43f67acdabed9b91beee24603316e73f8328203081a460
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.27.orig.tar.xz' linux_6.1.27.orig.tar.xz 137313692 SHA256:6f7629a19e2689ba8223e0af177ba488e127d1311149c35de8e2112fc627b2a8
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.27-1.debian.tar.xz' linux_6.1.27-1.debian.tar.xz 1458556 SHA256:1c6c6212cc071a67b023d87addc86b7f87f08460bc9accd60aeeeb901bbfb167
+$ apt-get source -qq --print-uris linux=6.1.37-1
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_6.1.37-1.dsc' linux_6.1.37-1.dsc 290924 SHA256:ad35f62009cc2798c71fe4788d8ed250576f8a56d3e2d00a8349226c5b5a982a
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_6.1.37.orig.tar.xz' linux_6.1.37.orig.tar.xz 137331348 SHA256:5d98b9130b60e980eda129287210c9a994eb0dbbafdc2269959c77b698f21c70
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_6.1.37-1.debian.tar.xz' linux_6.1.37-1.debian.tar.xz 1481740 SHA256:646132760e8aa77b6e0029df6312a834a309d914002c5fbb940086f58892a88f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/6.1.27-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/6.1.27-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/6.1.27-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/6.1.37-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/6.1.37-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/6.1.37-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lz4=1.9.4-1`
 
