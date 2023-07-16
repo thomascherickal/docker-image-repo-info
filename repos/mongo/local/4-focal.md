@@ -1,10 +1,10 @@
-# `mongo:4.4.22-focal`
+# `mongo:4.4.23-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:cb026d11ad72d7240f3709c9d673af4cb2c7ff735dd455a015f6172b1efa53da`
-- Created: `2023-07-04T18:39:57.9965269Z`
-- Virtual Size: ~ 432.17 Mb  
+- Image ID: `sha256:b5b0e0662b9a8a4413901fdaf4144b63a8daf3dd1ee72a47e1cedb97a73eb28c`
+- Created: `2023-07-14T00:21:56.681386115Z`
+- Virtual Size: ~ 432.25 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -16,7 +16,7 @@
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=4.4`
-  - `MONGO_VERSION=4.4.22`
+  - `MONGO_VERSION=4.4.23`
   - `HOME=/data/db`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
@@ -1284,16 +1284,16 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `mongodb-org=4.4.22`
+### `dpkg` source package: `mongodb-org=4.4.23`
 
 Binary Packages:
 
-- `mongodb-org=4.4.22`
-- `mongodb-org-database-tools-extra=4.4.22`
-- `mongodb-org-mongos=4.4.22`
-- `mongodb-org-server=4.4.22`
-- `mongodb-org-shell=4.4.22`
-- `mongodb-org-tools=4.4.22`
+- `mongodb-org=4.4.23`
+- `mongodb-org-database-tools-extra=4.4.23`
+- `mongodb-org-mongos=4.4.23`
+- `mongodb-org-server=4.4.23`
+- `mongodb-org-shell=4.4.23`
+- `mongodb-org-tools=4.4.23`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
