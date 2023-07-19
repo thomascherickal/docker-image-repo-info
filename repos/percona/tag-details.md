@@ -742,11 +742,21 @@ CMD ["mysqld"]
 
 ## `percona:5.7.39`
 
-**does not exist** (yet?)
+```console
+$ docker pull percona@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `percona:5.7.39-centos`
 
-**does not exist** (yet?)
+```console
+$ docker pull percona@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `percona:8`
 
@@ -1735,7 +1745,12 @@ CMD ["mysqld"]
 
 ## `percona:ps-5.7.39`
 
-**does not exist** (yet?)
+```console
+$ docker pull percona@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `percona:ps-8`
 
@@ -2119,7 +2134,12 @@ CMD ["mongod"]
 
 ## `percona:psmdb-4.2.24`
 
-**does not exist** (yet?)
+```console
+$ docker pull percona@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `percona:psmdb-4.4`
 
@@ -2236,7 +2256,12 @@ CMD ["mongod"]
 
 ## `percona:psmdb-4.4.22`
 
-**does not exist** (yet?)
+```console
+$ docker pull percona@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `percona:psmdb-5.0`
 
@@ -2353,12 +2378,27 @@ CMD ["mongod"]
 
 ## `percona:psmdb-5.0.18`
 
-**does not exist** (yet?)
+```console
+$ docker pull percona@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `percona:psmdb-6.0`
 
-**does not exist** (yet?)
+```console
+$ docker pull percona@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `percona:psmdb-6.0.6`
 
-**does not exist** (yet?)
+```console
+$ docker pull percona@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
