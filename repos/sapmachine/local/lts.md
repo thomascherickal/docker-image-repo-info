@@ -1,10 +1,10 @@
-# `sapmachine:17`
+# `sapmachine:jdk-ubuntu-17`
 
 ## Docker Metadata
 
-- Image ID: `sha256:a32ea279f46a5075ece209459e0679b196448923a72291b3e37c1c1ef14539cc`
-- Created: `2023-07-04T18:46:15.890307989Z`
-- Virtual Size: ~ 430.94 Mb  
+- Image ID: `sha256:3c26f44674d4c20a64718852532e93a9679e17c27b4770bcde4f6cf476a11ecb`
+- Created: `2023-07-19T23:26:09.513348885Z`
+- Virtual Size: ~ 422.41 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -240,26 +240,6 @@ $ apt-get source -qq --print-uris bzip2=1.0.8-5build1
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bzip2/bzip2_1.0.8-5build1.debian.tar.bz2' bzip2_1.0.8-5build1.debian.tar.bz2 26870 SHA512:e030c257c3458d780fd0ffc6f328efd69d0e875e81acd7441a7c6651194ebded61017c96aad7c99061f93d50dfc33056abe98c9a599abc900f49d51c4a1eed6f
 ```
 
-### `dpkg` source package: `ca-certificates=20230311ubuntu0.22.04.1`
-
-Binary Packages:
-
-- `ca-certificates=20230311ubuntu0.22.04.1`
-
-Licenses: (parsed from: `/usr/share/doc/ca-certificates/copyright`)
-
-- `GPL-2`
-- `GPL-2+`
-- `MPL-2.0`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris ca-certificates=20230311ubuntu0.22.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20230311ubuntu0.22.04.1.dsc' ca-certificates_20230311ubuntu0.22.04.1.dsc 1878 SHA512:374985f61650e5428d3c37421085a2b04b9340737071a6f04d9b28c7d5f448d5f33ff780fe37da6c98690248bc3845f2ec6201967bb2e4e0ad32afd491e37ba3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20230311ubuntu0.22.04.1.tar.xz' ca-certificates_20230311ubuntu0.22.04.1.tar.xz 257832 SHA512:fc8e573ef51f61eec3b7ffedd7e91f65fda6fd13093c94aff2b375a0a64653d03a1241ed04517d4c7a6c6bb16f866cea4bed87ea576aad5dd9992098805ff6d2
-```
-
 ### `dpkg` source package: `cdebconf=0.261ubuntu1`
 
 Binary Packages:
@@ -296,43 +276,6 @@ $ apt-get source -qq --print-uris coreutils=8.32-4.1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.32.orig.tar.xz' coreutils_8.32.orig.tar.xz 5547836 SHA512:1c8f3584efd61b4b02e7ac5db8e103b63cfb2063432caaf1e64cb2dcc56d8c657d1133bbf10bd41468d6a1f31142e6caa81d16ae68fa3e6e84075c253613a145
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.32.orig.tar.xz.asc' coreutils_8.32.orig.tar.xz.asc 833 SHA512:9c73b35c9e8f7c2b8eff317afcb5aa3234c5f41c80d1882f3c2342906f3fdc876ae45d1256dd1b8fd3cb58c50925f3c13f93de5018626634fdca3c72c14a9acb
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.32-4.1ubuntu1.debian.tar.xz' coreutils_8.32-4.1ubuntu1.debian.tar.xz 41096 SHA512:74adfa2f2a85af8d7024ad6d13942e915217dcb10e29caa9c314e0a15da6ec019e7aa52ac5351c35ccea1bace7a05c6dc7569b7b0487c8fcd46b3ba42d66d89d
-```
-
-### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg2-3ubuntu1.2`
-
-Binary Packages:
-
-- `libsasl2-2:amd64=2.1.27+dfsg2-3ubuntu1.2`
-- `libsasl2-modules-db:amd64=2.1.27+dfsg2-3ubuntu1.2`
-
-Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/libsasl2-modules-db/copyright`)
-
-- `BSD-2-clause`
-- `BSD-2.2-clause`
-- `BSD-3-clause`
-- `BSD-3-clause-JANET`
-- `BSD-3-clause-PADL`
-- `BSD-4-clause`
-- `BSD-4-clause-UC`
-- `FSFULLR`
-- `GPL-3`
-- `GPL-3+`
-- `IBM-as-is`
-- `MIT-CMU`
-- `MIT-Export`
-- `MIT-OpenVision`
-- `OpenLDAP`
-- `OpenSSL`
-- `RSA-MD`
-- `SSLeay`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.27+dfsg2-3ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg2-3ubuntu1.2.dsc' cyrus-sasl2_2.1.27+dfsg2-3ubuntu1.2.dsc 3626 SHA512:fc67304c71b6bf7e5097bdb080ef0973ab873ff7558d91153066820c2f7d5983260586564760d6abd04c3e3fe7b076b474ae44bc97907cc2fb2757d4ca3cfe56
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg2.orig.tar.xz' cyrus-sasl2_2.1.27+dfsg2.orig.tar.xz 829892 SHA512:13337dfcc57ea8fec471ee0f2a0f6b58fb92907ad0899a4a8afaba957c5da302924e71c9fc4a61bbc913a4ee2ea74b05772cb26ed58d5724a312bb20a8b6a4cb
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.27%2bdfsg2-3ubuntu1.2.debian.tar.xz' cyrus-sasl2_2.1.27+dfsg2-3ubuntu1.2.debian.tar.xz 98836 SHA512:91457b1c476fae1b407f82304e6f651053ceaa923059e185b59e2be680038c2a38aab7749004b640ba604f7fdf51eb87a45e91671077207b8b8b4319e1bf24fb
 ```
 
 ### `dpkg` source package: `dash=0.5.11+git20210903+057cd650a4ed-3build1`
@@ -675,20 +618,9 @@ $ apt-get source -qq --print-uris gmp=2:6.2.1+dfsg-3ubuntu1
 
 Binary Packages:
 
-- `dirmngr=2.2.27-3ubuntu2.1`
-- `gnupg=2.2.27-3ubuntu2.1`
-- `gnupg-l10n=2.2.27-3ubuntu2.1`
-- `gnupg-utils=2.2.27-3ubuntu2.1`
-- `gnupg2=2.2.27-3ubuntu2.1`
-- `gpg=2.2.27-3ubuntu2.1`
-- `gpg-agent=2.2.27-3ubuntu2.1`
-- `gpg-wks-client=2.2.27-3ubuntu2.1`
-- `gpg-wks-server=2.2.27-3ubuntu2.1`
-- `gpgconf=2.2.27-3ubuntu2.1`
-- `gpgsm=2.2.27-3ubuntu2.1`
 - `gpgv=2.2.27-3ubuntu2.1`
 
-Licenses: (parsed from: `/usr/share/doc/dirmngr/copyright`, `/usr/share/doc/gnupg/copyright`, `/usr/share/doc/gnupg-l10n/copyright`, `/usr/share/doc/gnupg-utils/copyright`, `/usr/share/doc/gnupg2/copyright`, `/usr/share/doc/gpg/copyright`, `/usr/share/doc/gpg-agent/copyright`, `/usr/share/doc/gpg-wks-client/copyright`, `/usr/share/doc/gpg-wks-server/copyright`, `/usr/share/doc/gpgconf/copyright`, `/usr/share/doc/gpgsm/copyright`, `/usr/share/doc/gpgv/copyright`)
+Licenses: (parsed from: `/usr/share/doc/gpgv/copyright`)
 
 - `BSD-3-clause`
 - `CC0-1.0`
@@ -871,36 +803,6 @@ $ apt-get source -qq --print-uris krb5=1.19.2-2ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2-2ubuntu0.2.debian.tar.xz' krb5_1.19.2-2ubuntu0.2.debian.tar.xz 108204 SHA512:090720455cb51c4f5435657b699071880c0021204c79e5dc97b6a4ba3eb5bc18df2ddedc7fe938181c6207af88c7b6533b87e7de7bdabef0f88ff8d6715784e9
 ```
 
-### `dpkg` source package: `libassuan=2.5.5-1build1`
-
-Binary Packages:
-
-- `libassuan0:amd64=2.5.5-1build1`
-
-Licenses: (parsed from: `/usr/share/doc/libassuan0/copyright`)
-
-- `GAP`
-- `GAP~FSF`
-- `GPL-2`
-- `GPL-2+`
-- `GPL-2+ with libtool exception`
-- `GPL-3`
-- `GPL-3+`
-- `LGPL-2.1`
-- `LGPL-2.1+`
-- `LGPL-3`
-- `LGPL-3+`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris libassuan=2.5.5-1build1
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libassuan/libassuan_2.5.5-1build1.dsc' libassuan_2.5.5-1build1.dsc 2753 SHA512:6aa8147a85858f8e0c6ce17083c605fa92c65bcc810a0c1c5c8c5ef08332d359795ad77129bead9f7b216d7893c305e34f653ab29941b008f2bd1178e81587f5
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libassuan/libassuan_2.5.5.orig.tar.bz2' libassuan_2.5.5.orig.tar.bz2 572263 SHA512:70117f77aa43bbbe0ed28da5ef23834c026780a74076a92ec775e30f851badb423e9a2cb9e8d142c94e4f6f8a794988c1b788fd4bd2271e562071adf0ab16403
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libassuan/libassuan_2.5.5.orig.tar.bz2.asc' libassuan_2.5.5.orig.tar.bz2.asc 228 SHA512:343336ea5dffa113cd934167f548faf4e85d31bf64a46541ee6828b4d0995a8cc9d0668995812d9c4d3ab73347d5b1bbfff0d6ed586fbf4bbc57ac42e828e8d5
-'http://archive.ubuntu.com/ubuntu/pool/main/liba/libassuan/libassuan_2.5.5-1build1.debian.tar.xz' libassuan_2.5.5-1build1.debian.tar.xz 14448 SHA512:590d52fa0d3e7fde9747cb164b08a60ae3372eff60ac80f4de809289f86a83c2b7361e65bbb20e1b68a27960e7478a78031b57d7e9784d6d2dc407f1c8530217
-```
-
 ### `dpkg` source package: `libbsd=0.11.5-1`
 
 Binary Packages:
@@ -1067,28 +969,6 @@ $ apt-get source -qq --print-uris libidn2=2.3.2-2build1
 'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.3.2.orig.tar.gz' libidn2_2.3.2.orig.tar.gz 2169556 SHA512:958dbf49a47a84c7627ac182f4cc8ea452696cec3f0d1ff102a6c48e89893e772b2aa81f75da8223dfc6326515cca3ae085268fbf997828de9330c3a351152f1
 'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.3.2.orig.tar.gz.asc' libidn2_2.3.2.orig.tar.gz.asc 488 SHA512:0559b51b37c7937f3e1f8bf9de9b193f137f16b79d6673f85691a4f4a12ec132568e913848a70136f8522118817f7ecaa8432d353a5eff6b99a7be8719421fe0
 'http://archive.ubuntu.com/ubuntu/pool/main/libi/libidn2/libidn2_2.3.2-2build1.debian.tar.xz' libidn2_2.3.2-2build1.debian.tar.xz 15972 SHA512:d5af028cc405d326c31e67e577ef16d9b8b81e433171220fda2c2a6f8fc982a63b6d1d85c6595f5ce01a5005768d935aeeaa5de8a552990f4e070bc541e78570
-```
-
-### `dpkg` source package: `libksba=1.6.0-2ubuntu0.2`
-
-Binary Packages:
-
-- `libksba8:amd64=1.6.0-2ubuntu0.2`
-
-Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
-
-- `FSFUL`
-- `GPL-3`
-- `LGPL-2.1-or-later`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris libksba=1.6.0-2ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0-2ubuntu0.2.dsc' libksba_1.6.0-2ubuntu0.2.dsc 2585 SHA512:ef96729e570627b7cf38ed0dcc3338097a81f690dde041fd9ea63b3c4b55c11ccf35ab7b2bbd196af3ca7834f8e5017cbb14436a7718034608f3276ca3db9f3f
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0.orig.tar.bz2' libksba_1.6.0.orig.tar.bz2 662120 SHA512:a7c76d41dfd8ec6383ac2de3c53848cd9f066b538f6f3cd43175e3c8095df51b96d0a24a573481c0c4856b09b7c224e2b562d88f5c0801e7acfb582ea2739c2b
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0.orig.tar.bz2.asc' libksba_1.6.0.orig.tar.bz2.asc 228 SHA512:fc381ea66eefdb431a5248fa3ac0751d7343d7f99cc7ebf7621b0763e6e31a80b45c5e17b09bbc7c1c1154e6a0152af1f13798f64959ac63f50b789ec046d7a3
-'http://archive.ubuntu.com/ubuntu/pool/main/libk/libksba/libksba_1.6.0-2ubuntu0.2.debian.tar.xz' libksba_1.6.0-2ubuntu0.2.debian.tar.xz 16004 SHA512:24a609ca522b5e3a1402ff5a97ce451869bdf0960902d171a89f2190d4de7c8442403d21f938cebeeafd0ae082bf03d76c0521b26a2c153257df784cf7894b43
 ```
 
 ### `dpkg` source package: `libmd=1.0.4-1build1`
@@ -1649,26 +1529,6 @@ $ apt-get source -qq --print-uris nettle=3.7.3-1build2
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.7.3-1build2.debian.tar.xz' nettle_3.7.3-1build2.debian.tar.xz 22100 SHA512:c1935d35e9f04798273053ab92c7405ec225a5d72ba6c2869b0f2bf54b459ac428e113bc149796e91834a8b56082f8bbfbb906a6cd6787142b8932bd1dd83cec
 ```
 
-### `dpkg` source package: `npth=1.6-3build2`
-
-Binary Packages:
-
-- `libnpth0:amd64=1.6-3build2`
-
-Licenses: (parsed from: `/usr/share/doc/libnpth0/copyright`)
-
-- `LGPL-2.1`
-- `LGPL-2.1+`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris npth=1.6-3build2
-'http://archive.ubuntu.com/ubuntu/pool/main/n/npth/npth_1.6-3build2.dsc' npth_1.6-3build2.dsc 2063 SHA512:19ea7bd0ffc2b0aff06c52298c9a25c2f30619239bea09b571feb4a3d162f461a4529136e351da42b16ab3eaef5add24234f644e822e859ccb32de5bfd658ec0
-'http://archive.ubuntu.com/ubuntu/pool/main/n/npth/npth_1.6.orig.tar.bz2' npth_1.6.orig.tar.bz2 300486 SHA512:2ed1012e14a9d10665420b9a23628be7e206fd9348111ec751349b93557ee69f1176bcf7e6b195b35b1c44a5e0e81ee33b713f03d79a33d1ecd9037035afeda2
-'http://archive.ubuntu.com/ubuntu/pool/main/n/npth/npth_1.6-3build2.debian.tar.xz' npth_1.6-3build2.debian.tar.xz 10904 SHA512:426ab3ab9e27b3701d67cde0a4c4040aa9ccac22a0266321824487fe80a118ccd6860b6fa0fb5ca3c46dfa3c20053889fbb51a2e74618065b3aff059a0216c4c
-```
-
 ### `dpkg` source package: `nspr=2:4.32-3build1`
 
 Binary Packages:
@@ -1711,33 +1571,13 @@ $ apt-get source -qq --print-uris nss=2:3.68.2-0ubuntu1.2
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nss/nss_3.68.2-0ubuntu1.2.debian.tar.xz' nss_3.68.2-0ubuntu1.2.debian.tar.xz 28328 SHA512:89a6c60cb4f2bf2e9f335c1b56cd0ef5854bea58a1cd491b1f453fe7e4e1bae097aa502ac80c5bfd0e1d62d843db51ffc8a300ef79886ce8dc2ca151913ddc73
 ```
 
-### `dpkg` source package: `openldap=2.5.14+dfsg-0ubuntu0.22.04.2`
-
-Binary Packages:
-
-- `libldap-2.5-0:amd64=2.5.14+dfsg-0ubuntu0.22.04.2`
-
-**WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
-If source is available (seen below), check the contents of `debian/copyright` within it.
-
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris openldap=2.5.14+dfsg-0ubuntu0.22.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.14%2bdfsg-0ubuntu0.22.04.2.dsc' openldap_2.5.14+dfsg-0ubuntu0.22.04.2.dsc 3319 SHA512:fabc88df8932e495a3401b2d34f142b0faf4f0c2004ea4c4af8a72088737dd803bd1586c6bd4a9cf02e2a88e724193750c6f011807f201bb069354f7f84b3306
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.14%2bdfsg.orig.tar.gz' openldap_2.5.14+dfsg.orig.tar.gz 5622405 SHA512:9dd020503317ec291a9a32ca4333dd6b31f3253d01e18485a02efe5ac02a778003565db751294df414a381cb4dab269572958ea092ea5ddd5c7570764b735bd7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.14%2bdfsg-0ubuntu0.22.04.2.debian.tar.xz' openldap_2.5.14+dfsg-0ubuntu0.22.04.2.debian.tar.xz 171824 SHA512:5a1b0ebc09d91c5a0cd8e851bf57522d1528d2cecdf5882dc8cb3b8b82181b52e02dc34e0c52cdaf2468e00716e6994a1d41c5561a9871fc37a5db68d5d5d84b
-```
-
 ### `dpkg` source package: `openssl=3.0.2-0ubuntu1.10`
 
 Binary Packages:
 
 - `libssl3:amd64=3.0.2-0ubuntu1.10`
-- `openssl=3.0.2-0ubuntu1.10`
 
-Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/openssl/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`)
 
 - `Apache-2.0`
 - `Artistic`
@@ -1887,30 +1727,6 @@ $ apt-get source -qq --print-uris perl=5.34.0-3ubuntu1.2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-3ubuntu1.2.debian.tar.xz' perl_5.34.0-3ubuntu1.2.debian.tar.xz 192372 SHA512:bbe3da1c08d92640bb3877babc77ca0a012614acba47cb9bff1e4bd3d439f571848a655789ac157944e90b5b0df1c2a3b78c41480e2e796ea0c7b14647edcf5b
 ```
 
-### `dpkg` source package: `pinentry=1.1.1-1build2`
-
-Binary Packages:
-
-- `pinentry-curses=1.1.1-1build2`
-
-Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
-
-- `GPL-2`
-- `GPL-2+`
-- `LGPL-3`
-- `LGPL-3+`
-- `X11`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris pinentry=1.1.1-1build2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.1-1build2.dsc' pinentry_1.1.1-1build2.dsc 2953 SHA512:d66ea2b52226887f18bab9f7ebfa65f5da95225c57362ec3be1792c261a60d7c74bb0b60d82e556f977246ef615add3d89e7137a16d73248a044e0ea752246ca
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.1.orig.tar.bz2' pinentry_1.1.1.orig.tar.bz2 515723 SHA512:d6ab5af8ac2f3c9c05e09703e95d8e2676f9b2b7ceb97f6a31d101d0e9da7a1e106a6d3eabe86cab1bb35a4b119a7cba1380ac64bf13c61af0b3c48803116c12
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.1.orig.tar.bz2.asc' pinentry_1.1.1.orig.tar.bz2.asc 390 SHA512:2b696e5a59219c6fca719d5f948d508279c483d1d2b2c99221522648fe3098da4a195aca2527fbb5b777fa2905dbda642edb5f6ac4038ed9720a5291ce282cff
-'http://archive.ubuntu.com/ubuntu/pool/main/p/pinentry/pinentry_1.1.1-1build2.debian.tar.xz' pinentry_1.1.1-1build2.debian.tar.xz 20060 SHA512:34adaf10856d36e7294fbc9841f6c1b2c9fc1d507fcff6d4c9c3f4e11d5aed9ce744d091f25e013084d56ce8ed3245fff67a7b5d799081def0c68345e921241e
-```
-
 ### `dpkg` source package: `procps=2:3.3.17-6ubuntu2`
 
 Binary Packages:
@@ -1936,32 +1752,11 @@ $ apt-get source -qq --print-uris procps=2:3.3.17-6ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.17-6ubuntu2.debian.tar.xz' procps_3.3.17-6ubuntu2.debian.tar.xz 34228 SHA512:68ba4678fde89a5f7fce8b04e5ea0b24f9addc7c15b949b01f908cb9a179d68eb8313fc108a99f260d3cb5dff9fd5c9d33f678d3d8bfdd0cba02bcdd9b0bd3c5
 ```
 
-### `dpkg` source package: `readline=8.1.2-1`
+### `dpkg` source package: `sapmachine-17-jdk=17.0.8`
 
 Binary Packages:
 
-- `libreadline8:amd64=8.1.2-1`
-- `readline-common=8.1.2-1`
-
-Licenses: (parsed from: `/usr/share/doc/libreadline8/copyright`, `/usr/share/doc/readline-common/copyright`)
-
-- `GFDL`
-- `GPL-3`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris readline=8.1.2-1
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.1.2-1.dsc' readline_8.1.2-1.dsc 2432 SHA512:3166229d2ac183a46455c7d8cf17ef1d509ca8651ffa7887f654d87bbe1d00a08f9a9f73f14e652ac067d89e5d1128998f8f09f6a1128c56049338ace65ed773
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.1.2.orig.tar.gz' readline_8.1.2.orig.tar.gz 2993073 SHA512:b512275c8aa8b3b3178366c6d681f867676fc1c881e375134a88e9c860a448535e04ca43df727817fd0048261e48203e88bd1c086e86572022d1d65fb0350e4d
-'http://archive.ubuntu.com/ubuntu/pool/main/r/readline/readline_8.1.2-1.debian.tar.xz' readline_8.1.2-1.debian.tar.xz 29292 SHA512:a64621c93975bc42ba171c9298c932f9515025513911e744183092e0ef9873db474c4ec27a21f310f40e7b970ba6300edb057552f7e90fc469897ffa2eb706f0
-```
-
-### `dpkg` source package: `sapmachine-17-jdk=17.0.7`
-
-Binary Packages:
-
-- `sapmachine-17-jdk=17.0.7`
+- `sapmachine-17-jdk=17.0.8`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
