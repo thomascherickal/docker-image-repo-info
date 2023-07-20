@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3f71cb3c38740c91f5b848acffd66c230061f959745edca726954942145b89d6`
-- Created: `2023-07-11T04:10:26.8340909Z`
-- Virtual Size: ~ 515.65 Mb  
+- Image ID: `sha256:56fd008e7a8adaac05bceff69183332deb7e2c98b5d203d01a602e97b368c640`
+- Created: `2023-07-14T00:28:33.855055291Z`
+- Virtual Size: ~ 513.77 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -539,16 +539,16 @@ MIT
 ### `apk` package: `icu-data-en`
 
 ```console
-icu-data-en-73.2-r1 description:
+icu-data-en-73.2-r2 description:
 Stripped down ICU data with only en_US/GB locale and no legacy charset converters
 
-icu-data-en-73.2-r1 webpage:
+icu-data-en-73.2-r2 webpage:
 https://icu.unicode.org/
 
-icu-data-en-73.2-r1 installed size:
+icu-data-en-73.2-r2 installed size:
 3016 KiB
 
-icu-data-en-73.2-r1 license:
+icu-data-en-73.2-r2 license:
 ICU
 
 ```
@@ -556,16 +556,16 @@ ICU
 ### `apk` package: `icu-libs`
 
 ```console
-icu-libs-73.2-r1 description:
+icu-libs-73.2-r2 description:
 International Components for Unicode library (libraries)
 
-icu-libs-73.2-r1 webpage:
+icu-libs-73.2-r2 webpage:
 https://icu.unicode.org/
 
-icu-libs-73.2-r1 installed size:
-4328 KiB
+icu-libs-73.2-r2 installed size:
+4332 KiB
 
-icu-libs-73.2-r1 license:
+icu-libs-73.2-r2 license:
 ICU
 
 ```
