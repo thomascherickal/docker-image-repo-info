@@ -1,7 +1,7 @@
 ## `alt:sisyphus`
 
 ```console
-$ docker pull alt@sha256:0f54a13afa45aa350f713dede5bf4b8d4bff029db11da20eb1b8e757bb8abe7b
+$ docker pull alt@sha256:ab6b05d95315e4d85491608fe221c0636d05b5261ab27c467a56669ae549b04f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,169 +15,169 @@ $ docker pull alt@sha256:0f54a13afa45aa350f713dede5bf4b8d4bff029db11da20eb1b8e75
 ### `alt:sisyphus` - linux; amd64
 
 ```console
-$ docker pull alt@sha256:063e35ca0183cfa2d98d5cdbe2ec8acacef1ae90c5e17e592f8036cdd2edcefd
+$ docker pull alt@sha256:f7b819218c2dcdd9a891434cd5cc83383fe279abcc2ce88474a23ce6d65c3e90
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **39.8 MB (39788098 bytes)**  
+-	Total Size: **40.5 MB (40465011 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7e95a3608a848ce6e926cee92821fa1d6e1125f939e2c21850197e9196becf9d`
+-	Image ID: `sha256:0d40c73c0745816bb5664f2d8794fee0e390aa7ad39e7fb66e195226b5526ff3`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
 # Wed, 04 Aug 2021 22:28:37 GMT
 MAINTAINER [Alexey Shabalin <shaba@altlinux.org>] [Mikhail Gordeev <obirvalger@altlinux.org]
-# Tue, 15 Nov 2022 01:20:06 GMT
-ADD file:fdb1b94f89be9d43a9661907ff2924e1ff6b7a5ec184a4f90ec81606381d5bb8 in / 
-# Tue, 15 Nov 2022 01:20:07 GMT
+# Wed, 19 Jul 2023 23:20:37 GMT
+ADD file:19ddac8e51abe2241a4b4f6bfe90dad9838c8d1658bebd1746e685a40e0b37b3 in / 
+# Wed, 19 Jul 2023 23:20:38 GMT
 RUN true > /etc/security/limits.d/50-defaults.conf
-# Tue, 15 Nov 2022 01:20:07 GMT
+# Wed, 19 Jul 2023 23:20:38 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:3fa75f5396438293b230ea15e5a772ee709a82c8353f6fb97d4b2aa848ac6a83`  
-		Last Modified: Tue, 15 Nov 2022 01:20:51 GMT  
-		Size: 39.8 MB (39787906 bytes)  
+	-	`sha256:188450edefdd410a0d1e58be6ea183a9b704d681bf5caf292dd31fc6b6bf9910`  
+		Last Modified: Wed, 19 Jul 2023 23:21:18 GMT  
+		Size: 40.5 MB (40464820 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4faa8b65574d09c4f2f04bbe6c1f54bf8313c1aabdba168aacddda919855fccb`  
-		Last Modified: Tue, 15 Nov 2022 01:20:45 GMT  
-		Size: 192.0 B  
+	-	`sha256:aa0486df7c5bbbf8a15e8e79933c2835e867432fe1f7ab0513a1e8a6be01015a`  
+		Last Modified: Wed, 19 Jul 2023 23:21:13 GMT  
+		Size: 191.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `alt:sisyphus` - linux; arm variant v7
 
 ```console
-$ docker pull alt@sha256:43070dcde5bde43ae7f688cd13e6d47d730d16e736fb6fca4cb128d36c915d59
+$ docker pull alt@sha256:71f9b95fd028b4821f5fbbd5209a543e82a1f7f188d5b291889a4e3b0fddd4cf
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **36.6 MB (36565979 bytes)**  
+-	Total Size: **37.4 MB (37365930 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5cbfaefb0178fb4546f4bc0eb0338a2a0e9116b378474d772f887d2b8a404e68`
+-	Image ID: `sha256:421208568a3897b86324fd6d4a4154f054866abbb9be224087cb7423ad6d6e35`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
 # Mon, 13 Mar 2023 16:13:31 GMT
 MAINTAINER [Alexey Shabalin <shaba@altlinux.org>] [Mikhail Gordeev <obirvalger@altlinux.org]
-# Mon, 13 Mar 2023 16:13:55 GMT
-ADD file:68303bcb4e6e46984292cc1bcd76c055370bcb8130fd91060a88cf3b213cc6b9 in / 
-# Mon, 13 Mar 2023 16:13:56 GMT
+# Wed, 19 Jul 2023 23:57:37 GMT
+ADD file:8d9cbe86162f5986c16e5fc83bf893f40c0ec043f27512fb8441dadc19e48f8a in / 
+# Wed, 19 Jul 2023 23:57:38 GMT
 RUN true > /etc/security/limits.d/50-defaults.conf
-# Mon, 13 Mar 2023 16:13:56 GMT
+# Wed, 19 Jul 2023 23:57:38 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:38a5fafaff60c273b4326ab547adbc4d0fb299b27b70b6eaa416a9190d57b2fd`  
-		Last Modified: Tue, 15 Nov 2022 00:58:45 GMT  
-		Size: 36.6 MB (36565786 bytes)  
+	-	`sha256:12208bb6fe46a2e2b2f1e9acf1160227ef9af04a1936a852e45aaf9e7e5d4e60`  
+		Last Modified: Wed, 19 Jul 2023 23:58:17 GMT  
+		Size: 37.4 MB (37365738 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:43076048366bea9e5f72f3bee8224c27ff7c3909d1978646b79511e7a689bf1f`  
-		Last Modified: Mon, 13 Mar 2023 16:14:41 GMT  
-		Size: 193.0 B  
+	-	`sha256:261742c8101d0708ad71c9169f50a4a33531ac0b165570ecd0430612cceae352`  
+		Last Modified: Wed, 19 Jul 2023 23:58:11 GMT  
+		Size: 192.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `alt:sisyphus` - linux; arm64 variant v8
 
 ```console
-$ docker pull alt@sha256:716774decc6f569affd0a929cb9f4b3cff7cb93a9a32931b2c5eca1e11c0de5d
+$ docker pull alt@sha256:f544153ca70345037f7b96f6146b8f0ea9abaef4a2e8563d60568fe3e2894de5
 ```
 
--	Docker Version: 20.10.17
+-	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **38.1 MB (38093695 bytes)**  
+-	Total Size: **38.8 MB (38849597 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fa0894c0e5362608c22f3de307c1f55d9d2eddbe197b3f409eba9a937aa57e8e`
+-	Image ID: `sha256:1fb64942701a898e0995217f64511508e5084b5a41f63680fbb9ab54f04f36a1`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
 # Tue, 15 Nov 2022 01:39:36 GMT
 MAINTAINER [Alexey Shabalin <shaba@altlinux.org>] [Mikhail Gordeev <obirvalger@altlinux.org]
-# Tue, 15 Nov 2022 01:39:52 GMT
-ADD file:cdc41ec84dce7c303c9e17c99d9ea8bf8f0ce39b54d4ab5e895bad457e2d19bf in / 
-# Tue, 15 Nov 2022 01:39:52 GMT
+# Wed, 19 Jul 2023 23:44:40 GMT
+ADD file:f15f1d9afae47960133823ab7de848d63290cd6fe2994fdaf5b108479b8463ec in / 
+# Wed, 19 Jul 2023 23:44:41 GMT
 RUN true > /etc/security/limits.d/50-defaults.conf
-# Tue, 15 Nov 2022 01:39:52 GMT
+# Wed, 19 Jul 2023 23:44:41 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:5ba571e9d99e7bb34cd62a85561492216e4a54125b9deb92b1b582a8cf1c0936`  
-		Last Modified: Tue, 15 Nov 2022 01:40:30 GMT  
-		Size: 38.1 MB (38093505 bytes)  
+	-	`sha256:e0f18648debac30a5217e72c213cad95c9578c9b88622de1d121b38918c445f2`  
+		Last Modified: Wed, 19 Jul 2023 23:45:17 GMT  
+		Size: 38.8 MB (38849407 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba408e33df46cf67e1503cd5c51a8f43f81cf795112d9698140dcdaf3274a324`  
-		Last Modified: Tue, 15 Nov 2022 01:40:25 GMT  
+	-	`sha256:8271bbf08f85e96b959f6c18ecfd1a7a7c95b57a292e3e6ccfe96a58fa64880c`  
+		Last Modified: Wed, 19 Jul 2023 23:45:13 GMT  
 		Size: 190.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `alt:sisyphus` - linux; 386
 
 ```console
-$ docker pull alt@sha256:3d82698074ba6607e20823b776d26d0388671ac6adea8c2206a2cc12720ec240
+$ docker pull alt@sha256:a6100b874dd30c33f0b5460538978bc8aa03d5a184c9ed1623eb8b0f122c916d
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **39.9 MB (39913937 bytes)**  
+-	Total Size: **40.6 MB (40632982 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a9b9e440c88f16d66d04bec9aff726181b6685c75f2ed61577140f3d49d52154`
+-	Image ID: `sha256:9d5f1f8790a69bd3fb2dddc5a742733d59ff079fb6db5ea1db5cad357221cba9`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Mon, 06 Jun 2022 17:38:38 GMT
+# Wed, 19 Jul 2023 23:38:46 GMT
 MAINTAINER [Alexey Shabalin <shaba@altlinux.org>] [Mikhail Gordeev <obirvalger@altlinux.org]
-# Tue, 15 Nov 2022 01:39:14 GMT
-ADD file:eb9d9f9bdff609429e97386463285ea72bf3f04d9404ec1818dda9ab71409bfc in / 
-# Tue, 15 Nov 2022 01:39:15 GMT
+# Wed, 19 Jul 2023 23:39:09 GMT
+ADD file:0fa6b359de624e4076d274c559396de736d2337c956729c93df17ac0a6598ff8 in / 
+# Wed, 19 Jul 2023 23:39:10 GMT
 RUN true > /etc/security/limits.d/50-defaults.conf
-# Tue, 15 Nov 2022 01:39:16 GMT
+# Wed, 19 Jul 2023 23:39:10 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:ae5ad96d8fa58f7e95dbc9095e437192a553bd477758c67c90d0735b360347a9`  
-		Last Modified: Tue, 15 Nov 2022 01:40:07 GMT  
-		Size: 39.9 MB (39913746 bytes)  
+	-	`sha256:c9ffff7f34c96866e0fe66169bf93a2b177fdf3dce30f1e8fa78d84d00100fce`  
+		Last Modified: Wed, 19 Jul 2023 23:39:56 GMT  
+		Size: 40.6 MB (40632792 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b787de1fa6dec9f38fbeb6dcf2ba27b7513cd3e0e2ebca69db3d64f5e5c641e8`  
-		Last Modified: Tue, 15 Nov 2022 01:40:02 GMT  
-		Size: 191.0 B  
+	-	`sha256:0bf6e58abb187f85668c3bc5ec7ebbb48202cd02fac0df3bbd7cc8171446d10a`  
+		Last Modified: Wed, 19 Jul 2023 23:39:48 GMT  
+		Size: 190.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `alt:sisyphus` - linux; ppc64le
 
 ```console
-$ docker pull alt@sha256:c310179a59438e1581bd4fa453db9cdd11cff26e26f9c5f5faad205735288614
+$ docker pull alt@sha256:edf091a895a80878a7cb8c2ded7432461ac5b4b11eb89c994fb888738bfe8ad1
 ```
 
--	Docker Version: 20.10.12
+-	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **42.0 MB (42034481 bytes)**  
+-	Total Size: **42.8 MB (42771813 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a2ef58c0c412f3677d4dd34c177e751a30512bce7bb048cfd3fb0069ef704dd6`
+-	Image ID: `sha256:6c2338ae42101f0bcbf6bd2af529acfecdf8291970ecb9b7ae7d436a12cb939d`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
 # Tue, 15 Nov 2022 01:16:44 GMT
 MAINTAINER [Alexey Shabalin <shaba@altlinux.org>] [Mikhail Gordeev <obirvalger@altlinux.org]
-# Tue, 15 Nov 2022 01:17:23 GMT
-ADD file:0833e0c5e7b640713f46c56cf3ccd48d7ce4ce6f247647e7cef328d8d26b3622 in / 
-# Tue, 15 Nov 2022 01:17:26 GMT
+# Wed, 19 Jul 2023 23:25:11 GMT
+ADD file:6057a1fb3352c82bd7a102d31bdc6974b66f7aa2cba0960351502cbe531e0f47 in / 
+# Wed, 19 Jul 2023 23:25:14 GMT
 RUN true > /etc/security/limits.d/50-defaults.conf
-# Tue, 15 Nov 2022 01:17:27 GMT
+# Wed, 19 Jul 2023 23:25:14 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:fe8464cb62934c047b0218ee3f921e132798ebb09bd522927abc03bca38795d6`  
-		Last Modified: Tue, 15 Nov 2022 01:18:35 GMT  
-		Size: 42.0 MB (42034288 bytes)  
+	-	`sha256:31fdd6f51f73634ec97fffcb8b717c7ad505c570938bf638e070ad29ebfb984b`  
+		Last Modified: Wed, 19 Jul 2023 23:26:24 GMT  
+		Size: 42.8 MB (42771621 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ba5301f457babb1ce021b3c9ac0c3c6afd1b68ae638f1d8816b186ff4f9473e7`  
-		Last Modified: Tue, 15 Nov 2022 01:18:24 GMT  
-		Size: 193.0 B  
+	-	`sha256:308214b9452ed2fdc8f103a93cf090159fa64d5d86a1c7a9b6a366ed895afbde`  
+		Last Modified: Wed, 19 Jul 2023 23:26:13 GMT  
+		Size: 192.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
