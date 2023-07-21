@@ -6,8 +6,8 @@
 -	[`zookeeper:3.7.1-temurin`](#zookeeper371-temurin)
 -	[`zookeeper:3.8`](#zookeeper38)
 -	[`zookeeper:3.8-temurin`](#zookeeper38-temurin)
--	[`zookeeper:3.8.1`](#zookeeper381)
--	[`zookeeper:3.8.1-temurin`](#zookeeper381-temurin)
+-	[`zookeeper:3.8.2`](#zookeeper382)
+-	[`zookeeper:3.8.2-temurin`](#zookeeper382-temurin)
 -	[`zookeeper:latest`](#zookeeperlatest)
 
 ## `zookeeper:3.7-temurin`
@@ -887,7 +887,7 @@ CMD ["zkServer.sh" "start-foreground"]
 ## `zookeeper:3.8`
 
 ```console
-$ docker pull zookeeper@sha256:8242c71f0a529559f6513e949af42f3cf759bf4a05ef3b0e485af72884c8adb0
+$ docker pull zookeeper@sha256:20d751cedd24ccdf9401005a74b8ddd6dd7f075684478c88cad00f39d154edfa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -900,14 +900,14 @@ $ docker pull zookeeper@sha256:8242c71f0a529559f6513e949af42f3cf759bf4a05ef3b0e4
 ### `zookeeper:3.8` - linux; amd64
 
 ```console
-$ docker pull zookeeper@sha256:612ec46e165711ce59e14130fc9c8c40d80a6c8784c090c7f53d0ad17d85cc14
+$ docker pull zookeeper@sha256:ec79abcf6899aa703af6138c3486dac85e2d47001db3387dd0b9a8c165adfe06
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.5 MB (107521228 bytes)**  
+-	Total Size: **107.6 MB (107623833 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7793c364179673f40c7683c8b682a353b0e3bc9a6630dc5a3a6857620dc64b15`
+-	Image ID: `sha256:72307cb5e010cb65c282e11409e9db0588f4215a282254580d9a27a70ab39d5c`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -944,28 +944,28 @@ ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
 # Wed, 05 Jul 2023 12:36:57 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 12:37:12 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG SHORT_DISTRO_NAME=zookeeper-3.8.2
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG DISTRO_NAME=apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 20:31:56 GMT
+# ARGS: DISTRO_NAME=apache-zookeeper-3.8.2-bin GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC SHORT_DISTRO_NAME=zookeeper-3.8.2
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 12:37:12 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
+WORKDIR /apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 20:31:56 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 12:37:12 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.2-bin/bin ZOOCFGDIR=/conf
+# Fri, 21 Jul 2023 20:31:56 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:57 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -994,13 +994,13 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 05 Jul 2023 12:37:23 GMT  
 		Size: 4.6 MB (4603955 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49f6df6fb85b0c5417d4431840e80551bdea0a9d040e20a4b081c7a5f3daa75f`  
-		Last Modified: Wed, 05 Jul 2023 12:37:32 GMT  
-		Size: 13.3 MB (13321531 bytes)  
+	-	`sha256:f7d68aab60c001744df79fd5ab0fef701faecac09518865e2448fab941229d3f`  
+		Last Modified: Fri, 21 Jul 2023 20:32:14 GMT  
+		Size: 13.4 MB (13424135 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7e1ad5119040f31a0e911aec81d80782ac5a39fc4125354b2b113176ba043c2`  
-		Last Modified: Wed, 05 Jul 2023 12:37:31 GMT  
-		Size: 774.0 B  
+	-	`sha256:e61bc76815e068a06b5cda444770303f6614c77d0bbca918d61e08ca2020eeea`  
+		Last Modified: Fri, 21 Jul 2023 20:32:13 GMT  
+		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `zookeeper:3.8` - linux; arm64 variant v8
@@ -1112,14 +1112,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:3.8` - linux; ppc64le
 
 ```console
-$ docker pull zookeeper@sha256:92bc66379745c395cf864f46cd3f2e9860c3ce5794004d5b8cfc660236b7a4ad
+$ docker pull zookeeper@sha256:571dfa82113134ec4f3b1e94ba413c0807acff82b82c7b209ec6160b62b158af
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.7 MB (109661033 bytes)**  
+-	Total Size: **109.8 MB (109764071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4cc1ffd7efee3fdfc119d5a12c32ca929bc33666eaad804cef3274ced2ed8c93`
+-	Image ID: `sha256:024e024d7bd2975284530591593e48197de0342d35b071abeb06b5eddc02b23e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -1156,28 +1156,28 @@ ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
 # Wed, 05 Jul 2023 18:43:53 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 18:44:46 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 18:44:49 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 18:44:49 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 18:45:02 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
+# Fri, 21 Jul 2023 21:22:26 GMT
+ARG GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC
+# Fri, 21 Jul 2023 21:22:26 GMT
+ARG SHORT_DISTRO_NAME=zookeeper-3.8.2
+# Fri, 21 Jul 2023 21:22:27 GMT
+ARG DISTRO_NAME=apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 21:22:37 GMT
+# ARGS: DISTRO_NAME=apache-zookeeper-3.8.2-bin GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC SHORT_DISTRO_NAME=zookeeper-3.8.2
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 18:45:07 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 18:45:08 GMT
+# Fri, 21 Jul 2023 21:22:39 GMT
+WORKDIR /apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 21:22:40 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 18:45:09 GMT
+# Fri, 21 Jul 2023 21:22:40 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 18:45:11 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 18:45:11 GMT
+# Fri, 21 Jul 2023 21:22:41 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.2-bin/bin ZOOCFGDIR=/conf
+# Fri, 21 Jul 2023 21:22:41 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 18:45:13 GMT
+# Fri, 21 Jul 2023 21:22:42 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 18:45:14 GMT
+# Fri, 21 Jul 2023 21:22:43 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -1206,12 +1206,12 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 05 Jul 2023 18:45:34 GMT  
 		Size: 5.2 MB (5214449 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57344d4bdc0ae18ed3fab3f6dced7528c0dd1af4943fdf6d674fba25ecbc3e71`  
-		Last Modified: Wed, 05 Jul 2023 18:45:51 GMT  
-		Size: 13.3 MB (13321096 bytes)  
+	-	`sha256:d2d59aa81b0460314b0ca1a7f2af477bac0958abc9437d02e980ae045786e188`  
+		Last Modified: Fri, 21 Jul 2023 21:23:10 GMT  
+		Size: 13.4 MB (13424134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b9f75294f98f588044baa8bddca3a861bc076044a4b9505cc6ddc60437ca6e32`  
-		Last Modified: Wed, 05 Jul 2023 18:45:49 GMT  
+	-	`sha256:3b3bbfd61fbc9cff2dc2c0818acfd9db6aae9b9fad24d55f87060697a681f954`  
+		Last Modified: Fri, 21 Jul 2023 21:23:08 GMT  
 		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1324,7 +1324,7 @@ CMD ["zkServer.sh" "start-foreground"]
 ## `zookeeper:3.8-temurin`
 
 ```console
-$ docker pull zookeeper@sha256:8242c71f0a529559f6513e949af42f3cf759bf4a05ef3b0e485af72884c8adb0
+$ docker pull zookeeper@sha256:20d751cedd24ccdf9401005a74b8ddd6dd7f075684478c88cad00f39d154edfa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1337,14 +1337,14 @@ $ docker pull zookeeper@sha256:8242c71f0a529559f6513e949af42f3cf759bf4a05ef3b0e4
 ### `zookeeper:3.8-temurin` - linux; amd64
 
 ```console
-$ docker pull zookeeper@sha256:612ec46e165711ce59e14130fc9c8c40d80a6c8784c090c7f53d0ad17d85cc14
+$ docker pull zookeeper@sha256:ec79abcf6899aa703af6138c3486dac85e2d47001db3387dd0b9a8c165adfe06
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.5 MB (107521228 bytes)**  
+-	Total Size: **107.6 MB (107623833 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7793c364179673f40c7683c8b682a353b0e3bc9a6630dc5a3a6857620dc64b15`
+-	Image ID: `sha256:72307cb5e010cb65c282e11409e9db0588f4215a282254580d9a27a70ab39d5c`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -1381,28 +1381,28 @@ ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
 # Wed, 05 Jul 2023 12:36:57 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 12:37:12 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG SHORT_DISTRO_NAME=zookeeper-3.8.2
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG DISTRO_NAME=apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 20:31:56 GMT
+# ARGS: DISTRO_NAME=apache-zookeeper-3.8.2-bin GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC SHORT_DISTRO_NAME=zookeeper-3.8.2
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 12:37:12 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
+WORKDIR /apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 20:31:56 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 12:37:12 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.2-bin/bin ZOOCFGDIR=/conf
+# Fri, 21 Jul 2023 20:31:56 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:57 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -1431,13 +1431,13 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 05 Jul 2023 12:37:23 GMT  
 		Size: 4.6 MB (4603955 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49f6df6fb85b0c5417d4431840e80551bdea0a9d040e20a4b081c7a5f3daa75f`  
-		Last Modified: Wed, 05 Jul 2023 12:37:32 GMT  
-		Size: 13.3 MB (13321531 bytes)  
+	-	`sha256:f7d68aab60c001744df79fd5ab0fef701faecac09518865e2448fab941229d3f`  
+		Last Modified: Fri, 21 Jul 2023 20:32:14 GMT  
+		Size: 13.4 MB (13424135 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7e1ad5119040f31a0e911aec81d80782ac5a39fc4125354b2b113176ba043c2`  
-		Last Modified: Wed, 05 Jul 2023 12:37:31 GMT  
-		Size: 774.0 B  
+	-	`sha256:e61bc76815e068a06b5cda444770303f6614c77d0bbca918d61e08ca2020eeea`  
+		Last Modified: Fri, 21 Jul 2023 20:32:13 GMT  
+		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `zookeeper:3.8-temurin` - linux; arm64 variant v8
@@ -1549,14 +1549,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:3.8-temurin` - linux; ppc64le
 
 ```console
-$ docker pull zookeeper@sha256:92bc66379745c395cf864f46cd3f2e9860c3ce5794004d5b8cfc660236b7a4ad
+$ docker pull zookeeper@sha256:571dfa82113134ec4f3b1e94ba413c0807acff82b82c7b209ec6160b62b158af
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.7 MB (109661033 bytes)**  
+-	Total Size: **109.8 MB (109764071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4cc1ffd7efee3fdfc119d5a12c32ca929bc33666eaad804cef3274ced2ed8c93`
+-	Image ID: `sha256:024e024d7bd2975284530591593e48197de0342d35b071abeb06b5eddc02b23e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -1593,28 +1593,28 @@ ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
 # Wed, 05 Jul 2023 18:43:53 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 18:44:46 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 18:44:49 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 18:44:49 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 18:45:02 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
+# Fri, 21 Jul 2023 21:22:26 GMT
+ARG GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC
+# Fri, 21 Jul 2023 21:22:26 GMT
+ARG SHORT_DISTRO_NAME=zookeeper-3.8.2
+# Fri, 21 Jul 2023 21:22:27 GMT
+ARG DISTRO_NAME=apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 21:22:37 GMT
+# ARGS: DISTRO_NAME=apache-zookeeper-3.8.2-bin GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC SHORT_DISTRO_NAME=zookeeper-3.8.2
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 18:45:07 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 18:45:08 GMT
+# Fri, 21 Jul 2023 21:22:39 GMT
+WORKDIR /apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 21:22:40 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 18:45:09 GMT
+# Fri, 21 Jul 2023 21:22:40 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 18:45:11 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 18:45:11 GMT
+# Fri, 21 Jul 2023 21:22:41 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.2-bin/bin ZOOCFGDIR=/conf
+# Fri, 21 Jul 2023 21:22:41 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 18:45:13 GMT
+# Fri, 21 Jul 2023 21:22:42 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 18:45:14 GMT
+# Fri, 21 Jul 2023 21:22:43 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -1643,12 +1643,12 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 05 Jul 2023 18:45:34 GMT  
 		Size: 5.2 MB (5214449 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57344d4bdc0ae18ed3fab3f6dced7528c0dd1af4943fdf6d674fba25ecbc3e71`  
-		Last Modified: Wed, 05 Jul 2023 18:45:51 GMT  
-		Size: 13.3 MB (13321096 bytes)  
+	-	`sha256:d2d59aa81b0460314b0ca1a7f2af477bac0958abc9437d02e980ae045786e188`  
+		Last Modified: Fri, 21 Jul 2023 21:23:10 GMT  
+		Size: 13.4 MB (13424134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b9f75294f98f588044baa8bddca3a861bc076044a4b9505cc6ddc60437ca6e32`  
-		Last Modified: Wed, 05 Jul 2023 18:45:49 GMT  
+	-	`sha256:3b3bbfd61fbc9cff2dc2c0818acfd9db6aae9b9fad24d55f87060697a681f954`  
+		Last Modified: Fri, 21 Jul 2023 21:23:08 GMT  
 		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1758,30 +1758,28 @@ CMD ["zkServer.sh" "start-foreground"]
 		Size: 774.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-## `zookeeper:3.8.1`
+## `zookeeper:3.8.2`
 
 ```console
-$ docker pull zookeeper@sha256:8242c71f0a529559f6513e949af42f3cf759bf4a05ef3b0e485af72884c8adb0
+$ docker pull zookeeper@sha256:51d55c37e8d003e2157eb70416c2ff4a71ab99d0cd0799ba790d504e4b451ec4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 4
+-	Platforms: 2
 	-	linux; amd64
-	-	linux; arm64 variant v8
 	-	linux; ppc64le
-	-	linux; s390x
 
-### `zookeeper:3.8.1` - linux; amd64
+### `zookeeper:3.8.2` - linux; amd64
 
 ```console
-$ docker pull zookeeper@sha256:612ec46e165711ce59e14130fc9c8c40d80a6c8784c090c7f53d0ad17d85cc14
+$ docker pull zookeeper@sha256:ec79abcf6899aa703af6138c3486dac85e2d47001db3387dd0b9a8c165adfe06
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.5 MB (107521228 bytes)**  
+-	Total Size: **107.6 MB (107623833 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7793c364179673f40c7683c8b682a353b0e3bc9a6630dc5a3a6857620dc64b15`
+-	Image ID: `sha256:72307cb5e010cb65c282e11409e9db0588f4215a282254580d9a27a70ab39d5c`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -1818,28 +1816,28 @@ ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
 # Wed, 05 Jul 2023 12:36:57 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 12:37:12 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG SHORT_DISTRO_NAME=zookeeper-3.8.2
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG DISTRO_NAME=apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 20:31:56 GMT
+# ARGS: DISTRO_NAME=apache-zookeeper-3.8.2-bin GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC SHORT_DISTRO_NAME=zookeeper-3.8.2
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 12:37:12 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
+WORKDIR /apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 20:31:56 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 12:37:12 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.2-bin/bin ZOOCFGDIR=/conf
+# Fri, 21 Jul 2023 20:31:56 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:57 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -1868,132 +1866,26 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 05 Jul 2023 12:37:23 GMT  
 		Size: 4.6 MB (4603955 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49f6df6fb85b0c5417d4431840e80551bdea0a9d040e20a4b081c7a5f3daa75f`  
-		Last Modified: Wed, 05 Jul 2023 12:37:32 GMT  
-		Size: 13.3 MB (13321531 bytes)  
+	-	`sha256:f7d68aab60c001744df79fd5ab0fef701faecac09518865e2448fab941229d3f`  
+		Last Modified: Fri, 21 Jul 2023 20:32:14 GMT  
+		Size: 13.4 MB (13424135 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7e1ad5119040f31a0e911aec81d80782ac5a39fc4125354b2b113176ba043c2`  
-		Last Modified: Wed, 05 Jul 2023 12:37:31 GMT  
-		Size: 774.0 B  
+	-	`sha256:e61bc76815e068a06b5cda444770303f6614c77d0bbca918d61e08ca2020eeea`  
+		Last Modified: Fri, 21 Jul 2023 20:32:13 GMT  
+		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `zookeeper:3.8.1` - linux; arm64 variant v8
+### `zookeeper:3.8.2` - linux; ppc64le
 
 ```console
-$ docker pull zookeeper@sha256:637fc608a2ebaf0474824cb9c8b35ba722c00ad4afec6b88c38520b77ad62fac
+$ docker pull zookeeper@sha256:571dfa82113134ec4f3b1e94ba413c0807acff82b82c7b209ec6160b62b158af
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **103.7 MB (103688899 bytes)**  
+-	Total Size: **109.8 MB (109764071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:49a3b40a0a3c17a0cd83260ce91cb4e0531388afcb713e2405b4873608a3499e`
--	Entrypoint: `["\/docker-entrypoint.sh"]`
--	Default Command: `["zkServer.sh","start-foreground"]`
-
-```dockerfile
-# Wed, 28 Jun 2023 08:42:48 GMT
-ARG RELEASE
-# Wed, 28 Jun 2023 08:42:48 GMT
-ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 28 Jun 2023 08:42:48 GMT
-LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 28 Jun 2023 08:42:48 GMT
-LABEL org.opencontainers.image.version=22.04
-# Wed, 28 Jun 2023 08:42:50 GMT
-ADD file:262490f82459c14632f5c9a6d6a5cf6c07b4f307e8fd380fa764662cda46e88f in / 
-# Wed, 28 Jun 2023 08:42:50 GMT
-CMD ["/bin/bash"]
-# Tue, 04 Jul 2023 15:32:45 GMT
-ENV JAVA_HOME=/opt/java/openjdk
-# Tue, 04 Jul 2023 15:32:45 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 04 Jul 2023 15:32:45 GMT
-ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 04 Jul 2023 15:32:59 GMT
-RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 04 Jul 2023 15:33:41 GMT
-ENV JAVA_VERSION=jdk-11.0.19+7
-# Tue, 04 Jul 2023 15:34:07 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='1fe4b20d808f393422610818711c728331992a4455eeeb061d3d05b45412771d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.19_7.tar.gz';          ;;        armhf|arm)          ESUM='cb754b055177381f9f6852b7e5469904a15edddd7f8e136043c28b1e33aee47c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_arm_linux_hotspot_11.0.19_7.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='8019d938e5525938ec8e68e2989c4413263b0d9b7b3f20fe0c45f6d967919cfb';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.19_7.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='058419435fe6212d1bc305a14f578c314f9ff9a2d96d523c178120e84231c733';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_s390x_linux_hotspot_11.0.19_7.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='32dcf760664f93531594b72ce9226e9216567de5705a23c9ff5a77c797948054';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_x64_linux_hotspot_11.0.19_7.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 04 Jul 2023 15:34:08 GMT
-RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 05 Jul 2023 05:32:52 GMT
-ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 05 Jul 2023 05:32:52 GMT
-RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 05 Jul 2023 05:32:58 GMT
-RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 05:33:05 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 05:33:06 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 05:33:06 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 05:33:11 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
-RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 05:33:11 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 05:33:12 GMT
-VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 05:33:12 GMT
-EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 05:33:12 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 05:33:12 GMT
-COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 05:33:12 GMT
-ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 05:33:12 GMT
-CMD ["zkServer.sh" "start-foreground"]
-```
-
--	Layers:
-	-	`sha256:ac34a2e0269ced3acc355be706239ee0f3f1e73a035c40dd2fac74827164ee53`  
-		Last Modified: Wed, 28 Jun 2023 23:23:40 GMT  
-		Size: 28.4 MB (28391011 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a8d9df805749ad7c4605f0d49a64da6a6173ab190ec361dc2063b6b73af59ab5`  
-		Last Modified: Tue, 04 Jul 2023 15:36:55 GMT  
-		Size: 12.5 MB (12455497 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b1e11a5919e5746092b2a288f71090ffdb0d3544b7b54c31ed0137e6d5d4735`  
-		Last Modified: Tue, 04 Jul 2023 15:38:37 GMT  
-		Size: 45.0 MB (45009079 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a80987dc89da28aa5ceec7a86ea74e13cee06ecd9304cf4c92d8f382c79eb4f2`  
-		Last Modified: Tue, 04 Jul 2023 15:38:32 GMT  
-		Size: 159.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd25712ceddb84b0cff96ab5be1130874ce0a1ac744911e6cb2ecd6dd334bc26`  
-		Last Modified: Wed, 05 Jul 2023 05:33:24 GMT  
-		Size: 1.9 KB (1890 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4ee2a575bf3265526d40f59e88add76c56b6989ea12ad34bb87566950100ce5`  
-		Last Modified: Wed, 05 Jul 2023 05:33:24 GMT  
-		Size: 4.5 MB (4508981 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:519e22727cdd29f2d09c67f7a3750c2a3bbeb6bf14a7c8c1a2b161ae49a486fc`  
-		Last Modified: Wed, 05 Jul 2023 05:33:33 GMT  
-		Size: 13.3 MB (13321508 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0bae8d4fe902c37250b859b084c8e25f2a6dc3b152117ae220ba0b62ef54e04`  
-		Last Modified: Wed, 05 Jul 2023 05:33:32 GMT  
-		Size: 774.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `zookeeper:3.8.1` - linux; ppc64le
-
-```console
-$ docker pull zookeeper@sha256:92bc66379745c395cf864f46cd3f2e9860c3ce5794004d5b8cfc660236b7a4ad
-```
-
--	Docker Version: 20.10.23
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.7 MB (109661033 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4cc1ffd7efee3fdfc119d5a12c32ca929bc33666eaad804cef3274ced2ed8c93`
+-	Image ID: `sha256:024e024d7bd2975284530591593e48197de0342d35b071abeb06b5eddc02b23e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -2030,28 +1922,28 @@ ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
 # Wed, 05 Jul 2023 18:43:53 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 18:44:46 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 18:44:49 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 18:44:49 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 18:45:02 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
+# Fri, 21 Jul 2023 21:22:26 GMT
+ARG GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC
+# Fri, 21 Jul 2023 21:22:26 GMT
+ARG SHORT_DISTRO_NAME=zookeeper-3.8.2
+# Fri, 21 Jul 2023 21:22:27 GMT
+ARG DISTRO_NAME=apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 21:22:37 GMT
+# ARGS: DISTRO_NAME=apache-zookeeper-3.8.2-bin GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC SHORT_DISTRO_NAME=zookeeper-3.8.2
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 18:45:07 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 18:45:08 GMT
+# Fri, 21 Jul 2023 21:22:39 GMT
+WORKDIR /apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 21:22:40 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 18:45:09 GMT
+# Fri, 21 Jul 2023 21:22:40 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 18:45:11 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 18:45:11 GMT
+# Fri, 21 Jul 2023 21:22:41 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.2-bin/bin ZOOCFGDIR=/conf
+# Fri, 21 Jul 2023 21:22:41 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 18:45:13 GMT
+# Fri, 21 Jul 2023 21:22:42 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 18:45:14 GMT
+# Fri, 21 Jul 2023 21:22:43 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -2080,145 +1972,37 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 05 Jul 2023 18:45:34 GMT  
 		Size: 5.2 MB (5214449 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57344d4bdc0ae18ed3fab3f6dced7528c0dd1af4943fdf6d674fba25ecbc3e71`  
-		Last Modified: Wed, 05 Jul 2023 18:45:51 GMT  
-		Size: 13.3 MB (13321096 bytes)  
+	-	`sha256:d2d59aa81b0460314b0ca1a7f2af477bac0958abc9437d02e980ae045786e188`  
+		Last Modified: Fri, 21 Jul 2023 21:23:10 GMT  
+		Size: 13.4 MB (13424134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b9f75294f98f588044baa8bddca3a861bc076044a4b9505cc6ddc60437ca6e32`  
-		Last Modified: Wed, 05 Jul 2023 18:45:49 GMT  
+	-	`sha256:3b3bbfd61fbc9cff2dc2c0818acfd9db6aae9b9fad24d55f87060697a681f954`  
+		Last Modified: Fri, 21 Jul 2023 21:23:08 GMT  
 		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `zookeeper:3.8.1` - linux; s390x
+## `zookeeper:3.8.2-temurin`
 
 ```console
-$ docker pull zookeeper@sha256:3b15cc9fc1afd18ee751e1db1dda7e6812732b8b86d8cb74bc528875bd087774
-```
-
--	Docker Version: 20.10.23
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **99.5 MB (99536865 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25366b91cce764d6694037b65a27a29c658f23ba676dfccb9c45f76d16cca585`
--	Entrypoint: `["\/docker-entrypoint.sh"]`
--	Default Command: `["zkServer.sh","start-foreground"]`
-
-```dockerfile
-# Wed, 28 Jun 2023 08:53:20 GMT
-ARG RELEASE
-# Wed, 28 Jun 2023 08:53:20 GMT
-ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 28 Jun 2023 08:53:20 GMT
-LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 28 Jun 2023 08:53:20 GMT
-LABEL org.opencontainers.image.version=22.04
-# Wed, 28 Jun 2023 08:53:22 GMT
-ADD file:fa0aef35be7808c8fd6751a52bdec4dd81057e2fcaa075c547a1db53640dae9a in / 
-# Wed, 28 Jun 2023 08:53:22 GMT
-CMD ["/bin/bash"]
-# Tue, 04 Jul 2023 16:24:17 GMT
-ENV JAVA_HOME=/opt/java/openjdk
-# Tue, 04 Jul 2023 16:24:18 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 04 Jul 2023 16:24:18 GMT
-ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 04 Jul 2023 16:24:43 GMT
-RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 04 Jul 2023 16:24:44 GMT
-ENV JAVA_VERSION=jdk-11.0.19+7
-# Tue, 04 Jul 2023 16:25:27 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='1fe4b20d808f393422610818711c728331992a4455eeeb061d3d05b45412771d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.19_7.tar.gz';          ;;        armhf|arm)          ESUM='cb754b055177381f9f6852b7e5469904a15edddd7f8e136043c28b1e33aee47c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_arm_linux_hotspot_11.0.19_7.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='8019d938e5525938ec8e68e2989c4413263b0d9b7b3f20fe0c45f6d967919cfb';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.19_7.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='058419435fe6212d1bc305a14f578c314f9ff9a2d96d523c178120e84231c733';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_s390x_linux_hotspot_11.0.19_7.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='32dcf760664f93531594b72ce9226e9216567de5705a23c9ff5a77c797948054';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_x64_linux_hotspot_11.0.19_7.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 04 Jul 2023 16:25:28 GMT
-RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 05 Jul 2023 11:00:33 GMT
-ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 05 Jul 2023 11:00:34 GMT
-RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 05 Jul 2023 11:00:41 GMT
-RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 11:00:58 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 11:00:58 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 11:00:58 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 11:01:03 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
-RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 11:01:06 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 11:01:06 GMT
-VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 11:01:06 GMT
-EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 11:01:07 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 11:01:07 GMT
-COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 11:01:07 GMT
-ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 11:01:07 GMT
-CMD ["zkServer.sh" "start-foreground"]
-```
-
--	Layers:
-	-	`sha256:ce02ee0330980398d6a84a50abfa1a8c4d1cba27cbd7442b79f4aa1b1a14020d`  
-		Last Modified: Tue, 04 Jul 2023 13:08:30 GMT  
-		Size: 28.6 MB (28645696 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65492d08dde894d63be320541c94ca7bd8c47f187c5f24c988df18c6fb625d34`  
-		Last Modified: Tue, 04 Jul 2023 16:28:21 GMT  
-		Size: 12.5 MB (12546738 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2ae90f4a67913c4bc4ab738becf7acc127b8fa8f0e09e23bcc46c50fc899c6`  
-		Last Modified: Tue, 04 Jul 2023 16:28:57 GMT  
-		Size: 40.5 MB (40540453 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a4b61795b6e96e974ed89dc04541fdd5d63a5d69105cfb5771dfd310050e26c4`  
-		Last Modified: Tue, 04 Jul 2023 16:28:52 GMT  
-		Size: 159.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a6ffc287f11cd6e8234b1f4fea0fde83ef96b88ea362d5e5ef352fbef801289e`  
-		Last Modified: Wed, 05 Jul 2023 11:01:22 GMT  
-		Size: 1.9 KB (1889 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4609a4c71a439983c0c8af34c109c47e009b8ee01f4428ca5c6d7d9e4ddb7e47`  
-		Last Modified: Wed, 05 Jul 2023 11:01:23 GMT  
-		Size: 4.5 MB (4479985 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:09787d8b9847abd60457301c149b17044dcea2e940854324d114397292747088`  
-		Last Modified: Wed, 05 Jul 2023 11:01:29 GMT  
-		Size: 13.3 MB (13321171 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6559cd0cbb176544a794405e9faf13da9aaddd99e340a002ecd5a5c67a451bdb`  
-		Last Modified: Wed, 05 Jul 2023 11:01:28 GMT  
-		Size: 774.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-## `zookeeper:3.8.1-temurin`
-
-```console
-$ docker pull zookeeper@sha256:8242c71f0a529559f6513e949af42f3cf759bf4a05ef3b0e485af72884c8adb0
+$ docker pull zookeeper@sha256:51d55c37e8d003e2157eb70416c2ff4a71ab99d0cd0799ba790d504e4b451ec4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 4
+-	Platforms: 2
 	-	linux; amd64
-	-	linux; arm64 variant v8
 	-	linux; ppc64le
-	-	linux; s390x
 
-### `zookeeper:3.8.1-temurin` - linux; amd64
+### `zookeeper:3.8.2-temurin` - linux; amd64
 
 ```console
-$ docker pull zookeeper@sha256:612ec46e165711ce59e14130fc9c8c40d80a6c8784c090c7f53d0ad17d85cc14
+$ docker pull zookeeper@sha256:ec79abcf6899aa703af6138c3486dac85e2d47001db3387dd0b9a8c165adfe06
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.5 MB (107521228 bytes)**  
+-	Total Size: **107.6 MB (107623833 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7793c364179673f40c7683c8b682a353b0e3bc9a6630dc5a3a6857620dc64b15`
+-	Image ID: `sha256:72307cb5e010cb65c282e11409e9db0588f4215a282254580d9a27a70ab39d5c`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -2255,28 +2039,28 @@ ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
 # Wed, 05 Jul 2023 12:36:57 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 12:37:12 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG SHORT_DISTRO_NAME=zookeeper-3.8.2
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG DISTRO_NAME=apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 20:31:56 GMT
+# ARGS: DISTRO_NAME=apache-zookeeper-3.8.2-bin GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC SHORT_DISTRO_NAME=zookeeper-3.8.2
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 12:37:12 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
+WORKDIR /apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 20:31:56 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 12:37:12 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.2-bin/bin ZOOCFGDIR=/conf
+# Fri, 21 Jul 2023 20:31:56 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:57 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -2305,132 +2089,26 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 05 Jul 2023 12:37:23 GMT  
 		Size: 4.6 MB (4603955 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49f6df6fb85b0c5417d4431840e80551bdea0a9d040e20a4b081c7a5f3daa75f`  
-		Last Modified: Wed, 05 Jul 2023 12:37:32 GMT  
-		Size: 13.3 MB (13321531 bytes)  
+	-	`sha256:f7d68aab60c001744df79fd5ab0fef701faecac09518865e2448fab941229d3f`  
+		Last Modified: Fri, 21 Jul 2023 20:32:14 GMT  
+		Size: 13.4 MB (13424135 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7e1ad5119040f31a0e911aec81d80782ac5a39fc4125354b2b113176ba043c2`  
-		Last Modified: Wed, 05 Jul 2023 12:37:31 GMT  
-		Size: 774.0 B  
+	-	`sha256:e61bc76815e068a06b5cda444770303f6614c77d0bbca918d61e08ca2020eeea`  
+		Last Modified: Fri, 21 Jul 2023 20:32:13 GMT  
+		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `zookeeper:3.8.1-temurin` - linux; arm64 variant v8
+### `zookeeper:3.8.2-temurin` - linux; ppc64le
 
 ```console
-$ docker pull zookeeper@sha256:637fc608a2ebaf0474824cb9c8b35ba722c00ad4afec6b88c38520b77ad62fac
+$ docker pull zookeeper@sha256:571dfa82113134ec4f3b1e94ba413c0807acff82b82c7b209ec6160b62b158af
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **103.7 MB (103688899 bytes)**  
+-	Total Size: **109.8 MB (109764071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:49a3b40a0a3c17a0cd83260ce91cb4e0531388afcb713e2405b4873608a3499e`
--	Entrypoint: `["\/docker-entrypoint.sh"]`
--	Default Command: `["zkServer.sh","start-foreground"]`
-
-```dockerfile
-# Wed, 28 Jun 2023 08:42:48 GMT
-ARG RELEASE
-# Wed, 28 Jun 2023 08:42:48 GMT
-ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 28 Jun 2023 08:42:48 GMT
-LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 28 Jun 2023 08:42:48 GMT
-LABEL org.opencontainers.image.version=22.04
-# Wed, 28 Jun 2023 08:42:50 GMT
-ADD file:262490f82459c14632f5c9a6d6a5cf6c07b4f307e8fd380fa764662cda46e88f in / 
-# Wed, 28 Jun 2023 08:42:50 GMT
-CMD ["/bin/bash"]
-# Tue, 04 Jul 2023 15:32:45 GMT
-ENV JAVA_HOME=/opt/java/openjdk
-# Tue, 04 Jul 2023 15:32:45 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 04 Jul 2023 15:32:45 GMT
-ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 04 Jul 2023 15:32:59 GMT
-RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 04 Jul 2023 15:33:41 GMT
-ENV JAVA_VERSION=jdk-11.0.19+7
-# Tue, 04 Jul 2023 15:34:07 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='1fe4b20d808f393422610818711c728331992a4455eeeb061d3d05b45412771d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.19_7.tar.gz';          ;;        armhf|arm)          ESUM='cb754b055177381f9f6852b7e5469904a15edddd7f8e136043c28b1e33aee47c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_arm_linux_hotspot_11.0.19_7.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='8019d938e5525938ec8e68e2989c4413263b0d9b7b3f20fe0c45f6d967919cfb';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.19_7.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='058419435fe6212d1bc305a14f578c314f9ff9a2d96d523c178120e84231c733';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_s390x_linux_hotspot_11.0.19_7.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='32dcf760664f93531594b72ce9226e9216567de5705a23c9ff5a77c797948054';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_x64_linux_hotspot_11.0.19_7.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 04 Jul 2023 15:34:08 GMT
-RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 05 Jul 2023 05:32:52 GMT
-ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 05 Jul 2023 05:32:52 GMT
-RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 05 Jul 2023 05:32:58 GMT
-RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 05:33:05 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 05:33:06 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 05:33:06 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 05:33:11 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
-RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 05:33:11 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 05:33:12 GMT
-VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 05:33:12 GMT
-EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 05:33:12 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 05:33:12 GMT
-COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 05:33:12 GMT
-ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 05:33:12 GMT
-CMD ["zkServer.sh" "start-foreground"]
-```
-
--	Layers:
-	-	`sha256:ac34a2e0269ced3acc355be706239ee0f3f1e73a035c40dd2fac74827164ee53`  
-		Last Modified: Wed, 28 Jun 2023 23:23:40 GMT  
-		Size: 28.4 MB (28391011 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a8d9df805749ad7c4605f0d49a64da6a6173ab190ec361dc2063b6b73af59ab5`  
-		Last Modified: Tue, 04 Jul 2023 15:36:55 GMT  
-		Size: 12.5 MB (12455497 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1b1e11a5919e5746092b2a288f71090ffdb0d3544b7b54c31ed0137e6d5d4735`  
-		Last Modified: Tue, 04 Jul 2023 15:38:37 GMT  
-		Size: 45.0 MB (45009079 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a80987dc89da28aa5ceec7a86ea74e13cee06ecd9304cf4c92d8f382c79eb4f2`  
-		Last Modified: Tue, 04 Jul 2023 15:38:32 GMT  
-		Size: 159.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bd25712ceddb84b0cff96ab5be1130874ce0a1ac744911e6cb2ecd6dd334bc26`  
-		Last Modified: Wed, 05 Jul 2023 05:33:24 GMT  
-		Size: 1.9 KB (1890 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d4ee2a575bf3265526d40f59e88add76c56b6989ea12ad34bb87566950100ce5`  
-		Last Modified: Wed, 05 Jul 2023 05:33:24 GMT  
-		Size: 4.5 MB (4508981 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:519e22727cdd29f2d09c67f7a3750c2a3bbeb6bf14a7c8c1a2b161ae49a486fc`  
-		Last Modified: Wed, 05 Jul 2023 05:33:33 GMT  
-		Size: 13.3 MB (13321508 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0bae8d4fe902c37250b859b084c8e25f2a6dc3b152117ae220ba0b62ef54e04`  
-		Last Modified: Wed, 05 Jul 2023 05:33:32 GMT  
-		Size: 774.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `zookeeper:3.8.1-temurin` - linux; ppc64le
-
-```console
-$ docker pull zookeeper@sha256:92bc66379745c395cf864f46cd3f2e9860c3ce5794004d5b8cfc660236b7a4ad
-```
-
--	Docker Version: 20.10.23
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.7 MB (109661033 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4cc1ffd7efee3fdfc119d5a12c32ca929bc33666eaad804cef3274ced2ed8c93`
+-	Image ID: `sha256:024e024d7bd2975284530591593e48197de0342d35b071abeb06b5eddc02b23e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -2467,28 +2145,28 @@ ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
 # Wed, 05 Jul 2023 18:43:53 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 18:44:46 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 18:44:49 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 18:44:49 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 18:45:02 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
+# Fri, 21 Jul 2023 21:22:26 GMT
+ARG GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC
+# Fri, 21 Jul 2023 21:22:26 GMT
+ARG SHORT_DISTRO_NAME=zookeeper-3.8.2
+# Fri, 21 Jul 2023 21:22:27 GMT
+ARG DISTRO_NAME=apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 21:22:37 GMT
+# ARGS: DISTRO_NAME=apache-zookeeper-3.8.2-bin GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC SHORT_DISTRO_NAME=zookeeper-3.8.2
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 18:45:07 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 18:45:08 GMT
+# Fri, 21 Jul 2023 21:22:39 GMT
+WORKDIR /apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 21:22:40 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 18:45:09 GMT
+# Fri, 21 Jul 2023 21:22:40 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 18:45:11 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 18:45:11 GMT
+# Fri, 21 Jul 2023 21:22:41 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.2-bin/bin ZOOCFGDIR=/conf
+# Fri, 21 Jul 2023 21:22:41 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 18:45:13 GMT
+# Fri, 21 Jul 2023 21:22:42 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 18:45:14 GMT
+# Fri, 21 Jul 2023 21:22:43 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -2517,125 +2195,19 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 05 Jul 2023 18:45:34 GMT  
 		Size: 5.2 MB (5214449 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57344d4bdc0ae18ed3fab3f6dced7528c0dd1af4943fdf6d674fba25ecbc3e71`  
-		Last Modified: Wed, 05 Jul 2023 18:45:51 GMT  
-		Size: 13.3 MB (13321096 bytes)  
+	-	`sha256:d2d59aa81b0460314b0ca1a7f2af477bac0958abc9437d02e980ae045786e188`  
+		Last Modified: Fri, 21 Jul 2023 21:23:10 GMT  
+		Size: 13.4 MB (13424134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b9f75294f98f588044baa8bddca3a861bc076044a4b9505cc6ddc60437ca6e32`  
-		Last Modified: Wed, 05 Jul 2023 18:45:49 GMT  
+	-	`sha256:3b3bbfd61fbc9cff2dc2c0818acfd9db6aae9b9fad24d55f87060697a681f954`  
+		Last Modified: Fri, 21 Jul 2023 21:23:08 GMT  
 		Size: 775.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `zookeeper:3.8.1-temurin` - linux; s390x
-
-```console
-$ docker pull zookeeper@sha256:3b15cc9fc1afd18ee751e1db1dda7e6812732b8b86d8cb74bc528875bd087774
-```
-
--	Docker Version: 20.10.23
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **99.5 MB (99536865 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:25366b91cce764d6694037b65a27a29c658f23ba676dfccb9c45f76d16cca585`
--	Entrypoint: `["\/docker-entrypoint.sh"]`
--	Default Command: `["zkServer.sh","start-foreground"]`
-
-```dockerfile
-# Wed, 28 Jun 2023 08:53:20 GMT
-ARG RELEASE
-# Wed, 28 Jun 2023 08:53:20 GMT
-ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 28 Jun 2023 08:53:20 GMT
-LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 28 Jun 2023 08:53:20 GMT
-LABEL org.opencontainers.image.version=22.04
-# Wed, 28 Jun 2023 08:53:22 GMT
-ADD file:fa0aef35be7808c8fd6751a52bdec4dd81057e2fcaa075c547a1db53640dae9a in / 
-# Wed, 28 Jun 2023 08:53:22 GMT
-CMD ["/bin/bash"]
-# Tue, 04 Jul 2023 16:24:17 GMT
-ENV JAVA_HOME=/opt/java/openjdk
-# Tue, 04 Jul 2023 16:24:18 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 04 Jul 2023 16:24:18 GMT
-ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Tue, 04 Jul 2023 16:24:43 GMT
-RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Tue, 04 Jul 2023 16:24:44 GMT
-ENV JAVA_VERSION=jdk-11.0.19+7
-# Tue, 04 Jul 2023 16:25:27 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='1fe4b20d808f393422610818711c728331992a4455eeeb061d3d05b45412771d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_aarch64_linux_hotspot_11.0.19_7.tar.gz';          ;;        armhf|arm)          ESUM='cb754b055177381f9f6852b7e5469904a15edddd7f8e136043c28b1e33aee47c';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_arm_linux_hotspot_11.0.19_7.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='8019d938e5525938ec8e68e2989c4413263b0d9b7b3f20fe0c45f6d967919cfb';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_ppc64le_linux_hotspot_11.0.19_7.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='058419435fe6212d1bc305a14f578c314f9ff9a2d96d523c178120e84231c733';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_s390x_linux_hotspot_11.0.19_7.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='32dcf760664f93531594b72ce9226e9216567de5705a23c9ff5a77c797948054';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.19%2B7/OpenJDK11U-jre_x64_linux_hotspot_11.0.19_7.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Tue, 04 Jul 2023 16:25:28 GMT
-RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo java --version && java --version     && echo Complete.
-# Wed, 05 Jul 2023 11:00:33 GMT
-ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=/logs ZOO_TICK_TIME=2000 ZOO_INIT_LIMIT=5 ZOO_SYNC_LIMIT=2 ZOO_AUTOPURGE_PURGEINTERVAL=0 ZOO_AUTOPURGE_SNAPRETAINCOUNT=3 ZOO_MAX_CLIENT_CNXNS=60 ZOO_STANDALONE_ENABLED=true ZOO_ADMINSERVER_ENABLED=true
-# Wed, 05 Jul 2023 11:00:34 GMT
-RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
-# Wed, 05 Jul 2023 11:00:41 GMT
-RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 11:00:58 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 11:00:58 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 11:00:58 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 11:01:03 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
-RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 11:01:06 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 11:01:06 GMT
-VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 11:01:06 GMT
-EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 11:01:07 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 11:01:07 GMT
-COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 11:01:07 GMT
-ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 11:01:07 GMT
-CMD ["zkServer.sh" "start-foreground"]
-```
-
--	Layers:
-	-	`sha256:ce02ee0330980398d6a84a50abfa1a8c4d1cba27cbd7442b79f4aa1b1a14020d`  
-		Last Modified: Tue, 04 Jul 2023 13:08:30 GMT  
-		Size: 28.6 MB (28645696 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65492d08dde894d63be320541c94ca7bd8c47f187c5f24c988df18c6fb625d34`  
-		Last Modified: Tue, 04 Jul 2023 16:28:21 GMT  
-		Size: 12.5 MB (12546738 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe2ae90f4a67913c4bc4ab738becf7acc127b8fa8f0e09e23bcc46c50fc899c6`  
-		Last Modified: Tue, 04 Jul 2023 16:28:57 GMT  
-		Size: 40.5 MB (40540453 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a4b61795b6e96e974ed89dc04541fdd5d63a5d69105cfb5771dfd310050e26c4`  
-		Last Modified: Tue, 04 Jul 2023 16:28:52 GMT  
-		Size: 159.0 B  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a6ffc287f11cd6e8234b1f4fea0fde83ef96b88ea362d5e5ef352fbef801289e`  
-		Last Modified: Wed, 05 Jul 2023 11:01:22 GMT  
-		Size: 1.9 KB (1889 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4609a4c71a439983c0c8af34c109c47e009b8ee01f4428ca5c6d7d9e4ddb7e47`  
-		Last Modified: Wed, 05 Jul 2023 11:01:23 GMT  
-		Size: 4.5 MB (4479985 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:09787d8b9847abd60457301c149b17044dcea2e940854324d114397292747088`  
-		Last Modified: Wed, 05 Jul 2023 11:01:29 GMT  
-		Size: 13.3 MB (13321171 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6559cd0cbb176544a794405e9faf13da9aaddd99e340a002ecd5a5c67a451bdb`  
-		Last Modified: Wed, 05 Jul 2023 11:01:28 GMT  
-		Size: 774.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `zookeeper:latest`
 
 ```console
-$ docker pull zookeeper@sha256:8242c71f0a529559f6513e949af42f3cf759bf4a05ef3b0e485af72884c8adb0
+$ docker pull zookeeper@sha256:20d751cedd24ccdf9401005a74b8ddd6dd7f075684478c88cad00f39d154edfa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2648,14 +2220,14 @@ $ docker pull zookeeper@sha256:8242c71f0a529559f6513e949af42f3cf759bf4a05ef3b0e4
 ### `zookeeper:latest` - linux; amd64
 
 ```console
-$ docker pull zookeeper@sha256:612ec46e165711ce59e14130fc9c8c40d80a6c8784c090c7f53d0ad17d85cc14
+$ docker pull zookeeper@sha256:ec79abcf6899aa703af6138c3486dac85e2d47001db3387dd0b9a8c165adfe06
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.5 MB (107521228 bytes)**  
+-	Total Size: **107.6 MB (107623833 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7793c364179673f40c7683c8b682a353b0e3bc9a6630dc5a3a6857620dc64b15`
+-	Image ID: `sha256:72307cb5e010cb65c282e11409e9db0588f4215a282254580d9a27a70ab39d5c`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -2692,28 +2264,28 @@ ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
 # Wed, 05 Jul 2023 12:36:57 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 12:37:06 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 12:37:12 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG SHORT_DISTRO_NAME=zookeeper-3.8.2
+# Fri, 21 Jul 2023 20:31:51 GMT
+ARG DISTRO_NAME=apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 20:31:56 GMT
+# ARGS: DISTRO_NAME=apache-zookeeper-3.8.2-bin GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC SHORT_DISTRO_NAME=zookeeper-3.8.2
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 12:37:12 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
+WORKDIR /apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 20:31:56 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 12:37:12 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.2-bin/bin ZOOCFGDIR=/conf
+# Fri, 21 Jul 2023 20:31:56 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:56 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 12:37:12 GMT
+# Fri, 21 Jul 2023 20:31:57 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -2742,13 +2314,13 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 05 Jul 2023 12:37:23 GMT  
 		Size: 4.6 MB (4603955 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49f6df6fb85b0c5417d4431840e80551bdea0a9d040e20a4b081c7a5f3daa75f`  
-		Last Modified: Wed, 05 Jul 2023 12:37:32 GMT  
-		Size: 13.3 MB (13321531 bytes)  
+	-	`sha256:f7d68aab60c001744df79fd5ab0fef701faecac09518865e2448fab941229d3f`  
+		Last Modified: Fri, 21 Jul 2023 20:32:14 GMT  
+		Size: 13.4 MB (13424135 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e7e1ad5119040f31a0e911aec81d80782ac5a39fc4125354b2b113176ba043c2`  
-		Last Modified: Wed, 05 Jul 2023 12:37:31 GMT  
-		Size: 774.0 B  
+	-	`sha256:e61bc76815e068a06b5cda444770303f6614c77d0bbca918d61e08ca2020eeea`  
+		Last Modified: Fri, 21 Jul 2023 20:32:13 GMT  
+		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `zookeeper:latest` - linux; arm64 variant v8
@@ -2860,14 +2432,14 @@ CMD ["zkServer.sh" "start-foreground"]
 ### `zookeeper:latest` - linux; ppc64le
 
 ```console
-$ docker pull zookeeper@sha256:92bc66379745c395cf864f46cd3f2e9860c3ce5794004d5b8cfc660236b7a4ad
+$ docker pull zookeeper@sha256:571dfa82113134ec4f3b1e94ba413c0807acff82b82c7b209ec6160b62b158af
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **109.7 MB (109661033 bytes)**  
+-	Total Size: **109.8 MB (109764071 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4cc1ffd7efee3fdfc119d5a12c32ca929bc33666eaad804cef3274ced2ed8c93`
+-	Image ID: `sha256:024e024d7bd2975284530591593e48197de0342d35b071abeb06b5eddc02b23e`
 -	Entrypoint: `["\/docker-entrypoint.sh"]`
 -	Default Command: `["zkServer.sh","start-foreground"]`
 
@@ -2904,28 +2476,28 @@ ENV ZOO_CONF_DIR=/conf ZOO_DATA_DIR=/data ZOO_DATA_LOG_DIR=/datalog ZOO_LOG_DIR=
 RUN set -eux;     groupadd -r zookeeper --gid=1000;     useradd -r -g zookeeper --uid=1000 zookeeper;     mkdir -p "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR";     chown zookeeper:zookeeper "$ZOO_DATA_LOG_DIR" "$ZOO_DATA_DIR" "$ZOO_CONF_DIR" "$ZOO_LOG_DIR"
 # Wed, 05 Jul 2023 18:43:53 GMT
 RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive     apt-get install -y --no-install-recommends         ca-certificates         dirmngr         gosu         gnupg         netcat         wget;     rm -rf /var/lib/apt/lists/*;     gosu nobody true
-# Wed, 05 Jul 2023 18:44:46 GMT
-ARG GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C
-# Wed, 05 Jul 2023 18:44:49 GMT
-ARG SHORT_DISTRO_NAME=zookeeper-3.8.1
-# Wed, 05 Jul 2023 18:44:49 GMT
-ARG DISTRO_NAME=apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 18:45:02 GMT
-# ARGS: DISTRO_NAME=apache-zookeeper-3.8.1-bin GPG_KEY=BBE7232D7991050B54C8EA0ADC08637CA615D22C SHORT_DISTRO_NAME=zookeeper-3.8.1
+# Fri, 21 Jul 2023 21:22:26 GMT
+ARG GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC
+# Fri, 21 Jul 2023 21:22:26 GMT
+ARG SHORT_DISTRO_NAME=zookeeper-3.8.2
+# Fri, 21 Jul 2023 21:22:27 GMT
+ARG DISTRO_NAME=apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 21:22:37 GMT
+# ARGS: DISTRO_NAME=apache-zookeeper-3.8.2-bin GPG_KEY=52A7EA3EECAE05B0A8306471790761798F6E35FC SHORT_DISTRO_NAME=zookeeper-3.8.2
 RUN set -eux;     ddist() {         local f="$1"; shift;         local distFile="$1"; shift;         local success=;         local distUrl=;         for distUrl in             'https://www.apache.org/dyn/closer.cgi?action=download&filename='             https://www-us.apache.org/dist/             https://www.apache.org/dist/             https://archive.apache.org/dist/         ; do             if wget -q -O "$f" "$distUrl$distFile" && [ -s "$f" ]; then                 success=1;                 break;             fi;         done;         [ -n "$success" ];     };     ddist "$DISTRO_NAME.tar.gz" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz";     ddist "$DISTRO_NAME.tar.gz.asc" "zookeeper/$SHORT_DISTRO_NAME/$DISTRO_NAME.tar.gz.asc";     export GNUPGHOME="$(mktemp -d)";     gpg --keyserver hkps://keyserver.pgp.com --recv-key "$GPG_KEY" ||     gpg --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY" ||     gpg --keyserver hkps://pgp.mit.edu --recv-keys "$GPG_KEY";     gpg --batch --verify "$DISTRO_NAME.tar.gz.asc" "$DISTRO_NAME.tar.gz";     tar -zxf "$DISTRO_NAME.tar.gz";     mv "$DISTRO_NAME/conf/"* "$ZOO_CONF_DIR";     rm -rf "$GNUPGHOME" "$DISTRO_NAME.tar.gz" "$DISTRO_NAME.tar.gz.asc";     chown -R zookeeper:zookeeper "/$DISTRO_NAME"
-# Wed, 05 Jul 2023 18:45:07 GMT
-WORKDIR /apache-zookeeper-3.8.1-bin
-# Wed, 05 Jul 2023 18:45:08 GMT
+# Fri, 21 Jul 2023 21:22:39 GMT
+WORKDIR /apache-zookeeper-3.8.2-bin
+# Fri, 21 Jul 2023 21:22:40 GMT
 VOLUME [/data /datalog /logs]
-# Wed, 05 Jul 2023 18:45:09 GMT
+# Fri, 21 Jul 2023 21:22:40 GMT
 EXPOSE 2181 2888 3888 8080
-# Wed, 05 Jul 2023 18:45:11 GMT
-ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.1-bin/bin ZOOCFGDIR=/conf
-# Wed, 05 Jul 2023 18:45:11 GMT
+# Fri, 21 Jul 2023 21:22:41 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/apache-zookeeper-3.8.2-bin/bin ZOOCFGDIR=/conf
+# Fri, 21 Jul 2023 21:22:41 GMT
 COPY file:15946498c7ecbfe405350ae22386ab548cb62ffb5e51b384938a3e1d87a02052 in / 
-# Wed, 05 Jul 2023 18:45:13 GMT
+# Fri, 21 Jul 2023 21:22:42 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Wed, 05 Jul 2023 18:45:14 GMT
+# Fri, 21 Jul 2023 21:22:43 GMT
 CMD ["zkServer.sh" "start-foreground"]
 ```
 
@@ -2954,12 +2526,12 @@ CMD ["zkServer.sh" "start-foreground"]
 		Last Modified: Wed, 05 Jul 2023 18:45:34 GMT  
 		Size: 5.2 MB (5214449 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:57344d4bdc0ae18ed3fab3f6dced7528c0dd1af4943fdf6d674fba25ecbc3e71`  
-		Last Modified: Wed, 05 Jul 2023 18:45:51 GMT  
-		Size: 13.3 MB (13321096 bytes)  
+	-	`sha256:d2d59aa81b0460314b0ca1a7f2af477bac0958abc9437d02e980ae045786e188`  
+		Last Modified: Fri, 21 Jul 2023 21:23:10 GMT  
+		Size: 13.4 MB (13424134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b9f75294f98f588044baa8bddca3a861bc076044a4b9505cc6ddc60437ca6e32`  
-		Last Modified: Wed, 05 Jul 2023 18:45:49 GMT  
+	-	`sha256:3b3bbfd61fbc9cff2dc2c0818acfd9db6aae9b9fad24d55f87060697a681f954`  
+		Last Modified: Fri, 21 Jul 2023 21:23:08 GMT  
 		Size: 775.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
