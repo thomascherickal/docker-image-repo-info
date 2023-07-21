@@ -1,10 +1,10 @@
-# `crate:5.3.4`
+# `crate:5.4.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0b836455bdc3b4a5c8909a3aeae3fa23dea0f0e9e45da10cc0feb014fc2749ad`
-- Created: `2023-07-17T19:25:08.063589375Z`
-- Virtual Size: ~ 602.97 Mb  
+- Image ID: `sha256:5bb7652c7e23cdcfa7aafb88ff2c19cd01cddf9c5da4328c77fd1fbc62cb6c1d`
+- Created: `2023-07-18T19:27:03.687017739Z`
+- Virtual Size: ~ 606.10 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -14,13 +14,13 @@
   - `CRATE_HEAP_SIZE=512M`
 - Labels:
   - `maintainer=Crate.io <office@crate.io>`
-  - `org.opencontainers.image.created=2023-07-11T09:48:31.716932`
+  - `org.opencontainers.image.created=2023-07-11T14:38:05.395912`
   - `org.opencontainers.image.description=CrateDB is a distributed SQL database that handles massive amounts of machine data in real-time.`
   - `org.opencontainers.image.source=https://github.com/crate/docker-crate`
   - `org.opencontainers.image.title=crate`
   - `org.opencontainers.image.url=https://crate.io/products/cratedb/`
   - `org.opencontainers.image.vendor=Crate.io`
-  - `org.opencontainers.image.version=5.3.4`
+  - `org.opencontainers.image.version=5.4.0`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -580,26 +580,26 @@ $ dnf --quiet download --source --url kmod-libs-28-7.el9
 http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/kmod-28-7.el9.src.rpm
 ```
 
-### `rpm` package: `krb5-libs-1.20.1-8.el9.x86_64`
+### `rpm` package: `krb5-libs-1.20.1-9.el9_2.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url krb5-libs-1.20.1-8.el9
-http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/krb5-1.20.1-8.el9.src.rpm
+$ dnf --quiet download --source --url krb5-libs-1.20.1-9.el9_2
+http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/krb5-1.20.1-9.el9_2.src.rpm
 ```
 
-### `rpm` package: `less-590-1.el9_0.x86_64`
+### `rpm` package: `less-590-2.el9_2.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+ or BSD
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url less-590-1.el9_0
-http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/less-590-1.el9_0.src.rpm
+$ dnf --quiet download --source --url less-590-2.el9_2
+http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/less-590-2.el9_2.src.rpm
 ```
 
 ### `rpm` package: `libacl-2.3.1-3.el9.x86_64`
@@ -1196,26 +1196,26 @@ $ dnf --quiet download --source --url openldap-compat-2.6.2-3.el9
 http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/openldap-2.6.2-3.el9.src.rpm
 ```
 
-### `rpm` package: `openssl-3.0.7-6.el9_2.x86_64`
+### `rpm` package: `openssl-3.0.7-16.el9_2.x86_64`
 
 Licenses (from `rpm --query`): ASL 2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url openssl-3.0.7-6.el9_2
-http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/openssl-3.0.7-6.el9_2.src.rpm
+$ dnf --quiet download --source --url openssl-3.0.7-16.el9_2
+http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/openssl-3.0.7-16.el9_2.src.rpm
 ```
 
-### `rpm` package: `openssl-libs-3.0.7-6.el9_2.x86_64`
+### `rpm` package: `openssl-libs-3.0.7-16.el9_2.x86_64`
 
 Licenses (from `rpm --query`): ASL 2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url openssl-libs-3.0.7-6.el9_2
-http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/openssl-3.0.7-6.el9_2.src.rpm
+$ dnf --quiet download --source --url openssl-libs-3.0.7-16.el9_2
+http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/openssl-3.0.7-16.el9_2.src.rpm
 ```
 
 ### `rpm` package: `p11-kit-0.24.1-2.el9.x86_64`
@@ -1295,15 +1295,15 @@ $ dnf --quiet download --source --url popt-1.18-8.el9
 http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/popt-1.18-8.el9.src.rpm
 ```
 
-### `rpm` package: `python3-3.9.16-1.el9.x86_64`
+### `rpm` package: `python3-3.9.16-1.el9_2.1.x86_64`
 
 Licenses (from `rpm --query`): Python
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url python3-3.9.16-1.el9
-http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/python3.9-3.9.16-1.el9.src.rpm
+$ dnf --quiet download --source --url python3-3.9.16-1.el9_2.1
+http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/python3.9-3.9.16-1.el9_2.1.src.rpm
 ```
 
 ### `rpm` package: `python3-dnf-4.14.0-5.el9_2.alma.noarch`
@@ -1361,15 +1361,15 @@ $ dnf --quiet download --source --url python3-libdnf-0.69.0-3.el9_2.alma
 http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/libdnf-0.69.0-3.el9_2.alma.src.rpm
 ```
 
-### `rpm` package: `python3-libs-3.9.16-1.el9.x86_64`
+### `rpm` package: `python3-libs-3.9.16-1.el9_2.1.x86_64`
 
 Licenses (from `rpm --query`): Python
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url python3-libs-3.9.16-1.el9
-http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/python3.9-3.9.16-1.el9.src.rpm
+$ dnf --quiet download --source --url python3-libs-3.9.16-1.el9_2.1
+http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/python3.9-3.9.16-1.el9_2.1.src.rpm
 ```
 
 ### `rpm` package: `python3-pip-wheel-21.2.3-6.el9.noarch`
@@ -1515,48 +1515,48 @@ $ dnf --quiet download --source --url sqlite-libs-3.34.1-6.el9_1
 http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/sqlite-3.34.1-6.el9_1.src.rpm
 ```
 
-### `rpm` package: `systemd-252-13.el9_2.x86_64`
+### `rpm` package: `systemd-252-14.el9_2.1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT and GPLv2+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url systemd-252-13.el9_2
-http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/systemd-252-13.el9_2.src.rpm
+$ dnf --quiet download --source --url systemd-252-14.el9_2.1
+http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/systemd-252-14.el9_2.1.src.rpm
 ```
 
-### `rpm` package: `systemd-libs-252-13.el9_2.x86_64`
+### `rpm` package: `systemd-libs-252-14.el9_2.1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url systemd-libs-252-13.el9_2
-http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/systemd-252-13.el9_2.src.rpm
+$ dnf --quiet download --source --url systemd-libs-252-14.el9_2.1
+http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/systemd-252-14.el9_2.1.src.rpm
 ```
 
-### `rpm` package: `systemd-pam-252-13.el9_2.x86_64`
+### `rpm` package: `systemd-pam-252-14.el9_2.1.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT and GPLv2+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url systemd-pam-252-13.el9_2
-http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/systemd-252-13.el9_2.src.rpm
+$ dnf --quiet download --source --url systemd-pam-252-14.el9_2.1
+http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/systemd-252-14.el9_2.1.src.rpm
 ```
 
-### `rpm` package: `systemd-rpm-macros-252-13.el9_2.noarch`
+### `rpm` package: `systemd-rpm-macros-252-14.el9_2.1.noarch`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT and GPLv2+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url systemd-rpm-macros-252-13.el9_2.noarch
-http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/systemd-252-13.el9_2.src.rpm
+$ dnf --quiet download --source --url systemd-rpm-macros-252-14.el9_2.1.noarch
+http://repo.almalinux.org/vault/9.2/BaseOS/Source/Packages/systemd-252-14.el9_2.1.src.rpm
 ```
 
 ### `rpm` package: `tar-1.34-6.el9_1.x86_64`
