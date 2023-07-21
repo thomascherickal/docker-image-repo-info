@@ -1,9 +1,9 @@
-# `elixir:1.15.1`
+# `elixir:1.15.4`
 
 ## Docker Metadata
 
-- Image ID: `sha256:8d90532a215cd8f008b4c68fc1a048890b8c73646a9f5503374fa05bb52523a4`
-- Created: `2023-07-05T04:47:30.593548457Z`
+- Image ID: `sha256:0af9f057ac8159434c8c780fb9f68dd27ae7b8281bebf2518c9a1ee732994316`
+- Created: `2023-07-19T20:26:28.440294804Z`
 - Virtual Size: ~ 1.48 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -13,7 +13,7 @@
   - `OTP_VERSION=26.0.2`
   - `REBAR3_VERSION=3.20.0`
   - `REBAR_VERSION=2.6.4`
-  - `ELIXIR_VERSION=v1.15.1`
+  - `ELIXIR_VERSION=v1.15.4`
   - `LANG=C.UTF-8`
 - Labels:
   - `org.opencontainers.image.version=26.0.2`
