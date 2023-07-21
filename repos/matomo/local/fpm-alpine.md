@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ff551f5832266ab3f9d867eaad86b90bad25444d321ce626efbf62d20ee07338`
-- Created: `2023-07-10T20:23:53.779578636Z`
-- Virtual Size: ~ 145.67 Mb  
+- Image ID: `sha256:998a21f200467bf2daffb5d4da0e77c9bb6b8fd37e0b7ce43f5cf7ca72a15eef`
+- Created: `2023-07-20T23:02:05.53056728Z`
+- Virtual Size: ~ 145.74 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.20`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.20.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.20.tar.xz.asc`
-  - `PHP_SHA256=4c9973f599e93ed5e8ce2b45ce1d41bb8fb54ce642824fd23e56b52fd75029a6`
+  - `PHP_VERSION=8.1.21`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.21.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.21.tar.xz.asc`
+  - `PHP_SHA256=e634a00b0c6a8cd39e840e9fb30b5227b820b7a9ace95b7b001053c1411c4821`
   - `PHP_MEMORY_LIMIT=256M`
   - `MATOMO_VERSION=4.15.0`
 
@@ -403,16 +403,16 @@ BSD-3-Clause AND IJG AND Zlib
 ### `apk` package: `libldap`
 
 ```console
-libldap-2.6.4-r3 description:
+libldap-2.6.5-r0 description:
 OpenLDAP libraries
 
-libldap-2.6.4-r3 webpage:
+libldap-2.6.5-r0 webpage:
 https://www.openldap.org/
 
-libldap-2.6.4-r3 installed size:
+libldap-2.6.5-r0 installed size:
 400 KiB
 
-libldap-2.6.4-r3 license:
+libldap-2.6.5-r0 license:
 OLDAP-2.8
 
 ```
