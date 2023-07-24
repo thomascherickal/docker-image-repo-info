@@ -9,17 +9,41 @@
 -	[`neo4j:4.4.23-community`](#neo4j4423-community)
 -	[`neo4j:4.4.23-enterprise`](#neo4j4423-enterprise)
 -	[`neo4j:5`](#neo4j5)
+-	[`neo4j:5-bullseye`](#neo4j5-bullseye)
 -	[`neo4j:5-community`](#neo4j5-community)
+-	[`neo4j:5-community-bullseye`](#neo4j5-community-bullseye)
+-	[`neo4j:5-community-ubi8`](#neo4j5-community-ubi8)
 -	[`neo4j:5-enterprise`](#neo4j5-enterprise)
+-	[`neo4j:5-enterprise-bullseye`](#neo4j5-enterprise-bullseye)
+-	[`neo4j:5-enterprise-ubi8`](#neo4j5-enterprise-ubi8)
+-	[`neo4j:5-ubi8`](#neo4j5-ubi8)
 -	[`neo4j:5.10`](#neo4j510)
+-	[`neo4j:5.10-bullseye`](#neo4j510-bullseye)
 -	[`neo4j:5.10-community`](#neo4j510-community)
+-	[`neo4j:5.10-community-bullseye`](#neo4j510-community-bullseye)
+-	[`neo4j:5.10-community-ubi8`](#neo4j510-community-ubi8)
 -	[`neo4j:5.10-enterprise`](#neo4j510-enterprise)
+-	[`neo4j:5.10-enterprise-bullseye`](#neo4j510-enterprise-bullseye)
+-	[`neo4j:5.10-enterprise-ubi8`](#neo4j510-enterprise-ubi8)
+-	[`neo4j:5.10-ubi8`](#neo4j510-ubi8)
 -	[`neo4j:5.10.0`](#neo4j5100)
+-	[`neo4j:5.10.0-bullseye`](#neo4j5100-bullseye)
 -	[`neo4j:5.10.0-community`](#neo4j5100-community)
+-	[`neo4j:5.10.0-community-bullseye`](#neo4j5100-community-bullseye)
+-	[`neo4j:5.10.0-community-ubi8`](#neo4j5100-community-ubi8)
 -	[`neo4j:5.10.0-enterprise`](#neo4j5100-enterprise)
+-	[`neo4j:5.10.0-enterprise-bullseye`](#neo4j5100-enterprise-bullseye)
+-	[`neo4j:5.10.0-enterprise-ubi8`](#neo4j5100-enterprise-ubi8)
+-	[`neo4j:5.10.0-ubi8`](#neo4j5100-ubi8)
+-	[`neo4j:bullseye`](#neo4jbullseye)
 -	[`neo4j:community`](#neo4jcommunity)
+-	[`neo4j:community-bullseye`](#neo4jcommunity-bullseye)
+-	[`neo4j:community-ubi8`](#neo4jcommunity-ubi8)
 -	[`neo4j:enterprise`](#neo4jenterprise)
+-	[`neo4j:enterprise-bullseye`](#neo4jenterprise-bullseye)
+-	[`neo4j:enterprise-ubi8`](#neo4jenterprise-ubi8)
 -	[`neo4j:latest`](#neo4jlatest)
+-	[`neo4j:ubi8`](#neo4jubi8)
 
 ## `neo4j:4.4`
 
@@ -1092,6 +1116,10 @@ CMD ["neo4j"]
 		Size: 119.6 MB (119581580 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `neo4j:5-bullseye`
+
+**does not exist** (yet?)
+
 ## `neo4j:5-community`
 
 ```console
@@ -1244,6 +1272,14 @@ CMD ["neo4j"]
 		Last Modified: Wed, 19 Jul 2023 21:54:43 GMT  
 		Size: 119.6 MB (119581580 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `neo4j:5-community-bullseye`
+
+**does not exist** (yet?)
+
+## `neo4j:5-community-ubi8`
+
+**does not exist** (yet?)
 
 ## `neo4j:5-enterprise`
 
@@ -1398,6 +1434,18 @@ CMD ["neo4j"]
 		Size: 400.6 MB (400619071 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `neo4j:5-enterprise-bullseye`
+
+**does not exist** (yet?)
+
+## `neo4j:5-enterprise-ubi8`
+
+**does not exist** (yet?)
+
+## `neo4j:5-ubi8`
+
+**does not exist** (yet?)
+
 ## `neo4j:5.10`
 
 ```console
@@ -1550,6 +1598,10 @@ CMD ["neo4j"]
 		Last Modified: Wed, 19 Jul 2023 21:54:43 GMT  
 		Size: 119.6 MB (119581580 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `neo4j:5.10-bullseye`
+
+**does not exist** (yet?)
 
 ## `neo4j:5.10-community`
 
@@ -1704,6 +1756,14 @@ CMD ["neo4j"]
 		Size: 119.6 MB (119581580 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `neo4j:5.10-community-bullseye`
+
+**does not exist** (yet?)
+
+## `neo4j:5.10-community-ubi8`
+
+**does not exist** (yet?)
+
 ## `neo4j:5.10-enterprise`
 
 ```console
@@ -1856,6 +1916,18 @@ CMD ["neo4j"]
 		Last Modified: Wed, 19 Jul 2023 21:55:23 GMT  
 		Size: 400.6 MB (400619071 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `neo4j:5.10-enterprise-bullseye`
+
+**does not exist** (yet?)
+
+## `neo4j:5.10-enterprise-ubi8`
+
+**does not exist** (yet?)
+
+## `neo4j:5.10-ubi8`
+
+**does not exist** (yet?)
 
 ## `neo4j:5.10.0`
 
@@ -2010,6 +2082,10 @@ CMD ["neo4j"]
 		Size: 119.6 MB (119581580 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `neo4j:5.10.0-bullseye`
+
+**does not exist** (yet?)
+
 ## `neo4j:5.10.0-community`
 
 ```console
@@ -2162,6 +2238,14 @@ CMD ["neo4j"]
 		Last Modified: Wed, 19 Jul 2023 21:54:43 GMT  
 		Size: 119.6 MB (119581580 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `neo4j:5.10.0-community-bullseye`
+
+**does not exist** (yet?)
+
+## `neo4j:5.10.0-community-ubi8`
+
+**does not exist** (yet?)
 
 ## `neo4j:5.10.0-enterprise`
 
@@ -2316,6 +2400,22 @@ CMD ["neo4j"]
 		Size: 400.6 MB (400619071 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `neo4j:5.10.0-enterprise-bullseye`
+
+**does not exist** (yet?)
+
+## `neo4j:5.10.0-enterprise-ubi8`
+
+**does not exist** (yet?)
+
+## `neo4j:5.10.0-ubi8`
+
+**does not exist** (yet?)
+
+## `neo4j:bullseye`
+
+**does not exist** (yet?)
+
 ## `neo4j:community`
 
 ```console
@@ -2468,6 +2568,14 @@ CMD ["neo4j"]
 		Last Modified: Wed, 19 Jul 2023 21:54:43 GMT  
 		Size: 119.6 MB (119581580 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `neo4j:community-bullseye`
+
+**does not exist** (yet?)
+
+## `neo4j:community-ubi8`
+
+**does not exist** (yet?)
 
 ## `neo4j:enterprise`
 
@@ -2622,6 +2730,14 @@ CMD ["neo4j"]
 		Size: 400.6 MB (400619071 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `neo4j:enterprise-bullseye`
+
+**does not exist** (yet?)
+
+## `neo4j:enterprise-ubi8`
+
+**does not exist** (yet?)
+
 ## `neo4j:latest`
 
 ```console
@@ -2774,3 +2890,7 @@ CMD ["neo4j"]
 		Last Modified: Wed, 19 Jul 2023 21:54:43 GMT  
 		Size: 119.6 MB (119581580 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `neo4j:ubi8`
+
+**does not exist** (yet?)
