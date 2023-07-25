@@ -1,3 +1,234 @@
 ## `neo4j:5-ubi8`
 
-**does not exist** (yet?)
+```console
+$ docker pull neo4j@sha256:7946884e08e39b34a17af99ef834828159533dd7b0d91594e19d15f70b7d3d8d
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 2
+	-	linux; amd64
+	-	linux; arm64 variant v8
+
+### `neo4j:5-ubi8` - linux; amd64
+
+```console
+$ docker pull neo4j@sha256:8e5e4d29e64e80fc806543ccd87fda498fbed9aa1c6417a07615dbf83c11e296
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **352.1 MB (352095310 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:c13f49191e4a173262172c1b3cd83dd380a6ed292ea97dcf03e7cb0a3d448e30`
+-	Entrypoint: `["tini","-g","--","\/startup\/docker-entrypoint.sh"]`
+-	Default Command: `["neo4j"]`
+
+```dockerfile
+# Wed, 03 May 2023 15:11:34 GMT
+ADD file:84dff5b0f84a1086a0a07b28849d08a18f2d658869173d376845a20a2cb34541 in / 
+# Wed, 03 May 2023 15:11:35 GMT
+RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
+# Wed, 03 May 2023 15:11:35 GMT
+ADD file:214c1de395c24e4a86ef9a706069ef30a9e804c63f851c37c35655e16fea3ced in /tmp/tls-ca-bundle.pem 
+# Wed, 03 May 2023 15:11:36 GMT
+ADD multi:62a5ed918ba581cb28e63a96c95a2291910a696c57ec0a22b415b43695503828 in /etc/yum.repos.d/ 
+# Wed, 03 May 2023 15:11:36 GMT
+LABEL maintainer="Red Hat, Inc."
+# Wed, 03 May 2023 15:11:36 GMT
+LABEL com.redhat.component="ubi8-minimal-container"       name="ubi8-minimal"       version="8.8"
+# Wed, 03 May 2023 15:11:36 GMT
+LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
+# Wed, 03 May 2023 15:11:36 GMT
+LABEL summary="Provides the latest release of the minimal Red Hat Universal Base Image 8."
+# Wed, 03 May 2023 15:11:36 GMT
+LABEL description="The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
+# Wed, 03 May 2023 15:11:36 GMT
+LABEL io.k8s.display-name="Red Hat Universal Base Image 8 Minimal"
+# Wed, 03 May 2023 15:11:36 GMT
+LABEL io.openshift.expose-services=""
+# Wed, 03 May 2023 15:11:36 GMT
+LABEL io.openshift.tags="minimal rhel8"
+# Wed, 03 May 2023 15:11:36 GMT
+ENV container oci
+# Wed, 03 May 2023 15:11:36 GMT
+ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Wed, 03 May 2023 15:11:36 GMT
+CMD ["/bin/bash"]
+# Wed, 03 May 2023 15:11:36 GMT
+RUN rm -rf /var/log/*
+# Wed, 03 May 2023 15:11:36 GMT
+LABEL release=860
+# Wed, 03 May 2023 15:11:37 GMT
+ADD file:13e13737bf27853f3a47e1f55b843236868d5521b05c5fed54688856d11bd33f in /root/buildinfo/content_manifests/ubi8-minimal-container-8.8-860.json 
+# Wed, 03 May 2023 15:11:37 GMT
+ADD file:fcaeea1e052139bcd93a719356f6d30b0bd66243e25ccb0a8ed0e3b2013b5804 in /root/buildinfo/Dockerfile-ubi8-minimal-8.8-860 
+# Wed, 03 May 2023 15:11:37 GMT
+LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-05-03T15:02:09" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="dee8029ddcc7ecbfbebb0905d2b15e134338616c" "io.k8s.description"="The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8-minimal/images/8.8-860"
+# Wed, 03 May 2023 15:11:38 GMT
+RUN rm -f '/etc/yum.repos.d/repo-700b5.repo' '/etc/yum.repos.d/repo-cb269.repo'
+# Wed, 03 May 2023 15:11:39 GMT
+RUN rm -f /tmp/tls-ca-bundle.pem
+# Wed, 03 May 2023 15:11:40 GMT
+RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
+# Mon, 24 Jul 2023 22:58:18 GMT
+ENV JAVA_HOME=/opt/java/openjdk
+# Mon, 24 Jul 2023 22:58:21 GMT
+COPY dir:4f02f3c240ecc691ff41263b0454f619d51a2ba11a57fe51c0e31e7ff62a9194 in /opt/java/openjdk 
+# Mon, 24 Jul 2023 22:58:29 GMT
+RUN set -eux;     arch="$(uname -m)";     case "${arch}" in         'x86_64')             tiniurl="https://github.com/krallin/tini/releases/download/v0.19.0/tini";             gosuurl="https://github.com/tianon/gosu/releases/download/1.16/gosu-amd64";             ;;         'aarch64')             tiniurl="https://github.com/krallin/tini/releases/download/v0.19.0/tini-arm64";             gosuurl="https://github.com/tianon/gosu/releases/download/1.16/gosu-arm64";             ;;         *) echo >&2 "Neo4j does not currently have a docker image for architecture $arch"; exit 1 ;;     esac;     microdnf install -y         findutils         gzip         hostname         jq         procps         shadow-utils         tar         wget         which;     wget -q ${tiniurl} -O /usr/bin/tini;     wget -q ${tiniurl}.asc -O tini.asc;     wget -q ${gosuurl} -O /usr/sbin/gosu;     wget -q  ${gosuurl}.asc -O gosu.asc;     chmod a+x /usr/bin/tini;     chmod a+x /usr/sbin/gosu;     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys         595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7         B42F6819007F00F88E364FD4036A9C25BF357DD4;     gpg --batch --verify tini.asc /usr/bin/tini;     gpg --batch --verify gosu.asc /usr/sbin/gosu;     gpgconf --kill all;     rm -rf "$GNUPGHOME" tini.asc gosu.asc;     microdnf clean all
+# Mon, 24 Jul 2023 22:58:29 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin NEO4J_SHA256=2bbf7257481874b0f4b025d0344f81fe972bba1f20fd18e3eb8840ff04ad1b33 NEO4J_TARBALL=neo4j-community-5.10.0-unix.tar.gz NEO4J_EDITION=community NEO4J_HOME=/var/lib/neo4j
+# Mon, 24 Jul 2023 22:58:29 GMT
+ARG NEO4J_URI=https://dist.neo4j.org/neo4j-community-5.10.0-unix.tar.gz
+# Mon, 24 Jul 2023 22:58:29 GMT
+COPY multi:d939a3d156891be9a8e359f0c5c2adbad24c093f1ca53494ce82d0acd2b2613d in /startup/ 
+# Mon, 24 Jul 2023 22:58:33 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-5.10.0-unix.tar.gz
+RUN set -eux;     groupadd --gid 7474 --system neo4j && useradd --uid 7474 --system --no-create-home --home "${NEO4J_HOME}" --gid neo4j neo4j;     curl --fail --silent --show-error --location --remote-name ${NEO4J_URI};     echo "${NEO4J_SHA256}  ${NEO4J_TARBALL}" | sha256sum -c --strict --quiet;     tar --extract --file ${NEO4J_TARBALL} --directory /var/lib;     mv /var/lib/neo4j-* "${NEO4J_HOME}";     rm ${NEO4J_TARBALL};     mv "${NEO4J_HOME}"/data /data;     mv "${NEO4J_HOME}"/logs /logs;     chown -R neo4j:neo4j /data;     chmod -R 777 /data;     chown -R neo4j:neo4j /logs;     chmod -R 777 /logs;     chown -R neo4j:neo4j "${NEO4J_HOME}";     chmod -R 777 "${NEO4J_HOME}";     ln -s /data "${NEO4J_HOME}"/data;     ln -s /logs "${NEO4J_HOME}"/logs;     mv /startup/neo4j-admin-report.sh "${NEO4J_HOME}"/bin/neo4j-admin-report
+# Mon, 24 Jul 2023 22:58:33 GMT
+ENV PATH=/var/lib/neo4j/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Mon, 24 Jul 2023 22:58:33 GMT
+WORKDIR /var/lib/neo4j
+# Mon, 24 Jul 2023 22:58:33 GMT
+VOLUME [/data /logs]
+# Mon, 24 Jul 2023 22:58:33 GMT
+EXPOSE 7473 7474 7687
+# Mon, 24 Jul 2023 22:58:34 GMT
+ENTRYPOINT ["tini" "-g" "--" "/startup/docker-entrypoint.sh"]
+# Mon, 24 Jul 2023 22:58:34 GMT
+CMD ["neo4j"]
+```
+
+-	Layers:
+	-	`sha256:d2b5f358ecf170222d561c3811b4d74699c0078ec14ffaa84434d303b0b3591f`  
+		Last Modified: Tue, 16 May 2023 13:59:36 GMT  
+		Size: 39.3 MB (39289044 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0321fb73e9d684d9ce813cb7a4e52fbe5b1bea68f90b2ed0e4d756d79435bc67`  
+		Last Modified: Mon, 24 Jul 2023 23:01:08 GMT  
+		Size: 192.6 MB (192580400 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2a6f0971adc65c6d55c9f03c6aaef5b607f342266ec7a46a5031c2f9c0d76d8f`  
+		Last Modified: Mon, 24 Jul 2023 23:00:55 GMT  
+		Size: 6.5 MB (6535925 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:13c2bef55be3235340974bdc13fd26e8aa0fd05a254d586fbacc09990adc1427`  
+		Last Modified: Mon, 24 Jul 2023 23:00:54 GMT  
+		Size: 9.3 KB (9350 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4fd7050958d2615303d64775f21134cd44728eab4e99664496176b4d22a767b3`  
+		Last Modified: Mon, 24 Jul 2023 23:01:00 GMT  
+		Size: 113.7 MB (113680591 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `neo4j:5-ubi8` - linux; arm64 variant v8
+
+```console
+$ docker pull neo4j@sha256:8cdd9304198e07ed554c31bdb8683729032cf5e51b2e2c6546d70fa0a7642964
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **349.1 MB (349109476 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:5ad4a881822dffac29ef234f7c7ec960aa6e1e417aa18dc06ad57e4d1a25b04b`
+-	Entrypoint: `["tini","-g","--","\/startup\/docker-entrypoint.sh"]`
+-	Default Command: `["neo4j"]`
+
+```dockerfile
+# Wed, 03 May 2023 15:11:05 GMT
+ADD file:c1449fa3fa5e28681c0d29ba138d06c93ca3be96e038d945ac7d474f9693e797 in / 
+# Wed, 03 May 2023 15:11:07 GMT
+RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
+# Wed, 03 May 2023 15:11:07 GMT
+ADD file:214c1de395c24e4a86ef9a706069ef30a9e804c63f851c37c35655e16fea3ced in /tmp/tls-ca-bundle.pem 
+# Wed, 03 May 2023 15:11:07 GMT
+ADD multi:62a5ed918ba581cb28e63a96c95a2291910a696c57ec0a22b415b43695503828 in /etc/yum.repos.d/ 
+# Wed, 03 May 2023 15:11:07 GMT
+LABEL maintainer="Red Hat, Inc."
+# Wed, 03 May 2023 15:11:07 GMT
+LABEL com.redhat.component="ubi8-minimal-container"       name="ubi8-minimal"       version="8.8"
+# Wed, 03 May 2023 15:11:07 GMT
+LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
+# Wed, 03 May 2023 15:11:07 GMT
+LABEL summary="Provides the latest release of the minimal Red Hat Universal Base Image 8."
+# Wed, 03 May 2023 15:11:07 GMT
+LABEL description="The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
+# Wed, 03 May 2023 15:11:07 GMT
+LABEL io.k8s.display-name="Red Hat Universal Base Image 8 Minimal"
+# Wed, 03 May 2023 15:11:07 GMT
+LABEL io.openshift.expose-services=""
+# Wed, 03 May 2023 15:11:07 GMT
+LABEL io.openshift.tags="minimal rhel8"
+# Wed, 03 May 2023 15:11:07 GMT
+ENV container oci
+# Wed, 03 May 2023 15:11:07 GMT
+ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Wed, 03 May 2023 15:11:07 GMT
+CMD ["/bin/bash"]
+# Wed, 03 May 2023 15:11:08 GMT
+RUN rm -rf /var/log/*
+# Wed, 03 May 2023 15:11:08 GMT
+LABEL release=860
+# Wed, 03 May 2023 15:11:08 GMT
+ADD file:a071058fca5391f210272bff5a389267bf1c9383b47b5473dff87949a9ea8630 in /root/buildinfo/content_manifests/ubi8-minimal-container-8.8-860.json 
+# Wed, 03 May 2023 15:11:08 GMT
+ADD file:777f5b26862de30ef41c6c5468c53fe0c949b0ac6f03cb717986596bd3afd6d3 in /root/buildinfo/Dockerfile-ubi8-minimal-8.8-860 
+# Wed, 03 May 2023 15:11:08 GMT
+LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-05-03T15:02:09" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="dee8029ddcc7ecbfbebb0905d2b15e134338616c" "io.k8s.description"="The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8-minimal/images/8.8-860"
+# Wed, 03 May 2023 15:11:10 GMT
+RUN rm -f '/etc/yum.repos.d/repo-700b5.repo' '/etc/yum.repos.d/repo-cb269.repo'
+# Wed, 03 May 2023 15:11:11 GMT
+RUN rm -f /tmp/tls-ca-bundle.pem
+# Wed, 03 May 2023 15:11:12 GMT
+RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
+# Mon, 24 Jul 2023 21:40:55 GMT
+ENV JAVA_HOME=/opt/java/openjdk
+# Mon, 24 Jul 2023 21:40:58 GMT
+COPY dir:1b2a87d4690d92c678e5e7380bdebd2fd0670a13533a2a897045c86dc03eb9f6 in /opt/java/openjdk 
+# Mon, 24 Jul 2023 21:41:09 GMT
+RUN set -eux;     arch="$(uname -m)";     case "${arch}" in         'x86_64')             tiniurl="https://github.com/krallin/tini/releases/download/v0.19.0/tini";             gosuurl="https://github.com/tianon/gosu/releases/download/1.16/gosu-amd64";             ;;         'aarch64')             tiniurl="https://github.com/krallin/tini/releases/download/v0.19.0/tini-arm64";             gosuurl="https://github.com/tianon/gosu/releases/download/1.16/gosu-arm64";             ;;         *) echo >&2 "Neo4j does not currently have a docker image for architecture $arch"; exit 1 ;;     esac;     microdnf install -y         findutils         gzip         hostname         jq         procps         shadow-utils         tar         wget         which;     wget -q ${tiniurl} -O /usr/bin/tini;     wget -q ${tiniurl}.asc -O tini.asc;     wget -q ${gosuurl} -O /usr/sbin/gosu;     wget -q  ${gosuurl}.asc -O gosu.asc;     chmod a+x /usr/bin/tini;     chmod a+x /usr/sbin/gosu;     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys         595E85A6B1B4779EA4DAAEC70B588DFF0527A9B7         B42F6819007F00F88E364FD4036A9C25BF357DD4;     gpg --batch --verify tini.asc /usr/bin/tini;     gpg --batch --verify gosu.asc /usr/sbin/gosu;     gpgconf --kill all;     rm -rf "$GNUPGHOME" tini.asc gosu.asc;     microdnf clean all
+# Mon, 24 Jul 2023 21:41:09 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin NEO4J_SHA256=2bbf7257481874b0f4b025d0344f81fe972bba1f20fd18e3eb8840ff04ad1b33 NEO4J_TARBALL=neo4j-community-5.10.0-unix.tar.gz NEO4J_EDITION=community NEO4J_HOME=/var/lib/neo4j
+# Mon, 24 Jul 2023 21:41:09 GMT
+ARG NEO4J_URI=https://dist.neo4j.org/neo4j-community-5.10.0-unix.tar.gz
+# Mon, 24 Jul 2023 21:41:09 GMT
+COPY multi:d939a3d156891be9a8e359f0c5c2adbad24c093f1ca53494ce82d0acd2b2613d in /startup/ 
+# Mon, 24 Jul 2023 21:41:12 GMT
+# ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-5.10.0-unix.tar.gz
+RUN set -eux;     groupadd --gid 7474 --system neo4j && useradd --uid 7474 --system --no-create-home --home "${NEO4J_HOME}" --gid neo4j neo4j;     curl --fail --silent --show-error --location --remote-name ${NEO4J_URI};     echo "${NEO4J_SHA256}  ${NEO4J_TARBALL}" | sha256sum -c --strict --quiet;     tar --extract --file ${NEO4J_TARBALL} --directory /var/lib;     mv /var/lib/neo4j-* "${NEO4J_HOME}";     rm ${NEO4J_TARBALL};     mv "${NEO4J_HOME}"/data /data;     mv "${NEO4J_HOME}"/logs /logs;     chown -R neo4j:neo4j /data;     chmod -R 777 /data;     chown -R neo4j:neo4j /logs;     chmod -R 777 /logs;     chown -R neo4j:neo4j "${NEO4J_HOME}";     chmod -R 777 "${NEO4J_HOME}";     ln -s /data "${NEO4J_HOME}"/data;     ln -s /logs "${NEO4J_HOME}"/logs;     mv /startup/neo4j-admin-report.sh "${NEO4J_HOME}"/bin/neo4j-admin-report
+# Mon, 24 Jul 2023 21:41:13 GMT
+ENV PATH=/var/lib/neo4j/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Mon, 24 Jul 2023 21:41:13 GMT
+WORKDIR /var/lib/neo4j
+# Mon, 24 Jul 2023 21:41:13 GMT
+VOLUME [/data /logs]
+# Mon, 24 Jul 2023 21:41:13 GMT
+EXPOSE 7473 7474 7687
+# Mon, 24 Jul 2023 21:41:13 GMT
+ENTRYPOINT ["tini" "-g" "--" "/startup/docker-entrypoint.sh"]
+# Mon, 24 Jul 2023 21:41:13 GMT
+CMD ["neo4j"]
+```
+
+-	Layers:
+	-	`sha256:b964235f9f3052ef964da88e3540367964bd517e4c985fcdc8a6b705c48326ed`  
+		Last Modified: Tue, 16 May 2023 16:09:53 GMT  
+		Size: 37.5 MB (37531440 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:1d02ee36d4d5d9ec3dde506054f6fa568850c84eb3006a7307d02eb15e7f3df4`  
+		Last Modified: Mon, 24 Jul 2023 21:43:29 GMT  
+		Size: 191.4 MB (191387729 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:bf11d7b672341d9131cf33182764604ed40eb23f62b68706766379e05d47920b`  
+		Last Modified: Mon, 24 Jul 2023 21:43:18 GMT  
+		Size: 6.5 MB (6500304 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:36c5d4405d0f7f1ed74f7c3cb22b9f819777fb922e6559a534c8e19f7b889730`  
+		Last Modified: Mon, 24 Jul 2023 21:43:17 GMT  
+		Size: 9.4 KB (9351 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:7950f9f4eea832d14a7c77e09ebeca45f335ba9b2dbe3c331eb73821cd8b9ecc`  
+		Last Modified: Mon, 24 Jul 2023 21:43:22 GMT  
+		Size: 113.7 MB (113680652 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
