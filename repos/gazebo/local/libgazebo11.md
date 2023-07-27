@@ -5258,14 +5258,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.4.0-153.170
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-153.170.dsc' linux_5.4.0-153.170.dsc 7067 SHA512:69d7e2074fffb6875a195880d0cadc47d3c82a1b3bd44431b3c72beb93d45fa075de7f9a4d58e4e2603ad2d7d6806ebdd1b28d152d251e835c106329a13798aa
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-153.170.diff.gz' linux_5.4.0-153.170.diff.gz 10758203 SHA512:f294970976c4a34d748ed30354650d8337119e1d72b49e5db804d3dc2414bf9ce4ba0f06080f7ec0f041c1b38c23a2dac31835ecf7f30f2ef895e627af6b3eae
-```
 
 ### `dpkg` source package: `llvm-toolchain-12=1:12.0.0-3ubuntu1~20.04.5`
 
@@ -5610,9 +5605,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris mysql-8.0=8.0.33-0ubuntu0.20.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.33-0ubuntu0.20.04.2.dsc' mysql-8.0_8.0.33-0ubuntu0.20.04.2.dsc 3497 SHA512:e66bb82f3fb7a8eb0ce2981bf74511d5f22c1181b110e2d3697a1742ed073c1804901abc4efbb2c5f519970aeec5f94e9e550bcda5c2569983f713b4882b2aa4
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.33.orig.tar.gz' mysql-8.0_8.0.33.orig.tar.gz 438065679 SHA512:47f76819004c7c545d1b0b6b6646d8816899976f92d35c5564b1255b144b597ff7d3e674c721a45bcbb13cc0da3f4474fb29221c0e21d2ff91a1892cd42c636c
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.33-0ubuntu0.20.04.2.debian.tar.xz' mysql-8.0_8.0.33-0ubuntu0.20.04.2.debian.tar.xz 165572 SHA512:93031af62706324d6c8d99e33b0b286ff3f395c269ec915b2673282890c26ceaba22ec3b705a1a303bfbdfbaaed3c122ce96c70a1eeef591cfc47ea9ac5457de
+'http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.33-0ubuntu0.20.04.2.dsc' mysql-8.0_8.0.33-0ubuntu0.20.04.2.dsc 3497 SHA512:e66bb82f3fb7a8eb0ce2981bf74511d5f22c1181b110e2d3697a1742ed073c1804901abc4efbb2c5f519970aeec5f94e9e550bcda5c2569983f713b4882b2aa4
+'http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.33.orig.tar.gz' mysql-8.0_8.0.33.orig.tar.gz 438065679 SHA512:47f76819004c7c545d1b0b6b6646d8816899976f92d35c5564b1255b144b597ff7d3e674c721a45bcbb13cc0da3f4474fb29221c0e21d2ff91a1892cd42c636c
+'http://security.ubuntu.com/ubuntu/pool/main/m/mysql-8.0/mysql-8.0_8.0.33-0ubuntu0.20.04.2.debian.tar.xz' mysql-8.0_8.0.33-0ubuntu0.20.04.2.debian.tar.xz 165572 SHA512:93031af62706324d6c8d99e33b0b286ff3f395c269ec915b2673282890c26ceaba22ec3b705a1a303bfbdfbaaed3c122ce96c70a1eeef591cfc47ea9ac5457de
 ```
 
 ### `dpkg` source package: `mysql-defaults=1.0.5ubuntu2`
@@ -6152,14 +6147,9 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 - `Powell-BSD-style`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssh=1:8.2p1-4ubuntu0.7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.7.dsc' openssh_8.2p1-4ubuntu0.7.dsc 3098 SHA512:dc99606beb93298a6b63c0700756af20231d23268e6e542bf09929e096c9b5a1d7470dab5e84370fce59756418006650a05465bfd5f81144081c7718402fc14f
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1.orig.tar.gz' openssh_8.2p1.orig.tar.gz 1701197 SHA512:c4db64e52a3a4c410de9de49f9cb104dd493b10250af3599b92457dd986277b3fd99a6f51cec94892fd1be5bd0369c5757262ea7805f0de464b245c3d34c120a
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.7.debian.tar.xz' openssh_8.2p1-4ubuntu0.7.debian.tar.xz 177848 SHA512:9826b2f0c5262349d22cabdbb0745821fb0e44e85a50638f017749cdd9cc247edda3f48dc2214bde265ff3a4e5e273f5fc057073232408425f5d722ab4caf355
-```
 
 ### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.19`
 
