@@ -1,10 +1,10 @@
-# `eclipse-temurin:11.0.19_7-jre-focal`
+# `eclipse-temurin:11.0.20_8-jre-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d9db51b5dcae6fd4ceea4280afe1e0f495052b42ee1908f178537d2198ba94a2`
-- Created: `2023-07-04T20:35:28.042186546Z`
-- Virtual Size: ~ 256.64 Mb  
+- Image ID: `sha256:db4156bc8024ea93e426a1a3bc5a6ea3296c67b7f1fd0b3b8323a171bcade3a9`
+- Created: `2023-07-26T00:54:24.168162096Z`
+- Virtual Size: ~ 257.05 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.19+7`
+  - `JAVA_VERSION=jdk-11.0.20+8`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=20.04`

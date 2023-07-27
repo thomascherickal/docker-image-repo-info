@@ -1,10 +1,10 @@
-# `eclipse-temurin:11.0.19_7-jre-jammy`
+# `eclipse-temurin:11.0.20_8-jre-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:651d2ea6463c0ef8824cfd7151dbb12ae22af65c7d2fa9acc969dc45e6b278b7`
-- Created: `2023-07-04T20:35:35.345406024Z`
-- Virtual Size: ~ 252.29 Mb  
+- Image ID: `sha256:869eee3db00a3cf41f5851544d8fc67e11e55ce84801d10d346acf16f3e67571`
+- Created: `2023-07-26T00:54:32.103940775Z`
+- Virtual Size: ~ 252.70 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.19+7`
+  - `JAVA_VERSION=jdk-11.0.20+8`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=22.04`
@@ -1451,14 +1451,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.5.14+dfsg-0ubuntu0.22.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.14%2bdfsg-0ubuntu0.22.04.2.dsc' openldap_2.5.14+dfsg-0ubuntu0.22.04.2.dsc 3319 SHA512:fabc88df8932e495a3401b2d34f142b0faf4f0c2004ea4c4af8a72088737dd803bd1586c6bd4a9cf02e2a88e724193750c6f011807f201bb069354f7f84b3306
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.14%2bdfsg.orig.tar.gz' openldap_2.5.14+dfsg.orig.tar.gz 5622405 SHA512:9dd020503317ec291a9a32ca4333dd6b31f3253d01e18485a02efe5ac02a778003565db751294df414a381cb4dab269572958ea092ea5ddd5c7570764b735bd7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.14%2bdfsg-0ubuntu0.22.04.2.debian.tar.xz' openldap_2.5.14+dfsg-0ubuntu0.22.04.2.debian.tar.xz 171824 SHA512:5a1b0ebc09d91c5a0cd8e851bf57522d1528d2cecdf5882dc8cb3b8b82181b52e02dc34e0c52cdaf2468e00716e6994a1d41c5561a9871fc37a5db68d5d5d84b
-```
 
 ### `dpkg` source package: `openssl=3.0.2-0ubuntu1.10`
 
