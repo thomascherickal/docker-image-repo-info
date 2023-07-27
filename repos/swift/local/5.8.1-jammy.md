@@ -2039,14 +2039,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.15.0-76.83
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-76.83.dsc' linux_5.15.0-76.83.dsc 7374 SHA512:1c7094705352525e04163b28cc78079da190063bf4717d922d58d692db5e1d946fa4633ea62c085d2f286387d2306b73ad50e357d97ce3d2045a6956b9936fff
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-76.83.diff.gz' linux_5.15.0-76.83.diff.gz 9848570 SHA512:9adac0d447fcf53120d1d7c271af1c6644a75d24e14392907136ba5b87d48727f7bd39c6c3cad55313ba535f178936b34525518c382b768d3d099cff35125c66
-```
 
 ### `dpkg` source package: `llvm-toolchain-13=1:13.0.1-2ubuntu2.1`
 
@@ -2334,14 +2329,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.5.14+dfsg-0ubuntu0.22.04.2
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.14%2bdfsg-0ubuntu0.22.04.2.dsc' openldap_2.5.14+dfsg-0ubuntu0.22.04.2.dsc 3319 SHA512:fabc88df8932e495a3401b2d34f142b0faf4f0c2004ea4c4af8a72088737dd803bd1586c6bd4a9cf02e2a88e724193750c6f011807f201bb069354f7f84b3306
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.14%2bdfsg.orig.tar.gz' openldap_2.5.14+dfsg.orig.tar.gz 5622405 SHA512:9dd020503317ec291a9a32ca4333dd6b31f3253d01e18485a02efe5ac02a778003565db751294df414a381cb4dab269572958ea092ea5ddd5c7570764b735bd7
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.14%2bdfsg-0ubuntu0.22.04.2.debian.tar.xz' openldap_2.5.14+dfsg-0ubuntu0.22.04.2.debian.tar.xz 171824 SHA512:5a1b0ebc09d91c5a0cd8e851bf57522d1528d2cecdf5882dc8cb3b8b82181b52e02dc34e0c52cdaf2468e00716e6994a1d41c5561a9871fc37a5db68d5d5d84b
-```
 
 ### `dpkg` source package: `openssh=1:8.9p1-3ubuntu0.1`
 
@@ -2359,14 +2349,9 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 - `Powell-BSD-style`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssh=1:8.9p1-3ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.9p1-3ubuntu0.1.dsc' openssh_8.9p1-3ubuntu0.1.dsc 3103 SHA512:309da8400838e6eba4a3c042df328f00535ae39ac175be3acf685b06942dd0a536d36a60e6e19459fef0a1c0181d9b7420ea519c1e9be27328f0deb7c9ebebe8
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.9p1.orig.tar.gz' openssh_8.9p1.orig.tar.gz 1820282 SHA512:04bd38ea6fe4be31acc8c4e83de7d3dda66fb7207be2e4ba25d3b8118d13d098a283769da9e8ce1fc4fba7edf739c14efcc6c9137132919261a7f882314b0f6b
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.9p1-3ubuntu0.1.debian.tar.xz' openssh_8.9p1-3ubuntu0.1.debian.tar.xz 189828 SHA512:010de7412829977b2f0fa45a7ca8731c366bb93524db640296931f57511b08c9a3137cd369c0bcb23d085492537627d9f04ac33d605d4041b699b6c2d4b11145
-```
 
 ### `dpkg` source package: `openssl=3.0.2-0ubuntu1.10`
 
