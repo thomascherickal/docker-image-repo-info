@@ -1,7 +1,7 @@
 ## `rakudo-star:latest`
 
 ```console
-$ docker pull rakudo-star@sha256:7cdf611107cbcd1eb00be6335e6de238acd5dab906ac912fe607bbbb3b64e89b
+$ docker pull rakudo-star@sha256:2a342d2a152672834065b9211c363e1714f7593cf758c0c531c01d98d2fa4f93
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,61 +12,61 @@ $ docker pull rakudo-star@sha256:7cdf611107cbcd1eb00be6335e6de238acd5dab906ac912
 ### `rakudo-star:latest` - linux; amd64
 
 ```console
-$ docker pull rakudo-star@sha256:8a8a1d379ed02e5c23ed1adbcc72bf3071bb2f8662bef87d05e088d9686becec
+$ docker pull rakudo-star@sha256:74d4931f380eb64b9d379c7fc7087cc85b0742e343f42c5462f005a62191d91f
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **175.9 MB (175855025 bytes)**  
+-	Total Size: **176.1 MB (176120788 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d10bd9481b5feb1fc8c4f214baed4556b40d1a6a6605051202682edbfeea88ca`
+-	Image ID: `sha256:68511a29e5f8d336661fac3adc6a70b02fedbee0c5081edd8077954ac72e6393`
 -	Default Command: `["raku"]`
 
 ```dockerfile
-# Tue, 04 Jul 2023 01:19:44 GMT
-ADD file:5d17ca085473e890bd6eca4abf6d324c3181f80692523b83ef25d1c42576b99f in / 
-# Tue, 04 Jul 2023 01:19:44 GMT
+# Thu, 27 Jul 2023 23:24:29 GMT
+ADD file:cc1376ecb3d9e93e4160573c110da753ffeb2efe2223351f1fbf483d89f1a756 in / 
+# Thu, 27 Jul 2023 23:24:30 GMT
 CMD ["bash"]
-# Tue, 04 Jul 2023 03:27:59 GMT
+# Fri, 28 Jul 2023 03:00:41 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 		netbase 		sq 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Tue, 04 Jul 2023 03:28:22 GMT
+# Fri, 28 Jul 2023 03:01:00 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Wed, 12 Jul 2023 19:38:13 GMT
+# Fri, 28 Jul 2023 21:42:31 GMT
 MAINTAINER Rob Hoelz
-# Wed, 12 Jul 2023 19:38:13 GMT
+# Fri, 28 Jul 2023 21:42:32 GMT
 RUN groupadd -r raku && useradd -m -r -g raku raku
-# Wed, 12 Jul 2023 19:38:14 GMT
+# Fri, 28 Jul 2023 21:42:32 GMT
 ARG rakudo_version=2023.06-01
-# Wed, 12 Jul 2023 19:38:14 GMT
+# Fri, 28 Jul 2023 21:42:32 GMT
 ENV rakudo_version=2023.06-01
-# Wed, 12 Jul 2023 19:59:15 GMT
+# Fri, 28 Jul 2023 22:02:19 GMT
 RUN buildDeps='         gcc         libc6-dev         make     '         url="https://rakudo.org/dl/star/rakudo-star-${rakudo_version}.tar.gz"     keyfp="3E7E3C6EAF916676AC549285A2919382E961E2EE"     pubkeyurl="https://rakudo.org/keys/rakudo_github_automation-${keyfp}.asc"     tmpdir="$(mktemp -d)"     && set -eux     && export GNUPGHOME="$tmpdir/gnupg"     && mkdir $GNUPGHOME     && apt-get update     && apt-get install -y --no-install-recommends $buildDeps     && rm -rf /var/lib/apt/lists/*     && mkdir ${tmpdir}/rakudo         && curl -fsSL ${url}.asc -o ${tmpdir}/rakudo.tar.gz.asc     && curl -fsSL $url -o ${tmpdir}/rakudo.tar.gz     && curl -fsSL $pubkeyurl -o ${tmpdir}/key.asc         && gpg --batch --import ${tmpdir}/key.asc     && gpg --batch --export $keyfp > ${tmpdir}/${keyfp}.asc     && rm -rf $GNUPGHOME     && mkdir $GNUPGHOME     && gpg --batch --import ${tmpdir}/${keyfp}.asc     && gpg --batch --verify ${tmpdir}/rakudo.tar.gz.asc ${tmpdir}/rakudo.tar.gz         && tar xzf ${tmpdir}/rakudo.tar.gz --strip-components=1 -C ${tmpdir}/rakudo     && (         cd ${tmpdir}/rakudo         && bash bin/rstar install -p /usr     )     && rm -rf $tmpdir     && apt-get purge -y --auto-remove $buildDeps
-# Wed, 12 Jul 2023 19:59:16 GMT
+# Fri, 28 Jul 2023 22:02:19 GMT
 ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/perl6/core/bin:/usr/share/perl6/site/bin:/usr/share/perl6/vendor/bin
-# Wed, 12 Jul 2023 19:59:16 GMT
+# Fri, 28 Jul 2023 22:02:19 GMT
 CMD ["raku"]
 ```
 
 -	Layers:
-	-	`sha256:d52e4f012db158bb7c0fe215b98af1facaddcbaee530efd69b1bae07d597b711`  
-		Last Modified: Tue, 04 Jul 2023 01:24:39 GMT  
-		Size: 49.6 MB (49551432 bytes)  
+	-	`sha256:785ef8b9b236a5f027f33cae77513051704c0538bff455ff5548105c954c3b1c`  
+		Last Modified: Thu, 27 Jul 2023 23:29:02 GMT  
+		Size: 49.6 MB (49557354 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7dd206bea61ff3e3b54be1c20b58d8475ddd6f89df176146ddb7a2fd2c747ea2`  
-		Last Modified: Tue, 04 Jul 2023 03:51:23 GMT  
-		Size: 24.0 MB (24030593 bytes)  
+	-	`sha256:5a6dad8f55ae6c733e986316bd08205c8b2c41640bf8d08ff6e9bbcb6884304f`  
+		Last Modified: Fri, 28 Jul 2023 03:07:18 GMT  
+		Size: 24.0 MB (24030539 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2320f9be4a9c605d1ac847cf67cec42b91484a7cf7c94996417a0c7c316deadc`  
-		Last Modified: Tue, 04 Jul 2023 03:51:42 GMT  
-		Size: 64.1 MB (64111613 bytes)  
+	-	`sha256:bd36c7bfe5f4bdffcc0bbb74b0fb38feb35c286ea58b5992617fb38b0c933603`  
+		Last Modified: Fri, 28 Jul 2023 03:07:36 GMT  
+		Size: 64.1 MB (64112293 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b8b96bee4d756827d68ca06a166ee54ec1255e55561df01787c6fdd27d0b6630`  
-		Last Modified: Wed, 12 Jul 2023 20:21:09 GMT  
+	-	`sha256:6bd5608fbdf95e72d06e0719469866b09a6cd4a132923fd3b7226e5adb7cd771`  
+		Last Modified: Fri, 28 Jul 2023 22:02:36 GMT  
 		Size: 3.3 KB (3290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0c2bc9a814c0296a63acc0c1dd1308a812ab3b018aef2ec6aa5c402cb2ca963c`  
-		Last Modified: Wed, 12 Jul 2023 20:21:16 GMT  
-		Size: 38.2 MB (38158097 bytes)  
+	-	`sha256:77cbbddde57b925ace9ee9a5fc52c5a463dfb9d1e844066009583285bba1fa21`  
+		Last Modified: Fri, 28 Jul 2023 22:02:42 GMT  
+		Size: 38.4 MB (38417312 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `rakudo-star:latest` - linux; arm64 variant v8
