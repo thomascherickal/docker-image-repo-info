@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e2d22af6f68892edd104247abfbefc8a913b842e87e2a9a49ad88019cbf56865`
-- Created: `2023-06-20T20:20:41.808857801Z`
-- Virtual Size: ~ 505.54 Mb  
+- Image ID: `sha256:d05f649ab7650de1625c20295e63d221cdc94b1432dd97c24b31d2868187ee43`
+- Created: `2023-07-26T23:20:08.882045938Z`
+- Virtual Size: ~ 509.94 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
 - Command: `["arangod"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `ARANGO_VERSION=3.11.1`
+  - `ARANGO_VERSION=3.11.2`
   - `GLIBCXX_FORCE_NEW=1`
 
 ## `apk` (`.apk`-based packages)
@@ -342,16 +342,16 @@ MIT BSD GPL2+
 ### `apk` package: `nghttp2-libs`
 
 ```console
-nghttp2-libs-1.47.0-r0 description:
+nghttp2-libs-1.47.0-r1 description:
 Experimental HTTP/2 client, server and proxy (libraries)
 
-nghttp2-libs-1.47.0-r0 webpage:
+nghttp2-libs-1.47.0-r1 webpage:
 https://nghttp2.org
 
-nghttp2-libs-1.47.0-r0 installed size:
+nghttp2-libs-1.47.0-r1 installed size:
 156 KiB
 
-nghttp2-libs-1.47.0-r0 license:
+nghttp2-libs-1.47.0-r1 license:
 MIT
 
 ```
@@ -359,16 +359,16 @@ MIT
 ### `apk` package: `nodejs`
 
 ```console
-nodejs-16.20.0-r0 description:
+nodejs-16.20.1-r0 description:
 JavaScript runtime built on V8 engine - LTS version
 
-nodejs-16.20.0-r0 webpage:
+nodejs-16.20.1-r0 webpage:
 https://nodejs.org/
 
-nodejs-16.20.0-r0 installed size:
+nodejs-16.20.1-r0 installed size:
 32 MiB
 
-nodejs-16.20.0-r0 license:
+nodejs-16.20.1-r0 license:
 MIT
 
 ```
