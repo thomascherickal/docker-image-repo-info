@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:13e000a2c698828f387b1fb93aac03975c54d5fe31e1becb100006645f4b6521`
-- Created: `2023-07-05T06:48:47.892857808Z`
+- Image ID: `sha256:ea6554cf2c13ce318c576e0282575da9e21cd79e4333cc4dc2f65fb1ed0b8b6b`
+- Created: `2023-07-29T01:28:55.309602395Z`
 - Virtual Size: ~ 565.96 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -3040,11 +3040,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.179-1`
+### `dpkg` source package: `linux=5.10.179-2`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.179-1`
+- `linux-libc-dev:amd64=5.10.179-2`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3057,13 +3057,20 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `X11`
 - `Xen-interface`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris linux=5.10.179-2
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.179-2.dsc' linux_5.10.179-2.dsc 197238 SHA256:312e7344c5ecd4047f2d050f0c7b3e2054acccaecaacb7b81420d0d13e172e0c
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.179.orig.tar.xz' linux_5.10.179.orig.tar.xz 121881852 SHA256:254d0375733a423efd8b364b9c33c88034dec85a76e2cba1093c54a667a74dbd
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.179-2.debian.tar.xz' linux_5.10.179-2.debian.tar.xz 3807820 SHA256:e187b502efdcd8f85ea203739f2d5002d54b9a0d6d2bdfeaf7677102dd68c603
+```
 
-- http://snapshot.debian.org/package/linux/5.10.179-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/linux/5.10.179-2/ (for browsing the source)
+- https://sources.debian.net/src/linux/5.10.179-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/5.10.179-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
