@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d161e060ac91d28e298369cc018f3e12b6f79baa06957cc4bb042525b2999a04`
-- Created: `2023-07-19T01:07:02.940709436Z`
-- Virtual Size: ~ 480.56 Mb  
+- Image ID: `sha256:4aa9673daaa13f4435502264149a4a9854725c76c98b6a7d8c7d96b4e15dd3f6`
+- Created: `2023-07-26T20:50:24.738079282Z`
+- Virtual Size: ~ 478.07 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -491,15 +491,15 @@ $ dnf --quiet download --source --url libblkid-2.30.2-2.amzn2.0.11
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/c7c43bb10d4100f9580a69349277657c6f44557b61f4305c5462d31f8895ad03/../../../../../blobstore/c3d8b01e2190e686623eb8551a13a4a33cc08e086036e951fe5ed1b99c7b2b8e/util-linux-2.30.2-2.amzn2.0.11.src.rpm
 ```
 
-### `rpm` package: `libcap-2.54-1.amzn2.0.1.x86_64`
+### `rpm` package: `libcap-2.54-1.amzn2.0.2.x86_64`
 
 Licenses (from `rpm --query`): BSD or GPLv2
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libcap-2.54-1.amzn2.0.1
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/c7c43bb10d4100f9580a69349277657c6f44557b61f4305c5462d31f8895ad03/../../../../../blobstore/9506a32eb696ab4f98e895d6b89a80ab76cf7674eb2eba3221e10ace4844b77e/libcap-2.54-1.amzn2.0.1.src.rpm
+$ dnf --quiet download --source --url libcap-2.54-1.amzn2.0.2
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/c7c43bb10d4100f9580a69349277657c6f44557b61f4305c5462d31f8895ad03/../../../../../blobstore/ab5e39e42f4b1dd512a49eb9ca2c71cebf3647d3f63d147f5b20e7229596ba54/libcap-2.54-1.amzn2.0.2.src.rpm
 ```
 
 ### `rpm` package: `libcap-ng-0.7.5-4.amzn2.0.4.x86_64`
