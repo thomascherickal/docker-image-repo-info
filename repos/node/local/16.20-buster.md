@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:81c6e5ef93fcc0f603ac62cb5b8fbda4575af20f5003d5da1d229b54d02d97c4`
-- Created: `2023-07-04T17:37:42.007003494Z`
-- Virtual Size: ~ 908.75 Mb  
+- Image ID: `sha256:a21a68db680698eb1a863e229f81f70975f7ff6231e4d3ae755cf82f77bbac67`
+- Created: `2023-07-28T22:06:46.142097186Z`
+- Virtual Size: ~ 908.81 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -695,11 +695,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/debconf/1.5.71+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/debconf/1.5.71+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `debian-archive-keyring=2019.1+deb10u1`
+### `dpkg` source package: `debian-archive-keyring=2019.1+deb10u2`
 
 Binary Packages:
 
-- `debian-archive-keyring=2019.1+deb10u1`
+- `debian-archive-keyring=2019.1+deb10u2`
 
 Licenses: (parsed from: `/usr/share/doc/debian-archive-keyring/copyright`)
 
@@ -708,16 +708,16 @@ Licenses: (parsed from: `/usr/share/doc/debian-archive-keyring/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris debian-archive-keyring=2019.1+deb10u1
-'http://deb.debian.org/debian/pool/main/d/debian-archive-keyring/debian-archive-keyring_2019.1%2bdeb10u1.dsc' debian-archive-keyring_2019.1+deb10u1.dsc 1878 SHA256:5e331767f3b49a6da251e0723604ac953496536965dfddc1d527d23d028f0de0
-'http://deb.debian.org/debian/pool/main/d/debian-archive-keyring/debian-archive-keyring_2019.1%2bdeb10u1.tar.xz' debian-archive-keyring_2019.1+deb10u1.tar.xz 149144 SHA256:ffb63bc54d67f3d9125ebbb7298fdf3be1d18a6df1816d5ae96f1cf0f141eb39
+$ apt-get source -qq --print-uris debian-archive-keyring=2019.1+deb10u2
+'http://deb.debian.org/debian-security/pool/updates/main/d/debian-archive-keyring/debian-archive-keyring_2019.1%2bdeb10u2.dsc' debian-archive-keyring_2019.1+deb10u2.dsc 1907 SHA256:7acc7d3add782c639e12c451a6784ddfd389b155a723c4ab5158eea9f79108cf
+'http://deb.debian.org/debian-security/pool/updates/main/d/debian-archive-keyring/debian-archive-keyring_2019.1%2bdeb10u2.tar.xz' debian-archive-keyring_2019.1+deb10u2.tar.xz 274312 SHA256:1e9f3d32f25962aeec3753d8d663bd7513dfcf31316216cfb7c007c09004eb44
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/debian-archive-keyring/2019.1+deb10u1/ (for browsing the source)
-- https://sources.debian.net/src/debian-archive-keyring/2019.1+deb10u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debian-archive-keyring/2019.1+deb10u1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/debian-archive-keyring/2019.1+deb10u2/ (for browsing the source)
+- https://sources.debian.net/src/debian-archive-keyring/2019.1+deb10u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/debian-archive-keyring/2019.1+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debianutils=4.8.6.1`
 
@@ -3462,11 +3462,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.3.8+dfsg-3+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.3.8+dfsg-3+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=4.19.282-1`
+### `dpkg` source package: `linux=4.19.289-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=4.19.282-1`
+- `linux-libc-dev:amd64=4.19.289-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3481,17 +3481,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=4.19.282-1
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.282-1.dsc' linux_4.19.282-1.dsc 191175 SHA256:bbeb315958c6f263ab2cca7a1d94e20e692fead32b5af29cba65761285bb04b2
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.282.orig.tar.xz' linux_4.19.282.orig.tar.xz 107691628 SHA256:854ad29b296cd876d19c13977680207f0ae93d2d4ee09296afe0a7190debf960
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.282-1.debian.tar.xz' linux_4.19.282-1.debian.tar.xz 1583640 SHA256:36a21bf9e36271d546ca21cdf553432d518c852e6f9a11f356b1cc0572b364bc
+$ apt-get source -qq --print-uris linux=4.19.289-1
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.289-1.dsc' linux_4.19.289-1.dsc 191175 SHA256:815e3d4d78fa0f24f3ddea073d43a0dc09d12b8fe63b17d3bf2293a3076648c6
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.289.orig.tar.xz' linux_4.19.289.orig.tar.xz 107654512 SHA256:8ce9eda34863c308c12b0b1025d87efb2ea7267f6fd920eaea2a41e0beed4db5
+'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_4.19.289-1.debian.tar.xz' linux_4.19.289-1.debian.tar.xz 1589484 SHA256:9bc62a0ced6133de33d5fcda3a8e02e028edf9e4a08dbc31a9aa8a2fa7a9991f
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/4.19.282-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/4.19.282-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/4.19.282-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/4.19.289-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/4.19.289-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/4.19.289-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=10.2019051400`
 
