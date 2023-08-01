@@ -1,7 +1,7 @@
 ## `eclipse-temurin:8-jre-ubi9-minimal`
 
 ```console
-$ docker pull eclipse-temurin@sha256:1414e18e85621575a5b58ec8dd38bea07e4852e9c6744cf09fd729bb5ee1c82d
+$ docker pull eclipse-temurin@sha256:ee7c6381a89578793766be14ac9a83143dcfda9e3184c8fccd46442aa40597b2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13,14 +13,14 @@ $ docker pull eclipse-temurin@sha256:1414e18e85621575a5b58ec8dd38bea07e4852e9c67
 ### `eclipse-temurin:8-jre-ubi9-minimal` - linux; amd64
 
 ```console
-$ docker pull eclipse-temurin@sha256:40a0c1cbbf75b98068c85e55cd851693076a783968deabd67a961d30754cb67e
+$ docker pull eclipse-temurin@sha256:01975d0822757098ed15e97ef5f9dfbb986aebc8a6473117e0a71cf03cfa5847
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **107.5 MB (107532074 bytes)**  
+-	Total Size: **107.5 MB (107543319 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7c2b6a010c6e504715d50a574bfac0bf7ff3c007991979f399d1585983b78ddf`
+-	Image ID: `sha256:b7e3455b672e8d558327ad45ae571e036e61019fa5890216ba1261d27b2a589e`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -78,11 +78,11 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Thu, 22 Jun 2023 01:08:25 GMT
 RUN microdnf install -y binutils tzdata openssl wget ca-certificates fontconfig glibc-langpack-en gzip tar     && microdnf clean all
-# Thu, 22 Jun 2023 01:08:25 GMT
-ENV JAVA_VERSION=jdk8u372-b07
-# Thu, 22 Jun 2023 01:08:48 GMT
-RUN set -eux;     ARCH="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')";     case "${ARCH}" in        aarch64|arm64)          ESUM='f8e440273c8feb3fcfaca88ba18fec291deae18a548adde8a37cd1db08107b95';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_aarch64_linux_hotspot_8u372b07.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='ba5f8141a16722e39576bf42b69d2b8ebf95fc2c05441e3200f609af4dd9f1ea';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_ppc64le_linux_hotspot_8u372b07.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b6fdfe32085a884c11b31f66aa67ac62811df7112fb6fb08beea61376a86fbb4';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_x64_linux_hotspot_8u372b07.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;
-# Thu, 22 Jun 2023 01:08:49 GMT
+# Tue, 01 Aug 2023 21:21:04 GMT
+ENV JAVA_VERSION=jdk8u382-b05
+# Tue, 01 Aug 2023 21:21:43 GMT
+RUN set -eux;     ARCH="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')";     case "${ARCH}" in        aarch64|arm64)          ESUM='8cf329aa76d5b6abe35dd94e5087d9d14993fa13b43bbaed3b26bda4c57162c4';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jre_aarch64_linux_hotspot_8u382b05.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='8f0706f16373078e46666a6035325792584cd565b4cc5a793a37312599f3af0b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jre_ppc64le_linux_hotspot_8u382b05.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1fad165cc243e8db1b9cf226134acdfe3dc5919cd98c5fd9210de3cf9edeabd7';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jre_x64_linux_hotspot_8u382b05.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;
+# Tue, 01 Aug 2023 21:21:44 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
 ```
 
@@ -95,26 +95,26 @@ RUN echo Verifying install ...     && echo java -version && java -version     &&
 		Last Modified: Thu, 22 Jun 2023 01:11:48 GMT  
 		Size: 27.9 MB (27864943 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4915738d3ef90c1e0fbf272733651cb0b8524fc1cbc5091c283421259bbb6c8d`  
-		Last Modified: Thu, 22 Jun 2023 01:12:06 GMT  
-		Size: 41.8 MB (41833810 bytes)  
+	-	`sha256:7b04740d0a98c63f1493fc7cc12af64a5ed8f9901f4231bd0b79e9c577b3979f`  
+		Last Modified: Tue, 01 Aug 2023 21:26:52 GMT  
+		Size: 41.8 MB (41845053 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:21cc089ec89f3133b30d47a246268241efd16a39434de884504a83ba833c859c`  
-		Last Modified: Thu, 22 Jun 2023 01:12:01 GMT  
-		Size: 160.0 B  
+	-	`sha256:0aa48e928076d33eaaf2a56612275ebad916a155f6b591dc698586be50cfa529`  
+		Last Modified: Tue, 01 Aug 2023 21:26:46 GMT  
+		Size: 162.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `eclipse-temurin:8-jre-ubi9-minimal` - linux; arm64 variant v8
 
 ```console
-$ docker pull eclipse-temurin@sha256:f6bf7405dfe3cd734593b5ae66ba415fafaf215fb3e0b7945abbaeb21933aef7
+$ docker pull eclipse-temurin@sha256:548deaa26ff89cfd0eb649f459f152ed36a778083b4a33eda112c4cd66bbe963
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **105.3 MB (105250773 bytes)**  
+-	Total Size: **105.3 MB (105277633 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6eac201ad748d08ca8fdc9fb85e4e7a2912ad4dff3ef2ea7549d3ee99942590f`
+-	Image ID: `sha256:fcc16fc7b58cc4ca07498f39dd86d91b8759cc736f52c5af8ef2fc848c1ce632`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -172,11 +172,11 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Thu, 22 Jun 2023 01:22:29 GMT
 RUN microdnf install -y binutils tzdata openssl wget ca-certificates fontconfig glibc-langpack-en gzip tar     && microdnf clean all
-# Thu, 22 Jun 2023 01:22:29 GMT
-ENV JAVA_VERSION=jdk8u372-b07
-# Thu, 22 Jun 2023 01:22:44 GMT
-RUN set -eux;     ARCH="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')";     case "${ARCH}" in        aarch64|arm64)          ESUM='f8e440273c8feb3fcfaca88ba18fec291deae18a548adde8a37cd1db08107b95';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_aarch64_linux_hotspot_8u372b07.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='ba5f8141a16722e39576bf42b69d2b8ebf95fc2c05441e3200f609af4dd9f1ea';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_ppc64le_linux_hotspot_8u372b07.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b6fdfe32085a884c11b31f66aa67ac62811df7112fb6fb08beea61376a86fbb4';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_x64_linux_hotspot_8u372b07.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;
-# Thu, 22 Jun 2023 01:22:45 GMT
+# Tue, 01 Aug 2023 21:39:59 GMT
+ENV JAVA_VERSION=jdk8u382-b05
+# Tue, 01 Aug 2023 21:40:26 GMT
+RUN set -eux;     ARCH="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')";     case "${ARCH}" in        aarch64|arm64)          ESUM='8cf329aa76d5b6abe35dd94e5087d9d14993fa13b43bbaed3b26bda4c57162c4';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jre_aarch64_linux_hotspot_8u382b05.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='8f0706f16373078e46666a6035325792584cd565b4cc5a793a37312599f3af0b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jre_ppc64le_linux_hotspot_8u382b05.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1fad165cc243e8db1b9cf226134acdfe3dc5919cd98c5fd9210de3cf9edeabd7';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jre_x64_linux_hotspot_8u382b05.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;
+# Tue, 01 Aug 2023 21:40:27 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
 ```
 
@@ -189,26 +189,26 @@ RUN echo Verifying install ...     && echo java -version && java -version     &&
 		Last Modified: Thu, 22 Jun 2023 01:25:14 GMT  
 		Size: 28.3 MB (28296608 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4fa4d7ec27f3d698807b131eb73defbc16b23fa0940e82ce2994f980fa6fdc7b`  
-		Last Modified: Thu, 22 Jun 2023 01:25:32 GMT  
-		Size: 40.8 MB (40816814 bytes)  
+	-	`sha256:0690d831f4fed5ae3b9610463416afee3991438786028bd1e278f76aa015dc6e`  
+		Last Modified: Tue, 01 Aug 2023 21:43:42 GMT  
+		Size: 40.8 MB (40843674 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a9694719c8472e6c03ea5438688e50e35fbb7bc6b159602de83f3f25db41c788`  
-		Last Modified: Thu, 22 Jun 2023 01:25:29 GMT  
+	-	`sha256:897419b7f5eb4c67481436fd079e62310232fc58a594d80d21fc9b9c06edc439`  
+		Last Modified: Tue, 01 Aug 2023 21:43:38 GMT  
 		Size: 160.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `eclipse-temurin:8-jre-ubi9-minimal` - linux; ppc64le
 
 ```console
-$ docker pull eclipse-temurin@sha256:dfc3b315f76459d49bb7ee0851419f7944b9014d53302dc80d4119e5c5c068e3
+$ docker pull eclipse-temurin@sha256:17f1d87d96f3c1f5bdc67f610d70f8503b98669e0af7568253f6fb78a0f0c493
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **113.9 MB (113910806 bytes)**  
+-	Total Size: **113.9 MB (113910892 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a8578d732059a86217df719cbdaae70d865620deea0111e10be96b65209e6d87`
+-	Image ID: `sha256:6fe681f765e1e0d6300f7b9f307912f571d06a34a164322d9f8dc893cf530ebd`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -266,11 +266,11 @@ ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
 # Thu, 22 Jun 2023 01:15:54 GMT
 RUN microdnf install -y binutils tzdata openssl wget ca-certificates fontconfig glibc-langpack-en gzip tar     && microdnf clean all
-# Thu, 22 Jun 2023 01:15:56 GMT
-ENV JAVA_VERSION=jdk8u372-b07
-# Thu, 22 Jun 2023 01:16:26 GMT
-RUN set -eux;     ARCH="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')";     case "${ARCH}" in        aarch64|arm64)          ESUM='f8e440273c8feb3fcfaca88ba18fec291deae18a548adde8a37cd1db08107b95';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_aarch64_linux_hotspot_8u372b07.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='ba5f8141a16722e39576bf42b69d2b8ebf95fc2c05441e3200f609af4dd9f1ea';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_ppc64le_linux_hotspot_8u372b07.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='b6fdfe32085a884c11b31f66aa67ac62811df7112fb6fb08beea61376a86fbb4';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u372-b07/OpenJDK8U-jre_x64_linux_hotspot_8u372b07.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/src.zip;
-# Thu, 22 Jun 2023 01:16:28 GMT
+# Tue, 01 Aug 2023 21:17:58 GMT
+ENV JAVA_VERSION=jdk8u382-b05
+# Tue, 01 Aug 2023 21:19:14 GMT
+RUN set -eux;     ARCH="$(objdump="$(command -v objdump)" && objdump --file-headers "$objdump" | awk -F '[:,]+[[:space:]]+' '$1 == "architecture" { print $2 }')";     case "${ARCH}" in        aarch64|arm64)          ESUM='8cf329aa76d5b6abe35dd94e5087d9d14993fa13b43bbaed3b26bda4c57162c4';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jre_aarch64_linux_hotspot_8u382b05.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='8f0706f16373078e46666a6035325792584cd565b4cc5a793a37312599f3af0b';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jre_ppc64le_linux_hotspot_8u382b05.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='1fad165cc243e8db1b9cf226134acdfe3dc5919cd98c5fd9210de3cf9edeabd7';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jre_x64_linux_hotspot_8u382b05.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;
+# Tue, 01 Aug 2023 21:19:17 GMT
 RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
 ```
 
@@ -283,11 +283,11 @@ RUN echo Verifying install ...     && echo java -version && java -version     &&
 		Last Modified: Thu, 22 Jun 2023 01:19:16 GMT  
 		Size: 30.4 MB (30423134 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:711862b315992a1aea67bed636a85c836f297634085223392ebab0ae54726e83`  
-		Last Modified: Thu, 22 Jun 2023 01:19:40 GMT  
-		Size: 41.2 MB (41226027 bytes)  
+	-	`sha256:0a918e400aa978809fc5911bf00e0c2dab85d7ac5fc466eecc66751339c2cb70`  
+		Last Modified: Tue, 01 Aug 2023 21:24:27 GMT  
+		Size: 41.2 MB (41226112 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c888fd24f0058707910d286c31047c8080cbe569a9c1a3d841dcd5510b7b17d0`  
-		Last Modified: Thu, 22 Jun 2023 01:19:32 GMT  
-		Size: 160.0 B  
+	-	`sha256:5b7b46954fae29f787c637d182044335b587a3264b01f957a4a653af314c76b0`  
+		Last Modified: Tue, 01 Aug 2023 21:24:19 GMT  
+		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
