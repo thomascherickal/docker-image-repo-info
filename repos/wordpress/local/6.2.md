@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:043bd1522bd8a989041881081a83385915d8534bf6e0960be0adfc0dc4d21bfe`
-- Created: `2023-07-05T07:49:51.70721003Z`
+- Image ID: `sha256:b94fa4376c73c3a5b779642dc4a25083a6fe8257d240e8321a2d994f141489ad`
+- Created: `2023-07-29T02:34:28.630142875Z`
 - Virtual Size: ~ 663.83 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -3112,11 +3112,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.4.8+dfsg-2.1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.4.8+dfsg-2.1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=5.10.179-1`
+### `dpkg` source package: `linux=5.10.179-2`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.10.179-1`
+- `linux-libc-dev:amd64=5.10.179-2`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3134,7 +3134,7 @@ This is *usually* due to a new package version being released and the old versio
 
 The source package *may* still be available for download from:
 
-- http://snapshot.debian.org/package/linux/5.10.179-1/
+- http://snapshot.debian.org/package/linux/5.10.179-2/
 
 
 ### `dpkg` source package: `lsb=11.1.0`
