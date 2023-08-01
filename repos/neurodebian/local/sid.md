@@ -735,20 +735,13 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 - `LGPL-3`
 - `LGPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gmp=2:6.2.1+dfsg1-1.1
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1%2bdfsg1-1.1.dsc' gmp_6.2.1+dfsg1-1.1.dsc 2238 SHA256:2831ed4f83bc3304c2403474b335652ab2dc507cd517de44414d9142171748f0
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1%2bdfsg1.orig.tar.xz' gmp_6.2.1+dfsg1.orig.tar.xz 1787428 SHA256:471b9e463e04362a0124f215afc5f0a4b99caedeeb62634c61bbc12988efa64c
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1%2bdfsg1-1.1.debian.tar.xz' gmp_6.2.1+dfsg1-1.1.debian.tar.xz 19444 SHA256:4e3e324d72fe688e409c716d33b35aa8657f6016cc1aabd5d9c7ec137412e5ef
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gmp/2:6.2.1+dfsg1-1.1/
 
-- https://sources.debian.net/src/gmp/2:6.2.1+dfsg1-1.1/ (for browsing the source)
-- https://sources.debian.net/src/gmp/2:6.2.1+dfsg1-1.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gmp/2:6.2.1+dfsg1-1.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnupg2=2.2.40-1.1`
 
@@ -1433,20 +1426,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libxcrypt=1:4.4.35-1
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.35-1.dsc' libxcrypt_4.4.35-1.dsc 1591 SHA256:f984567dc7761aa528f15491aa97c66dfb8b91be9746499936982387498b79bd
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.35.orig.tar.xz' libxcrypt_4.4.35.orig.tar.xz 393948 SHA256:520aa182205c5744630a224e169db5ffce6f439942d3d3866f139260f52876a2
-'http://deb.debian.org/debian/pool/main/libx/libxcrypt/libxcrypt_4.4.35-1.debian.tar.xz' libxcrypt_4.4.35-1.debian.tar.xz 8204 SHA256:d4cc6726f30fcc58e301ad7b6ca1353d1b346f3a76a88210ea73bf223cb385d7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libxcrypt/1:4.4.35-1/
 
-- https://sources.debian.net/src/libxcrypt/1:4.4.35-1/ (for browsing the source)
-- https://sources.debian.net/src/libxcrypt/1:4.4.35-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libxcrypt/1:4.4.35-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libzstd=1.5.5+dfsg2-1`
 
@@ -1584,21 +1570,13 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.8.1-2
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1-2.dsc' nettle_3.8.1-2.dsc 2274 SHA256:a437e204da67612efb656cab354835f358b44c077c5c0a46d6e8c30b5c0bddff
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1.orig.tar.gz' nettle_3.8.1.orig.tar.gz 2406251 SHA256:364f3e2b77cd7dcde83fd7c45219c834e54b0c75e428b6f894a23d12dd41cbfe
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1.orig.tar.gz.asc' nettle_3.8.1.orig.tar.gz.asc 573 SHA256:71fe31c44728fdc144cbf12f30ca5d483992c17fd23afabe58f89d4201f66ddb
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1-2.debian.tar.xz' nettle_3.8.1-2.debian.tar.xz 23396 SHA256:8f1eae9c6afffe545de294140f33d53352261478268dafee5ef72d840e1b3d7b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nettle/3.8.1-2/
 
-- https://sources.debian.net/src/nettle/3.8.1-2/ (for browsing the source)
-- https://sources.debian.net/src/nettle/3.8.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nettle/3.8.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `neurodebian=0.41.2+nmu1`
 
@@ -1718,21 +1696,13 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris p11-kit=0.25.0-3
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.25.0-3.dsc' p11-kit_0.25.0-3.dsc 2501 SHA256:14798a2293f3f0712ac333c02429c36d657a4f7678570cf790a7b1b3bfdf0115
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.25.0.orig.tar.xz' p11-kit_0.25.0.orig.tar.xz 958940 SHA256:d55583bcdde83d86579cabe3a8f7f2638675fef01d23cace733ff748fc354706
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.25.0.orig.tar.xz.asc' p11-kit_0.25.0.orig.tar.xz.asc 228 SHA256:ee893a62a368fb807abc678a29279b1c04808ab626b68d5d7085b8b4ab4174c9
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.25.0-3.debian.tar.xz' p11-kit_0.25.0-3.debian.tar.xz 25252 SHA256:1a271017b148ce8ad744a81adc181352f8135811d485bc418bcd136e4a11e2b9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/p11-kit/0.25.0-3/
 
-- https://sources.debian.net/src/p11-kit/0.25.0-3/ (for browsing the source)
-- https://sources.debian.net/src/p11-kit/0.25.0-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/p11-kit/0.25.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.5.2-6`
 
