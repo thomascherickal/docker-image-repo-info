@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:39a94f5a3ed4090634663cc92fd67597e497194fe5e74c8cbf5b483588a361e4`
-- Created: `2023-06-15T08:58:51.94467863Z`
-- Virtual Size: ~ 191.70 Mb  
+- Image ID: `sha256:75b58b848355e4e5bcb600cf29fdc3239b1075b8e92ce0d1ef2dd5008087f08d`
+- Created: `2023-08-01T22:06:43.753205823Z`
+- Virtual Size: ~ 249.41 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["lein","repl"]`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk8u372-b07`
+  - `JAVA_VERSION=jdk8u382-b05`
   - `LEIN_VERSION=2.10.0`
   - `LEIN_INSTALL=/usr/local/bin/`
   - `LEIN_ROOT=1`
@@ -279,16 +279,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.1.1-r1 description:
+libcrypto3-3.1.1-r3 description:
 Crypto library from openssl
 
-libcrypto3-3.1.1-r1 webpage:
+libcrypto3-3.1.1-r3 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.1.1-r1 installed size:
+libcrypto3-3.1.1-r3 installed size:
 4464 KiB
 
-libcrypto3-3.1.1-r1 license:
+libcrypto3-3.1.1-r3 license:
 Apache-2.0
 
 ```
@@ -398,16 +398,16 @@ ISC AND ( BSD-3-Clause OR MIT )
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.1.1-r1 description:
+libssl3-3.1.1-r3 description:
 SSL shared libraries
 
-libssl3-3.1.1-r1 webpage:
+libssl3-3.1.1-r3 webpage:
 https://www.openssl.org/
 
-libssl3-3.1.1-r1 installed size:
+libssl3-3.1.1-r3 installed size:
 552 KiB
 
-libssl3-3.1.1-r1 license:
+libssl3-3.1.1-r3 license:
 Apache-2.0
 
 ```
