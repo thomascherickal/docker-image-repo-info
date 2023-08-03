@@ -2,7 +2,7 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f43441258516220b7d44ec07dee4ce15599f94a2be333fa81b3c5a057e7267b9`
+- Image ID: `sha256:706a3b31ab84af0354f137a6b38a9275161e5eb16306013db944fb4272d811d3`
 - Created: `2023-05-16T17:59:38Z`
 - Virtual Size: ~ 345.01 Mb  
   (total size of all layers on-disk)
@@ -446,16 +446,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.2.0-r0 description:
+libcurl-8.2.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.2.0-r0 webpage:
+libcurl-8.2.1-r0 webpage:
 https://curl.se/
 
-libcurl-8.2.0-r0 installed size:
+libcurl-8.2.1-r0 installed size:
 552 KiB
 
-libcurl-8.2.0-r0 license:
+libcurl-8.2.1-r0 license:
 curl
 
 ```
@@ -769,16 +769,16 @@ X11
 ### `apk` package: `nghttp2-libs`
 
 ```console
-nghttp2-libs-1.53.0-r0 description:
+nghttp2-libs-1.55.1-r0 description:
 Experimental HTTP/2 client, server and proxy (libraries)
 
-nghttp2-libs-1.53.0-r0 webpage:
+nghttp2-libs-1.55.1-r0 webpage:
 https://nghttp2.org
 
-nghttp2-libs-1.53.0-r0 installed size:
+nghttp2-libs-1.55.1-r0 installed size:
 152 KiB
 
-nghttp2-libs-1.53.0-r0 license:
+nghttp2-libs-1.55.1-r0 license:
 MIT
 
 ```
@@ -786,16 +786,16 @@ MIT
 ### `apk` package: `openssh-client-common`
 
 ```console
-openssh-client-common-9.3_p1-r3 description:
+openssh-client-common-9.3_p2-r0 description:
 OpenBSD's SSH client common files
 
-openssh-client-common-9.3_p1-r3 webpage:
+openssh-client-common-9.3_p2-r0 webpage:
 https://www.openssh.com/portable.html
 
-openssh-client-common-9.3_p1-r3 installed size:
+openssh-client-common-9.3_p2-r0 installed size:
 2804 KiB
 
-openssh-client-common-9.3_p1-r3 license:
+openssh-client-common-9.3_p2-r0 license:
 BSD
 
 ```
@@ -803,16 +803,16 @@ BSD
 ### `apk` package: `openssh-client-default`
 
 ```console
-openssh-client-default-9.3_p1-r3 description:
+openssh-client-default-9.3_p2-r0 description:
 OpenBSD's SSH client
 
-openssh-client-default-9.3_p1-r3 webpage:
+openssh-client-default-9.3_p2-r0 webpage:
 https://www.openssh.com/portable.html
 
-openssh-client-default-9.3_p1-r3 installed size:
+openssh-client-default-9.3_p2-r0 installed size:
 900 KiB
 
-openssh-client-default-9.3_p1-r3 license:
+openssh-client-default-9.3_p2-r0 license:
 BSD
 
 ```
@@ -820,16 +820,16 @@ BSD
 ### `apk` package: `openssh-keygen`
 
 ```console
-openssh-keygen-9.3_p1-r3 description:
+openssh-keygen-9.3_p2-r0 description:
 ssh helper program for generating keys
 
-openssh-keygen-9.3_p1-r3 webpage:
+openssh-keygen-9.3_p2-r0 webpage:
 https://www.openssh.com/portable.html
 
-openssh-keygen-9.3_p1-r3 installed size:
+openssh-keygen-9.3_p2-r0 installed size:
 556 KiB
 
-openssh-keygen-9.3_p1-r3 license:
+openssh-keygen-9.3_p2-r0 license:
 BSD
 
 ```

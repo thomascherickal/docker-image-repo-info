@@ -2,7 +2,7 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5e5f29bec3a3295a6adfa151e9e7c5dd775c9e2b3ddcc836496edc85be5655cc`
+- Image ID: `sha256:8c286ab22367f9d969f15195e3e96ed1ac3c7437220ca139514685d6fb40d0c2`
 - Created: `2023-05-16T17:59:38Z`
 - Virtual Size: ~ 351.31 Mb  
   (total size of all layers on-disk)
@@ -446,16 +446,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.2.0-r1 description:
+libcurl-8.2.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.2.0-r1 webpage:
+libcurl-8.2.1-r0 webpage:
 https://curl.se/
 
-libcurl-8.2.0-r1 installed size:
+libcurl-8.2.1-r0 installed size:
 552 KiB
 
-libcurl-8.2.0-r1 license:
+libcurl-8.2.1-r0 license:
 curl
 
 ```
@@ -786,16 +786,16 @@ MIT
 ### `apk` package: `openssh-client-common`
 
 ```console
-openssh-client-common-9.3_p1-r3 description:
+openssh-client-common-9.3_p2-r0 description:
 OpenBSD's SSH client common files
 
-openssh-client-common-9.3_p1-r3 webpage:
+openssh-client-common-9.3_p2-r0 webpage:
 https://www.openssh.com/portable.html
 
-openssh-client-common-9.3_p1-r3 installed size:
+openssh-client-common-9.3_p2-r0 installed size:
 2804 KiB
 
-openssh-client-common-9.3_p1-r3 license:
+openssh-client-common-9.3_p2-r0 license:
 BSD
 
 ```
@@ -803,16 +803,16 @@ BSD
 ### `apk` package: `openssh-client-default`
 
 ```console
-openssh-client-default-9.3_p1-r3 description:
+openssh-client-default-9.3_p2-r0 description:
 OpenBSD's SSH client
 
-openssh-client-default-9.3_p1-r3 webpage:
+openssh-client-default-9.3_p2-r0 webpage:
 https://www.openssh.com/portable.html
 
-openssh-client-default-9.3_p1-r3 installed size:
+openssh-client-default-9.3_p2-r0 installed size:
 900 KiB
 
-openssh-client-default-9.3_p1-r3 license:
+openssh-client-default-9.3_p2-r0 license:
 BSD
 
 ```
@@ -820,16 +820,16 @@ BSD
 ### `apk` package: `openssh-keygen`
 
 ```console
-openssh-keygen-9.3_p1-r3 description:
+openssh-keygen-9.3_p2-r0 description:
 ssh helper program for generating keys
 
-openssh-keygen-9.3_p1-r3 webpage:
+openssh-keygen-9.3_p2-r0 webpage:
 https://www.openssh.com/portable.html
 
-openssh-keygen-9.3_p1-r3 installed size:
+openssh-keygen-9.3_p2-r0 installed size:
 556 KiB
 
-openssh-keygen-9.3_p1-r3 license:
+openssh-keygen-9.3_p2-r0 license:
 BSD
 
 ```
