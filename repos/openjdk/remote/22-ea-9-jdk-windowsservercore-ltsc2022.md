@@ -1,4 +1,4 @@
-## `openjdk:22-ea-windowsservercore-ltsc2022`
+## `openjdk:22-ea-9-jdk-windowsservercore-ltsc2022`
 
 ```console
 $ docker pull openjdk@sha256:23d3b0b54888bfc0fb1b1de25c1170ab89a8f9cadf904893677393c41789249f
@@ -8,7 +8,7 @@ $ docker pull openjdk@sha256:23d3b0b54888bfc0fb1b1de25c1170ab89a8f9cadf904893677
 -	Platforms: 1
 	-	windows version 10.0.20348.1850; amd64
 
-### `openjdk:22-ea-windowsservercore-ltsc2022` - windows version 10.0.20348.1850; amd64
+### `openjdk:22-ea-9-jdk-windowsservercore-ltsc2022` - windows version 10.0.20348.1850; amd64
 
 ```console
 $ docker pull openjdk@sha256:da59548c3724108cb29f41279e928d52e4d223bb803a5322eaef53420de0be8a
