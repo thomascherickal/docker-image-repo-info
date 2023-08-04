@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:1ed313b0551f6255bb9ea7fd953363f0f306d9e2e92dc9fb94cbdf70e3dafb6f`
-- Created: `2023-06-15T08:28:40.171086786Z`
-- Virtual Size: ~ 70.28 Mb  
+- Image ID: `sha256:24881e92d6487bb77608e410fd9efa9aad6851112ab6500faa3a04bd72da5b21`
+- Created: `2023-07-31T17:16:12.783731863Z`
+- Virtual Size: ~ 70.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -443,13 +443,13 @@ $ apt-get source -qq --print-uris findutils=4.9.0-3ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.9.0-3ubuntu1.debian.tar.xz' findutils_4.9.0-3ubuntu1.debian.tar.xz 28484 SHA512:2aeef5a8931606e3aec4f6e4f28c560d564b6bf43f2c459b189514a96fba4837104ba04ed1fdef75d101b5055f5692df47615369317e10f36f2d03e28b09dd24
 ```
 
-### `dpkg` source package: `gcc-13=13-20230320-1ubuntu1`
+### `dpkg` source package: `gcc-13=13.1.0-2ubuntu2~23.04`
 
 Binary Packages:
 
-- `gcc-13-base:amd64=13-20230320-1ubuntu1`
-- `libgcc-s1:amd64=13-20230320-1ubuntu1`
-- `libstdc++6:amd64=13-20230320-1ubuntu1`
+- `gcc-13-base:amd64=13.1.0-2ubuntu2~23.04`
+- `libgcc-s1:amd64=13.1.0-2ubuntu2~23.04`
+- `libstdc++6:amd64=13.1.0-2ubuntu2~23.04`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-13-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -463,10 +463,10 @@ Licenses: (parsed from: `/usr/share/doc/gcc-13-base/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gcc-13=13-20230320-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13-20230320-1ubuntu1.dsc' gcc-13_13-20230320-1ubuntu1.dsc 27878 SHA512:00fc7492fa3420b676f7a9779ee43ec063c240c14a5f65fb32b34539bcba9a0999b68dcf053bc5c72afe3e360445c52398570101e69471ff79884aa774d24fc9
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13-20230320.orig.tar.gz' gcc-13_13-20230320.orig.tar.gz 87343570 SHA512:f0558638c5caad89ee5c55bfb53840f4e04a554f103959759b9e7a50c8fe3bbf25355146a74e2284a51212c5c691512c84bd90dcd3ceff4faee09f84c4079122
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13-20230320-1ubuntu1.debian.tar.xz' gcc-13_13-20230320-1ubuntu1.debian.tar.xz 530704 SHA512:a1b7b5db7a82b8acca5dc6f60db6628de92d5575786f82d6d860c2d0e71ef9890ee2abcb0a9ca552f4628669d7125c28cf8cc9d3852e9b7019b11ef885d1907d
+$ apt-get source -qq --print-uris gcc-13=13.1.0-2ubuntu2~23.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13.1.0-2ubuntu2%7e23.04.dsc' gcc-13_13.1.0-2ubuntu2~23.04.dsc 27892 SHA512:5c22642701bc3b7a1deca483d345a1ed8109a7990d8da62622836d2bd5f414a37ae5cf36d04dadb0510ed7e9c0cb646729e0e64d140c678137c37c3f1610c865
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13.1.0.orig.tar.gz' gcc-13_13.1.0.orig.tar.gz 92188593 SHA512:81da5b2e1447652f895cc90ae6b7f106d0bb8e7d4741396ddea0e23fe06a13208469fcbefa6affe7b17271af9efb64464cbd5c76bba283b8f3710843a739b687
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13.1.0-2ubuntu2%7e23.04.debian.tar.xz' gcc-13_13.1.0-2ubuntu2~23.04.debian.tar.xz 1143460 SHA512:dd4ee2efd038788b103f4700bd650e43daeb60c8c5f22855c8d7ad41fee7a5b0ebbbd91dd8d4964a1248f8cc4b10a3d4a77eff490a2458c1f4eec78ce27d5534
 ```
 
 ### `dpkg` source package: `glibc=2.37-0ubuntu2`
