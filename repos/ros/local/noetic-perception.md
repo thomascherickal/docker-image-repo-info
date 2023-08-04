@@ -2473,14 +2473,9 @@ Licenses: (parsed from: `/usr/share/doc/libgstreamer-plugins-base1.0-0/copyright
 - `LGPL-2+`
 - `MIT/X11 (BSD like) LGPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gst-plugins-base1.0=1.16.3-0ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gst-plugins-base1.0/gst-plugins-base1.0_1.16.3-0ubuntu1.1.dsc' gst-plugins-base1.0_1.16.3-0ubuntu1.1.dsc 4152 SHA512:81f0a292e8ab699e984a0e239f5591e6718fa10f6c2576362ecce8805d43f3920e13d5b6c5ac4d23329b17a362a8d059dd9ca9f3c916967ac09a1e13df7983f4
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gst-plugins-base1.0/gst-plugins-base1.0_1.16.3.orig.tar.xz' gst-plugins-base1.0_1.16.3.orig.tar.xz 3953616 SHA512:d44d4da9cb27a6b8e59cb3f0714cc71809c0f14b42ef8d4a2dddbb940efbcb9634a40596d3cdc7391016f6e758005c14aabe1f8f30bb597a57d85c2d94045e75
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gst-plugins-base1.0/gst-plugins-base1.0_1.16.3-0ubuntu1.1.debian.tar.xz' gst-plugins-base1.0_1.16.3-0ubuntu1.1.debian.tar.xz 46540 SHA512:4828f237c6285e4a0486a84e91c98d43299aad6e4557286aafacb65ee1a6c5fe0eff33391521579851d10958a1c10545ac2a7cb7c54446058ef150f93e87b1a8
-```
 
 ### `dpkg` source package: `gstreamer1.0=1.16.3-0ubuntu1.1`
 
@@ -4388,14 +4383,9 @@ Licenses: (parsed from: `/usr/share/doc/librsvg2-2/copyright`, `/usr/share/doc/l
 - `Sun-permissive`
 - `Unlicense`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris librsvg=2.48.9-1ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.48.9-1ubuntu0.20.04.1.dsc' librsvg_2.48.9-1ubuntu0.20.04.1.dsc 2643 SHA512:31d3922daecaec10ef5f0dceb49067183cfcc4fe5f4422785def2b7c1056908753ebe7db31ba89a9b6fbaef0ee4c3435edc06cede57bb5a82ab8a8599ad21643
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.48.9.orig.tar.xz' librsvg_2.48.9.orig.tar.xz 12661188 SHA512:4edfba4d667536ef921e72da53e4a357e56cae6db5e7e93c23d6792241b31b2397e68633dbb0df465129ce68f0ef1ba55cc51f2321adc6f4874fe7089715bb5c
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/librsvg/librsvg_2.48.9-1ubuntu0.20.04.1.debian.tar.xz' librsvg_2.48.9-1ubuntu0.20.04.1.debian.tar.xz 24260 SHA512:11d05100ea44f7d3474907516f0869b5b43517eaccd56cc70780418935f39de97294e3a0b31fa8e36382d3a6809ca1812220931b9673842a1e2a236e153a3e40
-```
 
 ### `dpkg` source package: `libseccomp=2.5.1-1ubuntu1~20.04.2`
 
@@ -7012,14 +7002,9 @@ Licenses: (parsed from: `/usr/share/doc/libpoppler-dev/copyright`, `/usr/share/d
 - `Apache-2.0`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris poppler=0.86.1-0ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.86.1-0ubuntu1.1.dsc' poppler_0.86.1-0ubuntu1.1.dsc 3320 SHA512:32be68069d284c5bf372574de05bbcc98efe27b018cdc85bde89346c3868a82174e05cac7a2a32027024a364d8b5d6b870871d599a202c315dfeaeeb33705df5
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.86.1.orig.tar.xz' poppler_0.86.1.orig.tar.xz 1593856 SHA512:435fc1e7f3e8123e0adde9aa60c0d7dc17db367cde8908932abfef913cee6f27efeb1c4f2d6f316019a69a87f1fa5251be4216d0a81a681a24f24a70ac571670
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.86.1-0ubuntu1.1.debian.tar.xz' poppler_0.86.1-0ubuntu1.1.debian.tar.xz 35408 SHA512:b2e9660f0dd0f3c46043ba638177d8b62e523fedc58da320018e84fab967edddb55ab3b4dab08a7fb5750eddc7c478ed5139724b9714318920e276a049f5d903
-```
 
 ### `dpkg` source package: `postgresql-12=12.15-0ubuntu0.20.04.1`
 

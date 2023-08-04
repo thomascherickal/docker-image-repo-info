@@ -488,13 +488,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=12ubuntu4.3
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_12ubuntu4.3.dsc' base-files_12ubuntu4.3.dsc 1253 SHA512:4094c76e31f1d2522264a2b3694c18792f4f0f9387ae9d6e4c613b4ad992975d36e3cf1decd497b01fe4b062445bf0b2c106e8339d1ea68a7569faeca3fc08fc
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_12ubuntu4.3.tar.xz' base-files_12ubuntu4.3.tar.xz 81796 SHA512:16949054156d18c9a7142d9edf75d34918f4509a1b7f69ffef8641e2dc82d131ef32d55626358ccfb8d770ccad76c9a3f794945a17520628e3747bc2417e4f07
-```
 
 ### `dpkg` source package: `base-passwd=3.5.52build1`
 
@@ -6095,14 +6091,9 @@ Licenses: (parsed from: `/usr/share/doc/libegl-mesa0/copyright`, `/usr/share/doc
 - `MLAA`
 - `SGI`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mesa=22.2.5-0ubuntu0.1~22.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_22.2.5-0ubuntu0.1%7e22.04.3.dsc' mesa_22.2.5-0ubuntu0.1~22.04.3.dsc 5511 SHA512:ba825ca564875b1436f5a3c337632a73257a19d1fd523b23c59cd813118329fa3f4f7d47e993cf7e2b3482157dd683f7ae464f0c6c5760954b9e938c29ab253a
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_22.2.5.orig.tar.gz' mesa_22.2.5.orig.tar.gz 26307331 SHA512:87f8d2e712a7529ac4a9d7be6798cf68b915ae9b0ce517ceaf4f31562e4dc40bef453d7804467df794a9455d78c75b2a9b35e4065242414ae03ef86920e65301
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_22.2.5-0ubuntu0.1%7e22.04.3.diff.gz' mesa_22.2.5-0ubuntu0.1~22.04.3.diff.gz 120033 SHA512:57702b4a52168dc25a7d2332c57a695b756a462f0c4ea9d6f50f26405a6adc2205b58a310c997a43850c7ec0bb7e526725bdac2501810cecb9e92bde271df8d6
-```
 
 ### `dpkg` source package: `minizip=1.1-8build1`
 
@@ -7439,14 +7430,9 @@ Licenses: (parsed from: `/usr/share/doc/libpoppler-dev/copyright`, `/usr/share/d
 - `GPL-2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris poppler=22.02.0-2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_22.02.0-2ubuntu0.1.dsc' poppler_22.02.0-2ubuntu0.1.dsc 3360 SHA512:9ecd3f4802eeb0adb0f4921ce93cb3aafa379428e40c04dd4401e0ab13d42b8dcb2a2f0a0694badc030e4d3764354e7ce2b9df8a8afb57f63c5cb05505c4f93d
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_22.02.0.orig.tar.xz' poppler_22.02.0.orig.tar.xz 1807024 SHA512:61867241d6d076dae554d654a8ad3b1a073079bad31f45170516b886fabb4c238ff2d49705924da219e128eb4052ac6337121967347600e54f61790dd0eed487
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_22.02.0-2ubuntu0.1.debian.tar.xz' poppler_22.02.0-2ubuntu0.1.debian.tar.xz 37464 SHA512:3819d635163e905da0af2704207f72b7b4af0df46a4f909e42e4f04a19f644cecfcc1a6f2f9af22520a36b8c6720b5c5806227de5f72c999aa506d88622353c6
-```
 
 ### `dpkg` source package: `popt=1.18-3build1`
 
