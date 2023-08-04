@@ -1,7 +1,7 @@
 ## `perl:5-slim-threaded-bookworm`
 
 ```console
-$ docker pull perl@sha256:fdef604b192fd5df112b6d4d9117fe049aeb8fc7ef46706e647234a83d14ea0f
+$ docker pull perl@sha256:e697e33992273b8aa81325ec275baa35b43c35e197a69ffc01d84aea80a0d0dd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14,14 +14,14 @@ $ docker pull perl@sha256:fdef604b192fd5df112b6d4d9117fe049aeb8fc7ef46706e647234
 ### `perl:5-slim-threaded-bookworm` - linux; amd64
 
 ```console
-$ docker pull perl@sha256:a2ac857d6e6e5a546c951fd6366ba3fef98bae700ceb3f210d8c697c68868b40
+$ docker pull perl@sha256:a824463642a23fc7d9e59be07db6eb442db1d5042f073113dc473f67ec4eef92
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **57.7 MB (57659577 bytes)**  
+-	Total Size: **57.7 MB (57659742 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cfce4d6bc02a46734d004338f788997984cca8a4bab2ab9c5e4ef15e2754a426`
+-	Image ID: `sha256:05440fb06f0f9ffe589edcb8e2248153bc571a71d1062a29535af2bd3a98ea9c`
 -	Default Command: `["perl5.38.0","-de0"]`
 
 ```dockerfile
@@ -35,9 +35,9 @@ LABEL maintainer=Peter Martini <PeterCMartini@GMail.com>, Zak B. Elep <zakame@cp
 WORKDIR /usr/src/perl
 # Tue, 01 Aug 2023 00:18:46 GMT
 RUN apt-get update     && apt-get install -y --no-install-recommends        bzip2        ca-certificates        curl        dpkg-dev        gcc        libc6-dev        make        netbase        patch        zlib1g-dev        xz-utils        libssl-dev     && curl -fL https://www.cpan.org/src/5.0/perl-5.38.0.tar.xz -o perl-5.38.0.tar.xz     && echo 'eca551caec3bc549a4e590c0015003790bdd1a604ffe19cc78ee631d51f7072e *perl-5.38.0.tar.xz' | sha256sum --strict --check -     && tar --strip-components=1 -xaf perl-5.38.0.tar.xz -C /usr/src/perl     && rm perl-5.38.0.tar.xz     && cat *.patch | patch -p1     && gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"     && archBits="$(dpkg-architecture --query DEB_BUILD_ARCH_BITS)"     && archFlag="$([ "$archBits" = '64' ] && echo '-Duse64bitall' || echo '-Duse64bitint')"     && ./Configure -Darchname="$gnuArch" "$archFlag" -Dusethreads -Duseshrplib -Dvendorprefix=/usr/local  -des     && make -j$(nproc)     && TEST_JOBS=$(nproc) make test_harness     && make install     && cd /usr/src     && curl -fLO https://www.cpan.org/authors/id/M/MI/MIYAGAWA/App-cpanminus-1.7047.tar.gz     && echo '963e63c6e1a8725ff2f624e9086396ae150db51dd0a337c3781d09a994af05a5 *App-cpanminus-1.7047.tar.gz' | sha256sum --strict --check -     && tar -xzf App-cpanminus-1.7047.tar.gz && cd App-cpanminus-1.7047 && perl bin/cpanm . && cd /root     && cpanm IO::Socket::SSL     && curl -fL https://raw.githubusercontent.com/skaji/cpm/0.997011/cpm -o /usr/local/bin/cpm     && echo '7dee2176a450a8be3a6b9b91dac603a0c3a7e807042626d3fe6c93d843f75610 */usr/local/bin/cpm' | sha256sum --strict --check -     && chmod +x /usr/local/bin/cpm     && savedPackages="ca-certificates make netbase zlib1g-dev libssl-dev"     && apt-mark auto '.*' > /dev/null     && apt-mark manual $savedPackages     && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false     && rm -fr /var/cache/apt/* /var/lib/apt/lists/*     && rm -fr /root/.cpanm /usr/src/perl /usr/src/App-cpanminus-1.7047* /tmp/*     && cpanm --version && cpm --version
-# Tue, 01 Aug 2023 00:18:46 GMT
-WORKDIR /
-# Tue, 01 Aug 2023 00:18:46 GMT
+# Fri, 04 Aug 2023 00:40:44 GMT
+WORKDIR /usr/src/app
+# Fri, 04 Aug 2023 00:40:45 GMT
 CMD ["perl5.38.0" "-de0"]
 ```
 
@@ -53,6 +53,10 @@ CMD ["perl5.38.0" "-de0"]
 	-	`sha256:7dcd8dac85699a457019e07d7a6c15fb44351233739408242af7095a7521f1ba`  
 		Last Modified: Tue, 01 Aug 2023 03:16:45 GMT  
 		Size: 28.5 MB (28534877 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8b938108787d417329e90acdb0da1dd9e91def2af48e1079ac446c3ae23fd7c3`  
+		Last Modified: Fri, 04 Aug 2023 00:45:47 GMT  
+		Size: 165.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `perl:5-slim-threaded-bookworm` - linux; arm variant v7
