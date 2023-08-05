@@ -1061,20 +1061,13 @@ Licenses: (parsed from: `/usr/share/doc/libgmp10/copyright`)
 - `LGPL-3`
 - `LGPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gmp=2:6.2.1+dfsg1-1.1
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1%2bdfsg1-1.1.dsc' gmp_6.2.1+dfsg1-1.1.dsc 2238 SHA256:2831ed4f83bc3304c2403474b335652ab2dc507cd517de44414d9142171748f0
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1%2bdfsg1.orig.tar.xz' gmp_6.2.1+dfsg1.orig.tar.xz 1787428 SHA256:471b9e463e04362a0124f215afc5f0a4b99caedeeb62634c61bbc12988efa64c
-'http://deb.debian.org/debian/pool/main/g/gmp/gmp_6.2.1%2bdfsg1-1.1.debian.tar.xz' gmp_6.2.1+dfsg1-1.1.debian.tar.xz 19444 SHA256:4e3e324d72fe688e409c716d33b35aa8657f6016cc1aabd5d9c7ec137412e5ef
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gmp/2:6.2.1+dfsg1-1.1/
 
-- https://sources.debian.net/src/gmp/2:6.2.1+dfsg1-1.1/ (for browsing the source)
-- https://sources.debian.net/src/gmp/2:6.2.1+dfsg1-1.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gmp/2:6.2.1+dfsg1-1.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `gnupg2=2.2.40-1.1`
 
@@ -2484,10 +2477,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris mawk=1.3.4.20230525-1
-'http://http.debian.net/debian/pool/main/m/mawk/mawk_1.3.4.20230525-1.dsc' mawk_1.3.4.20230525-1.dsc 1918 SHA256:e6fd0a6d20e18d5a99b76bb9246794a47878f130efa28b8ee52edc89ea810020
-'http://http.debian.net/debian/pool/main/m/mawk/mawk_1.3.4.20230525.orig.tar.gz' mawk_1.3.4.20230525.orig.tar.gz 403222 SHA256:5639d14bb9124373b3d7f957d2b925ad8ad9656d46212c3f23dbca810cc9269f
-'http://http.debian.net/debian/pool/main/m/mawk/mawk_1.3.4.20230525-1.debian.tar.xz' mawk_1.3.4.20230525-1.debian.tar.xz 14288 SHA256:5d0b292f99d20e72fb03f47e37e30ee46283302b0bea1bebef90c30819699837
+'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230525-1.dsc' mawk_1.3.4.20230525-1.dsc 1918 SHA256:e6fd0a6d20e18d5a99b76bb9246794a47878f130efa28b8ee52edc89ea810020
+'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230525.orig.tar.gz' mawk_1.3.4.20230525.orig.tar.gz 403222 SHA256:5639d14bb9124373b3d7f957d2b925ad8ad9656d46212c3f23dbca810cc9269f
+'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230525-1.debian.tar.xz' mawk_1.3.4.20230525-1.debian.tar.xz 14288 SHA256:5d0b292f99d20e72fb03f47e37e30ee46283302b0bea1bebef90c30819699837
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/mawk/1.3.4.20230525-1/ (for browsing the source)
+- https://sources.debian.net/src/mawk/1.3.4.20230525-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/mawk/1.3.4.20230525-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mgcv=1.9-0-1`
 
@@ -2762,21 +2761,13 @@ Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
 - `permissive-like-automake-output`
 - `same-as-rest-of-p11kit`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris p11-kit=0.25.0-3
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.25.0-3.dsc' p11-kit_0.25.0-3.dsc 2501 SHA256:14798a2293f3f0712ac333c02429c36d657a4f7678570cf790a7b1b3bfdf0115
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.25.0.orig.tar.xz' p11-kit_0.25.0.orig.tar.xz 958940 SHA256:d55583bcdde83d86579cabe3a8f7f2638675fef01d23cace733ff748fc354706
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.25.0.orig.tar.xz.asc' p11-kit_0.25.0.orig.tar.xz.asc 228 SHA256:ee893a62a368fb807abc678a29279b1c04808ab626b68d5d7085b8b4ab4174c9
-'http://deb.debian.org/debian/pool/main/p/p11-kit/p11-kit_0.25.0-3.debian.tar.xz' p11-kit_0.25.0-3.debian.tar.xz 25252 SHA256:1a271017b148ce8ad744a81adc181352f8135811d485bc418bcd136e4a11e2b9
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/p11-kit/0.25.0-3/
 
-- https://sources.debian.net/src/p11-kit/0.25.0-3/ (for browsing the source)
-- https://sources.debian.net/src/p11-kit/0.25.0-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/p11-kit/0.25.0-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pam=1.5.2-6`
 
@@ -3005,14 +2996,13 @@ Licenses: (parsed from: `/usr/share/doc/r-base/copyright`, `/usr/share/doc/r-bas
 - `LGPL-2.1`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris r-base=4.3.1-3
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.3.1-3.dsc' r-base_4.3.1-3.dsc 2925 SHA256:35400a16f3dcbd2a4671d90791524f79576df96c4741d5dd1377e13aa6917dbc
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.3.1.orig.tar.gz' r-base_4.3.1.orig.tar.gz 34899964 SHA256:8dd0bf24f1023c6f618c3b317383d291b4a494f40d73b983ac22ffea99e4ba99
-'http://http.debian.net/debian/pool/main/r/r-base/r-base_4.3.1-3.debian.tar.xz' r-base_4.3.1-3.debian.tar.xz 99544 SHA256:fc466c36b607cce44ae6a826111d2ffa12a5d20900d16774657e1f47a3667a5c
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/r-base/4.3.1-3/
+
 
 ### `dpkg` source package: `r-cran-class=7.3-22-2`
 
@@ -3453,20 +3443,13 @@ Licenses: (parsed from: `/usr/share/doc/libtiff6/copyright`)
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.5.1-1
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.5.1-1.dsc' tiff_4.5.1-1.dsc 2255 SHA256:bf793f20bff42d1f2b3deced6d2ffffc3c5f7561c24e3523b7bfcf2b1cd3f6f7
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.5.1.orig.tar.bz2' tiff_4.5.1.orig.tar.bz2 2058175 SHA256:f932502df730d3394bdac47d6f930a23dfa3b1868289813841673fd5cff13ebc
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.5.1-1.debian.tar.xz' tiff_4.5.1-1.debian.tar.xz 21812 SHA256:57b592ec3644d707be690036fbba43aa65bb7734555a4ec3e83aa8044afce3b5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tiff/4.5.1-1/
 
-- https://sources.debian.net/src/tiff/4.5.1-1/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.5.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.5.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tk8.6=8.6.13-2`
 
