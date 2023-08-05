@@ -1,10 +1,10 @@
-# `convertigo:8.2.1`
+# `convertigo:8.2.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:5bd0d7703056d4c7b38ae4feb2ef6476961ecd44cf737dc72da5d5ce4e91f6e9`
-- Created: `2023-07-26T00:39:02.775170284Z`
-- Virtual Size: ~ 564.92 Mb  
+- Image ID: `sha256:10854d768b32cd46eac396404540439c5984ecf628c2907086515e80c6eaf21c`
+- Created: `2023-08-03T07:46:07.169059686Z`
+- Virtual Size: ~ 564.05 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","--","/docker-entrypoint.sh"]`
@@ -24,8 +24,8 @@
   - `TOMCAT_VERSION=9.0.78`
   - `TOMCAT_SHA512=c9f2e60489d07f25b53f715918f4b082c5bb69dbc497e0a9d3d5e3a0d351ff2e0ec8dfc5657de840ee5b3dea6174b27630033b38e36fa4c06b08664e70dec8df`
   - `SWT_GTK3=0`
-  - `CONVERTIGO_VERSION=8.2.1`
-  - `CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/8.2.1/convertigo-8.2.1.war`
+  - `CONVERTIGO_VERSION=8.2.2`
+  - `CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/8.2.2/convertigo-8.2.2.war`
   - `CONVERTIGO_GPG_KEYS=6A7779BB78FE368DF74B708FD4DA8FBEB64BF75F`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
@@ -547,13 +547,13 @@ $ apt-get source -qq --print-uris findutils=4.7.0-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/f/findutils/findutils_4.7.0-1ubuntu1.debian.tar.xz' findutils_4.7.0-1ubuntu1.debian.tar.xz 27700 SHA256:dfb2329fd141384c2d76409c2e99f164cc25954115529245d80d5d41e3167731
 ```
 
-### `dpkg` source package: `gcc-10=10.3.0-1ubuntu1~20.04`
+### `dpkg` source package: `gcc-10=10.5.0-1ubuntu1~20.04`
 
 Binary Packages:
 
-- `gcc-10-base:amd64=10.3.0-1ubuntu1~20.04`
-- `libgcc-s1:amd64=10.3.0-1ubuntu1~20.04`
-- `libstdc++6:amd64=10.3.0-1ubuntu1~20.04`
+- `gcc-10-base:amd64=10.5.0-1ubuntu1~20.04`
+- `libgcc-s1:amd64=10.5.0-1ubuntu1~20.04`
+- `libstdc++6:amd64=10.5.0-1ubuntu1~20.04`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -564,9 +564,14 @@ Licenses: (parsed from: `/usr/share/doc/gcc-10-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-10=10.5.0-1ubuntu1~20.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.5.0-1ubuntu1%7e20.04.dsc' gcc-10_10.5.0-1ubuntu1~20.04.dsc 31130 SHA512:0adfb92474d09348ce0ef4a4a3edd143a054d2bcba01dbdf29f925066ecc6e4874a02d7ced1501d39c1e966a1b0f3b9bef6ddcc8181df9b77206cefedcef6f15
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.5.0.orig.tar.gz' gcc-10_10.5.0.orig.tar.gz 84203753 SHA512:0617b7353e3da37e30abecb3527a987bb444a57e2f18a1265f9b727b5f43a40068d7242f8ce92fe47810e883778c13a0c54c5126071a5c6abd786c02919f5c81
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.5.0-1ubuntu1%7e20.04.debian.tar.xz' gcc-10_10.5.0-1ubuntu1~20.04.debian.tar.xz 5953836 SHA512:d68b8b10628bec39c370c9af1baa39bd76f3fb885d765b2d449435981ab772443187cba3bcb629e69a4a7c4b1e890babc4ea9ed8a3a3eb9a8e7e1e76abb8b526
+```
 
 ### `dpkg` source package: `glibc=2.31-0ubuntu9.9`
 
