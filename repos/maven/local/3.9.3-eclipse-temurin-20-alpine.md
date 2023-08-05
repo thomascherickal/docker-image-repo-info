@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b855bfaa38fe4941249445e6b4ff29f594b4e4a16e16ed8aac7b02a85fc08f23`
+- Image ID: `sha256:bdd3b99a9df5c4e37a145973efa0d9dfeb8a7bb00f7630fdc6308156b0bc3dcb`
 - Created: `2023-06-26T13:48:06Z`
-- Virtual Size: ~ 335.57 Mb  
+- Virtual Size: ~ 337.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
@@ -194,16 +194,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-8.2.0-r1 description:
+curl-8.2.1-r0 description:
 URL retrival utility and library
 
-curl-8.2.0-r1 webpage:
+curl-8.2.1-r0 webpage:
 https://curl.se/
 
-curl-8.2.0-r1 installed size:
-240 KiB
+curl-8.2.1-r0 installed size:
+236 KiB
 
-curl-8.2.0-r1 license:
+curl-8.2.1-r0 license:
 curl
 
 ```
@@ -273,6 +273,23 @@ freetype-2.13.0-r5 installed size:
 
 freetype-2.13.0-r5 license:
 FTL OR GPL-2.0-or-later
+
+```
+
+### `apk` package: `java-cacerts`
+
+```console
+java-cacerts-1.0-r1 description:
+Script to update java cacerts store
+
+java-cacerts-1.0-r1 webpage:
+https://git.alpinelinux.org/aports/tree/community/java-cacerts
+
+java-cacerts-1.0-r1 installed size:
+32 KiB
+
+java-cacerts-1.0-r1 license:
+MIT
 
 ```
 
@@ -347,16 +364,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.2.0-r1 description:
+libcurl-8.2.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.2.0-r1 webpage:
+libcurl-8.2.1-r0 webpage:
 https://curl.se/
 
-libcurl-8.2.0-r1 installed size:
+libcurl-8.2.1-r0 installed size:
 552 KiB
 
-libcurl-8.2.0-r1 license:
+libcurl-8.2.1-r0 license:
 curl
 
 ```
@@ -374,6 +391,23 @@ libexpat-2.5.0-r1 installed size:
 144 KiB
 
 libexpat-2.5.0-r1 license:
+MIT
+
+```
+
+### `apk` package: `libffi`
+
+```console
+libffi-3.4.4-r2 description:
+portable, high level programming interface to various calling conventions.
+
+libffi-3.4.4-r2 webpage:
+https://sourceware.org/libffi/
+
+libffi-3.4.4-r2 installed size:
+52 KiB
+
+libffi-3.4.4-r2 license:
 MIT
 
 ```
@@ -514,6 +548,23 @@ Apache-2.0
 
 ```
 
+### `apk` package: `libtasn1`
+
+```console
+libtasn1-4.19.0-r1 description:
+The ASN.1 library used in GNUTLS
+
+libtasn1-4.19.0-r1 webpage:
+https://www.gnu.org/software/gnutls/
+
+libtasn1-4.19.0-r1 installed size:
+80 KiB
+
+libtasn1-4.19.0-r1 license:
+LGPL-2.1-or-later
+
+```
+
 ### `apk` package: `libunistring`
 
 ```console
@@ -647,6 +698,40 @@ nghttp2-libs-1.55.1-r0 installed size:
 
 nghttp2-libs-1.55.1-r0 license:
 MIT
+
+```
+
+### `apk` package: `p11-kit`
+
+```console
+p11-kit-0.24.1-r2 description:
+Library for loading and sharing PKCS#11 modules
+
+p11-kit-0.24.1-r2 webpage:
+https://p11-glue.freedesktop.org/
+
+p11-kit-0.24.1-r2 installed size:
+1012 KiB
+
+p11-kit-0.24.1-r2 license:
+BSD-3-Clause
+
+```
+
+### `apk` package: `p11-kit-trust`
+
+```console
+p11-kit-trust-0.24.1-r2 description:
+System trust module from p11-kit
+
+p11-kit-trust-0.24.1-r2 webpage:
+https://p11-glue.freedesktop.org/
+
+p11-kit-trust-0.24.1-r2 installed size:
+356 KiB
+
+p11-kit-trust-0.24.1-r2 license:
+BSD-3-Clause
 
 ```
 
