@@ -5270,14 +5270,9 @@ Licenses: (parsed from: `/usr/share/doc/libpoppler97/copyright`)
 - `Apache-2.0`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris poppler=0.86.1-0ubuntu1.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.86.1-0ubuntu1.1.dsc' poppler_0.86.1-0ubuntu1.1.dsc 3320 SHA512:32be68069d284c5bf372574de05bbcc98efe27b018cdc85bde89346c3868a82174e05cac7a2a32027024a364d8b5d6b870871d599a202c315dfeaeeb33705df5
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.86.1.orig.tar.xz' poppler_0.86.1.orig.tar.xz 1593856 SHA512:435fc1e7f3e8123e0adde9aa60c0d7dc17db367cde8908932abfef913cee6f27efeb1c4f2d6f316019a69a87f1fa5251be4216d0a81a681a24f24a70ac571670
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.86.1-0ubuntu1.1.debian.tar.xz' poppler_0.86.1-0ubuntu1.1.debian.tar.xz 35408 SHA512:b2e9660f0dd0f3c46043ba638177d8b62e523fedc58da320018e84fab967edddb55ab3b4dab08a7fb5750eddc7c478ed5139724b9714318920e276a049f5d903
-```
 
 ### `dpkg` source package: `postgresql-12=12.15-0ubuntu0.20.04.1`
 
