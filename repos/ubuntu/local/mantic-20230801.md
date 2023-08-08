@@ -53,13 +53,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.7.2
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.7.2.dsc' apt_2.7.2.dsc 2945 SHA512:ea064a21671b78f49fa8431a21e3a55f96c1ece7f951dfb34d77979c2c9c1c0122941a7f199620c0d0a6c626a50031fa20dadddef14da50b0d7d30c634f187e1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.7.2.tar.xz' apt_2.7.2.tar.xz 2335316 SHA512:0aa6fc3628edd909216e2ee3034626f05f9114e6f435433f1eb0711eed32e199b205c63d1463cec77765b142e0c672f5e3a9e43eddcc40abb84f0952d995460f
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/apt/2.7.2/
+
 
 ### `dpkg` source package: `attr=1:2.5.1-4`
 
@@ -412,15 +412,9 @@ Licenses: (parsed from: `/usr/share/doc/e2fsprogs/copyright`, `/usr/share/doc/li
 - `Latex2e`
 - `MIT-US-export`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris e2fsprogs=1.47.0-1ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.47.0-1ubuntu2.dsc' e2fsprogs_1.47.0-1ubuntu2.dsc 3182 SHA512:a3d47f742e4d79e1e387abc54421304ef45274053d98aeffcd7025c6ac0cb84a2f1c67d2e5c8873c20d60edd4b2d44b7521bae004107e02569d7aac05b86de9b
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.47.0.orig.tar.gz' e2fsprogs_1.47.0.orig.tar.gz 9637717 SHA512:4f03a469d03cb0f0656bd17c64d944606fb25e68002e3e42c278f3775fee6bf776cc2061ae378b5df4f167a5c33444490111fdcbb140e0320445706f9d048dd0
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.47.0.orig.tar.gz.asc' e2fsprogs_1.47.0.orig.tar.gz.asc 488 SHA512:cd3652ec12f694f1c1f5bd4af4964bb32ad832ba8a06a48864d12a998dc514e9a950ebdb475707a3abb8360852a3469794f2327f097328c99233beef575df144
-'http://archive.ubuntu.com/ubuntu/pool/main/e/e2fsprogs/e2fsprogs_1.47.0-1ubuntu2.debian.tar.xz' e2fsprogs_1.47.0-1ubuntu2.debian.tar.xz 88740 SHA512:07e21ba21e8bf3af354f8f933b9e61e47889a9fa4e53260d1975b57528b4491bbe29b6f4c57b545d885d076f6de428781d1a3147c2265100fc520197f87f4fe8
-```
 
 ### `dpkg` source package: `findutils=4.9.0-5`
 
@@ -1060,14 +1054,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 - `GPL-2.0-only`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20230525-1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20230525-1.dsc' mawk_1.3.4.20230525-1.dsc 1918 SHA512:395e31e96a38e80130fcd38d0d165d9a86d57ef3989d8a77fcbf944c160816ea1a2351df718b7c6ad7f09ecc612c07c3cc9603b70466db6367b51f85c4202ba8
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20230525.orig.tar.gz' mawk_1.3.4.20230525.orig.tar.gz 403222 SHA512:704c1a94569e8e953af7b00ea81efa20df03483f57e4183935e73df62309874644f2250a307b136af34ce3df62d90170d8afe7b3a86eeacb31cf5845056126cb
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20230525-1.debian.tar.xz' mawk_1.3.4.20230525-1.debian.tar.xz 14288 SHA512:bf68b5b7aec6c1a9257cf4071b6541f799f2f68c1bd6967e146fced2cc579a6c939014dc39a12bc71d70f84df109101e0e790b32f760d3eb894b37c991753f24
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/mawk/1.3.4.20230525-1/
+
 
 ### `dpkg` source package: `ncurses=6.4+20230625-1`
 
@@ -1391,14 +1384,9 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-3`
 - `GPL-3.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=3.06-4ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_3.06-4ubuntu1.dsc' sysvinit_3.06-4ubuntu1.dsc 2466 SHA512:5d6f20233ff423790a8d64b4290dd5b7804ade6902898166ff006241622a4dc6e94cf396ae8e94c5b7ee9cfea35c565216d7c55a83ed2f73b385374102b4ba08
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_3.06.orig.tar.gz' sysvinit_3.06.orig.tar.gz 466092 SHA512:9f1111ea05cbb405e3fe2423ee2d281832f3d15a69e39c5c6896e1ee7c0d56369046d39d7a2203f66db05304836dd33f1664652726cadf8a29cb0eea27ce822f
-'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_3.06-4ubuntu1.debian.tar.xz' sysvinit_3.06-4ubuntu1.debian.tar.xz 135992 SHA512:7c4d7d742ad5febe27bcf946d0afaef2dd8a0d0711f7f463f4161f87a6b9e7e493815cb92056d22118113275641afdcf39cd42fc5408a0c9ee814502f9f00b52
-```
 
 ### `dpkg` source package: `tar=1.34+dfsg-1.2ubuntu1`
 
