@@ -1,9 +1,9 @@
-# `wordpress:beta-6.3-RC3-apache`
+# `wordpress:beta-6.3-RC4-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c83cb452350da7c0109ac8eba2cb84833b592329d38ef1c04d9aab006a9f8141`
-- Created: `2023-08-03T02:02:59.151123859Z`
+- Image ID: `sha256:8b52ea828865f9b9f4c1ee23ea3a1260a2275c12a3ae525f7f547e73176b428a`
+- Created: `2023-08-08T00:25:10.991862964Z`
 - Virtual Size: ~ 665.74 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
