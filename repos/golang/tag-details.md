@@ -78,7 +78,7 @@
 ## `golang:1`
 
 ```console
-$ docker pull golang@sha256:d626efd1f694b0caa19016cc5b4c970f8a638b367a2d645daefea83e744f57b9
+$ docker pull golang@sha256:d1c9e30544f4fd17d639388da96ac36c4b61219ff6d0a8b77e09a555081ec5ba
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -427,14 +427,14 @@ WORKDIR /go
 ### `golang:1` - linux; mips64le
 
 ```console
-$ docker pull golang@sha256:64d546b7de81d2f80dd12b6e54e1a399eaacc7524f1acc776ff70286a4b6b391
+$ docker pull golang@sha256:df6053b34b7d25ada150915c20d8a3a92f894edfbe055b6a7870d9d0206a86ad
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **300.1 MB (300099332 bytes)**  
+-	Total Size: **267.8 MB (267756477 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:88b7489537c2f1d4e62b81eca2ca9bf545cdae1abad7159e0ad8dbef525a786f`
+-	Image ID: `sha256:d66bee4b015af14ec2f0f00a9ae20420c683db8c3dc8826c3ed97ecfc76524f4`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -450,17 +450,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Sat, 29 Jul 2023 19:44:30 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:29:10 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:41:02 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.7.linux-amd64.tar.gz'; 			sha256='f0a87f1bcae91c4b69f8dc2bc6d7e6bfcd7524fceec130af525058c0c17b1b44'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.7.linux-armv6l.tar.gz'; 			sha256='7cc231b415b94f2f7065870a73f67dd2b0ec12b5a98052b7ee0121c42bc04f8d'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.7.linux-arm64.tar.gz'; 			sha256='44781ae3b153c3b07651d93b6bc554e835a36e2d72a696281c1e4dad9efffe43'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.7.linux-386.tar.gz'; 			sha256='ddb48145f05bda2f4617a22c979d4e94b22802cdb1a1fde1b1974e733b26f091'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.7.linux-ppc64le.tar.gz'; 			sha256='6318a1db307c12b8afe68808bd6fae4fba1e558a85b958216096869ed506dcb3'; 			;; 		'riscv64') 			export GOARCH='riscv64' GOOS='linux'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.7.linux-s390x.tar.gz'; 			sha256='26aea2ede8722ceecbd9db883328a8d963136fd96c11dacc356c44c4c19c6515'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.7.src.tar.gz'; 		sha256='2c5ee9c9ec1e733b0dbbc2bdfed3f62306e51d8172bf38f4f4e542b27520f597'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Tue, 01 Aug 2023 21:41:10 GMT
+# Tue, 08 Aug 2023 21:24:42 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:25:32 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:25:40 GMT
 ENV GOPATH=/go
-# Tue, 01 Aug 2023 21:41:16 GMT
+# Tue, 08 Aug 2023 21:25:46 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:41:25 GMT
+# Tue, 08 Aug 2023 21:25:55 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Tue, 01 Aug 2023 21:41:32 GMT
+# Tue, 08 Aug 2023 21:26:01 GMT
 WORKDIR /go
 ```
 
@@ -481,13 +481,13 @@ WORKDIR /go
 		Last Modified: Sat, 29 Jul 2023 20:42:16 GMT  
 		Size: 69.6 MB (69625048 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a2d58e643ac77d73462d501f78b21fb37ab182fa998a1fdce336c0db6e8bf4cc`  
-		Last Modified: Tue, 01 Aug 2023 22:22:14 GMT  
-		Size: 94.4 MB (94368617 bytes)  
+	-	`sha256:503e556f1b1861954a25d70f3a5c25853440cbb11869ead2ba011199ff4395e9`  
+		Last Modified: Tue, 08 Aug 2023 21:29:15 GMT  
+		Size: 62.0 MB (62025760 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4ae2cbc861b04ab443c850fc8d67dc974b4ee861449ab39a79434f3102ce05c`  
-		Last Modified: Tue, 01 Aug 2023 22:21:18 GMT  
-		Size: 124.0 B  
+	-	`sha256:a78bef0024a1147f7116d9d415cfeec8b3b94e6a53d3c739f489f5e8b447851e`  
+		Last Modified: Tue, 08 Aug 2023 21:28:29 GMT  
+		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1` - linux; ppc64le
@@ -625,14 +625,14 @@ WORKDIR /go
 ### `golang:1` - windows version 10.0.20348.1850; amd64
 
 ```console
-$ docker pull golang@sha256:361e217a104bae0291b7fbf17562d067e23f423a30e3990ba398d1e5e31876ac
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **1.9 GB (1872105855 bytes)**  
+-	Total Size: **1.8 GB (1832386829 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c215aa2e0cafd71becc45d0d6eaf4b1a970534bf22fea882179daceda3459ed0`
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -657,11 +657,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:30:22 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:35:14 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:37:37 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:37:39 GMT
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
 WORKDIR C:\go
 ```
 
@@ -706,30 +706,30 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
 		Size: 263.2 KB (263191 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:326ef3ff4b4f0b55d50275b360cf494cf23752c258adb2116098f5e5a3199fa5`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.4 KB (1421 bytes)  
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14b097dfbd4dafff76dab0b850bb2b043b71c920e96c26552d47f479821c9617`  
-		Last Modified: Tue, 01 Aug 2023 22:00:48 GMT  
-		Size: 108.9 MB (108930621 bytes)  
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13679ff7ad3316b11d9df991a057252d1ac7662138189bc9c290725e4eef2066`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.6 KB (1552 bytes)  
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1` - windows version 10.0.17763.4645; amd64
 
 ```console
-$ docker pull golang@sha256:7abdfc5f7428a10fbe3538e853212a71f913861e9c079c42c3bf6e866ececef7
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 GB (2074393559 bytes)**  
+-	Total Size: **2.0 GB (2034660194 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2bcd2628c82f1aadd5593c967a21deee4c2491b8dc93a0c789d55dc99062534`
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -754,11 +754,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:35:18 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:37:57 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:41:26 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:41:27 GMT
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
 WORKDIR C:\go
 ```
 
@@ -803,17 +803,17 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
 		Size: 199.7 KB (199676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e5b14c2b67f2b328130150440eb9cb9b7587ff44970e85f41bfd1512959de12`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10ad11c6a3e2aa14d9b47ee1fd63465f38b657b04b84e6d1aeb8febd6ba00d16`  
-		Last Modified: Tue, 01 Aug 2023 22:01:26 GMT  
-		Size: 109.0 MB (108954748 bytes)  
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14a8b1be9bc4be6c78af685e63fc4c0cfd8f95c9e2882e957178927e6ecfcdc`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.5 KB (1546 bytes)  
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1-alpine`
@@ -2001,7 +2001,7 @@ WORKDIR /go
 ## `golang:1-bookworm`
 
 ```console
-$ docker pull golang@sha256:3ebca24d93900b280143427b6bb536ac73328561d521d6204223bf85e08f795c
+$ docker pull golang@sha256:0f48aacdbbe45b24dc65accfbe77d5a6c118a00ff1fca2e3b3c8652e2d949443
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2348,14 +2348,14 @@ WORKDIR /go
 ### `golang:1-bookworm` - linux; mips64le
 
 ```console
-$ docker pull golang@sha256:64d546b7de81d2f80dd12b6e54e1a399eaacc7524f1acc776ff70286a4b6b391
+$ docker pull golang@sha256:df6053b34b7d25ada150915c20d8a3a92f894edfbe055b6a7870d9d0206a86ad
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **300.1 MB (300099332 bytes)**  
+-	Total Size: **267.8 MB (267756477 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:88b7489537c2f1d4e62b81eca2ca9bf545cdae1abad7159e0ad8dbef525a786f`
+-	Image ID: `sha256:d66bee4b015af14ec2f0f00a9ae20420c683db8c3dc8826c3ed97ecfc76524f4`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -2371,17 +2371,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Sat, 29 Jul 2023 19:44:30 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:29:10 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:41:02 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.7.linux-amd64.tar.gz'; 			sha256='f0a87f1bcae91c4b69f8dc2bc6d7e6bfcd7524fceec130af525058c0c17b1b44'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.7.linux-armv6l.tar.gz'; 			sha256='7cc231b415b94f2f7065870a73f67dd2b0ec12b5a98052b7ee0121c42bc04f8d'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.7.linux-arm64.tar.gz'; 			sha256='44781ae3b153c3b07651d93b6bc554e835a36e2d72a696281c1e4dad9efffe43'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.7.linux-386.tar.gz'; 			sha256='ddb48145f05bda2f4617a22c979d4e94b22802cdb1a1fde1b1974e733b26f091'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.7.linux-ppc64le.tar.gz'; 			sha256='6318a1db307c12b8afe68808bd6fae4fba1e558a85b958216096869ed506dcb3'; 			;; 		'riscv64') 			export GOARCH='riscv64' GOOS='linux'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.7.linux-s390x.tar.gz'; 			sha256='26aea2ede8722ceecbd9db883328a8d963136fd96c11dacc356c44c4c19c6515'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.7.src.tar.gz'; 		sha256='2c5ee9c9ec1e733b0dbbc2bdfed3f62306e51d8172bf38f4f4e542b27520f597'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Tue, 01 Aug 2023 21:41:10 GMT
+# Tue, 08 Aug 2023 21:24:42 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:25:32 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:25:40 GMT
 ENV GOPATH=/go
-# Tue, 01 Aug 2023 21:41:16 GMT
+# Tue, 08 Aug 2023 21:25:46 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:41:25 GMT
+# Tue, 08 Aug 2023 21:25:55 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Tue, 01 Aug 2023 21:41:32 GMT
+# Tue, 08 Aug 2023 21:26:01 GMT
 WORKDIR /go
 ```
 
@@ -2402,13 +2402,13 @@ WORKDIR /go
 		Last Modified: Sat, 29 Jul 2023 20:42:16 GMT  
 		Size: 69.6 MB (69625048 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a2d58e643ac77d73462d501f78b21fb37ab182fa998a1fdce336c0db6e8bf4cc`  
-		Last Modified: Tue, 01 Aug 2023 22:22:14 GMT  
-		Size: 94.4 MB (94368617 bytes)  
+	-	`sha256:503e556f1b1861954a25d70f3a5c25853440cbb11869ead2ba011199ff4395e9`  
+		Last Modified: Tue, 08 Aug 2023 21:29:15 GMT  
+		Size: 62.0 MB (62025760 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4ae2cbc861b04ab443c850fc8d67dc974b4ee861449ab39a79434f3102ce05c`  
-		Last Modified: Tue, 01 Aug 2023 22:21:18 GMT  
-		Size: 124.0 B  
+	-	`sha256:a78bef0024a1147f7116d9d415cfeec8b3b94e6a53d3c739f489f5e8b447851e`  
+		Last Modified: Tue, 08 Aug 2023 21:28:29 GMT  
+		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-bookworm` - linux; ppc64le
@@ -2546,7 +2546,7 @@ WORKDIR /go
 ## `golang:1-bullseye`
 
 ```console
-$ docker pull golang@sha256:33fd8ed66879fdcf8db193866feedc58a073ce263fda5934fdb511dbdf46b6c6
+$ docker pull golang@sha256:00b1926b6e3f7f47ba01ad808c07ff1832c61c1f8bc01b4ca1dfa21d659df46b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2893,14 +2893,14 @@ WORKDIR /go
 ### `golang:1-bullseye` - linux; mips64le
 
 ```console
-$ docker pull golang@sha256:4fdc0b28da3722b72a6d60d5eae11e2ccb594eff0471f250d49d1266d8fa0064
+$ docker pull golang@sha256:cb59c7f8baaa3685cd9236f9be40a0db1589b5e15e9763d0373ea2a48e544b36
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **283.4 MB (283364096 bytes)**  
+-	Total Size: **251.0 MB (251027403 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7add50da0431578c185daaac3b869ca0791426278001e33e2558b5b93f34c544`
+-	Image ID: `sha256:52360527d77829d9e6a419e77c303cc28b8a7fcb3d97c6f40adba5275cf5adb0`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -2916,17 +2916,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Sat, 29 Jul 2023 19:47:23 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:41:44 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:53:53 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.7.linux-amd64.tar.gz'; 			sha256='f0a87f1bcae91c4b69f8dc2bc6d7e6bfcd7524fceec130af525058c0c17b1b44'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.7.linux-armv6l.tar.gz'; 			sha256='7cc231b415b94f2f7065870a73f67dd2b0ec12b5a98052b7ee0121c42bc04f8d'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.7.linux-arm64.tar.gz'; 			sha256='44781ae3b153c3b07651d93b6bc554e835a36e2d72a696281c1e4dad9efffe43'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.7.linux-386.tar.gz'; 			sha256='ddb48145f05bda2f4617a22c979d4e94b22802cdb1a1fde1b1974e733b26f091'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.7.linux-ppc64le.tar.gz'; 			sha256='6318a1db307c12b8afe68808bd6fae4fba1e558a85b958216096869ed506dcb3'; 			;; 		'riscv64') 			export GOARCH='riscv64' GOOS='linux'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.7.linux-s390x.tar.gz'; 			sha256='26aea2ede8722ceecbd9db883328a8d963136fd96c11dacc356c44c4c19c6515'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.7.src.tar.gz'; 		sha256='2c5ee9c9ec1e733b0dbbc2bdfed3f62306e51d8172bf38f4f4e542b27520f597'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Tue, 01 Aug 2023 21:54:01 GMT
+# Tue, 08 Aug 2023 21:26:25 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:27:22 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:27:30 GMT
 ENV GOPATH=/go
-# Tue, 01 Aug 2023 21:54:07 GMT
+# Tue, 08 Aug 2023 21:27:37 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:54:16 GMT
+# Tue, 08 Aug 2023 21:27:46 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Tue, 01 Aug 2023 21:54:22 GMT
+# Tue, 08 Aug 2023 21:27:52 GMT
 WORKDIR /go
 ```
 
@@ -2947,13 +2947,13 @@ WORKDIR /go
 		Last Modified: Sat, 29 Jul 2023 20:43:20 GMT  
 		Size: 66.9 MB (66903395 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3b3c451f740b04bd6569a4d57b724574017a6cea7a8a1e6d3fd46dc8c8136d24`  
-		Last Modified: Tue, 01 Aug 2023 22:23:23 GMT  
-		Size: 94.4 MB (94362392 bytes)  
+	-	`sha256:62b8d05d16d1758e71d13cde9e070a9b4961ec68b11ee2a5a31e066f313f51d7`  
+		Last Modified: Tue, 08 Aug 2023 21:30:18 GMT  
+		Size: 62.0 MB (62025701 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e80df7040f185ad46328e0ed7d43b420ce3d72df0dadb1ec8bad5e2195621790`  
-		Last Modified: Tue, 01 Aug 2023 22:22:30 GMT  
-		Size: 126.0 B  
+	-	`sha256:065b22d1ed694fae113a9a1af84385a76db59135d86ebaf63d4dc5b17ec68c3a`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 124.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-bullseye` - linux; ppc64le
@@ -3091,7 +3091,7 @@ WORKDIR /go
 ## `golang:1-nanoserver`
 
 ```console
-$ docker pull golang@sha256:0473162c214e4bde2ad1e3128352fb56c979e2d871e65fe834b2feab46dafaf5
+$ docker pull golang@sha256:d104df22c40bb3ab5306cc508365f5f4bd2829fc2237901dac3ae896724b73bb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3102,14 +3102,14 @@ $ docker pull golang@sha256:0473162c214e4bde2ad1e3128352fb56c979e2d871e65fe834b2
 ### `golang:1-nanoserver` - windows version 10.0.20348.1850; amd64
 
 ```console
-$ docker pull golang@sha256:1ee174d7717c6a3a5faf68a4aa5b0674361eefb1beec51b39cc3cdf5ac82c1af
+$ docker pull golang@sha256:e8df3077548882da2eb56598ad5e9b344e69906bdfee5a8511ed41f788c32e60
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **228.8 MB (228845740 bytes)**  
+-	Total Size: **189.1 MB (189135108 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f118a3bc9c328dedcfd0d0c13066fca6919b01fb03c94fa13204006672d80ba`
+-	Image ID: `sha256:dd48537ca6566717a32196281d5abb1765953e0a9405aca55940dc49cc117c8d`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/S","\/C"]`
 
@@ -3126,13 +3126,13 @@ USER ContainerAdministrator
 RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
 # Thu, 13 Jul 2023 20:38:50 GMT
 USER ContainerUser
-# Tue, 01 Aug 2023 21:41:42 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:43:31 GMT
-COPY dir:7838f09f321adfac003943dc47e6d67d803060d7e7835c75d5671d28e1431790 in C:\Program Files\Go 
-# Tue, 01 Aug 2023 21:43:50 GMT
+# Tue, 08 Aug 2023 21:22:27 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:24:21 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:24:43 GMT
 RUN go version
-# Tue, 01 Aug 2023 21:43:51 GMT
+# Tue, 08 Aug 2023 21:24:44 GMT
 WORKDIR C:\go
 ```
 
@@ -3161,34 +3161,34 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:09:55 GMT  
 		Size: 1.2 KB (1179 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eef29bb5c78c7f5a72f65075fa0bbb878d200a987b8acae6d52875a4a579b5ad`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 1.2 KB (1162 bytes)  
+	-	`sha256:825ee507fe4c91483617811fb931f31de6a2a16ccb1d45f5f81f88645e5780ec`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.1 KB (1140 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:023368f22c38cf49c869a31e4cb5899a5fe3a4056312bb84267bd56c843e1e2a`  
-		Last Modified: Tue, 01 Aug 2023 22:02:08 GMT  
-		Size: 108.6 MB (108647299 bytes)  
+	-	`sha256:98af339c9efd9281d67c7e6f4c5b6a36344102e749829d130ad2fa23f474b927`  
+		Last Modified: Tue, 08 Aug 2023 21:30:08 GMT  
+		Size: 68.9 MB (68935351 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:023326773a0d32be9c3a78188a49932250322d6e4eebdff9864f688237caa89f`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 48.1 KB (48124 bytes)  
+	-	`sha256:c65fa4c0e6cc1578aa176c87cc5e1340fc400fa93f1e2a3f36bc3df0214781ef`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 49.4 KB (49439 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f29fb9e93f7b5be03db3d3f2d6650c19305e7adc83d70db9c116ef6749fe8945`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 1.3 KB (1342 bytes)  
+	-	`sha256:2daa7b153413c6fface39a4c691b8dd7d346e087a8bf33dedf562f9829346a95`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.4 KB (1365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-nanoserver` - windows version 10.0.17763.4645; amd64
 
 ```console
-$ docker pull golang@sha256:e64f134d80b9a1dde47a2e70d82962c4063bbc26743e7d4b02ebdf26c69cb061
+$ docker pull golang@sha256:a9e32be9db6a5bfeb9b3234a32ffc15b7df1b7a55fd3eed596193ce695173f7e
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **213.2 MB (213225153 bytes)**  
+-	Total Size: **173.5 MB (173476510 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c65db5955e0513d308d0fa7e53442d3e8bf8cf2a0b3f771d92ab1db69b41c5b8`
+-	Image ID: `sha256:111942e3e4e041fd241d5f02ac10a193d716b706a85e568cdc159786eff7841c`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/S","\/C"]`
 
@@ -3205,13 +3205,13 @@ USER ContainerAdministrator
 RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
 # Thu, 13 Jul 2023 20:41:31 GMT
 USER ContainerUser
-# Tue, 01 Aug 2023 21:44:10 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:45:58 GMT
-COPY dir:7838f09f321adfac003943dc47e6d67d803060d7e7835c75d5671d28e1431790 in C:\Program Files\Go 
-# Tue, 01 Aug 2023 21:46:18 GMT
+# Tue, 08 Aug 2023 21:24:55 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:26:51 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:27:10 GMT
 RUN go version
-# Tue, 01 Aug 2023 21:46:19 GMT
+# Tue, 08 Aug 2023 21:27:11 GMT
 WORKDIR C:\go
 ```
 
@@ -3240,27 +3240,27 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:10:32 GMT  
 		Size: 1.2 KB (1164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8fcdaad6979c017e6da699dbf698f77b594370087a6502bcbf1442ff11b0e136`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 1.1 KB (1146 bytes)  
+	-	`sha256:a023276388344d2474bd8dd3b29d50513061de5a1a32eddc670b8076fd699b62`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.1 KB (1127 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ca5731f2a035975a11e8adb1cc7a3ffacd4e8a797d5cbd4b28f3be6bc15871be`  
-		Last Modified: Tue, 01 Aug 2023 22:02:45 GMT  
-		Size: 108.6 MB (108646265 bytes)  
+	-	`sha256:b4a746a1f96095d170fb8ea3ad0b38d825335fc94307c675d082f68d85234bae`  
+		Last Modified: Tue, 08 Aug 2023 21:30:45 GMT  
+		Size: 68.9 MB (68902833 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19eddb617fd90adcf1bb80518718e3ed5cad2bba1757a213978f1af464b8bb3f`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 87.2 KB (87246 bytes)  
+	-	`sha256:6d30343b23bb2b78603d183ea90053d8e26e990e8cb67aa5711992f55c79551c`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 82.2 KB (82185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6493f14c2c96160d0a8fd4afa069dee2c479f932b215bf6ee702a4f4e9269eb`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 1.4 KB (1358 bytes)  
+	-	`sha256:180b607dd89477842db7b3f786480f140c427f268f0a94818ee1535e5bb4b02f`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.2 KB (1227 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1-nanoserver-1809`
 
 ```console
-$ docker pull golang@sha256:f2c195d07ec9f2ff00c86c3026eb41579abba3c90a6d54ee8253132da19f838b
+$ docker pull golang@sha256:2e10cd4037d87598c352e1efdc1a50a1eac093d83308b6b774ef4c1114861827
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3270,14 +3270,14 @@ $ docker pull golang@sha256:f2c195d07ec9f2ff00c86c3026eb41579abba3c90a6d54ee8253
 ### `golang:1-nanoserver-1809` - windows version 10.0.17763.4645; amd64
 
 ```console
-$ docker pull golang@sha256:e64f134d80b9a1dde47a2e70d82962c4063bbc26743e7d4b02ebdf26c69cb061
+$ docker pull golang@sha256:a9e32be9db6a5bfeb9b3234a32ffc15b7df1b7a55fd3eed596193ce695173f7e
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **213.2 MB (213225153 bytes)**  
+-	Total Size: **173.5 MB (173476510 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c65db5955e0513d308d0fa7e53442d3e8bf8cf2a0b3f771d92ab1db69b41c5b8`
+-	Image ID: `sha256:111942e3e4e041fd241d5f02ac10a193d716b706a85e568cdc159786eff7841c`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/S","\/C"]`
 
@@ -3294,13 +3294,13 @@ USER ContainerAdministrator
 RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
 # Thu, 13 Jul 2023 20:41:31 GMT
 USER ContainerUser
-# Tue, 01 Aug 2023 21:44:10 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:45:58 GMT
-COPY dir:7838f09f321adfac003943dc47e6d67d803060d7e7835c75d5671d28e1431790 in C:\Program Files\Go 
-# Tue, 01 Aug 2023 21:46:18 GMT
+# Tue, 08 Aug 2023 21:24:55 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:26:51 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:27:10 GMT
 RUN go version
-# Tue, 01 Aug 2023 21:46:19 GMT
+# Tue, 08 Aug 2023 21:27:11 GMT
 WORKDIR C:\go
 ```
 
@@ -3329,27 +3329,27 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:10:32 GMT  
 		Size: 1.2 KB (1164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8fcdaad6979c017e6da699dbf698f77b594370087a6502bcbf1442ff11b0e136`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 1.1 KB (1146 bytes)  
+	-	`sha256:a023276388344d2474bd8dd3b29d50513061de5a1a32eddc670b8076fd699b62`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.1 KB (1127 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ca5731f2a035975a11e8adb1cc7a3ffacd4e8a797d5cbd4b28f3be6bc15871be`  
-		Last Modified: Tue, 01 Aug 2023 22:02:45 GMT  
-		Size: 108.6 MB (108646265 bytes)  
+	-	`sha256:b4a746a1f96095d170fb8ea3ad0b38d825335fc94307c675d082f68d85234bae`  
+		Last Modified: Tue, 08 Aug 2023 21:30:45 GMT  
+		Size: 68.9 MB (68902833 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19eddb617fd90adcf1bb80518718e3ed5cad2bba1757a213978f1af464b8bb3f`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 87.2 KB (87246 bytes)  
+	-	`sha256:6d30343b23bb2b78603d183ea90053d8e26e990e8cb67aa5711992f55c79551c`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 82.2 KB (82185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6493f14c2c96160d0a8fd4afa069dee2c479f932b215bf6ee702a4f4e9269eb`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 1.4 KB (1358 bytes)  
+	-	`sha256:180b607dd89477842db7b3f786480f140c427f268f0a94818ee1535e5bb4b02f`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.2 KB (1227 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1-nanoserver-ltsc2022`
 
 ```console
-$ docker pull golang@sha256:f8a6749e9607e15aec6d428f66262578b36fe213df38dcf3cc42e85128d3682e
+$ docker pull golang@sha256:9ae631036977f91d349d3e6b46858a805465005bb5d925e15c3125a51b4eb872
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3359,14 +3359,14 @@ $ docker pull golang@sha256:f8a6749e9607e15aec6d428f66262578b36fe213df38dcf3cc42
 ### `golang:1-nanoserver-ltsc2022` - windows version 10.0.20348.1850; amd64
 
 ```console
-$ docker pull golang@sha256:1ee174d7717c6a3a5faf68a4aa5b0674361eefb1beec51b39cc3cdf5ac82c1af
+$ docker pull golang@sha256:e8df3077548882da2eb56598ad5e9b344e69906bdfee5a8511ed41f788c32e60
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **228.8 MB (228845740 bytes)**  
+-	Total Size: **189.1 MB (189135108 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f118a3bc9c328dedcfd0d0c13066fca6919b01fb03c94fa13204006672d80ba`
+-	Image ID: `sha256:dd48537ca6566717a32196281d5abb1765953e0a9405aca55940dc49cc117c8d`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/S","\/C"]`
 
@@ -3383,13 +3383,13 @@ USER ContainerAdministrator
 RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
 # Thu, 13 Jul 2023 20:38:50 GMT
 USER ContainerUser
-# Tue, 01 Aug 2023 21:41:42 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:43:31 GMT
-COPY dir:7838f09f321adfac003943dc47e6d67d803060d7e7835c75d5671d28e1431790 in C:\Program Files\Go 
-# Tue, 01 Aug 2023 21:43:50 GMT
+# Tue, 08 Aug 2023 21:22:27 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:24:21 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:24:43 GMT
 RUN go version
-# Tue, 01 Aug 2023 21:43:51 GMT
+# Tue, 08 Aug 2023 21:24:44 GMT
 WORKDIR C:\go
 ```
 
@@ -3418,27 +3418,27 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:09:55 GMT  
 		Size: 1.2 KB (1179 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eef29bb5c78c7f5a72f65075fa0bbb878d200a987b8acae6d52875a4a579b5ad`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 1.2 KB (1162 bytes)  
+	-	`sha256:825ee507fe4c91483617811fb931f31de6a2a16ccb1d45f5f81f88645e5780ec`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.1 KB (1140 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:023368f22c38cf49c869a31e4cb5899a5fe3a4056312bb84267bd56c843e1e2a`  
-		Last Modified: Tue, 01 Aug 2023 22:02:08 GMT  
-		Size: 108.6 MB (108647299 bytes)  
+	-	`sha256:98af339c9efd9281d67c7e6f4c5b6a36344102e749829d130ad2fa23f474b927`  
+		Last Modified: Tue, 08 Aug 2023 21:30:08 GMT  
+		Size: 68.9 MB (68935351 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:023326773a0d32be9c3a78188a49932250322d6e4eebdff9864f688237caa89f`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 48.1 KB (48124 bytes)  
+	-	`sha256:c65fa4c0e6cc1578aa176c87cc5e1340fc400fa93f1e2a3f36bc3df0214781ef`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 49.4 KB (49439 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f29fb9e93f7b5be03db3d3f2d6650c19305e7adc83d70db9c116ef6749fe8945`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 1.3 KB (1342 bytes)  
+	-	`sha256:2daa7b153413c6fface39a4c691b8dd7d346e087a8bf33dedf562f9829346a95`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.4 KB (1365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1-windowsservercore`
 
 ```console
-$ docker pull golang@sha256:0a24fb5e72f532c616aa9abef79db812e13ec3d2c2e861cc14e22d6af8e008cc
+$ docker pull golang@sha256:877dd735c19d34da65a34ef67716d27d59a2212b507568f6f0c23ff6c6627642
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3449,14 +3449,14 @@ $ docker pull golang@sha256:0a24fb5e72f532c616aa9abef79db812e13ec3d2c2e861cc14e2
 ### `golang:1-windowsservercore` - windows version 10.0.20348.1850; amd64
 
 ```console
-$ docker pull golang@sha256:361e217a104bae0291b7fbf17562d067e23f423a30e3990ba398d1e5e31876ac
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **1.9 GB (1872105855 bytes)**  
+-	Total Size: **1.8 GB (1832386829 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c215aa2e0cafd71becc45d0d6eaf4b1a970534bf22fea882179daceda3459ed0`
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -3481,11 +3481,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:30:22 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:35:14 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:37:37 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:37:39 GMT
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
 WORKDIR C:\go
 ```
 
@@ -3530,30 +3530,30 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
 		Size: 263.2 KB (263191 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:326ef3ff4b4f0b55d50275b360cf494cf23752c258adb2116098f5e5a3199fa5`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.4 KB (1421 bytes)  
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14b097dfbd4dafff76dab0b850bb2b043b71c920e96c26552d47f479821c9617`  
-		Last Modified: Tue, 01 Aug 2023 22:00:48 GMT  
-		Size: 108.9 MB (108930621 bytes)  
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13679ff7ad3316b11d9df991a057252d1ac7662138189bc9c290725e4eef2066`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.6 KB (1552 bytes)  
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:1-windowsservercore` - windows version 10.0.17763.4645; amd64
 
 ```console
-$ docker pull golang@sha256:7abdfc5f7428a10fbe3538e853212a71f913861e9c079c42c3bf6e866ececef7
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 GB (2074393559 bytes)**  
+-	Total Size: **2.0 GB (2034660194 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2bcd2628c82f1aadd5593c967a21deee4c2491b8dc93a0c789d55dc99062534`
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -3578,11 +3578,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:35:18 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:37:57 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:41:26 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:41:27 GMT
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
 WORKDIR C:\go
 ```
 
@@ -3627,23 +3627,23 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
 		Size: 199.7 KB (199676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e5b14c2b67f2b328130150440eb9cb9b7587ff44970e85f41bfd1512959de12`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10ad11c6a3e2aa14d9b47ee1fd63465f38b657b04b84e6d1aeb8febd6ba00d16`  
-		Last Modified: Tue, 01 Aug 2023 22:01:26 GMT  
-		Size: 109.0 MB (108954748 bytes)  
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14a8b1be9bc4be6c78af685e63fc4c0cfd8f95c9e2882e957178927e6ecfcdc`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.5 KB (1546 bytes)  
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1-windowsservercore-1809`
 
 ```console
-$ docker pull golang@sha256:ce0e1c35ba0fdb0f6e074419f4cad6bc40685ed67b206cc21f061fdb3ade5ba8
+$ docker pull golang@sha256:9684e4046ac508b5e7ff049ab3cc222fa9c61feee9e5aaea7454641890c3ba14
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3653,14 +3653,14 @@ $ docker pull golang@sha256:ce0e1c35ba0fdb0f6e074419f4cad6bc40685ed67b206cc21f06
 ### `golang:1-windowsservercore-1809` - windows version 10.0.17763.4645; amd64
 
 ```console
-$ docker pull golang@sha256:7abdfc5f7428a10fbe3538e853212a71f913861e9c079c42c3bf6e866ececef7
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 GB (2074393559 bytes)**  
+-	Total Size: **2.0 GB (2034660194 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2bcd2628c82f1aadd5593c967a21deee4c2491b8dc93a0c789d55dc99062534`
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -3685,11 +3685,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:35:18 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:37:57 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:41:26 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:41:27 GMT
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
 WORKDIR C:\go
 ```
 
@@ -3734,23 +3734,23 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
 		Size: 199.7 KB (199676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e5b14c2b67f2b328130150440eb9cb9b7587ff44970e85f41bfd1512959de12`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10ad11c6a3e2aa14d9b47ee1fd63465f38b657b04b84e6d1aeb8febd6ba00d16`  
-		Last Modified: Tue, 01 Aug 2023 22:01:26 GMT  
-		Size: 109.0 MB (108954748 bytes)  
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14a8b1be9bc4be6c78af685e63fc4c0cfd8f95c9e2882e957178927e6ecfcdc`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.5 KB (1546 bytes)  
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1-windowsservercore-ltsc2022`
 
 ```console
-$ docker pull golang@sha256:50099bdf1e99d9721383c29e32d74dbdd98272df8b2027fca62cf2c65b87d89e
+$ docker pull golang@sha256:9d96523c0fa673ba10e7e2725f840d7c12c8981856d2a92b7a325c269ddf99aa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3760,14 +3760,14 @@ $ docker pull golang@sha256:50099bdf1e99d9721383c29e32d74dbdd98272df8b2027fca62c
 ### `golang:1-windowsservercore-ltsc2022` - windows version 10.0.20348.1850; amd64
 
 ```console
-$ docker pull golang@sha256:361e217a104bae0291b7fbf17562d067e23f423a30e3990ba398d1e5e31876ac
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **1.9 GB (1872105855 bytes)**  
+-	Total Size: **1.8 GB (1832386829 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c215aa2e0cafd71becc45d0d6eaf4b1a970534bf22fea882179daceda3459ed0`
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -3792,11 +3792,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:30:22 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:35:14 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:37:37 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:37:39 GMT
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
 WORKDIR C:\go
 ```
 
@@ -3841,17 +3841,17 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
 		Size: 263.2 KB (263191 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:326ef3ff4b4f0b55d50275b360cf494cf23752c258adb2116098f5e5a3199fa5`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.4 KB (1421 bytes)  
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14b097dfbd4dafff76dab0b850bb2b043b71c920e96c26552d47f479821c9617`  
-		Last Modified: Tue, 01 Aug 2023 22:00:48 GMT  
-		Size: 108.9 MB (108930621 bytes)  
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13679ff7ad3316b11d9df991a057252d1ac7662138189bc9c290725e4eef2066`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.6 KB (1552 bytes)  
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.20`
@@ -11415,12 +11415,15 @@ WORKDIR C:\go
 ## `golang:1.21`
 
 ```console
-$ docker pull golang@sha256:5b3dfaa6077ce11229dde1fc9f4dbdde8ac794d6ae20e58741dec8f23e1d89b1
+$ docker pull golang@sha256:24fd60f8a13ef2bd18b40e6bd5907950d11ff53be7edb6780c4da88e2acb7650
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Platforms: 4
 	-	linux; arm variant v5
+	-	linux; mips64le
+	-	windows version 10.0.20348.1850; amd64
+	-	windows version 10.0.17763.4645; amd64
 
 ### `golang:1.21` - linux; arm variant v5
 
@@ -11488,6 +11491,266 @@ WORKDIR /go
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `golang:1.21` - linux; mips64le
+
+```console
+$ docker pull golang@sha256:df6053b34b7d25ada150915c20d8a3a92f894edfbe055b6a7870d9d0206a86ad
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **267.8 MB (267756477 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:d66bee4b015af14ec2f0f00a9ae20420c683db8c3dc8826c3ed97ecfc76524f4`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 27 Jul 2023 23:10:44 GMT
+ADD file:3568f288ff9791a341f5cb0e99c0a63e09a68f3816d7f7a9971127b9b98a04b8 in / 
+# Thu, 27 Jul 2023 23:10:50 GMT
+CMD ["bash"]
+# Fri, 28 Jul 2023 01:11:15 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 		netbase 		sq 		wget 	; 	rm -rf /var/lib/apt/lists/*
+# Fri, 28 Jul 2023 01:13:02 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:44:25 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:44:30 GMT
+ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:24:42 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:25:32 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:25:40 GMT
+ENV GOPATH=/go
+# Tue, 08 Aug 2023 21:25:46 GMT
+ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:25:55 GMT
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
+# Tue, 08 Aug 2023 21:26:01 GMT
+WORKDIR /go
+```
+
+-	Layers:
+	-	`sha256:e4dbd8372ba202a8b430bce8d5c5b8a4bfdbc6ef2703180665e5964d51bb0437`  
+		Last Modified: Thu, 27 Jul 2023 23:21:43 GMT  
+		Size: 49.5 MB (49542050 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a69206dfad992d03f1e8e833ae728ffacf2c6919f78c4822d849e341473efebb`  
+		Last Modified: Fri, 28 Jul 2023 01:31:27 GMT  
+		Size: 23.6 MB (23612647 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:33fab0a49ca1e0cd2eb4b9660e3a70dc1ab671984cc4843ea845a6cf76532eaa`  
+		Last Modified: Fri, 28 Jul 2023 01:32:19 GMT  
+		Size: 63.0 MB (62950846 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3111f1bcc30e6eb541b76a95351b90515be864553f2ca58dcb1f8035e15833f2`  
+		Last Modified: Sat, 29 Jul 2023 20:42:16 GMT  
+		Size: 69.6 MB (69625048 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:503e556f1b1861954a25d70f3a5c25853440cbb11869ead2ba011199ff4395e9`  
+		Last Modified: Tue, 08 Aug 2023 21:29:15 GMT  
+		Size: 62.0 MB (62025760 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a78bef0024a1147f7116d9d415cfeec8b3b94e6a53d3c739f489f5e8b447851e`  
+		Last Modified: Tue, 08 Aug 2023 21:28:29 GMT  
+		Size: 126.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `golang:1.21` - windows version 10.0.20348.1850; amd64
+
+```console
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **1.8 GB (1832386829 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:55:20 GMT
+RUN Apply image 10.0.20348.1787
+# Fri, 07 Jul 2023 21:29:32 GMT
+RUN Install update 10.0.20348.1850
+# Thu, 13 Jul 2023 20:29:18 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:29:19 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:29:20 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:30:02 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:30:03 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:30:22 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:7c76e5cf7755ce357ffb737715b0da6799a50ea468cc252c094f4d915d426b3f`  
+		Last Modified: Tue, 13 Jun 2023 17:55:32 GMT  
+		Size: 1.4 GB (1388598786 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c84a7416e1317a892f4786a89c62493b21df55e0e06b82a4bb007cc79df0f949`  
+		Last Modified: Tue, 11 Jul 2023 18:03:32 GMT  
+		Size: 348.8 MB (348766456 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d3e3828ab9c4326158b6161915d8bad87619b3107529ab32863eb31b684d127`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1400 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:43ab322251f8c00d29baecc140e08d269c37b32475902e7a2822076226f616fa`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1408 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a968ab3b5ad50a23776f7dd7e039322644cac504ae091a0b0cd2e1b88fbb7e69`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f9ba07cbbe0cde4ed464b5564160e204ded4877d3a1e5cf5fa3e155d5c0c3500`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:22efbf516ade60254b7399cfd7c01ac615e7d0c3745272b9636c39ba1b16c6e9`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1288 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:195ef065fa8b0419c3b6dc860031273f7cb1e3adab37c0a55458d916644f7f32`  
+		Last Modified: Thu, 13 Jul 2023 21:07:40 GMT  
+		Size: 25.5 MB (25535727 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:792bc8f98993f23c77f2a5ab339752f8bed1c5769eff7a72bd01f84cae18d978`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:90ee2ce3d2ac713b0419f7347636dffe3f3d8639e4f3476fc6cf2f233ed3392b`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 263.2 KB (263191 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `golang:1.21` - windows version 10.0.17763.4645; amd64
+
+```console
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.0 GB (2034660194 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:58:24 GMT
+RUN Apply image 10.0.17763.4499
+# Fri, 07 Jul 2023 08:17:39 GMT
+RUN Install update 10.0.17763.4645
+# Thu, 13 Jul 2023 20:32:48 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:32:49 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:32:50 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:32:51 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:32:52 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:34:19 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:34:20 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:35:18 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:c9226d61d3bdbf9f09821b32f5878623b8daaa5fb4f875cb63c199f87a26d57e`  
+		Last Modified: Tue, 13 Jun 2023 18:25:35 GMT  
+		Size: 1.7 GB (1650620357 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e36dba1ee29cd36713c8785a5de7dd2a487244d734ed4c5e7b0a6890bffb806e`  
+		Last Modified: Tue, 11 Jul 2023 18:27:38 GMT  
+		Size: 289.1 MB (289068746 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2e991bb72ebb8bf12a5cb5fcb2075d938e3508db6634bdfe6a5bb73e4c612051`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1342 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0e45ab66f9ac94fc8ae1502d608bfafe55474826433492ded72aec621e806135`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1292 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:09ec77006091819bb389d795fbc65cfaa9816b1ec1d290fa69d7463deca96f34`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.4 KB (1407 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:644e3d07488adc4a8ad4814e56aa81e6fca904355063f428ffb268295652ffe2`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1317 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cbd32009b5917604a82cfb40d9544473ce70effdf77f88e2789da38c728bf558`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1284 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e4a4965a15372d2b5cedfe4d4430099e41e99422d4cca3691a98cbec84eecbac`  
+		Last Modified: Thu, 13 Jul 2023 21:08:55 GMT  
+		Size: 25.5 MB (25539036 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8ae3b26bb532e185a0466f153372175d53da071a98b81698629642ad9beaa7f6`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 1.4 KB (1391 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c849e84b956dfd8d9b126adc28c0df4e277eb9af511f64babd04a6a14726333a`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 199.7 KB (199676 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `golang:1.21-alpine`
 
 ```console
@@ -11518,12 +11781,13 @@ $ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab
 ## `golang:1.21-bookworm`
 
 ```console
-$ docker pull golang@sha256:5b3dfaa6077ce11229dde1fc9f4dbdde8ac794d6ae20e58741dec8f23e1d89b1
+$ docker pull golang@sha256:a6730a31cfe2e80fa0c053ee682451e77b0390afd24a5edf8a0b461a6c07b444
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Platforms: 2
 	-	linux; arm variant v5
+	-	linux; mips64le
 
 ### `golang:1.21-bookworm` - linux; arm variant v5
 
@@ -11591,15 +11855,82 @@ WORKDIR /go
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `golang:1.21-bookworm` - linux; mips64le
+
+```console
+$ docker pull golang@sha256:df6053b34b7d25ada150915c20d8a3a92f894edfbe055b6a7870d9d0206a86ad
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **267.8 MB (267756477 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:d66bee4b015af14ec2f0f00a9ae20420c683db8c3dc8826c3ed97ecfc76524f4`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 27 Jul 2023 23:10:44 GMT
+ADD file:3568f288ff9791a341f5cb0e99c0a63e09a68f3816d7f7a9971127b9b98a04b8 in / 
+# Thu, 27 Jul 2023 23:10:50 GMT
+CMD ["bash"]
+# Fri, 28 Jul 2023 01:11:15 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 		netbase 		sq 		wget 	; 	rm -rf /var/lib/apt/lists/*
+# Fri, 28 Jul 2023 01:13:02 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:44:25 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:44:30 GMT
+ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:24:42 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:25:32 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:25:40 GMT
+ENV GOPATH=/go
+# Tue, 08 Aug 2023 21:25:46 GMT
+ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:25:55 GMT
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
+# Tue, 08 Aug 2023 21:26:01 GMT
+WORKDIR /go
+```
+
+-	Layers:
+	-	`sha256:e4dbd8372ba202a8b430bce8d5c5b8a4bfdbc6ef2703180665e5964d51bb0437`  
+		Last Modified: Thu, 27 Jul 2023 23:21:43 GMT  
+		Size: 49.5 MB (49542050 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a69206dfad992d03f1e8e833ae728ffacf2c6919f78c4822d849e341473efebb`  
+		Last Modified: Fri, 28 Jul 2023 01:31:27 GMT  
+		Size: 23.6 MB (23612647 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:33fab0a49ca1e0cd2eb4b9660e3a70dc1ab671984cc4843ea845a6cf76532eaa`  
+		Last Modified: Fri, 28 Jul 2023 01:32:19 GMT  
+		Size: 63.0 MB (62950846 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3111f1bcc30e6eb541b76a95351b90515be864553f2ca58dcb1f8035e15833f2`  
+		Last Modified: Sat, 29 Jul 2023 20:42:16 GMT  
+		Size: 69.6 MB (69625048 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:503e556f1b1861954a25d70f3a5c25853440cbb11869ead2ba011199ff4395e9`  
+		Last Modified: Tue, 08 Aug 2023 21:29:15 GMT  
+		Size: 62.0 MB (62025760 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a78bef0024a1147f7116d9d415cfeec8b3b94e6a53d3c739f489f5e8b447851e`  
+		Last Modified: Tue, 08 Aug 2023 21:28:29 GMT  
+		Size: 126.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `golang:1.21-bullseye`
 
 ```console
-$ docker pull golang@sha256:2004bfc0d6cb546bb1dc7e806dc7ab7fa61747e63e28ddc45ef11598e5e376be
+$ docker pull golang@sha256:eb5fc3d3f80dc6e34b7d8b620d6ad40601d8b9a63a8c41718fb204ecb906f270
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Platforms: 2
 	-	linux; arm variant v5
+	-	linux; mips64le
 
 ### `golang:1.21-bullseye` - linux; arm variant v5
 
@@ -11667,69 +11998,850 @@ WORKDIR /go
 		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `golang:1.21-bullseye` - linux; mips64le
+
+```console
+$ docker pull golang@sha256:cb59c7f8baaa3685cd9236f9be40a0db1589b5e15e9763d0373ea2a48e544b36
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **251.0 MB (251027403 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:52360527d77829d9e6a419e77c303cc28b8a7fcb3d97c6f40adba5275cf5adb0`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 27 Jul 2023 23:11:57 GMT
+ADD file:ccccca3acf3759fd714159d3c3beff86d84a9751b947e148348d523272fc1bb9 in / 
+# Thu, 27 Jul 2023 23:12:02 GMT
+CMD ["bash"]
+# Fri, 28 Jul 2023 01:19:34 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
+# Fri, 28 Jul 2023 01:21:18 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:47:18 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:47:23 GMT
+ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:26:25 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:27:22 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:27:30 GMT
+ENV GOPATH=/go
+# Tue, 08 Aug 2023 21:27:37 GMT
+ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:27:46 GMT
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
+# Tue, 08 Aug 2023 21:27:52 GMT
+WORKDIR /go
+```
+
+-	Layers:
+	-	`sha256:9d9a0c35af83dc10b6307f02a48749b4d8024123530a89d5173f70981e00b9e3`  
+		Last Modified: Thu, 27 Jul 2023 23:23:10 GMT  
+		Size: 53.3 MB (53270927 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f12aa6a7cf9a2dd39c4a36e47b26cc0ca1c9e8ad55d149bdf74bcbc866c92718`  
+		Last Modified: Fri, 28 Jul 2023 01:34:45 GMT  
+		Size: 15.5 MB (15520522 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3cedbdbe02029d723bc1414bf8094fe7b1ac71ed4460a31db174ac0e221fc1b3`  
+		Last Modified: Fri, 28 Jul 2023 01:35:29 GMT  
+		Size: 53.3 MB (53306734 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:66d1011d0c755667944595a368ae6afe28335a2f43df6ad6b77778150579c660`  
+		Last Modified: Sat, 29 Jul 2023 20:43:20 GMT  
+		Size: 66.9 MB (66903395 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:62b8d05d16d1758e71d13cde9e070a9b4961ec68b11ee2a5a31e066f313f51d7`  
+		Last Modified: Tue, 08 Aug 2023 21:30:18 GMT  
+		Size: 62.0 MB (62025701 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:065b22d1ed694fae113a9a1af84385a76db59135d86ebaf63d4dc5b17ec68c3a`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 124.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `golang:1.21-nanoserver`
 
 ```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+$ docker pull golang@sha256:d104df22c40bb3ab5306cc508365f5f4bd2829fc2237901dac3ae896724b73bb
 ```
 
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 2
+	-	windows version 10.0.20348.1850; amd64
+	-	windows version 10.0.17763.4645; amd64
+
+### `golang:1.21-nanoserver` - windows version 10.0.20348.1850; amd64
+
+```console
+$ docker pull golang@sha256:e8df3077548882da2eb56598ad5e9b344e69906bdfee5a8511ed41f788c32e60
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **189.1 MB (189135108 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:dd48537ca6566717a32196281d5abb1765953e0a9405aca55940dc49cc117c8d`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["cmd","\/S","\/C"]`
+
+```dockerfile
+# Fri, 07 Jul 2023 21:00:40 GMT
+RUN Apply image 10.0.20348.1850
+# Thu, 13 Jul 2023 20:38:35 GMT
+SHELL [cmd /S /C]
+# Thu, 13 Jul 2023 20:38:36 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:38:36 GMT
+USER ContainerAdministrator
+# Thu, 13 Jul 2023 20:38:50 GMT
+RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
+# Thu, 13 Jul 2023 20:38:50 GMT
+USER ContainerUser
+# Tue, 08 Aug 2023 21:22:27 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:24:21 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:24:43 GMT
+RUN go version
+# Tue, 08 Aug 2023 21:24:44 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:cc0a26bd90fcc4d863317c36d7ffec77a0a82a905697204d4dcbc76ec13b3920`  
+		Last Modified: Tue, 11 Jul 2023 20:10:45 GMT  
+		Size: 120.1 MB (120056465 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:262f95c9ffc2400b306c39bdd21ab1ee5e02c305fa1895921355e39b04ef5049`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.2 KB (1168 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a8d65723d6c5290f74027190acf1ee9ba18c9d51dd97ae7d43aa55180c5dcdff`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.1 KB (1118 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5a4ebd208492d6e9b4540041dcd87d92206bc12bdf6b234dd276ad2d81738dae`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.2 KB (1168 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:364d1293eec57c6600f83d614d2e6f78ac8fb57a6c20691027ca7db38dbda83f`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 86.7 KB (86715 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c39c7d947e695d0076bd41e61d92b006bea76bce898a31501288817066d0b8b7`  
+		Last Modified: Thu, 13 Jul 2023 21:09:55 GMT  
+		Size: 1.2 KB (1179 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:825ee507fe4c91483617811fb931f31de6a2a16ccb1d45f5f81f88645e5780ec`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.1 KB (1140 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:98af339c9efd9281d67c7e6f4c5b6a36344102e749829d130ad2fa23f474b927`  
+		Last Modified: Tue, 08 Aug 2023 21:30:08 GMT  
+		Size: 68.9 MB (68935351 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c65fa4c0e6cc1578aa176c87cc5e1340fc400fa93f1e2a3f36bc3df0214781ef`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 49.4 KB (49439 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2daa7b153413c6fface39a4c691b8dd7d346e087a8bf33dedf562f9829346a95`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.4 KB (1365 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `golang:1.21-nanoserver` - windows version 10.0.17763.4645; amd64
+
+```console
+$ docker pull golang@sha256:a9e32be9db6a5bfeb9b3234a32ffc15b7df1b7a55fd3eed596193ce695173f7e
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **173.5 MB (173476510 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:111942e3e4e041fd241d5f02ac10a193d716b706a85e568cdc159786eff7841c`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["cmd","\/S","\/C"]`
+
+```dockerfile
+# Fri, 07 Jul 2023 07:42:59 GMT
+RUN Apply image 10.0.17763.4645
+# Thu, 13 Jul 2023 20:41:18 GMT
+SHELL [cmd /S /C]
+# Thu, 13 Jul 2023 20:41:19 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:41:20 GMT
+USER ContainerAdministrator
+# Thu, 13 Jul 2023 20:41:31 GMT
+RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
+# Thu, 13 Jul 2023 20:41:31 GMT
+USER ContainerUser
+# Tue, 08 Aug 2023 21:24:55 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:26:51 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:27:10 GMT
+RUN go version
+# Tue, 08 Aug 2023 21:27:11 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:5c5b06ba65934bcf850a1a54ecf4b3da34d3e6d6c8e90dbc897719c3ea377c8a`  
+		Last Modified: Tue, 11 Jul 2023 17:31:37 GMT  
+		Size: 104.4 MB (104408241 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a48271163dd58fddb2ff623ae3c53cac64a29148ad84e995c93073602f68793d`  
+		Last Modified: Thu, 13 Jul 2023 21:10:35 GMT  
+		Size: 1.1 KB (1144 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b8a8c1feea8292b9bc0b0f2be869e9692d63d21efa75624c84fa878079e30b05`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 1.2 KB (1172 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8041e971a244f1bdd7e444ce782b9e6fa4ba5859f2bbc2b8ccac016697970d7d`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 1.2 KB (1155 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d64db53aeff99ec4a41edd8036064f37150123d7caf2d1eff287f9704a010c6c`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 76.3 KB (76262 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0e25cfa96b658400676137a25a21f4628df693a06c1d217748e7696d9570cae7`  
+		Last Modified: Thu, 13 Jul 2023 21:10:32 GMT  
+		Size: 1.2 KB (1164 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a023276388344d2474bd8dd3b29d50513061de5a1a32eddc670b8076fd699b62`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.1 KB (1127 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b4a746a1f96095d170fb8ea3ad0b38d825335fc94307c675d082f68d85234bae`  
+		Last Modified: Tue, 08 Aug 2023 21:30:45 GMT  
+		Size: 68.9 MB (68902833 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6d30343b23bb2b78603d183ea90053d8e26e990e8cb67aa5711992f55c79551c`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 82.2 KB (82185 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:180b607dd89477842db7b3f786480f140c427f268f0a94818ee1535e5bb4b02f`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.2 KB (1227 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.21-nanoserver-1809`
 
 ```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
-```
-
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
-
-## `golang:1.21-nanoserver-ltsc2022`
-
-```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
-```
-
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
-
-## `golang:1.21-windowsservercore`
-
-```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
-```
-
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
-
-## `golang:1.21-windowsservercore-1809`
-
-```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
-```
-
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
-
-## `golang:1.21-windowsservercore-ltsc2022`
-
-```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
-```
-
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
-
-## `golang:1.21.0`
-
-```console
-$ docker pull golang@sha256:5b3dfaa6077ce11229dde1fc9f4dbdde8ac794d6ae20e58741dec8f23e1d89b1
+$ docker pull golang@sha256:2e10cd4037d87598c352e1efdc1a50a1eac093d83308b6b774ef4c1114861827
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
 -	Platforms: 1
+	-	windows version 10.0.17763.4645; amd64
+
+### `golang:1.21-nanoserver-1809` - windows version 10.0.17763.4645; amd64
+
+```console
+$ docker pull golang@sha256:a9e32be9db6a5bfeb9b3234a32ffc15b7df1b7a55fd3eed596193ce695173f7e
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **173.5 MB (173476510 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:111942e3e4e041fd241d5f02ac10a193d716b706a85e568cdc159786eff7841c`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["cmd","\/S","\/C"]`
+
+```dockerfile
+# Fri, 07 Jul 2023 07:42:59 GMT
+RUN Apply image 10.0.17763.4645
+# Thu, 13 Jul 2023 20:41:18 GMT
+SHELL [cmd /S /C]
+# Thu, 13 Jul 2023 20:41:19 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:41:20 GMT
+USER ContainerAdministrator
+# Thu, 13 Jul 2023 20:41:31 GMT
+RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
+# Thu, 13 Jul 2023 20:41:31 GMT
+USER ContainerUser
+# Tue, 08 Aug 2023 21:24:55 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:26:51 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:27:10 GMT
+RUN go version
+# Tue, 08 Aug 2023 21:27:11 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:5c5b06ba65934bcf850a1a54ecf4b3da34d3e6d6c8e90dbc897719c3ea377c8a`  
+		Last Modified: Tue, 11 Jul 2023 17:31:37 GMT  
+		Size: 104.4 MB (104408241 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a48271163dd58fddb2ff623ae3c53cac64a29148ad84e995c93073602f68793d`  
+		Last Modified: Thu, 13 Jul 2023 21:10:35 GMT  
+		Size: 1.1 KB (1144 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b8a8c1feea8292b9bc0b0f2be869e9692d63d21efa75624c84fa878079e30b05`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 1.2 KB (1172 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8041e971a244f1bdd7e444ce782b9e6fa4ba5859f2bbc2b8ccac016697970d7d`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 1.2 KB (1155 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d64db53aeff99ec4a41edd8036064f37150123d7caf2d1eff287f9704a010c6c`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 76.3 KB (76262 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0e25cfa96b658400676137a25a21f4628df693a06c1d217748e7696d9570cae7`  
+		Last Modified: Thu, 13 Jul 2023 21:10:32 GMT  
+		Size: 1.2 KB (1164 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a023276388344d2474bd8dd3b29d50513061de5a1a32eddc670b8076fd699b62`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.1 KB (1127 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b4a746a1f96095d170fb8ea3ad0b38d825335fc94307c675d082f68d85234bae`  
+		Last Modified: Tue, 08 Aug 2023 21:30:45 GMT  
+		Size: 68.9 MB (68902833 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6d30343b23bb2b78603d183ea90053d8e26e990e8cb67aa5711992f55c79551c`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 82.2 KB (82185 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:180b607dd89477842db7b3f786480f140c427f268f0a94818ee1535e5bb4b02f`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.2 KB (1227 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `golang:1.21-nanoserver-ltsc2022`
+
+```console
+$ docker pull golang@sha256:9ae631036977f91d349d3e6b46858a805465005bb5d925e15c3125a51b4eb872
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	windows version 10.0.20348.1850; amd64
+
+### `golang:1.21-nanoserver-ltsc2022` - windows version 10.0.20348.1850; amd64
+
+```console
+$ docker pull golang@sha256:e8df3077548882da2eb56598ad5e9b344e69906bdfee5a8511ed41f788c32e60
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **189.1 MB (189135108 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:dd48537ca6566717a32196281d5abb1765953e0a9405aca55940dc49cc117c8d`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["cmd","\/S","\/C"]`
+
+```dockerfile
+# Fri, 07 Jul 2023 21:00:40 GMT
+RUN Apply image 10.0.20348.1850
+# Thu, 13 Jul 2023 20:38:35 GMT
+SHELL [cmd /S /C]
+# Thu, 13 Jul 2023 20:38:36 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:38:36 GMT
+USER ContainerAdministrator
+# Thu, 13 Jul 2023 20:38:50 GMT
+RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
+# Thu, 13 Jul 2023 20:38:50 GMT
+USER ContainerUser
+# Tue, 08 Aug 2023 21:22:27 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:24:21 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:24:43 GMT
+RUN go version
+# Tue, 08 Aug 2023 21:24:44 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:cc0a26bd90fcc4d863317c36d7ffec77a0a82a905697204d4dcbc76ec13b3920`  
+		Last Modified: Tue, 11 Jul 2023 20:10:45 GMT  
+		Size: 120.1 MB (120056465 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:262f95c9ffc2400b306c39bdd21ab1ee5e02c305fa1895921355e39b04ef5049`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.2 KB (1168 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a8d65723d6c5290f74027190acf1ee9ba18c9d51dd97ae7d43aa55180c5dcdff`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.1 KB (1118 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5a4ebd208492d6e9b4540041dcd87d92206bc12bdf6b234dd276ad2d81738dae`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.2 KB (1168 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:364d1293eec57c6600f83d614d2e6f78ac8fb57a6c20691027ca7db38dbda83f`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 86.7 KB (86715 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c39c7d947e695d0076bd41e61d92b006bea76bce898a31501288817066d0b8b7`  
+		Last Modified: Thu, 13 Jul 2023 21:09:55 GMT  
+		Size: 1.2 KB (1179 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:825ee507fe4c91483617811fb931f31de6a2a16ccb1d45f5f81f88645e5780ec`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.1 KB (1140 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:98af339c9efd9281d67c7e6f4c5b6a36344102e749829d130ad2fa23f474b927`  
+		Last Modified: Tue, 08 Aug 2023 21:30:08 GMT  
+		Size: 68.9 MB (68935351 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c65fa4c0e6cc1578aa176c87cc5e1340fc400fa93f1e2a3f36bc3df0214781ef`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 49.4 KB (49439 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2daa7b153413c6fface39a4c691b8dd7d346e087a8bf33dedf562f9829346a95`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.4 KB (1365 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `golang:1.21-windowsservercore`
+
+```console
+$ docker pull golang@sha256:877dd735c19d34da65a34ef67716d27d59a2212b507568f6f0c23ff6c6627642
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 2
+	-	windows version 10.0.20348.1850; amd64
+	-	windows version 10.0.17763.4645; amd64
+
+### `golang:1.21-windowsservercore` - windows version 10.0.20348.1850; amd64
+
+```console
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **1.8 GB (1832386829 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:55:20 GMT
+RUN Apply image 10.0.20348.1787
+# Fri, 07 Jul 2023 21:29:32 GMT
+RUN Install update 10.0.20348.1850
+# Thu, 13 Jul 2023 20:29:18 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:29:19 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:29:20 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:30:02 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:30:03 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:30:22 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:7c76e5cf7755ce357ffb737715b0da6799a50ea468cc252c094f4d915d426b3f`  
+		Last Modified: Tue, 13 Jun 2023 17:55:32 GMT  
+		Size: 1.4 GB (1388598786 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c84a7416e1317a892f4786a89c62493b21df55e0e06b82a4bb007cc79df0f949`  
+		Last Modified: Tue, 11 Jul 2023 18:03:32 GMT  
+		Size: 348.8 MB (348766456 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d3e3828ab9c4326158b6161915d8bad87619b3107529ab32863eb31b684d127`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1400 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:43ab322251f8c00d29baecc140e08d269c37b32475902e7a2822076226f616fa`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1408 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a968ab3b5ad50a23776f7dd7e039322644cac504ae091a0b0cd2e1b88fbb7e69`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f9ba07cbbe0cde4ed464b5564160e204ded4877d3a1e5cf5fa3e155d5c0c3500`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:22efbf516ade60254b7399cfd7c01ac615e7d0c3745272b9636c39ba1b16c6e9`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1288 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:195ef065fa8b0419c3b6dc860031273f7cb1e3adab37c0a55458d916644f7f32`  
+		Last Modified: Thu, 13 Jul 2023 21:07:40 GMT  
+		Size: 25.5 MB (25535727 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:792bc8f98993f23c77f2a5ab339752f8bed1c5769eff7a72bd01f84cae18d978`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:90ee2ce3d2ac713b0419f7347636dffe3f3d8639e4f3476fc6cf2f233ed3392b`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 263.2 KB (263191 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `golang:1.21-windowsservercore` - windows version 10.0.17763.4645; amd64
+
+```console
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.0 GB (2034660194 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:58:24 GMT
+RUN Apply image 10.0.17763.4499
+# Fri, 07 Jul 2023 08:17:39 GMT
+RUN Install update 10.0.17763.4645
+# Thu, 13 Jul 2023 20:32:48 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:32:49 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:32:50 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:32:51 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:32:52 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:34:19 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:34:20 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:35:18 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:c9226d61d3bdbf9f09821b32f5878623b8daaa5fb4f875cb63c199f87a26d57e`  
+		Last Modified: Tue, 13 Jun 2023 18:25:35 GMT  
+		Size: 1.7 GB (1650620357 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e36dba1ee29cd36713c8785a5de7dd2a487244d734ed4c5e7b0a6890bffb806e`  
+		Last Modified: Tue, 11 Jul 2023 18:27:38 GMT  
+		Size: 289.1 MB (289068746 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2e991bb72ebb8bf12a5cb5fcb2075d938e3508db6634bdfe6a5bb73e4c612051`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1342 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0e45ab66f9ac94fc8ae1502d608bfafe55474826433492ded72aec621e806135`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1292 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:09ec77006091819bb389d795fbc65cfaa9816b1ec1d290fa69d7463deca96f34`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.4 KB (1407 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:644e3d07488adc4a8ad4814e56aa81e6fca904355063f428ffb268295652ffe2`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1317 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cbd32009b5917604a82cfb40d9544473ce70effdf77f88e2789da38c728bf558`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1284 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e4a4965a15372d2b5cedfe4d4430099e41e99422d4cca3691a98cbec84eecbac`  
+		Last Modified: Thu, 13 Jul 2023 21:08:55 GMT  
+		Size: 25.5 MB (25539036 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8ae3b26bb532e185a0466f153372175d53da071a98b81698629642ad9beaa7f6`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 1.4 KB (1391 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c849e84b956dfd8d9b126adc28c0df4e277eb9af511f64babd04a6a14726333a`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 199.7 KB (199676 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `golang:1.21-windowsservercore-1809`
+
+```console
+$ docker pull golang@sha256:9684e4046ac508b5e7ff049ab3cc222fa9c61feee9e5aaea7454641890c3ba14
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	windows version 10.0.17763.4645; amd64
+
+### `golang:1.21-windowsservercore-1809` - windows version 10.0.17763.4645; amd64
+
+```console
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.0 GB (2034660194 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:58:24 GMT
+RUN Apply image 10.0.17763.4499
+# Fri, 07 Jul 2023 08:17:39 GMT
+RUN Install update 10.0.17763.4645
+# Thu, 13 Jul 2023 20:32:48 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:32:49 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:32:50 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:32:51 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:32:52 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:34:19 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:34:20 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:35:18 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:c9226d61d3bdbf9f09821b32f5878623b8daaa5fb4f875cb63c199f87a26d57e`  
+		Last Modified: Tue, 13 Jun 2023 18:25:35 GMT  
+		Size: 1.7 GB (1650620357 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e36dba1ee29cd36713c8785a5de7dd2a487244d734ed4c5e7b0a6890bffb806e`  
+		Last Modified: Tue, 11 Jul 2023 18:27:38 GMT  
+		Size: 289.1 MB (289068746 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2e991bb72ebb8bf12a5cb5fcb2075d938e3508db6634bdfe6a5bb73e4c612051`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1342 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0e45ab66f9ac94fc8ae1502d608bfafe55474826433492ded72aec621e806135`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1292 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:09ec77006091819bb389d795fbc65cfaa9816b1ec1d290fa69d7463deca96f34`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.4 KB (1407 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:644e3d07488adc4a8ad4814e56aa81e6fca904355063f428ffb268295652ffe2`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1317 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cbd32009b5917604a82cfb40d9544473ce70effdf77f88e2789da38c728bf558`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1284 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e4a4965a15372d2b5cedfe4d4430099e41e99422d4cca3691a98cbec84eecbac`  
+		Last Modified: Thu, 13 Jul 2023 21:08:55 GMT  
+		Size: 25.5 MB (25539036 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8ae3b26bb532e185a0466f153372175d53da071a98b81698629642ad9beaa7f6`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 1.4 KB (1391 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c849e84b956dfd8d9b126adc28c0df4e277eb9af511f64babd04a6a14726333a`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 199.7 KB (199676 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `golang:1.21-windowsservercore-ltsc2022`
+
+```console
+$ docker pull golang@sha256:9d96523c0fa673ba10e7e2725f840d7c12c8981856d2a92b7a325c269ddf99aa
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	windows version 10.0.20348.1850; amd64
+
+### `golang:1.21-windowsservercore-ltsc2022` - windows version 10.0.20348.1850; amd64
+
+```console
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **1.8 GB (1832386829 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:55:20 GMT
+RUN Apply image 10.0.20348.1787
+# Fri, 07 Jul 2023 21:29:32 GMT
+RUN Install update 10.0.20348.1850
+# Thu, 13 Jul 2023 20:29:18 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:29:19 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:29:20 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:30:02 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:30:03 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:30:22 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:7c76e5cf7755ce357ffb737715b0da6799a50ea468cc252c094f4d915d426b3f`  
+		Last Modified: Tue, 13 Jun 2023 17:55:32 GMT  
+		Size: 1.4 GB (1388598786 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c84a7416e1317a892f4786a89c62493b21df55e0e06b82a4bb007cc79df0f949`  
+		Last Modified: Tue, 11 Jul 2023 18:03:32 GMT  
+		Size: 348.8 MB (348766456 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d3e3828ab9c4326158b6161915d8bad87619b3107529ab32863eb31b684d127`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1400 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:43ab322251f8c00d29baecc140e08d269c37b32475902e7a2822076226f616fa`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1408 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a968ab3b5ad50a23776f7dd7e039322644cac504ae091a0b0cd2e1b88fbb7e69`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f9ba07cbbe0cde4ed464b5564160e204ded4877d3a1e5cf5fa3e155d5c0c3500`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:22efbf516ade60254b7399cfd7c01ac615e7d0c3745272b9636c39ba1b16c6e9`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1288 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:195ef065fa8b0419c3b6dc860031273f7cb1e3adab37c0a55458d916644f7f32`  
+		Last Modified: Thu, 13 Jul 2023 21:07:40 GMT  
+		Size: 25.5 MB (25535727 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:792bc8f98993f23c77f2a5ab339752f8bed1c5769eff7a72bd01f84cae18d978`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:90ee2ce3d2ac713b0419f7347636dffe3f3d8639e4f3476fc6cf2f233ed3392b`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 263.2 KB (263191 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `golang:1.21.0`
+
+```console
+$ docker pull golang@sha256:24fd60f8a13ef2bd18b40e6bd5907950d11ff53be7edb6780c4da88e2acb7650
+```
+
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 4
 	-	linux; arm variant v5
+	-	linux; mips64le
+	-	windows version 10.0.20348.1850; amd64
+	-	windows version 10.0.17763.4645; amd64
 
 ### `golang:1.21.0` - linux; arm variant v5
 
@@ -11797,6 +12909,266 @@ WORKDIR /go
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `golang:1.21.0` - linux; mips64le
+
+```console
+$ docker pull golang@sha256:df6053b34b7d25ada150915c20d8a3a92f894edfbe055b6a7870d9d0206a86ad
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **267.8 MB (267756477 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:d66bee4b015af14ec2f0f00a9ae20420c683db8c3dc8826c3ed97ecfc76524f4`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 27 Jul 2023 23:10:44 GMT
+ADD file:3568f288ff9791a341f5cb0e99c0a63e09a68f3816d7f7a9971127b9b98a04b8 in / 
+# Thu, 27 Jul 2023 23:10:50 GMT
+CMD ["bash"]
+# Fri, 28 Jul 2023 01:11:15 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 		netbase 		sq 		wget 	; 	rm -rf /var/lib/apt/lists/*
+# Fri, 28 Jul 2023 01:13:02 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:44:25 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:44:30 GMT
+ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:24:42 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:25:32 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:25:40 GMT
+ENV GOPATH=/go
+# Tue, 08 Aug 2023 21:25:46 GMT
+ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:25:55 GMT
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
+# Tue, 08 Aug 2023 21:26:01 GMT
+WORKDIR /go
+```
+
+-	Layers:
+	-	`sha256:e4dbd8372ba202a8b430bce8d5c5b8a4bfdbc6ef2703180665e5964d51bb0437`  
+		Last Modified: Thu, 27 Jul 2023 23:21:43 GMT  
+		Size: 49.5 MB (49542050 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a69206dfad992d03f1e8e833ae728ffacf2c6919f78c4822d849e341473efebb`  
+		Last Modified: Fri, 28 Jul 2023 01:31:27 GMT  
+		Size: 23.6 MB (23612647 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:33fab0a49ca1e0cd2eb4b9660e3a70dc1ab671984cc4843ea845a6cf76532eaa`  
+		Last Modified: Fri, 28 Jul 2023 01:32:19 GMT  
+		Size: 63.0 MB (62950846 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3111f1bcc30e6eb541b76a95351b90515be864553f2ca58dcb1f8035e15833f2`  
+		Last Modified: Sat, 29 Jul 2023 20:42:16 GMT  
+		Size: 69.6 MB (69625048 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:503e556f1b1861954a25d70f3a5c25853440cbb11869ead2ba011199ff4395e9`  
+		Last Modified: Tue, 08 Aug 2023 21:29:15 GMT  
+		Size: 62.0 MB (62025760 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a78bef0024a1147f7116d9d415cfeec8b3b94e6a53d3c739f489f5e8b447851e`  
+		Last Modified: Tue, 08 Aug 2023 21:28:29 GMT  
+		Size: 126.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `golang:1.21.0` - windows version 10.0.20348.1850; amd64
+
+```console
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **1.8 GB (1832386829 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:55:20 GMT
+RUN Apply image 10.0.20348.1787
+# Fri, 07 Jul 2023 21:29:32 GMT
+RUN Install update 10.0.20348.1850
+# Thu, 13 Jul 2023 20:29:18 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:29:19 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:29:20 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:30:02 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:30:03 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:30:22 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:7c76e5cf7755ce357ffb737715b0da6799a50ea468cc252c094f4d915d426b3f`  
+		Last Modified: Tue, 13 Jun 2023 17:55:32 GMT  
+		Size: 1.4 GB (1388598786 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c84a7416e1317a892f4786a89c62493b21df55e0e06b82a4bb007cc79df0f949`  
+		Last Modified: Tue, 11 Jul 2023 18:03:32 GMT  
+		Size: 348.8 MB (348766456 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d3e3828ab9c4326158b6161915d8bad87619b3107529ab32863eb31b684d127`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1400 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:43ab322251f8c00d29baecc140e08d269c37b32475902e7a2822076226f616fa`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1408 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a968ab3b5ad50a23776f7dd7e039322644cac504ae091a0b0cd2e1b88fbb7e69`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f9ba07cbbe0cde4ed464b5564160e204ded4877d3a1e5cf5fa3e155d5c0c3500`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:22efbf516ade60254b7399cfd7c01ac615e7d0c3745272b9636c39ba1b16c6e9`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1288 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:195ef065fa8b0419c3b6dc860031273f7cb1e3adab37c0a55458d916644f7f32`  
+		Last Modified: Thu, 13 Jul 2023 21:07:40 GMT  
+		Size: 25.5 MB (25535727 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:792bc8f98993f23c77f2a5ab339752f8bed1c5769eff7a72bd01f84cae18d978`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:90ee2ce3d2ac713b0419f7347636dffe3f3d8639e4f3476fc6cf2f233ed3392b`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 263.2 KB (263191 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `golang:1.21.0` - windows version 10.0.17763.4645; amd64
+
+```console
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.0 GB (2034660194 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:58:24 GMT
+RUN Apply image 10.0.17763.4499
+# Fri, 07 Jul 2023 08:17:39 GMT
+RUN Install update 10.0.17763.4645
+# Thu, 13 Jul 2023 20:32:48 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:32:49 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:32:50 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:32:51 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:32:52 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:34:19 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:34:20 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:35:18 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:c9226d61d3bdbf9f09821b32f5878623b8daaa5fb4f875cb63c199f87a26d57e`  
+		Last Modified: Tue, 13 Jun 2023 18:25:35 GMT  
+		Size: 1.7 GB (1650620357 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e36dba1ee29cd36713c8785a5de7dd2a487244d734ed4c5e7b0a6890bffb806e`  
+		Last Modified: Tue, 11 Jul 2023 18:27:38 GMT  
+		Size: 289.1 MB (289068746 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2e991bb72ebb8bf12a5cb5fcb2075d938e3508db6634bdfe6a5bb73e4c612051`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1342 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0e45ab66f9ac94fc8ae1502d608bfafe55474826433492ded72aec621e806135`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1292 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:09ec77006091819bb389d795fbc65cfaa9816b1ec1d290fa69d7463deca96f34`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.4 KB (1407 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:644e3d07488adc4a8ad4814e56aa81e6fca904355063f428ffb268295652ffe2`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1317 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cbd32009b5917604a82cfb40d9544473ce70effdf77f88e2789da38c728bf558`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1284 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e4a4965a15372d2b5cedfe4d4430099e41e99422d4cca3691a98cbec84eecbac`  
+		Last Modified: Thu, 13 Jul 2023 21:08:55 GMT  
+		Size: 25.5 MB (25539036 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8ae3b26bb532e185a0466f153372175d53da071a98b81698629642ad9beaa7f6`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 1.4 KB (1391 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c849e84b956dfd8d9b126adc28c0df4e277eb9af511f64babd04a6a14726333a`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 199.7 KB (199676 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `golang:1.21.0-alpine`
 
 ```console
@@ -11827,12 +13199,13 @@ $ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab
 ## `golang:1.21.0-bookworm`
 
 ```console
-$ docker pull golang@sha256:5b3dfaa6077ce11229dde1fc9f4dbdde8ac794d6ae20e58741dec8f23e1d89b1
+$ docker pull golang@sha256:a6730a31cfe2e80fa0c053ee682451e77b0390afd24a5edf8a0b461a6c07b444
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Platforms: 2
 	-	linux; arm variant v5
+	-	linux; mips64le
 
 ### `golang:1.21.0-bookworm` - linux; arm variant v5
 
@@ -11900,15 +13273,82 @@ WORKDIR /go
 		Size: 156.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `golang:1.21.0-bookworm` - linux; mips64le
+
+```console
+$ docker pull golang@sha256:df6053b34b7d25ada150915c20d8a3a92f894edfbe055b6a7870d9d0206a86ad
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **267.8 MB (267756477 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:d66bee4b015af14ec2f0f00a9ae20420c683db8c3dc8826c3ed97ecfc76524f4`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 27 Jul 2023 23:10:44 GMT
+ADD file:3568f288ff9791a341f5cb0e99c0a63e09a68f3816d7f7a9971127b9b98a04b8 in / 
+# Thu, 27 Jul 2023 23:10:50 GMT
+CMD ["bash"]
+# Fri, 28 Jul 2023 01:11:15 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 		netbase 		sq 		wget 	; 	rm -rf /var/lib/apt/lists/*
+# Fri, 28 Jul 2023 01:13:02 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:44:25 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:44:30 GMT
+ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:24:42 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:25:32 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:25:40 GMT
+ENV GOPATH=/go
+# Tue, 08 Aug 2023 21:25:46 GMT
+ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:25:55 GMT
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
+# Tue, 08 Aug 2023 21:26:01 GMT
+WORKDIR /go
+```
+
+-	Layers:
+	-	`sha256:e4dbd8372ba202a8b430bce8d5c5b8a4bfdbc6ef2703180665e5964d51bb0437`  
+		Last Modified: Thu, 27 Jul 2023 23:21:43 GMT  
+		Size: 49.5 MB (49542050 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a69206dfad992d03f1e8e833ae728ffacf2c6919f78c4822d849e341473efebb`  
+		Last Modified: Fri, 28 Jul 2023 01:31:27 GMT  
+		Size: 23.6 MB (23612647 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:33fab0a49ca1e0cd2eb4b9660e3a70dc1ab671984cc4843ea845a6cf76532eaa`  
+		Last Modified: Fri, 28 Jul 2023 01:32:19 GMT  
+		Size: 63.0 MB (62950846 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3111f1bcc30e6eb541b76a95351b90515be864553f2ca58dcb1f8035e15833f2`  
+		Last Modified: Sat, 29 Jul 2023 20:42:16 GMT  
+		Size: 69.6 MB (69625048 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:503e556f1b1861954a25d70f3a5c25853440cbb11869ead2ba011199ff4395e9`  
+		Last Modified: Tue, 08 Aug 2023 21:29:15 GMT  
+		Size: 62.0 MB (62025760 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a78bef0024a1147f7116d9d415cfeec8b3b94e6a53d3c739f489f5e8b447851e`  
+		Last Modified: Tue, 08 Aug 2023 21:28:29 GMT  
+		Size: 126.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `golang:1.21.0-bullseye`
 
 ```console
-$ docker pull golang@sha256:2004bfc0d6cb546bb1dc7e806dc7ab7fa61747e63e28ddc45ef11598e5e376be
+$ docker pull golang@sha256:eb5fc3d3f80dc6e34b7d8b620d6ad40601d8b9a63a8c41718fb204ecb906f270
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 1
+-	Platforms: 2
 	-	linux; arm variant v5
+	-	linux; mips64le
 
 ### `golang:1.21.0-bullseye` - linux; arm variant v5
 
@@ -11976,59 +13416,837 @@ WORKDIR /go
 		Size: 155.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `golang:1.21.0-bullseye` - linux; mips64le
+
+```console
+$ docker pull golang@sha256:cb59c7f8baaa3685cd9236f9be40a0db1589b5e15e9763d0373ea2a48e544b36
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **251.0 MB (251027403 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:52360527d77829d9e6a419e77c303cc28b8a7fcb3d97c6f40adba5275cf5adb0`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Thu, 27 Jul 2023 23:11:57 GMT
+ADD file:ccccca3acf3759fd714159d3c3beff86d84a9751b947e148348d523272fc1bb9 in / 
+# Thu, 27 Jul 2023 23:12:02 GMT
+CMD ["bash"]
+# Fri, 28 Jul 2023 01:19:34 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
+# Fri, 28 Jul 2023 01:21:18 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:47:18 GMT
+RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
+# Sat, 29 Jul 2023 19:47:23 GMT
+ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:26:25 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:27:22 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:27:30 GMT
+ENV GOPATH=/go
+# Tue, 08 Aug 2023 21:27:37 GMT
+ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 08 Aug 2023 21:27:46 GMT
+RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
+# Tue, 08 Aug 2023 21:27:52 GMT
+WORKDIR /go
+```
+
+-	Layers:
+	-	`sha256:9d9a0c35af83dc10b6307f02a48749b4d8024123530a89d5173f70981e00b9e3`  
+		Last Modified: Thu, 27 Jul 2023 23:23:10 GMT  
+		Size: 53.3 MB (53270927 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f12aa6a7cf9a2dd39c4a36e47b26cc0ca1c9e8ad55d149bdf74bcbc866c92718`  
+		Last Modified: Fri, 28 Jul 2023 01:34:45 GMT  
+		Size: 15.5 MB (15520522 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3cedbdbe02029d723bc1414bf8094fe7b1ac71ed4460a31db174ac0e221fc1b3`  
+		Last Modified: Fri, 28 Jul 2023 01:35:29 GMT  
+		Size: 53.3 MB (53306734 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:66d1011d0c755667944595a368ae6afe28335a2f43df6ad6b77778150579c660`  
+		Last Modified: Sat, 29 Jul 2023 20:43:20 GMT  
+		Size: 66.9 MB (66903395 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:62b8d05d16d1758e71d13cde9e070a9b4961ec68b11ee2a5a31e066f313f51d7`  
+		Last Modified: Tue, 08 Aug 2023 21:30:18 GMT  
+		Size: 62.0 MB (62025701 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:065b22d1ed694fae113a9a1af84385a76db59135d86ebaf63d4dc5b17ec68c3a`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 124.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `golang:1.21.0-nanoserver`
 
 ```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+$ docker pull golang@sha256:d104df22c40bb3ab5306cc508365f5f4bd2829fc2237901dac3ae896724b73bb
 ```
 
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 2
+	-	windows version 10.0.20348.1850; amd64
+	-	windows version 10.0.17763.4645; amd64
+
+### `golang:1.21.0-nanoserver` - windows version 10.0.20348.1850; amd64
+
+```console
+$ docker pull golang@sha256:e8df3077548882da2eb56598ad5e9b344e69906bdfee5a8511ed41f788c32e60
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **189.1 MB (189135108 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:dd48537ca6566717a32196281d5abb1765953e0a9405aca55940dc49cc117c8d`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["cmd","\/S","\/C"]`
+
+```dockerfile
+# Fri, 07 Jul 2023 21:00:40 GMT
+RUN Apply image 10.0.20348.1850
+# Thu, 13 Jul 2023 20:38:35 GMT
+SHELL [cmd /S /C]
+# Thu, 13 Jul 2023 20:38:36 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:38:36 GMT
+USER ContainerAdministrator
+# Thu, 13 Jul 2023 20:38:50 GMT
+RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
+# Thu, 13 Jul 2023 20:38:50 GMT
+USER ContainerUser
+# Tue, 08 Aug 2023 21:22:27 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:24:21 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:24:43 GMT
+RUN go version
+# Tue, 08 Aug 2023 21:24:44 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:cc0a26bd90fcc4d863317c36d7ffec77a0a82a905697204d4dcbc76ec13b3920`  
+		Last Modified: Tue, 11 Jul 2023 20:10:45 GMT  
+		Size: 120.1 MB (120056465 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:262f95c9ffc2400b306c39bdd21ab1ee5e02c305fa1895921355e39b04ef5049`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.2 KB (1168 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a8d65723d6c5290f74027190acf1ee9ba18c9d51dd97ae7d43aa55180c5dcdff`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.1 KB (1118 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5a4ebd208492d6e9b4540041dcd87d92206bc12bdf6b234dd276ad2d81738dae`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.2 KB (1168 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:364d1293eec57c6600f83d614d2e6f78ac8fb57a6c20691027ca7db38dbda83f`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 86.7 KB (86715 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c39c7d947e695d0076bd41e61d92b006bea76bce898a31501288817066d0b8b7`  
+		Last Modified: Thu, 13 Jul 2023 21:09:55 GMT  
+		Size: 1.2 KB (1179 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:825ee507fe4c91483617811fb931f31de6a2a16ccb1d45f5f81f88645e5780ec`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.1 KB (1140 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:98af339c9efd9281d67c7e6f4c5b6a36344102e749829d130ad2fa23f474b927`  
+		Last Modified: Tue, 08 Aug 2023 21:30:08 GMT  
+		Size: 68.9 MB (68935351 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c65fa4c0e6cc1578aa176c87cc5e1340fc400fa93f1e2a3f36bc3df0214781ef`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 49.4 KB (49439 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2daa7b153413c6fface39a4c691b8dd7d346e087a8bf33dedf562f9829346a95`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.4 KB (1365 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `golang:1.21.0-nanoserver` - windows version 10.0.17763.4645; amd64
+
+```console
+$ docker pull golang@sha256:a9e32be9db6a5bfeb9b3234a32ffc15b7df1b7a55fd3eed596193ce695173f7e
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **173.5 MB (173476510 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:111942e3e4e041fd241d5f02ac10a193d716b706a85e568cdc159786eff7841c`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["cmd","\/S","\/C"]`
+
+```dockerfile
+# Fri, 07 Jul 2023 07:42:59 GMT
+RUN Apply image 10.0.17763.4645
+# Thu, 13 Jul 2023 20:41:18 GMT
+SHELL [cmd /S /C]
+# Thu, 13 Jul 2023 20:41:19 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:41:20 GMT
+USER ContainerAdministrator
+# Thu, 13 Jul 2023 20:41:31 GMT
+RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
+# Thu, 13 Jul 2023 20:41:31 GMT
+USER ContainerUser
+# Tue, 08 Aug 2023 21:24:55 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:26:51 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:27:10 GMT
+RUN go version
+# Tue, 08 Aug 2023 21:27:11 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:5c5b06ba65934bcf850a1a54ecf4b3da34d3e6d6c8e90dbc897719c3ea377c8a`  
+		Last Modified: Tue, 11 Jul 2023 17:31:37 GMT  
+		Size: 104.4 MB (104408241 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a48271163dd58fddb2ff623ae3c53cac64a29148ad84e995c93073602f68793d`  
+		Last Modified: Thu, 13 Jul 2023 21:10:35 GMT  
+		Size: 1.1 KB (1144 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b8a8c1feea8292b9bc0b0f2be869e9692d63d21efa75624c84fa878079e30b05`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 1.2 KB (1172 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8041e971a244f1bdd7e444ce782b9e6fa4ba5859f2bbc2b8ccac016697970d7d`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 1.2 KB (1155 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d64db53aeff99ec4a41edd8036064f37150123d7caf2d1eff287f9704a010c6c`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 76.3 KB (76262 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0e25cfa96b658400676137a25a21f4628df693a06c1d217748e7696d9570cae7`  
+		Last Modified: Thu, 13 Jul 2023 21:10:32 GMT  
+		Size: 1.2 KB (1164 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a023276388344d2474bd8dd3b29d50513061de5a1a32eddc670b8076fd699b62`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.1 KB (1127 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b4a746a1f96095d170fb8ea3ad0b38d825335fc94307c675d082f68d85234bae`  
+		Last Modified: Tue, 08 Aug 2023 21:30:45 GMT  
+		Size: 68.9 MB (68902833 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6d30343b23bb2b78603d183ea90053d8e26e990e8cb67aa5711992f55c79551c`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 82.2 KB (82185 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:180b607dd89477842db7b3f786480f140c427f268f0a94818ee1535e5bb4b02f`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.2 KB (1227 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.21.0-nanoserver-1809`
 
 ```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+$ docker pull golang@sha256:2e10cd4037d87598c352e1efdc1a50a1eac093d83308b6b774ef4c1114861827
 ```
 
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	windows version 10.0.17763.4645; amd64
+
+### `golang:1.21.0-nanoserver-1809` - windows version 10.0.17763.4645; amd64
+
+```console
+$ docker pull golang@sha256:a9e32be9db6a5bfeb9b3234a32ffc15b7df1b7a55fd3eed596193ce695173f7e
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **173.5 MB (173476510 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:111942e3e4e041fd241d5f02ac10a193d716b706a85e568cdc159786eff7841c`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["cmd","\/S","\/C"]`
+
+```dockerfile
+# Fri, 07 Jul 2023 07:42:59 GMT
+RUN Apply image 10.0.17763.4645
+# Thu, 13 Jul 2023 20:41:18 GMT
+SHELL [cmd /S /C]
+# Thu, 13 Jul 2023 20:41:19 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:41:20 GMT
+USER ContainerAdministrator
+# Thu, 13 Jul 2023 20:41:31 GMT
+RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
+# Thu, 13 Jul 2023 20:41:31 GMT
+USER ContainerUser
+# Tue, 08 Aug 2023 21:24:55 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:26:51 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:27:10 GMT
+RUN go version
+# Tue, 08 Aug 2023 21:27:11 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:5c5b06ba65934bcf850a1a54ecf4b3da34d3e6d6c8e90dbc897719c3ea377c8a`  
+		Last Modified: Tue, 11 Jul 2023 17:31:37 GMT  
+		Size: 104.4 MB (104408241 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a48271163dd58fddb2ff623ae3c53cac64a29148ad84e995c93073602f68793d`  
+		Last Modified: Thu, 13 Jul 2023 21:10:35 GMT  
+		Size: 1.1 KB (1144 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b8a8c1feea8292b9bc0b0f2be869e9692d63d21efa75624c84fa878079e30b05`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 1.2 KB (1172 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8041e971a244f1bdd7e444ce782b9e6fa4ba5859f2bbc2b8ccac016697970d7d`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 1.2 KB (1155 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d64db53aeff99ec4a41edd8036064f37150123d7caf2d1eff287f9704a010c6c`  
+		Last Modified: Thu, 13 Jul 2023 21:10:34 GMT  
+		Size: 76.3 KB (76262 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0e25cfa96b658400676137a25a21f4628df693a06c1d217748e7696d9570cae7`  
+		Last Modified: Thu, 13 Jul 2023 21:10:32 GMT  
+		Size: 1.2 KB (1164 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a023276388344d2474bd8dd3b29d50513061de5a1a32eddc670b8076fd699b62`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.1 KB (1127 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b4a746a1f96095d170fb8ea3ad0b38d825335fc94307c675d082f68d85234bae`  
+		Last Modified: Tue, 08 Aug 2023 21:30:45 GMT  
+		Size: 68.9 MB (68902833 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6d30343b23bb2b78603d183ea90053d8e26e990e8cb67aa5711992f55c79551c`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 82.2 KB (82185 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:180b607dd89477842db7b3f786480f140c427f268f0a94818ee1535e5bb4b02f`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.2 KB (1227 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.21.0-nanoserver-ltsc2022`
 
 ```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+$ docker pull golang@sha256:9ae631036977f91d349d3e6b46858a805465005bb5d925e15c3125a51b4eb872
 ```
 
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	windows version 10.0.20348.1850; amd64
+
+### `golang:1.21.0-nanoserver-ltsc2022` - windows version 10.0.20348.1850; amd64
+
+```console
+$ docker pull golang@sha256:e8df3077548882da2eb56598ad5e9b344e69906bdfee5a8511ed41f788c32e60
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **189.1 MB (189135108 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:dd48537ca6566717a32196281d5abb1765953e0a9405aca55940dc49cc117c8d`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["cmd","\/S","\/C"]`
+
+```dockerfile
+# Fri, 07 Jul 2023 21:00:40 GMT
+RUN Apply image 10.0.20348.1850
+# Thu, 13 Jul 2023 20:38:35 GMT
+SHELL [cmd /S /C]
+# Thu, 13 Jul 2023 20:38:36 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:38:36 GMT
+USER ContainerAdministrator
+# Thu, 13 Jul 2023 20:38:50 GMT
+RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
+# Thu, 13 Jul 2023 20:38:50 GMT
+USER ContainerUser
+# Tue, 08 Aug 2023 21:22:27 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:24:21 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:24:43 GMT
+RUN go version
+# Tue, 08 Aug 2023 21:24:44 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:cc0a26bd90fcc4d863317c36d7ffec77a0a82a905697204d4dcbc76ec13b3920`  
+		Last Modified: Tue, 11 Jul 2023 20:10:45 GMT  
+		Size: 120.1 MB (120056465 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:262f95c9ffc2400b306c39bdd21ab1ee5e02c305fa1895921355e39b04ef5049`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.2 KB (1168 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a8d65723d6c5290f74027190acf1ee9ba18c9d51dd97ae7d43aa55180c5dcdff`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.1 KB (1118 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5a4ebd208492d6e9b4540041dcd87d92206bc12bdf6b234dd276ad2d81738dae`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 1.2 KB (1168 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:364d1293eec57c6600f83d614d2e6f78ac8fb57a6c20691027ca7db38dbda83f`  
+		Last Modified: Thu, 13 Jul 2023 21:09:57 GMT  
+		Size: 86.7 KB (86715 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c39c7d947e695d0076bd41e61d92b006bea76bce898a31501288817066d0b8b7`  
+		Last Modified: Thu, 13 Jul 2023 21:09:55 GMT  
+		Size: 1.2 KB (1179 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:825ee507fe4c91483617811fb931f31de6a2a16ccb1d45f5f81f88645e5780ec`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.1 KB (1140 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:98af339c9efd9281d67c7e6f4c5b6a36344102e749829d130ad2fa23f474b927`  
+		Last Modified: Tue, 08 Aug 2023 21:30:08 GMT  
+		Size: 68.9 MB (68935351 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c65fa4c0e6cc1578aa176c87cc5e1340fc400fa93f1e2a3f36bc3df0214781ef`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 49.4 KB (49439 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2daa7b153413c6fface39a4c691b8dd7d346e087a8bf33dedf562f9829346a95`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.4 KB (1365 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.21.0-windowsservercore`
 
 ```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+$ docker pull golang@sha256:877dd735c19d34da65a34ef67716d27d59a2212b507568f6f0c23ff6c6627642
 ```
 
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 2
+	-	windows version 10.0.20348.1850; amd64
+	-	windows version 10.0.17763.4645; amd64
+
+### `golang:1.21.0-windowsservercore` - windows version 10.0.20348.1850; amd64
+
+```console
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **1.8 GB (1832386829 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:55:20 GMT
+RUN Apply image 10.0.20348.1787
+# Fri, 07 Jul 2023 21:29:32 GMT
+RUN Install update 10.0.20348.1850
+# Thu, 13 Jul 2023 20:29:18 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:29:19 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:29:20 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:30:02 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:30:03 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:30:22 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:7c76e5cf7755ce357ffb737715b0da6799a50ea468cc252c094f4d915d426b3f`  
+		Last Modified: Tue, 13 Jun 2023 17:55:32 GMT  
+		Size: 1.4 GB (1388598786 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c84a7416e1317a892f4786a89c62493b21df55e0e06b82a4bb007cc79df0f949`  
+		Last Modified: Tue, 11 Jul 2023 18:03:32 GMT  
+		Size: 348.8 MB (348766456 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d3e3828ab9c4326158b6161915d8bad87619b3107529ab32863eb31b684d127`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1400 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:43ab322251f8c00d29baecc140e08d269c37b32475902e7a2822076226f616fa`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1408 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a968ab3b5ad50a23776f7dd7e039322644cac504ae091a0b0cd2e1b88fbb7e69`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f9ba07cbbe0cde4ed464b5564160e204ded4877d3a1e5cf5fa3e155d5c0c3500`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:22efbf516ade60254b7399cfd7c01ac615e7d0c3745272b9636c39ba1b16c6e9`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1288 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:195ef065fa8b0419c3b6dc860031273f7cb1e3adab37c0a55458d916644f7f32`  
+		Last Modified: Thu, 13 Jul 2023 21:07:40 GMT  
+		Size: 25.5 MB (25535727 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:792bc8f98993f23c77f2a5ab339752f8bed1c5769eff7a72bd01f84cae18d978`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:90ee2ce3d2ac713b0419f7347636dffe3f3d8639e4f3476fc6cf2f233ed3392b`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 263.2 KB (263191 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `golang:1.21.0-windowsservercore` - windows version 10.0.17763.4645; amd64
+
+```console
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.0 GB (2034660194 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:58:24 GMT
+RUN Apply image 10.0.17763.4499
+# Fri, 07 Jul 2023 08:17:39 GMT
+RUN Install update 10.0.17763.4645
+# Thu, 13 Jul 2023 20:32:48 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:32:49 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:32:50 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:32:51 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:32:52 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:34:19 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:34:20 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:35:18 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:c9226d61d3bdbf9f09821b32f5878623b8daaa5fb4f875cb63c199f87a26d57e`  
+		Last Modified: Tue, 13 Jun 2023 18:25:35 GMT  
+		Size: 1.7 GB (1650620357 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e36dba1ee29cd36713c8785a5de7dd2a487244d734ed4c5e7b0a6890bffb806e`  
+		Last Modified: Tue, 11 Jul 2023 18:27:38 GMT  
+		Size: 289.1 MB (289068746 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2e991bb72ebb8bf12a5cb5fcb2075d938e3508db6634bdfe6a5bb73e4c612051`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1342 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0e45ab66f9ac94fc8ae1502d608bfafe55474826433492ded72aec621e806135`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1292 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:09ec77006091819bb389d795fbc65cfaa9816b1ec1d290fa69d7463deca96f34`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.4 KB (1407 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:644e3d07488adc4a8ad4814e56aa81e6fca904355063f428ffb268295652ffe2`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1317 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cbd32009b5917604a82cfb40d9544473ce70effdf77f88e2789da38c728bf558`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1284 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e4a4965a15372d2b5cedfe4d4430099e41e99422d4cca3691a98cbec84eecbac`  
+		Last Modified: Thu, 13 Jul 2023 21:08:55 GMT  
+		Size: 25.5 MB (25539036 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8ae3b26bb532e185a0466f153372175d53da071a98b81698629642ad9beaa7f6`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 1.4 KB (1391 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c849e84b956dfd8d9b126adc28c0df4e277eb9af511f64babd04a6a14726333a`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 199.7 KB (199676 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.21.0-windowsservercore-1809`
 
 ```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+$ docker pull golang@sha256:9684e4046ac508b5e7ff049ab3cc222fa9c61feee9e5aaea7454641890c3ba14
 ```
 
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	windows version 10.0.17763.4645; amd64
+
+### `golang:1.21.0-windowsservercore-1809` - windows version 10.0.17763.4645; amd64
+
+```console
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **2.0 GB (2034660194 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:58:24 GMT
+RUN Apply image 10.0.17763.4499
+# Fri, 07 Jul 2023 08:17:39 GMT
+RUN Install update 10.0.17763.4645
+# Thu, 13 Jul 2023 20:32:48 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:32:49 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:32:50 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:32:51 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:32:52 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:34:19 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:34:20 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:35:18 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:c9226d61d3bdbf9f09821b32f5878623b8daaa5fb4f875cb63c199f87a26d57e`  
+		Last Modified: Tue, 13 Jun 2023 18:25:35 GMT  
+		Size: 1.7 GB (1650620357 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e36dba1ee29cd36713c8785a5de7dd2a487244d734ed4c5e7b0a6890bffb806e`  
+		Last Modified: Tue, 11 Jul 2023 18:27:38 GMT  
+		Size: 289.1 MB (289068746 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2e991bb72ebb8bf12a5cb5fcb2075d938e3508db6634bdfe6a5bb73e4c612051`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1342 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0e45ab66f9ac94fc8ae1502d608bfafe55474826433492ded72aec621e806135`  
+		Last Modified: Thu, 13 Jul 2023 21:08:51 GMT  
+		Size: 1.3 KB (1292 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:09ec77006091819bb389d795fbc65cfaa9816b1ec1d290fa69d7463deca96f34`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.4 KB (1407 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:644e3d07488adc4a8ad4814e56aa81e6fca904355063f428ffb268295652ffe2`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1317 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cbd32009b5917604a82cfb40d9544473ce70effdf77f88e2789da38c728bf558`  
+		Last Modified: Thu, 13 Jul 2023 21:08:49 GMT  
+		Size: 1.3 KB (1284 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:e4a4965a15372d2b5cedfe4d4430099e41e99422d4cca3691a98cbec84eecbac`  
+		Last Modified: Thu, 13 Jul 2023 21:08:55 GMT  
+		Size: 25.5 MB (25539036 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:8ae3b26bb532e185a0466f153372175d53da071a98b81698629642ad9beaa7f6`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 1.4 KB (1391 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c849e84b956dfd8d9b126adc28c0df4e277eb9af511f64babd04a6a14726333a`  
+		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
+		Size: 199.7 KB (199676 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:1.21.0-windowsservercore-ltsc2022`
 
 ```console
-$ docker pull golang@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+$ docker pull golang@sha256:9d96523c0fa673ba10e7e2725f840d7c12c8981856d2a92b7a325c269ddf99aa
 ```
 
--	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 0
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
+-	Platforms: 1
+	-	windows version 10.0.20348.1850; amd64
+
+### `golang:1.21.0-windowsservercore-ltsc2022` - windows version 10.0.20348.1850; amd64
+
+```console
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
+```
+
+-	Docker Version: 20.10.21
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **1.8 GB (1832386829 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
+-	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
+-	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
+
+```dockerfile
+# Thu, 08 Jun 2023 12:55:20 GMT
+RUN Apply image 10.0.20348.1787
+# Fri, 07 Jul 2023 21:29:32 GMT
+RUN Install update 10.0.20348.1850
+# Thu, 13 Jul 2023 20:29:18 GMT
+SHELL [powershell -Command $ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';]
+# Thu, 13 Jul 2023 20:29:19 GMT
+ENV GIT_VERSION=2.23.0
+# Thu, 13 Jul 2023 20:29:20 GMT
+ENV GIT_TAG=v2.23.0.windows.1
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_URL=https://github.com/git-for-windows/git/releases/download/v2.23.0.windows.1/MinGit-2.23.0-64-bit.zip
+# Thu, 13 Jul 2023 20:29:21 GMT
+ENV GIT_DOWNLOAD_SHA256=8f65208f92c0b4c3ae4c0cf02d4b5f6791d539cd1a07b2df62b7116467724735
+# Thu, 13 Jul 2023 20:30:02 GMT
+RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $env:GIT_DOWNLOAD_URL -OutFile 'git.zip'; 		Write-Host ('Verifying sha256 ({0}) ...' -f $env:GIT_DOWNLOAD_SHA256); 	if ((Get-FileHash git.zip -Algorithm sha256).Hash -ne $env:GIT_DOWNLOAD_SHA256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive -Path git.zip -DestinationPath C:\git\.; 		Write-Host 'Removing ...'; 	Remove-Item git.zip -Force; 		Write-Host 'Updating PATH ...'; 	$env:PATH = 'C:\git\cmd;C:\git\mingw64\bin;C:\git\usr\bin;' + $env:PATH; 	[Environment]::SetEnvironmentVariable('PATH', $env:PATH, [EnvironmentVariableTarget]::Machine); 		Write-Host 'Verifying install ("git version") ...'; 	git version; 		Write-Host 'Complete.';
+# Thu, 13 Jul 2023 20:30:03 GMT
+ENV GOPATH=C:\go
+# Thu, 13 Jul 2023 20:30:22 GMT
+RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
+WORKDIR C:\go
+```
+
+-	Layers:
+	-	`sha256:7c76e5cf7755ce357ffb737715b0da6799a50ea468cc252c094f4d915d426b3f`  
+		Last Modified: Tue, 13 Jun 2023 17:55:32 GMT  
+		Size: 1.4 GB (1388598786 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c84a7416e1317a892f4786a89c62493b21df55e0e06b82a4bb007cc79df0f949`  
+		Last Modified: Tue, 11 Jul 2023 18:03:32 GMT  
+		Size: 348.8 MB (348766456 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5d3e3828ab9c4326158b6161915d8bad87619b3107529ab32863eb31b684d127`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1400 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:43ab322251f8c00d29baecc140e08d269c37b32475902e7a2822076226f616fa`  
+		Last Modified: Thu, 13 Jul 2023 21:07:36 GMT  
+		Size: 1.4 KB (1408 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a968ab3b5ad50a23776f7dd7e039322644cac504ae091a0b0cd2e1b88fbb7e69`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.4 KB (1441 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f9ba07cbbe0cde4ed464b5564160e204ded4877d3a1e5cf5fa3e155d5c0c3500`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:22efbf516ade60254b7399cfd7c01ac615e7d0c3745272b9636c39ba1b16c6e9`  
+		Last Modified: Thu, 13 Jul 2023 21:07:34 GMT  
+		Size: 1.3 KB (1288 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:195ef065fa8b0419c3b6dc860031273f7cb1e3adab37c0a55458d916644f7f32`  
+		Last Modified: Thu, 13 Jul 2023 21:07:40 GMT  
+		Size: 25.5 MB (25535727 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:792bc8f98993f23c77f2a5ab339752f8bed1c5769eff7a72bd01f84cae18d978`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 1.3 KB (1282 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:90ee2ce3d2ac713b0419f7347636dffe3f3d8639e4f3476fc6cf2f233ed3392b`  
+		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
+		Size: 263.2 KB (263191 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:alpine`
 
@@ -13215,7 +15433,7 @@ WORKDIR /go
 ## `golang:bookworm`
 
 ```console
-$ docker pull golang@sha256:3ebca24d93900b280143427b6bb536ac73328561d521d6204223bf85e08f795c
+$ docker pull golang@sha256:0f48aacdbbe45b24dc65accfbe77d5a6c118a00ff1fca2e3b3c8652e2d949443
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13562,14 +15780,14 @@ WORKDIR /go
 ### `golang:bookworm` - linux; mips64le
 
 ```console
-$ docker pull golang@sha256:64d546b7de81d2f80dd12b6e54e1a399eaacc7524f1acc776ff70286a4b6b391
+$ docker pull golang@sha256:df6053b34b7d25ada150915c20d8a3a92f894edfbe055b6a7870d9d0206a86ad
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **300.1 MB (300099332 bytes)**  
+-	Total Size: **267.8 MB (267756477 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:88b7489537c2f1d4e62b81eca2ca9bf545cdae1abad7159e0ad8dbef525a786f`
+-	Image ID: `sha256:d66bee4b015af14ec2f0f00a9ae20420c683db8c3dc8826c3ed97ecfc76524f4`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -13585,17 +15803,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Sat, 29 Jul 2023 19:44:30 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:29:10 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:41:02 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.7.linux-amd64.tar.gz'; 			sha256='f0a87f1bcae91c4b69f8dc2bc6d7e6bfcd7524fceec130af525058c0c17b1b44'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.7.linux-armv6l.tar.gz'; 			sha256='7cc231b415b94f2f7065870a73f67dd2b0ec12b5a98052b7ee0121c42bc04f8d'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.7.linux-arm64.tar.gz'; 			sha256='44781ae3b153c3b07651d93b6bc554e835a36e2d72a696281c1e4dad9efffe43'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.7.linux-386.tar.gz'; 			sha256='ddb48145f05bda2f4617a22c979d4e94b22802cdb1a1fde1b1974e733b26f091'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.7.linux-ppc64le.tar.gz'; 			sha256='6318a1db307c12b8afe68808bd6fae4fba1e558a85b958216096869ed506dcb3'; 			;; 		'riscv64') 			export GOARCH='riscv64' GOOS='linux'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.7.linux-s390x.tar.gz'; 			sha256='26aea2ede8722ceecbd9db883328a8d963136fd96c11dacc356c44c4c19c6515'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.7.src.tar.gz'; 		sha256='2c5ee9c9ec1e733b0dbbc2bdfed3f62306e51d8172bf38f4f4e542b27520f597'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Tue, 01 Aug 2023 21:41:10 GMT
+# Tue, 08 Aug 2023 21:24:42 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:25:32 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:25:40 GMT
 ENV GOPATH=/go
-# Tue, 01 Aug 2023 21:41:16 GMT
+# Tue, 08 Aug 2023 21:25:46 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:41:25 GMT
+# Tue, 08 Aug 2023 21:25:55 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Tue, 01 Aug 2023 21:41:32 GMT
+# Tue, 08 Aug 2023 21:26:01 GMT
 WORKDIR /go
 ```
 
@@ -13616,13 +15834,13 @@ WORKDIR /go
 		Last Modified: Sat, 29 Jul 2023 20:42:16 GMT  
 		Size: 69.6 MB (69625048 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a2d58e643ac77d73462d501f78b21fb37ab182fa998a1fdce336c0db6e8bf4cc`  
-		Last Modified: Tue, 01 Aug 2023 22:22:14 GMT  
-		Size: 94.4 MB (94368617 bytes)  
+	-	`sha256:503e556f1b1861954a25d70f3a5c25853440cbb11869ead2ba011199ff4395e9`  
+		Last Modified: Tue, 08 Aug 2023 21:29:15 GMT  
+		Size: 62.0 MB (62025760 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4ae2cbc861b04ab443c850fc8d67dc974b4ee861449ab39a79434f3102ce05c`  
-		Last Modified: Tue, 01 Aug 2023 22:21:18 GMT  
-		Size: 124.0 B  
+	-	`sha256:a78bef0024a1147f7116d9d415cfeec8b3b94e6a53d3c739f489f5e8b447851e`  
+		Last Modified: Tue, 08 Aug 2023 21:28:29 GMT  
+		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:bookworm` - linux; ppc64le
@@ -13760,7 +15978,7 @@ WORKDIR /go
 ## `golang:bullseye`
 
 ```console
-$ docker pull golang@sha256:33fd8ed66879fdcf8db193866feedc58a073ce263fda5934fdb511dbdf46b6c6
+$ docker pull golang@sha256:00b1926b6e3f7f47ba01ad808c07ff1832c61c1f8bc01b4ca1dfa21d659df46b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14107,14 +16325,14 @@ WORKDIR /go
 ### `golang:bullseye` - linux; mips64le
 
 ```console
-$ docker pull golang@sha256:4fdc0b28da3722b72a6d60d5eae11e2ccb594eff0471f250d49d1266d8fa0064
+$ docker pull golang@sha256:cb59c7f8baaa3685cd9236f9be40a0db1589b5e15e9763d0373ea2a48e544b36
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **283.4 MB (283364096 bytes)**  
+-	Total Size: **251.0 MB (251027403 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:7add50da0431578c185daaac3b869ca0791426278001e33e2558b5b93f34c544`
+-	Image ID: `sha256:52360527d77829d9e6a419e77c303cc28b8a7fcb3d97c6f40adba5275cf5adb0`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -14130,17 +16348,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Sat, 29 Jul 2023 19:47:23 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:41:44 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:53:53 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.7.linux-amd64.tar.gz'; 			sha256='f0a87f1bcae91c4b69f8dc2bc6d7e6bfcd7524fceec130af525058c0c17b1b44'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.7.linux-armv6l.tar.gz'; 			sha256='7cc231b415b94f2f7065870a73f67dd2b0ec12b5a98052b7ee0121c42bc04f8d'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.7.linux-arm64.tar.gz'; 			sha256='44781ae3b153c3b07651d93b6bc554e835a36e2d72a696281c1e4dad9efffe43'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.7.linux-386.tar.gz'; 			sha256='ddb48145f05bda2f4617a22c979d4e94b22802cdb1a1fde1b1974e733b26f091'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.7.linux-ppc64le.tar.gz'; 			sha256='6318a1db307c12b8afe68808bd6fae4fba1e558a85b958216096869ed506dcb3'; 			;; 		'riscv64') 			export GOARCH='riscv64' GOOS='linux'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.7.linux-s390x.tar.gz'; 			sha256='26aea2ede8722ceecbd9db883328a8d963136fd96c11dacc356c44c4c19c6515'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.7.src.tar.gz'; 		sha256='2c5ee9c9ec1e733b0dbbc2bdfed3f62306e51d8172bf38f4f4e542b27520f597'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Tue, 01 Aug 2023 21:54:01 GMT
+# Tue, 08 Aug 2023 21:26:25 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:27:22 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		( 			. /etc/os-release; 			echo "deb https://deb.debian.org/debian $VERSION_CODENAME-backports main" > /etc/apt/sources.list.d/backports.list; 						apt-get update; 			apt-get install -y --no-install-recommends -t "$VERSION_CODENAME-backports" golang-go; 		); 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:27:30 GMT
 ENV GOPATH=/go
-# Tue, 01 Aug 2023 21:54:07 GMT
+# Tue, 08 Aug 2023 21:27:37 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:54:16 GMT
+# Tue, 08 Aug 2023 21:27:46 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Tue, 01 Aug 2023 21:54:22 GMT
+# Tue, 08 Aug 2023 21:27:52 GMT
 WORKDIR /go
 ```
 
@@ -14161,13 +16379,13 @@ WORKDIR /go
 		Last Modified: Sat, 29 Jul 2023 20:43:20 GMT  
 		Size: 66.9 MB (66903395 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3b3c451f740b04bd6569a4d57b724574017a6cea7a8a1e6d3fd46dc8c8136d24`  
-		Last Modified: Tue, 01 Aug 2023 22:23:23 GMT  
-		Size: 94.4 MB (94362392 bytes)  
+	-	`sha256:62b8d05d16d1758e71d13cde9e070a9b4961ec68b11ee2a5a31e066f313f51d7`  
+		Last Modified: Tue, 08 Aug 2023 21:30:18 GMT  
+		Size: 62.0 MB (62025701 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e80df7040f185ad46328e0ed7d43b420ce3d72df0dadb1ec8bad5e2195621790`  
-		Last Modified: Tue, 01 Aug 2023 22:22:30 GMT  
-		Size: 126.0 B  
+	-	`sha256:065b22d1ed694fae113a9a1af84385a76db59135d86ebaf63d4dc5b17ec68c3a`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 124.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:bullseye` - linux; ppc64le
@@ -14305,7 +16523,7 @@ WORKDIR /go
 ## `golang:latest`
 
 ```console
-$ docker pull golang@sha256:d626efd1f694b0caa19016cc5b4c970f8a638b367a2d645daefea83e744f57b9
+$ docker pull golang@sha256:d1c9e30544f4fd17d639388da96ac36c4b61219ff6d0a8b77e09a555081ec5ba
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14654,14 +16872,14 @@ WORKDIR /go
 ### `golang:latest` - linux; mips64le
 
 ```console
-$ docker pull golang@sha256:64d546b7de81d2f80dd12b6e54e1a399eaacc7524f1acc776ff70286a4b6b391
+$ docker pull golang@sha256:df6053b34b7d25ada150915c20d8a3a92f894edfbe055b6a7870d9d0206a86ad
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **300.1 MB (300099332 bytes)**  
+-	Total Size: **267.8 MB (267756477 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:88b7489537c2f1d4e62b81eca2ca9bf545cdae1abad7159e0ad8dbef525a786f`
+-	Image ID: `sha256:d66bee4b015af14ec2f0f00a9ae20420c683db8c3dc8826c3ed97ecfc76524f4`
 -	Default Command: `["bash"]`
 
 ```dockerfile
@@ -14677,17 +16895,17 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		g++ 		gcc 		libc6-dev 		make 		pkg-config 	; 	rm -rf /var/lib/apt/lists/*
 # Sat, 29 Jul 2023 19:44:30 GMT
 ENV PATH=/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:29:10 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:41:02 GMT
-RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.20.7.linux-amd64.tar.gz'; 			sha256='f0a87f1bcae91c4b69f8dc2bc6d7e6bfcd7524fceec130af525058c0c17b1b44'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.20.7.linux-armv6l.tar.gz'; 			sha256='7cc231b415b94f2f7065870a73f67dd2b0ec12b5a98052b7ee0121c42bc04f8d'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.20.7.linux-arm64.tar.gz'; 			sha256='44781ae3b153c3b07651d93b6bc554e835a36e2d72a696281c1e4dad9efffe43'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.20.7.linux-386.tar.gz'; 			sha256='ddb48145f05bda2f4617a22c979d4e94b22802cdb1a1fde1b1974e733b26f091'; 			;; 		'mips64el') 			export GOARCH='mips64le' GOOS='linux'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.20.7.linux-ppc64le.tar.gz'; 			sha256='6318a1db307c12b8afe68808bd6fae4fba1e558a85b958216096869ed506dcb3'; 			;; 		'riscv64') 			export GOARCH='riscv64' GOOS='linux'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.20.7.linux-s390x.tar.gz'; 			sha256='26aea2ede8722ceecbd9db883328a8d963136fd96c11dacc356c44c4c19c6515'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.20.7.src.tar.gz'; 		sha256='2c5ee9c9ec1e733b0dbbc2bdfed3f62306e51d8172bf38f4f4e542b27520f597'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
-# Tue, 01 Aug 2023 21:41:10 GMT
+# Tue, 08 Aug 2023 21:24:42 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:25:32 GMT
+RUN set -eux; 	arch="$(dpkg --print-architecture)"; arch="${arch##*-}"; 	url=; 	case "$arch" in 		'amd64') 			url='https://dl.google.com/go/go1.21.0.linux-amd64.tar.gz'; 			sha256='d0398903a16ba2232b389fb31032ddf57cac34efda306a0eebac34f0965a0742'; 			;; 		'armel') 			export GOARCH='arm' GOARM='5' GOOS='linux'; 			;; 		'armhf') 			url='https://dl.google.com/go/go1.21.0.linux-armv6l.tar.gz'; 			sha256='e377a0004957c8c560a3ff99601bce612330a3d95ba3b0a2ae144165fc87deb1'; 			;; 		'arm64') 			url='https://dl.google.com/go/go1.21.0.linux-arm64.tar.gz'; 			sha256='f3d4548edf9b22f26bbd49720350bbfe59d75b7090a1a2bff1afad8214febaf3'; 			;; 		'i386') 			url='https://dl.google.com/go/go1.21.0.linux-386.tar.gz'; 			sha256='0e6f378d9b072fab0a3d9ff4d5e990d98487d47252dba8160015a61e6bd0bcba'; 			;; 		'mips64el') 			url='https://dl.google.com/go/go1.21.0.linux-mips64le.tar.gz'; 			sha256='92f7933d997c589b4f506c6b3cc5b27ff43b294c3a2d40bf4d7eeaf375f92afb'; 			;; 		'ppc64el') 			url='https://dl.google.com/go/go1.21.0.linux-ppc64le.tar.gz'; 			sha256='e938ffc81d8ebe5efc179240960ba22da6a841ff05d5cab7ce2547112b14a47f'; 			;; 		'riscv64') 			url='https://dl.google.com/go/go1.21.0.linux-riscv64.tar.gz'; 			sha256='87b21c06573617842ca9e00b954bc9f534066736a0778eae594ac54b45a9e8b7'; 			;; 		's390x') 			url='https://dl.google.com/go/go1.21.0.linux-s390x.tar.gz'; 			sha256='be7338df8e5d5472dfa307b0df2b446d85d001b0a2a3cdb1a14048d751b70481'; 			;; 		*) echo >&2 "error: unsupported architecture '$arch' (likely packaging update needed)"; exit 1 ;; 	esac; 	build=; 	if [ -z "$url" ]; then 		build=1; 		url='https://dl.google.com/go/go1.21.0.src.tar.gz'; 		sha256='818d46ede85682dd551ad378ef37a4d247006f12ec59b5b755601d2ce114369a'; 		echo >&2; 		echo >&2 "warning: current architecture ($arch) does not have a compatible Go binary release; will be building from source"; 		echo >&2; 	fi; 		wget -O go.tgz.asc "$url.asc"; 	wget -O go.tgz "$url" --progress=dot:giga; 	echo "$sha256 *go.tgz" | sha256sum -c -; 		GNUPGHOME="$(mktemp -d)"; export GNUPGHOME; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys 'EB4C 1BFD 4F04 2F6D DDCC  EC91 7721 F63B D38B 4796'; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys '2F52 8D36 D67B 69ED F998  D857 78BD 6547 3CB3 BD13'; 	gpg --batch --verify go.tgz.asc go.tgz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" go.tgz.asc; 		tar -C /usr/local -xzf go.tgz; 	rm go.tgz; 		if [ -n "$build" ]; then 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 		apt-get install -y --no-install-recommends golang-go; 				export GOCACHE='/tmp/gocache'; 				( 			cd /usr/local/go/src; 			export GOROOT_BOOTSTRAP="$(go env GOROOT)" GOHOSTOS="$GOOS" GOHOSTARCH="$GOARCH"; 			./make.bash; 		); 				apt-mark auto '.*' > /dev/null; 		apt-mark manual $savedAptMark > /dev/null; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		rm -rf /var/lib/apt/lists/*; 				rm -rf 			/usr/local/go/pkg/*/cmd 			/usr/local/go/pkg/bootstrap 			/usr/local/go/pkg/obj 			/usr/local/go/pkg/tool/*/api 			/usr/local/go/pkg/tool/*/go_bootstrap 			/usr/local/go/src/cmd/dist/dist 			"$GOCACHE" 		; 	fi; 		go version
+# Tue, 08 Aug 2023 21:25:40 GMT
 ENV GOPATH=/go
-# Tue, 01 Aug 2023 21:41:16 GMT
+# Tue, 08 Aug 2023 21:25:46 GMT
 ENV PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 01 Aug 2023 21:41:25 GMT
+# Tue, 08 Aug 2023 21:25:55 GMT
 RUN mkdir -p "$GOPATH/src" "$GOPATH/bin" && chmod -R 1777 "$GOPATH"
-# Tue, 01 Aug 2023 21:41:32 GMT
+# Tue, 08 Aug 2023 21:26:01 GMT
 WORKDIR /go
 ```
 
@@ -14708,13 +16926,13 @@ WORKDIR /go
 		Last Modified: Sat, 29 Jul 2023 20:42:16 GMT  
 		Size: 69.6 MB (69625048 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a2d58e643ac77d73462d501f78b21fb37ab182fa998a1fdce336c0db6e8bf4cc`  
-		Last Modified: Tue, 01 Aug 2023 22:22:14 GMT  
-		Size: 94.4 MB (94368617 bytes)  
+	-	`sha256:503e556f1b1861954a25d70f3a5c25853440cbb11869ead2ba011199ff4395e9`  
+		Last Modified: Tue, 08 Aug 2023 21:29:15 GMT  
+		Size: 62.0 MB (62025760 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f4ae2cbc861b04ab443c850fc8d67dc974b4ee861449ab39a79434f3102ce05c`  
-		Last Modified: Tue, 01 Aug 2023 22:21:18 GMT  
-		Size: 124.0 B  
+	-	`sha256:a78bef0024a1147f7116d9d415cfeec8b3b94e6a53d3c739f489f5e8b447851e`  
+		Last Modified: Tue, 08 Aug 2023 21:28:29 GMT  
+		Size: 126.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:latest` - linux; ppc64le
@@ -14852,14 +17070,14 @@ WORKDIR /go
 ### `golang:latest` - windows version 10.0.20348.1850; amd64
 
 ```console
-$ docker pull golang@sha256:361e217a104bae0291b7fbf17562d067e23f423a30e3990ba398d1e5e31876ac
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **1.9 GB (1872105855 bytes)**  
+-	Total Size: **1.8 GB (1832386829 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c215aa2e0cafd71becc45d0d6eaf4b1a970534bf22fea882179daceda3459ed0`
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -14884,11 +17102,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:30:22 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:35:14 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:37:37 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:37:39 GMT
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
 WORKDIR C:\go
 ```
 
@@ -14933,30 +17151,30 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
 		Size: 263.2 KB (263191 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:326ef3ff4b4f0b55d50275b360cf494cf23752c258adb2116098f5e5a3199fa5`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.4 KB (1421 bytes)  
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14b097dfbd4dafff76dab0b850bb2b043b71c920e96c26552d47f479821c9617`  
-		Last Modified: Tue, 01 Aug 2023 22:00:48 GMT  
-		Size: 108.9 MB (108930621 bytes)  
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13679ff7ad3316b11d9df991a057252d1ac7662138189bc9c290725e4eef2066`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.6 KB (1552 bytes)  
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:latest` - windows version 10.0.17763.4645; amd64
 
 ```console
-$ docker pull golang@sha256:7abdfc5f7428a10fbe3538e853212a71f913861e9c079c42c3bf6e866ececef7
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 GB (2074393559 bytes)**  
+-	Total Size: **2.0 GB (2034660194 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2bcd2628c82f1aadd5593c967a21deee4c2491b8dc93a0c789d55dc99062534`
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -14981,11 +17199,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:35:18 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:37:57 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:41:26 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:41:27 GMT
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
 WORKDIR C:\go
 ```
 
@@ -15030,23 +17248,23 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
 		Size: 199.7 KB (199676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e5b14c2b67f2b328130150440eb9cb9b7587ff44970e85f41bfd1512959de12`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10ad11c6a3e2aa14d9b47ee1fd63465f38b657b04b84e6d1aeb8febd6ba00d16`  
-		Last Modified: Tue, 01 Aug 2023 22:01:26 GMT  
-		Size: 109.0 MB (108954748 bytes)  
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14a8b1be9bc4be6c78af685e63fc4c0cfd8f95c9e2882e957178927e6ecfcdc`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.5 KB (1546 bytes)  
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:nanoserver`
 
 ```console
-$ docker pull golang@sha256:0473162c214e4bde2ad1e3128352fb56c979e2d871e65fe834b2feab46dafaf5
+$ docker pull golang@sha256:d104df22c40bb3ab5306cc508365f5f4bd2829fc2237901dac3ae896724b73bb
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15057,14 +17275,14 @@ $ docker pull golang@sha256:0473162c214e4bde2ad1e3128352fb56c979e2d871e65fe834b2
 ### `golang:nanoserver` - windows version 10.0.20348.1850; amd64
 
 ```console
-$ docker pull golang@sha256:1ee174d7717c6a3a5faf68a4aa5b0674361eefb1beec51b39cc3cdf5ac82c1af
+$ docker pull golang@sha256:e8df3077548882da2eb56598ad5e9b344e69906bdfee5a8511ed41f788c32e60
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **228.8 MB (228845740 bytes)**  
+-	Total Size: **189.1 MB (189135108 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f118a3bc9c328dedcfd0d0c13066fca6919b01fb03c94fa13204006672d80ba`
+-	Image ID: `sha256:dd48537ca6566717a32196281d5abb1765953e0a9405aca55940dc49cc117c8d`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/S","\/C"]`
 
@@ -15081,13 +17299,13 @@ USER ContainerAdministrator
 RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
 # Thu, 13 Jul 2023 20:38:50 GMT
 USER ContainerUser
-# Tue, 01 Aug 2023 21:41:42 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:43:31 GMT
-COPY dir:7838f09f321adfac003943dc47e6d67d803060d7e7835c75d5671d28e1431790 in C:\Program Files\Go 
-# Tue, 01 Aug 2023 21:43:50 GMT
+# Tue, 08 Aug 2023 21:22:27 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:24:21 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:24:43 GMT
 RUN go version
-# Tue, 01 Aug 2023 21:43:51 GMT
+# Tue, 08 Aug 2023 21:24:44 GMT
 WORKDIR C:\go
 ```
 
@@ -15116,34 +17334,34 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:09:55 GMT  
 		Size: 1.2 KB (1179 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eef29bb5c78c7f5a72f65075fa0bbb878d200a987b8acae6d52875a4a579b5ad`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 1.2 KB (1162 bytes)  
+	-	`sha256:825ee507fe4c91483617811fb931f31de6a2a16ccb1d45f5f81f88645e5780ec`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.1 KB (1140 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:023368f22c38cf49c869a31e4cb5899a5fe3a4056312bb84267bd56c843e1e2a`  
-		Last Modified: Tue, 01 Aug 2023 22:02:08 GMT  
-		Size: 108.6 MB (108647299 bytes)  
+	-	`sha256:98af339c9efd9281d67c7e6f4c5b6a36344102e749829d130ad2fa23f474b927`  
+		Last Modified: Tue, 08 Aug 2023 21:30:08 GMT  
+		Size: 68.9 MB (68935351 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:023326773a0d32be9c3a78188a49932250322d6e4eebdff9864f688237caa89f`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 48.1 KB (48124 bytes)  
+	-	`sha256:c65fa4c0e6cc1578aa176c87cc5e1340fc400fa93f1e2a3f36bc3df0214781ef`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 49.4 KB (49439 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f29fb9e93f7b5be03db3d3f2d6650c19305e7adc83d70db9c116ef6749fe8945`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 1.3 KB (1342 bytes)  
+	-	`sha256:2daa7b153413c6fface39a4c691b8dd7d346e087a8bf33dedf562f9829346a95`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.4 KB (1365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:nanoserver` - windows version 10.0.17763.4645; amd64
 
 ```console
-$ docker pull golang@sha256:e64f134d80b9a1dde47a2e70d82962c4063bbc26743e7d4b02ebdf26c69cb061
+$ docker pull golang@sha256:a9e32be9db6a5bfeb9b3234a32ffc15b7df1b7a55fd3eed596193ce695173f7e
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **213.2 MB (213225153 bytes)**  
+-	Total Size: **173.5 MB (173476510 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c65db5955e0513d308d0fa7e53442d3e8bf8cf2a0b3f771d92ab1db69b41c5b8`
+-	Image ID: `sha256:111942e3e4e041fd241d5f02ac10a193d716b706a85e568cdc159786eff7841c`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/S","\/C"]`
 
@@ -15160,13 +17378,13 @@ USER ContainerAdministrator
 RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
 # Thu, 13 Jul 2023 20:41:31 GMT
 USER ContainerUser
-# Tue, 01 Aug 2023 21:44:10 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:45:58 GMT
-COPY dir:7838f09f321adfac003943dc47e6d67d803060d7e7835c75d5671d28e1431790 in C:\Program Files\Go 
-# Tue, 01 Aug 2023 21:46:18 GMT
+# Tue, 08 Aug 2023 21:24:55 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:26:51 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:27:10 GMT
 RUN go version
-# Tue, 01 Aug 2023 21:46:19 GMT
+# Tue, 08 Aug 2023 21:27:11 GMT
 WORKDIR C:\go
 ```
 
@@ -15195,27 +17413,27 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:10:32 GMT  
 		Size: 1.2 KB (1164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8fcdaad6979c017e6da699dbf698f77b594370087a6502bcbf1442ff11b0e136`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 1.1 KB (1146 bytes)  
+	-	`sha256:a023276388344d2474bd8dd3b29d50513061de5a1a32eddc670b8076fd699b62`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.1 KB (1127 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ca5731f2a035975a11e8adb1cc7a3ffacd4e8a797d5cbd4b28f3be6bc15871be`  
-		Last Modified: Tue, 01 Aug 2023 22:02:45 GMT  
-		Size: 108.6 MB (108646265 bytes)  
+	-	`sha256:b4a746a1f96095d170fb8ea3ad0b38d825335fc94307c675d082f68d85234bae`  
+		Last Modified: Tue, 08 Aug 2023 21:30:45 GMT  
+		Size: 68.9 MB (68902833 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19eddb617fd90adcf1bb80518718e3ed5cad2bba1757a213978f1af464b8bb3f`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 87.2 KB (87246 bytes)  
+	-	`sha256:6d30343b23bb2b78603d183ea90053d8e26e990e8cb67aa5711992f55c79551c`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 82.2 KB (82185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6493f14c2c96160d0a8fd4afa069dee2c479f932b215bf6ee702a4f4e9269eb`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 1.4 KB (1358 bytes)  
+	-	`sha256:180b607dd89477842db7b3f786480f140c427f268f0a94818ee1535e5bb4b02f`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.2 KB (1227 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:nanoserver-1809`
 
 ```console
-$ docker pull golang@sha256:f2c195d07ec9f2ff00c86c3026eb41579abba3c90a6d54ee8253132da19f838b
+$ docker pull golang@sha256:2e10cd4037d87598c352e1efdc1a50a1eac093d83308b6b774ef4c1114861827
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15225,14 +17443,14 @@ $ docker pull golang@sha256:f2c195d07ec9f2ff00c86c3026eb41579abba3c90a6d54ee8253
 ### `golang:nanoserver-1809` - windows version 10.0.17763.4645; amd64
 
 ```console
-$ docker pull golang@sha256:e64f134d80b9a1dde47a2e70d82962c4063bbc26743e7d4b02ebdf26c69cb061
+$ docker pull golang@sha256:a9e32be9db6a5bfeb9b3234a32ffc15b7df1b7a55fd3eed596193ce695173f7e
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **213.2 MB (213225153 bytes)**  
+-	Total Size: **173.5 MB (173476510 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c65db5955e0513d308d0fa7e53442d3e8bf8cf2a0b3f771d92ab1db69b41c5b8`
+-	Image ID: `sha256:111942e3e4e041fd241d5f02ac10a193d716b706a85e568cdc159786eff7841c`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/S","\/C"]`
 
@@ -15249,13 +17467,13 @@ USER ContainerAdministrator
 RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
 # Thu, 13 Jul 2023 20:41:31 GMT
 USER ContainerUser
-# Tue, 01 Aug 2023 21:44:10 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:45:58 GMT
-COPY dir:7838f09f321adfac003943dc47e6d67d803060d7e7835c75d5671d28e1431790 in C:\Program Files\Go 
-# Tue, 01 Aug 2023 21:46:18 GMT
+# Tue, 08 Aug 2023 21:24:55 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:26:51 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:27:10 GMT
 RUN go version
-# Tue, 01 Aug 2023 21:46:19 GMT
+# Tue, 08 Aug 2023 21:27:11 GMT
 WORKDIR C:\go
 ```
 
@@ -15284,27 +17502,27 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:10:32 GMT  
 		Size: 1.2 KB (1164 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8fcdaad6979c017e6da699dbf698f77b594370087a6502bcbf1442ff11b0e136`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 1.1 KB (1146 bytes)  
+	-	`sha256:a023276388344d2474bd8dd3b29d50513061de5a1a32eddc670b8076fd699b62`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.1 KB (1127 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ca5731f2a035975a11e8adb1cc7a3ffacd4e8a797d5cbd4b28f3be6bc15871be`  
-		Last Modified: Tue, 01 Aug 2023 22:02:45 GMT  
-		Size: 108.6 MB (108646265 bytes)  
+	-	`sha256:b4a746a1f96095d170fb8ea3ad0b38d825335fc94307c675d082f68d85234bae`  
+		Last Modified: Tue, 08 Aug 2023 21:30:45 GMT  
+		Size: 68.9 MB (68902833 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:19eddb617fd90adcf1bb80518718e3ed5cad2bba1757a213978f1af464b8bb3f`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 87.2 KB (87246 bytes)  
+	-	`sha256:6d30343b23bb2b78603d183ea90053d8e26e990e8cb67aa5711992f55c79551c`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 82.2 KB (82185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b6493f14c2c96160d0a8fd4afa069dee2c479f932b215bf6ee702a4f4e9269eb`  
-		Last Modified: Tue, 01 Aug 2023 22:02:22 GMT  
-		Size: 1.4 KB (1358 bytes)  
+	-	`sha256:180b607dd89477842db7b3f786480f140c427f268f0a94818ee1535e5bb4b02f`  
+		Last Modified: Tue, 08 Aug 2023 21:30:24 GMT  
+		Size: 1.2 KB (1227 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:nanoserver-ltsc2022`
 
 ```console
-$ docker pull golang@sha256:f8a6749e9607e15aec6d428f66262578b36fe213df38dcf3cc42e85128d3682e
+$ docker pull golang@sha256:9ae631036977f91d349d3e6b46858a805465005bb5d925e15c3125a51b4eb872
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15314,14 +17532,14 @@ $ docker pull golang@sha256:f8a6749e9607e15aec6d428f66262578b36fe213df38dcf3cc42
 ### `golang:nanoserver-ltsc2022` - windows version 10.0.20348.1850; amd64
 
 ```console
-$ docker pull golang@sha256:1ee174d7717c6a3a5faf68a4aa5b0674361eefb1beec51b39cc3cdf5ac82c1af
+$ docker pull golang@sha256:e8df3077548882da2eb56598ad5e9b344e69906bdfee5a8511ed41f788c32e60
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **228.8 MB (228845740 bytes)**  
+-	Total Size: **189.1 MB (189135108 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1f118a3bc9c328dedcfd0d0c13066fca6919b01fb03c94fa13204006672d80ba`
+-	Image ID: `sha256:dd48537ca6566717a32196281d5abb1765953e0a9405aca55940dc49cc117c8d`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/S","\/C"]`
 
@@ -15338,13 +17556,13 @@ USER ContainerAdministrator
 RUN setx /m PATH "%GOPATH%\bin;C:\Program Files\Go\bin;%PATH%"
 # Thu, 13 Jul 2023 20:38:50 GMT
 USER ContainerUser
-# Tue, 01 Aug 2023 21:41:42 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:43:31 GMT
-COPY dir:7838f09f321adfac003943dc47e6d67d803060d7e7835c75d5671d28e1431790 in C:\Program Files\Go 
-# Tue, 01 Aug 2023 21:43:50 GMT
+# Tue, 08 Aug 2023 21:22:27 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:24:21 GMT
+COPY dir:c21970be5995b3ef4606ef40facc4d16ec9885a3650e5902951dfb757ebb0503 in C:\Program Files\Go 
+# Tue, 08 Aug 2023 21:24:43 GMT
 RUN go version
-# Tue, 01 Aug 2023 21:43:51 GMT
+# Tue, 08 Aug 2023 21:24:44 GMT
 WORKDIR C:\go
 ```
 
@@ -15373,27 +17591,27 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:09:55 GMT  
 		Size: 1.2 KB (1179 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eef29bb5c78c7f5a72f65075fa0bbb878d200a987b8acae6d52875a4a579b5ad`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 1.2 KB (1162 bytes)  
+	-	`sha256:825ee507fe4c91483617811fb931f31de6a2a16ccb1d45f5f81f88645e5780ec`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.1 KB (1140 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:023368f22c38cf49c869a31e4cb5899a5fe3a4056312bb84267bd56c843e1e2a`  
-		Last Modified: Tue, 01 Aug 2023 22:02:08 GMT  
-		Size: 108.6 MB (108647299 bytes)  
+	-	`sha256:98af339c9efd9281d67c7e6f4c5b6a36344102e749829d130ad2fa23f474b927`  
+		Last Modified: Tue, 08 Aug 2023 21:30:08 GMT  
+		Size: 68.9 MB (68935351 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:023326773a0d32be9c3a78188a49932250322d6e4eebdff9864f688237caa89f`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 48.1 KB (48124 bytes)  
+	-	`sha256:c65fa4c0e6cc1578aa176c87cc5e1340fc400fa93f1e2a3f36bc3df0214781ef`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 49.4 KB (49439 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f29fb9e93f7b5be03db3d3f2d6650c19305e7adc83d70db9c116ef6749fe8945`  
-		Last Modified: Tue, 01 Aug 2023 22:01:41 GMT  
-		Size: 1.3 KB (1342 bytes)  
+	-	`sha256:2daa7b153413c6fface39a4c691b8dd7d346e087a8bf33dedf562f9829346a95`  
+		Last Modified: Tue, 08 Aug 2023 21:29:48 GMT  
+		Size: 1.4 KB (1365 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:windowsservercore`
 
 ```console
-$ docker pull golang@sha256:0a24fb5e72f532c616aa9abef79db812e13ec3d2c2e861cc14e22d6af8e008cc
+$ docker pull golang@sha256:877dd735c19d34da65a34ef67716d27d59a2212b507568f6f0c23ff6c6627642
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15404,14 +17622,14 @@ $ docker pull golang@sha256:0a24fb5e72f532c616aa9abef79db812e13ec3d2c2e861cc14e2
 ### `golang:windowsservercore` - windows version 10.0.20348.1850; amd64
 
 ```console
-$ docker pull golang@sha256:361e217a104bae0291b7fbf17562d067e23f423a30e3990ba398d1e5e31876ac
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **1.9 GB (1872105855 bytes)**  
+-	Total Size: **1.8 GB (1832386829 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c215aa2e0cafd71becc45d0d6eaf4b1a970534bf22fea882179daceda3459ed0`
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -15436,11 +17654,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:30:22 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:35:14 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:37:37 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:37:39 GMT
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
 WORKDIR C:\go
 ```
 
@@ -15485,30 +17703,30 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
 		Size: 263.2 KB (263191 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:326ef3ff4b4f0b55d50275b360cf494cf23752c258adb2116098f5e5a3199fa5`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.4 KB (1421 bytes)  
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14b097dfbd4dafff76dab0b850bb2b043b71c920e96c26552d47f479821c9617`  
-		Last Modified: Tue, 01 Aug 2023 22:00:48 GMT  
-		Size: 108.9 MB (108930621 bytes)  
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13679ff7ad3316b11d9df991a057252d1ac7662138189bc9c290725e4eef2066`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.6 KB (1552 bytes)  
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `golang:windowsservercore` - windows version 10.0.17763.4645; amd64
 
 ```console
-$ docker pull golang@sha256:7abdfc5f7428a10fbe3538e853212a71f913861e9c079c42c3bf6e866ececef7
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 GB (2074393559 bytes)**  
+-	Total Size: **2.0 GB (2034660194 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2bcd2628c82f1aadd5593c967a21deee4c2491b8dc93a0c789d55dc99062534`
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -15533,11 +17751,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:35:18 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:37:57 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:41:26 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:41:27 GMT
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
 WORKDIR C:\go
 ```
 
@@ -15582,23 +17800,23 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
 		Size: 199.7 KB (199676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e5b14c2b67f2b328130150440eb9cb9b7587ff44970e85f41bfd1512959de12`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10ad11c6a3e2aa14d9b47ee1fd63465f38b657b04b84e6d1aeb8febd6ba00d16`  
-		Last Modified: Tue, 01 Aug 2023 22:01:26 GMT  
-		Size: 109.0 MB (108954748 bytes)  
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14a8b1be9bc4be6c78af685e63fc4c0cfd8f95c9e2882e957178927e6ecfcdc`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.5 KB (1546 bytes)  
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:windowsservercore-1809`
 
 ```console
-$ docker pull golang@sha256:ce0e1c35ba0fdb0f6e074419f4cad6bc40685ed67b206cc21f061fdb3ade5ba8
+$ docker pull golang@sha256:9684e4046ac508b5e7ff049ab3cc222fa9c61feee9e5aaea7454641890c3ba14
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15608,14 +17826,14 @@ $ docker pull golang@sha256:ce0e1c35ba0fdb0f6e074419f4cad6bc40685ed67b206cc21f06
 ### `golang:windowsservercore-1809` - windows version 10.0.17763.4645; amd64
 
 ```console
-$ docker pull golang@sha256:7abdfc5f7428a10fbe3538e853212a71f913861e9c079c42c3bf6e866ececef7
+$ docker pull golang@sha256:35008975441858a48018dca487a0d6993bea8f7cbab0413ced3f196da6c89b6b
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 GB (2074393559 bytes)**  
+-	Total Size: **2.0 GB (2034660194 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c2bcd2628c82f1aadd5593c967a21deee4c2491b8dc93a0c789d55dc99062534`
+-	Image ID: `sha256:8dcb2e6bc1a482f04b6366e4b2ccbf38855032d2170b49d9da1dae67c386aaba`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -15640,11 +17858,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:35:18 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:37:57 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:41:26 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:41:27 GMT
+# Tue, 08 Aug 2023 21:18:57 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:22:16 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:22:18 GMT
 WORKDIR C:\go
 ```
 
@@ -15689,23 +17907,23 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:08:47 GMT  
 		Size: 199.7 KB (199676 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2e5b14c2b67f2b328130150440eb9cb9b7587ff44970e85f41bfd1512959de12`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.4 KB (1417 bytes)  
+	-	`sha256:86937723106de6d071e003fed2c64168a89ffe7beda5e7db3edb2a59f3307b2d`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.3 KB (1270 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10ad11c6a3e2aa14d9b47ee1fd63465f38b657b04b84e6d1aeb8febd6ba00d16`  
-		Last Modified: Tue, 01 Aug 2023 22:01:26 GMT  
-		Size: 109.0 MB (108954748 bytes)  
+	-	`sha256:2b4a08e44249eb2f58ddd11ae5f61849c1b21ab7cfd83905539463ad736e0da7`  
+		Last Modified: Tue, 08 Aug 2023 21:29:31 GMT  
+		Size: 69.2 MB (69221505 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d14a8b1be9bc4be6c78af685e63fc4c0cfd8f95c9e2882e957178927e6ecfcdc`  
-		Last Modified: Tue, 01 Aug 2023 22:01:02 GMT  
-		Size: 1.5 KB (1546 bytes)  
+	-	`sha256:4d7cb2c8189480ea2e5dd6ba1f4db0df0fe37ba641f4a262597fa17f61a9f291`  
+		Last Modified: Tue, 08 Aug 2023 21:29:10 GMT  
+		Size: 1.6 KB (1571 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `golang:windowsservercore-ltsc2022`
 
 ```console
-$ docker pull golang@sha256:50099bdf1e99d9721383c29e32d74dbdd98272df8b2027fca62cf2c65b87d89e
+$ docker pull golang@sha256:9d96523c0fa673ba10e7e2725f840d7c12c8981856d2a92b7a325c269ddf99aa
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15715,14 +17933,14 @@ $ docker pull golang@sha256:50099bdf1e99d9721383c29e32d74dbdd98272df8b2027fca62c
 ### `golang:windowsservercore-ltsc2022` - windows version 10.0.20348.1850; amd64
 
 ```console
-$ docker pull golang@sha256:361e217a104bae0291b7fbf17562d067e23f423a30e3990ba398d1e5e31876ac
+$ docker pull golang@sha256:2419787b8b8bbea09525a573001b1e6224f943d81e681d3ee832e51f45bf13fd
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **1.9 GB (1872105855 bytes)**  
+-	Total Size: **1.8 GB (1832386829 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c215aa2e0cafd71becc45d0d6eaf4b1a970534bf22fea882179daceda3459ed0`
+-	Image ID: `sha256:7e5dffefd003c9a30324d707da80003bf5c75fc135dfd5ad9cab03a7b18271ab`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["powershell","-Command","$ErrorActionPreference = 'Stop'; $ProgressPreference = 'SilentlyContinue';"]`
 
@@ -15747,11 +17965,11 @@ RUN Write-Host ('Downloading {0} ...' -f $env:GIT_DOWNLOAD_URL); 	[Net.ServicePo
 ENV GOPATH=C:\go
 # Thu, 13 Jul 2023 20:30:22 GMT
 RUN $newPath = ('{0}\bin;C:\Program Files\Go\bin;{1}' -f $env:GOPATH, $env:PATH); 	Write-Host ('Updating PATH: {0}' -f $newPath); 	[Environment]::SetEnvironmentVariable('PATH', $newPath, [EnvironmentVariableTarget]::Machine);
-# Tue, 01 Aug 2023 21:35:14 GMT
-ENV GOLANG_VERSION=1.20.7
-# Tue, 01 Aug 2023 21:37:37 GMT
-RUN $url = 'https://dl.google.com/go/go1.20.7.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '736dc6c7fcab1c96b682c8c93e38d7e371e62a17d34cb2c37d451a1147f66af9'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
-# Tue, 01 Aug 2023 21:37:39 GMT
+# Tue, 08 Aug 2023 21:16:28 GMT
+ENV GOLANG_VERSION=1.21.0
+# Tue, 08 Aug 2023 21:18:46 GMT
+RUN $url = 'https://dl.google.com/go/go1.21.0.windows-amd64.zip'; 	Write-Host ('Downloading {0} ...' -f $url); 	[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; 	Invoke-WebRequest -Uri $url -OutFile 'go.zip'; 		$sha256 = '732121e64e0ecb07c77fdf6cc1bc5ce7b242c2d40d4ac29021ad4c64a08731f6'; 	Write-Host ('Verifying sha256 ({0}) ...' -f $sha256); 	if ((Get-FileHash go.zip -Algorithm sha256).Hash -ne $sha256) { 		Write-Host 'FAILED!'; 		exit 1; 	}; 		Write-Host 'Expanding ...'; 	Expand-Archive go.zip -DestinationPath C:\; 		Write-Host 'Moving ...'; 	Move-Item -Path C:\go -Destination 'C:\Program Files\Go'; 		Write-Host 'Removing ...'; 	Remove-Item go.zip -Force; 		Write-Host 'Verifying install ("go version") ...'; 	go version; 		Write-Host 'Complete.';
+# Tue, 08 Aug 2023 21:18:48 GMT
 WORKDIR C:\go
 ```
 
@@ -15796,15 +18014,15 @@ WORKDIR C:\go
 		Last Modified: Thu, 13 Jul 2023 21:07:32 GMT  
 		Size: 263.2 KB (263191 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:326ef3ff4b4f0b55d50275b360cf494cf23752c258adb2116098f5e5a3199fa5`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.4 KB (1421 bytes)  
+	-	`sha256:ec474793dee1bfbb14163250a60aac5c2794737ba544bcef7e67a0417e5f497d`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1368 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:14b097dfbd4dafff76dab0b850bb2b043b71c920e96c26552d47f479821c9617`  
-		Last Modified: Tue, 01 Aug 2023 22:00:48 GMT  
-		Size: 108.9 MB (108930621 bytes)  
+	-	`sha256:5b8cdd3d1e86ff67f4a6904f8fa80f74f047081303eb37bdf960593bef11abf5`  
+		Last Modified: Tue, 08 Aug 2023 21:28:55 GMT  
+		Size: 69.2 MB (69211775 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:13679ff7ad3316b11d9df991a057252d1ac7662138189bc9c290725e4eef2066`  
-		Last Modified: Tue, 01 Aug 2023 22:00:25 GMT  
-		Size: 1.6 KB (1552 bytes)  
+	-	`sha256:15c78100e26315a543b9af9ad9571b2a5ddda2c9e8b63388aed739868cd35484`  
+		Last Modified: Tue, 08 Aug 2023 21:28:34 GMT  
+		Size: 1.4 KB (1425 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
