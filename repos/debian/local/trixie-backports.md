@@ -1351,20 +1351,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 - `GPL-2.0-only`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20230525-1
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230525-1.dsc' mawk_1.3.4.20230525-1.dsc 1918 SHA256:e6fd0a6d20e18d5a99b76bb9246794a47878f130efa28b8ee52edc89ea810020
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230525.orig.tar.gz' mawk_1.3.4.20230525.orig.tar.gz 403222 SHA256:5639d14bb9124373b3d7f957d2b925ad8ad9656d46212c3f23dbca810cc9269f
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230525-1.debian.tar.xz' mawk_1.3.4.20230525-1.debian.tar.xz 14288 SHA256:5d0b292f99d20e72fb03f47e37e30ee46283302b0bea1bebef90c30819699837
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mawk/1.3.4.20230525-1/
 
-- https://sources.debian.net/src/mawk/1.3.4.20230525-1/ (for browsing the source)
-- https://sources.debian.net/src/mawk/1.3.4.20230525-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mawk/1.3.4.20230525-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ncurses=6.4+20230625-1`
 
@@ -1418,21 +1411,13 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.8.1-2
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1-2.dsc' nettle_3.8.1-2.dsc 2274 SHA256:a437e204da67612efb656cab354835f358b44c077c5c0a46d6e8c30b5c0bddff
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1.orig.tar.gz' nettle_3.8.1.orig.tar.gz 2406251 SHA256:364f3e2b77cd7dcde83fd7c45219c834e54b0c75e428b6f894a23d12dd41cbfe
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1.orig.tar.gz.asc' nettle_3.8.1.orig.tar.gz.asc 573 SHA256:71fe31c44728fdc144cbf12f30ca5d483992c17fd23afabe58f89d4201f66ddb
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1-2.debian.tar.xz' nettle_3.8.1-2.debian.tar.xz 23396 SHA256:8f1eae9c6afffe545de294140f33d53352261478268dafee5ef72d840e1b3d7b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nettle/3.8.1-2/
 
-- https://sources.debian.net/src/nettle/3.8.1-2/ (for browsing the source)
-- https://sources.debian.net/src/nettle/3.8.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nettle/3.8.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.25.0-3`
 
