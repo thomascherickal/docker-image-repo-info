@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f1072bd670e9610a88668c581f0c9ccc58ae906818f7a5cddd348587bec2b41f`
-- Created: `2023-07-11T03:00:07.224758025Z`
-- Virtual Size: ~ 229.00 Mb  
+- Image ID: `sha256:13ee0985a286c762aa5776d10b15a5bb2d00a8e018838784294e272b00edebd5`
+- Created: `2023-08-05T01:20:35.307034326Z`
+- Virtual Size: ~ 236.50 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.21`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.21.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.21.tar.xz.asc`
-  - `PHP_SHA256=e634a00b0c6a8cd39e840e9fb30b5227b820b7a9ace95b7b001053c1411c4821`
+  - `PHP_VERSION=8.1.22`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.22.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.22.tar.xz.asc`
+  - `PHP_SHA256=9ea4f4cfe775cb5866c057323d6b320f3a6e0adb1be41a068ff7bfec6f83e71d`
   - `PHP_OPCACHE_VALIDATE_TIMESTAMPS=0`
   - `PHP_OPCACHE_MAX_ACCELERATED_FILES=20000`
   - `PHP_OPCACHE_MEMORY_CONSUMPTION=192`
@@ -245,16 +245,16 @@ GPL-3.0-or-later
 ### `apk` package: `curl`
 
 ```console
-curl-8.1.2-r0 description:
+curl-8.2.1-r0 description:
 URL retrival utility and library
 
-curl-8.1.2-r0 webpage:
+curl-8.2.1-r0 webpage:
 https://curl.se/
 
-curl-8.1.2-r0 installed size:
+curl-8.2.1-r0 installed size:
 236 KiB
 
-curl-8.1.2-r0 license:
+curl-8.2.1-r0 license:
 curl
 
 ```
@@ -330,16 +330,16 @@ LGPL-2.1-or-later
 ### `apk` package: `icu-data-en`
 
 ```console
-icu-data-en-73.2-r1 description:
+icu-data-en-73.2-r2 description:
 Stripped down ICU data with only en_US/GB locale and no legacy charset converters
 
-icu-data-en-73.2-r1 webpage:
+icu-data-en-73.2-r2 webpage:
 https://icu.unicode.org/
 
-icu-data-en-73.2-r1 installed size:
+icu-data-en-73.2-r2 installed size:
 3016 KiB
 
-icu-data-en-73.2-r1 license:
+icu-data-en-73.2-r2 license:
 ICU
 
 ```
@@ -347,16 +347,16 @@ ICU
 ### `apk` package: `icu-libs`
 
 ```console
-icu-libs-73.2-r1 description:
+icu-libs-73.2-r2 description:
 International Components for Unicode library (libraries)
 
-icu-libs-73.2-r1 webpage:
+icu-libs-73.2-r2 webpage:
 https://icu.unicode.org/
 
-icu-libs-73.2-r1 installed size:
-4328 KiB
+icu-libs-73.2-r2 installed size:
+4332 KiB
 
-icu-libs-73.2-r1 license:
+icu-libs-73.2-r2 license:
 ICU
 
 ```
@@ -432,16 +432,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.1.1-r1 description:
+libcrypto3-3.1.2-r0 description:
 Crypto library from openssl
 
-libcrypto3-3.1.1-r1 webpage:
+libcrypto3-3.1.2-r0 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.1.1-r1 installed size:
-4464 KiB
+libcrypto3-3.1.2-r0 installed size:
+4468 KiB
 
-libcrypto3-3.1.1-r1 license:
+libcrypto3-3.1.2-r0 license:
 Apache-2.0
 
 ```
@@ -449,16 +449,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.1.2-r0 description:
+libcurl-8.2.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.1.2-r0 webpage:
+libcurl-8.2.1-r0 webpage:
 https://curl.se/
 
-libcurl-8.1.2-r0 installed size:
-548 KiB
+libcurl-8.2.1-r0 installed size:
+552 KiB
 
-libcurl-8.1.2-r0 license:
+libcurl-8.2.1-r0 license:
 curl
 
 ```
@@ -602,16 +602,16 @@ ISC
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.1.1-r1 description:
+libssl3-3.1.2-r0 description:
 SSL shared libraries
 
-libssl3-3.1.1-r1 webpage:
+libssl3-3.1.2-r0 webpage:
 https://www.openssl.org/
 
-libssl3-3.1.1-r1 installed size:
+libssl3-3.1.2-r0 installed size:
 552 KiB
 
-libssl3-3.1.1-r1 license:
+libssl3-3.1.2-r0 license:
 Apache-2.0
 
 ```
@@ -704,16 +704,16 @@ BSD-3-Clause
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.4-r0 description:
+musl-1.2.4-r1 description:
 the musl c library (libc) implementation
 
-musl-1.2.4-r0 webpage:
+musl-1.2.4-r1 webpage:
 https://musl.libc.org/
 
-musl-1.2.4-r0 installed size:
+musl-1.2.4-r1 installed size:
 620 KiB
 
-musl-1.2.4-r0 license:
+musl-1.2.4-r1 license:
 MIT
 
 ```
@@ -755,16 +755,16 @@ X11
 ### `apk` package: `nghttp2-libs`
 
 ```console
-nghttp2-libs-1.53.0-r0 description:
+nghttp2-libs-1.55.1-r0 description:
 Experimental HTTP/2 client, server and proxy (libraries)
 
-nghttp2-libs-1.53.0-r0 webpage:
+nghttp2-libs-1.55.1-r0 webpage:
 https://nghttp2.org
 
-nghttp2-libs-1.53.0-r0 installed size:
+nghttp2-libs-1.55.1-r0 installed size:
 152 KiB
 
-nghttp2-libs-1.53.0-r0 license:
+nghttp2-libs-1.55.1-r0 license:
 MIT
 
 ```
@@ -789,16 +789,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-3.1.1-r1 description:
+openssl-3.1.2-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-3.1.1-r1 webpage:
+openssl-3.1.2-r0 webpage:
 https://www.openssl.org/
 
-openssl-3.1.1-r1 installed size:
-748 KiB
+openssl-3.1.2-r0 installed size:
+752 KiB
 
-openssl-3.1.1-r1 license:
+openssl-3.1.2-r0 license:
 Apache-2.0
 
 ```
