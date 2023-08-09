@@ -456,11 +456,17 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris curl=7.88.1-10
-'http://http.debian.net/debian/pool/main/c/curl/curl_7.88.1-10.dsc' curl_7.88.1-10.dsc 3163 SHA256:717ed30766b1ccf951685627c910dea11b021da5f1c3e6f465517981d62ef0fe
-'http://http.debian.net/debian/pool/main/c/curl/curl_7.88.1.orig.tar.gz' curl_7.88.1.orig.tar.gz 4343562 SHA256:cdb38b72e36bc5d33d5b8810f8018ece1baa29a8f215b4495e495ded82bbf3c7
-'http://http.debian.net/debian/pool/main/c/curl/curl_7.88.1.orig.tar.gz.asc' curl_7.88.1.orig.tar.gz.asc 488 SHA256:7a5a55d7123149a1b357f298cf895bd0a601e3a2807005ef6c95f3752803485f
-'http://http.debian.net/debian/pool/main/c/curl/curl_7.88.1-10.debian.tar.xz' curl_7.88.1-10.debian.tar.xz 55392 SHA256:fc3976de8659cd016d9f3c3523dc801294651c895026193e07a6c3ce358c13d1
+'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1-10.dsc' curl_7.88.1-10.dsc 3163 SHA256:717ed30766b1ccf951685627c910dea11b021da5f1c3e6f465517981d62ef0fe
+'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1.orig.tar.gz' curl_7.88.1.orig.tar.gz 4343562 SHA256:cdb38b72e36bc5d33d5b8810f8018ece1baa29a8f215b4495e495ded82bbf3c7
+'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1.orig.tar.gz.asc' curl_7.88.1.orig.tar.gz.asc 488 SHA256:7a5a55d7123149a1b357f298cf895bd0a601e3a2807005ef6c95f3752803485f
+'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1-10.debian.tar.xz' curl_7.88.1-10.debian.tar.xz 55392 SHA256:fc3976de8659cd016d9f3c3523dc801294651c895026193e07a6c3ce358c13d1
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/curl/7.88.1-10/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.88.1-10/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.88.1-10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg1-1`
 
@@ -2473,20 +2479,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 - `GPL-2.0-only`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20230525-1
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230525-1.dsc' mawk_1.3.4.20230525-1.dsc 1918 SHA256:e6fd0a6d20e18d5a99b76bb9246794a47878f130efa28b8ee52edc89ea810020
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230525.orig.tar.gz' mawk_1.3.4.20230525.orig.tar.gz 403222 SHA256:5639d14bb9124373b3d7f957d2b925ad8ad9656d46212c3f23dbca810cc9269f
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230525-1.debian.tar.xz' mawk_1.3.4.20230525-1.debian.tar.xz 14288 SHA256:5d0b292f99d20e72fb03f47e37e30ee46283302b0bea1bebef90c30819699837
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mawk/1.3.4.20230525-1/
 
-- https://sources.debian.net/src/mawk/1.3.4.20230525-1/ (for browsing the source)
-- https://sources.debian.net/src/mawk/1.3.4.20230525-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mawk/1.3.4.20230525-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mgcv=1.9-0-1`
 
@@ -2567,11 +2566,17 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris ncurses=6.4+20230625-1
-'http://http.debian.net/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625-1.dsc' ncurses_6.4+20230625-1.dsc 3807 SHA256:7f5cfc1271d60b30ebc46df49654f099b4f5492cea5159115c6cfdc245972d25
-'http://http.debian.net/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625.orig.tar.gz' ncurses_6.4+20230625.orig.tar.gz 3649551 SHA256:54d25c0215c1b7f6f17d64c7f8f229fb34af007d663c0fcd54d9557a1cacc3ee
-'http://http.debian.net/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625.orig.tar.gz.asc' ncurses_6.4+20230625.orig.tar.gz.asc 729 SHA256:d20a0166bdf9f8eccc6df015a49fd60a168f00f8430431810fc49963b44c0965
-'http://http.debian.net/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625-1.debian.tar.xz' ncurses_6.4+20230625-1.debian.tar.xz 50328 SHA256:c068f9d6e751ebbfeb5cee05a010580fd539c0251da4a703cc1d14427b284798
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625-1.dsc' ncurses_6.4+20230625-1.dsc 3807 SHA256:7f5cfc1271d60b30ebc46df49654f099b4f5492cea5159115c6cfdc245972d25
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625.orig.tar.gz' ncurses_6.4+20230625.orig.tar.gz 3649551 SHA256:54d25c0215c1b7f6f17d64c7f8f229fb34af007d663c0fcd54d9557a1cacc3ee
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625.orig.tar.gz.asc' ncurses_6.4+20230625.orig.tar.gz.asc 729 SHA256:d20a0166bdf9f8eccc6df015a49fd60a168f00f8430431810fc49963b44c0965
+'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625-1.debian.tar.xz' ncurses_6.4+20230625-1.debian.tar.xz 50328 SHA256:c068f9d6e751ebbfeb5cee05a010580fd539c0251da4a703cc1d14427b284798
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/ncurses/6.4+20230625-1/ (for browsing the source)
+- https://sources.debian.net/src/ncurses/6.4+20230625-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ncurses/6.4+20230625-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nettle=3.8.1-2`
 
@@ -2595,21 +2600,13 @@ Licenses: (parsed from: `/usr/share/doc/libhogweed6/copyright`, `/usr/share/doc/
 - `LGPL-3+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nettle=3.8.1-2
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1-2.dsc' nettle_3.8.1-2.dsc 2274 SHA256:a437e204da67612efb656cab354835f358b44c077c5c0a46d6e8c30b5c0bddff
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1.orig.tar.gz' nettle_3.8.1.orig.tar.gz 2406251 SHA256:364f3e2b77cd7dcde83fd7c45219c834e54b0c75e428b6f894a23d12dd41cbfe
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1.orig.tar.gz.asc' nettle_3.8.1.orig.tar.gz.asc 573 SHA256:71fe31c44728fdc144cbf12f30ca5d483992c17fd23afabe58f89d4201f66ddb
-'http://deb.debian.org/debian/pool/main/n/nettle/nettle_3.8.1-2.debian.tar.xz' nettle_3.8.1-2.debian.tar.xz 23396 SHA256:8f1eae9c6afffe545de294140f33d53352261478268dafee5ef72d840e1b3d7b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nettle/3.8.1-2/
 
-- https://sources.debian.net/src/nettle/3.8.1-2/ (for browsing the source)
-- https://sources.debian.net/src/nettle/3.8.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nettle/3.8.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nghttp2=1.55.1-1`
 
@@ -2673,10 +2670,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openblas=0.3.23+ds-2
-'http://http.debian.net/debian/pool/main/o/openblas/openblas_0.3.23%2bds-2.dsc' openblas_0.3.23+ds-2.dsc 4815 SHA256:38cbaca5e855dc6af4bad76ac3f0363ede6e34e4c5e5777ada746de3b7b7ecb3
-'http://http.debian.net/debian/pool/main/o/openblas/openblas_0.3.23%2bds.orig.tar.xz' openblas_0.3.23+ds.orig.tar.xz 1874384 SHA256:84863ced908986a0aa5dd5983a58fc10dd9e995733e29aafdcaec9d1c642ffbf
-'http://http.debian.net/debian/pool/main/o/openblas/openblas_0.3.23%2bds-2.debian.tar.xz' openblas_0.3.23+ds-2.debian.tar.xz 23976 SHA256:f5d281d8fd1886aae49c080169cd23a0bdd030fb44da807c573ea97d2c6e7f79
+'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.23%2bds-2.dsc' openblas_0.3.23+ds-2.dsc 4815 SHA256:38cbaca5e855dc6af4bad76ac3f0363ede6e34e4c5e5777ada746de3b7b7ecb3
+'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.23%2bds.orig.tar.xz' openblas_0.3.23+ds.orig.tar.xz 1874384 SHA256:84863ced908986a0aa5dd5983a58fc10dd9e995733e29aafdcaec9d1c642ffbf
+'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.23%2bds-2.debian.tar.xz' openblas_0.3.23+ds-2.debian.tar.xz 23976 SHA256:f5d281d8fd1886aae49c080169cd23a0bdd030fb44da807c573ea97d2c6e7f79
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/openblas/0.3.23+ds-2/ (for browsing the source)
+- https://sources.debian.net/src/openblas/0.3.23+ds-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openblas/0.3.23+ds-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.5.13+dfsg-5`
 
@@ -3141,20 +3144,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-matrix/copyright`)
 - `GPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris rmatrix=1.5-3-1
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.5-3-1.dsc' rmatrix_1.5-3-1.dsc 1860 SHA256:a5d76f341039c2c96b0680c6f933c511e3ced02daaa40437294c4baac61ef1d1
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.5-3.orig.tar.gz' rmatrix_1.5-3.orig.tar.gz 2163568 SHA256:4e720f4edc97b1c09646a445851b1ce955caf6b1de8306a2283328b526fee00d
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.5-3-1.debian.tar.xz' rmatrix_1.5-3-1.debian.tar.xz 5760 SHA256:1041176f784dbbb40ac6d7e13a0789c103b6e1fedb3ff981c2e7b6eaa9a1bbeb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/rmatrix/1.5-3-1/
 
-- https://sources.debian.net/src/rmatrix/1.5-3-1/ (for browsing the source)
-- https://sources.debian.net/src/rmatrix/1.5-3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/rmatrix/1.5-3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rpart=4.1.19-1`
 
@@ -3484,11 +3480,17 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris tzdata=2023c-7
-'http://http.debian.net/debian/pool/main/t/tzdata/tzdata_2023c-7.dsc' tzdata_2023c-7.dsc 2429 SHA256:2ad6a5899368119caea23c4929517baa8ad438146434c153ab240795604b434b
-'http://http.debian.net/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz' tzdata_2023c.orig.tar.gz 443902 SHA256:3f510b5d1b4ae9bb38e485aa302a776b317fb3637bdb6404c4adf7b6cadd965c
-'http://http.debian.net/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz.asc' tzdata_2023c.orig.tar.gz.asc 833 SHA256:d5ec7b6ceddc46aa137c0ef85fa5c87445509d7997c067ee0fd2e2a23f833557
-'http://http.debian.net/debian/pool/main/t/tzdata/tzdata_2023c-7.debian.tar.xz' tzdata_2023c-7.debian.tar.xz 120472 SHA256:ab8cc6a17b26909f5d97936bd1b7fababa9162d7194c9d6df6d03d4bb5fdb3a8
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c-7.dsc' tzdata_2023c-7.dsc 2429 SHA256:2ad6a5899368119caea23c4929517baa8ad438146434c153ab240795604b434b
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz' tzdata_2023c.orig.tar.gz 443902 SHA256:3f510b5d1b4ae9bb38e485aa302a776b317fb3637bdb6404c4adf7b6cadd965c
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz.asc' tzdata_2023c.orig.tar.gz.asc 833 SHA256:d5ec7b6ceddc46aa137c0ef85fa5c87445509d7997c067ee0fd2e2a23f833557
+'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c-7.debian.tar.xz' tzdata_2023c-7.debian.tar.xz 120472 SHA256:ab8cc6a17b26909f5d97936bd1b7fababa9162d7194c9d6df6d03d4bb5fdb3a8
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/tzdata/2023c-7/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2023c-7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2023c-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0043+nmu1`
 
