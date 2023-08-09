@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:12919f6804febd1bf03c66cd3ba6d52c9c067818efa057835608a972b72113ef`
-- Created: `2023-07-20T18:22:38.407797375Z`
-- Virtual Size: ~ 713.00 Mb  
+- Image ID: `sha256:62d2f31a6ed5d7f81d5e040e42ec6d1727da74791bd6e2862ec5489604b97667`
+- Created: `2023-08-05T01:39:11.246130004Z`
+- Virtual Size: ~ 717.77 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.21`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.21.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.21.tar.xz.asc`
-  - `PHP_SHA256=e634a00b0c6a8cd39e840e9fb30b5227b820b7a9ace95b7b001053c1411c4821`
+  - `PHP_VERSION=8.1.22`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.22.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.22.tar.xz.asc`
+  - `PHP_SHA256=9ea4f4cfe775cb5866c057323d6b320f3a6e0adb1be41a068ff7bfec6f83e71d`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `NEXTCLOUD_VERSION=25.0.9`
@@ -404,16 +404,16 @@ LGPL-2.0-or-later
 ### `apk` package: `ghostscript`
 
 ```console
-ghostscript-9.56.1-r1 description:
+ghostscript-9.56.1-r2 description:
 An interpreter for the PostScript language and for PDF
 
-ghostscript-9.56.1-r1 webpage:
+ghostscript-9.56.1-r2 webpage:
 https://ghostscript.com/
 
-ghostscript-9.56.1-r1 installed size:
+ghostscript-9.56.1-r2 installed size:
 69 MiB
 
-ghostscript-9.56.1-r1 license:
+ghostscript-9.56.1-r2 license:
 AGPL-3.0-or-later
 
 ```
@@ -693,16 +693,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1u-r1 description:
+libcrypto1.1-1.1.1v-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1u-r1 webpage:
+libcrypto1.1-1.1.1v-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1u-r1 installed size:
+libcrypto1.1-1.1.1v-r0 installed size:
 2708 KiB
 
-libcrypto1.1-1.1.1u-r1 license:
+libcrypto1.1-1.1.1v-r0 license:
 OpenSSL
 
 ```
@@ -710,16 +710,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.1.2-r0 description:
+libcurl-8.2.1-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.1.2-r0 webpage:
+libcurl-8.2.1-r0 webpage:
 https://curl.se/
 
-libcurl-8.1.2-r0 installed size:
+libcurl-8.2.1-r0 installed size:
 564 KiB
 
-libcurl-8.1.2-r0 license:
+libcurl-8.2.1-r0 license:
 curl
 
 ```
@@ -1016,16 +1016,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1u-r1 description:
+libssl1.1-1.1.1v-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1u-r1 webpage:
+libssl1.1-1.1.1v-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1u-r1 installed size:
+libssl1.1-1.1.1v-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1u-r1 license:
+libssl1.1-1.1.1v-r0 license:
 OpenSSL
 
 ```
@@ -1356,16 +1356,16 @@ LGPL-2.0-or-later
 ### `apk` package: `nghttp2-libs`
 
 ```console
-nghttp2-libs-1.47.0-r0 description:
+nghttp2-libs-1.47.0-r1 description:
 Experimental HTTP/2 client, server and proxy (libraries)
 
-nghttp2-libs-1.47.0-r0 webpage:
+nghttp2-libs-1.47.0-r1 webpage:
 https://nghttp2.org
 
-nghttp2-libs-1.47.0-r0 installed size:
+nghttp2-libs-1.47.0-r1 installed size:
 156 KiB
 
-nghttp2-libs-1.47.0-r0 license:
+nghttp2-libs-1.47.0-r1 license:
 MIT
 
 ```
@@ -1407,16 +1407,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1u-r1 description:
+openssl-1.1.1v-r0 description:
 toolkit for transport layer security (TLS) - version 1.1
 
-openssl-1.1.1u-r1 webpage:
+openssl-1.1.1v-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1u-r1 installed size:
+openssl-1.1.1v-r0 installed size:
 660 KiB
 
-openssl-1.1.1u-r1 license:
+openssl-1.1.1v-r0 license:
 OpenSSL
 
 ```
