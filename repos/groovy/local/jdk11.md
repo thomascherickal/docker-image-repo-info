@@ -2,11 +2,12 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b3a7dfdc99ec72e52adb32f016689f10608f60a377037fecdcc982ccaa5477ad`
-- Created: `2023-07-26T01:59:14.048443855Z`
-- Virtual Size: ~ 431.87 Mb  
+- Image ID: `sha256:1517e37bc63ccb31082c68d6c5b56b444f62df222e2ff2a50d6aae3c8c50322a`
+- Created: `2023-08-08T19:51:13.243032571Z`
+- Virtual Size: ~ 433.39 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
+- Entrypoint: `["/entrypoint.sh"]`
 - Command: `["groovysh"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
@@ -278,12 +279,12 @@ $ apt-get source -qq --print-uris coreutils=8.32-4.1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.32-4.1ubuntu1.debian.tar.xz' coreutils_8.32-4.1ubuntu1.debian.tar.xz 41096 SHA512:74adfa2f2a85af8d7024ad6d13942e915217dcb10e29caa9c314e0a15da6ec019e7aa52ac5351c35ccea1bace7a05c6dc7569b7b0487c8fcd46b3ba42d66d89d
 ```
 
-### `dpkg` source package: `curl=7.81.0-1ubuntu1.10`
+### `dpkg` source package: `curl=7.81.0-1ubuntu1.13`
 
 Binary Packages:
 
-- `curl=7.81.0-1ubuntu1.10`
-- `libcurl4:amd64=7.81.0-1ubuntu1.10`
+- `curl=7.81.0-1ubuntu1.13`
+- `libcurl4:amd64=7.81.0-1ubuntu1.13`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -294,9 +295,15 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.81.0-1ubuntu1.13
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.13.dsc' curl_7.81.0-1ubuntu1.13.dsc 3143 SHA512:e2bde02f21c21c31a5d4d9d724b33e99da0578869ce8bf49f84fa33b57a4f2909d2f5bebf97e43f0d39cb7fba230d486e79f448864f445f7dddef4f454802d90
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz' curl_7.81.0.orig.tar.gz 4188040 SHA512:e3084f0fa083f7f93eac923edbfdddb5fd0a372b94673ba9d4427a2b95508898c15ecdf63b99a1c1f6cf3215e27b06cbaa2b7073df038d43b362e586f92495d3
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz.asc' curl_7.81.0.orig.tar.gz.asc 488 SHA512:92bc5ede831551285d67b03abe8400c609ad31c9d33e324ee5c41b92dd5c2a0245a09a396bd76807b3e44bcfef944b1e16ac266264f7b85d27cc1c072a6e82bd
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.13.debian.tar.xz' curl_7.81.0-1ubuntu1.13.debian.tar.xz 70616 SHA512:28538b2792ccbf575b95775e9544d045960f99098f61bc43f6cd8744a84179d7205f362bd13839c122c1791f9901b07790923f602ceb9a5d90710bbed89d63ae
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg2-3ubuntu1.2`
 
@@ -1516,19 +1523,24 @@ $ apt-get source -qq --print-uris npth=1.6-3build2
 'http://archive.ubuntu.com/ubuntu/pool/main/n/npth/npth_1.6-3build2.debian.tar.xz' npth_1.6-3build2.debian.tar.xz 10904 SHA512:426ab3ab9e27b3701d67cde0a4c4040aa9ccac22a0266321824487fe80a118ccd6860b6fa0fb5ca3c46dfa3c20053889fbb51a2e74618065b3aff059a0216c4c
 ```
 
-### `dpkg` source package: `openldap=2.5.14+dfsg-0ubuntu0.22.04.2`
+### `dpkg` source package: `openldap=2.5.15+dfsg-0ubuntu0.22.04.1`
 
 Binary Packages:
 
-- `libldap-2.5-0:amd64=2.5.14+dfsg-0ubuntu0.22.04.2`
+- `libldap-2.5-0:amd64=2.5.15+dfsg-0ubuntu0.22.04.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openldap=2.5.15+dfsg-0ubuntu0.22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.15%2bdfsg-0ubuntu0.22.04.1.dsc' openldap_2.5.15+dfsg-0ubuntu0.22.04.1.dsc 3319 SHA512:b872106b4d944d1050a70c5db89a51eeef8826d49ef723a1e24951f962108dd7af083a9f4d9e17e627c10f3f3e94844d6c4b90250af2947d69d839313a0e4b95
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.15%2bdfsg.orig.tar.gz' openldap_2.5.15+dfsg.orig.tar.gz 5616689 SHA512:e461b6c7f25bb666a72df84e83d0813d6b64e997b8de842b7ec6eac987287fcf08348be6c0b8bd6b7b663e2a03fc672d2eb5a38c570608404861633070fb613d
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.15%2bdfsg-0ubuntu0.22.04.1.debian.tar.xz' openldap_2.5.15+dfsg-0ubuntu0.22.04.1.debian.tar.xz 171804 SHA512:7aaba43df6cb6ed437dbad0881e9165f91de0375f3da89f4e5b7cb135e3d5fae123cf50d3c5c9a409a7be38f7c14bc95b38f7e2782455c6706ee50e70f9a5074
+```
 
 ### `dpkg` source package: `openssl=3.0.2-0ubuntu1.10`
 
@@ -1559,8 +1571,10 @@ $ apt-get source -qq --print-uris openssl=3.0.2-0ubuntu1.10
 Binary Packages:
 
 - `libp11-kit0:amd64=0.24.0-6build1`
+- `p11-kit=0.24.0-6build1`
+- `p11-kit-modules:amd64=0.24.0-6build1`
 
-Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`, `/usr/share/doc/p11-kit/copyright`, `/usr/share/doc/p11-kit-modules/copyright`)
 
 - `Apache-2.0`
 - `BSD-3-Clause`
