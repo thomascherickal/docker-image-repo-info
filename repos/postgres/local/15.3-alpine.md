@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:696ffaadb338660eea62083440b46d40914b387b29fb1cb6661e060c8f576636`
-- Created: `2023-06-14T21:19:23.701467183Z`
-- Virtual Size: ~ 236.71 Mb  
+- Image ID: `sha256:049a8e6cb3b4607b01e9ec97ba6b0555d6e6671d12b3802021e0ec0a34f93db3`
+- Created: `2023-08-09T02:35:31.46648229Z`
+- Virtual Size: ~ 236.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -108,16 +108,16 @@ GPL-3.0-or-later
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.36.1-r0 description:
+busybox-1.36.1-r2 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.36.1-r0 webpage:
+busybox-1.36.1-r2 webpage:
 https://busybox.net/
 
-busybox-1.36.1-r0 installed size:
+busybox-1.36.1-r2 installed size:
 924 KiB
 
-busybox-1.36.1-r0 license:
+busybox-1.36.1-r2 license:
 GPL-2.0-only
 
 ```
@@ -125,16 +125,16 @@ GPL-2.0-only
 ### `apk` package: `busybox-binsh`
 
 ```console
-busybox-binsh-1.36.1-r0 description:
+busybox-binsh-1.36.1-r2 description:
 busybox ash /bin/sh
 
-busybox-binsh-1.36.1-r0 webpage:
+busybox-binsh-1.36.1-r2 webpage:
 https://busybox.net/
 
-busybox-binsh-1.36.1-r0 installed size:
+busybox-binsh-1.36.1-r2 installed size:
 8192 B
 
-busybox-binsh-1.36.1-r0 license:
+busybox-binsh-1.36.1-r2 license:
 GPL-2.0-only
 
 ```
@@ -176,16 +176,16 @@ GPL-3.0-or-later
 ### `apk` package: `icu-data-full`
 
 ```console
-icu-data-full-73.1-r1 description:
+icu-data-full-73.2-r2 description:
 Full ICU data
 
-icu-data-full-73.1-r1 webpage:
+icu-data-full-73.2-r2 webpage:
 https://icu.unicode.org/
 
-icu-data-full-73.1-r1 installed size:
+icu-data-full-73.2-r2 installed size:
 30 MiB
 
-icu-data-full-73.1-r1 license:
+icu-data-full-73.2-r2 license:
 ICU
 
 ```
@@ -193,16 +193,16 @@ ICU
 ### `apk` package: `icu-libs`
 
 ```console
-icu-libs-73.1-r1 description:
+icu-libs-73.2-r2 description:
 International Components for Unicode library (libraries)
 
-icu-libs-73.1-r1 webpage:
+icu-libs-73.2-r2 webpage:
 https://icu.unicode.org/
 
-icu-libs-73.1-r1 installed size:
-4328 KiB
+icu-libs-73.2-r2 installed size:
+4332 KiB
 
-icu-libs-73.1-r1 license:
+icu-libs-73.2-r2 license:
 ICU
 
 ```
@@ -295,16 +295,16 @@ GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.1.1-r1 description:
+libcrypto3-3.1.2-r0 description:
 Crypto library from openssl
 
-libcrypto3-3.1.1-r1 webpage:
+libcrypto3-3.1.2-r0 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.1.1-r1 installed size:
-4464 KiB
+libcrypto3-3.1.2-r0 installed size:
+4468 KiB
 
-libcrypto3-3.1.1-r1 license:
+libcrypto3-3.1.2-r0 license:
 Apache-2.0
 
 ```
@@ -397,16 +397,16 @@ GPL-2.0-or-later AND LGPL-2.1-or-later
 ### `apk` package: `libldap`
 
 ```console
-libldap-2.6.4-r3 description:
+libldap-2.6.5-r0 description:
 OpenLDAP libraries
 
-libldap-2.6.4-r3 webpage:
+libldap-2.6.5-r0 webpage:
 https://www.openldap.org/
 
-libldap-2.6.4-r3 installed size:
+libldap-2.6.5-r0 installed size:
 400 KiB
 
-libldap-2.6.4-r3 license:
+libldap-2.6.5-r0 license:
 OLDAP-2.8
 
 ```
@@ -448,16 +448,16 @@ custom
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.1.1-r1 description:
+libssl3-3.1.2-r0 description:
 SSL shared libraries
 
-libssl3-3.1.1-r1 webpage:
+libssl3-3.1.2-r0 webpage:
 https://www.openssl.org/
 
-libssl3-3.1.1-r1 installed size:
+libssl3-3.1.2-r0 installed size:
 552 KiB
 
-libssl3-3.1.1-r1 license:
+libssl3-3.1.2-r0 license:
 Apache-2.0
 
 ```
@@ -584,16 +584,16 @@ BSD-2-Clause AND GPL-2.0-only
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.4-r0 description:
+musl-1.2.4-r1 description:
 the musl c library (libc) implementation
 
-musl-1.2.4-r0 webpage:
+musl-1.2.4-r1 webpage:
 https://musl.libc.org/
 
-musl-1.2.4-r0 installed size:
+musl-1.2.4-r1 installed size:
 620 KiB
 
-musl-1.2.4-r0 license:
+musl-1.2.4-r1 license:
 MIT
 
 ```
@@ -601,16 +601,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.4-r0 description:
+musl-utils-1.2.4-r1 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.4-r0 webpage:
+musl-utils-1.2.4-r1 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.4-r0 installed size:
+musl-utils-1.2.4-r1 installed size:
 132 KiB
 
-musl-utils-1.2.4-r0 license:
+musl-utils-1.2.4-r1 license:
 MIT AND BSD-2-Clause AND GPL-2.0-or-later
 
 ```
@@ -686,16 +686,16 @@ GPL-2.0-only
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.36.1-r0 description:
+ssl_client-1.36.1-r2 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.36.1-r0 webpage:
+ssl_client-1.36.1-r2 webpage:
 https://busybox.net/
 
-ssl_client-1.36.1-r0 installed size:
+ssl_client-1.36.1-r2 installed size:
 28 KiB
 
-ssl_client-1.36.1-r0 license:
+ssl_client-1.36.1-r2 license:
 GPL-2.0-only
 
 ```
