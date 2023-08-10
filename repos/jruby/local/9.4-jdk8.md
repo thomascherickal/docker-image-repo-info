@@ -2,11 +2,12 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:ddfb4d2047bf42e037f9b1e2b3f50428fed7cdeb7b4484556baae17d342a441a`
-- Created: `2023-08-03T04:46:02.266460096Z`
-- Virtual Size: ~ 395.34 Mb  
+- Image ID: `sha256:bc685438bb1acf2a2a91a469f99945815cfe9bdcc33593c46aa27adbb326cbfe`
+- Created: `2023-08-08T22:54:44.978736299Z`
+- Virtual Size: ~ 397.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
+- Entrypoint: `["/entrypoint.sh"]`
 - Command: `["irb"]`
 - Environment:
   - `PATH=/usr/local/bundle/bin:/opt/jruby/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
@@ -1252,9 +1253,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=5.4.0-155.172
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-155.172.dsc' linux_5.4.0-155.172.dsc 7067 SHA512:061e4e1c699f3a4360a272996ff6035193a49bab6d7d39a0cd5b5ca03a99f4d17250edff06f689de541a070549a7575d42b422d1ca73a5bc410e2594e06442a2
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-155.172.diff.gz' linux_5.4.0-155.172.diff.gz 10759016 SHA512:d3a03a566b03f3a1da4c9459c937e86f149e1622994b25b2c78b9e23cb1de6f98b003cded9bcc243b38788009a1147fbeb3c6f44774b5081cdfbd9c2434d7f4e
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-155.172.dsc' linux_5.4.0-155.172.dsc 7067 SHA512:061e4e1c699f3a4360a272996ff6035193a49bab6d7d39a0cd5b5ca03a99f4d17250edff06f689de541a070549a7575d42b422d1ca73a5bc410e2594e06442a2
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-155.172.diff.gz' linux_5.4.0-155.172.diff.gz 10759016 SHA512:d3a03a566b03f3a1da4c9459c937e86f149e1622994b25b2c78b9e23cb1de6f98b003cded9bcc243b38788009a1147fbeb3c6f44774b5081cdfbd9c2434d7f4e
 ```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
@@ -1460,8 +1461,10 @@ $ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.19
 Binary Packages:
 
 - `libp11-kit0:amd64=0.23.20-1ubuntu0.1`
+- `p11-kit=0.23.20-1ubuntu0.1`
+- `p11-kit-modules:amd64=0.23.20-1ubuntu0.1`
 
-Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libp11-kit0/copyright`, `/usr/share/doc/p11-kit/copyright`, `/usr/share/doc/p11-kit-modules/copyright`)
 
 - `BSD-3-Clause`
 - `ISC`
