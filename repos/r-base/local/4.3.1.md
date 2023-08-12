@@ -1635,10 +1635,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris libdeflate=1.14-1
-'http://http.debian.net/debian/pool/main/libd/libdeflate/libdeflate_1.14-1.dsc' libdeflate_1.14-1.dsc 2214 SHA256:1f82791c5ac5623ed110e09cc991471deebfe4c419414392d1242e122c6f4c19
-'http://http.debian.net/debian/pool/main/libd/libdeflate/libdeflate_1.14.orig.tar.gz' libdeflate_1.14.orig.tar.gz 180182 SHA256:89e7df898c37c3427b0f39aadcf733731321a278771d20fc553f92da8d4808ac
-'http://http.debian.net/debian/pool/main/libd/libdeflate/libdeflate_1.14-1.debian.tar.xz' libdeflate_1.14-1.debian.tar.xz 4784 SHA256:4794c379cc4e77eaeb283620bd80a7ce57b858af508f80ba6d5efbc4bcb10434
+'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.14-1.dsc' libdeflate_1.14-1.dsc 2214 SHA256:1f82791c5ac5623ed110e09cc991471deebfe4c419414392d1242e122c6f4c19
+'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.14.orig.tar.gz' libdeflate_1.14.orig.tar.gz 180182 SHA256:89e7df898c37c3427b0f39aadcf733731321a278771d20fc553f92da8d4808ac
+'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.14-1.debian.tar.xz' libdeflate_1.14-1.debian.tar.xz 4784 SHA256:4794c379cc4e77eaeb283620bd80a7ce57b858af508f80ba6d5efbc4bcb10434
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libdeflate/1.14-1/ (for browsing the source)
+- https://sources.debian.net/src/libdeflate/1.14-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libdeflate/1.14-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.4.4-1`
 
@@ -2562,21 +2568,13 @@ Licenses: (parsed from: `/usr/share/doc/libncurses-dev/copyright`, `/usr/share/d
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.4+20230625-1
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625-1.dsc' ncurses_6.4+20230625-1.dsc 3807 SHA256:7f5cfc1271d60b30ebc46df49654f099b4f5492cea5159115c6cfdc245972d25
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625.orig.tar.gz' ncurses_6.4+20230625.orig.tar.gz 3649551 SHA256:54d25c0215c1b7f6f17d64c7f8f229fb34af007d663c0fcd54d9557a1cacc3ee
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625.orig.tar.gz.asc' ncurses_6.4+20230625.orig.tar.gz.asc 729 SHA256:d20a0166bdf9f8eccc6df015a49fd60a168f00f8430431810fc49963b44c0965
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.4%2b20230625-1.debian.tar.xz' ncurses_6.4+20230625-1.debian.tar.xz 50328 SHA256:c068f9d6e751ebbfeb5cee05a010580fd539c0251da4a703cc1d14427b284798
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ncurses/6.4+20230625-1/
 
-- https://sources.debian.net/src/ncurses/6.4+20230625-1/ (for browsing the source)
-- https://sources.debian.net/src/ncurses/6.4+20230625-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ncurses/6.4+20230625-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nettle=3.8.1-2`
 
@@ -2666,20 +2664,13 @@ Licenses: (parsed from: `/usr/share/doc/libopenblas0-pthread/copyright`)
 - `BSD-3-clause`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openblas=0.3.23+ds-2
-'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.23%2bds-2.dsc' openblas_0.3.23+ds-2.dsc 4815 SHA256:38cbaca5e855dc6af4bad76ac3f0363ede6e34e4c5e5777ada746de3b7b7ecb3
-'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.23%2bds.orig.tar.xz' openblas_0.3.23+ds.orig.tar.xz 1874384 SHA256:84863ced908986a0aa5dd5983a58fc10dd9e995733e29aafdcaec9d1c642ffbf
-'http://deb.debian.org/debian/pool/main/o/openblas/openblas_0.3.23%2bds-2.debian.tar.xz' openblas_0.3.23+ds-2.debian.tar.xz 23976 SHA256:f5d281d8fd1886aae49c080169cd23a0bdd030fb44da807c573ea97d2c6e7f79
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openblas/0.3.23+ds-2/
 
-- https://sources.debian.net/src/openblas/0.3.23+ds-2/ (for browsing the source)
-- https://sources.debian.net/src/openblas/0.3.23+ds-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openblas/0.3.23+ds-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openldap=2.5.13+dfsg-5`
 
@@ -3580,14 +3571,13 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.38.1-6
-'http://http.debian.net/debian/pool/main/u/util-linux/util-linux_2.38.1-6.dsc' util-linux_2.38.1-6.dsc 4571 SHA256:7e09413c396eb35c57600df502a821e05328299e846acb5cc561ad503003d025
-'http://http.debian.net/debian/pool/main/u/util-linux/util-linux_2.38.1.orig.tar.xz' util-linux_2.38.1.orig.tar.xz 7495904 SHA256:60492a19b44e6cf9a3ddff68325b333b8b52b6c59ce3ebd6a0ecaa4c5117e84f
-'http://http.debian.net/debian/pool/main/u/util-linux/util-linux_2.38.1-6.debian.tar.xz' util-linux_2.38.1-6.debian.tar.xz 114052 SHA256:553a46f955f71fdc80ac2206be9e71661e3f51ef00a1af4cabb8d007c1b6f41b
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/util-linux/2.38.1-6/
+
 
 ### `dpkg` source package: `vim=2:9.0.1672-1`
 
