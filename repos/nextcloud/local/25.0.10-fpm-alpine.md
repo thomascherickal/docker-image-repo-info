@@ -1,10 +1,10 @@
-# `nextcloud:25.0.9-fpm-alpine`
+# `nextcloud:25.0.10-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:62d2f31a6ed5d7f81d5e040e42ec6d1727da74791bd6e2862ec5489604b97667`
-- Created: `2023-08-05T01:39:11.246130004Z`
-- Virtual Size: ~ 717.77 Mb  
+- Image ID: `sha256:9fa7dbf25f367a1c0207ce6397d1a6680b8f37157c9ba0378958d5b5a802efb7`
+- Created: `2023-08-11T18:26:22.622575459Z`
+- Virtual Size: ~ 713.01 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=9ea4f4cfe775cb5866c057323d6b320f3a6e0adb1be41a068ff7bfec6f83e71d`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
-  - `NEXTCLOUD_VERSION=25.0.9`
+  - `NEXTCLOUD_VERSION=25.0.10`
 
 ## `apk` (`.apk`-based packages)
 
@@ -268,16 +268,16 @@ GPL-2.0-only
 ### `apk` package: `curl`
 
 ```console
-curl-8.1.2-r0 description:
+curl-8.2.1-r0 description:
 URL retrival utility and library
 
-curl-8.1.2-r0 webpage:
+curl-8.2.1-r0 webpage:
 https://curl.se/
 
-curl-8.1.2-r0 installed size:
+curl-8.2.1-r0 installed size:
 268 KiB
 
-curl-8.1.2-r0 license:
+curl-8.2.1-r0 license:
 curl
 
 ```
