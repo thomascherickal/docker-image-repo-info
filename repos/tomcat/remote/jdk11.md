@@ -1,7 +1,7 @@
 ## `tomcat:jdk11`
 
 ```console
-$ docker pull tomcat@sha256:3ec727292eecf7d971a5def8cdcdcfff60f192345b426cac52bdf15d94fe67ca
+$ docker pull tomcat@sha256:53588c829087d7ed10bee200709563938671a9be47a854962a8101055e160036
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15,15 +15,14 @@ $ docker pull tomcat@sha256:3ec727292eecf7d971a5def8cdcdcfff60f192345b426cac52bd
 ### `tomcat:jdk11` - linux; amd64
 
 ```console
-$ docker pull tomcat@sha256:3de8583c24e7f813640a4f1c7e14727e2e5022ff909fabef2b625331a2dd4942
+$ docker pull tomcat@sha256:2314842cc6b405cd9c69bec7be87bc540c193adc34fb91bffd46ffd9f9cad52a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **201.8 MB (201801328 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1afa93c7a7667349aecf64db97008ddfde6902ee27f910a639bf23c0c14133a1`
--	Entrypoint: `["\/entrypoint.sh"]`
+-	Image ID: `sha256:99eb047d03e1f9628a69383de221c24287e0c9c422a7dc80053a6b98bf0c5521`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -85,7 +84,9 @@ RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
 # Tue, 08 Aug 2023 21:19:33 GMT
 EXPOSE 8080
-# Tue, 08 Aug 2023 21:19:33 GMT
+# Sat, 12 Aug 2023 00:16:19 GMT
+ENTRYPOINT []
+# Sat, 12 Aug 2023 00:16:20 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -126,15 +127,14 @@ CMD ["catalina.sh" "run"]
 ### `tomcat:jdk11` - linux; arm variant v7
 
 ```console
-$ docker pull tomcat@sha256:0794e1a2f9844b747ee9fc32767ca11a0daca8912f2dcb68e37dbe9013772a99
+$ docker pull tomcat@sha256:eaaf36f0fe990e68e607822ed9dd8ccb243e4c0f976509d4b9e439c11b44ac8e
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **190.3 MB (190346311 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3eff03fb7618293de1741b41efc62ae1ffabdc37323f25efe0818b52ff23493c`
--	Entrypoint: `["\/entrypoint.sh"]`
+-	Image ID: `sha256:b3c44b51c201a94596deb0a7f2c8eb62c39e50e3c70eff6f6196f70b7ca0a648`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -196,7 +196,9 @@ RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
 # Tue, 08 Aug 2023 19:56:23 GMT
 EXPOSE 8080
-# Tue, 08 Aug 2023 19:56:24 GMT
+# Sat, 12 Aug 2023 00:25:26 GMT
+ENTRYPOINT []
+# Sat, 12 Aug 2023 00:25:26 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -348,15 +350,14 @@ CMD ["catalina.sh" "run"]
 ### `tomcat:jdk11` - linux; ppc64le
 
 ```console
-$ docker pull tomcat@sha256:53c9fb0a888688de2aea7dda3061bfd27a0c5ccc2f3edb1e10b9a5af9aff7e4b
+$ docker pull tomcat@sha256:ba09d7960bbd896f2e1229ba66c1dc0d9262a2146bb0dabeb54a90b120150c48
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **195.3 MB (195305651 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:73131b0526a2945c1720b9c97ae0255db27a9d2bbd7d43c0d16e0a095cd8ef0c`
--	Entrypoint: `["\/entrypoint.sh"]`
+-	Image ID: `sha256:918250eeb1bc8759787f7420ca968e6e601018df4dca079a8ab27aab863589fa`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -418,7 +419,9 @@ RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
 # Tue, 08 Aug 2023 21:03:23 GMT
 EXPOSE 8080
-# Tue, 08 Aug 2023 21:03:24 GMT
+# Sat, 12 Aug 2023 00:15:02 GMT
+ENTRYPOINT []
+# Sat, 12 Aug 2023 00:15:02 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -459,15 +462,14 @@ CMD ["catalina.sh" "run"]
 ### `tomcat:jdk11` - linux; s390x
 
 ```console
-$ docker pull tomcat@sha256:9a89c5b518c44ffc1f126366a6e1413926e8662a823764cb41e75a7deba0d569
+$ docker pull tomcat@sha256:d7e6ea457a2ceb0c2f09c764b8048484d90d9f455cae9ef2a712bc79323c5dba
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **180.4 MB (180437750 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fd09e4a08e9fefda544f56550d375e06ebc1df3a7a31d1ca93d10b5289c170f4`
--	Entrypoint: `["\/entrypoint.sh"]`
+-	Image ID: `sha256:aaa35aea17d55b5543e6740e473340b9e598a698d1b493791dcef4932649ca35`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -529,7 +531,9 @@ RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
 # Tue, 08 Aug 2023 20:09:10 GMT
 EXPOSE 8080
-# Tue, 08 Aug 2023 20:09:10 GMT
+# Sat, 12 Aug 2023 00:05:36 GMT
+ENTRYPOINT []
+# Sat, 12 Aug 2023 00:05:36 GMT
 CMD ["catalina.sh" "run"]
 ```
 
