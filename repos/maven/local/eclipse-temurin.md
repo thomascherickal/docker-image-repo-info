@@ -1561,14 +1561,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openldap=2.5.15+dfsg-0ubuntu0.22.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.15%2bdfsg-0ubuntu0.22.04.1.dsc' openldap_2.5.15+dfsg-0ubuntu0.22.04.1.dsc 3319 SHA512:b872106b4d944d1050a70c5db89a51eeef8826d49ef723a1e24951f962108dd7af083a9f4d9e17e627c10f3f3e94844d6c4b90250af2947d69d839313a0e4b95
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.15%2bdfsg.orig.tar.gz' openldap_2.5.15+dfsg.orig.tar.gz 5616689 SHA512:e461b6c7f25bb666a72df84e83d0813d6b64e997b8de842b7ec6eac987287fcf08348be6c0b8bd6b7b663e2a03fc672d2eb5a38c570608404861633070fb613d
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.15%2bdfsg-0ubuntu0.22.04.1.debian.tar.xz' openldap_2.5.15+dfsg-0ubuntu0.22.04.1.debian.tar.xz 171804 SHA512:7aaba43df6cb6ed437dbad0881e9165f91de0375f3da89f4e5b7cb135e3d5fae123cf50d3c5c9a409a7be38f7c14bc95b38f7e2782455c6706ee50e70f9a5074
-```
 
 ### `dpkg` source package: `openssl=3.0.2-0ubuntu1.10`
 
