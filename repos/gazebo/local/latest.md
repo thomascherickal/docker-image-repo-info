@@ -5263,14 +5263,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.4.0-155.172
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-155.172.dsc' linux_5.4.0-155.172.dsc 7067 SHA512:061e4e1c699f3a4360a272996ff6035193a49bab6d7d39a0cd5b5ca03a99f4d17250edff06f689de541a070549a7575d42b422d1ca73a5bc410e2594e06442a2
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-155.172.diff.gz' linux_5.4.0-155.172.diff.gz 10759016 SHA512:d3a03a566b03f3a1da4c9459c937e86f149e1622994b25b2c78b9e23cb1de6f98b003cded9bcc243b38788009a1147fbeb3c6f44774b5081cdfbd9c2434d7f4e
-```
 
 ### `dpkg` source package: `llvm-toolchain-12=1:12.0.0-3ubuntu1~20.04.5`
 
