@@ -1,7 +1,7 @@
 ## `clojure:temurin-8-boot`
 
 ```console
-$ docker pull clojure@sha256:a22aa490c07c15b196160e6180f43b314dd9e06e86760a1ad59ca64279160195
+$ docker pull clojure@sha256:a8167ed490d72b36a6fd542acf554ae0f4493b5e3836cbc292b59d2172734441
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -105,15 +105,15 @@ CMD ["boot" "repl"]
 ### `clojure:temurin-8-boot` - linux; arm64 variant v8
 
 ```console
-$ docker pull clojure@sha256:72b8de090fa04e4a9ce9da0c5152e56b1d49dddbef4b557a86dc84ee7e2b7756
+$ docker pull clojure@sha256:b0d4f9c97a2edecb3cee5c9f3e8b59820e498b94399190a23b4d8f6fbd58fd4b
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **203.1 MB (203087180 bytes)**  
+-	Total Size: **203.1 MB (203087046 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c6fdb4082ccd0462a5ebec6d092de8fca9795d0b1b1aaf52fa6977d16890e36a`
--	Entrypoint: `["\/entrypoint.sh"]`
+-	Image ID: `sha256:bb7647916b714285c474c8076aa4c8b63b3fe66a14853113b465ff26f52eed42`
+-	Entrypoint: `["\/__cacert_entrypoint.sh"]`
 -	Default Command: `["boot","repl"]`
 
 ```dockerfile
@@ -143,25 +143,25 @@ ENV JAVA_VERSION=jdk8u382-b05
 RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0951398197b7bef39ab987b59c22852812ee2c2da6549953eed7fced4c08e13d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_aarch64_linux_hotspot_8u382b05.tar.gz';          ;;        armhf|arm)          ESUM='5d805ff157f272acf0f7d192f21af4a3b68c840333ca95568e4e07142efc369d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_arm_linux_hotspot_8u382b05.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='509c923c308d1f4f28fd0068831a59250a05b8ca173ca92fb2be2e2e1f9ff3f9';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u382b05.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='789ad24dc0d9618294e3ba564c9bfda9d3f3a218604350e0ce0381bbc8f28db3';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_x64_linux_hotspot_8u382b05.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
 # Tue, 08 Aug 2023 19:40:47 GMT
 RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
-# Tue, 08 Aug 2023 19:40:47 GMT
-COPY file:0673fe0a4a716089bcd96321c8de60149aea8a94ae7c4ba827ecc4a74a9789a3 in / 
-# Tue, 08 Aug 2023 19:40:47 GMT
-ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 08 Aug 2023 20:18:59 GMT
+# Mon, 14 Aug 2023 18:08:55 GMT
+COPY file:8b8864b3e02a33a579dc216fd51b28a6047bc8eeaa03045b258980fe0cf7fcb3 in /__cacert_entrypoint.sh 
+# Mon, 14 Aug 2023 18:08:55 GMT
+ENTRYPOINT ["/__cacert_entrypoint.sh"]
+# Mon, 14 Aug 2023 19:00:36 GMT
 ENV BOOT_VERSION=2.8.3
-# Tue, 08 Aug 2023 20:18:59 GMT
+# Mon, 14 Aug 2023 19:00:36 GMT
 ENV BOOT_INSTALL=/usr/local/bin/
-# Tue, 08 Aug 2023 20:18:59 GMT
+# Mon, 14 Aug 2023 19:00:36 GMT
 WORKDIR /tmp
-# Tue, 08 Aug 2023 20:19:03 GMT
+# Mon, 14 Aug 2023 19:00:39 GMT
 RUN apt-get update && apt-get install -y wget && rm -rf /var/lib/apt/lists/* && mkdir -p $BOOT_INSTALL && wget -q https://github.com/boot-clj/boot-bin/releases/download/latest/boot.sh && echo "Comparing installer checksum..." && sha256sum boot.sh && echo "0ccd697f2027e7e1cd3be3d62721057cbc841585740d0aaa9fbb485d7b1f17c3 *boot.sh" | sha256sum -c - && mv boot.sh $BOOT_INSTALL/boot && chmod 0755 $BOOT_INSTALL/boot && apt-get purge -y --auto-remove wget
-# Tue, 08 Aug 2023 20:19:03 GMT
+# Mon, 14 Aug 2023 19:00:39 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/local/bin/
-# Tue, 08 Aug 2023 20:19:03 GMT
+# Mon, 14 Aug 2023 19:00:39 GMT
 ENV BOOT_AS_ROOT=yes
-# Tue, 08 Aug 2023 20:19:21 GMT
+# Mon, 14 Aug 2023 19:00:56 GMT
 RUN boot
-# Tue, 08 Aug 2023 20:19:22 GMT
+# Mon, 14 Aug 2023 19:00:56 GMT
 CMD ["boot" "repl"]
 ```
 
@@ -182,15 +182,15 @@ CMD ["boot" "repl"]
 		Last Modified: Tue, 08 Aug 2023 19:44:19 GMT  
 		Size: 161.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:177eae88468753c91f0a40d1db961d25a16c558da98f84b44541a0e9461a4c3f`  
-		Last Modified: Tue, 08 Aug 2023 19:44:19 GMT  
-		Size: 666.0 B  
+	-	`sha256:56b73d4ef15be463d86ef42300259c47faae674d49cac2bb608a00922f8f4bde`  
+		Last Modified: Mon, 14 Aug 2023 18:10:58 GMT  
+		Size: 733.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ea935b2539ce47c46a665e670efd5910b9bc64b6d098bbeceb619a78a2848fca`  
-		Last Modified: Tue, 08 Aug 2023 20:30:56 GMT  
-		Size: 339.9 KB (339861 bytes)  
+	-	`sha256:e8028ee4b649d83848b11d24c1c329cede532e94635fb80b07491accb1c6aa55`  
+		Last Modified: Mon, 14 Aug 2023 19:08:14 GMT  
+		Size: 339.9 KB (339882 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3b6de96c3b12768ae6194b7c2bd1220589a6e93947f7ae6dfe752774e554b5b6`  
-		Last Modified: Tue, 08 Aug 2023 20:31:01 GMT  
-		Size: 58.8 MB (58820577 bytes)  
+	-	`sha256:6a06ad78e21e4283612168b5379cbf40d6edd3b74f147cb2e1b1d0bd6dd00e83`  
+		Last Modified: Mon, 14 Aug 2023 19:08:17 GMT  
+		Size: 58.8 MB (58820355 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
