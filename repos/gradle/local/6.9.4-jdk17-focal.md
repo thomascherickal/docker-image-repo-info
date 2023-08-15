@@ -2,12 +2,12 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9559f81b6fa4b273a3a00a524c2f68b023472e9fcb21f3505588043675ae619e`
-- Created: `2023-08-08T21:03:03.732404801Z`
+- Image ID: `sha256:067bb17ef79fd83e90d3c63da4a42542b9fd58062beda61fc781caa260e87e63`
+- Created: `2023-08-14T19:17:55.927101792Z`
 - Virtual Size: ~ 724.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Entrypoint: `["/entrypoint.sh"]`
+- Entrypoint: `["/__cacert_entrypoint.sh"]`
 - Command: `["gradle"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
@@ -1802,11 +1802,11 @@ $ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2ubuntu1.9
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49%2bdfsg-2ubuntu1.9.debian.tar.xz' openldap_2.4.49+dfsg-2ubuntu1.9.debian.tar.xz 189676 SHA512:bf7e4ff9f710404704526a912932d7445fab4c6ce30a099dd890adc78b8afe740ac773596cb4fe409d495406e5bd103d186bd0b2993265cdafd3eb9a71d6a3b5
 ```
 
-### `dpkg` source package: `openssh=1:8.2p1-4ubuntu0.8`
+### `dpkg` source package: `openssh=1:8.2p1-4ubuntu0.9`
 
 Binary Packages:
 
-- `openssh-client=1:8.2p1-4ubuntu0.8`
+- `openssh-client=1:8.2p1-4ubuntu0.9`
 
 Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 
@@ -1819,9 +1819,14 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 - `Powell-BSD-style`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssh=1:8.2p1-4ubuntu0.9
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.9.dsc' openssh_8.2p1-4ubuntu0.9.dsc 2968 SHA512:4dfc3048671fcdc2fdd48c427e74bd5e86dc23d9f57de6fe3806c0dc3fcfe82cfc94a3dac73baba1faae39882df63160e0e825c48e9bc1b6ff4960c007ce95f5
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1.orig.tar.gz' openssh_8.2p1.orig.tar.gz 1701197 SHA512:c4db64e52a3a4c410de9de49f9cb104dd493b10250af3599b92457dd986277b3fd99a6f51cec94892fd1be5bd0369c5757262ea7805f0de464b245c3d34c120a
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.9.debian.tar.xz' openssh_8.2p1-4ubuntu0.9.debian.tar.xz 180188 SHA512:5564ef185742df68bb254a8349e6c83848e660c7a289ec37251fb8b94af9b8780c81caf7dbe0fbafa126f64a0edd4122e22c241b8a424d851a862e5eb1194dbd
+```
 
 ### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.19`
 

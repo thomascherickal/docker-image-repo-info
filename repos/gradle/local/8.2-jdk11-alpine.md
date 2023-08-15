@@ -2,12 +2,12 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f3d5342b309f617ed3b508d4793d2a9883ae2a6c9582052f937e699cf3ade2c4`
-- Created: `2023-08-08T21:00:02.286086545Z`
-- Virtual Size: ~ 520.63 Mb  
+- Image ID: `sha256:d4ffcbcdf6893428db612f161ebcac491b06ff8c599425a2229fa5fa19b3d53b`
+- Created: `2023-08-14T19:14:55.906916822Z`
+- Virtual Size: ~ 521.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Entrypoint: `["/entrypoint.sh"]`
+- Entrypoint: `["/__cacert_entrypoint.sh"]`
 - Command: `["gradle"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
@@ -120,6 +120,23 @@ apr-util-1.6.3-r1 installed size:
 
 apr-util-1.6.3-r1 license:
 Apache-2.0
+
+```
+
+### `apk` package: `bash`
+
+```console
+bash-5.2.15-r5 description:
+The GNU Bourne Again shell
+
+bash-5.2.15-r5 webpage:
+https://www.gnu.org/software/bash/bash.html
+
+bash-5.2.15-r5 installed size:
+1360 KiB
+
+bash-5.2.15-r5 license:
+GPL-3.0-or-later
 
 ```
 
