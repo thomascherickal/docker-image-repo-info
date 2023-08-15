@@ -1,9 +1,9 @@
-# `aerospike:ce-6.4.0.0`
+# `aerospike:ce-6.4.0.1`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d59e69cb360845343878200161929cce3c7739f145a9ccf493f5297c7eff4716`
-- Created: `2023-08-04T18:20:21.434913717Z`
+- Image ID: `sha256:91c6c61b6ae15e07ed8e8f7aaa11efa2024ab1268cfa3664610c186c21f2d013`
+- Created: `2023-08-11T18:19:57.227255314Z`
 - Virtual Size: ~ 205.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -68,11 +68,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.134/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.134/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `aerospike-server-community=6.4.0.0-1`
+### `dpkg` source package: `aerospike-server-community=6.4.0.1-1`
 
 Binary Packages:
 
-- `aerospike-server-community=6.4.0.0-1`
+- `aerospike-server-community=6.4.0.1-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
