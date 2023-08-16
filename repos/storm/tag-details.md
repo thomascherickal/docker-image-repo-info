@@ -6,6 +6,7 @@
 -	[`storm:1.2.4-temurin`](#storm124-temurin)
 -	[`storm:2.4-temurin`](#storm24-temurin)
 -	[`storm:2.4.0-temurin`](#storm240-temurin)
+-	[`storm:2.5.0`](#storm250)
 -	[`storm:latest`](#stormlatest)
 
 ## `storm:1.2-temurin`
@@ -919,6 +920,15 @@ ENTRYPOINT ["/docker-entrypoint.sh"]
 		Last Modified: Wed, 16 Aug 2023 16:49:30 GMT  
 		Size: 413.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `storm:2.5.0`
+
+```console
+$ docker pull storm@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `storm:latest`
 
