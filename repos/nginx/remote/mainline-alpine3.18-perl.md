@@ -1,4 +1,4 @@
-## `nginx:mainline-alpine-perl`
+## `nginx:mainline-alpine3.18-perl`
 
 ```console
 $ docker pull nginx@sha256:b93faac80f640d751f353a582784adedccfe9570e1147d1f2d3ad20f36a261e4
@@ -14,7 +14,7 @@ $ docker pull nginx@sha256:b93faac80f640d751f353a582784adedccfe9570e1147d1f2d3ad
 	-	linux; ppc64le
 	-	linux; s390x
 
-### `nginx:mainline-alpine-perl` - linux; amd64
+### `nginx:mainline-alpine3.18-perl` - linux; amd64
 
 ```console
 $ docker pull nginx@sha256:1d57233d10453750099ae9278f9d4c8c7606d53e3e5123e971e82da3fb7bb0b0
@@ -105,7 +105,7 @@ RUN set -x     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         
 		Size: 9.1 MB (9100879 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `nginx:mainline-alpine-perl` - linux; arm variant v6
+### `nginx:mainline-alpine3.18-perl` - linux; arm variant v6
 
 ```console
 $ docker pull nginx@sha256:30b1772cf6071f5f71bdbb73210fc10c0d9bec8bbc9719e852e11d7edfedbfa9
@@ -196,7 +196,7 @@ RUN set -x     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         
 		Size: 13.3 MB (13288362 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `nginx:mainline-alpine-perl` - linux; arm variant v7
+### `nginx:mainline-alpine3.18-perl` - linux; arm variant v7
 
 ```console
 $ docker pull nginx@sha256:89d9fd3b0b3daa8628e82681b04c4c731bb3148fd581ca7d8ad06ff528acef76
@@ -287,7 +287,7 @@ RUN set -x     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         
 		Size: 13.1 MB (13135129 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `nginx:mainline-alpine-perl` - linux; arm64 variant v8
+### `nginx:mainline-alpine3.18-perl` - linux; arm64 variant v8
 
 ```console
 $ docker pull nginx@sha256:f27f17f68fadcaf9da0c8be0bce7c2c46a274c31cf8022a10d4719b29396b335
@@ -378,7 +378,7 @@ RUN set -x     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         
 		Size: 9.1 MB (9121615 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `nginx:mainline-alpine-perl` - linux; 386
+### `nginx:mainline-alpine3.18-perl` - linux; 386
 
 ```console
 $ docker pull nginx@sha256:e8d49e6ff861b6656fb7f1a637576fc5d6991c30577972a81828a3b33705eb01
@@ -469,7 +469,7 @@ RUN set -x     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         
 		Size: 13.3 MB (13299712 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `nginx:mainline-alpine-perl` - linux; ppc64le
+### `nginx:mainline-alpine3.18-perl` - linux; ppc64le
 
 ```console
 $ docker pull nginx@sha256:261476e5cd3b5fc5d691f07a965fa5ddb745efeb44778f4526155adca60e1ee2
@@ -560,7 +560,7 @@ RUN set -x     && apkArch="$(cat /etc/apk/arch)"     && nginxPackages="         
 		Size: 14.2 MB (14176664 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `nginx:mainline-alpine-perl` - linux; s390x
+### `nginx:mainline-alpine3.18-perl` - linux; s390x
 
 ```console
 $ docker pull nginx@sha256:3318b55f9fe05551f01d32ddf35e586696ff8c93daa2f872a95b48878c74fdbc
