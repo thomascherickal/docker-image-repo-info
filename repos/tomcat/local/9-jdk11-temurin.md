@@ -1,10 +1,10 @@
-# `tomcat:9.0.78-jdk11-temurin-jammy`
+# `tomcat:9.0.79-jdk11-temurin-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2a7d556737f1c25df19b96950dadb258a6f981cf9a2416a3b20d47368adaa045`
-- Created: `2023-08-12T00:18:53.88729935Z`
-- Virtual Size: ~ 415.12 Mb  
+- Image ID: `sha256:255cb52f591196f33d5dfa7a50d9aaf3c2734c162a432c201d97d4523695241f`
+- Created: `2023-08-16T18:28:52.494578993Z`
+- Virtual Size: ~ 412.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -20,8 +20,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=48F8E69F6390C9F25CFEDCD268248959359E722B A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.78`
-  - `TOMCAT_SHA512=c9f2e60489d07f25b53f715918f4b082c5bb69dbc497e0a9d3d5e3a0d351ff2e0ec8dfc5657de840ee5b3dea6174b27630033b38e36fa4c06b08664e70dec8df`
+  - `TOMCAT_VERSION=9.0.79`
+  - `TOMCAT_SHA512=7a0d99b5fc37c9e9ac26b554fab9147ce0a2ba59fad41e2565b15e9f6e137bf0105f5c9cd6b7b508837ff24feb7b95b2aba49e0abc7b1480a30a11606e79802a`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=22.04`
@@ -101,13 +101,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.4.9
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.9.dsc' apt_2.4.9.dsc 2805 SHA512:f94b979fce0293f0db741bba3fa9736c594f4369969a5b2568a1ed14b7288184064b61234bf3afc2f545ba32d91e2dac0fc7fa3346d80413c23d16ad92f31038
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.9.tar.xz' apt_2.4.9.tar.xz 2317652 SHA512:68972b488ee992cc7bf7eb0350cd3d4cb2d054e6f4ff1062bc2c3e68cc032c0d901cf874911db3d9d7c18d356f6c9a078668f44525007fb85af58568e5487b92
-```
 
 ### `dpkg` source package: `attr=1:2.5.1-1build1`
 
@@ -154,19 +150,23 @@ $ apt-get source -qq --print-uris audit=1:3.0.7-1build1
 'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_3.0.7-1build1.debian.tar.xz' audit_3.0.7-1build1.debian.tar.xz 17772 SHA512:cdf346fc7dc04e42b44a9089fb7c01e68ea54ccd20d3eef8100d0cd8eed8ebd0764d8fd6ceab133faa0bfeee18e3cfe7625d230600b0e34ed0c19a7b739ec783
 ```
 
-### `dpkg` source package: `base-files=12ubuntu4.3`
+### `dpkg` source package: `base-files=12ubuntu4.4`
 
 Binary Packages:
 
-- `base-files=12ubuntu4.3`
+- `base-files=12ubuntu4.4`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris base-files=12ubuntu4.4
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_12ubuntu4.4.dsc' base-files_12ubuntu4.4.dsc 1277 SHA512:b668e9ce4d9709a704e3f0be29d5b8fb8c92c9f9b6a94ce21269c7f6f2e1d8c78e222e4313a56eb92d8f015fce6a258efa2a01bebfbbfd38f39f10f5dc9e3a7c
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_12ubuntu4.4.tar.xz' base-files_12ubuntu4.4.tar.xz 81824 SHA512:f5fc383dcf8830000a09633f481eae15a29b077407a5fd895948ce03888386092cd42d4c0fd4d6d3eaf7685e06bffc4a083646aa6053b24af813d1f85dffb9a1
+```
 
 ### `dpkg` source package: `base-passwd=3.5.52build1`
 
@@ -1470,19 +1470,24 @@ $ apt-get source -qq --print-uris nghttp2=1.43.0-1build3
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.43.0-1build3.debian.tar.xz' nghttp2_1.43.0-1build3.debian.tar.xz 16528 SHA512:a3c7be43142e4976a395052ff4eba22e4f610c31659eed2b03987c58d0b0ae83335f0593ceeea0f05f5d7db8f56c3c3b3651bd92fae3a8353b95595179926bd1
 ```
 
-### `dpkg` source package: `openldap=2.5.15+dfsg-0ubuntu0.22.04.1`
+### `dpkg` source package: `openldap=2.5.16+dfsg-0ubuntu0.22.04.1`
 
 Binary Packages:
 
-- `libldap-2.5-0:amd64=2.5.15+dfsg-0ubuntu0.22.04.1`
+- `libldap-2.5-0:amd64=2.5.16+dfsg-0ubuntu0.22.04.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openldap=2.5.16+dfsg-0ubuntu0.22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.16%2bdfsg-0ubuntu0.22.04.1.dsc' openldap_2.5.16+dfsg-0ubuntu0.22.04.1.dsc 3319 SHA512:d1041b2c938fca2cf6ed0518057d2f724b3e24bf0f3e29c5b4420f1925b80eb3f4aa8393b3aa0eae275d1990c53fb718b88e982721aacda361c2517fdfd7f0e6
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.16%2bdfsg.orig.tar.gz' openldap_2.5.16+dfsg.orig.tar.gz 5608943 SHA512:0e3a208773e1ee1bd307594e55c3d4fdc6a9dddd517f6d433e89c4064a9d796a37ad49e106de803217fdac58221d56fa568dc269c185fb40650647e4024fcc98
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.5.16%2bdfsg-0ubuntu0.22.04.1.debian.tar.xz' openldap_2.5.16+dfsg-0ubuntu0.22.04.1.debian.tar.xz 171800 SHA512:18b60cf943512a8e2d726c9cd1114a3637d46efc928f4a1f241da11eeaf6c859d5f7402c0888a81da425386543d9a2eaac8a9e8c768cfa24b2c605aa88fb01db
+```
 
 ### `dpkg` source package: `openssl=3.0.2-0ubuntu1.10`
 
