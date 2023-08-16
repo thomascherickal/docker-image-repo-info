@@ -1,43 +1,16 @@
-## `debian:10-slim`
+## `debian:buster-20230814-slim`
 
 ```console
-$ docker pull debian@sha256:1e96e118f409e6054f1fc556f52c102dcef14f1a086465af16111d05c89a1b96
+$ docker pull debian@sha256:edac2a839168969cfd0e54e2140c8e1817837192c3ded4ea0f92a0d35c5a25ba
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 4
-	-	linux; amd64
+-	Platforms: 3
 	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; 386
 
-### `debian:10-slim` - linux; amd64
-
-```console
-$ docker pull debian@sha256:3c79ef737f40be78dc90e66d413aea6e2b4cda306dabf5226b5b668bc20c7007
-```
-
--	Docker Version: 20.10.23
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **27.2 MB (27187431 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e1b92a6f8d1298f27568bccc58adf390f553d579ccd5a1a65e6754787252a3c5`
--	Default Command: `["bash"]`
-
-```dockerfile
-# Thu, 27 Jul 2023 23:25:29 GMT
-ADD file:20e7ad6bec617357895302b08431eb3430cce3113bdf0a8ff9827115f858d313 in / 
-# Thu, 27 Jul 2023 23:25:30 GMT
-CMD ["bash"]
-```
-
--	Layers:
-	-	`sha256:3240fe174df9a5a4923c4b52f1d887dd1ad1a9ee69245c1fb867f399167584dd`  
-		Last Modified: Thu, 27 Jul 2023 23:30:49 GMT  
-		Size: 27.2 MB (27187431 bytes)  
-		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-
-### `debian:10-slim` - linux; arm variant v7
+### `debian:buster-20230814-slim` - linux; arm variant v7
 
 ```console
 $ docker pull debian@sha256:73a407a0dcff9eba894a1619c695e77ae1a393acb8f1a4060f8a400ebd489d88
@@ -63,7 +36,7 @@ CMD ["bash"]
 		Size: 22.8 MB (22795639 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:10-slim` - linux; arm64 variant v8
+### `debian:buster-20230814-slim` - linux; arm64 variant v8
 
 ```console
 $ docker pull debian@sha256:2ca5f9adf73b6503cd9888ba2cb468350846ccac90aafcff08b09e6deb83694d
@@ -89,7 +62,7 @@ CMD ["bash"]
 		Size: 26.0 MB (25967768 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `debian:10-slim` - linux; 386
+### `debian:buster-20230814-slim` - linux; 386
 
 ```console
 $ docker pull debian@sha256:d1c53d593a576cddf5ef48ec739e59474dd61ff0503b15db751f6ac023c4fef4
