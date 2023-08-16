@@ -77,19 +77,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.6.1
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.6.1.dsc' apt_2.6.1.dsc 2933 SHA256:e258c1b9c24e1747100271db9d6e5af7127bd3ef812a69bdf63de263abfdc6fd
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.6.1.tar.xz' apt_2.6.1.tar.xz 2328508 SHA256:86b888c901fa2e78f1bf52a2aaa2f400ff82a472b94ff0ac6631939ee68fa6fd
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.6.1/
 
-- https://sources.debian.net/src/apt/2.6.1/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.6.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.6.1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-4`
 
@@ -452,21 +446,13 @@ Licenses: (parsed from: `/usr/share/doc/libcurl4/copyright`)
 - `X11`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.88.1-10
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1-10.dsc' curl_7.88.1-10.dsc 3163 SHA256:717ed30766b1ccf951685627c910dea11b021da5f1c3e6f465517981d62ef0fe
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1.orig.tar.gz' curl_7.88.1.orig.tar.gz 4343562 SHA256:cdb38b72e36bc5d33d5b8810f8018ece1baa29a8f215b4495e495ded82bbf3c7
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1.orig.tar.gz.asc' curl_7.88.1.orig.tar.gz.asc 488 SHA256:7a5a55d7123149a1b357f298cf895bd0a601e3a2807005ef6c95f3752803485f
-'http://deb.debian.org/debian/pool/main/c/curl/curl_7.88.1-10.debian.tar.xz' curl_7.88.1-10.debian.tar.xz 55392 SHA256:fc3976de8659cd016d9f3c3523dc801294651c895026193e07a6c3ce358c13d1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.88.1-10/
 
-- https://sources.debian.net/src/curl/7.88.1-10/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.88.1-10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.88.1-10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg1-1`
 
@@ -494,14 +480,13 @@ Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/l
 - `OpenLDAP`
 - `RSA-MD`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.28+dfsg1-1
-'http://http.debian.net/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg1-1.dsc' cyrus-sasl2_2.1.28+dfsg1-1.dsc 3327 SHA256:d1d7906447739d3f87f9a425cdb73c26af93180b1c6dd9d071dc2fbcc3156c34
-'http://http.debian.net/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg1.orig.tar.xz' cyrus-sasl2_2.1.28+dfsg1.orig.tar.xz 794540 SHA256:e796a5d85d1a85e1b433d43504e467f9075c7ebc0b45730a3996cf11b1deada4
-'http://http.debian.net/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg1-1.debian.tar.xz' cyrus-sasl2_2.1.28+dfsg1-1.debian.tar.xz 98608 SHA256:ab8f203c4bb9b1608f63e1f57f89f3da9debcc98007be98ba88459b6e44a7e43
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/cyrus-sasl2/2.1.28+dfsg1-1/
+
 
 ### `dpkg` source package: `dash=0.5.12-6`
 
@@ -1132,11 +1117,17 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris gnutls28=3.7.9-2
-'http://http.debian.net/debian/pool/main/g/gnutls28/gnutls28_3.7.9-2.dsc' gnutls28_3.7.9-2.dsc 3386 SHA256:65a8fe5a079115b9f2381d3071cbe4f5f00c2dc2a8ef04aab47523ae66f636e4
-'http://http.debian.net/debian/pool/main/g/gnutls28/gnutls28_3.7.9.orig.tar.xz' gnutls28_3.7.9.orig.tar.xz 6377212 SHA256:aaa03416cdbd54eb155187b359e3ec3ed52ec73df4df35a0edd49429ff64d844
-'http://http.debian.net/debian/pool/main/g/gnutls28/gnutls28_3.7.9.orig.tar.xz.asc' gnutls28_3.7.9.orig.tar.xz.asc 996 SHA256:da4a96b14edd3cd44971a36ba1e976af1057e57a2d6c21b0cc7025c983ee84cc
-'http://http.debian.net/debian/pool/main/g/gnutls28/gnutls28_3.7.9-2.debian.tar.xz' gnutls28_3.7.9-2.debian.tar.xz 85892 SHA256:1f5f0a73e1f0b25e481785398f7e213237810841ee3860475acbbcc9b0dd16bf
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9-2.dsc' gnutls28_3.7.9-2.dsc 3386 SHA256:65a8fe5a079115b9f2381d3071cbe4f5f00c2dc2a8ef04aab47523ae66f636e4
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9.orig.tar.xz' gnutls28_3.7.9.orig.tar.xz 6377212 SHA256:aaa03416cdbd54eb155187b359e3ec3ed52ec73df4df35a0edd49429ff64d844
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9.orig.tar.xz.asc' gnutls28_3.7.9.orig.tar.xz.asc 996 SHA256:da4a96b14edd3cd44971a36ba1e976af1057e57a2d6c21b0cc7025c983ee84cc
+'http://deb.debian.org/debian/pool/main/g/gnutls28/gnutls28_3.7.9-2.debian.tar.xz' gnutls28_3.7.9-2.debian.tar.xz 85892 SHA256:1f5f0a73e1f0b25e481785398f7e213237810841ee3860475acbbcc9b0dd16bf
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/gnutls28/3.7.9-2/ (for browsing the source)
+- https://sources.debian.net/src/gnutls28/3.7.9-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gnutls28/3.7.9-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `graphite2=1.3.14-1`
 
@@ -1631,20 +1622,13 @@ Licenses: (parsed from: `/usr/share/doc/libdeflate0/copyright`)
 
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libdeflate=1.14-1
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.14-1.dsc' libdeflate_1.14-1.dsc 2214 SHA256:1f82791c5ac5623ed110e09cc991471deebfe4c419414392d1242e122c6f4c19
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.14.orig.tar.gz' libdeflate_1.14.orig.tar.gz 180182 SHA256:89e7df898c37c3427b0f39aadcf733731321a278771d20fc553f92da8d4808ac
-'http://deb.debian.org/debian/pool/main/libd/libdeflate/libdeflate_1.14-1.debian.tar.xz' libdeflate_1.14-1.debian.tar.xz 4784 SHA256:4794c379cc4e77eaeb283620bd80a7ce57b858af508f80ba6d5efbc4bcb10434
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libdeflate/1.14-1/
 
-- https://sources.debian.net/src/libdeflate/1.14-1/ (for browsing the source)
-- https://sources.debian.net/src/libdeflate/1.14-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libdeflate/1.14-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libffi=3.4.4-1`
 
@@ -2645,10 +2629,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris nlme=3.1.162-1
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.162-1.dsc' nlme_3.1.162-1.dsc 1840 SHA256:049a9ae92e930c9e397f4d69c260f1f4842d37d72a0c2d10d6dccc08841ca35b
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.162.orig.tar.gz' nlme_3.1.162.orig.tar.gz 848546 SHA256:ba6da2575554afa2614c4cba9971f8a9f8a07622d201284cb78899f3d6a2dc67
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.162-1.debian.tar.xz' nlme_3.1.162-1.debian.tar.xz 7312 SHA256:f1c45b43c07e3344cfa08a57e3b3427eaf447ad0ea1b04c903edcf4c5969de8e
+'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.162-1.dsc' nlme_3.1.162-1.dsc 1840 SHA256:049a9ae92e930c9e397f4d69c260f1f4842d37d72a0c2d10d6dccc08841ca35b
+'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.162.orig.tar.gz' nlme_3.1.162.orig.tar.gz 848546 SHA256:ba6da2575554afa2614c4cba9971f8a9f8a07622d201284cb78899f3d6a2dc67
+'http://deb.debian.org/debian/pool/main/n/nlme/nlme_3.1.162-1.debian.tar.xz' nlme_3.1.162-1.debian.tar.xz 7312 SHA256:f1c45b43c07e3344cfa08a57e3b3427eaf447ad0ea1b04c903edcf4c5969de8e
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/nlme/3.1.162-1/ (for browsing the source)
+- https://sources.debian.net/src/nlme/3.1.162-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/nlme/3.1.162-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openblas=0.3.23+ds-2`
 
