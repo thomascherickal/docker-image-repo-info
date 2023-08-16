@@ -1,7 +1,7 @@
 ## `varnish:stable`
 
 ```console
-$ docker pull varnish@sha256:7c06860a18eebc527b4570466e121168f6c14f9627c8beadb83ace437f11af38
+$ docker pull varnish@sha256:581b3ce9d04d65bea11f7a7506dc17aa83a647fbba144783b4da18aa09d08105
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -65,50 +65,50 @@ CMD []
 ### `varnish:stable` - linux; arm variant v7
 
 ```console
-$ docker pull varnish@sha256:a86b794d4d2e933305e4c00b7cc75e3db90a2d7b143f33732e809602490eab06
+$ docker pull varnish@sha256:3c37a9c3e8ca5396967ad18d9ffe63a33c2f8580d9338e6120ea2fea4e0c75b3
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **72.8 MB (72777549 bytes)**  
+-	Total Size: **72.8 MB (72777589 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b649ff0cfcb87c3604250220071228e43218fbb60a7eabe57d4649fb88e7a8b6`
+-	Image ID: `sha256:96b5db5d3f8ab94afaf9944774f7f9834434542feb6588921fce5b3d70336d7b`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-varnish-entrypoint"]`
 -	Default Command: `[]`
 
 ```dockerfile
-# Thu, 27 Jul 2023 23:58:18 GMT
-ADD file:480cada6975fa477736805a1834cca05d1e18de255c6cc0cca13df01fdb44253 in / 
-# Thu, 27 Jul 2023 23:58:18 GMT
+# Wed, 16 Aug 2023 00:17:33 GMT
+ADD file:d9383f6a4370dbf4af8e05edac181465a410899022cf1788f9001a976b9beecd in / 
+# Wed, 16 Aug 2023 00:17:33 GMT
 CMD ["bash"]
-# Fri, 28 Jul 2023 16:19:02 GMT
+# Wed, 16 Aug 2023 15:20:36 GMT
 ENV VARNISH_SIZE=100M
-# Fri, 28 Jul 2023 16:20:51 GMT
+# Wed, 16 Aug 2023 15:22:15 GMT
 RUN set -e;     BASE_PKGS="curl dpkg-dev debhelper devscripts equivs git pkg-config apt-utils fakeroot";     export DEBIAN_FRONTEND=noninteractive;     export DEBCONF_NONINTERACTIVE_SEEN=true;     tmpdir="$(mktemp -d)";     cd "$tmpdir";     apt-get update;     apt-get install -y --no-install-recommends $BASE_PKGS;     git clone https://github.com/varnishcache/pkg-varnish-cache.git;     cd pkg-varnish-cache;     git checkout 10da6a585eb7d8defe9d273a51df5b133500eb6b;     rm -rf .git;     curl -f https://varnish-cache.org/downloads/varnish-6.0.11.tgz -o $tmpdir/orig.tgz;     echo "02f56f360c6bbed663e712edef961384e6003cfe73307c7ea50f805ac4b4df0d26958179170401a2254a69ab623acc172da42926d82189bfa724a4e8a78597ea  $tmpdir/orig.tgz" | sha512sum -c -;     tar xavf $tmpdir/orig.tgz --strip 1;     sed -i -e "s|@VERSION@|6.0.11|"  "debian/changelog";     mk-build-deps --install --tool="apt-get -o Debug::pkgProblemResolver=yes --yes" debian/control;     sed -i '' debian/varnish*;     dpkg-buildpackage -us -uc -j"$(nproc)";     apt-get -y --no-install-recommends install ../*.deb;     apt-get -y purge --auto-remove varnish-build-deps $BASE_PKGS;     mkdir /pkgs;     mv ../*dev*.deb /pkgs;     rm -rf /var/lib/apt/lists/* "$tmpdir";
-# Fri, 28 Jul 2023 16:20:51 GMT
+# Wed, 16 Aug 2023 15:22:16 GMT
 WORKDIR /etc/varnish
-# Fri, 28 Jul 2023 16:20:52 GMT
+# Wed, 16 Aug 2023 15:22:16 GMT
 COPY dir:81cfdf3570a33a2213eb3396395161c2375769c233d0e51a4b70c65b389fabfa in /usr/local/bin/ 
-# Fri, 28 Jul 2023 16:20:52 GMT
+# Wed, 16 Aug 2023 15:22:16 GMT
 ENTRYPOINT ["/usr/local/bin/docker-varnish-entrypoint"]
-# Fri, 28 Jul 2023 16:20:52 GMT
+# Wed, 16 Aug 2023 15:22:16 GMT
 EXPOSE 80 8443
-# Fri, 28 Jul 2023 16:20:52 GMT
+# Wed, 16 Aug 2023 15:22:16 GMT
 CMD []
 ```
 
 -	Layers:
-	-	`sha256:1236490553984befd7be19a151a0489729a35a66c4aaf5d799cd87d2c738371a`  
-		Last Modified: Fri, 28 Jul 2023 00:03:56 GMT  
-		Size: 26.6 MB (26578603 bytes)  
+	-	`sha256:66971a88ba9c0b0ac6503475f1bc4981010269bdba2638318b63c625ee44cd79`  
+		Last Modified: Wed, 16 Aug 2023 00:22:09 GMT  
+		Size: 26.6 MB (26578637 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fdcbd0cfa0fc5528b3f6552f6bab9827390e937cd85339b58292166c23f06834`  
-		Last Modified: Fri, 28 Jul 2023 16:21:53 GMT  
-		Size: 46.2 MB (46198244 bytes)  
+	-	`sha256:6b3098dcffa0fe60bb7e770c8255d63e5cefbf379ff1eb6002e194006360c0a7`  
+		Last Modified: Wed, 16 Aug 2023 15:23:29 GMT  
+		Size: 46.2 MB (46198252 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7dafab1909332e96c41e681fbad78d1f2437b27155bbe4c7092c5c4e6d1b519d`  
-		Last Modified: Fri, 28 Jul 2023 16:21:46 GMT  
-		Size: 702.0 B  
+	-	`sha256:40d60d36564e773ae36e5c90fd7ace76c7ff741208c74c6b614c87e680d190c7`  
+		Last Modified: Wed, 16 Aug 2023 15:23:22 GMT  
+		Size: 700.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `varnish:stable` - linux; arm64 variant v8
