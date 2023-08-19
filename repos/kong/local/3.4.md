@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:9af41bd1970c551ebdff2aa1d21f9ec5bcae595cae26f673d22a5ec791f85b46`
-- Created: `2023-08-11T18:21:51.895565326Z`
-- Virtual Size: ~ 279.17 Mb  
+- Image ID: `sha256:136ae5a29e76ea317f95802e541c084e1c5ac96ef492880eb008c8aafcc4bd2f`
+- Created: `2023-08-16T16:00:23.735173176Z`
+- Virtual Size: ~ 279.22 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -122,19 +122,23 @@ $ apt-get source -qq --print-uris audit=1:3.0.7-1build1
 'http://archive.ubuntu.com/ubuntu/pool/main/a/audit/audit_3.0.7-1build1.debian.tar.xz' audit_3.0.7-1build1.debian.tar.xz 17772 SHA512:cdf346fc7dc04e42b44a9089fb7c01e68ea54ccd20d3eef8100d0cd8eed8ebd0764d8fd6ceab133faa0bfeee18e3cfe7625d230600b0e34ed0c19a7b739ec783
 ```
 
-### `dpkg` source package: `base-files=12ubuntu4.3`
+### `dpkg` source package: `base-files=12ubuntu4.4`
 
 Binary Packages:
 
-- `base-files=12ubuntu4.3`
+- `base-files=12ubuntu4.4`
 
 Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris base-files=12ubuntu4.4
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_12ubuntu4.4.dsc' base-files_12ubuntu4.4.dsc 1277 SHA512:b668e9ce4d9709a704e3f0be29d5b8fb8c92c9f9b6a94ce21269c7f6f2e1d8c78e222e4313a56eb92d8f015fce6a258efa2a01bebfbbfd38f39f10f5dc9e3a7c
+'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_12ubuntu4.4.tar.xz' base-files_12ubuntu4.4.tar.xz 81824 SHA512:f5fc383dcf8830000a09633f481eae15a29b077407a5fd895948ce03888386092cd42d4c0fd4d6d3eaf7685e06bffc4a083646aa6053b24af813d1f85dffb9a1
+```
 
 ### `dpkg` source package: `base-passwd=3.5.52build1`
 
@@ -600,13 +604,13 @@ $ apt-get source -qq --print-uris freetype=2.11.1+dfsg-1ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/f/freetype/freetype_2.11.1%2bdfsg-1ubuntu0.2.debian.tar.xz' freetype_2.11.1+dfsg-1ubuntu0.2.debian.tar.xz 41920 SHA512:5ebb72c4c47997c74da26fe13b796a558f7b4e2075743a55ba6a0079cd30c713aac3499ddbb05f6cbf408d383028743b41d9839531c906bf41d5ad725c9d5b04
 ```
 
-### `dpkg` source package: `gcc-12=12.1.0-2ubuntu1~22.04`
+### `dpkg` source package: `gcc-12=12.3.0-1ubuntu1~22.04`
 
 Binary Packages:
 
-- `gcc-12-base:amd64=12.1.0-2ubuntu1~22.04`
-- `libgcc-s1:amd64=12.1.0-2ubuntu1~22.04`
-- `libstdc++6:amd64=12.1.0-2ubuntu1~22.04`
+- `gcc-12-base:amd64=12.3.0-1ubuntu1~22.04`
+- `libgcc-s1:amd64=12.3.0-1ubuntu1~22.04`
+- `libstdc++6:amd64=12.3.0-1ubuntu1~22.04`
 
 Licenses: (parsed from: `/usr/share/doc/gcc-12-base/copyright`, `/usr/share/doc/libgcc-s1/copyright`, `/usr/share/doc/libstdc++6/copyright`)
 
@@ -617,9 +621,14 @@ Licenses: (parsed from: `/usr/share/doc/gcc-12-base/copyright`, `/usr/share/doc/
 - `GPL-3`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-12=12.3.0-1ubuntu1~22.04
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.3.0-1ubuntu1%7e22.04.dsc' gcc-12_12.3.0-1ubuntu1~22.04.dsc 27867 SHA512:68c0860bb1f453ad06334504034c575bed05512ef2a94599e8bbf57a25ed51dc9a429f4646848c8d98e0d4695f1319fac5d5ebbee3a0f8eecdb279b75936a875
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.3.0.orig.tar.gz' gcc-12_12.3.0.orig.tar.gz 91555468 SHA512:a33ce506594e13cf96f0419e6d62b71f8906c87c69426218bf8679d281865f1b170bc2f7379216ae1d6ad9f6bdbf5819c34c65c7537fdb74179c27b0d4ab7b48
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.3.0-1ubuntu1%7e22.04.debian.tar.xz' gcc-12_12.3.0-1ubuntu1~22.04.debian.tar.xz 575908 SHA512:d1bf37d9af699430d3b107d0966194b20aef22654337efdb99971b270609785020dd1f04ce6a0f3f3eb0dbad704b46e9d9e5dfa6a497e98c78a867f5bc290038
+```
 
 ### `dpkg` source package: `gdbm=1.23-1`
 
@@ -677,9 +686,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris git=1:2.34.1-1ubuntu1.9
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.9.dsc' git_2.34.1-1ubuntu1.9.dsc 2927 SHA512:7af902f1d57f6c62c8314ce2f3846490d0c16c4a39b626bc6226cfcd1ba1aebe2f01d075b9287237ceeb861b3ba0d8bc8dd3c638f663e3806489e04f989c2efc
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1.orig.tar.xz' git_2.34.1.orig.tar.xz 6623760 SHA512:a1a8e9e6f64b1da25508fbd2f783564dcdbe181fb5ff1ebab3bdac6db6094e18acc334479a1abf22ac17ce4f733cc3e10a664db9ab234cd523735a3f027b42db
-'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.9.debian.tar.xz' git_2.34.1-1ubuntu1.9.debian.tar.xz 757920 SHA512:3505621b8bd34a69bd4a3f9c1dce8d7621cb27909899635c20b5eed68397fa7f1df7cfc5a84e481242355e96d2d4d1d5e00eed5e74b21e3861f558f4772c0e30
+'http://security.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.9.dsc' git_2.34.1-1ubuntu1.9.dsc 2927 SHA512:7af902f1d57f6c62c8314ce2f3846490d0c16c4a39b626bc6226cfcd1ba1aebe2f01d075b9287237ceeb861b3ba0d8bc8dd3c638f663e3806489e04f989c2efc
+'http://security.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1.orig.tar.xz' git_2.34.1.orig.tar.xz 6623760 SHA512:a1a8e9e6f64b1da25508fbd2f783564dcdbe181fb5ff1ebab3bdac6db6094e18acc334479a1abf22ac17ce4f733cc3e10a664db9ab234cd523735a3f027b42db
+'http://security.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.9.debian.tar.xz' git_2.34.1-1ubuntu1.9.debian.tar.xz 757920 SHA512:3505621b8bd34a69bd4a3f9c1dce8d7621cb27909899635c20b5eed68397fa7f1df7cfc5a84e481242355e96d2d4d1d5e00eed5e74b21e3861f558f4772c0e30
 ```
 
 ### `dpkg` source package: `glibc=2.35-0ubuntu3.1`
@@ -1700,11 +1709,11 @@ $ apt-get source -qq --print-uris libzstd=1.4.8+dfsg-3build1
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.8%2bdfsg-3build1.debian.tar.xz' libzstd_1.4.8+dfsg-3build1.debian.tar.xz 12316 SHA512:8123965a6e73c5ddd8d535e78ed1074e2eabd7f8ed090d215a89feedffae9391cf472d2395242d3cb0351cbf76603448dae93ad70d0989806b42b03c65b22db0
 ```
 
-### `dpkg` source package: `linux=5.15.0-78.85`
+### `dpkg` source package: `linux=5.15.0-79.86`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.15.0-78.85`
+- `linux-libc-dev:amd64=5.15.0-79.86`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1713,10 +1722,10 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=5.15.0-78.85
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-78.85.dsc' linux_5.15.0-78.85.dsc 7374 SHA512:04bf45a0fdc804875aedbddeb3d4e362065d6c29805c63faa6c1717ebab751bb7bfb9ef087332364bd61cbf55ab5874af5d09a8872aafb6960421ced4cd95861
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-78.85.diff.gz' linux_5.15.0-78.85.diff.gz 9851591 SHA512:b8b4af13d826b72f1be4d50d4f62318e2f0e492c0ca29d87e037974b8619cac72954542df3d1f7b78de6fde8486cef03b0ad3f28a0de1f99ec9c813429eee7e9
+$ apt-get source -qq --print-uris linux=5.15.0-79.86
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-79.86.dsc' linux_5.15.0-79.86.dsc 7690 SHA512:06239d843d0b0a95ac5a0d02ad56cfacea6b2acb712ba202a7d09ad8534f3c7e7fac7fe0a99d136d49f8edc1c07005e13b61dbca7a6cadea4e436b69a33161a7
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-79.86.diff.gz' linux_5.15.0-79.86.diff.gz 10275684 SHA512:c10bd6b2c8903ba61d5137fa8c0dbe5ecbfe7ac1c49cef55064fe7801ec58389d7dc553b101aadaef70c0753d069cffcdd30e052efed1dc1accff0cc9ac55050
 ```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu4`
@@ -2292,19 +2301,25 @@ $ apt-get source -qq --print-uris tar=1.34+dfsg-1ubuntu0.1.22.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1ubuntu0.1.22.04.1.debian.tar.xz' tar_1.34+dfsg-1ubuntu0.1.22.04.1.debian.tar.xz 19908 SHA512:26348cafd78134c0a993b1b99ffbb051d3190444608ab7953c7dbb6a4e8520df53502994f0ae933b18ecbdcb50dac9feb20ecea224de7f7e5d536ac5dd32d420
 ```
 
-### `dpkg` source package: `tiff=4.3.0-6ubuntu0.4`
+### `dpkg` source package: `tiff=4.3.0-6ubuntu0.5`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.3.0-6ubuntu0.4`
+- `libtiff5:amd64=4.3.0-6ubuntu0.5`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tiff=4.3.0-6ubuntu0.5
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6ubuntu0.5.dsc' tiff_4.3.0-6ubuntu0.5.dsc 2573 SHA512:ea173e54ca4bd3f3c1ac0b4d2ff733d041f35382431be242ffa2892173a460ac03b4a0fb367da020134918a20196060568ba2a59110d07d6fb686cbc2db429fe
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz' tiff_4.3.0.orig.tar.gz 2808254 SHA512:e04a4a6c542e58a174c1e9516af3908acf1d3d3e1096648c5514f4963f73e7af27387a76b0fbabe43cf867a18874088f963796a7cd6e45deb998692e3e235493
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz.asc' tiff_4.3.0.orig.tar.gz.asc 488 SHA512:115a4c5714b52d0fbea800c494d83c8a96b70b2c9ce84a8df03205d9afc517faa17963f5f9508c013d7d3e2be6675b84b594a771a829406473234c4bd85e469e
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6ubuntu0.5.debian.tar.xz' tiff_4.3.0-6ubuntu0.5.debian.tar.xz 41828 SHA512:8be935fa88e572e4c01184a825728f4a193885a2876bb01fea877c1d182fee83136257f76fd382a8620ec345df8637b1a31c4f6283d6bebc88cb17ee54aea573
+```
 
 ### `dpkg` source package: `ubuntu-keyring=2021.03.26`
 
