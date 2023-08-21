@@ -5293,14 +5293,9 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-12=12.15-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.15-0ubuntu0.20.04.1.dsc' postgresql-12_12.15-0ubuntu0.20.04.1.dsc 3764 SHA512:59910c6bd721d4f083069961179d836cd0c43cfcbe8a49f127c2dcd86ed2aae44562588770e8becf53de27965bf9ccba013fa34fa16fbddecb8f0e1f307b9dcc
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.15.orig.tar.gz' postgresql-12_12.15.orig.tar.gz 27729919 SHA512:35d07ca4d773a1e5a8f160428100047900cd57e01165523208ec25069463a49aed5c1bffca44d20bbfcffcf912e293367d2c2bb3a4b451220dc70f5fa4062b6e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.15-0ubuntu0.20.04.1.debian.tar.xz' postgresql-12_12.15-0ubuntu0.20.04.1.debian.tar.xz 27340 SHA512:4cb869bb583a5390ce0b97b98227dbaae0b4b7a1a60028e394b50af25dbe1372d5d69cbcff6e3996b1e77146b8382639385b9c99ccb357b55b999ba0a06e16f2
-```
 
 ### `dpkg` source package: `procps=2:3.3.16-1ubuntu2.3`
 
