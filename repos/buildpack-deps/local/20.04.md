@@ -3580,14 +3580,9 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-12=12.15-0ubuntu0.20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.15-0ubuntu0.20.04.1.dsc' postgresql-12_12.15-0ubuntu0.20.04.1.dsc 3764 SHA512:59910c6bd721d4f083069961179d836cd0c43cfcbe8a49f127c2dcd86ed2aae44562588770e8becf53de27965bf9ccba013fa34fa16fbddecb8f0e1f307b9dcc
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.15.orig.tar.gz' postgresql-12_12.15.orig.tar.gz 27729919 SHA512:35d07ca4d773a1e5a8f160428100047900cd57e01165523208ec25069463a49aed5c1bffca44d20bbfcffcf912e293367d2c2bb3a4b451220dc70f5fa4062b6e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.15-0ubuntu0.20.04.1.debian.tar.xz' postgresql-12_12.15-0ubuntu0.20.04.1.debian.tar.xz 27340 SHA512:4cb869bb583a5390ce0b97b98227dbaae0b4b7a1a60028e394b50af25dbe1372d5d69cbcff6e3996b1e77146b8382639385b9c99ccb357b55b999ba0a06e16f2
-```
 
 ### `dpkg` source package: `procps=2:3.3.16-1ubuntu2.3`
 
@@ -4101,14 +4096,9 @@ Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2ubuntu0.20.04.8
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.8.dsc' tiff_4.1.0+git191117-2ubuntu0.20.04.8.dsc 2422 SHA512:7d172e89a3d69e8a9354c1dd58256d15656d5d2cc094b1cf5f4c356188d94ed068e5dbc1bd4eda83cd95256ff0927468127714ff8a2571b6db18f54615789cf0
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA512:25b4bc4522fc2e7f3ca6857b87acd4481d8643566b1120c755020afc8b48949238ee2078bc43dd3ba7407eaa4e36b1b712d7056f101ddaf60f94dab8607870b8
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.8.debian.tar.xz' tiff_4.1.0+git191117-2ubuntu0.20.04.8.debian.tar.xz 40672 SHA512:5bd7705888447431080e6d8416315b07e7ba54c903700c94631b7d1769968a213a61b6f8472ed654952b2627b91e9e3383ac742ee0408f537aa7c0d0efba27fc
-```
 
 ### `dpkg` source package: `tzdata=2023c-0ubuntu0.20.04.2`
 

@@ -3987,14 +3987,9 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `double-metaphone`
 - `nagaysau-ishii`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-15=15.3-0ubuntu0.23.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-15/postgresql-15_15.3-0ubuntu0.23.04.1.dsc' postgresql-15_15.3-0ubuntu0.23.04.1.dsc 4014 SHA512:98906b02eaa6fe62f88fb5c0c2f7548bc52f2f66659402b2776f3a395414a8bd447245f92491825901c32db4dd5ef88888ab9499396db4bb767c705332b39db3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-15/postgresql-15_15.3.orig.tar.gz' postgresql-15_15.3.orig.tar.gz 29946539 SHA512:d659b96320fe884a3885bbf50d49a7def2b037e735fe2ee07fd1ccd81dd1a277f380756cb15535aba058bbddb64e22896ed3350b9c5a2757b2bf3b23583273f8
-'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-15/postgresql-15_15.3-0ubuntu0.23.04.1.debian.tar.xz' postgresql-15_15.3-0ubuntu0.23.04.1.debian.tar.xz 23144 SHA512:923e67fd2e8746da2f001cd9d8351863a78f22956225e75f48d0a34ade21aacedc5f95a09454c0b079d4faee22ac58776cdae674286223e18344fd327737fd26
-```
 
 ### `dpkg` source package: `procps=2:4.0.3-1ubuntu1`
 
