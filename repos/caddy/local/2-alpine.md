@@ -1,16 +1,16 @@
-# `caddy:2.7.3-alpine`
+# `caddy:2.7.4-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:3f4e9fe28a35a7bd46854ffa0afa91435071afeabac2784f8730569278d8bc9a`
-- Created: `2023-08-14T18:20:18.380039325Z`
-- Virtual Size: ~ 49.39 Mb  
+- Image ID: `sha256:e1e1b7ae170b7d7d7e524717fe978e0090023cc82a7d9ffe48e344b0351a3ee1`
+- Created: `2023-08-17T22:19:42.702127207Z`
+- Virtual Size: ~ 48.80 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["caddy","run","--config","/etc/caddy/Caddyfile","--adapter","caddyfile"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `CADDY_VERSION=v2.7.3`
+  - `CADDY_VERSION=v2.7.4`
   - `XDG_CONFIG_HOME=/config`
   - `XDG_DATA_HOME=/data`
 - Labels:
@@ -21,7 +21,7 @@
   - `org.opencontainers.image.title=Caddy`
   - `org.opencontainers.image.url=https://caddyserver.com`
   - `org.opencontainers.image.vendor=Light Code Labs`
-  - `org.opencontainers.image.version=v2.7.3`
+  - `org.opencontainers.image.version=v2.7.4`
 
 ## `apk` (`.apk`-based packages)
 
