@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f79eceef3d2dc483b2956cac1aded1506b64e039a08b79137792e62a9eda7403`
-- Created: `2023-08-14T23:21:52.338142925Z`
+- Image ID: `sha256:dcdea9364bfae902d295f7139d9607b0ee2625d56dafcf4dd148c5245d72e827`
+- Created: `2023-08-23T20:23:46.207197555Z`
 - Virtual Size: ~ 468.68 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -16,7 +16,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk8u382-b05`
-  - `CLOJURE_VERSION=1.11.1.1386`
+  - `CLOJURE_VERSION=1.11.1.1405`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=20.04`

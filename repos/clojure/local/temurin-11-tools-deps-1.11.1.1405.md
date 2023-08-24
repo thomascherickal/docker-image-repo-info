@@ -1,22 +1,22 @@
-# `clojure:temurin-20-jammy`
+# `clojure:temurin-11-jammy`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c1c8f168dbd4f08a35cb5aa7c243c40f4528dae10ef9a40b954ba595b0de4087`
-- Created: `2023-08-16T18:12:39.779179874Z`
-- Virtual Size: ~ 550.25 Mb  
+- Image ID: `sha256:1666ff7db5e86cb1c8e61cbe7225de006eff74a3a079de5b47c58103a2c6b4bb`
+- Created: `2023-08-23T20:26:03.262323524Z`
+- Virtual Size: ~ 516.52 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Entrypoint: `["entrypoint"]`
-- Command: `["-M","--repl"]`
+- Entrypoint: `["/__cacert_entrypoint.sh"]`
+- Command: `["clj"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/opt/java/openjdk`
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-20.0.2+9`
-  - `CLOJURE_VERSION=1.11.1.1386`
+  - `JAVA_VERSION=jdk-11.0.20+8`
+  - `CLOJURE_VERSION=1.11.1.1405`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=22.04`
@@ -179,32 +179,6 @@ $ apt-get source -qq --print-uris bash=5.1-6ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.dsc' bash_5.1-6ubuntu1.dsc 2426 SHA512:9c808b5b8a281e01c5a4a503eca84fca8b21a2153dc4e7abbedda21346ae4005c806ffe7afd689b7ff66af8d431b9b4bebf2f1324745c01ed5f3ee219a515a88
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1.orig.tar.xz' bash_5.1.orig.tar.xz 5802740 SHA512:95d3acc542231cb893e1347c7d9dd66687f68cd347a0e9e126fde2d14e68c5b5530d1a5866eafa781e88aa013fcf72b4ad56d2e484c2ac7a69bd90bb149a9b86
 'http://archive.ubuntu.com/ubuntu/pool/main/b/bash/bash_5.1-6ubuntu1.debian.tar.xz' bash_5.1-6ubuntu1.debian.tar.xz 99652 SHA512:da77655882d0977656b75c750589307c54c7d5dd28b1cfc357d4a474ebf26399a91cfa19c4ba381e0a59a8f115f8381d432e82f2e659cb9bcbebf3fa0cd77bc1
-```
-
-### `dpkg` source package: `binutils=2.38-4ubuntu2.3`
-
-Binary Packages:
-
-- `binutils=2.38-4ubuntu2.3`
-- `binutils-common:amd64=2.38-4ubuntu2.3`
-- `binutils-x86-64-linux-gnu=2.38-4ubuntu2.3`
-- `libbinutils:amd64=2.38-4ubuntu2.3`
-- `libctf-nobfd0:amd64=2.38-4ubuntu2.3`
-- `libctf0:amd64=2.38-4ubuntu2.3`
-
-Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/binutils-common/copyright`, `/usr/share/doc/binutils-x86-64-linux-gnu/copyright`, `/usr/share/doc/libbinutils/copyright`, `/usr/share/doc/libctf-nobfd0/copyright`, `/usr/share/doc/libctf0/copyright`)
-
-- `GFDL`
-- `GPL`
-- `LGPL`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris binutils=2.38-4ubuntu2.3
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-4ubuntu2.3.dsc' binutils_2.38-4ubuntu2.3.dsc 8886 SHA512:1905b4fa0a2aa3797d1b201647aae26b3223d57213fb31baadbe247e88ecfbcd85c70611b79656147f465bd1781927d37be839439e8b473f89ab67af13a3868c
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38.orig.tar.xz' binutils_2.38.orig.tar.xz 23651408 SHA512:8bf0b0d193c9c010e0518ee2b2e5a830898af206510992483b427477ed178396cd210235e85fd7bd99a96fc6d5eedbeccbd48317a10f752b7336ada8b2bb826d
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.38-4ubuntu2.3.debian.tar.xz' binutils_2.38-4ubuntu2.3.debian.tar.xz 295236 SHA512:166dca02762ff3d196eb41d6bbeed9655390291c44464e425a4db5082cc5c29bafa51c47f7e010d89a699614101f3e27784a4f4dea3c0848b6c177be8c266e84
 ```
 
 ### `dpkg` source package: `brotli=1.0.9-2build6`
