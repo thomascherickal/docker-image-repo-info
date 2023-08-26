@@ -1,9 +1,9 @@
-# `silverpeas:6.3`
+# `silverpeas:6.3.1`
 
 ## Docker Metadata
 
-- Image ID: `sha256:5f5cafd85320e7a2a3593bbcd3e87d06bee27b51317573ed4dcd028391effe99`
-- Created: `2023-08-17T07:16:29.248346888Z`
+- Image ID: `sha256:d0df5dcfb2a6cf94274f1407d52d63df6708932e604320f2a0e3ed3cb5708da3`
+- Created: `2023-08-24T19:23:40.489673429Z`
 - Virtual Size: ~ 3.14 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -17,16 +17,16 @@
   - `JAVA_HOME=/docker-java-home`
   - `SILVERPEAS_HOME=/opt/silverpeas`
   - `JBOSS_HOME=/opt/wildfly`
-  - `SILVERPEAS_VERSION=6.3`
+  - `SILVERPEAS_VERSION=6.3.1`
   - `WILDFLY_VERSION=26.1.1`
 - Labels:
   - `build=1`
-  - `description=Image to install and to run Silverpeas 6.3`
-  - `name=Silverpeas 6.3`
+  - `description=Image to install and to run Silverpeas 6.3.1`
+  - `name=Silverpeas 6.3.1`
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=20.04`
   - `vendor=Silverpeas`
-  - `version=6.3`
+  - `version=6.3.1`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1797,14 +1797,9 @@ Licenses: (parsed from: `/usr/share/doc/cpp-9/copyright`, `/usr/share/doc/gcc-9-
 - `LGPL`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-9=9.4.0-1ubuntu1~20.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0-1ubuntu1%7e20.04.1.dsc' gcc-9_9.4.0-1ubuntu1~20.04.1.dsc 23760 SHA512:d79ad34fada44a666a231894b346f8f34c3f9c7d8ccca2c49155928f6ef9af1e7bd187adf14fd38851f14668769daaf0353f1b6018600bf7a281c7b5a0de9ef7
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0.orig.tar.gz' gcc-9_9.4.0.orig.tar.gz 92368536 SHA512:c10390524e900d3f0afd4516af097f536304fb2946ecf73eaba0472b953609ce8fbb5c7f0c20af9e54fe38fc8f45ec3b6ebd2051fa67225c73efa8362150c1c6
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0-1ubuntu1%7e20.04.1.debian.tar.xz' gcc-9_9.4.0-1ubuntu1~20.04.1.debian.tar.xz 578028 SHA512:eba28507ac082c7febc8c9af48e797da2e540aa5dddbba94dee90807c8f0710b45373f571c569cb5432d07898c120452e5988cedeeb293655ee0613d744c2159
-```
 
 ### `dpkg` source package: `gcc-defaults=1.185.1ubuntu2`
 
