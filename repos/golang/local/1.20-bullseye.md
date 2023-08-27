@@ -2049,20 +2049,13 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `X11`
 - `Xen-interface`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.10.179-5
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.179-5.dsc' linux_5.10.179-5.dsc 197238 SHA256:00928ac3b5249c5612d7853cccda46aa0445938bc09ebb6127a402acc6dd08ee
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.179.orig.tar.xz' linux_5.10.179.orig.tar.xz 121881852 SHA256:254d0375733a423efd8b364b9c33c88034dec85a76e2cba1093c54a667a74dbd
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_5.10.179-5.debian.tar.xz' linux_5.10.179-5.debian.tar.xz 1637144 SHA256:24d847d6505e92ab8f7b07637522fce033e71730f8eafc2dcf42f4a0dff5b3f7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/linux/5.10.179-5/
 
-- https://sources.debian.net/src/linux/5.10.179-5/ (for browsing the source)
-- https://sources.debian.net/src/linux/5.10.179-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/5.10.179-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lsb=11.1.0`
 
