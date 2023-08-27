@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:03a1fbf430b5768e79a33528a6f1726929d4940cb66ae9f56d06856eafc817e1`
-- Created: `2023-08-17T02:56:13.802717918Z`
-- Virtual Size: ~ 154.31 Mb  
+- Image ID: `sha256:3690e4ca02af3c8fa527f8d9334d6bbf4d2d6b8ed27dfa4a330a3efd24682f2d`
+- Created: `2023-08-26T03:29:53.401414782Z`
+- Virtual Size: ~ 135.25 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `GPG_KEY=E3FF2839C048B25C084DEBE9B26995E310250568`
-  - `PYTHON_VERSION=3.9.17`
+  - `PYTHON_VERSION=3.9.18`
   - `PYTHON_PIP_VERSION=23.0.1`
   - `PYTHON_SETUPTOOLS_VERSION=58.1.0`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/9af82b715db434abb94a0a6f3569f43e72157346/public/get-pip.py`
@@ -746,11 +746,9 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libc-bin=2.36-9+deb12u1`
-- `libc-dev-bin=2.36-9+deb12u1`
 - `libc6:amd64=2.36-9+deb12u1`
-- `libc6-dev:amd64=2.36-9+deb12u1`
 
-Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
@@ -1256,10 +1254,9 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libnsl-dev:amd64=1.3.0-2`
 - `libnsl2:amd64=1.3.0-2`
 
-Licenses: (parsed from: `/usr/share/doc/libnsl-dev/copyright`, `/usr/share/doc/libnsl2/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libnsl2/copyright`)
 
 - `BSD-3-clause`
 - `GPL-2`
@@ -1436,10 +1433,9 @@ Other potentially useful URLs:
 Binary Packages:
 
 - `libtirpc-common=1.3.3+ds-1`
-- `libtirpc-dev:amd64=1.3.3+ds-1`
 - `libtirpc3:amd64=1.3.3+ds-1`
 
-Licenses: (parsed from: `/usr/share/doc/libtirpc-common/copyright`, `/usr/share/doc/libtirpc-dev/copyright`, `/usr/share/doc/libtirpc3/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libtirpc-common/copyright`, `/usr/share/doc/libtirpc3/copyright`)
 
 - `BSD-2-Clause`
 - `BSD-3-Clause`
@@ -1505,7 +1501,6 @@ Other potentially useful URLs:
 
 Binary Packages:
 
-- `libcrypt-dev:amd64=1:4.4.33-2`
 - `libcrypt1:amd64=1:4.4.33-2`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
@@ -1555,37 +1550,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.5.4+dfsg2-5/ (for browsing the source)
 - https://sources.debian.net/src/libzstd/1.5.4+dfsg2-5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.5.4+dfsg2-5/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `linux=6.1.38-4`
-
-Binary Packages:
-
-- `linux-libc-dev:amd64=6.1.38-4`
-
-Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
-
-- `BSD-2-clause`
-- `CRYPTOGAMS`
-- `GPL-2`
-- `GPL-2+-or-X11`
-- `LGPL-2.1`
-- `Unicode-data`
-- `Xen-interface`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris linux=6.1.38-4
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_6.1.38-4.dsc' linux_6.1.38-4.dsc 290924 SHA256:bb0be431ea69ca59d62d1c789fa8f77a664e10c31ef076410db05bfa19e8ca16
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_6.1.38.orig.tar.xz' linux_6.1.38.orig.tar.xz 137332648 SHA256:89ec2ca3af4376d3ac4adc900920238c76c671f89785746a1b2a498851e47d19
-'http://deb.debian.org/debian-security/pool/updates/main/l/linux/linux_6.1.38-4.debian.tar.xz' linux_6.1.38-4.debian.tar.xz 1518476 SHA256:c311bb83274027a185544926950f4b873c258e36947061606e3caf8f7d0b8832
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/linux/6.1.38-4/ (for browsing the source)
-- https://sources.debian.net/src/linux/6.1.38-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/6.1.38-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lz4=1.9.4-1`
 
@@ -1947,41 +1911,6 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/readline/8.2-1.3/ (for browsing the source)
 - https://sources.debian.net/src/readline/8.2-1.3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/readline/8.2-1.3/ (for access to the source package after it no longer exists in the archive)
-
-### `dpkg` source package: `rpcsvc-proto=1.4.3-1`
-
-Binary Packages:
-
-- `rpcsvc-proto=1.4.3-1`
-
-Licenses: (parsed from: `/usr/share/doc/rpcsvc-proto/copyright`)
-
-- `BSD-3-clause`
-- `GPL-2`
-- `GPL-2+-autoconf-exception`
-- `GPL-3`
-- `GPL-3+-autoconf-exception`
-- `MIT`
-- `permissive-autoconf-m4`
-- `permissive-autoconf-m4-no-warranty`
-- `permissive-configure`
-- `permissive-fsf`
-- `permissive-makefile-in`
-
-Source:
-
-```console
-$ apt-get source -qq --print-uris rpcsvc-proto=1.4.3-1
-'http://deb.debian.org/debian/pool/main/r/rpcsvc-proto/rpcsvc-proto_1.4.3-1.dsc' rpcsvc-proto_1.4.3-1.dsc 1999 SHA256:7d8e122bd18b02fe0de6d467a0ecdafff74035b3e1ed0da1c0c792d9c015682f
-'http://deb.debian.org/debian/pool/main/r/rpcsvc-proto/rpcsvc-proto_1.4.3.orig.tar.xz' rpcsvc-proto_1.4.3.orig.tar.xz 167964 SHA256:69315e94430f4e79c74d43422f4a36e6259e97e67e2677b2c7d7060436bd99b1
-'http://deb.debian.org/debian/pool/main/r/rpcsvc-proto/rpcsvc-proto_1.4.3-1.debian.tar.xz' rpcsvc-proto_1.4.3-1.debian.tar.xz 4228 SHA256:02034b9dadcf3af5424f72eb65c3842c8d7117b6b78e7a3c798316ceb60843d1
-```
-
-Other potentially useful URLs:
-
-- https://sources.debian.net/src/rpcsvc-proto/1.4.3-1/ (for browsing the source)
-- https://sources.debian.net/src/rpcsvc-proto/1.4.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/rpcsvc-proto/1.4.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sed=4.9-1`
 
