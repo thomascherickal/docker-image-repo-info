@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:07e30ae709a7b4f4aea5f624e1bb5c03c027ec30dcf6550c1676df452881e76e`
-- Created: `2023-08-17T09:17:17.639703452Z`
+- Image ID: `sha256:4ef08f76b46ffc056d4ed505e8b0fd9f8eba9fdf60396ea277bf491080c5b9af`
+- Created: `2023-08-26T05:33:05.283508723Z`
 - Virtual Size: ~ 827.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -21,8 +21,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 5C3C5F3E314C866292F359A8F3AD5C94A67F707E 765908099ACF92702C7D949BFA0C35EA8AA299F1 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23`
   - `TOMCAT_MAJOR=8`
-  - `TOMCAT_VERSION=8.5.92`
-  - `TOMCAT_SHA512=faab13a29531a800d38b2602ff76c0041277ffbfb25b938bbefb84ef6ad3ffa26d2c2645cd233eb0d819bcca9887aaeb44df6c044852160d000e5084b1addc2f`
+  - `TOMCAT_VERSION=8.5.93`
+  - `TOMCAT_SHA512=fdd9bd768c2c8b7f57c75f1a4863bd2bde55e8ea7c8b9cb81427ea8be652540bdcb1ff1cd625b9fb0dd48eb750ebef0f0244d12ac574998d5df3a0d339699bcc`
   - `GN_FILE=geonetwork.war`
   - `DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data`
   - `JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC`
@@ -1700,12 +1700,12 @@ $ apt-get source -qq --print-uris perl=5.34.0-3ubuntu1.2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-3ubuntu1.2.debian.tar.xz' perl_5.34.0-3ubuntu1.2.debian.tar.xz 192372 SHA512:bbe3da1c08d92640bb3877babc77ca0a012614acba47cb9bff1e4bd3d439f571848a655789ac157944e90b5b0df1c2a3b78c41480e2e796ea0c7b14647edcf5b
 ```
 
-### `dpkg` source package: `postgresql-14=14.8-0ubuntu0.22.04.1`
+### `dpkg` source package: `postgresql-14=14.9-0ubuntu0.22.04.1`
 
 Binary Packages:
 
-- `libpq5:amd64=14.8-0ubuntu0.22.04.1`
-- `postgresql-client-14=14.8-0ubuntu0.22.04.1`
+- `libpq5:amd64=14.9-0ubuntu0.22.04.1`
+- `postgresql-client-14=14.9-0ubuntu0.22.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postgresql-client-14/copyright`)
 
@@ -1725,9 +1725,14 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`, `/usr/share/doc/postg
 - `nagaysau-ishii`
 - `rijndael`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris postgresql-14=14.9-0ubuntu0.22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.9-0ubuntu0.22.04.1.dsc' postgresql-14_14.9-0ubuntu0.22.04.1.dsc 3857 SHA512:c9183143763d9c00a7810ef662a4c5610c651889cc9dc08ef836b906d736d29350f256114eb417aac8c958b8009b78ac32f3ba9dc113cdffb2dd36cbe634a560
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.9.orig.tar.gz' postgresql-14_14.9.orig.tar.gz 29143610 SHA512:b2a1d2978bfc255b337508ff6f6a63eb70e1f010e2786038aac8923cdf4e2bfafcd7ba6514271cd22e5f95238433718d1d0d2e19313f0647da88f6583da6dbb5
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.9-0ubuntu0.22.04.1.debian.tar.xz' postgresql-14_14.9-0ubuntu0.22.04.1.debian.tar.xz 25548 SHA512:ce81ba235569235d1ed144bc22b5c87ff5b219dec8937da81a1453eef7c4d554bee1de932729583b34246f5f8f3ecce8058331fc616328491ff0a45c021f1bb4
+```
 
 ### `dpkg` source package: `postgresql-common=238`
 
