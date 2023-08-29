@@ -2,8 +2,15 @@
 
 # Tags of `elasticsearch`
 
+-	[`elasticsearch:7.17.11`](#elasticsearch71711)
 -	[`elasticsearch:7.17.12`](#elasticsearch71712)
+-	[`elasticsearch:8.8.2`](#elasticsearch882)
+-	[`elasticsearch:8.9.0`](#elasticsearch890)
 -	[`elasticsearch:8.9.1`](#elasticsearch891)
+
+## `elasticsearch:7.17.11`
+
+**does not exist** (yet?)
 
 ## `elasticsearch:7.17.12`
 
@@ -215,6 +222,14 @@ CMD ["eswrapper"]
 		Last Modified: Fri, 11 Aug 2023 19:12:54 GMT  
 		Size: 109.2 KB (109246 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `elasticsearch:8.8.2`
+
+**does not exist** (yet?)
+
+## `elasticsearch:8.9.0`
+
+**does not exist** (yet?)
 
 ## `elasticsearch:8.9.1`
 
