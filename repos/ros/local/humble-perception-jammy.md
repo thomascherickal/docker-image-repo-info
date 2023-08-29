@@ -3072,14 +3072,9 @@ Licenses: (parsed from: `/usr/share/doc/libjson-c-dev/copyright`, `/usr/share/do
 
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris json-c=0.15-3~ubuntu1.22.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.15-3%7eubuntu1.22.04.1.dsc' json-c_0.15-3~ubuntu1.22.04.1.dsc 2148 SHA512:f6ebf37711ac592a936993d06cb410514da2cecb276e0e1670505db281178e562fb6aa39e63d7e3d14192d042ef89d44e3cb89e922f98ffd469de01992fdd3fb
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.15.orig.tar.gz' json-c_0.15.orig.tar.gz 348261 SHA512:35cb3ef403ff5e8905144978ea0a22c9151b63e6bf749a50ca63b3d9320e5018be18aef236490295388d1be2ead7fcf8946d248b28b7ca109a057daaaada2162
-'http://archive.ubuntu.com/ubuntu/pool/main/j/json-c/json-c_0.15-3%7eubuntu1.22.04.1.debian.tar.xz' json-c_0.15-3~ubuntu1.22.04.1.debian.tar.xz 11252 SHA512:719f49405db2751ab32e19f440ca88d74879452f9b27b90c0ed6b272d87b40ac55e3972f5e975816b49afffe1f57ff9790eabf5499ee4fbfabc51b8bc2cfa1bd
-```
 
 ### `dpkg` source package: `keyutils=1.6.1-2ubuntu3`
 
@@ -5764,9 +5759,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=5.15.0-79.86
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-79.86.dsc' linux_5.15.0-79.86.dsc 7690 SHA512:06239d843d0b0a95ac5a0d02ad56cfacea6b2acb712ba202a7d09ad8534f3c7e7fac7fe0a99d136d49f8edc1c07005e13b61dbca7a6cadea4e436b69a33161a7
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-79.86.diff.gz' linux_5.15.0-79.86.diff.gz 10275684 SHA512:c10bd6b2c8903ba61d5137fa8c0dbe5ecbfe7ac1c49cef55064fe7801ec58389d7dc553b101aadaef70c0753d069cffcdd30e052efed1dc1accff0cc9ac55050
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-79.86.dsc' linux_5.15.0-79.86.dsc 7690 SHA512:06239d843d0b0a95ac5a0d02ad56cfacea6b2acb712ba202a7d09ad8534f3c7e7fac7fe0a99d136d49f8edc1c07005e13b61dbca7a6cadea4e436b69a33161a7
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-79.86.diff.gz' linux_5.15.0-79.86.diff.gz 10275684 SHA512:c10bd6b2c8903ba61d5137fa8c0dbe5ecbfe7ac1c49cef55064fe7801ec58389d7dc553b101aadaef70c0753d069cffcdd30e052efed1dc1accff0cc9ac55050
 ```
 
 ### `dpkg` source package: `llvm-toolchain-14=1:14.0.0-1ubuntu1.1`
