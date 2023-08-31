@@ -1,7 +1,7 @@
 ## `neo4j:latest`
 
 ```console
-$ docker pull neo4j@sha256:b56fd7c0da7d717dd4b8668f0deb9a2e6369c48b05caab75f4bb8e8e3afc5c6f
+$ docker pull neo4j@sha256:3452812fa1986f3c17eca6fb8c7ccf5c6ce71a9c985bf73f4e377a50568c47f7
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull neo4j@sha256:b56fd7c0da7d717dd4b8668f0deb9a2e6369c48b05caab75f4bb8
 ### `neo4j:latest` - linux; amd64
 
 ```console
-$ docker pull neo4j@sha256:acad44c4c0ce675745008de8cc5b83ecbe88545d3298bfaac0bfe6504ee16381
+$ docker pull neo4j@sha256:9a39fb3df061a082bf400507f857ffd78af2e7ac39bf3964b3e9df9ddbea4dac
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **293.7 MB (293720172 bytes)**  
+-	Total Size: **293.7 MB (293722286 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2dd5b693a4dbaf98473e9d295f2f8696286a1fe8c7d722a0d680439b8be1c19f`
+-	Image ID: `sha256:7db463f6cc7764a98a89c21226b932f481a609ed66efcf540cd6c05f8548ed6b`
 -	Entrypoint: `["tini","-g","--","\/startup\/docker-entrypoint.sh"]`
 -	Default Command: `["neo4j"]`
 
@@ -30,31 +30,31 @@ ADD file:2d91c2e03d02bfa16fe4f766d851b351d93d33f84751ad96c985e64ea024ec28 in /
 CMD ["bash"]
 # Wed, 16 Aug 2023 01:26:55 GMT
 ENV JAVA_HOME=/opt/java/openjdk
-# Wed, 16 Aug 2023 17:01:12 GMT
-COPY dir:534dada44a8b7afe6fc6978f0ae46933b536905423b1ac2af86e550e59d392b1 in /opt/java/openjdk 
-# Thu, 17 Aug 2023 10:08:44 GMT
+# Thu, 31 Aug 2023 20:48:51 GMT
+COPY dir:6777d1f77166c2ecdd8f4eb23f5fd82574aa8a90fd65d6dff981fbb31778a3d1 in /opt/java/openjdk 
+# Thu, 31 Aug 2023 20:48:52 GMT
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin NEO4J_SHA256=3a206271d01ff337ab64e99a9ea90b17733416ec17c093b5be7bfb9342b0dacd NEO4J_TARBALL=neo4j-community-5.11.0-unix.tar.gz NEO4J_EDITION=community NEO4J_HOME=/var/lib/neo4j
-# Thu, 17 Aug 2023 10:08:44 GMT
+# Thu, 31 Aug 2023 20:48:52 GMT
 ARG NEO4J_URI=https://dist.neo4j.org/neo4j-community-5.11.0-unix.tar.gz
-# Thu, 17 Aug 2023 10:08:45 GMT
+# Thu, 31 Aug 2023 20:48:53 GMT
 # ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-5.11.0-unix.tar.gz
 RUN addgroup --gid 7474 --system neo4j && adduser --uid 7474 --system --no-create-home --home "${NEO4J_HOME}" --ingroup neo4j neo4j
-# Thu, 17 Aug 2023 10:08:45 GMT
+# Thu, 31 Aug 2023 20:48:53 GMT
 COPY multi:d939a3d156891be9a8e359f0c5c2adbad24c093f1ca53494ce82d0acd2b2613d in /startup/ 
-# Thu, 17 Aug 2023 10:08:59 GMT
+# Thu, 31 Aug 2023 20:49:06 GMT
 # ARGS: NEO4J_URI=https://dist.neo4j.org/neo4j-community-5.11.0-unix.tar.gz
 RUN apt update     && apt install -y curl gosu jq procps tini wget     && curl --fail --silent --show-error --location --remote-name ${NEO4J_URI}     && echo "${NEO4J_SHA256}  ${NEO4J_TARBALL}" | sha256sum -c --strict --quiet     && tar --extract --file ${NEO4J_TARBALL} --directory /var/lib     && mv /var/lib/neo4j-* "${NEO4J_HOME}"     && rm ${NEO4J_TARBALL}     && mv "${NEO4J_HOME}"/data /data     && mv "${NEO4J_HOME}"/logs /logs     && chown -R neo4j:neo4j /data     && chmod -R 777 /data     && chown -R neo4j:neo4j /logs     && chmod -R 777 /logs     && chown -R neo4j:neo4j "${NEO4J_HOME}"     && chmod -R 777 "${NEO4J_HOME}"     && ln -s /data "${NEO4J_HOME}"/data     && ln -s /logs "${NEO4J_HOME}"/logs     && mv /startup/neo4j-admin-report.sh "${NEO4J_HOME}"/bin/neo4j-admin-report     && apt-get -y purge --auto-remove curl     && rm -rf /var/lib/apt/lists/*
-# Thu, 17 Aug 2023 10:08:59 GMT
+# Thu, 31 Aug 2023 20:49:07 GMT
 ENV PATH=/var/lib/neo4j/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Thu, 17 Aug 2023 10:08:59 GMT
+# Thu, 31 Aug 2023 20:49:07 GMT
 WORKDIR /var/lib/neo4j
-# Thu, 17 Aug 2023 10:08:59 GMT
+# Thu, 31 Aug 2023 20:49:07 GMT
 VOLUME [/data /logs]
-# Thu, 17 Aug 2023 10:09:00 GMT
+# Thu, 31 Aug 2023 20:49:07 GMT
 EXPOSE 7473 7474 7687
-# Thu, 17 Aug 2023 10:09:00 GMT
+# Thu, 31 Aug 2023 20:49:07 GMT
 ENTRYPOINT ["tini" "-g" "--" "/startup/docker-entrypoint.sh"]
-# Thu, 17 Aug 2023 10:09:00 GMT
+# Thu, 31 Aug 2023 20:49:07 GMT
 CMD ["neo4j"]
 ```
 
@@ -63,21 +63,21 @@ CMD ["neo4j"]
 		Last Modified: Wed, 16 Aug 2023 01:05:12 GMT  
 		Size: 31.4 MB (31417678 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:60f19d3c0c76607d38f469ea69cdeea9a0f589af42c6145f4530a3ae325eaef2`  
-		Last Modified: Wed, 16 Aug 2023 17:03:52 GMT  
-		Size: 144.8 MB (144773731 bytes)  
+	-	`sha256:65006a4851e206ccc53a9bf891b081e6fefbdbe0fcb897d670970fc7f2eff9ea`  
+		Last Modified: Thu, 31 Aug 2023 20:51:41 GMT  
+		Size: 144.8 MB (144775820 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4e45bf0a420b65db47d2998894a55e2adcaf6681afb0d2647eddc955ebc950b8`  
-		Last Modified: Thu, 17 Aug 2023 10:10:38 GMT  
-		Size: 3.9 KB (3858 bytes)  
+	-	`sha256:c565599f1dc1ddf97deb3cc8e05ab94f2057bf0398afc2cbdadc75350bc9f77b`  
+		Last Modified: Thu, 31 Aug 2023 20:51:29 GMT  
+		Size: 3.9 KB (3863 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f163608e839f1622c2ee393975b5de2f94e77e557fd87b141126922e3ed9f17e`  
-		Last Modified: Thu, 17 Aug 2023 10:10:39 GMT  
-		Size: 9.3 KB (9347 bytes)  
+	-	`sha256:de4b4f83dfc50acec6110f72c3d3d4470034c0c4a212b82659c59afe6a94ecf8`  
+		Last Modified: Thu, 31 Aug 2023 20:51:29 GMT  
+		Size: 9.3 KB (9345 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f7016299ad80373dfbf5b3aba89577d434fb3107abdc73a028fe71b436e3d86f`  
-		Last Modified: Thu, 17 Aug 2023 10:10:45 GMT  
-		Size: 117.5 MB (117515558 bytes)  
+	-	`sha256:7f1aabf964f5b827b641a2f7fd4843589e5ccd89491ba1ea623ff3d6b6d4041f`  
+		Last Modified: Thu, 31 Aug 2023 20:51:36 GMT  
+		Size: 117.5 MB (117515580 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `neo4j:latest` - linux; arm64 variant v8
