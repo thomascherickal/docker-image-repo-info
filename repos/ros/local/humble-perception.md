@@ -5755,14 +5755,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.15.0-79.86
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-79.86.dsc' linux_5.15.0-79.86.dsc 7690 SHA512:06239d843d0b0a95ac5a0d02ad56cfacea6b2acb712ba202a7d09ad8534f3c7e7fac7fe0a99d136d49f8edc1c07005e13b61dbca7a6cadea4e436b69a33161a7
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-79.86.diff.gz' linux_5.15.0-79.86.diff.gz 10275684 SHA512:c10bd6b2c8903ba61d5137fa8c0dbe5ecbfe7ac1c49cef55064fe7801ec58389d7dc553b101aadaef70c0753d069cffcdd30e052efed1dc1accff0cc9ac55050
-```
 
 ### `dpkg` source package: `llvm-toolchain-14=1:14.0.0-1ubuntu1.1`
 
@@ -6818,14 +6813,9 @@ Licenses: (parsed from: `/usr/share/doc/openjdk-11-jdk/copyright`, `/usr/share/d
 - `LGPL-2-1`
 - `MIT`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openjdk-lts=11.0.20+8-1ubuntu1~22.04
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openjdk-lts/openjdk-lts_11.0.20%2b8-1ubuntu1%7e22.04.dsc' openjdk-lts_11.0.20+8-1ubuntu1~22.04.dsc 4665 SHA512:37f4fb6b30c7971e3c1855d6aa927252c515a3470606fa31c92b18839688c4d8f2a36464cedf9058fd4f01c2f3b0fc5113e39114590f3b36fc1641f1560a5b2e
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openjdk-lts/openjdk-lts_11.0.20%2b8.orig.tar.xz' openjdk-lts_11.0.20+8.orig.tar.xz 68772944 SHA512:f5beb22ae406b15dc5af447ef7aaaf2ce1b921ab3704060fe0e4c2c34a6fff3d21af40c18c4617fe44f0df8bbe69de63a058260657523a4656b3f32442ff575e
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openjdk-lts/openjdk-lts_11.0.20%2b8-1ubuntu1%7e22.04.debian.tar.xz' openjdk-lts_11.0.20+8-1ubuntu1~22.04.debian.tar.xz 161772 SHA512:c5aea18913529e17bbdbbc8e3ebf844279a7d2ade6154b4d77c97f7b76820855f07770429f7d33d4b1555ecfb93f9871d5f7f29952fdb835768ccd0f50c9121a
-```
 
 ### `dpkg` source package: `openjpeg2=2.4.0-6`
 
