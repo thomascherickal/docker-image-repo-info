@@ -1,10 +1,10 @@
-# `aerospike:ce-6.4.0.1`
+# `aerospike:ce-6.4.0.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2bfcfe91e7bf84695780fd78bca04268c591658103422847134774624b6ce3fe`
-- Created: `2023-08-16T06:52:30.539761585Z`
-- Virtual Size: ~ 205.86 Mb  
+- Image ID: `sha256:ab7351ac55fff33f714617909b7e751cef56689bc374a2be4cb2752233e250ee`
+- Created: `2023-08-31T20:20:09.278537635Z`
+- Virtual Size: ~ 205.87 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/bin/as-tini-static","-r","SIGUSR1","-t","SIGTERM","--","/entrypoint.sh"]`
@@ -68,11 +68,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/adduser/3.134/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/adduser/3.134/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `aerospike-server-community=6.4.0.1-1`
+### `dpkg` source package: `aerospike-server-community=6.4.0.2-1`
 
 Binary Packages:
 
-- `aerospike-server-community=6.4.0.1-1`
+- `aerospike-server-community=6.4.0.2-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
