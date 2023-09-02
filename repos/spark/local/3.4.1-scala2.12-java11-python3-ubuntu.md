@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4099569c2082598e3f70e9fe2dea3c58d73f520159feb7cc0421788ad018f68d`
-- Created: `2023-08-14T18:45:46.525289482Z`
+- Image ID: `sha256:ea25f803d638591abcc6f87fea837293fcf58dfb0fd166e024114226c8d7c19a`
+- Created: `2023-08-31T21:08:05.558884105Z`
 - Virtual Size: ~ 973.30 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.20+8`
+  - `JAVA_VERSION=jdk-11.0.20.1+1`
   - `SPARK_TGZ_URL=https://archive.apache.org/dist/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz`
   - `SPARK_TGZ_ASC_URL=https://archive.apache.org/dist/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz.asc`
   - `GPG_KEY=F28C9C925C188C35E345614DEDA00CE834F0FC5C`
@@ -744,17 +744,17 @@ $ apt-get source -qq --print-uris gcc-10=10.5.0-1ubuntu1~20.04
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.5.0-1ubuntu1%7e20.04.debian.tar.xz' gcc-10_10.5.0-1ubuntu1~20.04.debian.tar.xz 5953836 SHA512:d68b8b10628bec39c370c9af1baa39bd76f3fb885d765b2d449435981ab772443187cba3bcb629e69a4a7c4b1e890babc4ea9ed8a3a3eb9a8e7e1e76abb8b526
 ```
 
-### `dpkg` source package: `gcc-9=9.4.0-1ubuntu1~20.04.1`
+### `dpkg` source package: `gcc-9=9.4.0-1ubuntu1~20.04.2`
 
 Binary Packages:
 
-- `cpp-9=9.4.0-1ubuntu1~20.04.1`
-- `g++-9=9.4.0-1ubuntu1~20.04.1`
-- `gcc-9=9.4.0-1ubuntu1~20.04.1`
-- `gcc-9-base:amd64=9.4.0-1ubuntu1~20.04.1`
-- `libasan5:amd64=9.4.0-1ubuntu1~20.04.1`
-- `libgcc-9-dev:amd64=9.4.0-1ubuntu1~20.04.1`
-- `libstdc++-9-dev:amd64=9.4.0-1ubuntu1~20.04.1`
+- `cpp-9=9.4.0-1ubuntu1~20.04.2`
+- `g++-9=9.4.0-1ubuntu1~20.04.2`
+- `gcc-9=9.4.0-1ubuntu1~20.04.2`
+- `gcc-9-base:amd64=9.4.0-1ubuntu1~20.04.2`
+- `libasan5:amd64=9.4.0-1ubuntu1~20.04.2`
+- `libgcc-9-dev:amd64=9.4.0-1ubuntu1~20.04.2`
+- `libstdc++-9-dev:amd64=9.4.0-1ubuntu1~20.04.2`
 
 Licenses: (parsed from: `/usr/share/doc/cpp-9/copyright`, `/usr/share/doc/g++-9/copyright`, `/usr/share/doc/gcc-9/copyright`, `/usr/share/doc/gcc-9-base/copyright`, `/usr/share/doc/libasan5/copyright`, `/usr/share/doc/libgcc-9-dev/copyright`, `/usr/share/doc/libstdc++-9-dev/copyright`)
 
@@ -766,9 +766,14 @@ Licenses: (parsed from: `/usr/share/doc/cpp-9/copyright`, `/usr/share/doc/g++-9/
 - `LGPL`
 - `LGPL-2.1+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gcc-9=9.4.0-1ubuntu1~20.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0-1ubuntu1%7e20.04.2.dsc' gcc-9_9.4.0-1ubuntu1~20.04.2.dsc 23760 SHA512:76d09db3de4bf585143b73bbfe9f46c66f9e00da33b08cb62cf95b70d21a704f95df61725527edb514c87356cc13ee4a2e2bb21b66f468469ace0d4893da0c34
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0.orig.tar.gz' gcc-9_9.4.0.orig.tar.gz 92368536 SHA512:c10390524e900d3f0afd4516af097f536304fb2946ecf73eaba0472b953609ce8fbb5c7f0c20af9e54fe38fc8f45ec3b6ebd2051fa67225c73efa8362150c1c6
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-9/gcc-9_9.4.0-1ubuntu1%7e20.04.2.debian.tar.xz' gcc-9_9.4.0-1ubuntu1~20.04.2.debian.tar.xz 579772 SHA512:4f23eb26adf795d2794c7ef083caa0a0f73dd9d8e3e809139df9595f4ef29012a6c7a5b158441900d1a55f7bb6d80ea68d0bc422f0a18d9573df9db04b30945f
+```
 
 ### `dpkg` source package: `gcc-defaults=1.185.1ubuntu2`
 
@@ -1774,19 +1779,24 @@ $ apt-get source -qq --print-uris libzstd=1.4.4+dfsg-3ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.4%2bdfsg-3ubuntu0.1.debian.tar.xz' libzstd_1.4.4+dfsg-3ubuntu0.1.debian.tar.xz 17300 SHA512:0484891be5603d00bd57b799c708b9395fccbaa8c6c44f535377f6fa2c7ac22c01c8a3c1b45e1c1f3c30f19dc74d510626bf82067fcbfb53c39f1bcc2249affe
 ```
 
-### `dpkg` source package: `linux=5.4.0-156.173`
+### `dpkg` source package: `linux=5.4.0-159.176`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.4.0-156.173`
+- `linux-libc-dev:amd64=5.4.0-159.176`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=5.4.0-159.176
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-159.176.dsc' linux_5.4.0-159.176.dsc 7067 SHA512:5d54f8290d18accdd0d79d1c68be5d7b756ff773f1c7dc4a1eac9b56b6049abfc3383bfa0fc8e641c6f8b2278d3148bfc0964235204ecff9b18711d17aad9602
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-159.176.diff.gz' linux_5.4.0-159.176.diff.gz 10866290 SHA512:5c25eb6084f7d620056c6c9a5130a59c6ca28a30aee6dae4791bc1797a72638cac5eec2b97c793c642736e4e458efc1e69ca8fb1ad18017f2509552aa6340d25
+```
 
 ### `dpkg` source package: `lmdb=0.9.24-1`
 
