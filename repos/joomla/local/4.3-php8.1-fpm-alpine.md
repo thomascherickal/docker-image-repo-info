@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d5ca535c8f348b2f6d145970cd0f3be85231e6c00ce5851a13c02230ab7e5a1b`
-- Created: `2023-08-23T19:23:27.896337319Z`
-- Virtual Size: ~ 323.02 Mb  
+- Image ID: `sha256:2d87ebfc665e88541d2ba6e26c24707f56730b834f67dae0fdf34713078f5789`
+- Created: `2023-09-02T10:15:24.143898017Z`
+- Virtual Size: ~ 323.08 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
-  - `PHP_VERSION=8.1.22`
-  - `PHP_URL=https://www.php.net/distributions/php-8.1.22.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.22.tar.xz.asc`
-  - `PHP_SHA256=9ea4f4cfe775cb5866c057323d6b320f3a6e0adb1be41a068ff7bfec6f83e71d`
+  - `PHP_VERSION=8.1.23`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.23.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.23.tar.xz.asc`
+  - `PHP_SHA256=fc48422fa7e75bb45916fc192a9f9728cb38bb2b5858572c51ea15825326360c`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
   - `JOOMLA_VERSION=4.3.4`
   - `JOOMLA_SHA512=2efede3c3230d2fd849c46f84eea9aa1ef2bef6836e0ceec6451499bb6abf7e747d63f3996d0a5f7fc2d439c5ae0380e0e71f7c2823adfdda80e87a0bc377be1`
@@ -1069,16 +1069,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-15.3-r0 description:
+libpq-15.4-r0 description:
 PostgreSQL client library
 
-libpq-15.3-r0 webpage:
+libpq-15.4-r0 webpage:
 https://www.postgresql.org/
 
-libpq-15.3-r0 installed size:
+libpq-15.4-r0 installed size:
 320 KiB
 
-libpq-15.3-r0 license:
+libpq-15.4-r0 license:
 PostgreSQL
 
 ```
