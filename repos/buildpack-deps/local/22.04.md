@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:94908eb37d98646dc9d9135bee566b6e4f09c6e2ddafa8fcec2cc89c5dcf8325`
-- Created: `2023-08-16T07:07:39.499313944Z`
-- Virtual Size: ~ 713.86 Mb  
+- Image ID: `sha256:05f95e3673e31a397ddde5b383b4a32dfab0d936354867685721204967b462a9`
+- Created: `2023-09-02T00:02:40.836023388Z`
+- Virtual Size: ~ 713.84 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -91,14 +91,9 @@ Licenses: (parsed from: `/usr/share/doc/libaprutil1/copyright`)
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apr-util=1.6.1-5ubuntu4.22.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-5ubuntu4.22.04.1.dsc' apr-util_1.6.1-5ubuntu4.22.04.1.dsc 2339 SHA512:38097a93c0533e0d76a9ff4325f6c689e4661c93a8a35f2e3bbc66775188e778790974fd7aad9e03a00b296cd69f7e27691a5ee3f37f0572f86bd8e75c67eea1
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1.orig.tar.bz2' apr-util_1.6.1.orig.tar.bz2 428595 SHA512:40eff8a37c0634f7fdddd6ca5e596b38de15fd10767a34c30bbe49c632816e8f3e1e230678034f578dd5816a94f246fb5dfdf48d644829af13bf28de3225205d
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-5ubuntu4.22.04.1.debian.tar.xz' apr-util_1.6.1-5ubuntu4.22.04.1.debian.tar.xz 344520 SHA512:00e5698194f0e8dce93f096fd51362a3de2c3eb5353f185f1dc5dbafbb68d8e7cfed1efa1705dfa3eea39399c263cbc0bd55d3128405d996492bd348d2f2e2fd
-```
 
 ### `dpkg` source package: `apr=1.7.0-8ubuntu0.22.04.1`
 
@@ -120,21 +115,25 @@ $ apt-get source -qq --print-uris apr=1.7.0-8ubuntu0.22.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.7.0-8ubuntu0.22.04.1.debian.tar.xz' apr_1.7.0-8ubuntu0.22.04.1.debian.tar.xz 223956 SHA512:15e521cd85aec08044a4c7302e50808e0d0e52b4c388872c87b84e4a646a9dfc409f0ce625eec986643ed9dff248edd25c69aa44d3904a59faea55c495f485bf
 ```
 
-### `dpkg` source package: `apt=2.4.9`
+### `dpkg` source package: `apt=2.4.10`
 
 Binary Packages:
 
-- `apt=2.4.9`
-- `libapt-pkg6.0:amd64=2.4.9`
+- `apt=2.4.10`
+- `libapt-pkg6.0:amd64=2.4.10`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg6.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris apt=2.4.10
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.10.dsc' apt_2.4.10.dsc 2801 SHA512:5c28184020dbb9b8ff959120768c0c2616acd5923fa6be8a87c1025345e3e2beb982a6256849061e043c9a74522c40937e3c7477115ce8dbc79f715bf6f3ea17
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.10.tar.xz' apt_2.4.10.tar.xz 2318732 SHA512:1b9c12a44c205013c2d56af163c219a5c945f7a4c15373a2a07ec5d2d4130ef3bbd964f6986e22b55016b5481897356b968da9fdf84e538f8d81d7bcd70bd11d
+```
 
 ### `dpkg` source package: `attr=1:2.5.1-1build1`
 
@@ -1090,12 +1089,12 @@ $ apt-get source -qq --print-uris gdk-pixbuf=2.42.8+dfsg-1ubuntu0.2
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdk-pixbuf/gdk-pixbuf_2.42.8%2bdfsg-1ubuntu0.2.debian.tar.xz' gdk-pixbuf_2.42.8+dfsg-1ubuntu0.2.debian.tar.xz 22020 SHA512:b68c9b7681df8dddcda27741c0b883808c0fe9a0e8ed74e7061c6be3f157fcad627e6fa99ce056886babab53914aebf22c49d51924cb7978781f5277de3efdcd
 ```
 
-### `dpkg` source package: `git=1:2.34.1-1ubuntu1.9`
+### `dpkg` source package: `git=1:2.34.1-1ubuntu1.10`
 
 Binary Packages:
 
-- `git=1:2.34.1-1ubuntu1.9`
-- `git-man=1:2.34.1-1ubuntu1.9`
+- `git=1:2.34.1-1ubuntu1.10`
+- `git-man=1:2.34.1-1ubuntu1.10`
 
 Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/copyright`)
 
@@ -1120,10 +1119,10 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris git=1:2.34.1-1ubuntu1.9
-'http://security.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.9.dsc' git_2.34.1-1ubuntu1.9.dsc 2927 SHA512:7af902f1d57f6c62c8314ce2f3846490d0c16c4a39b626bc6226cfcd1ba1aebe2f01d075b9287237ceeb861b3ba0d8bc8dd3c638f663e3806489e04f989c2efc
-'http://security.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1.orig.tar.xz' git_2.34.1.orig.tar.xz 6623760 SHA512:a1a8e9e6f64b1da25508fbd2f783564dcdbe181fb5ff1ebab3bdac6db6094e18acc334479a1abf22ac17ce4f733cc3e10a664db9ab234cd523735a3f027b42db
-'http://security.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.9.debian.tar.xz' git_2.34.1-1ubuntu1.9.debian.tar.xz 757920 SHA512:3505621b8bd34a69bd4a3f9c1dce8d7621cb27909899635c20b5eed68397fa7f1df7cfc5a84e481242355e96d2d4d1d5e00eed5e74b21e3861f558f4772c0e30
+$ apt-get source -qq --print-uris git=1:2.34.1-1ubuntu1.10
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.10.dsc' git_2.34.1-1ubuntu1.10.dsc 2931 SHA512:d775d702896036a1c2fad945fb3c826cfb9d16e0dbaedaedbf5236866d6b238658280ac96f8cc70b69a26462c4f7333e4836b3e34b22936de9f2f8f637ec6b79
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1.orig.tar.xz' git_2.34.1.orig.tar.xz 6623760 SHA512:a1a8e9e6f64b1da25508fbd2f783564dcdbe181fb5ff1ebab3bdac6db6094e18acc334479a1abf22ac17ce4f733cc3e10a664db9ab234cd523735a3f027b42db
+'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.10.debian.tar.xz' git_2.34.1-1ubuntu1.10.debian.tar.xz 758892 SHA512:029b3f7756adab7d11abd53a935a06198f1947fefba2a768f9cbdf98b1a2b39e3dd5a17617afe2dbf1c4c7f3512b41825ebe0838ed8bbecb18b3bbe3962be338
 ```
 
 ### `dpkg` source package: `glib2.0=2.72.4-0ubuntu2.2`
@@ -2992,11 +2991,11 @@ $ apt-get source -qq --print-uris libzstd=1.4.8+dfsg-3build1
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.8%2bdfsg-3build1.debian.tar.xz' libzstd_1.4.8+dfsg-3build1.debian.tar.xz 12316 SHA512:8123965a6e73c5ddd8d535e78ed1074e2eabd7f8ed090d215a89feedffae9391cf472d2395242d3cb0351cbf76603448dae93ad70d0989806b42b03c65b22db0
 ```
 
-### `dpkg` source package: `linux=5.15.0-79.86`
+### `dpkg` source package: `linux=5.15.0-82.91`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.15.0-79.86`
+- `linux-libc-dev:amd64=5.15.0-82.91`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3832,12 +3831,12 @@ $ apt-get source -qq --print-uris pkg-config=0.29.2-1ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pkg-config/pkg-config_0.29.2-1ubuntu3.diff.gz' pkg-config_0.29.2-1ubuntu3.diff.gz 10134 SHA512:881ecd107c06f14b6e42a1c3e85a1233f9c92b0666dc5ad1a5fac21d4a64423dcff40c67bdff88311babde5465be82bd5eea8d863bce088468fdff828d8b98ab
 ```
 
-### `dpkg` source package: `postgresql-14=14.8-0ubuntu0.22.04.1`
+### `dpkg` source package: `postgresql-14=14.9-0ubuntu0.22.04.1`
 
 Binary Packages:
 
-- `libpq-dev=14.8-0ubuntu0.22.04.1`
-- `libpq5:amd64=14.8-0ubuntu0.22.04.1`
+- `libpq-dev=14.9-0ubuntu0.22.04.1`
+- `libpq5:amd64=14.9-0ubuntu0.22.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/libpq5/copyright`)
 
@@ -3857,9 +3856,14 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `nagaysau-ishii`
 - `rijndael`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris postgresql-14=14.9-0ubuntu0.22.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.9-0ubuntu0.22.04.1.dsc' postgresql-14_14.9-0ubuntu0.22.04.1.dsc 3857 SHA512:c9183143763d9c00a7810ef662a4c5610c651889cc9dc08ef836b906d736d29350f256114eb417aac8c958b8009b78ac32f3ba9dc113cdffb2dd36cbe634a560
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.9.orig.tar.gz' postgresql-14_14.9.orig.tar.gz 29143610 SHA512:b2a1d2978bfc255b337508ff6f6a63eb70e1f010e2786038aac8923cdf4e2bfafcd7ba6514271cd22e5f95238433718d1d0d2e19313f0647da88f6583da6dbb5
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-14/postgresql-14_14.9-0ubuntu0.22.04.1.debian.tar.xz' postgresql-14_14.9-0ubuntu0.22.04.1.debian.tar.xz 25548 SHA512:ce81ba235569235d1ed144bc22b5c87ff5b219dec8937da81a1453eef7c4d554bee1de932729583b34246f5f8f3ecce8058331fc616328491ff0a45c021f1bb4
+```
 
 ### `dpkg` source package: `procps=2:3.3.17-6ubuntu2`
 

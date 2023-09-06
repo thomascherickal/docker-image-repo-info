@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:71ad6024b68e422663a1c646150045aa8c2978a4fbc5f589970e5a60e2d05dfd`
-- Created: `2023-08-03T03:29:41.838792286Z`
-- Virtual Size: ~ 239.42 Mb  
+- Image ID: `sha256:8d2703be409206d1ee821eedf8f00c38df5d9e8c9dee6618340c11dc584c48d8`
+- Created: `2023-09-02T00:04:10.715931003Z`
+- Virtual Size: ~ 239.44 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -98,12 +98,12 @@ $ apt-get source -qq --print-uris apr=1.7.2-2
 'http://archive.ubuntu.com/ubuntu/pool/main/a/apr/apr_1.7.2-2.debian.tar.xz' apr_1.7.2-2.debian.tar.xz 53316 SHA512:abdb0623e45f77bae34a2ffba0cbefb46ad5b283a992e846d1800d22c2d183b3a2433ebb1366aa5eb2dd6356619cf4339da9409fde4ab6ce614a9d13bb71ccf3
 ```
 
-### `dpkg` source package: `apt=2.6.0`
+### `dpkg` source package: `apt=2.6.0ubuntu0.1`
 
 Binary Packages:
 
-- `apt=2.6.0`
-- `libapt-pkg6.0:amd64=2.6.0`
+- `apt=2.6.0ubuntu0.1`
+- `libapt-pkg6.0:amd64=2.6.0ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg6.0/copyright`)
 
@@ -115,9 +115,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris apt=2.6.0
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.6.0.dsc' apt_2.6.0.dsc 2933 SHA512:d511ab6fd46ebf49ce2958611e9bfcad0568680555e8973a397671b67e376fada0344118e0d3cb0df6d5d70207db9758169e9b2bf29cbc108a6221037397ddd3
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.6.0.tar.xz' apt_2.6.0.tar.xz 2328252 SHA512:44e35e6773f63bbfee8b5b2c405ffef218226d2af14f45a552eeefca1aea2192052c49a1c4d25a492e7222f243bec9301fcaec2f4cb530e7563791b5a30a749f
+$ apt-get source -qq --print-uris apt=2.6.0ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.6.0ubuntu0.1.dsc' apt_2.6.0ubuntu0.1.dsc 3064 SHA512:3d559a24311627e9355e22c39bac2a48efb66611a04b8b3c0605cad17546c5092141cef55e383cd4671e676b76db142844f92286c6cd8f23c7fbae4a663a52c8
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.6.0ubuntu0.1.tar.xz' apt_2.6.0ubuntu0.1.tar.xz 2329256 SHA512:b6b11d459fe89d438f3d79e448356409de53aa90974fe540ff57645f92aae73f1f6425db00d2552a1240bd5512e6b42c27af631c7de32a50956b24f2f79a0696
 ```
 
 ### `dpkg` source package: `attr=1:2.5.1-4`

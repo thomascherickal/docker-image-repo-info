@@ -1057,14 +1057,9 @@ Licenses: (parsed from: `/usr/share/doc/cpp-13/copyright`, `/usr/share/doc/g++-1
 - `GPL-3`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gcc-13=13.2.0-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13.2.0-2ubuntu1.dsc' gcc-13_13.2.0-2ubuntu1.dsc 27634 SHA512:6eda29e74acd93e46f0d08cf13d3bd0377a974e837e8da3adc4bce717c9a2eb909f2a6d0833c3171a78126ea52998a60d7e11381c01ba42dc4a3f22128a05200
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13.2.0.orig.tar.gz' gcc-13_13.2.0.orig.tar.gz 92596024 SHA512:cf149aff3cbee36bf23987e91016fa3f93dbcba8c88319876e6aa3cacd1dacea27d06ea7c4da6394a56d7d9d4f14ac928ead7d25502f0cc6db558f7f5cd99dff
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13.2.0-2ubuntu1.debian.tar.xz' gcc-13_13.2.0-2ubuntu1.debian.tar.xz 1533656 SHA512:cc402e93be20bfb8a47a93087ccbfd4c96a177367986b3ddc281e42554ae4c96a691cab9035c42d760511c3dfa44aed3c669b692ee13207b7e234df1d79f7b25
-```
 
 ### `dpkg` source package: `gcc-defaults=1.208ubuntu1`
 
@@ -1217,15 +1212,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `Unicode-DFS-2016`
 - `bzip2-1.0.6`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.77.2-1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.77.2-1.dsc' glib2.0_2.77.2-1.dsc 3600 SHA512:6ba183f93bd456d3a6f64f0139dd868b6fdb4e68d0c29e6ddaa24a2879098f961d7809e60fce91a5baf3912efb1e3a441f44dae09bb7d08db834c603f0f7cce3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.77.2.orig-unicode-data.tar.xz' glib2.0_2.77.2.orig-unicode-data.tar.xz 267604 SHA512:4aa46ef326af848500c44597bdf8e4e303c9f3697000a8fa943e1ded383ff5e0eca25b1ee5e102cf1215690eac5f41c74b7525334de630afcd1bfa2b0fae241f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.77.2.orig.tar.xz' glib2.0_2.77.2.orig.tar.xz 5317264 SHA512:0e2cf5178a7174b174480a795b1cbb2f1dbbea35899b7e4756937e426b6c39c20deb8488958403b78552674c4179e6fd63ea7fac2b746ac49a62046e27086111
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.77.2-1.debian.tar.xz' glib2.0_2.77.2-1.debian.tar.xz 117992 SHA512:b8a0f94d9c9ff28f2dbfdf8ef2cd8a6c11ec0ef24132b8af2543b9dd6f3b25dd9b6bf5b1c5f7db5a02a6e2f88c37693aaaadaff61a7060bd8b872dddea6f830d
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/glib2.0/2.77.2-1/
+
 
 ### `dpkg` source package: `glibc=2.38-1ubuntu3`
 
@@ -1242,15 +1235,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.38-1ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.38-1ubuntu3.dsc' glibc_2.38-1ubuntu3.dsc 9310 SHA512:99e3c76fa3e94f43e3e586bdeb71b144d166242a691bb12da607ffe70d9d2f12553be251f70da3b2f9c28171d198bfa982d337d72eab4d768d36c33a27301013
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.38.orig.tar.xz' glibc_2.38.orig.tar.xz 18913712 SHA512:a6dd5e42dcd63d58e2820c783522c8c895890b6e8c8e6c83b025553de0cc77cdf227e7044e431ead98c89c68a9ce4dd63509b47e647775fb2075f011849c1900
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.38.orig.tar.xz.asc' glibc_2.38.orig.tar.xz.asc 833 SHA512:32248467450f4530f8e84c03ea78d8293946e1b1def853eff9fb2cb51106e66cc3b024a254f3c2fabd2634f8192bd14e7df00c317f4230860d702c4d9ec7a01e
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.38-1ubuntu3.debian.tar.xz' glibc_2.38-1ubuntu3.debian.tar.xz 438072 SHA512:d00340ee13e2c4185159ce5c3d5d456e2d81458c8b1e0cb3ee25bd9b934c23928418e4148451972f39e8138f432b09616802806c82c8f0061dd539aff7c3ee3a
-```
 
 ### `dpkg` source package: `gmp=2:6.3.0+dfsg-2ubuntu4`
 
@@ -3357,14 +3344,13 @@ Licenses: (parsed from: `/usr/share/doc/libmpfr6/copyright`)
 - `GFDL-1.2`
 - `LGPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mpfr4=4.2.0-1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpfr4/mpfr4_4.2.0-1.dsc' mpfr4_4.2.0-1.dsc 1959 SHA512:37028f092546cdb981cea24df989508902bed3df8db43ef6e6ef12e95d5da34ab96ea5bed21238949eadb332b0ece995d738a1b39f72beaae5ddf6996b7b986d
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpfr4/mpfr4_4.2.0.orig.tar.xz' mpfr4_4.2.0.orig.tar.xz 1477532 SHA512:58e843125884ca58837ae5159cd4092af09e8f21931a2efd19c15de057c9d1dc0753ae95c592e2ce59a727fbc491af776db8b00a055320413cdcf2033b90505c
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mpfr4/mpfr4_4.2.0-1.debian.tar.xz' mpfr4_4.2.0-1.debian.tar.xz 12488 SHA512:6b5acd25cdf8d183e7c9d26af13811dd0cc07cedcda1d6956da45e42ac665beebee510e5428b30d96968e40df1afe94ad55d1eef6e710d0a59ab857655ab0f87
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/mpfr4/4.2.0-1/
+
 
 ### `dpkg` source package: `mysql-8.0=8.0.34-1ubuntu1`
 
