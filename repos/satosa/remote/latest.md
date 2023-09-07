@@ -1,7 +1,7 @@
 ## `satosa:latest`
 
 ```console
-$ docker pull satosa@sha256:adf46e40765a343d27d366a8cff9ba42dfa2dbbdca0fe7a94696649a60384996
+$ docker pull satosa@sha256:d0b505b0421938dec856c300aa0a265a380492ed154a6a76fe5212290c9b87dc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -332,21 +332,21 @@ CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ### `satosa:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull satosa@sha256:b3a8e902ca382a71bd619b9b13d952d72e889314efcd24d883bbb829531271c7
+$ docker pull satosa@sha256:9257cc07e1d5eefa9f43f1e4b62d474251039fb350a9d43b1472094edb25262d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **88.8 MB (88791835 bytes)**  
+-	Total Size: **88.8 MB (88791757 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:4a9c1d4154cbcd9da6bdacc616e99f4ba1b44d6a0b165e37e83fb1c7bc9c11b2`
+-	Image ID: `sha256:382f4288f62cf776e5894fdaea6e5a6de8b3349fec497013574b792ef4b3f68c`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["gunicorn","-b0.0.0.0:8080","satosa.wsgi:app"]`
 
 ```dockerfile
-# Tue, 15 Aug 2023 23:40:11 GMT
-ADD file:ea912fd82699af55c10b8136b5dc4b5ce9d08b8a01f9c06f6783d94dc430335a in / 
-# Tue, 15 Aug 2023 23:40:11 GMT
+# Thu, 07 Sep 2023 00:39:53 GMT
+ADD file:abd1ad48ae3ebec7a6ecc8ce3016c25be2afcbaedfcb904bc89b1ce59400aef0 in / 
+# Thu, 07 Sep 2023 00:39:54 GMT
 CMD ["bash"]
 # Fri, 25 Aug 2023 21:33:43 GMT
 ENV PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
@@ -374,64 +374,64 @@ ENV PYTHON_GET_PIP_SHA256=45a2bb8bf2bb5eff16fdd00faef6f29731831c7c59bd9fc2bf1f3b
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends wget; 		wget -O get-pip.py "$PYTHON_GET_PIP_URL"; 	echo "$PYTHON_GET_PIP_SHA256 *get-pip.py" | sha256sum -c -; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		export PYTHONDONTWRITEBYTECODE=1; 		python get-pip.py 		--disable-pip-version-check 		--no-cache-dir 		--no-compile 		"pip==$PYTHON_PIP_VERSION" 		"setuptools==$PYTHON_SETUPTOOLS_VERSION" 	; 	rm -f get-pip.py; 		pip --version # buildkit
 # Fri, 25 Aug 2023 21:33:43 GMT
 CMD ["python3"]
-# Sat, 26 Aug 2023 02:55:01 GMT
+# Thu, 07 Sep 2023 10:26:24 GMT
 RUN set -eux; 	groupadd -g 1000 satosa; 	useradd -m -g 1000 -u 1000 satosa; 	apt-get update; 	apt-get install -y --no-install-recommends 		jq 		libxml2-utils 		xmlsec1 	; 	rm -rf /var/lib/apt/lists/*; 	pip install --no-cache-dir 		yq 	;
-# Sat, 26 Aug 2023 02:55:01 GMT
+# Thu, 07 Sep 2023 10:26:24 GMT
 ENV SATOSA_VERSION=8.2.0
-# Sat, 26 Aug 2023 02:55:55 GMT
+# Thu, 07 Sep 2023 10:27:18 GMT
 RUN set -eux; 	savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		cargo 		dpkg-dev 		gcc 		gnupg dirmngr 		libbluetooth-dev 		libbz2-dev 		libc6-dev 		libexpat1-dev 		libffi-dev 		libgdbm-dev 		liblzma-dev 		libncursesw5-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		make 		python3-dev 		tk-dev 		uuid-dev 		wget 		xz-utils 		zlib1g-dev 	; 	pip install --no-cache-dir 		satosa==${SATOSA_VERSION} 	; 	apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 	mkdir /etc/satosa; 	chown -R satosa:satosa /etc/satosa
-# Sat, 26 Aug 2023 02:55:56 GMT
+# Thu, 07 Sep 2023 10:27:19 GMT
 RUN set -eux; 	python -c 'import urllib.request; urllib.request.urlretrieve("https://github.com/IdentityPython/SATOSA/archive/refs/tags/v'${SATOSA_VERSION%%[a-z]*}'.tar.gz","/tmp/satosa.tgz")'; 	mkdir /usr/share/satosa; 	tar --extract --directory /usr/share/satosa --strip-components=1 --file /tmp/satosa.tgz SATOSA-${SATOSA_VERSION%%[a-z]*}/example/; 	rm /tmp/satosa.tgz
-# Sat, 26 Aug 2023 02:55:56 GMT
+# Thu, 07 Sep 2023 10:27:19 GMT
 WORKDIR /etc/satosa
-# Sat, 26 Aug 2023 02:55:56 GMT
+# Thu, 07 Sep 2023 10:27:19 GMT
 COPY file:c55013587aaf85deb9d4e88a802c99946f6d607afbf641c34429da762c1aa229 in /usr/local/bin/ 
-# Sat, 26 Aug 2023 02:55:56 GMT
+# Thu, 07 Sep 2023 10:27:19 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Sat, 26 Aug 2023 02:55:56 GMT
+# Thu, 07 Sep 2023 10:27:20 GMT
 EXPOSE 8080
-# Sat, 26 Aug 2023 02:55:57 GMT
+# Thu, 07 Sep 2023 10:27:20 GMT
 USER satosa:satosa
-# Sat, 26 Aug 2023 02:55:57 GMT
+# Thu, 07 Sep 2023 10:27:20 GMT
 CMD ["gunicorn" "-b0.0.0.0:8080" "satosa.wsgi:app"]
 ```
 
 -	Layers:
-	-	`sha256:41f92d5a73b9bee296c7b4a3817b28098b22fb60112608b42bb03570ca296115`  
-		Last Modified: Tue, 15 Aug 2023 23:43:58 GMT  
-		Size: 30.1 MB (30062816 bytes)  
+	-	`sha256:f96ab15157043879c2ff23e0556e798eba6a6ff3d7fd5d1384de223bb9f66f1d`  
+		Last Modified: Thu, 07 Sep 2023 00:43:41 GMT  
+		Size: 30.1 MB (30062903 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:40589f858a36548f3a99431b7b0d983ba27e5350bd0a032910f956dc14bc77a3`  
-		Last Modified: Wed, 16 Aug 2023 09:02:45 GMT  
-		Size: 1.1 MB (1064374 bytes)  
+	-	`sha256:eb617592f14301c17bff6bc72b4b8252fd851f03a36f5e80b4a679e36e8126ec`  
+		Last Modified: Thu, 07 Sep 2023 05:32:59 GMT  
+		Size: 1.1 MB (1064336 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:47b59fac9b3672eb4d9f7689bf81eda054485c2f72164c650310bd1233a2661a`  
-		Last Modified: Sat, 26 Aug 2023 01:57:04 GMT  
-		Size: 12.1 MB (12050246 bytes)  
+	-	`sha256:c6b48fae698333cea09f7cc7c30372afbda9834e071824dbc75c9095a89053fe`  
+		Last Modified: Thu, 07 Sep 2023 05:33:40 GMT  
+		Size: 12.0 MB (12049870 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f7242a0721abd9aeb182e6430c5c8e6a7fa0a5620796d6ab972f4b0cba38a3c7`  
-		Last Modified: Sat, 26 Aug 2023 01:57:02 GMT  
-		Size: 247.0 B  
+	-	`sha256:089aae753786528570d28b073184defbf2ae12b300f2edae2dd6c4e38b16f2a0`  
+		Last Modified: Thu, 07 Sep 2023 05:33:38 GMT  
+		Size: 242.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65decd37240bb2ff92e1bf6f0dfc7acab6331ffca54b6f02209bdb7659bcd28c`  
-		Last Modified: Sat, 26 Aug 2023 01:57:03 GMT  
-		Size: 3.4 MB (3402894 bytes)  
+	-	`sha256:32233c93bb41bd5b5d3921b41f98f89e772f36bb683b86dde4e398ee44782684`  
+		Last Modified: Thu, 07 Sep 2023 05:33:39 GMT  
+		Size: 3.4 MB (3402879 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:82a86e46eee8860c1c1079a923da34bb5cfcb62a61c51001ff4a84fcbe8bfdab`  
-		Last Modified: Sat, 26 Aug 2023 02:56:17 GMT  
-		Size: 21.1 MB (21070682 bytes)  
+	-	`sha256:f758b9f4ca256d070952aa31686312aa1ac6eafd43131486e6888f88f0c3c997`  
+		Last Modified: Thu, 07 Sep 2023 10:27:41 GMT  
+		Size: 21.1 MB (21070710 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7f3a70c86b82d64ae45fd7273b4a61eff14da6e42cdeb8ebff96409de8afa973`  
-		Last Modified: Sat, 26 Aug 2023 02:56:18 GMT  
-		Size: 21.1 MB (21128944 bytes)  
+	-	`sha256:41368de6f26ef5ac83ba20a5a1528f1e31c263ffacae3bf74b4dc88db27d153e`  
+		Last Modified: Thu, 07 Sep 2023 10:27:41 GMT  
+		Size: 21.1 MB (21129189 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8208cfedecd7f90ad25d5de95332e915348f26ba4d60ed7e3477b204d367e2a1`  
-		Last Modified: Sat, 26 Aug 2023 02:56:15 GMT  
-		Size: 9.5 KB (9489 bytes)  
+	-	`sha256:6c08459b5d243bb01be3d7a6186606f6b26a695064120551f863652bcdc607eb`  
+		Last Modified: Thu, 07 Sep 2023 10:27:38 GMT  
+		Size: 9.5 KB (9487 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cca236326570add701ceebddb3af4bcc7a9d8f75551443967b0c57121a0a2e2e`  
-		Last Modified: Sat, 26 Aug 2023 02:56:15 GMT  
-		Size: 2.1 KB (2143 bytes)  
+	-	`sha256:606beff56bac97499880e7d450f7fb5ac3f4cc3b3e77e7b67ce66c4a19251a01`  
+		Last Modified: Thu, 07 Sep 2023 10:27:38 GMT  
+		Size: 2.1 KB (2141 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `satosa:latest` - linux; 386
