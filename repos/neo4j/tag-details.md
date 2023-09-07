@@ -356,15 +356,30 @@ CMD ["neo4j"]
 
 ## `neo4j:4.1.13`
 
-**does not exist** (yet?)
+```console
+$ docker pull neo4j@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `neo4j:4.1.13-community`
 
-**does not exist** (yet?)
+```console
+$ docker pull neo4j@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `neo4j:4.1.13-enterprise`
 
-**does not exist** (yet?)
+```console
+$ docker pull neo4j@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `neo4j:4.4`
 
