@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f8f4d071d0c73484eb18bf2923554367e3c55bfb074b8d0684e5cb06596b7292`
-- Created: `2023-08-17T22:23:16.473075387Z`
+- Image ID: `sha256:235ae9af9eaf9fc97000e045c3d4149f38ba1929d17b9ad8c2c4cebd7dbc5ef9`
+- Created: `2023-09-07T03:48:54.711765947Z`
 - Virtual Size: ~ 3.61 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -4117,11 +4117,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/openldap/2.4.47+dfsg-3+deb10u7/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/openldap/2.4.47+dfsg-3+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `openssh=1:7.9p1-10+deb10u2`
+### `dpkg` source package: `openssh=1:7.9p1-10+deb10u3`
 
 Binary Packages:
 
-- `openssh-client=1:7.9p1-10+deb10u2`
+- `openssh-client=1:7.9p1-10+deb10u3`
 
 Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 
@@ -4137,18 +4137,18 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris openssh=1:7.9p1-10+deb10u2
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_7.9p1-10%2bdeb10u2.dsc' openssh_7.9p1-10+deb10u2.dsc 3321 SHA256:bb8384534491eb1edba6c12a2d4f289e59abb4ec4795101d9655fae52e426dec
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_7.9p1.orig.tar.gz' openssh_7.9p1.orig.tar.gz 1565384 SHA256:6b4b3ba2253d84ed3771c8050728d597c91cfce898713beb7b64a305b6f11aad
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_7.9p1.orig.tar.gz.asc' openssh_7.9p1.orig.tar.gz.asc 683 SHA256:4fd584498595450d68f5514b3d79eb14425a3d6aa9e9021d9e928fdd7b4469eb
-'http://deb.debian.org/debian/pool/main/o/openssh/openssh_7.9p1-10%2bdeb10u2.debian.tar.xz' openssh_7.9p1-10+deb10u2.debian.tar.xz 174016 SHA256:2f8d81757e3050aab4ab735692c1b2d521cee54ec3987ef3b08fbaff84abf3c1
+$ apt-get source -qq --print-uris openssh=1:7.9p1-10+deb10u3
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssh/openssh_7.9p1-10%2bdeb10u3.dsc' openssh_7.9p1-10+deb10u3.dsc 3226 SHA256:d76e7b22b887f7f2505ac4b7d37affeda4e9427ea8293caaf6d8254e21651ccf
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssh/openssh_7.9p1.orig.tar.gz' openssh_7.9p1.orig.tar.gz 1565384 SHA256:6b4b3ba2253d84ed3771c8050728d597c91cfce898713beb7b64a305b6f11aad
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssh/openssh_7.9p1.orig.tar.gz.asc' openssh_7.9p1.orig.tar.gz.asc 683 SHA256:4fd584498595450d68f5514b3d79eb14425a3d6aa9e9021d9e928fdd7b4469eb
+'http://deb.debian.org/debian-security/pool/updates/main/o/openssh/openssh_7.9p1-10%2bdeb10u3.debian.tar.xz' openssh_7.9p1-10+deb10u3.debian.tar.xz 175660 SHA256:81f45c86ca3c83e9751cdbaad0dc526027cc17fb76dfc5d86501c57bd253f39a
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/openssh/1:7.9p1-10+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/openssh/1:7.9p1-10+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssh/1:7.9p1-10+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/openssh/1:7.9p1-10+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/openssh/1:7.9p1-10+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/openssh/1:7.9p1-10+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openssl=1.1.1n-0+deb10u6`
 
