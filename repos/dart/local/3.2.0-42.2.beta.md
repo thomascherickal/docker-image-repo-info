@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:118c228dbc71ba4684e54a4a9496262d50f00e1db0085f0fda03935be9698788`
-- Created: `2023-09-01T19:23:04.807643673Z`
+- Image ID: `sha256:fcc8cfa0f51038c89bf08e4ff5ade6cd9efb3d4e45759a5e4b8a8bc76ac58152`
+- Created: `2023-09-07T03:44:56.802432957Z`
 - Virtual Size: ~ 803.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1136,11 +1136,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/init-system-helpers/1.60/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/init-system-helpers/1.60/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `json-c=0.15-2`
+### `dpkg` source package: `json-c=0.15-2+deb11u1`
 
 Binary Packages:
 
-- `libjson-c5:amd64=0.15-2`
+- `libjson-c5:amd64=0.15-2+deb11u1`
 
 Licenses: (parsed from: `/usr/share/doc/libjson-c5/copyright`)
 
@@ -1149,17 +1149,17 @@ Licenses: (parsed from: `/usr/share/doc/libjson-c5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris json-c=0.15-2
-'http://deb.debian.org/debian/pool/main/j/json-c/json-c_0.15-2.dsc' json-c_0.15-2.dsc 2084 SHA256:f16458d0da837e811ebd854182f1d606e95525a362da1da7f99e6a887a571b5f
-'http://deb.debian.org/debian/pool/main/j/json-c/json-c_0.15.orig.tar.gz' json-c_0.15.orig.tar.gz 348261 SHA256:4ba9a090a42cf1e12b84c64e4464bb6fb893666841d5843cc5bef90774028882
-'http://deb.debian.org/debian/pool/main/j/json-c/json-c_0.15-2.debian.tar.xz' json-c_0.15-2.debian.tar.xz 11140 SHA256:f1282bb4894df30e4061ae7bad88afb6351d62e06f10b0b070603a8107fffde4
+$ apt-get source -qq --print-uris json-c=0.15-2+deb11u1
+'http://deb.debian.org/debian-security/pool/updates/main/j/json-c/json-c_0.15-2%2bdeb11u1.dsc' json-c_0.15-2+deb11u1.dsc 2116 SHA256:420ea8efc3721bcc8e94e6e70dd3c67a7cc84b44c398ada46a9d22c475f9d7be
+'http://deb.debian.org/debian-security/pool/updates/main/j/json-c/json-c_0.15.orig.tar.gz' json-c_0.15.orig.tar.gz 348261 SHA256:4ba9a090a42cf1e12b84c64e4464bb6fb893666841d5843cc5bef90774028882
+'http://deb.debian.org/debian-security/pool/updates/main/j/json-c/json-c_0.15-2%2bdeb11u1.debian.tar.xz' json-c_0.15-2+deb11u1.debian.tar.xz 11588 SHA256:6510a2f2e8d90e253e6fad4e3dc98da0112224f87179cb4509f1aa68884f7b2b
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/json-c/0.15-2/ (for browsing the source)
-- https://sources.debian.net/src/json-c/0.15-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/json-c/0.15-2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/json-c/0.15-2+deb11u1/ (for browsing the source)
+- https://sources.debian.net/src/json-c/0.15-2+deb11u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/json-c/0.15-2+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `keyutils=1.6.1-2`
 
