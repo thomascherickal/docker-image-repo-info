@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:72b3ecec1e088feaa282987d1ecc7e89e990c52e095ca4b4c7e75a1ccfc9c206`
-- Created: `2023-08-16T10:50:37.379551246Z`
-- Virtual Size: ~ 990.50 Mb  
+- Image ID: `sha256:e7aea0194f377782c44a3da20357d29ab47f613314f74f53da957fc11239f3ce`
+- Created: `2023-09-07T07:37:30.936328026Z`
+- Virtual Size: ~ 990.44 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["perl5.38.0","-de0"]`
@@ -3147,14 +3147,14 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libpthread-stubs/0.4-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libpthread-stubs/0.4-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `librsvg=2.54.5+dfsg-1`
+### `dpkg` source package: `librsvg=2.54.7+dfsg-1~deb12u1`
 
 Binary Packages:
 
-- `gir1.2-rsvg-2.0:amd64=2.54.5+dfsg-1`
-- `librsvg2-2:amd64=2.54.5+dfsg-1`
-- `librsvg2-common:amd64=2.54.5+dfsg-1`
-- `librsvg2-dev:amd64=2.54.5+dfsg-1`
+- `gir1.2-rsvg-2.0:amd64=2.54.7+dfsg-1~deb12u1`
+- `librsvg2-2:amd64=2.54.7+dfsg-1~deb12u1`
+- `librsvg2-common:amd64=2.54.7+dfsg-1~deb12u1`
+- `librsvg2-dev:amd64=2.54.7+dfsg-1~deb12u1`
 
 Licenses: (parsed from: `/usr/share/doc/gir1.2-rsvg-2.0/copyright`, `/usr/share/doc/librsvg2-2/copyright`, `/usr/share/doc/librsvg2-common/copyright`, `/usr/share/doc/librsvg2-dev/copyright`)
 
@@ -3187,17 +3187,17 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-rsvg-2.0/copyright`, `/usr/share/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris librsvg=2.54.5+dfsg-1
-'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.54.5%2bdfsg-1.dsc' librsvg_2.54.5+dfsg-1.dsc 2879 SHA256:c6df68819c4af8b1a0418b7fcb156915b3210bdc774ac9fbb5b80722a33857f0
-'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.54.5%2bdfsg.orig.tar.xz' librsvg_2.54.5+dfsg.orig.tar.xz 14613132 SHA256:a65888ab1cfddfbab04433a28fba140a7e66411d8735d9c240e7c2427b26ac4b
-'http://deb.debian.org/debian/pool/main/libr/librsvg/librsvg_2.54.5%2bdfsg-1.debian.tar.xz' librsvg_2.54.5+dfsg-1.debian.tar.xz 34372 SHA256:1a15c41db98789dcff2e0d0153fa69e21965d35ce4525775658e69cbc2f5d962
+$ apt-get source -qq --print-uris librsvg=2.54.7+dfsg-1~deb12u1
+'http://deb.debian.org/debian-security/pool/updates/main/libr/librsvg/librsvg_2.54.7%2bdfsg-1%7edeb12u1.dsc' librsvg_2.54.7+dfsg-1~deb12u1.dsc 2997 SHA256:87925d4b6f5f1a8b5fc8e069d69322d4ac70694408490091c05737b97ba938ca
+'http://deb.debian.org/debian-security/pool/updates/main/libr/librsvg/librsvg_2.54.7%2bdfsg.orig.tar.xz' librsvg_2.54.7+dfsg.orig.tar.xz 14342756 SHA256:799f93b73ed24c03efda1c707d8c40630fdee18c7e7532dda4ad1ce9671e98c2
+'http://deb.debian.org/debian-security/pool/updates/main/libr/librsvg/librsvg_2.54.7%2bdfsg-1%7edeb12u1.debian.tar.xz' librsvg_2.54.7+dfsg-1~deb12u1.debian.tar.xz 35052 SHA256:ce0db15bd6a2633fbfcfacce894a81ad5c0056628ad176f00ddaa648d462e5fb
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/librsvg/2.54.5+dfsg-1/ (for browsing the source)
-- https://sources.debian.net/src/librsvg/2.54.5+dfsg-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/librsvg/2.54.5+dfsg-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/librsvg/2.54.7+dfsg-1~deb12u1/ (for browsing the source)
+- https://sources.debian.net/src/librsvg/2.54.7+dfsg-1~deb12u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/librsvg/2.54.7+dfsg-1~deb12u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libseccomp=2.5.4-1`
 
