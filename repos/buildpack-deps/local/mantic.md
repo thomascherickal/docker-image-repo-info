@@ -329,14 +329,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.41-4ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.41-4ubuntu1.dsc' binutils_2.41-4ubuntu1.dsc 9687 SHA512:4a9d5d9ad640ca8274af1031aa4f5c1269b577be27e9630623a24d5ca18a16f6e713b8ead18601d56ccb9daaa070f570c1b9a5ae9d4efbfd5ac238575d558741
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.41.orig.tar.xz' binutils_2.41.orig.tar.xz 26765692 SHA512:5df45d0bd6ddabdce4f35878c041e46a92deef01e7dea5facc97fd65cc06b59abc6fba0eb454b68e571c7e14038dc823fe7f2263843e6e627b7444eaf0fe9374
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.41-4ubuntu1.debian.tar.xz' binutils_2.41-4ubuntu1.debian.tar.xz 141764 SHA512:2b926bc2818a9d5f4de6f19d35a86b73b929a45b72d187aa9109dcff9678fbbc1ef5d539db9df8501ba634836a4803750378a787282ae428daaacd474751a1b4
-```
 
 ### `dpkg` source package: `brotli=1.0.9-2build8`
 
@@ -4427,15 +4422,9 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 - `ICU`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2023c-7ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2023c-7ubuntu1.dsc' tzdata_2023c-7ubuntu1.dsc 2675 SHA512:11cfcc8a9a63d172082291316bc2baa8a2c72e5350515797bcf36780f3b2f2dc5bf70f78a35b0060169ff9a3f17d7eb2cbb4be704229fa897b3eaab4067f9df7
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz' tzdata_2023c.orig.tar.gz 443902 SHA512:608bd286ebcbd0004cfdc1da183273f08aff61f90c8867661154453d77a05d421e4c46ad6d066a1fe2e87d5c82ec0f1c0224667a3b35f3180a3eb7f6ff84cbf5
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz.asc' tzdata_2023c.orig.tar.gz.asc 833 SHA512:15da6e01a12a0390f736fe5bacf27595c8f7080a4b27eccfae7f244bc38d5839e7d25622e325f874db17f9e723777e9cfe0f460fbd595b66772f1642dd603b6b
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tzdata/tzdata_2023c-7ubuntu1.debian.tar.xz' tzdata_2023c-7ubuntu1.debian.tar.xz 181596 SHA512:0fa2cc8fe94ba6af0f4be98a8a74cb7eb0167f38619e00f9a9ad5a5444170dffe61cad024e3ae6368b32cfa806ecc8accb7312d50f7f82a46f851abcce9d8b06
-```
 
 ### `dpkg` source package: `ubuntu-keyring=2021.03.26`
 
