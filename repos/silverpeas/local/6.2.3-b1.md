@@ -829,15 +829,9 @@ Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`)
 - `FSFUL`
 - `Zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cups=2.3.1-9ubuntu1.4
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1-9ubuntu1.4.dsc' cups_2.3.1-9ubuntu1.4.dsc 3415 SHA512:2051b281fc16d6d42fd4876302368c721d7aebeea455d1e9faa6a9c675a45443b14a8116dc2f0d7bf6a259cf7782b95712193f2f51e49d9ba806051bd2eaad28
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1.orig.tar.gz' cups_2.3.1.orig.tar.gz 8135891 SHA512:e3f3ad9e78c1c723d46cc2276957ac67495483882f639421203d9dad227eacbb1259717a92489e710995fdc89e2d575202e4b43117aff08ff1230dcf06674376
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1.orig.tar.gz.asc' cups_2.3.1.orig.tar.gz.asc 858 SHA512:a9770f3346229c687b6ec1a5b42231e68ec547339f7d5b29467014d13a2706daf6f5aa9cdc0dd24efd386bdf966890e927cbab61d7a461612f075127c24a2b28
-'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1-9ubuntu1.4.debian.tar.xz' cups_2.3.1-9ubuntu1.4.debian.tar.xz 358932 SHA512:21c31d3b13b20b43964ab4cab182e6037f86957bae04e6b683f9bd36bf208ac3be67bac41702c57a8e24c815200abb062189286cb3db8ed0ef5c24bf4f00ed53
-```
 
 ### `dpkg` source package: `curl=7.68.0-1ubuntu2.19`
 
@@ -1395,14 +1389,9 @@ Licenses: (parsed from: `/usr/share/doc/libflac8/copyright`)
 - `LGPL-2.1+`
 - `Public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris flac=1.3.3-1ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/f/flac/flac_1.3.3-1ubuntu0.1.dsc' flac_1.3.3-1ubuntu0.1.dsc 2059 SHA512:5b1bf439858a0877e473b13c18dd4d21d3914355cb989ee8aa8d0f8b971d3e08ef30493b526997d44cd097857f0cdd99d0fba3a1e3a1c2730934624805ce9f38
-'http://archive.ubuntu.com/ubuntu/pool/main/f/flac/flac_1.3.3.orig.tar.xz' flac_1.3.3.orig.tar.xz 1044472 SHA512:d6417e14fab0c41b2df369e5e39ce62a5f588e491af4d465b0162f74e171e5549b2f061867f344bfbf8aaccd246bf5f2acd697e532a2c7901c920c69429b1a28
-'http://archive.ubuntu.com/ubuntu/pool/main/f/flac/flac_1.3.3-1ubuntu0.1.debian.tar.xz' flac_1.3.3-1ubuntu0.1.debian.tar.xz 18140 SHA512:c5095711cfde39b88b9acfd80cbf215e8b582c7db8f3654b09594b3fc723d16d4c8fd29e4773d8267b30ebdd9fc4af73c993c0cc0e3f64b27c8db1321e695a42
-```
 
 ### `dpkg` source package: `flite=2.1-release-3`
 
