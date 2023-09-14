@@ -1,7 +1,7 @@
 ## `spark:scala`
 
 ```console
-$ docker pull spark@sha256:1b9f0964d864d778278b16d89128855ac3fa467b432cc6701b2d566807941049
+$ docker pull spark@sha256:61c3c13b5a164f687d67322bc2d2900077a867062f178c98f52d92fbd3c384af
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull spark@sha256:1b9f0964d864d778278b16d89128855ac3fa467b432cc6701b2d5
 ### `spark:scala` - linux; amd64
 
 ```console
-$ docker pull spark@sha256:c0b29efd117a40847cfb83bc975b0c4de77432dccfb43967ba5e9fc4e19bcbef
+$ docker pull spark@sha256:9f652132023834d16736ff274e7b42f52e3d6ae1d0b951030b9e958b423b4c7a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **434.0 MB (433969605 bytes)**  
+-	Total Size: **440.5 MB (440511218 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a959b5d4573e88a33f47f0789d723229de6a78a49b4e8cf2077e205c34def9c0`
+-	Image ID: `sha256:ea680aee700367fbf8b7e4640a508b7d8cf339f484459e87e8f1ba8e49c14fe4`
 -	Entrypoint: `["\/opt\/entrypoint.sh"]`
 
 ```dockerfile
@@ -61,20 +61,20 @@ RUN groupadd --system --gid=${spark_uid} spark &&     useradd --system --uid=${s
 # Thu, 31 Aug 2023 21:03:49 GMT
 # ARGS: spark_uid=185
 RUN set -ex;     apt-get update;     apt-get install -y gnupg2 wget bash tini libc6 libpam-modules krb5-user libnss3 procps net-tools gosu libnss-wrapper;     mkdir -p /opt/spark;     mkdir /opt/spark/python;     mkdir -p /opt/spark/examples;     mkdir -p /opt/spark/work-dir;     chmod g+w /opt/spark/work-dir;     touch /opt/spark/RELEASE;     chown -R spark:spark /opt/spark;     echo "auth required pam_wheel.so use_uid" >> /etc/pam.d/su;     rm -rf /var/lib/apt/lists/*
-# Thu, 31 Aug 2023 21:03:49 GMT
-ENV SPARK_TGZ_URL=https://archive.apache.org/dist/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz SPARK_TGZ_ASC_URL=https://archive.apache.org/dist/spark/spark-3.4.1/spark-3.4.1-bin-hadoop3.tgz.asc GPG_KEY=F28C9C925C188C35E345614DEDA00CE834F0FC5C
-# Thu, 31 Aug 2023 21:04:46 GMT
+# Thu, 14 Sep 2023 21:24:57 GMT
+ENV SPARK_TGZ_URL=https://archive.apache.org/dist/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz SPARK_TGZ_ASC_URL=https://archive.apache.org/dist/spark/spark-3.5.0/spark-3.5.0-bin-hadoop3.tgz.asc GPG_KEY=FC3AE3A7EAA1BAC98770840E7E1ABCC53AAA2216
+# Thu, 14 Sep 2023 21:25:53 GMT
 # ARGS: spark_uid=185
 RUN set -ex;     export SPARK_TMP="$(mktemp -d)";     cd $SPARK_TMP;     wget -nv -O spark.tgz "$SPARK_TGZ_URL";     wget -nv -O spark.tgz.asc "$SPARK_TGZ_ASC_URL";     export GNUPGHOME="$(mktemp -d)";     gpg --batch --keyserver hkps://keys.openpgp.org --recv-key "$GPG_KEY" ||     gpg --batch --keyserver hkps://keyserver.ubuntu.com --recv-keys "$GPG_KEY";     gpg --batch --verify spark.tgz.asc spark.tgz;     gpgconf --kill all;     rm -rf "$GNUPGHOME" spark.tgz.asc;         tar -xf spark.tgz --strip-components=1;     chown -R spark:spark .;     mv jars /opt/spark/;     mv bin /opt/spark/;     mv sbin /opt/spark/;     mv kubernetes/dockerfiles/spark/decom.sh /opt/;     mv examples /opt/spark/;     mv kubernetes/tests /opt/spark/;     mv data /opt/spark/;     mv python/pyspark /opt/spark/python/pyspark/;     mv python/lib /opt/spark/python/lib/;     mv R /opt/spark/;     chmod a+x /opt/decom.sh;     cd ..;     rm -rf "$SPARK_TMP";
-# Thu, 31 Aug 2023 21:04:46 GMT
-COPY file:01f69f91109a74812cb83cbe729877b82d879c4c4634d429eef0305a59878741 in /opt/ 
-# Thu, 31 Aug 2023 21:04:46 GMT
+# Thu, 14 Sep 2023 21:25:54 GMT
+COPY file:b1ecb91165fbd66c0d3cfad8d169bf4914b1cf964de586096e80f8b5ca8b3b12 in /opt/ 
+# Thu, 14 Sep 2023 21:25:54 GMT
 ENV SPARK_HOME=/opt/spark
-# Thu, 31 Aug 2023 21:04:47 GMT
+# Thu, 14 Sep 2023 21:25:54 GMT
 WORKDIR /opt/spark/work-dir
-# Thu, 31 Aug 2023 21:04:47 GMT
+# Thu, 14 Sep 2023 21:25:54 GMT
 USER spark
-# Thu, 31 Aug 2023 21:04:47 GMT
+# Thu, 14 Sep 2023 21:25:54 GMT
 ENTRYPOINT ["/opt/entrypoint.sh"]
 ```
 
@@ -107,13 +107,13 @@ ENTRYPOINT ["/opt/entrypoint.sh"]
 		Last Modified: Thu, 31 Aug 2023 21:09:09 GMT  
 		Size: 23.7 MB (23715356 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0678fe53bb7df877853b282be734800f44012a1cb7ad285adaf8fd4e021caf81`  
-		Last Modified: Thu, 31 Aug 2023 21:09:20 GMT  
-		Size: 317.9 MB (317886733 bytes)  
+	-	`sha256:1e69c8fe72288ad711c29996795a099bd994a79bddf3bc82d3659138c7612b92`  
+		Last Modified: Thu, 14 Sep 2023 21:31:10 GMT  
+		Size: 324.4 MB (324428291 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a9a267eac7589096faaa943f01a985d95ea98e1d76f4893c6d84393bbd80e799`  
-		Last Modified: Thu, 31 Aug 2023 21:09:06 GMT  
-		Size: 2.1 KB (2083 bytes)  
+	-	`sha256:0e9858e9952cb00193ce9577ed73c0b0382b8cd48625fd874de3a5751baf9aa1`  
+		Last Modified: Thu, 14 Sep 2023 21:30:56 GMT  
+		Size: 2.1 KB (2138 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `spark:scala` - linux; arm64 variant v8
