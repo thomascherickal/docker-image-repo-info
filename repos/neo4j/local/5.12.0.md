@@ -1,10 +1,10 @@
-# `neo4j:5.11.0-community-bullseye`
+# `neo4j:5.12.0-community-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:e03a2a7d1b29db40ef1f6b3fe064339dda6b7d21001e0ac7a2a181dbf201c77a`
-- Created: `2023-09-07T02:04:03.133773654Z`
-- Virtual Size: ~ 495.39 Mb  
+- Image ID: `sha256:9f63c85a7b03e25228be9f24de1030063761e345233193a453837937a5397aab`
+- Created: `2023-09-14T21:20:23.908388572Z`
+- Virtual Size: ~ 494.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","-g","--","/startup/docker-entrypoint.sh"]`
@@ -12,8 +12,8 @@
 - Environment:
   - `PATH=/var/lib/neo4j/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/opt/java/openjdk`
-  - `NEO4J_SHA256=3a206271d01ff337ab64e99a9ea90b17733416ec17c093b5be7bfb9342b0dacd`
-  - `NEO4J_TARBALL=neo4j-community-5.11.0-unix.tar.gz`
+  - `NEO4J_SHA256=adf9e7915f5c10dfa4daf9eab79852660887eac3c3e165741fce48415c0b6f34`
+  - `NEO4J_TARBALL=neo4j-community-5.12.0-unix.tar.gz`
   - `NEO4J_EDITION=community`
   - `NEO4J_HOME=/var/lib/neo4j`
 
