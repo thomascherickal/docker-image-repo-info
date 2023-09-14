@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b832460992214ed4c44f90bef18ac182d4bdc8ed1977721cfac5b3bf80b701fe`
-- Created: `2023-08-31T20:22:48.022428656Z`
-- Virtual Size: ~ 436.88 Mb  
+- Image ID: `sha256:cf9588b13f534625053b1969609d03457a541cafabd910c5d461f1bd1ed537e0`
+- Created: `2023-09-13T00:13:08.226267113Z`
+- Virtual Size: ~ 436.94 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/__cacert_entrypoint.sh"]`
@@ -19,7 +19,7 @@
   - `JAVA_VERSION=jdk-11.0.20.1+1`
 - Labels:
   - `architecture=x86_64`
-  - `build-date=2023-07-26T14:47:44`
+  - `build-date=2023-09-05T09:00:56`
   - `com.redhat.component=ubi9-minimal-container`
   - `com.redhat.license_terms=https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI`
   - `description=The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.`
@@ -31,9 +31,9 @@
   - `io.openshift.tags=minimal rhel9`
   - `maintainer=Red Hat, Inc.`
   - `name=ubi9-minimal`
-  - `release=717`
+  - `release=750`
   - `summary=Provides the latest release of the minimal Red Hat Universal Base Image 9.`
-  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.2-717`
+  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.2-750`
   - `vcs-ref=7ef59505f75bf0c11c8d3addefebee5ceaaf4c41`
   - `vcs-type=git`
   - `vendor=Red Hat, Inc.`
@@ -89,7 +89,7 @@ Licenses (from `rpm --query`): BSD
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `ca-certificates-2022.2.54-90.2.el9_0.noarch`
+### `rpm` package: `ca-certificates-2023.2.60_v7.0.306-90.1.el9_2.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
@@ -113,7 +113,7 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `crypto-policies-20221215-1.git9a18988.el9.noarch`
+### `rpm` package: `crypto-policies-20221215-1.git9a18988.el9_2.1.noarch`
 
 Licenses (from `rpm --query`): LGPLv2+
 
@@ -131,7 +131,7 @@ Licenses (from `rpm --query`): BSD with advertising
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `dbus-1.12.20-7.el9_1.x86_64`
+### `rpm` package: `dbus-1.12.20-7.el9_2.1.x86_64`
 
 Licenses (from `rpm --query`): (GPLv2+ or AFL) and GPLv2+
 
@@ -143,7 +143,7 @@ Licenses (from `rpm --query`): ASL 2.0
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `dbus-common-1.12.20-7.el9_1.noarch`
+### `rpm` package: `dbus-common-1.12.20-7.el9_2.1.noarch`
 
 Licenses (from `rpm --query`): (GPLv2+ or AFL) and GPLv2+
 
@@ -275,7 +275,7 @@ Licenses (from `rpm --query`): GPLv3+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `gnutls-3.7.6-20.el9_2.x86_64`
+### `rpm` package: `gnutls-3.7.6-21.el9_2.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+ and LGPLv2+
 
@@ -413,7 +413,7 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libcap-2.48-8.el9.x86_64`
+### `rpm` package: `libcap-2.48-9.el9_2.x86_64`
 
 Licenses (from `rpm --query`): BSD or GPLv2
 
