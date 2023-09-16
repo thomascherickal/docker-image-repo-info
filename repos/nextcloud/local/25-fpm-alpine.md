@@ -1,10 +1,10 @@
-# `nextcloud:25.0.10-fpm-alpine`
+# `nextcloud:25.0.11-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d56ac4db4fcc266a9b93eafa6b3eed04b3942cf9c524dddd8e2b66a6ace410b7`
-- Created: `2023-09-02T11:01:51.187599881Z`
-- Virtual Size: ~ 713.07 Mb  
+- Image ID: `sha256:f51eff89ced6fd3b49ec41bbf8923a45d2e7186b52c24528ab749f9639af27b7`
+- Created: `2023-09-15T01:03:09.693879915Z`
+- Virtual Size: ~ 728.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -23,7 +23,7 @@
   - `PHP_SHA256=fc48422fa7e75bb45916fc192a9f9728cb38bb2b5858572c51ea15825326360c`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
-  - `NEXTCLOUD_VERSION=25.0.10`
+  - `NEXTCLOUD_VERSION=25.0.11`
 
 ## `apk` (`.apk`-based packages)
 
@@ -1084,16 +1084,16 @@ GPL-2.0-or-later OR LGPL-3.0-or-later
 ### `apk` package: `libwebp`
 
 ```console
-libwebp-1.2.3-r1 description:
+libwebp-1.2.3-r2 description:
 Libraries for working with WebP images
 
-libwebp-1.2.3-r1 webpage:
+libwebp-1.2.3-r2 webpage:
 https://developers.google.com/speed/webp
 
-libwebp-1.2.3-r1 installed size:
+libwebp-1.2.3-r2 installed size:
 584 KiB
 
-libwebp-1.2.3-r1 license:
+libwebp-1.2.3-r2 license:
 BSD-3-Clause
 
 ```

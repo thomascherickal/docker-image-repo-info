@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:44cf3957ec413f1c593f5100f764341e32c7761b7cb3097c79e4bcf362994920`
-- Created: `2023-09-02T11:16:57.030961513Z`
-- Virtual Size: ~ 749.57 Mb  
+- Image ID: `sha256:72248454f352cc016b03e4dc492dbf696e90d5d1947f366ead27c1330c14e20d`
+- Created: `2023-09-15T01:18:10.725391058Z`
+- Virtual Size: ~ 751.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -1203,16 +1203,16 @@ GPL-2.0-or-later OR LGPL-3.0-or-later
 ### `apk` package: `libwebp`
 
 ```console
-libwebp-1.3.1-r0 description:
+libwebp-1.3.2-r0 description:
 Libraries for working with WebP images
 
-libwebp-1.3.1-r0 webpage:
+libwebp-1.3.2-r0 webpage:
 https://developers.google.com/speed/webp
 
-libwebp-1.3.1-r0 installed size:
+libwebp-1.3.2-r0 installed size:
 596 KiB
 
-libwebp-1.3.1-r0 license:
+libwebp-1.3.2-r0 license:
 BSD-3-Clause
 
 ```

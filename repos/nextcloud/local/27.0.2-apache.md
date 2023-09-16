@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5cab3681afe9022051f6ca1e32a36a2fb894c426dc788fb1467fe1cde8cff0bf`
-- Created: `2023-09-08T02:44:07.849893596Z`
-- Virtual Size: ~ 1.14 Gb  
+- Image ID: `sha256:4c5b0e283a7a2660d338e9ca9451ce529c65960ebd189344c82467a932483198`
+- Created: `2023-09-15T01:15:52.593814631Z`
+- Virtual Size: ~ 1.15 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -3023,13 +3023,13 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libunistring/1.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libunistring/1.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libwebp=1.2.4-0.2`
+### `dpkg` source package: `libwebp=1.2.4-0.2+deb12u1`
 
 Binary Packages:
 
-- `libwebp7:amd64=1.2.4-0.2`
-- `libwebpdemux2:amd64=1.2.4-0.2`
-- `libwebpmux3:amd64=1.2.4-0.2`
+- `libwebp7:amd64=1.2.4-0.2+deb12u1`
+- `libwebpdemux2:amd64=1.2.4-0.2+deb12u1`
+- `libwebpmux3:amd64=1.2.4-0.2+deb12u1`
 
 Licenses: (parsed from: `/usr/share/doc/libwebp7/copyright`, `/usr/share/doc/libwebpdemux2/copyright`, `/usr/share/doc/libwebpmux3/copyright`)
 
@@ -3038,18 +3038,18 @@ Licenses: (parsed from: `/usr/share/doc/libwebp7/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libwebp=1.2.4-0.2
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4-0.2.dsc' libwebp_1.2.4-0.2.dsc 2531 SHA256:a5138070f42170f20c6b6daabc56716c5f7c3973a904ac37978cfe19f3d7e1df
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz' libwebp_1.2.4.orig.tar.gz 4141376 SHA256:7bf5a8a28cc69bcfa8cb214f2c3095703c6b73ac5fba4d5480c205331d9494df
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz.asc' libwebp_1.2.4.orig.tar.gz.asc 833 SHA256:4c546cf7f757a70d8803ab850e69d28e7ce06e66dbee003fd3ede7346543851a
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4-0.2.debian.tar.xz' libwebp_1.2.4-0.2.debian.tar.xz 8064 SHA256:e8bd944079de9d9e00fe210e28c987f60d96f8210f089fe4d56ef43f4570c933
+$ apt-get source -qq --print-uris libwebp=1.2.4-0.2+deb12u1
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_1.2.4-0.2%2bdeb12u1.dsc' libwebp_1.2.4-0.2+deb12u1.dsc 2411 SHA256:d9ed0b59e2010f255c28d0869fd15b31f9b08aed757bfc91862d43aa9ec1aa99
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz' libwebp_1.2.4.orig.tar.gz 4141376 SHA256:7bf5a8a28cc69bcfa8cb214f2c3095703c6b73ac5fba4d5480c205331d9494df
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz.asc' libwebp_1.2.4.orig.tar.gz.asc 833 SHA256:4c546cf7f757a70d8803ab850e69d28e7ce06e66dbee003fd3ede7346543851a
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_1.2.4-0.2%2bdeb12u1.debian.tar.xz' libwebp_1.2.4-0.2+deb12u1.debian.tar.xz 12028 SHA256:69cdba4dfe2e1b34d55fa80c1b29c31cacd40dd183812d6bcca7e508a2f7afcd
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libwebp/1.2.4-0.2/ (for browsing the source)
-- https://sources.debian.net/src/libwebp/1.2.4-0.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libwebp/1.2.4-0.2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libwebp/1.2.4-0.2+deb12u1/ (for browsing the source)
+- https://sources.debian.net/src/libwebp/1.2.4-0.2+deb12u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libwebp/1.2.4-0.2+deb12u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libwmf=0.2.12-5.1`
 
