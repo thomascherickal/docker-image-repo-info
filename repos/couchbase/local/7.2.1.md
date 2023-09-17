@@ -1,9 +1,9 @@
-# `couchbase:7.2.0`
+# `couchbase:7.2.1`
 
 ## Docker Metadata
 
-- Image ID: `sha256:232147af3c363497c044401c3a221e39f18ad490a26bf4efc84e5e972db019c4`
-- Created: `2023-08-03T02:56:28.228391835Z`
+- Image ID: `sha256:c6d64b3c0490e6acf255981a7454c3ecb9ff4099ac57963e72be8f50ffe4f56b`
+- Created: `2023-09-15T00:48:04.683496649Z`
 - Virtual Size: ~ 1.41 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -258,11 +258,11 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `couchbase-server=7.2.0-5325-1`
+### `dpkg` source package: `couchbase-server=7.2.1-5934-1`
 
 Binary Packages:
 
-- `couchbase-server=7.2.0-5325-1`
+- `couchbase-server=7.2.1-5934-1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
