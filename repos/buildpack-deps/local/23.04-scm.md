@@ -358,14 +358,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `X11`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.88.1-8ubuntu2.1
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.88.1-8ubuntu2.1.dsc' curl_7.88.1-8ubuntu2.1.dsc 3044 SHA512:537cf947b69b8ef426eca86788db597b2f14b1f603baebfbb69ccfdc6858d2189ac5483d946393383129507c8c9af524677ca553e0e6030f5e47c3c6f04c028a
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.88.1.orig.tar.gz' curl_7.88.1.orig.tar.gz 4343562 SHA512:67701d458548712bbfaa55f2ebefbf87cdbba01b7b1200f608b1c3af67e8dd8e243fa89f256446d217d658a5a1242331d8b0168ab600351e74ee0e2511e79dae
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.88.1-8ubuntu2.1.debian.tar.xz' curl_7.88.1-8ubuntu2.1.debian.tar.xz 52732 SHA512:cb2ff2d2505d22166b656e264b2b069d7cb45b7887dbe3571f0fa28b26d448cc257911a9dbf8b9cfbde0178af9f9f3e6638749fb4ccbda337060b28a0595db42
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-10`
 
@@ -1854,10 +1849,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris openssh=1:9.0p1-1ubuntu8.4
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_9.0p1-1ubuntu8.4.dsc' openssh_9.0p1-1ubuntu8.4.dsc 3356 SHA512:88d2b72d14d8961bb6e9ee978f154e0f609dbf0fe71969ef82c9c8a3fe2f1975447e70baea9a0d5f83b7e32c719b7b8cbb1e34725f7d926a51a2cf2e58739b6c
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_9.0p1.orig.tar.gz' openssh_9.0p1.orig.tar.gz 1822183 SHA512:613ae95317e734868c6a60d9cc5af47a889baa3124bbdd2b31bb51dd6b57b136f4cfcb5604cca78a03bd500baab9b9b45eaf77e038b1ed776c86dce0437449a9
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_9.0p1.orig.tar.gz.asc' openssh_9.0p1.orig.tar.gz.asc 833 SHA512:7b1445764058435d2fa8a9c7553643983650d4232036c088e46e44beeb538d32cba88f775b1be9da5f21a01d6caea59b3dc4714507781e9cb946546fa54f169f
-'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_9.0p1-1ubuntu8.4.debian.tar.xz' openssh_9.0p1-1ubuntu8.4.debian.tar.xz 183480 SHA512:7bb36b0f53091e76e387f98ae8116bb212d77656443d518fcdec47f8ce588a1dbbb3a9ab229630333432f2900a8d48a76b845cdd7d94dd5c6fd069c22ee58c59
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_9.0p1-1ubuntu8.4.dsc' openssh_9.0p1-1ubuntu8.4.dsc 3356 SHA512:88d2b72d14d8961bb6e9ee978f154e0f609dbf0fe71969ef82c9c8a3fe2f1975447e70baea9a0d5f83b7e32c719b7b8cbb1e34725f7d926a51a2cf2e58739b6c
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_9.0p1.orig.tar.gz' openssh_9.0p1.orig.tar.gz 1822183 SHA512:613ae95317e734868c6a60d9cc5af47a889baa3124bbdd2b31bb51dd6b57b136f4cfcb5604cca78a03bd500baab9b9b45eaf77e038b1ed776c86dce0437449a9
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_9.0p1.orig.tar.gz.asc' openssh_9.0p1.orig.tar.gz.asc 833 SHA512:7b1445764058435d2fa8a9c7553643983650d4232036c088e46e44beeb538d32cba88f775b1be9da5f21a01d6caea59b3dc4714507781e9cb946546fa54f169f
+'http://security.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_9.0p1-1ubuntu8.4.debian.tar.xz' openssh_9.0p1-1ubuntu8.4.debian.tar.xz 183480 SHA512:7bb36b0f53091e76e387f98ae8116bb212d77656443d518fcdec47f8ce588a1dbbb3a9ab229630333432f2900a8d48a76b845cdd7d94dd5c6fd069c22ee58c59
 ```
 
 ### `dpkg` source package: `openssl=3.0.8-1ubuntu1.2`

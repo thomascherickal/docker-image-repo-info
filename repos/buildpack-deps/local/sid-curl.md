@@ -81,19 +81,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.7.3
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.7.3.dsc' apt_2.7.3.dsc 2945 SHA256:6927412c35484426113eebfa6cca50c54180d877c5daa899703e8029dfe1b9b6
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.7.3.tar.xz' apt_2.7.3.tar.xz 2343000 SHA256:9ad2eb2c4f25ce3535d9a5d8056e1fe932d6dbb58c2647cd5fc8df8c9f8def53
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.7.3/
 
-- https://sources.debian.net/src/apt/2.7.3/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.7.3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.7.3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-4`
 
@@ -1064,21 +1058,13 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.20.1-3
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1-3.dsc' krb5_1.20.1-3.dsc 3171 SHA256:1b272a4e1d303749af23c10c1e5f709115b63b4d739361df4282d88403705057
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1.orig.tar.gz' krb5_1.20.1.orig.tar.gz 8661660 SHA256:704aed49b19eb5a7178b34b2873620ec299db08752d6a8574f95d41879ab8851
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1.orig.tar.gz.asc' krb5_1.20.1.orig.tar.gz.asc 833 SHA256:2afeec5dbc586cc40b7975645e02b4c41c4d719dd02213e828c72d8239d55666
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1-3.debian.tar.xz' krb5_1.20.1-3.debian.tar.xz 100208 SHA256:045ee0fca6e008f2cbfdadeea8f9d66182f21c99ae67d20cf940e98f1e513a28
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/krb5/1.20.1-3/
 
-- https://sources.debian.net/src/krb5/1.20.1-3/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.20.1-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.20.1-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libassuan=2.5.6-1`
 
@@ -2292,21 +2278,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.43.0-1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.43.0-1.dsc' sqlite3_3.43.0-1.dsc 2486 SHA256:4b7860e59dea07bad289efea2d9d24322600560014c4c55499a695bdf58ccadb
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.43.0.orig-www.tar.xz' sqlite3_3.43.0.orig-www.tar.xz 5661976 SHA256:b65fdac6cbfd08b96692aa8aff680c977e20680a53f2ff57284a1ae79afa4300
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.43.0.orig.tar.xz' sqlite3_3.43.0.orig.tar.xz 8085188 SHA256:7775adc0217ed5d8f6dcc83ef3811b88d7b072b992381024412f2be8d1e14ffb
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.43.0-1.debian.tar.xz' sqlite3_3.43.0-1.debian.tar.xz 30080 SHA256:da653fa430db8b2f3b20abd7ae10abdf98b0acfeb9dbcd58085d1f9040b847fc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.43.0-1/
 
-- https://sources.debian.net/src/sqlite3/3.43.0-1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.43.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.43.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=254.1-3`
 
@@ -2326,20 +2304,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=254.1-3
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_254.1-3.dsc' systemd_254.1-3.dsc 6852 SHA256:584aba9784079f780ddab38b38bf113d76a117c9561174f4e9dfe7aef9800806
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_254.1.orig.tar.gz' systemd_254.1.orig.tar.gz 14324840 SHA256:d1e372a6ff817e639cdf58cc3888f72d37a380c0027d42bc875e5ab4b628a580
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_254.1-3.debian.tar.xz' systemd_254.1-3.debian.tar.xz 164788 SHA256:de1a1f5d0d418735bec20913c17d3f4155f331875d64c912854db33bf19eb908
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/254.1-3/
 
-- https://sources.debian.net/src/systemd/254.1-3/ (for browsing the source)
-- https://sources.debian.net/src/systemd/254.1-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/254.1-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.07-1`
 
@@ -2355,20 +2326,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-3`
 - `GPL-3.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=3.07-1
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.07-1.dsc' sysvinit_3.07-1.dsc 2359 SHA256:a65764c7ce0d78529300bcc195c7816b33b52a4347f84102c4a4d39c8a912183
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.07.orig.tar.gz' sysvinit_3.07.orig.tar.gz 513168 SHA256:79ac3d1b3b52cee328a59f4f5357104eafde6f146c2ee10a929096d7177c83df
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.07-1.debian.tar.xz' sysvinit_3.07-1.debian.tar.xz 134388 SHA256:a2fbffb5f18fe4179b17fef1f6bc1ba7615f3747c221c08d3996b8906f5a5115
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/3.07-1/
 
-- https://sources.debian.net/src/sysvinit/3.07-1/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/3.07-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/3.07-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1.2`
 
