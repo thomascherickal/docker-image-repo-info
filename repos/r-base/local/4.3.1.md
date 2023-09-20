@@ -62,9 +62,15 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris apt=2.7.3
-'http://http.debian.net/debian/pool/main/a/apt/apt_2.7.3.dsc' apt_2.7.3.dsc 2945 SHA256:6927412c35484426113eebfa6cca50c54180d877c5daa899703e8029dfe1b9b6
-'http://http.debian.net/debian/pool/main/a/apt/apt_2.7.3.tar.xz' apt_2.7.3.tar.xz 2343000 SHA256:9ad2eb2c4f25ce3535d9a5d8056e1fe932d6dbb58c2647cd5fc8df8c9f8def53
+'http://deb.debian.org/debian/pool/main/a/apt/apt_2.7.3.dsc' apt_2.7.3.dsc 2945 SHA256:6927412c35484426113eebfa6cca50c54180d877c5daa899703e8029dfe1b9b6
+'http://deb.debian.org/debian/pool/main/a/apt/apt_2.7.3.tar.xz' apt_2.7.3.tar.xz 2343000 SHA256:9ad2eb2c4f25ce3535d9a5d8056e1fe932d6dbb58c2647cd5fc8df8c9f8def53
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/apt/2.7.3/ (for browsing the source)
+- https://sources.debian.net/src/apt/2.7.3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/apt/2.7.3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-4`
 
@@ -2131,21 +2137,13 @@ Licenses: (parsed from: `/usr/share/doc/libwebp7/copyright`)
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libwebp=1.2.4-0.2
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4-0.2.dsc' libwebp_1.2.4-0.2.dsc 2531 SHA256:a5138070f42170f20c6b6daabc56716c5f7c3973a904ac37978cfe19f3d7e1df
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz' libwebp_1.2.4.orig.tar.gz 4141376 SHA256:7bf5a8a28cc69bcfa8cb214f2c3095703c6b73ac5fba4d5480c205331d9494df
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz.asc' libwebp_1.2.4.orig.tar.gz.asc 833 SHA256:4c546cf7f757a70d8803ab850e69d28e7ce06e66dbee003fd3ede7346543851a
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4-0.2.debian.tar.xz' libwebp_1.2.4-0.2.debian.tar.xz 8064 SHA256:e8bd944079de9d9e00fe210e28c987f60d96f8210f089fe4d56ef43f4570c933
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libwebp/1.2.4-0.2/
 
-- https://sources.debian.net/src/libwebp/1.2.4-0.2/ (for browsing the source)
-- https://sources.debian.net/src/libwebp/1.2.4-0.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libwebp/1.2.4-0.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libx11=2:1.8.6-1`
 
@@ -2910,21 +2908,13 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.36/copyright`, `/usr/share/doc/
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.36.0-7
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.36.0-7.dsc' perl_5.36.0-7.dsc 2886 SHA256:d9992947bb5c254e1bf96c56f12ac0bc962a2ff1e700834f871fb412526b4a8b
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.36.0.orig-regen-configure.tar.xz' perl_5.36.0.orig-regen-configure.tar.xz 417784 SHA256:10ac353bc5a933403afe60ed1817e7a456f99bdbcaf80c1cdb0eb3a08ea56d4e
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.36.0.orig.tar.xz' perl_5.36.0.orig.tar.xz 13051500 SHA256:0f386dccbee8e26286404b2cca144e1005be65477979beb9b1ba272d4819bcf0
-'http://deb.debian.org/debian/pool/main/p/perl/perl_5.36.0-7.debian.tar.xz' perl_5.36.0-7.debian.tar.xz 169288 SHA256:c8a46245b7102d60539cc4c550977f35cbb8409643abc0d00c7a8b78d0271bea
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/perl/5.36.0-7/
 
-- https://sources.debian.net/src/perl/5.36.0-7/ (for browsing the source)
-- https://sources.debian.net/src/perl/5.36.0-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/perl/5.36.0-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pixman=0.42.2-1`
 
@@ -3352,10 +3342,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris sysvinit=3.07-1
-'http://http.debian.net/debian/pool/main/s/sysvinit/sysvinit_3.07-1.dsc' sysvinit_3.07-1.dsc 2359 SHA256:a65764c7ce0d78529300bcc195c7816b33b52a4347f84102c4a4d39c8a912183
-'http://http.debian.net/debian/pool/main/s/sysvinit/sysvinit_3.07.orig.tar.gz' sysvinit_3.07.orig.tar.gz 513168 SHA256:79ac3d1b3b52cee328a59f4f5357104eafde6f146c2ee10a929096d7177c83df
-'http://http.debian.net/debian/pool/main/s/sysvinit/sysvinit_3.07-1.debian.tar.xz' sysvinit_3.07-1.debian.tar.xz 134388 SHA256:a2fbffb5f18fe4179b17fef1f6bc1ba7615f3747c221c08d3996b8906f5a5115
+'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.07-1.dsc' sysvinit_3.07-1.dsc 2359 SHA256:a65764c7ce0d78529300bcc195c7816b33b52a4347f84102c4a4d39c8a912183
+'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.07.orig.tar.gz' sysvinit_3.07.orig.tar.gz 513168 SHA256:79ac3d1b3b52cee328a59f4f5357104eafde6f146c2ee10a929096d7177c83df
+'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.07-1.debian.tar.xz' sysvinit_3.07-1.debian.tar.xz 134388 SHA256:a2fbffb5f18fe4179b17fef1f6bc1ba7615f3747c221c08d3996b8906f5a5115
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/sysvinit/3.07-1/ (for browsing the source)
+- https://sources.debian.net/src/sysvinit/3.07-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sysvinit/3.07-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1.2`
 
@@ -3724,20 +3720,13 @@ Licenses: (parsed from: `/usr/share/doc/libxxhash0/copyright`)
 - `BSD-2-clause`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris xxhash=0.8.1-1
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.1-1.dsc' xxhash_0.8.1-1.dsc 1966 SHA256:4a961627c06efc8fa3bc4b06ee9dba6cfaf092f2550b88d63e9218a2728721b4
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.1.orig.tar.gz' xxhash_0.8.1.orig.tar.gz 171552 SHA256:3bb6b7d6f30c591dd65aaaff1c8b7a5b94d81687998ca9400082c739a690436c
-'http://deb.debian.org/debian/pool/main/x/xxhash/xxhash_0.8.1-1.debian.tar.xz' xxhash_0.8.1-1.debian.tar.xz 4572 SHA256:d40aa223e90b85435082857b64573541ba9a995841717496e8975aed97241550
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/xxhash/0.8.1-1/
 
-- https://sources.debian.net/src/xxhash/0.8.1-1/ (for browsing the source)
-- https://sources.debian.net/src/xxhash/0.8.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/xxhash/0.8.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `xz-utils=5.4.4-0.1`
 
