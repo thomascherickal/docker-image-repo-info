@@ -871,7 +871,7 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ## `unit:1.31.0-node18`
 
 ```console
-$ docker pull unit@sha256:3310735389c5cfe124decca5e2a24f14954f619b48a696056e8c1db41f633197
+$ docker pull unit@sha256:7a99ad3d2ee7f9b6582f4919721667924898ec565d7636439a77528ec4b9c5df
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -999,14 +999,14 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ### `unit:1.31.0-node18` - linux; arm64 variant v8
 
 ```console
-$ docker pull unit@sha256:1be198fec6ae122ac2dc6e63b78980cebadae90ad5bb4197ca6652d8d9fd9fd3
+$ docker pull unit@sha256:e5484ac9d921a9f3e4dab619fda28b9d84023e69c3b77cc7e63d93864e00098d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **371.6 MB (371640786 bytes)**  
+-	Total Size: **371.8 MB (371828256 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3ad46d4636652cd7fcd38dd28ccc95a26f415a77447070df178834e3a681b273`
+-	Image ID: `sha256:75c2c6360d25ece7cc2fe27c5e8ff05dce45fe254dc689ed5aa1235fb22c062c`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -1023,47 +1023,47 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
 # Thu, 07 Sep 2023 13:05:46 GMT
 RUN groupadd --gid 1000 node   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
-# Thu, 07 Sep 2023 13:06:52 GMT
-ENV NODE_VERSION=18.17.1
-# Thu, 07 Sep 2023 13:07:04 GMT
-RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"   && case "${dpkgArch##*-}" in     amd64) ARCH='x64';;     ppc64el) ARCH='ppc64le';;     s390x) ARCH='s390x';;     arm64) ARCH='arm64';;     armhf) ARCH='armv7l';;     i386) ARCH='x86';;     *) echo "unsupported architecture"; exit 1 ;;   esac   && set -ex   && for key in     4ED778F539E3634C779C87C6D7062848A1AB005C     141F07595B7B3FFE74309A937405533BE57C7D57     74F12602B6F1C4E913FAA37AD3A89613643B6201     DD792F5973C6DE52C432CBDAC77ABFA00DDBF2B7     61FC681DFB92A079F1685E77973F295594EC4689     8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8     890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4     C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C     108F52B48DB57BB0CC439B2997B01419BD92F80A   ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"   && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc   && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt   && ln -s /usr/local/bin/node /usr/local/bin/nodejs   && node --version   && npm --version
-# Thu, 07 Sep 2023 13:07:05 GMT
+# Wed, 20 Sep 2023 01:20:49 GMT
+ENV NODE_VERSION=18.18.0
+# Wed, 20 Sep 2023 01:21:04 GMT
+RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"   && case "${dpkgArch##*-}" in     amd64) ARCH='x64';;     ppc64el) ARCH='ppc64le';;     s390x) ARCH='s390x';;     arm64) ARCH='arm64';;     armhf) ARCH='armv7l';;     i386) ARCH='x86';;     *) echo "unsupported architecture"; exit 1 ;;   esac   && set -ex   && for key in     4ED778F539E3634C779C87C6D7062848A1AB005C     141F07595B7B3FFE74309A937405533BE57C7D57     74F12602B6F1C4E913FAA37AD3A89613643B6201     DD792F5973C6DE52C432CBDAC77ABFA00DDBF2B7     61FC681DFB92A079F1685E77973F295594EC4689     8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8     890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4     C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C     108F52B48DB57BB0CC439B2997B01419BD92F80A     A363A499291CBBC940DD62E41F10027AF002F8B0   ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"   && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc   && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt   && ln -s /usr/local/bin/node /usr/local/bin/nodejs   && node --version   && npm --version
+# Wed, 20 Sep 2023 01:21:05 GMT
 ENV YARN_VERSION=1.22.19
-# Thu, 07 Sep 2023 13:07:08 GMT
+# Wed, 20 Sep 2023 01:21:08 GMT
 RUN set -ex   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && yarn --version
-# Thu, 07 Sep 2023 13:07:08 GMT
+# Wed, 20 Sep 2023 01:21:08 GMT
 COPY file:4d192565a7220e135cab6c77fbc1c73211b69f3d9fb37e62857b2c6eb9363d51 in /usr/local/bin/ 
-# Thu, 07 Sep 2023 13:07:08 GMT
+# Wed, 20 Sep 2023 01:21:08 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 07 Sep 2023 13:07:08 GMT
+# Wed, 20 Sep 2023 01:21:08 GMT
 CMD ["node"]
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.title=Unit (node18)
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.version=1.31.0
-# Thu, 07 Sep 2023 22:19:42 GMT
+# Wed, 20 Sep 2023 02:35:29 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev curl pkg-config     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && mkdir -p /usr/src/unit     && cd /usr/src/unit     && hg clone -u 1.31.0-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS_MODULES="--prefix=/usr                 --statedir=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --runstatedir=/var/run                 --pid=/var/run/unit.pid                 --logdir=/var/log                 --log=/var/log/unit.log                 --tmpdir=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && CONFIGURE_ARGS="$CONFIGURE_ARGS_MODULES                 --njs"     && make -j $NCPU -C pkg/contrib .njs     && export PKG_CONFIG_PATH=$(pwd)/pkg/contrib/njs/build     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd     && make clean     && npm -g install node-gyp     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && ./configure nodejs --node-gyp=/usr/local/bin/node-gyp     && make -j $NCPU node node-install libunit-install     && make clean     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/modules     && ./configure nodejs --node-gyp=/usr/local/bin/node-gyp     && make -j $NCPU node node-install libunit-install     && cd     && rm -rf /usr/src/unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && rm -rf /root/.cache/ && rm -rf /root/.npm     && mkdir -p /var/lib/unit/     && mkdir -p /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove build-essential     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Thu, 07 Sep 2023 22:19:42 GMT
+# Wed, 20 Sep 2023 02:35:29 GMT
 COPY file:8b65557c2137d1a3946148e09ddd45af0b855e40210dabb5a9bd6c36fac22006 in /usr/local/bin/ 
-# Thu, 07 Sep 2023 22:19:43 GMT
+# Wed, 20 Sep 2023 02:35:30 GMT
 COPY multi:0ef77957b92a7e8997661453cf7256a81db39d0e9f975a137d7e664007d8fcf4 in /usr/share/unit/welcome/ 
-# Thu, 07 Sep 2023 22:19:43 GMT
+# Wed, 20 Sep 2023 02:35:30 GMT
 STOPSIGNAL SIGTERM
-# Thu, 07 Sep 2023 22:19:43 GMT
+# Wed, 20 Sep 2023 02:35:30 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Thu, 07 Sep 2023 22:19:43 GMT
+# Wed, 20 Sep 2023 02:35:30 GMT
 EXPOSE 80
-# Thu, 07 Sep 2023 22:19:43 GMT
+# Wed, 20 Sep 2023 02:35:30 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -1088,35 +1088,35 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Thu, 07 Sep 2023 13:10:26 GMT  
 		Size: 4.2 KB (4207 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f13537afdfac7eb87400bdeb12bc37994692e9e9aa06ae0911f458c90e5f1f8a`  
-		Last Modified: Thu, 07 Sep 2023 13:11:59 GMT  
-		Size: 45.9 MB (45860713 bytes)  
+	-	`sha256:f639c62ab6970668ee11e0948ceb8d66486cc7996aa4722f27b3d544bbd5fbb9`  
+		Last Modified: Wed, 20 Sep 2023 01:30:07 GMT  
+		Size: 46.0 MB (46042586 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9cd18fab942af25e64b76dde7090bb54792140060a5039af315a0b459018b3e1`  
-		Last Modified: Thu, 07 Sep 2023 13:11:54 GMT  
-		Size: 2.3 MB (2276180 bytes)  
+	-	`sha256:c2e14592a2f185fc07ff5a7dec8247bfd7521d7f285f14f64b8fff386c9f0055`  
+		Last Modified: Wed, 20 Sep 2023 01:30:01 GMT  
+		Size: 2.3 MB (2282420 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3beee2a0e8ff34a18e28fe081362cac6d6f00152f556b2e2a190d9cf8120818b`  
-		Last Modified: Thu, 07 Sep 2023 13:11:53 GMT  
-		Size: 450.0 B  
+	-	`sha256:fab6562969f9ff6b8d4cce0fa3d114a62d634f11d1004310106fec384d222050`  
+		Last Modified: Wed, 20 Sep 2023 01:30:00 GMT  
+		Size: 453.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3237b0984c3219de5cfddc95ac6d711552b41b75b5796641900c173b675957d1`  
-		Last Modified: Thu, 07 Sep 2023 22:24:10 GMT  
-		Size: 9.6 MB (9592355 bytes)  
+	-	`sha256:4d82314bc4765388724bec4ef93b3208fdea48dd1d6b57a22a10762d27be6da0`  
+		Last Modified: Wed, 20 Sep 2023 02:36:30 GMT  
+		Size: 9.6 MB (9591706 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f49d15de4f17c6f87106fdc0ba0aafda5a966d6b103b3b60df4ad53bb75a508b`  
-		Last Modified: Thu, 07 Sep 2023 22:24:08 GMT  
-		Size: 1.3 KB (1272 bytes)  
+	-	`sha256:40c21f81d6c8b105e469eacd5f0dd2d0feea2182707bf69ce4e91742d067cc22`  
+		Last Modified: Wed, 20 Sep 2023 02:36:28 GMT  
+		Size: 1.3 KB (1274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3d996bbe67773e7e05359720115d897160e8c0aae2249ac571adba0cc7b17f1`  
-		Last Modified: Thu, 07 Sep 2023 22:24:08 GMT  
-		Size: 1.5 KB (1466 bytes)  
+	-	`sha256:83f9c7c92830eb5500b7319039d72346ffabcc8493a11fc814a368b7e011643f`  
+		Last Modified: Wed, 20 Sep 2023 02:36:28 GMT  
+		Size: 1.5 KB (1467 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `unit:1.31.0-node20`
 
 ```console
-$ docker pull unit@sha256:9ab2eb60ba50e9c9c36b5fd85bd00864eca5ddfd8d7a71eb458bc29b8dbbd0ad
+$ docker pull unit@sha256:e228ccbf526e122925603dce8e5121b148808206506fb4912d2bc00b02dd14b0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1244,14 +1244,14 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ### `unit:1.31.0-node20` - linux; arm64 variant v8
 
 ```console
-$ docker pull unit@sha256:a93f1130d5c52ec3c518274f4fc358f6f1629e3ccf6567ebbf536e9d3c0f2abf
+$ docker pull unit@sha256:b2696c863020e9f13330b364fd8c96513bdbfea076c5d01521bfb0c0dfdfc58c
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **373.4 MB (373410772 bytes)**  
+-	Total Size: **373.6 MB (373621182 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fed54a44577299a9ab01de363012dc37c0a048fdd6e52c52cf9beaa96ef75f4c`
+-	Image ID: `sha256:b9735278d796c9afc9ff36f2cba4c0551913b6091927563ad2fd8983960d1701`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -1268,47 +1268,47 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
 # Thu, 07 Sep 2023 13:05:46 GMT
 RUN groupadd --gid 1000 node   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
-# Mon, 11 Sep 2023 18:32:54 GMT
-ENV NODE_VERSION=20.6.1
-# Mon, 11 Sep 2023 18:33:08 GMT
+# Wed, 20 Sep 2023 00:35:21 GMT
+ENV NODE_VERSION=20.7.0
+# Wed, 20 Sep 2023 00:35:36 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"   && case "${dpkgArch##*-}" in     amd64) ARCH='x64';;     ppc64el) ARCH='ppc64le';;     s390x) ARCH='s390x';;     arm64) ARCH='arm64';;     armhf) ARCH='armv7l';;     i386) ARCH='x86';;     *) echo "unsupported architecture"; exit 1 ;;   esac   && set -ex   && for key in     4ED778F539E3634C779C87C6D7062848A1AB005C     141F07595B7B3FFE74309A937405533BE57C7D57     74F12602B6F1C4E913FAA37AD3A89613643B6201     DD792F5973C6DE52C432CBDAC77ABFA00DDBF2B7     61FC681DFB92A079F1685E77973F295594EC4689     8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8     890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4     C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C     108F52B48DB57BB0CC439B2997B01419BD92F80A     A363A499291CBBC940DD62E41F10027AF002F8B0   ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"   && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc   && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt   && ln -s /usr/local/bin/node /usr/local/bin/nodejs   && node --version   && npm --version
-# Mon, 11 Sep 2023 18:33:09 GMT
+# Wed, 20 Sep 2023 00:35:36 GMT
 ENV YARN_VERSION=1.22.19
-# Mon, 11 Sep 2023 18:33:11 GMT
+# Wed, 20 Sep 2023 00:35:39 GMT
 RUN set -ex   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && yarn --version
-# Mon, 11 Sep 2023 18:33:11 GMT
+# Wed, 20 Sep 2023 00:35:40 GMT
 COPY file:4d192565a7220e135cab6c77fbc1c73211b69f3d9fb37e62857b2c6eb9363d51 in /usr/local/bin/ 
-# Mon, 11 Sep 2023 18:33:12 GMT
+# Wed, 20 Sep 2023 00:35:40 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 11 Sep 2023 18:33:12 GMT
+# Wed, 20 Sep 2023 00:35:40 GMT
 CMD ["node"]
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.title=Unit (node20)
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:46 GMT
 LABEL org.opencontainers.image.version=1.31.0
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev curl pkg-config     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && mkdir -p /usr/src/unit     && cd /usr/src/unit     && hg clone -u 1.31.0-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS_MODULES="--prefix=/usr                 --statedir=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --runstatedir=/var/run                 --pid=/var/run/unit.pid                 --logdir=/var/log                 --log=/var/log/unit.log                 --tmpdir=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && CONFIGURE_ARGS="$CONFIGURE_ARGS_MODULES                 --njs"     && make -j $NCPU -C pkg/contrib .njs     && export PKG_CONFIG_PATH=$(pwd)/pkg/contrib/njs/build     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd     && make clean     && npm -g install node-gyp     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && ./configure nodejs --node-gyp=/usr/local/bin/node-gyp     && make -j $NCPU node node-install libunit-install     && make clean     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/modules     && ./configure nodejs --node-gyp=/usr/local/bin/node-gyp     && make -j $NCPU node node-install libunit-install     && cd     && rm -rf /usr/src/unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && rm -rf /root/.cache/ && rm -rf /root/.npm     && mkdir -p /var/lib/unit/     && mkdir -p /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove build-essential     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 COPY file:8b65557c2137d1a3946148e09ddd45af0b855e40210dabb5a9bd6c36fac22006 in /usr/local/bin/ 
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 COPY multi:0ef77957b92a7e8997661453cf7256a81db39d0e9f975a137d7e664007d8fcf4 in /usr/share/unit/welcome/ 
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 STOPSIGNAL SIGTERM
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 EXPOSE 80
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -1333,29 +1333,29 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Thu, 07 Sep 2023 13:10:26 GMT  
 		Size: 4.2 KB (4207 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20b3241a49a1702b165104ab2c459b2247ec3f28b3fdecf47a53fba3ec304ae3`  
-		Last Modified: Mon, 11 Sep 2023 18:39:06 GMT  
-		Size: 47.6 MB (47625774 bytes)  
+	-	`sha256:29dc004d381350c84e88c703bae551c6b308176c12fe9ee63c173f56e1487ffa`  
+		Last Modified: Wed, 20 Sep 2023 01:26:36 GMT  
+		Size: 47.8 MB (47836931 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb12071992cccab93d68529112a4d87d2de894ab3ba2503579f19a91e5944bf7`  
-		Last Modified: Mon, 11 Sep 2023 18:39:01 GMT  
-		Size: 2.3 MB (2281085 bytes)  
+	-	`sha256:ac376807223c14dfa168bcc05f384b941803bcef964c08d8975586d50736ccd3`  
+		Last Modified: Wed, 20 Sep 2023 01:26:29 GMT  
+		Size: 2.3 MB (2281004 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2bc2d17c4807dfac8437281364b214e4e7bd59cf12ea2aa6eadd6c9ab46ab568`  
-		Last Modified: Mon, 11 Sep 2023 18:39:00 GMT  
-		Size: 449.0 B  
+	-	`sha256:b9b71fa0227a17485f30f43c1c3d53891bc2963d792ecc4051a2114a1b686f79`  
+		Last Modified: Wed, 20 Sep 2023 01:26:28 GMT  
+		Size: 453.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6fbd653b065af4dc6efb5cc9f9c9a6cc1b4fb2702c314ce6bb50bc93fef81ef6`  
-		Last Modified: Mon, 11 Sep 2023 19:09:09 GMT  
-		Size: 9.6 MB (9592382 bytes)  
+	-	`sha256:82d1e15a6b90694085b3ae698c43abdf9da95f2cfc69cd9bc832335b618dc7e1`  
+		Last Modified: Wed, 20 Sep 2023 02:36:18 GMT  
+		Size: 9.6 MB (9591707 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:37050e21f3fa6d05d5cf4ae96369ac698f526d49783c01e1e94780b88706fcd5`  
-		Last Modified: Mon, 11 Sep 2023 19:09:08 GMT  
-		Size: 1.3 KB (1270 bytes)  
+	-	`sha256:d83bc61aba62696330361a230fc5a6e42be476112886eb67e3870044a89a877d`  
+		Last Modified: Wed, 20 Sep 2023 02:36:16 GMT  
+		Size: 1.3 KB (1271 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f9170564934f2e78c8c5e0657a1f0c23bc2815b5060645dd8cfceecde3935c76`  
-		Last Modified: Mon, 11 Sep 2023 19:09:08 GMT  
-		Size: 1.5 KB (1462 bytes)  
+	-	`sha256:636eac4113003e856fea8c264099fb14d224a2f376fbe4fbcf6719fd5d31c264`  
+		Last Modified: Wed, 20 Sep 2023 02:36:16 GMT  
+		Size: 1.5 KB (1466 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `unit:1.31.0-perl5.36`
@@ -4411,7 +4411,7 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ## `unit:node`
 
 ```console
-$ docker pull unit@sha256:9ab2eb60ba50e9c9c36b5fd85bd00864eca5ddfd8d7a71eb458bc29b8dbbd0ad
+$ docker pull unit@sha256:e228ccbf526e122925603dce8e5121b148808206506fb4912d2bc00b02dd14b0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4539,14 +4539,14 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ### `unit:node` - linux; arm64 variant v8
 
 ```console
-$ docker pull unit@sha256:a93f1130d5c52ec3c518274f4fc358f6f1629e3ccf6567ebbf536e9d3c0f2abf
+$ docker pull unit@sha256:b2696c863020e9f13330b364fd8c96513bdbfea076c5d01521bfb0c0dfdfc58c
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **373.4 MB (373410772 bytes)**  
+-	Total Size: **373.6 MB (373621182 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fed54a44577299a9ab01de363012dc37c0a048fdd6e52c52cf9beaa96ef75f4c`
+-	Image ID: `sha256:b9735278d796c9afc9ff36f2cba4c0551913b6091927563ad2fd8983960d1701`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -4563,47 +4563,47 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
 # Thu, 07 Sep 2023 13:05:46 GMT
 RUN groupadd --gid 1000 node   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
-# Mon, 11 Sep 2023 18:32:54 GMT
-ENV NODE_VERSION=20.6.1
-# Mon, 11 Sep 2023 18:33:08 GMT
+# Wed, 20 Sep 2023 00:35:21 GMT
+ENV NODE_VERSION=20.7.0
+# Wed, 20 Sep 2023 00:35:36 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"   && case "${dpkgArch##*-}" in     amd64) ARCH='x64';;     ppc64el) ARCH='ppc64le';;     s390x) ARCH='s390x';;     arm64) ARCH='arm64';;     armhf) ARCH='armv7l';;     i386) ARCH='x86';;     *) echo "unsupported architecture"; exit 1 ;;   esac   && set -ex   && for key in     4ED778F539E3634C779C87C6D7062848A1AB005C     141F07595B7B3FFE74309A937405533BE57C7D57     74F12602B6F1C4E913FAA37AD3A89613643B6201     DD792F5973C6DE52C432CBDAC77ABFA00DDBF2B7     61FC681DFB92A079F1685E77973F295594EC4689     8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8     890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4     C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C     108F52B48DB57BB0CC439B2997B01419BD92F80A     A363A499291CBBC940DD62E41F10027AF002F8B0   ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"   && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc   && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt   && ln -s /usr/local/bin/node /usr/local/bin/nodejs   && node --version   && npm --version
-# Mon, 11 Sep 2023 18:33:09 GMT
+# Wed, 20 Sep 2023 00:35:36 GMT
 ENV YARN_VERSION=1.22.19
-# Mon, 11 Sep 2023 18:33:11 GMT
+# Wed, 20 Sep 2023 00:35:39 GMT
 RUN set -ex   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && yarn --version
-# Mon, 11 Sep 2023 18:33:11 GMT
+# Wed, 20 Sep 2023 00:35:40 GMT
 COPY file:4d192565a7220e135cab6c77fbc1c73211b69f3d9fb37e62857b2c6eb9363d51 in /usr/local/bin/ 
-# Mon, 11 Sep 2023 18:33:12 GMT
+# Wed, 20 Sep 2023 00:35:40 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 11 Sep 2023 18:33:12 GMT
+# Wed, 20 Sep 2023 00:35:40 GMT
 CMD ["node"]
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.title=Unit (node20)
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:46 GMT
 LABEL org.opencontainers.image.version=1.31.0
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev curl pkg-config     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && mkdir -p /usr/src/unit     && cd /usr/src/unit     && hg clone -u 1.31.0-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS_MODULES="--prefix=/usr                 --statedir=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --runstatedir=/var/run                 --pid=/var/run/unit.pid                 --logdir=/var/log                 --log=/var/log/unit.log                 --tmpdir=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && CONFIGURE_ARGS="$CONFIGURE_ARGS_MODULES                 --njs"     && make -j $NCPU -C pkg/contrib .njs     && export PKG_CONFIG_PATH=$(pwd)/pkg/contrib/njs/build     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd     && make clean     && npm -g install node-gyp     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && ./configure nodejs --node-gyp=/usr/local/bin/node-gyp     && make -j $NCPU node node-install libunit-install     && make clean     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/modules     && ./configure nodejs --node-gyp=/usr/local/bin/node-gyp     && make -j $NCPU node node-install libunit-install     && cd     && rm -rf /usr/src/unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && rm -rf /root/.cache/ && rm -rf /root/.npm     && mkdir -p /var/lib/unit/     && mkdir -p /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove build-essential     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 COPY file:8b65557c2137d1a3946148e09ddd45af0b855e40210dabb5a9bd6c36fac22006 in /usr/local/bin/ 
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 COPY multi:0ef77957b92a7e8997661453cf7256a81db39d0e9f975a137d7e664007d8fcf4 in /usr/share/unit/welcome/ 
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 STOPSIGNAL SIGTERM
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 EXPOSE 80
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -4628,35 +4628,35 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Thu, 07 Sep 2023 13:10:26 GMT  
 		Size: 4.2 KB (4207 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20b3241a49a1702b165104ab2c459b2247ec3f28b3fdecf47a53fba3ec304ae3`  
-		Last Modified: Mon, 11 Sep 2023 18:39:06 GMT  
-		Size: 47.6 MB (47625774 bytes)  
+	-	`sha256:29dc004d381350c84e88c703bae551c6b308176c12fe9ee63c173f56e1487ffa`  
+		Last Modified: Wed, 20 Sep 2023 01:26:36 GMT  
+		Size: 47.8 MB (47836931 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb12071992cccab93d68529112a4d87d2de894ab3ba2503579f19a91e5944bf7`  
-		Last Modified: Mon, 11 Sep 2023 18:39:01 GMT  
-		Size: 2.3 MB (2281085 bytes)  
+	-	`sha256:ac376807223c14dfa168bcc05f384b941803bcef964c08d8975586d50736ccd3`  
+		Last Modified: Wed, 20 Sep 2023 01:26:29 GMT  
+		Size: 2.3 MB (2281004 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2bc2d17c4807dfac8437281364b214e4e7bd59cf12ea2aa6eadd6c9ab46ab568`  
-		Last Modified: Mon, 11 Sep 2023 18:39:00 GMT  
-		Size: 449.0 B  
+	-	`sha256:b9b71fa0227a17485f30f43c1c3d53891bc2963d792ecc4051a2114a1b686f79`  
+		Last Modified: Wed, 20 Sep 2023 01:26:28 GMT  
+		Size: 453.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6fbd653b065af4dc6efb5cc9f9c9a6cc1b4fb2702c314ce6bb50bc93fef81ef6`  
-		Last Modified: Mon, 11 Sep 2023 19:09:09 GMT  
-		Size: 9.6 MB (9592382 bytes)  
+	-	`sha256:82d1e15a6b90694085b3ae698c43abdf9da95f2cfc69cd9bc832335b618dc7e1`  
+		Last Modified: Wed, 20 Sep 2023 02:36:18 GMT  
+		Size: 9.6 MB (9591707 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:37050e21f3fa6d05d5cf4ae96369ac698f526d49783c01e1e94780b88706fcd5`  
-		Last Modified: Mon, 11 Sep 2023 19:09:08 GMT  
-		Size: 1.3 KB (1270 bytes)  
+	-	`sha256:d83bc61aba62696330361a230fc5a6e42be476112886eb67e3870044a89a877d`  
+		Last Modified: Wed, 20 Sep 2023 02:36:16 GMT  
+		Size: 1.3 KB (1271 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f9170564934f2e78c8c5e0657a1f0c23bc2815b5060645dd8cfceecde3935c76`  
-		Last Modified: Mon, 11 Sep 2023 19:09:08 GMT  
-		Size: 1.5 KB (1462 bytes)  
+	-	`sha256:636eac4113003e856fea8c264099fb14d224a2f376fbe4fbcf6719fd5d31c264`  
+		Last Modified: Wed, 20 Sep 2023 02:36:16 GMT  
+		Size: 1.5 KB (1466 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `unit:node18`
 
 ```console
-$ docker pull unit@sha256:3310735389c5cfe124decca5e2a24f14954f619b48a696056e8c1db41f633197
+$ docker pull unit@sha256:7a99ad3d2ee7f9b6582f4919721667924898ec565d7636439a77528ec4b9c5df
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4784,14 +4784,14 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ### `unit:node18` - linux; arm64 variant v8
 
 ```console
-$ docker pull unit@sha256:1be198fec6ae122ac2dc6e63b78980cebadae90ad5bb4197ca6652d8d9fd9fd3
+$ docker pull unit@sha256:e5484ac9d921a9f3e4dab619fda28b9d84023e69c3b77cc7e63d93864e00098d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **371.6 MB (371640786 bytes)**  
+-	Total Size: **371.8 MB (371828256 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:3ad46d4636652cd7fcd38dd28ccc95a26f415a77447070df178834e3a681b273`
+-	Image ID: `sha256:75c2c6360d25ece7cc2fe27c5e8ff05dce45fe254dc689ed5aa1235fb22c062c`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -4808,47 +4808,47 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
 # Thu, 07 Sep 2023 13:05:46 GMT
 RUN groupadd --gid 1000 node   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
-# Thu, 07 Sep 2023 13:06:52 GMT
-ENV NODE_VERSION=18.17.1
-# Thu, 07 Sep 2023 13:07:04 GMT
-RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"   && case "${dpkgArch##*-}" in     amd64) ARCH='x64';;     ppc64el) ARCH='ppc64le';;     s390x) ARCH='s390x';;     arm64) ARCH='arm64';;     armhf) ARCH='armv7l';;     i386) ARCH='x86';;     *) echo "unsupported architecture"; exit 1 ;;   esac   && set -ex   && for key in     4ED778F539E3634C779C87C6D7062848A1AB005C     141F07595B7B3FFE74309A937405533BE57C7D57     74F12602B6F1C4E913FAA37AD3A89613643B6201     DD792F5973C6DE52C432CBDAC77ABFA00DDBF2B7     61FC681DFB92A079F1685E77973F295594EC4689     8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8     890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4     C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C     108F52B48DB57BB0CC439B2997B01419BD92F80A   ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"   && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc   && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt   && ln -s /usr/local/bin/node /usr/local/bin/nodejs   && node --version   && npm --version
-# Thu, 07 Sep 2023 13:07:05 GMT
+# Wed, 20 Sep 2023 01:20:49 GMT
+ENV NODE_VERSION=18.18.0
+# Wed, 20 Sep 2023 01:21:04 GMT
+RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"   && case "${dpkgArch##*-}" in     amd64) ARCH='x64';;     ppc64el) ARCH='ppc64le';;     s390x) ARCH='s390x';;     arm64) ARCH='arm64';;     armhf) ARCH='armv7l';;     i386) ARCH='x86';;     *) echo "unsupported architecture"; exit 1 ;;   esac   && set -ex   && for key in     4ED778F539E3634C779C87C6D7062848A1AB005C     141F07595B7B3FFE74309A937405533BE57C7D57     74F12602B6F1C4E913FAA37AD3A89613643B6201     DD792F5973C6DE52C432CBDAC77ABFA00DDBF2B7     61FC681DFB92A079F1685E77973F295594EC4689     8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8     890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4     C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C     108F52B48DB57BB0CC439B2997B01419BD92F80A     A363A499291CBBC940DD62E41F10027AF002F8B0   ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"   && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc   && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt   && ln -s /usr/local/bin/node /usr/local/bin/nodejs   && node --version   && npm --version
+# Wed, 20 Sep 2023 01:21:05 GMT
 ENV YARN_VERSION=1.22.19
-# Thu, 07 Sep 2023 13:07:08 GMT
+# Wed, 20 Sep 2023 01:21:08 GMT
 RUN set -ex   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && yarn --version
-# Thu, 07 Sep 2023 13:07:08 GMT
+# Wed, 20 Sep 2023 01:21:08 GMT
 COPY file:4d192565a7220e135cab6c77fbc1c73211b69f3d9fb37e62857b2c6eb9363d51 in /usr/local/bin/ 
-# Thu, 07 Sep 2023 13:07:08 GMT
+# Wed, 20 Sep 2023 01:21:08 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 07 Sep 2023 13:07:08 GMT
+# Wed, 20 Sep 2023 01:21:08 GMT
 CMD ["node"]
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.title=Unit (node18)
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Thu, 07 Sep 2023 22:18:53 GMT
+# Wed, 20 Sep 2023 02:34:43 GMT
 LABEL org.opencontainers.image.version=1.31.0
-# Thu, 07 Sep 2023 22:19:42 GMT
+# Wed, 20 Sep 2023 02:35:29 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev curl pkg-config     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && mkdir -p /usr/src/unit     && cd /usr/src/unit     && hg clone -u 1.31.0-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS_MODULES="--prefix=/usr                 --statedir=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --runstatedir=/var/run                 --pid=/var/run/unit.pid                 --logdir=/var/log                 --log=/var/log/unit.log                 --tmpdir=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && CONFIGURE_ARGS="$CONFIGURE_ARGS_MODULES                 --njs"     && make -j $NCPU -C pkg/contrib .njs     && export PKG_CONFIG_PATH=$(pwd)/pkg/contrib/njs/build     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd     && make clean     && npm -g install node-gyp     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && ./configure nodejs --node-gyp=/usr/local/bin/node-gyp     && make -j $NCPU node node-install libunit-install     && make clean     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/modules     && ./configure nodejs --node-gyp=/usr/local/bin/node-gyp     && make -j $NCPU node node-install libunit-install     && cd     && rm -rf /usr/src/unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && rm -rf /root/.cache/ && rm -rf /root/.npm     && mkdir -p /var/lib/unit/     && mkdir -p /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove build-essential     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Thu, 07 Sep 2023 22:19:42 GMT
+# Wed, 20 Sep 2023 02:35:29 GMT
 COPY file:8b65557c2137d1a3946148e09ddd45af0b855e40210dabb5a9bd6c36fac22006 in /usr/local/bin/ 
-# Thu, 07 Sep 2023 22:19:43 GMT
+# Wed, 20 Sep 2023 02:35:30 GMT
 COPY multi:0ef77957b92a7e8997661453cf7256a81db39d0e9f975a137d7e664007d8fcf4 in /usr/share/unit/welcome/ 
-# Thu, 07 Sep 2023 22:19:43 GMT
+# Wed, 20 Sep 2023 02:35:30 GMT
 STOPSIGNAL SIGTERM
-# Thu, 07 Sep 2023 22:19:43 GMT
+# Wed, 20 Sep 2023 02:35:30 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Thu, 07 Sep 2023 22:19:43 GMT
+# Wed, 20 Sep 2023 02:35:30 GMT
 EXPOSE 80
-# Thu, 07 Sep 2023 22:19:43 GMT
+# Wed, 20 Sep 2023 02:35:30 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -4873,35 +4873,35 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Thu, 07 Sep 2023 13:10:26 GMT  
 		Size: 4.2 KB (4207 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f13537afdfac7eb87400bdeb12bc37994692e9e9aa06ae0911f458c90e5f1f8a`  
-		Last Modified: Thu, 07 Sep 2023 13:11:59 GMT  
-		Size: 45.9 MB (45860713 bytes)  
+	-	`sha256:f639c62ab6970668ee11e0948ceb8d66486cc7996aa4722f27b3d544bbd5fbb9`  
+		Last Modified: Wed, 20 Sep 2023 01:30:07 GMT  
+		Size: 46.0 MB (46042586 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9cd18fab942af25e64b76dde7090bb54792140060a5039af315a0b459018b3e1`  
-		Last Modified: Thu, 07 Sep 2023 13:11:54 GMT  
-		Size: 2.3 MB (2276180 bytes)  
+	-	`sha256:c2e14592a2f185fc07ff5a7dec8247bfd7521d7f285f14f64b8fff386c9f0055`  
+		Last Modified: Wed, 20 Sep 2023 01:30:01 GMT  
+		Size: 2.3 MB (2282420 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3beee2a0e8ff34a18e28fe081362cac6d6f00152f556b2e2a190d9cf8120818b`  
-		Last Modified: Thu, 07 Sep 2023 13:11:53 GMT  
-		Size: 450.0 B  
+	-	`sha256:fab6562969f9ff6b8d4cce0fa3d114a62d634f11d1004310106fec384d222050`  
+		Last Modified: Wed, 20 Sep 2023 01:30:00 GMT  
+		Size: 453.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3237b0984c3219de5cfddc95ac6d711552b41b75b5796641900c173b675957d1`  
-		Last Modified: Thu, 07 Sep 2023 22:24:10 GMT  
-		Size: 9.6 MB (9592355 bytes)  
+	-	`sha256:4d82314bc4765388724bec4ef93b3208fdea48dd1d6b57a22a10762d27be6da0`  
+		Last Modified: Wed, 20 Sep 2023 02:36:30 GMT  
+		Size: 9.6 MB (9591706 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f49d15de4f17c6f87106fdc0ba0aafda5a966d6b103b3b60df4ad53bb75a508b`  
-		Last Modified: Thu, 07 Sep 2023 22:24:08 GMT  
-		Size: 1.3 KB (1272 bytes)  
+	-	`sha256:40c21f81d6c8b105e469eacd5f0dd2d0feea2182707bf69ce4e91742d067cc22`  
+		Last Modified: Wed, 20 Sep 2023 02:36:28 GMT  
+		Size: 1.3 KB (1274 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3d996bbe67773e7e05359720115d897160e8c0aae2249ac571adba0cc7b17f1`  
-		Last Modified: Thu, 07 Sep 2023 22:24:08 GMT  
-		Size: 1.5 KB (1466 bytes)  
+	-	`sha256:83f9c7c92830eb5500b7319039d72346ffabcc8493a11fc814a368b7e011643f`  
+		Last Modified: Wed, 20 Sep 2023 02:36:28 GMT  
+		Size: 1.5 KB (1467 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `unit:node20`
 
 ```console
-$ docker pull unit@sha256:9ab2eb60ba50e9c9c36b5fd85bd00864eca5ddfd8d7a71eb458bc29b8dbbd0ad
+$ docker pull unit@sha256:e228ccbf526e122925603dce8e5121b148808206506fb4912d2bc00b02dd14b0
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5029,14 +5029,14 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ### `unit:node20` - linux; arm64 variant v8
 
 ```console
-$ docker pull unit@sha256:a93f1130d5c52ec3c518274f4fc358f6f1629e3ccf6567ebbf536e9d3c0f2abf
+$ docker pull unit@sha256:b2696c863020e9f13330b364fd8c96513bdbfea076c5d01521bfb0c0dfdfc58c
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **373.4 MB (373410772 bytes)**  
+-	Total Size: **373.6 MB (373621182 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fed54a44577299a9ab01de363012dc37c0a048fdd6e52c52cf9beaa96ef75f4c`
+-	Image ID: `sha256:b9735278d796c9afc9ff36f2cba4c0551913b6091927563ad2fd8983960d1701`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
@@ -5053,47 +5053,47 @@ RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercuri
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
 # Thu, 07 Sep 2023 13:05:46 GMT
 RUN groupadd --gid 1000 node   && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
-# Mon, 11 Sep 2023 18:32:54 GMT
-ENV NODE_VERSION=20.6.1
-# Mon, 11 Sep 2023 18:33:08 GMT
+# Wed, 20 Sep 2023 00:35:21 GMT
+ENV NODE_VERSION=20.7.0
+# Wed, 20 Sep 2023 00:35:36 GMT
 RUN ARCH= && dpkgArch="$(dpkg --print-architecture)"   && case "${dpkgArch##*-}" in     amd64) ARCH='x64';;     ppc64el) ARCH='ppc64le';;     s390x) ARCH='s390x';;     arm64) ARCH='arm64';;     armhf) ARCH='armv7l';;     i386) ARCH='x86';;     *) echo "unsupported architecture"; exit 1 ;;   esac   && set -ex   && for key in     4ED778F539E3634C779C87C6D7062848A1AB005C     141F07595B7B3FFE74309A937405533BE57C7D57     74F12602B6F1C4E913FAA37AD3A89613643B6201     DD792F5973C6DE52C432CBDAC77ABFA00DDBF2B7     61FC681DFB92A079F1685E77973F295594EC4689     8FCCA13FEF1D0C2E91008E09770F7A9A5AE15600     C4F0DFFF4E8C1A8236409D08E73BC641CC11F4C8     890C08DB8579162FEE0DF9DB8BEAB4DFCF555EF4     C82FA3AE1CBEDC6BE46B9360C43CEC45C17AB93C     108F52B48DB57BB0CC439B2997B01419BD92F80A     A363A499291CBBC940DD62E41F10027AF002F8B0   ; do       gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||       gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/node-v$NODE_VERSION-linux-$ARCH.tar.xz"   && curl -fsSLO --compressed "https://nodejs.org/dist/v$NODE_VERSION/SHASUMS256.txt.asc"   && gpg --batch --decrypt --output SHASUMS256.txt SHASUMS256.txt.asc   && grep " node-v$NODE_VERSION-linux-$ARCH.tar.xz\$" SHASUMS256.txt | sha256sum -c -   && tar -xJf "node-v$NODE_VERSION-linux-$ARCH.tar.xz" -C /usr/local --strip-components=1 --no-same-owner   && rm "node-v$NODE_VERSION-linux-$ARCH.tar.xz" SHASUMS256.txt.asc SHASUMS256.txt   && ln -s /usr/local/bin/node /usr/local/bin/nodejs   && node --version   && npm --version
-# Mon, 11 Sep 2023 18:33:09 GMT
+# Wed, 20 Sep 2023 00:35:36 GMT
 ENV YARN_VERSION=1.22.19
-# Mon, 11 Sep 2023 18:33:11 GMT
+# Wed, 20 Sep 2023 00:35:39 GMT
 RUN set -ex   && for key in     6A010C5166006599AA17F08146C2130DFD2497F5   ; do     gpg --batch --keyserver hkps://keys.openpgp.org --recv-keys "$key" ||     gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key" ;   done   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz"   && curl -fsSLO --compressed "https://yarnpkg.com/downloads/$YARN_VERSION/yarn-v$YARN_VERSION.tar.gz.asc"   && gpg --batch --verify yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && mkdir -p /opt   && tar -xzf yarn-v$YARN_VERSION.tar.gz -C /opt/   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarn /usr/local/bin/yarn   && ln -s /opt/yarn-v$YARN_VERSION/bin/yarnpkg /usr/local/bin/yarnpkg   && rm yarn-v$YARN_VERSION.tar.gz.asc yarn-v$YARN_VERSION.tar.gz   && yarn --version
-# Mon, 11 Sep 2023 18:33:11 GMT
+# Wed, 20 Sep 2023 00:35:40 GMT
 COPY file:4d192565a7220e135cab6c77fbc1c73211b69f3d9fb37e62857b2c6eb9363d51 in /usr/local/bin/ 
-# Mon, 11 Sep 2023 18:33:12 GMT
+# Wed, 20 Sep 2023 00:35:40 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Mon, 11 Sep 2023 18:33:12 GMT
+# Wed, 20 Sep 2023 00:35:40 GMT
 CMD ["node"]
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.title=Unit (node20)
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:45 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Mon, 11 Sep 2023 19:07:33 GMT
+# Wed, 20 Sep 2023 02:33:46 GMT
 LABEL org.opencontainers.image.version=1.31.0
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev curl pkg-config     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && mkdir -p /usr/src/unit     && cd /usr/src/unit     && hg clone -u 1.31.0-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS_MODULES="--prefix=/usr                 --statedir=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --runstatedir=/var/run                 --pid=/var/run/unit.pid                 --logdir=/var/log                 --log=/var/log/unit.log                 --tmpdir=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && CONFIGURE_ARGS="$CONFIGURE_ARGS_MODULES                 --njs"     && make -j $NCPU -C pkg/contrib .njs     && export PKG_CONFIG_PATH=$(pwd)/pkg/contrib/njs/build     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd     && make clean     && npm -g install node-gyp     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && ./configure nodejs --node-gyp=/usr/local/bin/node-gyp     && make -j $NCPU node node-install libunit-install     && make clean     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/modules     && ./configure nodejs --node-gyp=/usr/local/bin/node-gyp     && make -j $NCPU node node-install libunit-install     && cd     && rm -rf /usr/src/unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && rm -rf /root/.cache/ && rm -rf /root/.npm     && mkdir -p /var/lib/unit/     && mkdir -p /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove build-essential     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 COPY file:8b65557c2137d1a3946148e09ddd45af0b855e40210dabb5a9bd6c36fac22006 in /usr/local/bin/ 
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 COPY multi:0ef77957b92a7e8997661453cf7256a81db39d0e9f975a137d7e664007d8fcf4 in /usr/share/unit/welcome/ 
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 STOPSIGNAL SIGTERM
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 EXPOSE 80
-# Mon, 11 Sep 2023 19:08:22 GMT
+# Wed, 20 Sep 2023 02:34:33 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
@@ -5118,29 +5118,29 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 		Last Modified: Thu, 07 Sep 2023 13:10:26 GMT  
 		Size: 4.2 KB (4207 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20b3241a49a1702b165104ab2c459b2247ec3f28b3fdecf47a53fba3ec304ae3`  
-		Last Modified: Mon, 11 Sep 2023 18:39:06 GMT  
-		Size: 47.6 MB (47625774 bytes)  
+	-	`sha256:29dc004d381350c84e88c703bae551c6b308176c12fe9ee63c173f56e1487ffa`  
+		Last Modified: Wed, 20 Sep 2023 01:26:36 GMT  
+		Size: 47.8 MB (47836931 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb12071992cccab93d68529112a4d87d2de894ab3ba2503579f19a91e5944bf7`  
-		Last Modified: Mon, 11 Sep 2023 18:39:01 GMT  
-		Size: 2.3 MB (2281085 bytes)  
+	-	`sha256:ac376807223c14dfa168bcc05f384b941803bcef964c08d8975586d50736ccd3`  
+		Last Modified: Wed, 20 Sep 2023 01:26:29 GMT  
+		Size: 2.3 MB (2281004 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2bc2d17c4807dfac8437281364b214e4e7bd59cf12ea2aa6eadd6c9ab46ab568`  
-		Last Modified: Mon, 11 Sep 2023 18:39:00 GMT  
-		Size: 449.0 B  
+	-	`sha256:b9b71fa0227a17485f30f43c1c3d53891bc2963d792ecc4051a2114a1b686f79`  
+		Last Modified: Wed, 20 Sep 2023 01:26:28 GMT  
+		Size: 453.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6fbd653b065af4dc6efb5cc9f9c9a6cc1b4fb2702c314ce6bb50bc93fef81ef6`  
-		Last Modified: Mon, 11 Sep 2023 19:09:09 GMT  
-		Size: 9.6 MB (9592382 bytes)  
+	-	`sha256:82d1e15a6b90694085b3ae698c43abdf9da95f2cfc69cd9bc832335b618dc7e1`  
+		Last Modified: Wed, 20 Sep 2023 02:36:18 GMT  
+		Size: 9.6 MB (9591707 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:37050e21f3fa6d05d5cf4ae96369ac698f526d49783c01e1e94780b88706fcd5`  
-		Last Modified: Mon, 11 Sep 2023 19:09:08 GMT  
-		Size: 1.3 KB (1270 bytes)  
+	-	`sha256:d83bc61aba62696330361a230fc5a6e42be476112886eb67e3870044a89a877d`  
+		Last Modified: Wed, 20 Sep 2023 02:36:16 GMT  
+		Size: 1.3 KB (1271 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f9170564934f2e78c8c5e0657a1f0c23bc2815b5060645dd8cfceecde3935c76`  
-		Last Modified: Mon, 11 Sep 2023 19:09:08 GMT  
-		Size: 1.5 KB (1462 bytes)  
+	-	`sha256:636eac4113003e856fea8c264099fb14d224a2f376fbe4fbcf6719fd5d31c264`  
+		Last Modified: Wed, 20 Sep 2023 02:36:16 GMT  
+		Size: 1.5 KB (1466 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `unit:perl`
