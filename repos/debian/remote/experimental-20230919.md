@@ -1,13 +1,14 @@
 ## `debian:experimental-20230919`
 
 ```console
-$ docker pull debian@sha256:4f6125ca5673a99a5add1bebb96acdb4c43bbe95124d70cce32ba6d8dbfdae6b
+$ docker pull debian@sha256:c591284ee1680f4ff8e9a73103fd6e549ded0de0c5c1312d27ec3a6ff0417b52
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 2
+-	Platforms: 3
 	-	linux; arm variant v5
 	-	linux; 386
+	-	linux; riscv64
 
 ### `debian:experimental-20230919` - linux; arm variant v5
 
@@ -71,4 +72,36 @@ RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources
 	-	`sha256:78a9afcc3ec989f19fd54d38ea92d23b13f7eb0a710358015dde31ed56a53cb6`  
 		Last Modified: Wed, 20 Sep 2023 00:53:01 GMT  
 		Size: 224.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `debian:experimental-20230919` - linux; riscv64
+
+```console
+$ docker pull debian@sha256:e08fca1312c295ab8ad2841f4ed6e36de03309c233d3051874170ab4a7ae03f1
+```
+
+-	Docker Version: 20.10.25
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **47.9 MB (47886230 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:cc784227faae7baba952fabcb31d5132bea3cc613402980652031e499def33dc`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Wed, 20 Sep 2023 01:11:45 GMT
+ADD file:6a9fad96e58d832f0ec36c085b5b9904ae84876ad08531f6c3c132d3be73dd3d in / 
+# Wed, 20 Sep 2023 01:11:47 GMT
+CMD ["bash"]
+# Wed, 20 Sep 2023 01:12:21 GMT
+RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources.list.d/experimental.list
+```
+
+-	Layers:
+	-	`sha256:b0c261248d3418f436857a29cba81500d32de6cb99f0dec9332afcf0a92999f4`  
+		Last Modified: Wed, 20 Sep 2023 01:14:55 GMT  
+		Size: 47.9 MB (47886007 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d10557eba7c5e511a82e3ea746d3521945b345f619939bed42516bdd75805b5b`  
+		Last Modified: Wed, 20 Sep 2023 01:15:39 GMT  
+		Size: 223.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
