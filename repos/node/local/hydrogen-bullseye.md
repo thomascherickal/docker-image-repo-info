@@ -2,16 +2,16 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8f439c3a18e4203b6a9daa5a91bd0382a0242944782cd50dc9fcfabce60d83ba`
-- Created: `2023-09-07T22:32:13.720026399Z`
-- Virtual Size: ~ 996.95 Mb  
+- Image ID: `sha256:3f5a4400dca487bd51503944694104843ef22f1b497635dd6cb28dc0d3f9ff7c`
+- Created: `2023-09-20T00:38:58.916365Z`
+- Virtual Size: ~ 997.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["node"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=18.17.1`
+  - `NODE_VERSION=18.18.0`
   - `YARN_VERSION=1.22.19`
 
 ## `dpkg` (`.deb`-based packages)
@@ -3318,20 +3318,13 @@ Licenses: (parsed from: `/usr/share/doc/libwebp-dev/copyright`, `/usr/share/doc/
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libwebp=0.6.1-2.1+deb11u1
-'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2.1%2bdeb11u1.dsc' libwebp_0.6.1-2.1+deb11u1.dsc 2086 SHA256:be17e41375907dec4a6b059edb6d019faa5f750573f1f8dba7e00b6f3c2d8974
-'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1.orig.tar.gz' libwebp_0.6.1.orig.tar.gz 3554290 SHA256:a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4
-'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2.1%2bdeb11u1.debian.tar.xz' libwebp_0.6.1-2.1+deb11u1.debian.tar.xz 14032 SHA256:07284af84e47c6656a6904eb88ca725ffdd984397ea3636cf83641db93353701
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libwebp/0.6.1-2.1+deb11u1/
 
-- https://sources.debian.net/src/libwebp/0.6.1-2.1+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/libwebp/0.6.1-2.1+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libwebp/0.6.1-2.1+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libwmf=0.2.8.4-17`
 
