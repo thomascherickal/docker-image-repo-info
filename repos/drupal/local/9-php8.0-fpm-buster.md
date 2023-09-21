@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:382d77854f098fde905a36ff7886e7ede11c7fe441c58ace0037566f0bf463b1`
-- Created: `2023-09-15T21:13:14.356760544Z`
+- Image ID: `sha256:9e6e331783209bd0e578814c7484640a62bc72f81f47b76b820989506e5d0149`
+- Created: `2023-09-21T06:23:36.238898018Z`
 - Virtual Size: ~ 491.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1690,11 +1690,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libsodium/1.0.17-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libsodium/1.0.17-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libssh2=1.8.0-2.1`
+### `dpkg` source package: `libssh2=1.8.0-2.1+deb10u1`
 
 Binary Packages:
 
-- `libssh2-1:amd64=1.8.0-2.1`
+- `libssh2-1:amd64=1.8.0-2.1+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libssh2-1/copyright`)
 
@@ -1703,17 +1703,17 @@ Licenses: (parsed from: `/usr/share/doc/libssh2-1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libssh2=1.8.0-2.1
-'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2_1.8.0-2.1.dsc' libssh2_1.8.0-2.1.dsc 1958 SHA256:33f070a4a32db5d3952457986d8f80c9cf874dd144d81f5bce062171564b35d9
-'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2_1.8.0.orig.tar.gz' libssh2_1.8.0.orig.tar.gz 846989 SHA256:4382d33de790b28f862e53ed59ffbd65f3def7a06e8b6e9ca1b6f70453b4d5e0
-'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2_1.8.0-2.1.debian.tar.xz' libssh2_1.8.0-2.1.debian.tar.xz 13988 SHA256:e3c34166cddaba7f2162132ef4f4bdc1490c499ee6610bde81f773adef43489e
+$ apt-get source -qq --print-uris libssh2=1.8.0-2.1+deb10u1
+'http://deb.debian.org/debian-security/pool/updates/main/libs/libssh2/libssh2_1.8.0-2.1%2bdeb10u1.dsc' libssh2_1.8.0-2.1+deb10u1.dsc 1835 SHA256:fc932f9c37345e11191b546c7a97e5c2fe27803d11c53718764e2f7047eeb29a
+'http://deb.debian.org/debian-security/pool/updates/main/libs/libssh2/libssh2_1.8.0.orig.tar.gz' libssh2_1.8.0.orig.tar.gz 846989 SHA256:4382d33de790b28f862e53ed59ffbd65f3def7a06e8b6e9ca1b6f70453b4d5e0
+'http://deb.debian.org/debian-security/pool/updates/main/libs/libssh2/libssh2_1.8.0-2.1%2bdeb10u1.debian.tar.xz' libssh2_1.8.0-2.1+deb10u1.debian.tar.xz 17116 SHA256:b8cec51fc65b728e844ea8b12b0c4a0088ae10f4cdf103b6f5d29b18a6c905f1
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libssh2/1.8.0-2.1/ (for browsing the source)
-- https://sources.debian.net/src/libssh2/1.8.0-2.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libssh2/1.8.0-2.1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libssh2/1.8.0-2.1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/libssh2/1.8.0-2.1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libssh2/1.8.0-2.1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libtasn1-6=4.13-3+deb10u1`
 
@@ -1779,11 +1779,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libunistring/0.9.10-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libunistring/0.9.10-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libwebp=0.6.1-2+deb10u2`
+### `dpkg` source package: `libwebp=0.6.1-2+deb10u3`
 
 Binary Packages:
 
-- `libwebp6:amd64=0.6.1-2+deb10u2`
+- `libwebp6:amd64=0.6.1-2+deb10u3`
 
 Licenses: (parsed from: `/usr/share/doc/libwebp6/copyright`)
 
@@ -1792,17 +1792,17 @@ Licenses: (parsed from: `/usr/share/doc/libwebp6/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libwebp=0.6.1-2+deb10u2
-'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2%2bdeb10u2.dsc' libwebp_0.6.1-2+deb10u2.dsc 2078 SHA256:e57554e788414a5b38c1d31844bb0c56694bcc8cb1bde282432d7796333d7e75
+$ apt-get source -qq --print-uris libwebp=0.6.1-2+deb10u3
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2%2bdeb10u3.dsc' libwebp_0.6.1-2+deb10u3.dsc 2078 SHA256:d33d618fcc46af0c4360cae3b3234fda69efc52945e8b123896bc81814026139
 'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1.orig.tar.gz' libwebp_0.6.1.orig.tar.gz 3554290 SHA256:a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4
-'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2%2bdeb10u2.debian.tar.xz' libwebp_0.6.1-2+deb10u2.debian.tar.xz 14396 SHA256:f84d655f88949b4a38ef09c28adf864423f9a35a9ef4f9342495e7cce985118e
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2%2bdeb10u3.debian.tar.xz' libwebp_0.6.1-2+deb10u3.debian.tar.xz 18220 SHA256:62f1b5c78a7e236e3c07c06f5ca68ae37b5b436baaccae2ebe9c3775895f0f4e
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/libwebp/0.6.1-2+deb10u2/ (for browsing the source)
-- https://sources.debian.net/src/libwebp/0.6.1-2+deb10u2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libwebp/0.6.1-2+deb10u2/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/libwebp/0.6.1-2+deb10u3/ (for browsing the source)
+- https://sources.debian.net/src/libwebp/0.6.1-2+deb10u3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libwebp/0.6.1-2+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxml2=2.9.4+dfsg1-7+deb10u6`
 

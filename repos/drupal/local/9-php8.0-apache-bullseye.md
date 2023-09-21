@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b5bbc57ecb5166fe079128db952b934859479b4d5416e3409b2c9e5898a6c8e4`
-- Created: `2023-09-15T21:12:23.057843873Z`
+- Image ID: `sha256:f625a798ad841ba6999ef786ab1a41be0ec006632cc70f42589bfbd640bcffb2`
+- Created: `2023-09-21T06:19:52.783342158Z`
 - Virtual Size: ~ 557.02 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -2084,23 +2084,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libunistring/0.9.10-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libunistring/0.9.10-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libwebp=0.6.1-2.1+deb11u1`
+### `dpkg` source package: `libwebp=0.6.1-2.1+deb11u2`
 
 Binary Packages:
 
-- `libwebp6:amd64=0.6.1-2.1+deb11u1`
+- `libwebp6:amd64=0.6.1-2.1+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/libwebp6/copyright`)
 
 - `Apache-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libwebp=0.6.1-2.1+deb11u2
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2.1%2bdeb11u2.dsc' libwebp_0.6.1-2.1+deb11u2.dsc 2086 SHA256:de8a8c64cb1c1fb217b68ca91bc32737af2fa71b6a5ed344262e778cc9f90aa6
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1.orig.tar.gz' libwebp_0.6.1.orig.tar.gz 3554290 SHA256:a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2.1%2bdeb11u2.debian.tar.xz' libwebp_0.6.1-2.1+deb11u2.debian.tar.xz 17716 SHA256:81385fbc2b489bc5e0d90f7c2155f64c4adf474b5456f6ccca6a2643e4b870af
+```
 
-- http://snapshot.debian.org/package/libwebp/0.6.1-2.1+deb11u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libwebp/0.6.1-2.1+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/libwebp/0.6.1-2.1+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libwebp/0.6.1-2.1+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxcrypt=1:4.4.18-4`
 
