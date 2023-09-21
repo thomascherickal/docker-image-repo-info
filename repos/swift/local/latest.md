@@ -1,10 +1,10 @@
-# `swift:5.8.1`
+# `swift:5.9.0`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0b36addfce35dcdb78a5664b730c1176fb9330042679326d18a727394fcfd5a7`
-- Created: `2023-09-02T00:16:47.94594269Z`
-- Virtual Size: ~ 2.40 Gb  
+- Image ID: `sha256:e1da2b4a63debed0a4f0f15e2735132b087e08c3fe7b3554f23b4c03c2ed8424`
+- Created: `2023-09-20T03:24:45.401285235Z`
+- Virtual Size: ~ 2.55 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -12,8 +12,8 @@
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561`
   - `SWIFT_PLATFORM=ubuntu22.04`
-  - `SWIFT_BRANCH=swift-5.8.1-release`
-  - `SWIFT_VERSION=swift-5.8.1-RELEASE`
+  - `SWIFT_BRANCH=swift-5.9-release`
+  - `SWIFT_VERSION=swift-5.9-RELEASE`
   - `SWIFT_WEBROOT=https://download.swift.org`
 - Labels:
   - `description=Docker Container for the Swift programming language`
