@@ -2459,11 +2459,21 @@ CMD ["mvn"]
 
 ## `maven:3-amazoncorretto-21-debian`
 
-**does not exist** (yet?)
+```console
+$ docker pull maven@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `maven:3-amazoncorretto-21-debian-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull maven@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `maven:3-amazoncorretto-8`
 
@@ -11821,11 +11831,21 @@ CMD ["mvn"]
 
 ## `maven:3.9-amazoncorretto-21-debian`
 
-**does not exist** (yet?)
+```console
+$ docker pull maven@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `maven:3.9-amazoncorretto-21-debian-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull maven@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `maven:3.9-amazoncorretto-8`
 
@@ -21183,11 +21203,21 @@ CMD ["mvn"]
 
 ## `maven:3.9.4-amazoncorretto-21-debian`
 
-**does not exist** (yet?)
+```console
+$ docker pull maven@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `maven:3.9.4-amazoncorretto-21-debian-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull maven@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `maven:3.9.4-amazoncorretto-8`
 
