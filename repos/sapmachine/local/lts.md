@@ -1,16 +1,16 @@
-# `sapmachine:jdk-ubuntu-17`
+# `sapmachine:21-jdk-ubuntu`
 
 ## Docker Metadata
 
-- Image ID: `sha256:99bf23bb1c8a0a95f1366777c11cc892f58264d44f263a550b4ff55a56367057`
-- Created: `2023-09-02T01:25:23.87935562Z`
-- Virtual Size: ~ 422.42 Mb  
+- Image ID: `sha256:c680f53e874cc27082a366bdbc94f47088de63923878d1bce28e204e31776b60`
+- Created: `2023-09-21T08:50:50.488481141Z`
+- Virtual Size: ~ 450.34 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `JAVA_HOME=/usr/lib/jvm/sapmachine-17`
+  - `JAVA_HOME=/usr/lib/jvm/sapmachine-21`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=22.04`
@@ -1746,11 +1746,11 @@ $ apt-get source -qq --print-uris procps=2:3.3.17-6ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.17-6ubuntu2.debian.tar.xz' procps_3.3.17-6ubuntu2.debian.tar.xz 34228 SHA512:68ba4678fde89a5f7fce8b04e5ea0b24f9addc7c15b949b01f908cb9a179d68eb8313fc108a99f260d3cb5dff9fd5c9d33f678d3d8bfdd0cba02bcdd9b0bd3c5
 ```
 
-### `dpkg` source package: `sapmachine-17-jdk=17.0.8`
+### `dpkg` source package: `sapmachine-21-jdk=21`
 
 Binary Packages:
 
-- `sapmachine-17-jdk=17.0.8`
+- `sapmachine-21-jdk=21`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
