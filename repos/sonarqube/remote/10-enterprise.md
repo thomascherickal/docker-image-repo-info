@@ -1,7 +1,7 @@
 ## `sonarqube:10-enterprise`
 
 ```console
-$ docker pull sonarqube@sha256:ebc5908eb9b64c594e6e2137b076f30148259b0374080b0f72c6a9a2c98eae5b
+$ docker pull sonarqube@sha256:ea92b4f2edde15c5f34c0d56b1cb6b172590e724e29fed72fe18a478636098d4
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -113,14 +113,14 @@ ENTRYPOINT ["/opt/sonarqube/docker/entrypoint.sh"]
 ### `sonarqube:10-enterprise` - linux; arm64 variant v8
 
 ```console
-$ docker pull sonarqube@sha256:a1ec663566d9d2043b0da309b9858fd5ead5600bbd6645fb6a19c84e368c24c1
+$ docker pull sonarqube@sha256:823075212dcd82f92a1dfb652f47aa34afa82e2f5ab324fa11d96b06c7aedb2a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **591.9 MB (591904853 bytes)**  
+-	Total Size: **591.9 MB (591904143 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2fc0a8ba65f5b09c3d74a75e3fb8aa681ec5c27e114669e89e0a73380687a5a3`
+-	Image ID: `sha256:7271991fd684037e679b98bdf5dfdbcb65935e88831fbda1eb923e9369218003`
 -	Entrypoint: `["\/opt\/sonarqube\/docker\/entrypoint.sh"]`
 
 ```dockerfile
@@ -158,26 +158,26 @@ ENTRYPOINT ["/__cacert_entrypoint.sh"]
 LABEL org.opencontainers.image.url=https://github.com/SonarSource/docker-sonarqube
 # Sat, 02 Sep 2023 03:08:32 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Sat, 02 Sep 2023 03:10:38 GMT
-ARG SONARQUBE_VERSION=10.2.0.77647
-# Sat, 02 Sep 2023 03:11:25 GMT
-ARG SONARQUBE_ZIP_URL=https://binaries.sonarsource.com/CommercialDistribution/sonarqube-enterprise/sonarqube-enterprise-10.2.0.77647.zip
-# Sat, 02 Sep 2023 03:11:25 GMT
-ENV DOCKER_RUNNING=true JAVA_HOME=/opt/java/openjdk SONARQUBE_HOME=/opt/sonarqube SONAR_VERSION=10.2.0.77647 SQ_DATA_DIR=/opt/sonarqube/data SQ_EXTENSIONS_DIR=/opt/sonarqube/extensions SQ_LOGS_DIR=/opt/sonarqube/logs SQ_TEMP_DIR=/opt/sonarqube/temp
-# Sat, 02 Sep 2023 03:11:45 GMT
-# ARGS: SONARQUBE_VERSION=10.2.0.77647 SONARQUBE_ZIP_URL=https://binaries.sonarsource.com/CommercialDistribution/sonarqube-enterprise/sonarqube-enterprise-10.2.0.77647.zip
+# Thu, 21 Sep 2023 05:06:45 GMT
+ARG SONARQUBE_VERSION=10.2.1.78527
+# Thu, 21 Sep 2023 05:08:01 GMT
+ARG SONARQUBE_ZIP_URL=https://binaries.sonarsource.com/CommercialDistribution/sonarqube-enterprise/sonarqube-enterprise-10.2.1.78527.zip
+# Thu, 21 Sep 2023 05:08:01 GMT
+ENV DOCKER_RUNNING=true JAVA_HOME=/opt/java/openjdk SONARQUBE_HOME=/opt/sonarqube SONAR_VERSION=10.2.1.78527 SQ_DATA_DIR=/opt/sonarqube/data SQ_EXTENSIONS_DIR=/opt/sonarqube/extensions SQ_LOGS_DIR=/opt/sonarqube/logs SQ_TEMP_DIR=/opt/sonarqube/temp
+# Thu, 21 Sep 2023 05:08:20 GMT
+# ARGS: SONARQUBE_VERSION=10.2.1.78527 SONARQUBE_ZIP_URL=https://binaries.sonarsource.com/CommercialDistribution/sonarqube-enterprise/sonarqube-enterprise-10.2.1.78527.zip
 RUN set -eux;     groupadd --system --gid 1000 sonarqube;     useradd --system --uid 1000 --gid sonarqube sonarqube;     apt-get update;     apt-get install -y gnupg unzip curl bash fonts-dejavu;     echo "networkaddress.cache.ttl=5" >> "${JAVA_HOME}/conf/security/java.security";     sed --in-place --expression="s?securerandom.source=file:/dev/random?securerandom.source=file:/dev/urandom?g" "${JAVA_HOME}/conf/security/java.security";     for server in $(shuf -e hkps://keys.openpgp.org                             hkps://keyserver.ubuntu.com) ; do         gpg --batch --keyserver "${server}" --recv-keys 679F1EE92B19609DE816FDE81DB198F93525EC1A && break || : ;     done;     mkdir --parents /opt;     cd /opt;     curl --fail --location --output sonarqube.zip --silent --show-error "${SONARQUBE_ZIP_URL}";     curl --fail --location --output sonarqube.zip.asc --silent --show-error "${SONARQUBE_ZIP_URL}.asc";     gpg --batch --verify sonarqube.zip.asc sonarqube.zip;     unzip -q sonarqube.zip;     mv "sonarqube-${SONARQUBE_VERSION}" sonarqube;     rm sonarqube.zip*;     rm -rf ${SONARQUBE_HOME}/bin/*;     ln -s "${SONARQUBE_HOME}/lib/sonar-application-${SONARQUBE_VERSION}.jar" "${SONARQUBE_HOME}/lib/sonarqube.jar";     chmod -R 555 ${SONARQUBE_HOME};     chmod -R ugo+wrX "${SQ_DATA_DIR}" "${SQ_EXTENSIONS_DIR}" "${SQ_LOGS_DIR}" "${SQ_TEMP_DIR}";     apt-get remove -y gnupg unzip curl;     rm -rf /var/lib/apt/lists/*;
-# Sat, 02 Sep 2023 03:11:48 GMT
+# Thu, 21 Sep 2023 05:08:24 GMT
 COPY file:51aced1b78206886f6fbafaa2cd9132831e659d7d4073dffca35b43d1847a323 in /opt/sonarqube/docker/ 
-# Sat, 02 Sep 2023 03:11:48 GMT
+# Thu, 21 Sep 2023 05:08:24 GMT
 WORKDIR /opt/sonarqube
-# Sat, 02 Sep 2023 03:11:49 GMT
+# Thu, 21 Sep 2023 05:08:24 GMT
 EXPOSE 9000
-# Sat, 02 Sep 2023 03:11:49 GMT
+# Thu, 21 Sep 2023 05:08:24 GMT
 USER sonarqube
-# Sat, 02 Sep 2023 03:11:49 GMT
+# Thu, 21 Sep 2023 05:08:24 GMT
 STOPSIGNAL SIGINT
-# Sat, 02 Sep 2023 03:11:49 GMT
+# Thu, 21 Sep 2023 05:08:24 GMT
 ENTRYPOINT ["/opt/sonarqube/docker/entrypoint.sh"]
 ```
 
@@ -202,11 +202,11 @@ ENTRYPOINT ["/opt/sonarqube/docker/entrypoint.sh"]
 		Last Modified: Fri, 01 Sep 2023 23:33:33 GMT  
 		Size: 734.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:105667a52df1d01d16a6e1951a9440bce922a46d518cbaf85f4f9bc3cdc76796`  
-		Last Modified: Sat, 02 Sep 2023 03:17:01 GMT  
-		Size: 498.0 MB (497988291 bytes)  
+	-	`sha256:52591e10ab77fe5f5b9d915fb4e08e5b9b8260c0d74cd02397b0e113af020b73`  
+		Last Modified: Thu, 21 Sep 2023 05:12:05 GMT  
+		Size: 498.0 MB (497987581 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ab9e8854589f4f7a73b8d48eeac398296fdc38d194c260c99eae0450690dd460`  
-		Last Modified: Sat, 02 Sep 2023 03:16:39 GMT  
+	-	`sha256:3fd2255e56dd06f62e553d5b24a59acea86bdc5580537102ec73f0b3814c06e5`  
+		Last Modified: Thu, 21 Sep 2023 05:11:43 GMT  
 		Size: 478.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
