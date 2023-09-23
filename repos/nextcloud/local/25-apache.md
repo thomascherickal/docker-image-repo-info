@@ -1,9 +1,9 @@
-# `nextcloud:25.0.11-apache`
+# `nextcloud:25.0.12-apache`
 
 ## Docker Metadata
 
-- Image ID: `sha256:791c5db787c76cb7b699bfb94ff8e12d8421f11d51b367063cac037ad2abacf6`
-- Created: `2023-09-19T00:22:27.255463958Z`
+- Image ID: `sha256:6e63f19c2348c7ac05342289ad398225f5c4ed06cc19a2280e91ee26e767b9e9`
+- Created: `2023-09-22T01:16:42.542983769Z`
 - Virtual Size: ~ 1.06 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -26,7 +26,7 @@
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
   - `APACHE_BODY_LIMIT=1073741824`
-  - `NEXTCLOUD_VERSION=25.0.11`
+  - `NEXTCLOUD_VERSION=25.0.12`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -2858,25 +2858,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libunistring/0.9.10-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libunistring/0.9.10-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libwebp=0.6.1-2.1+deb11u1`
+### `dpkg` source package: `libwebp=0.6.1-2.1+deb11u2`
 
 Binary Packages:
 
-- `libwebp6:amd64=0.6.1-2.1+deb11u1`
-- `libwebpdemux2:amd64=0.6.1-2.1+deb11u1`
-- `libwebpmux3:amd64=0.6.1-2.1+deb11u1`
+- `libwebp6:amd64=0.6.1-2.1+deb11u2`
+- `libwebpdemux2:amd64=0.6.1-2.1+deb11u2`
+- `libwebpmux3:amd64=0.6.1-2.1+deb11u2`
 
 Licenses: (parsed from: `/usr/share/doc/libwebp6/copyright`, `/usr/share/doc/libwebpdemux2/copyright`, `/usr/share/doc/libwebpmux3/copyright`)
 
 - `Apache-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libwebp=0.6.1-2.1+deb11u2
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2.1%2bdeb11u2.dsc' libwebp_0.6.1-2.1+deb11u2.dsc 2086 SHA256:de8a8c64cb1c1fb217b68ca91bc32737af2fa71b6a5ed344262e778cc9f90aa6
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1.orig.tar.gz' libwebp_0.6.1.orig.tar.gz 3554290 SHA256:a86045e3ec24704bddbaa369ca30980d6bf4f2625f4cdca03715e91f9c08bbb4
+'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_0.6.1-2.1%2bdeb11u2.debian.tar.xz' libwebp_0.6.1-2.1+deb11u2.debian.tar.xz 17716 SHA256:81385fbc2b489bc5e0d90f7c2155f64c4adf474b5456f6ccca6a2643e4b870af
+```
 
-- http://snapshot.debian.org/package/libwebp/0.6.1-2.1+deb11u1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libwebp/0.6.1-2.1+deb11u2/ (for browsing the source)
+- https://sources.debian.net/src/libwebp/0.6.1-2.1+deb11u2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libwebp/0.6.1-2.1+deb11u2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libwmf=0.2.8.4-17`
 
