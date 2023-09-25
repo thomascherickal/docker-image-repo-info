@@ -7,6 +7,8 @@
 -	[`emqx:5.0.26`](#emqx5026)
 -	[`emqx:5.1`](#emqx51)
 -	[`emqx:5.1.6`](#emqx516)
+-	[`emqx:5.2`](#emqx52)
+-	[`emqx:5.2.1`](#emqx521)
 -	[`emqx:latest`](#emqxlatest)
 
 ## `emqx:5`
@@ -773,6 +775,14 @@ CMD ["/opt/emqx/bin/emqx" "foreground"]
 		Last Modified: Wed, 20 Sep 2023 09:44:13 GMT  
 		Size: 902.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `emqx:5.2`
+
+**does not exist** (yet?)
+
+## `emqx:5.2.1`
+
+**does not exist** (yet?)
 
 ## `emqx:latest`
 
