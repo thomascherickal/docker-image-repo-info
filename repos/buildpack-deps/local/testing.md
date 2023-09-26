@@ -1545,21 +1545,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `Unicode-DFS-2016`
 - `bzip2-1.0.6`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.78.0-1
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.78.0-1.dsc' glib2.0_2.78.0-1.dsc 3684 SHA256:edffc37836416656e4953e694b26d67b998f0e56f0db38f2968d86b51d4d72a9
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.78.0.orig-unicode-data.tar.xz' glib2.0_2.78.0.orig-unicode-data.tar.xz 266184 SHA256:7c3e36ec1356ac025a92169b74c4c3e6858345f59ed4ea4cf0db300dec4fa21a
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.78.0.orig.tar.xz' glib2.0_2.78.0.orig.tar.xz 5327096 SHA256:44eaab8b720877ce303c5540b657b126f12dc94972d9880b52959f43fb537b30
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.78.0-1.debian.tar.xz' glib2.0_2.78.0-1.debian.tar.xz 118476 SHA256:006bf1b14fdcd17982fc165a72c6caa5eba0336571a4811dd24fd4d7ceb98358
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/glib2.0/2.78.0-1/
 
-- https://sources.debian.net/src/glib2.0/2.78.0-1/ (for browsing the source)
-- https://sources.debian.net/src/glib2.0/2.78.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/glib2.0/2.78.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.37-8`
 
@@ -3550,21 +3542,13 @@ Licenses: (parsed from: `/usr/share/doc/libwebp-dev/copyright`, `/usr/share/doc/
 
 - `Apache-2.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libwebp=1.2.4-0.3
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4-0.3.dsc' libwebp_1.2.4-0.3.dsc 2379 SHA256:822a6258c3d41b875a60e709c46cf739c55047b4b6d0e1541c5432a4fe445ec8
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz' libwebp_1.2.4.orig.tar.gz 4141376 SHA256:7bf5a8a28cc69bcfa8cb214f2c3095703c6b73ac5fba4d5480c205331d9494df
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz.asc' libwebp_1.2.4.orig.tar.gz.asc 833 SHA256:4c546cf7f757a70d8803ab850e69d28e7ce06e66dbee003fd3ede7346543851a
-'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4-0.3.debian.tar.xz' libwebp_1.2.4-0.3.debian.tar.xz 12004 SHA256:e2196110d735d4020feefa38ca28abc6e87a3998c0ce9645dbc8745ac64dc20d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libwebp/1.2.4-0.3/
 
-- https://sources.debian.net/src/libwebp/1.2.4-0.3/ (for browsing the source)
-- https://sources.debian.net/src/libwebp/1.2.4-0.3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libwebp/1.2.4-0.3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libwmf=0.2.13-1`
 
@@ -3939,20 +3923,13 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `Unicode-data`
 - `Xen-interface`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=6.4.13-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.4.13-1.dsc' linux_6.4.13-1.dsc 288852 SHA256:dc648bce294aa64a0c91ef4120edec1ab93052a67fff1b0dc54ef2f10fb319c4
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.4.13.orig.tar.xz' linux_6.4.13.orig.tar.xz 140445268 SHA256:75ea8a2a5f6ac5083c8b92296962f4c7b442f7b77afeadfe3195cbb675a956f6
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.4.13-1.debian.tar.xz' linux_6.4.13-1.debian.tar.xz 1494260 SHA256:0ee6f6d8ea1c8be26e04ced1c2f9f3d054455867e8cdd906aa1c422611bdc5a2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/linux/6.4.13-1/
 
-- https://sources.debian.net/src/linux/6.4.13-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/6.4.13-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/6.4.13-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lz4=1.9.4-1`
 
@@ -5467,20 +5444,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `GPL-3`
 - `GPL-3.0`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=3.07-1
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.07-1.dsc' sysvinit_3.07-1.dsc 2359 SHA256:a65764c7ce0d78529300bcc195c7816b33b52a4347f84102c4a4d39c8a912183
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.07.orig.tar.gz' sysvinit_3.07.orig.tar.gz 513168 SHA256:79ac3d1b3b52cee328a59f4f5357104eafde6f146c2ee10a929096d7177c83df
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.07-1.debian.tar.xz' sysvinit_3.07-1.debian.tar.xz 134388 SHA256:a2fbffb5f18fe4179b17fef1f6bc1ba7615f3747c221c08d3996b8906f5a5115
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/3.07-1/
 
-- https://sources.debian.net/src/sysvinit/3.07-1/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/3.07-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/3.07-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1.2`
 

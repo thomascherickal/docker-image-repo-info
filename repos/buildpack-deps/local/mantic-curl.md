@@ -1653,15 +1653,9 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.36.0-7ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7ubuntu1.dsc' perl_5.36.0-7ubuntu1.dsc 2968 SHA512:74c9b60640c71820ef6654e6a4439220dddc4ce1c4fcf04e470395e189d1ea66a47cbfc5ff2a9dcb9cd288b629b5afa4cc0cbf0f2f3eb2950ef175d39535647c
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig-regen-configure.tar.xz' perl_5.36.0.orig-regen-configure.tar.xz 417784 SHA512:4d16685f569a5b1dea79d607b6d62718111c32efaf5547bb9e1528bd755acf0c8fc74a1cc1f4d68fcb10aef9da7d8fea17a5cc10dabce6efa4721ab45ab03a65
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig.tar.xz' perl_5.36.0.orig.tar.xz 13051500 SHA512:6dd6ac2a77566c173c5ab9c238cf555f2c3e592e89abb5600bc23ce1cbd0c349e0233f6417cbbf1f6d0aefc6a734ba491285af0d3dc68a605b658b65c89f1dab
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7ubuntu1.debian.tar.xz' perl_5.36.0-7ubuntu1.debian.tar.xz 169744 SHA512:7859f20b2d168d3fb77f8aec0223548f6616c1954f443296fb711680063d188a3534374541e93dafc4212583453edb8d4668420839156a582f16a8dc3dc33c16
-```
 
 ### `dpkg` source package: `pinentry=1.2.1-1ubuntu1`
 
@@ -1892,14 +1886,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=253.5-1ubuntu5
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_253.5-1ubuntu5.dsc' systemd_253.5-1ubuntu5.dsc 6887 SHA512:594a86bc958c7c2e26559e2571a985cf95f32aa13fcdec0a6d838a57f2aeafe4b441f98ee3177180785034d9a7d434974979d9d6ad06adec051739fa159b4388
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_253.5.orig.tar.gz' systemd_253.5.orig.tar.gz 12015672 SHA512:39709b485cd9287e26ac8e973fa1692b280bec3b96e1da6667e4a4f2ac2228aa072b22802720a254698d32c82f5306d7feb32229e4b6d54cc0e2b1e2caa4cc2e
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_253.5-1ubuntu5.debian.tar.xz' systemd_253.5-1ubuntu5.debian.tar.xz 220120 SHA512:16b6eeb79eb303fcec0b34cb52e1f25a97b025fdeba18615c811206ae24d23423a416d3a85962de84c088398d289f27824d502a8efb03a1b77adef3e5dceb4c5
-```
 
 ### `dpkg` source package: `sysvinit=3.07-1ubuntu1`
 

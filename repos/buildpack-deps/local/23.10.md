@@ -1975,14 +1975,9 @@ Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 - `other-1`
 - `public-domain-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libde265=1.0.12-1build1
-'http://archive.ubuntu.com/ubuntu/pool/universe/libd/libde265/libde265_1.0.12-1build1.dsc' libde265_1.0.12-1build1.dsc 2214 SHA512:b675f524fb7db0d6a0f319020876ca89e90585e9c0d7a0de34ff3200d0bef75c8275ececa54e02b1412609d31a3ef54fd9e4daf7c85b8cbade188a45036ff697
-'http://archive.ubuntu.com/ubuntu/pool/universe/libd/libde265/libde265_1.0.12.orig.tar.gz' libde265_1.0.12.orig.tar.gz 846345 SHA512:2cd105f3ce15a075da758f5429670b78ec162217017d1057eb828d7bc45414d35f2a8ab3b2cd5f247320c361740f4ab92d2ce5a6d943feeb33dc28c273e1ed64
-'http://archive.ubuntu.com/ubuntu/pool/universe/libd/libde265/libde265_1.0.12-1build1.debian.tar.xz' libde265_1.0.12-1build1.debian.tar.xz 13920 SHA512:744e44987639fcf5294a2087f219b843fa61c727204d5aa610b3b56f11db57828a96e9dd6f96eac432e8a01a0d98711f2e492d1b69bbd64e8b7019a10204b102
-```
 
 ### `dpkg` source package: `libdeflate=1.18-1`
 
@@ -2072,14 +2067,9 @@ Licenses: (parsed from: `/usr/share/doc/libevent-2.1-7/copyright`, `/usr/share/d
 - `ISC`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libevent=2.1.12-stable-8ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevent/libevent_2.1.12-stable-8ubuntu3.dsc' libevent_2.1.12-stable-8ubuntu3.dsc 2632 SHA512:889848a98f14e296f66af3dec9ff4129234d5d815454df16242321638bb2ab777531030c690df5cc0655cfc0adfa0acd1fff3405480bbae8ff53861e9acd3c26
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevent/libevent_2.1.12-stable.orig.tar.gz' libevent_2.1.12-stable.orig.tar.gz 1100847 SHA512:88d8944cd75cbe78bc4e56a6741ca67c017a3686d5349100f1c74f8a68ac0b6410ce64dff160be4a4ba0696ee29540dfed59aaf3c9a02f0c164b00307fcfe84f
-'http://archive.ubuntu.com/ubuntu/pool/main/libe/libevent/libevent_2.1.12-stable-8ubuntu3.debian.tar.xz' libevent_2.1.12-stable-8ubuntu3.debian.tar.xz 18072 SHA512:b32904d9f53f5aa83c8b9e42563aafd3ebcde7bfeae40f55dd8f6e8233aa1045032ea2fe5d0225145f224f943b0b9f199c0b56bde903362058c3ffeead877088
-```
 
 ### `dpkg` source package: `libexif=0.6.24-1build1`
 
@@ -3840,15 +3830,9 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.36/copyright`, `/usr/share/doc/
 - `Unicode`
 - `ZLIB`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris perl=5.36.0-7ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7ubuntu1.dsc' perl_5.36.0-7ubuntu1.dsc 2968 SHA512:74c9b60640c71820ef6654e6a4439220dddc4ce1c4fcf04e470395e189d1ea66a47cbfc5ff2a9dcb9cd288b629b5afa4cc0cbf0f2f3eb2950ef175d39535647c
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig-regen-configure.tar.xz' perl_5.36.0.orig-regen-configure.tar.xz 417784 SHA512:4d16685f569a5b1dea79d607b6d62718111c32efaf5547bb9e1528bd755acf0c8fc74a1cc1f4d68fcb10aef9da7d8fea17a5cc10dabce6efa4721ab45ab03a65
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig.tar.xz' perl_5.36.0.orig.tar.xz 13051500 SHA512:6dd6ac2a77566c173c5ab9c238cf555f2c3e592e89abb5600bc23ce1cbd0c349e0233f6417cbbf1f6d0aefc6a734ba491285af0d3dc68a605b658b65c89f1dab
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7ubuntu1.debian.tar.xz' perl_5.36.0-7ubuntu1.debian.tar.xz 169744 SHA512:7859f20b2d168d3fb77f8aec0223548f6616c1954f443296fb711680063d188a3534374541e93dafc4212583453edb8d4668420839156a582f16a8dc3dc33c16
-```
 
 ### `dpkg` source package: `pinentry=1.2.1-1ubuntu1`
 
@@ -4338,14 +4322,9 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=253.5-1ubuntu5
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_253.5-1ubuntu5.dsc' systemd_253.5-1ubuntu5.dsc 6887 SHA512:594a86bc958c7c2e26559e2571a985cf95f32aa13fcdec0a6d838a57f2aeafe4b441f98ee3177180785034d9a7d434974979d9d6ad06adec051739fa159b4388
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_253.5.orig.tar.gz' systemd_253.5.orig.tar.gz 12015672 SHA512:39709b485cd9287e26ac8e973fa1692b280bec3b96e1da6667e4a4f2ac2228aa072b22802720a254698d32c82f5306d7feb32229e4b6d54cc0e2b1e2caa4cc2e
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_253.5-1ubuntu5.debian.tar.xz' systemd_253.5-1ubuntu5.debian.tar.xz 220120 SHA512:16b6eeb79eb303fcec0b34cb52e1f25a97b025fdeba18615c811206ae24d23423a416d3a85962de84c088398d289f27824d502a8efb03a1b77adef3e5dceb4c5
-```
 
 ### `dpkg` source package: `sysvinit=3.07-1ubuntu1`
 
