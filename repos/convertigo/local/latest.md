@@ -1,10 +1,10 @@
-# `convertigo:8.2.2`
+# `convertigo:8.2.3`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4538ee35de4ec269e807e92c576f5f85c2974b9887ce4b6b2eb735187e7de6dd`
-- Created: `2023-09-01T00:41:51.527437109Z`
-- Virtual Size: ~ 565.89 Mb  
+- Image ID: `sha256:42b74a73dade3e38ada681f6eb69d449cd60766e27de7379459ec41c6d049be0`
+- Created: `2023-09-26T23:19:42.996357864Z`
+- Virtual Size: ~ 565.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","--","/docker-entrypoint.sh"]`
@@ -24,8 +24,8 @@
   - `TOMCAT_VERSION=9.0.80`
   - `TOMCAT_SHA512=24014441b0ccdd2dda238efa56e1a039476488943e6cf04f8a372a340a49dd21ce174ed68e2f5fcc43401e85fae6d00c5eac3d357653e91601737b6fa94476de`
   - `SWT_GTK3=0`
-  - `CONVERTIGO_VERSION=8.2.2`
-  - `CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/8.2.2/convertigo-8.2.2.war`
+  - `CONVERTIGO_VERSION=8.2.3`
+  - `CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/8.2.3/convertigo-8.2.3.war`
   - `CONVERTIGO_GPG_KEYS=6A7779BB78FE368DF74B708FD4DA8FBEB64BF75F`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
