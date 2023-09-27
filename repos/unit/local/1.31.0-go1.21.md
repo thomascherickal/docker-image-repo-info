@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f4b823d922247908d74a8975038cc805be59ade66befe42ad19db74538b497e6`
-- Created: `2023-09-21T08:58:05.408911988Z`
+- Image ID: `sha256:31e9b0c24b6fdce02be7d26ac8b3405b29ca9e7d1fa09627406ccaaf1e803f04`
+- Created: `2023-09-27T00:50:36.436800786Z`
 - Virtual Size: ~ 767.47 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,6 +12,7 @@
 - Environment:
   - `PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `GOLANG_VERSION=1.21.1`
+  - `GOTOOLCHAIN=local`
   - `GOPATH=/go`
 - Labels:
   - `org.opencontainers.image.description=Official build of Unit for Docker.`
