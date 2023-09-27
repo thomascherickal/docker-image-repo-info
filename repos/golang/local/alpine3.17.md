@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4e68e45a133e31c773c9f0d4f3f0bf166c2fff9701fb30dc3014733a4329a18b`
-- Created: `2023-09-06T18:31:55.920228634Z`
+- Image ID: `sha256:33f4878ac58a44fcdbd5b5494ff0891849afce5d3dcc78a0bde48aa4cf7f44a3`
+- Created: `2023-09-27T00:22:40.541603624Z`
 - Virtual Size: ~ 221.37 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,6 +11,7 @@
 - Environment:
   - `PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `GOLANG_VERSION=1.21.1`
+  - `GOTOOLCHAIN=local`
   - `GOPATH=/go`
 
 ## `apk` (`.apk`-based packages)

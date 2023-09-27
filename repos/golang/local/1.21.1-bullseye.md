@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4c310e5feff8845fd04b48c9a14fa7fce314a92a6162199fe93e8cf8a97b2793`
-- Created: `2023-09-21T03:29:30.578107133Z`
+- Image ID: `sha256:13e4b175ddd621ec3b57eda36dafd694aa168af5101b84fe83a723cc3fcd9e42`
+- Created: `2023-09-27T00:22:33.276658657Z`
 - Virtual Size: ~ 746.41 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,6 +11,7 @@
 - Environment:
   - `PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `GOLANG_VERSION=1.21.1`
+  - `GOTOOLCHAIN=local`
   - `GOPATH=/go`
 
 ## `dpkg` (`.deb`-based packages)
