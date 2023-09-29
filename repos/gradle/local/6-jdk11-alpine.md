@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a139c69a8b727ffd4df59e0df0776e1a49fe6af37f593ca1e9a73ad917ff4ad4`
-- Created: `2023-08-31T23:53:29.048715599Z`
-- Virtual Size: ~ 501.46 Mb  
+- Image ID: `sha256:0b4fd61c42959793eda0aaedc1915975381b02be996acb0917b59fd4f8d02d5c`
+- Created: `2023-09-29T03:52:52.101109752Z`
+- Virtual Size: ~ 501.50 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/__cacert_entrypoint.sh"]`
@@ -330,16 +330,16 @@ GPL-2.0-only
 ### `apk` package: `git-lfs`
 
 ```console
-git-lfs-3.3.0-r3 description:
+git-lfs-3.3.0-r4 description:
 Git extension for versioning large files
 
-git-lfs-3.3.0-r3 webpage:
+git-lfs-3.3.0-r4 webpage:
 https://git-lfs.github.io/
 
-git-lfs-3.3.0-r3 installed size:
+git-lfs-3.3.0-r4 installed size:
 11 MiB
 
-git-lfs-3.3.0-r3 license:
+git-lfs-3.3.0-r4 license:
 MIT
 
 ```
@@ -398,16 +398,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.1.2-r0 description:
+libcrypto3-3.1.3-r0 description:
 Crypto library from openssl
 
-libcrypto3-3.1.2-r0 webpage:
+libcrypto3-3.1.3-r0 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.1.2-r0 installed size:
+libcrypto3-3.1.3-r0 installed size:
 4468 KiB
 
-libcrypto3-3.1.2-r0 license:
+libcrypto3-3.1.3-r0 license:
 Apache-2.0
 
 ```
@@ -415,16 +415,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.2.1-r0 description:
+libcurl-8.3.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.2.1-r0 webpage:
+libcurl-8.3.0-r0 webpage:
 https://curl.se/
 
-libcurl-8.2.1-r0 installed size:
-552 KiB
+libcurl-8.3.0-r0 installed size:
+584 KiB
 
-libcurl-8.2.1-r0 license:
+libcurl-8.3.0-r0 license:
 curl
 
 ```
@@ -619,16 +619,16 @@ custom
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.1.2-r0 description:
+libssl3-3.1.3-r0 description:
 SSL shared libraries
 
-libssl3-3.1.2-r0 webpage:
+libssl3-3.1.3-r0 webpage:
 https://www.openssl.org/
 
-libssl3-3.1.2-r0 installed size:
+libssl3-3.1.3-r0 installed size:
 552 KiB
 
-libssl3-3.1.2-r0 license:
+libssl3-3.1.3-r0 license:
 Apache-2.0
 
 ```
