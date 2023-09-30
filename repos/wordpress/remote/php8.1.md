@@ -1,7 +1,7 @@
 ## `wordpress:php8.1`
 
 ```console
-$ docker pull wordpress@sha256:9cb92af4df9f639c4f9393c0a1cb19d68a8a9e98cfbec556ffb8ce25b1ec0a44
+$ docker pull wordpress@sha256:65d920b82bd1777c72e4da024b1e6b5dad6644bd701080f5bbd19ddfc0de8e71
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -388,14 +388,14 @@ CMD ["apache2-foreground"]
 ### `wordpress:php8.1` - linux; arm variant v7
 
 ```console
-$ docker pull wordpress@sha256:f33d7805e376b8d945332b9446168b6793118d5a9faea6eda8c5f9f74b74b583
+$ docker pull wordpress@sha256:9e28db06a028f146cbb5413a1a33e9bfda886aa3be43258dfe075de92f15fd05
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **215.2 MB (215162079 bytes)**  
+-	Total Size: **215.1 MB (215085780 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b917fd44c46eaf75d7e0959efc19f7660baaed87c65943f79fd559be25eb8808`
+-	Image ID: `sha256:69987c2f3a9d3abf2e81406aa470ede6fa0321afaeadfe2515c06393b8914563`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -432,55 +432,55 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Wed, 20 Sep 2023 06:38:20 GMT
 ENV GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD
-# Wed, 20 Sep 2023 07:34:23 GMT
-ENV PHP_VERSION=8.1.23
-# Wed, 20 Sep 2023 07:34:23 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-8.1.23.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.1.23.tar.xz.asc
-# Wed, 20 Sep 2023 07:34:23 GMT
-ENV PHP_SHA256=fc48422fa7e75bb45916fc192a9f9728cb38bb2b5858572c51ea15825326360c
-# Wed, 20 Sep 2023 07:34:36 GMT
+# Sat, 30 Sep 2023 03:23:07 GMT
+ENV PHP_VERSION=8.1.24
+# Sat, 30 Sep 2023 03:23:07 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-8.1.24.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.1.24.tar.xz.asc
+# Sat, 30 Sep 2023 03:23:07 GMT
+ENV PHP_SHA256=ee61f6232bb29bd2e785daf325d2177f2272bf80d086c295a724594e710bce3d
+# Sat, 30 Sep 2023 03:23:19 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 20 Sep 2023 07:34:36 GMT
+# Sat, 30 Sep 2023 03:23:19 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Wed, 20 Sep 2023 07:37:20 GMT
+# Sat, 30 Sep 2023 03:25:56 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		apache2-dev 		libargon2-dev 		libcurl4-openssl-dev 		libonig-dev 		libreadline-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 	; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-iconv 		--with-openssl 		--with-readline 		--with-zlib 				--disable-phpdbg 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				--disable-cgi 				--with-apxs2 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find 		/usr/local 		-type f 		-perm '/0111' 		-exec sh -euxc ' 			strip --strip-all "$@" || : 		' -- '{}' + 	; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { so = $(NF-1); if (index(so, "/usr/local/") == 1) { next }; gsub("^/(usr/)?", "", so); print so }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Wed, 20 Sep 2023 07:37:20 GMT
+# Sat, 30 Sep 2023 03:25:56 GMT
 COPY multi:e11221d43af7136e4dbad5a74e659bcfa753214a9e615c3daf357f1633d9d3d1 in /usr/local/bin/ 
-# Wed, 20 Sep 2023 07:37:21 GMT
+# Sat, 30 Sep 2023 03:25:56 GMT
 RUN docker-php-ext-enable sodium
-# Wed, 20 Sep 2023 07:37:21 GMT
+# Sat, 30 Sep 2023 03:25:57 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Wed, 20 Sep 2023 07:37:21 GMT
+# Sat, 30 Sep 2023 03:25:57 GMT
 STOPSIGNAL SIGWINCH
-# Wed, 20 Sep 2023 07:37:21 GMT
+# Sat, 30 Sep 2023 03:25:57 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Wed, 20 Sep 2023 07:37:21 GMT
+# Sat, 30 Sep 2023 03:25:57 GMT
 WORKDIR /var/www/html
-# Wed, 20 Sep 2023 07:37:22 GMT
+# Sat, 30 Sep 2023 03:25:57 GMT
 EXPOSE 80
-# Wed, 20 Sep 2023 07:37:22 GMT
+# Sat, 30 Sep 2023 03:25:57 GMT
 CMD ["apache2-foreground"]
-# Thu, 21 Sep 2023 09:45:03 GMT
+# Sat, 30 Sep 2023 07:19:54 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ghostscript 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 21 Sep 2023 09:46:19 GMT
+# Sat, 30 Sep 2023 07:21:08 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libicu-dev 		libjpeg-dev 		libmagickwand-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		intl 		mysqli 		zip 	; 	pecl install imagick-3.6.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		out="$(php -r 'exit(0);')"; 	[ -z "$out" ]; 	err="$(php -r 'exit(0);' 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]; 		extDir="$(php -r 'echo ini_get("extension_dir");')"; 	[ -d "$extDir" ]; 	apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$extDir"/*.so 		| awk '/=>/ { so = $(NF-1); if (index(so, "/usr/local/") == 1) { next }; gsub("^/(usr/)?", "", so); print so }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		! { ldd "$extDir"/*.so | grep 'not found'; }; 	err="$(php --version 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]
-# Thu, 21 Sep 2023 09:46:20 GMT
+# Sat, 30 Sep 2023 07:21:09 GMT
 RUN set -eux; 	docker-php-ext-enable opcache; 	{ 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 21 Sep 2023 09:46:20 GMT
+# Sat, 30 Sep 2023 07:21:09 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Thu, 21 Sep 2023 09:46:21 GMT
+# Sat, 30 Sep 2023 07:21:10 GMT
 RUN set -eux; 	a2enmod rewrite expires; 		a2enmod remoteip; 	{ 		echo 'RemoteIPHeader X-Forwarded-For'; 		echo 'RemoteIPInternalProxy 10.0.0.0/8'; 		echo 'RemoteIPInternalProxy 172.16.0.0/12'; 		echo 'RemoteIPInternalProxy 192.168.0.0/16'; 		echo 'RemoteIPInternalProxy 169.254.0.0/16'; 		echo 'RemoteIPInternalProxy 127.0.0.0/8'; 	} > /etc/apache2/conf-available/remoteip.conf; 	a2enconf remoteip; 	find /etc/apache2 -type f -name '*.conf' -exec sed -ri 's/([[:space:]]*LogFormat[[:space:]]+"[^"]*)%h([^"]*")/\1%a\2/g' '{}' +
-# Thu, 21 Sep 2023 09:46:25 GMT
+# Sat, 30 Sep 2023 07:21:14 GMT
 RUN set -eux; 	version='6.3.1'; 	sha1='052777aef40e7f627c63c8a26eefe37b843a44df'; 		curl -o wordpress.tar.gz -fL "https://wordpress.org/wordpress-$version.tar.gz"; 	echo "$sha1 *wordpress.tar.gz" | sha1sum -c -; 		tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 		[ ! -e /usr/src/wordpress/.htaccess ]; 	{ 		echo '# BEGIN WordPress'; 		echo ''; 		echo 'RewriteEngine On'; 		echo 'RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]'; 		echo 'RewriteBase /'; 		echo 'RewriteRule ^index\.php$ - [L]'; 		echo 'RewriteCond %{REQUEST_FILENAME} !-f'; 		echo 'RewriteCond %{REQUEST_FILENAME} !-d'; 		echo 'RewriteRule . /index.php [L]'; 		echo ''; 		echo '# END WordPress'; 	} > /usr/src/wordpress/.htaccess; 		chown -R www-data:www-data /usr/src/wordpress; 	mkdir wp-content; 	for dir in /usr/src/wordpress/wp-content/*/ cache; do 		dir="$(basename "${dir%/}")"; 		mkdir "wp-content/$dir"; 	done; 	chown -R www-data:www-data wp-content; 	chmod -R 1777 wp-content
-# Thu, 21 Sep 2023 09:46:25 GMT
+# Sat, 30 Sep 2023 07:21:14 GMT
 VOLUME [/var/www/html]
-# Thu, 21 Sep 2023 09:46:25 GMT
+# Sat, 30 Sep 2023 07:21:14 GMT
 COPY --chown=www-data:www-datafile:d38fd3c0db552e13465e83c5d7bbd85c7c3d036bf1285495988cc4ab2ffaf7f5 in /usr/src/wordpress/ 
-# Thu, 21 Sep 2023 09:46:25 GMT
+# Sat, 30 Sep 2023 07:21:14 GMT
 COPY file:5be6bcc31206cb827f037769d89fd092037ed61a1e10d6cae7939a37055beb4c in /usr/local/bin/ 
-# Thu, 21 Sep 2023 09:46:25 GMT
+# Sat, 30 Sep 2023 07:21:14 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 21 Sep 2023 09:46:25 GMT
+# Sat, 30 Sep 2023 07:21:15 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -513,74 +513,74 @@ CMD ["apache2-foreground"]
 		Last Modified: Wed, 20 Sep 2023 08:27:59 GMT  
 		Size: 517.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:80bf93d3a2d4e537210bc80b140eaf2b630b43926211c53048455a914964d685`  
-		Last Modified: Wed, 20 Sep 2023 08:44:51 GMT  
-		Size: 12.2 MB (12202102 bytes)  
+	-	`sha256:d0ded11f75d07320d1913a445f81480f0cb801a692413c8c3252480ffebc907b`  
+		Last Modified: Sat, 30 Sep 2023 04:24:22 GMT  
+		Size: 12.1 MB (12124242 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8f27b93136d130051713fab900e0a65e0b259ba34d4e2c710d4768fcec85248a`  
-		Last Modified: Wed, 20 Sep 2023 08:44:48 GMT  
+	-	`sha256:99f536f06810305bbd408264030eb811eeed0a82157e21e8be8991d4f59dd5c3`  
+		Last Modified: Sat, 30 Sep 2023 04:24:20 GMT  
 		Size: 491.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c644da40f29df40d769085109bea88455492728da9bcb6dcd65b377909d9e995`  
-		Last Modified: Wed, 20 Sep 2023 08:44:50 GMT  
-		Size: 9.6 MB (9571203 bytes)  
+	-	`sha256:323643c757d32e025ab1fa02660de0a48ea95bf00cecbbb300b87407f5e3aea7`  
+		Last Modified: Sat, 30 Sep 2023 04:24:22 GMT  
+		Size: 9.6 MB (9572619 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2eaa256bbd4e5d897b8076010e9f23f0cc80f39f1f2e470885d923680ea8d9e6`  
-		Last Modified: Wed, 20 Sep 2023 08:44:48 GMT  
-		Size: 2.5 KB (2455 bytes)  
+	-	`sha256:d3265de77ec772d56255f4e03f5c771e1d9b2001232950e16c632769e0b3d970`  
+		Last Modified: Sat, 30 Sep 2023 04:24:20 GMT  
+		Size: 2.5 KB (2458 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6a8971e1665d0a6d7b2065d4a17f8606b040ea5451301881dbd52596f69b123a`  
-		Last Modified: Wed, 20 Sep 2023 08:44:48 GMT  
-		Size: 244.0 B  
+	-	`sha256:28298c629f705d854f48de7ff5f12219d168bdd77c8cfe677a72fffb7b54c722`  
+		Last Modified: Sat, 30 Sep 2023 04:24:20 GMT  
+		Size: 246.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7335c1f40fc85b451829fff0395c682a27c7116086533a0f66ebbc23156802ba`  
-		Last Modified: Wed, 20 Sep 2023 08:44:48 GMT  
-		Size: 892.0 B  
+	-	`sha256:80a5584df5a959305cc840380d3e0f4d0bf7f03429a39c378b98d7bfc6d67e45`  
+		Last Modified: Sat, 30 Sep 2023 04:24:20 GMT  
+		Size: 895.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c0487cb29681fab779990c5567b535a4c9f4c626df3f2e93a52a004e3905b925`  
-		Last Modified: Thu, 21 Sep 2023 09:53:58 GMT  
-		Size: 25.1 MB (25074603 bytes)  
+	-	`sha256:faeb44a4d0717995ae1c0cc57f45b8bf175fd6129a24eec34abd30d62fca805a`  
+		Last Modified: Sat, 30 Sep 2023 07:32:52 GMT  
+		Size: 25.1 MB (25074647 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:607f7e7008e55a35e33afa41282fb9a3a63be2eed60071c7ff56a318ca33f59f`  
-		Last Modified: Thu, 21 Sep 2023 09:53:58 GMT  
-		Size: 24.9 MB (24943587 bytes)  
+	-	`sha256:e0933c40f81a7eaa3e7e719d03aed19d9a87ebb9cc3510c0c839b2bfc1373722`  
+		Last Modified: Sat, 30 Sep 2023 07:32:51 GMT  
+		Size: 24.9 MB (24943669 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bfff4c6d03ba54b44be0956b4c3593abe48eefa5cc851fad7ada8f7883fe328f`  
-		Last Modified: Thu, 21 Sep 2023 09:53:53 GMT  
-		Size: 358.0 B  
+	-	`sha256:b8ad00913a7b40e3cdb9d7af1256e88313423bbd84a9f870d8dee8146130d438`  
+		Last Modified: Sat, 30 Sep 2023 07:32:47 GMT  
+		Size: 361.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdb18c0260e290697b2f707e868a6c2b646ed1ece40397499d86d16240042db5`  
-		Last Modified: Thu, 21 Sep 2023 09:53:51 GMT  
-		Size: 388.0 B  
+	-	`sha256:654ac1f418bdc2c4e0c4c4d3289eb2343471f8214d213a61daeaaf6546228445`  
+		Last Modified: Sat, 30 Sep 2023 07:32:45 GMT  
+		Size: 390.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0f3a272eb7bde498571658d8c6f45dcc8a789c1f6999bbc5e4d5487d6e53975c`  
-		Last Modified: Thu, 21 Sep 2023 09:53:51 GMT  
-		Size: 19.1 KB (19148 bytes)  
+	-	`sha256:5744c53961994a204795980fb7b1d702ecb87f858298d0de7be425cd29f70cf8`  
+		Last Modified: Sat, 30 Sep 2023 07:32:46 GMT  
+		Size: 19.2 KB (19152 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b9ccb159ac71bbb85eddfcd5e60d0a9d12c2b09a6f72c66ba6ac5694ac5d8913`  
-		Last Modified: Thu, 21 Sep 2023 09:53:56 GMT  
-		Size: 23.3 MB (23273528 bytes)  
+	-	`sha256:96b65209a30d02df4572a85d1cf1f8cf8694facbda00184f5a2214e47a720a5b`  
+		Last Modified: Sat, 30 Sep 2023 07:32:49 GMT  
+		Size: 23.3 MB (23273530 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4615b39bd79f2feb6933335c42818ccd4045e87ee9db1913485fd279680f0971`  
-		Last Modified: Thu, 21 Sep 2023 09:53:51 GMT  
-		Size: 2.3 KB (2349 bytes)  
+	-	`sha256:209bbcecf291ba317b94df3e3761c5e2c2609fea4751810de4c19dc747662642`  
+		Last Modified: Sat, 30 Sep 2023 07:32:45 GMT  
+		Size: 2.3 KB (2347 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8ae5addfd39f6baaa49b3dcf9d658f5d4ec68f439f13dda3f8a3726cd4f94e74`  
-		Last Modified: Thu, 21 Sep 2023 09:53:52 GMT  
-		Size: 1.7 KB (1732 bytes)  
+	-	`sha256:40f54248758890f39e2903267755beee2a7d1b529150769a598f8a3658017eda`  
+		Last Modified: Sat, 30 Sep 2023 07:32:45 GMT  
+		Size: 1.7 KB (1734 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:php8.1` - linux; arm64 variant v8
 
 ```console
-$ docker pull wordpress@sha256:226a117b6a4b50e24dec73448b3841a0980622cd7bb992970f43dee9658cad81
+$ docker pull wordpress@sha256:655935da68467829ff1454ecbc6beb7eaa8708c732646292f715892f2b8d7534
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **247.7 MB (247726522 bytes)**  
+-	Total Size: **247.7 MB (247650964 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:314459890428cc441b2d704e505c542b7217d9c82b741d7a7a6b760bbb135a5e`
+-	Image ID: `sha256:1f003ea04fe5f134d11ec3d29197c74563f0b208b18ddaf25ed7ad3de9af43b4`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -617,55 +617,55 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Wed, 20 Sep 2023 04:16:09 GMT
 ENV GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD
-# Wed, 20 Sep 2023 05:16:29 GMT
-ENV PHP_VERSION=8.1.23
-# Wed, 20 Sep 2023 05:16:29 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-8.1.23.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.1.23.tar.xz.asc
-# Wed, 20 Sep 2023 05:16:29 GMT
-ENV PHP_SHA256=fc48422fa7e75bb45916fc192a9f9728cb38bb2b5858572c51ea15825326360c
-# Wed, 20 Sep 2023 05:16:39 GMT
+# Sat, 30 Sep 2023 02:38:29 GMT
+ENV PHP_VERSION=8.1.24
+# Sat, 30 Sep 2023 02:38:29 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-8.1.24.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.1.24.tar.xz.asc
+# Sat, 30 Sep 2023 02:38:29 GMT
+ENV PHP_SHA256=ee61f6232bb29bd2e785daf325d2177f2272bf80d086c295a724594e710bce3d
+# Sat, 30 Sep 2023 02:38:39 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 20 Sep 2023 05:16:40 GMT
+# Sat, 30 Sep 2023 02:38:40 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Wed, 20 Sep 2023 05:19:56 GMT
+# Sat, 30 Sep 2023 02:41:59 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		apache2-dev 		libargon2-dev 		libcurl4-openssl-dev 		libonig-dev 		libreadline-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 	; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-iconv 		--with-openssl 		--with-readline 		--with-zlib 				--disable-phpdbg 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				--disable-cgi 				--with-apxs2 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find 		/usr/local 		-type f 		-perm '/0111' 		-exec sh -euxc ' 			strip --strip-all "$@" || : 		' -- '{}' + 	; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { so = $(NF-1); if (index(so, "/usr/local/") == 1) { next }; gsub("^/(usr/)?", "", so); print so }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Wed, 20 Sep 2023 05:19:56 GMT
+# Sat, 30 Sep 2023 02:41:59 GMT
 COPY multi:e11221d43af7136e4dbad5a74e659bcfa753214a9e615c3daf357f1633d9d3d1 in /usr/local/bin/ 
-# Wed, 20 Sep 2023 05:19:57 GMT
+# Sat, 30 Sep 2023 02:41:59 GMT
 RUN docker-php-ext-enable sodium
-# Wed, 20 Sep 2023 05:19:57 GMT
+# Sat, 30 Sep 2023 02:42:00 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Wed, 20 Sep 2023 05:19:57 GMT
+# Sat, 30 Sep 2023 02:42:00 GMT
 STOPSIGNAL SIGWINCH
-# Wed, 20 Sep 2023 05:19:57 GMT
+# Sat, 30 Sep 2023 02:42:00 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Wed, 20 Sep 2023 05:19:57 GMT
+# Sat, 30 Sep 2023 02:42:00 GMT
 WORKDIR /var/www/html
-# Wed, 20 Sep 2023 05:19:57 GMT
+# Sat, 30 Sep 2023 02:42:00 GMT
 EXPOSE 80
-# Wed, 20 Sep 2023 05:19:57 GMT
+# Sat, 30 Sep 2023 02:42:00 GMT
 CMD ["apache2-foreground"]
-# Wed, 20 Sep 2023 20:23:01 GMT
+# Sat, 30 Sep 2023 07:00:48 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ghostscript 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 20 Sep 2023 20:24:10 GMT
+# Sat, 30 Sep 2023 07:01:58 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libicu-dev 		libjpeg-dev 		libmagickwand-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		intl 		mysqli 		zip 	; 	pecl install imagick-3.6.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		out="$(php -r 'exit(0);')"; 	[ -z "$out" ]; 	err="$(php -r 'exit(0);' 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]; 		extDir="$(php -r 'echo ini_get("extension_dir");')"; 	[ -d "$extDir" ]; 	apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$extDir"/*.so 		| awk '/=>/ { so = $(NF-1); if (index(so, "/usr/local/") == 1) { next }; gsub("^/(usr/)?", "", so); print so }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		! { ldd "$extDir"/*.so | grep 'not found'; }; 	err="$(php --version 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]
-# Wed, 20 Sep 2023 20:24:10 GMT
+# Sat, 30 Sep 2023 07:01:59 GMT
 RUN set -eux; 	docker-php-ext-enable opcache; 	{ 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Wed, 20 Sep 2023 20:24:11 GMT
+# Sat, 30 Sep 2023 07:01:59 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Wed, 20 Sep 2023 20:24:11 GMT
+# Sat, 30 Sep 2023 07:02:00 GMT
 RUN set -eux; 	a2enmod rewrite expires; 		a2enmod remoteip; 	{ 		echo 'RemoteIPHeader X-Forwarded-For'; 		echo 'RemoteIPInternalProxy 10.0.0.0/8'; 		echo 'RemoteIPInternalProxy 172.16.0.0/12'; 		echo 'RemoteIPInternalProxy 192.168.0.0/16'; 		echo 'RemoteIPInternalProxy 169.254.0.0/16'; 		echo 'RemoteIPInternalProxy 127.0.0.0/8'; 	} > /etc/apache2/conf-available/remoteip.conf; 	a2enconf remoteip; 	find /etc/apache2 -type f -name '*.conf' -exec sed -ri 's/([[:space:]]*LogFormat[[:space:]]+"[^"]*)%h([^"]*")/\1%a\2/g' '{}' +
-# Wed, 20 Sep 2023 20:24:16 GMT
+# Sat, 30 Sep 2023 07:02:03 GMT
 RUN set -eux; 	version='6.3.1'; 	sha1='052777aef40e7f627c63c8a26eefe37b843a44df'; 		curl -o wordpress.tar.gz -fL "https://wordpress.org/wordpress-$version.tar.gz"; 	echo "$sha1 *wordpress.tar.gz" | sha1sum -c -; 		tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 		[ ! -e /usr/src/wordpress/.htaccess ]; 	{ 		echo '# BEGIN WordPress'; 		echo ''; 		echo 'RewriteEngine On'; 		echo 'RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]'; 		echo 'RewriteBase /'; 		echo 'RewriteRule ^index\.php$ - [L]'; 		echo 'RewriteCond %{REQUEST_FILENAME} !-f'; 		echo 'RewriteCond %{REQUEST_FILENAME} !-d'; 		echo 'RewriteRule . /index.php [L]'; 		echo ''; 		echo '# END WordPress'; 	} > /usr/src/wordpress/.htaccess; 		chown -R www-data:www-data /usr/src/wordpress; 	mkdir wp-content; 	for dir in /usr/src/wordpress/wp-content/*/ cache; do 		dir="$(basename "${dir%/}")"; 		mkdir "wp-content/$dir"; 	done; 	chown -R www-data:www-data wp-content; 	chmod -R 1777 wp-content
-# Wed, 20 Sep 2023 20:24:16 GMT
+# Sat, 30 Sep 2023 07:02:03 GMT
 VOLUME [/var/www/html]
-# Wed, 20 Sep 2023 20:24:16 GMT
+# Sat, 30 Sep 2023 07:02:03 GMT
 COPY --chown=www-data:www-datafile:d38fd3c0db552e13465e83c5d7bbd85c7c3d036bf1285495988cc4ab2ffaf7f5 in /usr/src/wordpress/ 
-# Wed, 20 Sep 2023 20:24:16 GMT
+# Sat, 30 Sep 2023 07:02:03 GMT
 COPY file:5be6bcc31206cb827f037769d89fd092037ed61a1e10d6cae7939a37055beb4c in /usr/local/bin/ 
-# Wed, 20 Sep 2023 20:24:16 GMT
+# Sat, 30 Sep 2023 07:02:04 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Wed, 20 Sep 2023 20:24:16 GMT
+# Sat, 30 Sep 2023 07:02:04 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -698,61 +698,61 @@ CMD ["apache2-foreground"]
 		Last Modified: Wed, 20 Sep 2023 06:00:17 GMT  
 		Size: 510.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4bd7f80a566c7df6baeb19773ee997fee63a64ffec43852b5aa3bd5725b22417`  
-		Last Modified: Wed, 20 Sep 2023 06:13:26 GMT  
-		Size: 12.2 MB (12203837 bytes)  
+	-	`sha256:4aa5009f1710a68773fd02f3c5ae25f94f6854283e814c6024c3cef1f3ac72d4`  
+		Last Modified: Sat, 30 Sep 2023 03:48:45 GMT  
+		Size: 12.1 MB (12125872 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:089393cfb0e504ca74074bbdbf48ed38b82398d09a6e6e05d08f58edc0c7ca5f`  
-		Last Modified: Wed, 20 Sep 2023 06:13:23 GMT  
-		Size: 489.0 B  
+	-	`sha256:3d82455a88c584d7a31a9e98e1aae87e164691cdfa778b5984c36181fd3f41d4`  
+		Last Modified: Sat, 30 Sep 2023 03:48:42 GMT  
+		Size: 490.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8bddfb77c65db4af413f49cea0c6c409478ffd1cb400f54a270edf74158b84a0`  
-		Last Modified: Wed, 20 Sep 2023 06:13:24 GMT  
-		Size: 11.1 MB (11142006 bytes)  
+	-	`sha256:afd4600caec6b2a7fab2bd3235ecec123fad4fdafd656b380730d28a89ae0eab`  
+		Last Modified: Sat, 30 Sep 2023 03:48:43 GMT  
+		Size: 11.1 MB (11144106 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:baed59b11d617d05513166318756f1fc04e1f4ff776ee6dc18170aa24b78cd74`  
-		Last Modified: Wed, 20 Sep 2023 06:13:23 GMT  
-		Size: 2.5 KB (2456 bytes)  
+	-	`sha256:cf43686b9ff197049f814a1f1259dc0a57ba6679182dafd1b52bf98b399de2ab`  
+		Last Modified: Sat, 30 Sep 2023 03:48:42 GMT  
+		Size: 2.5 KB (2458 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1565697279a0f784a4f172d6ea00e5f66fd8d25f0899ef3bfc03b9ea12842af6`  
-		Last Modified: Wed, 20 Sep 2023 06:13:23 GMT  
-		Size: 244.0 B  
+	-	`sha256:0dee0bb488e5df61e6fe1f2f1b7f208655c7b40189b003bcaab114616fe06e0c`  
+		Last Modified: Sat, 30 Sep 2023 03:48:42 GMT  
+		Size: 242.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:116cfb7065e1382b9b96bf70f2778c915ae434bb72ced8250b9ff05d831ec9da`  
-		Last Modified: Wed, 20 Sep 2023 06:13:23 GMT  
-		Size: 891.0 B  
+	-	`sha256:ad2ee7885801b031db95b238ae3873c15881be037a2d19c6b09735bfc9f92633`  
+		Last Modified: Sat, 30 Sep 2023 03:48:42 GMT  
+		Size: 893.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3b6d680bfb1a67c68c74bc0df0a714cc97c1f08ecc8c1fc18f284c51707878e5`  
-		Last Modified: Wed, 20 Sep 2023 20:31:12 GMT  
-		Size: 26.2 MB (26178941 bytes)  
+	-	`sha256:bfde298c82b8546c1e29c63aa6f1d6b6c326cf9062faf0be29f5caa278199339`  
+		Last Modified: Sat, 30 Sep 2023 07:13:13 GMT  
+		Size: 26.2 MB (26179042 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cc9444209000771278cb79b7d9cfddae87b020744d5b63794956ecd28303e182`  
-		Last Modified: Wed, 20 Sep 2023 20:31:12 GMT  
-		Size: 27.3 MB (27325460 bytes)  
+	-	`sha256:c905be7e317be35a022c8209cae561680713eac9116d5ed40bae3ca268a0ee54`  
+		Last Modified: Sat, 30 Sep 2023 07:13:13 GMT  
+		Size: 27.3 MB (27325654 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0d4e19da2ab3ae8a977f019204a208ee2feaf37771b29fc14ade0c8b8cf7294a`  
-		Last Modified: Wed, 20 Sep 2023 20:31:09 GMT  
-		Size: 361.0 B  
+	-	`sha256:db31b1694fea0d68dfe16c6c4dc131de9d27e287d8b4facfa9105403a6f09a00`  
+		Last Modified: Sat, 30 Sep 2023 07:13:10 GMT  
+		Size: 358.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6c61fa789ce6a33ca1a8878785619ed14ae1631b01f766c693388b4ddf264af0`  
-		Last Modified: Wed, 20 Sep 2023 20:31:07 GMT  
-		Size: 394.0 B  
+	-	`sha256:a59ac7fba5bb521704ca620f4a4029b97efd58d6e7f7f1ed759a04b622d59494`  
+		Last Modified: Sat, 30 Sep 2023 07:13:08 GMT  
+		Size: 387.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d95cf5b61dbd9f34697adadd02268b87b2ae4d594c32debc871b707a009afc18`  
-		Last Modified: Wed, 20 Sep 2023 20:31:07 GMT  
-		Size: 19.1 KB (19147 bytes)  
+	-	`sha256:43085936dd166bfefbfd9309ec27d6aeb9bd461164ed29ef4a3bbcaa57c150da`  
+		Last Modified: Sat, 30 Sep 2023 07:13:08 GMT  
+		Size: 19.1 KB (19148 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f3255fad9a68c8c4172b6b919818d0cb13427893eada8af08fde6026776be5fe`  
-		Last Modified: Wed, 20 Sep 2023 20:31:10 GMT  
-		Size: 23.3 MB (23273528 bytes)  
+	-	`sha256:7a183907d3a6d81c888479d7cb3b20289f5ad9eb3bee9ca4f05e941ca274ffe1`  
+		Last Modified: Sat, 30 Sep 2023 07:13:11 GMT  
+		Size: 23.3 MB (23273546 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65e5dcbc4e699fe9854b80feb5c2a51f57613214eb42b3d36bd3307aa9ddc63c`  
-		Last Modified: Wed, 20 Sep 2023 20:31:07 GMT  
-		Size: 2.3 KB (2347 bytes)  
+	-	`sha256:e9f9769e8bd5e34292bad0fd7aa653a589d96e9399933a3ee3a74901353cc236`  
+		Last Modified: Sat, 30 Sep 2023 07:13:08 GMT  
+		Size: 2.3 KB (2348 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:620b4a06a6834d86a997dd551b62cc4e8a07a5f1bbf45ea6d279ee031b1820a3`  
-		Last Modified: Wed, 20 Sep 2023 20:31:07 GMT  
-		Size: 1.7 KB (1734 bytes)  
+	-	`sha256:81c37ea99d0a1672461174417983d861f5e7109d246153450e45009903d7e548`  
+		Last Modified: Sat, 30 Sep 2023 07:13:08 GMT  
+		Size: 1.7 KB (1733 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:php8.1` - linux; 386
@@ -1128,14 +1128,14 @@ CMD ["apache2-foreground"]
 ### `wordpress:php8.1` - linux; ppc64le
 
 ```console
-$ docker pull wordpress@sha256:15411f61092597527a6fe0a65efc16d7ae21db85967485caa4554ca907ec3745
+$ docker pull wordpress@sha256:2c207f0de236b1808a7ee7e595cc8daaef3bd7ddf0241003f0c9785fe2b884b8
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **262.0 MB (261971282 bytes)**  
+-	Total Size: **261.9 MB (261894863 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:695a7b076a0e50a9728fc41585e3389864365d332000bee02417116653326e81`
+-	Image ID: `sha256:bec6cdaabd84ba5d9f56659bf3c473d4d0d391be4c7c7e93389b3354192a23c2`
 -	Entrypoint: `["docker-entrypoint.sh"]`
 -	Default Command: `["apache2-foreground"]`
 
@@ -1172,55 +1172,55 @@ ENV PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D
 ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Wed, 20 Sep 2023 23:05:53 GMT
 ENV GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD
-# Wed, 20 Sep 2023 23:41:46 GMT
-ENV PHP_VERSION=8.1.23
-# Wed, 20 Sep 2023 23:41:47 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-8.1.23.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.1.23.tar.xz.asc
-# Wed, 20 Sep 2023 23:41:47 GMT
-ENV PHP_SHA256=fc48422fa7e75bb45916fc192a9f9728cb38bb2b5858572c51ea15825326360c
-# Wed, 20 Sep 2023 23:42:11 GMT
+# Sat, 30 Sep 2023 03:59:13 GMT
+ENV PHP_VERSION=8.1.24
+# Sat, 30 Sep 2023 03:59:14 GMT
+ENV PHP_URL=https://www.php.net/distributions/php-8.1.24.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.1.24.tar.xz.asc
+# Sat, 30 Sep 2023 03:59:15 GMT
+ENV PHP_SHA256=ee61f6232bb29bd2e785daf325d2177f2272bf80d086c295a724594e710bce3d
+# Sat, 30 Sep 2023 03:59:48 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends gnupg; 	rm -rf /var/lib/apt/lists/*; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark > /dev/null; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false
-# Wed, 20 Sep 2023 23:42:11 GMT
+# Sat, 30 Sep 2023 03:59:49 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Wed, 20 Sep 2023 23:46:33 GMT
+# Sat, 30 Sep 2023 04:04:36 GMT
 RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		apache2-dev 		libargon2-dev 		libcurl4-openssl-dev 		libonig-dev 		libreadline-dev 		libsodium-dev 		libsqlite3-dev 		libssl-dev 		libxml2-dev 		zlib1g-dev 	; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; 	if [ ! -d /usr/include/curl ]; then 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; 	fi; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-iconv 		--with-openssl 		--with-readline 		--with-zlib 				--disable-phpdbg 				--with-pear 				$(test "$gnuArch" = 's390x-linux-gnu' && echo '--without-pcre-jit') 		--with-libdir="lib/$debMultiarch" 				--disable-cgi 				--with-apxs2 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find 		/usr/local 		-type f 		-perm '/0111' 		-exec sh -euxc ' 			strip --strip-all "$@" || : 		' -- '{}' + 	; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	find /usr/local -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { so = $(NF-1); if (index(so, "/usr/local/") == 1) { next }; gsub("^/(usr/)?", "", so); print so }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -r apt-mark manual 	; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Wed, 20 Sep 2023 23:46:34 GMT
+# Sat, 30 Sep 2023 04:04:38 GMT
 COPY multi:e11221d43af7136e4dbad5a74e659bcfa753214a9e615c3daf357f1633d9d3d1 in /usr/local/bin/ 
-# Wed, 20 Sep 2023 23:46:36 GMT
+# Sat, 30 Sep 2023 04:04:39 GMT
 RUN docker-php-ext-enable sodium
-# Wed, 20 Sep 2023 23:46:36 GMT
+# Sat, 30 Sep 2023 04:04:40 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Wed, 20 Sep 2023 23:46:36 GMT
+# Sat, 30 Sep 2023 04:04:40 GMT
 STOPSIGNAL SIGWINCH
-# Wed, 20 Sep 2023 23:46:37 GMT
+# Sat, 30 Sep 2023 04:04:41 GMT
 COPY file:e3123fcb6566efa979f945bfac1c94c854a559d7b82723e42118882a8ac4de66 in /usr/local/bin/ 
-# Wed, 20 Sep 2023 23:46:37 GMT
+# Sat, 30 Sep 2023 04:04:42 GMT
 WORKDIR /var/www/html
-# Wed, 20 Sep 2023 23:46:38 GMT
+# Sat, 30 Sep 2023 04:04:42 GMT
 EXPOSE 80
-# Wed, 20 Sep 2023 23:46:38 GMT
+# Sat, 30 Sep 2023 04:04:43 GMT
 CMD ["apache2-foreground"]
-# Thu, 21 Sep 2023 12:59:35 GMT
+# Sat, 30 Sep 2023 06:23:44 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ghostscript 	; 	rm -rf /var/lib/apt/lists/*
-# Thu, 21 Sep 2023 13:02:24 GMT
+# Sat, 30 Sep 2023 06:27:35 GMT
 RUN set -ex; 		savedAptMark="$(apt-mark showmanual)"; 		apt-get update; 	apt-get install -y --no-install-recommends 		libfreetype6-dev 		libicu-dev 		libjpeg-dev 		libmagickwand-dev 		libpng-dev 		libwebp-dev 		libzip-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg 		--with-webp 	; 	docker-php-ext-install -j "$(nproc)" 		bcmath 		exif 		gd 		intl 		mysqli 		zip 	; 	pecl install imagick-3.6.0; 	docker-php-ext-enable imagick; 	rm -r /tmp/pear; 		out="$(php -r 'exit(0);')"; 	[ -z "$out" ]; 	err="$(php -r 'exit(0);' 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]; 		extDir="$(php -r 'echo ini_get("extension_dir");')"; 	[ -d "$extDir" ]; 	apt-mark auto '.*' > /dev/null; 	apt-mark manual $savedAptMark; 	ldd "$extDir"/*.so 		| awk '/=>/ { so = $(NF-1); if (index(so, "/usr/local/") == 1) { next }; gsub("^/(usr/)?", "", so); print so }' 		| sort -u 		| xargs -r dpkg-query --search 		| cut -d: -f1 		| sort -u 		| xargs -rt apt-mark manual; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		! { ldd "$extDir"/*.so | grep 'not found'; }; 	err="$(php --version 3>&1 1>&2 2>&3)"; 	[ -z "$err" ]
-# Thu, 21 Sep 2023 13:02:27 GMT
+# Sat, 30 Sep 2023 06:27:38 GMT
 RUN set -eux; 	docker-php-ext-enable opcache; 	{ 		echo 'opcache.memory_consumption=128'; 		echo 'opcache.interned_strings_buffer=8'; 		echo 'opcache.max_accelerated_files=4000'; 		echo 'opcache.revalidate_freq=2'; 	} > /usr/local/etc/php/conf.d/opcache-recommended.ini
-# Thu, 21 Sep 2023 13:02:27 GMT
+# Sat, 30 Sep 2023 06:27:40 GMT
 RUN { 		echo 'error_reporting = E_ERROR | E_WARNING | E_PARSE | E_CORE_ERROR | E_CORE_WARNING | E_COMPILE_ERROR | E_COMPILE_WARNING | E_RECOVERABLE_ERROR'; 		echo 'display_errors = Off'; 		echo 'display_startup_errors = Off'; 		echo 'log_errors = On'; 		echo 'error_log = /dev/stderr'; 		echo 'log_errors_max_len = 1024'; 		echo 'ignore_repeated_errors = On'; 		echo 'ignore_repeated_source = Off'; 		echo 'html_errors = Off'; 	} > /usr/local/etc/php/conf.d/error-logging.ini
-# Thu, 21 Sep 2023 13:02:29 GMT
+# Sat, 30 Sep 2023 06:27:43 GMT
 RUN set -eux; 	a2enmod rewrite expires; 		a2enmod remoteip; 	{ 		echo 'RemoteIPHeader X-Forwarded-For'; 		echo 'RemoteIPInternalProxy 10.0.0.0/8'; 		echo 'RemoteIPInternalProxy 172.16.0.0/12'; 		echo 'RemoteIPInternalProxy 192.168.0.0/16'; 		echo 'RemoteIPInternalProxy 169.254.0.0/16'; 		echo 'RemoteIPInternalProxy 127.0.0.0/8'; 	} > /etc/apache2/conf-available/remoteip.conf; 	a2enconf remoteip; 	find /etc/apache2 -type f -name '*.conf' -exec sed -ri 's/([[:space:]]*LogFormat[[:space:]]+"[^"]*)%h([^"]*")/\1%a\2/g' '{}' +
-# Thu, 21 Sep 2023 13:02:34 GMT
+# Sat, 30 Sep 2023 06:27:49 GMT
 RUN set -eux; 	version='6.3.1'; 	sha1='052777aef40e7f627c63c8a26eefe37b843a44df'; 		curl -o wordpress.tar.gz -fL "https://wordpress.org/wordpress-$version.tar.gz"; 	echo "$sha1 *wordpress.tar.gz" | sha1sum -c -; 		tar -xzf wordpress.tar.gz -C /usr/src/; 	rm wordpress.tar.gz; 		[ ! -e /usr/src/wordpress/.htaccess ]; 	{ 		echo '# BEGIN WordPress'; 		echo ''; 		echo 'RewriteEngine On'; 		echo 'RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]'; 		echo 'RewriteBase /'; 		echo 'RewriteRule ^index\.php$ - [L]'; 		echo 'RewriteCond %{REQUEST_FILENAME} !-f'; 		echo 'RewriteCond %{REQUEST_FILENAME} !-d'; 		echo 'RewriteRule . /index.php [L]'; 		echo ''; 		echo '# END WordPress'; 	} > /usr/src/wordpress/.htaccess; 		chown -R www-data:www-data /usr/src/wordpress; 	mkdir wp-content; 	for dir in /usr/src/wordpress/wp-content/*/ cache; do 		dir="$(basename "${dir%/}")"; 		mkdir "wp-content/$dir"; 	done; 	chown -R www-data:www-data wp-content; 	chmod -R 1777 wp-content
-# Thu, 21 Sep 2023 13:02:35 GMT
+# Sat, 30 Sep 2023 06:27:52 GMT
 VOLUME [/var/www/html]
-# Thu, 21 Sep 2023 13:02:36 GMT
+# Sat, 30 Sep 2023 06:27:52 GMT
 COPY --chown=www-data:www-datafile:d38fd3c0db552e13465e83c5d7bbd85c7c3d036bf1285495988cc4ab2ffaf7f5 in /usr/src/wordpress/ 
-# Thu, 21 Sep 2023 13:02:36 GMT
+# Sat, 30 Sep 2023 06:27:53 GMT
 COPY file:5be6bcc31206cb827f037769d89fd092037ed61a1e10d6cae7939a37055beb4c in /usr/local/bin/ 
-# Thu, 21 Sep 2023 13:02:36 GMT
+# Sat, 30 Sep 2023 06:27:53 GMT
 ENTRYPOINT ["docker-entrypoint.sh"]
-# Thu, 21 Sep 2023 13:02:36 GMT
+# Sat, 30 Sep 2023 06:27:54 GMT
 CMD ["apache2-foreground"]
 ```
 
@@ -1253,61 +1253,61 @@ CMD ["apache2-foreground"]
 		Last Modified: Thu, 21 Sep 2023 00:32:41 GMT  
 		Size: 516.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c4e2b5348f575e64f19398c7629e6d6ea257c0fe4bcaacc0dd7fbe3157a52d18`  
-		Last Modified: Thu, 21 Sep 2023 00:45:58 GMT  
-		Size: 12.2 MB (12203549 bytes)  
+	-	`sha256:7411e628668f17b0b438d76e7aacbf6c922b529e0533ad981c559914eeab1aaf`  
+		Last Modified: Sat, 30 Sep 2023 05:29:52 GMT  
+		Size: 12.1 MB (12125657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:c693ff79eb052102d83ae657371574f8190e1de1896263fa3a9dc869ae57fcc4`  
-		Last Modified: Thu, 21 Sep 2023 00:45:54 GMT  
-		Size: 491.0 B  
+	-	`sha256:6c1dc783f2809f70c23c7bbd9a136a90d8095e2fed6172669f24cdc50b506eb8`  
+		Last Modified: Sat, 30 Sep 2023 05:29:49 GMT  
+		Size: 492.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:93b5e0b316c3087269685910cb2d0806a8a2eca29fce706a86b450afaa708da1`  
-		Last Modified: Thu, 21 Sep 2023 00:45:58 GMT  
-		Size: 11.5 MB (11521015 bytes)  
+	-	`sha256:28eade38781c643e0d65efd76d29f52513d5819094afad4bb5598345b4ef75c7`  
+		Last Modified: Sat, 30 Sep 2023 05:29:52 GMT  
+		Size: 11.5 MB (11521978 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:77f8d0f2f9bea7cb19f519943cc8b29a100a02c4d7ec91bec8332d5181abdfad`  
-		Last Modified: Thu, 21 Sep 2023 00:45:56 GMT  
-		Size: 2.5 KB (2458 bytes)  
+	-	`sha256:85a32774bfaf248677cd8245c45714bce2f4f45c3acb9d5826739dc0aeaf105a`  
+		Last Modified: Sat, 30 Sep 2023 05:29:49 GMT  
+		Size: 2.5 KB (2459 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fbb8af96fda5f3fdce711932e005e0999ede4b3664b8dd20d16cc79a11132b1b`  
-		Last Modified: Thu, 21 Sep 2023 00:45:54 GMT  
-		Size: 247.0 B  
+	-	`sha256:bb65c0fcb11dd3bc3ec71baf2daca308af8fbb7682dc592aa7d5e82887ae46e0`  
+		Last Modified: Sat, 30 Sep 2023 05:29:49 GMT  
+		Size: 246.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4bd649caabb69aa6be4e1434d1d15617a5c9f44da310245930052dcb1b25cc4a`  
-		Last Modified: Thu, 21 Sep 2023 00:45:54 GMT  
+	-	`sha256:49bac4df24f33dfef7f4bfb9b9d6d787ea9ff0c88edff57b9dfc7edb4e5a3da0`  
+		Last Modified: Sat, 30 Sep 2023 05:29:49 GMT  
 		Size: 894.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9b61bd96d8c055c2d1e0786e052b4f3367e335c9f50c82491f947a966c8e1745`  
-		Last Modified: Thu, 21 Sep 2023 13:16:20 GMT  
-		Size: 27.3 MB (27340683 bytes)  
+	-	`sha256:0ddb320244a1d51ab9bfdd157bd3c80f09057395947280ebeee257615051e34f`  
+		Last Modified: Sat, 30 Sep 2023 06:56:03 GMT  
+		Size: 27.3 MB (27340918 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:af89d3b71ab400a90e8852f5fc9e2fa78fb3332aa718fe49d0e2044b8ce57f29`  
-		Last Modified: Thu, 21 Sep 2023 13:16:21 GMT  
-		Size: 29.7 MB (29689308 bytes)  
+	-	`sha256:bae5fbbca0c8bc0c2d6fd0263d4c546b701268a0c2f531b4b4b6ec13393565c6`  
+		Last Modified: Sat, 30 Sep 2023 06:56:04 GMT  
+		Size: 29.7 MB (29689602 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8708b09a2cd5e0ba2103565dfd33f1b72397de9a68952f806f3ba825cac5ee95`  
-		Last Modified: Thu, 21 Sep 2023 13:16:13 GMT  
-		Size: 366.0 B  
+	-	`sha256:d3c0ee7d055eac92703b14ef22a42f980f18c00347eff06e058443c2ef679d42`  
+		Last Modified: Sat, 30 Sep 2023 06:55:56 GMT  
+		Size: 361.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:890f158244c1a4aade72b6433d279113398e27b4ffcf5e88948d0a31157e4f66`  
-		Last Modified: Thu, 21 Sep 2023 13:16:11 GMT  
-		Size: 392.0 B  
+	-	`sha256:acb1b6e708f6d5cf1f16491d0054710dd8efc3bbe7d01f3b3684c95797e81def`  
+		Last Modified: Sat, 30 Sep 2023 06:55:54 GMT  
+		Size: 393.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b0af236c883bf4cc4923fa3b67848f687a989eda44a6391f0156ea80fc54da52`  
-		Last Modified: Thu, 21 Sep 2023 13:16:11 GMT  
-		Size: 19.2 KB (19153 bytes)  
+	-	`sha256:fea9ef59dc800fbc1c319e6fde8a7456303a6aa17c45ce266ed0cf107cf6f5a6`  
+		Last Modified: Sat, 30 Sep 2023 06:55:54 GMT  
+		Size: 19.2 KB (19154 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f6a0016aa6e9f1e3d26e48e9b192806345e19b0e92852f7bc4e4282ccc44d261`  
-		Last Modified: Thu, 21 Sep 2023 13:16:16 GMT  
-		Size: 23.3 MB (23273541 bytes)  
+	-	`sha256:f4c80c70cc553443cb51554955e5bc4af9b472510565e39503344e74962c5f06`  
+		Last Modified: Sat, 30 Sep 2023 06:55:59 GMT  
+		Size: 23.3 MB (23273530 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:10b3c84e92f5f40dc7bd5dc504c12b0c976dad8eaddb915c08d2df60e023234f`  
-		Last Modified: Thu, 21 Sep 2023 13:16:11 GMT  
+	-	`sha256:cfa0126bd5168f82c914d9421fe8410883b0af16c8901737013d329b3bd52752`  
+		Last Modified: Sat, 30 Sep 2023 06:55:54 GMT  
 		Size: 2.3 KB (2347 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:542d26e4d3cde797b3ef8d83e11792eaaca26a98507dddc0b4593fa5f27f1242`  
-		Last Modified: Thu, 21 Sep 2023 13:16:11 GMT  
-		Size: 1.7 KB (1734 bytes)  
+	-	`sha256:2c1b72d1513a4f08d024e0b180fb4de04e1dded063c9f96c1000f618237227d9`  
+		Last Modified: Sat, 30 Sep 2023 06:55:54 GMT  
+		Size: 1.7 KB (1728 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `wordpress:php8.1` - linux; s390x
