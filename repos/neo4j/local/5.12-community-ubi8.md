@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3d5823c5426f54a894f9cdfc79c17b356ed9d056ab56a4ec9f256064a9ad8bac`
-- Created: `2023-09-14T21:20:58.979995239Z`
-- Virtual Size: ~ 512.96 Mb  
+- Image ID: `sha256:43273d56696c5aaf2280be95cf02de6fd169aa8ddd8d0b45916dafdb72891bb3`
+- Created: `2023-10-03T10:10:24.856850051Z`
+- Virtual Size: ~ 512.92 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","-g","--","/startup/docker-entrypoint.sh"]`
@@ -131,7 +131,7 @@ Licenses (from `rpm --query`): Public Domain
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `findutils-4.6.0-20.el8.x86_64`
+### `rpm` package: `findutils-4.6.0-20.el8_8.1.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
 
