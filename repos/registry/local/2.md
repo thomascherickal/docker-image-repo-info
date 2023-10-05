@@ -1,10 +1,10 @@
-# `registry:2.8.2`
+# `registry:2.8.3`
 
 ## Docker Metadata
 
-- Image ID: `sha256:fb59138d7af16a5974de721cb6a4399b9700f0ade6a1bc91209a174245cfb789`
-- Created: `2023-09-29T02:53:34.65164593Z`
-- Virtual Size: ~ 24.05 Mb  
+- Image ID: `sha256:0ae1560ca86fd99c4932c235774a65173f550179a92e3ba101b2ef783a701d20`
+- Created: `2023-10-03T04:04:10.560980382Z`
+- Virtual Size: ~ 25.40 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
