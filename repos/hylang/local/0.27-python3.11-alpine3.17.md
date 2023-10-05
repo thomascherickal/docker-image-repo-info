@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0c9fe793e9006489725d0f4c8d206b3063ede654f82d1111affda70270ec5584`
-- Created: `2023-08-26T03:28:26.770755928Z`
-- Virtual Size: ~ 67.56 Mb  
+- Image ID: `sha256:910a50b1348a7a871a99938b18173d0df9dbf590fea51bf6ca97b065a2fe8261`
+- Created: `2023-10-03T04:15:26.036090311Z`
+- Virtual Size: ~ 72.54 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["hy"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `LANG=C.UTF-8`
   - `GPG_KEY=A035C8C19219BA821ECEA86B64E628F8D684696D`
-  - `PYTHON_VERSION=3.11.5`
+  - `PYTHON_VERSION=3.11.6`
   - `PYTHON_PIP_VERSION=23.2.1`
   - `PYTHON_SETUPTOOLS_VERSION=65.5.1`
   - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/9af82b715db434abb94a0a6f3569f43e72157346/public/get-pip.py`
@@ -280,16 +280,16 @@ GPL-2.0-or-later AND LGPL-2.0-or-later AND BSD-3-Clause AND MIT
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.0.10-r0 description:
+libcrypto3-3.0.11-r0 description:
 Crypto library from openssl
 
-libcrypto3-3.0.10-r0 webpage:
+libcrypto3-3.0.11-r0 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.0.10-r0 installed size:
-4116 KiB
+libcrypto3-3.0.11-r0 installed size:
+4120 KiB
 
-libcrypto3-3.0.10-r0 license:
+libcrypto3-3.0.11-r0 license:
 Apache-2.0
 
 ```
@@ -365,16 +365,16 @@ LGPL-2.0-or-later
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.0.10-r0 description:
+libssl3-3.0.11-r0 description:
 SSL shared libraries
 
-libssl3-3.0.10-r0 webpage:
+libssl3-3.0.11-r0 webpage:
 https://www.openssl.org/
 
-libssl3-3.0.10-r0 installed size:
+libssl3-3.0.11-r0 installed size:
 608 KiB
 
-libssl3-3.0.10-r0 license:
+libssl3-3.0.11-r0 license:
 Apache-2.0
 
 ```
