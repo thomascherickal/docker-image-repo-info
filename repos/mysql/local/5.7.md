@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:92034fe9a41f4344b97f3fc88a8796248e2cfa9b934be58379f3dbc150d07d9d`
-- Created: `2023-08-03T01:43:32.567458788Z`
-- Virtual Size: ~ 581.08 Mb  
+- Image ID: `sha256:a5b7ceed4074932a04ea553af3124bb03b249affe14899e2cd746d1a63e12ecc`
+- Created: `2023-07-27T22:18:54Z`
+- Virtual Size: ~ 580.77 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -531,15 +531,15 @@ $ dnf --quiet download --source --url kmod-libs-20-28.0.3.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/kmod-20-28.0.3.el7.src.rpm
 ```
 
-### `rpm` package: `kpartx-0.4.9-136.0.1.el7_9.x86_64`
+### `rpm` package: `kpartx-0.4.9-136.0.3.el7_9.x86_64`
 
 Licenses (from `rpm --query`): GPL+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url kpartx-0.4.9-136.0.1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/device-mapper-multipath-0.4.9-136.0.1.el7_9.src.rpm
+$ dnf --quiet download --source --url kpartx-0.4.9-136.0.3.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/device-mapper-multipath-0.4.9-136.0.3.el7_9.src.rpm
 ```
 
 ### `rpm` package: `krb5-libs-1.15.1-55.0.1.el7_9.x86_64`
