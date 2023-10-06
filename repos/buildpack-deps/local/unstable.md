@@ -3595,21 +3595,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libx11=2:1.8.6-1
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.8.6-1.dsc' libx11_1.8.6-1.dsc 2509 SHA256:12d0bad855f51aa4ee6286f1c88acf6395fe6ea94b5416f79c664631bf5b83a8
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.8.6.orig.tar.gz' libx11_1.8.6.orig.tar.gz 3193457 SHA256:5ff0d26c94d82ebb94a944b9f1f55cd01b9713fd461fe93f62f3527ce14ad94e
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.8.6.orig.tar.gz.asc' libx11_1.8.6.orig.tar.gz.asc 801 SHA256:20b9fb0b6d80411dee9b6c3e2b5821ba0f26e59d1ac4c3e715e9d93679895126
-'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.8.6-1.diff.gz' libx11_1.8.6-1.diff.gz 73485 SHA256:7ddc8c5f32c4292fd7f525a75301d77d3010467639ce9f217416dc9031da97a5
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libx11/2:1.8.6-1/
 
-- https://sources.debian.net/src/libx11/2:1.8.6-1/ (for browsing the source)
-- https://sources.debian.net/src/libx11/2:1.8.6-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libx11/2:1.8.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.9-1`
 
@@ -4074,20 +4066,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb=1:10.11.4-1
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.4-1.dsc' mariadb_10.11.4-1.dsc 5055 SHA256:35f200677039774c41d92bdab536403db828eed83a14bb1c42721df2c43d3bc6
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.4.orig.tar.gz' mariadb_10.11.4.orig.tar.gz 93268027 SHA256:f3e38a6bbea5e98176adb8f1b00b08832e01a4b4687f80f3271d1c6e0443f13c
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.4-1.debian.tar.xz' mariadb_10.11.4-1.debian.tar.xz 272608 SHA256:43d65c126dac4a237e745ada820c8d39b4794a32995f56f69848112f599a160b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb/1:10.11.4-1/
 
-- https://sources.debian.net/src/mariadb/1:10.11.4-1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb/1:10.11.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb/1:10.11.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20230808-1`
 
@@ -5058,20 +5043,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.11/copyright`, `/usr/share/do
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.11=3.11.5-3
-'http://deb.debian.org/debian/pool/main/p/python3.11/python3.11_3.11.5-3.dsc' python3.11_3.11.5-3.dsc 3655 SHA256:7abf728c255cacb8788f3a61e3002285617d329b9b560ca4ca8fd3662afc69e3
-'http://deb.debian.org/debian/pool/main/p/python3.11/python3.11_3.11.5.orig.tar.xz' python3.11_3.11.5.orig.tar.xz 20053580 SHA256:85cd12e9cf1d6d5a45f17f7afe1cebe7ee628d3282281c492e86adf636defa3f
-'http://deb.debian.org/debian/pool/main/p/python3.11/python3.11_3.11.5-3.debian.tar.xz' python3.11_3.11.5-3.debian.tar.xz 213776 SHA256:321d0ecab527eec41512ed5d62f4d713271e8e9b8ed415ae4f99292f23c43347
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.11/3.11.5-3/
 
-- https://sources.debian.net/src/python3.11/3.11.5-3/ (for browsing the source)
-- https://sources.debian.net/src/python3.11/3.11.5-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.11/3.11.5-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.2-1.3`
 
@@ -5286,20 +5264,13 @@ Licenses: (parsed from: `/usr/share/doc/python3-pkg-resources/copyright`)
 - `Apache-2.0`
 - `BSD-3-clause`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris setuptools=68.1.2-1
-'http://deb.debian.org/debian/pool/main/s/setuptools/setuptools_68.1.2-1.dsc' setuptools_68.1.2-1.dsc 2237 SHA256:fb71891fb5a10ee7fa4d2d223283b0f57ee37e0e8967a51dbf5e2d2ca26040b8
-'http://deb.debian.org/debian/pool/main/s/setuptools/setuptools_68.1.2.orig.tar.gz' setuptools_68.1.2.orig.tar.gz 2198001 SHA256:3d4dfa6d95f1b101d695a6160a7626e15583af71a5f52176efa5d39a054d475d
-'http://deb.debian.org/debian/pool/main/s/setuptools/setuptools_68.1.2-1.debian.tar.xz' setuptools_68.1.2-1.debian.tar.xz 14076 SHA256:ebbb8228954f1a2f07e249ce6b1c083b7f85f6bd1039a779636214c2938ec888
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/setuptools/68.1.2-1/
 
-- https://sources.debian.net/src/setuptools/68.1.2-1/ (for browsing the source)
-- https://sources.debian.net/src/setuptools/68.1.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/setuptools/68.1.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `shadow=1:4.13+dfsg1-1`
 

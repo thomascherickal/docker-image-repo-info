@@ -1208,15 +1208,9 @@ Licenses: (parsed from: `/usr/share/doc/libgcrypt20/copyright`)
 - `GPL-2`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libgcrypt20=1.10.2-2ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.10.2-2ubuntu1.dsc' libgcrypt20_1.10.2-2ubuntu1.dsc 2913 SHA512:26adc44ea61437ed6ad7ed49bdb39d203da33aa12118df08730549366b36f8592b1f95cb856be68219cba684631c5e0db4b611096379ccfcc8a9e77e2cb01929
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.10.2.orig.tar.bz2' libgcrypt20_1.10.2.orig.tar.bz2 3795164 SHA512:3a850baddfe8ffe8b3e96dc54af3fbb9e1dab204db1f06b9b90b8fbbfb7fb7276260cd1e61ba4dde5a662a2385385007478834e62e95f785d2e3d32652adb29e
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.10.2.orig.tar.bz2.asc' libgcrypt20_1.10.2.orig.tar.bz2.asc 228 SHA512:151ac009da846f4f97fc5f8d936c90da53a69e0824890b860249add4620480ca00e239b8b886f2e071e81095f120cf67c991ae981ac0fb58d56ea011c26957ab
-'http://archive.ubuntu.com/ubuntu/pool/main/libg/libgcrypt20/libgcrypt20_1.10.2-2ubuntu1.debian.tar.xz' libgcrypt20_1.10.2-2ubuntu1.debian.tar.xz 37320 SHA512:3853b2f9c200629fc4bee91b651d95611588ab084af467564c325f08775917b3bcb001bda88b3d458e97f1136482440f8374e2a82b4da8447812b46f175bf4ff
-```
 
 ### `dpkg` source package: `libgpg-error=1.47-2`
 
@@ -2128,14 +2122,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.11-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.11=3.11.5-3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.11/python3.11_3.11.5-3.dsc' python3.11_3.11.5-3.dsc 3655 SHA512:1ff7ec98006536e3cd8c92da76e788cd6bf2b133e7a2c9935b9afe98a7f0b8fd597548316ae2648f644e8c5b11a05f84ad426358a6a0d3bea6d360769fdb3d0e
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.11/python3.11_3.11.5.orig.tar.xz' python3.11_3.11.5.orig.tar.xz 20053580 SHA512:93fa640bedcea449060caac8aa691aa315a19f172fd9f0422183d17749c3512d4ecac60e7599f9ef14e3cdb3c8b4b060e484c9061b1e7ee8d958200d6041e408
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.11/python3.11_3.11.5-3.debian.tar.xz' python3.11_3.11.5-3.debian.tar.xz 213776 SHA512:20bcab5f68c4c7fa6a4e6fe6f9cb062eb7a340dd4f32dc607a8b5fe411299aafddb064a771f051123fc5d653428839fc99a7663d32edfae526712b4f38e50cdb
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/python3.11/3.11.5-3/
+
 
 ### `dpkg` source package: `readline=8.2-1.3`
 
@@ -2194,14 +2187,13 @@ Licenses: (parsed from: `/usr/share/doc/sq/copyright`)
 - `GPL-2`
 - `GPL-2.0-or-later`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris rust-sequoia-sq=0.27.0-2
-'http://archive.ubuntu.com/ubuntu/pool/universe/r/rust-sequoia-sq/rust-sequoia-sq_0.27.0-2.dsc' rust-sequoia-sq_0.27.0-2.dsc 3088 SHA512:f4fda21e5762ea50b8711ad9d4eee47fa5cdafa658e31a492d149594a767548a4ae5ab5f182be116adc10f49d1f5449d89fae52aba9fb5331de43c94d732d625
-'http://archive.ubuntu.com/ubuntu/pool/universe/r/rust-sequoia-sq/rust-sequoia-sq_0.27.0.orig.tar.gz' rust-sequoia-sq_0.27.0.orig.tar.gz 196791 SHA512:af86f5f4d868b970bfe9d027415fb7eda4a03963603bab2987f82b7a31decaec87b64578e9d6d6ce7bbffcb4563824aca715f58b28aaf92925ed2584dcb2f5ba
-'http://archive.ubuntu.com/ubuntu/pool/universe/r/rust-sequoia-sq/rust-sequoia-sq_0.27.0-2.debian.tar.xz' rust-sequoia-sq_0.27.0-2.debian.tar.xz 5916 SHA512:5d8826cce1590d95f6620f7eb1c65301e59b8d73774f84fa19928f256f745fa2b609c9785e9b7eb23078863167104f2d03f84060e600f69df5df745928ba7231
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/rust-sequoia-sq/0.27.0-2/
+
 
 ### `dpkg` source package: `sed=4.9-1`
 

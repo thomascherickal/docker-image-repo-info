@@ -2913,15 +2913,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libx11=2:1.8.4-2ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.8.4-2ubuntu0.2.dsc' libx11_1.8.4-2ubuntu0.2.dsc 2598 SHA512:4bd64a1786d70b60aff20de8f77669e450f8369bde8c8369dd868bd6dfbe38949cb8f1993339e39f815d47649f4b31d0bf61e75513bd96e60dd02e11eddb8c69
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.8.4.orig.tar.gz' libx11_1.8.4.orig.tar.gz 3168573 SHA512:b694964c529a3b9b40a67840636a4bdf5641742ad65f1596bd6ea88c51ade1b37cfcdc879f09beac9c5cfe55813128905ebf37bf844b221d4f03a935a5219436
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.8.4.orig.tar.gz.asc' libx11_1.8.4.orig.tar.gz.asc 801 SHA512:bf9d8ab92ffa841cd1a52845885a008c97ad76356410a29ea787309bafab2e31dce8cc32b58085281d22693e412d3cefcdae6bd901b16f1c636b54ebe5734619
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.8.4-2ubuntu0.2.diff.gz' libx11_1.8.4-2ubuntu0.2.diff.gz 112334 SHA512:6a810ee58fefe3fda48cbb0ed750d9da38adcdadd0bd784d2c3394afdcd92746fb54c7c598f8ba691d82eeeee01c10951f3c7562920a3c6d8a90afceabd786c1
-```
 
 ### `dpkg` source package: `libxau=1:1.0.9-1build5`
 

@@ -2557,15 +2557,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libx11=2:1.6.9-2ubuntu1.5
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9-2ubuntu1.5.dsc' libx11_1.6.9-2ubuntu1.5.dsc 2671 SHA512:8f317870dd79f8e6c2211f0d8976ab4d6fac8c13c8aa6b87ad7dad0646f177347bac326909de03d08d06ec879d8c365914c34c1d29fcce5fd404506965b00500
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9.orig.tar.gz' libx11_1.6.9.orig.tar.gz 2994329 SHA512:c79cf0924e920a2e8d2e9af45e73ed42b565dea79ac68d4c3889033738274694b29cedb62c057fec1aa7f7ad7dcf843334fccb43470bbae7922d42373c1c6045
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9.orig.tar.gz.asc' libx11_1.6.9.orig.tar.gz.asc 659 SHA512:56e53d1481be4e12f89af2fbcd297a3612996f5ca1eae39d6fe336f9b52832ea430ac0568e556b9e57291562c56590086871c08ec7ac046f15af4211f680adee
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9-2ubuntu1.5.diff.gz' libx11_1.6.9-2ubuntu1.5.diff.gz 68346 SHA512:76b4a12f70342181e8fc201eb40333012a42fcc5a3e13bb5484315ee5d5327d431b057f0c64a23d6d1d31c48c14bfd645a0925369fa0215e3a2167ae4a1fd1d4
-```
 
 ### `dpkg` source package: `libxau=1:1.0.9-0ubuntu1`
 

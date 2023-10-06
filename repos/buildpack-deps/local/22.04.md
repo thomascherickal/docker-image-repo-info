@@ -1170,15 +1170,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.35-0ubuntu3.3
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35-0ubuntu3.3.dsc' glibc_2.35-0ubuntu3.3.dsc 8710 SHA512:e4244fad731eb9ecb64519893dbaf23aeef87dea99d06870cb6223947a49f34479966b792d4c23897892f0b4f72ebb1f6f483032760348f256396a81c68d6ce9
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35.orig.tar.xz' glibc_2.35.orig.tar.xz 18165952 SHA512:e7336ce27561be5d7c217832a1136fb327e057bd8d3f92925b35c97e3e9f9e486948b5a1e03e5e4090772ef06437a074d10b82e68f17f1ad8f22077ee39e1b66
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35.orig.tar.xz.asc' glibc_2.35.orig.tar.xz.asc 833 SHA512:2a1c152511dac05f9b4e48f7e7a6b59dbf2d8b71fea54f128173113357be26e86216e13c9865f617049e6858396a221a5abc704f65a786b22453945fd80265e9
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35-0ubuntu3.3.debian.tar.xz' glibc_2.35-0ubuntu3.3.debian.tar.xz 907016 SHA512:433df60d6c2006f47c01a1984973441529e04d267acbc75a7d953025c51e54a6a479f88331c81e2750303d11b0bd9206116917228ab263e81a749eaef8e83ea1
-```
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg-3ubuntu1`
 
@@ -2754,15 +2748,9 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libx11=2:1.7.5-1ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.7.5-1ubuntu0.2.dsc' libx11_1.7.5-1ubuntu0.2.dsc 2654 SHA512:8e39fbaeb78d1aea852053255b8b1bdb1261fcd37461c8738b7de5a263aeb5c45d3294e3a23929374f6b12b16fbe1d682b1f19a41757e6896b8d81dbc5484006
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.7.5.orig.tar.gz' libx11_1.7.5.orig.tar.gz 3170022 SHA512:90474f5f95c3498a02100aeeb6b5ad7ae9076bc40a70cdd828bd881adac0bf278002186142f2760e5504cf82120f4869798831e0e2332ecbc6903e8f7c9114ab
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.7.5.orig.tar.gz.asc' libx11_1.7.5.orig.tar.gz.asc 358 SHA512:75139b9f7b2f19aed3d3a66ea8b883480db2fa56d713bb0160ea8a0faba208da4c241768f9f2703f723f13906438eda3117f489d7d5d17fbe1cbb75b13c9935d
-'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.7.5-1ubuntu0.2.diff.gz' libx11_1.7.5-1ubuntu0.2.diff.gz 95625 SHA512:7531825daa8fe9779499603ec4fdfe989e9377de068af274dbcb1aeeadc8f6adf32d5167fe986a866283437783ef0e4f92e39a38dffc2408e4ad670454d14356
-```
 
 ### `dpkg` source package: `libxau=1:1.0.9-1build5`
 
@@ -3006,14 +2994,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.15.0-84.93
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-84.93.dsc' linux_5.15.0-84.93.dsc 7377 SHA512:3b4746d7d66a40d67fb325aeb9a96225ea1224ea43d679e90cffd6191f09d49d1cd0bc52a07673634263198f56394370466975c3c81cef8782cd2260a30f3b5b
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-84.93.diff.gz' linux_5.15.0-84.93.diff.gz 10553666 SHA512:96b2c8460c31d511dc701e867f939d44e8175169c0c3d16084fc0e56770f4273edb2852a2cb6bfa984d08578735aeb19ed850f08260527099a1b98cfa0321d30
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu4`
 
