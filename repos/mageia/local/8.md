@@ -17,298 +17,163 @@
 
 Licenses (from `rpm --query`): GPL
 
-Source:
-
-```console
-$ dnf --quiet download --source --url basesystem-minimal-8-0.4.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/basesystem-8-0.4.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `basesystem-minimal-core-8-0.4.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPL
 
-Source:
-
-```console
-$ dnf --quiet download --source --url basesystem-minimal-core-8-0.4.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/basesystem-8-0.4.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `bash-5.1-4.1.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url bash-5.1-4.1.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/bash-5.1-4.1.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `bzip2-1.0.8-2.mga8.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
-Source:
-
-```console
-$ dnf --quiet download --source --url bzip2-1.0.8-2.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/bzip2-1.0.8-2.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `chkconfig-1.14-1.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPL
 
-Source:
-
-```console
-$ dnf --quiet download --source --url chkconfig-1.14-1.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/chkconfig-1.14-1.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `common-licenses-1.1-10.mga8.noarch`
 
 Licenses (from `rpm --query`): GPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url common-licenses-1.1-10.mga8.noarch
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/common-licenses-1.1-10.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `coreutils-8.32-2.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url coreutils-8.32-2.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/coreutils-8.32-2.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `cpio-2.13-5.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url cpio-2.13-5.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/cpio-2.13-5.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `cracklib-dicts-2.9.7-3.mga8.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2
 
-Source:
-
-```console
-$ dnf --quiet download --source --url cracklib-dicts-2.9.7-3.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/cracklib-2.9.7-3.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `cronie-1.5.5-2.mga8.x86_64`
 
 Licenses (from `rpm --query`): MIT and BSD
 
-Source:
-
-```console
-$ dnf --quiet download --source --url cronie-1.5.5-2.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/cronie-1.5.5-2.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `crontabs-1.10-24.mga8.noarch`
 
 Licenses (from `rpm --query`): GPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url crontabs-1.10-24.mga8.noarch
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/crontabs-1.10-24.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `crypto-policies-20210118-1.mga8.noarch`
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url crypto-policies-20210118-1.mga8.noarch
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/crypto-policies-20210118-1.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `curl-7.74.0-1.mga8.x86_64`
 
 Licenses (from `rpm --query`): BSD-like
 
-Source:
-
-```console
-$ dnf --quiet download --source --url curl-7.74.0-1.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/curl-7.74.0-1.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `dash-static-0.5.11.2-1.mga8.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
-Source:
-
-```console
-$ dnf --quiet download --source --url dash-static-0.5.11.2-1.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/dash-0.5.11.2-1.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `dbus-1.13.18-3.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+ or AFL
 
-Source:
-
-```console
-$ dnf --quiet download --source --url dbus-1.13.18-3.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/dbus-1.13.18-3.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `deltarpm-3.6.2-3.mga8.x86_64`
 
 Licenses (from `rpm --query`): BSD-3-Clause
 
-Source:
-
-```console
-$ dnf --quiet download --source --url deltarpm-3.6.2-3.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/deltarpm-3.6.2-3.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `dnf-4.6.0-1.mga8.noarch`
 
 Licenses (from `rpm --query`): GPLv2+ and GPLv2 and GPL
 
-Source:
-
-```console
-$ dnf --quiet download --source --url dnf-4.6.0-1.mga8.noarch
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/dnf-4.6.0-1.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `dnf-data-4.6.0-1.mga8.noarch`
 
 Licenses (from `rpm --query`): GPLv2+ and GPLv2 and GPL
 
-Source:
-
-```console
-$ dnf --quiet download --source --url dnf-data-4.6.0-1.mga8.noarch
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/dnf-4.6.0-1.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `e2fsprogs-1.45.6-6.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPLv2
 
-Source:
-
-```console
-$ dnf --quiet download --source --url e2fsprogs-1.45.6-6.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/e2fsprogs-1.45.6-6.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `etcskel-1.63-36.mga8.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
-Source:
-
-```console
-$ dnf --quiet download --source --url etcskel-1.63-36.mga8.noarch
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/etcskel-1.63-36.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `ethtool-5.10-1.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPLv2
 
-Source:
-
-```console
-$ dnf --quiet download --source --url ethtool-5.10-1.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/ethtool-5.10-1.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `file-5.39-4.mga8.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
-Source:
-
-```console
-$ dnf --quiet download --source --url file-5.39-4.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/file-5.39-4.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `filesystem-2.1.9-34.mga8.x86_64`
 
 Licenses (from `rpm --query`): Public Domain
 
-Source:
-
-```console
-$ dnf --quiet download --source --url filesystem-2.1.9-34.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/filesystem-2.1.9-34.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `findutils-4.8.0-1.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPLv3
 
-Source:
-
-```console
-$ dnf --quiet download --source --url findutils-4.8.0-1.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/findutils-4.8.0-1.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `gawk-5.1.0-1.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url gawk-5.1.0-1.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/gawk-5.1.0-1.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `genhdlist2-7.12-2.mga8.noarch`
 
 Licenses (from `rpm --query`): GPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url genhdlist2-7.12-2.mga8.noarch
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/rpmtools-7.12-2.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `gettext-base-0.21-8.mga8.x86_64`
 
 Licenses (from `rpm --query`): GPLv3+ and LGPLv2+ and GFDL
 
-Source:
-
-```console
-$ dnf --quiet download --source --url gettext-base-0.21-8.mga8
-http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/release/gettext-0.21-8.mga8.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `glibc-2.32-15.mga8.x86_64`
 
