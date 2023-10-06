@@ -18,7 +18,7 @@
 ## `geonetwork:3`
 
 ```console
-$ docker pull geonetwork@sha256:bcf79596be265a2b0847b6e9bc31ea2a4d3673ee4aa7be282fbf97b9ad47deed
+$ docker pull geonetwork@sha256:0c079bfef5009e5e36763e77df6d88fe5b320dd173085ff6e0ed4bde89561f3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -172,14 +172,14 @@ CMD ["catalina.sh" "run"]
 ### `geonetwork:3` - linux; arm variant v7
 
 ```console
-$ docker pull geonetwork@sha256:cb0c4b6d69665104821e859fadfbf7882f20544ba337456b58391a51caf5a886
+$ docker pull geonetwork@sha256:2a15ee136127ad13ad77acd81d2eb371a8d93d97c14db87a275e3361d32c2abc
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **469.6 MB (469552152 bytes)**  
+-	Total Size: **385.7 MB (385704838 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:06c4208128b8ec9bf2726f4d4b88b0cf86b258b36118ca98f55885b321ef4e50`
+-	Image ID: `sha256:d2d9094c7889a2d0bde3bc539d8bd1d2335f545a8cba25263d9212573d5eeef3`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["catalina.sh","run"]`
 
@@ -250,21 +250,21 @@ ENV GN_FILE=geonetwork.war
 ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
 # Tue, 03 Oct 2023 07:39:45 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
-# Tue, 03 Oct 2023 07:39:45 GMT
-ENV GN_VERSION=3.12.10
-# Tue, 03 Oct 2023 07:39:45 GMT
-ENV GN_DOWNLOAD_MD5=13555d5289d3256d191edad19f412790
-# Tue, 03 Oct 2023 07:39:45 GMT
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:57:16 GMT
 WORKDIR /usr/local/tomcat/webapps
-# Tue, 03 Oct 2023 07:40:22 GMT
+# Fri, 06 Oct 2023 01:57:45 GMT
 RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 WORKDIR /usr/local/tomcat
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -301,13 +301,13 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 03 Oct 2023 07:10:00 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb2b990547adf0aa8500c0fa7fce03a7e53a4884a5c6811aee43296694584a0d`  
-		Last Modified: Tue, 03 Oct 2023 07:41:16 GMT  
-		Size: 318.6 MB (318615385 bytes)  
+	-	`sha256:4efbd3a31840564238976e5ac90e7766a7675929c2541f62098f84c56d091000`  
+		Last Modified: Fri, 06 Oct 2023 01:58:29 GMT  
+		Size: 234.8 MB (234768072 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92b1ee8c0f5fc41192d72caf6cd17d091e9ebb6346de380d03e56fd9890f95dd`  
-		Last Modified: Tue, 03 Oct 2023 07:40:55 GMT  
-		Size: 249.0 B  
+	-	`sha256:fe9727b589b31d070c5d2170e47a2bdf46e4195c31920d9338bfe4e0bf66c60b`  
+		Last Modified: Fri, 06 Oct 2023 01:58:12 GMT  
+		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `geonetwork:3` - linux; arm64 variant v8
@@ -454,14 +454,14 @@ CMD ["catalina.sh" "run"]
 ### `geonetwork:3` - linux; ppc64le
 
 ```console
-$ docker pull geonetwork@sha256:f8b47f0f4c516b2073d9794b9ed63ad5eec9dbaad042373af80137e77d16ae4d
+$ docker pull geonetwork@sha256:707074d6e367a9351faa6be921e85e6b6b412f1ef1b76add6d3ab42d4db12a07
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **481.1 MB (481052240 bytes)**  
+-	Total Size: **397.2 MB (397197928 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:23b902095fc4ab7789a6f1a5cb4db6afaa8eaf3daf023477fcec6259398da4b0`
+-	Image ID: `sha256:c12812188ad9d63ea995a3a029c0c5bad79ad4d1bc417a29a7a3d3ec0c384dd8`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["catalina.sh","run"]`
 
@@ -532,21 +532,21 @@ ENV GN_FILE=geonetwork.war
 ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
 # Tue, 03 Oct 2023 12:47:48 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
-# Tue, 03 Oct 2023 12:47:49 GMT
-ENV GN_VERSION=3.12.10
-# Tue, 03 Oct 2023 12:47:50 GMT
-ENV GN_DOWNLOAD_MD5=13555d5289d3256d191edad19f412790
-# Tue, 03 Oct 2023 12:47:50 GMT
+# Fri, 06 Oct 2023 01:24:22 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:24:23 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:24:23 GMT
 WORKDIR /usr/local/tomcat/webapps
-# Tue, 03 Oct 2023 12:48:32 GMT
+# Fri, 06 Oct 2023 01:25:49 GMT
 RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
-# Tue, 03 Oct 2023 12:48:47 GMT
+# Fri, 06 Oct 2023 01:25:56 GMT
 COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
-# Tue, 03 Oct 2023 12:48:50 GMT
+# Fri, 06 Oct 2023 01:25:56 GMT
 WORKDIR /usr/local/tomcat
-# Tue, 03 Oct 2023 12:48:51 GMT
+# Fri, 06 Oct 2023 01:25:58 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 12:48:52 GMT
+# Fri, 06 Oct 2023 01:25:59 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -583,19 +583,19 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 03 Oct 2023 12:17:18 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f88ec2baf89164568b0bc7a8a1543e3588ab0a80f5aaef2c56686459256a6a16`  
-		Last Modified: Tue, 03 Oct 2023 12:50:11 GMT  
-		Size: 318.7 MB (318668847 bytes)  
+	-	`sha256:6f648b9c7bfd0f57c038e2665a591e6fd5ece1735d6f4478ce7cf02bab5247e2`  
+		Last Modified: Fri, 06 Oct 2023 01:27:47 GMT  
+		Size: 234.8 MB (234814536 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b5ab0b0416f0b58983cebb26e289b8e78e2ecac23e13ba17945785ed187b8192`  
-		Last Modified: Tue, 03 Oct 2023 12:49:40 GMT  
-		Size: 249.0 B  
+	-	`sha256:17996447fbb293482262c0a261ed70d15ae93c6a6a140bf0b84619ce9ffc9ae9`  
+		Last Modified: Fri, 06 Oct 2023 01:27:16 GMT  
+		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `geonetwork:3-postgres`
 
 ```console
-$ docker pull geonetwork@sha256:c93414e0d689edbf9fac15a264c728972b8c7cdb1098893fe4c56b50d2dd96f9
+$ docker pull geonetwork@sha256:9dc35632c60e84d5067f2e9dff2e309799c05c55b13140c97b3bf84ea697c349
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -777,14 +777,14 @@ CMD ["catalina.sh" "run"]
 ### `geonetwork:3-postgres` - linux; arm variant v7
 
 ```console
-$ docker pull geonetwork@sha256:98959fe2ff9987a8eaaf8620b58bc812154fd071b864b99a2edfbe8635067b30
+$ docker pull geonetwork@sha256:c4df9c21bc11768309e7610e64c841a269610cba0ad509e6c76f3b468a7d22ae
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **482.3 MB (482306606 bytes)**  
+-	Total Size: **398.5 MB (398459062 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e4e86b2c3766a5fd8825e3eff4cd890011a724ea08dfec6e3fd1914df10368a7`
+-	Image ID: `sha256:905d5f87e6dc7a7e623c3dbfd80aec6ed89b09cfad14f9bb2299a95a1dd7ce9f`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["catalina.sh","run"]`
 
@@ -855,33 +855,33 @@ ENV GN_FILE=geonetwork.war
 ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
 # Tue, 03 Oct 2023 07:39:45 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
-# Tue, 03 Oct 2023 07:39:45 GMT
-ENV GN_VERSION=3.12.10
-# Tue, 03 Oct 2023 07:39:45 GMT
-ENV GN_DOWNLOAD_MD5=13555d5289d3256d191edad19f412790
-# Tue, 03 Oct 2023 07:39:45 GMT
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:57:16 GMT
 WORKDIR /usr/local/tomcat/webapps
-# Tue, 03 Oct 2023 07:40:22 GMT
+# Fri, 06 Oct 2023 01:57:45 GMT
 RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 WORKDIR /usr/local/tomcat
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 CMD ["catalina.sh" "run"]
-# Tue, 03 Oct 2023 07:40:42 GMT
+# Fri, 06 Oct 2023 01:57:59 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client &&     rm -rf /var/lib/apt/lists/*
-# Tue, 03 Oct 2023 07:40:42 GMT
+# Fri, 06 Oct 2023 01:57:59 GMT
 RUN sed -i -e 's#<import resource="../config-db/${geonetwork.db.type:h2}.xml"/>#<!--<import resource="../config-db/${geonetwork.db.type:h2}.xml"/-->#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml" && sed -i -e 's#<!--<import resource="../config-db/postgres.xml"/>-->#<import resource="../config-db/postgres.xml"/>#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml"
-# Tue, 03 Oct 2023 07:40:43 GMT
+# Fri, 06 Oct 2023 01:58:00 GMT
 COPY file:83f69d2041e5fb378033b0db57e096c81ba0725102ab4da4f089685e748fcce3 in /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-db/jdbc.properties 
-# Tue, 03 Oct 2023 07:40:43 GMT
+# Fri, 06 Oct 2023 01:58:00 GMT
 COPY file:c88411abba7ad9b7bb75019f08755dbfa163d2fc7fdd80676bf9350c4c56a19c in /entrypoint.sh 
-# Tue, 03 Oct 2023 07:40:43 GMT
+# Fri, 06 Oct 2023 01:58:00 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 07:40:43 GMT
+# Fri, 06 Oct 2023 01:58:00 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -918,28 +918,28 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 03 Oct 2023 07:10:00 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb2b990547adf0aa8500c0fa7fce03a7e53a4884a5c6811aee43296694584a0d`  
-		Last Modified: Tue, 03 Oct 2023 07:41:16 GMT  
-		Size: 318.6 MB (318615385 bytes)  
+	-	`sha256:4efbd3a31840564238976e5ac90e7766a7675929c2541f62098f84c56d091000`  
+		Last Modified: Fri, 06 Oct 2023 01:58:29 GMT  
+		Size: 234.8 MB (234768072 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92b1ee8c0f5fc41192d72caf6cd17d091e9ebb6346de380d03e56fd9890f95dd`  
-		Last Modified: Tue, 03 Oct 2023 07:40:55 GMT  
-		Size: 249.0 B  
+	-	`sha256:fe9727b589b31d070c5d2170e47a2bdf46e4195c31920d9338bfe4e0bf66c60b`  
+		Last Modified: Fri, 06 Oct 2023 01:58:12 GMT  
+		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0565cd9cbddd717673eafdba3562640d4a367440d6c4270efa8f3413edc85415`  
-		Last Modified: Tue, 03 Oct 2023 07:41:29 GMT  
-		Size: 12.8 MB (12751087 bytes)  
+	-	`sha256:2c14a92e5e66dcdacbdde275b3db7588fa16540967be7d83958389373c22cf8b`  
+		Last Modified: Fri, 06 Oct 2023 01:58:45 GMT  
+		Size: 12.8 MB (12750862 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc02a4e3361a71ae17e5af181379a96536ea9dd5109b7516eef4b67ffdc0c1da`  
-		Last Modified: Tue, 03 Oct 2023 07:41:27 GMT  
-		Size: 1.3 KB (1268 bytes)  
+	-	`sha256:b4cf2a4346b50103bbc0837100768ca5ee39ff731addc2d0a3df9579ff33a49c`  
+		Last Modified: Fri, 06 Oct 2023 01:58:42 GMT  
+		Size: 1.3 KB (1265 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ce8149229c6bb14457eb00c8c7106e8c4f172496ed8d41dccac75574466b5b3`  
-		Last Modified: Tue, 03 Oct 2023 07:41:27 GMT  
-		Size: 1.1 KB (1126 bytes)  
+	-	`sha256:23fc5a58b5baa860bb84a3882c93a18533b83873acb20431008ee6d777f140af`  
+		Last Modified: Fri, 06 Oct 2023 01:58:42 GMT  
+		Size: 1.1 KB (1124 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:487bec23e86b29993bcef88f7fe405bfe9b064ff03f47cf5e88d68f839da94cd`  
-		Last Modified: Tue, 03 Oct 2023 07:41:27 GMT  
+	-	`sha256:0ee53b45127b0cb7a3fdfab58f5851a1f51dd7ccf9d4bdcb97a4c543de7da2c9`  
+		Last Modified: Fri, 06 Oct 2023 01:58:42 GMT  
 		Size: 973.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -1115,14 +1115,14 @@ CMD ["catalina.sh" "run"]
 ### `geonetwork:3-postgres` - linux; ppc64le
 
 ```console
-$ docker pull geonetwork@sha256:6193109c141baf21756b4c63f1d584ea2301ecceea33b85363db61adc09d78a5
+$ docker pull geonetwork@sha256:4cf8f348100ad578ec073fa94f51939c3bd4c286f264dd6db2790d818766b523
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **495.3 MB (495254602 bytes)**  
+-	Total Size: **411.4 MB (411400355 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b1e2ea8fa8d75dbe12b2a9d313d038b35084653432d40c94c9f1665757ad8e68`
+-	Image ID: `sha256:71f53a12220f575553692eceb29799e577621efbc72250f99e05f20c0ef7257e`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["catalina.sh","run"]`
 
@@ -1193,33 +1193,33 @@ ENV GN_FILE=geonetwork.war
 ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
 # Tue, 03 Oct 2023 12:47:48 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
-# Tue, 03 Oct 2023 12:47:49 GMT
-ENV GN_VERSION=3.12.10
-# Tue, 03 Oct 2023 12:47:50 GMT
-ENV GN_DOWNLOAD_MD5=13555d5289d3256d191edad19f412790
-# Tue, 03 Oct 2023 12:47:50 GMT
+# Fri, 06 Oct 2023 01:24:22 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:24:23 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:24:23 GMT
 WORKDIR /usr/local/tomcat/webapps
-# Tue, 03 Oct 2023 12:48:32 GMT
+# Fri, 06 Oct 2023 01:25:49 GMT
 RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
-# Tue, 03 Oct 2023 12:48:47 GMT
+# Fri, 06 Oct 2023 01:25:56 GMT
 COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
-# Tue, 03 Oct 2023 12:48:50 GMT
+# Fri, 06 Oct 2023 01:25:56 GMT
 WORKDIR /usr/local/tomcat
-# Tue, 03 Oct 2023 12:48:51 GMT
+# Fri, 06 Oct 2023 01:25:58 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 12:48:52 GMT
+# Fri, 06 Oct 2023 01:25:59 GMT
 CMD ["catalina.sh" "run"]
-# Tue, 03 Oct 2023 12:49:20 GMT
+# Fri, 06 Oct 2023 01:26:53 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client &&     rm -rf /var/lib/apt/lists/*
-# Tue, 03 Oct 2023 12:49:23 GMT
+# Fri, 06 Oct 2023 01:26:57 GMT
 RUN sed -i -e 's#<import resource="../config-db/${geonetwork.db.type:h2}.xml"/>#<!--<import resource="../config-db/${geonetwork.db.type:h2}.xml"/-->#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml" && sed -i -e 's#<!--<import resource="../config-db/postgres.xml"/>-->#<import resource="../config-db/postgres.xml"/>#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml"
-# Tue, 03 Oct 2023 12:49:24 GMT
+# Fri, 06 Oct 2023 01:26:58 GMT
 COPY file:83f69d2041e5fb378033b0db57e096c81ba0725102ab4da4f089685e748fcce3 in /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-db/jdbc.properties 
-# Tue, 03 Oct 2023 12:49:24 GMT
+# Fri, 06 Oct 2023 01:26:58 GMT
 COPY file:c88411abba7ad9b7bb75019f08755dbfa163d2fc7fdd80676bf9350c4c56a19c in /entrypoint.sh 
-# Tue, 03 Oct 2023 12:49:25 GMT
+# Fri, 06 Oct 2023 01:26:58 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 12:49:26 GMT
+# Fri, 06 Oct 2023 01:27:00 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -1256,35 +1256,35 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 03 Oct 2023 12:17:18 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f88ec2baf89164568b0bc7a8a1543e3588ab0a80f5aaef2c56686459256a6a16`  
-		Last Modified: Tue, 03 Oct 2023 12:50:11 GMT  
-		Size: 318.7 MB (318668847 bytes)  
+	-	`sha256:6f648b9c7bfd0f57c038e2665a591e6fd5ece1735d6f4478ce7cf02bab5247e2`  
+		Last Modified: Fri, 06 Oct 2023 01:27:47 GMT  
+		Size: 234.8 MB (234814536 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b5ab0b0416f0b58983cebb26e289b8e78e2ecac23e13ba17945785ed187b8192`  
-		Last Modified: Tue, 03 Oct 2023 12:49:40 GMT  
-		Size: 249.0 B  
+	-	`sha256:17996447fbb293482262c0a261ed70d15ae93c6a6a140bf0b84619ce9ffc9ae9`  
+		Last Modified: Fri, 06 Oct 2023 01:27:16 GMT  
+		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bdbebe3c20641c11d19baaebfe3ca15b82f2e120916f4c25702a6d826f1adb46`  
-		Last Modified: Tue, 03 Oct 2023 12:50:27 GMT  
-		Size: 14.2 MB (14199000 bytes)  
+	-	`sha256:f1bf633e84c04192436471b5cb8d8f89fc3b26691c0f82373c6bd1a822aa016e`  
+		Last Modified: Fri, 06 Oct 2023 01:28:08 GMT  
+		Size: 14.2 MB (14199075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1512901b7fddcc113bbe56af79b0b8566579d1a92675d9e1619fb3583b720655`  
-		Last Modified: Tue, 03 Oct 2023 12:50:23 GMT  
-		Size: 1.3 KB (1264 bytes)  
+	-	`sha256:631a66e2bdb132a8ca517028885c71622342fbeef6111db20c397c4eb852d02a`  
+		Last Modified: Fri, 06 Oct 2023 01:28:01 GMT  
+		Size: 1.3 KB (1260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6d82497f138893267df21751f7c90a8ae21dee31d1d8d8ddace3144a818bfd04`  
-		Last Modified: Tue, 03 Oct 2023 12:50:23 GMT  
-		Size: 1.1 KB (1125 bytes)  
+	-	`sha256:c65bdd747c41c704edda63cae81ab3411d7bf87d15718ddb279f623d5b32cd2b`  
+		Last Modified: Fri, 06 Oct 2023 01:28:01 GMT  
+		Size: 1.1 KB (1119 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5de51130a95c779f0115bd37a05c662c313b94638ff329c6a85569f809958a10`  
-		Last Modified: Tue, 03 Oct 2023 12:50:23 GMT  
+	-	`sha256:ae4c5891d58279d971b5c6effff940a3bcfd0594a5b779d416403471f17a4477`  
+		Last Modified: Fri, 06 Oct 2023 01:28:02 GMT  
 		Size: 973.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `geonetwork:3.12`
 
 ```console
-$ docker pull geonetwork@sha256:bcf79596be265a2b0847b6e9bc31ea2a4d3673ee4aa7be282fbf97b9ad47deed
+$ docker pull geonetwork@sha256:0c079bfef5009e5e36763e77df6d88fe5b320dd173085ff6e0ed4bde89561f3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -1438,14 +1438,14 @@ CMD ["catalina.sh" "run"]
 ### `geonetwork:3.12` - linux; arm variant v7
 
 ```console
-$ docker pull geonetwork@sha256:cb0c4b6d69665104821e859fadfbf7882f20544ba337456b58391a51caf5a886
+$ docker pull geonetwork@sha256:2a15ee136127ad13ad77acd81d2eb371a8d93d97c14db87a275e3361d32c2abc
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **469.6 MB (469552152 bytes)**  
+-	Total Size: **385.7 MB (385704838 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:06c4208128b8ec9bf2726f4d4b88b0cf86b258b36118ca98f55885b321ef4e50`
+-	Image ID: `sha256:d2d9094c7889a2d0bde3bc539d8bd1d2335f545a8cba25263d9212573d5eeef3`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["catalina.sh","run"]`
 
@@ -1516,21 +1516,21 @@ ENV GN_FILE=geonetwork.war
 ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
 # Tue, 03 Oct 2023 07:39:45 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
-# Tue, 03 Oct 2023 07:39:45 GMT
-ENV GN_VERSION=3.12.10
-# Tue, 03 Oct 2023 07:39:45 GMT
-ENV GN_DOWNLOAD_MD5=13555d5289d3256d191edad19f412790
-# Tue, 03 Oct 2023 07:39:45 GMT
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:57:16 GMT
 WORKDIR /usr/local/tomcat/webapps
-# Tue, 03 Oct 2023 07:40:22 GMT
+# Fri, 06 Oct 2023 01:57:45 GMT
 RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 WORKDIR /usr/local/tomcat
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -1567,13 +1567,13 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 03 Oct 2023 07:10:00 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb2b990547adf0aa8500c0fa7fce03a7e53a4884a5c6811aee43296694584a0d`  
-		Last Modified: Tue, 03 Oct 2023 07:41:16 GMT  
-		Size: 318.6 MB (318615385 bytes)  
+	-	`sha256:4efbd3a31840564238976e5ac90e7766a7675929c2541f62098f84c56d091000`  
+		Last Modified: Fri, 06 Oct 2023 01:58:29 GMT  
+		Size: 234.8 MB (234768072 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92b1ee8c0f5fc41192d72caf6cd17d091e9ebb6346de380d03e56fd9890f95dd`  
-		Last Modified: Tue, 03 Oct 2023 07:40:55 GMT  
-		Size: 249.0 B  
+	-	`sha256:fe9727b589b31d070c5d2170e47a2bdf46e4195c31920d9338bfe4e0bf66c60b`  
+		Last Modified: Fri, 06 Oct 2023 01:58:12 GMT  
+		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `geonetwork:3.12` - linux; arm64 variant v8
@@ -1720,14 +1720,14 @@ CMD ["catalina.sh" "run"]
 ### `geonetwork:3.12` - linux; ppc64le
 
 ```console
-$ docker pull geonetwork@sha256:f8b47f0f4c516b2073d9794b9ed63ad5eec9dbaad042373af80137e77d16ae4d
+$ docker pull geonetwork@sha256:707074d6e367a9351faa6be921e85e6b6b412f1ef1b76add6d3ab42d4db12a07
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **481.1 MB (481052240 bytes)**  
+-	Total Size: **397.2 MB (397197928 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:23b902095fc4ab7789a6f1a5cb4db6afaa8eaf3daf023477fcec6259398da4b0`
+-	Image ID: `sha256:c12812188ad9d63ea995a3a029c0c5bad79ad4d1bc417a29a7a3d3ec0c384dd8`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["catalina.sh","run"]`
 
@@ -1798,21 +1798,21 @@ ENV GN_FILE=geonetwork.war
 ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
 # Tue, 03 Oct 2023 12:47:48 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
-# Tue, 03 Oct 2023 12:47:49 GMT
-ENV GN_VERSION=3.12.10
-# Tue, 03 Oct 2023 12:47:50 GMT
-ENV GN_DOWNLOAD_MD5=13555d5289d3256d191edad19f412790
-# Tue, 03 Oct 2023 12:47:50 GMT
+# Fri, 06 Oct 2023 01:24:22 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:24:23 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:24:23 GMT
 WORKDIR /usr/local/tomcat/webapps
-# Tue, 03 Oct 2023 12:48:32 GMT
+# Fri, 06 Oct 2023 01:25:49 GMT
 RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
-# Tue, 03 Oct 2023 12:48:47 GMT
+# Fri, 06 Oct 2023 01:25:56 GMT
 COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
-# Tue, 03 Oct 2023 12:48:50 GMT
+# Fri, 06 Oct 2023 01:25:56 GMT
 WORKDIR /usr/local/tomcat
-# Tue, 03 Oct 2023 12:48:51 GMT
+# Fri, 06 Oct 2023 01:25:58 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 12:48:52 GMT
+# Fri, 06 Oct 2023 01:25:59 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -1849,19 +1849,19 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 03 Oct 2023 12:17:18 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f88ec2baf89164568b0bc7a8a1543e3588ab0a80f5aaef2c56686459256a6a16`  
-		Last Modified: Tue, 03 Oct 2023 12:50:11 GMT  
-		Size: 318.7 MB (318668847 bytes)  
+	-	`sha256:6f648b9c7bfd0f57c038e2665a591e6fd5ece1735d6f4478ce7cf02bab5247e2`  
+		Last Modified: Fri, 06 Oct 2023 01:27:47 GMT  
+		Size: 234.8 MB (234814536 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b5ab0b0416f0b58983cebb26e289b8e78e2ecac23e13ba17945785ed187b8192`  
-		Last Modified: Tue, 03 Oct 2023 12:49:40 GMT  
-		Size: 249.0 B  
+	-	`sha256:17996447fbb293482262c0a261ed70d15ae93c6a6a140bf0b84619ce9ffc9ae9`  
+		Last Modified: Fri, 06 Oct 2023 01:27:16 GMT  
+		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `geonetwork:3.12-postgres`
 
 ```console
-$ docker pull geonetwork@sha256:c93414e0d689edbf9fac15a264c728972b8c7cdb1098893fe4c56b50d2dd96f9
+$ docker pull geonetwork@sha256:9dc35632c60e84d5067f2e9dff2e309799c05c55b13140c97b3bf84ea697c349
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -2043,14 +2043,14 @@ CMD ["catalina.sh" "run"]
 ### `geonetwork:3.12-postgres` - linux; arm variant v7
 
 ```console
-$ docker pull geonetwork@sha256:98959fe2ff9987a8eaaf8620b58bc812154fd071b864b99a2edfbe8635067b30
+$ docker pull geonetwork@sha256:c4df9c21bc11768309e7610e64c841a269610cba0ad509e6c76f3b468a7d22ae
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **482.3 MB (482306606 bytes)**  
+-	Total Size: **398.5 MB (398459062 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e4e86b2c3766a5fd8825e3eff4cd890011a724ea08dfec6e3fd1914df10368a7`
+-	Image ID: `sha256:905d5f87e6dc7a7e623c3dbfd80aec6ed89b09cfad14f9bb2299a95a1dd7ce9f`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["catalina.sh","run"]`
 
@@ -2121,33 +2121,33 @@ ENV GN_FILE=geonetwork.war
 ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
 # Tue, 03 Oct 2023 07:39:45 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
-# Tue, 03 Oct 2023 07:39:45 GMT
-ENV GN_VERSION=3.12.10
-# Tue, 03 Oct 2023 07:39:45 GMT
-ENV GN_DOWNLOAD_MD5=13555d5289d3256d191edad19f412790
-# Tue, 03 Oct 2023 07:39:45 GMT
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:57:16 GMT
 WORKDIR /usr/local/tomcat/webapps
-# Tue, 03 Oct 2023 07:40:22 GMT
+# Fri, 06 Oct 2023 01:57:45 GMT
 RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 WORKDIR /usr/local/tomcat
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 07:40:24 GMT
+# Fri, 06 Oct 2023 01:57:47 GMT
 CMD ["catalina.sh" "run"]
-# Tue, 03 Oct 2023 07:40:42 GMT
+# Fri, 06 Oct 2023 01:57:59 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client &&     rm -rf /var/lib/apt/lists/*
-# Tue, 03 Oct 2023 07:40:42 GMT
+# Fri, 06 Oct 2023 01:57:59 GMT
 RUN sed -i -e 's#<import resource="../config-db/${geonetwork.db.type:h2}.xml"/>#<!--<import resource="../config-db/${geonetwork.db.type:h2}.xml"/-->#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml" && sed -i -e 's#<!--<import resource="../config-db/postgres.xml"/>-->#<import resource="../config-db/postgres.xml"/>#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml"
-# Tue, 03 Oct 2023 07:40:43 GMT
+# Fri, 06 Oct 2023 01:58:00 GMT
 COPY file:83f69d2041e5fb378033b0db57e096c81ba0725102ab4da4f089685e748fcce3 in /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-db/jdbc.properties 
-# Tue, 03 Oct 2023 07:40:43 GMT
+# Fri, 06 Oct 2023 01:58:00 GMT
 COPY file:c88411abba7ad9b7bb75019f08755dbfa163d2fc7fdd80676bf9350c4c56a19c in /entrypoint.sh 
-# Tue, 03 Oct 2023 07:40:43 GMT
+# Fri, 06 Oct 2023 01:58:00 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 07:40:43 GMT
+# Fri, 06 Oct 2023 01:58:00 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -2184,28 +2184,28 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 03 Oct 2023 07:10:00 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bb2b990547adf0aa8500c0fa7fce03a7e53a4884a5c6811aee43296694584a0d`  
-		Last Modified: Tue, 03 Oct 2023 07:41:16 GMT  
-		Size: 318.6 MB (318615385 bytes)  
+	-	`sha256:4efbd3a31840564238976e5ac90e7766a7675929c2541f62098f84c56d091000`  
+		Last Modified: Fri, 06 Oct 2023 01:58:29 GMT  
+		Size: 234.8 MB (234768072 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:92b1ee8c0f5fc41192d72caf6cd17d091e9ebb6346de380d03e56fd9890f95dd`  
-		Last Modified: Tue, 03 Oct 2023 07:40:55 GMT  
-		Size: 249.0 B  
+	-	`sha256:fe9727b589b31d070c5d2170e47a2bdf46e4195c31920d9338bfe4e0bf66c60b`  
+		Last Modified: Fri, 06 Oct 2023 01:58:12 GMT  
+		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:0565cd9cbddd717673eafdba3562640d4a367440d6c4270efa8f3413edc85415`  
-		Last Modified: Tue, 03 Oct 2023 07:41:29 GMT  
-		Size: 12.8 MB (12751087 bytes)  
+	-	`sha256:2c14a92e5e66dcdacbdde275b3db7588fa16540967be7d83958389373c22cf8b`  
+		Last Modified: Fri, 06 Oct 2023 01:58:45 GMT  
+		Size: 12.8 MB (12750862 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:dc02a4e3361a71ae17e5af181379a96536ea9dd5109b7516eef4b67ffdc0c1da`  
-		Last Modified: Tue, 03 Oct 2023 07:41:27 GMT  
-		Size: 1.3 KB (1268 bytes)  
+	-	`sha256:b4cf2a4346b50103bbc0837100768ca5ee39ff731addc2d0a3df9579ff33a49c`  
+		Last Modified: Fri, 06 Oct 2023 01:58:42 GMT  
+		Size: 1.3 KB (1265 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2ce8149229c6bb14457eb00c8c7106e8c4f172496ed8d41dccac75574466b5b3`  
-		Last Modified: Tue, 03 Oct 2023 07:41:27 GMT  
-		Size: 1.1 KB (1126 bytes)  
+	-	`sha256:23fc5a58b5baa860bb84a3882c93a18533b83873acb20431008ee6d777f140af`  
+		Last Modified: Fri, 06 Oct 2023 01:58:42 GMT  
+		Size: 1.1 KB (1124 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:487bec23e86b29993bcef88f7fe405bfe9b064ff03f47cf5e88d68f839da94cd`  
-		Last Modified: Tue, 03 Oct 2023 07:41:27 GMT  
+	-	`sha256:0ee53b45127b0cb7a3fdfab58f5851a1f51dd7ccf9d4bdcb97a4c543de7da2c9`  
+		Last Modified: Fri, 06 Oct 2023 01:58:42 GMT  
 		Size: 973.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -2381,14 +2381,14 @@ CMD ["catalina.sh" "run"]
 ### `geonetwork:3.12-postgres` - linux; ppc64le
 
 ```console
-$ docker pull geonetwork@sha256:6193109c141baf21756b4c63f1d584ea2301ecceea33b85363db61adc09d78a5
+$ docker pull geonetwork@sha256:4cf8f348100ad578ec073fa94f51939c3bd4c286f264dd6db2790d818766b523
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **495.3 MB (495254602 bytes)**  
+-	Total Size: **411.4 MB (411400355 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b1e2ea8fa8d75dbe12b2a9d313d038b35084653432d40c94c9f1665757ad8e68`
+-	Image ID: `sha256:71f53a12220f575553692eceb29799e577621efbc72250f99e05f20c0ef7257e`
 -	Entrypoint: `["\/entrypoint.sh"]`
 -	Default Command: `["catalina.sh","run"]`
 
@@ -2459,33 +2459,33 @@ ENV GN_FILE=geonetwork.war
 ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
 # Tue, 03 Oct 2023 12:47:48 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
-# Tue, 03 Oct 2023 12:47:49 GMT
-ENV GN_VERSION=3.12.10
-# Tue, 03 Oct 2023 12:47:50 GMT
-ENV GN_DOWNLOAD_MD5=13555d5289d3256d191edad19f412790
-# Tue, 03 Oct 2023 12:47:50 GMT
+# Fri, 06 Oct 2023 01:24:22 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:24:23 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:24:23 GMT
 WORKDIR /usr/local/tomcat/webapps
-# Tue, 03 Oct 2023 12:48:32 GMT
+# Fri, 06 Oct 2023 01:25:49 GMT
 RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
-# Tue, 03 Oct 2023 12:48:47 GMT
+# Fri, 06 Oct 2023 01:25:56 GMT
 COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
-# Tue, 03 Oct 2023 12:48:50 GMT
+# Fri, 06 Oct 2023 01:25:56 GMT
 WORKDIR /usr/local/tomcat
-# Tue, 03 Oct 2023 12:48:51 GMT
+# Fri, 06 Oct 2023 01:25:58 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 12:48:52 GMT
+# Fri, 06 Oct 2023 01:25:59 GMT
 CMD ["catalina.sh" "run"]
-# Tue, 03 Oct 2023 12:49:20 GMT
+# Fri, 06 Oct 2023 01:26:53 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client &&     rm -rf /var/lib/apt/lists/*
-# Tue, 03 Oct 2023 12:49:23 GMT
+# Fri, 06 Oct 2023 01:26:57 GMT
 RUN sed -i -e 's#<import resource="../config-db/${geonetwork.db.type:h2}.xml"/>#<!--<import resource="../config-db/${geonetwork.db.type:h2}.xml"/-->#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml" && sed -i -e 's#<!--<import resource="../config-db/postgres.xml"/>-->#<import resource="../config-db/postgres.xml"/>#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml"
-# Tue, 03 Oct 2023 12:49:24 GMT
+# Fri, 06 Oct 2023 01:26:58 GMT
 COPY file:83f69d2041e5fb378033b0db57e096c81ba0725102ab4da4f089685e748fcce3 in /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-db/jdbc.properties 
-# Tue, 03 Oct 2023 12:49:24 GMT
+# Fri, 06 Oct 2023 01:26:58 GMT
 COPY file:c88411abba7ad9b7bb75019f08755dbfa163d2fc7fdd80676bf9350c4c56a19c in /entrypoint.sh 
-# Tue, 03 Oct 2023 12:49:25 GMT
+# Fri, 06 Oct 2023 01:26:58 GMT
 ENTRYPOINT ["/entrypoint.sh"]
-# Tue, 03 Oct 2023 12:49:26 GMT
+# Fri, 06 Oct 2023 01:27:00 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -2522,41 +2522,43 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Tue, 03 Oct 2023 12:17:18 GMT  
 		Size: 130.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f88ec2baf89164568b0bc7a8a1543e3588ab0a80f5aaef2c56686459256a6a16`  
-		Last Modified: Tue, 03 Oct 2023 12:50:11 GMT  
-		Size: 318.7 MB (318668847 bytes)  
+	-	`sha256:6f648b9c7bfd0f57c038e2665a591e6fd5ece1735d6f4478ce7cf02bab5247e2`  
+		Last Modified: Fri, 06 Oct 2023 01:27:47 GMT  
+		Size: 234.8 MB (234814536 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b5ab0b0416f0b58983cebb26e289b8e78e2ecac23e13ba17945785ed187b8192`  
-		Last Modified: Tue, 03 Oct 2023 12:49:40 GMT  
-		Size: 249.0 B  
+	-	`sha256:17996447fbb293482262c0a261ed70d15ae93c6a6a140bf0b84619ce9ffc9ae9`  
+		Last Modified: Fri, 06 Oct 2023 01:27:16 GMT  
+		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:bdbebe3c20641c11d19baaebfe3ca15b82f2e120916f4c25702a6d826f1adb46`  
-		Last Modified: Tue, 03 Oct 2023 12:50:27 GMT  
-		Size: 14.2 MB (14199000 bytes)  
+	-	`sha256:f1bf633e84c04192436471b5cb8d8f89fc3b26691c0f82373c6bd1a822aa016e`  
+		Last Modified: Fri, 06 Oct 2023 01:28:08 GMT  
+		Size: 14.2 MB (14199075 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1512901b7fddcc113bbe56af79b0b8566579d1a92675d9e1619fb3583b720655`  
-		Last Modified: Tue, 03 Oct 2023 12:50:23 GMT  
-		Size: 1.3 KB (1264 bytes)  
+	-	`sha256:631a66e2bdb132a8ca517028885c71622342fbeef6111db20c397c4eb852d02a`  
+		Last Modified: Fri, 06 Oct 2023 01:28:01 GMT  
+		Size: 1.3 KB (1260 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6d82497f138893267df21751f7c90a8ae21dee31d1d8d8ddace3144a818bfd04`  
-		Last Modified: Tue, 03 Oct 2023 12:50:23 GMT  
-		Size: 1.1 KB (1125 bytes)  
+	-	`sha256:c65bdd747c41c704edda63cae81ab3411d7bf87d15718ddb279f623d5b32cd2b`  
+		Last Modified: Fri, 06 Oct 2023 01:28:01 GMT  
+		Size: 1.1 KB (1119 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5de51130a95c779f0115bd37a05c662c313b94638ff329c6a85569f809958a10`  
-		Last Modified: Tue, 03 Oct 2023 12:50:23 GMT  
+	-	`sha256:ae4c5891d58279d971b5c6effff940a3bcfd0594a5b779d416403471f17a4477`  
+		Last Modified: Fri, 06 Oct 2023 01:28:02 GMT  
 		Size: 973.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `geonetwork:3.12.11`
 
 ```console
-$ docker pull geonetwork@sha256:716989f856e4c79559ff5cf9cff7e3ba23051e5cc1d23381e6c3f70c197d1ae6
+$ docker pull geonetwork@sha256:0c079bfef5009e5e36763e77df6d88fe5b320dd173085ff6e0ed4bde89561f3e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 2
+-	Platforms: 4
 	-	linux; amd64
+	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; ppc64le
 
 ### `geonetwork:3.12.11` - linux; amd64
 
@@ -2697,6 +2699,147 @@ CMD ["catalina.sh" "run"]
 	-	`sha256:db841fecba4bc3a2cce262c1ba1f4215174787e6c4b4e2b70afac4134a5b64ca`  
 		Last Modified: Fri, 06 Oct 2023 01:08:40 GMT  
 		Size: 250.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `geonetwork:3.12.11` - linux; arm variant v7
+
+```console
+$ docker pull geonetwork@sha256:2a15ee136127ad13ad77acd81d2eb371a8d93d97c14db87a275e3361d32c2abc
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **385.7 MB (385704838 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:d2d9094c7889a2d0bde3bc539d8bd1d2335f545a8cba25263d9212573d5eeef3`
+-	Entrypoint: `["\/entrypoint.sh"]`
+-	Default Command: `["catalina.sh","run"]`
+
+```dockerfile
+# Mon, 25 Sep 2023 10:19:15 GMT
+ARG RELEASE
+# Mon, 25 Sep 2023 10:19:15 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Mon, 25 Sep 2023 10:19:16 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Mon, 25 Sep 2023 10:19:16 GMT
+LABEL org.opencontainers.image.version=22.04
+# Mon, 25 Sep 2023 10:19:18 GMT
+ADD file:0008d56422c09f73afbcd40ace46d311e36ba0d60eef05198ea3665172ba3433 in / 
+# Mon, 25 Sep 2023 10:19:18 GMT
+CMD ["/bin/bash"]
+# Tue, 03 Oct 2023 06:00:53 GMT
+ENV JAVA_HOME=/opt/java/openjdk
+# Tue, 03 Oct 2023 06:00:54 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 03 Oct 2023 06:00:54 GMT
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
+# Tue, 03 Oct 2023 06:01:30 GMT
+RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales p11-kit     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Tue, 03 Oct 2023 06:01:30 GMT
+ENV JAVA_VERSION=jdk8u382-b05
+# Tue, 03 Oct 2023 06:01:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0951398197b7bef39ab987b59c22852812ee2c2da6549953eed7fced4c08e13d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_aarch64_linux_hotspot_8u382b05.tar.gz';          ;;        armhf|arm)          ESUM='5d805ff157f272acf0f7d192f21af4a3b68c840333ca95568e4e07142efc369d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_arm_linux_hotspot_8u382b05.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='509c923c308d1f4f28fd0068831a59250a05b8ca173ca92fb2be2e2e1f9ff3f9';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u382b05.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='789ad24dc0d9618294e3ba564c9bfda9d3f3a218604350e0ce0381bbc8f28db3';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_x64_linux_hotspot_8u382b05.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Tue, 03 Oct 2023 06:01:42 GMT
+RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
+# Tue, 03 Oct 2023 06:01:42 GMT
+COPY file:8b8864b3e02a33a579dc216fd51b28a6047bc8eeaa03045b258980fe0cf7fcb3 in /__cacert_entrypoint.sh 
+# Tue, 03 Oct 2023 06:01:42 GMT
+ENTRYPOINT ["/__cacert_entrypoint.sh"]
+# Tue, 03 Oct 2023 06:57:57 GMT
+ENV CATALINA_HOME=/usr/local/tomcat
+# Tue, 03 Oct 2023 06:57:58 GMT
+ENV PATH=/usr/local/tomcat/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 03 Oct 2023 06:57:58 GMT
+RUN mkdir -p "$CATALINA_HOME"
+# Tue, 03 Oct 2023 06:57:58 GMT
+WORKDIR /usr/local/tomcat
+# Tue, 03 Oct 2023 06:57:58 GMT
+ENV TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib
+# Tue, 03 Oct 2023 06:57:58 GMT
+ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
+# Tue, 03 Oct 2023 07:00:30 GMT
+ENV GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 5C3C5F3E314C866292F359A8F3AD5C94A67F707E 765908099ACF92702C7D949BFA0C35EA8AA299F1 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
+# Tue, 03 Oct 2023 07:00:30 GMT
+ENV TOMCAT_MAJOR=8
+# Tue, 03 Oct 2023 07:00:30 GMT
+ENV TOMCAT_VERSION=8.5.93
+# Tue, 03 Oct 2023 07:00:31 GMT
+ENV TOMCAT_SHA512=fdd9bd768c2c8b7f57c75f1a4863bd2bde55e8ea7c8b9cb81427ea8be652540bdcb1ff1cd625b9fb0dd48eb750ebef0f0244d12ac574998d5df3a0d339699bcc
+# Tue, 03 Oct 2023 07:01:03 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 	; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local mvnFile="${1:-}"; 		local success=; 		local distUrl=; 		for distUrl in 			"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile" 			"https://downloads.apache.org/$distFile" 			"https://www-us.apache.org/dist/$distFile" 			"https://www.apache.org/dist/$distFile" 			"https://archive.apache.org/dist/$distFile" 			${mvnFile:+"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile"} 		; do 			if curl -fL -o "$f" "$distUrl" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libapr1-dev 		libssl-dev 		make 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--build="$gnuArch" 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl 		; 		nproc="$(nproc)"; 		make -j "$nproc"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| xargs -rt readlink -e 		| sort -u 		| xargs -rt dpkg-query --search 		| cut -d: -f1 		| sort -u 		| tee "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt" 		| xargs -r apt-mark manual 	; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 1777 logs temp work; 		catalina.sh version
+# Tue, 03 Oct 2023 07:01:05 GMT
+RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
+# Tue, 03 Oct 2023 07:01:05 GMT
+EXPOSE 8080
+# Tue, 03 Oct 2023 07:01:05 GMT
+ENTRYPOINT []
+# Tue, 03 Oct 2023 07:01:05 GMT
+CMD ["catalina.sh" "run"]
+# Tue, 03 Oct 2023 07:39:45 GMT
+ENV GN_FILE=geonetwork.war
+# Tue, 03 Oct 2023 07:39:45 GMT
+ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
+# Tue, 03 Oct 2023 07:39:45 GMT
+ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:57:16 GMT
+WORKDIR /usr/local/tomcat/webapps
+# Fri, 06 Oct 2023 01:57:45 GMT
+RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
+# Fri, 06 Oct 2023 01:57:47 GMT
+COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
+# Fri, 06 Oct 2023 01:57:47 GMT
+WORKDIR /usr/local/tomcat
+# Fri, 06 Oct 2023 01:57:47 GMT
+ENTRYPOINT ["/entrypoint.sh"]
+# Fri, 06 Oct 2023 01:57:47 GMT
+CMD ["catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:7271b2c80df6c73d794550b50f57d78c6fd5b85da7934c6506c76ea706087280`  
+		Last Modified: Tue, 26 Sep 2023 02:07:56 GMT  
+		Size: 27.5 MB (27515498 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:eda8dd86380daebf30969cb41ed0b268657958a7e1447d39fc3a2fc0d9c8c636`  
+		Last Modified: Tue, 03 Oct 2023 06:03:57 GMT  
+		Size: 12.5 MB (12491478 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:da9d1027e134cc206bf93dada4b37b6045ac324e48ec457dfa571c518d4ef28c`  
+		Last Modified: Tue, 03 Oct 2023 06:04:05 GMT  
+		Size: 99.2 MB (99223306 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:bfe8039328b0f7ef4027315636140ddfe4f32cee5a3ddca88232f3ad8a327dd2`  
+		Last Modified: Tue, 03 Oct 2023 06:03:55 GMT  
+		Size: 160.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:61f1c56b3f7e85dca9f9cdc5278c15d72fd5b9d3fd2b70ad0d2c3f7a8cac24f1`  
+		Last Modified: Tue, 03 Oct 2023 06:03:55 GMT  
+		Size: 734.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4168b5cb773e3c31f9019d267a395156dbfca3fa3fcba4b9fd0e7d94494743bc`  
+		Last Modified: Tue, 03 Oct 2023 07:07:17 GMT  
+		Size: 172.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d06ed53eb3717b636d65d2dafa319d2238bc657b8bcba518dc538077e2dd6e1a`  
+		Last Modified: Tue, 03 Oct 2023 07:10:01 GMT  
+		Size: 11.7 MB (11705040 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cfcca44fe3c9574e83b557a13220ca02b0ad4628c6fca4289a50e573bf132e2a`  
+		Last Modified: Tue, 03 Oct 2023 07:10:00 GMT  
+		Size: 130.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4efbd3a31840564238976e5ac90e7766a7675929c2541f62098f84c56d091000`  
+		Last Modified: Fri, 06 Oct 2023 01:58:29 GMT  
+		Size: 234.8 MB (234768072 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fe9727b589b31d070c5d2170e47a2bdf46e4195c31920d9338bfe4e0bf66c60b`  
+		Last Modified: Fri, 06 Oct 2023 01:58:12 GMT  
+		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `geonetwork:3.12.11` - linux; arm64 variant v8
@@ -2840,16 +2983,159 @@ CMD ["catalina.sh" "run"]
 		Size: 248.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `geonetwork:3.12.11` - linux; ppc64le
+
+```console
+$ docker pull geonetwork@sha256:707074d6e367a9351faa6be921e85e6b6b412f1ef1b76add6d3ab42d4db12a07
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **397.2 MB (397197928 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:c12812188ad9d63ea995a3a029c0c5bad79ad4d1bc417a29a7a3d3ec0c384dd8`
+-	Entrypoint: `["\/entrypoint.sh"]`
+-	Default Command: `["catalina.sh","run"]`
+
+```dockerfile
+# Mon, 25 Sep 2023 10:20:46 GMT
+ARG RELEASE
+# Mon, 25 Sep 2023 10:20:46 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Mon, 25 Sep 2023 10:20:46 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Mon, 25 Sep 2023 10:20:46 GMT
+LABEL org.opencontainers.image.version=22.04
+# Mon, 25 Sep 2023 10:20:49 GMT
+ADD file:4e52928c778d7e98d90ccfcaacd039ae1fdde494dfa310adbe229d7051c30918 in / 
+# Mon, 25 Sep 2023 10:20:49 GMT
+CMD ["/bin/bash"]
+# Tue, 03 Oct 2023 08:16:45 GMT
+ENV JAVA_HOME=/opt/java/openjdk
+# Tue, 03 Oct 2023 08:16:45 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 03 Oct 2023 08:16:46 GMT
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
+# Tue, 03 Oct 2023 08:17:22 GMT
+RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales p11-kit     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Tue, 03 Oct 2023 08:17:24 GMT
+ENV JAVA_VERSION=jdk8u382-b05
+# Tue, 03 Oct 2023 08:17:36 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0951398197b7bef39ab987b59c22852812ee2c2da6549953eed7fced4c08e13d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_aarch64_linux_hotspot_8u382b05.tar.gz';          ;;        armhf|arm)          ESUM='5d805ff157f272acf0f7d192f21af4a3b68c840333ca95568e4e07142efc369d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_arm_linux_hotspot_8u382b05.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='509c923c308d1f4f28fd0068831a59250a05b8ca173ca92fb2be2e2e1f9ff3f9';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u382b05.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='789ad24dc0d9618294e3ba564c9bfda9d3f3a218604350e0ce0381bbc8f28db3';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_x64_linux_hotspot_8u382b05.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Tue, 03 Oct 2023 08:17:40 GMT
+RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
+# Tue, 03 Oct 2023 08:17:40 GMT
+COPY file:8b8864b3e02a33a579dc216fd51b28a6047bc8eeaa03045b258980fe0cf7fcb3 in /__cacert_entrypoint.sh 
+# Tue, 03 Oct 2023 08:17:41 GMT
+ENTRYPOINT ["/__cacert_entrypoint.sh"]
+# Tue, 03 Oct 2023 11:53:43 GMT
+ENV CATALINA_HOME=/usr/local/tomcat
+# Tue, 03 Oct 2023 11:53:43 GMT
+ENV PATH=/usr/local/tomcat/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 03 Oct 2023 11:53:44 GMT
+RUN mkdir -p "$CATALINA_HOME"
+# Tue, 03 Oct 2023 11:53:45 GMT
+WORKDIR /usr/local/tomcat
+# Tue, 03 Oct 2023 11:53:45 GMT
+ENV TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib
+# Tue, 03 Oct 2023 11:53:46 GMT
+ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
+# Tue, 03 Oct 2023 12:04:12 GMT
+ENV GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 5C3C5F3E314C866292F359A8F3AD5C94A67F707E 765908099ACF92702C7D949BFA0C35EA8AA299F1 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
+# Tue, 03 Oct 2023 12:04:13 GMT
+ENV TOMCAT_MAJOR=8
+# Tue, 03 Oct 2023 12:04:14 GMT
+ENV TOMCAT_VERSION=8.5.93
+# Tue, 03 Oct 2023 12:04:17 GMT
+ENV TOMCAT_SHA512=fdd9bd768c2c8b7f57c75f1a4863bd2bde55e8ea7c8b9cb81427ea8be652540bdcb1ff1cd625b9fb0dd48eb750ebef0f0244d12ac574998d5df3a0d339699bcc
+# Tue, 03 Oct 2023 12:06:16 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 	; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local mvnFile="${1:-}"; 		local success=; 		local distUrl=; 		for distUrl in 			"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile" 			"https://downloads.apache.org/$distFile" 			"https://www-us.apache.org/dist/$distFile" 			"https://www.apache.org/dist/$distFile" 			"https://archive.apache.org/dist/$distFile" 			${mvnFile:+"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile"} 		; do 			if curl -fL -o "$f" "$distUrl" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libapr1-dev 		libssl-dev 		make 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--build="$gnuArch" 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl 		; 		nproc="$(nproc)"; 		make -j "$nproc"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| xargs -rt readlink -e 		| sort -u 		| xargs -rt dpkg-query --search 		| cut -d: -f1 		| sort -u 		| tee "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt" 		| xargs -r apt-mark manual 	; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 1777 logs temp work; 		catalina.sh version
+# Tue, 03 Oct 2023 12:06:20 GMT
+RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
+# Tue, 03 Oct 2023 12:06:21 GMT
+EXPOSE 8080
+# Tue, 03 Oct 2023 12:06:21 GMT
+ENTRYPOINT []
+# Tue, 03 Oct 2023 12:06:22 GMT
+CMD ["catalina.sh" "run"]
+# Tue, 03 Oct 2023 12:47:47 GMT
+ENV GN_FILE=geonetwork.war
+# Tue, 03 Oct 2023 12:47:48 GMT
+ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
+# Tue, 03 Oct 2023 12:47:48 GMT
+ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
+# Fri, 06 Oct 2023 01:24:22 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:24:23 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:24:23 GMT
+WORKDIR /usr/local/tomcat/webapps
+# Fri, 06 Oct 2023 01:25:49 GMT
+RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
+# Fri, 06 Oct 2023 01:25:56 GMT
+COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
+# Fri, 06 Oct 2023 01:25:56 GMT
+WORKDIR /usr/local/tomcat
+# Fri, 06 Oct 2023 01:25:58 GMT
+ENTRYPOINT ["/entrypoint.sh"]
+# Fri, 06 Oct 2023 01:25:59 GMT
+CMD ["catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:8098558aeb0337452acaa8c74f02401dc8e9bc5a2c048e4c82c013b483a11f11`  
+		Last Modified: Tue, 03 Oct 2023 07:57:52 GMT  
+		Size: 35.7 MB (35702863 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:931c9c8af9e87407323da067bbf3a8b691add055bcd0d602e17cd36b4b0c4cee`  
+		Last Modified: Tue, 03 Oct 2023 08:22:20 GMT  
+		Size: 13.8 MB (13770245 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4026cc7f98984fd494a240f9d2eca1064096dd02556f298bf4f6dc3ccc49535c`  
+		Last Modified: Tue, 03 Oct 2023 08:22:21 GMT  
+		Size: 101.1 MB (101051165 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2d83ca7c9a077d23beca4481817cce42cc0e610779ac53d3bf2ca53c6259636f`  
+		Last Modified: Tue, 03 Oct 2023 08:22:06 GMT  
+		Size: 160.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:07b6ae30de53392f62b126c49ce4d1e5e0cc1d4d961fc3e83b185d2c58f59f8f`  
+		Last Modified: Tue, 03 Oct 2023 08:22:06 GMT  
+		Size: 734.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:43c0c50547154d73e7086ef50b767115c2442871a37bd3aa4bd30a8aa1bb8613`  
+		Last Modified: Tue, 03 Oct 2023 12:13:30 GMT  
+		Size: 172.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:408e1d4b21ba05da43f11feb2516d3bb714174dc55a53bb4b0f776705700467f`  
+		Last Modified: Tue, 03 Oct 2023 12:17:20 GMT  
+		Size: 11.9 MB (11857675 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a33ea6eced6a15372b03d1c90cb70a953dd954858b0337a4e14ac7de79b7de53`  
+		Last Modified: Tue, 03 Oct 2023 12:17:18 GMT  
+		Size: 130.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6f648b9c7bfd0f57c038e2665a591e6fd5ece1735d6f4478ce7cf02bab5247e2`  
+		Last Modified: Fri, 06 Oct 2023 01:27:47 GMT  
+		Size: 234.8 MB (234814536 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:17996447fbb293482262c0a261ed70d15ae93c6a6a140bf0b84619ce9ffc9ae9`  
+		Last Modified: Fri, 06 Oct 2023 01:27:16 GMT  
+		Size: 248.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ## `geonetwork:3.12.11-postgres`
 
 ```console
-$ docker pull geonetwork@sha256:e82a1d931fc1a6104bc907f926d0f6441136fbbe897f86c755e4ddc03cc66677
+$ docker pull geonetwork@sha256:9dc35632c60e84d5067f2e9dff2e309799c05c55b13140c97b3bf84ea697c349
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 2
+-	Platforms: 4
 	-	linux; amd64
+	-	linux; arm variant v7
 	-	linux; arm64 variant v8
+	-	linux; ppc64le
 
 ### `geonetwork:3.12.11-postgres` - linux; amd64
 
@@ -3020,6 +3306,175 @@ CMD ["catalina.sh" "run"]
 		Size: 973.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `geonetwork:3.12.11-postgres` - linux; arm variant v7
+
+```console
+$ docker pull geonetwork@sha256:c4df9c21bc11768309e7610e64c841a269610cba0ad509e6c76f3b468a7d22ae
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **398.5 MB (398459062 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:905d5f87e6dc7a7e623c3dbfd80aec6ed89b09cfad14f9bb2299a95a1dd7ce9f`
+-	Entrypoint: `["\/entrypoint.sh"]`
+-	Default Command: `["catalina.sh","run"]`
+
+```dockerfile
+# Mon, 25 Sep 2023 10:19:15 GMT
+ARG RELEASE
+# Mon, 25 Sep 2023 10:19:15 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Mon, 25 Sep 2023 10:19:16 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Mon, 25 Sep 2023 10:19:16 GMT
+LABEL org.opencontainers.image.version=22.04
+# Mon, 25 Sep 2023 10:19:18 GMT
+ADD file:0008d56422c09f73afbcd40ace46d311e36ba0d60eef05198ea3665172ba3433 in / 
+# Mon, 25 Sep 2023 10:19:18 GMT
+CMD ["/bin/bash"]
+# Tue, 03 Oct 2023 06:00:53 GMT
+ENV JAVA_HOME=/opt/java/openjdk
+# Tue, 03 Oct 2023 06:00:54 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 03 Oct 2023 06:00:54 GMT
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
+# Tue, 03 Oct 2023 06:01:30 GMT
+RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales p11-kit     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Tue, 03 Oct 2023 06:01:30 GMT
+ENV JAVA_VERSION=jdk8u382-b05
+# Tue, 03 Oct 2023 06:01:41 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0951398197b7bef39ab987b59c22852812ee2c2da6549953eed7fced4c08e13d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_aarch64_linux_hotspot_8u382b05.tar.gz';          ;;        armhf|arm)          ESUM='5d805ff157f272acf0f7d192f21af4a3b68c840333ca95568e4e07142efc369d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_arm_linux_hotspot_8u382b05.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='509c923c308d1f4f28fd0068831a59250a05b8ca173ca92fb2be2e2e1f9ff3f9';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u382b05.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='789ad24dc0d9618294e3ba564c9bfda9d3f3a218604350e0ce0381bbc8f28db3';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_x64_linux_hotspot_8u382b05.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Tue, 03 Oct 2023 06:01:42 GMT
+RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
+# Tue, 03 Oct 2023 06:01:42 GMT
+COPY file:8b8864b3e02a33a579dc216fd51b28a6047bc8eeaa03045b258980fe0cf7fcb3 in /__cacert_entrypoint.sh 
+# Tue, 03 Oct 2023 06:01:42 GMT
+ENTRYPOINT ["/__cacert_entrypoint.sh"]
+# Tue, 03 Oct 2023 06:57:57 GMT
+ENV CATALINA_HOME=/usr/local/tomcat
+# Tue, 03 Oct 2023 06:57:58 GMT
+ENV PATH=/usr/local/tomcat/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 03 Oct 2023 06:57:58 GMT
+RUN mkdir -p "$CATALINA_HOME"
+# Tue, 03 Oct 2023 06:57:58 GMT
+WORKDIR /usr/local/tomcat
+# Tue, 03 Oct 2023 06:57:58 GMT
+ENV TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib
+# Tue, 03 Oct 2023 06:57:58 GMT
+ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
+# Tue, 03 Oct 2023 07:00:30 GMT
+ENV GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 5C3C5F3E314C866292F359A8F3AD5C94A67F707E 765908099ACF92702C7D949BFA0C35EA8AA299F1 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
+# Tue, 03 Oct 2023 07:00:30 GMT
+ENV TOMCAT_MAJOR=8
+# Tue, 03 Oct 2023 07:00:30 GMT
+ENV TOMCAT_VERSION=8.5.93
+# Tue, 03 Oct 2023 07:00:31 GMT
+ENV TOMCAT_SHA512=fdd9bd768c2c8b7f57c75f1a4863bd2bde55e8ea7c8b9cb81427ea8be652540bdcb1ff1cd625b9fb0dd48eb750ebef0f0244d12ac574998d5df3a0d339699bcc
+# Tue, 03 Oct 2023 07:01:03 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 	; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local mvnFile="${1:-}"; 		local success=; 		local distUrl=; 		for distUrl in 			"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile" 			"https://downloads.apache.org/$distFile" 			"https://www-us.apache.org/dist/$distFile" 			"https://www.apache.org/dist/$distFile" 			"https://archive.apache.org/dist/$distFile" 			${mvnFile:+"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile"} 		; do 			if curl -fL -o "$f" "$distUrl" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libapr1-dev 		libssl-dev 		make 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--build="$gnuArch" 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl 		; 		nproc="$(nproc)"; 		make -j "$nproc"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| xargs -rt readlink -e 		| sort -u 		| xargs -rt dpkg-query --search 		| cut -d: -f1 		| sort -u 		| tee "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt" 		| xargs -r apt-mark manual 	; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 1777 logs temp work; 		catalina.sh version
+# Tue, 03 Oct 2023 07:01:05 GMT
+RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
+# Tue, 03 Oct 2023 07:01:05 GMT
+EXPOSE 8080
+# Tue, 03 Oct 2023 07:01:05 GMT
+ENTRYPOINT []
+# Tue, 03 Oct 2023 07:01:05 GMT
+CMD ["catalina.sh" "run"]
+# Tue, 03 Oct 2023 07:39:45 GMT
+ENV GN_FILE=geonetwork.war
+# Tue, 03 Oct 2023 07:39:45 GMT
+ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
+# Tue, 03 Oct 2023 07:39:45 GMT
+ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:57:16 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:57:16 GMT
+WORKDIR /usr/local/tomcat/webapps
+# Fri, 06 Oct 2023 01:57:45 GMT
+RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
+# Fri, 06 Oct 2023 01:57:47 GMT
+COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
+# Fri, 06 Oct 2023 01:57:47 GMT
+WORKDIR /usr/local/tomcat
+# Fri, 06 Oct 2023 01:57:47 GMT
+ENTRYPOINT ["/entrypoint.sh"]
+# Fri, 06 Oct 2023 01:57:47 GMT
+CMD ["catalina.sh" "run"]
+# Fri, 06 Oct 2023 01:57:59 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client &&     rm -rf /var/lib/apt/lists/*
+# Fri, 06 Oct 2023 01:57:59 GMT
+RUN sed -i -e 's#<import resource="../config-db/${geonetwork.db.type:h2}.xml"/>#<!--<import resource="../config-db/${geonetwork.db.type:h2}.xml"/-->#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml" && sed -i -e 's#<!--<import resource="../config-db/postgres.xml"/>-->#<import resource="../config-db/postgres.xml"/>#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml"
+# Fri, 06 Oct 2023 01:58:00 GMT
+COPY file:83f69d2041e5fb378033b0db57e096c81ba0725102ab4da4f089685e748fcce3 in /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-db/jdbc.properties 
+# Fri, 06 Oct 2023 01:58:00 GMT
+COPY file:c88411abba7ad9b7bb75019f08755dbfa163d2fc7fdd80676bf9350c4c56a19c in /entrypoint.sh 
+# Fri, 06 Oct 2023 01:58:00 GMT
+ENTRYPOINT ["/entrypoint.sh"]
+# Fri, 06 Oct 2023 01:58:00 GMT
+CMD ["catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:7271b2c80df6c73d794550b50f57d78c6fd5b85da7934c6506c76ea706087280`  
+		Last Modified: Tue, 26 Sep 2023 02:07:56 GMT  
+		Size: 27.5 MB (27515498 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:eda8dd86380daebf30969cb41ed0b268657958a7e1447d39fc3a2fc0d9c8c636`  
+		Last Modified: Tue, 03 Oct 2023 06:03:57 GMT  
+		Size: 12.5 MB (12491478 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:da9d1027e134cc206bf93dada4b37b6045ac324e48ec457dfa571c518d4ef28c`  
+		Last Modified: Tue, 03 Oct 2023 06:04:05 GMT  
+		Size: 99.2 MB (99223306 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:bfe8039328b0f7ef4027315636140ddfe4f32cee5a3ddca88232f3ad8a327dd2`  
+		Last Modified: Tue, 03 Oct 2023 06:03:55 GMT  
+		Size: 160.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:61f1c56b3f7e85dca9f9cdc5278c15d72fd5b9d3fd2b70ad0d2c3f7a8cac24f1`  
+		Last Modified: Tue, 03 Oct 2023 06:03:55 GMT  
+		Size: 734.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4168b5cb773e3c31f9019d267a395156dbfca3fa3fcba4b9fd0e7d94494743bc`  
+		Last Modified: Tue, 03 Oct 2023 07:07:17 GMT  
+		Size: 172.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:d06ed53eb3717b636d65d2dafa319d2238bc657b8bcba518dc538077e2dd6e1a`  
+		Last Modified: Tue, 03 Oct 2023 07:10:01 GMT  
+		Size: 11.7 MB (11705040 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:cfcca44fe3c9574e83b557a13220ca02b0ad4628c6fca4289a50e573bf132e2a`  
+		Last Modified: Tue, 03 Oct 2023 07:10:00 GMT  
+		Size: 130.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4efbd3a31840564238976e5ac90e7766a7675929c2541f62098f84c56d091000`  
+		Last Modified: Fri, 06 Oct 2023 01:58:29 GMT  
+		Size: 234.8 MB (234768072 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:fe9727b589b31d070c5d2170e47a2bdf46e4195c31920d9338bfe4e0bf66c60b`  
+		Last Modified: Fri, 06 Oct 2023 01:58:12 GMT  
+		Size: 248.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2c14a92e5e66dcdacbdde275b3db7588fa16540967be7d83958389373c22cf8b`  
+		Last Modified: Fri, 06 Oct 2023 01:58:45 GMT  
+		Size: 12.8 MB (12750862 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:b4cf2a4346b50103bbc0837100768ca5ee39ff731addc2d0a3df9579ff33a49c`  
+		Last Modified: Fri, 06 Oct 2023 01:58:42 GMT  
+		Size: 1.3 KB (1265 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:23fc5a58b5baa860bb84a3882c93a18533b83873acb20431008ee6d777f140af`  
+		Last Modified: Fri, 06 Oct 2023 01:58:42 GMT  
+		Size: 1.1 KB (1124 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:0ee53b45127b0cb7a3fdfab58f5851a1f51dd7ccf9d4bdcb97a4c543de7da2c9`  
+		Last Modified: Fri, 06 Oct 2023 01:58:42 GMT  
+		Size: 973.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ### `geonetwork:3.12.11-postgres` - linux; arm64 variant v8
 
 ```console
@@ -3186,6 +3641,175 @@ CMD ["catalina.sh" "run"]
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 	-	`sha256:5e31ef5642b1811d20e365710e8c6feff7b3d55be8da9819ee3eb487f6d1ad67`  
 		Last Modified: Fri, 06 Oct 2023 01:23:40 GMT  
+		Size: 973.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `geonetwork:3.12.11-postgres` - linux; ppc64le
+
+```console
+$ docker pull geonetwork@sha256:4cf8f348100ad578ec073fa94f51939c3bd4c286f264dd6db2790d818766b523
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **411.4 MB (411400355 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:71f53a12220f575553692eceb29799e577621efbc72250f99e05f20c0ef7257e`
+-	Entrypoint: `["\/entrypoint.sh"]`
+-	Default Command: `["catalina.sh","run"]`
+
+```dockerfile
+# Mon, 25 Sep 2023 10:20:46 GMT
+ARG RELEASE
+# Mon, 25 Sep 2023 10:20:46 GMT
+ARG LAUNCHPAD_BUILD_ARCH
+# Mon, 25 Sep 2023 10:20:46 GMT
+LABEL org.opencontainers.image.ref.name=ubuntu
+# Mon, 25 Sep 2023 10:20:46 GMT
+LABEL org.opencontainers.image.version=22.04
+# Mon, 25 Sep 2023 10:20:49 GMT
+ADD file:4e52928c778d7e98d90ccfcaacd039ae1fdde494dfa310adbe229d7051c30918 in / 
+# Mon, 25 Sep 2023 10:20:49 GMT
+CMD ["/bin/bash"]
+# Tue, 03 Oct 2023 08:16:45 GMT
+ENV JAVA_HOME=/opt/java/openjdk
+# Tue, 03 Oct 2023 08:16:45 GMT
+ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 03 Oct 2023 08:16:46 GMT
+ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
+# Tue, 03 Oct 2023 08:17:22 GMT
+RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales p11-kit     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
+# Tue, 03 Oct 2023 08:17:24 GMT
+ENV JAVA_VERSION=jdk8u382-b05
+# Tue, 03 Oct 2023 08:17:36 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='0951398197b7bef39ab987b59c22852812ee2c2da6549953eed7fced4c08e13d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_aarch64_linux_hotspot_8u382b05.tar.gz';          ;;        armhf|arm)          ESUM='5d805ff157f272acf0f7d192f21af4a3b68c840333ca95568e4e07142efc369d';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_arm_linux_hotspot_8u382b05.tar.gz';          apt-get update          && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends libatomic1          && rm -rf /var/lib/apt/lists/*          ;;        ppc64el|powerpc:common64)          ESUM='509c923c308d1f4f28fd0068831a59250a05b8ca173ca92fb2be2e2e1f9ff3f9';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_ppc64le_linux_hotspot_8u382b05.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='789ad24dc0d9618294e3ba564c9bfda9d3f3a218604350e0ce0381bbc8f28db3';          BINARY_URL='https://github.com/adoptium/temurin8-binaries/releases/download/jdk8u382-b05/OpenJDK8U-jdk_x64_linux_hotspot_8u382b05.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;
+# Tue, 03 Oct 2023 08:17:40 GMT
+RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
+# Tue, 03 Oct 2023 08:17:40 GMT
+COPY file:8b8864b3e02a33a579dc216fd51b28a6047bc8eeaa03045b258980fe0cf7fcb3 in /__cacert_entrypoint.sh 
+# Tue, 03 Oct 2023 08:17:41 GMT
+ENTRYPOINT ["/__cacert_entrypoint.sh"]
+# Tue, 03 Oct 2023 11:53:43 GMT
+ENV CATALINA_HOME=/usr/local/tomcat
+# Tue, 03 Oct 2023 11:53:43 GMT
+ENV PATH=/usr/local/tomcat/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+# Tue, 03 Oct 2023 11:53:44 GMT
+RUN mkdir -p "$CATALINA_HOME"
+# Tue, 03 Oct 2023 11:53:45 GMT
+WORKDIR /usr/local/tomcat
+# Tue, 03 Oct 2023 11:53:45 GMT
+ENV TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib
+# Tue, 03 Oct 2023 11:53:46 GMT
+ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
+# Tue, 03 Oct 2023 12:04:12 GMT
+ENV GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 5C3C5F3E314C866292F359A8F3AD5C94A67F707E 765908099ACF92702C7D949BFA0C35EA8AA299F1 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
+# Tue, 03 Oct 2023 12:04:13 GMT
+ENV TOMCAT_MAJOR=8
+# Tue, 03 Oct 2023 12:04:14 GMT
+ENV TOMCAT_VERSION=8.5.93
+# Tue, 03 Oct 2023 12:04:17 GMT
+ENV TOMCAT_SHA512=fdd9bd768c2c8b7f57c75f1a4863bd2bde55e8ea7c8b9cb81427ea8be652540bdcb1ff1cd625b9fb0dd48eb750ebef0f0244d12ac574998d5df3a0d339699bcc
+# Tue, 03 Oct 2023 12:06:16 GMT
+RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 	; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local mvnFile="${1:-}"; 		local success=; 		local distUrl=; 		for distUrl in 			"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile" 			"https://downloads.apache.org/$distFile" 			"https://www-us.apache.org/dist/$distFile" 			"https://www.apache.org/dist/$distFile" 			"https://archive.apache.org/dist/$distFile" 			${mvnFile:+"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile"} 		; do 			if curl -fL -o "$f" "$distUrl" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	apt-get install -y --no-install-recommends 		dpkg-dev 		gcc 		libapr1-dev 		libssl-dev 		make 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--build="$gnuArch" 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl 		; 		nproc="$(nproc)"; 		make -j "$nproc"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null; 	find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ { print $(NF-1) }' 		| xargs -rt readlink -e 		| sort -u 		| xargs -rt dpkg-query --search 		| cut -d: -f1 		| sort -u 		| tee "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt" 		| xargs -r apt-mark manual 	; 		apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 	rm -rf /var/lib/apt/lists/*; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 1777 logs temp work; 		catalina.sh version
+# Tue, 03 Oct 2023 12:06:20 GMT
+RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
+# Tue, 03 Oct 2023 12:06:21 GMT
+EXPOSE 8080
+# Tue, 03 Oct 2023 12:06:21 GMT
+ENTRYPOINT []
+# Tue, 03 Oct 2023 12:06:22 GMT
+CMD ["catalina.sh" "run"]
+# Tue, 03 Oct 2023 12:47:47 GMT
+ENV GN_FILE=geonetwork.war
+# Tue, 03 Oct 2023 12:47:48 GMT
+ENV DATA_DIR=/usr/local/tomcat/webapps/geonetwork/WEB-INF/data
+# Tue, 03 Oct 2023 12:47:48 GMT
+ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true -server -Xms512m -Xmx2024m -XX:NewSize=512m -XX:MaxNewSize=1024m -XX:+UseConcMarkSweepGC
+# Fri, 06 Oct 2023 01:24:22 GMT
+ENV GN_VERSION=3.12.11
+# Fri, 06 Oct 2023 01:24:23 GMT
+ENV GN_DOWNLOAD_MD5=2ece7076f05068e7a5270af03e32d632
+# Fri, 06 Oct 2023 01:24:23 GMT
+WORKDIR /usr/local/tomcat/webapps
+# Fri, 06 Oct 2023 01:25:49 GMT
+RUN apt-get update &&      apt-get install -y --no-install-recommends           unzip           curl &&     rm -rf /var/lib/apt/lists/* &&      curl -fSL -o $GN_FILE      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *${GN_FILE}" | md5sum -c &&      mkdir -p geonetwork &&      unzip -e $GN_FILE -d geonetwork &&      rm $GN_FILE
+# Fri, 06 Oct 2023 01:25:56 GMT
+COPY file:0804862fd42c05f06dfa65cb1e5dad9a956d8ac6a3ddd4d962847ba159f5cfe6 in /entrypoint.sh 
+# Fri, 06 Oct 2023 01:25:56 GMT
+WORKDIR /usr/local/tomcat
+# Fri, 06 Oct 2023 01:25:58 GMT
+ENTRYPOINT ["/entrypoint.sh"]
+# Fri, 06 Oct 2023 01:25:59 GMT
+CMD ["catalina.sh" "run"]
+# Fri, 06 Oct 2023 01:26:53 GMT
+RUN apt-get update && apt-get install -y --no-install-recommends postgresql-client &&     rm -rf /var/lib/apt/lists/*
+# Fri, 06 Oct 2023 01:26:57 GMT
+RUN sed -i -e 's#<import resource="../config-db/${geonetwork.db.type:h2}.xml"/>#<!--<import resource="../config-db/${geonetwork.db.type:h2}.xml"/-->#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml" && sed -i -e 's#<!--<import resource="../config-db/postgres.xml"/>-->#<import resource="../config-db/postgres.xml"/>#g' "${CATALINA_HOME}/webapps/geonetwork/WEB-INF/config-node/srv.xml"
+# Fri, 06 Oct 2023 01:26:58 GMT
+COPY file:83f69d2041e5fb378033b0db57e096c81ba0725102ab4da4f089685e748fcce3 in /usr/local/tomcat/webapps/geonetwork/WEB-INF/config-db/jdbc.properties 
+# Fri, 06 Oct 2023 01:26:58 GMT
+COPY file:c88411abba7ad9b7bb75019f08755dbfa163d2fc7fdd80676bf9350c4c56a19c in /entrypoint.sh 
+# Fri, 06 Oct 2023 01:26:58 GMT
+ENTRYPOINT ["/entrypoint.sh"]
+# Fri, 06 Oct 2023 01:27:00 GMT
+CMD ["catalina.sh" "run"]
+```
+
+-	Layers:
+	-	`sha256:8098558aeb0337452acaa8c74f02401dc8e9bc5a2c048e4c82c013b483a11f11`  
+		Last Modified: Tue, 03 Oct 2023 07:57:52 GMT  
+		Size: 35.7 MB (35702863 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:931c9c8af9e87407323da067bbf3a8b691add055bcd0d602e17cd36b4b0c4cee`  
+		Last Modified: Tue, 03 Oct 2023 08:22:20 GMT  
+		Size: 13.8 MB (13770245 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:4026cc7f98984fd494a240f9d2eca1064096dd02556f298bf4f6dc3ccc49535c`  
+		Last Modified: Tue, 03 Oct 2023 08:22:21 GMT  
+		Size: 101.1 MB (101051165 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:2d83ca7c9a077d23beca4481817cce42cc0e610779ac53d3bf2ca53c6259636f`  
+		Last Modified: Tue, 03 Oct 2023 08:22:06 GMT  
+		Size: 160.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:07b6ae30de53392f62b126c49ce4d1e5e0cc1d4d961fc3e83b185d2c58f59f8f`  
+		Last Modified: Tue, 03 Oct 2023 08:22:06 GMT  
+		Size: 734.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:43c0c50547154d73e7086ef50b767115c2442871a37bd3aa4bd30a8aa1bb8613`  
+		Last Modified: Tue, 03 Oct 2023 12:13:30 GMT  
+		Size: 172.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:408e1d4b21ba05da43f11feb2516d3bb714174dc55a53bb4b0f776705700467f`  
+		Last Modified: Tue, 03 Oct 2023 12:17:20 GMT  
+		Size: 11.9 MB (11857675 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:a33ea6eced6a15372b03d1c90cb70a953dd954858b0337a4e14ac7de79b7de53`  
+		Last Modified: Tue, 03 Oct 2023 12:17:18 GMT  
+		Size: 130.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:6f648b9c7bfd0f57c038e2665a591e6fd5ece1735d6f4478ce7cf02bab5247e2`  
+		Last Modified: Fri, 06 Oct 2023 01:27:47 GMT  
+		Size: 234.8 MB (234814536 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:17996447fbb293482262c0a261ed70d15ae93c6a6a140bf0b84619ce9ffc9ae9`  
+		Last Modified: Fri, 06 Oct 2023 01:27:16 GMT  
+		Size: 248.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:f1bf633e84c04192436471b5cb8d8f89fc3b26691c0f82373c6bd1a822aa016e`  
+		Last Modified: Fri, 06 Oct 2023 01:28:08 GMT  
+		Size: 14.2 MB (14199075 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:631a66e2bdb132a8ca517028885c71622342fbeef6111db20c397c4eb852d02a`  
+		Last Modified: Fri, 06 Oct 2023 01:28:01 GMT  
+		Size: 1.3 KB (1260 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:c65bdd747c41c704edda63cae81ab3411d7bf87d15718ddb279f623d5b32cd2b`  
+		Last Modified: Fri, 06 Oct 2023 01:28:01 GMT  
+		Size: 1.1 KB (1119 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:ae4c5891d58279d971b5c6effff940a3bcfd0594a5b779d416403471f17a4477`  
+		Last Modified: Fri, 06 Oct 2023 01:28:02 GMT  
 		Size: 973.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
