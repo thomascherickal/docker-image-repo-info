@@ -56,19 +56,13 @@ Licenses: (parsed from: `/usr/share/doc/adduser/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris adduser=3.118
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.118.dsc' adduser_3.118.dsc 1670 SHA256:fc79bc37fcf5e5700546c78a80670bb7b34836d012595b343fe2304cac82917d
-'http://deb.debian.org/debian/pool/main/a/adduser/adduser_3.118.tar.xz' adduser_3.118.tar.xz 212280 SHA256:3e9eea661c9aac6b2c791bfcc1de3a9c6a422d45c8f3d38ed417737ed3166ffc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/adduser/3.118/
 
-- https://sources.debian.net/src/adduser/3.118/ (for browsing the source)
-- https://sources.debian.net/src/adduser/3.118/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/adduser/3.118/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `apparmor=2.13.6-10`
 
@@ -219,19 +213,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=11.1+deb11u7
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_11.1%2bdeb11u7.dsc' base-files_11.1+deb11u7.dsc 1110 SHA256:0462f6a11386d2bb11a4bcdce37548f6ea2886959070d427b2d7aa6236c5d39a
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_11.1%2bdeb11u7.tar.xz' base-files_11.1+deb11u7.tar.xz 65668 SHA256:b4d93c4adfbd6026a41b5d13c54f2c613747fc8bf0d52b3caa3d6da26faaaad4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/11.1+deb11u7/
 
-- https://sources.debian.net/src/base-files/11.1+deb11u7/ (for browsing the source)
-- https://sources.debian.net/src/base-files/11.1+deb11u7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/11.1+deb11u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.5.51`
 
@@ -559,19 +547,13 @@ Licenses: (parsed from: `/usr/share/doc/dpkg/copyright`)
 - `public-domain-md5`
 - `public-domain-s-s-d`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris dpkg=1.20.12
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.20.12.dsc' dpkg_1.20.12.dsc 2124 SHA256:fe919a7491472bab59362fab8da0c89cf59cd2eea4a8714db58f9f169fc62bf4
-'http://deb.debian.org/debian/pool/main/d/dpkg/dpkg_1.20.12.tar.xz' dpkg_1.20.12.tar.xz 5009108 SHA256:1428610305d00dffa9c35543fc3096bb1ce3293b53ed4ddad847a3d822eafbf0
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/dpkg/1.20.12/
 
-- https://sources.debian.net/src/dpkg/1.20.12/ (for browsing the source)
-- https://sources.debian.net/src/dpkg/1.20.12/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/dpkg/1.20.12/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `e2fsprogs=1.46.2-2`
 
@@ -624,10 +606,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris file=1:5.39-3+deb11u1
-'http://deb.debian.org/debian-security/pool/updates/main/f/file/file_5.39-3%2bdeb11u1.dsc' file_5.39-3+deb11u1.dsc 2424 SHA256:b08cfd706099600aa634d3cdcc2a7461908902414ae8cbfd1caddf557983e4e8
-'http://deb.debian.org/debian-security/pool/updates/main/f/file/file_5.39.orig.tar.gz' file_5.39.orig.tar.gz 954266 SHA256:f05d286a76d9556243d0cb05814929c2ecf3a5ba07963f8f70bfaaa70517fad1
-'http://deb.debian.org/debian-security/pool/updates/main/f/file/file_5.39.orig.tar.gz.asc' file_5.39.orig.tar.gz.asc 169 SHA256:409232b54cabe3082f38f1e7ec4c69e7d937f26d039da691f7349d142b48df83
-'http://deb.debian.org/debian-security/pool/updates/main/f/file/file_5.39-3%2bdeb11u1.debian.tar.xz' file_5.39-3+deb11u1.debian.tar.xz 34816 SHA256:c4ef624328d06f6128d808fd0edc14b1d856d6fefe0f29dfcae0ce30b42de0a3
+'http://deb.debian.org/debian/pool/main/f/file/file_5.39-3%2bdeb11u1.dsc' file_5.39-3+deb11u1.dsc 2424 SHA256:b08cfd706099600aa634d3cdcc2a7461908902414ae8cbfd1caddf557983e4e8
+'http://deb.debian.org/debian/pool/main/f/file/file_5.39.orig.tar.gz' file_5.39.orig.tar.gz 954266 SHA256:f05d286a76d9556243d0cb05814929c2ecf3a5ba07963f8f70bfaaa70517fad1
+'http://deb.debian.org/debian/pool/main/f/file/file_5.39.orig.tar.gz.asc' file_5.39.orig.tar.gz.asc 169 SHA256:409232b54cabe3082f38f1e7ec4c69e7d937f26d039da691f7349d142b48df83
+'http://deb.debian.org/debian/pool/main/f/file/file_5.39-3%2bdeb11u1.debian.tar.xz' file_5.39-3+deb11u1.debian.tar.xz 34816 SHA256:c4ef624328d06f6128d808fd0edc14b1d856d6fefe0f29dfcae0ce30b42de0a3
 ```
 
 Other potentially useful URLs:
@@ -1121,10 +1103,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris krb5=1.18.3-6+deb11u3
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.18.3-6%2bdeb11u3.dsc' krb5_1.18.3-6+deb11u3.dsc 3209 SHA256:539d8a8df5c181b5c16cab487fef4d192f934a170dcfe507e76020132fdb5399
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.18.3.orig.tar.gz' krb5_1.18.3.orig.tar.gz 8715312 SHA256:e61783c292b5efd9afb45c555a80dd267ac67eebabca42185362bee6c4fbd719
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.18.3.orig.tar.gz.asc' krb5_1.18.3.orig.tar.gz.asc 833 SHA256:ded19808ba7320ad0bb3ddfb5202845b2ff36a50613af7832f78dd3cb4437419
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.18.3-6%2bdeb11u3.debian.tar.xz' krb5_1.18.3-6+deb11u3.debian.tar.xz 108804 SHA256:5efc82324430be1c2e12a6f0b40dd27b149f5f77cfe10a9ed0b8567a07f08981
+'http://deb.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.18.3-6%2bdeb11u3.dsc' krb5_1.18.3-6+deb11u3.dsc 3209 SHA256:539d8a8df5c181b5c16cab487fef4d192f934a170dcfe507e76020132fdb5399
+'http://deb.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.18.3.orig.tar.gz' krb5_1.18.3.orig.tar.gz 8715312 SHA256:e61783c292b5efd9afb45c555a80dd267ac67eebabca42185362bee6c4fbd719
+'http://deb.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.18.3.orig.tar.gz.asc' krb5_1.18.3.orig.tar.gz.asc 833 SHA256:ded19808ba7320ad0bb3ddfb5202845b2ff36a50613af7832f78dd3cb4437419
+'http://deb.debian.org/debian-security/pool/updates/main/k/krb5/krb5_1.18.3-6%2bdeb11u3.debian.tar.xz' krb5_1.18.3-6+deb11u3.debian.tar.xz 108804 SHA256:5efc82324430be1c2e12a6f0b40dd27b149f5f77cfe10a9ed0b8567a07f08981
 ```
 
 Other potentially useful URLs:
@@ -1158,21 +1140,13 @@ Licenses: (parsed from: `/usr/share/doc/libbsd0/copyright`)
 - `ISC-Original`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libbsd=0.11.3-1
-'http://deb.debian.org/debian/pool/main/libb/libbsd/libbsd_0.11.3-1.dsc' libbsd_0.11.3-1.dsc 2292 SHA256:714c9cee71ddcea7a91593c56ca9ab297856e4f597743a32cda909544fe04ccb
-'http://deb.debian.org/debian/pool/main/libb/libbsd/libbsd_0.11.3.orig.tar.xz' libbsd_0.11.3.orig.tar.xz 399712 SHA256:ff95cf8184151dacae4247832f8d4ea8800fa127dbd15033ecfe839f285b42a1
-'http://deb.debian.org/debian/pool/main/libb/libbsd/libbsd_0.11.3.orig.tar.xz.asc' libbsd_0.11.3.orig.tar.xz.asc 833 SHA256:213f30c9537e2a180ebdad6445402ea879f83c3a85907f7509ae7f7304f7ce1b
-'http://deb.debian.org/debian/pool/main/libb/libbsd/libbsd_0.11.3-1.debian.tar.xz' libbsd_0.11.3-1.debian.tar.xz 17504 SHA256:b414f384d71ebd8ed67b759526df4c83529946414c71cc3c5e5b98bc9323ad3b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libbsd/0.11.3-1/
 
-- https://sources.debian.net/src/libbsd/0.11.3-1/ (for browsing the source)
-- https://sources.debian.net/src/libbsd/0.11.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libbsd/0.11.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libcap-ng=0.7.9-2.2`
 
@@ -1946,21 +1920,13 @@ Licenses: (parsed from: `/usr/share/doc/libncurses6/copyright`, `/usr/share/doc/
 - `MIT/X11`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ncurses=6.2+20201114-2+deb11u1
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2%2b20201114-2%2bdeb11u1.dsc' ncurses_6.2+20201114-2+deb11u1.dsc 4138 SHA256:7ba568bfdd893cf88fe48093273d168a3fda1e74f9fdd7af5a8970baeab55011
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2%2b20201114.orig.tar.gz' ncurses_6.2+20201114.orig.tar.gz 3539796 SHA256:aa3f8cfaff2a2b78f184274ec43d9da910c864e4b4d80fc47b5b48cba9154cd2
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2%2b20201114.orig.tar.gz.asc' ncurses_6.2+20201114.orig.tar.gz.asc 265 SHA256:91615d9d5575f9e974e78c6aca55e1885f42d1b2600cebec407be4471bb7a27d
-'http://deb.debian.org/debian/pool/main/n/ncurses/ncurses_6.2%2b20201114-2%2bdeb11u1.debian.tar.xz' ncurses_6.2+20201114-2+deb11u1.debian.tar.xz 53556 SHA256:24f38ec08bc231c7cd5f598b50e10a00b10b46b50aef9c05b9379dc361aed537
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/ncurses/6.2+20201114-2+deb11u1/
 
-- https://sources.debian.net/src/ncurses/6.2+20201114-2+deb11u1/ (for browsing the source)
-- https://sources.debian.net/src/ncurses/6.2+20201114-2+deb11u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/ncurses/6.2+20201114-2+deb11u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=6.3`
 
@@ -2305,10 +2271,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris php7.4=7.4.33-1+deb11u4
-'http://deb.debian.org/debian-security/pool/updates/main/p/php7.4/php7.4_7.4.33-1%2bdeb11u4.dsc' php7.4_7.4.33-1+deb11u4.dsc 5825 SHA256:98b39be4aaebd6887ca18b03b2605faba6ce959e461a358d3b02ad146694088a
-'http://deb.debian.org/debian-security/pool/updates/main/p/php7.4/php7.4_7.4.33.orig.tar.xz' php7.4_7.4.33.orig.tar.xz 10420144 SHA256:924846abf93bc613815c55dd3f5809377813ac62a9ec4eb3778675b82a27b927
-'http://deb.debian.org/debian-security/pool/updates/main/p/php7.4/php7.4_7.4.33.orig.tar.xz.asc' php7.4_7.4.33.orig.tar.xz.asc 833 SHA256:569a01c7c605a4571fdf7dfadfff4215cc4a63ea5d474c7ec92bd7b4fecfffcb
-'http://deb.debian.org/debian-security/pool/updates/main/p/php7.4/php7.4_7.4.33-1%2bdeb11u4.debian.tar.xz' php7.4_7.4.33-1+deb11u4.debian.tar.xz 77184 SHA256:66b1476f1ea7d5c158d5d1641a71b618f47bacb8794f1e22ab6146086694312e
+'http://deb.debian.org/debian/pool/main/p/php7.4/php7.4_7.4.33-1%2bdeb11u4.dsc' php7.4_7.4.33-1+deb11u4.dsc 5825 SHA256:98b39be4aaebd6887ca18b03b2605faba6ce959e461a358d3b02ad146694088a
+'http://deb.debian.org/debian/pool/main/p/php7.4/php7.4_7.4.33.orig.tar.xz' php7.4_7.4.33.orig.tar.xz 10420144 SHA256:924846abf93bc613815c55dd3f5809377813ac62a9ec4eb3778675b82a27b927
+'http://deb.debian.org/debian/pool/main/p/php7.4/php7.4_7.4.33.orig.tar.xz.asc' php7.4_7.4.33.orig.tar.xz.asc 833 SHA256:569a01c7c605a4571fdf7dfadfff4215cc4a63ea5d474c7ec92bd7b4fecfffcb
+'http://deb.debian.org/debian/pool/main/p/php7.4/php7.4_7.4.33-1%2bdeb11u4.debian.tar.xz' php7.4_7.4.33-1+deb11u4.debian.tar.xz 77184 SHA256:66b1476f1ea7d5c158d5d1641a71b618f47bacb8794f1e22ab6146086694312e
 ```
 
 Other potentially useful URLs:
@@ -2345,9 +2311,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris postgresql-13=13.11-0+deb11u1
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.11-0%2bdeb11u1.dsc' postgresql-13_13.11-0+deb11u1.dsc 3703 SHA256:eaa5b109ae2d02a847dc7e6dc5263539ccb79dee6a130fd1228e59aa375831c7
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.11.orig.tar.bz2' postgresql-13_13.11.orig.tar.bz2 21519655 SHA256:4992ff647203566b670d4e54dc5317499a26856c93576d0ea951bdf6bee50bfb
-'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-13/postgresql-13_13.11-0%2bdeb11u1.debian.tar.xz' postgresql-13_13.11-0+deb11u1.debian.tar.xz 30160 SHA256:f4dc062b966ab53fece8116eb4919629a8d4bbe2045786b0015f893fa7852ea1
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.11-0%2bdeb11u1.dsc' postgresql-13_13.11-0+deb11u1.dsc 3703 SHA256:eaa5b109ae2d02a847dc7e6dc5263539ccb79dee6a130fd1228e59aa375831c7
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.11.orig.tar.bz2' postgresql-13_13.11.orig.tar.bz2 21519655 SHA256:4992ff647203566b670d4e54dc5317499a26856c93576d0ea951bdf6bee50bfb
+'http://deb.debian.org/debian/pool/main/p/postgresql-13/postgresql-13_13.11-0%2bdeb11u1.debian.tar.xz' postgresql-13_13.11-0+deb11u1.debian.tar.xz 30160 SHA256:f4dc062b966ab53fece8116eb4919629a8d4bbe2045786b0015f893fa7852ea1
 ```
 
 Other potentially useful URLs:
