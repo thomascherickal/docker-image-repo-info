@@ -1438,10 +1438,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris lattice=0.21-8-2
-'http://http.debian.net/debian/pool/main/l/lattice/lattice_0.21-8-2.dsc' lattice_0.21-8-2.dsc 1838 SHA256:5c91fea06d31e1215bbb8ab715e4b0d63e8026354e77636b956d269ef40fbbfc
-'http://http.debian.net/debian/pool/main/l/lattice/lattice_0.21-8.orig.tar.gz' lattice_0.21-8.orig.tar.gz 589330 SHA256:8ad3d6974262e6cab6cc8fec38aa279b5b2f2524adf6f3eab56f68302b60c329
-'http://http.debian.net/debian/pool/main/l/lattice/lattice_0.21-8-2.debian.tar.xz' lattice_0.21-8-2.debian.tar.xz 5352 SHA256:d01eeff7d0d63f649df658d3d09a0ad06c06644e427377ba29082233ddbb26f3
+'http://deb.debian.org/debian/pool/main/l/lattice/lattice_0.21-8-2.dsc' lattice_0.21-8-2.dsc 1838 SHA256:5c91fea06d31e1215bbb8ab715e4b0d63e8026354e77636b956d269ef40fbbfc
+'http://deb.debian.org/debian/pool/main/l/lattice/lattice_0.21-8.orig.tar.gz' lattice_0.21-8.orig.tar.gz 589330 SHA256:8ad3d6974262e6cab6cc8fec38aa279b5b2f2524adf6f3eab56f68302b60c329
+'http://deb.debian.org/debian/pool/main/l/lattice/lattice_0.21-8-2.debian.tar.xz' lattice_0.21-8-2.debian.tar.xz 5352 SHA256:d01eeff7d0d63f649df658d3d09a0ad06c06644e427377ba29082233ddbb26f3
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/lattice/0.21-8-2/ (for browsing the source)
+- https://sources.debian.net/src/lattice/0.21-8-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/lattice/0.21-8-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lerc=4.0.0+ds-3`
 
@@ -2142,11 +2148,17 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris libx11=2:1.8.6-1
-'http://http.debian.net/debian/pool/main/libx/libx11/libx11_1.8.6-1.dsc' libx11_1.8.6-1.dsc 2509 SHA256:12d0bad855f51aa4ee6286f1c88acf6395fe6ea94b5416f79c664631bf5b83a8
-'http://http.debian.net/debian/pool/main/libx/libx11/libx11_1.8.6.orig.tar.gz' libx11_1.8.6.orig.tar.gz 3193457 SHA256:5ff0d26c94d82ebb94a944b9f1f55cd01b9713fd461fe93f62f3527ce14ad94e
-'http://http.debian.net/debian/pool/main/libx/libx11/libx11_1.8.6.orig.tar.gz.asc' libx11_1.8.6.orig.tar.gz.asc 801 SHA256:20b9fb0b6d80411dee9b6c3e2b5821ba0f26e59d1ac4c3e715e9d93679895126
-'http://http.debian.net/debian/pool/main/libx/libx11/libx11_1.8.6-1.diff.gz' libx11_1.8.6-1.diff.gz 73485 SHA256:7ddc8c5f32c4292fd7f525a75301d77d3010467639ce9f217416dc9031da97a5
+'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.8.6-1.dsc' libx11_1.8.6-1.dsc 2509 SHA256:12d0bad855f51aa4ee6286f1c88acf6395fe6ea94b5416f79c664631bf5b83a8
+'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.8.6.orig.tar.gz' libx11_1.8.6.orig.tar.gz 3193457 SHA256:5ff0d26c94d82ebb94a944b9f1f55cd01b9713fd461fe93f62f3527ce14ad94e
+'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.8.6.orig.tar.gz.asc' libx11_1.8.6.orig.tar.gz.asc 801 SHA256:20b9fb0b6d80411dee9b6c3e2b5821ba0f26e59d1ac4c3e715e9d93679895126
+'http://deb.debian.org/debian/pool/main/libx/libx11/libx11_1.8.6-1.diff.gz' libx11_1.8.6-1.diff.gz 73485 SHA256:7ddc8c5f32c4292fd7f525a75301d77d3010467639ce9f217416dc9031da97a5
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libx11/2:1.8.6-1/ (for browsing the source)
+- https://sources.debian.net/src/libx11/2:1.8.6-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libx11/2:1.8.6-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.9-1`
 
