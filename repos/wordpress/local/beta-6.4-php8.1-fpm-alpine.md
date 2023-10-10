@@ -1,10 +1,10 @@
-# `wordpress:beta-6.4-beta1-php8.1-fpm-alpine`
+# `wordpress:beta-6.4-beta2-php8.1-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d6d0cebf5b64029c6fa87b77c74e0310c8e6278cc5d9203cc8705ac6a71d9aa3`
-- Created: `2023-09-30T07:46:22.64485194Z`
-- Virtual Size: ~ 311.03 Mb  
+- Image ID: `sha256:9eae3e202cff82eefb86b9c379bab784023775d4609024a3ff5a7345a447217d`
+- Created: `2023-10-06T20:21:00.180290644Z`
+- Virtual Size: ~ 309.73 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
