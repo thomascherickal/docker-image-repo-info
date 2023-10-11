@@ -553,20 +553,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u6
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u6.dsc' curl_7.64.0-4+deb10u6.dsc 2845 SHA256:ce14e22c43f23f505624b39b8bc0225ecd6ee8dbdd84ac5bd47cd9df5779648e
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u6.debian.tar.xz' curl_7.64.0-4+deb10u6.debian.tar.xz 62540 SHA256:63c961ed2d37600d6cd904dd5723409af60c0e9483341c9c1de39bf6da62f550
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u6/
 
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u6/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u2`
 
