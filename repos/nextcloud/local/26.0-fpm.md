@@ -273,19 +273,13 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=12.4+deb12u1
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_12.4%2bdeb12u1.dsc' base-files_12.4+deb12u1.dsc 1133 SHA256:28dbb051c63e3efa95caf9e67d6452f77d835280fef3212a44237172908c38da
-'http://deb.debian.org/debian/pool/main/b/base-files/base-files_12.4%2bdeb12u1.tar.xz' base-files_12.4+deb12u1.tar.xz 66000 SHA256:d2c5ab6e185b73a38995930f137ec4e06f9b4ebbf97065a50ae9076ece5e6aaf
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/base-files/12.4+deb12u1/
 
-- https://sources.debian.net/src/base-files/12.4+deb12u1/ (for browsing the source)
-- https://sources.debian.net/src/base-files/12.4+deb12u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/base-files/12.4+deb12u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-passwd=3.6.1`
 
@@ -773,19 +767,13 @@ Licenses: (parsed from: `/usr/share/doc/debian-archive-keyring/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debian-archive-keyring=2023.3
-'http://deb.debian.org/debian/pool/main/d/debian-archive-keyring/debian-archive-keyring_2023.3.dsc' debian-archive-keyring_2023.3.dsc 1261 SHA256:31c1ef4aaa73e1b4b3a85a88993a7f5180d9f697a8784f58471d9d39047409f9
-'http://deb.debian.org/debian/pool/main/d/debian-archive-keyring/debian-archive-keyring_2023.3.tar.xz' debian-archive-keyring_2023.3.tar.xz 177472 SHA256:0b9af95add8f2f7834d90f95ce6fde065319148c9363f140077b03684a71eea8
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/debian-archive-keyring/2023.3/
 
-- https://sources.debian.net/src/debian-archive-keyring/2023.3/ (for browsing the source)
-- https://sources.debian.net/src/debian-archive-keyring/2023.3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debian-archive-keyring/2023.3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debianutils=5.7-0.4`
 
@@ -800,20 +788,13 @@ Licenses: (parsed from: `/usr/share/doc/debianutils/copyright`)
 - `SMAIL-GPL`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris debianutils=5.7-0.4
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.7-0.4.dsc' debianutils_5.7-0.4.dsc 1737 SHA256:1cd234cc6449122c5bb8213e7b2919162002ae4234a5c51b2b8e54e82837a047
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.7.orig.tar.gz' debianutils_5.7.orig.tar.gz 257231 SHA256:27ec9e0e7e44dc8ab611aa576330471bacb07e4491ffecf0d3aa6909c92f9022
-'http://deb.debian.org/debian/pool/main/d/debianutils/debianutils_5.7-0.4.debian.tar.xz' debianutils_5.7-0.4.debian.tar.xz 22412 SHA256:e47eb4fc4cd16fedc8fd741c42acb3af1de19ba42143016adafe61c282ad6771
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/debianutils/5.7-0.4/
 
-- https://sources.debian.net/src/debianutils/5.7-0.4/ (for browsing the source)
-- https://sources.debian.net/src/debianutils/5.7-0.4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/debianutils/5.7-0.4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `diffutils=1:3.8-4`
 
@@ -1946,21 +1927,13 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.20.1-2
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1-2.dsc' krb5_1.20.1-2.dsc 3168 SHA256:708ce2f57cd69f1489f7eb97a6191548770d7dd5af02dfc770aa02e328f8f861
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1.orig.tar.gz' krb5_1.20.1.orig.tar.gz 8661660 SHA256:704aed49b19eb5a7178b34b2873620ec299db08752d6a8574f95d41879ab8851
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1.orig.tar.gz.asc' krb5_1.20.1.orig.tar.gz.asc 833 SHA256:2afeec5dbc586cc40b7975645e02b4c41c4d719dd02213e828c72d8239d55666
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1-2.debian.tar.xz' krb5_1.20.1-2.debian.tar.xz 99520 SHA256:ef231e13219fe578217c1efdc3a88436e189af111f13c68f7280d77b16d7411e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/krb5/1.20.1-2/
 
-- https://sources.debian.net/src/krb5/1.20.1-2/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.20.1-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.20.1-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lcms2=2.14-2`
 
@@ -2940,10 +2913,10 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris libwebp=1.2.4-0.2+deb12u1
-'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_1.2.4-0.2%2bdeb12u1.dsc' libwebp_1.2.4-0.2+deb12u1.dsc 2411 SHA256:d9ed0b59e2010f255c28d0869fd15b31f9b08aed757bfc91862d43aa9ec1aa99
-'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz' libwebp_1.2.4.orig.tar.gz 4141376 SHA256:7bf5a8a28cc69bcfa8cb214f2c3095703c6b73ac5fba4d5480c205331d9494df
-'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz.asc' libwebp_1.2.4.orig.tar.gz.asc 833 SHA256:4c546cf7f757a70d8803ab850e69d28e7ce06e66dbee003fd3ede7346543851a
-'http://deb.debian.org/debian-security/pool/updates/main/libw/libwebp/libwebp_1.2.4-0.2%2bdeb12u1.debian.tar.xz' libwebp_1.2.4-0.2+deb12u1.debian.tar.xz 12028 SHA256:69cdba4dfe2e1b34d55fa80c1b29c31cacd40dd183812d6bcca7e508a2f7afcd
+'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4-0.2%2bdeb12u1.dsc' libwebp_1.2.4-0.2+deb12u1.dsc 2411 SHA256:d9ed0b59e2010f255c28d0869fd15b31f9b08aed757bfc91862d43aa9ec1aa99
+'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz' libwebp_1.2.4.orig.tar.gz 4141376 SHA256:7bf5a8a28cc69bcfa8cb214f2c3095703c6b73ac5fba4d5480c205331d9494df
+'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4.orig.tar.gz.asc' libwebp_1.2.4.orig.tar.gz.asc 833 SHA256:4c546cf7f757a70d8803ab850e69d28e7ce06e66dbee003fd3ede7346543851a
+'http://deb.debian.org/debian/pool/main/libw/libwebp/libwebp_1.2.4-0.2%2bdeb12u1.debian.tar.xz' libwebp_1.2.4-0.2+deb12u1.debian.tar.xz 12028 SHA256:69cdba4dfe2e1b34d55fa80c1b29c31cacd40dd183812d6bcca7e508a2f7afcd
 ```
 
 Other potentially useful URLs:
@@ -3705,21 +3678,13 @@ Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/open
 - `GPL-1`
 - `GPL-1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris openssl=3.0.9-1
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_3.0.9-1.dsc' openssl_3.0.9-1.dsc 2459 SHA256:e1349619b782e9a7ef5e838f9d3ef3b669454ddcd4be740a1183d8cf12153e91
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_3.0.9.orig.tar.gz' openssl_3.0.9.orig.tar.gz 15181285 SHA256:eb1ab04781474360f77c318ab89d8c5a03abc38e63d65a603cabbf1b00a1dc90
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_3.0.9.orig.tar.gz.asc' openssl_3.0.9.orig.tar.gz.asc 833 SHA256:75f46c27c14fbe84c16d41ed95b1af347641c06a53533d3926c4fc05f59ef87a
-'http://deb.debian.org/debian/pool/main/o/openssl/openssl_3.0.9-1.debian.tar.xz' openssl_3.0.9-1.debian.tar.xz 75600 SHA256:e2d357313d50b244727c37aceae3c1e69b0d03a6e911d73de5382515a27647f1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/openssl/3.0.9-1/
 
-- https://sources.debian.net/src/openssl/3.0.9-1/ (for browsing the source)
-- https://sources.debian.net/src/openssl/3.0.9-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/openssl/3.0.9-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `p11-kit=0.24.1-2`
 
@@ -3777,20 +3742,13 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 - `LGPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.5.2-6
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2-6.dsc' pam_1.5.2-6.dsc 1998 SHA256:2dbff29f5fc189c95b863ffd690795a7313515619ddadc470eab8a50b7555903
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2.orig.tar.xz' pam_1.5.2.orig.tar.xz 988784 SHA256:e4ec7131a91da44512574268f493c6d8ca105c87091691b8e9b56ca685d4f94d
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2-6.debian.tar.xz' pam_1.5.2-6.debian.tar.xz 122320 SHA256:97adad0df930ba5ed52b88bef6d494a1b303ca2eb5be9e347479a23e4d9254fc
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pam/1.5.2-6/
 
-- https://sources.debian.net/src/pam/1.5.2-6/ (for browsing the source)
-- https://sources.debian.net/src/pam/1.5.2-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pam/1.5.2-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pango1.0=1.50.12+ds-1`
 
@@ -4422,20 +4380,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=252.12-1~deb12u1
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.12-1%7edeb12u1.dsc' systemd_252.12-1~deb12u1.dsc 6610 SHA256:c8918ab5dd6d2fbdc9d7f67e4e254eff8ed1547986eb5366a7cdcddcec937b99
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.12.orig.tar.gz' systemd_252.12.orig.tar.gz 11897946 SHA256:c6c249d65b3aff0a2b99410f430f404068c74a7cd96b63f482c933afd7288112
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_252.12-1%7edeb12u1.debian.tar.xz' systemd_252.12-1~deb12u1.debian.tar.xz 170636 SHA256:bedd601e65be33332b864d7615e825e90314305daf94d62a24324961b2d9837e
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/252.12-1~deb12u1/
 
-- https://sources.debian.net/src/systemd/252.12-1~deb12u1/ (for browsing the source)
-- https://sources.debian.net/src/systemd/252.12-1~deb12u1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/252.12-1~deb12u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.06-4`
 
