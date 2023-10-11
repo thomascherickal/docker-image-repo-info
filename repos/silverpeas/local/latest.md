@@ -850,14 +850,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.19
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.19.dsc' curl_7.68.0-1ubuntu2.19.dsc 2737 SHA512:86dfd3a26b645e5ce9d2a8d58a7e5f1fd4b7aa5944c85ffba8f9e3e36e93028a18e8d6b4bdf5f95809407df593c63e86a954488d2ab4c744cb2f02c2c4f8b9bf
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.19.debian.tar.xz' curl_7.68.0-1ubuntu2.19.debian.tar.xz 68292 SHA512:268714df9abeaebc38df547dd7b0dfee02c605b7fa8a8054818d9f5c608135a70e0d0e3492c1cf504d138bbddd457421486bf1b2e00464f206bb7172c4bc74bf
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -8740,14 +8735,9 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2ubuntu0.20.04.9
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.9.dsc' tiff_4.1.0+git191117-2ubuntu0.20.04.9.dsc 2422 SHA512:4360bcd1d5b13bfc7f0ab43d9a3dde472006f17c4bdab70798bd86d20144dbf5a9ac1bbbbe7088d9b2289a55a2affbd7c9af9cd4e043996876675b5652a89178
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA512:25b4bc4522fc2e7f3ca6857b87acd4481d8643566b1120c755020afc8b48949238ee2078bc43dd3ba7407eaa4e36b1b712d7056f101ddaf60f94dab8607870b8
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.9.debian.tar.xz' tiff_4.1.0+git191117-2ubuntu0.20.04.9.debian.tar.xz 43988 SHA512:b1b56bbdc9a4565fb6a3fb75e9e12318974c5c492272aa6f3f48ae39dcd1d64a350d7f282076b6626b796e9de2181cfb82423942535b663e2781bd3d5830bf2e
-```
 
 ### `dpkg` source package: `twolame=0.4.0-2`
 
