@@ -1,13 +1,14 @@
-# `eclipse-temurin:20.0.2_9-jre-ubi9-minimal`
+# `eclipse-temurin:21_35-jdk-ubi9-minimal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:c61b5a7233c949af58f8cba0f1dd7693fef94016212a4bd6b475cadfdb20d2a1`
-- Created: `2023-09-13T00:14:41.4175345Z`
-- Virtual Size: ~ 322.43 Mb  
+- Image ID: `sha256:b276a1eb7e83f463abc417dcdea5bfb2e692ef1cd1c0f6a297a039f3d3ba3541`
+- Created: `2023-10-11T18:10:06.03757557Z`
+- Virtual Size: ~ 477.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/__cacert_entrypoint.sh"]`
+- Command: `["jshell"]`
 - Environment:
   - `PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `container=oci`
@@ -15,10 +16,10 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-20.0.2+9`
+  - `JAVA_VERSION=jdk-21+35`
 - Labels:
   - `architecture=x86_64`
-  - `build-date=2023-09-05T09:00:56`
+  - `build-date=2023-10-05T14:27:14`
   - `com.redhat.component=ubi9-minimal-container`
   - `com.redhat.license_terms=https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI`
   - `description=The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.`
@@ -30,9 +31,9 @@
   - `io.openshift.tags=minimal rhel9`
   - `maintainer=Red Hat, Inc.`
   - `name=ubi9-minimal`
-  - `release=750`
+  - `release=750.1696515534`
   - `summary=Provides the latest release of the minimal Red Hat Universal Base Image 9.`
-  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.2-750`
+  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.2-750.1696515534`
   - `vcs-ref=7ef59505f75bf0c11c8d3addefebee5ceaaf4c41`
   - `vcs-type=git`
   - `vendor=Red Hat, Inc.`
@@ -238,25 +239,25 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-2.34-60.el9.x86_64`
+### `rpm` package: `glibc-2.34-60.el9_2.7.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-common-2.34-60.el9.x86_64`
+### `rpm` package: `glibc-common-2.34-60.el9_2.7.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-langpack-en-2.34-60.el9.x86_64`
+### `rpm` package: `glibc-langpack-en-2.34-60.el9_2.7.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-minimal-langpack-2.34-60.el9.x86_64`
+### `rpm` package: `glibc-minimal-langpack-2.34-60.el9_2.7.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 

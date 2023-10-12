@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:2d295d855b942d89264f83b652550d3d5fa3ce16b605f1ecb55af0bc65ece12e`
-- Created: `2023-09-13T00:13:26.210716286Z`
+- Image ID: `sha256:364fe955d0e2e8d9d072c546db63397bd91a0eed2309db8b67bb7e64afeab5b0`
+- Created: `2023-10-10T23:50:30.281533313Z`
 - Virtual Size: ~ 300.87 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,7 +18,7 @@
   - `JAVA_VERSION=jdk-11.0.20.1+1`
 - Labels:
   - `architecture=x86_64`
-  - `build-date=2023-09-05T09:00:56`
+  - `build-date=2023-10-05T14:27:14`
   - `com.redhat.component=ubi9-minimal-container`
   - `com.redhat.license_terms=https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI`
   - `description=The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.`
@@ -30,9 +30,9 @@
   - `io.openshift.tags=minimal rhel9`
   - `maintainer=Red Hat, Inc.`
   - `name=ubi9-minimal`
-  - `release=750`
+  - `release=750.1696515534`
   - `summary=Provides the latest release of the minimal Red Hat Universal Base Image 9.`
-  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.2-750`
+  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.2-750.1696515534`
   - `vcs-ref=7ef59505f75bf0c11c8d3addefebee5ceaaf4c41`
   - `vcs-type=git`
   - `vendor=Red Hat, Inc.`
@@ -238,25 +238,25 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-2.34-60.el9.x86_64`
+### `rpm` package: `glibc-2.34-60.el9_2.7.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-common-2.34-60.el9.x86_64`
+### `rpm` package: `glibc-common-2.34-60.el9_2.7.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-langpack-en-2.34-60.el9.x86_64`
+### `rpm` package: `glibc-langpack-en-2.34-60.el9_2.7.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-minimal-langpack-2.34-60.el9.x86_64`
+### `rpm` package: `glibc-minimal-langpack-2.34-60.el9_2.7.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 
