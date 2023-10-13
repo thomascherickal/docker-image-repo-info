@@ -7447,11 +7447,21 @@ CMD ["-M" "--repl"]
 
 ## `clojure:temurin-17-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-17-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-17-boot`
 
@@ -7889,11 +7899,21 @@ CMD ["repl"]
 
 ## `clojure:temurin-17-boot-2.8.3-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-17-boot-2.8.3-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-17-boot-2.8.3-bullseye`
 
@@ -11437,11 +11457,21 @@ CMD ["repl"]
 
 ## `clojure:temurin-17-lein-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-17-lein-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-17-lein-bullseye`
 
@@ -12686,11 +12716,21 @@ CMD ["-M" "--repl"]
 
 ## `clojure:temurin-17-tools-deps-1.11.1.1413-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-17-tools-deps-1.11.1.1413-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-17-tools-deps-1.11.1.1413-bullseye`
 
@@ -13477,11 +13517,21 @@ CMD ["-M" "--repl"]
 
 ## `clojure:temurin-17-tools-deps-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-17-tools-deps-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-17-tools-deps-bullseye`
 
@@ -14169,139 +14219,309 @@ CMD ["-M" "--repl"]
 
 ## `clojure:temurin-21-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-bullseye-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-jammy`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-2.10.0`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-2.10.0-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-2.10.0-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-2.10.0-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-2.10.0-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-2.10.0-bullseye-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-2.10.0-jammy`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-bullseye-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-lein-jammy`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-1.11.1.1413`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-1.11.1.1413-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-1.11.1.1413-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-1.11.1.1413-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-1.11.1.1413-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-1.11.1.1413-bullseye-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-1.11.1.1413-jammy`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-bullseye-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-21-tools-deps-jammy`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-alpine`
 
@@ -14394,11 +14614,21 @@ CMD ["clj"]
 
 ## `clojure:temurin-8-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-boot`
 
@@ -14796,11 +15026,21 @@ CMD ["boot" "repl"]
 
 ## `clojure:temurin-8-boot-2.8.3-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-boot-2.8.3-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-boot-2.8.3-bullseye`
 
@@ -15460,11 +15700,21 @@ CMD ["boot" "repl"]
 
 ## `clojure:temurin-8-boot-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-boot-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-boot-bullseye`
 
@@ -17221,11 +17471,21 @@ CMD ["lein" "repl"]
 
 ## `clojure:temurin-8-lein-2.10.0-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-lein-2.10.0-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-lein-2.10.0-bullseye`
 
@@ -17980,11 +18240,21 @@ CMD ["lein" "repl"]
 
 ## `clojure:temurin-8-lein-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-lein-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-lein-bullseye`
 
@@ -19103,11 +19373,21 @@ CMD ["clj"]
 
 ## `clojure:temurin-8-tools-deps-1.11.1.1413-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-tools-deps-1.11.1.1413-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-tools-deps-1.11.1.1413-bullseye`
 
@@ -19808,11 +20088,21 @@ CMD ["clj"]
 
 ## `clojure:temurin-8-tools-deps-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-tools-deps-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:temurin-8-tools-deps-bullseye`
 
@@ -20834,27 +21124,57 @@ CMD ["-M" "--repl"]
 
 ## `clojure:tools-deps-1.11.1.1413-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:tools-deps-1.11.1.1413-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:tools-deps-1.11.1.1413-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:tools-deps-1.11.1.1413-bullseye-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:tools-deps-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:tools-deps-bookworm-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `clojure:tools-deps-bullseye`
 
@@ -21055,4 +21375,9 @@ CMD ["-M" "--repl"]
 
 ## `clojure:tools-deps-bullseye-slim`
 
-**does not exist** (yet?)
+```console
+$ docker pull clojure@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
