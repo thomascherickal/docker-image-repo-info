@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7cdb4a6f59d3ac3f984df2be0978789f608389a147873c4fd36ac32be18a0fd5`
-- Created: `2023-08-03T03:26:15.44138852Z`
+- Image ID: `sha256:8d252f65001e3c05b44da7e1571a3fe4ba3665f5da85a30da8ed21e0f01a6550`
+- Created: `2023-10-13T07:12:13.622946635Z`
 - Virtual Size: ~ 279.97 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -57,19 +57,24 @@ $ apt-get source -qq --print-uris adduser=3.118ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/a/adduser/adduser_3.118ubuntu2.tar.xz' adduser_3.118ubuntu2.tar.xz 222364 SHA256:9429124c39c381b541005da6f0ae29831bd6533dd65c923e06ca2a7c310db382
 ```
 
-### `dpkg` source package: `apr-util=1.6.1-4ubuntu2.1`
+### `dpkg` source package: `apr-util=1.6.1-4ubuntu2.2`
 
 Binary Packages:
 
-- `libaprutil1:amd64=1.6.1-4ubuntu2.1`
+- `libaprutil1:amd64=1.6.1-4ubuntu2.2`
 
 Licenses: (parsed from: `/usr/share/doc/libaprutil1/copyright`)
 
 - `Apache-2.0`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris apr-util=1.6.1-4ubuntu2.2
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-4ubuntu2.2.dsc' apr-util_1.6.1-4ubuntu2.2.dsc 2694 SHA512:63dfe83ec1e695366274110e6c3aca780686f766847720e506f4e105316ac28dcab7c2188e90852fe643599867982d6d2340729f1582fca631d91a50f719f58b
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1.orig.tar.bz2' apr-util_1.6.1.orig.tar.bz2 428595 SHA512:40eff8a37c0634f7fdddd6ca5e596b38de15fd10767a34c30bbe49c632816e8f3e1e230678034f578dd5816a94f246fb5dfdf48d644829af13bf28de3225205d
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apr-util/apr-util_1.6.1-4ubuntu2.2.debian.tar.xz' apr-util_1.6.1-4ubuntu2.2.debian.tar.xz 215044 SHA512:1957703ab59072905848cfc6bf14211512ee02264b9fb5fb1a32b164d95890f83d4c3dc0e0b50a17a361d4b70e83a26e6601091750f169730b0272bf36dfd80c
+```
 
 ### `dpkg` source package: `apr=1.6.5-1ubuntu1`
 
@@ -369,13 +374,13 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.19`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.20`
 
 Binary Packages:
 
-- `curl=7.68.0-1ubuntu2.19`
-- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.19`
-- `libcurl4:amd64=7.68.0-1ubuntu2.19`
+- `curl=7.68.0-1ubuntu2.20`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.20`
+- `libcurl4:amd64=7.68.0-1ubuntu2.20`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -389,10 +394,10 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.19
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.19.dsc' curl_7.68.0-1ubuntu2.19.dsc 2737 SHA512:86dfd3a26b645e5ce9d2a8d58a7e5f1fd4b7aa5944c85ffba8f9e3e36e93028a18e8d6b4bdf5f95809407df593c63e86a954488d2ab4c744cb2f02c2c4f8b9bf
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.20
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.20.dsc' curl_7.68.0-1ubuntu2.20.dsc 2737 SHA512:fc602637e036ba63548581b1950c055cc5fdb0b950848baac342fe117715a6021e7ecb00db10c9e44d777feba7c911c48b80f27880be8d9252250857414f614b
 'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.19.debian.tar.xz' curl_7.68.0-1ubuntu2.19.debian.tar.xz 68292 SHA512:268714df9abeaebc38df547dd7b0dfee02c605b7fa8a8054818d9f5c608135a70e0d0e3492c1cf504d138bbddd457421486bf1b2e00464f206bb7172c4bc74bf
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.20.debian.tar.xz' curl_7.68.0-1ubuntu2.20.debian.tar.xz 69464 SHA512:63c11b6186ed3dded8f90bcdac432ce4a79de6dc6364eb29d7fa88ad367961be3a9f34035b30e7ba2c1d3d7d7a80d765ffdbe9466e03512bd73339b3023e009e
 ```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
@@ -708,21 +713,26 @@ $ apt-get source -qq --print-uris git=1:2.25.1-1ubuntu3.11
 'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.25.1-1ubuntu3.11.debian.tar.xz' git_2.25.1-1ubuntu3.11.debian.tar.xz 708608 SHA512:f761df90be2d25b8bbdcbec0fa781bf2b20e954350eb15a1a210408876ac7e90ca4b7643b00c074cd4ce7b286494b0bfb71f4586024e01c026737cb290165ba9
 ```
 
-### `dpkg` source package: `glibc=2.31-0ubuntu9.9`
+### `dpkg` source package: `glibc=2.31-0ubuntu9.12`
 
 Binary Packages:
 
-- `libc-bin=2.31-0ubuntu9.9`
-- `libc6:amd64=2.31-0ubuntu9.9`
+- `libc-bin=2.31-0ubuntu9.12`
+- `libc6:amd64=2.31-0ubuntu9.12`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.12
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.12.dsc' glibc_2.31-0ubuntu9.12.dsc 9378 SHA512:2055d7f2d479789f44629fc4f9f938e3bcfdc035b6ca49ee5238aa0de18e4db3da1197591951838514565c1c1bad825273026bc6eb146394f646039d13c787a9
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA512:2ff56628fe935cacbdf1825534f15d45cb87a159cbdb2e6a981590eeb6174ed4b3ff7041519cdecbd4f624ac20b745e2dd9614c420dd3ea186b8f36bc4c2453c
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.12.debian.tar.xz' glibc_2.31-0ubuntu9.12.debian.tar.xz 879820 SHA512:94fe56d6feb9507ad0d6d81080a064729e259aa92130e0cb08567a61ec2615b11899959f909396a54df0a1e67e29f03ee9e10c2fad406ee9f3333e7269758a32
+```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4ubuntu0.1`
 
@@ -1729,11 +1739,11 @@ $ apt-get source -qq --print-uris openldap=2.4.49+dfsg-2ubuntu1.9
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openldap/openldap_2.4.49%2bdfsg-2ubuntu1.9.debian.tar.xz' openldap_2.4.49+dfsg-2ubuntu1.9.debian.tar.xz 189676 SHA512:bf7e4ff9f710404704526a912932d7445fab4c6ce30a099dd890adc78b8afe740ac773596cb4fe409d495406e5bd103d186bd0b2993265cdafd3eb9a71d6a3b5
 ```
 
-### `dpkg` source package: `openssh=1:8.2p1-4ubuntu0.8`
+### `dpkg` source package: `openssh=1:8.2p1-4ubuntu0.9`
 
 Binary Packages:
 
-- `openssh-client=1:8.2p1-4ubuntu0.8`
+- `openssh-client=1:8.2p1-4ubuntu0.9`
 
 Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 
@@ -1746,9 +1756,14 @@ Licenses: (parsed from: `/usr/share/doc/openssh-client/copyright`)
 - `Powell-BSD-style`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssh=1:8.2p1-4ubuntu0.9
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.9.dsc' openssh_8.2p1-4ubuntu0.9.dsc 2968 SHA512:4dfc3048671fcdc2fdd48c427e74bd5e86dc23d9f57de6fe3806c0dc3fcfe82cfc94a3dac73baba1faae39882df63160e0e825c48e9bc1b6ff4960c007ce95f5
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1.orig.tar.gz' openssh_8.2p1.orig.tar.gz 1701197 SHA512:c4db64e52a3a4c410de9de49f9cb104dd493b10250af3599b92457dd986277b3fd99a6f51cec94892fd1be5bd0369c5757262ea7805f0de464b245c3d34c120a
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.9.debian.tar.xz' openssh_8.2p1-4ubuntu0.9.debian.tar.xz 180188 SHA512:5564ef185742df68bb254a8349e6c83848e660c7a289ec37251fb8b94af9b8780c81caf7dbe0fbafa126f64a0edd4122e22c241b8a424d851a862e5eb1194dbd
+```
 
 ### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.19`
 

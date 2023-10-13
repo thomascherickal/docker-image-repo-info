@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:24c8395c2be2d787152723375ba6c6657e3dbadb0b9135c72a0a55409012a16a`
-- Created: `2023-09-20T09:23:44.916257871Z`
+- Image ID: `sha256:bf521dae41c7d61f7dc44e641032d2e238a024f227c62d1e5fe1a5c4889449ad`
+- Created: `2023-10-12T03:22:30.136709774Z`
 - Virtual Size: ~ 147.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -324,12 +324,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.30-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.30-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.64.0-4+deb10u6`
+### `dpkg` source package: `curl=7.64.0-4+deb10u7`
 
 Binary Packages:
 
-- `curl=7.64.0-4+deb10u6`
-- `libcurl4:amd64=7.64.0-4+deb10u6`
+- `curl=7.64.0-4+deb10u7`
+- `libcurl4:amd64=7.64.0-4+deb10u7`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -343,17 +343,17 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u6
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u6.dsc' curl_7.64.0-4+deb10u6.dsc 2845 SHA256:ce14e22c43f23f505624b39b8bc0225ecd6ee8dbdd84ac5bd47cd9df5779648e
+$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u7
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u7.dsc' curl_7.64.0-4+deb10u7.dsc 2694 SHA256:c7fef95314f6348b0aec80b8b3cc6c01f0a77e1ad66851832e4121c756ae22e3
 'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u6.debian.tar.xz' curl_7.64.0-4+deb10u6.debian.tar.xz 62540 SHA256:63c961ed2d37600d6cd904dd5723409af60c0e9483341c9c1de39bf6da62f550
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u7.debian.tar.xz' curl_7.64.0-4+deb10u7.debian.tar.xz 65944 SHA256:33782f62c3574883547d9075abb07fadb82224c2dea56146c060343faf89d4e4
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u6/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u6/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u7/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u2`
 
@@ -589,11 +589,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/e2fsprogs/1.44.5-1+deb10u3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/e2fsprogs/1.44.5-1+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `elfutils=0.176-1.1`
+### `dpkg` source package: `elfutils=0.176-1.1+deb10u1`
 
 Binary Packages:
 
-- `libelf1:amd64=0.176-1.1`
+- `libelf1:amd64=0.176-1.1+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libelf1/copyright`)
 
@@ -604,18 +604,18 @@ Licenses: (parsed from: `/usr/share/doc/libelf1/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris elfutils=0.176-1.1
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.176-1.1.dsc' elfutils_0.176-1.1.dsc 2584 SHA256:6d9fa4741e921f58a3e291def1f92a87bed888db15e73d6e29d46fc48b5f615a
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.176.orig.tar.bz2' elfutils_0.176.orig.tar.bz2 8646075 SHA256:eb5747c371b0af0f71e86215a5ebb88728533c3a104a43d4231963f308cd1023
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.176.orig.tar.bz2.asc' elfutils_0.176.orig.tar.bz2.asc 455 SHA256:51474b579b25fc799de0777e241c83605427d2903f8d28524ef6af42f75931fd
-'http://deb.debian.org/debian/pool/main/e/elfutils/elfutils_0.176-1.1.debian.tar.xz' elfutils_0.176-1.1.debian.tar.xz 31644 SHA256:06d7057e744d3a6138cf43d30237e2b327b6bfe3041a9a4b210414429c1267f1
+$ apt-get source -qq --print-uris elfutils=0.176-1.1+deb10u1
+'http://deb.debian.org/debian-security/pool/updates/main/e/elfutils/elfutils_0.176-1.1%2bdeb10u1.dsc' elfutils_0.176-1.1+deb10u1.dsc 2775 SHA256:4793de664af842998d3f0a2b8dea987fc043d5e90fc2df924c372a3521628072
+'http://deb.debian.org/debian-security/pool/updates/main/e/elfutils/elfutils_0.176.orig.tar.bz2' elfutils_0.176.orig.tar.bz2 8646075 SHA256:eb5747c371b0af0f71e86215a5ebb88728533c3a104a43d4231963f308cd1023
+'http://deb.debian.org/debian-security/pool/updates/main/e/elfutils/elfutils_0.176.orig.tar.bz2.asc' elfutils_0.176.orig.tar.bz2.asc 455 SHA256:51474b579b25fc799de0777e241c83605427d2903f8d28524ef6af42f75931fd
+'http://deb.debian.org/debian-security/pool/updates/main/e/elfutils/elfutils_0.176-1.1%2bdeb10u1.debian.tar.xz' elfutils_0.176-1.1+deb10u1.debian.tar.xz 32544 SHA256:81d4da6aedc7114fd7e08f1d024cceea995df5291f355f39a54668c2110046fb
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/elfutils/0.176-1.1/ (for browsing the source)
-- https://sources.debian.net/src/elfutils/0.176-1.1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/elfutils/0.176-1.1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/elfutils/0.176-1.1+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/elfutils/0.176-1.1+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/elfutils/0.176-1.1+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `findutils=4.6.0+git+20190209-2`
 
@@ -1630,26 +1630,33 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/mawk/1.3.3-17/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/mawk/1.3.3-17/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u3`
+### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u4`
 
 Binary Packages:
 
-- `libncursesw6:amd64=6.1+20181013-2+deb10u3`
-- `libtinfo6:amd64=6.1+20181013-2+deb10u3`
-- `ncurses-base=6.1+20181013-2+deb10u3`
-- `ncurses-bin=6.1+20181013-2+deb10u3`
+- `libncursesw6:amd64=6.1+20181013-2+deb10u4`
+- `libtinfo6:amd64=6.1+20181013-2+deb10u4`
+- `ncurses-base=6.1+20181013-2+deb10u4`
+- `ncurses-bin=6.1+20181013-2+deb10u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris ncurses=6.1+20181013-2+deb10u4
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u4.dsc' ncurses_6.1+20181013-2+deb10u4.dsc 3951 SHA256:84f56725a0bd1031423169a45b27519b4d397920b6095489f0def539946a3d2c
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013.orig.tar.gz' ncurses_6.1+20181013.orig.tar.gz 3411288 SHA256:aeb1d098ee90b39a763b57b00da19ff5bbb573dea077f98fbd85d59444bb3b59
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u4.debian.tar.xz' ncurses_6.1+20181013-2+deb10u4.debian.tar.xz 63228 SHA256:e3bf15e6a02dab6110d420d4582b79d3ff85edb7781cfba5b10101b9306af97e
+```
 
-- http://snapshot.debian.org/package/ncurses/6.1+20181013-2+deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ncurses/6.1+20181013-2+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=5.6`
 

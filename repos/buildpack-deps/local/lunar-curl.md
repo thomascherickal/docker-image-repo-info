@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6094e5e80f92499ace6989f78bc8339ba778b721f8d6ed7332a35c20020e92f1`
-- Created: `2023-09-02T00:03:34.926631201Z`
+- Image ID: `sha256:8dd67c3192123379e495aa231a49f40ef79982b7d68adc966bfa69e52eaa6d7a`
+- Created: `2023-10-13T07:19:58.038029623Z`
 - Virtual Size: ~ 103.65 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -296,12 +296,12 @@ $ apt-get source -qq --print-uris coreutils=9.1-1ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_9.1-1ubuntu2.debian.tar.xz' coreutils_9.1-1ubuntu2.debian.tar.xz 38492 SHA512:54c46926e87c50345823d4d8dcf977bd172cc81be821991e5bdd698056ca919293074e23d59502727e0e93a08ff780bb9b53ac997e57894926ae08b079afb736
 ```
 
-### `dpkg` source package: `curl=7.88.1-8ubuntu2.1`
+### `dpkg` source package: `curl=7.88.1-8ubuntu2.3`
 
 Binary Packages:
 
-- `curl=7.88.1-8ubuntu2.1`
-- `libcurl4:amd64=7.88.1-8ubuntu2.1`
+- `curl=7.88.1-8ubuntu2.3`
+- `libcurl4:amd64=7.88.1-8ubuntu2.3`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -317,9 +317,14 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `X11`
 - `curl`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.88.1-8ubuntu2.3
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.88.1-8ubuntu2.3.dsc' curl_7.88.1-8ubuntu2.3.dsc 3044 SHA512:c3a23cb38bfcc3506dd54e83e54a5ab5c312eec0d25e7ee34f3892caedb20fda94bcd095ea13d8769987f180476c6da4fe0dda99b20df74ee8ccd50814fc31f4
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.88.1.orig.tar.gz' curl_7.88.1.orig.tar.gz 4343562 SHA512:67701d458548712bbfaa55f2ebefbf87cdbba01b7b1200f608b1c3af67e8dd8e243fa89f256446d217d658a5a1242331d8b0168ab600351e74ee0e2511e79dae
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.88.1-8ubuntu2.3.debian.tar.xz' curl_7.88.1-8ubuntu2.3.debian.tar.xz 57340 SHA512:91e3ce4a87c9cd4b0e0f54e7b87bc17af6bcce3b6652faac5e62813e1fa5c7725c1a1711dd4e1eabf5e02cc90f7fedb45d18c3f10f7fc057903ceb227fe4577b
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg-10`
 
@@ -590,12 +595,12 @@ $ apt-get source -qq --print-uris gcc-13=13.1.0-2ubuntu2~23.04
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-13/gcc-13_13.1.0-2ubuntu2%7e23.04.debian.tar.xz' gcc-13_13.1.0-2ubuntu2~23.04.debian.tar.xz 1143460 SHA512:dd4ee2efd038788b103f4700bd650e43daeb60c8c5f22855c8d7ad41fee7a5b0ebbbd91dd8d4964a1248f8cc4b10a3d4a77eff490a2458c1f4eec78ce27d5534
 ```
 
-### `dpkg` source package: `glibc=2.37-0ubuntu2`
+### `dpkg` source package: `glibc=2.37-0ubuntu2.1`
 
 Binary Packages:
 
-- `libc-bin=2.37-0ubuntu2`
-- `libc6:amd64=2.37-0ubuntu2`
+- `libc-bin=2.37-0ubuntu2.1`
+- `libc6:amd64=2.37-0ubuntu2.1`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`)
 
@@ -606,11 +611,11 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 Source:
 
 ```console
-$ apt-get source -qq --print-uris glibc=2.37-0ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.37-0ubuntu2.dsc' glibc_2.37-0ubuntu2.dsc 8718 SHA512:d2b2b2a66a80d703c44a7f312c06fe8d79f70ec60eb5a25ebae33c5f31ceafe52b23334d97d6a7350db3b566f3b69dc49bce8c76843df6e7e22fc84328151b91
+$ apt-get source -qq --print-uris glibc=2.37-0ubuntu2.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.37-0ubuntu2.1.dsc' glibc_2.37-0ubuntu2.1.dsc 8900 SHA512:af0154e034b2e498ec98b6378a39f44027df8f3c4929c27191cd6542eec8eec988efa1948d5a7043dd87396e078422869f85168d231ffe1ca6284dd9c56c3a6b
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.37.orig.tar.xz' glibc_2.37.orig.tar.xz 18674604 SHA512:4fc5932f206bb1b8b54828a28af1a681616b838bbab60c81c82155f3629cbfe1301d271af65511ed917f4c6949a025429221fe6035753282f15346919f15b90c
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.37.orig.tar.xz.asc' glibc_2.37.orig.tar.xz.asc 833 SHA512:9849ba6aa9bff59499f67aceb69693c0331e7811fc74dea766a8e08f648ff09972449a540c3ea69bd70401464dd331f56ba29dbd00b6eeb27e9ceb42699089d8
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.37-0ubuntu2.debian.tar.xz' glibc_2.37-0ubuntu2.debian.tar.xz 891980 SHA512:865a99eaef3cb3102eeb7cc990aeb59ec9857ef9e97f066f35433f6edcbf179b4d6424578d61717e66ffeb628bfb5d9bf6ac2e7ec9449b1cbbf3efc6085a2263
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.37-0ubuntu2.1.debian.tar.xz' glibc_2.37-0ubuntu2.1.debian.tar.xz 894344 SHA512:a72a73361164f2e40df3c91c2614310070ef26fb873b03fc2d2c76275adb1dab910fd3a1a50e6135c102d0aae85a86fa542ca053222b4b74777c674a9c90bf33
 ```
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg1-1.1ubuntu1`
@@ -1840,12 +1845,12 @@ $ apt-get source -qq --print-uris sqlite3=3.40.1-1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.40.1-1.debian.tar.xz' sqlite3_3.40.1-1.debian.tar.xz 29804 SHA512:3dc61ed9d1c68d62a9f8dcfbef984f322be6a5f7679a9bab469c0b5a7be91d8235a01df5945e12a6e1e80626b35e897f4d4fcafe684f0e17d984ef1a220b4ec6
 ```
 
-### `dpkg` source package: `systemd=252.5-2ubuntu3`
+### `dpkg` source package: `systemd=252.5-2ubuntu3.1`
 
 Binary Packages:
 
-- `libsystemd0:amd64=252.5-2ubuntu3`
-- `libudev1:amd64=252.5-2ubuntu3`
+- `libsystemd0:amd64=252.5-2ubuntu3.1`
+- `libudev1:amd64=252.5-2ubuntu3.1`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1861,10 +1866,10 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris systemd=252.5-2ubuntu3
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_252.5-2ubuntu3.dsc' systemd_252.5-2ubuntu3.dsc 6750 SHA512:8b95149167ae826674dc151231fe4e2a06374552e96778f5629e2888378c29fb9e973e6ca88988b7ea19001a0ee5ae6f248967dd2741db860e2aa4cd79d73db7
+$ apt-get source -qq --print-uris systemd=252.5-2ubuntu3.1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_252.5-2ubuntu3.1.dsc' systemd_252.5-2ubuntu3.1.dsc 6783 SHA512:473297e5a9df4072fc76ea8ef9bd11b16b4f47d51264f50c7766c0d9cd763d689840ef2d05f3ce9974fd0806f8a1a9dcc5737ffdd022e0a2ee2ba3440d965450
 'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_252.5.orig.tar.gz' systemd_252.5.orig.tar.gz 11762414 SHA512:f3359e0496b673033d6c8da5c117890e0dc26c9db51003b28f629ac751d9bae117be32d9f54c377eb2d5a7c2d36ac0dbdc2116498698e993550fbdd9aae535b9
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_252.5-2ubuntu3.debian.tar.xz' systemd_252.5-2ubuntu3.debian.tar.xz 230516 SHA512:0e2e33dc91f091ad9881c51585bfb49980580160d892a89162f58b5bf0aa52390cb6f2c04805be8075a99a5cc876c477d4a081c931a4ad6aaff508a41c945602
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_252.5-2ubuntu3.1.debian.tar.xz' systemd_252.5-2ubuntu3.1.debian.tar.xz 233880 SHA512:4728ffa81b9b10d6b5981b7ac95462fcf8386545a924252f48128f7d418104f3fb878c2feb46b19b582632023ce788f94616cd00cab9f6c9f809745e301d2ccf
 ```
 
 ### `dpkg` source package: `sysvinit=3.06-2ubuntu1`
