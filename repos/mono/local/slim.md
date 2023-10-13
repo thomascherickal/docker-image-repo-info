@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:78369de2c821e5df32c2e1487b849d9feec3976d0739c899bd6dae15158e60d1`
-- Created: `2023-09-20T20:31:22.891213796Z`
+- Image ID: `sha256:665731c802e9e4384a984d555d9d80decaef69720c36981e1c6626d2a6561cfe`
+- Created: `2023-10-12T03:02:38.334902924Z`
 - Virtual Size: ~ 268.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -1505,26 +1505,33 @@ $ apt-get source -qq --print-uris mono=6.12.0.182-0xamarin1+debian10b1
 'https://download.mono-project.com/repo/debian/pool/main/m/mono/mono_6.12.0.182-0xamarin1%2bdebian10b1.debian.tar.xz' mono_6.12.0.182-0xamarin1+debian10b1.debian.tar.xz 163496 SHA256:8c7dc71d9820e43b888749fc7925a85e0f755f2821cb5d2d76aa47573bf16cf4
 ```
 
-### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u3`
+### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u4`
 
 Binary Packages:
 
-- `libncursesw6:amd64=6.1+20181013-2+deb10u3`
-- `libtinfo6:amd64=6.1+20181013-2+deb10u3`
-- `ncurses-base=6.1+20181013-2+deb10u3`
-- `ncurses-bin=6.1+20181013-2+deb10u3`
+- `libncursesw6:amd64=6.1+20181013-2+deb10u4`
+- `libtinfo6:amd64=6.1+20181013-2+deb10u4`
+- `ncurses-base=6.1+20181013-2+deb10u4`
+- `ncurses-bin=6.1+20181013-2+deb10u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris ncurses=6.1+20181013-2+deb10u4
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u4.dsc' ncurses_6.1+20181013-2+deb10u4.dsc 3951 SHA256:84f56725a0bd1031423169a45b27519b4d397920b6095489f0def539946a3d2c
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013.orig.tar.gz' ncurses_6.1+20181013.orig.tar.gz 3411288 SHA256:aeb1d098ee90b39a763b57b00da19ff5bbb573dea077f98fbd85d59444bb3b59
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u4.debian.tar.xz' ncurses_6.1+20181013-2+deb10u4.debian.tar.xz 63228 SHA256:e3bf15e6a02dab6110d420d4582b79d3ff85edb7781cfba5b10101b9306af97e
+```
 
-- http://snapshot.debian.org/package/ncurses/6.1+20181013-2+deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ncurses/6.1+20181013-2+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=5.6`
 

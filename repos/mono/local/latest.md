@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:b2211caad9a6b781c273f96b0bb3262d9c13ab38ae20a5c64de9a74d5dc60be9`
-- Created: `2023-09-20T20:33:16.145908837Z`
-- Virtual Size: ~ 787.92 Mb  
+- Image ID: `sha256:31026d5cd7de3878d5399a6d3ad63e6040b90c5030069ad476d8856c25ca7c30`
+- Created: `2023-10-12T03:04:27.514928095Z`
+- Virtual Size: ~ 787.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -445,12 +445,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/8.30-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/8.30-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `curl=7.64.0-4+deb10u6`
+### `dpkg` source package: `curl=7.64.0-4+deb10u7`
 
 Binary Packages:
 
-- `curl=7.64.0-4+deb10u6`
-- `libcurl4:amd64=7.64.0-4+deb10u6`
+- `curl=7.64.0-4+deb10u7`
+- `libcurl4:amd64=7.64.0-4+deb10u7`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -464,17 +464,17 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u6
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u6.dsc' curl_7.64.0-4+deb10u6.dsc 2845 SHA256:ce14e22c43f23f505624b39b8bc0225ecd6ee8dbdd84ac5bd47cd9df5779648e
+$ apt-get source -qq --print-uris curl=7.64.0-4+deb10u7
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u7.dsc' curl_7.64.0-4+deb10u7.dsc 2694 SHA256:c7fef95314f6348b0aec80b8b3cc6c01f0a77e1ad66851832e4121c756ae22e3
 'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0.orig.tar.gz' curl_7.64.0.orig.tar.gz 4032645 SHA256:cb90d2eb74d4e358c1ed1489f8e3af96b50ea4374ad71f143fa4595e998d81b5
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u6.debian.tar.xz' curl_7.64.0-4+deb10u6.debian.tar.xz 62540 SHA256:63c961ed2d37600d6cd904dd5723409af60c0e9483341c9c1de39bf6da62f550
+'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.64.0-4%2bdeb10u7.debian.tar.xz' curl_7.64.0-4+deb10u7.debian.tar.xz 65944 SHA256:33782f62c3574883547d9075abb07fadb82224c2dea56146c060343faf89d4e4
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u6/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.64.0-4+deb10u6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u6/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u7/ (for browsing the source)
+- https://sources.debian.net/src/curl/7.64.0-4+deb10u7/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/curl/7.64.0-4+deb10u7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-1+deb10u2`
 
@@ -967,12 +967,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/giflib/5.1.4-3+deb10u1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/giflib/5.1.4-3+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `glib2.0=2.58.3-2+deb10u4`
+### `dpkg` source package: `glib2.0=2.58.3-2+deb10u5`
 
 Binary Packages:
 
-- `libglib2.0-0:amd64=2.58.3-2+deb10u4`
-- `libglib2.0-data=2.58.3-2+deb10u4`
+- `libglib2.0-0:amd64=2.58.3-2+deb10u5`
+- `libglib2.0-data=2.58.3-2+deb10u5`
 
 Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc/libglib2.0-data/copyright`)
 
@@ -981,13 +981,20 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `LGPL`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris glib2.0=2.58.3-2+deb10u5
+'http://deb.debian.org/debian-security/pool/updates/main/g/glib2.0/glib2.0_2.58.3-2%2bdeb10u5.dsc' glib2.0_2.58.3-2+deb10u5.dsc 2729 SHA256:59c25e933d20f4f711c4b6685fbfeb46f1df344aa0e09c862b77fcaef94c57d3
+'http://deb.debian.org/debian-security/pool/updates/main/g/glib2.0/glib2.0_2.58.3.orig.tar.xz' glib2.0_2.58.3.orig.tar.xz 4863648 SHA256:8f43c31767e88a25da72b52a40f3301fefc49a665b56dc10ee7cc9565cbe7481
+'http://deb.debian.org/debian-security/pool/updates/main/g/glib2.0/glib2.0_2.58.3-2%2bdeb10u5.debian.tar.xz' glib2.0_2.58.3-2+deb10u5.debian.tar.xz 130900 SHA256:5c9d1dc438c0a8923eaf65391e04906230d06a71426dc1aa6df785b12a4d21d4
+```
 
-- http://snapshot.debian.org/package/glib2.0/2.58.3-2+deb10u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/glib2.0/2.58.3-2+deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/glib2.0/2.58.3-2+deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/glib2.0/2.58.3-2+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.28-10+deb10u2`
 
@@ -1942,24 +1949,31 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libwebp/0.6.1-2+deb10u3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libwebp/0.6.1-2+deb10u3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libx11=2:1.6.7-1+deb10u3`
+### `dpkg` source package: `libx11=2:1.6.7-1+deb10u4`
 
 Binary Packages:
 
-- `libx11-6:amd64=2:1.6.7-1+deb10u3`
-- `libx11-data=2:1.6.7-1+deb10u3`
+- `libx11-6:amd64=2:1.6.7-1+deb10u4`
+- `libx11-data=2:1.6.7-1+deb10u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libx11=2:1.6.7-1+deb10u4
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.7-1%2bdeb10u4.dsc' libx11_1.6.7-1+deb10u4.dsc 2410 SHA256:04b3214f5376f1d51742e2399c5b3458c34ad9b5ad6f2dc41876a6e46bab0b48
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.7.orig.tar.gz' libx11_1.6.7.orig.tar.gz 2972354 SHA256:f62ab88c2a87b55e1dc338726a55bb6ed8048084fe6a3294a7ae324ca45159d1
+'http://deb.debian.org/debian-security/pool/updates/main/libx/libx11/libx11_1.6.7-1%2bdeb10u4.diff.gz' libx11_1.6.7-1+deb10u4.diff.gz 57414 SHA256:cbf262ac55def260fdf1d8dae689fe28db222130fdc3e305c24bd138ba59ba4a
+```
 
-- http://snapshot.debian.org/package/libx11/2:1.6.7-1+deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libx11/2:1.6.7-1+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/libx11/2:1.6.7-1+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libx11/2:1.6.7-1+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libxau=1:1.0.8-1`
 
@@ -2485,26 +2499,33 @@ $ apt-get source -qq --print-uris msbuild=1:16.10.1+xamarinxplat.2021.05.26.14.0
 'https://download.mono-project.com/repo/debian/pool/main/m/msbuild/msbuild_16.10.1%2bxamarinxplat.2021.05.26.14.00-0xamarin2%2bdebian10b1.debian.tar.xz' msbuild_16.10.1+xamarinxplat.2021.05.26.14.00-0xamarin2+debian10b1.debian.tar.xz 5644 SHA256:8736a1269cf161906b7498886335b7c94dd2ec73fa97269d4fbc62f7432be81a
 ```
 
-### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u3`
+### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u4`
 
 Binary Packages:
 
-- `libncursesw6:amd64=6.1+20181013-2+deb10u3`
-- `libtinfo6:amd64=6.1+20181013-2+deb10u3`
-- `ncurses-base=6.1+20181013-2+deb10u3`
-- `ncurses-bin=6.1+20181013-2+deb10u3`
+- `libncursesw6:amd64=6.1+20181013-2+deb10u4`
+- `libtinfo6:amd64=6.1+20181013-2+deb10u4`
+- `ncurses-base=6.1+20181013-2+deb10u4`
+- `ncurses-bin=6.1+20181013-2+deb10u4`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris ncurses=6.1+20181013-2+deb10u4
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u4.dsc' ncurses_6.1+20181013-2+deb10u4.dsc 3951 SHA256:84f56725a0bd1031423169a45b27519b4d397920b6095489f0def539946a3d2c
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013.orig.tar.gz' ncurses_6.1+20181013.orig.tar.gz 3411288 SHA256:aeb1d098ee90b39a763b57b00da19ff5bbb573dea077f98fbd85d59444bb3b59
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u4.debian.tar.xz' ncurses_6.1+20181013-2+deb10u4.debian.tar.xz 63228 SHA256:e3bf15e6a02dab6110d420d4582b79d3ff85edb7781cfba5b10101b9306af97e
+```
 
-- http://snapshot.debian.org/package/ncurses/6.1+20181013-2+deb10u3/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u4/ (for browsing the source)
+- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ncurses/6.1+20181013-2+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `netbase=5.6`
 
