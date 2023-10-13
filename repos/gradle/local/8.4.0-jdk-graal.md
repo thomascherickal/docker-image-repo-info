@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6817fe00db242601a20184edbf261b40edce4bab762ce7d52ea79883272c2282`
-- Created: `2023-10-06T01:12:10.656286871Z`
+- Image ID: `sha256:818ca0e5a1dc1946aec8a19608409f4340f180a92777a71d0efee484319c5233`
+- Created: `2023-10-13T06:07:05.908405829Z`
 - Virtual Size: ~ 1.14 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -404,13 +404,13 @@ $ apt-get source -qq --print-uris coreutils=8.32-4.1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.32-4.1ubuntu1.debian.tar.xz' coreutils_8.32-4.1ubuntu1.debian.tar.xz 41096 SHA512:74adfa2f2a85af8d7024ad6d13942e915217dcb10e29caa9c314e0a15da6ec019e7aa52ac5351c35ccea1bace7a05c6dc7569b7b0487c8fcd46b3ba42d66d89d
 ```
 
-### `dpkg` source package: `curl=7.81.0-1ubuntu1.13`
+### `dpkg` source package: `curl=7.81.0-1ubuntu1.14`
 
 Binary Packages:
 
-- `curl=7.81.0-1ubuntu1.13`
-- `libcurl3-gnutls:amd64=7.81.0-1ubuntu1.13`
-- `libcurl4:amd64=7.81.0-1ubuntu1.13`
+- `curl=7.81.0-1ubuntu1.14`
+- `libcurl3-gnutls:amd64=7.81.0-1ubuntu1.14`
+- `libcurl4:amd64=7.81.0-1ubuntu1.14`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -424,11 +424,11 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 Source:
 
 ```console
-$ apt-get source -qq --print-uris curl=7.81.0-1ubuntu1.13
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.13.dsc' curl_7.81.0-1ubuntu1.13.dsc 3143 SHA512:e2bde02f21c21c31a5d4d9d724b33e99da0578869ce8bf49f84fa33b57a4f2909d2f5bebf97e43f0d39cb7fba230d486e79f448864f445f7dddef4f454802d90
+$ apt-get source -qq --print-uris curl=7.81.0-1ubuntu1.14
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.14.dsc' curl_7.81.0-1ubuntu1.14.dsc 3143 SHA512:1c937dd675502657bd4ed5b4f76e8a79eaddecf9e7150d79ee2987b6b649cb1bf51810e7e54b28cf82c8b6793cf9cfc5ed7a0a4569474e85452cca8dd234bc5a
 'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz' curl_7.81.0.orig.tar.gz 4188040 SHA512:e3084f0fa083f7f93eac923edbfdddb5fd0a372b94673ba9d4427a2b95508898c15ecdf63b99a1c1f6cf3215e27b06cbaa2b7073df038d43b362e586f92495d3
 'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz.asc' curl_7.81.0.orig.tar.gz.asc 488 SHA512:92bc5ede831551285d67b03abe8400c609ad31c9d33e324ee5c41b92dd5c2a0245a09a396bd76807b3e44bcfef944b1e16ac266264f7b85d27cc1c072a6e82bd
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.13.debian.tar.xz' curl_7.81.0-1ubuntu1.13.debian.tar.xz 70616 SHA512:28538b2792ccbf575b95775e9544d045960f99098f61bc43f6cd8744a84179d7205f362bd13839c122c1791f9901b07790923f602ceb9a5d90710bbed89d63ae
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.14.debian.tar.xz' curl_7.81.0-1ubuntu1.14.debian.tar.xz 72928 SHA512:868772eef638747a080425e2a50138819f618bc59809fb78f46a5d52fe0c75090b1ba245b6057261f7764889d31a0889cb8594b46de1697659d88addba81718f
 ```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg2-3ubuntu1.2`
@@ -917,15 +917,15 @@ $ apt-get source -qq --print-uris git=1:2.34.1-1ubuntu1.10
 'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.34.1-1ubuntu1.10.debian.tar.xz' git_2.34.1-1ubuntu1.10.debian.tar.xz 758892 SHA512:029b3f7756adab7d11abd53a935a06198f1947fefba2a768f9cbdf98b1a2b39e3dd5a17617afe2dbf1c4c7f3512b41825ebe0838ed8bbecb18b3bbe3962be338
 ```
 
-### `dpkg` source package: `glibc=2.35-0ubuntu3.3`
+### `dpkg` source package: `glibc=2.35-0ubuntu3.4`
 
 Binary Packages:
 
-- `libc-bin=2.35-0ubuntu3.3`
-- `libc-dev-bin=2.35-0ubuntu3.3`
-- `libc6:amd64=2.35-0ubuntu3.3`
-- `libc6-dev:amd64=2.35-0ubuntu3.3`
-- `locales=2.35-0ubuntu3.3`
+- `libc-bin=2.35-0ubuntu3.4`
+- `libc-dev-bin=2.35-0ubuntu3.4`
+- `libc6:amd64=2.35-0ubuntu3.4`
+- `libc6-dev:amd64=2.35-0ubuntu3.4`
+- `locales=2.35-0ubuntu3.4`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`, `/usr/share/doc/locales/copyright`)
 
@@ -933,9 +933,15 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glibc=2.35-0ubuntu3.4
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35-0ubuntu3.4.dsc' glibc_2.35-0ubuntu3.4.dsc 8884 SHA512:13788156756c01fe08b0567514a91ec7f928651b9fa350bc252618f90e560b1e3eaec917fcf2350ba88e20614c7a088e22cf2cf0e52424a8f0f4da3e5701eab2
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35.orig.tar.xz' glibc_2.35.orig.tar.xz 18165952 SHA512:e7336ce27561be5d7c217832a1136fb327e057bd8d3f92925b35c97e3e9f9e486948b5a1e03e5e4090772ef06437a074d10b82e68f17f1ad8f22077ee39e1b66
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35.orig.tar.xz.asc' glibc_2.35.orig.tar.xz.asc 833 SHA512:2a1c152511dac05f9b4e48f7e7a6b59dbf2d8b71fea54f128173113357be26e86216e13c9865f617049e6858396a221a5abc704f65a786b22453945fd80265e9
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35-0ubuntu3.4.debian.tar.xz' glibc_2.35-0ubuntu3.4.debian.tar.xz 907840 SHA512:14f1c25988492ffcffa5c2010d99ca5698412b0cea852d4c2eca26daf5b8d5401cf7cc9e2648e6f81938a07e9311ba6f805a96057cfeedd8f7a6b0f587e6b5f8
+```
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg-3ubuntu1`
 
@@ -1755,19 +1761,24 @@ $ apt-get source -qq --print-uris libzstd=1.4.8+dfsg-3build1
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.4.8%2bdfsg-3build1.debian.tar.xz' libzstd_1.4.8+dfsg-3build1.debian.tar.xz 12316 SHA512:8123965a6e73c5ddd8d535e78ed1074e2eabd7f8ed090d215a89feedffae9391cf472d2395242d3cb0351cbf76603448dae93ad70d0989806b42b03c65b22db0
 ```
 
-### `dpkg` source package: `linux=5.15.0-84.93`
+### `dpkg` source package: `linux=5.15.0-86.96`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=5.15.0-84.93`
+- `linux-libc-dev:amd64=5.15.0-86.96`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris linux=5.15.0-86.96
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-86.96.dsc' linux_5.15.0-86.96.dsc 7690 SHA512:53d5d1d50764a3a902027f2190d9aec93698693fb4e5c1a9e48fb81fb778c584fb41c99749517a02185553bdb0481542812105ce86147bfaf1373cd5a6367a96
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0.orig.tar.gz' linux_5.15.0.orig.tar.gz 194969557 SHA512:ae9a32132d5988441c189157703b0f8fa4e232d8d24f7104f944c06827db740beafae55eb37a51eb99b4ac513927cd372321fa1e84afff4d450b786e44414861
+'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.15.0-86.96.diff.gz' linux_5.15.0-86.96.diff.gz 10870728 SHA512:ce74806753ab32d8af157453a2bc31dd53a76abc0be0d5d7039d6b14159ae699ff5e4919ca891a9b3b7f85f2ca035e1228c747898059abd0994a28d80a64465e
+```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu4`
 
