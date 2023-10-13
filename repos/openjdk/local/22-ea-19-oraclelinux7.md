@@ -1,10 +1,10 @@
-# `openjdk:22-ea-18-jdk-oraclelinux7`
+# `openjdk:22-ea-19-jdk-oraclelinux7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0b6e716a515a3c6c2a6edcdaf3c0ecfc3dfdc8b0c8dd952e8e660347d6da639c`
-- Created: `2023-10-06T20:13:35.059091652Z`
-- Virtual Size: ~ 530.66 Mb  
+- Image ID: `sha256:243d09a8b58d31df268f69a6c76b3367196cccbbba2212e3fee82f9dfc4cf684`
+- Created: `2023-10-13T02:03:03.580468577Z`
+- Virtual Size: ~ 530.84 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["jshell"]`
@@ -12,7 +12,7 @@
   - `PATH=/usr/java/openjdk-22/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/java/openjdk-22`
   - `LANG=en_US.UTF-8`
-  - `JAVA_VERSION=22-ea+18`
+  - `JAVA_VERSION=22-ea+19`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -71,15 +71,15 @@ $ dnf --quiet download --source --url bzip2-libs-1.0.6-13.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/bzip2-1.0.6-13.el7.src.rpm
 ```
 
-### `rpm` package: `ca-certificates-2022.2.54-74.el7_9.noarch`
+### `rpm` package: `ca-certificates-2023.2.60_v7.0.306-72.el7_9.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url ca-certificates-2022.2.54-74.el7_9.noarch
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/ca-certificates-2022.2.54-74.el7_9.src.rpm
+$ dnf --quiet download --source --url ca-certificates-2023.2.60_v7.0.306-72.el7_9.noarch
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/ca-certificates-2023.2.60_v7.0.306-72.el7_9.src.rpm
 ```
 
 ### `rpm` package: `chkconfig-1.7.6-1.el7.x86_64`
@@ -291,26 +291,26 @@ $ dnf --quiet download --source --url glib2-2.56.1-9.el7_9
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/glib2-2.56.1-9.el7_9.src.rpm
 ```
 
-### `rpm` package: `glibc-2.17-326.0.3.el7_9.x86_64`
+### `rpm` package: `glibc-2.17-326.0.9.el7_9.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url glibc-2.17-326.0.3.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/glibc-2.17-326.0.3.el7_9.src.rpm
+$ dnf --quiet download --source --url glibc-2.17-326.0.9.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/glibc-2.17-326.0.9.el7_9.src.rpm
 ```
 
-### `rpm` package: `glibc-common-2.17-326.0.3.el7_9.x86_64`
+### `rpm` package: `glibc-common-2.17-326.0.9.el7_9.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url glibc-common-2.17-326.0.3.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/glibc-2.17-326.0.3.el7_9.src.rpm
+$ dnf --quiet download --source --url glibc-common-2.17-326.0.9.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/glibc-2.17-326.0.9.el7_9.src.rpm
 ```
 
 ### `rpm` package: `gmp-6.0.0-15.el7.x86_64`
@@ -633,15 +633,15 @@ $ dnf --quiet download --source --url libsepol-2.5-10.el7
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/libsepol-2.5-10.el7.src.rpm
 ```
 
-### `rpm` package: `libssh2-1.8.0-4.el7.x86_64`
+### `rpm` package: `libssh2-1.8.0-4.el7_9.1.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libssh2-1.8.0-4.el7
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/libssh2-1.8.0-4.el7.src.rpm
+$ dnf --quiet download --source --url libssh2-1.8.0-4.el7_9.1
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/libssh2-1.8.0-4.el7_9.1.src.rpm
 ```
 
 ### `rpm` package: `libstdc++-4.8.5-44.0.3.el7.x86_64`
@@ -754,26 +754,26 @@ $ dnf --quiet download --source --url ncurses-libs-5.9-14.20130511.el7_4
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/ncurses-5.9-14.20130511.el7_4.src.rpm
 ```
 
-### `rpm` package: `nspr-4.34.0-3.1.el7_9.x86_64`
+### `rpm` package: `nspr-4.35.0-1.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nspr-4.34.0-3.1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nspr-4.34.0-3.1.el7_9.src.rpm
+$ dnf --quiet download --source --url nspr-4.35.0-1.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nspr-4.35.0-1.el7_9.src.rpm
 ```
 
-### `rpm` package: `nss-3.79.0-5.el7_9.x86_64`
+### `rpm` package: `nss-3.90.0-2.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-3.79.0-5.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.79.0-5.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-3.90.0-2.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.90.0-2.el7_9.src.rpm
 ```
 
 ### `rpm` package: `nss-pem-1.0.3-7.el7_9.1.x86_64`
@@ -787,59 +787,59 @@ $ dnf --quiet download --source --url nss-pem-1.0.3-7.el7_9.1
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-pem-1.0.3-7.el7_9.1.src.rpm
 ```
 
-### `rpm` package: `nss-softokn-3.79.0-4.0.1.el7_9.x86_64`
+### `rpm` package: `nss-softokn-3.90.0-6.0.1.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-softokn-3.79.0-4.0.1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-softokn-3.79.0-4.0.1.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-softokn-3.90.0-6.0.1.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-softokn-3.90.0-6.0.1.el7_9.src.rpm
 ```
 
-### `rpm` package: `nss-softokn-freebl-3.79.0-4.0.1.el7_9.x86_64`
+### `rpm` package: `nss-softokn-freebl-3.90.0-6.0.1.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-softokn-freebl-3.79.0-4.0.1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-softokn-3.79.0-4.0.1.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-softokn-freebl-3.90.0-6.0.1.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-softokn-3.90.0-6.0.1.el7_9.src.rpm
 ```
 
-### `rpm` package: `nss-sysinit-3.79.0-5.el7_9.x86_64`
+### `rpm` package: `nss-sysinit-3.90.0-2.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-sysinit-3.79.0-5.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.79.0-5.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-sysinit-3.90.0-2.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.90.0-2.el7_9.src.rpm
 ```
 
-### `rpm` package: `nss-tools-3.79.0-5.el7_9.x86_64`
+### `rpm` package: `nss-tools-3.90.0-2.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-tools-3.79.0-5.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.79.0-5.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-tools-3.90.0-2.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-3.90.0-2.el7_9.src.rpm
 ```
 
-### `rpm` package: `nss-util-3.79.0-1.el7_9.x86_64`
+### `rpm` package: `nss-util-3.90.0-1.el7_9.x86_64`
 
 Licenses (from `rpm --query`): MPLv2.0
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url nss-util-3.79.0-1.el7_9
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-util-3.79.0-1.el7_9.src.rpm
+$ dnf --quiet download --source --url nss-util-3.90.0-1.el7_9
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/nss-util-3.90.0-1.el7_9.src.rpm
 ```
 
 ### `rpm` package: `openldap-2.4.44-25.el7_9.x86_64`
@@ -1227,15 +1227,15 @@ $ dnf --quiet download --source --url xz-libs-5.2.2-2.el7_9
 https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/xz-5.2.2-2.el7_9.src.rpm
 ```
 
-### `rpm` package: `yum-3.4.3-168.0.3.el7.noarch`
+### `rpm` package: `yum-3.4.3-168.0.5.el7.noarch`
 
 Licenses (from `rpm --query`): GPLv2+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url yum-3.4.3-168.0.3.el7.noarch
-https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/yum-3.4.3-168.0.3.el7.src.rpm
+$ dnf --quiet download --source --url yum-3.4.3-168.0.5.el7.noarch
+https://yum.oracle.com/repo/OracleLinux/OL7/latest/x86_64/getPackageSource/yum-3.4.3-168.0.5.el7.src.rpm
 ```
 
 ### `rpm` package: `yum-metadata-parser-1.1.4-10.el7.x86_64`
