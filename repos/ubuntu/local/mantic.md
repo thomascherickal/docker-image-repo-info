@@ -116,13 +116,9 @@ Licenses: (parsed from: `/usr/share/doc/base-files/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-files=13ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_13ubuntu1.dsc' base-files_13ubuntu1.dsc 1613 SHA512:64c1efe75319a5cbf1baa91c0fd085772df3bc74dd1d3f3c73cf98c6a06d2775c8aa192c2df0f73496aaeaec8e11a1c353ac0c6cc2a422ee1fed8db14e88cd0f
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-files/base-files_13ubuntu1.tar.xz' base-files_13ubuntu1.tar.xz 93176 SHA512:617ecd27787efcfd8d26bbf3afa42822cab7e9bcbe062c8c97029bf2531c67eeb6bfc0e7c8c23a6e6177327a49d6c9d8d92fad755d1721f66794c82dbaeb4985
-```
 
 ### `dpkg` source package: `base-passwd=3.6.1`
 
