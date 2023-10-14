@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c957927264ebbae6be7e322101852a898ac565ec0b3f314c2d21212bd6c18271`
-- Created: `2023-10-11T17:23:12.345299013Z`
-- Virtual Size: ~ 268.45 Mb  
+- Image ID: `sha256:02e3b1de73edc913ef133fab63c2ffe61de3c0042b456b6865628e6c45b2c958`
+- Created: `2023-10-13T13:17:26.40592027Z`
+- Virtual Size: ~ 267.46 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -642,13 +642,13 @@ $ apt-get source -qq --print-uris gcc-12=12.3.0-1ubuntu1~22.04
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-12/gcc-12_12.3.0-1ubuntu1%7e22.04.debian.tar.xz' gcc-12_12.3.0-1ubuntu1~22.04.debian.tar.xz 575908 SHA512:d1bf37d9af699430d3b107d0966194b20aef22654337efdb99971b270609785020dd1f04ce6a0f3f3eb0dbad704b46e9d9e5dfa6a497e98c78a867f5bc290038
 ```
 
-### `dpkg` source package: `glibc=2.35-0ubuntu3.3`
+### `dpkg` source package: `glibc=2.35-0ubuntu3.4`
 
 Binary Packages:
 
-- `libc-bin=2.35-0ubuntu3.3`
-- `libc6:amd64=2.35-0ubuntu3.3`
-- `locales=2.35-0ubuntu3.3`
+- `libc-bin=2.35-0ubuntu3.4`
+- `libc6:amd64=2.35-0ubuntu3.4`
+- `locales=2.35-0ubuntu3.4`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/locales/copyright`)
 
@@ -656,9 +656,15 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glibc=2.35-0ubuntu3.4
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35-0ubuntu3.4.dsc' glibc_2.35-0ubuntu3.4.dsc 8884 SHA512:13788156756c01fe08b0567514a91ec7f928651b9fa350bc252618f90e560b1e3eaec917fcf2350ba88e20614c7a088e22cf2cf0e52424a8f0f4da3e5701eab2
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35.orig.tar.xz' glibc_2.35.orig.tar.xz 18165952 SHA512:e7336ce27561be5d7c217832a1136fb327e057bd8d3f92925b35c97e3e9f9e486948b5a1e03e5e4090772ef06437a074d10b82e68f17f1ad8f22077ee39e1b66
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35.orig.tar.xz.asc' glibc_2.35.orig.tar.xz.asc 833 SHA512:2a1c152511dac05f9b4e48f7e7a6b59dbf2d8b71fea54f128173113357be26e86216e13c9865f617049e6858396a221a5abc704f65a786b22453945fd80265e9
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.35-0ubuntu3.4.debian.tar.xz' glibc_2.35-0ubuntu3.4.debian.tar.xz 907840 SHA512:14f1c25988492ffcffa5c2010d99ca5698412b0cea852d4c2eca26daf5b8d5401cf7cc9e2648e6f81938a07e9311ba6f805a96057cfeedd8f7a6b0f587e6b5f8
+```
 
 ### `dpkg` source package: `gmp=2:6.2.1+dfsg-3ubuntu1`
 
