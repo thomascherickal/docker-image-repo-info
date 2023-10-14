@@ -1,10 +1,10 @@
-# `tomcat:9.0.80-jdk11-corretto-al2`
+# `tomcat:9.0.82-jdk11-corretto-al2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f1d74b4acd79bbef907f92e333d4721ec23c14a9e5c365ac548a01b6872a8a64`
-- Created: `2023-09-23T02:00:57.598512934Z`
-- Virtual Size: ~ 482.25 Mb  
+- Image ID: `sha256:67a35537915b84f819c9f75249b4c5f64d5ce91c9cc3f38140aa704c389af13f`
+- Created: `2023-10-14T02:49:26.069758108Z`
+- Virtual Size: ~ 482.29 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -17,8 +17,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=48F8E69F6390C9F25CFEDCD268248959359E722B A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.80`
-  - `TOMCAT_SHA512=24014441b0ccdd2dda238efa56e1a039476488943e6cf04f8a372a340a49dd21ce174ed68e2f5fcc43401e85fae6d00c5eac3d357653e91601737b6fa94476de`
+  - `TOMCAT_VERSION=9.0.82`
+  - `TOMCAT_SHA512=2b13f11f4e0d0b9aee667c256c6ea5d2853b067e8b7e8293f117da050d3833fda8aa9d9ad278bd12fb7fbf0825108c7d0384509f44c05f9bad73eb099cfaa128`
 
 ## `rpm` (`.rpm`-based packages)
 
@@ -176,15 +176,15 @@ $ dnf --quiet download --source --url diffutils-3.3-5.amzn2
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/7498d5605faa5fe11944f18f481bfd06505d92eb389668b4b387c589a3fc7eb7/../../../../../blobstore/3b94189bd4a0bbb334c887b5a7306f5cbe927e45ca9a9c1e68e6466570b7a4e1/diffutils-3.3-5.amzn2.src.rpm
 ```
 
-### `rpm` package: `elfutils-libelf-0.176-2.amzn2.0.1.x86_64`
+### `rpm` package: `elfutils-libelf-0.176-2.amzn2.0.2.x86_64`
 
 Licenses (from `rpm --query`): GPLv2+ or LGPLv3+
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url elfutils-libelf-0.176-2.amzn2.0.1
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/7498d5605faa5fe11944f18f481bfd06505d92eb389668b4b387c589a3fc7eb7/../../../../../blobstore/a49409874188bde60493bd9ed201b4cd0aad51c1c9e864c67d61f0d7ac1691a8/elfutils-0.176-2.amzn2.0.1.src.rpm
+$ dnf --quiet download --source --url elfutils-libelf-0.176-2.amzn2.0.2
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/7498d5605faa5fe11944f18f481bfd06505d92eb389668b4b387c589a3fc7eb7/../../../../../blobstore/1c91483c986f8c6728684f387c271636212f24068e329c1b81b7502fdeeadddc/elfutils-0.176-2.amzn2.0.2.src.rpm
 ```
 
 ### `rpm` package: `expat-2.1.0-15.amzn2.0.2.x86_64`
@@ -667,15 +667,15 @@ $ dnf --quiet download --source --url libsepol-2.5-8.1.amzn2.0.2
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/7498d5605faa5fe11944f18f481bfd06505d92eb389668b4b387c589a3fc7eb7/../../../../../blobstore/c5597168fd76decdd14b8c307ea2ab87a22f7e2236cf9c2ff4cf438c0e6d4120/libsepol-2.5-8.1.amzn2.0.2.src.rpm
 ```
 
-### `rpm` package: `libssh2-1.4.3-12.amzn2.2.5.x86_64`
+### `rpm` package: `libssh2-1.4.3-12.amzn2.2.6.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url libssh2-1.4.3-12.amzn2.2.5
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/7498d5605faa5fe11944f18f481bfd06505d92eb389668b4b387c589a3fc7eb7/../../../../../blobstore/3e1753be032a39050442ac2e38f282b8d0c1f2fd19530bbb26729f9546a796f8/libssh2-1.4.3-12.amzn2.2.5.src.rpm
+$ dnf --quiet download --source --url libssh2-1.4.3-12.amzn2.2.6
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/7498d5605faa5fe11944f18f481bfd06505d92eb389668b4b387c589a3fc7eb7/../../../../../blobstore/d9a9fc99ac24238ed884d06fcfcc22ff7b2403783bf4bc31cc92108135e6899e/libssh2-1.4.3-12.amzn2.2.6.src.rpm
 ```
 
 ### `rpm` package: `libstdc++-7.3.1-17.amzn2.x86_64`
@@ -1173,15 +1173,15 @@ $ dnf --quiet download --source --url sqlite-3.7.17-8.amzn2.1.2
 https://cdn.amazonlinux.com/2/core/2.0/SRPMS/7498d5605faa5fe11944f18f481bfd06505d92eb389668b4b387c589a3fc7eb7/../../../../../blobstore/5ada8c006d0e919d9a1fcdc513c897787b875dcd0143ca89aae582983119f1d6/sqlite-3.7.17-8.amzn2.1.2.src.rpm
 ```
 
-### `rpm` package: `system-release-2-14.amzn2.x86_64`
+### `rpm` package: `system-release-2-15.amzn2.x86_64`
 
 Licenses (from `rpm --query`): GPLv2
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url system-release-2-14.amzn2
-https://cdn.amazonlinux.com/2/core/2.0/SRPMS/7498d5605faa5fe11944f18f481bfd06505d92eb389668b4b387c589a3fc7eb7/../../../../../blobstore/f8291de4fb74f8128b183c912b52af7d376f9c08892cd663841193ebcc9e4496/system-release-2-14.amzn2.src.rpm
+$ dnf --quiet download --source --url system-release-2-15.amzn2
+https://cdn.amazonlinux.com/2/core/2.0/SRPMS/7498d5605faa5fe11944f18f481bfd06505d92eb389668b4b387c589a3fc7eb7/../../../../../blobstore/2dbdb2a40e59547f93ef1c1295278e3f201660c58d8b8bd661548b710e2f960d/system-release-2-15.amzn2.src.rpm
 ```
 
 ### `rpm` package: `tzdata-2023c-1.amzn2.0.1.noarch`
