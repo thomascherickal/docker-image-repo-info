@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5478619f7799f43f922627b7c27b76758a2bee1bb7ece77e856b7e0dacff5684`
-- Created: `2023-08-28T21:22:24.480818968Z`
+- Image ID: `sha256:622457b842839208cdc8a8452edcc096179287c5294cd11f57767f63e0a19246`
+- Created: `2023-10-13T12:43:09.495762817Z`
 - Virtual Size: ~ 468.68 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -282,13 +282,13 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.19`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.20`
 
 Binary Packages:
 
-- `curl=7.68.0-1ubuntu2.19`
-- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.19`
-- `libcurl4:amd64=7.68.0-1ubuntu2.19`
+- `curl=7.68.0-1ubuntu2.20`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.20`
+- `libcurl4:amd64=7.68.0-1ubuntu2.20`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -299,9 +299,14 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.20
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.20.dsc' curl_7.68.0-1ubuntu2.20.dsc 2737 SHA512:fc602637e036ba63548581b1950c055cc5fdb0b950848baac342fe117715a6021e7ecb00db10c9e44d777feba7c911c48b80f27880be8d9252250857414f614b
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.20.debian.tar.xz' curl_7.68.0-1ubuntu2.20.debian.tar.xz 69464 SHA512:63c11b6186ed3dded8f90bcdac432ce4a79de6dc6364eb29d7fa88ad367961be3a9f34035b30e7ba2c1d3d7d7a80d765ffdbe9466e03512bd73339b3023e009e
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -701,22 +706,27 @@ $ apt-get source -qq --print-uris git=1:2.25.1-1ubuntu3.11
 'http://archive.ubuntu.com/ubuntu/pool/main/g/git/git_2.25.1-1ubuntu3.11.debian.tar.xz' git_2.25.1-1ubuntu3.11.debian.tar.xz 708608 SHA512:f761df90be2d25b8bbdcbec0fa781bf2b20e954350eb15a1a210408876ac7e90ca4b7643b00c074cd4ce7b286494b0bfb71f4586024e01c026737cb290165ba9
 ```
 
-### `dpkg` source package: `glibc=2.31-0ubuntu9.9`
+### `dpkg` source package: `glibc=2.31-0ubuntu9.12`
 
 Binary Packages:
 
-- `libc-bin=2.31-0ubuntu9.9`
-- `libc6:amd64=2.31-0ubuntu9.9`
-- `locales=2.31-0ubuntu9.9`
+- `libc-bin=2.31-0ubuntu9.12`
+- `libc6:amd64=2.31-0ubuntu9.12`
+- `locales=2.31-0ubuntu9.12`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/locales/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.12
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.12.dsc' glibc_2.31-0ubuntu9.12.dsc 9378 SHA512:2055d7f2d479789f44629fc4f9f938e3bcfdc035b6ca49ee5238aa0de18e4db3da1197591951838514565c1c1bad825273026bc6eb146394f646039d13c787a9
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA512:2ff56628fe935cacbdf1825534f15d45cb87a159cbdb2e6a981590eeb6174ed4b3ff7041519cdecbd4f624ac20b745e2dd9614c420dd3ea186b8f36bc4c2453c
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.12.debian.tar.xz' glibc_2.31-0ubuntu9.12.debian.tar.xz 879820 SHA512:94fe56d6feb9507ad0d6d81080a064729e259aa92130e0cb08567a61ec2615b11899959f909396a54df0a1e67e29f03ee9e10c2fad406ee9f3333e7269758a32
+```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4ubuntu0.1`
 
@@ -1406,20 +1416,26 @@ $ apt-get source -qq --print-uris libunistring=0.9.10-2
 'http://archive.ubuntu.com/ubuntu/pool/main/libu/libunistring/libunistring_0.9.10-2.debian.tar.xz' libunistring_0.9.10-2.debian.tar.xz 40708 SHA256:5e291a1a15549d12c64575c72868a8c94586715d35062b5efb48fe9a9d09924e
 ```
 
-### `dpkg` source package: `libx11=2:1.6.9-2ubuntu1.5`
+### `dpkg` source package: `libx11=2:1.6.9-2ubuntu1.6`
 
 Binary Packages:
 
-- `libx11-6:amd64=2:1.6.9-2ubuntu1.5`
-- `libx11-data=2:1.6.9-2ubuntu1.5`
+- `libx11-6:amd64=2:1.6.9-2ubuntu1.6`
+- `libx11-data=2:1.6.9-2ubuntu1.6`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris libx11=2:1.6.9-2ubuntu1.6
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9-2ubuntu1.6.dsc' libx11_1.6.9-2ubuntu1.6.dsc 2671 SHA512:46674410511381909f8f29ee70138e3158098c0937784783574bbccca9ce43e319f49663df5d8fb6e5ee57e33bccaaf7b8c9590183bfda4c80a8b9ac7173594a
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9.orig.tar.gz' libx11_1.6.9.orig.tar.gz 2994329 SHA512:c79cf0924e920a2e8d2e9af45e73ed42b565dea79ac68d4c3889033738274694b29cedb62c057fec1aa7f7ad7dcf843334fccb43470bbae7922d42373c1c6045
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9.orig.tar.gz.asc' libx11_1.6.9.orig.tar.gz.asc 659 SHA512:56e53d1481be4e12f89af2fbcd297a3612996f5ca1eae39d6fe336f9b52832ea430ac0568e556b9e57291562c56590086871c08ec7ac046f15af4211f680adee
+'http://archive.ubuntu.com/ubuntu/pool/main/libx/libx11/libx11_1.6.9-2ubuntu1.6.diff.gz' libx11_1.6.9-2ubuntu1.6.diff.gz 71964 SHA512:61bbb0b65991c46fb5f63d4698abf3ac484cf156bbcc665583a549e729975e9b45adf41a865dd59ed719426da9c703bf733626dd829450ffc58e02139af9808f
+```
 
 ### `dpkg` source package: `libxau=1:1.0.9-0ubuntu1`
 

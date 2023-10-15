@@ -1,4 +1,4 @@
-# `clojure:lein-2.10.0-alpine`
+# `clojure:temurin-17-lein-2.10.0-alpine`
 
 ## Docker Metadata
 
