@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:68d4b191f02c2c3d23b0dd340c812e2046d24cb0341b567a665334b2c754cdd7`
-- Created: `2023-10-10T20:30:24.996432762Z`
-- Virtual Size: ~ 1.97 Gb  
+- Image ID: `sha256:b408db230000fd63ba469b95af7ac2bc21059b32f667dbb2fb0cd3eda689c335`
+- Created: `2023-10-13T08:27:26.513246405Z`
+- Virtual Size: ~ 1.96 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/gzserver_entrypoint.sh"]`
@@ -899,13 +899,13 @@ $ apt-get source -qq --print-uris cups=2.3.1-9ubuntu1.6
 'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1-9ubuntu1.6.debian.tar.xz' cups_2.3.1-9ubuntu1.6.debian.tar.xz 359696 SHA512:9aab4becd11309c088cd0b00f7bf73a6a2f2908bdca6b51aaeb74178930fb1b40672493efa0b975f27dd2b6770e4409c85970eca4ab94a40ff247a388edfe63e
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.19`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.20`
 
 Binary Packages:
 
-- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.19`
-- `libcurl4:amd64=7.68.0-1ubuntu2.19`
-- `libcurl4-openssl-dev:amd64=7.68.0-1ubuntu2.19`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.20`
+- `libcurl4:amd64=7.68.0-1ubuntu2.20`
+- `libcurl4-openssl-dev:amd64=7.68.0-1ubuntu2.20`
 
 Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`, `/usr/share/doc/libcurl4-openssl-dev/copyright`)
 
@@ -916,9 +916,14 @@ Licenses: (parsed from: `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.20
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.20.dsc' curl_7.68.0-1ubuntu2.20.dsc 2737 SHA512:fc602637e036ba63548581b1950c055cc5fdb0b950848baac342fe117715a6021e7ecb00db10c9e44d777feba7c911c48b80f27880be8d9252250857414f614b
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.20.debian.tar.xz' curl_7.68.0-1ubuntu2.20.debian.tar.xz 69464 SHA512:63c11b6186ed3dded8f90bcdac432ce4a79de6dc6364eb29d7fa88ad367961be3a9f34035b30e7ba2c1d3d7d7a80d765ffdbe9466e03512bd73339b3023e009e
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -1983,11 +1988,12 @@ $ apt-get source -qq --print-uris glib2.0=2.64.6-1~ubuntu20.04.6
 
 Binary Packages:
 
+- `libc-bin=2.31-0ubuntu9.12`
 - `libc-dev-bin=2.31-0ubuntu9.12`
 - `libc6:amd64=2.31-0ubuntu9.12`
 - `libc6-dev:amd64=2.31-0ubuntu9.12`
 
-Licenses: (parsed from: `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc-dev-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/libc6-dev/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
@@ -2000,21 +2006,6 @@ $ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.12
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA512:2ff56628fe935cacbdf1825534f15d45cb87a159cbdb2e6a981590eeb6174ed4b3ff7041519cdecbd4f624ac20b745e2dd9614c420dd3ea186b8f36bc4c2453c
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.12.debian.tar.xz' glibc_2.31-0ubuntu9.12.debian.tar.xz 879820 SHA512:94fe56d6feb9507ad0d6d81080a064729e259aa92130e0cb08567a61ec2615b11899959f909396a54df0a1e67e29f03ee9e10c2fad406ee9f3333e7269758a32
 ```
-
-### `dpkg` source package: `glibc=2.31-0ubuntu9.9`
-
-Binary Packages:
-
-- `libc-bin=2.31-0ubuntu9.9`
-
-Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`)
-
-- `GPL-2`
-- `LGPL-2.1`
-
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
-
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4ubuntu0.1`
 
@@ -7674,21 +7665,26 @@ $ apt-get source -qq --print-uris tcp-wrappers=7.6.q-30
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tcp-wrappers/tcp-wrappers_7.6.q-30.debian.tar.xz' tcp-wrappers_7.6.q-30.debian.tar.xz 36204 SHA256:71661be900202a909144ba1f49f7dceb83a619b88a11aca3b9d867934c0dbb36
 ```
 
-### `dpkg` source package: `tiff=4.1.0+git191117-2ubuntu0.20.04.9`
+### `dpkg` source package: `tiff=4.1.0+git191117-2ubuntu0.20.04.10`
 
 Binary Packages:
 
-- `libtiff-dev:amd64=4.1.0+git191117-2ubuntu0.20.04.9`
-- `libtiff5:amd64=4.1.0+git191117-2ubuntu0.20.04.9`
-- `libtiffxx5:amd64=4.1.0+git191117-2ubuntu0.20.04.9`
+- `libtiff-dev:amd64=4.1.0+git191117-2ubuntu0.20.04.10`
+- `libtiff5:amd64=4.1.0+git191117-2ubuntu0.20.04.10`
+- `libtiffxx5:amd64=4.1.0+git191117-2ubuntu0.20.04.10`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff-dev/copyright`, `/usr/share/doc/libtiff5/copyright`, `/usr/share/doc/libtiffxx5/copyright`)
 
 - `Hylafax`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2ubuntu0.20.04.10
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.10.dsc' tiff_4.1.0+git191117-2ubuntu0.20.04.10.dsc 2255 SHA512:91cfa7a9a6f962cdf26b92f0360bf7222da2dda964db2a247a9fe22fc1d28427bbd1a5e775038c501a2dbb390cb0b66dd03a8b0f91963d2fd6aba482742ae2b2
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA512:25b4bc4522fc2e7f3ca6857b87acd4481d8643566b1120c755020afc8b48949238ee2078bc43dd3ba7407eaa4e36b1b712d7056f101ddaf60f94dab8607870b8
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.10.debian.tar.xz' tiff_4.1.0+git191117-2ubuntu0.20.04.10.debian.tar.xz 44440 SHA512:501553027e1afc2f835050e328ea7efc6de964c73764e8efd139456252aec2714a6443d7de064a608d27662f839a276040727bc8d9a678d9f8ceca26cac43647
+```
 
 ### `dpkg` source package: `tinyxml2=7.0.0+dfsg-1build1`
 
