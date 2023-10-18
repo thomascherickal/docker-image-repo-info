@@ -1,7 +1,7 @@
 ## `tomcat:9-jre17-temurin-focal`
 
 ```console
-$ docker pull tomcat@sha256:f2873f730d178944ccdeb8a91967f748556d9eea72f8de88688e258a3e44fb5d
+$ docker pull tomcat@sha256:3b9cfb531e38a52ca0f4ce5ebfa6aa0afbc7125f87d9a1a5ea21acf013a7946b
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -363,14 +363,14 @@ CMD ["catalina.sh" "run"]
 ### `tomcat:9-jre17-temurin-focal` - linux; ppc64le
 
 ```console
-$ docker pull tomcat@sha256:a43e23bb80dd2f520ca307137da0079bb1431e3deed3aa769806dc3f919fd5c0
+$ docker pull tomcat@sha256:57e50f5bfb015ef07f384eda2340cb924225bd459dd658b8d22a83ae973f7913
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **116.0 MB (115968993 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:79d0cf5bed024d422d61aa4602e3aa1566111fac765de33deedd4662d3de726e`
+-	Image ID: `sha256:c15c027e82cf37308dd38c099965406bd3b6a04a992d58319f524483d1e631e1`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -432,9 +432,9 @@ RUN set -eux; 	apt-get update; 	xargs -rt apt-get install -y --no-install-recomm
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
 # Sat, 14 Oct 2023 02:28:03 GMT
 EXPOSE 8080
-# Sat, 14 Oct 2023 02:28:04 GMT
+# Wed, 18 Oct 2023 00:25:48 GMT
 ENTRYPOINT []
-# Sat, 14 Oct 2023 02:28:04 GMT
+# Wed, 18 Oct 2023 00:25:48 GMT
 CMD ["catalina.sh" "run"]
 ```
 

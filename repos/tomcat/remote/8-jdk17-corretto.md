@@ -1,7 +1,7 @@
 ## `tomcat:8-jdk17-corretto`
 
 ```console
-$ docker pull tomcat@sha256:89609aa1bb26f004d4245a2dd5e55303540c2c6d8ddd6013b8bef38531d61b43
+$ docker pull tomcat@sha256:9f0127784307cf054545f0ed88587e487a420c013a796c182546152e213fd26a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull tomcat@sha256:89609aa1bb26f004d4245a2dd5e55303540c2c6d8ddd6013b8be
 ### `tomcat:8-jdk17-corretto` - linux; amd64
 
 ```console
-$ docker pull tomcat@sha256:7697d2141350e2226730e0b85f900085eff74a877586f3b66a21751af1dcc6d8
+$ docker pull tomcat@sha256:893ebb1ec7570ba18b3a8a09aac112b747ffd19774ab79714af76b632c386e00
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **230.5 MB (230472261 bytes)**  
+-	Total Size: **230.5 MB (230486662 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a0ef62724aa40c62d25528991abf43d1bff4adae8d323058d3aefbe0537205af`
+-	Image ID: `sha256:b212b72d5690978a187bc0b06bd46ccadb45854dee38908766288892378ed08f`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -36,33 +36,33 @@ RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.
 ENV LANG=C.UTF-8
 # Thu, 12 Oct 2023 23:10:29 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto
-# Fri, 13 Oct 2023 00:22:33 GMT
+# Wed, 18 Oct 2023 00:30:38 GMT
 ENV CATALINA_HOME=/usr/local/tomcat
-# Fri, 13 Oct 2023 00:22:33 GMT
+# Wed, 18 Oct 2023 00:30:38 GMT
 ENV PATH=/usr/local/tomcat/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 13 Oct 2023 00:22:33 GMT
+# Wed, 18 Oct 2023 00:30:39 GMT
 RUN mkdir -p "$CATALINA_HOME"
-# Fri, 13 Oct 2023 00:22:33 GMT
+# Wed, 18 Oct 2023 00:30:39 GMT
 WORKDIR /usr/local/tomcat
-# Fri, 13 Oct 2023 00:22:33 GMT
+# Wed, 18 Oct 2023 00:30:39 GMT
 ENV TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib
-# Fri, 13 Oct 2023 00:22:33 GMT
+# Wed, 18 Oct 2023 00:30:39 GMT
 ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
-# Fri, 13 Oct 2023 00:32:43 GMT
+# Wed, 18 Oct 2023 00:36:46 GMT
 ENV GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 5C3C5F3E314C866292F359A8F3AD5C94A67F707E 765908099ACF92702C7D949BFA0C35EA8AA299F1 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
-# Fri, 13 Oct 2023 00:32:43 GMT
+# Wed, 18 Oct 2023 00:36:46 GMT
 ENV TOMCAT_MAJOR=8
-# Fri, 13 Oct 2023 00:32:43 GMT
-ENV TOMCAT_VERSION=8.5.94
-# Fri, 13 Oct 2023 00:32:43 GMT
-ENV TOMCAT_SHA512=bee5399a0fef6dea774ac2b99ebf58b69c67079c0e870698be3c7786c88e9a120cb073223d0508621585e13f509f3fade9d276cfadeb0692e09feeb5f7bb2cc9
-# Fri, 13 Oct 2023 00:33:36 GMT
+# Wed, 18 Oct 2023 00:36:46 GMT
+ENV TOMCAT_VERSION=8.5.95
+# Wed, 18 Oct 2023 00:36:46 GMT
+ENV TOMCAT_SHA512=1c36d0de6ef0c1bab090bfb30908f8cf848510ab83d6140890e2e1db001e8a4d0d5982a53c92e4cc7a736de304b22f461706689c48160e24c299dae7a148a673
+# Wed, 18 Oct 2023 00:37:26 GMT
 RUN set -eux; 		if ! command -v yumdb > /dev/null; then 		yum install -y --setopt=skip_missing_names_on_install=False yum-utils; 		yumdb set reason dep yum-utils; 	fi; 	_yum_install_temporary() { ( set -eu +x; 		local pkg todo=''; 		for pkg; do 			if ! rpm --query "$pkg" > /dev/null 2>&1; then 				todo="$todo $pkg"; 			fi; 		done; 		if [ -n "$todo" ]; then 			set -x; 			yum install -y --setopt=skip_missing_names_on_install=False $todo; 			yumdb set reason dep $todo; 		fi; 	) }; 	_yum_install_temporary gzip tar; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local mvnFile="${1:-}"; 		local success=; 		local distUrl=; 		for distUrl in 			"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile" 			"https://downloads.apache.org/$distFile" 			"https://www-us.apache.org/dist/$distFile" 			"https://www.apache.org/dist/$distFile" 			"https://archive.apache.org/dist/$distFile" 			${mvnFile:+"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile"} 		; do 			if curl -fL -o "$f" "$distUrl" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	_yum_install_temporary 		apr-devel 		gcc 		make 		openssl11-devel 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl 		; 		nproc="$(nproc)"; 		make -j "$nproc"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ && $(NF-1) != "=>" { print $(NF-1) }' 		| xargs -rt readlink -e 		| sort -u 		| xargs -rt rpm --query --whatprovides 		| sort -u 		| tee "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt" 		| xargs -r yumdb set reason user 	; 		yum autoremove -y; 	yum clean all; 	rm -rf /var/cache/yum; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 1777 logs temp work; 		catalina.sh version
-# Fri, 13 Oct 2023 00:33:38 GMT
+# Wed, 18 Oct 2023 00:37:27 GMT
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Fri, 13 Oct 2023 00:33:38 GMT
+# Wed, 18 Oct 2023 00:37:27 GMT
 EXPOSE 8080
-# Fri, 13 Oct 2023 00:33:38 GMT
+# Wed, 18 Oct 2023 00:37:27 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -75,30 +75,30 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Thu, 12 Oct 2023 23:24:13 GMT  
 		Size: 152.1 MB (152116855 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ef74c28b948c1bd7609aee04919fa4d3c2971d5096d67ab936983337d2655826`  
-		Last Modified: Fri, 13 Oct 2023 00:49:26 GMT  
-		Size: 173.0 B  
+	-	`sha256:785495fafd03ee40538d69beb02e1e4c1561992c4dda9448f9bbb30fbdf8c7e0`  
+		Last Modified: Wed, 18 Oct 2023 00:50:45 GMT  
+		Size: 172.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4053fa4f3e9e4eaf454b83622e8ae80d51127a3783c0bd771e3e40d13a955cf0`  
-		Last Modified: Fri, 13 Oct 2023 00:55:46 GMT  
-		Size: 15.9 MB (15885456 bytes)  
+	-	`sha256:fe3e3c7914691ad1d9ba7430c367ee1b8a4a41357939929f7785e34829fd7d42`  
+		Last Modified: Wed, 18 Oct 2023 00:54:45 GMT  
+		Size: 15.9 MB (15899857 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5a50564f56122e47ff34495cb16fac415026d06c8ba148d9a04f3519166c49ac`  
-		Last Modified: Fri, 13 Oct 2023 00:55:44 GMT  
-		Size: 132.0 B  
+	-	`sha256:f3d179a1ad8803c6dc2ccac14c9ade26214a0e45d4a8fddb037fabb186b1e7fc`  
+		Last Modified: Wed, 18 Oct 2023 00:54:44 GMT  
+		Size: 133.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `tomcat:8-jdk17-corretto` - linux; arm64 variant v8
 
 ```console
-$ docker pull tomcat@sha256:1c9f924c80e716f1745ee7b7d63ccb945eca07ff21704125642591cf7f0af00a
+$ docker pull tomcat@sha256:283ffa193025d068e574a603dc8acbf02f83df660d6f4bf3f979639faabb5ff0
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **230.7 MB (230675850 bytes)**  
+-	Total Size: **230.7 MB (230665546 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:673fc3249ff2f30aaee89a2afaf8db4a8e36762f6facb1a0f0e079114ef7fe0f`
+-	Image ID: `sha256:e8ef3e104086439cf9abcc8f3ad3914b90ad7d0b9fd570c926614d96cfda5ebf`
 -	Default Command: `["catalina.sh","run"]`
 
 ```dockerfile
@@ -115,33 +115,33 @@ RUN set -eux     && export GNUPGHOME="$(mktemp -d)"     && curl -fL -o corretto.
 ENV LANG=C.UTF-8
 # Thu, 12 Oct 2023 23:17:13 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-17-amazon-corretto
-# Fri, 13 Oct 2023 00:19:48 GMT
+# Wed, 18 Oct 2023 00:55:49 GMT
 ENV CATALINA_HOME=/usr/local/tomcat
-# Fri, 13 Oct 2023 00:19:48 GMT
+# Wed, 18 Oct 2023 00:55:49 GMT
 ENV PATH=/usr/local/tomcat/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 13 Oct 2023 00:19:49 GMT
+# Wed, 18 Oct 2023 00:55:49 GMT
 RUN mkdir -p "$CATALINA_HOME"
-# Fri, 13 Oct 2023 00:19:49 GMT
+# Wed, 18 Oct 2023 00:55:49 GMT
 WORKDIR /usr/local/tomcat
-# Fri, 13 Oct 2023 00:19:49 GMT
+# Wed, 18 Oct 2023 00:55:49 GMT
 ENV TOMCAT_NATIVE_LIBDIR=/usr/local/tomcat/native-jni-lib
-# Fri, 13 Oct 2023 00:19:49 GMT
+# Wed, 18 Oct 2023 00:55:49 GMT
 ENV LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib
-# Fri, 13 Oct 2023 00:28:10 GMT
+# Wed, 18 Oct 2023 01:00:47 GMT
 ENV GPG_KEYS=05AB33110949707C93A279E3D3EFE6B686867BA6 07E48665A34DCAFAE522E5E6266191C37C037D42 47309207D818FFD8DCD3F83F1931D684307A10A5 541FBE7D8F78B25E055DDEE13C370389288584E7 5C3C5F3E314C866292F359A8F3AD5C94A67F707E 765908099ACF92702C7D949BFA0C35EA8AA299F1 79F7026C690BAA50B92CD8B66A3AD3F4F22C4FED 9BA44C2621385CB966EBA586F72C284D731FABEE A27677289986DB50844682F8ACB77FC2E86E29AC A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243 F3A04C595DB5B6A5F1ECA43E3B7BBB100D811BBE F7DA48BB64BCB84ECBA7EE6935CD23C10D498E23
-# Fri, 13 Oct 2023 00:28:11 GMT
+# Wed, 18 Oct 2023 01:00:47 GMT
 ENV TOMCAT_MAJOR=8
-# Fri, 13 Oct 2023 00:28:11 GMT
-ENV TOMCAT_VERSION=8.5.94
-# Fri, 13 Oct 2023 00:28:11 GMT
-ENV TOMCAT_SHA512=bee5399a0fef6dea774ac2b99ebf58b69c67079c0e870698be3c7786c88e9a120cb073223d0508621585e13f509f3fade9d276cfadeb0692e09feeb5f7bb2cc9
-# Fri, 13 Oct 2023 00:28:55 GMT
+# Wed, 18 Oct 2023 01:00:47 GMT
+ENV TOMCAT_VERSION=8.5.95
+# Wed, 18 Oct 2023 01:00:47 GMT
+ENV TOMCAT_SHA512=1c36d0de6ef0c1bab090bfb30908f8cf848510ab83d6140890e2e1db001e8a4d0d5982a53c92e4cc7a736de304b22f461706689c48160e24c299dae7a148a673
+# Wed, 18 Oct 2023 01:01:19 GMT
 RUN set -eux; 		if ! command -v yumdb > /dev/null; then 		yum install -y --setopt=skip_missing_names_on_install=False yum-utils; 		yumdb set reason dep yum-utils; 	fi; 	_yum_install_temporary() { ( set -eu +x; 		local pkg todo=''; 		for pkg; do 			if ! rpm --query "$pkg" > /dev/null 2>&1; then 				todo="$todo $pkg"; 			fi; 		done; 		if [ -n "$todo" ]; then 			set -x; 			yum install -y --setopt=skip_missing_names_on_install=False $todo; 			yumdb set reason dep $todo; 		fi; 	) }; 	_yum_install_temporary gzip tar; 		ddist() { 		local f="$1"; shift; 		local distFile="$1"; shift; 		local mvnFile="${1:-}"; 		local success=; 		local distUrl=; 		for distUrl in 			"https://www.apache.org/dyn/closer.cgi?action=download&filename=$distFile" 			"https://downloads.apache.org/$distFile" 			"https://www-us.apache.org/dist/$distFile" 			"https://www.apache.org/dist/$distFile" 			"https://archive.apache.org/dist/$distFile" 			${mvnFile:+"https://repo1.maven.org/maven2/org/apache/tomcat/tomcat/$mvnFile"} 		; do 			if curl -fL -o "$f" "$distUrl" && [ -s "$f" ]; then 				success=1; 				break; 			fi; 		done; 		[ -n "$success" ]; 	}; 		ddist 'tomcat.tar.gz' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz"; 	echo "$TOMCAT_SHA512 *tomcat.tar.gz" | sha512sum --strict --check -; 	ddist 'tomcat.tar.gz.asc' "tomcat/tomcat-$TOMCAT_MAJOR/v$TOMCAT_VERSION/bin/apache-tomcat-$TOMCAT_VERSION.tar.gz.asc" "$TOMCAT_VERSION/tomcat-$TOMCAT_VERSION.tar.gz.asc"; 	export GNUPGHOME="$(mktemp -d)"; 	for key in $GPG_KEYS; do 		gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 	done; 	gpg --batch --verify tomcat.tar.gz.asc tomcat.tar.gz; 	tar -xf tomcat.tar.gz --strip-components=1; 	rm bin/*.bat; 	rm tomcat.tar.gz*; 	rm -rf "$GNUPGHOME"; 		mv webapps webapps.dist; 	mkdir webapps; 		nativeBuildDir="$(mktemp -d)"; 	tar -xf bin/tomcat-native.tar.gz -C "$nativeBuildDir" --strip-components=1; 	_yum_install_temporary 		apr-devel 		gcc 		make 		openssl11-devel 	; 	( 		export CATALINA_HOME="$PWD"; 		cd "$nativeBuildDir/native"; 		aprConfig="$(command -v apr-1-config)"; 		./configure 			--libdir="$TOMCAT_NATIVE_LIBDIR" 			--prefix="$CATALINA_HOME" 			--with-apr="$aprConfig" 			--with-java-home="$JAVA_HOME" 			--with-ssl 		; 		nproc="$(nproc)"; 		make -j "$nproc"; 		make install; 	); 	rm -rf "$nativeBuildDir"; 	rm bin/tomcat-native.tar.gz; 		find "$TOMCAT_NATIVE_LIBDIR" -type f -executable -exec ldd '{}' ';' 		| awk '/=>/ && $(NF-1) != "=>" { print $(NF-1) }' 		| xargs -rt readlink -e 		| sort -u 		| xargs -rt rpm --query --whatprovides 		| sort -u 		| tee "$TOMCAT_NATIVE_LIBDIR/.dependencies.txt" 		| xargs -r yumdb set reason user 	; 		yum autoremove -y; 	yum clean all; 	rm -rf /var/cache/yum; 		find ./bin/ -name '*.sh' -exec sed -ri 's|^#!/bin/sh$|#!/usr/bin/env bash|' '{}' +; 		chmod -R +rX .; 	chmod 1777 logs temp work; 		catalina.sh version
-# Fri, 13 Oct 2023 00:28:56 GMT
+# Wed, 18 Oct 2023 01:01:21 GMT
 RUN set -eux; 	nativeLines="$(catalina.sh configtest 2>&1)"; 	nativeLines="$(echo "$nativeLines" | grep 'Apache Tomcat Native')"; 	nativeLines="$(echo "$nativeLines" | sort -u)"; 	if ! echo "$nativeLines" | grep -E 'INFO: Loaded( APR based)? Apache Tomcat Native library' >&2; then 		echo >&2 "$nativeLines"; 		exit 1; 	fi
-# Fri, 13 Oct 2023 00:28:56 GMT
+# Wed, 18 Oct 2023 01:01:21 GMT
 EXPOSE 8080
-# Fri, 13 Oct 2023 00:28:56 GMT
+# Wed, 18 Oct 2023 01:01:21 GMT
 CMD ["catalina.sh" "run"]
 ```
 
@@ -154,15 +154,15 @@ CMD ["catalina.sh" "run"]
 		Last Modified: Thu, 12 Oct 2023 23:28:39 GMT  
 		Size: 150.7 MB (150652878 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d88ce07c642c952a54ca65dbf7d98f834f9a76fb5d1336fed13e0c87e9c03d07`  
-		Last Modified: Fri, 13 Oct 2023 00:44:16 GMT  
-		Size: 173.0 B  
+	-	`sha256:aae778bf75bd4d927c36f20c295cf8dff0f2dfa8ce83de8b4ec38fc70c5563c6`  
+		Last Modified: Wed, 18 Oct 2023 01:13:38 GMT  
+		Size: 171.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:87b9a5f3304e530f0b3082a0605af57824c2b6eaad871cb1bd2e96094ac64b0d`  
-		Last Modified: Fri, 13 Oct 2023 00:50:37 GMT  
-		Size: 15.9 MB (15858959 bytes)  
+	-	`sha256:f3d9fe676c6c7023bd8b0ba80d29acbf0a70c4c819a622eddd263f9ae02b0ce6`  
+		Last Modified: Wed, 18 Oct 2023 01:17:41 GMT  
+		Size: 15.8 MB (15848653 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:43d9048e87aaec2d7bdd2a9771847919fec63b846da5614f547274bfcbc528fb`  
-		Last Modified: Fri, 13 Oct 2023 00:50:35 GMT  
-		Size: 129.0 B  
+	-	`sha256:861e6d1c9a6ebae880e01106157681e50e8dc5698d798e9a6eab494f00672be6`  
+		Last Modified: Wed, 18 Oct 2023 01:17:40 GMT  
+		Size: 133.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
