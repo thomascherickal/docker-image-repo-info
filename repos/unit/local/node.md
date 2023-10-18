@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:e3f37649ba07e8b34c3a68cc1ab1fbc5f0206bd1c459408871abde7dcb01a37f`
-- Created: `2023-10-12T18:28:12.203059234Z`
+- Image ID: `sha256:ace5cd13dece9a891491c3e8e387d68135407c1487f6d87787ada0e5021dff50`
+- Created: `2023-10-16T17:02:21.221061591Z`
 - Virtual Size: ~ 1.03 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Command: `["unitd","--no-daemon","--control","unix:/var/run/control.unit.sock"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=20.8.0`
+  - `NODE_VERSION=20.8.1`
   - `YARN_VERSION=1.22.19`
 - Labels:
   - `org.opencontainers.image.description=Official build of Unit for Docker.`
