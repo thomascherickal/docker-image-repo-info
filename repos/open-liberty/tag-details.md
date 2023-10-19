@@ -2,6 +2,12 @@
 
 # Tags of `open-liberty`
 
+-	[`open-liberty:23.0.0.10-full-java11-openj9`](#open-liberty230010-full-java11-openj9)
+-	[`open-liberty:23.0.0.10-full-java17-openj9`](#open-liberty230010-full-java17-openj9)
+-	[`open-liberty:23.0.0.10-full-java8-openj9`](#open-liberty230010-full-java8-openj9)
+-	[`open-liberty:23.0.0.10-kernel-slim-java11-openj9`](#open-liberty230010-kernel-slim-java11-openj9)
+-	[`open-liberty:23.0.0.10-kernel-slim-java17-openj9`](#open-liberty230010-kernel-slim-java17-openj9)
+-	[`open-liberty:23.0.0.10-kernel-slim-java8-openj9`](#open-liberty230010-kernel-slim-java8-openj9)
 -	[`open-liberty:23.0.0.6-full-java11-openj9`](#open-liberty23006-full-java11-openj9)
 -	[`open-liberty:23.0.0.6-full-java17-openj9`](#open-liberty23006-full-java17-openj9)
 -	[`open-liberty:23.0.0.6-full-java8-openj9`](#open-liberty23006-full-java8-openj9)
@@ -26,6 +32,30 @@
 -	[`open-liberty:kernel-slim-java17-openj9`](#open-libertykernel-slim-java17-openj9)
 -	[`open-liberty:kernel-slim-java8-openj9`](#open-libertykernel-slim-java8-openj9)
 -	[`open-liberty:latest`](#open-libertylatest)
+
+## `open-liberty:23.0.0.10-full-java11-openj9`
+
+**does not exist** (yet?)
+
+## `open-liberty:23.0.0.10-full-java17-openj9`
+
+**does not exist** (yet?)
+
+## `open-liberty:23.0.0.10-full-java8-openj9`
+
+**does not exist** (yet?)
+
+## `open-liberty:23.0.0.10-kernel-slim-java11-openj9`
+
+**does not exist** (yet?)
+
+## `open-liberty:23.0.0.10-kernel-slim-java17-openj9`
+
+**does not exist** (yet?)
+
+## `open-liberty:23.0.0.10-kernel-slim-java8-openj9`
+
+**does not exist** (yet?)
 
 ## `open-liberty:23.0.0.6-full-java11-openj9`
 
