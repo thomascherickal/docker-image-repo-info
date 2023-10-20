@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3ca908b949b45ffe0f1dcc9f7b58534beea2e57e01aabbec23ed44d6f1e3942d`
-- Created: `2023-10-02T18:56:26Z`
-- Virtual Size: ~ 51.14 Mb  
+- Image ID: `sha256:a4c7645b18dcc60bfbcc654a5b813458da4d84f95f5ac86f98d97458ddf3d53b`
+- Created: `2023-10-16T00:14:53Z`
+- Virtual Size: ~ 51.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["python3"]`
@@ -14,8 +14,8 @@
   - `GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305`
   - `PYTHON_VERSION=3.12.0`
   - `PYTHON_PIP_VERSION=23.2.1`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/9af82b715db434abb94a0a6f3569f43e72157346/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=45a2bb8bf2bb5eff16fdd00faef6f29731831c7c59bd9fc2bf1f3bed511ff1fe`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/c6add47b0abf67511cdfb4734771cbab403af062/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=22b849a10f86f5ddf7ce148ca2a31214504ee6c83ef626840fde6e5dcd809d11`
 
 ## `apk` (`.apk`-based packages)
 
@@ -481,16 +481,16 @@ MIT
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.4-r1 description:
+musl-1.2.4-r2 description:
 the musl c library (libc) implementation
 
-musl-1.2.4-r1 webpage:
+musl-1.2.4-r2 webpage:
 https://musl.libc.org/
 
-musl-1.2.4-r1 installed size:
+musl-1.2.4-r2 installed size:
 620 KiB
 
-musl-1.2.4-r1 license:
+musl-1.2.4-r2 license:
 MIT
 
 ```
