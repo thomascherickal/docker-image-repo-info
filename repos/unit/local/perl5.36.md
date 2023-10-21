@@ -1,9 +1,9 @@
-# `unit:1.31.0-perl5.36`
+# `unit:1.31.1-perl5.36`
 
 ## Docker Metadata
 
-- Image ID: `sha256:fdf7de6cac13f8f9d859cbad5cbbf6c55507c94e190f920f5bc22663452ecf55`
-- Created: `2023-10-12T18:31:23.483963318Z`
+- Image ID: `sha256:13cfdf5902b1c8a4c61cb56057bdfff827f2e57f849fa3cc5bcb4463d5d62835`
+- Created: `2023-10-19T23:37:49.270220447Z`
 - Virtual Size: ~ 914.19 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -19,7 +19,7 @@
   - `org.opencontainers.image.title=Unit (perl5.36)`
   - `org.opencontainers.image.url=https://unit.nginx.org`
   - `org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>`
-  - `org.opencontainers.image.version=1.31.0`
+  - `org.opencontainers.image.version=1.31.1`
 
 ## `dpkg` (`.deb`-based packages)
 

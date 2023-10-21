@@ -1,10 +1,10 @@
-# `unit:1.31.0-ruby3.2`
+# `unit:1.31.1-ruby3.2`
 
 ## Docker Metadata
 
-- Image ID: `sha256:5d6bc0fa9883efa05e2b60ca31d62ed04b9874069c82d73cece8008b4df54557`
-- Created: `2023-10-12T18:33:23.875212097Z`
-- Virtual Size: ~ 913.62 Mb  
+- Image ID: `sha256:ff7d5ab7ad33fedd50c4f1f88d02ef80570079d2227205c437be7e08bd8a3c71`
+- Created: `2023-10-19T23:40:57.993394801Z`
+- Virtual Size: ~ 913.63 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-entrypoint.sh"]`
@@ -25,7 +25,7 @@
   - `org.opencontainers.image.title=Unit (ruby3.2)`
   - `org.opencontainers.image.url=https://unit.nginx.org`
   - `org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>`
-  - `org.opencontainers.image.version=1.31.0`
+  - `org.opencontainers.image.version=1.31.1`
 
 ## `dpkg` (`.deb`-based packages)
 

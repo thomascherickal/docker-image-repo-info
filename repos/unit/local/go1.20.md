@@ -1,9 +1,9 @@
-# `unit:1.31.0-go1.20`
+# `unit:1.31.1-go1.20`
 
 ## Docker Metadata
 
-- Image ID: `sha256:84a95ad350e1dee4346426b9d4e682da677c50006cc5a30d08d91a6264286d46`
-- Created: `2023-10-12T18:27:03.256939912Z`
+- Image ID: `sha256:d52055b0fe379affcabb95b13ce2ae11eb2a3fc88fec388e580db318619c6d95`
+- Created: `2023-10-19T23:31:22.527185926Z`
 - Virtual Size: ~ 798.50 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -20,7 +20,7 @@
   - `org.opencontainers.image.title=Unit (go1.20)`
   - `org.opencontainers.image.url=https://unit.nginx.org`
   - `org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>`
-  - `org.opencontainers.image.version=1.31.0`
+  - `org.opencontainers.image.version=1.31.1`
 
 ## `dpkg` (`.deb`-based packages)
 
