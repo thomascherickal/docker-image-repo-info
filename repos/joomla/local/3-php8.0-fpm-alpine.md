@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:a9494d22436883bda8d8de87c8962655e6c799f1b29f59a4bc70326e03669dbe`
-- Created: `2023-08-09T11:34:55.896516288Z`
-- Virtual Size: ~ 274.77 Mb  
+- Image ID: `sha256:6d18055511abc9f6d9817ce239c9abeed41d822704e80f78e76a6535ff54b437`
+- Created: `2023-10-19T01:08:37.738684204Z`
+- Virtual Size: ~ 278.87 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -678,16 +678,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1v-r0 description:
+libcrypto1.1-1.1.1w-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1v-r0 webpage:
+libcrypto1.1-1.1.1w-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1v-r0 installed size:
+libcrypto1.1-1.1.1w-r0 installed size:
 2708 KiB
 
-libcrypto1.1-1.1.1v-r0 license:
+libcrypto1.1-1.1.1w-r0 license:
 OpenSSL
 
 ```
@@ -950,16 +950,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-14.8-r0 description:
+libpq-14.9-r0 description:
 PostgreSQL client library
 
-libpq-14.8-r0 webpage:
+libpq-14.9-r0 webpage:
 https://www.postgresql.org/
 
-libpq-14.8-r0 installed size:
+libpq-14.9-r0 installed size:
 328 KiB
 
-libpq-14.8-r0 license:
+libpq-14.9-r0 license:
 PostgreSQL
 
 ```
@@ -1018,16 +1018,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1v-r0 description:
+libssl1.1-1.1.1w-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1v-r0 webpage:
+libssl1.1-1.1.1w-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1v-r0 installed size:
+libssl1.1-1.1.1w-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1v-r0 license:
+libssl1.1-1.1.1w-r0 license:
 OpenSSL
 
 ```
@@ -1086,16 +1086,16 @@ GPL-2.0-or-later OR LGPL-3.0-or-later
 ### `apk` package: `libwebp`
 
 ```console
-libwebp-1.2.3-r1 description:
+libwebp-1.2.3-r2 description:
 Libraries for working with WebP images
 
-libwebp-1.2.3-r1 webpage:
+libwebp-1.2.3-r2 webpage:
 https://developers.google.com/speed/webp
 
-libwebp-1.2.3-r1 installed size:
+libwebp-1.2.3-r2 installed size:
 584 KiB
 
-libwebp-1.2.3-r1 license:
+libwebp-1.2.3-r2 license:
 BSD-3-Clause
 
 ```
@@ -1392,16 +1392,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1v-r0 description:
+openssl-1.1.1w-r0 description:
 toolkit for transport layer security (TLS) - version 1.1
 
-openssl-1.1.1v-r0 webpage:
+openssl-1.1.1w-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1v-r0 installed size:
+openssl-1.1.1w-r0 installed size:
 660 KiB
 
-openssl-1.1.1v-r0 license:
+openssl-1.1.1w-r0 license:
 OpenSSL
 
 ```

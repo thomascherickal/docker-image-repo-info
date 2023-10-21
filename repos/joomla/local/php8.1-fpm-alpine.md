@@ -1,10 +1,10 @@
-# `joomla:4.3.4-php8.1-fpm-alpine`
+# `joomla:4.4.0-php8.1-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:885340df7587028f46f6d81d2fbad5925ac2581a86f6da0a1d4a9dc2c544e184`
-- Created: `2023-10-04T22:38:46.051707811Z`
-- Virtual Size: ~ 323.05 Mb  
+- Image ID: `sha256:9f3e7c14c7267fa459e8a5f36eff10ffea6232d105e0158c4160cf7729e50e62`
+- Created: `2023-10-19T01:02:33.253604414Z`
+- Virtual Size: ~ 324.74 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -22,8 +22,8 @@
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.24.tar.xz.asc`
   - `PHP_SHA256=ee61f6232bb29bd2e785daf325d2177f2272bf80d086c295a724594e710bce3d`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
-  - `JOOMLA_VERSION=4.3.4`
-  - `JOOMLA_SHA512=2efede3c3230d2fd849c46f84eea9aa1ef2bef6836e0ceec6451499bb6abf7e747d63f3996d0a5f7fc2d439c5ae0380e0e71f7c2823adfdda80e87a0bc377be1`
+  - `JOOMLA_VERSION=4.4.0`
+  - `JOOMLA_SHA512=800e985b1aa99e0df329349779f3c0f2f29a5c4de5115a7804b118029cba6f8d726cbd09979e3ac5a13e6a518ff87f847e713be9fa38ee59b04a5e9102479838`
 - Labels:
   - `maintainer=Llewellyn van der Merwe <llewellyn.van-der-merwe@community.joomla.org> (@Llewellynvdm), Harald Leithner <harald.leithner@community.joomla.org> (@HLeithner)`
 
@@ -1392,16 +1392,16 @@ BSD-3-Clause
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.4-r1 description:
+musl-1.2.4-r2 description:
 the musl c library (libc) implementation
 
-musl-1.2.4-r1 webpage:
+musl-1.2.4-r2 webpage:
 https://musl.libc.org/
 
-musl-1.2.4-r1 installed size:
+musl-1.2.4-r2 installed size:
 620 KiB
 
-musl-1.2.4-r1 license:
+musl-1.2.4-r2 license:
 MIT
 
 ```

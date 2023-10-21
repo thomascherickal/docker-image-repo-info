@@ -1,10 +1,10 @@
-# `joomla:4.3.4-php8.0-fpm-alpine`
+# `joomla:4.4.0-php8.0-fpm-alpine`
 
 ## Docker Metadata
 
-- Image ID: `sha256:2406e156acbb08b012cae73850fac9e8a2a4879f23091c4f329e41553055078d`
-- Created: `2023-10-04T22:38:37.356522492Z`
-- Virtual Size: ~ 324.16 Mb  
+- Image ID: `sha256:66748ba95e21cf5560f25a7cd2a5f0b6c02d6eaed53af2c0e9db2c8b71f138d8`
+- Created: `2023-10-19T00:59:57.054695762Z`
+- Virtual Size: ~ 329.34 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -22,8 +22,8 @@
   - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.30.tar.xz.asc`
   - `PHP_SHA256=216ab305737a5d392107112d618a755dc5df42058226f1670e9db90e77d777d9`
   - `JOOMLA_INSTALLATION_DISABLE_LOCALHOST_CHECK=1`
-  - `JOOMLA_VERSION=4.3.4`
-  - `JOOMLA_SHA512=2efede3c3230d2fd849c46f84eea9aa1ef2bef6836e0ceec6451499bb6abf7e747d63f3996d0a5f7fc2d439c5ae0380e0e71f7c2823adfdda80e87a0bc377be1`
+  - `JOOMLA_VERSION=4.4.0`
+  - `JOOMLA_SHA512=800e985b1aa99e0df329349779f3c0f2f29a5c4de5115a7804b118029cba6f8d726cbd09979e3ac5a13e6a518ff87f847e713be9fa38ee59b04a5e9102479838`
 - Labels:
   - `maintainer=Llewellyn van der Merwe <llewellyn.van-der-merwe@community.joomla.org> (@Llewellynvdm), Harald Leithner <harald.leithner@community.joomla.org> (@HLeithner)`
 
@@ -712,16 +712,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1v-r0 description:
+libcrypto1.1-1.1.1w-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1v-r0 webpage:
+libcrypto1.1-1.1.1w-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1v-r0 installed size:
+libcrypto1.1-1.1.1w-r0 installed size:
 2708 KiB
 
-libcrypto1.1-1.1.1v-r0 license:
+libcrypto1.1-1.1.1w-r0 license:
 OpenSSL
 
 ```
@@ -967,16 +967,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-14.8-r0 description:
+libpq-14.9-r0 description:
 PostgreSQL client library
 
-libpq-14.8-r0 webpage:
+libpq-14.9-r0 webpage:
 https://www.postgresql.org/
 
-libpq-14.8-r0 installed size:
+libpq-14.9-r0 installed size:
 328 KiB
 
-libpq-14.8-r0 license:
+libpq-14.9-r0 license:
 PostgreSQL
 
 ```
@@ -1035,16 +1035,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1v-r0 description:
+libssl1.1-1.1.1w-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1v-r0 webpage:
+libssl1.1-1.1.1w-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1v-r0 installed size:
+libssl1.1-1.1.1w-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1v-r0 license:
+libssl1.1-1.1.1w-r0 license:
 OpenSSL
 
 ```
@@ -1103,16 +1103,16 @@ GPL-2.0-or-later OR LGPL-3.0-or-later
 ### `apk` package: `libwebp`
 
 ```console
-libwebp-1.2.3-r1 description:
+libwebp-1.2.3-r2 description:
 Libraries for working with WebP images
 
-libwebp-1.2.3-r1 webpage:
+libwebp-1.2.3-r2 webpage:
 https://developers.google.com/speed/webp
 
-libwebp-1.2.3-r1 installed size:
+libwebp-1.2.3-r2 installed size:
 584 KiB
 
-libwebp-1.2.3-r1 license:
+libwebp-1.2.3-r2 license:
 BSD-3-Clause
 
 ```
@@ -1409,16 +1409,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1v-r0 description:
+openssl-1.1.1w-r0 description:
 toolkit for transport layer security (TLS) - version 1.1
 
-openssl-1.1.1v-r0 webpage:
+openssl-1.1.1w-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1v-r0 installed size:
+openssl-1.1.1w-r0 installed size:
 660 KiB
 
-openssl-1.1.1v-r0 license:
+openssl-1.1.1w-r0 license:
 OpenSSL
 
 ```
