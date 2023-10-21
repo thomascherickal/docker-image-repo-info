@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:517e079261f2e0b842228007febe6201b28e2e6ed0e2a38b1ce3c25d7a0a617f`
-- Created: `2023-10-11T17:33:19.279642254Z`
-- Virtual Size: ~ 302.61 Mb  
+- Image ID: `sha256:32411e9976daeb40e09a8627aecf67773e7285610316a076a6c6607c4ea674da`
+- Created: `2023-10-19T07:33:10.799129935Z`
+- Virtual Size: ~ 302.78 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -76,16 +76,16 @@ MIT
 ### `apk` package: `amazon-corretto-11`
 
 ```console
-amazon-corretto-11-11.0.20.9.1-r0 description:
+amazon-corretto-11-11.0.21.9.1-r0 description:
 Corretto11
 
-amazon-corretto-11-11.0.20.9.1-r0 webpage:
+amazon-corretto-11-11.0.21.9.1-r0 webpage:
 https://github.com/corretto/corretto-11
 
-amazon-corretto-11-11.0.20.9.1-r0 installed size:
+amazon-corretto-11-11.0.21.9.1-r0 installed size:
 311 MiB
 
-amazon-corretto-11-11.0.20.9.1-r0 license:
+amazon-corretto-11-11.0.21.9.1-r0 license:
 https://github.com/corretto/corretto-11/blob/develop/LICENSE
 
 ```
