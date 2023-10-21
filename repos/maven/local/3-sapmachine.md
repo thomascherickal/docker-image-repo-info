@@ -1,10 +1,10 @@
-# `maven:3.9.4-sapmachine-21`
+# `maven:3.9.5-sapmachine-21`
 
 ## Docker Metadata
 
-- Image ID: `sha256:b80e2a361d04f5d4320d98b316f0158407021320709d02702f0cc09f9c18e26c`
-- Created: `2023-09-22T08:38:46Z`
-- Virtual Size: ~ 528.65 Mb  
+- Image ID: `sha256:17349c086d8044fbd3600d51a2cab0defa40b98c23b444f9ceecd77ccd7f1ade`
+- Created: `2023-10-19T09:04:18Z`
+- Virtual Size: ~ 528.75 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/mvn-entrypoint.sh"]`
@@ -2034,11 +2034,11 @@ $ apt-get source -qq --print-uris rtmpdump=2.4+20151223.gitfa8646d.1-2build4
 'http://archive.ubuntu.com/ubuntu/pool/main/r/rtmpdump/rtmpdump_2.4%2b20151223.gitfa8646d.1-2build4.debian.tar.xz' rtmpdump_2.4+20151223.gitfa8646d.1-2build4.debian.tar.xz 8376 SHA512:b01ac33a7251e3c0fad21897d31710766136027b656cb29903cf8f695893648631037a96fa18aa40eae7ad363394344aad4f2fae152622618b88f22133c03578
 ```
 
-### `dpkg` source package: `sapmachine-21-jdk=21`
+### `dpkg` source package: `sapmachine-21-jdk=21.0.1`
 
 Binary Packages:
 
-- `sapmachine-21-jdk=21`
+- `sapmachine-21-jdk=21.0.1`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
