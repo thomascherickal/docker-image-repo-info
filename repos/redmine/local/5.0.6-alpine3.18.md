@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:fc1782bb2dc521ca080c679c3e700f361146f4570d2794542fde5f56ea58b809`
-- Created: `2023-10-03T04:02:37.820643138Z`
-- Virtual Size: ~ 464.33 Mb  
+- Image ID: `sha256:5a73a821fb6de3626e22d4cbd893ed36a3d4b44316149aaab81edb2817a5176a`
+- Created: `2023-09-30T08:26:15Z`
+- Virtual Size: ~ 465.02 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -812,16 +812,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.3.0-r0 description:
+libcurl-8.4.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.3.0-r0 webpage:
+libcurl-8.4.0-r0 webpage:
 https://curl.se/
 
-libcurl-8.3.0-r0 installed size:
+libcurl-8.4.0-r0 installed size:
 584 KiB
 
-libcurl-8.3.0-r0 license:
+libcurl-8.4.0-r0 license:
 curl
 
 ```
@@ -1594,16 +1594,16 @@ BSD-2-Clause
 ### `apk` package: `musl`
 
 ```console
-musl-1.2.4-r1 description:
+musl-1.2.4-r2 description:
 the musl c library (libc) implementation
 
-musl-1.2.4-r1 webpage:
+musl-1.2.4-r2 webpage:
 https://musl.libc.org/
 
-musl-1.2.4-r1 installed size:
+musl-1.2.4-r2 installed size:
 620 KiB
 
-musl-1.2.4-r1 license:
+musl-1.2.4-r2 license:
 MIT
 
 ```
@@ -1662,16 +1662,16 @@ GPL-2.0-or-later OR LGPL-3.0-or-later
 ### `apk` package: `nghttp2-libs`
 
 ```console
-nghttp2-libs-1.55.1-r0 description:
+nghttp2-libs-1.57.0-r0 description:
 Experimental HTTP/2 client, server and proxy (libraries)
 
-nghttp2-libs-1.55.1-r0 webpage:
+nghttp2-libs-1.57.0-r0 webpage:
 https://nghttp2.org
 
-nghttp2-libs-1.55.1-r0 installed size:
+nghttp2-libs-1.57.0-r0 installed size:
 152 KiB
 
-nghttp2-libs-1.55.1-r0 license:
+nghttp2-libs-1.57.0-r0 license:
 MIT
 
 ```
@@ -1849,16 +1849,16 @@ GPL-2.0-or-later AND LGPL-2.1-or-later
 ### `apk` package: `py3-certifi`
 
 ```console
-py3-certifi-2023.5.7-r0 description:
+py3-certifi-2023.7.22-r0 description:
 Python3 package for providing Mozilla's CA Bundle
 
-py3-certifi-2023.5.7-r0 webpage:
+py3-certifi-2023.7.22-r0 webpage:
 https://pypi.org/project/certifi
 
-py3-certifi-2023.5.7-r0 installed size:
+py3-certifi-2023.7.22-r0 installed size:
 64 KiB
 
-py3-certifi-2023.5.7-r0 license:
+py3-certifi-2023.7.22-r0 license:
 MPL-2.0
 
 ```
@@ -1866,16 +1866,16 @@ MPL-2.0
 ### `apk` package: `py3-certifi-pyc`
 
 ```console
-py3-certifi-pyc-2023.5.7-r0 description:
+py3-certifi-pyc-2023.7.22-r0 description:
 Precompiled Python bytecode for py3-certifi
 
-py3-certifi-pyc-2023.5.7-r0 webpage:
+py3-certifi-pyc-2023.7.22-r0 webpage:
 https://pypi.org/project/certifi
 
-py3-certifi-pyc-2023.5.7-r0 installed size:
+py3-certifi-pyc-2023.7.22-r0 installed size:
 40 KiB
 
-py3-certifi-pyc-2023.5.7-r0 license:
+py3-certifi-pyc-2023.7.22-r0 license:
 MPL-2.0
 
 ```
@@ -2019,16 +2019,16 @@ MIT
 ### `apk` package: `py3-urllib3`
 
 ```console
-py3-urllib3-1.26.15-r1 description:
+py3-urllib3-1.26.18-r0 description:
 HTTP library with thread-safe connection pooling, file post, and more
 
-py3-urllib3-1.26.15-r1 webpage:
+py3-urllib3-1.26.18-r0 webpage:
 https://github.com/urllib3/urllib3
 
-py3-urllib3-1.26.15-r1 installed size:
-572 KiB
+py3-urllib3-1.26.18-r0 installed size:
+580 KiB
 
-py3-urllib3-1.26.15-r1 license:
+py3-urllib3-1.26.18-r0 license:
 MIT
 
 ```
@@ -2036,16 +2036,16 @@ MIT
 ### `apk` package: `py3-urllib3-pyc`
 
 ```console
-py3-urllib3-pyc-1.26.15-r1 description:
+py3-urllib3-pyc-1.26.18-r0 description:
 Precompiled Python bytecode for py3-urllib3
 
-py3-urllib3-pyc-1.26.15-r1 webpage:
+py3-urllib3-pyc-1.26.18-r0 webpage:
 https://github.com/urllib3/urllib3
 
-py3-urllib3-pyc-1.26.15-r1 installed size:
-600 KiB
+py3-urllib3-pyc-1.26.18-r0 installed size:
+608 KiB
 
-py3-urllib3-pyc-1.26.15-r1 license:
+py3-urllib3-pyc-1.26.18-r0 license:
 MIT
 
 ```
@@ -2070,16 +2070,16 @@ MIT
 ### `apk` package: `python3`
 
 ```console
-python3-3.11.5-r0 description:
+python3-3.11.6-r0 description:
 High-level scripting language
 
-python3-3.11.5-r0 webpage:
+python3-3.11.6-r0 webpage:
 https://www.python.org/
 
-python3-3.11.5-r0 installed size:
+python3-3.11.6-r0 installed size:
 24 MiB
 
-python3-3.11.5-r0 license:
+python3-3.11.6-r0 license:
 PSF-2.0
 
 ```
@@ -2087,16 +2087,16 @@ PSF-2.0
 ### `apk` package: `python3-pyc`
 
 ```console
-python3-pyc-3.11.5-r0 description:
+python3-pyc-3.11.6-r0 description:
 High-level scripting language (install .pyc cache files)
 
-python3-pyc-3.11.5-r0 webpage:
+python3-pyc-3.11.6-r0 webpage:
 https://www.python.org/
 
-python3-pyc-3.11.5-r0 installed size:
+python3-pyc-3.11.6-r0 installed size:
 4096 B
 
-python3-pyc-3.11.5-r0 license:
+python3-pyc-3.11.6-r0 license:
 PSF-2.0
 
 ```
@@ -2104,16 +2104,16 @@ PSF-2.0
 ### `apk` package: `python3-pycache-pyc0`
 
 ```console
-python3-pycache-pyc0-3.11.5-r0 description:
+python3-pycache-pyc0-3.11.6-r0 description:
 High-level scripting language (.pyc pycache files)
 
-python3-pycache-pyc0-3.11.5-r0 webpage:
+python3-pycache-pyc0-3.11.6-r0 webpage:
 https://www.python.org/
 
-python3-pycache-pyc0-3.11.5-r0 installed size:
+python3-pycache-pyc0-3.11.6-r0 installed size:
 13 MiB
 
-python3-pycache-pyc0-3.11.5-r0 license:
+python3-pycache-pyc0-3.11.6-r0 license:
 PSF-2.0
 
 ```
