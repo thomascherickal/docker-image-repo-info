@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:661e975084498f43ab55e0e7942291cd493ba0fcfc7a4b734658b3404291fd28`
-- Created: `2023-08-07T20:07:12.251766606Z`
-- Virtual Size: ~ 319.84 Mb  
+- Image ID: `sha256:be82fe324d0817bbc07c96c2d52d747a41049594124520d07c833757b4365058`
+- Created: `2023-10-21T00:09:29.314962386Z`
+- Virtual Size: ~ 319.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/opt/files/startup.sh"]`
@@ -208,16 +208,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-8.2.1-r0 description:
+curl-8.4.0-r0 description:
 URL retrival utility and library
 
-curl-8.2.1-r0 webpage:
+curl-8.4.0-r0 webpage:
 https://curl.se/
 
-curl-8.2.1-r0 installed size:
-268 KiB
+curl-8.4.0-r0 installed size:
+280 KiB
 
-curl-8.2.1-r0 license:
+curl-8.4.0-r0 license:
 curl
 
 ```
@@ -378,16 +378,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.2.1-r0 description:
+libcurl-8.4.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.2.1-r0 webpage:
+libcurl-8.4.0-r0 webpage:
 https://curl.se/
 
-libcurl-8.2.1-r0 installed size:
-564 KiB
+libcurl-8.4.0-r0 installed size:
+588 KiB
 
-libcurl-8.2.1-r0 license:
+libcurl-8.4.0-r0 license:
 curl
 
 ```
@@ -701,16 +701,16 @@ MIT
 ### `apk` package: `openjdk11-jre`
 
 ```console
-openjdk11-jre-11.0.20_p8-r0 description:
+openjdk11-jre-11.0.21_p9-r0 description:
 Oracle OpenJDK 11 (JRE)
 
-openjdk11-jre-11.0.20_p8-r0 webpage:
+openjdk11-jre-11.0.21_p9-r0 webpage:
 https://github.com/openjdk/jdk11u
 
-openjdk11-jre-11.0.20_p8-r0 installed size:
-2768 KiB
+openjdk11-jre-11.0.21_p9-r0 installed size:
+2796 KiB
 
-openjdk11-jre-11.0.20_p8-r0 license:
+openjdk11-jre-11.0.21_p9-r0 license:
 GPL-2.0-with-classpath-exception
 
 ```
@@ -718,16 +718,16 @@ GPL-2.0-with-classpath-exception
 ### `apk` package: `openjdk11-jre-headless`
 
 ```console
-openjdk11-jre-headless-11.0.20_p8-r0 description:
+openjdk11-jre-headless-11.0.21_p9-r0 description:
 Oracle OpenJDK 11 (JRE headless)
 
-openjdk11-jre-headless-11.0.20_p8-r0 webpage:
+openjdk11-jre-headless-11.0.21_p9-r0 webpage:
 https://github.com/openjdk/jdk11u
 
-openjdk11-jre-headless-11.0.20_p8-r0 installed size:
+openjdk11-jre-headless-11.0.21_p9-r0 installed size:
 154 MiB
 
-openjdk11-jre-headless-11.0.20_p8-r0 license:
+openjdk11-jre-headless-11.0.21_p9-r0 license:
 GPL-2.0-with-classpath-exception
 
 ```
