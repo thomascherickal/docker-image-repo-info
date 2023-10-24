@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:157c7027d9455d0c91dd014c89f6dd9a7397bfb85edd1380ef5e61554225a1f5`
+- Image ID: `sha256:a3d24ddfa5304f19d1cf75b2f7827b74756d19ff3097e45de75c78a009bfb9b0`
 - Created: `2023-10-06T09:28:33Z`
-- Virtual Size: ~ 221.15 Mb  
+- Virtual Size: ~ 185.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -200,16 +200,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.36.1-r2 description:
+busybox-1.36.1-r4 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.36.1-r2 webpage:
+busybox-1.36.1-r4 webpage:
 https://busybox.net/
 
-busybox-1.36.1-r2 installed size:
+busybox-1.36.1-r4 installed size:
 924 KiB
 
-busybox-1.36.1-r2 license:
+busybox-1.36.1-r4 license:
 GPL-2.0-only
 
 ```
@@ -217,16 +217,16 @@ GPL-2.0-only
 ### `apk` package: `busybox-binsh`
 
 ```console
-busybox-binsh-1.36.1-r2 description:
+busybox-binsh-1.36.1-r4 description:
 busybox ash /bin/sh
 
-busybox-binsh-1.36.1-r2 webpage:
+busybox-binsh-1.36.1-r4 webpage:
 https://busybox.net/
 
-busybox-binsh-1.36.1-r2 installed size:
+busybox-binsh-1.36.1-r4 installed size:
 8192 B
 
-busybox-binsh-1.36.1-r2 license:
+busybox-binsh-1.36.1-r4 license:
 GPL-2.0-only
 
 ```
@@ -285,16 +285,16 @@ GPL-3.0-or-later
 ### `apk` package: `curl`
 
 ```console
-curl-8.3.0-r0 description:
+curl-8.4.0-r0 description:
 URL retrival utility and library
 
-curl-8.3.0-r0 webpage:
+curl-8.4.0-r0 webpage:
 https://curl.se/
 
-curl-8.3.0-r0 installed size:
+curl-8.4.0-r0 installed size:
 248 KiB
 
-curl-8.3.0-r0 license:
+curl-8.4.0-r0 license:
 curl
 
 ```
@@ -438,16 +438,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.3.0-r0 description:
+libcurl-8.4.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.3.0-r0 webpage:
+libcurl-8.4.0-r0 webpage:
 https://curl.se/
 
-libcurl-8.3.0-r0 installed size:
+libcurl-8.4.0-r0 installed size:
 584 KiB
 
-libcurl-8.3.0-r0 license:
+libcurl-8.4.0-r0 license:
 curl
 
 ```
@@ -846,16 +846,16 @@ X11
 ### `apk` package: `nghttp2-libs`
 
 ```console
-nghttp2-libs-1.55.1-r0 description:
+nghttp2-libs-1.57.0-r0 description:
 Experimental HTTP/2 client, server and proxy (libraries)
 
-nghttp2-libs-1.55.1-r0 webpage:
+nghttp2-libs-1.57.0-r0 webpage:
 https://nghttp2.org
 
-nghttp2-libs-1.55.1-r0 installed size:
+nghttp2-libs-1.57.0-r0 installed size:
 152 KiB
 
-nghttp2-libs-1.55.1-r0 license:
+nghttp2-libs-1.57.0-r0 license:
 MIT
 
 ```
@@ -1135,16 +1135,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.36.1-r2 description:
+ssl_client-1.36.1-r4 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.36.1-r2 webpage:
+ssl_client-1.36.1-r4 webpage:
 https://busybox.net/
 
-ssl_client-1.36.1-r2 installed size:
+ssl_client-1.36.1-r4 installed size:
 28 KiB
 
-ssl_client-1.36.1-r2 license:
+ssl_client-1.36.1-r4 license:
 GPL-2.0-only
 
 ```
