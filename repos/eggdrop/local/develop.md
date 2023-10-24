@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c9417ba1287905d0241856d3a71d726f88ed396dd3902270009ceae49a373676`
-- Created: `2023-08-08T23:40:50.382166146Z`
-- Virtual Size: ~ 42.46 Mb  
+- Image ID: `sha256:f4df521af73130bbe77b03bd8ecc6b8a34b79233f59eb491c1eadc2f4a50df0a`
+- Created: `2023-10-21T00:20:48.759806524Z`
+- Virtual Size: ~ 47.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/home/eggdrop/eggdrop/entrypoint.sh"]`
@@ -178,16 +178,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.0.10-r0 description:
+libcrypto3-3.0.11-r0 description:
 Crypto library from openssl
 
-libcrypto3-3.0.10-r0 webpage:
+libcrypto3-3.0.11-r0 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.0.10-r0 installed size:
-4116 KiB
+libcrypto3-3.0.11-r0 installed size:
+4120 KiB
 
-libcrypto3-3.0.10-r0 license:
+libcrypto3-3.0.11-r0 license:
 Apache-2.0
 
 ```
@@ -195,16 +195,16 @@ Apache-2.0
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.0.10-r0 description:
+libssl3-3.0.11-r0 description:
 SSL shared libraries
 
-libssl3-3.0.10-r0 webpage:
+libssl3-3.0.11-r0 webpage:
 https://www.openssl.org/
 
-libssl3-3.0.10-r0 installed size:
+libssl3-3.0.11-r0 installed size:
 608 KiB
 
-libssl3-3.0.10-r0 license:
+libssl3-3.0.11-r0 license:
 Apache-2.0
 
 ```
@@ -280,16 +280,16 @@ MIT
 ### `apk` package: `openssl`
 
 ```console
-openssl-3.0.10-r0 description:
+openssl-3.0.11-r0 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-3.0.10-r0 webpage:
+openssl-3.0.11-r0 webpage:
 https://www.openssl.org/
 
-openssl-3.0.10-r0 installed size:
+openssl-3.0.11-r0 installed size:
 872 KiB
 
-openssl-3.0.10-r0 license:
+openssl-3.0.11-r0 license:
 Apache-2.0
 
 ```
