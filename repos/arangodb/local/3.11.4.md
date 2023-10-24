@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:385586e3b62e68239354f76125957ee2e746c067bd4e34b4ae2d065007d7ef47`
-- Created: `2023-10-10T20:20:04.283472912Z`
-- Virtual Size: ~ 504.96 Mb  
+- Image ID: `sha256:59d9b01076ffd3d11cf5e371bf88370c4f76a566c2e94595b314b20c81f9a52f`
+- Created: `2023-10-21T00:07:14.626952455Z`
+- Virtual Size: ~ 505.01 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -359,16 +359,16 @@ MIT
 ### `apk` package: `nodejs`
 
 ```console
-nodejs-16.20.1-r0 description:
+nodejs-16.20.2-r0 description:
 JavaScript runtime built on V8 engine - LTS version
 
-nodejs-16.20.1-r0 webpage:
+nodejs-16.20.2-r0 webpage:
 https://nodejs.org/
 
-nodejs-16.20.1-r0 installed size:
+nodejs-16.20.2-r0 installed size:
 32 MiB
 
-nodejs-16.20.1-r0 license:
+nodejs-16.20.2-r0 license:
 MIT
 
 ```
