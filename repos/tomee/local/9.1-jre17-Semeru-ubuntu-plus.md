@@ -1,10 +1,10 @@
-# `tomee:9.1.0-jre17-Semeru-ubuntu-plus`
+# `tomee:9.1.1-jre17-Semeru-ubuntu-plus`
 
 ## Docker Metadata
 
-- Image ID: `sha256:4a3bde616b6d1aa6834d7aadbfbe8b5932e9b0d10f6c4ec1ac17553235e67c54`
-- Created: `2023-10-13T11:40:51.414663075Z`
-- Virtual Size: ~ 369.96 Mb  
+- Image ID: `sha256:5405650cdf49d947a701f9e78484990cc0e0df976250572d0391a45f9d959bf3`
+- Created: `2023-10-23T22:28:56.435218713Z`
+- Virtual Size: ~ 366.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["catalina.sh","run"]`
@@ -16,7 +16,7 @@
   - `JAVA_VERSION=jdk-17.0.8.1+1_openj9-0.40.0`
   - `JAVA_HOME=/opt/java/openjdk`
   - `JAVA_TOOL_OPTIONS=-XX:+IgnoreUnrecognizedVMOptions -XX:+PortableSharedCache -XX:+IdleTuningGcOnIdle -Xshareclasses:name=openj9_system_scc,cacheDir=/opt/java/.scc,readonly,nonFatal`
-  - `TOMEE_VER=9.1.0`
+  - `TOMEE_VER=9.1.1`
   - `TOMEE_BUILD=plus`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`

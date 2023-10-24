@@ -1,10 +1,10 @@
-# `tomee:9.1.0-jre17-Temurin-alpine-plus`
+# `tomee:9.1.1-jre17-Temurin-alpine-plus`
 
 ## Docker Metadata
 
-- Image ID: `sha256:0e16a9e496fc43e437403b7126eb86ced7265915358db7ebd5a072833bb141c7`
-- Created: `2023-09-29T04:12:06.839432331Z`
-- Virtual Size: ~ 267.45 Mb  
+- Image ID: `sha256:ffe5000aa630b85b8329065785b07e8dd37d1dbea11282555c0df9ff25faf9a1`
+- Created: `2023-10-23T22:26:35.674876976Z`
+- Virtual Size: ~ 263.84 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/__cacert_entrypoint.sh"]`
@@ -16,7 +16,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-17.0.8.1+1`
-  - `TOMEE_VER=9.1.0`
+  - `TOMEE_VER=9.1.1`
   - `TOMEE_BUILD=plus`
 
 ## `apk` (`.apk`-based packages)
@@ -194,16 +194,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-8.3.0-r0 description:
+curl-8.4.0-r0 description:
 URL retrival utility and library
 
-curl-8.3.0-r0 webpage:
+curl-8.4.0-r0 webpage:
 https://curl.se/
 
-curl-8.3.0-r0 installed size:
+curl-8.4.0-r0 installed size:
 248 KiB
 
-curl-8.3.0-r0 license:
+curl-8.4.0-r0 license:
 curl
 
 ```
@@ -500,16 +500,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.3.0-r0 description:
+libcurl-8.4.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.3.0-r0 webpage:
+libcurl-8.4.0-r0 webpage:
 https://curl.se/
 
-libcurl-8.3.0-r0 installed size:
+libcurl-8.4.0-r0 installed size:
 584 KiB
 
-libcurl-8.3.0-r0 license:
+libcurl-8.4.0-r0 license:
 curl
 
 ```
@@ -908,16 +908,16 @@ GPL-2.0-or-later OR LGPL-3.0-or-later
 ### `apk` package: `nghttp2-libs`
 
 ```console
-nghttp2-libs-1.55.1-r0 description:
+nghttp2-libs-1.57.0-r0 description:
 Experimental HTTP/2 client, server and proxy (libraries)
 
-nghttp2-libs-1.55.1-r0 webpage:
+nghttp2-libs-1.57.0-r0 webpage:
 https://nghttp2.org
 
-nghttp2-libs-1.55.1-r0 installed size:
+nghttp2-libs-1.57.0-r0 installed size:
 152 KiB
 
-nghttp2-libs-1.55.1-r0 license:
+nghttp2-libs-1.57.0-r0 license:
 MIT
 
 ```

@@ -1,10 +1,10 @@
-# `tomee:9.1.0-jre11-Temurin-ubuntu-plus`
+# `tomee:9.1.1-jre11-Temurin-ubuntu-plus`
 
 ## Docker Metadata
 
-- Image ID: `sha256:f8b866d15d609f8af09462b336164ddbdda154626ec67e6138c236150d952db4`
-- Created: `2023-10-13T11:39:36.485540897Z`
-- Virtual Size: ~ 349.40 Mb  
+- Image ID: `sha256:01cf487ad881cac82c9c61ab5e1e2131d74e756466ee909875d0990669b362b5`
+- Created: `2023-10-23T22:27:21.629945183Z`
+- Virtual Size: ~ 345.79 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/__cacert_entrypoint.sh"]`
@@ -16,7 +16,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-11.0.20.1+1`
-  - `TOMEE_VER=9.1.0`
+  - `TOMEE_VER=9.1.1`
   - `TOMEE_BUILD=plus`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
