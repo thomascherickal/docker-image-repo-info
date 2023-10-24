@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8c94c0b9e6f5ffc667c73eb329e86db42861a86004351eeb12e5f74ca902d0ee`
-- Created: `2023-10-19T06:45:04.524212289Z`
-- Virtual Size: ~ 150.31 Mb  
+- Image ID: `sha256:4a94220011e82adf4d8c0270c52e42fc4474c6566c83bd5a1183d4d049135bed`
+- Created: `2023-10-21T08:15:18.835421974Z`
+- Virtual Size: ~ 153.58 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -200,16 +200,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-8.2.1-r0 description:
+curl-8.4.0-r0 description:
 URL retrival utility and library
 
-curl-8.2.1-r0 webpage:
+curl-8.4.0-r0 webpage:
 https://curl.se/
 
-curl-8.2.1-r0 installed size:
-268 KiB
+curl-8.4.0-r0 installed size:
+280 KiB
 
-curl-8.2.1-r0 license:
+curl-8.4.0-r0 license:
 curl
 
 ```
@@ -421,16 +421,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1v-r0 description:
+libcrypto1.1-1.1.1w-r0 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1v-r0 webpage:
+libcrypto1.1-1.1.1w-r0 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1v-r0 installed size:
+libcrypto1.1-1.1.1w-r0 installed size:
 2708 KiB
 
-libcrypto1.1-1.1.1v-r0 license:
+libcrypto1.1-1.1.1w-r0 license:
 OpenSSL
 
 ```
@@ -438,16 +438,16 @@ OpenSSL
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.2.1-r0 description:
+libcurl-8.4.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.2.1-r0 webpage:
+libcurl-8.4.0-r0 webpage:
 https://curl.se/
 
-libcurl-8.2.1-r0 installed size:
-564 KiB
+libcurl-8.4.0-r0 installed size:
+588 KiB
 
-libcurl-8.2.1-r0 license:
+libcurl-8.4.0-r0 license:
 curl
 
 ```
@@ -557,16 +557,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1v-r0 description:
+libssl1.1-1.1.1w-r0 description:
 SSL shared libraries
 
-libssl1.1-1.1.1v-r0 webpage:
+libssl1.1-1.1.1w-r0 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1v-r0 installed size:
+libssl1.1-1.1.1w-r0 installed size:
 528 KiB
 
-libssl1.1-1.1.1v-r0 license:
+libssl1.1-1.1.1w-r0 license:
 OpenSSL
 
 ```
@@ -880,16 +880,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1v-r0 description:
+openssl-1.1.1w-r0 description:
 toolkit for transport layer security (TLS) - version 1.1
 
-openssl-1.1.1v-r0 webpage:
+openssl-1.1.1w-r0 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1v-r0 installed size:
+openssl-1.1.1w-r0 installed size:
 660 KiB
 
-openssl-1.1.1v-r0 license:
+openssl-1.1.1w-r0 license:
 OpenSSL
 
 ```
