@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:530f71185e641dba59ccaa4918afc9ae91ef62c06676089a0a9316863ccb8661`
-- Created: `2023-09-30T03:03:32.413386845Z`
-- Virtual Size: ~ 82.31 Mb  
+- Image ID: `sha256:e21f479c9bc9ef5f62e42186c0b8c422eca73fc9a91f2e88d04207d71d57ed65`
+- Created: `2023-10-21T04:57:10.343884496Z`
+- Virtual Size: ~ 80.66 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -197,16 +197,16 @@ MPL-2.0 AND MIT
 ### `apk` package: `curl`
 
 ```console
-curl-8.2.1-r0 description:
+curl-8.4.0-r0 description:
 URL retrival utility and library
 
-curl-8.2.1-r0 webpage:
+curl-8.4.0-r0 webpage:
 https://curl.se/
 
-curl-8.2.1-r0 installed size:
-268 KiB
+curl-8.4.0-r0 installed size:
+280 KiB
 
-curl-8.2.1-r0 license:
+curl-8.4.0-r0 license:
 curl
 
 ```
@@ -282,16 +282,16 @@ Apache-2.0
 ### `apk` package: `libcurl`
 
 ```console
-libcurl-8.3.0-r0 description:
+libcurl-8.4.0-r0 description:
 The multiprotocol file transfer library
 
-libcurl-8.3.0-r0 webpage:
+libcurl-8.4.0-r0 webpage:
 https://curl.se/
 
-libcurl-8.3.0-r0 installed size:
+libcurl-8.4.0-r0 installed size:
 608 KiB
 
-libcurl-8.3.0-r0 license:
+libcurl-8.4.0-r0 license:
 curl
 
 ```
@@ -435,16 +435,16 @@ MIT
 ### `apk` package: `nghttp2-libs`
 
 ```console
-nghttp2-libs-1.51.0-r1 description:
+nghttp2-libs-1.51.0-r2 description:
 Experimental HTTP/2 client, server and proxy (libraries)
 
-nghttp2-libs-1.51.0-r1 webpage:
+nghttp2-libs-1.51.0-r2 webpage:
 https://nghttp2.org
 
-nghttp2-libs-1.51.0-r1 installed size:
-172 KiB
+nghttp2-libs-1.51.0-r2 installed size:
+176 KiB
 
-nghttp2-libs-1.51.0-r1 license:
+nghttp2-libs-1.51.0-r2 license:
 MIT
 
 ```
