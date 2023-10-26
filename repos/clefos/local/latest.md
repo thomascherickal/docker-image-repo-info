@@ -28,23 +28,13 @@ Licenses (from `rpm --query`): GPLv2+
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source audit-libs-2.8.5-4.el7
-https://download.sinenomine.net/clefos/7/source/srpms/audit-2.8.5-4.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `basesystem-10.0-7.el7.centos.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source basesystem-10.0-7.el7.centos.noarch
-https://download.sinenomine.net/clefos/7/source/srpms/basesystem-10.0-7.el7.centos.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `bash-4.2.46-33.el7.s390x`
 
@@ -62,12 +52,7 @@ Licenses (from `rpm --query`): GPLv3+
 
 Licenses (from `rpm --query`): BSD
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source bzip2-libs-1.0.6-13.el7
-https://download.sinenomine.net/clefos/7/source/srpms/bzip2-1.0.6-13.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `ca-certificates-2019.2.32-76.el7_7.noarch`
 
@@ -91,12 +76,7 @@ Licenses (from `rpm --query`): GPLv2
 
 Licenses (from `rpm --query`): GPLv3+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source coreutils-8.22-24.el7
-https://download.sinenomine.net/clefos/7/source/srpms/coreutils-8.22-24.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `cpio-2.11-27.el7.s390x`
 
@@ -108,23 +88,13 @@ Licenses (from `rpm --query`): GPLv3+
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source cracklib-2.9.0-11.el7
-https://download.sinenomine.net/clefos/7/source/srpms/cracklib-2.9.0-11.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `cracklib-dicts-2.9.0-11.el7.s390x`
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source cracklib-dicts-2.9.0-11.el7
-https://download.sinenomine.net/clefos/7/source/srpms/cracklib-2.9.0-11.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `cryptsetup-libs-2.0.3-5.el7.s390x`
 
@@ -142,12 +112,7 @@ Licenses (from `rpm --query`): MIT
 
 Licenses (from `rpm --query`): BSD with advertising
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source cyrus-sasl-lib-2.1.26-23.el7
-https://download.sinenomine.net/clefos/7/source/srpms/cyrus-sasl-2.1.26-23.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `dbus-1.10.24-13.el7_6.s390x`
 
@@ -177,12 +142,7 @@ Licenses (from `rpm --query`): LGPLv2
 
 Licenses (from `rpm --query`): GPLv3+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source diffutils-3.3-5.el7
-https://download.sinenomine.net/clefos/7/source/srpms/diffutils-3.3-5.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `dracut-033-564.el7.s390x`
 
@@ -212,13 +172,7 @@ Licenses (from `rpm --query`): GPLv2+ or LGPLv3+
 
 Licenses (from `rpm --query`): GPLv2
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source epel-release-7-11.noarch
-https://download.sinenomine.net/clefos/7/source/srpms/epel-release-7-11.src.rpm
-https://download.sinenomine.net/epel/epel-source-7/srpms/epel-release-7-11.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `expat-2.1.0-10.el7_3.s390x`
 
@@ -236,45 +190,25 @@ Licenses (from `rpm --query`): BSD
 
 Licenses (from `rpm --query`): Public Domain
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source filesystem-3.2-25.el7
-https://download.sinenomine.net/clefos/7/source/srpms/filesystem-3.2-25.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `findutils-4.5.11-6.el7.s390x`
 
 Licenses (from `rpm --query`): GPLv3+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source findutils-4.5.11-6.el7
-https://download.sinenomine.net/clefos/7/source/srpms/findutils-4.5.11-6.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `gawk-4.0.2-4.el7_3.1.s390x`
 
 Licenses (from `rpm --query`): GPLv3+ and GPL and LGPLv3+ and LGPL and BSD
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source gawk-4.0.2-4.el7_3.1
-https://download.sinenomine.net/clefos/7/source/srpms/gawk-4.0.2-4.el7_3.1.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `gdbm-1.10-8.el7.s390x`
 
 Licenses (from `rpm --query`): GPLv3+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source gdbm-1.10-8.el7
-https://download.sinenomine.net/clefos/7/source/srpms/gdbm-1.10-8.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `glib2-2.56.1-5.el7.s390x`
 
@@ -298,23 +232,13 @@ Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+
 
 Licenses (from `rpm --query`): LGPLv3+ or GPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source gmp-6.0.0-15.el7
-https://download.sinenomine.net/clefos/7/source/srpms/gmp-6.0.0-15.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `gnupg2-2.0.22-5.el7_5.s390x`
 
 Licenses (from `rpm --query`): GPLv3+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source gnupg2-2.0.22-5.el7_5
-https://download.sinenomine.net/clefos/7/source/srpms/gnupg2-2.0.22-5.el7_5.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `gpg-pubkey-40ccbbaa-51885936`
 
@@ -332,78 +256,43 @@ Licenses (from `rpm --query`): pubkey
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source gpgme-1.3.2-5.el7
-https://download.sinenomine.net/clefos/7/source/srpms/gpgme-1.3.2-5.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `grep-2.20-3.el7.s390x`
 
 Licenses (from `rpm --query`): GPLv3+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source grep-2.20-3.el7
-https://download.sinenomine.net/clefos/7/source/srpms/grep-2.20-3.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `gzip-1.5-10.el7.s390x`
 
 Licenses (from `rpm --query`): GPLv3+ and GFDL
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source gzip-1.5-10.el7
-https://download.sinenomine.net/clefos/7/source/srpms/gzip-1.5-10.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `hardlink-1.0-19.el7.s390x`
 
 Licenses (from `rpm --query`): GPL+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source hardlink-1.0-19.el7
-https://download.sinenomine.net/clefos/7/source/srpms/hardlink-1.0-19.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `info-5.1-5.el7.s390x`
 
 Licenses (from `rpm --query`): GPLv3+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source info-5.1-5.el7
-https://download.sinenomine.net/clefos/7/source/srpms/texinfo-5.1-5.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `json-c-0.11-4.el7_0.s390x`
 
 Licenses (from `rpm --query`): MIT
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source json-c-0.11-4.el7_0
-https://download.sinenomine.net/clefos/7/source/srpms/json-c-0.11-4.el7_0.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `keyutils-libs-1.5.8-3.el7.s390x`
 
 Licenses (from `rpm --query`): GPLv2+ and LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source keyutils-libs-1.5.8-3.el7
-https://download.sinenomine.net/clefos/7/source/srpms/keyutils-1.5.8-3.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `kmod-20-25.el7_7.1.s390x`
 
@@ -439,23 +328,13 @@ Licenses (from `rpm --query`): LGPLv2+
 
 Licenses (from `rpm --query`): LGPLv2+ and GPLv3+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libassuan-2.1.0-3.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libassuan-2.1.0-3.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libattr-2.4.46-13.el7.s390x`
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libattr-2.4.46-13.el7
-https://download.sinenomine.net/clefos/7/source/srpms/attr-2.4.46-13.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libblkid-2.23.2-61.el7_7.1.s390x`
 
@@ -473,12 +352,7 @@ Licenses (from `rpm --query`): LGPLv2+
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libcap-ng-0.7.5-4.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libcap-ng-0.7.5-4.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libcom_err-1.42.9-16.el7.s390x`
 
@@ -496,23 +370,13 @@ Licenses (from `rpm --query`): MIT
 
 Licenses (from `rpm --query`): BSD and LGPLv2 and Sleepycat
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libdb-5.3.21-25.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libdb-5.3.21-25.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libdb-utils-5.3.21-25.el7.s390x`
 
 Licenses (from `rpm --query`): BSD and LGPLv2 and Sleepycat
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libdb-utils-5.3.21-25.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libdb-5.3.21-25.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libffi-3.0.13-18.el7.s390x`
 
@@ -530,34 +394,19 @@ Licenses (from `rpm --query`): GPLv3+ and GPLv3+ with exceptions and GPLv2+ with
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libgcrypt-1.5.3-14.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libgcrypt-1.5.3-14.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libgpg-error-1.12-3.el7.s390x`
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libgpg-error-1.12-3.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libgpg-error-1.12-3.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libidn-1.28-4.el7.s390x`
 
 Licenses (from `rpm --query`): LGPLv2+ and GPLv3+ and GFDL
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libidn-1.28-4.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libidn-1.28-4.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libmount-2.23.2-61.el7_7.1.s390x`
 
@@ -569,12 +418,7 @@ Licenses (from `rpm --query`): LGPLv2+
 
 Licenses (from `rpm --query`): BSD or GPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libpwquality-1.2.3-5.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libpwquality-1.2.3-5.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libselinux-2.5-14.1.el7.s390x`
 
@@ -586,23 +430,13 @@ Licenses (from `rpm --query`): Public Domain
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libsemanage-2.5-14.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libsemanage-2.5-14.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libsepol-2.5-10.el7.s390x`
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libsepol-2.5-10.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libsepol-2.5-10.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libsmartcols-2.23.2-61.el7_7.1.s390x`
 
@@ -626,34 +460,19 @@ Licenses (from `rpm --query`): GPLv3+ and GPLv3+ with exceptions and GPLv2+ with
 
 Licenses (from `rpm --query`): GPLv3+ and LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libtasn1-4.10-1.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libtasn1-4.10-1.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libuser-0.60-9.el7.s390x`
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libuser-0.60-9.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libuser-0.60-9.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libutempter-1.1.6-4.el7.s390x`
 
 Licenses (from `rpm --query`): LGPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libutempter-1.1.6-4.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libutempter-1.1.6-4.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libuuid-2.23.2-61.el7_7.1.s390x`
 
@@ -665,12 +484,7 @@ Licenses (from `rpm --query`): BSD
 
 Licenses (from `rpm --query`): MIT
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source libverto-0.2.5-4.el7
-https://download.sinenomine.net/clefos/7/source/srpms/libverto-0.2.5-4.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `libxml2-2.9.1-6.el7_2.3.s390x`
 
@@ -682,12 +496,7 @@ Licenses (from `rpm --query`): MIT
 
 Licenses (from `rpm --query`): MIT
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source lua-5.1.4-15.el7
-https://download.sinenomine.net/clefos/7/source/srpms/lua-5.1.4-15.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `lz4-1.7.5-3.el7.s390x`
 
@@ -699,122 +508,67 @@ Licenses (from `rpm --query`): GPLv2+ and BSD
 
 Licenses (from `rpm --query`): MIT
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source ncurses-5.9-14.20130511.el7_4
-https://download.sinenomine.net/clefos/7/source/srpms/ncurses-5.9-14.20130511.el7_4.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `ncurses-base-5.9-14.20130511.el7_4.noarch`
 
 Licenses (from `rpm --query`): MIT
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source ncurses-base-5.9-14.20130511.el7_4.noarch
-https://download.sinenomine.net/clefos/7/source/srpms/ncurses-5.9-14.20130511.el7_4.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `ncurses-libs-5.9-14.20130511.el7_4.s390x`
 
 Licenses (from `rpm --query`): MIT
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source ncurses-libs-5.9-14.20130511.el7_4
-https://download.sinenomine.net/clefos/7/source/srpms/ncurses-5.9-14.20130511.el7_4.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `nspr-4.21.0-1.el7.s390x`
 
 Licenses (from `rpm --query`): MPLv2.0
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source nspr-4.21.0-1.el7
-https://download.sinenomine.net/clefos/7/source/srpms/nspr-4.21.0-1.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `nss-3.44.0-7.el7_7.s390x`
 
 Licenses (from `rpm --query`): MPLv2.0
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source nss-3.44.0-7.el7_7
-https://download.sinenomine.net/clefos/7/source/srpms/nss-3.44.0-7.el7_7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `nss-pem-1.0.3-7.el7.s390x`
 
 Licenses (from `rpm --query`): MPLv1.1
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source nss-pem-1.0.3-7.el7
-https://download.sinenomine.net/clefos/7/source/srpms/nss-pem-1.0.3-7.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `nss-softokn-3.44.0-8.el7_7.s390x`
 
 Licenses (from `rpm --query`): MPLv2.0
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source nss-softokn-3.44.0-8.el7_7
-https://download.sinenomine.net/clefos/7/source/srpms/nss-softokn-3.44.0-8.el7_7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `nss-softokn-freebl-3.44.0-8.el7_7.s390x`
 
 Licenses (from `rpm --query`): MPLv2.0
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source nss-softokn-freebl-3.44.0-8.el7_7
-https://download.sinenomine.net/clefos/7/source/srpms/nss-softokn-3.44.0-8.el7_7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `nss-sysinit-3.44.0-7.el7_7.s390x`
 
 Licenses (from `rpm --query`): MPLv2.0
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source nss-sysinit-3.44.0-7.el7_7
-https://download.sinenomine.net/clefos/7/source/srpms/nss-3.44.0-7.el7_7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `nss-tools-3.44.0-7.el7_7.s390x`
 
 Licenses (from `rpm --query`): MPLv2.0
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source nss-tools-3.44.0-7.el7_7
-https://download.sinenomine.net/clefos/7/source/srpms/nss-3.44.0-7.el7_7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `nss-util-3.44.0-4.el7_7.s390x`
 
 Licenses (from `rpm --query`): MPLv2.0
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source nss-util-3.44.0-4.el7_7
-https://download.sinenomine.net/clefos/7/source/srpms/nss-util-3.44.0-4.el7_7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `openldap-2.4.44-21.el7_6.s390x`
 
@@ -826,34 +580,19 @@ Licenses (from `rpm --query`): OpenLDAP
 
 Licenses (from `rpm --query`): OpenSSL
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source openssl-libs-1.0.2k-19.el7
-https://download.sinenomine.net/clefos/7/source/srpms/openssl-1.0.2k-19.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `p11-kit-0.23.5-3.el7.s390x`
 
 Licenses (from `rpm --query`): BSD
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source p11-kit-0.23.5-3.el7
-https://download.sinenomine.net/clefos/7/source/srpms/p11-kit-0.23.5-3.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `p11-kit-trust-0.23.5-3.el7.s390x`
 
 Licenses (from `rpm --query`): BSD
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source p11-kit-trust-0.23.5-3.el7
-https://download.sinenomine.net/clefos/7/source/srpms/p11-kit-0.23.5-3.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `pam-1.1.8-22.el7.s390x`
 
@@ -865,45 +604,25 @@ Licenses (from `rpm --query`): BSD and GPLv2+
 
 Licenses (from `rpm --query`): BSD
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source pcre-8.32-17.el7
-https://download.sinenomine.net/clefos/7/source/srpms/pcre-8.32-17.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `pinentry-0.8.1-17.el7.s390x`
 
 Licenses (from `rpm --query`): GPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source pinentry-0.8.1-17.el7
-https://download.sinenomine.net/clefos/7/source/srpms/pinentry-0.8.1-17.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `pkgconfig-0.27.1-4.el7.s390x`
 
 Licenses (from `rpm --query`): GPLv2+
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source pkgconfig-0.27.1-4.el7
-https://download.sinenomine.net/clefos/7/source/srpms/pkgconfig-0.27.1-4.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `popt-1.13-16.el7.s390x`
 
 Licenses (from `rpm --query`): MIT
 
-Source:
-
-```console
-$ dnf --quiet download --source --url --enablerepo=source popt-1.13-16.el7
-https://download.sinenomine.net/clefos/7/source/srpms/popt-1.13-16.el7.src.rpm
-```
+**WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
 ### `rpm` package: `procps-ng-3.3.10-26.el7_7.1.s390x`
 
