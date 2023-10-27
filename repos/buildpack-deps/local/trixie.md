@@ -639,21 +639,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `X11`
 - `curl`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=8.3.0-2
-'http://deb.debian.org/debian/pool/main/c/curl/curl_8.3.0-2.dsc' curl_8.3.0-2.dsc 3044 SHA256:f64536a6fa948e37e5bc2bc7ffb38fe9aabebc3121b9fd227322684e53aa7012
-'http://deb.debian.org/debian/pool/main/c/curl/curl_8.3.0.orig.tar.gz' curl_8.3.0.orig.tar.gz 4404620 SHA256:d3a19aeea301085a56c32bc0f7d924a818a7893af253e41505d1e26d7db8e95a
-'http://deb.debian.org/debian/pool/main/c/curl/curl_8.3.0.orig.tar.gz.asc' curl_8.3.0.orig.tar.gz.asc 488 SHA256:3612f9b0f6cb45a0cbf8a5c7f2f018297920e4f9e26a6e3a61d1f452f9ebda42
-'http://deb.debian.org/debian/pool/main/c/curl/curl_8.3.0-2.debian.tar.xz' curl_8.3.0-2.debian.tar.xz 46940 SHA256:511cb15e226f23d81aa58fb745d37758101512fb6e135ea372599dcf2dd72042
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/8.3.0-2/
 
-- https://sources.debian.net/src/curl/8.3.0-2/ (for browsing the source)
-- https://sources.debian.net/src/curl/8.3.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/8.3.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg1-3`
 
@@ -2203,21 +2195,13 @@ Licenses: (parsed from: `/usr/share/doc/krb5-multidev/copyright`, `/usr/share/do
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.20.1-4
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1-4.dsc' krb5_1.20.1-4.dsc 3248 SHA256:21dd89f7b1a9b70ebbc48b7d2708640ff632477fca549dae3ceef8a5b4c258ec
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1.orig.tar.gz' krb5_1.20.1.orig.tar.gz 8661660 SHA256:704aed49b19eb5a7178b34b2873620ec299db08752d6a8574f95d41879ab8851
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1.orig.tar.gz.asc' krb5_1.20.1.orig.tar.gz.asc 833 SHA256:2afeec5dbc586cc40b7975645e02b4c41c4d719dd02213e828c72d8239d55666
-'http://deb.debian.org/debian/pool/main/k/krb5/krb5_1.20.1-4.debian.tar.xz' krb5_1.20.1-4.debian.tar.xz 104400 SHA256:2b96f8e13204ecd91f956f7c78552cd0319f01bc2944df2c2bdcaa99bab2bbec
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/krb5/1.20.1-4/
 
-- https://sources.debian.net/src/krb5/1.20.1-4/ (for browsing the source)
-- https://sources.debian.net/src/krb5/1.20.1-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/krb5/1.20.1-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lapack=3.11.0-2`
 
@@ -4072,20 +4056,13 @@ Licenses: (parsed from: `/usr/share/doc/libmariadb-dev/copyright`, `/usr/share/d
 - `unlimited-free-doc`
 - `zlib/libpng`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mariadb=1:10.11.4-1
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.4-1.dsc' mariadb_10.11.4-1.dsc 5055 SHA256:35f200677039774c41d92bdab536403db828eed83a14bb1c42721df2c43d3bc6
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.4.orig.tar.gz' mariadb_10.11.4.orig.tar.gz 93268027 SHA256:f3e38a6bbea5e98176adb8f1b00b08832e01a4b4687f80f3271d1c6e0443f13c
-'http://deb.debian.org/debian/pool/main/m/mariadb/mariadb_10.11.4-1.debian.tar.xz' mariadb_10.11.4-1.debian.tar.xz 272608 SHA256:43d65c126dac4a237e745ada820c8d39b4794a32995f56f69848112f599a160b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mariadb/1:10.11.4-1/
 
-- https://sources.debian.net/src/mariadb/1:10.11.4-1/ (for browsing the source)
-- https://sources.debian.net/src/mariadb/1:10.11.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mariadb/1:10.11.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `mawk=1.3.4.20230808-1`
 
@@ -4640,20 +4617,13 @@ Licenses: (parsed from: `/usr/share/doc/libpam-modules/copyright`, `/usr/share/d
 - `LGPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pam=1.5.2-7
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2-7.dsc' pam_1.5.2-7.dsc 1998 SHA256:7df51d293e96b103ad515b730f9b0422fb8dd0b0d3173979ff03ae688b3beaeb
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2.orig.tar.xz' pam_1.5.2.orig.tar.xz 988784 SHA256:e4ec7131a91da44512574268f493c6d8ca105c87091691b8e9b56ca685d4f94d
-'http://deb.debian.org/debian/pool/main/p/pam/pam_1.5.2-7.debian.tar.xz' pam_1.5.2-7.debian.tar.xz 123000 SHA256:e8432e78c764abeaa313dbe69eedc98d4a407b0b66ffc622e3766d4acd995db2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pam/1.5.2-7/
 
-- https://sources.debian.net/src/pam/1.5.2-7/ (for browsing the source)
-- https://sources.debian.net/src/pam/1.5.2-7/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pam/1.5.2-7/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pango1.0=1.51.0+ds-2`
 
