@@ -1,10 +1,10 @@
-# `mongo:5.0.21-focal`
+# `mongo:5.0.22-focal`
 
 ## Docker Metadata
 
-- Image ID: `sha256:12ce459b546c9d80f0da01459a91d65d85ab0b587e7f9bfa1a4110fd8129ee5a`
-- Created: `2023-10-13T04:48:37.853140255Z`
-- Virtual Size: ~ 690.28 Mb  
+- Image ID: `sha256:a41b90b03613937ed61fe4b9f6f2347e431f836e3b22c4f41682ed5bd6b753c2`
+- Created: `2023-10-26T23:21:18.743853849Z`
+- Virtual Size: ~ 699.33 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -16,7 +16,7 @@
   - `MONGO_PACKAGE=mongodb-org`
   - `MONGO_REPO=repo.mongodb.org`
   - `MONGO_MAJOR=5.0`
-  - `MONGO_VERSION=5.0.21`
+  - `MONGO_VERSION=5.0.22`
   - `HOME=/data/db`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
@@ -1270,11 +1270,11 @@ $ apt-get source -qq --print-uris mawk=1.3.4.20200120-2
 'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20200120-2.debian.tar.xz' mawk_1.3.4.20200120-2.debian.tar.xz 7504 SHA256:b772ed2f016b0286980c46cbc1f1f4ae62887ef2aa3dff6ef10cae638f923f26
 ```
 
-### `dpkg` source package: `mongodb-database-tools=100.8.0`
+### `dpkg` source package: `mongodb-database-tools=100.9.0`
 
 Binary Packages:
 
-- `mongodb-database-tools=100.8.0`
+- `mongodb-database-tools=100.9.0`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
@@ -1284,11 +1284,11 @@ If source is available (seen below), check the contents of `debian/copyright` wi
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `mongodb-mongosh=2.0.1`
+### `dpkg` source package: `mongodb-mongosh=2.0.2`
 
 Binary Packages:
 
-- `mongodb-mongosh=2.0.1`
+- `mongodb-mongosh=2.0.2`
 
 Licenses: (parsed from: `/usr/share/doc/mongodb-mongosh/copyright`)
 
@@ -1299,17 +1299,17 @@ Licenses: (parsed from: `/usr/share/doc/mongodb-mongosh/copyright`)
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `mongodb-org=5.0.21`
+### `dpkg` source package: `mongodb-org=5.0.22`
 
 Binary Packages:
 
-- `mongodb-org=5.0.21`
-- `mongodb-org-database=5.0.21`
-- `mongodb-org-database-tools-extra=5.0.21`
-- `mongodb-org-mongos=5.0.21`
-- `mongodb-org-server=5.0.21`
-- `mongodb-org-shell=5.0.21`
-- `mongodb-org-tools=5.0.21`
+- `mongodb-org=5.0.22`
+- `mongodb-org-database=5.0.22`
+- `mongodb-org-database-tools-extra=5.0.22`
+- `mongodb-org-mongos=5.0.22`
+- `mongodb-org-server=5.0.22`
+- `mongodb-org-shell=5.0.22`
+- `mongodb-org-tools=5.0.22`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
