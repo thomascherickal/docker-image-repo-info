@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:759849c007d4101565e124e430b35e64bca2360946fb15669d894c4bc947955d`
-- Created: `2023-10-23T23:23:30.10492394Z`
-- Virtual Size: ~ 513.27 Mb  
+- Image ID: `sha256:e4a4062ae5b326ca01c8276df7b0514e325adfeb8d4989dfc37240874ed11e5c`
+- Created: `2023-10-28T00:17:47.935317097Z`
+- Virtual Size: ~ 513.39 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","-g","--","/startup/docker-entrypoint.sh"]`
@@ -19,21 +19,21 @@
   - `NEO4J_HOME=/var/lib/neo4j`
 - Labels:
   - `architecture=x86_64`
-  - `build-date=2023-05-03T15:02:09`
+  - `build-date=2023-10-18T11:46:11`
   - `com.redhat.component=ubi8-minimal-container`
   - `com.redhat.license_terms=https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI`
   - `description=The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.`
   - `distribution-scope=public`
-  - `io.buildah.version=1.27.3`
+  - `io.buildah.version=1.29.0`
   - `io.k8s.description=The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.`
   - `io.k8s.display-name=Red Hat Universal Base Image 8 Minimal`
   - `io.openshift.expose-services=`
   - `io.openshift.tags=minimal rhel8`
   - `maintainer=Red Hat, Inc.`
   - `name=ubi8-minimal`
-  - `release=860`
+  - `release=1072.1697626218`
   - `summary=Provides the latest release of the minimal Red Hat Universal Base Image 8.`
-  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8-minimal/images/8.8-860`
+  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi8-minimal/images/8.8-1072.1697626218`
   - `vcs-ref=dee8029ddcc7ecbfbebb0905d2b15e134338616c`
   - `vcs-type=git`
   - `vendor=Red Hat, Inc.`
@@ -71,7 +71,7 @@ Licenses (from `rpm --query`): BSD
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `ca-certificates-2022.2.54-80.2.el8_6.noarch`
+### `rpm` package: `ca-certificates-2023.2.60_v7.0.306-80.0.el8_8.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
@@ -95,7 +95,7 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `curl-7.61.1-30.el8_8.2.x86_64`
+### `rpm` package: `curl-7.61.1-30.el8_8.3.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -149,19 +149,19 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-2.28-225.el8.x86_64`
+### `rpm` package: `glibc-2.28-225.el8_8.6.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-common-2.28-225.el8.x86_64`
+### `rpm` package: `glibc-common-2.28-225.el8_8.6.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `glibc-minimal-langpack-2.28-225.el8.x86_64`
+### `rpm` package: `glibc-minimal-langpack-2.28-225.el8_8.6.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and LGPLv2+ with exceptions and GPLv2+ and GPLv2+ with exceptions and BSD and Inner-Net and ISC and Public Domain and GFDL
 
@@ -257,7 +257,7 @@ Licenses (from `rpm --query`): GPLv2+ and LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `krb5-libs-1.18.2-22.el8_7.x86_64`
+### `rpm` package: `krb5-libs-1.18.2-25.el8_8.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -299,7 +299,7 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libcap-2.48-4.el8.x86_64`
+### `rpm` package: `libcap-2.48-5.el8_8.x86_64`
 
 Licenses (from `rpm --query`): BSD or GPLv2
 
@@ -317,7 +317,7 @@ Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libcurl-7.61.1-30.el8_8.2.x86_64`
+### `rpm` package: `libcurl-7.61.1-30.el8_8.3.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -395,7 +395,7 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libnghttp2-1.33.0-3.el8_2.1.x86_64`
+### `rpm` package: `libnghttp2-1.33.0-5.el8_8.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -455,19 +455,19 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libsolv-0.7.20-4.el8.x86_64`
+### `rpm` package: `libsolv-0.7.20-4.el8_7.x86_64`
 
 Licenses (from `rpm --query`): BSD
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libssh-0.9.6-6.el8.x86_64`
+### `rpm` package: `libssh-0.9.6-10.el8_8.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libssh-config-0.9.6-6.el8.noarch`
+### `rpm` package: `libssh-config-0.9.6-10.el8_8.noarch`
 
 Licenses (from `rpm --query`): LGPLv2+
 
@@ -515,7 +515,7 @@ Licenses (from `rpm --query`): LGPLv2+ and BSD and Public Domain
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libxml2-2.9.7-15.el8_7.1.x86_64`
+### `rpm` package: `libxml2-2.9.7-16.el8_8.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -557,13 +557,13 @@ Licenses (from `rpm --query`): LGPLv3+ and GPLv3+ and GFDL
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `ncurses-base-6.1-9.20180224.el8.noarch`
+### `rpm` package: `ncurses-base-6.1-9.20180224.el8_8.1.noarch`
 
 Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `ncurses-libs-6.1-9.20180224.el8.x86_64`
+### `rpm` package: `ncurses-libs-6.1-9.20180224.el8_8.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -689,13 +689,13 @@ Licenses (from `rpm --query`): BSD and GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `sqlite-libs-3.26.0-17.el8_7.x86_64`
+### `rpm` package: `sqlite-libs-3.26.0-18.el8_8.x86_64`
 
 Licenses (from `rpm --query`): Public Domain
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `systemd-libs-239-74.el8_8.x86_64`
+### `rpm` package: `systemd-libs-239-74.el8_8.5.x86_64`
 
 Licenses (from `rpm --query`): LGPLv2+ and MIT
 
