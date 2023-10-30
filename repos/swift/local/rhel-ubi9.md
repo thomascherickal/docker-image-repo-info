@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4f293e3afedef159249cd90c89c9feeffba03379a88e83dafc1a78592aa5c627`
-- Created: `2023-10-19T19:46:21.123944242Z`
+- Image ID: `sha256:d4a1cca9b050bea5650f572936a08353d0b82e3a1ab84898fee7c4026f7f4074`
+- Created: `2023-10-28T00:21:57.854497558Z`
 - Virtual Size: ~ 2.46 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -18,7 +18,7 @@
   - `SWIFT_WEBROOT=https://download.swift.org`
 - Labels:
   - `architecture=x86_64`
-  - `build-date=2023-10-05T14:03:48`
+  - `build-date=2023-10-18T11:30:28`
   - `com.redhat.component=ubi9-container`
   - `com.redhat.license_terms=https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI`
   - `description=Docker Container for the Swift programming language`
@@ -30,9 +30,9 @@
   - `io.openshift.tags=base rhel9`
   - `maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>`
   - `name=ubi9`
-  - `release=755.1696514207`
+  - `release=755.1697625012`
   - `summary=Provides the latest release of Red Hat Universal Base Image 9.`
-  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.2-755.1696514207`
+  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.2-755.1697625012`
   - `vcs-ref=6b5892a11894993e819f9a93ee1d7aaa80dc3a17`
   - `vcs-type=git`
   - `vendor=Red Hat, Inc.`
@@ -136,7 +136,7 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `curl-minimal-7.76.1-23.el9_2.2.x86_64`
+### `rpm` package: `curl-minimal-7.76.1-23.el9_2.4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -526,13 +526,13 @@ Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libcurl-devel-7.76.1-23.el9_2.2.x86_64`
+### `rpm` package: `libcurl-devel-7.76.1-23.el9_2.4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libcurl-minimal-7.76.1-23.el9_2.2.x86_64`
+### `rpm` package: `libcurl-minimal-7.76.1-23.el9_2.4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -652,7 +652,7 @@ Licenses (from `rpm --query`): LGPLv3+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libnghttp2-1.43.0-5.el9.x86_64`
+### `rpm` package: `libnghttp2-1.43.0-5.el9_2.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 

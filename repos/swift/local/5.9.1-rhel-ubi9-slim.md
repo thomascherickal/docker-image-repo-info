@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c74ed2d8e1606c24cff3963d1a043b3f7d34ea4940d176aa1b953c85cc5992e9`
-- Created: `2023-10-19T19:46:56.786628738Z`
-- Virtual Size: ~ 337.97 Mb  
+- Image ID: `sha256:b31df111e7400ccface04de2866225789c3b2e6bc074244042e6e9d7297fdd03`
+- Created: `2023-10-28T00:22:36.776574683Z`
+- Virtual Size: ~ 337.96 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -18,7 +18,7 @@
   - `SWIFT_WEBROOT=https://download.swift.org`
 - Labels:
   - `architecture=x86_64`
-  - `build-date=2023-10-05T14:03:48`
+  - `build-date=2023-10-18T11:30:28`
   - `com.redhat.component=ubi9-container`
   - `com.redhat.license_terms=https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI`
   - `description=Docker Container for the Swift programming language`
@@ -30,9 +30,9 @@
   - `io.openshift.tags=base rhel9`
   - `maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>`
   - `name=ubi9`
-  - `release=755.1696514207`
+  - `release=755.1697625012`
   - `summary=Provides the latest release of Red Hat Universal Base Image 9.`
-  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.2-755.1696514207`
+  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.2-755.1697625012`
   - `vcs-ref=6b5892a11894993e819f9a93ee1d7aaa80dc3a17`
   - `vcs-type=git`
   - `vendor=Red Hat, Inc.`
@@ -112,7 +112,7 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `curl-minimal-7.76.1-23.el9_2.2.x86_64`
+### `rpm` package: `curl-minimal-7.76.1-23.el9_2.4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -424,7 +424,7 @@ Licenses (from `rpm --query`): GPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libcurl-minimal-7.76.1-23.el9_2.2.x86_64`
+### `rpm` package: `libcurl-minimal-7.76.1-23.el9_2.4.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
@@ -520,7 +520,7 @@ Licenses (from `rpm --query`): LGPLv2+
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libnghttp2-1.43.0-5.el9.x86_64`
+### `rpm` package: `libnghttp2-1.43.0-5.el9_2.1.x86_64`
 
 Licenses (from `rpm --query`): MIT
 
