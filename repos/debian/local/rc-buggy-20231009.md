@@ -1729,19 +1729,13 @@ Licenses: (parsed from: `/usr/share/doc/usr-is-merged/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris usrmerge=37
-'http://deb.debian.org/debian/pool/main/u/usrmerge/usrmerge_37.dsc' usrmerge_37.dsc 981 SHA256:a285d4aac1fca5dfbca44cad7b39cbfa883af229106f09742d9f5bca61cd3b50
-'http://deb.debian.org/debian/pool/main/u/usrmerge/usrmerge_37.tar.xz' usrmerge_37.tar.xz 15112 SHA256:0de88e6bb765c78bbe6cf6b771ef9f6cab92b72bf95d7910c5d473bfbc7955c7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/usrmerge/37/
 
-- https://sources.debian.net/src/usrmerge/37/ (for browsing the source)
-- https://sources.debian.net/src/usrmerge/37/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/usrmerge/37/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `util-linux=2.39.2-2`
 
