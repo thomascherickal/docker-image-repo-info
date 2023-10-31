@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:f7d0b5298d9f8cafb53b409a7d3bda15da297ff08973b3f24cc365f444040727`
-- Created: `2023-10-13T06:08:05.76946054Z`
-- Virtual Size: ~ 738.42 Mb  
+- Image ID: `sha256:643f06325796b2a816c0046b3f402238bc12bcbd74a408c6523d8fdd29c61230`
+- Created: `2023-10-31T05:24:58.189858437Z`
+- Virtual Size: ~ 738.51 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/__cacert_entrypoint.sh"]`
@@ -15,7 +15,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.8.1+1`
+  - `JAVA_VERSION=jdk-17.0.9+9`
   - `GRADLE_HOME=/opt/gradle`
   - `GRADLE_VERSION=7.6.3`
 - Labels:
@@ -1828,20 +1828,25 @@ $ apt-get source -qq --print-uris openssh=1:8.2p1-4ubuntu0.9
 'http://archive.ubuntu.com/ubuntu/pool/main/o/openssh/openssh_8.2p1-4ubuntu0.9.debian.tar.xz' openssh_8.2p1-4ubuntu0.9.debian.tar.xz 180188 SHA512:5564ef185742df68bb254a8349e6c83848e660c7a289ec37251fb8b94af9b8780c81caf7dbe0fbafa126f64a0edd4122e22c241b8a424d851a862e5eb1194dbd
 ```
 
-### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.19`
+### `dpkg` source package: `openssl=1.1.1f-1ubuntu2.20`
 
 Binary Packages:
 
-- `libssl1.1:amd64=1.1.1f-1ubuntu2.19`
-- `openssl=1.1.1f-1ubuntu2.19`
+- `libssl1.1:amd64=1.1.1f-1ubuntu2.20`
+- `openssl=1.1.1f-1ubuntu2.20`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris openssl=1.1.1f-1ubuntu2.20
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.20.dsc' openssl_1.1.1f-1ubuntu2.20.dsc 2336 SHA512:4d6d4ef8ba486935854e3849dbafec4997ca2b6ab668fcea67ac9ccceb5fff2cb667aae4db22893063a922a1298fe145a6957897d6c5db3c3e6b968edf262bbe
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f.orig.tar.gz' openssl_1.1.1f.orig.tar.gz 9792828 SHA512:b00bd9b5ad5298fbceeec6bb19c1ab0c106ca5cfb31178497c58bf7e0e0cf30fcc19c20f84e23af31cc126bf2447d3e4f8461db97bafa7bd78f69561932f000c
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_1.1.1f-1ubuntu2.20.debian.tar.xz' openssl_1.1.1f-1ubuntu2.20.debian.tar.xz 233100 SHA512:5cc654ad0cf95661b9f9a15a2dc53d92fcbf989d636d3491682d791f1e83a092c8f8827ac188ed92287943ff7065f53d6d8b8c365700188f38eb4bb626a7e879
+```
 
 ### `dpkg` source package: `p11-kit=0.23.20-1ubuntu0.1`
 

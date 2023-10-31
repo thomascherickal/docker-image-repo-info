@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:970c857a8410716054d0f97393eef7cae340d8a4a0c650919f0f6ac9ad4a806e`
-- Created: `2023-10-19T07:19:50.050029932Z`
-- Virtual Size: ~ 566.23 Mb  
+- Image ID: `sha256:5ca5c2b7550317cb1ebdcad64e07e9d8775a0b1c581e3dd7bf5440a0f78c97b9`
+- Created: `2023-10-31T05:24:04.187528726Z`
+- Virtual Size: ~ 574.87 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/__cacert_entrypoint.sh"]`
@@ -15,7 +15,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-21+35`
+  - `JAVA_VERSION=jdk-21.0.1+12`
   - `GRADLE_HOME=/opt/gradle`
   - `GRADLE_VERSION=8.4`
 
@@ -137,6 +137,23 @@ bash-5.2.15-r5 installed size:
 
 bash-5.2.15-r5 license:
 GPL-3.0-or-later
+
+```
+
+### `apk` package: `binutils`
+
+```console
+binutils-2.40-r7 description:
+Tools necessary to build programs
+
+binutils-2.40-r7 webpage:
+https://www.gnu.org/software/binutils/
+
+binutils-2.40-r7 installed size:
+8020 KiB
+
+binutils-2.40-r7 license:
+GPL-2.0-or-later AND LGPL-2.1-or-later AND BSD-3-Clause
 
 ```
 
@@ -1174,5 +1191,22 @@ zlib-1.2.13-r1 installed size:
 
 zlib-1.2.13-r1 license:
 Zlib
+
+```
+
+### `apk` package: `zstd-libs`
+
+```console
+zstd-libs-1.5.5-r4 description:
+Zstandard - Fast real-time compression algorithm (libraries)
+
+zstd-libs-1.5.5-r4 webpage:
+https://www.zstd.net/
+
+zstd-libs-1.5.5-r4 installed size:
+736 KiB
+
+zstd-libs-1.5.5-r4 license:
+BSD-3-Clause GPL-2.0-or-later
 
 ```
