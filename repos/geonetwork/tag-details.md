@@ -3816,7 +3816,7 @@ CMD ["catalina.sh" "run"]
 ## `geonetwork:4`
 
 ```console
-$ docker pull geonetwork@sha256:a39c4533c41751b152d5e2f5f78c2da8fa927e3326c274ae711781cc51808add
+$ docker pull geonetwork@sha256:e9bd8606f7a153703d798e82cf77b8412d47ff75dd5f6fac70e7a796f2d18075
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -3988,14 +3988,14 @@ VOLUME [/catalogue-data]
 ### `geonetwork:4` - linux; arm64 variant v8
 
 ```console
-$ docker pull geonetwork@sha256:5372c4e5fadad885c113c5c79789d2f919ccd118064d3e89b9e1510064da27d2
+$ docker pull geonetwork@sha256:0eccc722db086ce4fb1211e4f3862120595ff93b3756b0084ecb4454a506e5b4
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **507.3 MB (507305770 bytes)**  
+-	Total Size: **507.7 MB (507723131 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cac715517a81f7bb0514b1fc4bdcc3d897d9571dc8c08f4e5c12663ca9439148`
+-	Image ID: `sha256:755e4c693adc79af9f589570bbb4dc063fbbce93f9ccb286eec90898c9c454bd`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -4018,81 +4018,81 @@ ENV JAVA_HOME=/opt/java/openjdk
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Fri, 13 Oct 2023 02:46:03 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Fri, 13 Oct 2023 02:46:20 GMT
-RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales p11-kit     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 13 Oct 2023 02:47:16 GMT
-ENV JAVA_VERSION=jdk-11.0.20.1+1
-# Fri, 13 Oct 2023 02:47:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='69d39682c4a2fac294a9eaacbf62c26d3c8a2f9123f1b5d287498a5472c6b672';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        armhf|arm)          ESUM='e83674aee238ebb5f359b9395b3c5e3fad5b645846095494662802d2f0fd01c9';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b806f4bb526161bf9b2ffb37be4e1b77f56b4e726dc4d52c7902130a79e7d710';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='a7efbe804a4616d38b6ac0def40cd9feacc04aee2bb89132191f4d33fc0a7c1e';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='398a64bff002f0e3b0c01ecd24a1a32c83cb72a5255344219e9757d4ddd9f857';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Fri, 13 Oct 2023 02:47:27 GMT
-RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:31 GMT
+RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends         curl         wget         fontconfig         ca-certificates p11-kit         tzdata         locales     ;     echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen;     locale-gen en_US.UTF-8;     rm -rf /var/lib/apt/lists/*
+# Mon, 30 Oct 2023 23:40:31 GMT
+ENV JAVA_VERSION=jdk-11.0.21+9
+# Mon, 30 Oct 2023 23:40:38 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='8c3146035b99c55ab26a2982f4b9abd2bf600582361cf9c732539f713d271faf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.21_9.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='60ea98daa09834fdd3162ca91ddc8d92a155ab3121204f6f643176ee0c2d0d5e';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_x64_linux_hotspot_11.0.21_9.tar.gz';          ;;        armhf|arm)          ESUM='a64b005b84b173e294078fec34660ed3429d8c60726a5fb5c140e13b9e0c79fa';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_arm_linux_hotspot_11.0.21_9.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='262ff98d6d88a7c7cc522cb4ec4129491a0eb04f5b17dcca0da57cfcdcf3830d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.21_9.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bc67f79fb82c4131d9dcea32649c540a16aa380a9726306b9a67c5ec9690c492';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.21_9.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     wget --progress=dot:giga -O /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p "$JAVA_HOME";     tar --extract         --file /tmp/openjdk.tar.gz         --directory "$JAVA_HOME"         --strip-components 1         --no-same-owner     ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Mon, 30 Oct 2023 23:40:41 GMT
+RUN set -eux;     echo "Verifying install ...";     fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java;     echo "javac --version"; javac --version;     echo "java --version"; java --version;     echo "Complete."
+# Mon, 30 Oct 2023 23:40:42 GMT
 COPY file:8b8864b3e02a33a579dc216fd51b28a6047bc8eeaa03045b258980fe0cf7fcb3 in /__cacert_entrypoint.sh 
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:42 GMT
 ENTRYPOINT ["/__cacert_entrypoint.sh"]
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:42 GMT
 CMD ["jshell"]
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_VERSION=9.4.53.v20231009
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV TMPDIR=/tmp/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 13 Oct 2023 07:57:54 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.53.v20231009/jetty-home-9.4.53.v20231009.tar.gz
-# Fri, 13 Oct 2023 07:57:54 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	F254B35617DC255D9344BCFA873A8E86B4372146 	E22488CC94F63E3FC928536C4241C08270D999C3
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	case "$JETTY_VERSION" in 		"12."*) START_MODULES="server,http,ext,resources" ;; 		*) START_MODULES="server,http,deploy,ext,resources,jsp,jstl,websocket" ;; 	esac ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="$START_MODULES" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 WORKDIR /var/lib/jetty
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 COPY multi:6bf6ffc2c0ff756d51254f4ec987e84575c16c895c328c42a63bde92f8d5278a in / 
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 USER jetty
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 EXPOSE 8080
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV DATA_DIR=/catalogue-data
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV WEBAPP_CONTEXT_PATH=/geonetwork
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV GN_CONFIG_PROPERTIES=-Dgeonetwork.dir=/catalogue-data         -Dgeonetwork.formatter.dir=/catalogue-data/data/formatter         -Dgeonetwork.schema.dir=/opt/geonetwork/WEB-INF/data/config/schema_plugins         -Dgeonetwork.indexConfig.dir=/opt/geonetwork/WEB-INF/data/config/index
-# Wed, 25 Oct 2023 21:28:26 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC
-# Wed, 25 Oct 2023 21:28:26 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 USER root
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /opt/geonetwork &&     chown -R jetty:jetty /opt/geonetwork
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 USER jetty
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_FILE=geonetwork.war
-# Wed, 25 Oct 2023 21:28:41 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_VERSION=4.4.0
-# Wed, 25 Oct 2023 21:28:41 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_DOWNLOAD_MD5=36638cfd380942801ff2038792ee54a9
-# Wed, 25 Oct 2023 21:28:58 GMT
+# Tue, 31 Oct 2023 04:22:03 GMT
 RUN cd /opt/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Wed, 25 Oct 2023 21:29:00 GMT
+# Tue, 31 Oct 2023 04:22:06 GMT
 COPY file:996df24c69b17d351426a6c0c0dfb153f784c21af81ae4ec36afa187063e1eda in /usr/local/share/geonetwork/geonetwork_context_template.xml 
-# Wed, 25 Oct 2023 21:29:00 GMT
+# Tue, 31 Oct 2023 04:22:06 GMT
 COPY file:d9c7c0ea7fa75c70fed09ff248e0afcc376dd41d9a324310e416d6496fe3a37e in /geonetwork-entrypoint.sh 
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 RUN java -jar /usr/local/jetty/start.jar --create-startd --add-module=http-forwarded
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -4101,48 +4101,48 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 05 Oct 2023 12:12:17 GMT  
 		Size: 27.2 MB (27199503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3a7fe5b0236efc346cd4debc4c5e5b3c24c2c34ab5913c1647b26219f2c53f7`  
-		Last Modified: Fri, 13 Oct 2023 02:50:41 GMT  
-		Size: 16.8 MB (16768291 bytes)  
+	-	`sha256:2717b88e02799c1309e24243b581cd227d05944a061c0c57d1cac69369a47533`  
+		Last Modified: Mon, 30 Oct 2023 23:48:05 GMT  
+		Size: 16.8 MB (16768205 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:84562ffe350fd123902a28225215826843d7983e543835f54b2af29c6e3ce992`  
-		Last Modified: Fri, 13 Oct 2023 02:51:51 GMT  
-		Size: 141.6 MB (141584461 bytes)  
+	-	`sha256:d82722792e906a87964d888a3beeaa639775df882dc78cfc97770128f9f3412d`  
+		Last Modified: Mon, 30 Oct 2023 23:48:11 GMT  
+		Size: 142.0 MB (142001844 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49bd8ecdd6a33dcccec3d07709e6f8f48487b45cfb79709d88776ac6325faf6a`  
-		Last Modified: Fri, 13 Oct 2023 02:51:42 GMT  
-		Size: 176.0 B  
+	-	`sha256:15a50967cb307fbe0b595fdc063f95ec5699535a9335205353a548ad1bc30a9b`  
+		Last Modified: Mon, 30 Oct 2023 23:48:02 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e0b93572998af73b5ca61b23f8a00ca5bf4b6fdbf25853fbc3a76cdff635f9ff`  
-		Last Modified: Fri, 13 Oct 2023 02:51:42 GMT  
-		Size: 733.0 B  
+	-	`sha256:7587ce9b054e206a8446bfe1e2e72ce19b20503a84cfd423fe9f26c979c1c2d7`  
+		Last Modified: Mon, 30 Oct 2023 23:48:02 GMT  
+		Size: 734.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d4db4bb4dc5704e2e0480a29b6d492a070f49f3d9cb7499ea523d92a16ce862`  
-		Last Modified: Fri, 13 Oct 2023 08:05:16 GMT  
-		Size: 10.3 MB (10269288 bytes)  
+	-	`sha256:cfee3b24b2d42a830cec8492f53d1ab8ede6130ad1db5f15fb67b87a37d8399c`  
+		Last Modified: Tue, 31 Oct 2023 02:02:04 GMT  
+		Size: 10.3 MB (10269326 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:edd13ed6599590948aba12cec99936ad694253c45c6fa74662bb1a921385085d`  
-		Last Modified: Fri, 13 Oct 2023 08:05:15 GMT  
-		Size: 1.6 KB (1634 bytes)  
+	-	`sha256:01be6ec241020ea2f369b8bcca5ac43ad4656e52dfb67c3d540821c95030b871`  
+		Last Modified: Tue, 31 Oct 2023 02:02:02 GMT  
+		Size: 1.6 KB (1632 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11fe3afffd3624c4a594e21280b7cba1718ac5691d42fd0b3dec72460e32d8a6`  
-		Last Modified: Wed, 25 Oct 2023 21:29:19 GMT  
-		Size: 481.2 KB (481156 bytes)  
+	-	`sha256:f551abe6055e6d1e622a7fc41a663cfe06579c2d50cac3928aa686372eaa2496`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 481.1 KB (481110 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94f0d93eff3350ab94e2867a2975257b93730b16b1619e7f3bec599e9c629522`  
-		Last Modified: Wed, 25 Oct 2023 21:29:34 GMT  
-		Size: 311.0 MB (310999212 bytes)  
+	-	`sha256:86c0109336d5d652abdf16facff185dd8599553aa35b73276e716878629596c4`  
+		Last Modified: Tue, 31 Oct 2023 04:22:42 GMT  
+		Size: 311.0 MB (310999290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ed23e6eb15632b9da7a38f5078bcd94b89dc520625729d8554bb405f65e293dc`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
-		Size: 582.0 B  
+	-	`sha256:9478d2886a1df5b27d7ed6dda0ddf146e707293df1791c83e222a02cede24c4e`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 579.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e22818240268c28116392dae3b1b41676c836e36ff78add1e446a3f2c1db5cb7`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
-		Size: 565.0 B  
+	-	`sha256:ce151443a1de0fc221a16d551056e248fd9b62e54e9995a28622ac6800685c61`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 564.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db60d338d4566141d68327577911f2702380b45d09473b5c548177986bb6280d`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
+	-	`sha256:748788667a70ca34e763a18b75e46f8a28284fe617738a368ff8ec102a451c29`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
 		Size: 169.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
@@ -4743,7 +4743,7 @@ VOLUME [/catalogue-data]
 ## `geonetwork:4.4`
 
 ```console
-$ docker pull geonetwork@sha256:a39c4533c41751b152d5e2f5f78c2da8fa927e3326c274ae711781cc51808add
+$ docker pull geonetwork@sha256:e9bd8606f7a153703d798e82cf77b8412d47ff75dd5f6fac70e7a796f2d18075
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -4915,14 +4915,14 @@ VOLUME [/catalogue-data]
 ### `geonetwork:4.4` - linux; arm64 variant v8
 
 ```console
-$ docker pull geonetwork@sha256:5372c4e5fadad885c113c5c79789d2f919ccd118064d3e89b9e1510064da27d2
+$ docker pull geonetwork@sha256:0eccc722db086ce4fb1211e4f3862120595ff93b3756b0084ecb4454a506e5b4
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **507.3 MB (507305770 bytes)**  
+-	Total Size: **507.7 MB (507723131 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cac715517a81f7bb0514b1fc4bdcc3d897d9571dc8c08f4e5c12663ca9439148`
+-	Image ID: `sha256:755e4c693adc79af9f589570bbb4dc063fbbce93f9ccb286eec90898c9c454bd`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -4945,81 +4945,81 @@ ENV JAVA_HOME=/opt/java/openjdk
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Fri, 13 Oct 2023 02:46:03 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Fri, 13 Oct 2023 02:46:20 GMT
-RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales p11-kit     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 13 Oct 2023 02:47:16 GMT
-ENV JAVA_VERSION=jdk-11.0.20.1+1
-# Fri, 13 Oct 2023 02:47:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='69d39682c4a2fac294a9eaacbf62c26d3c8a2f9123f1b5d287498a5472c6b672';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        armhf|arm)          ESUM='e83674aee238ebb5f359b9395b3c5e3fad5b645846095494662802d2f0fd01c9';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b806f4bb526161bf9b2ffb37be4e1b77f56b4e726dc4d52c7902130a79e7d710';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='a7efbe804a4616d38b6ac0def40cd9feacc04aee2bb89132191f4d33fc0a7c1e';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='398a64bff002f0e3b0c01ecd24a1a32c83cb72a5255344219e9757d4ddd9f857';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Fri, 13 Oct 2023 02:47:27 GMT
-RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:31 GMT
+RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends         curl         wget         fontconfig         ca-certificates p11-kit         tzdata         locales     ;     echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen;     locale-gen en_US.UTF-8;     rm -rf /var/lib/apt/lists/*
+# Mon, 30 Oct 2023 23:40:31 GMT
+ENV JAVA_VERSION=jdk-11.0.21+9
+# Mon, 30 Oct 2023 23:40:38 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='8c3146035b99c55ab26a2982f4b9abd2bf600582361cf9c732539f713d271faf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.21_9.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='60ea98daa09834fdd3162ca91ddc8d92a155ab3121204f6f643176ee0c2d0d5e';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_x64_linux_hotspot_11.0.21_9.tar.gz';          ;;        armhf|arm)          ESUM='a64b005b84b173e294078fec34660ed3429d8c60726a5fb5c140e13b9e0c79fa';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_arm_linux_hotspot_11.0.21_9.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='262ff98d6d88a7c7cc522cb4ec4129491a0eb04f5b17dcca0da57cfcdcf3830d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.21_9.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bc67f79fb82c4131d9dcea32649c540a16aa380a9726306b9a67c5ec9690c492';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.21_9.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     wget --progress=dot:giga -O /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p "$JAVA_HOME";     tar --extract         --file /tmp/openjdk.tar.gz         --directory "$JAVA_HOME"         --strip-components 1         --no-same-owner     ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Mon, 30 Oct 2023 23:40:41 GMT
+RUN set -eux;     echo "Verifying install ...";     fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java;     echo "javac --version"; javac --version;     echo "java --version"; java --version;     echo "Complete."
+# Mon, 30 Oct 2023 23:40:42 GMT
 COPY file:8b8864b3e02a33a579dc216fd51b28a6047bc8eeaa03045b258980fe0cf7fcb3 in /__cacert_entrypoint.sh 
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:42 GMT
 ENTRYPOINT ["/__cacert_entrypoint.sh"]
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:42 GMT
 CMD ["jshell"]
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_VERSION=9.4.53.v20231009
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV TMPDIR=/tmp/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 13 Oct 2023 07:57:54 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.53.v20231009/jetty-home-9.4.53.v20231009.tar.gz
-# Fri, 13 Oct 2023 07:57:54 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	F254B35617DC255D9344BCFA873A8E86B4372146 	E22488CC94F63E3FC928536C4241C08270D999C3
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	case "$JETTY_VERSION" in 		"12."*) START_MODULES="server,http,ext,resources" ;; 		*) START_MODULES="server,http,deploy,ext,resources,jsp,jstl,websocket" ;; 	esac ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="$START_MODULES" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 WORKDIR /var/lib/jetty
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 COPY multi:6bf6ffc2c0ff756d51254f4ec987e84575c16c895c328c42a63bde92f8d5278a in / 
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 USER jetty
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 EXPOSE 8080
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV DATA_DIR=/catalogue-data
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV WEBAPP_CONTEXT_PATH=/geonetwork
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV GN_CONFIG_PROPERTIES=-Dgeonetwork.dir=/catalogue-data         -Dgeonetwork.formatter.dir=/catalogue-data/data/formatter         -Dgeonetwork.schema.dir=/opt/geonetwork/WEB-INF/data/config/schema_plugins         -Dgeonetwork.indexConfig.dir=/opt/geonetwork/WEB-INF/data/config/index
-# Wed, 25 Oct 2023 21:28:26 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC
-# Wed, 25 Oct 2023 21:28:26 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 USER root
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /opt/geonetwork &&     chown -R jetty:jetty /opt/geonetwork
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 USER jetty
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_FILE=geonetwork.war
-# Wed, 25 Oct 2023 21:28:41 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_VERSION=4.4.0
-# Wed, 25 Oct 2023 21:28:41 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_DOWNLOAD_MD5=36638cfd380942801ff2038792ee54a9
-# Wed, 25 Oct 2023 21:28:58 GMT
+# Tue, 31 Oct 2023 04:22:03 GMT
 RUN cd /opt/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Wed, 25 Oct 2023 21:29:00 GMT
+# Tue, 31 Oct 2023 04:22:06 GMT
 COPY file:996df24c69b17d351426a6c0c0dfb153f784c21af81ae4ec36afa187063e1eda in /usr/local/share/geonetwork/geonetwork_context_template.xml 
-# Wed, 25 Oct 2023 21:29:00 GMT
+# Tue, 31 Oct 2023 04:22:06 GMT
 COPY file:d9c7c0ea7fa75c70fed09ff248e0afcc376dd41d9a324310e416d6496fe3a37e in /geonetwork-entrypoint.sh 
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 RUN java -jar /usr/local/jetty/start.jar --create-startd --add-module=http-forwarded
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -5028,55 +5028,55 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 05 Oct 2023 12:12:17 GMT  
 		Size: 27.2 MB (27199503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3a7fe5b0236efc346cd4debc4c5e5b3c24c2c34ab5913c1647b26219f2c53f7`  
-		Last Modified: Fri, 13 Oct 2023 02:50:41 GMT  
-		Size: 16.8 MB (16768291 bytes)  
+	-	`sha256:2717b88e02799c1309e24243b581cd227d05944a061c0c57d1cac69369a47533`  
+		Last Modified: Mon, 30 Oct 2023 23:48:05 GMT  
+		Size: 16.8 MB (16768205 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:84562ffe350fd123902a28225215826843d7983e543835f54b2af29c6e3ce992`  
-		Last Modified: Fri, 13 Oct 2023 02:51:51 GMT  
-		Size: 141.6 MB (141584461 bytes)  
+	-	`sha256:d82722792e906a87964d888a3beeaa639775df882dc78cfc97770128f9f3412d`  
+		Last Modified: Mon, 30 Oct 2023 23:48:11 GMT  
+		Size: 142.0 MB (142001844 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49bd8ecdd6a33dcccec3d07709e6f8f48487b45cfb79709d88776ac6325faf6a`  
-		Last Modified: Fri, 13 Oct 2023 02:51:42 GMT  
-		Size: 176.0 B  
+	-	`sha256:15a50967cb307fbe0b595fdc063f95ec5699535a9335205353a548ad1bc30a9b`  
+		Last Modified: Mon, 30 Oct 2023 23:48:02 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e0b93572998af73b5ca61b23f8a00ca5bf4b6fdbf25853fbc3a76cdff635f9ff`  
-		Last Modified: Fri, 13 Oct 2023 02:51:42 GMT  
-		Size: 733.0 B  
+	-	`sha256:7587ce9b054e206a8446bfe1e2e72ce19b20503a84cfd423fe9f26c979c1c2d7`  
+		Last Modified: Mon, 30 Oct 2023 23:48:02 GMT  
+		Size: 734.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d4db4bb4dc5704e2e0480a29b6d492a070f49f3d9cb7499ea523d92a16ce862`  
-		Last Modified: Fri, 13 Oct 2023 08:05:16 GMT  
-		Size: 10.3 MB (10269288 bytes)  
+	-	`sha256:cfee3b24b2d42a830cec8492f53d1ab8ede6130ad1db5f15fb67b87a37d8399c`  
+		Last Modified: Tue, 31 Oct 2023 02:02:04 GMT  
+		Size: 10.3 MB (10269326 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:edd13ed6599590948aba12cec99936ad694253c45c6fa74662bb1a921385085d`  
-		Last Modified: Fri, 13 Oct 2023 08:05:15 GMT  
-		Size: 1.6 KB (1634 bytes)  
+	-	`sha256:01be6ec241020ea2f369b8bcca5ac43ad4656e52dfb67c3d540821c95030b871`  
+		Last Modified: Tue, 31 Oct 2023 02:02:02 GMT  
+		Size: 1.6 KB (1632 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11fe3afffd3624c4a594e21280b7cba1718ac5691d42fd0b3dec72460e32d8a6`  
-		Last Modified: Wed, 25 Oct 2023 21:29:19 GMT  
-		Size: 481.2 KB (481156 bytes)  
+	-	`sha256:f551abe6055e6d1e622a7fc41a663cfe06579c2d50cac3928aa686372eaa2496`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 481.1 KB (481110 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94f0d93eff3350ab94e2867a2975257b93730b16b1619e7f3bec599e9c629522`  
-		Last Modified: Wed, 25 Oct 2023 21:29:34 GMT  
-		Size: 311.0 MB (310999212 bytes)  
+	-	`sha256:86c0109336d5d652abdf16facff185dd8599553aa35b73276e716878629596c4`  
+		Last Modified: Tue, 31 Oct 2023 04:22:42 GMT  
+		Size: 311.0 MB (310999290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ed23e6eb15632b9da7a38f5078bcd94b89dc520625729d8554bb405f65e293dc`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
-		Size: 582.0 B  
+	-	`sha256:9478d2886a1df5b27d7ed6dda0ddf146e707293df1791c83e222a02cede24c4e`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 579.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e22818240268c28116392dae3b1b41676c836e36ff78add1e446a3f2c1db5cb7`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
-		Size: 565.0 B  
+	-	`sha256:ce151443a1de0fc221a16d551056e248fd9b62e54e9995a28622ac6800685c61`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 564.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db60d338d4566141d68327577911f2702380b45d09473b5c548177986bb6280d`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
+	-	`sha256:748788667a70ca34e763a18b75e46f8a28284fe617738a368ff8ec102a451c29`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
 		Size: 169.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `geonetwork:4.4.0`
 
 ```console
-$ docker pull geonetwork@sha256:a39c4533c41751b152d5e2f5f78c2da8fa927e3326c274ae711781cc51808add
+$ docker pull geonetwork@sha256:e9bd8606f7a153703d798e82cf77b8412d47ff75dd5f6fac70e7a796f2d18075
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5248,14 +5248,14 @@ VOLUME [/catalogue-data]
 ### `geonetwork:4.4.0` - linux; arm64 variant v8
 
 ```console
-$ docker pull geonetwork@sha256:5372c4e5fadad885c113c5c79789d2f919ccd118064d3e89b9e1510064da27d2
+$ docker pull geonetwork@sha256:0eccc722db086ce4fb1211e4f3862120595ff93b3756b0084ecb4454a506e5b4
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **507.3 MB (507305770 bytes)**  
+-	Total Size: **507.7 MB (507723131 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cac715517a81f7bb0514b1fc4bdcc3d897d9571dc8c08f4e5c12663ca9439148`
+-	Image ID: `sha256:755e4c693adc79af9f589570bbb4dc063fbbce93f9ccb286eec90898c9c454bd`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -5278,81 +5278,81 @@ ENV JAVA_HOME=/opt/java/openjdk
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Fri, 13 Oct 2023 02:46:03 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Fri, 13 Oct 2023 02:46:20 GMT
-RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales p11-kit     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 13 Oct 2023 02:47:16 GMT
-ENV JAVA_VERSION=jdk-11.0.20.1+1
-# Fri, 13 Oct 2023 02:47:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='69d39682c4a2fac294a9eaacbf62c26d3c8a2f9123f1b5d287498a5472c6b672';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        armhf|arm)          ESUM='e83674aee238ebb5f359b9395b3c5e3fad5b645846095494662802d2f0fd01c9';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b806f4bb526161bf9b2ffb37be4e1b77f56b4e726dc4d52c7902130a79e7d710';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='a7efbe804a4616d38b6ac0def40cd9feacc04aee2bb89132191f4d33fc0a7c1e';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='398a64bff002f0e3b0c01ecd24a1a32c83cb72a5255344219e9757d4ddd9f857';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Fri, 13 Oct 2023 02:47:27 GMT
-RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:31 GMT
+RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends         curl         wget         fontconfig         ca-certificates p11-kit         tzdata         locales     ;     echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen;     locale-gen en_US.UTF-8;     rm -rf /var/lib/apt/lists/*
+# Mon, 30 Oct 2023 23:40:31 GMT
+ENV JAVA_VERSION=jdk-11.0.21+9
+# Mon, 30 Oct 2023 23:40:38 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='8c3146035b99c55ab26a2982f4b9abd2bf600582361cf9c732539f713d271faf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.21_9.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='60ea98daa09834fdd3162ca91ddc8d92a155ab3121204f6f643176ee0c2d0d5e';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_x64_linux_hotspot_11.0.21_9.tar.gz';          ;;        armhf|arm)          ESUM='a64b005b84b173e294078fec34660ed3429d8c60726a5fb5c140e13b9e0c79fa';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_arm_linux_hotspot_11.0.21_9.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='262ff98d6d88a7c7cc522cb4ec4129491a0eb04f5b17dcca0da57cfcdcf3830d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.21_9.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bc67f79fb82c4131d9dcea32649c540a16aa380a9726306b9a67c5ec9690c492';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.21_9.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     wget --progress=dot:giga -O /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p "$JAVA_HOME";     tar --extract         --file /tmp/openjdk.tar.gz         --directory "$JAVA_HOME"         --strip-components 1         --no-same-owner     ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Mon, 30 Oct 2023 23:40:41 GMT
+RUN set -eux;     echo "Verifying install ...";     fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java;     echo "javac --version"; javac --version;     echo "java --version"; java --version;     echo "Complete."
+# Mon, 30 Oct 2023 23:40:42 GMT
 COPY file:8b8864b3e02a33a579dc216fd51b28a6047bc8eeaa03045b258980fe0cf7fcb3 in /__cacert_entrypoint.sh 
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:42 GMT
 ENTRYPOINT ["/__cacert_entrypoint.sh"]
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:42 GMT
 CMD ["jshell"]
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_VERSION=9.4.53.v20231009
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV TMPDIR=/tmp/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 13 Oct 2023 07:57:54 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.53.v20231009/jetty-home-9.4.53.v20231009.tar.gz
-# Fri, 13 Oct 2023 07:57:54 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	F254B35617DC255D9344BCFA873A8E86B4372146 	E22488CC94F63E3FC928536C4241C08270D999C3
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	case "$JETTY_VERSION" in 		"12."*) START_MODULES="server,http,ext,resources" ;; 		*) START_MODULES="server,http,deploy,ext,resources,jsp,jstl,websocket" ;; 	esac ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="$START_MODULES" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 WORKDIR /var/lib/jetty
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 COPY multi:6bf6ffc2c0ff756d51254f4ec987e84575c16c895c328c42a63bde92f8d5278a in / 
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 USER jetty
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 EXPOSE 8080
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV DATA_DIR=/catalogue-data
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV WEBAPP_CONTEXT_PATH=/geonetwork
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV GN_CONFIG_PROPERTIES=-Dgeonetwork.dir=/catalogue-data         -Dgeonetwork.formatter.dir=/catalogue-data/data/formatter         -Dgeonetwork.schema.dir=/opt/geonetwork/WEB-INF/data/config/schema_plugins         -Dgeonetwork.indexConfig.dir=/opt/geonetwork/WEB-INF/data/config/index
-# Wed, 25 Oct 2023 21:28:26 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC
-# Wed, 25 Oct 2023 21:28:26 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 USER root
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /opt/geonetwork &&     chown -R jetty:jetty /opt/geonetwork
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 USER jetty
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_FILE=geonetwork.war
-# Wed, 25 Oct 2023 21:28:41 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_VERSION=4.4.0
-# Wed, 25 Oct 2023 21:28:41 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_DOWNLOAD_MD5=36638cfd380942801ff2038792ee54a9
-# Wed, 25 Oct 2023 21:28:58 GMT
+# Tue, 31 Oct 2023 04:22:03 GMT
 RUN cd /opt/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Wed, 25 Oct 2023 21:29:00 GMT
+# Tue, 31 Oct 2023 04:22:06 GMT
 COPY file:996df24c69b17d351426a6c0c0dfb153f784c21af81ae4ec36afa187063e1eda in /usr/local/share/geonetwork/geonetwork_context_template.xml 
-# Wed, 25 Oct 2023 21:29:00 GMT
+# Tue, 31 Oct 2023 04:22:06 GMT
 COPY file:d9c7c0ea7fa75c70fed09ff248e0afcc376dd41d9a324310e416d6496fe3a37e in /geonetwork-entrypoint.sh 
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 RUN java -jar /usr/local/jetty/start.jar --create-startd --add-module=http-forwarded
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -5361,55 +5361,55 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 05 Oct 2023 12:12:17 GMT  
 		Size: 27.2 MB (27199503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3a7fe5b0236efc346cd4debc4c5e5b3c24c2c34ab5913c1647b26219f2c53f7`  
-		Last Modified: Fri, 13 Oct 2023 02:50:41 GMT  
-		Size: 16.8 MB (16768291 bytes)  
+	-	`sha256:2717b88e02799c1309e24243b581cd227d05944a061c0c57d1cac69369a47533`  
+		Last Modified: Mon, 30 Oct 2023 23:48:05 GMT  
+		Size: 16.8 MB (16768205 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:84562ffe350fd123902a28225215826843d7983e543835f54b2af29c6e3ce992`  
-		Last Modified: Fri, 13 Oct 2023 02:51:51 GMT  
-		Size: 141.6 MB (141584461 bytes)  
+	-	`sha256:d82722792e906a87964d888a3beeaa639775df882dc78cfc97770128f9f3412d`  
+		Last Modified: Mon, 30 Oct 2023 23:48:11 GMT  
+		Size: 142.0 MB (142001844 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49bd8ecdd6a33dcccec3d07709e6f8f48487b45cfb79709d88776ac6325faf6a`  
-		Last Modified: Fri, 13 Oct 2023 02:51:42 GMT  
-		Size: 176.0 B  
+	-	`sha256:15a50967cb307fbe0b595fdc063f95ec5699535a9335205353a548ad1bc30a9b`  
+		Last Modified: Mon, 30 Oct 2023 23:48:02 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e0b93572998af73b5ca61b23f8a00ca5bf4b6fdbf25853fbc3a76cdff635f9ff`  
-		Last Modified: Fri, 13 Oct 2023 02:51:42 GMT  
-		Size: 733.0 B  
+	-	`sha256:7587ce9b054e206a8446bfe1e2e72ce19b20503a84cfd423fe9f26c979c1c2d7`  
+		Last Modified: Mon, 30 Oct 2023 23:48:02 GMT  
+		Size: 734.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d4db4bb4dc5704e2e0480a29b6d492a070f49f3d9cb7499ea523d92a16ce862`  
-		Last Modified: Fri, 13 Oct 2023 08:05:16 GMT  
-		Size: 10.3 MB (10269288 bytes)  
+	-	`sha256:cfee3b24b2d42a830cec8492f53d1ab8ede6130ad1db5f15fb67b87a37d8399c`  
+		Last Modified: Tue, 31 Oct 2023 02:02:04 GMT  
+		Size: 10.3 MB (10269326 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:edd13ed6599590948aba12cec99936ad694253c45c6fa74662bb1a921385085d`  
-		Last Modified: Fri, 13 Oct 2023 08:05:15 GMT  
-		Size: 1.6 KB (1634 bytes)  
+	-	`sha256:01be6ec241020ea2f369b8bcca5ac43ad4656e52dfb67c3d540821c95030b871`  
+		Last Modified: Tue, 31 Oct 2023 02:02:02 GMT  
+		Size: 1.6 KB (1632 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11fe3afffd3624c4a594e21280b7cba1718ac5691d42fd0b3dec72460e32d8a6`  
-		Last Modified: Wed, 25 Oct 2023 21:29:19 GMT  
-		Size: 481.2 KB (481156 bytes)  
+	-	`sha256:f551abe6055e6d1e622a7fc41a663cfe06579c2d50cac3928aa686372eaa2496`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 481.1 KB (481110 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94f0d93eff3350ab94e2867a2975257b93730b16b1619e7f3bec599e9c629522`  
-		Last Modified: Wed, 25 Oct 2023 21:29:34 GMT  
-		Size: 311.0 MB (310999212 bytes)  
+	-	`sha256:86c0109336d5d652abdf16facff185dd8599553aa35b73276e716878629596c4`  
+		Last Modified: Tue, 31 Oct 2023 04:22:42 GMT  
+		Size: 311.0 MB (310999290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ed23e6eb15632b9da7a38f5078bcd94b89dc520625729d8554bb405f65e293dc`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
-		Size: 582.0 B  
+	-	`sha256:9478d2886a1df5b27d7ed6dda0ddf146e707293df1791c83e222a02cede24c4e`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 579.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e22818240268c28116392dae3b1b41676c836e36ff78add1e446a3f2c1db5cb7`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
-		Size: 565.0 B  
+	-	`sha256:ce151443a1de0fc221a16d551056e248fd9b62e54e9995a28622ac6800685c61`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 564.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db60d338d4566141d68327577911f2702380b45d09473b5c548177986bb6280d`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
+	-	`sha256:748788667a70ca34e763a18b75e46f8a28284fe617738a368ff8ec102a451c29`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
 		Size: 169.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `geonetwork:latest`
 
 ```console
-$ docker pull geonetwork@sha256:a39c4533c41751b152d5e2f5f78c2da8fa927e3326c274ae711781cc51808add
+$ docker pull geonetwork@sha256:e9bd8606f7a153703d798e82cf77b8412d47ff75dd5f6fac70e7a796f2d18075
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -5581,14 +5581,14 @@ VOLUME [/catalogue-data]
 ### `geonetwork:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull geonetwork@sha256:5372c4e5fadad885c113c5c79789d2f919ccd118064d3e89b9e1510064da27d2
+$ docker pull geonetwork@sha256:0eccc722db086ce4fb1211e4f3862120595ff93b3756b0084ecb4454a506e5b4
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **507.3 MB (507305770 bytes)**  
+-	Total Size: **507.7 MB (507723131 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:cac715517a81f7bb0514b1fc4bdcc3d897d9571dc8c08f4e5c12663ca9439148`
+-	Image ID: `sha256:755e4c693adc79af9f589570bbb4dc063fbbce93f9ccb286eec90898c9c454bd`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -5611,81 +5611,81 @@ ENV JAVA_HOME=/opt/java/openjdk
 ENV PATH=/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 # Fri, 13 Oct 2023 02:46:03 GMT
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8
-# Fri, 13 Oct 2023 02:46:20 GMT
-RUN apt-get update     && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends tzdata curl wget ca-certificates fontconfig locales p11-kit     && echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen     && locale-gen en_US.UTF-8     && rm -rf /var/lib/apt/lists/*
-# Fri, 13 Oct 2023 02:47:16 GMT
-ENV JAVA_VERSION=jdk-11.0.20.1+1
-# Fri, 13 Oct 2023 02:47:25 GMT
-RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='69d39682c4a2fac294a9eaacbf62c26d3c8a2f9123f1b5d287498a5472c6b672';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        armhf|arm)          ESUM='e83674aee238ebb5f359b9395b3c5e3fad5b645846095494662802d2f0fd01c9';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_arm_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='b806f4bb526161bf9b2ffb37be4e1b77f56b4e726dc4d52c7902130a79e7d710';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='a7efbe804a4616d38b6ac0def40cd9feacc04aee2bb89132191f4d33fc0a7c1e';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='398a64bff002f0e3b0c01ecd24a1a32c83cb72a5255344219e9757d4ddd9f857';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.20.1%2B1/OpenJDK11U-jdk_x64_linux_hotspot_11.0.20.1_1.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac; 	  wget -O /tmp/openjdk.tar.gz ${BINARY_URL}; 	  echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -; 	  mkdir -p "$JAVA_HOME"; 	  tar --extract 	      --file /tmp/openjdk.tar.gz 	      --directory "$JAVA_HOME" 	      --strip-components 1 	      --no-same-owner 	  ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
-# Fri, 13 Oct 2023 02:47:27 GMT
-RUN echo Verifying install ...     && fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java     && echo javac --version && javac --version     && echo java --version && java --version     && echo Complete.
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:31 GMT
+RUN set -eux;     apt-get update;     DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends         curl         wget         fontconfig         ca-certificates p11-kit         tzdata         locales     ;     echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen;     locale-gen en_US.UTF-8;     rm -rf /var/lib/apt/lists/*
+# Mon, 30 Oct 2023 23:40:31 GMT
+ENV JAVA_VERSION=jdk-11.0.21+9
+# Mon, 30 Oct 2023 23:40:38 GMT
+RUN set -eux;     ARCH="$(dpkg --print-architecture)";     case "${ARCH}" in        aarch64|arm64)          ESUM='8c3146035b99c55ab26a2982f4b9abd2bf600582361cf9c732539f713d271faf';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_aarch64_linux_hotspot_11.0.21_9.tar.gz';          ;;        amd64|i386:x86-64)          ESUM='60ea98daa09834fdd3162ca91ddc8d92a155ab3121204f6f643176ee0c2d0d5e';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_x64_linux_hotspot_11.0.21_9.tar.gz';          ;;        armhf|arm)          ESUM='a64b005b84b173e294078fec34660ed3429d8c60726a5fb5c140e13b9e0c79fa';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_arm_linux_hotspot_11.0.21_9.tar.gz';          ;;        ppc64el|powerpc:common64)          ESUM='262ff98d6d88a7c7cc522cb4ec4129491a0eb04f5b17dcca0da57cfcdcf3830d';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_ppc64le_linux_hotspot_11.0.21_9.tar.gz';          ;;        s390x|s390:64-bit)          ESUM='bc67f79fb82c4131d9dcea32649c540a16aa380a9726306b9a67c5ec9690c492';          BINARY_URL='https://github.com/adoptium/temurin11-binaries/releases/download/jdk-11.0.21%2B9/OpenJDK11U-jdk_s390x_linux_hotspot_11.0.21_9.tar.gz';          ;;        *)          echo "Unsupported arch: ${ARCH}";          exit 1;          ;;     esac;     wget --progress=dot:giga -O /tmp/openjdk.tar.gz ${BINARY_URL};     echo "${ESUM} */tmp/openjdk.tar.gz" | sha256sum -c -;     mkdir -p "$JAVA_HOME";     tar --extract         --file /tmp/openjdk.tar.gz         --directory "$JAVA_HOME"         --strip-components 1         --no-same-owner     ;     rm -f /tmp/openjdk.tar.gz ${JAVA_HOME}/lib/src.zip;     find "$JAVA_HOME/lib" -name '*.so' -exec dirname '{}' ';' | sort -u > /etc/ld.so.conf.d/docker-openjdk.conf;     ldconfig;     java -Xshare:dump;
+# Mon, 30 Oct 2023 23:40:41 GMT
+RUN set -eux;     echo "Verifying install ...";     fileEncoding="$(echo 'System.out.println(System.getProperty("file.encoding"))' | jshell -s -)"; [ "$fileEncoding" = 'UTF-8' ]; rm -rf ~/.java;     echo "javac --version"; javac --version;     echo "java --version"; java --version;     echo "Complete."
+# Mon, 30 Oct 2023 23:40:42 GMT
 COPY file:8b8864b3e02a33a579dc216fd51b28a6047bc8eeaa03045b258980fe0cf7fcb3 in /__cacert_entrypoint.sh 
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:42 GMT
 ENTRYPOINT ["/__cacert_entrypoint.sh"]
-# Fri, 13 Oct 2023 02:47:28 GMT
+# Mon, 30 Oct 2023 23:40:42 GMT
 CMD ["jshell"]
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_VERSION=9.4.53.v20231009
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_HOME=/usr/local/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_BASE=/var/lib/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV TMPDIR=/tmp/jetty
-# Fri, 13 Oct 2023 07:57:53 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV PATH=/usr/local/jetty/bin:/opt/java/openjdk/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Fri, 13 Oct 2023 07:57:54 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/9.4.53.v20231009/jetty-home-9.4.53.v20231009.tar.gz
-# Fri, 13 Oct 2023 07:57:54 GMT
+# Tue, 31 Oct 2023 01:54:55 GMT
 ENV JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	F254B35617DC255D9344BCFA873A8E86B4372146 	E22488CC94F63E3FC928536C4241C08270D999C3
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 RUN set -xe ; 	export savedAptMark="$(apt-mark showmanual)" ; 	mkdir -p $TMPDIR ; 	apt-get update ; 	apt-get install -y --no-install-recommends 		ca-certificates 		p11-kit 		gnupg 		curl 		; 	export GNUPGHOME=/jetty-keys ; 	mkdir -p "$GNUPGHOME" ; 	for key in $JETTY_GPG_KEYS; do 		gpg --batch --keyserver "hkps://keyserver.ubuntu.com" --recv-keys "$key"; 	done ; 	mkdir -p "$JETTY_HOME" ; 	cd $JETTY_HOME ; 	curl -SL "$JETTY_TGZ_URL" -o jetty.tar.gz ; 	curl -SL "$JETTY_TGZ_URL.asc" -o jetty.tar.gz.asc ; 	gpg --batch --verify jetty.tar.gz.asc jetty.tar.gz ; 	tar -xvf jetty.tar.gz --strip-components=1 ; 	sed -i '/jetty-logging/d' etc/jetty.conf ; 	mkdir -p "$JETTY_BASE" ; 	cd $JETTY_BASE ; 	case "$JETTY_VERSION" in 		"12."*) START_MODULES="server,http,ext,resources" ;; 		*) START_MODULES="server,http,deploy,ext,resources,jsp,jstl,websocket" ;; 	esac ; 	java -jar "$JETTY_HOME/start.jar" --create-startd 		--add-to-start="$START_MODULES" ; 	groupadd -r jetty && useradd -r -g jetty jetty ; 	chown -R jetty:jetty "$JETTY_HOME" "$JETTY_BASE" "$TMPDIR" ; 	usermod -d $JETTY_BASE jetty ; 	apt-mark auto '.*' > /dev/null ; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark > /dev/null ; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false ; 	rm -rf /var/lib/apt/lists/* ; 	rm -rf /tmp/hsperfdata_root ; 	rm -fr $JETTY_HOME/jetty.tar.gz* ; 	rm -fr /jetty-keys $GNUPGHOME ; 	rm -rf /tmp/hsperfdata_root ; 	java -jar "$JETTY_HOME/start.jar" --list-config ;
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 WORKDIR /var/lib/jetty
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 COPY multi:6bf6ffc2c0ff756d51254f4ec987e84575c16c895c328c42a63bde92f8d5278a in / 
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 USER jetty
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 EXPOSE 8080
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 ENTRYPOINT ["/docker-entrypoint.sh"]
-# Fri, 13 Oct 2023 07:58:10 GMT
+# Tue, 31 Oct 2023 01:55:12 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV DATA_DIR=/catalogue-data
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV WEBAPP_CONTEXT_PATH=/geonetwork
-# Wed, 25 Oct 2023 21:28:25 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV GN_CONFIG_PROPERTIES=-Dgeonetwork.dir=/catalogue-data         -Dgeonetwork.formatter.dir=/catalogue-data/data/formatter         -Dgeonetwork.schema.dir=/opt/geonetwork/WEB-INF/data/config/schema_plugins         -Dgeonetwork.indexConfig.dir=/opt/geonetwork/WEB-INF/data/config/index
-# Wed, 25 Oct 2023 21:28:26 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 ENV JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom -Djava.awt.headless=true         -Xms512M -Xss512M -Xmx2G -XX:+UseConcMarkSweepGC
-# Wed, 25 Oct 2023 21:28:26 GMT
+# Tue, 31 Oct 2023 04:20:33 GMT
 USER root
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 RUN apt-get -y update &&     apt-get -y install --no-install-recommends         curl         unzip &&     rm -rf /var/lib/apt/lists/* &&     mkdir -p ${DATA_DIR} &&     chown -R jetty:jetty ${DATA_DIR} &&     mkdir -p /opt/geonetwork &&     chown -R jetty:jetty /opt/geonetwork
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 USER jetty
-# Wed, 25 Oct 2023 21:28:40 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_FILE=geonetwork.war
-# Wed, 25 Oct 2023 21:28:41 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_VERSION=4.4.0
-# Wed, 25 Oct 2023 21:28:41 GMT
+# Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_DOWNLOAD_MD5=36638cfd380942801ff2038792ee54a9
-# Wed, 25 Oct 2023 21:28:58 GMT
+# Tue, 31 Oct 2023 04:22:03 GMT
 RUN cd /opt/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Wed, 25 Oct 2023 21:29:00 GMT
+# Tue, 31 Oct 2023 04:22:06 GMT
 COPY file:996df24c69b17d351426a6c0c0dfb153f784c21af81ae4ec36afa187063e1eda in /usr/local/share/geonetwork/geonetwork_context_template.xml 
-# Wed, 25 Oct 2023 21:29:00 GMT
+# Tue, 31 Oct 2023 04:22:06 GMT
 COPY file:d9c7c0ea7fa75c70fed09ff248e0afcc376dd41d9a324310e416d6496fe3a37e in /geonetwork-entrypoint.sh 
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 RUN java -jar /usr/local/jetty/start.jar --create-startd --add-module=http-forwarded
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Wed, 25 Oct 2023 21:29:02 GMT
+# Tue, 31 Oct 2023 04:22:07 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -5694,47 +5694,47 @@ VOLUME [/catalogue-data]
 		Last Modified: Thu, 05 Oct 2023 12:12:17 GMT  
 		Size: 27.2 MB (27199503 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b3a7fe5b0236efc346cd4debc4c5e5b3c24c2c34ab5913c1647b26219f2c53f7`  
-		Last Modified: Fri, 13 Oct 2023 02:50:41 GMT  
-		Size: 16.8 MB (16768291 bytes)  
+	-	`sha256:2717b88e02799c1309e24243b581cd227d05944a061c0c57d1cac69369a47533`  
+		Last Modified: Mon, 30 Oct 2023 23:48:05 GMT  
+		Size: 16.8 MB (16768205 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:84562ffe350fd123902a28225215826843d7983e543835f54b2af29c6e3ce992`  
-		Last Modified: Fri, 13 Oct 2023 02:51:51 GMT  
-		Size: 141.6 MB (141584461 bytes)  
+	-	`sha256:d82722792e906a87964d888a3beeaa639775df882dc78cfc97770128f9f3412d`  
+		Last Modified: Mon, 30 Oct 2023 23:48:11 GMT  
+		Size: 142.0 MB (142001844 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:49bd8ecdd6a33dcccec3d07709e6f8f48487b45cfb79709d88776ac6325faf6a`  
-		Last Modified: Fri, 13 Oct 2023 02:51:42 GMT  
-		Size: 176.0 B  
+	-	`sha256:15a50967cb307fbe0b595fdc063f95ec5699535a9335205353a548ad1bc30a9b`  
+		Last Modified: Mon, 30 Oct 2023 23:48:02 GMT  
+		Size: 175.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e0b93572998af73b5ca61b23f8a00ca5bf4b6fdbf25853fbc3a76cdff635f9ff`  
-		Last Modified: Fri, 13 Oct 2023 02:51:42 GMT  
-		Size: 733.0 B  
+	-	`sha256:7587ce9b054e206a8446bfe1e2e72ce19b20503a84cfd423fe9f26c979c1c2d7`  
+		Last Modified: Mon, 30 Oct 2023 23:48:02 GMT  
+		Size: 734.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:2d4db4bb4dc5704e2e0480a29b6d492a070f49f3d9cb7499ea523d92a16ce862`  
-		Last Modified: Fri, 13 Oct 2023 08:05:16 GMT  
-		Size: 10.3 MB (10269288 bytes)  
+	-	`sha256:cfee3b24b2d42a830cec8492f53d1ab8ede6130ad1db5f15fb67b87a37d8399c`  
+		Last Modified: Tue, 31 Oct 2023 02:02:04 GMT  
+		Size: 10.3 MB (10269326 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:edd13ed6599590948aba12cec99936ad694253c45c6fa74662bb1a921385085d`  
-		Last Modified: Fri, 13 Oct 2023 08:05:15 GMT  
-		Size: 1.6 KB (1634 bytes)  
+	-	`sha256:01be6ec241020ea2f369b8bcca5ac43ad4656e52dfb67c3d540821c95030b871`  
+		Last Modified: Tue, 31 Oct 2023 02:02:02 GMT  
+		Size: 1.6 KB (1632 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:11fe3afffd3624c4a594e21280b7cba1718ac5691d42fd0b3dec72460e32d8a6`  
-		Last Modified: Wed, 25 Oct 2023 21:29:19 GMT  
-		Size: 481.2 KB (481156 bytes)  
+	-	`sha256:f551abe6055e6d1e622a7fc41a663cfe06579c2d50cac3928aa686372eaa2496`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 481.1 KB (481110 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94f0d93eff3350ab94e2867a2975257b93730b16b1619e7f3bec599e9c629522`  
-		Last Modified: Wed, 25 Oct 2023 21:29:34 GMT  
-		Size: 311.0 MB (310999212 bytes)  
+	-	`sha256:86c0109336d5d652abdf16facff185dd8599553aa35b73276e716878629596c4`  
+		Last Modified: Tue, 31 Oct 2023 04:22:42 GMT  
+		Size: 311.0 MB (310999290 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ed23e6eb15632b9da7a38f5078bcd94b89dc520625729d8554bb405f65e293dc`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
-		Size: 582.0 B  
+	-	`sha256:9478d2886a1df5b27d7ed6dda0ddf146e707293df1791c83e222a02cede24c4e`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 579.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e22818240268c28116392dae3b1b41676c836e36ff78add1e446a3f2c1db5cb7`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
-		Size: 565.0 B  
+	-	`sha256:ce151443a1de0fc221a16d551056e248fd9b62e54e9995a28622ac6800685c61`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
+		Size: 564.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:db60d338d4566141d68327577911f2702380b45d09473b5c548177986bb6280d`  
-		Last Modified: Wed, 25 Oct 2023 21:29:18 GMT  
+	-	`sha256:748788667a70ca34e763a18b75e46f8a28284fe617738a368ff8ec102a451c29`  
+		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
 		Size: 169.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
