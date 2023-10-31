@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7e643a48c6243ff858d1306b48d7ed0d51c079f09c6516a6f1314ad8b6602e0f`
-- Created: `2023-10-13T10:22:55.297864739Z`
-- Virtual Size: ~ 708.38 Mb  
+- Image ID: `sha256:56c4bb492a0eb19473c6dc3b2a1e05998fca0f2e6b5a28b1793ab6529c6ad496`
+- Created: `2023-10-31T02:14:07.677766543Z`
+- Virtual Size: ~ 708.80 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -14,7 +14,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-11.0.20.1+1`
+  - `JAVA_VERSION=jdk-11.0.21+9`
   - `STORM_CONF_DIR=/conf`
   - `STORM_DATA_DIR=/data`
   - `STORM_LOG_DIR=/logs`
@@ -1616,9 +1616,8 @@ $ apt-get source -qq --print-uris openldap=2.5.16+dfsg-0ubuntu0.22.04.1
 Binary Packages:
 
 - `libssl3:amd64=3.0.2-0ubuntu1.10`
-- `openssl=3.0.2-0ubuntu1.10`
 
-Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/openssl/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`)
 
 - `Apache-2.0`
 - `Artistic`
@@ -1628,6 +1627,29 @@ Licenses: (parsed from: `/usr/share/doc/libssl3/copyright`, `/usr/share/doc/open
 **WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
 This is *usually* due to a new package version being released and the old version being removed.
 
+
+### `dpkg` source package: `openssl=3.0.2-0ubuntu1.12`
+
+Binary Packages:
+
+- `openssl=3.0.2-0ubuntu1.12`
+
+Licenses: (parsed from: `/usr/share/doc/openssl/copyright`)
+
+- `Apache-2.0`
+- `Artistic`
+- `GPL-1`
+- `GPL-1+`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris openssl=3.0.2-0ubuntu1.12
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.12.dsc' openssl_3.0.2-0ubuntu1.12.dsc 2730 SHA512:2e433ebed19b390d52494526934d72152400bdc13ce2d958c03495dd13349812c2161887b5b0a4f0046aa5cd93661dcad8cdb83a388af134fb891eab981ce127
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2.orig.tar.gz' openssl_3.0.2.orig.tar.gz 15038141 SHA512:f986850d5be908b4d6b5fd7091bc4652d7378c9bccebfbc5becd7753843c04c1eb61a1749c432139d263dfac33df0b1f6c773664b485cad47542266823a4eb03
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2.orig.tar.gz.asc' openssl_3.0.2.orig.tar.gz.asc 488 SHA512:4303391a58107c76ad9b05510f5bfc95f687f4cb2f9ff5b03fb262ba99b573423ab83f0437471199954496799b343191b889ad9ef8fabdd7ee4ec3ec9b5f1d81
+'http://archive.ubuntu.com/ubuntu/pool/main/o/openssl/openssl_3.0.2-0ubuntu1.12.debian.tar.xz' openssl_3.0.2-0ubuntu1.12.debian.tar.xz 206100 SHA512:2cdbd3c0c91200def2b1b49af64cda5bbb977a6ea5739a42e21f0970d1e97711ca866c574eed502bf4c1be38f64a3be679a67ae5d4589c84f532c73a1d8e6925
+```
 
 ### `dpkg` source package: `p11-kit=0.24.0-6build1`
 
