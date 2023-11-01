@@ -1,7 +1,7 @@
 ## `unit:wasm`
 
 ```console
-$ docker pull unit@sha256:f0f4f51a4b8bd398296910baaed3a5792c676a8c9c63fd01aabe6689f09a6832
+$ docker pull unit@sha256:b6b4b0bca139eb14e4ca6da2c653d19c4b7bf5667e7639aa037cc89d4a5dbb4a
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -79,66 +79,66 @@ CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ### `unit:wasm` - linux; arm64 variant v8
 
 ```console
-$ docker pull unit@sha256:2d8390c31b611e14761357b4aae572093f1060d298406b8db5aad7b42753c5d9
+$ docker pull unit@sha256:019cb367006d09c0d2384b0cd45f259cedfeb19df6b642daefaa88a3d2e7f8ef
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **45.0 MB (45049116 bytes)**  
+-	Total Size: **45.0 MB (45048949 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:f52ac9c41a216069e7c6e30c1a88bf31a5b37fb5829470c46f59ed02bb6ef71c`
+-	Image ID: `sha256:216eb93e0669521a10fcd5fdf27ca830947b5f880d3a0b09d00a33a54c4d2234`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["unitd","--no-daemon","--control","unix:\/var\/run\/control.unit.sock"]`
 
 ```dockerfile
-# Wed, 11 Oct 2023 18:25:06 GMT
-ADD file:2c3e5451390c62f0b85f20139d2c88011cc54d649cdda5567084c050ad373372 in / 
-# Wed, 11 Oct 2023 18:25:06 GMT
+# Wed, 01 Nov 2023 00:39:55 GMT
+ADD file:99dc83e8bb8c67d9179a265fb750c76f73fa660e13e938b6cd613be653cd077e in / 
+# Wed, 01 Nov 2023 00:39:56 GMT
 CMD ["bash"]
-# Wed, 11 Oct 2023 19:09:12 GMT
+# Wed, 01 Nov 2023 01:47:41 GMT
 LABEL org.opencontainers.image.title=Unit (wasm)
-# Wed, 11 Oct 2023 19:09:12 GMT
+# Wed, 01 Nov 2023 01:47:42 GMT
 LABEL org.opencontainers.image.description=Official build of Unit for Docker.
-# Wed, 11 Oct 2023 19:09:12 GMT
+# Wed, 01 Nov 2023 01:47:42 GMT
 LABEL org.opencontainers.image.url=https://unit.nginx.org
-# Wed, 11 Oct 2023 19:09:12 GMT
+# Wed, 01 Nov 2023 01:47:42 GMT
 LABEL org.opencontainers.image.source=https://github.com/nginx/unit
-# Wed, 11 Oct 2023 19:09:12 GMT
+# Wed, 01 Nov 2023 01:47:42 GMT
 LABEL org.opencontainers.image.documentation=https://unit.nginx.org/installation/#docker-images
-# Wed, 11 Oct 2023 19:09:12 GMT
+# Wed, 01 Nov 2023 01:47:42 GMT
 LABEL org.opencontainers.image.vendor=NGINX Docker Maintainers <docker-maint@nginx.com>
-# Fri, 20 Oct 2023 01:54:28 GMT
+# Wed, 01 Nov 2023 01:47:42 GMT
 LABEL org.opencontainers.image.version=1.31.1
-# Fri, 20 Oct 2023 01:57:23 GMT
+# Wed, 01 Nov 2023 01:50:52 GMT
 RUN set -ex     && savedAptMark="$(apt-mark showmanual)"     && apt-get update     && apt-get install --no-install-recommends --no-install-suggests -y ca-certificates mercurial build-essential libssl-dev libpcre2-dev curl pkg-config     && mkdir -p /usr/lib/unit/modules /usr/lib/unit/debug-modules     && mkdir -p /usr/src/unit     && cd /usr/src/unit     && hg clone -u 1.31.1-1 https://hg.nginx.org/unit     && cd unit     && NCPU="$(getconf _NPROCESSORS_ONLN)"     && DEB_HOST_MULTIARCH="$(dpkg-architecture -q DEB_HOST_MULTIARCH)"     && CC_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_CFLAGS_MAINT_APPEND="-Wp,-D_FORTIFY_SOURCE=2 -fPIC" dpkg-buildflags --get CFLAGS)"     && LD_OPT="$(DEB_BUILD_MAINT_OPTIONS="hardening=+all,-pie" DEB_LDFLAGS_MAINT_APPEND="-Wl,--as-needed -pie" dpkg-buildflags --get LDFLAGS)"     && CONFIGURE_ARGS_MODULES="--prefix=/usr                 --statedir=/var/lib/unit                 --control=unix:/var/run/control.unit.sock                 --runstatedir=/var/run                 --pid=/var/run/unit.pid                 --logdir=/var/log                 --log=/var/log/unit.log                 --tmpdir=/var/tmp                 --user=unit                 --group=unit                 --openssl                 --libdir=/usr/lib/$DEB_HOST_MULTIARCH"     && CONFIGURE_ARGS="$CONFIGURE_ARGS_MODULES                 --njs"     && make -j $NCPU -C pkg/contrib .njs     && export PKG_CONFIG_PATH=$(pwd)/pkg/contrib/njs/build     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd-debug     && make clean     && ./configure $CONFIGURE_ARGS --cc-opt="$CC_OPT" --ld-opt="$LD_OPT" --modulesdir=/usr/lib/unit/modules     && make -j $NCPU unitd     && install -pm755 build/sbin/unitd /usr/sbin/unitd     && make clean     && export RUST_VERSION=1.71.0     && export RUSTUP_HOME=/usr/src/unit/rustup     && export CARGO_HOME=/usr/src/unit/cargo     && export PATH=/usr/src/unit/cargo/bin:$PATH     && dpkgArch="$(dpkg --print-architecture)"     && case "${dpkgArch##*-}" in        amd64) rustArch="x86_64-unknown-linux-gnu"; rustupSha256="0b2f6c8f85a3d02fde2efc0ced4657869d73fccfce59defb4e8d29233116e6db" ;;        arm64) rustArch="aarch64-unknown-linux-gnu"; rustupSha256="673e336c81c65e6b16dcdede33f4cc9ed0f08bde1dbe7a935f113605292dc800" ;;        *) echo >&2 "unsupported architecture: ${dpkgArch}"; exit 1 ;;     esac     && url="https://static.rust-lang.org/rustup/archive/1.26.0/${rustArch}/rustup-init"     && curl -L -O "$url"     && echo "${rustupSha256} *rustup-init" | sha256sum -c -     && chmod +x rustup-init     && ./rustup-init -y --no-modify-path --profile minimal --default-toolchain $RUST_VERSION --default-host ${rustArch}     && rm rustup-init     && rustup --version     && cargo --version     && rustc --version     && make -C pkg/contrib .wasmtime     && install -pm 755 pkg/contrib/wasmtime/target/release/libwasmtime.so /usr/lib/$(dpkg-architecture -q DEB_HOST_MULTIARCH)/     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/debug-modules --debug     && ./configure wasm --include-path=`pwd`/pkg/contrib/wasmtime/crates/c-api/include --lib-path=/usr/lib/$(dpkg-architecture -q DEB_HOST_MULTIARCH)/     && make -j $NCPU wasm-install     && make clean     && ./configure $CONFIGURE_ARGS_MODULES --cc-opt="$CC_OPT" --modulesdir=/usr/lib/unit/modules     && ./configure wasm --include-path=`pwd`/pkg/contrib/wasmtime/crates/c-api/include --lib-path=/usr/lib/$(dpkg-architecture -q DEB_HOST_MULTIARCH)/     && make -j $NCPU wasm-install     && cd     && rm -rf /usr/src/unit     && for f in /usr/sbin/unitd /usr/lib/unit/modules/*.unit.so; do         ldd $f | awk '/=>/{print $(NF-1)}' | while read n; do dpkg-query -S $n; done | sed 's/^\([^:]\+\):.*$/\1/' | sort | uniq >> /requirements.apt;        done     && apt-mark showmanual | xargs apt-mark auto > /dev/null     && { [ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; }     && /bin/true     && mkdir -p /var/lib/unit/     && mkdir -p /docker-entrypoint.d/     && groupadd --gid 999 unit     && useradd          --uid 999          --gid unit          --no-create-home          --home /nonexistent          --comment "unit user"          --shell /bin/false          unit     && apt-get update     && apt-get --no-install-recommends --no-install-suggests -y install curl $(cat /requirements.apt)     && apt-get purge -y --auto-remove build-essential     && rm -rf /var/lib/apt/lists/*     && rm -f /requirements.apt     && ln -sf /dev/stdout /var/log/unit.log
-# Fri, 20 Oct 2023 01:57:24 GMT
+# Wed, 01 Nov 2023 01:50:52 GMT
 COPY file:8b65557c2137d1a3946148e09ddd45af0b855e40210dabb5a9bd6c36fac22006 in /usr/local/bin/ 
-# Fri, 20 Oct 2023 01:57:24 GMT
+# Wed, 01 Nov 2023 01:50:52 GMT
 COPY multi:44b909b4ee0b15a0820a0f95f866a48ec9fbcb6e3c46d6d937842c09126ebe93 in /usr/share/unit/welcome/ 
-# Fri, 20 Oct 2023 01:57:24 GMT
+# Wed, 01 Nov 2023 01:50:52 GMT
 STOPSIGNAL SIGTERM
-# Fri, 20 Oct 2023 01:57:24 GMT
+# Wed, 01 Nov 2023 01:50:52 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Fri, 20 Oct 2023 01:57:24 GMT
+# Wed, 01 Nov 2023 01:50:52 GMT
 EXPOSE 80
-# Fri, 20 Oct 2023 01:57:24 GMT
+# Wed, 01 Nov 2023 01:50:52 GMT
 CMD ["unitd" "--no-daemon" "--control" "unix:/var/run/control.unit.sock"]
 ```
 
 -	Layers:
-	-	`sha256:85e50d2242ceaba78c3726e059dbd2fa06f5c18e265554bd43a482d19b256d20`  
-		Last Modified: Wed, 11 Oct 2023 18:29:07 GMT  
-		Size: 30.1 MB (30064086 bytes)  
+	-	`sha256:6e498137f0ed1053c364a5c8a688616b4abee72496a0b97cc71ea5e603565070`  
+		Last Modified: Wed, 01 Nov 2023 00:43:46 GMT  
+		Size: 30.1 MB (30063905 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:d971adf0eceddaacd9b851e522a4dffc540adb0881eac45822fa24cd851f3b98`  
-		Last Modified: Fri, 20 Oct 2023 02:01:36 GMT  
-		Size: 15.0 MB (14982282 bytes)  
+	-	`sha256:673c75c8612dbb1d7b8ce6dbd55637b773e5f58345d84b578b14bc1f53de9bf0`  
+		Last Modified: Wed, 01 Nov 2023 01:52:49 GMT  
+		Size: 15.0 MB (14982301 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:eb58dc13d030cc9f86a75f2bacb8d5bc5592fbd6978ea26c42eb50bf8632fecf`  
-		Last Modified: Fri, 20 Oct 2023 02:01:33 GMT  
-		Size: 1.3 KB (1265 bytes)  
+	-	`sha256:76a030cc4496cca6e19f0e401f78f4c2a43dae6b81a71a3138e93dcc46409815`  
+		Last Modified: Wed, 01 Nov 2023 01:52:47 GMT  
+		Size: 1.3 KB (1263 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:36e80447baf3ae30daa5c02056b15e2ecd84d551c7364f3dc964c714b780421d`  
-		Last Modified: Fri, 20 Oct 2023 02:01:33 GMT  
-		Size: 1.5 KB (1483 bytes)  
+	-	`sha256:a9956585b8b007e8ca80b5fcf0d36e9e34bf203ce0d9ed1170943e0cc255d7c7`  
+		Last Modified: Wed, 01 Nov 2023 01:52:47 GMT  
+		Size: 1.5 KB (1480 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
