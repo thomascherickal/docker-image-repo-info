@@ -1,10 +1,10 @@
-# `eclipse-temurin:17.0.8.1_1-jdk-centos7`
+# `eclipse-temurin:17.0.9_9-jdk-centos7`
 
 ## Docker Metadata
 
-- Image ID: `sha256:6fe9fe06a3907c0f01ad745d640291c4854a215ada1b1cd6b73538c25eb0c360`
-- Created: `2023-08-31T20:24:27.027976294Z`
-- Virtual Size: ~ 537.67 Mb  
+- Image ID: `sha256:76036c4bda51ad464156817ea3f3bdd2798737e1ff88bffbc4581c8fafdf78e0`
+- Created: `2023-10-30T23:28:34.608584346Z`
+- Virtual Size: ~ 539.94 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/__cacert_entrypoint.sh"]`
@@ -15,7 +15,7 @@
   - `LANG=en_US.UTF-8`
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
-  - `JAVA_VERSION=jdk-17.0.8.1+1`
+  - `JAVA_VERSION=jdk-17.0.9+9`
 - Labels:
   - `org.label-schema.build-date=20201113`
   - `org.label-schema.license=GPLv2`
@@ -117,15 +117,15 @@ $ dnf --quiet download --source --url bzip2-libs-1.0.6-13.el7
 http://vault.centos.org/centos/7/os/Source/SPackages/bzip2-1.0.6-13.el7.src.rpm
 ```
 
-### `rpm` package: `ca-certificates-2021.2.50-72.el7_9.noarch`
+### `rpm` package: `ca-certificates-2023.2.60_v7.0.306-72.el7_9.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url ca-certificates-2021.2.50-72.el7_9.noarch
-http://vault.centos.org/centos/7/updates/Source/SPackages/ca-certificates-2021.2.50-72.el7_9.src.rpm
+$ dnf --quiet download --source --url ca-certificates-2023.2.60_v7.0.306-72.el7_9.noarch
+http://vault.centos.org/centos/7/updates/Source/SPackages/ca-certificates-2023.2.60_v7.0.306-72.el7_9.src.rpm
 ```
 
 ### `rpm` package: `centos-release-7-9.2009.0.el7.centos.x86_64`
@@ -1204,26 +1204,26 @@ $ dnf --quiet download --source --url openldap-2.4.44-22.el7
 http://vault.centos.org/centos/7/os/Source/SPackages/openldap-2.4.44-22.el7.src.rpm
 ```
 
-### `rpm` package: `openssl-1.0.2k-25.el7_9.x86_64`
+### `rpm` package: `openssl-1.0.2k-26.el7_9.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url openssl-1.0.2k-25.el7_9
-http://vault.centos.org/centos/7/updates/Source/SPackages/openssl-1.0.2k-25.el7_9.src.rpm
+$ dnf --quiet download --source --url openssl-1.0.2k-26.el7_9
+http://vault.centos.org/centos/7/updates/Source/SPackages/openssl-1.0.2k-26.el7_9.src.rpm
 ```
 
-### `rpm` package: `openssl-libs-1.0.2k-25.el7_9.x86_64`
+### `rpm` package: `openssl-libs-1.0.2k-26.el7_9.x86_64`
 
 Licenses (from `rpm --query`): OpenSSL
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url openssl-libs-1.0.2k-25.el7_9
-http://vault.centos.org/centos/7/updates/Source/SPackages/openssl-1.0.2k-25.el7_9.src.rpm
+$ dnf --quiet download --source --url openssl-libs-1.0.2k-26.el7_9
+http://vault.centos.org/centos/7/updates/Source/SPackages/openssl-1.0.2k-26.el7_9.src.rpm
 ```
 
 ### `rpm` package: `p11-kit-0.23.5-3.el7.x86_64`
@@ -1622,15 +1622,15 @@ $ dnf --quiet download --source --url tar-1.26-35.el7
 http://vault.centos.org/centos/7/os/Source/SPackages/tar-1.26-35.el7.src.rpm
 ```
 
-### `rpm` package: `tzdata-2022a-1.el7.noarch`
+### `rpm` package: `tzdata-2023c-1.el7.noarch`
 
 Licenses (from `rpm --query`): Public Domain
 
 Source:
 
 ```console
-$ dnf --quiet download --source --url tzdata-2022a-1.el7.noarch
-http://vault.centos.org/centos/7/updates/Source/SPackages/tzdata-2022a-1.el7.src.rpm
+$ dnf --quiet download --source --url tzdata-2023c-1.el7.noarch
+http://vault.centos.org/centos/7/updates/Source/SPackages/tzdata-2023c-1.el7.src.rpm
 ```
 
 ### `rpm` package: `ustr-1.0.4-16.el7.x86_64`
