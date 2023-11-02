@@ -1,4 +1,4 @@
-## `eclipse-temurin:8-jre-jammy`
+## `eclipse-temurin:8u392-b08-jre-jammy`
 
 ```console
 $ docker pull eclipse-temurin@sha256:400bc606767f813a47ed98a572c4f732d6ce7238040034c3c5758e3395e5e139
@@ -11,7 +11,7 @@ $ docker pull eclipse-temurin@sha256:400bc606767f813a47ed98a572c4f732d6ce7238040
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
 
-### `eclipse-temurin:8-jre-jammy` - linux; amd64
+### `eclipse-temurin:8u392-b08-jre-jammy` - linux; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:08f3b330ce8a4e1c90b2607fbf31ff387e2b9cae9a2dd95f3bcc0bbcae931b4e
@@ -79,7 +79,7 @@ ENTRYPOINT ["/__cacert_entrypoint.sh"]
 		Size: 734.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:8-jre-jammy` - linux; arm variant v7
+### `eclipse-temurin:8u392-b08-jre-jammy` - linux; arm variant v7
 
 ```console
 $ docker pull eclipse-temurin@sha256:dfa0a6de7213d324463ea6139331e7b5e44e636284689a3bda11f405577c7c86
@@ -147,7 +147,7 @@ ENTRYPOINT ["/__cacert_entrypoint.sh"]
 		Size: 734.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:8-jre-jammy` - linux; arm64 variant v8
+### `eclipse-temurin:8u392-b08-jre-jammy` - linux; arm64 variant v8
 
 ```console
 $ docker pull eclipse-temurin@sha256:008455f2a9e62c98f263d56ecbaa2d672fee2cad1693f166b79c941d52a45ff5
@@ -215,7 +215,7 @@ ENTRYPOINT ["/__cacert_entrypoint.sh"]
 		Size: 734.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:8-jre-jammy` - linux; ppc64le
+### `eclipse-temurin:8u392-b08-jre-jammy` - linux; ppc64le
 
 ```console
 $ docker pull eclipse-temurin@sha256:d99a5cdaa830795563572434f17aab3e7f02731e27a426bd4904c1151fb129f0

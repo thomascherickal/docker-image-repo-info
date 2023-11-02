@@ -1,4 +1,4 @@
-## `eclipse-temurin:8-jre-nanoserver-ltsc2022`
+## `eclipse-temurin:8u392-b08-jre-nanoserver-ltsc2022`
 
 ```console
 $ docker pull eclipse-temurin@sha256:b46395953ddeff9b646b5f9b2d3d6462501fe7c7a7f98ff2174f0d8bb940d93b
@@ -8,7 +8,7 @@ $ docker pull eclipse-temurin@sha256:b46395953ddeff9b646b5f9b2d3d6462501fe7c7a7f
 -	Platforms: 1
 	-	windows version 10.0.20348.2031; amd64
 
-### `eclipse-temurin:8-jre-nanoserver-ltsc2022` - windows version 10.0.20348.2031; amd64
+### `eclipse-temurin:8u392-b08-jre-nanoserver-ltsc2022` - windows version 10.0.20348.2031; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:24dfc0ae451adc97918ca1a43256d425a0a26b3c1a04c27d0b9d0a36e4e2ff1c

@@ -1,4 +1,4 @@
-## `eclipse-temurin:8-nanoserver-1809`
+## `eclipse-temurin:8u392-b08-jdk-nanoserver-1809`
 
 ```console
 $ docker pull eclipse-temurin@sha256:9df78ae47094bd8477830b14914a7f04f55edc7e64cb729866b0cf728e7f782d
@@ -8,7 +8,7 @@ $ docker pull eclipse-temurin@sha256:9df78ae47094bd8477830b14914a7f04f55edc7e64c
 -	Platforms: 1
 	-	windows version 10.0.17763.4974; amd64
 
-### `eclipse-temurin:8-nanoserver-1809` - windows version 10.0.17763.4974; amd64
+### `eclipse-temurin:8u392-b08-jdk-nanoserver-1809` - windows version 10.0.17763.4974; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:537eaf9e42e9debd20a9ebc919e85d84b48c45e48658f9ed7d068b6fa1dd9530

@@ -1,4 +1,4 @@
-## `eclipse-temurin:8-jdk-nanoserver`
+## `eclipse-temurin:8u392-b08-jdk-nanoserver`
 
 ```console
 $ docker pull eclipse-temurin@sha256:a248bab004633605763975b85cc1aa8b3785f7ec3da958abfc6cd98711efcc4c
@@ -9,7 +9,7 @@ $ docker pull eclipse-temurin@sha256:a248bab004633605763975b85cc1aa8b3785f7ec3da
 	-	windows version 10.0.20348.2031; amd64
 	-	windows version 10.0.17763.4974; amd64
 
-### `eclipse-temurin:8-jdk-nanoserver` - windows version 10.0.20348.2031; amd64
+### `eclipse-temurin:8u392-b08-jdk-nanoserver` - windows version 10.0.20348.2031; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:4daaf5ae4a2c22df81a5e05cc07bac338cc09c98ad67150a65819fc2691271f5
@@ -82,7 +82,7 @@ RUN echo Verifying install ...     && echo javac -version && javac -version     
 		Size: 62.1 KB (62090 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:8-jdk-nanoserver` - windows version 10.0.17763.4974; amd64
+### `eclipse-temurin:8u392-b08-jdk-nanoserver` - windows version 10.0.17763.4974; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:537eaf9e42e9debd20a9ebc919e85d84b48c45e48658f9ed7d068b6fa1dd9530

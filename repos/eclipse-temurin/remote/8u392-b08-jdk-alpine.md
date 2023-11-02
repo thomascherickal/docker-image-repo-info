@@ -1,4 +1,4 @@
-## `eclipse-temurin:8-jdk-alpine`
+## `eclipse-temurin:8u392-b08-jdk-alpine`
 
 ```console
 $ docker pull eclipse-temurin@sha256:85bb9762882754e146b1174d4008aa8b9bc6f706c8ff57ace414694c88ce54cc
@@ -8,7 +8,7 @@ $ docker pull eclipse-temurin@sha256:85bb9762882754e146b1174d4008aa8b9bc6f706c8f
 -	Platforms: 1
 	-	linux; amd64
 
-### `eclipse-temurin:8-jdk-alpine` - linux; amd64
+### `eclipse-temurin:8u392-b08-jdk-alpine` - linux; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:1fc9d0fa80fdda482d0a741ffe2138efdae9cd40e78010d9cc31b37048cbcafb

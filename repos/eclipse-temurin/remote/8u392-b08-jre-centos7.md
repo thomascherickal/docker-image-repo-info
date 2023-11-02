@@ -1,4 +1,4 @@
-## `eclipse-temurin:8-jre-centos7`
+## `eclipse-temurin:8u392-b08-jre-centos7`
 
 ```console
 $ docker pull eclipse-temurin@sha256:d226c044bc32448be6384629bfa99f4aac46a2f55374eb0a250b299fc4d27523
@@ -10,7 +10,7 @@ $ docker pull eclipse-temurin@sha256:d226c044bc32448be6384629bfa99f4aac46a2f5537
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
 
-### `eclipse-temurin:8-jre-centos7` - linux; amd64
+### `eclipse-temurin:8u392-b08-jre-centos7` - linux; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:787e371c2b172edbe92b058bf4e99622ba3fa42e2608edcf86112982f411d900
@@ -72,7 +72,7 @@ ENTRYPOINT ["/__cacert_entrypoint.sh"]
 		Size: 711.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:8-jre-centos7` - linux; arm64 variant v8
+### `eclipse-temurin:8u392-b08-jre-centos7` - linux; arm64 variant v8
 
 ```console
 $ docker pull eclipse-temurin@sha256:c976a2a4a662fe32308f1362fad11a12daf47c3a946f07b79d1d7e707f5ab4d9
@@ -134,7 +134,7 @@ ENTRYPOINT ["/__cacert_entrypoint.sh"]
 		Size: 711.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:8-jre-centos7` - linux; ppc64le
+### `eclipse-temurin:8u392-b08-jre-centos7` - linux; ppc64le
 
 ```console
 $ docker pull eclipse-temurin@sha256:55569fe2f6ad2a21e62da8ec9858e631e049da137107269f338715c2e4e6236b

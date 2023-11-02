@@ -1,4 +1,4 @@
-## `eclipse-temurin:8-jdk-focal`
+## `eclipse-temurin:8u392-b08-jdk-focal`
 
 ```console
 $ docker pull eclipse-temurin@sha256:9410c80745c9e2fd054ebd2d82eb394d11561021708a18cf83426b933be955b0
@@ -11,7 +11,7 @@ $ docker pull eclipse-temurin@sha256:9410c80745c9e2fd054ebd2d82eb394d11561021708
 	-	linux; arm64 variant v8
 	-	linux; ppc64le
 
-### `eclipse-temurin:8-jdk-focal` - linux; amd64
+### `eclipse-temurin:8u392-b08-jdk-focal` - linux; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:74439212c9ac13ff66d75250c0b6436dc2e9d415a04fd10dc74cf2b41a0b98af
@@ -79,7 +79,7 @@ ENTRYPOINT ["/__cacert_entrypoint.sh"]
 		Size: 734.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:8-jdk-focal` - linux; arm variant v7
+### `eclipse-temurin:8u392-b08-jdk-focal` - linux; arm variant v7
 
 ```console
 $ docker pull eclipse-temurin@sha256:fc08c720d2e449ad11175287f8568bbf00aec98692a96879bfb3bcbb9aa80ddc
@@ -147,7 +147,7 @@ ENTRYPOINT ["/__cacert_entrypoint.sh"]
 		Size: 733.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:8-jdk-focal` - linux; arm64 variant v8
+### `eclipse-temurin:8u392-b08-jdk-focal` - linux; arm64 variant v8
 
 ```console
 $ docker pull eclipse-temurin@sha256:a9fd204f188404514d67213940c9d92cee691f41b4696ee5e65fd30fd2e5ad4d
@@ -215,7 +215,7 @@ ENTRYPOINT ["/__cacert_entrypoint.sh"]
 		Size: 733.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:8-jdk-focal` - linux; ppc64le
+### `eclipse-temurin:8u392-b08-jdk-focal` - linux; ppc64le
 
 ```console
 $ docker pull eclipse-temurin@sha256:1f7957ded84656a81ce3aac0999b07397f3ac008676e41677eb3679db1a24388

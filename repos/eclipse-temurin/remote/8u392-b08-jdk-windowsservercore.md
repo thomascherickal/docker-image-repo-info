@@ -1,4 +1,4 @@
-## `eclipse-temurin:8-windowsservercore`
+## `eclipse-temurin:8u392-b08-jdk-windowsservercore`
 
 ```console
 $ docker pull eclipse-temurin@sha256:51edbca0cf1f9d0462e3376c1c76a5def7d1f749b7117ebcd1849b7bc4d2cff3
@@ -9,7 +9,7 @@ $ docker pull eclipse-temurin@sha256:51edbca0cf1f9d0462e3376c1c76a5def7d1f749b71
 	-	windows version 10.0.20348.2031; amd64
 	-	windows version 10.0.17763.4974; amd64
 
-### `eclipse-temurin:8-windowsservercore` - windows version 10.0.20348.2031; amd64
+### `eclipse-temurin:8u392-b08-jdk-windowsservercore` - windows version 10.0.20348.2031; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:0b49143a8a3559f1243dcbb07ac5e17bbc58a88635f10ffde124604f78166a70
@@ -64,7 +64,7 @@ RUN Write-Host 'Verifying install ...';     Write-Host 'javac -version'; javac -
 		Size: 299.9 KB (299950 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:8-windowsservercore` - windows version 10.0.17763.4974; amd64
+### `eclipse-temurin:8u392-b08-jdk-windowsservercore` - windows version 10.0.17763.4974; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:b850c1a6b5e0989cb5f3c2c380da0bb6cf03110780a96a6699956aba65db25c4

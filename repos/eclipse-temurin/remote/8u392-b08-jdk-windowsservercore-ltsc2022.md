@@ -1,4 +1,4 @@
-## `eclipse-temurin:8-jdk-windowsservercore-ltsc2022`
+## `eclipse-temurin:8u392-b08-jdk-windowsservercore-ltsc2022`
 
 ```console
 $ docker pull eclipse-temurin@sha256:482c6d2cbd4d7bbdd67ffad411265c363c250a0bbc36ce7322e93e1cb62e3cf9
@@ -8,7 +8,7 @@ $ docker pull eclipse-temurin@sha256:482c6d2cbd4d7bbdd67ffad411265c363c250a0bbc3
 -	Platforms: 1
 	-	windows version 10.0.20348.2031; amd64
 
-### `eclipse-temurin:8-jdk-windowsservercore-ltsc2022` - windows version 10.0.20348.2031; amd64
+### `eclipse-temurin:8u392-b08-jdk-windowsservercore-ltsc2022` - windows version 10.0.20348.2031; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:0b49143a8a3559f1243dcbb07ac5e17bbc58a88635f10ffde124604f78166a70

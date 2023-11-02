@@ -1,4 +1,4 @@
-## `eclipse-temurin:8-jre-windowsservercore-1809`
+## `eclipse-temurin:8u392-b08-jre-windowsservercore-1809`
 
 ```console
 $ docker pull eclipse-temurin@sha256:58cd43a1c5e2a3c6f8bee40247c7d07d630fd7e92d3fd7abfa496c87023c584e
@@ -8,7 +8,7 @@ $ docker pull eclipse-temurin@sha256:58cd43a1c5e2a3c6f8bee40247c7d07d630fd7e92d3
 -	Platforms: 1
 	-	windows version 10.0.17763.4974; amd64
 
-### `eclipse-temurin:8-jre-windowsservercore-1809` - windows version 10.0.17763.4974; amd64
+### `eclipse-temurin:8u392-b08-jre-windowsservercore-1809` - windows version 10.0.17763.4974; amd64
 
 ```console
 $ docker pull eclipse-temurin@sha256:0d5a77ccbd1a0f6914a4c83858a767845c4002eb436c4d1e1c940f8c6b28f184

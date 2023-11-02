@@ -1,7 +1,7 @@
-## `eclipse-temurin:8-jdk-nanoserver`
+## `eclipse-temurin:8u392-b08-jre-nanoserver`
 
 ```console
-$ docker pull eclipse-temurin@sha256:a248bab004633605763975b85cc1aa8b3785f7ec3da958abfc6cd98711efcc4c
+$ docker pull eclipse-temurin@sha256:e6737483d7267d01b22ca4252b7d05f3dab17a1236ed7d88e7ed7a26739483dd
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9,17 +9,17 @@ $ docker pull eclipse-temurin@sha256:a248bab004633605763975b85cc1aa8b3785f7ec3da
 	-	windows version 10.0.20348.2031; amd64
 	-	windows version 10.0.17763.4974; amd64
 
-### `eclipse-temurin:8-jdk-nanoserver` - windows version 10.0.20348.2031; amd64
+### `eclipse-temurin:8u392-b08-jre-nanoserver` - windows version 10.0.20348.2031; amd64
 
 ```console
-$ docker pull eclipse-temurin@sha256:4daaf5ae4a2c22df81a5e05cc07bac338cc09c98ad67150a65819fc2691271f5
+$ docker pull eclipse-temurin@sha256:24dfc0ae451adc97918ca1a43256d425a0a26b3c1a04c27d0b9d0a36e4e2ff1c
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **222.4 MB (222446707 bytes)**  
+-	Total Size: **160.9 MB (160861409 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:694051b69d8dba55d0f62c08008a4368bc61ac370c76ae9b17deaba76bec163a`
+-	Image ID: `sha256:92c37e12a8b7485d233f1d4f2e6bdc3613b49278af80e21f847e3eae91d4790a`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/s","\/c"]`
 
@@ -38,10 +38,10 @@ USER ContainerAdministrator
 RUN echo Updating PATH: %JAVA_HOME%\bin;%PATH%     && setx /M PATH %JAVA_HOME%\bin;%PATH%     && echo Complete.
 # Thu, 02 Nov 2023 01:29:25 GMT
 USER ContainerUser
-# Thu, 02 Nov 2023 01:29:37 GMT
-COPY dir:d9c44d909d2b41aad5bf6fa4f7c7d36e81063822ae5e7ef30e4851bbe7809503 in C:\openjdk-8 
-# Thu, 02 Nov 2023 01:29:50 GMT
-RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
+# Thu, 02 Nov 2023 01:30:06 GMT
+COPY dir:dbdf2dd9ed9894186d74b75beac1320724c73c6994b00118f04985f0ea2b3067 in C:\openjdk-8 
+# Thu, 02 Nov 2023 01:30:17 GMT
+RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
 ```
 
 -	Layers:
@@ -73,26 +73,26 @@ RUN echo Verifying install ...     && echo javac -version && javac -version     
 		Last Modified: Thu, 02 Nov 2023 01:35:44 GMT  
 		Size: 1.1 KB (1137 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:6b1a4d2308fcf3cab9ae8adac26ab6cd22e30bb61faeed1cbf18d5bbbd212658`  
-		Last Modified: Thu, 02 Nov 2023 01:35:56 GMT  
-		Size: 101.7 MB (101696221 bytes)  
+	-	`sha256:2e379140e32b221fc75991ba6237948032d7d548f3150e02e142d74b35a24e87`  
+		Last Modified: Thu, 02 Nov 2023 01:36:14 GMT  
+		Size: 40.1 MB (40110942 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ece75bc3fe364391d82a78f12e16712b5e2d221323be33ba16decfb229fa1a93`  
-		Last Modified: Thu, 02 Nov 2023 01:35:44 GMT  
-		Size: 62.1 KB (62090 bytes)  
+	-	`sha256:d2291a2fe8d713d98b997b03a26fc3ba0b5a690590e4f05821bc776164538a92`  
+		Last Modified: Thu, 02 Nov 2023 01:36:08 GMT  
+		Size: 62.1 KB (62071 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
-### `eclipse-temurin:8-jdk-nanoserver` - windows version 10.0.17763.4974; amd64
+### `eclipse-temurin:8u392-b08-jre-nanoserver` - windows version 10.0.17763.4974; amd64
 
 ```console
-$ docker pull eclipse-temurin@sha256:537eaf9e42e9debd20a9ebc919e85d84b48c45e48658f9ed7d068b6fa1dd9530
+$ docker pull eclipse-temurin@sha256:6135cb5b5c30956e323adf687f8a5a1333d7b86f671c23232e66ced1a3c80da2
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **206.3 MB (206315622 bytes)**  
+-	Total Size: **144.7 MB (144731898 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a6b097d76e836b3019b4245e7485e47c351d1f8ab0d8d220d09326ee3e54d931`
+-	Image ID: `sha256:b7da4ec33b877b9b0976d6d59c4ff1bf323a85c77790971b4cb3ded379dac65b`
 -	Default Command: `["c:\\windows\\system32\\cmd.exe"]`
 -	`SHELL`: `["cmd","\/s","\/c"]`
 
@@ -111,10 +111,10 @@ USER ContainerAdministrator
 RUN echo Updating PATH: %JAVA_HOME%\bin;%PATH%     && setx /M PATH %JAVA_HOME%\bin;%PATH%     && echo Complete.
 # Thu, 02 Nov 2023 01:22:33 GMT
 USER ContainerUser
-# Thu, 02 Nov 2023 01:22:45 GMT
-COPY dir:d9c44d909d2b41aad5bf6fa4f7c7d36e81063822ae5e7ef30e4851bbe7809503 in C:\openjdk-8 
-# Thu, 02 Nov 2023 01:23:00 GMT
-RUN echo Verifying install ...     && echo javac -version && javac -version     && echo java -version && java -version     && echo Complete.
+# Thu, 02 Nov 2023 01:27:12 GMT
+COPY dir:dbdf2dd9ed9894186d74b75beac1320724c73c6994b00118f04985f0ea2b3067 in C:\openjdk-8 
+# Thu, 02 Nov 2023 01:27:23 GMT
+RUN echo Verifying install ...     && echo java -version && java -version     && echo Complete.
 ```
 
 -	Layers:
@@ -146,11 +146,11 @@ RUN echo Verifying install ...     && echo javac -version && javac -version     
 		Last Modified: Thu, 02 Nov 2023 01:34:06 GMT  
 		Size: 1.2 KB (1159 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:632602ad7ed3f150561ec8382a2a64affe5996d2c3c8f0c2cff4d62caa544ed2`  
-		Last Modified: Thu, 02 Nov 2023 01:34:18 GMT  
-		Size: 101.7 MB (101693545 bytes)  
+	-	`sha256:f5b55a5b502e3d777affca5e7392caaf8e2334c458f4d1ea499af39db4cba980`  
+		Last Modified: Thu, 02 Nov 2023 01:35:13 GMT  
+		Size: 40.1 MB (40110947 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cdfb80b19e266cd722164ce2476a345845f35d95931609e67c337bc59c31acc9`  
-		Last Modified: Thu, 02 Nov 2023 01:34:07 GMT  
-		Size: 82.7 KB (82651 bytes)  
+	-	`sha256:9a67c50f277585e77ab3ca2a0c0873f4cc9b929baedc4eec871e876a5ee75edc`  
+		Last Modified: Thu, 02 Nov 2023 01:35:07 GMT  
+		Size: 81.5 KB (81525 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
