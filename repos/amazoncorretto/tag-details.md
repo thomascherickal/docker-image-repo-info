@@ -7922,7 +7922,7 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ## `amazoncorretto:21-al2023`
 
 ```console
-$ docker pull amazoncorretto@sha256:ad7b7d2e3c4c462c8d61cf26cff1b63428cd8eccc58c205d676e4c3927666e56
+$ docker pull amazoncorretto@sha256:2c3d0b72919aa97bf821f168befbe8bae860f1a704057a471f086a60f4a26136
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -7933,14 +7933,14 @@ $ docker pull amazoncorretto@sha256:ad7b7d2e3c4c462c8d61cf26cff1b63428cd8eccc58c
 ### `amazoncorretto:21-al2023` - linux; amd64
 
 ```console
-$ docker pull amazoncorretto@sha256:644cbdb6b22e9d5c9cf1dcb4e4bf372ca73410529d5207390fbbb8a8d1f4bff3
+$ docker pull amazoncorretto@sha256:e989ffa2f38d1db044b4545c695281764fe2ef1a5a41b4863357fe4ce47caaf2
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **222.8 MB (222780084 bytes)**  
+-	Total Size: **222.8 MB (222774783 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c5e9cea12e42b36915abf33573d54cefffe89d759174885bb5d2b9fd98ac564b`
+-	Image ID: `sha256:ba522098caf565b3e908683ae688c8a359500d48b85b57fe9e87263ab390b43c`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -7950,14 +7950,14 @@ COPY dir:9af41cf6ce642147a5bc5b6f2e8b2df0656b169c3bf33f1a1298ad1ff250d756 in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:49:20 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:49:20 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:49:47 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:22:13 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:22:35 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-devel-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-jmods-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:49:48 GMT
+# Thu, 02 Nov 2023 22:22:36 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:49:48 GMT
+# Thu, 02 Nov 2023 22:22:36 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -7966,22 +7966,22 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Tue, 24 Oct 2023 18:05:52 GMT  
 		Size: 52.4 MB (52401965 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a4baee4900aec4868f73f736cce52c6a35686ec69c42e74f26008eddfb1e094c`  
-		Last Modified: Wed, 25 Oct 2023 02:00:21 GMT  
-		Size: 170.4 MB (170378119 bytes)  
+	-	`sha256:82a49e0d741e245757c9df45ab70b83a8a35605e9d4fe3609e7c8cf8811ccbea`  
+		Last Modified: Thu, 02 Nov 2023 22:26:12 GMT  
+		Size: 170.4 MB (170372818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `amazoncorretto:21-al2023` - linux; arm64 variant v8
 
 ```console
-$ docker pull amazoncorretto@sha256:589bc971b4c1c19b49d004ce3fae13a4511ad35af2624a6af24af1e00b45b1ac
+$ docker pull amazoncorretto@sha256:34bd26458c653424c721fb33e63ef3559cbbdea0d3aaf95aefb608c09436b62e
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **220.1 MB (220078502 bytes)**  
+-	Total Size: **220.1 MB (220068055 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:34e0334404a7853164d111640de5a6f37adc711eb7f5e1a54c962d6adc4e8d67`
+-	Image ID: `sha256:5a82a22381e9d669b8351a45470aad1bcf9a825e14fe6e0ddcc044164dfecfe4`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -7991,14 +7991,14 @@ COPY dir:479ee478c40efe0225a7bfb57784564c52845a04479c6b1813627da25975830a in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:25:11 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:25:11 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:25:30 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:40:14 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:40:34 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-devel-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-jmods-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:25:32 GMT
+# Thu, 02 Nov 2023 22:40:36 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:25:32 GMT
+# Thu, 02 Nov 2023 22:40:36 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -8007,15 +8007,15 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Wed, 25 Oct 2023 00:40:02 GMT  
 		Size: 51.5 MB (51479162 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec9c648f69027e894be0e9d8474d4285f10dd98c2ed9da5f8a04a3dae3ea2685`  
-		Last Modified: Wed, 25 Oct 2023 01:34:23 GMT  
-		Size: 168.6 MB (168599340 bytes)  
+	-	`sha256:c9058053d2f735ded1a6dcf765224bde1195e50e14f86c908ca3df14492713fb`  
+		Last Modified: Thu, 02 Nov 2023 22:43:52 GMT  
+		Size: 168.6 MB (168588893 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `amazoncorretto:21-al2023-headful`
 
 ```console
-$ docker pull amazoncorretto@sha256:f4a3d14c5843118e5f199d3b8674119af18a3249f6150421dafae369439dd44b
+$ docker pull amazoncorretto@sha256:49b6cbdeb9302c322fe4dc067ec9c9464e2d602398c8b8369cf058923546ae2c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8026,14 +8026,14 @@ $ docker pull amazoncorretto@sha256:f4a3d14c5843118e5f199d3b8674119af18a3249f615
 ### `amazoncorretto:21-al2023-headful` - linux; amd64
 
 ```console
-$ docker pull amazoncorretto@sha256:92484585d8e3e502485f8a18d140b418bfefb89ff1042792495f94740bd9317e
+$ docker pull amazoncorretto@sha256:56768572556e34ac6e4b2e6372e60aaf64d75a8b376662ee7d5c24f2aadc3341
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **142.5 MB (142539521 bytes)**  
+-	Total Size: **142.5 MB (142522657 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:eeb1f2ab1265921245fa04a1d983ae48e422b30f385f07e022e5517c71f84a29`
+-	Image ID: `sha256:12329c0907510bfbb5628d8c350de5bbcecc2c41e1e94732b9858d68897d3074`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -8043,14 +8043,14 @@ COPY dir:9af41cf6ce642147a5bc5b6f2e8b2df0656b169c3bf33f1a1298ad1ff250d756 in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:49:20 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:49:20 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:50:30 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:22:13 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:23:18 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:50:31 GMT
+# Thu, 02 Nov 2023 22:23:18 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:50:31 GMT
+# Thu, 02 Nov 2023 22:23:18 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -8059,22 +8059,22 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Tue, 24 Oct 2023 18:05:52 GMT  
 		Size: 52.4 MB (52401965 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a1f64159ee430cd9acd83073937eefad441d1cca9fb37ae1dbf356c859e4d75`  
-		Last Modified: Wed, 25 Oct 2023 02:01:01 GMT  
-		Size: 90.1 MB (90137556 bytes)  
+	-	`sha256:a03e93705168cb6b27edb6ed0a91e39ddd070effe4cb58dab3e5e99350ae7001`  
+		Last Modified: Thu, 02 Nov 2023 22:26:54 GMT  
+		Size: 90.1 MB (90120692 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `amazoncorretto:21-al2023-headful` - linux; arm64 variant v8
 
 ```console
-$ docker pull amazoncorretto@sha256:470a9cebc24ecc5419a22cf2d6ab3e0fb9a45fb8745a323a2cdcadfbd980ad8c
+$ docker pull amazoncorretto@sha256:0a41f5a70cdb8d6c185c2e82fa18238b294dbb397d0610d2c2bd9565e338a485
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **140.7 MB (140708752 bytes)**  
+-	Total Size: **140.7 MB (140687346 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9b32ac78b4a68713258ec2a30eb7e9e331476686ece1cea746af9937f20a64cf`
+-	Image ID: `sha256:81369bc93cca170de905f9c3e395ec451e5f8bde3221f0248415ccb95e59dfb9`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -8084,14 +8084,14 @@ COPY dir:479ee478c40efe0225a7bfb57784564c52845a04479c6b1813627da25975830a in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:25:11 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:25:11 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:26:04 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:40:14 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:41:16 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:26:05 GMT
+# Thu, 02 Nov 2023 22:41:17 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:26:05 GMT
+# Thu, 02 Nov 2023 22:41:17 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -8100,15 +8100,15 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Wed, 25 Oct 2023 00:40:02 GMT  
 		Size: 51.5 MB (51479162 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1bdcbc111d2facb0d5888ccb5792bf8d044de27cd24ecca524a4d8aaa6043ffa`  
-		Last Modified: Wed, 25 Oct 2023 01:35:00 GMT  
-		Size: 89.2 MB (89229590 bytes)  
+	-	`sha256:2072fa60895710d2b97f22ed32c0a68e8005c0279904a6e5a2211dc3486e235a`  
+		Last Modified: Thu, 02 Nov 2023 22:44:29 GMT  
+		Size: 89.2 MB (89208184 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `amazoncorretto:21-al2023-headless`
 
 ```console
-$ docker pull amazoncorretto@sha256:3a6f40a78f1619d32bad9eddb4d76238a357b35afe6f73d2a89a5a338fa1efb3
+$ docker pull amazoncorretto@sha256:af374700216f3628c0ef3cb74eb576834391f59a56f3bc4febc1ae4305c0abcc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8119,14 +8119,14 @@ $ docker pull amazoncorretto@sha256:3a6f40a78f1619d32bad9eddb4d76238a357b35afe6f
 ### `amazoncorretto:21-al2023-headless` - linux; amd64
 
 ```console
-$ docker pull amazoncorretto@sha256:a42c7da5c19ccb1beb4329eb736aa7e73aad4908095be4cbbc74904845568559
+$ docker pull amazoncorretto@sha256:102bf9c03e1b75dd1b0b6e1bcedf595163b24d1ea7d9d0d7af6cd5f04aa442db
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **141.8 MB (141828182 bytes)**  
+-	Total Size: **141.8 MB (141818976 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:37aa2661cca73fda857707a5445f97fe8909af8569ab9c71d2eddff0ba8569c1`
+-	Image ID: `sha256:9080e1cb9d8071071f3e296d6ae1475b28eb1a1b74fe1338664c9e6f5b454a33`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -8136,14 +8136,14 @@ COPY dir:9af41cf6ce642147a5bc5b6f2e8b2df0656b169c3bf33f1a1298ad1ff250d756 in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:49:20 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:49:20 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:50:10 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:22:13 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:22:57 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:50:10 GMT
+# Thu, 02 Nov 2023 22:22:58 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:50:10 GMT
+# Thu, 02 Nov 2023 22:22:58 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -8152,22 +8152,22 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Tue, 24 Oct 2023 18:05:52 GMT  
 		Size: 52.4 MB (52401965 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c04b670ff3aa145f3d43fd1676b824afb7f1ea9ba11cad06caab5152e26476e`  
-		Last Modified: Wed, 25 Oct 2023 02:00:42 GMT  
-		Size: 89.4 MB (89426217 bytes)  
+	-	`sha256:59b95efd1914461604c3cc97570be4e4d2a86dcd45d0174ea26a01451e95c940`  
+		Last Modified: Thu, 02 Nov 2023 22:26:34 GMT  
+		Size: 89.4 MB (89417011 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `amazoncorretto:21-al2023-headless` - linux; arm64 variant v8
 
 ```console
-$ docker pull amazoncorretto@sha256:7115106f61de4d9c00e272dd385d367c969cba999a7104a69a36d9fd044b922e
+$ docker pull amazoncorretto@sha256:0352d59a44b54087ffb5ac94beb9ebced6d2c7be74dbf5735a815b1c561de6f6
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **140.0 MB (139977204 bytes)**  
+-	Total Size: **140.0 MB (139972797 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45feee794ff99d7f1244134817214f0905f89867592bc67b004ea45e182122a5`
+-	Image ID: `sha256:8afc834d79ea1427dddf79e61946a16c9f69deb9503371fb7d103df2b05b76b0`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -8177,14 +8177,14 @@ COPY dir:479ee478c40efe0225a7bfb57784564c52845a04479c6b1813627da25975830a in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:25:11 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:25:11 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:25:47 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:40:14 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:40:56 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:25:49 GMT
+# Thu, 02 Nov 2023 22:40:57 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:25:49 GMT
+# Thu, 02 Nov 2023 22:40:58 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -8193,15 +8193,15 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Wed, 25 Oct 2023 00:40:02 GMT  
 		Size: 51.5 MB (51479162 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02ccff6a5f6fb831d09c6573c613f786cbf0d3fad3740f1dff5a5577b76200a7`  
-		Last Modified: Wed, 25 Oct 2023 01:34:43 GMT  
-		Size: 88.5 MB (88498042 bytes)  
+	-	`sha256:22aad10dfd1fb0449332bf5d864ec2b8a9a36d1943e4815a176a71999d968c36`  
+		Last Modified: Thu, 02 Nov 2023 22:44:11 GMT  
+		Size: 88.5 MB (88493635 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `amazoncorretto:21-al2023-jdk`
 
 ```console
-$ docker pull amazoncorretto@sha256:ad7b7d2e3c4c462c8d61cf26cff1b63428cd8eccc58c205d676e4c3927666e56
+$ docker pull amazoncorretto@sha256:2c3d0b72919aa97bf821f168befbe8bae860f1a704057a471f086a60f4a26136
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8212,14 +8212,14 @@ $ docker pull amazoncorretto@sha256:ad7b7d2e3c4c462c8d61cf26cff1b63428cd8eccc58c
 ### `amazoncorretto:21-al2023-jdk` - linux; amd64
 
 ```console
-$ docker pull amazoncorretto@sha256:644cbdb6b22e9d5c9cf1dcb4e4bf372ca73410529d5207390fbbb8a8d1f4bff3
+$ docker pull amazoncorretto@sha256:e989ffa2f38d1db044b4545c695281764fe2ef1a5a41b4863357fe4ce47caaf2
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **222.8 MB (222780084 bytes)**  
+-	Total Size: **222.8 MB (222774783 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c5e9cea12e42b36915abf33573d54cefffe89d759174885bb5d2b9fd98ac564b`
+-	Image ID: `sha256:ba522098caf565b3e908683ae688c8a359500d48b85b57fe9e87263ab390b43c`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -8229,14 +8229,14 @@ COPY dir:9af41cf6ce642147a5bc5b6f2e8b2df0656b169c3bf33f1a1298ad1ff250d756 in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:49:20 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:49:20 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:49:47 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:22:13 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:22:35 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-devel-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-jmods-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:49:48 GMT
+# Thu, 02 Nov 2023 22:22:36 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:49:48 GMT
+# Thu, 02 Nov 2023 22:22:36 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -8245,22 +8245,22 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Tue, 24 Oct 2023 18:05:52 GMT  
 		Size: 52.4 MB (52401965 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a4baee4900aec4868f73f736cce52c6a35686ec69c42e74f26008eddfb1e094c`  
-		Last Modified: Wed, 25 Oct 2023 02:00:21 GMT  
-		Size: 170.4 MB (170378119 bytes)  
+	-	`sha256:82a49e0d741e245757c9df45ab70b83a8a35605e9d4fe3609e7c8cf8811ccbea`  
+		Last Modified: Thu, 02 Nov 2023 22:26:12 GMT  
+		Size: 170.4 MB (170372818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `amazoncorretto:21-al2023-jdk` - linux; arm64 variant v8
 
 ```console
-$ docker pull amazoncorretto@sha256:589bc971b4c1c19b49d004ce3fae13a4511ad35af2624a6af24af1e00b45b1ac
+$ docker pull amazoncorretto@sha256:34bd26458c653424c721fb33e63ef3559cbbdea0d3aaf95aefb608c09436b62e
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **220.1 MB (220078502 bytes)**  
+-	Total Size: **220.1 MB (220068055 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:34e0334404a7853164d111640de5a6f37adc711eb7f5e1a54c962d6adc4e8d67`
+-	Image ID: `sha256:5a82a22381e9d669b8351a45470aad1bcf9a825e14fe6e0ddcc044164dfecfe4`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -8270,14 +8270,14 @@ COPY dir:479ee478c40efe0225a7bfb57784564c52845a04479c6b1813627da25975830a in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:25:11 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:25:11 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:25:30 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:40:14 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:40:34 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-devel-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-jmods-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:25:32 GMT
+# Thu, 02 Nov 2023 22:40:36 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:25:32 GMT
+# Thu, 02 Nov 2023 22:40:36 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -8286,9 +8286,9 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Wed, 25 Oct 2023 00:40:02 GMT  
 		Size: 51.5 MB (51479162 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec9c648f69027e894be0e9d8474d4285f10dd98c2ed9da5f8a04a3dae3ea2685`  
-		Last Modified: Wed, 25 Oct 2023 01:34:23 GMT  
-		Size: 168.6 MB (168599340 bytes)  
+	-	`sha256:c9058053d2f735ded1a6dcf765224bde1195e50e14f86c908ca3df14492713fb`  
+		Last Modified: Thu, 02 Nov 2023 22:43:52 GMT  
+		Size: 168.6 MB (168588893 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `amazoncorretto:21-alpine`
@@ -9956,7 +9956,7 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ## `amazoncorretto:21.0.1-al2023`
 
 ```console
-$ docker pull amazoncorretto@sha256:ad7b7d2e3c4c462c8d61cf26cff1b63428cd8eccc58c205d676e4c3927666e56
+$ docker pull amazoncorretto@sha256:2c3d0b72919aa97bf821f168befbe8bae860f1a704057a471f086a60f4a26136
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9967,14 +9967,14 @@ $ docker pull amazoncorretto@sha256:ad7b7d2e3c4c462c8d61cf26cff1b63428cd8eccc58c
 ### `amazoncorretto:21.0.1-al2023` - linux; amd64
 
 ```console
-$ docker pull amazoncorretto@sha256:644cbdb6b22e9d5c9cf1dcb4e4bf372ca73410529d5207390fbbb8a8d1f4bff3
+$ docker pull amazoncorretto@sha256:e989ffa2f38d1db044b4545c695281764fe2ef1a5a41b4863357fe4ce47caaf2
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **222.8 MB (222780084 bytes)**  
+-	Total Size: **222.8 MB (222774783 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:c5e9cea12e42b36915abf33573d54cefffe89d759174885bb5d2b9fd98ac564b`
+-	Image ID: `sha256:ba522098caf565b3e908683ae688c8a359500d48b85b57fe9e87263ab390b43c`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -9984,14 +9984,14 @@ COPY dir:9af41cf6ce642147a5bc5b6f2e8b2df0656b169c3bf33f1a1298ad1ff250d756 in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:49:20 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:49:20 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:49:47 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:22:13 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:22:35 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-devel-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-jmods-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:49:48 GMT
+# Thu, 02 Nov 2023 22:22:36 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:49:48 GMT
+# Thu, 02 Nov 2023 22:22:36 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -10000,22 +10000,22 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Tue, 24 Oct 2023 18:05:52 GMT  
 		Size: 52.4 MB (52401965 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a4baee4900aec4868f73f736cce52c6a35686ec69c42e74f26008eddfb1e094c`  
-		Last Modified: Wed, 25 Oct 2023 02:00:21 GMT  
-		Size: 170.4 MB (170378119 bytes)  
+	-	`sha256:82a49e0d741e245757c9df45ab70b83a8a35605e9d4fe3609e7c8cf8811ccbea`  
+		Last Modified: Thu, 02 Nov 2023 22:26:12 GMT  
+		Size: 170.4 MB (170372818 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `amazoncorretto:21.0.1-al2023` - linux; arm64 variant v8
 
 ```console
-$ docker pull amazoncorretto@sha256:589bc971b4c1c19b49d004ce3fae13a4511ad35af2624a6af24af1e00b45b1ac
+$ docker pull amazoncorretto@sha256:34bd26458c653424c721fb33e63ef3559cbbdea0d3aaf95aefb608c09436b62e
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **220.1 MB (220078502 bytes)**  
+-	Total Size: **220.1 MB (220068055 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:34e0334404a7853164d111640de5a6f37adc711eb7f5e1a54c962d6adc4e8d67`
+-	Image ID: `sha256:5a82a22381e9d669b8351a45470aad1bcf9a825e14fe6e0ddcc044164dfecfe4`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -10025,14 +10025,14 @@ COPY dir:479ee478c40efe0225a7bfb57784564c52845a04479c6b1813627da25975830a in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:25:11 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:25:11 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:25:30 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:40:14 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:40:34 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-devel-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-jmods-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:25:32 GMT
+# Thu, 02 Nov 2023 22:40:36 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:25:32 GMT
+# Thu, 02 Nov 2023 22:40:36 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -10041,15 +10041,15 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Wed, 25 Oct 2023 00:40:02 GMT  
 		Size: 51.5 MB (51479162 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ec9c648f69027e894be0e9d8474d4285f10dd98c2ed9da5f8a04a3dae3ea2685`  
-		Last Modified: Wed, 25 Oct 2023 01:34:23 GMT  
-		Size: 168.6 MB (168599340 bytes)  
+	-	`sha256:c9058053d2f735ded1a6dcf765224bde1195e50e14f86c908ca3df14492713fb`  
+		Last Modified: Thu, 02 Nov 2023 22:43:52 GMT  
+		Size: 168.6 MB (168588893 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `amazoncorretto:21.0.1-al2023-headful`
 
 ```console
-$ docker pull amazoncorretto@sha256:f4a3d14c5843118e5f199d3b8674119af18a3249f6150421dafae369439dd44b
+$ docker pull amazoncorretto@sha256:49b6cbdeb9302c322fe4dc067ec9c9464e2d602398c8b8369cf058923546ae2c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10060,14 +10060,14 @@ $ docker pull amazoncorretto@sha256:f4a3d14c5843118e5f199d3b8674119af18a3249f615
 ### `amazoncorretto:21.0.1-al2023-headful` - linux; amd64
 
 ```console
-$ docker pull amazoncorretto@sha256:92484585d8e3e502485f8a18d140b418bfefb89ff1042792495f94740bd9317e
+$ docker pull amazoncorretto@sha256:56768572556e34ac6e4b2e6372e60aaf64d75a8b376662ee7d5c24f2aadc3341
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **142.5 MB (142539521 bytes)**  
+-	Total Size: **142.5 MB (142522657 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:eeb1f2ab1265921245fa04a1d983ae48e422b30f385f07e022e5517c71f84a29`
+-	Image ID: `sha256:12329c0907510bfbb5628d8c350de5bbcecc2c41e1e94732b9858d68897d3074`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -10077,14 +10077,14 @@ COPY dir:9af41cf6ce642147a5bc5b6f2e8b2df0656b169c3bf33f1a1298ad1ff250d756 in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:49:20 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:49:20 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:50:30 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:22:13 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:23:18 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:50:31 GMT
+# Thu, 02 Nov 2023 22:23:18 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:50:31 GMT
+# Thu, 02 Nov 2023 22:23:18 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -10093,22 +10093,22 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Tue, 24 Oct 2023 18:05:52 GMT  
 		Size: 52.4 MB (52401965 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a1f64159ee430cd9acd83073937eefad441d1cca9fb37ae1dbf356c859e4d75`  
-		Last Modified: Wed, 25 Oct 2023 02:01:01 GMT  
-		Size: 90.1 MB (90137556 bytes)  
+	-	`sha256:a03e93705168cb6b27edb6ed0a91e39ddd070effe4cb58dab3e5e99350ae7001`  
+		Last Modified: Thu, 02 Nov 2023 22:26:54 GMT  
+		Size: 90.1 MB (90120692 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `amazoncorretto:21.0.1-al2023-headful` - linux; arm64 variant v8
 
 ```console
-$ docker pull amazoncorretto@sha256:470a9cebc24ecc5419a22cf2d6ab3e0fb9a45fb8745a323a2cdcadfbd980ad8c
+$ docker pull amazoncorretto@sha256:0a41f5a70cdb8d6c185c2e82fa18238b294dbb397d0610d2c2bd9565e338a485
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **140.7 MB (140708752 bytes)**  
+-	Total Size: **140.7 MB (140687346 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9b32ac78b4a68713258ec2a30eb7e9e331476686ece1cea746af9937f20a64cf`
+-	Image ID: `sha256:81369bc93cca170de905f9c3e395ec451e5f8bde3221f0248415ccb95e59dfb9`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -10118,14 +10118,14 @@ COPY dir:479ee478c40efe0225a7bfb57784564c52845a04479c6b1813627da25975830a in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:25:11 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:25:11 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:26:04 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:40:14 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:41:16 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm" "java-21-amazon-corretto-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:26:05 GMT
+# Thu, 02 Nov 2023 22:41:17 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:26:05 GMT
+# Thu, 02 Nov 2023 22:41:17 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -10134,15 +10134,15 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Wed, 25 Oct 2023 00:40:02 GMT  
 		Size: 51.5 MB (51479162 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1bdcbc111d2facb0d5888ccb5792bf8d044de27cd24ecca524a4d8aaa6043ffa`  
-		Last Modified: Wed, 25 Oct 2023 01:35:00 GMT  
-		Size: 89.2 MB (89229590 bytes)  
+	-	`sha256:2072fa60895710d2b97f22ed32c0a68e8005c0279904a6e5a2211dc3486e235a`  
+		Last Modified: Thu, 02 Nov 2023 22:44:29 GMT  
+		Size: 89.2 MB (89208184 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `amazoncorretto:21.0.1-al2023-headless`
 
 ```console
-$ docker pull amazoncorretto@sha256:3a6f40a78f1619d32bad9eddb4d76238a357b35afe6f73d2a89a5a338fa1efb3
+$ docker pull amazoncorretto@sha256:af374700216f3628c0ef3cb74eb576834391f59a56f3bc4febc1ae4305c0abcc
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10153,14 +10153,14 @@ $ docker pull amazoncorretto@sha256:3a6f40a78f1619d32bad9eddb4d76238a357b35afe6f
 ### `amazoncorretto:21.0.1-al2023-headless` - linux; amd64
 
 ```console
-$ docker pull amazoncorretto@sha256:a42c7da5c19ccb1beb4329eb736aa7e73aad4908095be4cbbc74904845568559
+$ docker pull amazoncorretto@sha256:102bf9c03e1b75dd1b0b6e1bcedf595163b24d1ea7d9d0d7af6cd5f04aa442db
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **141.8 MB (141828182 bytes)**  
+-	Total Size: **141.8 MB (141818976 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:37aa2661cca73fda857707a5445f97fe8909af8569ab9c71d2eddff0ba8569c1`
+-	Image ID: `sha256:9080e1cb9d8071071f3e296d6ae1475b28eb1a1b74fe1338664c9e6f5b454a33`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -10170,14 +10170,14 @@ COPY dir:9af41cf6ce642147a5bc5b6f2e8b2df0656b169c3bf33f1a1298ad1ff250d756 in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:49:20 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:49:20 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:50:10 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:22:13 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:22:57 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:50:10 GMT
+# Thu, 02 Nov 2023 22:22:58 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:50:10 GMT
+# Thu, 02 Nov 2023 22:22:58 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -10186,22 +10186,22 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Tue, 24 Oct 2023 18:05:52 GMT  
 		Size: 52.4 MB (52401965 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4c04b670ff3aa145f3d43fd1676b824afb7f1ea9ba11cad06caab5152e26476e`  
-		Last Modified: Wed, 25 Oct 2023 02:00:42 GMT  
-		Size: 89.4 MB (89426217 bytes)  
+	-	`sha256:59b95efd1914461604c3cc97570be4e4d2a86dcd45d0174ea26a01451e95c940`  
+		Last Modified: Thu, 02 Nov 2023 22:26:34 GMT  
+		Size: 89.4 MB (89417011 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `amazoncorretto:21.0.1-al2023-headless` - linux; arm64 variant v8
 
 ```console
-$ docker pull amazoncorretto@sha256:7115106f61de4d9c00e272dd385d367c969cba999a7104a69a36d9fd044b922e
+$ docker pull amazoncorretto@sha256:0352d59a44b54087ffb5ac94beb9ebced6d2c7be74dbf5735a815b1c561de6f6
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **140.0 MB (139977204 bytes)**  
+-	Total Size: **140.0 MB (139972797 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:45feee794ff99d7f1244134817214f0905f89867592bc67b004ea45e182122a5`
+-	Image ID: `sha256:8afc834d79ea1427dddf79e61946a16c9f69deb9503371fb7d103df2b05b76b0`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -10211,14 +10211,14 @@ COPY dir:479ee478c40efe0225a7bfb57784564c52845a04479c6b1813627da25975830a in /
 CMD ["/bin/bash"]
 # Wed, 25 Oct 2023 01:25:11 GMT
 ARG version=21.0.1.12-1
-# Wed, 25 Oct 2023 01:25:11 GMT
-ARG package_version=1
-# Wed, 25 Oct 2023 01:25:47 GMT
-# ARGS: package_version=1 version=21.0.1.12-1
+# Thu, 02 Nov 2023 22:40:14 GMT
+ARG package_version=2
+# Thu, 02 Nov 2023 22:40:56 GMT
+# ARGS: package_version=2 version=21.0.1.12-1
 RUN set -eux     && rpm --import file:///etc/pki/rpm-gpg/RPM-GPG-KEY-amazon-linux-2023     && echo "localpkg_gpgcheck=1" >> /etc/dnf/dnf.conf     && CORRETO_TEMP=$(mktemp -d)     && pushd ${CORRETO_TEMP}     && RPM_LIST=("java-21-amazon-corretto-headless-$version.amzn2023.${package_version}.$(uname -m).rpm")     && for rpm in ${RPM_LIST[@]}; do     curl --fail -O https://corretto.aws/downloads/resources/$(echo $version | tr '-' '.')/${rpm}     && rpm -K "${CORRETO_TEMP}/${rpm}" | grep -F "${CORRETO_TEMP}/${rpm}: digests signatures OK" || exit 1;     done     && dnf install -y ${CORRETO_TEMP}/*.rpm     && popd     && rm -rf /usr/lib/jvm/java-21-amazon-corretto.$(uname -m)/lib/src.zip     && rm -rf ${CORRETO_TEMP}     && dnf clean all     && sed -i '/localpkg_gpgcheck=1/d' /etc/dnf/dnf.conf
-# Wed, 25 Oct 2023 01:25:49 GMT
+# Thu, 02 Nov 2023 22:40:57 GMT
 ENV LANG=C.UTF-8
-# Wed, 25 Oct 2023 01:25:49 GMT
+# Thu, 02 Nov 2023 22:40:58 GMT
 ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 ```
 
@@ -10227,9 +10227,9 @@ ENV JAVA_HOME=/usr/lib/jvm/java-21-amazon-corretto
 		Last Modified: Wed, 25 Oct 2023 00:40:02 GMT  
 		Size: 51.5 MB (51479162 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:02ccff6a5f6fb831d09c6573c613f786cbf0d3fad3740f1dff5a5577b76200a7`  
-		Last Modified: Wed, 25 Oct 2023 01:34:43 GMT  
-		Size: 88.5 MB (88498042 bytes)  
+	-	`sha256:22aad10dfd1fb0449332bf5d864ec2b8a9a36d1943e4815a176a71999d968c36`  
+		Last Modified: Thu, 02 Nov 2023 22:44:11 GMT  
+		Size: 88.5 MB (88493635 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `amazoncorretto:21.0.1-alpine`
