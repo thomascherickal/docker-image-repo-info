@@ -1,7 +1,7 @@
 ## `buildpack-deps:trixie`
 
 ```console
-$ docker pull buildpack-deps@sha256:a604dd84f88c9391f240da95e229433d783ca796b044f4f761620dad041f2575
+$ docker pull buildpack-deps@sha256:6eec48e8f4f482f3e550fc0327015a55b8d323b09ae0fdaa008d2534d4f36d16
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -238,45 +238,45 @@ RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		auto
 ### `buildpack-deps:trixie` - linux; mips64le
 
 ```console
-$ docker pull buildpack-deps@sha256:842b71b4caf420c4377b561cf00b97cc6a8197bc33d15a4737e15b31abe79e34
+$ docker pull buildpack-deps@sha256:faeb0e8dfb5226efcd46f446405a699a6a6b8b02d07061278c3f463cff2c038e
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **349.0 MB (349022097 bytes)**  
+-	Total Size: **352.1 MB (352068148 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:df4ec66a4877ae141ac96c8cbd31f79462471d543cd6361ed56e2ed57e1e7f8e`
+-	Image ID: `sha256:da0f8a0a85e9586032ff1c4f538f05e9a1806b373625aa970bee640ad6a47e50`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 11 Oct 2023 17:56:15 GMT
-ADD file:29bed270e296c5a95f2141f114580e0f25c1040c03609fa632757a8e48ec43fd in / 
-# Wed, 11 Oct 2023 17:56:22 GMT
+# Wed, 01 Nov 2023 01:15:37 GMT
+ADD file:fcddbc3f0c0456097a49c255590801b884727d47f9ceac6afe8463117d63a70e in / 
+# Wed, 01 Nov 2023 01:15:43 GMT
 CMD ["bash"]
-# Wed, 11 Oct 2023 23:46:48 GMT
+# Wed, 01 Nov 2023 21:45:08 GMT
 RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 		gnupg 		netbase 		wget 	; 	rm -rf /var/lib/apt/lists/*
-# Wed, 11 Oct 2023 23:48:34 GMT
+# Wed, 01 Nov 2023 21:46:50 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends 		git 		mercurial 		openssh-client 		subversion 				procps 	&& rm -rf /var/lib/apt/lists/*
-# Wed, 11 Oct 2023 23:54:35 GMT
+# Wed, 01 Nov 2023 21:52:44 GMT
 RUN set -ex; 	apt-get update; 	apt-get install -y --no-install-recommends 		autoconf 		automake 		bzip2 		dpkg-dev 		file 		g++ 		gcc 		imagemagick 		libbz2-dev 		libc6-dev 		libcurl4-openssl-dev 		libdb-dev 		libevent-dev 		libffi-dev 		libgdbm-dev 		libglib2.0-dev 		libgmp-dev 		libjpeg-dev 		libkrb5-dev 		liblzma-dev 		libmagickcore-dev 		libmagickwand-dev 		libmaxminddb-dev 		libncurses5-dev 		libncursesw5-dev 		libpng-dev 		libpq-dev 		libreadline-dev 		libsqlite3-dev 		libssl-dev 		libtool 		libwebp-dev 		libxml2-dev 		libxslt-dev 		libyaml-dev 		make 		patch 		unzip 		xz-utils 		zlib1g-dev 				$( 			if apt-cache show 'default-libmysqlclient-dev' 2>/dev/null | grep -q '^Version:'; then 				echo 'default-libmysqlclient-dev'; 			else 				echo 'libmysqlclient-dev'; 			fi 		) 	; 	rm -rf /var/lib/apt/lists/*
 ```
 
 -	Layers:
-	-	`sha256:f0d54eafe706e7144ea10a18a0abaa975cb4f7f92fd40e292f388c2b1321a794`  
-		Last Modified: Wed, 11 Oct 2023 18:07:41 GMT  
-		Size: 49.3 MB (49301729 bytes)  
+	-	`sha256:434392845279581746e8cecd769b536845c39fb214d29012afa566896853392c`  
+		Last Modified: Wed, 01 Nov 2023 01:26:47 GMT  
+		Size: 49.3 MB (49278627 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:5204f5199336e47ca287487c83b254ad7b0260c5bf568e92c8927077786ee91c`  
-		Last Modified: Thu, 12 Oct 2023 00:05:30 GMT  
-		Size: 19.6 MB (19593645 bytes)  
+	-	`sha256:c7e21a2483e745ae82b15f9af96c00de4734d58f9fbbad7437eb162b3dca52df`  
+		Last Modified: Wed, 01 Nov 2023 22:04:15 GMT  
+		Size: 19.6 MB (19610097 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:daf370881cf98cc9a8acbbacf482b90a7a2d7f3a1d96216bd4d6b824f2814f5c`  
-		Last Modified: Thu, 12 Oct 2023 00:06:22 GMT  
-		Size: 64.1 MB (64135686 bytes)  
+	-	`sha256:e414d802047fb604efc17ab8e3bbee72728323d8e32342ba68c8ad52c214f2d5`  
+		Last Modified: Wed, 01 Nov 2023 22:05:05 GMT  
+		Size: 64.3 MB (64320188 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a05c74c2f9b1e7dbea41a67c427a2bbb28c1d0773bb04df36a32be1367db1717`  
-		Last Modified: Thu, 12 Oct 2023 00:08:49 GMT  
-		Size: 216.0 MB (215991037 bytes)  
+	-	`sha256:5458688a296e5f0cc8d94991c9014543dc7e0dd457bd640d0cd97ea035166911`  
+		Last Modified: Wed, 01 Nov 2023 22:07:28 GMT  
+		Size: 218.9 MB (218859236 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `buildpack-deps:trixie` - linux; ppc64le
