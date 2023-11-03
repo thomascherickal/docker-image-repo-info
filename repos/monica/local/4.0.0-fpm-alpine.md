@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c2f5302729ea6ea68c4656235d718195768d6161fe97aa34b02b0221a48f8b37`
-- Created: `2023-10-28T04:35:18.09636828Z`
-- Virtual Size: ~ 235.73 Mb  
+- Image ID: `sha256:aa09f0ca02e4efe6b6b84e5ef85b858c14cc051fcc1a39144837467125fa0c8f`
+- Created: `2023-11-01T00:38:15.657017246Z`
+- Virtual Size: ~ 237.03 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/entrypoint.sh"]`
@@ -25,6 +25,8 @@
   - `PHP_OPCACHE_MAX_ACCELERATED_FILES=20000`
   - `PHP_OPCACHE_MEMORY_CONSUMPTION=192`
   - `PHP_OPCACHE_MAX_WASTED_PERCENTAGE=10`
+  - `PHP_MEMORY_LIMIT=512M`
+  - `PHP_UPLOAD_LIMIT=512M`
   - `MONICA_VERSION=v4.0.0`
 - Labels:
   - `org.opencontainers.image.authors=Alexis Saettler <alexis@saettler.org>`
@@ -562,6 +564,23 @@ libpng-1.6.39-r3 installed size:
 
 libpng-1.6.39-r3 license:
 Libpng
+
+```
+
+### `apk` package: `libpq`
+
+```console
+libpq-15.4-r0 description:
+PostgreSQL client library
+
+libpq-15.4-r0 webpage:
+https://www.postgresql.org/
+
+libpq-15.4-r0 installed size:
+320 KiB
+
+libpq-15.4-r0 license:
+PostgreSQL
 
 ```
 
