@@ -1,9 +1,9 @@
-# `jetty:12.0.2`
+# `jetty:12.0.3`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ea6c53418c6df02904d91b8b5058932bbdfe4e7d5761e398056709be0ad09176`
-- Created: `2023-10-31T01:41:26.155749512Z`
+- Image ID: `sha256:c4ce696d44397bac804547aa4ad71c32240cce78a2031d3e24c95352ef32c2df`
+- Created: `2023-11-02T00:05:47.517086446Z`
 - Virtual Size: ~ 449.73 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -16,11 +16,11 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-17.0.9+9`
-  - `JETTY_VERSION=12.0.2`
+  - `JETTY_VERSION=12.0.3`
   - `JETTY_HOME=/usr/local/jetty`
   - `JETTY_BASE=/var/lib/jetty`
   - `TMPDIR=/tmp/jetty`
-  - `JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/12.0.2/jetty-home-12.0.2.tar.gz`
+  - `JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/12.0.3/jetty-home-12.0.3.tar.gz`
   - `JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	F254B35617DC255D9344BCFA873A8E86B4372146 	E22488CC94F63E3FC928536C4241C08270D999C3`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
