@@ -3,6 +3,7 @@
 # Tags of `logstash`
 
 -	[`logstash:7.17.14`](#logstash71714)
+-	[`logstash:8.10.3`](#logstash8103)
 -	[`logstash:8.10.4`](#logstash8104)
 
 ## `logstash:7.17.14`
@@ -253,6 +254,10 @@ ENTRYPOINT ["/usr/local/bin/docker-entrypoint"]
 		Last Modified: Thu, 02 Nov 2023 23:44:20 GMT  
 		Size: 493.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `logstash:8.10.3`
+
+**does not exist** (yet?)
 
 ## `logstash:8.10.4`
 
