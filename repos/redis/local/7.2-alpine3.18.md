@@ -1,19 +1,19 @@
-# `redis:7.2.2-alpine`
+# `redis:7.2.3-alpine3.18`
 
 ## Docker Metadata
 
-- Image ID: `sha256:1cd3929a2ac462b7f8a754b3e2a2611a4027377ef0704300a1d3b74a83777ad7`
-- Created: `2023-10-18T09:03:13Z`
-- Virtual Size: ~ 38.40 Mb  
+- Image ID: `sha256:3c8161452cbbd101671fcf13d11ea51747f5a56d539b82e2b1f4d63171854a0e`
+- Created: `2023-11-01T16:56:23Z`
+- Virtual Size: ~ 43.45 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["redis-server"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `REDIS_VERSION=7.2.2`
-  - `REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.2.2.tar.gz`
-  - `REDIS_DOWNLOAD_SHA=ca999be08800edc6d265379c4c7aafad92f0ee400692e4e2d69829ab4b4c3d08`
+  - `REDIS_VERSION=7.2.3`
+  - `REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.2.3.tar.gz`
+  - `REDIS_DOWNLOAD_SHA=3e2b196d6eb4ddb9e743088bfc2915ccbb42d40f5a8a3edd8cb69c716ec34be7`
 
 ## `apk` (`.apk`-based packages)
 
@@ -156,16 +156,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.1.3-r0 description:
+libcrypto3-3.1.4-r0 description:
 Crypto library from openssl
 
-libcrypto3-3.1.3-r0 webpage:
+libcrypto3-3.1.4-r0 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.1.3-r0 installed size:
-4468 KiB
+libcrypto3-3.1.4-r0 installed size:
+4472 KiB
 
-libcrypto3-3.1.3-r0 license:
+libcrypto3-3.1.4-r0 license:
 Apache-2.0
 
 ```
@@ -173,16 +173,16 @@ Apache-2.0
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.1.3-r0 description:
+libssl3-3.1.4-r0 description:
 SSL shared libraries
 
-libssl3-3.1.3-r0 webpage:
+libssl3-3.1.4-r0 webpage:
 https://www.openssl.org/
 
-libssl3-3.1.3-r0 installed size:
+libssl3-3.1.4-r0 installed size:
 552 KiB
 
-libssl3-3.1.3-r0 license:
+libssl3-3.1.4-r0 license:
 Apache-2.0
 
 ```
