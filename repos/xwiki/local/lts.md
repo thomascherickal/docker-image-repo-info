@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:71b28edea3e0f53010ea81ca788ef4395c7a0506bcb1a48cc509a07bbbc9a615`
-- Created: `2023-10-31T06:00:00.359609089Z`
+- Image ID: `sha256:3664b3f70bdb52d5bc3ba5a39de442ed8cc755707823857589433df3b9644ee9`
+- Created: `2023-11-07T00:23:18.714787112Z`
 - Virtual Size: ~ 1.18 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -26,11 +26,11 @@
   - `XWIKI_VERSION=14.10.18`
   - `XWIKI_URL_PREFIX=https://maven.xwiki.org/releases/org/xwiki/platform/xwiki-platform-distribution-war/14.10.18`
   - `XWIKI_DOWNLOAD_SHA256=66209b2e457b1b14b177f1f4918be37c2ae65c6655d16b314db6c52cc37003ff`
-  - `MYSQL_JDBC_VERSION=8.1.0`
-  - `MYSQL_JDBC_SHA256=e2e657e9c5ebe06a73485c9739ebd8a18e7bebb852a58d0da287da850beca1c7`
-  - `MYSQL_JDBC_PREFIX=https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.1.0`
-  - `MYSQL_JDBC_ARTIFACT=mysql-connector-j-8.1.0.jar`
-  - `MYSQL_JDBC_TARGET=/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/mysql-connector-j-8.1.0.jar`
+  - `MYSQL_JDBC_VERSION=8.2.0`
+  - `MYSQL_JDBC_SHA256=06f14fbd664d0e382347489e66495ca27ab7e6c2e1d9969a496931736197465f`
+  - `MYSQL_JDBC_PREFIX=https://repo1.maven.org/maven2/com/mysql/mysql-connector-j/8.2.0`
+  - `MYSQL_JDBC_ARTIFACT=mysql-connector-j-8.2.0.jar`
+  - `MYSQL_JDBC_TARGET=/usr/local/tomcat/webapps/ROOT/WEB-INF/lib/mysql-connector-j-8.2.0.jar`
 - Labels:
   - `org.opencontainers.image.authors=XWiki Development Team <committers@xwiki.org>`
   - `org.opencontainers.image.documentation=https://hub.docker.com/_/xwiki`
@@ -1380,14 +1380,9 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.19.2-2ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2-2ubuntu0.2.dsc' krb5_1.19.2-2ubuntu0.2.dsc 3652 SHA512:fa921e66961e2f2d2c6a4393942fd15c921a2a977ca1a368460e2b989ac45dab4f62b5c3e2507416b03890f9a7064078c4537ec8a7d9434ed22ae04a85e74bde
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2.orig.tar.gz' krb5_1.19.2.orig.tar.gz 8741053 SHA512:b90d6ed0e1e8a87eb5cb2c36d88b823a6a6caabf85e5d419adb8a930f7eea09a5f8491464e7e454cca7ba88be09d19415962fe0036ad2e31fc584f9fc0bbd470
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2-2ubuntu0.2.debian.tar.xz' krb5_1.19.2-2ubuntu0.2.debian.tar.xz 108204 SHA512:090720455cb51c4f5435657b699071880c0021204c79e5dc97b6a4ba3eb5bc18df2ddedc7fe938181c6207af88c7b6533b87e7de7bdabef0f88ff8d6715784e9
-```
 
 ### `dpkg` source package: `lcms2=2.12~rc1-2build2`
 
