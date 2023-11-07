@@ -973,14 +973,9 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.17-6ubuntu4.3
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17-6ubuntu4.3.dsc' krb5_1.17-6ubuntu4.3.dsc 3507 SHA512:c9c103545c03c78fb37a468af6fc2ecef18829f3e042e60a9aade190113cd6ba18c8f37b454d13ececcb91b7bf4ff0d9a1f121ff6eb2153a05418f9b45b42f5f
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17.orig.tar.gz' krb5_1.17.orig.tar.gz 8761763 SHA512:7462a578b936bd17f155a362dbb5d388e157a80a096549028be6c55400b11361c7f8a28e424fd5674801873651df4e694d536cae66728b7ae5e840e532358c52
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.17-6ubuntu4.3.debian.tar.xz' krb5_1.17-6ubuntu4.3.debian.tar.xz 148388 SHA512:a354f473adf021e26dc47d4ca7994d4ba110ee8510aa610ec6a43ed80410803882a33aef2c2484b60e233a7392d76ba6b46f9557afe17e44036c2c197eef48a3
-```
 
 ### `dpkg` source package: `libassuan=2.5.3-7ubuntu2`
 
@@ -2032,14 +2027,9 @@ Licenses: (parsed from: `/usr/share/doc/python3-urllib3/copyright`)
 - `Expat`
 - `PSF-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-urllib3=1.25.8-2ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-urllib3/python-urllib3_1.25.8-2ubuntu0.2.dsc' python-urllib3_1.25.8-2ubuntu0.2.dsc 2332 SHA512:fb198ea630217463097abc85806f144d8ddb28ff2ed9877b24a7ea98cdece3dd33af76171386218e22a6dbef645acddc14be002ec6ce82f88a28baaf066f4bef
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-urllib3/python-urllib3_1.25.8.orig.tar.gz' python-urllib3_1.25.8.orig.tar.gz 261077 SHA512:6e380d98d9a8b06534abfab4eb67b685a8311a091e31adcefe2b0ffc61d2b728229df067790b20358f2646e9054a546450c3351e4aa618f31d85573ea50ceaa2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-urllib3/python-urllib3_1.25.8-2ubuntu0.2.debian.tar.xz' python-urllib3_1.25.8-2ubuntu0.2.debian.tar.xz 13436 SHA512:5d21e9a8744f1fc6472d537bd14c90fd75d83a1c9a1b5013623fc7e296b8a855aa141175095fa5f9a89f3abb5ab28cad77d907543a74a4a062c5a4d112c506db
-```
 
 ### `dpkg` source package: `python2.7=2.7.18-1~20.04.3`
 

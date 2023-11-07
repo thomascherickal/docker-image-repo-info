@@ -2225,20 +2225,13 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 - `MIT`
 - `all-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nghttp2=1.57.0-1
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.57.0-1.dsc' nghttp2_1.57.0-1.dsc 2534 SHA256:8fa019e03114099262a7f2b8898ae067cbabe4aa9d1da78fea542485f06bbbb7
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.57.0.orig.tar.gz' nghttp2_1.57.0.orig.tar.gz 1058895 SHA256:3c0b4e023dddf2afa087aa4409f7dbe03c099b4c63655e7545a607035085848a
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.57.0-1.debian.tar.xz' nghttp2_1.57.0-1.debian.tar.xz 11776 SHA256:914a2e8162087ed717230da6c7735ecf08d11fc0717ed60cff843ea41b6d4238
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nghttp2/1.57.0-1/
 
-- https://sources.debian.net/src/nghttp2/1.57.0-1/ (for browsing the source)
-- https://sources.debian.net/src/nghttp2/1.57.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nghttp2/1.57.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `npth=1.6-3`
 
@@ -2545,21 +2538,13 @@ Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
 - `LGPL-3+`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pinentry=1.2.1-1
-'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1-1.dsc' pinentry_1.2.1-1.dsc 2242 SHA256:cb45060817fa5563d76591d99f0a7596aa069101710545852ec34a70a387597e
-'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1.orig.tar.bz2' pinentry_1.2.1.orig.tar.bz2 547698 SHA256:457a185e5a85238fb945a955dc6352ab962dc8b48720b62fc9fa48c7540a4067
-'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1.orig.tar.bz2.asc' pinentry_1.2.1.orig.tar.bz2.asc 390 SHA256:9f7d9c7509e4ff4161a043893d76183bd975230fcad671b643c90f78e500ba95
-'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1-1.debian.tar.xz' pinentry_1.2.1-1.debian.tar.xz 18568 SHA256:ae1bd8af99fe91bd3877b6fd3d606facbfb1be02d0227da7cc81f54f7fe2f708
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pinentry/1.2.1-1/
 
-- https://sources.debian.net/src/pinentry/1.2.1-1/ (for browsing the source)
-- https://sources.debian.net/src/pinentry/1.2.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pinentry/1.2.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:4.0.4-2`
 

@@ -1558,21 +1558,13 @@ Licenses: (parsed from: `/usr/share/doc/libglib2.0-0/copyright`, `/usr/share/doc
 - `Unicode-DFS-2016`
 - `bzip2-1.0.6`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glib2.0=2.78.1-1
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.78.1-1.dsc' glib2.0_2.78.1-1.dsc 3570 SHA256:745ddde80f861718fa48bd6dbee68885412a63b5a082e3cd94322262b36a81fc
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.78.1.orig-unicode-data.tar.xz' glib2.0_2.78.1.orig-unicode-data.tar.xz 267604 SHA256:f10f77c45e96ccd4866dad2cb79a314b57180a05929a612dfe86d89e471406b5
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.78.1.orig.tar.xz' glib2.0_2.78.1.orig.tar.xz 5320740 SHA256:915bc3d0f8507d650ead3832e2f8fb670fce59aac4d7754a7dab6f1e6fed78b2
-'http://deb.debian.org/debian/pool/main/g/glib2.0/glib2.0_2.78.1-1.debian.tar.xz' glib2.0_2.78.1-1.debian.tar.xz 118552 SHA256:2028c9515f9c33272af5e6ff82dd812d39977f70a41cbbec46326209b353ddb2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/glib2.0/2.78.1-1/
 
-- https://sources.debian.net/src/glib2.0/2.78.1-1/ (for browsing the source)
-- https://sources.debian.net/src/glib2.0/2.78.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/glib2.0/2.78.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.37-12`
 
@@ -3634,20 +3626,13 @@ Licenses: (parsed from: `/usr/share/doc/libwmf-0.2-7/copyright`, `/usr/share/doc
 - `LGPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libwmf=0.2.13-1
-'http://deb.debian.org/debian/pool/main/libw/libwmf/libwmf_0.2.13-1.dsc' libwmf_0.2.13-1.dsc 2502 SHA256:d545cf6ff85633e11360340f8b06c454bf961c68a7c086f2221bf393dacf998b
-'http://deb.debian.org/debian/pool/main/libw/libwmf/libwmf_0.2.13.orig.tar.gz' libwmf_0.2.13.orig.tar.gz 3044235 SHA256:18ba69febd2f515d98a2352de284a8051896062ac9728d2ead07bc39ea75a068
-'http://deb.debian.org/debian/pool/main/libw/libwmf/libwmf_0.2.13-1.debian.tar.xz' libwmf_0.2.13-1.debian.tar.xz 25712 SHA256:9a240882c9e7d5c4af93e861ec3ccfcb66f8d62b1a68ab4a431202eeffc9e308
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libwmf/0.2.13-1/
 
-- https://sources.debian.net/src/libwmf/0.2.13-1/ (for browsing the source)
-- https://sources.debian.net/src/libwmf/0.2.13-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libwmf/0.2.13-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libx11=2:1.8.7-1`
 
@@ -4425,20 +4410,13 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 - `MIT`
 - `all-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nghttp2=1.57.0-1
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.57.0-1.dsc' nghttp2_1.57.0-1.dsc 2534 SHA256:8fa019e03114099262a7f2b8898ae067cbabe4aa9d1da78fea542485f06bbbb7
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.57.0.orig.tar.gz' nghttp2_1.57.0.orig.tar.gz 1058895 SHA256:3c0b4e023dddf2afa087aa4409f7dbe03c099b4c63655e7545a607035085848a
-'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.57.0-1.debian.tar.xz' nghttp2_1.57.0-1.debian.tar.xz 11776 SHA256:914a2e8162087ed717230da6c7735ecf08d11fc0717ed60cff843ea41b6d4238
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/nghttp2/1.57.0-1/
 
-- https://sources.debian.net/src/nghttp2/1.57.0-1/ (for browsing the source)
-- https://sources.debian.net/src/nghttp2/1.57.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/nghttp2/1.57.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `npth=1.6-3`
 
@@ -4766,20 +4744,13 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 - `TCL`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pango1.0=1.51.0+ds-2
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds-2.dsc' pango1.0_1.51.0+ds-2.dsc 3584 SHA256:1b18786d7d7b500a957f2415105bdb5bf289b821c744e7a2dbbe0405fc928721
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds.orig.tar.xz' pango1.0_1.51.0+ds.orig.tar.xz 1731104 SHA256:df51bb6819e91fda4f6c8ba8d2bd51e437e6f7daa86419d69a15e33a99002170
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds-2.debian.tar.xz' pango1.0_1.51.0+ds-2.debian.tar.xz 41192 SHA256:56da56e5c7ac16d199c58e75c849a127bfe01259e0aaf49e9d3659713ac5f9df
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pango1.0/1.51.0+ds-2/
 
-- https://sources.debian.net/src/pango1.0/1.51.0+ds-2/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.51.0+ds-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.51.0+ds-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-7`
 
@@ -4908,21 +4879,13 @@ Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
 - `LGPL-3+`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pinentry=1.2.1-1
-'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1-1.dsc' pinentry_1.2.1-1.dsc 2242 SHA256:cb45060817fa5563d76591d99f0a7596aa069101710545852ec34a70a387597e
-'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1.orig.tar.bz2' pinentry_1.2.1.orig.tar.bz2 547698 SHA256:457a185e5a85238fb945a955dc6352ab962dc8b48720b62fc9fa48c7540a4067
-'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1.orig.tar.bz2.asc' pinentry_1.2.1.orig.tar.bz2.asc 390 SHA256:9f7d9c7509e4ff4161a043893d76183bd975230fcad671b643c90f78e500ba95
-'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1-1.debian.tar.xz' pinentry_1.2.1-1.debian.tar.xz 18568 SHA256:ae1bd8af99fe91bd3877b6fd3d606facbfb1be02d0227da7cc81f54f7fe2f708
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pinentry/1.2.1-1/
 
-- https://sources.debian.net/src/pinentry/1.2.1-1/ (for browsing the source)
-- https://sources.debian.net/src/pinentry/1.2.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pinentry/1.2.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `pixman=0.42.2-1`
 
