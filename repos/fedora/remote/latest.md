@@ -1,7 +1,7 @@
 ## `fedora:latest`
 
 ```console
-$ docker pull fedora@sha256:a1a130195520b4a145c6bef0f247024f76bee573e48af130e5e1296ca769cfdb
+$ docker pull fedora@sha256:ee16ca86648f857c68270514442953c808c61c416152b9a316e551b02bedf8ec
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -74,31 +74,31 @@ CMD ["/bin/bash"]
 ### `fedora:latest` - linux; ppc64le
 
 ```console
-$ docker pull fedora@sha256:1e6d8d678e832d9b14fc5f4f013781ac7e8c5cccdb2d5ed8efa852ca90ac1fc1
+$ docker pull fedora@sha256:22e742c68e965b5cfcf3f4c0b1b52631479174b0cd9c634f6edbb455ee412f9a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **75.7 MB (75665507 bytes)**  
+-	Total Size: **71.6 MB (71648668 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:664d91615f3cb656f62a2c648ca5f9b275e5e125f03db217ce23e979fbc55493`
+-	Image ID: `sha256:7d61dc7cd8ee062c120e0b9eeaef91bbeb1f382c95fccc98aa11728753bfb291`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
 # Tue, 11 Oct 2022 12:16:45 GMT
 LABEL maintainer=Clement Verna <cverna@fedoraproject.org>
-# Thu, 03 Nov 2022 21:19:02 GMT
-ENV DISTTAG=f38container FGC=f38 FBR=f38
-# Fri, 06 Oct 2023 18:19:54 GMT
-ADD file:1819574642d8ac7663def1ece7a7276d16b5d98260dffc58a3ddf27bf4b93e8a in / 
-# Fri, 06 Oct 2023 18:20:00 GMT
+# Mon, 13 Mar 2023 21:18:04 GMT
+ENV DISTTAG=f39container FGC=f39 FBR=f39
+# Tue, 07 Nov 2023 00:18:55 GMT
+ADD file:683d33f34bca6a49e59bf193666ce13b24913e1a8b73c79f21a450f6974a6176 in / 
+# Tue, 07 Nov 2023 00:19:00 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:0354f7434cd95c31bcb66d02a186d70ffb7de5c65c00e52ec68c0a3dfef73cf9`  
-		Last Modified: Fri, 06 Oct 2023 18:21:46 GMT  
-		Size: 75.7 MB (75665507 bytes)  
+	-	`sha256:2e996232af0506e79dda2c652092b606876a58e093ccfbd70e6cde6c47b300fb`  
+		Last Modified: Tue, 07 Nov 2023 00:20:24 GMT  
+		Size: 71.6 MB (71648668 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `fedora:latest` - linux; s390x

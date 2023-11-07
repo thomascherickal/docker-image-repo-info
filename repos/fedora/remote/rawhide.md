@@ -1,7 +1,7 @@
 ## `fedora:rawhide`
 
 ```console
-$ docker pull fedora@sha256:1b4a38f0fc8afaa5910c1465088ab17b841d4be28fd7bb2e5e2a7fd73f13a767
+$ docker pull fedora@sha256:3fd0131e8f99284776d900359f5dbafb2c4611ef086ca56130c1a85fd1653c8d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -74,14 +74,14 @@ CMD ["/bin/bash"]
 ### `fedora:rawhide` - linux; ppc64le
 
 ```console
-$ docker pull fedora@sha256:8add5bdbbae7dc925fdd79a358a301ba1a7dd74517c2c4d62f8c7ee4736ff780
+$ docker pull fedora@sha256:55e343b4ac801a100b662d76a75dd40532820720b92f04c8f28a2ac46ed549df
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **73.1 MB (73069210 bytes)**  
+-	Total Size: **72.1 MB (72061144 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:424f5e4ce37006e745cc9c52d5b5e453f20dc6727b4bc10ca4cd01c853bf8575`
+-	Image ID: `sha256:be1f0685bc2fed6103b706fb903985636893be3adf263068f1bf3071318e5f76`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
@@ -89,16 +89,16 @@ $ docker pull fedora@sha256:8add5bdbbae7dc925fdd79a358a301ba1a7dd74517c2c4d62f8c
 LABEL maintainer=Clement Verna <cverna@fedoraproject.org>
 # Thu, 14 Sep 2023 19:17:58 GMT
 ENV DISTTAG=f40container FGC=f40 FBR=f40
-# Fri, 06 Oct 2023 18:20:43 GMT
-ADD file:15002224426c93782c8fa360bf7d6911b421df9457324bb5ac84fcfcda047fc4 in / 
-# Fri, 06 Oct 2023 18:20:49 GMT
+# Tue, 07 Nov 2023 00:19:13 GMT
+ADD file:dbf46504c47203c748d757df809e0ca8ffe2f29744090b89e144daa70a34d453 in / 
+# Tue, 07 Nov 2023 00:19:18 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:73bd41eea61f9ff8d1083bc2f2f0c6304d4df8b023517fb747dff7436f5e7b30`  
-		Last Modified: Fri, 06 Oct 2023 18:22:41 GMT  
-		Size: 73.1 MB (73069210 bytes)  
+	-	`sha256:57fd147bb46e42c4dbf74fbd903bc4fc12d154cdd5305cecd4d3e768c53109e0`  
+		Last Modified: Tue, 07 Nov 2023 00:20:47 GMT  
+		Size: 72.1 MB (72061144 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `fedora:rawhide` - linux; s390x
