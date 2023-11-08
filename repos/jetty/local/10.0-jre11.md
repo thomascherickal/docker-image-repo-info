@@ -868,14 +868,9 @@ Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris krb5=1.19.2-2ubuntu0.2
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2-2ubuntu0.2.dsc' krb5_1.19.2-2ubuntu0.2.dsc 3652 SHA512:fa921e66961e2f2d2c6a4393942fd15c921a2a977ca1a368460e2b989ac45dab4f62b5c3e2507416b03890f9a7064078c4537ec8a7d9434ed22ae04a85e74bde
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2.orig.tar.gz' krb5_1.19.2.orig.tar.gz 8741053 SHA512:b90d6ed0e1e8a87eb5cb2c36d88b823a6a6caabf85e5d419adb8a930f7eea09a5f8491464e7e454cca7ba88be09d19415962fe0036ad2e31fc584f9fc0bbd470
-'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2-2ubuntu0.2.debian.tar.xz' krb5_1.19.2-2ubuntu0.2.debian.tar.xz 108204 SHA512:090720455cb51c4f5435657b699071880c0021204c79e5dc97b6a4ba3eb5bc18df2ddedc7fe938181c6207af88c7b6533b87e7de7bdabef0f88ff8d6715784e9
-```
 
 ### `dpkg` source package: `libcap-ng=0.7.9-2.2build3`
 
