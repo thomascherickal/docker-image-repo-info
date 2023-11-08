@@ -2592,14 +2592,13 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 - `MIT`
 - `all-permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nghttp2=1.57.0-1
-'http://http.debian.net/debian/pool/main/n/nghttp2/nghttp2_1.57.0-1.dsc' nghttp2_1.57.0-1.dsc 2534 SHA256:8fa019e03114099262a7f2b8898ae067cbabe4aa9d1da78fea542485f06bbbb7
-'http://http.debian.net/debian/pool/main/n/nghttp2/nghttp2_1.57.0.orig.tar.gz' nghttp2_1.57.0.orig.tar.gz 1058895 SHA256:3c0b4e023dddf2afa087aa4409f7dbe03c099b4c63655e7545a607035085848a
-'http://http.debian.net/debian/pool/main/n/nghttp2/nghttp2_1.57.0-1.debian.tar.xz' nghttp2_1.57.0-1.debian.tar.xz 11776 SHA256:914a2e8162087ed717230da6c7735ecf08d11fc0717ed60cff843ea41b6d4238
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/nghttp2/1.57.0-1/
+
 
 ### `dpkg` source package: `nlme=3.1.163-1`
 
@@ -2800,10 +2799,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris pango1.0=1.51.0+ds-2
-'http://http.debian.net/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds-2.dsc' pango1.0_1.51.0+ds-2.dsc 3584 SHA256:1b18786d7d7b500a957f2415105bdb5bf289b821c744e7a2dbbe0405fc928721
-'http://http.debian.net/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds.orig.tar.xz' pango1.0_1.51.0+ds.orig.tar.xz 1731104 SHA256:df51bb6819e91fda4f6c8ba8d2bd51e437e6f7daa86419d69a15e33a99002170
-'http://http.debian.net/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds-2.debian.tar.xz' pango1.0_1.51.0+ds-2.debian.tar.xz 41192 SHA256:56da56e5c7ac16d199c58e75c849a127bfe01259e0aaf49e9d3659713ac5f9df
+'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds-2.dsc' pango1.0_1.51.0+ds-2.dsc 3584 SHA256:1b18786d7d7b500a957f2415105bdb5bf289b821c744e7a2dbbe0405fc928721
+'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds.orig.tar.xz' pango1.0_1.51.0+ds.orig.tar.xz 1731104 SHA256:df51bb6819e91fda4f6c8ba8d2bd51e437e6f7daa86419d69a15e33a99002170
+'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds-2.debian.tar.xz' pango1.0_1.51.0+ds-2.debian.tar.xz 41192 SHA256:56da56e5c7ac16d199c58e75c849a127bfe01259e0aaf49e9d3659713ac5f9df
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/pango1.0/1.51.0+ds-2/ (for browsing the source)
+- https://sources.debian.net/src/pango1.0/1.51.0+ds-2/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/pango1.0/1.51.0+ds-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-7`
 
@@ -3111,20 +3116,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-matrix/copyright`)
 - `GPL-2+`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris rmatrix=1.6-1-1
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.6-1-1.dsc' rmatrix_1.6-1-1.dsc 1860 SHA256:d848f253b62d341a7768a7677b49439f9937aa442c8c23cdcfb2e4d658984974
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.6-1.orig.tar.gz' rmatrix_1.6-1.orig.tar.gz 2064299 SHA256:e5c60b601f665c98a6799781a0eeb2ec6f4effee2049020b54a3bae0c9ce0c07
-'http://deb.debian.org/debian/pool/main/r/rmatrix/rmatrix_1.6-1-1.debian.tar.xz' rmatrix_1.6-1-1.debian.tar.xz 5888 SHA256:27d42b183690190576d4bc085c016831c6b9b01a28751c781f9df5904f14b9f7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/rmatrix/1.6-1-1/
 
-- https://sources.debian.net/src/rmatrix/1.6-1-1/ (for browsing the source)
-- https://sources.debian.net/src/rmatrix/1.6-1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/rmatrix/1.6-1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `rpart=4.1.21-1`
 
@@ -3597,10 +3595,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris vim=2:9.0.1894-1
-'http://http.debian.net/debian/pool/main/v/vim/vim_9.0.1894-1.dsc' vim_9.0.1894-1.dsc 3035 SHA256:1fa84c9bff32ef9ef7dc4a86c6fbbed15b9a4fbfd07425fdd4ba2b219f8363b1
-'http://http.debian.net/debian/pool/main/v/vim/vim_9.0.1894.orig.tar.xz' vim_9.0.1894.orig.tar.xz 11314248 SHA256:85d93eda736c968afaf5d3b65f909fa65a087392f4c0a761c5e87f64a7c3f543
-'http://http.debian.net/debian/pool/main/v/vim/vim_9.0.1894-1.debian.tar.xz' vim_9.0.1894-1.debian.tar.xz 186904 SHA256:eb4c05aaf17e09360a972823e79962952094f08eac9e74fa0ed35044b0be6a99
+'http://deb.debian.org/debian/pool/main/v/vim/vim_9.0.1894-1.dsc' vim_9.0.1894-1.dsc 3035 SHA256:1fa84c9bff32ef9ef7dc4a86c6fbbed15b9a4fbfd07425fdd4ba2b219f8363b1
+'http://deb.debian.org/debian/pool/main/v/vim/vim_9.0.1894.orig.tar.xz' vim_9.0.1894.orig.tar.xz 11314248 SHA256:85d93eda736c968afaf5d3b65f909fa65a087392f4c0a761c5e87f64a7c3f543
+'http://deb.debian.org/debian/pool/main/v/vim/vim_9.0.1894-1.debian.tar.xz' vim_9.0.1894-1.debian.tar.xz 186904 SHA256:eb4c05aaf17e09360a972823e79962952094f08eac9e74fa0ed35044b0be6a99
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/vim/2:9.0.1894-1/ (for browsing the source)
+- https://sources.debian.net/src/vim/2:9.0.1894-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/vim/2:9.0.1894-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `wget=1.21.4-1`
 
