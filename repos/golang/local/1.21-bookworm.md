@@ -1,16 +1,16 @@
-# `golang:1.21.3-bookworm`
+# `golang:1.21.4-bookworm`
 
 ## Docker Metadata
 
-- Image ID: `sha256:16ac1e9944a27dfec4871b25a7f8854ab1fda801a94d52051df99b2e3571be98`
-- Created: `2023-11-01T18:04:58.941960306Z`
-- Virtual Size: ~ 814.58 Mb  
+- Image ID: `sha256:4c88d2e04e7dfa7509993fdbf6e86c309ab184da8e9fb4868dbefbf5c9710beb`
+- Created: `2023-11-07T20:20:05.987103717Z`
+- Virtual Size: ~ 814.55 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
 - Environment:
   - `PATH=/go/bin:/usr/local/go/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `GOLANG_VERSION=1.21.3`
+  - `GOLANG_VERSION=1.21.4`
   - `GOTOOLCHAIN=local`
   - `GOPATH=/go`
 
