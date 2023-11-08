@@ -1776,18 +1776,16 @@ CMD ["julia"]
 ## `julia:1.10-rc`
 
 ```console
-$ docker pull julia@sha256:463e4ef24f875093645b7d2a0c3811c39e302274080a5003fc0e07ddeef067aa
+$ docker pull julia@sha256:8acf57a7763922a17eaf669a23673e7de2cd831ca2b74f76eb05deba920ddcdd
 ```
 
 -	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 10
+-	Platforms: 8
 	-	linux; amd64
 	-	unknown; unknown
 	-	linux; arm64 variant v8
 	-	unknown; unknown
 	-	linux; 386
-	-	unknown; unknown
-	-	linux; ppc64le
 	-	unknown; unknown
 	-	windows version 10.0.20348.2031; amd64
 	-	windows version 10.0.17763.4974; amd64
@@ -2026,86 +2024,6 @@ $ docker pull julia@sha256:1e50dc1f219f824f96f4ade466a07f5615afd9fad6a87bdb8f36c
 	-	`sha256:a08936c387e76a2893b8d93b89587a366aae3bb9ddf302abb0942651901432d6`  
 		Last Modified: Wed, 01 Nov 2023 02:08:34 GMT  
 		Size: 17.6 KB (17583 bytes)  
-		MIME: application/vnd.in-toto+json
-
-### `julia:1.10-rc` - linux; ppc64le
-
-```console
-$ docker pull julia@sha256:1e4bd653f031a1e7e2bd53c8caf8f276a6073a53fe01d3c0f0f6f92aa14f0003
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **193.0 MB (193019258 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:db416bc9b98adec468e8bc4ddb051a7ef3b1bf0282526324dbff94fb23d0cd3f`
--	Entrypoint: `["docker-entrypoint.sh"]`
--	Default Command: `["julia"]`
-
-```dockerfile
-# Tue, 03 Oct 2023 23:59:11 GMT
-ADD file:f36d600ab8508979b5763875a75f35555fa0a83d2656cbcdfa50978c6ae97353 in / 
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["bash"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 	; 	rm -rf /var/lib/apt/lists/* # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_PATH=/usr/local/julia
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV PATH=/usr/local/julia/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_GPG=3673DF529D9049477F76B37566E3C7DC03D6E495
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_VERSION=1.10.0-beta3
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gnupg 	; 	rm -rf /var/lib/apt/lists/*; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			url='https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.0-beta3-linux-x86_64.tar.gz'; 			sha256='f6fb0b8625f608c6b586f96e6f403da827c5f69ee0fa72746e0c3b5b6eb29022'; 			;; 		'arm64') 			url='https://julialang-s3.julialang.org/bin/linux/aarch64/1.10/julia-1.10.0-beta3-linux-aarch64.tar.gz'; 			sha256='9ee2d8ff367f17efa7d7279415622d85ae3e592a0938cc2c90a41f6d6f5a28d2'; 			;; 		'i386') 			url='https://julialang-s3.julialang.org/bin/linux/x86/1.10/julia-1.10.0-beta3-linux-i686.tar.gz'; 			sha256='2a18c67f4b3222018b74c5fc0d0c2211784fbd4905c43b55fa714b774b941614'; 			;; 		'ppc64el') 			url='https://julialang-s3.julialang.org/bin/linux/ppc64le/1.10/julia-1.10.0-beta3-linux-ppc64le.tar.gz'; 			sha256='40c541540f610736813750017ddc7292067438190a1a78ba30604abcd2bc4818'; 			;; 		*) 			echo >&2 "error: current architecture ($arch) does not have a corresponding Julia binary release"; 			exit 1; 			;; 	esac; 		curl -fL -o julia.tar.gz.asc "$url.asc"; 	curl -fL -o julia.tar.gz "$url"; 		echo "$sha256 *julia.tar.gz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$JULIA_GPG"; 	gpg --batch --verify julia.tar.gz.asc julia.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" julia.tar.gz.asc; 		mkdir "$JULIA_PATH"; 	tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; 	rm julia.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		julia --version # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-COPY docker-entrypoint.sh /usr/local/bin/ # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["julia"]
-```
-
--	Layers:
-	-	`sha256:e56c8f20d7d119ff87eb044f21bfd5a4b30bf8436fc5fac12871095a6bd1517c`  
-		Last Modified: Wed, 01 Nov 2023 00:26:10 GMT  
-		Size: 33.1 MB (33141482 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:731fefc00fefcf2648725a405996c24f3f813cefde0845d8a9540eb613b297f1`  
-		Last Modified: Wed, 01 Nov 2023 13:51:05 GMT  
-		Size: 6.0 MB (6045806 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:ac41f37462d57ae6530dca0a3115d78f0fcd1d244fa2ce0712c55e658bc9f67d`  
-		Last Modified: Wed, 01 Nov 2023 13:51:15 GMT  
-		Size: 153.8 MB (153831594 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:6f311f19b9898e6ce46661f097aa594090f5486cea2bcbd995127c30777eca81`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 376.0 B  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-
-### `julia:1.10-rc` - unknown; unknown
-
-```console
-$ docker pull julia@sha256:923dc601cb6668682e8697416b6f39ca495a19483de2b9965770a22a8b4bb7c3
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 MB (2123345 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dee703b0d121dd68e4614d8d99d967fd73aa09b4e084249d1546adcce18f4c7f`
-
-```dockerfile
-```
-
--	Layers:
-	-	`sha256:9ccd3c63f34bdd7246ec8f335d847f568932a8b337d407ee48a67914316aeb38`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 2.1 MB (2105455 bytes)  
-		MIME: application/vnd.in-toto+json
-	-	`sha256:7255f70fc49d7298f2717008f4875a7a892433cd59513668fca0ff3ea73fe9ed`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 17.9 KB (17890 bytes)  
 		MIME: application/vnd.in-toto+json
 
 ### `julia:1.10-rc` - windows version 10.0.20348.2031; amd64
@@ -2500,18 +2418,16 @@ $ docker pull julia@sha256:d3c4f5124a29233a9571732ea1fe6855385f1007e6401a3eed776
 ## `julia:1.10-rc-bookworm`
 
 ```console
-$ docker pull julia@sha256:4b5a260fe4e0f8fe10903254823b4fb675c9c81dfa9360645f88e23fb54e1608
+$ docker pull julia@sha256:860b1d7035d7ad867ba3397425f390772a6c707711a51b6e4d6a2aea2ba27829
 ```
 
 -	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 8
+-	Platforms: 6
 	-	linux; amd64
 	-	unknown; unknown
 	-	linux; arm64 variant v8
 	-	unknown; unknown
 	-	linux; 386
-	-	unknown; unknown
-	-	linux; ppc64le
 	-	unknown; unknown
 
 ### `julia:1.10-rc-bookworm` - linux; amd64
@@ -2750,101 +2666,19 @@ $ docker pull julia@sha256:1e50dc1f219f824f96f4ade466a07f5615afd9fad6a87bdb8f36c
 		Size: 17.6 KB (17583 bytes)  
 		MIME: application/vnd.in-toto+json
 
-### `julia:1.10-rc-bookworm` - linux; ppc64le
-
-```console
-$ docker pull julia@sha256:1e4bd653f031a1e7e2bd53c8caf8f276a6073a53fe01d3c0f0f6f92aa14f0003
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **193.0 MB (193019258 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:db416bc9b98adec468e8bc4ddb051a7ef3b1bf0282526324dbff94fb23d0cd3f`
--	Entrypoint: `["docker-entrypoint.sh"]`
--	Default Command: `["julia"]`
-
-```dockerfile
-# Tue, 03 Oct 2023 23:59:11 GMT
-ADD file:f36d600ab8508979b5763875a75f35555fa0a83d2656cbcdfa50978c6ae97353 in / 
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["bash"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 	; 	rm -rf /var/lib/apt/lists/* # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_PATH=/usr/local/julia
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV PATH=/usr/local/julia/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_GPG=3673DF529D9049477F76B37566E3C7DC03D6E495
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_VERSION=1.10.0-beta3
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gnupg 	; 	rm -rf /var/lib/apt/lists/*; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			url='https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.0-beta3-linux-x86_64.tar.gz'; 			sha256='f6fb0b8625f608c6b586f96e6f403da827c5f69ee0fa72746e0c3b5b6eb29022'; 			;; 		'arm64') 			url='https://julialang-s3.julialang.org/bin/linux/aarch64/1.10/julia-1.10.0-beta3-linux-aarch64.tar.gz'; 			sha256='9ee2d8ff367f17efa7d7279415622d85ae3e592a0938cc2c90a41f6d6f5a28d2'; 			;; 		'i386') 			url='https://julialang-s3.julialang.org/bin/linux/x86/1.10/julia-1.10.0-beta3-linux-i686.tar.gz'; 			sha256='2a18c67f4b3222018b74c5fc0d0c2211784fbd4905c43b55fa714b774b941614'; 			;; 		'ppc64el') 			url='https://julialang-s3.julialang.org/bin/linux/ppc64le/1.10/julia-1.10.0-beta3-linux-ppc64le.tar.gz'; 			sha256='40c541540f610736813750017ddc7292067438190a1a78ba30604abcd2bc4818'; 			;; 		*) 			echo >&2 "error: current architecture ($arch) does not have a corresponding Julia binary release"; 			exit 1; 			;; 	esac; 		curl -fL -o julia.tar.gz.asc "$url.asc"; 	curl -fL -o julia.tar.gz "$url"; 		echo "$sha256 *julia.tar.gz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$JULIA_GPG"; 	gpg --batch --verify julia.tar.gz.asc julia.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" julia.tar.gz.asc; 		mkdir "$JULIA_PATH"; 	tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; 	rm julia.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		julia --version # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-COPY docker-entrypoint.sh /usr/local/bin/ # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["julia"]
-```
-
--	Layers:
-	-	`sha256:e56c8f20d7d119ff87eb044f21bfd5a4b30bf8436fc5fac12871095a6bd1517c`  
-		Last Modified: Wed, 01 Nov 2023 00:26:10 GMT  
-		Size: 33.1 MB (33141482 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:731fefc00fefcf2648725a405996c24f3f813cefde0845d8a9540eb613b297f1`  
-		Last Modified: Wed, 01 Nov 2023 13:51:05 GMT  
-		Size: 6.0 MB (6045806 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:ac41f37462d57ae6530dca0a3115d78f0fcd1d244fa2ce0712c55e658bc9f67d`  
-		Last Modified: Wed, 01 Nov 2023 13:51:15 GMT  
-		Size: 153.8 MB (153831594 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:6f311f19b9898e6ce46661f097aa594090f5486cea2bcbd995127c30777eca81`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 376.0 B  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-
-### `julia:1.10-rc-bookworm` - unknown; unknown
-
-```console
-$ docker pull julia@sha256:923dc601cb6668682e8697416b6f39ca495a19483de2b9965770a22a8b4bb7c3
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 MB (2123345 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dee703b0d121dd68e4614d8d99d967fd73aa09b4e084249d1546adcce18f4c7f`
-
-```dockerfile
-```
-
--	Layers:
-	-	`sha256:9ccd3c63f34bdd7246ec8f335d847f568932a8b337d407ee48a67914316aeb38`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 2.1 MB (2105455 bytes)  
-		MIME: application/vnd.in-toto+json
-	-	`sha256:7255f70fc49d7298f2717008f4875a7a892433cd59513668fca0ff3ea73fe9ed`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 17.9 KB (17890 bytes)  
-		MIME: application/vnd.in-toto+json
-
 ## `julia:1.10-rc-bullseye`
 
 ```console
-$ docker pull julia@sha256:c7b68080bde2c72122d13fd7406a0819d8ac0fc8bc238a1a79dccfd7baa05397
+$ docker pull julia@sha256:c2ef4a7fcad3e5bf45d916d517714e0c2d63a469124ac0c5603f24418f24cc5c
 ```
 
 -	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 8
+-	Platforms: 6
 	-	linux; amd64
 	-	unknown; unknown
 	-	linux; arm64 variant v8
 	-	unknown; unknown
 	-	linux; 386
-	-	unknown; unknown
-	-	linux; ppc64le
 	-	unknown; unknown
 
 ### `julia:1.10-rc-bullseye` - linux; amd64
@@ -3081,86 +2915,6 @@ $ docker pull julia@sha256:5eedfa3c5a2ab2306766c85184557dac0c47973bf4e71f26dea53
 	-	`sha256:3a49190f4d41ba7942c7337870de87b025f7713989e3b46e74e395927548002c`  
 		Last Modified: Wed, 01 Nov 2023 02:08:22 GMT  
 		Size: 16.7 KB (16704 bytes)  
-		MIME: application/vnd.in-toto+json
-
-### `julia:1.10-rc-bullseye` - linux; ppc64le
-
-```console
-$ docker pull julia@sha256:b6c596de81d68b7a22c35ec65e491622b6fce3a25e88ee5b0bc78edca7d81f74
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **191.6 MB (191550407 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9c0d9d044caa31a37434b428554665f324b8966b508618aea8ff8712cf1ee64f`
--	Entrypoint: `["docker-entrypoint.sh"]`
--	Default Command: `["julia"]`
-
-```dockerfile
-# Tue, 03 Oct 2023 23:59:11 GMT
-ADD file:a935b2993c62bfb1ade6ba0ffcf1f955422f6f76c63a723877d4bca5bb2aff7b in / 
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["bash"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 	; 	rm -rf /var/lib/apt/lists/* # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_PATH=/usr/local/julia
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV PATH=/usr/local/julia/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_GPG=3673DF529D9049477F76B37566E3C7DC03D6E495
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_VERSION=1.10.0-beta3
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gnupg 	; 	rm -rf /var/lib/apt/lists/*; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			url='https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.0-beta3-linux-x86_64.tar.gz'; 			sha256='f6fb0b8625f608c6b586f96e6f403da827c5f69ee0fa72746e0c3b5b6eb29022'; 			;; 		'arm64') 			url='https://julialang-s3.julialang.org/bin/linux/aarch64/1.10/julia-1.10.0-beta3-linux-aarch64.tar.gz'; 			sha256='9ee2d8ff367f17efa7d7279415622d85ae3e592a0938cc2c90a41f6d6f5a28d2'; 			;; 		'i386') 			url='https://julialang-s3.julialang.org/bin/linux/x86/1.10/julia-1.10.0-beta3-linux-i686.tar.gz'; 			sha256='2a18c67f4b3222018b74c5fc0d0c2211784fbd4905c43b55fa714b774b941614'; 			;; 		'ppc64el') 			url='https://julialang-s3.julialang.org/bin/linux/ppc64le/1.10/julia-1.10.0-beta3-linux-ppc64le.tar.gz'; 			sha256='40c541540f610736813750017ddc7292067438190a1a78ba30604abcd2bc4818'; 			;; 		*) 			echo >&2 "error: current architecture ($arch) does not have a corresponding Julia binary release"; 			exit 1; 			;; 	esac; 		curl -fL -o julia.tar.gz.asc "$url.asc"; 	curl -fL -o julia.tar.gz "$url"; 		echo "$sha256 *julia.tar.gz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$JULIA_GPG"; 	gpg --batch --verify julia.tar.gz.asc julia.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" julia.tar.gz.asc; 		mkdir "$JULIA_PATH"; 	tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; 	rm julia.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		julia --version # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-COPY docker-entrypoint.sh /usr/local/bin/ # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["julia"]
-```
-
--	Layers:
-	-	`sha256:c4a0eee30f72e7c0e9938500fbc7f30b5eb02d04d49bfe7f18a17af1a6d82f81`  
-		Last Modified: Wed, 01 Nov 2023 00:26:59 GMT  
-		Size: 35.3 MB (35293810 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:f18b73091125f2b78d22b50ccf4901ba0daac56dcf2d60f317040a844f84eba1`  
-		Last Modified: Wed, 01 Nov 2023 15:26:58 GMT  
-		Size: 2.4 MB (2424869 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:cfbd9c969473c8dcca330f150bcf9fbe50fc63ba462e68ecd0d4c3f90887bef8`  
-		Last Modified: Wed, 01 Nov 2023 15:27:10 GMT  
-		Size: 153.8 MB (153831353 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:9a40791d2b612179a5f9ef6e9ed6c4b70d92c778b0644c1a058eb6138c8431c2`  
-		Last Modified: Wed, 01 Nov 2023 15:26:58 GMT  
-		Size: 375.0 B  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-
-### `julia:1.10-rc-bullseye` - unknown; unknown
-
-```console
-$ docker pull julia@sha256:ec8b50a7bfd7b4f702f34579b0b77dfe53c1ad38a6d4c5495dfaaf737d2c8861
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.3 MB (2251550 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6c1bcab6a3b4c78b4baee86cf644e553f6272779e4fd64d842c718ed2d889a24`
-
-```dockerfile
-```
-
--	Layers:
-	-	`sha256:39a948527286455f4b804414127b15ee1b1b9f3e56d95c2e787de75c5015c994`  
-		Last Modified: Wed, 01 Nov 2023 15:26:58 GMT  
-		Size: 2.2 MB (2234571 bytes)  
-		MIME: application/vnd.in-toto+json
-	-	`sha256:5d2020ec108a5338ebccab8139a2517c5bb5d4a4f225308d1147ebf9fb23b20f`  
-		Last Modified: Wed, 01 Nov 2023 15:26:58 GMT  
-		Size: 17.0 KB (16979 bytes)  
 		MIME: application/vnd.in-toto+json
 
 ## `julia:1.10-rc-windowsservercore`
@@ -3464,39 +3218,84 @@ CMD ["julia"]
 
 ## `julia:1.10.0-rc1`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.10.0-rc1-alpine`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.10.0-rc1-alpine3.17`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.10.0-rc1-alpine3.18`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.10.0-rc1-bookworm`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.10.0-rc1-bullseye`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.10.0-rc1-windowsservercore`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.10.0-rc1-windowsservercore-1809`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.10.0-rc1-windowsservercore-ltsc2022`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.6`
 
@@ -11647,18 +11446,16 @@ CMD ["julia"]
 ## `julia:rc`
 
 ```console
-$ docker pull julia@sha256:463e4ef24f875093645b7d2a0c3811c39e302274080a5003fc0e07ddeef067aa
+$ docker pull julia@sha256:8acf57a7763922a17eaf669a23673e7de2cd831ca2b74f76eb05deba920ddcdd
 ```
 
 -	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 10
+-	Platforms: 8
 	-	linux; amd64
 	-	unknown; unknown
 	-	linux; arm64 variant v8
 	-	unknown; unknown
 	-	linux; 386
-	-	unknown; unknown
-	-	linux; ppc64le
 	-	unknown; unknown
 	-	windows version 10.0.20348.2031; amd64
 	-	windows version 10.0.17763.4974; amd64
@@ -11897,86 +11694,6 @@ $ docker pull julia@sha256:1e50dc1f219f824f96f4ade466a07f5615afd9fad6a87bdb8f36c
 	-	`sha256:a08936c387e76a2893b8d93b89587a366aae3bb9ddf302abb0942651901432d6`  
 		Last Modified: Wed, 01 Nov 2023 02:08:34 GMT  
 		Size: 17.6 KB (17583 bytes)  
-		MIME: application/vnd.in-toto+json
-
-### `julia:rc` - linux; ppc64le
-
-```console
-$ docker pull julia@sha256:1e4bd653f031a1e7e2bd53c8caf8f276a6073a53fe01d3c0f0f6f92aa14f0003
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **193.0 MB (193019258 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:db416bc9b98adec468e8bc4ddb051a7ef3b1bf0282526324dbff94fb23d0cd3f`
--	Entrypoint: `["docker-entrypoint.sh"]`
--	Default Command: `["julia"]`
-
-```dockerfile
-# Tue, 03 Oct 2023 23:59:11 GMT
-ADD file:f36d600ab8508979b5763875a75f35555fa0a83d2656cbcdfa50978c6ae97353 in / 
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["bash"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 	; 	rm -rf /var/lib/apt/lists/* # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_PATH=/usr/local/julia
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV PATH=/usr/local/julia/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_GPG=3673DF529D9049477F76B37566E3C7DC03D6E495
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_VERSION=1.10.0-beta3
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gnupg 	; 	rm -rf /var/lib/apt/lists/*; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			url='https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.0-beta3-linux-x86_64.tar.gz'; 			sha256='f6fb0b8625f608c6b586f96e6f403da827c5f69ee0fa72746e0c3b5b6eb29022'; 			;; 		'arm64') 			url='https://julialang-s3.julialang.org/bin/linux/aarch64/1.10/julia-1.10.0-beta3-linux-aarch64.tar.gz'; 			sha256='9ee2d8ff367f17efa7d7279415622d85ae3e592a0938cc2c90a41f6d6f5a28d2'; 			;; 		'i386') 			url='https://julialang-s3.julialang.org/bin/linux/x86/1.10/julia-1.10.0-beta3-linux-i686.tar.gz'; 			sha256='2a18c67f4b3222018b74c5fc0d0c2211784fbd4905c43b55fa714b774b941614'; 			;; 		'ppc64el') 			url='https://julialang-s3.julialang.org/bin/linux/ppc64le/1.10/julia-1.10.0-beta3-linux-ppc64le.tar.gz'; 			sha256='40c541540f610736813750017ddc7292067438190a1a78ba30604abcd2bc4818'; 			;; 		*) 			echo >&2 "error: current architecture ($arch) does not have a corresponding Julia binary release"; 			exit 1; 			;; 	esac; 		curl -fL -o julia.tar.gz.asc "$url.asc"; 	curl -fL -o julia.tar.gz "$url"; 		echo "$sha256 *julia.tar.gz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$JULIA_GPG"; 	gpg --batch --verify julia.tar.gz.asc julia.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" julia.tar.gz.asc; 		mkdir "$JULIA_PATH"; 	tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; 	rm julia.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		julia --version # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-COPY docker-entrypoint.sh /usr/local/bin/ # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["julia"]
-```
-
--	Layers:
-	-	`sha256:e56c8f20d7d119ff87eb044f21bfd5a4b30bf8436fc5fac12871095a6bd1517c`  
-		Last Modified: Wed, 01 Nov 2023 00:26:10 GMT  
-		Size: 33.1 MB (33141482 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:731fefc00fefcf2648725a405996c24f3f813cefde0845d8a9540eb613b297f1`  
-		Last Modified: Wed, 01 Nov 2023 13:51:05 GMT  
-		Size: 6.0 MB (6045806 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:ac41f37462d57ae6530dca0a3115d78f0fcd1d244fa2ce0712c55e658bc9f67d`  
-		Last Modified: Wed, 01 Nov 2023 13:51:15 GMT  
-		Size: 153.8 MB (153831594 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:6f311f19b9898e6ce46661f097aa594090f5486cea2bcbd995127c30777eca81`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 376.0 B  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-
-### `julia:rc` - unknown; unknown
-
-```console
-$ docker pull julia@sha256:923dc601cb6668682e8697416b6f39ca495a19483de2b9965770a22a8b4bb7c3
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 MB (2123345 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dee703b0d121dd68e4614d8d99d967fd73aa09b4e084249d1546adcce18f4c7f`
-
-```dockerfile
-```
-
--	Layers:
-	-	`sha256:9ccd3c63f34bdd7246ec8f335d847f568932a8b337d407ee48a67914316aeb38`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 2.1 MB (2105455 bytes)  
-		MIME: application/vnd.in-toto+json
-	-	`sha256:7255f70fc49d7298f2717008f4875a7a892433cd59513668fca0ff3ea73fe9ed`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 17.9 KB (17890 bytes)  
 		MIME: application/vnd.in-toto+json
 
 ### `julia:rc` - windows version 10.0.20348.2031; amd64
@@ -12371,18 +12088,16 @@ $ docker pull julia@sha256:d3c4f5124a29233a9571732ea1fe6855385f1007e6401a3eed776
 ## `julia:rc-bookworm`
 
 ```console
-$ docker pull julia@sha256:4b5a260fe4e0f8fe10903254823b4fb675c9c81dfa9360645f88e23fb54e1608
+$ docker pull julia@sha256:860b1d7035d7ad867ba3397425f390772a6c707711a51b6e4d6a2aea2ba27829
 ```
 
 -	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 8
+-	Platforms: 6
 	-	linux; amd64
 	-	unknown; unknown
 	-	linux; arm64 variant v8
 	-	unknown; unknown
 	-	linux; 386
-	-	unknown; unknown
-	-	linux; ppc64le
 	-	unknown; unknown
 
 ### `julia:rc-bookworm` - linux; amd64
@@ -12621,101 +12336,19 @@ $ docker pull julia@sha256:1e50dc1f219f824f96f4ade466a07f5615afd9fad6a87bdb8f36c
 		Size: 17.6 KB (17583 bytes)  
 		MIME: application/vnd.in-toto+json
 
-### `julia:rc-bookworm` - linux; ppc64le
-
-```console
-$ docker pull julia@sha256:1e4bd653f031a1e7e2bd53c8caf8f276a6073a53fe01d3c0f0f6f92aa14f0003
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **193.0 MB (193019258 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:db416bc9b98adec468e8bc4ddb051a7ef3b1bf0282526324dbff94fb23d0cd3f`
--	Entrypoint: `["docker-entrypoint.sh"]`
--	Default Command: `["julia"]`
-
-```dockerfile
-# Tue, 03 Oct 2023 23:59:11 GMT
-ADD file:f36d600ab8508979b5763875a75f35555fa0a83d2656cbcdfa50978c6ae97353 in / 
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["bash"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 	; 	rm -rf /var/lib/apt/lists/* # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_PATH=/usr/local/julia
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV PATH=/usr/local/julia/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_GPG=3673DF529D9049477F76B37566E3C7DC03D6E495
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_VERSION=1.10.0-beta3
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gnupg 	; 	rm -rf /var/lib/apt/lists/*; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			url='https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.0-beta3-linux-x86_64.tar.gz'; 			sha256='f6fb0b8625f608c6b586f96e6f403da827c5f69ee0fa72746e0c3b5b6eb29022'; 			;; 		'arm64') 			url='https://julialang-s3.julialang.org/bin/linux/aarch64/1.10/julia-1.10.0-beta3-linux-aarch64.tar.gz'; 			sha256='9ee2d8ff367f17efa7d7279415622d85ae3e592a0938cc2c90a41f6d6f5a28d2'; 			;; 		'i386') 			url='https://julialang-s3.julialang.org/bin/linux/x86/1.10/julia-1.10.0-beta3-linux-i686.tar.gz'; 			sha256='2a18c67f4b3222018b74c5fc0d0c2211784fbd4905c43b55fa714b774b941614'; 			;; 		'ppc64el') 			url='https://julialang-s3.julialang.org/bin/linux/ppc64le/1.10/julia-1.10.0-beta3-linux-ppc64le.tar.gz'; 			sha256='40c541540f610736813750017ddc7292067438190a1a78ba30604abcd2bc4818'; 			;; 		*) 			echo >&2 "error: current architecture ($arch) does not have a corresponding Julia binary release"; 			exit 1; 			;; 	esac; 		curl -fL -o julia.tar.gz.asc "$url.asc"; 	curl -fL -o julia.tar.gz "$url"; 		echo "$sha256 *julia.tar.gz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$JULIA_GPG"; 	gpg --batch --verify julia.tar.gz.asc julia.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" julia.tar.gz.asc; 		mkdir "$JULIA_PATH"; 	tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; 	rm julia.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		julia --version # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-COPY docker-entrypoint.sh /usr/local/bin/ # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["julia"]
-```
-
--	Layers:
-	-	`sha256:e56c8f20d7d119ff87eb044f21bfd5a4b30bf8436fc5fac12871095a6bd1517c`  
-		Last Modified: Wed, 01 Nov 2023 00:26:10 GMT  
-		Size: 33.1 MB (33141482 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:731fefc00fefcf2648725a405996c24f3f813cefde0845d8a9540eb613b297f1`  
-		Last Modified: Wed, 01 Nov 2023 13:51:05 GMT  
-		Size: 6.0 MB (6045806 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:ac41f37462d57ae6530dca0a3115d78f0fcd1d244fa2ce0712c55e658bc9f67d`  
-		Last Modified: Wed, 01 Nov 2023 13:51:15 GMT  
-		Size: 153.8 MB (153831594 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:6f311f19b9898e6ce46661f097aa594090f5486cea2bcbd995127c30777eca81`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 376.0 B  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-
-### `julia:rc-bookworm` - unknown; unknown
-
-```console
-$ docker pull julia@sha256:923dc601cb6668682e8697416b6f39ca495a19483de2b9965770a22a8b4bb7c3
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.1 MB (2123345 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:dee703b0d121dd68e4614d8d99d967fd73aa09b4e084249d1546adcce18f4c7f`
-
-```dockerfile
-```
-
--	Layers:
-	-	`sha256:9ccd3c63f34bdd7246ec8f335d847f568932a8b337d407ee48a67914316aeb38`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 2.1 MB (2105455 bytes)  
-		MIME: application/vnd.in-toto+json
-	-	`sha256:7255f70fc49d7298f2717008f4875a7a892433cd59513668fca0ff3ea73fe9ed`  
-		Last Modified: Wed, 01 Nov 2023 13:51:04 GMT  
-		Size: 17.9 KB (17890 bytes)  
-		MIME: application/vnd.in-toto+json
-
 ## `julia:rc-bullseye`
 
 ```console
-$ docker pull julia@sha256:c7b68080bde2c72122d13fd7406a0819d8ac0fc8bc238a1a79dccfd7baa05397
+$ docker pull julia@sha256:c2ef4a7fcad3e5bf45d916d517714e0c2d63a469124ac0c5603f24418f24cc5c
 ```
 
 -	Manifest MIME: `application/vnd.oci.image.index.v1+json`
--	Platforms: 8
+-	Platforms: 6
 	-	linux; amd64
 	-	unknown; unknown
 	-	linux; arm64 variant v8
 	-	unknown; unknown
 	-	linux; 386
-	-	unknown; unknown
-	-	linux; ppc64le
 	-	unknown; unknown
 
 ### `julia:rc-bullseye` - linux; amd64
@@ -12952,86 +12585,6 @@ $ docker pull julia@sha256:5eedfa3c5a2ab2306766c85184557dac0c47973bf4e71f26dea53
 	-	`sha256:3a49190f4d41ba7942c7337870de87b025f7713989e3b46e74e395927548002c`  
 		Last Modified: Wed, 01 Nov 2023 02:08:22 GMT  
 		Size: 16.7 KB (16704 bytes)  
-		MIME: application/vnd.in-toto+json
-
-### `julia:rc-bullseye` - linux; ppc64le
-
-```console
-$ docker pull julia@sha256:b6c596de81d68b7a22c35ec65e491622b6fce3a25e88ee5b0bc78edca7d81f74
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **191.6 MB (191550407 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:9c0d9d044caa31a37434b428554665f324b8966b508618aea8ff8712cf1ee64f`
--	Entrypoint: `["docker-entrypoint.sh"]`
--	Default Command: `["julia"]`
-
-```dockerfile
-# Tue, 03 Oct 2023 23:59:11 GMT
-ADD file:a935b2993c62bfb1ade6ba0ffcf1f955422f6f76c63a723877d4bca5bb2aff7b in / 
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["bash"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 	apt-get update; 	apt-get install -y --no-install-recommends 		ca-certificates 		curl 	; 	rm -rf /var/lib/apt/lists/* # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_PATH=/usr/local/julia
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV PATH=/usr/local/julia/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_GPG=3673DF529D9049477F76B37566E3C7DC03D6E495
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENV JULIA_VERSION=1.10.0-beta3
-# Tue, 03 Oct 2023 23:59:11 GMT
-RUN set -eux; 		savedAptMark="$(apt-mark showmanual)"; 	apt-get update; 	apt-get install -y --no-install-recommends 		gnupg 	; 	rm -rf /var/lib/apt/lists/*; 		arch="$(dpkg --print-architecture)"; 	case "$arch" in 		'amd64') 			url='https://julialang-s3.julialang.org/bin/linux/x64/1.10/julia-1.10.0-beta3-linux-x86_64.tar.gz'; 			sha256='f6fb0b8625f608c6b586f96e6f403da827c5f69ee0fa72746e0c3b5b6eb29022'; 			;; 		'arm64') 			url='https://julialang-s3.julialang.org/bin/linux/aarch64/1.10/julia-1.10.0-beta3-linux-aarch64.tar.gz'; 			sha256='9ee2d8ff367f17efa7d7279415622d85ae3e592a0938cc2c90a41f6d6f5a28d2'; 			;; 		'i386') 			url='https://julialang-s3.julialang.org/bin/linux/x86/1.10/julia-1.10.0-beta3-linux-i686.tar.gz'; 			sha256='2a18c67f4b3222018b74c5fc0d0c2211784fbd4905c43b55fa714b774b941614'; 			;; 		'ppc64el') 			url='https://julialang-s3.julialang.org/bin/linux/ppc64le/1.10/julia-1.10.0-beta3-linux-ppc64le.tar.gz'; 			sha256='40c541540f610736813750017ddc7292067438190a1a78ba30604abcd2bc4818'; 			;; 		*) 			echo >&2 "error: current architecture ($arch) does not have a corresponding Julia binary release"; 			exit 1; 			;; 	esac; 		curl -fL -o julia.tar.gz.asc "$url.asc"; 	curl -fL -o julia.tar.gz "$url"; 		echo "$sha256 *julia.tar.gz" | sha256sum --strict --check -; 		export GNUPGHOME="$(mktemp -d)"; 	gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$JULIA_GPG"; 	gpg --batch --verify julia.tar.gz.asc julia.tar.gz; 	gpgconf --kill all; 	rm -rf "$GNUPGHOME" julia.tar.gz.asc; 		mkdir "$JULIA_PATH"; 	tar -xzf julia.tar.gz -C "$JULIA_PATH" --strip-components 1; 	rm julia.tar.gz; 		apt-mark auto '.*' > /dev/null; 	[ -z "$savedAptMark" ] || apt-mark manual $savedAptMark; 	apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false; 		julia --version # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-COPY docker-entrypoint.sh /usr/local/bin/ # buildkit
-# Tue, 03 Oct 2023 23:59:11 GMT
-ENTRYPOINT ["docker-entrypoint.sh"]
-# Tue, 03 Oct 2023 23:59:11 GMT
-CMD ["julia"]
-```
-
--	Layers:
-	-	`sha256:c4a0eee30f72e7c0e9938500fbc7f30b5eb02d04d49bfe7f18a17af1a6d82f81`  
-		Last Modified: Wed, 01 Nov 2023 00:26:59 GMT  
-		Size: 35.3 MB (35293810 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:f18b73091125f2b78d22b50ccf4901ba0daac56dcf2d60f317040a844f84eba1`  
-		Last Modified: Wed, 01 Nov 2023 15:26:58 GMT  
-		Size: 2.4 MB (2424869 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:cfbd9c969473c8dcca330f150bcf9fbe50fc63ba462e68ecd0d4c3f90887bef8`  
-		Last Modified: Wed, 01 Nov 2023 15:27:10 GMT  
-		Size: 153.8 MB (153831353 bytes)  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:9a40791d2b612179a5f9ef6e9ed6c4b70d92c778b0644c1a058eb6138c8431c2`  
-		Last Modified: Wed, 01 Nov 2023 15:26:58 GMT  
-		Size: 375.0 B  
-		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-
-### `julia:rc-bullseye` - unknown; unknown
-
-```console
-$ docker pull julia@sha256:ec8b50a7bfd7b4f702f34579b0b77dfe53c1ad38a6d4c5495dfaaf737d2c8861
-```
-
--	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **2.3 MB (2251550 bytes)**  
-	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:6c1bcab6a3b4c78b4baee86cf644e553f6272779e4fd64d842c718ed2d889a24`
-
-```dockerfile
-```
-
--	Layers:
-	-	`sha256:39a948527286455f4b804414127b15ee1b1b9f3e56d95c2e787de75c5015c994`  
-		Last Modified: Wed, 01 Nov 2023 15:26:58 GMT  
-		Size: 2.2 MB (2234571 bytes)  
-		MIME: application/vnd.in-toto+json
-	-	`sha256:5d2020ec108a5338ebccab8139a2517c5bb5d4a4f225308d1147ebf9fb23b20f`  
-		Last Modified: Wed, 01 Nov 2023 15:26:58 GMT  
-		Size: 17.0 KB (16979 bytes)  
 		MIME: application/vnd.in-toto+json
 
 ## `julia:rc-windowsservercore`
