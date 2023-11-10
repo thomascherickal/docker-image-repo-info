@@ -777,19 +777,13 @@ Licenses: (parsed from: `/usr/share/doc/libdb-dev/copyright`)
 - `GPL-3`
 - `GPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris db-defaults=5.3.2
-'http://deb.debian.org/debian/pool/main/d/db-defaults/db-defaults_5.3.2.dsc' db-defaults_5.3.2.dsc 1371 SHA256:2a7596f2a13b9e4bd6027bb94d0698b887ca658de81d6df269be727b2d9c056e
-'http://deb.debian.org/debian/pool/main/d/db-defaults/db-defaults_5.3.2.tar.xz' db-defaults_5.3.2.tar.xz 2420 SHA256:ca3a1ba3ac4351eebf6b38a3811a652ff8fc360098dc38323c8f7f88cbe81d6b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/db-defaults/5.3.2/
 
-- https://sources.debian.net/src/db-defaults/5.3.2/ (for browsing the source)
-- https://sources.debian.net/src/db-defaults/5.3.2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/db-defaults/5.3.2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `db5.3=5.3.28+dfsg2-2`
 
@@ -3975,20 +3969,13 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 - `Unicode-data`
 - `Xen-interface`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=6.5.8-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.5.8-1.dsc' linux_6.5.8-1.dsc 285866 SHA256:ca9c53665bc4acd83ca794028f05e97bc417f660538d9c7b903055b77e94a2fe
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.5.8.orig.tar.xz' linux_6.5.8.orig.tar.xz 141510152 SHA256:c39974bcfbebc6a41210b4dd81d4daaad40213e69aa82ad26d08c2a30828f319
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.5.8-1.debian.tar.xz' linux_6.5.8-1.debian.tar.xz 1507520 SHA256:da848bc3031714f37decfbbf4e451a9cac2c6c9f0c87406519587d32df6326a1
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/linux/6.5.8-1/
 
-- https://sources.debian.net/src/linux/6.5.8-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/6.5.8-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/6.5.8-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lz4=1.9.4-1`
 
@@ -4744,20 +4731,13 @@ Licenses: (parsed from: `/usr/share/doc/libpango-1.0-0/copyright`, `/usr/share/d
 - `TCL`
 - `Unicode`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris pango1.0=1.51.0+ds-2
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds-2.dsc' pango1.0_1.51.0+ds-2.dsc 3584 SHA256:1b18786d7d7b500a957f2415105bdb5bf289b821c744e7a2dbbe0405fc928721
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds.orig.tar.xz' pango1.0_1.51.0+ds.orig.tar.xz 1731104 SHA256:df51bb6819e91fda4f6c8ba8d2bd51e437e6f7daa86419d69a15e33a99002170
-'http://deb.debian.org/debian/pool/main/p/pango1.0/pango1.0_1.51.0%2bds-2.debian.tar.xz' pango1.0_1.51.0+ds-2.debian.tar.xz 41192 SHA256:56da56e5c7ac16d199c58e75c849a127bfe01259e0aaf49e9d3659713ac5f9df
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/pango1.0/1.51.0+ds-2/
 
-- https://sources.debian.net/src/pango1.0/1.51.0+ds-2/ (for browsing the source)
-- https://sources.debian.net/src/pango1.0/1.51.0+ds-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/pango1.0/1.51.0+ds-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `patch=2.7.6-7`
 
@@ -5388,21 +5368,13 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`, `/usr/share/doc
 - `GPL-2+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sqlite3=3.43.2-1
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.43.2-1.dsc' sqlite3_3.43.2-1.dsc 2486 SHA256:2f7834f071c82b271e73858d0fd04326b48108fd2d7158eab4ae6fa87f896554
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.43.2.orig-www.tar.xz' sqlite3_3.43.2.orig-www.tar.xz 5704848 SHA256:ce8e641ca02002bfa47737f3623cf603ab5be6b7c05065d7a5dcb9bf0a86ce79
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.43.2.orig.tar.xz' sqlite3_3.43.2.orig.tar.xz 8140452 SHA256:9800be46b9512b8fe495a73ef6204ca94a7da448828b599dada8ed818544f001
-'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.43.2-1.debian.tar.xz' sqlite3_3.43.2-1.debian.tar.xz 30120 SHA256:25ee8bf7d9dd4ed435924f775b1f000a056c4641b8323c55818cd08d0a86390b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sqlite3/3.43.2-1/
 
-- https://sources.debian.net/src/sqlite3/3.43.2-1/ (for browsing the source)
-- https://sources.debian.net/src/sqlite3/3.43.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sqlite3/3.43.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `subversion=1.14.2-4`
 
