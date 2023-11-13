@@ -1,7 +1,7 @@
 ## `postfixadmin:fpm-alpine`
 
 ```console
-$ docker pull postfixadmin@sha256:8ba986f49691d16d016bed49193e443eae51812cfbff6131a8d1c85f011638d8
+$ docker pull postfixadmin@sha256:86e219f15fa95dabd31678533554a044eca7ed507125daa6034584f68617e9f2
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -17,14 +17,14 @@ $ docker pull postfixadmin@sha256:8ba986f49691d16d016bed49193e443eae51812cfbff61
 ### `postfixadmin:fpm-alpine` - linux; amd64
 
 ```console
-$ docker pull postfixadmin@sha256:b34a783ad0b8c86ded8379eb8234421cc9d3bbfc34bd30fe5093c31f79e04071
+$ docker pull postfixadmin@sha256:202e479488df144fd6f86393ed5273338b4ed58d5b99cd015beb719122a1bc17
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **36.5 MB (36533072 bytes)**  
+-	Total Size: **36.5 MB (36533134 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:79efb955f99e8083d729203dd4f3f0c75dde6a8eda2d1588c5dcf7bce09e5e61`
+-	Image ID: `sha256:cffec8c62a3a7460a12aca6332053ee4423f273693d9ad37293b284221c50c79`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -95,11 +95,11 @@ ENV POSTFIXADMIN_VERSION=3.3.13
 ENV POSTFIXADMIN_SHA512=bf7daaa089ee3adc4b557f1a7d0509d78979ef688fb725bab795f5c9d81e8774296245fde0cb184db51e9185cad381682c3ecc0bfadf852388b499a0a95cca64
 # Sat, 28 Oct 2023 04:46:19 GMT
 RUN set -eu; 	curl -fsSL -o postfixadmin.tar.gz "https://github.com/postfixadmin/postfixadmin/archive/postfixadmin-${POSTFIXADMIN_VERSION}.tar.gz"; 	echo "$POSTFIXADMIN_SHA512 *postfixadmin.tar.gz" | sha512sum -c -; 	mkdir /usr/src/postfixadmin; 	tar -xf postfixadmin.tar.gz -C /usr/src/postfixadmin --strip-components=1; 	rm postfixadmin.tar.gz; 	mkdir -p /usr/src/postfixadmin/templates_c; 	chown -R www-data:www-data /usr/src/postfixadmin
-# Sat, 28 Oct 2023 04:46:19 GMT
-COPY file:3f9cd88c9194b4dd46840502e61fb0ec7c3aa999b086fec7959e90f51a6c13ee in /usr/local/bin/ 
-# Sat, 28 Oct 2023 04:46:19 GMT
+# Mon, 13 Nov 2023 22:29:04 GMT
+COPY file:faa321731fa00b5daf94bddb260fab39ed3691c21fc55135092e44c63565f9b7 in /usr/local/bin/ 
+# Mon, 13 Nov 2023 22:29:04 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Sat, 28 Oct 2023 04:46:19 GMT
+# Mon, 13 Nov 2023 22:29:04 GMT
 CMD ["php-fpm"]
 ```
 
@@ -156,9 +156,9 @@ CMD ["php-fpm"]
 		Last Modified: Sat, 28 Oct 2023 04:47:20 GMT  
 		Size: 1.9 MB (1862850 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:8f3c6c17b832301dddaf7e267b4a19f180c8ff5f35cfe9e358a29cd8bd6f2e7a`  
-		Last Modified: Sat, 28 Oct 2023 04:47:19 GMT  
-		Size: 1.6 KB (1595 bytes)  
+	-	`sha256:5d93150b4fdbc17ba60697a658372121da64619c1d748cfbb8471085ef48f705`  
+		Last Modified: Mon, 13 Nov 2023 22:29:54 GMT  
+		Size: 1.7 KB (1657 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postfixadmin:fpm-alpine` - linux; arm variant v6
@@ -458,14 +458,14 @@ CMD ["php-fpm"]
 ### `postfixadmin:fpm-alpine` - linux; arm64 variant v8
 
 ```console
-$ docker pull postfixadmin@sha256:832c186435bb319c33d09433d3947b276edb1841b7443ab97ba0cf50cb4c299c
+$ docker pull postfixadmin@sha256:6efcdfe9fea928becbb803266a55edc05be02f54dd8bef6f565926bb4c14e6f4
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **36.5 MB (36526054 bytes)**  
+-	Total Size: **36.5 MB (36526116 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:2c342e34b8c541dd8abf24c8a86018242ddd099cd70043674f65284a4b7cc4b6`
+-	Image ID: `sha256:33b9c6c08dcde6c00730b624b5e2b360ca2ad8e7cac054e4051cf578b9d3a32f`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -536,11 +536,11 @@ ENV POSTFIXADMIN_VERSION=3.3.13
 ENV POSTFIXADMIN_SHA512=bf7daaa089ee3adc4b557f1a7d0509d78979ef688fb725bab795f5c9d81e8774296245fde0cb184db51e9185cad381682c3ecc0bfadf852388b499a0a95cca64
 # Sat, 28 Oct 2023 04:29:15 GMT
 RUN set -eu; 	curl -fsSL -o postfixadmin.tar.gz "https://github.com/postfixadmin/postfixadmin/archive/postfixadmin-${POSTFIXADMIN_VERSION}.tar.gz"; 	echo "$POSTFIXADMIN_SHA512 *postfixadmin.tar.gz" | sha512sum -c -; 	mkdir /usr/src/postfixadmin; 	tar -xf postfixadmin.tar.gz -C /usr/src/postfixadmin --strip-components=1; 	rm postfixadmin.tar.gz; 	mkdir -p /usr/src/postfixadmin/templates_c; 	chown -R www-data:www-data /usr/src/postfixadmin
-# Sat, 28 Oct 2023 04:29:15 GMT
-COPY file:3f9cd88c9194b4dd46840502e61fb0ec7c3aa999b086fec7959e90f51a6c13ee in /usr/local/bin/ 
-# Sat, 28 Oct 2023 04:29:15 GMT
+# Mon, 13 Nov 2023 22:55:55 GMT
+COPY file:faa321731fa00b5daf94bddb260fab39ed3691c21fc55135092e44c63565f9b7 in /usr/local/bin/ 
+# Mon, 13 Nov 2023 22:55:55 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Sat, 28 Oct 2023 04:29:15 GMT
+# Mon, 13 Nov 2023 22:55:55 GMT
 CMD ["php-fpm"]
 ```
 
@@ -597,22 +597,22 @@ CMD ["php-fpm"]
 		Last Modified: Sat, 28 Oct 2023 04:30:11 GMT  
 		Size: 1.9 MB (1862852 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f2ac1ce7d04c5a063275a371bbfbaae441b3f239c65989fc0e0c6dab20e5b715`  
-		Last Modified: Sat, 28 Oct 2023 04:30:10 GMT  
-		Size: 1.6 KB (1593 bytes)  
+	-	`sha256:20d4796782514029baeb24a4aa938765542b21e9f887783f948ca69d13b9221c`  
+		Last Modified: Mon, 13 Nov 2023 22:56:45 GMT  
+		Size: 1.7 KB (1655 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postfixadmin:fpm-alpine` - linux; 386
 
 ```console
-$ docker pull postfixadmin@sha256:4141323d40c41f02a3adf075a38ed3c23b7925526d71f28ca601ad146a42fb02
+$ docker pull postfixadmin@sha256:caeae142866b6100c59d4a64554f98d1ce6e7d57c2275fd7228d2ee633b693cc
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **36.4 MB (36443090 bytes)**  
+-	Total Size: **36.4 MB (36443152 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d7ba64d052ecd1fb73394ecc2d465a19002c70d8ca21b197c870fe5ac37fdf25`
+-	Image ID: `sha256:4301c2491f11585f501adfc0224bd9c36af00000c210494c8fc52f4eee42b961`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -683,11 +683,11 @@ ENV POSTFIXADMIN_VERSION=3.3.13
 ENV POSTFIXADMIN_SHA512=bf7daaa089ee3adc4b557f1a7d0509d78979ef688fb725bab795f5c9d81e8774296245fde0cb184db51e9185cad381682c3ecc0bfadf852388b499a0a95cca64
 # Sat, 28 Oct 2023 08:20:19 GMT
 RUN set -eu; 	curl -fsSL -o postfixadmin.tar.gz "https://github.com/postfixadmin/postfixadmin/archive/postfixadmin-${POSTFIXADMIN_VERSION}.tar.gz"; 	echo "$POSTFIXADMIN_SHA512 *postfixadmin.tar.gz" | sha512sum -c -; 	mkdir /usr/src/postfixadmin; 	tar -xf postfixadmin.tar.gz -C /usr/src/postfixadmin --strip-components=1; 	rm postfixadmin.tar.gz; 	mkdir -p /usr/src/postfixadmin/templates_c; 	chown -R www-data:www-data /usr/src/postfixadmin
-# Sat, 28 Oct 2023 08:20:19 GMT
-COPY file:3f9cd88c9194b4dd46840502e61fb0ec7c3aa999b086fec7959e90f51a6c13ee in /usr/local/bin/ 
-# Sat, 28 Oct 2023 08:20:19 GMT
+# Mon, 13 Nov 2023 22:38:33 GMT
+COPY file:faa321731fa00b5daf94bddb260fab39ed3691c21fc55135092e44c63565f9b7 in /usr/local/bin/ 
+# Mon, 13 Nov 2023 22:38:33 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Sat, 28 Oct 2023 08:20:19 GMT
+# Mon, 13 Nov 2023 22:38:34 GMT
 CMD ["php-fpm"]
 ```
 
@@ -744,9 +744,9 @@ CMD ["php-fpm"]
 		Last Modified: Sat, 28 Oct 2023 08:21:22 GMT  
 		Size: 1.9 MB (1862846 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3b5c08d8cc40030588ed6baa02048279d7addd617172904a962c74fe82027728`  
-		Last Modified: Sat, 28 Oct 2023 08:21:21 GMT  
-		Size: 1.6 KB (1594 bytes)  
+	-	`sha256:83c6eebd0f70d61b61c51ca7284e75abc81cebe7a5b1610c771ecebf890b90a5`  
+		Last Modified: Mon, 13 Nov 2023 22:39:26 GMT  
+		Size: 1.7 KB (1656 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `postfixadmin:fpm-alpine` - linux; ppc64le
@@ -899,14 +899,14 @@ CMD ["php-fpm"]
 ### `postfixadmin:fpm-alpine` - linux; s390x
 
 ```console
-$ docker pull postfixadmin@sha256:fe59f2aaef5f8d560fd0f20a2a476ed920ccd3dfbe7af1e7cc5ebcc76eff9293
+$ docker pull postfixadmin@sha256:d91f25fb9367428c79568f4af5107474cb1ff1f0f757689711124ce427b93a5a
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **35.5 MB (35460230 bytes)**  
+-	Total Size: **35.5 MB (35460292 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:69cf6ab5dc0d91561b0a5adc54cdc3bea552c3de64d9b9da7cbcd398098b2b40`
+-	Image ID: `sha256:c7529c65b6d0b70182ecbe6ccce06782b316bbcad808e10370f48787829d86c2`
 -	Entrypoint: `["\/usr\/local\/bin\/docker-entrypoint.sh"]`
 -	Default Command: `["php-fpm"]`
 
@@ -977,11 +977,11 @@ ENV POSTFIXADMIN_VERSION=3.3.13
 ENV POSTFIXADMIN_SHA512=bf7daaa089ee3adc4b557f1a7d0509d78979ef688fb725bab795f5c9d81e8774296245fde0cb184db51e9185cad381682c3ecc0bfadf852388b499a0a95cca64
 # Sat, 28 Oct 2023 07:12:07 GMT
 RUN set -eu; 	curl -fsSL -o postfixadmin.tar.gz "https://github.com/postfixadmin/postfixadmin/archive/postfixadmin-${POSTFIXADMIN_VERSION}.tar.gz"; 	echo "$POSTFIXADMIN_SHA512 *postfixadmin.tar.gz" | sha512sum -c -; 	mkdir /usr/src/postfixadmin; 	tar -xf postfixadmin.tar.gz -C /usr/src/postfixadmin --strip-components=1; 	rm postfixadmin.tar.gz; 	mkdir -p /usr/src/postfixadmin/templates_c; 	chown -R www-data:www-data /usr/src/postfixadmin
-# Sat, 28 Oct 2023 07:12:08 GMT
-COPY file:3f9cd88c9194b4dd46840502e61fb0ec7c3aa999b086fec7959e90f51a6c13ee in /usr/local/bin/ 
-# Sat, 28 Oct 2023 07:12:08 GMT
+# Mon, 13 Nov 2023 22:43:03 GMT
+COPY file:faa321731fa00b5daf94bddb260fab39ed3691c21fc55135092e44c63565f9b7 in /usr/local/bin/ 
+# Mon, 13 Nov 2023 22:43:03 GMT
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
-# Sat, 28 Oct 2023 07:12:08 GMT
+# Mon, 13 Nov 2023 22:43:03 GMT
 CMD ["php-fpm"]
 ```
 
@@ -1038,7 +1038,7 @@ CMD ["php-fpm"]
 		Last Modified: Sat, 28 Oct 2023 07:12:59 GMT  
 		Size: 1.9 MB (1862852 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3cb71a18ba79c4c1146976132b8030941b645307c7ec3e3c76cf9d04ad4fd089`  
-		Last Modified: Sat, 28 Oct 2023 07:12:59 GMT  
-		Size: 1.6 KB (1593 bytes)  
+	-	`sha256:bca69a280740000265b764ed8cf1bdb17ba1d0c85f4e33a255a0505e7159130e`  
+		Last Modified: Mon, 13 Nov 2023 22:43:54 GMT  
+		Size: 1.7 KB (1655 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
