@@ -4955,20 +4955,13 @@ Licenses: (parsed from: `/usr/share/doc/libpq-dev/copyright`, `/usr/share/doc/li
 - `double-metaphone`
 - `nagaysau-ishii`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris postgresql-16=16.0-2
-'http://deb.debian.org/debian/pool/main/p/postgresql-16/postgresql-16_16.0-2.dsc' postgresql-16_16.0-2.dsc 4193 SHA256:3b51eb618a751cede1cea3fc67c2820b4cccbeac48077345d8a4f735f327cfce
-'http://deb.debian.org/debian/pool/main/p/postgresql-16/postgresql-16_16.0.orig.tar.bz2' postgresql-16_16.0.orig.tar.bz2 24528207 SHA256:df9e823eb22330444e1d48e52cc65135a652a6fdb3ce325e3f08549339f51b99
-'http://deb.debian.org/debian/pool/main/p/postgresql-16/postgresql-16_16.0-2.debian.tar.xz' postgresql-16_16.0-2.debian.tar.xz 29472 SHA256:e76294c480dff105d6a7ccec80014e8e8c4255c7aa45a706dd141cfdcb895291
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/postgresql-16/16.0-2/
 
-- https://sources.debian.net/src/postgresql-16/16.0-2/ (for browsing the source)
-- https://sources.debian.net/src/postgresql-16/16.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/postgresql-16/16.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:4.0.4-2`
 
@@ -5399,21 +5392,13 @@ Licenses: (parsed from: `/usr/share/doc/libsvn1/copyright`, `/usr/share/doc/subv
 - `Unicode`
 - `Utfwidth`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris subversion=1.14.2-4
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.14.2-4.dsc' subversion_1.14.2-4.dsc 4046 SHA256:8a4b9684043e17d0bb4c1892be7869493563613ef7e2dfe4bb3ffac059ff1b87
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.14.2.orig.tar.gz' subversion_1.14.2.orig.tar.gz 11626792 SHA256:fd826afad03db7a580722839927dc664f3e93398fe88b66905732c8530971353
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.14.2.orig.tar.gz.asc' subversion_1.14.2.orig.tar.gz.asc 3215 SHA256:da6a0a5ff56f671ad2d1eae708f8d1cc1abf0485b029a163ff8272cba5475861
-'http://deb.debian.org/debian/pool/main/s/subversion/subversion_1.14.2-4.debian.tar.xz' subversion_1.14.2-4.debian.tar.xz 337148 SHA256:b9da3d33171f9e153a2c9d2080996a2fda6cf3b30659f9bbff0c00d279f6f2e6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/subversion/1.14.2-4/
 
-- https://sources.debian.net/src/subversion/1.14.2-4/ (for browsing the source)
-- https://sources.debian.net/src/subversion/1.14.2-4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/subversion/1.14.2-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=254.5-1`
 
