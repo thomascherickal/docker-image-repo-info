@@ -11,6 +11,10 @@
 -	[`spark:3.4.1-scala2.12-java11-r-ubuntu`](#spark341-scala212-java11-r-ubuntu)
 -	[`spark:3.4.1-scala2.12-java11-ubuntu`](#spark341-scala212-java11-ubuntu)
 -	[`spark:3.5.0`](#spark350)
+-	[`spark:3.5.0-java17`](#spark350-java17)
+-	[`spark:3.5.0-java17-python3`](#spark350-java17-python3)
+-	[`spark:3.5.0-java17-r`](#spark350-java17-r)
+-	[`spark:3.5.0-java17-scala`](#spark350-java17-scala)
 -	[`spark:3.5.0-python3`](#spark350-python3)
 -	[`spark:3.5.0-r`](#spark350-r)
 -	[`spark:3.5.0-scala`](#spark350-scala)
@@ -18,8 +22,13 @@
 -	[`spark:3.5.0-scala2.12-java11-python3-ubuntu`](#spark350-scala212-java11-python3-ubuntu)
 -	[`spark:3.5.0-scala2.12-java11-r-ubuntu`](#spark350-scala212-java11-r-ubuntu)
 -	[`spark:3.5.0-scala2.12-java11-ubuntu`](#spark350-scala212-java11-ubuntu)
+-	[`spark:3.5.0-scala2.12-java17-python3-r-ubuntu`](#spark350-scala212-java17-python3-r-ubuntu)
+-	[`spark:3.5.0-scala2.12-java17-python3-ubuntu`](#spark350-scala212-java17-python3-ubuntu)
+-	[`spark:3.5.0-scala2.12-java17-r-ubuntu`](#spark350-scala212-java17-r-ubuntu)
+-	[`spark:3.5.0-scala2.12-java17-ubuntu`](#spark350-scala212-java17-ubuntu)
 -	[`spark:latest`](#sparklatest)
 -	[`spark:python3`](#sparkpython3)
+-	[`spark:python3-java17`](#sparkpython3-java17)
 -	[`spark:r`](#sparkr)
 -	[`spark:scala`](#sparkscala)
 
@@ -2200,6 +2209,22 @@ USER spark
 		Size: 87.6 MB (87553479 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `spark:3.5.0-java17`
+
+**does not exist** (yet?)
+
+## `spark:3.5.0-java17-python3`
+
+**does not exist** (yet?)
+
+## `spark:3.5.0-java17-r`
+
+**does not exist** (yet?)
+
+## `spark:3.5.0-java17-scala`
+
+**does not exist** (yet?)
+
 ## `spark:3.5.0-python3`
 
 ```console
@@ -3887,6 +3912,22 @@ ENTRYPOINT ["/opt/entrypoint.sh"]
 		Size: 2.1 KB (2137 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+## `spark:3.5.0-scala2.12-java17-python3-r-ubuntu`
+
+**does not exist** (yet?)
+
+## `spark:3.5.0-scala2.12-java17-python3-ubuntu`
+
+**does not exist** (yet?)
+
+## `spark:3.5.0-scala2.12-java17-r-ubuntu`
+
+**does not exist** (yet?)
+
+## `spark:3.5.0-scala2.12-java17-ubuntu`
+
+**does not exist** (yet?)
+
 ## `spark:latest`
 
 ```console
@@ -4376,6 +4417,10 @@ USER spark
 		Last Modified: Tue, 31 Oct 2023 04:12:59 GMT  
 		Size: 87.6 MB (87553479 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+## `spark:python3-java17`
+
+**does not exist** (yet?)
 
 ## `spark:r`
 
