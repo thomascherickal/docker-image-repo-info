@@ -8154,7 +8154,7 @@ RUN set -e;     ARCH_NAME="$(dpkg --print-architecture)";     url=;     case "${
 ## `swift:5.8-rhel-ubi9`
 
 ```console
-$ docker pull swift@sha256:d03869ca050649556928a28ad62057b55dea87f50f6368464bc1061b28d22550
+$ docker pull swift@sha256:bb43a02ca8a5154d66304790e2511e3e5079c48a0f6e20651057c0445c9fc3ba
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8165,215 +8165,211 @@ $ docker pull swift@sha256:d03869ca050649556928a28ad62057b55dea87f50f6368464bc10
 ### `swift:5.8-rhel-ubi9` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:3a3390529159dddf33fda32eb928903e5a06b81c989bed1f1411f3456c25dd48
+$ docker pull swift@sha256:e2fe0578e2c5d816d9c7587e1449dcd48432c912816130c8475fe3c97894ebf5
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **758.1 MB (758128673 bytes)**  
+-	Total Size: **757.8 MB (757804408 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:431fcc4a9ff2c44c20a41540011703e9d2e1bff47e9fad8f85e96823a26d6aa0`
+-	Image ID: `sha256:a21b9a8eed3cf18f80982932782f2a4f0c47e72de85f1278ea09439c8770e883`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD file:ff958f237a7e10f155a495e636c5876a35f444c78fe174bce0b9d4e42ddb476d in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:51365bf81ffef571b9cae6537437d1cb9578bf45d8b6a353848d4bbc24583ace in / 
+# Thu, 09 Nov 2023 16:57:22 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:22 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:58 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:6ba531da9ca1a7e54bb1c018ed4817d0291616ab10c23bb268465a1b72b4a660 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:9e58e3b1f8d8a9b3d5a5e70e0182da2ba60d76e7b188b73769abc2b4ae323f89 in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:00 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:01 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
+ADD file:b21f5a973eb1a7e7cede8eb88bab4f034175bf01de661263540b4722655ec4b1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:25 GMT
+ADD file:81c5ce84fbc74763cd36dea9ef0064ee0c92125a77a579cfbb4a026beeb7be4f in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:25 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:26 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:27 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:03 GMT
+# Thu, 09 Nov 2023 16:57:29 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:31 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:32 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:18:59 GMT
+# Fri, 17 Nov 2023 04:17:53 GMT
 RUN yum -y install   git                 gcc-c++             libcurl-devel       libedit-devel       libuuid-devel       libxml2-devel       ncurses-devel       python3-devel       rsync               sqlite-devel        unzip               zip
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:21:08 GMT
+# Fri, 17 Nov 2023 04:19:55 GMT
 ARG SWIFT_BRANCH=swift-5.8.1-release
-# Wed, 08 Nov 2023 01:21:08 GMT
+# Fri, 17 Nov 2023 04:19:55 GMT
 ARG SWIFT_VERSION=swift-5.8.1-RELEASE
-# Wed, 08 Nov 2023 01:21:08 GMT
+# Fri, 17 Nov 2023 04:19:55 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:21:08 GMT
+# Fri, 17 Nov 2023 04:19:55 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.8.1-release SWIFT_VERSION=swift-5.8.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:21:47 GMT
+# Fri, 17 Nov 2023 04:20:37 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && echo $SWIFT_BIN_URL     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
-# Wed, 08 Nov 2023 01:21:53 GMT
+# Fri, 17 Nov 2023 04:20:43 GMT
 RUN swift --version
 ```
 
 -	Layers:
-	-	`sha256:4b36affe1d299102d9d4179738432b7c4c97fe634a59010fd9ecc1a447cb0eed`  
-		Last Modified: Tue, 07 Nov 2023 12:06:50 GMT  
-		Size: 78.8 MB (78830409 bytes)  
+	-	`sha256:b824f4b30c465e487e640bdc22e46bafd6983e4e0eabf30085cacf945c261160`  
+		Last Modified: Wed, 15 Nov 2023 11:22:54 GMT  
+		Size: 78.8 MB (78771519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e416dfadd7904055d74eef0cfdfb742aea14084b6e99f81aed7a956d6ad37a53`  
-		Last Modified: Wed, 08 Nov 2023 01:26:05 GMT  
-		Size: 122.0 MB (122043499 bytes)  
+	-	`sha256:9147eac6cae0e29431453d2a3a2886e28d88a1a9c6a377ff7e6caa3e989c1dd8`  
+		Last Modified: Fri, 17 Nov 2023 04:24:21 GMT  
+		Size: 121.8 MB (121778129 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3fea9fcaabca647f40fc0fa30bc196d038ca2a3b22992125bdffabed671bf11`  
-		Last Modified: Wed, 08 Nov 2023 01:29:05 GMT  
-		Size: 557.3 MB (557254537 bytes)  
+	-	`sha256:d64446103e0e36f0618368e2955a8d9f26d8ce3b60aed2ee2202de0ba68e1fd9`  
+		Last Modified: Fri, 17 Nov 2023 04:27:20 GMT  
+		Size: 557.3 MB (557254534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fef20c1333248924f512dc861eb68c65281659046168559126d89340e1506e6d`  
-		Last Modified: Wed, 08 Nov 2023 01:27:51 GMT  
-		Size: 228.0 B  
+	-	`sha256:be43ed12627459ded558df81d2506d4698ba397f9e1da25966dbf1d94a58c943`  
+		Last Modified: Fri, 17 Nov 2023 04:26:09 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swift:5.8-rhel-ubi9` - linux; arm64 variant v8
 
 ```console
-$ docker pull swift@sha256:8388bba8d89efb40e88c5afa135b1c96090eeec1bc903898f2e77364d91620e8
+$ docker pull swift@sha256:2c24817207163f16690bba22c3273044bf90eaa504cf60b16d4de85d8072cb10
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **740.2 MB (740238400 bytes)**  
+-	Total Size: **740.0 MB (740005856 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:216037cf6c7c99a569363ae92f4f006bfa4c46c89cfd2bc43b833915093b594c`
+-	Image ID: `sha256:4ca62c0b450dc9494fcb945fff7f891699c1c9fa42dfe21a355cdad0279654bb`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:56 GMT
-ADD file:c181af735ab58b6416a189483880bcde8d26f2fea1c22b0b80f9ecac19e7e98e in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:17 GMT
+ADD file:205960a3d0706f085c18728490f06b5e7fd7a132ab6b07a95a4ed18f00e126f4 in / 
+# Thu, 09 Nov 2023 16:57:18 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:19 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:336aaf586ff3db4d8064b2e86cb8c4e7a1f381f07097539f592af1397a12ca29 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:9dd57547fdd66ceae2d983b4f0b5b8e57abc1051765602fc9156843d2db0ea6d in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:49:00 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:01 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:02 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
+ADD file:0b626ed84dc2ce267bf6b274208582760edaf2c022f3194ac8260153cafce9d1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:a85c30847dff015a401ef205805a5a71cc706ae037b798d7b69c0465edec50a7 in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:21 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:22 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:04 GMT
+# Thu, 09 Nov 2023 16:57:25 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:11:53 GMT
+# Fri, 17 Nov 2023 03:33:24 GMT
 RUN yum -y install   git                 gcc-c++             libcurl-devel       libedit-devel       libuuid-devel       libxml2-devel       ncurses-devel       python3-devel       rsync               sqlite-devel        unzip               zip
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:13:52 GMT
+# Fri, 17 Nov 2023 03:35:25 GMT
 ARG SWIFT_BRANCH=swift-5.8.1-release
-# Wed, 08 Nov 2023 01:13:52 GMT
+# Fri, 17 Nov 2023 03:35:25 GMT
 ARG SWIFT_VERSION=swift-5.8.1-RELEASE
-# Wed, 08 Nov 2023 01:13:52 GMT
+# Fri, 17 Nov 2023 03:35:25 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:13:52 GMT
+# Fri, 17 Nov 2023 03:35:25 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.8.1-release SWIFT_VERSION=swift-5.8.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:14:26 GMT
+# Fri, 17 Nov 2023 03:36:05 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && echo $SWIFT_BIN_URL     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
-# Wed, 08 Nov 2023 01:14:36 GMT
+# Fri, 17 Nov 2023 03:36:16 GMT
 RUN swift --version
 ```
 
 -	Layers:
-	-	`sha256:1f6f7d33bea4fdbb69d8e2cf0f7b6cc5316ca8c8bf475d7b2cf01142cd6db055`  
-		Last Modified: Tue, 07 Nov 2023 12:06:59 GMT  
-		Size: 76.5 MB (76503019 bytes)  
+	-	`sha256:19dd821b7a83bf1ad388914394494ea983308667df914c57a315c52e312eb2c4`  
+		Last Modified: Wed, 15 Nov 2023 11:22:52 GMT  
+		Size: 76.5 MB (76512185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a8f2f956b192503530fa8a70acf9dff1bc9c6c43ed565416b338042970f97f4`  
-		Last Modified: Wed, 08 Nov 2023 01:16:30 GMT  
-		Size: 116.0 MB (116019603 bytes)  
+	-	`sha256:70fc2b349bdc2939f2aecce639b6653edd36f9f850fdccef537fce3ef5d9db32`  
+		Last Modified: Fri, 17 Nov 2023 03:38:04 GMT  
+		Size: 115.8 MB (115777908 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a37bf10e3079e4aa58168ed47dc7bc37eb0470aa980bd2468b1680613efed84`  
-		Last Modified: Wed, 08 Nov 2023 01:18:51 GMT  
-		Size: 547.7 MB (547715550 bytes)  
+	-	`sha256:3048ef68e49e59756edb0a14e886025374c65c4251db5965736f3b4aff3d4bc5`  
+		Last Modified: Fri, 17 Nov 2023 03:40:19 GMT  
+		Size: 547.7 MB (547715533 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:046517e1c6dd16d83943a3781bd325d5d5aa611d309af598dcc27f615226de89`  
-		Last Modified: Wed, 08 Nov 2023 01:17:58 GMT  
-		Size: 228.0 B  
+	-	`sha256:93c184d7999c1113c2416f3a63a665984b8184ee07351208719e041974fbb3d4`  
+		Last Modified: Fri, 17 Nov 2023 03:39:26 GMT  
+		Size: 230.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `swift:5.8-rhel-ubi9-slim`
 
 ```console
-$ docker pull swift@sha256:7f21389393adb030b1c2888fb7961e9c33a4386499a1351f38609b565f157c2e
+$ docker pull swift@sha256:c1a8cded5d19927fce08aa0534e2da57a183e0ee3eace32d88184cd9b21d500f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -8384,185 +8380,181 @@ $ docker pull swift@sha256:7f21389393adb030b1c2888fb7961e9c33a4386499a1351f38609
 ### `swift:5.8-rhel-ubi9-slim` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:f0c61debf769e280c2741d75437963b8ca70673bb5c16444edee921aaaecef0c
+$ docker pull swift@sha256:8e1eb8a1b1674c2611ac10b3f236dfe5a828077335306d0775bb2055d01b4cf8
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **166.5 MB (166521827 bytes)**  
+-	Total Size: **166.5 MB (166467512 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d7bf26130f701cc58a4235abe869367a7757ac86e6ab36925fd542669574da50`
+-	Image ID: `sha256:18a01d2375910af928f35f01385bc84103df2edf4020d0a194aaa7dbd41fff57`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD file:ff958f237a7e10f155a495e636c5876a35f444c78fe174bce0b9d4e42ddb476d in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:51365bf81ffef571b9cae6537437d1cb9578bf45d8b6a353848d4bbc24583ace in / 
+# Thu, 09 Nov 2023 16:57:22 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:22 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:58 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:6ba531da9ca1a7e54bb1c018ed4817d0291616ab10c23bb268465a1b72b4a660 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:9e58e3b1f8d8a9b3d5a5e70e0182da2ba60d76e7b188b73769abc2b4ae323f89 in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:00 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:01 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
+ADD file:b21f5a973eb1a7e7cede8eb88bab4f034175bf01de661263540b4722655ec4b1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:25 GMT
+ADD file:81c5ce84fbc74763cd36dea9ef0064ee0c92125a77a579cfbb4a026beeb7be4f in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:25 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:26 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:27 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:03 GMT
+# Thu, 09 Nov 2023 16:57:29 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:31 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:32 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:21:56 GMT
+# Fri, 17 Nov 2023 04:20:53 GMT
 ARG SWIFT_BRANCH=swift-5.8.1-release
-# Wed, 08 Nov 2023 01:21:57 GMT
+# Fri, 17 Nov 2023 04:20:53 GMT
 ARG SWIFT_VERSION=swift-5.8.1-RELEASE
-# Wed, 08 Nov 2023 01:21:57 GMT
+# Fri, 17 Nov 2023 04:20:54 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:21:57 GMT
+# Fri, 17 Nov 2023 04:20:54 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.8.1-release SWIFT_VERSION=swift-5.8.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:22:24 GMT
+# Fri, 17 Nov 2023 04:21:23 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1 $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/lib/swift/linux     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
 ```
 
 -	Layers:
-	-	`sha256:4b36affe1d299102d9d4179738432b7c4c97fe634a59010fd9ecc1a447cb0eed`  
-		Last Modified: Tue, 07 Nov 2023 12:06:50 GMT  
-		Size: 78.8 MB (78830409 bytes)  
+	-	`sha256:b824f4b30c465e487e640bdc22e46bafd6983e4e0eabf30085cacf945c261160`  
+		Last Modified: Wed, 15 Nov 2023 11:22:54 GMT  
+		Size: 78.8 MB (78771519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7b49667d03be1ac0f795811c7b7660014cadb7079a6755460e5ba070b90441e5`  
-		Last Modified: Wed, 08 Nov 2023 01:29:27 GMT  
-		Size: 87.7 MB (87691418 bytes)  
+	-	`sha256:9c791e503026272ea7ee3f254c72f29c274c0a140495ae3e81a4602d158abab0`  
+		Last Modified: Fri, 17 Nov 2023 04:27:42 GMT  
+		Size: 87.7 MB (87695993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swift:5.8-rhel-ubi9-slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull swift@sha256:40efdc0de75f0fe910d819262351b0222c6a7ada08fd66b61a83d1de8575d1c1
+$ docker pull swift@sha256:8f4521bd7c08f103dbfe88f348083639d01d4d7c145ac947263091a653c47a24
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **162.2 MB (162240464 bytes)**  
+-	Total Size: **162.3 MB (162265873 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b55a1ee35e7b3c2d176ec1d178e1b0de59e91a128a69f49ca5619bb4dea49858`
+-	Image ID: `sha256:a849ece80d85a431b4a00fb6d3200cd9935eb24a72caa0cd2d13e65e4803d3c1`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:56 GMT
-ADD file:c181af735ab58b6416a189483880bcde8d26f2fea1c22b0b80f9ecac19e7e98e in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:17 GMT
+ADD file:205960a3d0706f085c18728490f06b5e7fd7a132ab6b07a95a4ed18f00e126f4 in / 
+# Thu, 09 Nov 2023 16:57:18 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:19 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:336aaf586ff3db4d8064b2e86cb8c4e7a1f381f07097539f592af1397a12ca29 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:9dd57547fdd66ceae2d983b4f0b5b8e57abc1051765602fc9156843d2db0ea6d in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:49:00 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:01 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:02 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
+ADD file:0b626ed84dc2ce267bf6b274208582760edaf2c022f3194ac8260153cafce9d1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:a85c30847dff015a401ef205805a5a71cc706ae037b798d7b69c0465edec50a7 in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:21 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:22 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:04 GMT
+# Thu, 09 Nov 2023 16:57:25 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:14:40 GMT
+# Fri, 17 Nov 2023 03:36:22 GMT
 ARG SWIFT_BRANCH=swift-5.8.1-release
-# Wed, 08 Nov 2023 01:14:40 GMT
+# Fri, 17 Nov 2023 03:36:22 GMT
 ARG SWIFT_VERSION=swift-5.8.1-RELEASE
-# Wed, 08 Nov 2023 01:14:40 GMT
+# Fri, 17 Nov 2023 03:36:23 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:14:40 GMT
+# Fri, 17 Nov 2023 03:36:23 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.8.1-release SWIFT_VERSION=swift-5.8.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:15:04 GMT
+# Fri, 17 Nov 2023 03:36:49 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1 $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/lib/swift/linux     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
 ```
 
 -	Layers:
-	-	`sha256:1f6f7d33bea4fdbb69d8e2cf0f7b6cc5316ca8c8bf475d7b2cf01142cd6db055`  
-		Last Modified: Tue, 07 Nov 2023 12:06:59 GMT  
-		Size: 76.5 MB (76503019 bytes)  
+	-	`sha256:19dd821b7a83bf1ad388914394494ea983308667df914c57a315c52e312eb2c4`  
+		Last Modified: Wed, 15 Nov 2023 11:22:52 GMT  
+		Size: 76.5 MB (76512185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:105e3b3ef34bfa59ddeafc1e267c550b846cb25c437452e05b0f105ee2a4868c`  
-		Last Modified: Wed, 08 Nov 2023 01:19:09 GMT  
-		Size: 85.7 MB (85737445 bytes)  
+	-	`sha256:4794b4b85fa0e5a9d80e252deb53312ac88b2be50642059464229661da7fd4fa`  
+		Last Modified: Fri, 17 Nov 2023 03:40:36 GMT  
+		Size: 85.8 MB (85753688 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `swift:5.8-slim`
@@ -9790,7 +9782,7 @@ RUN set -e;     ARCH_NAME="$(dpkg --print-architecture)";     url=;     case "${
 ## `swift:5.8.1-rhel-ubi9`
 
 ```console
-$ docker pull swift@sha256:d03869ca050649556928a28ad62057b55dea87f50f6368464bc1061b28d22550
+$ docker pull swift@sha256:bb43a02ca8a5154d66304790e2511e3e5079c48a0f6e20651057c0445c9fc3ba
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -9801,215 +9793,211 @@ $ docker pull swift@sha256:d03869ca050649556928a28ad62057b55dea87f50f6368464bc10
 ### `swift:5.8.1-rhel-ubi9` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:3a3390529159dddf33fda32eb928903e5a06b81c989bed1f1411f3456c25dd48
+$ docker pull swift@sha256:e2fe0578e2c5d816d9c7587e1449dcd48432c912816130c8475fe3c97894ebf5
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **758.1 MB (758128673 bytes)**  
+-	Total Size: **757.8 MB (757804408 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:431fcc4a9ff2c44c20a41540011703e9d2e1bff47e9fad8f85e96823a26d6aa0`
+-	Image ID: `sha256:a21b9a8eed3cf18f80982932782f2a4f0c47e72de85f1278ea09439c8770e883`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD file:ff958f237a7e10f155a495e636c5876a35f444c78fe174bce0b9d4e42ddb476d in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:51365bf81ffef571b9cae6537437d1cb9578bf45d8b6a353848d4bbc24583ace in / 
+# Thu, 09 Nov 2023 16:57:22 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:22 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:58 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:6ba531da9ca1a7e54bb1c018ed4817d0291616ab10c23bb268465a1b72b4a660 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:9e58e3b1f8d8a9b3d5a5e70e0182da2ba60d76e7b188b73769abc2b4ae323f89 in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:00 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:01 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
+ADD file:b21f5a973eb1a7e7cede8eb88bab4f034175bf01de661263540b4722655ec4b1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:25 GMT
+ADD file:81c5ce84fbc74763cd36dea9ef0064ee0c92125a77a579cfbb4a026beeb7be4f in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:25 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:26 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:27 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:03 GMT
+# Thu, 09 Nov 2023 16:57:29 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:31 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:32 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:18:59 GMT
+# Fri, 17 Nov 2023 04:17:53 GMT
 RUN yum -y install   git                 gcc-c++             libcurl-devel       libedit-devel       libuuid-devel       libxml2-devel       ncurses-devel       python3-devel       rsync               sqlite-devel        unzip               zip
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:21:08 GMT
+# Fri, 17 Nov 2023 04:19:55 GMT
 ARG SWIFT_BRANCH=swift-5.8.1-release
-# Wed, 08 Nov 2023 01:21:08 GMT
+# Fri, 17 Nov 2023 04:19:55 GMT
 ARG SWIFT_VERSION=swift-5.8.1-RELEASE
-# Wed, 08 Nov 2023 01:21:08 GMT
+# Fri, 17 Nov 2023 04:19:55 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:21:08 GMT
+# Fri, 17 Nov 2023 04:19:55 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.8.1-release SWIFT_VERSION=swift-5.8.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:21:47 GMT
+# Fri, 17 Nov 2023 04:20:37 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && echo $SWIFT_BIN_URL     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
-# Wed, 08 Nov 2023 01:21:53 GMT
+# Fri, 17 Nov 2023 04:20:43 GMT
 RUN swift --version
 ```
 
 -	Layers:
-	-	`sha256:4b36affe1d299102d9d4179738432b7c4c97fe634a59010fd9ecc1a447cb0eed`  
-		Last Modified: Tue, 07 Nov 2023 12:06:50 GMT  
-		Size: 78.8 MB (78830409 bytes)  
+	-	`sha256:b824f4b30c465e487e640bdc22e46bafd6983e4e0eabf30085cacf945c261160`  
+		Last Modified: Wed, 15 Nov 2023 11:22:54 GMT  
+		Size: 78.8 MB (78771519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e416dfadd7904055d74eef0cfdfb742aea14084b6e99f81aed7a956d6ad37a53`  
-		Last Modified: Wed, 08 Nov 2023 01:26:05 GMT  
-		Size: 122.0 MB (122043499 bytes)  
+	-	`sha256:9147eac6cae0e29431453d2a3a2886e28d88a1a9c6a377ff7e6caa3e989c1dd8`  
+		Last Modified: Fri, 17 Nov 2023 04:24:21 GMT  
+		Size: 121.8 MB (121778129 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a3fea9fcaabca647f40fc0fa30bc196d038ca2a3b22992125bdffabed671bf11`  
-		Last Modified: Wed, 08 Nov 2023 01:29:05 GMT  
-		Size: 557.3 MB (557254537 bytes)  
+	-	`sha256:d64446103e0e36f0618368e2955a8d9f26d8ce3b60aed2ee2202de0ba68e1fd9`  
+		Last Modified: Fri, 17 Nov 2023 04:27:20 GMT  
+		Size: 557.3 MB (557254534 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fef20c1333248924f512dc861eb68c65281659046168559126d89340e1506e6d`  
-		Last Modified: Wed, 08 Nov 2023 01:27:51 GMT  
-		Size: 228.0 B  
+	-	`sha256:be43ed12627459ded558df81d2506d4698ba397f9e1da25966dbf1d94a58c943`  
+		Last Modified: Fri, 17 Nov 2023 04:26:09 GMT  
+		Size: 226.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swift:5.8.1-rhel-ubi9` - linux; arm64 variant v8
 
 ```console
-$ docker pull swift@sha256:8388bba8d89efb40e88c5afa135b1c96090eeec1bc903898f2e77364d91620e8
+$ docker pull swift@sha256:2c24817207163f16690bba22c3273044bf90eaa504cf60b16d4de85d8072cb10
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **740.2 MB (740238400 bytes)**  
+-	Total Size: **740.0 MB (740005856 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:216037cf6c7c99a569363ae92f4f006bfa4c46c89cfd2bc43b833915093b594c`
+-	Image ID: `sha256:4ca62c0b450dc9494fcb945fff7f891699c1c9fa42dfe21a355cdad0279654bb`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:56 GMT
-ADD file:c181af735ab58b6416a189483880bcde8d26f2fea1c22b0b80f9ecac19e7e98e in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:17 GMT
+ADD file:205960a3d0706f085c18728490f06b5e7fd7a132ab6b07a95a4ed18f00e126f4 in / 
+# Thu, 09 Nov 2023 16:57:18 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:19 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:336aaf586ff3db4d8064b2e86cb8c4e7a1f381f07097539f592af1397a12ca29 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:9dd57547fdd66ceae2d983b4f0b5b8e57abc1051765602fc9156843d2db0ea6d in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:49:00 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:01 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:02 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
+ADD file:0b626ed84dc2ce267bf6b274208582760edaf2c022f3194ac8260153cafce9d1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:a85c30847dff015a401ef205805a5a71cc706ae037b798d7b69c0465edec50a7 in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:21 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:22 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:04 GMT
+# Thu, 09 Nov 2023 16:57:25 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:11:53 GMT
+# Fri, 17 Nov 2023 03:33:24 GMT
 RUN yum -y install   git                 gcc-c++             libcurl-devel       libedit-devel       libuuid-devel       libxml2-devel       ncurses-devel       python3-devel       rsync               sqlite-devel        unzip               zip
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:13:52 GMT
+# Fri, 17 Nov 2023 03:35:25 GMT
 ARG SWIFT_BRANCH=swift-5.8.1-release
-# Wed, 08 Nov 2023 01:13:52 GMT
+# Fri, 17 Nov 2023 03:35:25 GMT
 ARG SWIFT_VERSION=swift-5.8.1-RELEASE
-# Wed, 08 Nov 2023 01:13:52 GMT
+# Fri, 17 Nov 2023 03:35:25 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:13:52 GMT
+# Fri, 17 Nov 2023 03:35:25 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.8.1-release SWIFT_VERSION=swift-5.8.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:14:26 GMT
+# Fri, 17 Nov 2023 03:36:05 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && echo $SWIFT_BIN_URL     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
-# Wed, 08 Nov 2023 01:14:36 GMT
+# Fri, 17 Nov 2023 03:36:16 GMT
 RUN swift --version
 ```
 
 -	Layers:
-	-	`sha256:1f6f7d33bea4fdbb69d8e2cf0f7b6cc5316ca8c8bf475d7b2cf01142cd6db055`  
-		Last Modified: Tue, 07 Nov 2023 12:06:59 GMT  
-		Size: 76.5 MB (76503019 bytes)  
+	-	`sha256:19dd821b7a83bf1ad388914394494ea983308667df914c57a315c52e312eb2c4`  
+		Last Modified: Wed, 15 Nov 2023 11:22:52 GMT  
+		Size: 76.5 MB (76512185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a8f2f956b192503530fa8a70acf9dff1bc9c6c43ed565416b338042970f97f4`  
-		Last Modified: Wed, 08 Nov 2023 01:16:30 GMT  
-		Size: 116.0 MB (116019603 bytes)  
+	-	`sha256:70fc2b349bdc2939f2aecce639b6653edd36f9f850fdccef537fce3ef5d9db32`  
+		Last Modified: Fri, 17 Nov 2023 03:38:04 GMT  
+		Size: 115.8 MB (115777908 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a37bf10e3079e4aa58168ed47dc7bc37eb0470aa980bd2468b1680613efed84`  
-		Last Modified: Wed, 08 Nov 2023 01:18:51 GMT  
-		Size: 547.7 MB (547715550 bytes)  
+	-	`sha256:3048ef68e49e59756edb0a14e886025374c65c4251db5965736f3b4aff3d4bc5`  
+		Last Modified: Fri, 17 Nov 2023 03:40:19 GMT  
+		Size: 547.7 MB (547715533 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:046517e1c6dd16d83943a3781bd325d5d5aa611d309af598dcc27f615226de89`  
-		Last Modified: Wed, 08 Nov 2023 01:17:58 GMT  
-		Size: 228.0 B  
+	-	`sha256:93c184d7999c1113c2416f3a63a665984b8184ee07351208719e041974fbb3d4`  
+		Last Modified: Fri, 17 Nov 2023 03:39:26 GMT  
+		Size: 230.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `swift:5.8.1-rhel-ubi9-slim`
 
 ```console
-$ docker pull swift@sha256:7f21389393adb030b1c2888fb7961e9c33a4386499a1351f38609b565f157c2e
+$ docker pull swift@sha256:c1a8cded5d19927fce08aa0534e2da57a183e0ee3eace32d88184cd9b21d500f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -10020,185 +10008,181 @@ $ docker pull swift@sha256:7f21389393adb030b1c2888fb7961e9c33a4386499a1351f38609
 ### `swift:5.8.1-rhel-ubi9-slim` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:f0c61debf769e280c2741d75437963b8ca70673bb5c16444edee921aaaecef0c
+$ docker pull swift@sha256:8e1eb8a1b1674c2611ac10b3f236dfe5a828077335306d0775bb2055d01b4cf8
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **166.5 MB (166521827 bytes)**  
+-	Total Size: **166.5 MB (166467512 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:d7bf26130f701cc58a4235abe869367a7757ac86e6ab36925fd542669574da50`
+-	Image ID: `sha256:18a01d2375910af928f35f01385bc84103df2edf4020d0a194aaa7dbd41fff57`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD file:ff958f237a7e10f155a495e636c5876a35f444c78fe174bce0b9d4e42ddb476d in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:51365bf81ffef571b9cae6537437d1cb9578bf45d8b6a353848d4bbc24583ace in / 
+# Thu, 09 Nov 2023 16:57:22 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:22 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:58 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:6ba531da9ca1a7e54bb1c018ed4817d0291616ab10c23bb268465a1b72b4a660 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:9e58e3b1f8d8a9b3d5a5e70e0182da2ba60d76e7b188b73769abc2b4ae323f89 in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:00 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:01 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
+ADD file:b21f5a973eb1a7e7cede8eb88bab4f034175bf01de661263540b4722655ec4b1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:25 GMT
+ADD file:81c5ce84fbc74763cd36dea9ef0064ee0c92125a77a579cfbb4a026beeb7be4f in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:25 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:26 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:27 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:03 GMT
+# Thu, 09 Nov 2023 16:57:29 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:31 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:32 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:21:56 GMT
+# Fri, 17 Nov 2023 04:20:53 GMT
 ARG SWIFT_BRANCH=swift-5.8.1-release
-# Wed, 08 Nov 2023 01:21:57 GMT
+# Fri, 17 Nov 2023 04:20:53 GMT
 ARG SWIFT_VERSION=swift-5.8.1-RELEASE
-# Wed, 08 Nov 2023 01:21:57 GMT
+# Fri, 17 Nov 2023 04:20:54 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:21:57 GMT
+# Fri, 17 Nov 2023 04:20:54 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.8.1-release SWIFT_VERSION=swift-5.8.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:22:24 GMT
+# Fri, 17 Nov 2023 04:21:23 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1 $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/lib/swift/linux     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
 ```
 
 -	Layers:
-	-	`sha256:4b36affe1d299102d9d4179738432b7c4c97fe634a59010fd9ecc1a447cb0eed`  
-		Last Modified: Tue, 07 Nov 2023 12:06:50 GMT  
-		Size: 78.8 MB (78830409 bytes)  
+	-	`sha256:b824f4b30c465e487e640bdc22e46bafd6983e4e0eabf30085cacf945c261160`  
+		Last Modified: Wed, 15 Nov 2023 11:22:54 GMT  
+		Size: 78.8 MB (78771519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7b49667d03be1ac0f795811c7b7660014cadb7079a6755460e5ba070b90441e5`  
-		Last Modified: Wed, 08 Nov 2023 01:29:27 GMT  
-		Size: 87.7 MB (87691418 bytes)  
+	-	`sha256:9c791e503026272ea7ee3f254c72f29c274c0a140495ae3e81a4602d158abab0`  
+		Last Modified: Fri, 17 Nov 2023 04:27:42 GMT  
+		Size: 87.7 MB (87695993 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swift:5.8.1-rhel-ubi9-slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull swift@sha256:40efdc0de75f0fe910d819262351b0222c6a7ada08fd66b61a83d1de8575d1c1
+$ docker pull swift@sha256:8f4521bd7c08f103dbfe88f348083639d01d4d7c145ac947263091a653c47a24
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **162.2 MB (162240464 bytes)**  
+-	Total Size: **162.3 MB (162265873 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b55a1ee35e7b3c2d176ec1d178e1b0de59e91a128a69f49ca5619bb4dea49858`
+-	Image ID: `sha256:a849ece80d85a431b4a00fb6d3200cd9935eb24a72caa0cd2d13e65e4803d3c1`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:56 GMT
-ADD file:c181af735ab58b6416a189483880bcde8d26f2fea1c22b0b80f9ecac19e7e98e in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:17 GMT
+ADD file:205960a3d0706f085c18728490f06b5e7fd7a132ab6b07a95a4ed18f00e126f4 in / 
+# Thu, 09 Nov 2023 16:57:18 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:19 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:336aaf586ff3db4d8064b2e86cb8c4e7a1f381f07097539f592af1397a12ca29 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:9dd57547fdd66ceae2d983b4f0b5b8e57abc1051765602fc9156843d2db0ea6d in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:49:00 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:01 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:02 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
+ADD file:0b626ed84dc2ce267bf6b274208582760edaf2c022f3194ac8260153cafce9d1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:a85c30847dff015a401ef205805a5a71cc706ae037b798d7b69c0465edec50a7 in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:21 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:22 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:04 GMT
+# Thu, 09 Nov 2023 16:57:25 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:14:40 GMT
+# Fri, 17 Nov 2023 03:36:22 GMT
 ARG SWIFT_BRANCH=swift-5.8.1-release
-# Wed, 08 Nov 2023 01:14:40 GMT
+# Fri, 17 Nov 2023 03:36:22 GMT
 ARG SWIFT_VERSION=swift-5.8.1-RELEASE
-# Wed, 08 Nov 2023 01:14:40 GMT
+# Fri, 17 Nov 2023 03:36:23 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:14:40 GMT
+# Fri, 17 Nov 2023 03:36:23 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.8.1-release SWIFT_VERSION=swift-5.8.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:15:04 GMT
+# Fri, 17 Nov 2023 03:36:49 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1 $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/lib/swift/linux     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
 ```
 
 -	Layers:
-	-	`sha256:1f6f7d33bea4fdbb69d8e2cf0f7b6cc5316ca8c8bf475d7b2cf01142cd6db055`  
-		Last Modified: Tue, 07 Nov 2023 12:06:59 GMT  
-		Size: 76.5 MB (76503019 bytes)  
+	-	`sha256:19dd821b7a83bf1ad388914394494ea983308667df914c57a315c52e312eb2c4`  
+		Last Modified: Wed, 15 Nov 2023 11:22:52 GMT  
+		Size: 76.5 MB (76512185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:105e3b3ef34bfa59ddeafc1e267c550b846cb25c437452e05b0f105ee2a4868c`  
-		Last Modified: Wed, 08 Nov 2023 01:19:09 GMT  
-		Size: 85.7 MB (85737445 bytes)  
+	-	`sha256:4794b4b85fa0e5a9d80e252deb53312ac88b2be50642059464229661da7fd4fa`  
+		Last Modified: Fri, 17 Nov 2023 03:40:36 GMT  
+		Size: 85.8 MB (85753688 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `swift:5.8.1-slim`
@@ -11444,7 +11428,7 @@ RUN set -e;     ARCH_NAME="$(dpkg --print-architecture)";     url=;     case "${
 ## `swift:5.9-rhel-ubi9`
 
 ```console
-$ docker pull swift@sha256:b7782b19abb6957061fc9f7c15af34b1c2dd4890a34b4c55052155eeb07cc720
+$ docker pull swift@sha256:55993878f31556fe8ba269a3e9c8bc143b91a824d36583912c8c716b9ab1444e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11455,215 +11439,211 @@ $ docker pull swift@sha256:b7782b19abb6957061fc9f7c15af34b1c2dd4890a34b4c5505215
 ### `swift:5.9-rhel-ubi9` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:333e4bb565b5cd80759db27f71cfa223671b76c35fc4aad38dfa3ed7a286d7a0
+$ docker pull swift@sha256:c9ed098fffb2dc7644d8d87131f6362159d1999829d43b00247f1f6c4dc3fb4d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **808.0 MB (807997857 bytes)**  
+-	Total Size: **807.7 MB (807673554 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8315b6f2e7a0abfe9c34e31211fa77d0408258892f1f4f4e08eda27646efa2c8`
+-	Image ID: `sha256:b77d062106a6e7bfbe7bff096c1c84bfb00828b85469dc460dcc2d259e9e47dd`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD file:ff958f237a7e10f155a495e636c5876a35f444c78fe174bce0b9d4e42ddb476d in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:51365bf81ffef571b9cae6537437d1cb9578bf45d8b6a353848d4bbc24583ace in / 
+# Thu, 09 Nov 2023 16:57:22 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:22 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:58 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:6ba531da9ca1a7e54bb1c018ed4817d0291616ab10c23bb268465a1b72b4a660 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:9e58e3b1f8d8a9b3d5a5e70e0182da2ba60d76e7b188b73769abc2b4ae323f89 in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:00 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:01 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
+ADD file:b21f5a973eb1a7e7cede8eb88bab4f034175bf01de661263540b4722655ec4b1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:25 GMT
+ADD file:81c5ce84fbc74763cd36dea9ef0064ee0c92125a77a579cfbb4a026beeb7be4f in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:25 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:26 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:27 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:03 GMT
+# Thu, 09 Nov 2023 16:57:29 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:31 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:32 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:18:59 GMT
+# Fri, 17 Nov 2023 04:17:53 GMT
 RUN yum -y install   git                 gcc-c++             libcurl-devel       libedit-devel       libuuid-devel       libxml2-devel       ncurses-devel       python3-devel       rsync               sqlite-devel        unzip               zip
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:55 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:19:48 GMT
+# Fri, 17 Nov 2023 04:18:41 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && echo $SWIFT_BIN_URL     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
-# Wed, 08 Nov 2023 01:19:54 GMT
+# Fri, 17 Nov 2023 04:18:47 GMT
 RUN swift --version
 ```
 
 -	Layers:
-	-	`sha256:4b36affe1d299102d9d4179738432b7c4c97fe634a59010fd9ecc1a447cb0eed`  
-		Last Modified: Tue, 07 Nov 2023 12:06:50 GMT  
-		Size: 78.8 MB (78830409 bytes)  
+	-	`sha256:b824f4b30c465e487e640bdc22e46bafd6983e4e0eabf30085cacf945c261160`  
+		Last Modified: Wed, 15 Nov 2023 11:22:54 GMT  
+		Size: 78.8 MB (78771519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e416dfadd7904055d74eef0cfdfb742aea14084b6e99f81aed7a956d6ad37a53`  
-		Last Modified: Wed, 08 Nov 2023 01:26:05 GMT  
-		Size: 122.0 MB (122043499 bytes)  
+	-	`sha256:9147eac6cae0e29431453d2a3a2886e28d88a1a9c6a377ff7e6caa3e989c1dd8`  
+		Last Modified: Fri, 17 Nov 2023 04:24:21 GMT  
+		Size: 121.8 MB (121778129 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:68dc89fb39a1411990c55c9cbc31b024dd227be68e2a263f377a7851828338eb`  
-		Last Modified: Wed, 08 Nov 2023 01:27:11 GMT  
-		Size: 607.1 MB (607123749 bytes)  
+	-	`sha256:37c00a38331bb8aacf017dfcb70e3bf66959b073ba12dc25ac16163f8dfcf5fe`  
+		Last Modified: Fri, 17 Nov 2023 04:25:27 GMT  
+		Size: 607.1 MB (607123705 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd56ccd3201c6c13e89ea8354f0f2effaa3eeb817939d99ca583f97f8f1a7e9f`  
-		Last Modified: Wed, 08 Nov 2023 01:25:49 GMT  
-		Size: 200.0 B  
+	-	`sha256:33a2379332fa540892b5d65b28fdb6ad1af0f52d639b4c94c8a50b2a1d64ac2f`  
+		Last Modified: Fri, 17 Nov 2023 04:24:06 GMT  
+		Size: 201.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swift:5.9-rhel-ubi9` - linux; arm64 variant v8
 
 ```console
-$ docker pull swift@sha256:3d70c322ae03ac3b5a01a08621fe1f16b30a736346f1d901ce005a8a8f3535b0
+$ docker pull swift@sha256:c2607ff918e0eb34baf960db2fc73c6cba913a9a60c5753ab040f46816a905d5
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **794.2 MB (794225807 bytes)**  
+-	Total Size: **794.0 MB (793993138 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1261add5e7114be004ab377294a510a486ed441bda6318bf03c4cbfe77d0bbdb`
+-	Image ID: `sha256:8ca7dc688ae5931b72d5f6493809b180164f4697c704371bf625942f796389e1`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:56 GMT
-ADD file:c181af735ab58b6416a189483880bcde8d26f2fea1c22b0b80f9ecac19e7e98e in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:17 GMT
+ADD file:205960a3d0706f085c18728490f06b5e7fd7a132ab6b07a95a4ed18f00e126f4 in / 
+# Thu, 09 Nov 2023 16:57:18 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:19 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:336aaf586ff3db4d8064b2e86cb8c4e7a1f381f07097539f592af1397a12ca29 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:9dd57547fdd66ceae2d983b4f0b5b8e57abc1051765602fc9156843d2db0ea6d in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:49:00 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:01 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:02 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
+ADD file:0b626ed84dc2ce267bf6b274208582760edaf2c022f3194ac8260153cafce9d1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:a85c30847dff015a401ef205805a5a71cc706ae037b798d7b69c0465edec50a7 in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:21 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:22 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:04 GMT
+# Thu, 09 Nov 2023 16:57:25 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:11:53 GMT
+# Fri, 17 Nov 2023 03:33:24 GMT
 RUN yum -y install   git                 gcc-c++             libcurl-devel       libedit-devel       libuuid-devel       libxml2-devel       ncurses-devel       python3-devel       rsync               sqlite-devel        unzip               zip
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:11:56 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:11:56 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:12:38 GMT
+# Fri, 17 Nov 2023 03:34:11 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && echo $SWIFT_BIN_URL     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
-# Wed, 08 Nov 2023 01:12:50 GMT
+# Fri, 17 Nov 2023 03:34:23 GMT
 RUN swift --version
 ```
 
 -	Layers:
-	-	`sha256:1f6f7d33bea4fdbb69d8e2cf0f7b6cc5316ca8c8bf475d7b2cf01142cd6db055`  
-		Last Modified: Tue, 07 Nov 2023 12:06:59 GMT  
-		Size: 76.5 MB (76503019 bytes)  
+	-	`sha256:19dd821b7a83bf1ad388914394494ea983308667df914c57a315c52e312eb2c4`  
+		Last Modified: Wed, 15 Nov 2023 11:22:52 GMT  
+		Size: 76.5 MB (76512185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a8f2f956b192503530fa8a70acf9dff1bc9c6c43ed565416b338042970f97f4`  
-		Last Modified: Wed, 08 Nov 2023 01:16:30 GMT  
-		Size: 116.0 MB (116019603 bytes)  
+	-	`sha256:70fc2b349bdc2939f2aecce639b6653edd36f9f850fdccef537fce3ef5d9db32`  
+		Last Modified: Fri, 17 Nov 2023 03:38:04 GMT  
+		Size: 115.8 MB (115777908 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:430f833f686fb6685f27a57f476f11a21dd78795ae501ab50dc68f7c12b1bb40`  
-		Last Modified: Wed, 08 Nov 2023 01:17:19 GMT  
-		Size: 601.7 MB (601702985 bytes)  
+	-	`sha256:88148505798541ea5c506304e406f4be51fb6b83b9c3b11149acacd8df0209ef`  
+		Last Modified: Fri, 17 Nov 2023 03:38:54 GMT  
+		Size: 601.7 MB (601702845 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5079b727514301772600734889503e287aeefb56ccfd50d243f27f2db423244`  
-		Last Modified: Wed, 08 Nov 2023 01:16:18 GMT  
+	-	`sha256:3f961a494086fe6ed78a9034e03cbfe314c899ce82e3c588e34d2c2e9d461298`  
+		Last Modified: Fri, 17 Nov 2023 03:37:53 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `swift:5.9-rhel-ubi9-slim`
 
 ```console
-$ docker pull swift@sha256:9918007d50335f18bc03784b0024c87de736bed42691be37305534b4892e5885
+$ docker pull swift@sha256:d5065cc9203571c1737a569cf02beeaf4fa0ad81418634f2656dcff07da54ad6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -11674,185 +11654,181 @@ $ docker pull swift@sha256:9918007d50335f18bc03784b0024c87de736bed42691be3730553
 ### `swift:5.9-rhel-ubi9-slim` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:fe68f1cf92370fa2346d2ea9d075f764805660d3a98f30309d05e4764352475c
+$ docker pull swift@sha256:13bfa00696eadee0259e12dc7d19bc3f34782537add9692b0c0829523492b980
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **124.3 MB (124250747 bytes)**  
+-	Total Size: **124.2 MB (124196369 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:02b83a0556306346472790346e0faa4640da81d94677a63e5686b68e38f3fb3f`
+-	Image ID: `sha256:a89380e864314da35932cd802f79f368f26c8917ad65e0895641d0a82489e95f`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD file:ff958f237a7e10f155a495e636c5876a35f444c78fe174bce0b9d4e42ddb476d in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:51365bf81ffef571b9cae6537437d1cb9578bf45d8b6a353848d4bbc24583ace in / 
+# Thu, 09 Nov 2023 16:57:22 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:22 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:58 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:6ba531da9ca1a7e54bb1c018ed4817d0291616ab10c23bb268465a1b72b4a660 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:9e58e3b1f8d8a9b3d5a5e70e0182da2ba60d76e7b188b73769abc2b4ae323f89 in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:00 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:01 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
+ADD file:b21f5a973eb1a7e7cede8eb88bab4f034175bf01de661263540b4722655ec4b1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:25 GMT
+ADD file:81c5ce84fbc74763cd36dea9ef0064ee0c92125a77a579cfbb4a026beeb7be4f in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:25 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:26 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:27 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:03 GMT
+# Thu, 09 Nov 2023 16:57:29 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:31 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:32 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:20:42 GMT
+# Fri, 17 Nov 2023 04:19:30 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/lib/swift/linux         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/libexec/swift/linux     && chmod -R o+r /usr/lib/swift /usr/libexec/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
 ```
 
 -	Layers:
-	-	`sha256:4b36affe1d299102d9d4179738432b7c4c97fe634a59010fd9ecc1a447cb0eed`  
-		Last Modified: Tue, 07 Nov 2023 12:06:50 GMT  
-		Size: 78.8 MB (78830409 bytes)  
+	-	`sha256:b824f4b30c465e487e640bdc22e46bafd6983e4e0eabf30085cacf945c261160`  
+		Last Modified: Wed, 15 Nov 2023 11:22:54 GMT  
+		Size: 78.8 MB (78771519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5bf0170c67d77ccac035fd92aa0a48a2d413069a066cfca867cbb01348c8b6d`  
-		Last Modified: Wed, 08 Nov 2023 01:27:31 GMT  
-		Size: 45.4 MB (45420338 bytes)  
+	-	`sha256:e3ed06bfc2ad70af3156f20c64924b9bffbf8045b9e5ecb209d5f24e468b796e`  
+		Last Modified: Fri, 17 Nov 2023 04:25:49 GMT  
+		Size: 45.4 MB (45424850 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swift:5.9-rhel-ubi9-slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull swift@sha256:c3bc3e99fe54673983be46b5061ec25dcca84e0aaf2551bc2e6e131d528b4835
+$ docker pull swift@sha256:6108bdff22f52580ac6a463db50aa98066d645c20a00c4b751ac222471963bd1
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **120.5 MB (120504429 bytes)**  
+-	Total Size: **120.5 MB (120530197 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5670d72184c3ab1c711ed2d82cac56db7ddf47da8ba457b1649fc20d5170adb5`
+-	Image ID: `sha256:f361dc54b5a95b46537c29a3f94f75ad0b3e2b373a18f71d072e043a5409ccce`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:56 GMT
-ADD file:c181af735ab58b6416a189483880bcde8d26f2fea1c22b0b80f9ecac19e7e98e in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:17 GMT
+ADD file:205960a3d0706f085c18728490f06b5e7fd7a132ab6b07a95a4ed18f00e126f4 in / 
+# Thu, 09 Nov 2023 16:57:18 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:19 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:336aaf586ff3db4d8064b2e86cb8c4e7a1f381f07097539f592af1397a12ca29 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:9dd57547fdd66ceae2d983b4f0b5b8e57abc1051765602fc9156843d2db0ea6d in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:49:00 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:01 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:02 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
+ADD file:0b626ed84dc2ce267bf6b274208582760edaf2c022f3194ac8260153cafce9d1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:a85c30847dff015a401ef205805a5a71cc706ae037b798d7b69c0465edec50a7 in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:21 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:22 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:04 GMT
+# Thu, 09 Nov 2023 16:57:25 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:29 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:29 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:29 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:13:35 GMT
+# Fri, 17 Nov 2023 03:35:08 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/lib/swift/linux         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/libexec/swift/linux     && chmod -R o+r /usr/lib/swift /usr/libexec/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
 ```
 
 -	Layers:
-	-	`sha256:1f6f7d33bea4fdbb69d8e2cf0f7b6cc5316ca8c8bf475d7b2cf01142cd6db055`  
-		Last Modified: Tue, 07 Nov 2023 12:06:59 GMT  
-		Size: 76.5 MB (76503019 bytes)  
+	-	`sha256:19dd821b7a83bf1ad388914394494ea983308667df914c57a315c52e312eb2c4`  
+		Last Modified: Wed, 15 Nov 2023 11:22:52 GMT  
+		Size: 76.5 MB (76512185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9de5506e2e7ec12a9e41023fd865c5966595b075690a1c495a695d0a86255da`  
-		Last Modified: Wed, 08 Nov 2023 01:17:36 GMT  
-		Size: 44.0 MB (44001410 bytes)  
+	-	`sha256:faee92efc222c26baee31fa4cffd24f2c03387d891681337afa54eeffb4bc87a`  
+		Last Modified: Fri, 17 Nov 2023 03:39:10 GMT  
+		Size: 44.0 MB (44018012 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `swift:5.9-slim`
@@ -13107,7 +13083,7 @@ RUN set -e;     ARCH_NAME="$(dpkg --print-architecture)";     url=;     case "${
 ## `swift:5.9.1-rhel-ubi9`
 
 ```console
-$ docker pull swift@sha256:b7782b19abb6957061fc9f7c15af34b1c2dd4890a34b4c55052155eeb07cc720
+$ docker pull swift@sha256:55993878f31556fe8ba269a3e9c8bc143b91a824d36583912c8c716b9ab1444e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13118,215 +13094,211 @@ $ docker pull swift@sha256:b7782b19abb6957061fc9f7c15af34b1c2dd4890a34b4c5505215
 ### `swift:5.9.1-rhel-ubi9` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:333e4bb565b5cd80759db27f71cfa223671b76c35fc4aad38dfa3ed7a286d7a0
+$ docker pull swift@sha256:c9ed098fffb2dc7644d8d87131f6362159d1999829d43b00247f1f6c4dc3fb4d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **808.0 MB (807997857 bytes)**  
+-	Total Size: **807.7 MB (807673554 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8315b6f2e7a0abfe9c34e31211fa77d0408258892f1f4f4e08eda27646efa2c8`
+-	Image ID: `sha256:b77d062106a6e7bfbe7bff096c1c84bfb00828b85469dc460dcc2d259e9e47dd`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD file:ff958f237a7e10f155a495e636c5876a35f444c78fe174bce0b9d4e42ddb476d in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:51365bf81ffef571b9cae6537437d1cb9578bf45d8b6a353848d4bbc24583ace in / 
+# Thu, 09 Nov 2023 16:57:22 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:22 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:58 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:6ba531da9ca1a7e54bb1c018ed4817d0291616ab10c23bb268465a1b72b4a660 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:9e58e3b1f8d8a9b3d5a5e70e0182da2ba60d76e7b188b73769abc2b4ae323f89 in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:00 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:01 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
+ADD file:b21f5a973eb1a7e7cede8eb88bab4f034175bf01de661263540b4722655ec4b1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:25 GMT
+ADD file:81c5ce84fbc74763cd36dea9ef0064ee0c92125a77a579cfbb4a026beeb7be4f in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:25 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:26 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:27 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:03 GMT
+# Thu, 09 Nov 2023 16:57:29 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:31 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:32 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:18:59 GMT
+# Fri, 17 Nov 2023 04:17:53 GMT
 RUN yum -y install   git                 gcc-c++             libcurl-devel       libedit-devel       libuuid-devel       libxml2-devel       ncurses-devel       python3-devel       rsync               sqlite-devel        unzip               zip
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:55 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:19:48 GMT
+# Fri, 17 Nov 2023 04:18:41 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && echo $SWIFT_BIN_URL     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
-# Wed, 08 Nov 2023 01:19:54 GMT
+# Fri, 17 Nov 2023 04:18:47 GMT
 RUN swift --version
 ```
 
 -	Layers:
-	-	`sha256:4b36affe1d299102d9d4179738432b7c4c97fe634a59010fd9ecc1a447cb0eed`  
-		Last Modified: Tue, 07 Nov 2023 12:06:50 GMT  
-		Size: 78.8 MB (78830409 bytes)  
+	-	`sha256:b824f4b30c465e487e640bdc22e46bafd6983e4e0eabf30085cacf945c261160`  
+		Last Modified: Wed, 15 Nov 2023 11:22:54 GMT  
+		Size: 78.8 MB (78771519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e416dfadd7904055d74eef0cfdfb742aea14084b6e99f81aed7a956d6ad37a53`  
-		Last Modified: Wed, 08 Nov 2023 01:26:05 GMT  
-		Size: 122.0 MB (122043499 bytes)  
+	-	`sha256:9147eac6cae0e29431453d2a3a2886e28d88a1a9c6a377ff7e6caa3e989c1dd8`  
+		Last Modified: Fri, 17 Nov 2023 04:24:21 GMT  
+		Size: 121.8 MB (121778129 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:68dc89fb39a1411990c55c9cbc31b024dd227be68e2a263f377a7851828338eb`  
-		Last Modified: Wed, 08 Nov 2023 01:27:11 GMT  
-		Size: 607.1 MB (607123749 bytes)  
+	-	`sha256:37c00a38331bb8aacf017dfcb70e3bf66959b073ba12dc25ac16163f8dfcf5fe`  
+		Last Modified: Fri, 17 Nov 2023 04:25:27 GMT  
+		Size: 607.1 MB (607123705 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd56ccd3201c6c13e89ea8354f0f2effaa3eeb817939d99ca583f97f8f1a7e9f`  
-		Last Modified: Wed, 08 Nov 2023 01:25:49 GMT  
-		Size: 200.0 B  
+	-	`sha256:33a2379332fa540892b5d65b28fdb6ad1af0f52d639b4c94c8a50b2a1d64ac2f`  
+		Last Modified: Fri, 17 Nov 2023 04:24:06 GMT  
+		Size: 201.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swift:5.9.1-rhel-ubi9` - linux; arm64 variant v8
 
 ```console
-$ docker pull swift@sha256:3d70c322ae03ac3b5a01a08621fe1f16b30a736346f1d901ce005a8a8f3535b0
+$ docker pull swift@sha256:c2607ff918e0eb34baf960db2fc73c6cba913a9a60c5753ab040f46816a905d5
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **794.2 MB (794225807 bytes)**  
+-	Total Size: **794.0 MB (793993138 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1261add5e7114be004ab377294a510a486ed441bda6318bf03c4cbfe77d0bbdb`
+-	Image ID: `sha256:8ca7dc688ae5931b72d5f6493809b180164f4697c704371bf625942f796389e1`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:56 GMT
-ADD file:c181af735ab58b6416a189483880bcde8d26f2fea1c22b0b80f9ecac19e7e98e in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:17 GMT
+ADD file:205960a3d0706f085c18728490f06b5e7fd7a132ab6b07a95a4ed18f00e126f4 in / 
+# Thu, 09 Nov 2023 16:57:18 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:19 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:336aaf586ff3db4d8064b2e86cb8c4e7a1f381f07097539f592af1397a12ca29 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:9dd57547fdd66ceae2d983b4f0b5b8e57abc1051765602fc9156843d2db0ea6d in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:49:00 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:01 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:02 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
+ADD file:0b626ed84dc2ce267bf6b274208582760edaf2c022f3194ac8260153cafce9d1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:a85c30847dff015a401ef205805a5a71cc706ae037b798d7b69c0465edec50a7 in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:21 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:22 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:04 GMT
+# Thu, 09 Nov 2023 16:57:25 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:11:53 GMT
+# Fri, 17 Nov 2023 03:33:24 GMT
 RUN yum -y install   git                 gcc-c++             libcurl-devel       libedit-devel       libuuid-devel       libxml2-devel       ncurses-devel       python3-devel       rsync               sqlite-devel        unzip               zip
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:11:56 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:11:56 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:12:38 GMT
+# Fri, 17 Nov 2023 03:34:11 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && echo $SWIFT_BIN_URL     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
-# Wed, 08 Nov 2023 01:12:50 GMT
+# Fri, 17 Nov 2023 03:34:23 GMT
 RUN swift --version
 ```
 
 -	Layers:
-	-	`sha256:1f6f7d33bea4fdbb69d8e2cf0f7b6cc5316ca8c8bf475d7b2cf01142cd6db055`  
-		Last Modified: Tue, 07 Nov 2023 12:06:59 GMT  
-		Size: 76.5 MB (76503019 bytes)  
+	-	`sha256:19dd821b7a83bf1ad388914394494ea983308667df914c57a315c52e312eb2c4`  
+		Last Modified: Wed, 15 Nov 2023 11:22:52 GMT  
+		Size: 76.5 MB (76512185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a8f2f956b192503530fa8a70acf9dff1bc9c6c43ed565416b338042970f97f4`  
-		Last Modified: Wed, 08 Nov 2023 01:16:30 GMT  
-		Size: 116.0 MB (116019603 bytes)  
+	-	`sha256:70fc2b349bdc2939f2aecce639b6653edd36f9f850fdccef537fce3ef5d9db32`  
+		Last Modified: Fri, 17 Nov 2023 03:38:04 GMT  
+		Size: 115.8 MB (115777908 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:430f833f686fb6685f27a57f476f11a21dd78795ae501ab50dc68f7c12b1bb40`  
-		Last Modified: Wed, 08 Nov 2023 01:17:19 GMT  
-		Size: 601.7 MB (601702985 bytes)  
+	-	`sha256:88148505798541ea5c506304e406f4be51fb6b83b9c3b11149acacd8df0209ef`  
+		Last Modified: Fri, 17 Nov 2023 03:38:54 GMT  
+		Size: 601.7 MB (601702845 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5079b727514301772600734889503e287aeefb56ccfd50d243f27f2db423244`  
-		Last Modified: Wed, 08 Nov 2023 01:16:18 GMT  
+	-	`sha256:3f961a494086fe6ed78a9034e03cbfe314c899ce82e3c588e34d2c2e9d461298`  
+		Last Modified: Fri, 17 Nov 2023 03:37:53 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `swift:5.9.1-rhel-ubi9-slim`
 
 ```console
-$ docker pull swift@sha256:9918007d50335f18bc03784b0024c87de736bed42691be37305534b4892e5885
+$ docker pull swift@sha256:d5065cc9203571c1737a569cf02beeaf4fa0ad81418634f2656dcff07da54ad6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -13337,185 +13309,181 @@ $ docker pull swift@sha256:9918007d50335f18bc03784b0024c87de736bed42691be3730553
 ### `swift:5.9.1-rhel-ubi9-slim` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:fe68f1cf92370fa2346d2ea9d075f764805660d3a98f30309d05e4764352475c
+$ docker pull swift@sha256:13bfa00696eadee0259e12dc7d19bc3f34782537add9692b0c0829523492b980
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **124.3 MB (124250747 bytes)**  
+-	Total Size: **124.2 MB (124196369 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:02b83a0556306346472790346e0faa4640da81d94677a63e5686b68e38f3fb3f`
+-	Image ID: `sha256:a89380e864314da35932cd802f79f368f26c8917ad65e0895641d0a82489e95f`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD file:ff958f237a7e10f155a495e636c5876a35f444c78fe174bce0b9d4e42ddb476d in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:51365bf81ffef571b9cae6537437d1cb9578bf45d8b6a353848d4bbc24583ace in / 
+# Thu, 09 Nov 2023 16:57:22 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:22 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:58 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:6ba531da9ca1a7e54bb1c018ed4817d0291616ab10c23bb268465a1b72b4a660 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:9e58e3b1f8d8a9b3d5a5e70e0182da2ba60d76e7b188b73769abc2b4ae323f89 in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:00 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:01 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
+ADD file:b21f5a973eb1a7e7cede8eb88bab4f034175bf01de661263540b4722655ec4b1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:25 GMT
+ADD file:81c5ce84fbc74763cd36dea9ef0064ee0c92125a77a579cfbb4a026beeb7be4f in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:25 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:26 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:27 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:03 GMT
+# Thu, 09 Nov 2023 16:57:29 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:31 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:32 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:20:42 GMT
+# Fri, 17 Nov 2023 04:19:30 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/lib/swift/linux         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/libexec/swift/linux     && chmod -R o+r /usr/lib/swift /usr/libexec/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
 ```
 
 -	Layers:
-	-	`sha256:4b36affe1d299102d9d4179738432b7c4c97fe634a59010fd9ecc1a447cb0eed`  
-		Last Modified: Tue, 07 Nov 2023 12:06:50 GMT  
-		Size: 78.8 MB (78830409 bytes)  
+	-	`sha256:b824f4b30c465e487e640bdc22e46bafd6983e4e0eabf30085cacf945c261160`  
+		Last Modified: Wed, 15 Nov 2023 11:22:54 GMT  
+		Size: 78.8 MB (78771519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5bf0170c67d77ccac035fd92aa0a48a2d413069a066cfca867cbb01348c8b6d`  
-		Last Modified: Wed, 08 Nov 2023 01:27:31 GMT  
-		Size: 45.4 MB (45420338 bytes)  
+	-	`sha256:e3ed06bfc2ad70af3156f20c64924b9bffbf8045b9e5ecb209d5f24e468b796e`  
+		Last Modified: Fri, 17 Nov 2023 04:25:49 GMT  
+		Size: 45.4 MB (45424850 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swift:5.9.1-rhel-ubi9-slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull swift@sha256:c3bc3e99fe54673983be46b5061ec25dcca84e0aaf2551bc2e6e131d528b4835
+$ docker pull swift@sha256:6108bdff22f52580ac6a463db50aa98066d645c20a00c4b751ac222471963bd1
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **120.5 MB (120504429 bytes)**  
+-	Total Size: **120.5 MB (120530197 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5670d72184c3ab1c711ed2d82cac56db7ddf47da8ba457b1649fc20d5170adb5`
+-	Image ID: `sha256:f361dc54b5a95b46537c29a3f94f75ad0b3e2b373a18f71d072e043a5409ccce`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:56 GMT
-ADD file:c181af735ab58b6416a189483880bcde8d26f2fea1c22b0b80f9ecac19e7e98e in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:17 GMT
+ADD file:205960a3d0706f085c18728490f06b5e7fd7a132ab6b07a95a4ed18f00e126f4 in / 
+# Thu, 09 Nov 2023 16:57:18 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:19 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:336aaf586ff3db4d8064b2e86cb8c4e7a1f381f07097539f592af1397a12ca29 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:9dd57547fdd66ceae2d983b4f0b5b8e57abc1051765602fc9156843d2db0ea6d in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:49:00 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:01 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:02 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
+ADD file:0b626ed84dc2ce267bf6b274208582760edaf2c022f3194ac8260153cafce9d1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:a85c30847dff015a401ef205805a5a71cc706ae037b798d7b69c0465edec50a7 in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:21 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:22 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:04 GMT
+# Thu, 09 Nov 2023 16:57:25 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:29 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:29 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:29 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:13:35 GMT
+# Fri, 17 Nov 2023 03:35:08 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/lib/swift/linux         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/libexec/swift/linux     && chmod -R o+r /usr/lib/swift /usr/libexec/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
 ```
 
 -	Layers:
-	-	`sha256:1f6f7d33bea4fdbb69d8e2cf0f7b6cc5316ca8c8bf475d7b2cf01142cd6db055`  
-		Last Modified: Tue, 07 Nov 2023 12:06:59 GMT  
-		Size: 76.5 MB (76503019 bytes)  
+	-	`sha256:19dd821b7a83bf1ad388914394494ea983308667df914c57a315c52e312eb2c4`  
+		Last Modified: Wed, 15 Nov 2023 11:22:52 GMT  
+		Size: 76.5 MB (76512185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9de5506e2e7ec12a9e41023fd865c5966595b075690a1c495a695d0a86255da`  
-		Last Modified: Wed, 08 Nov 2023 01:17:36 GMT  
-		Size: 44.0 MB (44001410 bytes)  
+	-	`sha256:faee92efc222c26baee31fa4cffd24f2c03387d891681337afa54eeffb4bc87a`  
+		Last Modified: Fri, 17 Nov 2023 03:39:10 GMT  
+		Size: 44.0 MB (44018012 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `swift:5.9.1-slim`
@@ -14770,7 +14738,7 @@ RUN swift --version
 ## `swift:rhel-ubi9`
 
 ```console
-$ docker pull swift@sha256:b7782b19abb6957061fc9f7c15af34b1c2dd4890a34b4c55052155eeb07cc720
+$ docker pull swift@sha256:55993878f31556fe8ba269a3e9c8bc143b91a824d36583912c8c716b9ab1444e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -14781,215 +14749,211 @@ $ docker pull swift@sha256:b7782b19abb6957061fc9f7c15af34b1c2dd4890a34b4c5505215
 ### `swift:rhel-ubi9` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:333e4bb565b5cd80759db27f71cfa223671b76c35fc4aad38dfa3ed7a286d7a0
+$ docker pull swift@sha256:c9ed098fffb2dc7644d8d87131f6362159d1999829d43b00247f1f6c4dc3fb4d
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **808.0 MB (807997857 bytes)**  
+-	Total Size: **807.7 MB (807673554 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:8315b6f2e7a0abfe9c34e31211fa77d0408258892f1f4f4e08eda27646efa2c8`
+-	Image ID: `sha256:b77d062106a6e7bfbe7bff096c1c84bfb00828b85469dc460dcc2d259e9e47dd`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD file:ff958f237a7e10f155a495e636c5876a35f444c78fe174bce0b9d4e42ddb476d in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:51365bf81ffef571b9cae6537437d1cb9578bf45d8b6a353848d4bbc24583ace in / 
+# Thu, 09 Nov 2023 16:57:22 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:22 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:58 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:6ba531da9ca1a7e54bb1c018ed4817d0291616ab10c23bb268465a1b72b4a660 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:9e58e3b1f8d8a9b3d5a5e70e0182da2ba60d76e7b188b73769abc2b4ae323f89 in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:00 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:01 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
+ADD file:b21f5a973eb1a7e7cede8eb88bab4f034175bf01de661263540b4722655ec4b1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:25 GMT
+ADD file:81c5ce84fbc74763cd36dea9ef0064ee0c92125a77a579cfbb4a026beeb7be4f in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:25 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:26 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:27 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:03 GMT
+# Thu, 09 Nov 2023 16:57:29 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:31 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:32 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:18:59 GMT
+# Fri, 17 Nov 2023 04:17:53 GMT
 RUN yum -y install   git                 gcc-c++             libcurl-devel       libedit-devel       libuuid-devel       libxml2-devel       ncurses-devel       python3-devel       rsync               sqlite-devel        unzip               zip
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:54 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:19:00 GMT
+# Fri, 17 Nov 2023 04:17:55 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:19:48 GMT
+# Fri, 17 Nov 2023 04:18:41 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && echo $SWIFT_BIN_URL     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
-# Wed, 08 Nov 2023 01:19:54 GMT
+# Fri, 17 Nov 2023 04:18:47 GMT
 RUN swift --version
 ```
 
 -	Layers:
-	-	`sha256:4b36affe1d299102d9d4179738432b7c4c97fe634a59010fd9ecc1a447cb0eed`  
-		Last Modified: Tue, 07 Nov 2023 12:06:50 GMT  
-		Size: 78.8 MB (78830409 bytes)  
+	-	`sha256:b824f4b30c465e487e640bdc22e46bafd6983e4e0eabf30085cacf945c261160`  
+		Last Modified: Wed, 15 Nov 2023 11:22:54 GMT  
+		Size: 78.8 MB (78771519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e416dfadd7904055d74eef0cfdfb742aea14084b6e99f81aed7a956d6ad37a53`  
-		Last Modified: Wed, 08 Nov 2023 01:26:05 GMT  
-		Size: 122.0 MB (122043499 bytes)  
+	-	`sha256:9147eac6cae0e29431453d2a3a2886e28d88a1a9c6a377ff7e6caa3e989c1dd8`  
+		Last Modified: Fri, 17 Nov 2023 04:24:21 GMT  
+		Size: 121.8 MB (121778129 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:68dc89fb39a1411990c55c9cbc31b024dd227be68e2a263f377a7851828338eb`  
-		Last Modified: Wed, 08 Nov 2023 01:27:11 GMT  
-		Size: 607.1 MB (607123749 bytes)  
+	-	`sha256:37c00a38331bb8aacf017dfcb70e3bf66959b073ba12dc25ac16163f8dfcf5fe`  
+		Last Modified: Fri, 17 Nov 2023 04:25:27 GMT  
+		Size: 607.1 MB (607123705 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:cd56ccd3201c6c13e89ea8354f0f2effaa3eeb817939d99ca583f97f8f1a7e9f`  
-		Last Modified: Wed, 08 Nov 2023 01:25:49 GMT  
-		Size: 200.0 B  
+	-	`sha256:33a2379332fa540892b5d65b28fdb6ad1af0f52d639b4c94c8a50b2a1d64ac2f`  
+		Last Modified: Fri, 17 Nov 2023 04:24:06 GMT  
+		Size: 201.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swift:rhel-ubi9` - linux; arm64 variant v8
 
 ```console
-$ docker pull swift@sha256:3d70c322ae03ac3b5a01a08621fe1f16b30a736346f1d901ce005a8a8f3535b0
+$ docker pull swift@sha256:c2607ff918e0eb34baf960db2fc73c6cba913a9a60c5753ab040f46816a905d5
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **794.2 MB (794225807 bytes)**  
+-	Total Size: **794.0 MB (793993138 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:1261add5e7114be004ab377294a510a486ed441bda6318bf03c4cbfe77d0bbdb`
+-	Image ID: `sha256:8ca7dc688ae5931b72d5f6493809b180164f4697c704371bf625942f796389e1`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:56 GMT
-ADD file:c181af735ab58b6416a189483880bcde8d26f2fea1c22b0b80f9ecac19e7e98e in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:17 GMT
+ADD file:205960a3d0706f085c18728490f06b5e7fd7a132ab6b07a95a4ed18f00e126f4 in / 
+# Thu, 09 Nov 2023 16:57:18 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:19 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:336aaf586ff3db4d8064b2e86cb8c4e7a1f381f07097539f592af1397a12ca29 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:9dd57547fdd66ceae2d983b4f0b5b8e57abc1051765602fc9156843d2db0ea6d in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:49:00 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:01 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:02 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
+ADD file:0b626ed84dc2ce267bf6b274208582760edaf2c022f3194ac8260153cafce9d1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:a85c30847dff015a401ef205805a5a71cc706ae037b798d7b69c0465edec50a7 in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:21 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:22 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:04 GMT
+# Thu, 09 Nov 2023 16:57:25 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:11:53 GMT
+# Fri, 17 Nov 2023 03:33:24 GMT
 RUN yum -y install   git                 gcc-c++             libcurl-devel       libedit-devel       libuuid-devel       libxml2-devel       ncurses-devel       python3-devel       rsync               sqlite-devel        unzip               zip
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:11:55 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:11:56 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:11:56 GMT
+# Fri, 17 Nov 2023 03:33:26 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:12:38 GMT
+# Fri, 17 Nov 2023 03:34:11 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && echo $SWIFT_BIN_URL     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && tar -xzf swift.tar.gz --directory / --strip-components=1     && chmod -R o+r /usr/lib/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
-# Wed, 08 Nov 2023 01:12:50 GMT
+# Fri, 17 Nov 2023 03:34:23 GMT
 RUN swift --version
 ```
 
 -	Layers:
-	-	`sha256:1f6f7d33bea4fdbb69d8e2cf0f7b6cc5316ca8c8bf475d7b2cf01142cd6db055`  
-		Last Modified: Tue, 07 Nov 2023 12:06:59 GMT  
-		Size: 76.5 MB (76503019 bytes)  
+	-	`sha256:19dd821b7a83bf1ad388914394494ea983308667df914c57a315c52e312eb2c4`  
+		Last Modified: Wed, 15 Nov 2023 11:22:52 GMT  
+		Size: 76.5 MB (76512185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3a8f2f956b192503530fa8a70acf9dff1bc9c6c43ed565416b338042970f97f4`  
-		Last Modified: Wed, 08 Nov 2023 01:16:30 GMT  
-		Size: 116.0 MB (116019603 bytes)  
+	-	`sha256:70fc2b349bdc2939f2aecce639b6653edd36f9f850fdccef537fce3ef5d9db32`  
+		Last Modified: Fri, 17 Nov 2023 03:38:04 GMT  
+		Size: 115.8 MB (115777908 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:430f833f686fb6685f27a57f476f11a21dd78795ae501ab50dc68f7c12b1bb40`  
-		Last Modified: Wed, 08 Nov 2023 01:17:19 GMT  
-		Size: 601.7 MB (601702985 bytes)  
+	-	`sha256:88148505798541ea5c506304e406f4be51fb6b83b9c3b11149acacd8df0209ef`  
+		Last Modified: Fri, 17 Nov 2023 03:38:54 GMT  
+		Size: 601.7 MB (601702845 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5079b727514301772600734889503e287aeefb56ccfd50d243f27f2db423244`  
-		Last Modified: Wed, 08 Nov 2023 01:16:18 GMT  
+	-	`sha256:3f961a494086fe6ed78a9034e03cbfe314c899ce82e3c588e34d2c2e9d461298`  
+		Last Modified: Fri, 17 Nov 2023 03:37:53 GMT  
 		Size: 200.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `swift:rhel-ubi9-slim`
 
 ```console
-$ docker pull swift@sha256:9918007d50335f18bc03784b0024c87de736bed42691be37305534b4892e5885
+$ docker pull swift@sha256:d5065cc9203571c1737a569cf02beeaf4fa0ad81418634f2656dcff07da54ad6
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -15000,185 +14964,181 @@ $ docker pull swift@sha256:9918007d50335f18bc03784b0024c87de736bed42691be3730553
 ### `swift:rhel-ubi9-slim` - linux; amd64
 
 ```console
-$ docker pull swift@sha256:fe68f1cf92370fa2346d2ea9d075f764805660d3a98f30309d05e4764352475c
+$ docker pull swift@sha256:13bfa00696eadee0259e12dc7d19bc3f34782537add9692b0c0829523492b980
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **124.3 MB (124250747 bytes)**  
+-	Total Size: **124.2 MB (124196369 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:02b83a0556306346472790346e0faa4640da81d94677a63e5686b68e38f3fb3f`
+-	Image ID: `sha256:a89380e864314da35932cd802f79f368f26c8917ad65e0895641d0a82489e95f`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD file:ff958f237a7e10f155a495e636c5876a35f444c78fe174bce0b9d4e42ddb476d in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:51365bf81ffef571b9cae6537437d1cb9578bf45d8b6a353848d4bbc24583ace in / 
+# Thu, 09 Nov 2023 16:57:22 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:22 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:58 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:6ba531da9ca1a7e54bb1c018ed4817d0291616ab10c23bb268465a1b72b4a660 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:48:59 GMT
-ADD file:9e58e3b1f8d8a9b3d5a5e70e0182da2ba60d76e7b188b73769abc2b4ae323f89 in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:00 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:01 GMT
+# Thu, 09 Nov 2023 16:57:24 GMT
+ADD file:b21f5a973eb1a7e7cede8eb88bab4f034175bf01de661263540b4722655ec4b1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:25 GMT
+ADD file:81c5ce84fbc74763cd36dea9ef0064ee0c92125a77a579cfbb4a026beeb7be4f in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:25 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="x86_64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:26 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:27 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:03 GMT
+# Thu, 09 Nov 2023 16:57:29 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:31 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:18:44 GMT
+# Fri, 17 Nov 2023 04:17:32 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:20:08 GMT
+# Fri, 17 Nov 2023 04:18:55 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:20:42 GMT
+# Fri, 17 Nov 2023 04:19:30 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/lib/swift/linux         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/libexec/swift/linux     && chmod -R o+r /usr/lib/swift /usr/libexec/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
 ```
 
 -	Layers:
-	-	`sha256:4b36affe1d299102d9d4179738432b7c4c97fe634a59010fd9ecc1a447cb0eed`  
-		Last Modified: Tue, 07 Nov 2023 12:06:50 GMT  
-		Size: 78.8 MB (78830409 bytes)  
+	-	`sha256:b824f4b30c465e487e640bdc22e46bafd6983e4e0eabf30085cacf945c261160`  
+		Last Modified: Wed, 15 Nov 2023 11:22:54 GMT  
+		Size: 78.8 MB (78771519 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:f5bf0170c67d77ccac035fd92aa0a48a2d413069a066cfca867cbb01348c8b6d`  
-		Last Modified: Wed, 08 Nov 2023 01:27:31 GMT  
-		Size: 45.4 MB (45420338 bytes)  
+	-	`sha256:e3ed06bfc2ad70af3156f20c64924b9bffbf8045b9e5ecb209d5f24e468b796e`  
+		Last Modified: Fri, 17 Nov 2023 04:25:49 GMT  
+		Size: 45.4 MB (45424850 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `swift:rhel-ubi9-slim` - linux; arm64 variant v8
 
 ```console
-$ docker pull swift@sha256:c3bc3e99fe54673983be46b5061ec25dcca84e0aaf2551bc2e6e131d528b4835
+$ docker pull swift@sha256:6108bdff22f52580ac6a463db50aa98066d645c20a00c4b751ac222471963bd1
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **120.5 MB (120504429 bytes)**  
+-	Total Size: **120.5 MB (120530197 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:5670d72184c3ab1c711ed2d82cac56db7ddf47da8ba457b1649fc20d5170adb5`
+-	Image ID: `sha256:f361dc54b5a95b46537c29a3f94f75ad0b3e2b373a18f71d072e043a5409ccce`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 01:48:56 GMT
-ADD file:c181af735ab58b6416a189483880bcde8d26f2fea1c22b0b80f9ecac19e7e98e in / 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:17 GMT
+ADD file:205960a3d0706f085c18728490f06b5e7fd7a132ab6b07a95a4ed18f00e126f4 in / 
+# Thu, 09 Nov 2023 16:57:18 GMT
 RUN mv -f /etc/yum.repos.d/ubi.repo /tmp || :
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ADD file:ecc29a1455ca1b7c82018555e16e2e802135974523df6748e431f8707e759ddd in /tmp/tls-ca-bundle.pem 
-# Wed, 01 Nov 2023 01:48:57 GMT
-ADD multi:de99ba40d34adfc554e955bb344f3584a5587f990f2c5ac525d44349cf2c6f4b in /etc/yum.repos.d/ 
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
+ADD multi:af962ebf871d89c5885926949add253d557f4af2063b876a12e675ae0ac48a6d in /etc/yum.repos.d/ 
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL maintainer="Red Hat, Inc."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.component="ubi9-container"       name="ubi9"       version="9.3"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL com.redhat.license_terms="https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL summary="Provides the latest release of Red Hat Universal Base Image 9."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL description="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly."
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.k8s.display-name="Red Hat Universal Base Image 9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.expose-services=""
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 LABEL io.openshift.tags="base rhel9"
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV container oci
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 ENV PATH /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
-# Wed, 01 Nov 2023 01:48:57 GMT
+# Thu, 09 Nov 2023 16:57:18 GMT
 CMD ["/bin/bash"]
-# Wed, 01 Nov 2023 01:48:58 GMT
+# Thu, 09 Nov 2023 16:57:19 GMT
 RUN rm -rf /var/log/*
-# Wed, 01 Nov 2023 01:48:59 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
 RUN mkdir -p /var/log/rhsm
-# Wed, 01 Nov 2023 01:48:59 GMT
-LABEL release=1361
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:336aaf586ff3db4d8064b2e86cb8c4e7a1f381f07097539f592af1397a12ca29 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.json 
-# Wed, 01 Nov 2023 01:49:00 GMT
-ADD file:9dd57547fdd66ceae2d983b4f0b5b8e57abc1051765602fc9156843d2db0ea6d in /root/buildinfo/Dockerfile-ubi9-9.3-1361 
-# Wed, 01 Nov 2023 01:49:00 GMT
-LABEL "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-01T01:38:36" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361"
-# Wed, 01 Nov 2023 01:49:01 GMT
-RUN rm -f '/etc/yum.repos.d/repo-7e938.repo' '/etc/yum.repos.d/repo-2aab0.repo'
-# Wed, 01 Nov 2023 01:49:02 GMT
+# Thu, 09 Nov 2023 16:57:20 GMT
+ADD file:0b626ed84dc2ce267bf6b274208582760edaf2c022f3194ac8260153cafce9d1 in /root/buildinfo/content_manifests/ubi9-container-9.3-1361.1699548029.json 
+# Thu, 09 Nov 2023 16:57:21 GMT
+ADD file:a85c30847dff015a401ef205805a5a71cc706ae037b798d7b69c0465edec50a7 in /root/buildinfo/Dockerfile-ubi9-9.3-1361.1699548029 
+# Thu, 09 Nov 2023 16:57:21 GMT
+LABEL "release"="1361.1699548029" "distribution-scope"="public" "vendor"="Red Hat, Inc." "build-date"="2023-11-09T16:40:44" "architecture"="aarch64" "vcs-type"="git" "vcs-ref"="eb726081eeafc660c182aae53074ec6631cb473e" "io.k8s.description"="The Universal Base Image is designed and engineered to be the base layer for all of your containerized applications, middleware and utilities. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly." "url"="https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9/images/9.3-1361.1699548029"
+# Thu, 09 Nov 2023 16:57:22 GMT
+RUN rm -f '/etc/yum.repos.d/odcs-2540020-1b8c0.repo' '/etc/yum.repos.d/gitweb-15c2e.repo'
+# Thu, 09 Nov 2023 16:57:23 GMT
 RUN rm -f /tmp/tls-ca-bundle.pem
-# Wed, 01 Nov 2023 01:49:04 GMT
+# Thu, 09 Nov 2023 16:57:25 GMT
 RUN mv -fZ /tmp/ubi.repo /etc/yum.repos.d/ubi.repo || :
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL maintainer=Swift Infrastructure <swift-infrastructure@forums.swift.org>
-# Wed, 08 Nov 2023 01:11:41 GMT
+# Fri, 17 Nov 2023 03:33:06 GMT
 LABEL description=Docker Container for the Swift programming language
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_PLATFORM=ubi9
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:28 GMT
 ARG SWIFT_BRANCH=swift-5.9.1-release
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:29 GMT
 ARG SWIFT_VERSION=swift-5.9.1-RELEASE
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:29 GMT
 ARG SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:13:03 GMT
+# Fri, 17 Nov 2023 03:34:29 GMT
 ENV SWIFT_SIGNING_KEY=A62AE125BBBFBB96A6E042EC925CC1CCED3D1561 SWIFT_PLATFORM=ubi9 SWIFT_BRANCH=swift-5.9.1-release SWIFT_VERSION=swift-5.9.1-RELEASE SWIFT_WEBROOT=https://download.swift.org
-# Wed, 08 Nov 2023 01:13:35 GMT
+# Fri, 17 Nov 2023 03:35:08 GMT
 RUN set -e;     ARCH_NAME="$(rpm --eval '%{_arch}')";     url=;     case "${ARCH_NAME##*-}" in         'x86_64')             OS_ARCH_SUFFIX='';             ;;         'aarch64')             OS_ARCH_SUFFIX='-aarch64';             ;;         *) echo >&2 "error: unsupported architecture: '$ARCH_NAME'"; exit 1 ;;     esac;     SWIFT_WEBDIR="$SWIFT_WEBROOT/$SWIFT_BRANCH/$(echo $SWIFT_PLATFORM | tr -d .)$OS_ARCH_SUFFIX"     && SWIFT_BIN_URL="$SWIFT_WEBDIR/$SWIFT_VERSION/$SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX.tar.gz"     && SWIFT_SIG_URL="$SWIFT_BIN_URL.sig"     && export GNUPGHOME="$(mktemp -d)"     && curl -fsSL "$SWIFT_BIN_URL" -o swift.tar.gz "$SWIFT_SIG_URL" -o swift.tar.gz.sig     && gpg --batch --quiet --keyserver keyserver.ubuntu.com --recv-keys "$SWIFT_SIGNING_KEY"     && gpg --batch --verify swift.tar.gz.sig swift.tar.gz     && yum -y install tar gzip     && tar -xzf swift.tar.gz --directory / --strip-components=1         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/lib/swift/linux         $SWIFT_VERSION-$SWIFT_PLATFORM$OS_ARCH_SUFFIX/usr/libexec/swift/linux     && chmod -R o+r /usr/lib/swift /usr/libexec/swift     && rm -rf "$GNUPGHOME" swift.tar.gz.sig swift.tar.gz
 ```
 
 -	Layers:
-	-	`sha256:1f6f7d33bea4fdbb69d8e2cf0f7b6cc5316ca8c8bf475d7b2cf01142cd6db055`  
-		Last Modified: Tue, 07 Nov 2023 12:06:59 GMT  
-		Size: 76.5 MB (76503019 bytes)  
+	-	`sha256:19dd821b7a83bf1ad388914394494ea983308667df914c57a315c52e312eb2c4`  
+		Last Modified: Wed, 15 Nov 2023 11:22:52 GMT  
+		Size: 76.5 MB (76512185 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e9de5506e2e7ec12a9e41023fd865c5966595b075690a1c495a695d0a86255da`  
-		Last Modified: Wed, 08 Nov 2023 01:17:36 GMT  
-		Size: 44.0 MB (44001410 bytes)  
+	-	`sha256:faee92efc222c26baee31fa4cffd24f2c03387d891681337afa54eeffb4bc87a`  
+		Last Modified: Fri, 17 Nov 2023 03:39:10 GMT  
+		Size: 44.0 MB (44018012 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ## `swift:slim`
