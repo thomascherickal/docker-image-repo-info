@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:6c6248e338704ed0103a72cedf26cec4ec90af9944acd6776e9c5dfd2d07a31e`
-- Created: `2023-11-01T00:59:09.436943475Z`
-- Virtual Size: ~ 155.36 Mb  
+- Image ID: `sha256:08129f3119f282d801ddd2495b0ce1a0ff7da19d113e7643294c273eefee0517`
+- Created: `2023-11-15T05:08:44.66045579Z`
+- Virtual Size: ~ 170.72 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["bash"]`
@@ -409,12 +409,12 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/curl/8.4.0-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/curl/8.4.0-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg1-3`
+### `dpkg` source package: `cyrus-sasl2=2.1.28+dfsg1-4`
 
 Binary Packages:
 
-- `libsasl2-2:amd64=2.1.28+dfsg1-3`
-- `libsasl2-modules-db:amd64=2.1.28+dfsg1-3`
+- `libsasl2-2:amd64=2.1.28+dfsg1-4`
+- `libsasl2-modules-db:amd64=2.1.28+dfsg1-4`
 
 Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/libsasl2-modules-db/copyright`)
 
@@ -438,17 +438,17 @@ Licenses: (parsed from: `/usr/share/doc/libsasl2-2/copyright`, `/usr/share/doc/l
 Source:
 
 ```console
-$ apt-get source -qq --print-uris cyrus-sasl2=2.1.28+dfsg1-3
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg1-3.dsc' cyrus-sasl2_2.1.28+dfsg1-3.dsc 3330 SHA256:a43831934f49088f8a018913e3ed7fc48ffc2e5c48a8eafbba25ccabdaf80341
+$ apt-get source -qq --print-uris cyrus-sasl2=2.1.28+dfsg1-4
+'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg1-4.dsc' cyrus-sasl2_2.1.28+dfsg1-4.dsc 3224 SHA256:d2169fde5404f07f71ae5265e308f0239e2788c0f8115fa3f10ce83ba4c1fd5d
 'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg1.orig.tar.xz' cyrus-sasl2_2.1.28+dfsg1.orig.tar.xz 794540 SHA256:e796a5d85d1a85e1b433d43504e467f9075c7ebc0b45730a3996cf11b1deada4
-'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg1-3.debian.tar.xz' cyrus-sasl2_2.1.28+dfsg1-3.debian.tar.xz 106568 SHA256:7e2bc5df64d3959cd190cf24b9a0d89be48708ff167b0d7556b2f6818b1de397
+'http://deb.debian.org/debian/pool/main/c/cyrus-sasl2/cyrus-sasl2_2.1.28%2bdfsg1-4.debian.tar.xz' cyrus-sasl2_2.1.28+dfsg1-4.debian.tar.xz 96688 SHA256:10f7765c85fb0601c0e9cf9d0ac250d194cd7d190f4656ca52dcd993c731ff4c
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/cyrus-sasl2/2.1.28+dfsg1-3/ (for browsing the source)
-- https://sources.debian.net/src/cyrus-sasl2/2.1.28+dfsg1-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cyrus-sasl2/2.1.28+dfsg1-3/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/cyrus-sasl2/2.1.28+dfsg1-4/ (for browsing the source)
+- https://sources.debian.net/src/cyrus-sasl2/2.1.28+dfsg1-4/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/cyrus-sasl2/2.1.28+dfsg1-4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `dash=0.5.12-6`
 
@@ -499,20 +499,13 @@ Licenses: (parsed from: `/usr/share/doc/libdb5.3/copyright`)
 - `X11`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris db5.3=5.3.28+dfsg2-2
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg2-2.dsc' db5.3_5.3.28+dfsg2-2.dsc 2183 SHA256:763a77002e906ab9c0db8ba81cef1639818b45285c4109d5622ba5d5daf11f44
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg2.orig.tar.xz' db5.3_5.3.28+dfsg2.orig.tar.xz 21287688 SHA256:ad41b507415dec8316e828b2230242af2251d2c86eefa3c7aa9ef47c5239ef33
-'http://deb.debian.org/debian/pool/main/d/db5.3/db5.3_5.3.28%2bdfsg2-2.debian.tar.xz' db5.3_5.3.28+dfsg2-2.debian.tar.xz 33560 SHA256:1292292f486d6529815d199291428f3fc770025ab562c4d1d370b8d3df74fa3d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/db5.3/5.3.28+dfsg2-2/
 
-- https://sources.debian.net/src/db5.3/5.3.28+dfsg2-2/ (for browsing the source)
-- https://sources.debian.net/src/db5.3/5.3.28+dfsg2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/db5.3/5.3.28+dfsg2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `debconf=1.5.82`
 
@@ -1670,21 +1663,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 - `GPL-2.0-only`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20230808-1
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808-1.dsc' mawk_1.3.4.20230808-1.dsc 2180 SHA256:f9536c5a23ed26b4e139493a1c2f2f0ecf9bb232b4906b3d048c2f95af0cd6c4
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808.orig.tar.gz' mawk_1.3.4.20230808.orig.tar.gz 410937 SHA256:88f55a632e2736ff5c5f69944abc151734d89d8298d5005921180f39ab7ba6d0
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808.orig.tar.gz.asc' mawk_1.3.4.20230808.orig.tar.gz.asc 729 SHA256:3212bb1153100c1f8b516546ce4be9177a9fafe83de03f6179efaab6b0484328
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808-1.debian.tar.xz' mawk_1.3.4.20230808-1.debian.tar.xz 15508 SHA256:173b5525a763c0c1fa41c596c31605157d2c87e8fcb0e69efdc29b0810fa4510
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mawk/1.3.4.20230808-1/
 
-- https://sources.debian.net/src/mawk/1.3.4.20230808-1/ (for browsing the source)
-- https://sources.debian.net/src/mawk/1.3.4.20230808-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mawk/1.3.4.20230808-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ncurses=6.4+20231016-1`
 
@@ -1778,11 +1763,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/nettle/3.9.1-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/nettle/3.9.1-2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `nghttp2=1.57.0-1`
+### `dpkg` source package: `nghttp2=1.58.0-1`
 
 Binary Packages:
 
-- `libnghttp2-14:amd64=1.57.0-1`
+- `libnghttp2-14:amd64=1.58.0-1`
 
 Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 
@@ -1793,13 +1778,20 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 - `MIT`
 - `all-permissive`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris nghttp2=1.58.0-1
+'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.58.0-1.dsc' nghttp2_1.58.0-1.dsc 2534 SHA256:6230357ee97d470d55f33c1b49b49a00e494721e191f60cedf5f9e82b99f5c4f
+'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.58.0.orig.tar.gz' nghttp2_1.58.0.orig.tar.gz 1061810 SHA256:7da19947b33a07ddcf97b9791331bfee8a8545e6b394275a9971f43cae9d636b
+'http://deb.debian.org/debian/pool/main/n/nghttp2/nghttp2_1.58.0-1.debian.tar.xz' nghttp2_1.58.0-1.debian.tar.xz 11788 SHA256:967aa46cc926e71b6fccfbce81bb69a2c4793a3be979722d3f53c77d3e61f138
+```
 
-- http://snapshot.debian.org/package/nghttp2/1.57.0-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/nghttp2/1.58.0-1/ (for browsing the source)
+- https://sources.debian.net/src/nghttp2/1.58.0-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/nghttp2/1.58.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `npth=1.6-3`
 
@@ -2057,11 +2049,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/perl/5.36.0-9/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/perl/5.36.0-9/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `pinentry=1.2.1-1`
+### `dpkg` source package: `pinentry=1.2.1-3`
 
 Binary Packages:
 
-- `pinentry-curses=1.2.1-1`
+- `pinentry-curses=1.2.1-3`
 
 Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
 
@@ -2071,13 +2063,21 @@ Licenses: (parsed from: `/usr/share/doc/pinentry-curses/copyright`)
 - `LGPL-3+`
 - `X11`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris pinentry=1.2.1-3
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1-3.dsc' pinentry_1.2.1-3.dsc 3170 SHA256:679a692b8a34c68a9146869347a09164d952a4b79dd2daa6ca20a1caa6aed8e8
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1.orig.tar.bz2' pinentry_1.2.1.orig.tar.bz2 547698 SHA256:457a185e5a85238fb945a955dc6352ab962dc8b48720b62fc9fa48c7540a4067
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1.orig.tar.bz2.asc' pinentry_1.2.1.orig.tar.bz2.asc 390 SHA256:9f7d9c7509e4ff4161a043893d76183bd975230fcad671b643c90f78e500ba95
+'http://deb.debian.org/debian/pool/main/p/pinentry/pinentry_1.2.1-3.debian.tar.xz' pinentry_1.2.1-3.debian.tar.xz 18864 SHA256:7919390ebf6fdf2f8e4e05231bc1348edb119396d29d66718478775bb4c9a0ba
+```
 
-- http://snapshot.debian.org/package/pinentry/1.2.1-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/pinentry/1.2.1-3/ (for browsing the source)
+- https://sources.debian.net/src/pinentry/1.2.1-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/pinentry/1.2.1-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.2-1.3`
 
@@ -2136,6 +2136,32 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/rtmpdump/2.4+20151223.gitfa8646d.1-2/ (for browsing the source)
 - https://sources.debian.net/src/rtmpdump/2.4+20151223.gitfa8646d.1-2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/rtmpdump/2.4+20151223.gitfa8646d.1-2/ (for access to the source package after it no longer exists in the archive)
+
+### `dpkg` source package: `rust-sequoia-sq=0.31.0-1`
+
+Binary Packages:
+
+- `sq=0.31.0-1`
+
+Licenses: (parsed from: `/usr/share/doc/sq/copyright`)
+
+- `GPL-2`
+- `GPL-2.0-or-later`
+
+Source:
+
+```console
+$ apt-get source -qq --print-uris rust-sequoia-sq=0.31.0-1
+'http://deb.debian.org/debian/pool/main/r/rust-sequoia-sq/rust-sequoia-sq_0.31.0-1.dsc' rust-sequoia-sq_0.31.0-1.dsc 3484 SHA256:3a7bc61f40ff0153604638a59d5f9be9a3437551e6911dfc06b2bca8164564c6
+'http://deb.debian.org/debian/pool/main/r/rust-sequoia-sq/rust-sequoia-sq_0.31.0.orig.tar.gz' rust-sequoia-sq_0.31.0.orig.tar.gz 369161 SHA256:38ce1b60431fcda2821cb257f9d124a3046e3b57d84a1a356f9d54d1cff6a6c4
+'http://deb.debian.org/debian/pool/main/r/rust-sequoia-sq/rust-sequoia-sq_0.31.0-1.debian.tar.xz' rust-sequoia-sq_0.31.0-1.debian.tar.xz 4144 SHA256:201210cc51a60cbab26abdcc60b85d86ac31b8bb653f02cc30ddf09652d06eb6
+```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/rust-sequoia-sq/0.31.0-1/ (for browsing the source)
+- https://sources.debian.net/src/rust-sequoia-sq/0.31.0-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/rust-sequoia-sq/0.31.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sed=4.9-1`
 
@@ -2201,11 +2227,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/shadow/1:4.13+dfsg1-3/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/shadow/1:4.13+dfsg1-3/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `sqlite3=3.43.2-1`
+### `dpkg` source package: `sqlite3=3.44.0-1`
 
 Binary Packages:
 
-- `libsqlite3-0:amd64=3.43.2-1`
+- `libsqlite3-0:amd64=3.44.0-1`
 
 Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 
@@ -2213,13 +2239,21 @@ Licenses: (parsed from: `/usr/share/doc/libsqlite3-0/copyright`)
 - `GPL-2+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris sqlite3=3.44.0-1
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.44.0-1.dsc' sqlite3_3.44.0-1.dsc 2486 SHA256:96a38faad95351e5f582ef7e2b47818de46dd95970e250439257d0f9a75f9322
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.44.0.orig-www.tar.xz' sqlite3_3.44.0.orig-www.tar.xz 5666172 SHA256:cf24a5656149b30e3400213b69f67d962d11655b04f95314bba60ed17d15128f
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.44.0.orig.tar.xz' sqlite3_3.44.0.orig.tar.xz 8207892 SHA256:03dad73b293bd1cb87a0e304f554af7886b2158980c92779fe6ec0373d9a9dad
+'http://deb.debian.org/debian/pool/main/s/sqlite3/sqlite3_3.44.0-1.debian.tar.xz' sqlite3_3.44.0-1.debian.tar.xz 30180 SHA256:80cdbf341d29e3f67d675326b0e4c5822da6002c6a6dfbc27576fdd09bbbb68a
+```
 
-- http://snapshot.debian.org/package/sqlite3/3.43.2-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/sqlite3/3.44.0-1/ (for browsing the source)
+- https://sources.debian.net/src/sqlite3/3.44.0-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sqlite3/3.44.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `systemd=254.5-1`
 

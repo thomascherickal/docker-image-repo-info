@@ -356,20 +356,13 @@ Licenses: (parsed from: `/usr/share/doc/coreutils/copyright`)
 - `GPL-3+`
 - `ISC`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris coreutils=9.1-1
-'http://deb.debian.org/debian/pool/main/c/coreutils/coreutils_9.1-1.dsc' coreutils_9.1-1.dsc 1848 SHA256:2f2fca0a07a1a3f38e3ebeb4cbd97e97e675e77bed84f3e9d0b7e5da4cde75fc
-'http://deb.debian.org/debian/pool/main/c/coreutils/coreutils_9.1.orig.tar.xz' coreutils_9.1.orig.tar.xz 5712104 SHA256:61a1f410d78ba7e7f37a5a4f50e6d1320aca33375484a3255eddf17a38580423
-'http://deb.debian.org/debian/pool/main/c/coreutils/coreutils_9.1-1.debian.tar.xz' coreutils_9.1-1.debian.tar.xz 30624 SHA256:45d4ae88d933a7d713ef038943e818a2488e759b6196a409788744cbc6df1832
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/coreutils/9.1-1/
 
-- https://sources.debian.net/src/coreutils/9.1-1/ (for browsing the source)
-- https://sources.debian.net/src/coreutils/9.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/coreutils/9.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `curl=8.4.0-2`
 
@@ -1664,21 +1657,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 - `GPL-2.0-only`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20230808-1
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808-1.dsc' mawk_1.3.4.20230808-1.dsc 2180 SHA256:f9536c5a23ed26b4e139493a1c2f2f0ecf9bb232b4906b3d048c2f95af0cd6c4
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808.orig.tar.gz' mawk_1.3.4.20230808.orig.tar.gz 410937 SHA256:88f55a632e2736ff5c5f69944abc151734d89d8298d5005921180f39ab7ba6d0
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808.orig.tar.gz.asc' mawk_1.3.4.20230808.orig.tar.gz.asc 729 SHA256:3212bb1153100c1f8b516546ce4be9177a9fafe83de03f6179efaab6b0484328
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808-1.debian.tar.xz' mawk_1.3.4.20230808-1.debian.tar.xz 15508 SHA256:173b5525a763c0c1fa41c596c31605157d2c87e8fcb0e69efdc29b0810fa4510
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mawk/1.3.4.20230808-1/
 
-- https://sources.debian.net/src/mawk/1.3.4.20230808-1/ (for browsing the source)
-- https://sources.debian.net/src/mawk/1.3.4.20230808-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mawk/1.3.4.20230808-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ncurses=6.4+20231016-1`
 

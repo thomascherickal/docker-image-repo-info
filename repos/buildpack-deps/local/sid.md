@@ -613,20 +613,13 @@ Licenses: (parsed from: `/usr/share/doc/coreutils/copyright`)
 - `GPL-3+`
 - `ISC`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris coreutils=9.1-1
-'http://deb.debian.org/debian/pool/main/c/coreutils/coreutils_9.1-1.dsc' coreutils_9.1-1.dsc 1848 SHA256:2f2fca0a07a1a3f38e3ebeb4cbd97e97e675e77bed84f3e9d0b7e5da4cde75fc
-'http://deb.debian.org/debian/pool/main/c/coreutils/coreutils_9.1.orig.tar.xz' coreutils_9.1.orig.tar.xz 5712104 SHA256:61a1f410d78ba7e7f37a5a4f50e6d1320aca33375484a3255eddf17a38580423
-'http://deb.debian.org/debian/pool/main/c/coreutils/coreutils_9.1-1.debian.tar.xz' coreutils_9.1-1.debian.tar.xz 30624 SHA256:45d4ae88d933a7d713ef038943e818a2488e759b6196a409788744cbc6df1832
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/coreutils/9.1-1/
 
-- https://sources.debian.net/src/coreutils/9.1-1/ (for browsing the source)
-- https://sources.debian.net/src/coreutils/9.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/coreutils/9.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `curl=8.4.0-2`
 
@@ -1728,21 +1721,13 @@ Licenses: (parsed from: `/usr/share/doc/gir1.2-freedesktop/copyright`, `/usr/sha
 - `Unicode-DFS-2016`
 - `bzip2-1.0.6`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gobject-introspection=1.78.1-1
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.78.1-1.dsc' gobject-introspection_1.78.1-1.dsc 3392 SHA256:99a712dc7005616e6040e641d21aaa68ca0f64874d94e969a2caedcacbb03e6e
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.78.1.orig-glib.tar.xz' gobject-introspection_1.78.1.orig-glib.tar.xz 5327096 SHA256:44eaab8b720877ce303c5540b657b126f12dc94972d9880b52959f43fb537b30
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.78.1.orig.tar.xz' gobject-introspection_1.78.1.orig.tar.xz 1060296 SHA256:bd7babd99af7258e76819e45ba4a6bc399608fe762d83fde3cac033c50841bb4
-'http://deb.debian.org/debian/pool/main/g/gobject-introspection/gobject-introspection_1.78.1-1.debian.tar.xz' gobject-introspection_1.78.1-1.debian.tar.xz 40408 SHA256:be1dc5ab6fbe0183ac698a1130e84cf53e774bae2bca070731e7ef47e4802396
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gobject-introspection/1.78.1-1/
 
-- https://sources.debian.net/src/gobject-introspection/1.78.1-1/ (for browsing the source)
-- https://sources.debian.net/src/gobject-introspection/1.78.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gobject-introspection/1.78.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `graphite2=1.3.14-1`
 
@@ -2986,20 +2971,13 @@ Licenses: (parsed from: `/usr/share/doc/libmaxminddb-dev/copyright`, `/usr/share
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libmaxminddb=1.7.1-1
-'http://deb.debian.org/debian/pool/main/libm/libmaxminddb/libmaxminddb_1.7.1-1.dsc' libmaxminddb_1.7.1-1.dsc 2322 SHA256:2b644c068739179907df3be7728d39f823aacc1f3d295788b8439a09fe222556
-'http://deb.debian.org/debian/pool/main/libm/libmaxminddb/libmaxminddb_1.7.1.orig.tar.gz' libmaxminddb_1.7.1.orig.tar.gz 252253 SHA256:fae04c5b681e7fcadb8443635a7ca01f6ebf921fbb2bd7babda0fdc6dac7c711
-'http://deb.debian.org/debian/pool/main/libm/libmaxminddb/libmaxminddb_1.7.1-1.debian.tar.xz' libmaxminddb_1.7.1-1.debian.tar.xz 12424 SHA256:1f0d476717e84095da59f9b1f9b693fdecead8ea4b564dc4c85a9bf321c01247
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libmaxminddb/1.7.1-1/
 
-- https://sources.debian.net/src/libmaxminddb/1.7.1-1/ (for browsing the source)
-- https://sources.debian.net/src/libmaxminddb/1.7.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libmaxminddb/1.7.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libmd=1.1.0-1`
 
@@ -4127,21 +4105,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 - `GPL-2.0-only`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20230808-1
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808-1.dsc' mawk_1.3.4.20230808-1.dsc 2180 SHA256:f9536c5a23ed26b4e139493a1c2f2f0ecf9bb232b4906b3d048c2f95af0cd6c4
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808.orig.tar.gz' mawk_1.3.4.20230808.orig.tar.gz 410937 SHA256:88f55a632e2736ff5c5f69944abc151734d89d8298d5005921180f39ab7ba6d0
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808.orig.tar.gz.asc' mawk_1.3.4.20230808.orig.tar.gz.asc 729 SHA256:3212bb1153100c1f8b516546ce4be9177a9fafe83de03f6179efaab6b0484328
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20230808-1.debian.tar.xz' mawk_1.3.4.20230808-1.debian.tar.xz 15508 SHA256:173b5525a763c0c1fa41c596c31605157d2c87e8fcb0e69efdc29b0810fa4510
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mawk/1.3.4.20230808-1/
 
-- https://sources.debian.net/src/mawk/1.3.4.20230808-1/ (for browsing the source)
-- https://sources.debian.net/src/mawk/1.3.4.20230808-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mawk/1.3.4.20230808-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `media-types=10.1.0`
 
@@ -5687,20 +5657,13 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.39.2-5
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.39.2-5.dsc' util-linux_2.39.2-5.dsc 4601 SHA256:109f7321812f476140d29a920b6f5a848ba611599f2634ca4e5566f0e4a7eae1
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.39.2.orig.tar.xz' util-linux_2.39.2.orig.tar.xz 8362220 SHA256:87abdfaa8e490f8be6dde976f7c80b9b5ff9f301e1b67e3899e1f05a59a1531f
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.39.2-5.debian.tar.xz' util-linux_2.39.2-5.debian.tar.xz 99352 SHA256:6e54d97c9d8fd21dba00d52a02f58fbc01b5690995d9c71dca316bf1e6448e6d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/util-linux/2.39.2-5/
 
-- https://sources.debian.net/src/util-linux/2.39.2-5/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.39.2-5/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.39.2-5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `wget=1.21.4-1`
 
