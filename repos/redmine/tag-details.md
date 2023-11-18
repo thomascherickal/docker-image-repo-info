@@ -14,6 +14,14 @@
 -	[`redmine:5.0.6-alpine`](#redmine506-alpine)
 -	[`redmine:5.0.6-alpine3.18`](#redmine506-alpine318)
 -	[`redmine:5.0.6-bookworm`](#redmine506-bookworm)
+-	[`redmine:5.1`](#redmine51)
+-	[`redmine:5.1-alpine`](#redmine51-alpine)
+-	[`redmine:5.1-alpine3.18`](#redmine51-alpine318)
+-	[`redmine:5.1-bookworm`](#redmine51-bookworm)
+-	[`redmine:5.1.0`](#redmine510)
+-	[`redmine:5.1.0-alpine`](#redmine510-alpine)
+-	[`redmine:5.1.0-alpine3.18`](#redmine510-alpine318)
+-	[`redmine:5.1.0-bookworm`](#redmine510-bookworm)
 -	[`redmine:alpine`](#redminealpine)
 -	[`redmine:alpine3.18`](#redminealpine318)
 -	[`redmine:bookworm`](#redminebookworm)
@@ -12756,6 +12764,38 @@ $ docker pull redmine@sha256:b91474bd3cf8b9ec10e0b8121dfd922a36e56b7273dd7882f85
 		Last Modified: Thu, 02 Nov 2023 05:20:40 GMT  
 		Size: 35.6 KB (35567 bytes)  
 		MIME: application/vnd.in-toto+json
+
+## `redmine:5.1`
+
+**does not exist** (yet?)
+
+## `redmine:5.1-alpine`
+
+**does not exist** (yet?)
+
+## `redmine:5.1-alpine3.18`
+
+**does not exist** (yet?)
+
+## `redmine:5.1-bookworm`
+
+**does not exist** (yet?)
+
+## `redmine:5.1.0`
+
+**does not exist** (yet?)
+
+## `redmine:5.1.0-alpine`
+
+**does not exist** (yet?)
+
+## `redmine:5.1.0-alpine3.18`
+
+**does not exist** (yet?)
+
+## `redmine:5.1.0-bookworm`
+
+**does not exist** (yet?)
 
 ## `redmine:alpine`
 
