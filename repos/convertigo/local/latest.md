@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:c93ca3220c40c62579deeacb8449943843970ab24467b43d1693e15a68314f49`
-- Created: `2023-10-31T05:47:56.392159035Z`
-- Virtual Size: ~ 566.12 Mb  
+- Image ID: `sha256:860867efa3bb63180b0611370017af566fac0aee301f5ed5e502e97849d25155`
+- Created: `2023-11-17T03:39:58.146263088Z`
+- Virtual Size: ~ 566.21 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["tini","--","/docker-entrypoint.sh"]`
@@ -21,8 +21,8 @@
   - `LD_LIBRARY_PATH=/usr/local/tomcat/native-jni-lib`
   - `GPG_KEYS=48F8E69F6390C9F25CFEDCD268248959359E722B A9C5DF4D22E99998D9875A5110C01C5A2F6059E7 DCFD35E0BF8CA7344752DE8B6FB21E8933C60243`
   - `TOMCAT_MAJOR=9`
-  - `TOMCAT_VERSION=9.0.82`
-  - `TOMCAT_SHA512=2b13f11f4e0d0b9aee667c256c6ea5d2853b067e8b7e8293f117da050d3833fda8aa9d9ad278bd12fb7fbf0825108c7d0384509f44c05f9bad73eb099cfaa128`
+  - `TOMCAT_VERSION=9.0.83`
+  - `TOMCAT_SHA512=3f022ec8552bce1b72eb85d0778c93052ccb00226de3302544ec844ab93a9991e19c2db56ed06c18f03e5d75f34a46cedac46ae83bdd225518a55c62fc69ea04`
   - `SWT_GTK3=0`
   - `CONVERTIGO_VERSION=8.2.3`
   - `CONVERTIGO_WAR_URL=https://github.com/convertigo/convertigo/releases/download/8.2.3/convertigo-8.2.3.war`
@@ -106,13 +106,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.0.9
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.0.9.dsc' apt_2.0.9.dsc 2835 SHA512:8e2981ae368e3cc07d6b4cd32fe347b8193b6d1844c1c273e389c168df2cc79a28236757a3bd4512872b983bd0d6c1f58cab14ad2eaf4af561ec0fe25ba43058
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.0.9.tar.xz' apt_2.0.9.tar.xz 2176408 SHA512:183a42c5811a311b26aedac904f10d41b192a8272655872d428f9f93b382db96e44a874c750ebaac4137900b9ac58b7392e79cf025b64375ee490bf0194af473
-```
 
 ### `dpkg` source package: `attr=1:2.4.48-5`
 
