@@ -1,7 +1,7 @@
 ## `debian:oldoldstable-backports`
 
 ```console
-$ docker pull debian@sha256:b1f3ab86c7c42a10ddcb9bda7d9775f4fe5c1caf5a22caa870d92f29e96c4df9
+$ docker pull debian@sha256:9304575427c32f5181eed16950f85d6e4260b34bfa6ee8f16f2df58b1ab6dc2d
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -110,31 +110,31 @@ RUN echo 'deb http://deb.debian.org/debian oldoldstable-backports main' > /etc/a
 ### `debian:oldoldstable-backports` - linux; 386
 
 ```console
-$ docker pull debian@sha256:f619b1b7c1be6c880e78fee696f46fb55229922b3c1247314eb9212a97a402e8
+$ docker pull debian@sha256:1baf7f4642a907081c1282ea13dbe4449e579fa0d5b04db3ce7b4ca0da25bfb2
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **51.3 MB (51255955 bytes)**  
+-	Total Size: **51.3 MB (51256373 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fe7fb20d1b90d9e19108253cbd145a1d4b34db3a94fea0a28687075a0c9b95cc`
+-	Image ID: `sha256:06c562a5214e90164e925b9baef094d04cf8805405d34a43d990b965f681c470`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Wed, 01 Nov 2023 00:39:50 GMT
-ADD file:719e8e1adb350076d6d94cf4a9d9aee4cbf29a10d35bde7ba859b36d199e21e9 in / 
-# Wed, 01 Nov 2023 00:39:50 GMT
+# Tue, 21 Nov 2023 04:40:48 GMT
+ADD file:31e793a57f0790996fe5a2214acd41429941a3b362aff70d5fd504eada62085d in / 
+# Tue, 21 Nov 2023 04:40:48 GMT
 CMD ["bash"]
-# Wed, 01 Nov 2023 00:39:52 GMT
+# Tue, 21 Nov 2023 04:40:52 GMT
 RUN echo 'deb http://deb.debian.org/debian oldoldstable-backports main' > /etc/apt/sources.list.d/backports.list
 ```
 
 -	Layers:
-	-	`sha256:ad734a3f4acc2a601edd93b5e1694b2a9a95a6d35b970ceedeac80dbdd08dd89`  
-		Last Modified: Wed, 01 Nov 2023 00:45:22 GMT  
-		Size: 51.3 MB (51255728 bytes)  
+	-	`sha256:04418c23f29bd4990c6b8fa1256b0c7d50b97b5dac1f1b40d0856bd4ab82ba8d`  
+		Last Modified: Tue, 21 Nov 2023 04:46:33 GMT  
+		Size: 51.3 MB (51256146 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:fe0e861861ff69b292be15e8aaa6f778b2b8a7272e3c71029751ed3f574bd705`  
-		Last Modified: Wed, 01 Nov 2023 00:45:31 GMT  
+	-	`sha256:df0685d979af90eb07d1103976ccd7db171aa412d6156181eb60d44c49580958`  
+		Last Modified: Tue, 21 Nov 2023 04:46:43 GMT  
 		Size: 227.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
