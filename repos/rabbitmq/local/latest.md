@@ -1,10 +1,10 @@
-# `rabbitmq:3.12.8`
+# `rabbitmq:3.12.9`
 
 ## Docker Metadata
 
-- Image ID: `sha256:336cb992af034adc8a676e3e98fd343cb566dbf42105b87cdfad8a524b228e40`
-- Created: `2023-10-31T17:27:40Z`
-- Virtual Size: ~ 216.65 Mb  
+- Image ID: `sha256:2edb4ed6c2df0f2fc8b5c2758784684284c6fa67edcd4af2162820f6bd2ecb06`
+- Created: `2023-11-17T12:05:25Z`
+- Virtual Size: ~ 216.62 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -14,7 +14,7 @@
   - `ERLANG_INSTALL_PATH_PREFIX=/opt/erlang`
   - `OPENSSL_INSTALL_PATH_PREFIX=/opt/openssl`
   - `RABBITMQ_DATA_DIR=/var/lib/rabbitmq`
-  - `RABBITMQ_VERSION=3.12.8`
+  - `RABBITMQ_VERSION=3.12.9`
   - `RABBITMQ_PGP_KEY_ID=0x0A9AF2115F4687BD29803A206B73A36E6026DFCA`
   - `RABBITMQ_HOME=/opt/rabbitmq`
   - `HOME=/var/lib/rabbitmq`
@@ -80,13 +80,9 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPLv2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.4.10
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.10.dsc' apt_2.4.10.dsc 2801 SHA512:5c28184020dbb9b8ff959120768c0c2616acd5923fa6be8a87c1025345e3e2beb982a6256849061e043c9a74522c40937e3c7477115ce8dbc79f715bf6f3ea17
-'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.10.tar.xz' apt_2.4.10.tar.xz 2318732 SHA512:1b9c12a44c205013c2d56af163c219a5c945f7a4c15373a2a07ec5d2d4130ef3bbd964f6986e22b55016b5481897356b968da9fdf84e538f8d81d7bcd70bd11d
-```
 
 ### `dpkg` source package: `attr=1:2.5.1-1build1`
 
@@ -561,15 +557,9 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.7.3-4ubuntu1.2
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3-4ubuntu1.2.dsc' gnutls28_3.7.3-4ubuntu1.2.dsc 3572 SHA512:5971615b09bdbe7a3c696da676d6c2df4d9511f4614050ec441dae3a70e7bbe9794def101d6515cd76b00d7b6aba064d759b786fe2633dbdc38237005935c14f
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3.orig.tar.xz' gnutls28_3.7.3.orig.tar.xz 6119292 SHA512:3ace744affe23e284342658d6d2d2de49dd50065489cbc8be18fc7d38187253e5268ca54027ce5cd517056c249ac039a7481e4548cec04325de37ae85617d077
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3.orig.tar.xz.asc' gnutls28_3.7.3.orig.tar.xz.asc 833 SHA512:cd0d30298377deddf20a835863b71e3f119588061f659906ad2684004758943179531508b1c77c730e930e2131148095e60ad9be365353cce772472d5f5345df
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3-4ubuntu1.2.debian.tar.xz' gnutls28_3.7.3-4ubuntu1.2.debian.tar.xz 75936 SHA512:b4c58bb306be5bfef362f1c37e0ecdacf02ea4bfb69c77b684fc3cf09f32c0dfae3535ccda273401ac0cdcb8312fe328f2ace1789ffb95f710de512fa27cee3c
-```
 
 ### `dpkg` source package: `gosu=1.14-1`
 
