@@ -2,7 +2,7 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d70548da47571625cd99af0e9a856f31ee62e0733caab650b308b4ab3cc6ec2f`
+- Image ID: `sha256:a13fa384f1513609e7140af44326b8e1876f2b968dccb24938587e88ffed1def`
 - Created: `2023-06-14T17:24:54Z`
 - Virtual Size: ~ 418.57 Mb  
   (total size of all layers on-disk)
@@ -1196,20 +1196,13 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `The MIT License (MIT)`
 - `The main library is licensed under GNU Lesser`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris gnutls28=3.6.7-4+deb10u10
-'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7-4%2bdeb10u10.dsc' gnutls28_3.6.7-4+deb10u10.dsc 3265 SHA256:12f471baebedb368b8ea0c85cfecdf16b4c2bb5b0ed191587fce28424d6ff46e
-'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz' gnutls28_3.6.7.orig.tar.xz 8153728 SHA256:5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2
-'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7-4%2bdeb10u10.debian.tar.xz' gnutls28_3.6.7-4+deb10u10.debian.tar.xz 102420 SHA256:7f2bfec4727b90b7d81267098f997bf847494c0c9ff2906606398a40a730ec7f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u10/
 
-- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u10/ (for browsing the source)
-- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `grep=3.3-1`
 
@@ -2658,11 +2651,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/pkg-config/0.29-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/pkg-config/0.29-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `postgresql-11=11.21-0+deb10u2`
+### `dpkg` source package: `postgresql-11=11.22-0+deb10u1`
 
 Binary Packages:
 
-- `libpq5:amd64=11.21-0+deb10u2`
+- `libpq5:amd64=11.22-0+deb10u1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -2682,13 +2675,20 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 - `nagaysau-ishii`
 - `rijndael`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris postgresql-11=11.22-0+deb10u1
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.22-0%2bdeb10u1.dsc' postgresql-11_11.22-0+deb10u1.dsc 3745 SHA256:ba35d186c00e553a253e54038c48521d80a5cf2f0c3b40a6d6fce70ad4b49810
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.22.orig.tar.bz2' postgresql-11_11.22.orig.tar.bz2 20482994 SHA256:2cb7c97d7a0d7278851bbc9c61f467b69c094c72b81740b751108e7892ebe1f0
+'http://deb.debian.org/debian-security/pool/updates/main/p/postgresql-11/postgresql-11_11.22-0%2bdeb10u1.debian.tar.xz' postgresql-11_11.22-0+deb10u1.debian.tar.xz 29868 SHA256:93e1ae7d4a32f10a2e2ea82a11a0fa0cfdb964c1a126f54aff7f174ec3e4c880
+```
 
-- http://snapshot.debian.org/package/postgresql-11/11.21-0+deb10u2/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/postgresql-11/11.22-0+deb10u1/ (for browsing the source)
+- https://sources.debian.net/src/postgresql-11/11.22-0+deb10u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/postgresql-11/11.22-0+deb10u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `procps=2:3.3.15-2`
 
