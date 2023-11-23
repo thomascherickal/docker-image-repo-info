@@ -1,7 +1,7 @@
 ## `geonetwork:latest`
 
 ```console
-$ docker pull geonetwork@sha256:6b7d726ec70cb268caa4dbbd6e328a48f096f7bc8d113e24f218215224a326a5
+$ docker pull geonetwork@sha256:3384c8a58c140837d7d07488e20ee36dff81f2195c306fe1c26ce14094260a16
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -173,14 +173,14 @@ VOLUME [/catalogue-data]
 ### `geonetwork:latest` - linux; arm64 variant v8
 
 ```console
-$ docker pull geonetwork@sha256:0eccc722db086ce4fb1211e4f3862120595ff93b3756b0084ecb4454a506e5b4
+$ docker pull geonetwork@sha256:e670fe74af302565a998d2da50ee3040328b8d374a4beb343fce2be8b85e4207
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **507.7 MB (507723131 bytes)**  
+-	Total Size: **466.7 MB (466666628 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:755e4c693adc79af9f589570bbb4dc063fbbce93f9ccb286eec90898c9c454bd`
+-	Image ID: `sha256:748e5b7420b9c12e75f508f614daec3a828038f16c3d77f5c9d627c6e738e35a`
 -	Entrypoint: `["\/geonetwork-entrypoint.sh"]`
 -	Default Command: `["java","-jar","\/usr\/local\/jetty\/start.jar"]`
 
@@ -261,23 +261,23 @@ RUN apt-get -y update &&     apt-get -y install --no-install-recommends         
 USER jetty
 # Tue, 31 Oct 2023 04:20:37 GMT
 ENV GN_FILE=geonetwork.war
-# Tue, 31 Oct 2023 04:20:37 GMT
-ENV GN_VERSION=4.4.0
-# Tue, 31 Oct 2023 04:20:37 GMT
-ENV GN_DOWNLOAD_MD5=36638cfd380942801ff2038792ee54a9
-# Tue, 31 Oct 2023 04:22:03 GMT
+# Thu, 23 Nov 2023 09:45:04 GMT
+ENV GN_VERSION=4.4.1
+# Thu, 23 Nov 2023 09:45:04 GMT
+ENV GN_DOWNLOAD_MD5=ff40fb2033e67b83f22246d52d04092e
+# Thu, 23 Nov 2023 09:46:04 GMT
 RUN cd /opt/geonetwork/ &&      curl -fSL -o geonetwork.war      https://sourceforge.net/projects/geonetwork/files/GeoNetwork_opensource/v${GN_VERSION}/${GN_FILE}/download &&      echo "${GN_DOWNLOAD_MD5} *geonetwork.war" | md5sum -c &&      unzip -q geonetwork.war &&      rm geonetwork.war
-# Tue, 31 Oct 2023 04:22:06 GMT
+# Thu, 23 Nov 2023 09:46:07 GMT
 COPY file:996df24c69b17d351426a6c0c0dfb153f784c21af81ae4ec36afa187063e1eda in /usr/local/share/geonetwork/geonetwork_context_template.xml 
-# Tue, 31 Oct 2023 04:22:06 GMT
-COPY file:d9c7c0ea7fa75c70fed09ff248e0afcc376dd41d9a324310e416d6496fe3a37e in /geonetwork-entrypoint.sh 
-# Tue, 31 Oct 2023 04:22:07 GMT
+# Thu, 23 Nov 2023 09:46:07 GMT
+COPY file:d79abcd242af427d06aee0b458cf9b6d258c1203248aa30f6246fc26f5727df3 in /geonetwork-entrypoint.sh 
+# Thu, 23 Nov 2023 09:46:08 GMT
 RUN java -jar /usr/local/jetty/start.jar --create-startd --add-module=http-forwarded
-# Tue, 31 Oct 2023 04:22:07 GMT
+# Thu, 23 Nov 2023 09:46:08 GMT
 ENTRYPOINT ["/geonetwork-entrypoint.sh"]
-# Tue, 31 Oct 2023 04:22:07 GMT
+# Thu, 23 Nov 2023 09:46:08 GMT
 CMD ["java" "-jar" "/usr/local/jetty/start.jar"]
-# Tue, 31 Oct 2023 04:22:07 GMT
+# Thu, 23 Nov 2023 09:46:08 GMT
 VOLUME [/catalogue-data]
 ```
 
@@ -314,19 +314,19 @@ VOLUME [/catalogue-data]
 		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
 		Size: 481.1 KB (481110 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:86c0109336d5d652abdf16facff185dd8599553aa35b73276e716878629596c4`  
-		Last Modified: Tue, 31 Oct 2023 04:22:42 GMT  
-		Size: 311.0 MB (310999290 bytes)  
+	-	`sha256:f0fbbd64c6eef9506990135557ae8adbd430aa89bad4b0404586272483f84f3a`  
+		Last Modified: Thu, 23 Nov 2023 09:46:58 GMT  
+		Size: 269.9 MB (269942782 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9478d2886a1df5b27d7ed6dda0ddf146e707293df1791c83e222a02cede24c4e`  
-		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
-		Size: 579.0 B  
+	-	`sha256:2c381f2d1ff9ebd3d33ee35c35a97ce7eaa2f6879be93ad445a22ac876fb1aff`  
+		Last Modified: Thu, 23 Nov 2023 09:46:46 GMT  
+		Size: 580.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ce151443a1de0fc221a16d551056e248fd9b62e54e9995a28622ac6800685c61`  
-		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
-		Size: 564.0 B  
+	-	`sha256:be19ef790c09b3903e66b64fe28b80a9c1a3262ff3224241ad8884b553cf8da8`  
+		Last Modified: Thu, 23 Nov 2023 09:46:46 GMT  
+		Size: 567.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:748788667a70ca34e763a18b75e46f8a28284fe617738a368ff8ec102a451c29`  
-		Last Modified: Tue, 31 Oct 2023 04:22:27 GMT  
-		Size: 169.0 B  
+	-	`sha256:d568d25cd15939988ba89109a7bb56f901f4a5b8acbe1985e5005f53e0a31d3e`  
+		Last Modified: Thu, 23 Nov 2023 09:46:46 GMT  
+		Size: 170.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
