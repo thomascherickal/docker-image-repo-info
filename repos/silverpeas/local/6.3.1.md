@@ -7945,14 +7945,9 @@ Licenses: (parsed from: `/usr/share/doc/libpoppler97/copyright`)
 - `Apache-2.0`
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris poppler=0.86.1-0ubuntu1.3
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.86.1-0ubuntu1.3.dsc' poppler_0.86.1-0ubuntu1.3.dsc 3361 SHA512:2fea34906391aab5291f86fbdd77aff394a97ea93067bdeb857d5fd2a91dae2c28dbd3eeda7a7b090e5be6426f1fc260879ddbc73fbbfd1ebf1604f25821f822
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.86.1.orig.tar.xz' poppler_0.86.1.orig.tar.xz 1593856 SHA512:435fc1e7f3e8123e0adde9aa60c0d7dc17db367cde8908932abfef913cee6f27efeb1c4f2d6f316019a69a87f1fa5251be4216d0a81a681a24f24a70ac571670
-'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.86.1-0ubuntu1.3.debian.tar.xz' poppler_0.86.1-0ubuntu1.3.debian.tar.xz 37400 SHA512:66c81010f7d83cb9a221b6a46cada5f7834969a13fc26a4e707c2fab35e12e05f4408c7b563fbbc07491d07f07304e2be4717dc899e5628dfc1e55a1e0841aec
-```
 
 ### `dpkg` source package: `postgresql-12=12.16-0ubuntu0.20.04.1`
 
@@ -8747,14 +8742,9 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tiff=4.1.0+git191117-2ubuntu0.20.04.10
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.10.dsc' tiff_4.1.0+git191117-2ubuntu0.20.04.10.dsc 2255 SHA512:91cfa7a9a6f962cdf26b92f0360bf7222da2dda964db2a247a9fe22fc1d28427bbd1a5e775038c501a2dbb390cb0b66dd03a8b0f91963d2fd6aba482742ae2b2
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117.orig.tar.xz' tiff_4.1.0+git191117.orig.tar.xz 1533524 SHA512:25b4bc4522fc2e7f3ca6857b87acd4481d8643566b1120c755020afc8b48949238ee2078bc43dd3ba7407eaa4e36b1b712d7056f101ddaf60f94dab8607870b8
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.1.0%2bgit191117-2ubuntu0.20.04.10.debian.tar.xz' tiff_4.1.0+git191117-2ubuntu0.20.04.10.debian.tar.xz 44440 SHA512:501553027e1afc2f835050e328ea7efc6de964c73764e8efd139456252aec2714a6443d7de064a608d27662f839a276040727bc8d9a678d9f8ceca26cac43647
-```
 
 ### `dpkg` source package: `twolame=0.4.0-2`
 
