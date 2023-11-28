@@ -81,19 +81,13 @@ Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-p
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris apt=2.7.6
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.7.6.dsc' apt_2.7.6.dsc 2945 SHA256:bdc573f2113e70fb648a819437d36b14427d492695460811f74214f174caf7fe
-'http://deb.debian.org/debian/pool/main/a/apt/apt_2.7.6.tar.xz' apt_2.7.6.tar.xz 2345736 SHA256:8683f54eff0bf54e51e025b348bd0774d0fd437799616f48512956cf15c05f67
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/apt/2.7.6/
 
-- https://sources.debian.net/src/apt/2.7.6/ (for browsing the source)
-- https://sources.debian.net/src/apt/2.7.6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/apt/2.7.6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `attr=1:2.5.1-4`
 
@@ -221,20 +215,13 @@ Licenses: (parsed from: `/usr/share/doc/bash/copyright`)
 - `MIT-like`
 - `permissive`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris bash=5.2.15-2
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2.15-2.dsc' bash_5.2.15-2.dsc 2317 SHA256:f51753e946af43eb58549c81e03b35a47af9fe6c6364179ccd4ef862b7c3b2d3
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2.15.orig.tar.gz' bash_5.2.15.orig.tar.gz 9997221 SHA256:7a315bc0e9d90713159e4390ec1096a41e4f33cd8cc3d1a749a8e5ad56600f51
-'http://deb.debian.org/debian/pool/main/b/bash/bash_5.2.15-2.debian.tar.xz' bash_5.2.15-2.debian.tar.xz 97380 SHA256:998f8ea5b754a734ae7d8306e149c43d713ddfcf49623a036004b729237dbcca
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/bash/5.2.15-2/
 
-- https://sources.debian.net/src/bash/5.2.15-2/ (for browsing the source)
-- https://sources.debian.net/src/bash/5.2.15-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/bash/5.2.15-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `bzip2=1.0.8-5`
 
@@ -2045,20 +2032,13 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris systemd=255~rc2-2
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_255%7erc2-2.dsc' systemd_255~rc2-2.dsc 6872 SHA256:b5cbdb71f7ace78546058e9fd9943b5fe5dcf77a3f888e6d2782e4e7d11f1326
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_255%7erc2.orig.tar.gz' systemd_255~rc2.orig.tar.gz 14844357 SHA256:56aa2f165a6b375ef51d13c8521d1530d9fb5a62b58e35d64b851c1a1b4cbaca
-'http://deb.debian.org/debian/pool/main/s/systemd/systemd_255%7erc2-2.debian.tar.xz' systemd_255~rc2-2.debian.tar.xz 163656 SHA256:7b286082bbc3fb76ada0bb29373ca93f41d2106a2d065c7dcf386f3095cfdcee
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/systemd/255~rc2-2/
 
-- https://sources.debian.net/src/systemd/255~rc2-2/ (for browsing the source)
-- https://sources.debian.net/src/systemd/255~rc2-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/systemd/255~rc2-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sysvinit=3.08-3`
 
@@ -2132,21 +2112,13 @@ Licenses: (parsed from: `/usr/share/doc/tzdata/copyright`)
 
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2023c-10
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c-10.dsc' tzdata_2023c-10.dsc 2259 SHA256:534f36efe6ec80a8dafb2a779a88d8c2f033befb794cbb168747269a0095f388
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz' tzdata_2023c.orig.tar.gz 443902 SHA256:3f510b5d1b4ae9bb38e485aa302a776b317fb3637bdb6404c4adf7b6cadd965c
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c.orig.tar.gz.asc' tzdata_2023c.orig.tar.gz.asc 833 SHA256:d5ec7b6ceddc46aa137c0ef85fa5c87445509d7997c067ee0fd2e2a23f833557
-'http://deb.debian.org/debian/pool/main/t/tzdata/tzdata_2023c-10.debian.tar.xz' tzdata_2023c-10.debian.tar.xz 121516 SHA256:5e82cd0a328f665b95c5456a024164f255b12b460c5b1c6f10702cba155f75f7
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2023c-10/
 
-- https://sources.debian.net/src/tzdata/2023c-10/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2023c-10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2023c-10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `usrmerge=38`
 
