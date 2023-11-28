@@ -1,7 +1,7 @@
 ## `drupal:9-php8.2-fpm-alpine3.18`
 
 ```console
-$ docker pull drupal@sha256:a32d88b9ba8e05a5ada732704d06c20b681d56e74dec9656b327eb5cc150d85e
+$ docker pull drupal@sha256:29326a55bd5299111334ba3ed68929513f5bd6aa9b6d117c56ec20884e06cb50
 ```
 
 -	Manifest MIME: `application/vnd.oci.image.index.v1+json`
@@ -189,13 +189,13 @@ $ docker pull drupal@sha256:02d19d139b3ddf4c2e4e936a7195c2390656010d1a54129fe28f
 ### `drupal:9-php8.2-fpm-alpine3.18` - linux; arm variant v6
 
 ```console
-$ docker pull drupal@sha256:079e3f3bb9db125b5c8c9872f6d84ceb12c3b79d3fc8198c24d7f37a8331f393
+$ docker pull drupal@sha256:b6167641eafd82fe7afa436e2a44dba12f9ab77b04c00e601a21eafef75f1d4e
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **57.6 MB (57587372 bytes)**  
+-	Total Size: **57.6 MB (57616220 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a505dfc8f4249f82473a40a3ba26e2e42c49ab2232b14e23ca536a0049b18c03`
+-	Image ID: `sha256:4332102c43f7c196c360823bc4fd399e9d32a86cd7dd5406075883e31445d660`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -223,11 +223,11 @@ ENV PHP_LDFLAGS=-Wl,-O1 -pie
 # Wed, 20 Sep 2023 22:07:44 GMT
 ENV GPG_KEYS=39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC
 # Wed, 20 Sep 2023 22:07:44 GMT
-ENV PHP_VERSION=8.2.12
+ENV PHP_VERSION=8.2.13
 # Wed, 20 Sep 2023 22:07:44 GMT
-ENV PHP_URL=https://www.php.net/distributions/php-8.2.12.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.2.12.tar.xz.asc
+ENV PHP_URL=https://www.php.net/distributions/php-8.2.13.tar.xz PHP_ASC_URL=https://www.php.net/distributions/php-8.2.13.tar.xz.asc
 # Wed, 20 Sep 2023 22:07:44 GMT
-ENV PHP_SHA256=e1526e400bce9f9f9f774603cfac6b72b5e8f89fa66971ebc3cc4e5964083132
+ENV PHP_SHA256=2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b
 # Wed, 20 Sep 2023 22:07:44 GMT
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
 # Wed, 20 Sep 2023 22:07:44 GMT
@@ -283,49 +283,49 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/drupa
 		Last Modified: Sat, 21 Oct 2023 03:21:09 GMT  
 		Size: 269.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:3447c9b165c946092ce36a05857dabc7b53e1c10e6b14e088945a2138195206f`  
-		Last Modified: Sat, 28 Oct 2023 02:36:25 GMT  
-		Size: 12.1 MB (12069767 bytes)  
+	-	`sha256:a205338a0deb0d4ca40adb20aa238a48070aaaaec3c76059cc3b48f23749fefc`  
+		Last Modified: Mon, 27 Nov 2023 22:30:53 GMT  
+		Size: 12.1 MB (12089944 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:7a846d41b7fe8f25c9f9d285b4a91dac3ba0fe88f1eacd5d7353ef8b488d8510`  
-		Last Modified: Sat, 28 Oct 2023 02:36:24 GMT  
-		Size: 497.0 B  
+	-	`sha256:9188e3126e59d64bc06361c6ec3425d1b111c9f82114b3fdcbadb9bf4ace0356`  
+		Last Modified: Mon, 27 Nov 2023 22:30:52 GMT  
+		Size: 499.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:65a48ce427779b092b47a518dd2ea2d681db30bba7ef2480982c8adbb0098f30`  
-		Last Modified: Sat, 28 Oct 2023 02:37:14 GMT  
-		Size: 14.2 MB (14213478 bytes)  
+	-	`sha256:81a8c7c13697d28b1b024f27e6d333ba59a0f339a02abe26e33a123f4f92fe42`  
+		Last Modified: Mon, 27 Nov 2023 22:31:24 GMT  
+		Size: 14.2 MB (14222203 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:1157767000f71613aad98039edec06c00ccd7443a6306a5cd603ff18539b7466`  
-		Last Modified: Sat, 28 Oct 2023 02:37:11 GMT  
+	-	`sha256:dd4e7f3c33458e415cc1d6c56a0470f20d23cf2011ebe47944ea4c626e0cc60e`  
+		Last Modified: Mon, 27 Nov 2023 22:31:21 GMT  
 		Size: 2.4 KB (2448 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9d798183443d00fd0e96e3b161356f07cc51333d9a869f139055fe0d3a8710bf`  
-		Last Modified: Sat, 28 Oct 2023 02:37:11 GMT  
-		Size: 18.8 KB (18810 bytes)  
+	-	`sha256:72964dbfca64322d62ce0037babea0a286cfc7907ff1370b97d9e44dc4164b99`  
+		Last Modified: Mon, 27 Nov 2023 22:31:21 GMT  
+		Size: 18.8 KB (18812 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:150710d154d950a8dd8422b9e982a4205207464d1dbf3d3eb1b5f12ce8475125`  
-		Last Modified: Sat, 28 Oct 2023 02:37:11 GMT  
-		Size: 9.2 KB (9181 bytes)  
+	-	`sha256:9eb6fb5bc2110a2f2958d3d1ebbd352caf1078a33fa39df48ca2ab39e28f2adc`  
+		Last Modified: Mon, 27 Nov 2023 22:31:21 GMT  
+		Size: 9.2 KB (9177 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:e0964e6de775d31a0f11951a22e8f96329defb9fbc778c335049f7ce9c20e3df`  
-		Last Modified: Wed, 08 Nov 2023 20:24:55 GMT  
-		Size: 1.9 MB (1855374 bytes)  
+	-	`sha256:63810ecee85eeb77e8798b92f13f1670b2383577bb30598fab30327ce739f2ea`  
+		Last Modified: Tue, 28 Nov 2023 00:13:01 GMT  
+		Size: 1.9 MB (1855403 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:20e97f4c470dfc84a734bbebf4e2bf1845cfea8ed59ddde129c52ae2c50e62f0`  
-		Last Modified: Wed, 08 Nov 2023 20:24:55 GMT  
-		Size: 317.0 B  
+	-	`sha256:65d8282e799c53169ca7b38d1b1fb02f7d7de62c3147afad21b27d65ff6579dd`  
+		Last Modified: Tue, 28 Nov 2023 00:13:00 GMT  
+		Size: 310.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:9bb98492ce5a9f2fc8df1916faf956a0f7c1a9b5229aaafd190b1ac7e1229e24`  
-		Last Modified: Wed, 08 Nov 2023 20:24:55 GMT  
-		Size: 705.0 KB (705007 bytes)  
+	-	`sha256:04de7a64e55ae8af0b639ee880ee90eecadbda24d5eb714b05333ad8ed5b74fe`  
+		Last Modified: Tue, 28 Nov 2023 00:13:00 GMT  
+		Size: 705.0 KB (704998 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:97a8c330094c3d0973e7bf69ca30f470cf333efaa00517d7355a28c5a4c4781b`  
-		Last Modified: Wed, 08 Nov 2023 20:24:55 GMT  
-		Size: 115.0 B  
+	-	`sha256:89fb017da6c1932b96b2eb806743e9a6f2c0a470decf43d807a09788319502f6`  
+		Last Modified: Tue, 28 Nov 2023 00:13:00 GMT  
+		Size: 114.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:ecfe197dab64387fe7f68a8ac5a71d22007817f4050791b29ed7ba9994469d26`  
-		Last Modified: Wed, 08 Nov 2023 20:33:13 GMT  
-		Size: 22.9 MB (22879921 bytes)  
+	-	`sha256:777e28f6bd99cd8b01647983a7b6a877d6181d007467465da38fdb65e53fec40`  
+		Last Modified: Tue, 28 Nov 2023 00:21:09 GMT  
+		Size: 22.9 MB (22879855 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `drupal:9-php8.2-fpm-alpine3.18` - linux; arm variant v7
