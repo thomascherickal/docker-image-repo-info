@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0bf3031f965523833e59f4c6c0a17dccaf18822a84a409e40a53a479d4cf6bad`
+- Image ID: `sha256:503fdcb13f37ec39292d2cf88400bbe475ec8552fe48e92a3b914940d9d4ca3d`
 - Created: `2023-09-20T22:07:44Z`
-- Virtual Size: ~ 173.09 Mb  
+- Virtual Size: ~ 177.20 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -283,16 +283,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1w-r0 description:
+libcrypto1.1-1.1.1w-r1 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1w-r0 webpage:
+libcrypto1.1-1.1.1w-r1 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1w-r0 installed size:
+libcrypto1.1-1.1.1w-r1 installed size:
 2708 KiB
 
-libcrypto1.1-1.1.1w-r0 license:
+libcrypto1.1-1.1.1w-r1 license:
 OpenSSL
 
 ```
@@ -351,16 +351,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-14.9-r0 description:
+libpq-14.10-r0 description:
 PostgreSQL client library
 
-libpq-14.9-r0 webpage:
+libpq-14.10-r0 webpage:
 https://www.postgresql.org/
 
-libpq-14.9-r0 installed size:
+libpq-14.10-r0 installed size:
 328 KiB
 
-libpq-14.9-r0 license:
+libpq-14.10-r0 license:
 PostgreSQL
 
 ```
@@ -385,16 +385,16 @@ ISC
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1w-r0 description:
+libssl1.1-1.1.1w-r1 description:
 SSL shared libraries
 
-libssl1.1-1.1.1w-r0 webpage:
+libssl1.1-1.1.1w-r1 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1w-r0 installed size:
+libssl1.1-1.1.1w-r1 installed size:
 528 KiB
 
-libssl1.1-1.1.1w-r0 license:
+libssl1.1-1.1.1w-r1 license:
 OpenSSL
 
 ```
@@ -555,16 +555,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-1.1.1w-r0 description:
+openssl-1.1.1w-r1 description:
 toolkit for transport layer security (TLS) - version 1.1
 
-openssl-1.1.1w-r0 webpage:
+openssl-1.1.1w-r1 webpage:
 https://www.openssl.org/
 
-openssl-1.1.1w-r0 installed size:
+openssl-1.1.1w-r1 installed size:
 660 KiB
 
-openssl-1.1.1w-r0 license:
+openssl-1.1.1w-r1 license:
 OpenSSL
 
 ```

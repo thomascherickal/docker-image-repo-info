@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:afefa09f55b24a544da23b78ef8ba89ef3ddaa57e17e78614ed065f801b47228`
+- Image ID: `sha256:400225bfd769f816b9fb639878881228af7c72a466c49d951289c7d76c8681f0`
 - Created: `2023-11-01T17:45:09Z`
-- Virtual Size: ~ 174.48 Mb  
+- Virtual Size: ~ 174.50 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -17,10 +17,10 @@
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
   - `GPG_KEYS=39B641343D8C104B2B146DC3F9C39DC0B9698544 E60913E4DF209907D8E30D96659A97C9CF2A795A 1198C0117593497A5EC5C199286AF1F9897469DC`
-  - `PHP_VERSION=8.2.12`
-  - `PHP_URL=https://www.php.net/distributions/php-8.2.12.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.2.12.tar.xz.asc`
-  - `PHP_SHA256=e1526e400bce9f9f9f774603cfac6b72b5e8f89fa66971ebc3cc4e5964083132`
+  - `PHP_VERSION=8.2.13`
+  - `PHP_URL=https://www.php.net/distributions/php-8.2.13.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.2.13.tar.xz.asc`
+  - `PHP_SHA256=2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b`
   - `DRUPAL_VERSION=10.1.6`
 
 ## `apk` (`.apk`-based packages)
@@ -300,16 +300,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.0.12-r0 description:
+libcrypto3-3.0.12-r1 description:
 Crypto library from openssl
 
-libcrypto3-3.0.12-r0 webpage:
+libcrypto3-3.0.12-r1 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.0.12-r0 installed size:
+libcrypto3-3.0.12-r1 installed size:
 4120 KiB
 
-libcrypto3-3.0.12-r0 license:
+libcrypto3-3.0.12-r1 license:
 Apache-2.0
 
 ```
@@ -385,16 +385,16 @@ Libpng
 ### `apk` package: `libpq`
 
 ```console
-libpq-15.4-r0 description:
+libpq-15.5-r0 description:
 PostgreSQL client library
 
-libpq-15.4-r0 webpage:
+libpq-15.5-r0 webpage:
 https://www.postgresql.org/
 
-libpq-15.4-r0 installed size:
+libpq-15.5-r0 installed size:
 336 KiB
 
-libpq-15.4-r0 license:
+libpq-15.5-r0 license:
 PostgreSQL
 
 ```
@@ -419,16 +419,16 @@ ISC
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.0.12-r0 description:
+libssl3-3.0.12-r1 description:
 SSL shared libraries
 
-libssl3-3.0.12-r0 webpage:
+libssl3-3.0.12-r1 webpage:
 https://www.openssl.org/
 
-libssl3-3.0.12-r0 installed size:
+libssl3-3.0.12-r1 installed size:
 608 KiB
 
-libssl3-3.0.12-r0 license:
+libssl3-3.0.12-r1 license:
 Apache-2.0
 
 ```
@@ -589,16 +589,16 @@ BSD-2-Clause
 ### `apk` package: `openssl`
 
 ```console
-openssl-3.0.12-r0 description:
+openssl-3.0.12-r1 description:
 Toolkit for Transport Layer Security (TLS)
 
-openssl-3.0.12-r0 webpage:
+openssl-3.0.12-r1 webpage:
 https://www.openssl.org/
 
-openssl-3.0.12-r0 installed size:
+openssl-3.0.12-r1 installed size:
 872 KiB
 
-openssl-3.0.12-r0 license:
+openssl-3.0.12-r1 license:
 Apache-2.0
 
 ```
