@@ -1,13 +1,13 @@
-# `perl:5.38.0-buster`
+# `perl:5.38.2-buster`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d2f19da2925509254eeeaf147fc02d7e8f17215230c31757c6841bfb136346e4`
-- Created: `2023-11-21T21:16:06.327616396Z`
-- Virtual Size: ~ 864.33 Mb  
+- Image ID: `sha256:26f9afff35aa4393c4254d85dc484e5484008b154967e8585513a38cdcc3d1b0`
+- Created: `2023-11-30T19:38:06.262323791Z`
+- Virtual Size: ~ 864.35 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
-- Command: `["perl5.38.0","-de0"]`
+- Command: `["perl5.38.2","-de0"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
 - Labels:
@@ -2229,20 +2229,13 @@ Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 - `other-1`
 - `public-domain-1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libde265=1.0.11-0+deb10u4
-'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.11-0%2bdeb10u4.dsc' libde265_1.0.11-0+deb10u4.dsc 2252 SHA256:ba727f2d4c780fc3df3d6146c3ee310eac4478211ef562d3ff59be6b98f4db1e
-'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.11.orig.tar.gz' libde265_1.0.11.orig.tar.gz 845996 SHA256:2f8f12cabbdb15e53532b7c1eb964d4e15d444db1be802505e6ac97a25035bab
-'http://deb.debian.org/debian-security/pool/updates/main/libd/libde265/libde265_1.0.11-0%2bdeb10u4.debian.tar.xz' libde265_1.0.11-0+deb10u4.debian.tar.xz 13672 SHA256:47135d99d518677711697a94f954595cd406be6d73aa80848c795ac3eac4ff9f
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libde265/1.0.11-0+deb10u4/
 
-- https://sources.debian.net/src/libde265/1.0.11-0+deb10u4/ (for browsing the source)
-- https://sources.debian.net/src/libde265/1.0.11-0+deb10u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libde265/1.0.11-0+deb10u4/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libedit=3.1-20181209-1`
 
