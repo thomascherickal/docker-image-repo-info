@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:dce2ca968ad2d564fa6f431ffb9755ceed30a385610a5ff6fbe13c06a8a0bd64`
-- Created: `2023-10-21T03:26:06.544220565Z`
-- Virtual Size: ~ 78.88 Mb  
+- Image ID: `sha256:dc069cfc4113d49e432d6e44330a87cb385377354961c12ba4db51058dafc542`
+- Created: `2023-12-01T05:49:08.262637494Z`
+- Virtual Size: ~ 73.93 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["irb"]`
@@ -227,16 +227,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto3`
 
 ```console
-libcrypto3-3.0.11-r0 description:
+libcrypto3-3.0.12-r1 description:
 Crypto library from openssl
 
-libcrypto3-3.0.11-r0 webpage:
+libcrypto3-3.0.12-r1 webpage:
 https://www.openssl.org/
 
-libcrypto3-3.0.11-r0 installed size:
+libcrypto3-3.0.12-r1 installed size:
 4120 KiB
 
-libcrypto3-3.0.11-r0 license:
+libcrypto3-3.0.12-r1 license:
 Apache-2.0
 
 ```
@@ -329,16 +329,16 @@ LGPL-2.1-or-later
 ### `apk` package: `libproc`
 
 ```console
-libproc-3.3.17-r2 description:
+libproc-3.3.17-r3 description:
 Library for monitoring system and processes
 
-libproc-3.3.17-r2 webpage:
+libproc-3.3.17-r3 webpage:
 https://gitlab.com/procps-ng/procps
 
-libproc-3.3.17-r2 installed size:
+libproc-3.3.17-r3 installed size:
 84 KiB
 
-libproc-3.3.17-r2 license:
+libproc-3.3.17-r3 license:
 GPL-2.0-or-later AND LGPL-2.1-or-later
 
 ```
@@ -346,16 +346,16 @@ GPL-2.0-or-later AND LGPL-2.1-or-later
 ### `apk` package: `libssl3`
 
 ```console
-libssl3-3.0.11-r0 description:
+libssl3-3.0.12-r1 description:
 SSL shared libraries
 
-libssl3-3.0.11-r0 webpage:
+libssl3-3.0.12-r1 webpage:
 https://www.openssl.org/
 
-libssl3-3.0.11-r0 installed size:
+libssl3-3.0.12-r1 installed size:
 608 KiB
 
-libssl3-3.0.11-r0 license:
+libssl3-3.0.12-r1 license:
 Apache-2.0
 
 ```
@@ -482,16 +482,16 @@ ISC
 ### `apk` package: `procps`
 
 ```console
-procps-3.3.17-r2 description:
+procps-3.3.17-r3 description:
 Utilities for monitoring your system and processes on your system
 
-procps-3.3.17-r2 webpage:
+procps-3.3.17-r3 webpage:
 https://gitlab.com/procps-ng/procps
 
-procps-3.3.17-r2 installed size:
-588 KiB
+procps-3.3.17-r3 installed size:
+592 KiB
 
-procps-3.3.17-r2 license:
+procps-3.3.17-r3 license:
 GPL-2.0-or-later AND LGPL-2.1-or-later
 
 ```
