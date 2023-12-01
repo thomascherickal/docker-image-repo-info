@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:463c601df1d0e376471dbdf282e0c0dac6451c01d7b25ed9ecf19990d9910943`
-- Created: `2023-10-16T00:14:53Z`
-- Virtual Size: ~ 930.78 Mb  
+- Image ID: `sha256:f154d21b0a1d9e16350d59b4fcf9c7fcc111ebeba7ff9efee7e03577dd635bfd`
+- Created: `2023-10-21T18:46:15Z`
+- Virtual Size: ~ 929.88 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["python3"]`
@@ -14,8 +14,8 @@
   - `GPG_KEY=7169605F62C751356D054A26A821E680E5FA6305`
   - `PYTHON_VERSION=3.12.0`
   - `PYTHON_PIP_VERSION=23.2.1`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/c6add47b0abf67511cdfb4734771cbab403af062/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=22b849a10f86f5ddf7ce148ca2a31214504ee6c83ef626840fde6e5dcd809d11`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/4cfa4081d27285bda1220a62a5ebf5b4bd749cdb/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=9cc01665956d22b3bf057ae8287b035827bfd895da235bcea200ab3b811790b6`
 
 ## `dpkg` (`.deb`-based packages)
 
