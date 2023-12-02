@@ -1,7 +1,7 @@
 ## `ros:iron-ros-core`
 
 ```console
-$ docker pull ros@sha256:d76c96209cddf4870139bf98131cd6cfda10f220b286042c782215eb02262899
+$ docker pull ros@sha256:b5b3791e097f6b41c4d8c2f8a5e696d02395a94c67349e713d2d3b1b057487a3
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,82 +12,82 @@ $ docker pull ros@sha256:d76c96209cddf4870139bf98131cd6cfda10f220b286042c782215e
 ### `ros:iron-ros-core` - linux; amd64
 
 ```console
-$ docker pull ros@sha256:c6d3480ac39788730c8cbbb844f6699b29e8b0d75ddfa74db49ce6900e520e6a
+$ docker pull ros@sha256:e72be73bac2f1194de395c9365c3c6b231810288998e9dd7d7a4b1b6332bd3ad
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **159.7 MB (159697919 bytes)**  
+-	Total Size: **159.7 MB (159707128 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e75070c10443e13888006991cc5e81a9cb80ddad9bcb4e8f3a9695b0bbb9bf4f`
+-	Image ID: `sha256:7309103b9f163d0005fc12ab9b18b31266751f3d711b3b2a0054627947e6d7e7`
 -	Entrypoint: `["\/ros_entrypoint.sh"]`
 -	Default Command: `["bash"]`
 
 ```dockerfile
-# Thu, 05 Oct 2023 07:33:30 GMT
+# Fri, 01 Dec 2023 07:49:48 GMT
 ARG RELEASE
-# Thu, 05 Oct 2023 07:33:30 GMT
+# Fri, 01 Dec 2023 07:49:48 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Thu, 05 Oct 2023 07:33:30 GMT
+# Fri, 01 Dec 2023 07:49:48 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Thu, 05 Oct 2023 07:33:30 GMT
+# Fri, 01 Dec 2023 07:49:48 GMT
 LABEL org.opencontainers.image.version=22.04
-# Thu, 05 Oct 2023 07:33:32 GMT
-ADD file:63d5ab3ef0aab308c0e71cb67292c5467f60deafa9b0418cbb220affcd078444 in / 
-# Thu, 05 Oct 2023 07:33:32 GMT
+# Fri, 01 Dec 2023 07:49:50 GMT
+ADD file:36d444e2cede3abe58191dcf28890b874c0908f5259bf7e8855338555701c4c5 in / 
+# Fri, 01 Dec 2023 07:49:50 GMT
 CMD ["/bin/bash"]
-# Fri, 13 Oct 2023 09:10:43 GMT
+# Sat, 02 Dec 2023 05:27:25 GMT
 RUN echo 'Etc/UTC' > /etc/timezone &&     ln -s /usr/share/zoneinfo/Etc/UTC /etc/localtime &&     apt-get update &&     apt-get install -q -y --no-install-recommends tzdata &&     rm -rf /var/lib/apt/lists/*
-# Fri, 13 Oct 2023 09:11:03 GMT
+# Sat, 02 Dec 2023 05:27:47 GMT
 RUN apt-get update && apt-get install -q -y --no-install-recommends     dirmngr     gnupg2     && rm -rf /var/lib/apt/lists/*
-# Fri, 13 Oct 2023 09:11:04 GMT
+# Sat, 02 Dec 2023 05:27:48 GMT
 RUN echo "deb http://packages.ros.org/ros2/ubuntu jammy main" > /etc/apt/sources.list.d/ros2-latest.list
-# Fri, 13 Oct 2023 09:11:05 GMT
+# Sat, 02 Dec 2023 05:27:49 GMT
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-# Fri, 13 Oct 2023 09:11:05 GMT
+# Sat, 02 Dec 2023 05:27:49 GMT
 ENV LANG=C.UTF-8
-# Fri, 13 Oct 2023 09:11:05 GMT
+# Sat, 02 Dec 2023 05:27:49 GMT
 ENV LC_ALL=C.UTF-8
-# Fri, 13 Oct 2023 09:23:57 GMT
+# Sat, 02 Dec 2023 05:51:06 GMT
 ENV ROS_DISTRO=iron
-# Fri, 13 Oct 2023 09:24:43 GMT
+# Sat, 02 Dec 2023 05:52:49 GMT
 RUN apt-get update && apt-get install -y --no-install-recommends     ros-iron-ros-core=0.10.0-3*     && rm -rf /var/lib/apt/lists/*
-# Fri, 13 Oct 2023 09:24:45 GMT
+# Sat, 02 Dec 2023 05:52:51 GMT
 COPY file:ec5b16a0e777d7d7d041a72ffc817bf5f7b375662afa0c404f3ca36fad1afb90 in / 
-# Fri, 13 Oct 2023 09:24:45 GMT
+# Sat, 02 Dec 2023 05:52:51 GMT
 ENTRYPOINT ["/ros_entrypoint.sh"]
-# Fri, 13 Oct 2023 09:24:45 GMT
+# Sat, 02 Dec 2023 05:52:51 GMT
 CMD ["bash"]
 ```
 
 -	Layers:
-	-	`sha256:43f89b94cd7df92a2f7e565b8fb1b7f502eff2cd225508cbd7ea2d36a9a3a601`  
-		Last Modified: Thu, 05 Oct 2023 08:42:10 GMT  
-		Size: 30.4 MB (30439111 bytes)  
+	-	`sha256:cbe3537751ce03ea42788c2fbe2d5d336180dc2e20472c8cdba8b3224191d101`  
+		Last Modified: Wed, 29 Nov 2023 19:24:54 GMT  
+		Size: 30.4 MB (30446322 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b88f4f42a82353a9c0283985de717a459b19bfb2efc359c4829a806484d20e81`  
-		Last Modified: Fri, 13 Oct 2023 09:33:58 GMT  
-		Size: 1.2 MB (1212966 bytes)  
+	-	`sha256:f3bf7725f2e681d0c15f152b2f888f77c84c4d12171d80cd7fa4f49f3d492f10`  
+		Last Modified: Sat, 02 Dec 2023 06:02:02 GMT  
+		Size: 1.2 MB (1213167 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:24c891fc2128fdc51ff82124d6dd8772e6f15b9d49b492bcffcb32904fad3d37`  
-		Last Modified: Fri, 13 Oct 2023 09:33:57 GMT  
-		Size: 3.8 MB (3828820 bytes)  
+	-	`sha256:779e38ab231d64c0df2d7580b11ddac752bacf4e52cd32b110d15cdbe06c8fbc`  
+		Last Modified: Sat, 02 Dec 2023 06:02:01 GMT  
+		Size: 3.8 MB (3829013 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:348881bc17ed1b5cc9deae183d10e21fd2c2b23014d9af63f6a686117b20f7ab`  
-		Last Modified: Fri, 13 Oct 2023 09:33:56 GMT  
-		Size: 230.0 B  
+	-	`sha256:5eeba364b2019d92e87cbcab89bd90f200d06ac74f5d4a1a9d74bf074212553f`  
+		Last Modified: Sat, 02 Dec 2023 06:02:00 GMT  
+		Size: 231.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:94d3a94e39139da8a88b5221c31a1e2766e0377f2fe424397759e44d36322beb`  
-		Last Modified: Fri, 13 Oct 2023 09:33:56 GMT  
+	-	`sha256:749b34d74c1a492cae4e3f4683f2d86855ac6e95e57c6b6cfbf50462c1600cee`  
+		Last Modified: Sat, 02 Dec 2023 06:02:00 GMT  
 		Size: 2.0 KB (1990 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:4a71a51fc13dccb3db719be64cb41c5683eb7cdab53ad5014f61544f34cf22da`  
-		Last Modified: Fri, 13 Oct 2023 09:36:46 GMT  
-		Size: 124.2 MB (124214606 bytes)  
+	-	`sha256:55970dcb7fa90692b2898147d21e6b7e0f5e68377f2c76abc9cc9835b3e1c54e`  
+		Last Modified: Sat, 02 Dec 2023 06:04:48 GMT  
+		Size: 124.2 MB (124216210 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:b05a5bca23e9a5b29bfe875724698516920afe1583e3125c80ef6fb24db5d46f`  
-		Last Modified: Fri, 13 Oct 2023 09:36:26 GMT  
-		Size: 196.0 B  
+	-	`sha256:8396d9129ad2c371dc2833e37d47be0334635d73ad57281ba8a3ea3c7165c891`  
+		Last Modified: Sat, 02 Dec 2023 06:04:29 GMT  
+		Size: 195.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `ros:iron-ros-core` - linux; arm64 variant v8
