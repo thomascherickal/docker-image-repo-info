@@ -1,7 +1,7 @@
 ## `ubuntu:mantic`
 
 ```console
-$ docker pull ubuntu@sha256:4c32aacd0f7d1d3a29e82bee76f892ba9bb6a63f17f9327ca0d97c3d39b9b0ee
+$ docker pull ubuntu@sha256:e82db07bf46c1da56547b5fb31c0200f4a41e0f0ea9cb7970b3ca3e8720d8d6c
 ```
 
 -	Manifest MIME: `application/vnd.oci.image.index.v1+json`
@@ -15,35 +15,35 @@ $ docker pull ubuntu@sha256:4c32aacd0f7d1d3a29e82bee76f892ba9bb6a63f17f9327ca0d9
 ### `ubuntu:mantic` - linux; amd64
 
 ```console
-$ docker pull ubuntu@sha256:13f233a16be210b57907b98b0d927ceff7571df390701e14fe1f3901b2c4a4d7
+$ docker pull ubuntu@sha256:8d093e0651575a6437cc4a3d561f892a345d263aeac6156ef378fe6a4ccabd4c
 ```
 
 -	Docker Version: 20.10.21
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **27.3 MB (27271091 bytes)**  
+-	Total Size: **27.3 MB (27273553 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:fe7a3960a97ee41f84c8045700d2e5bd671a42f02a64ee33dde10627dee1a7d7`
+-	Image ID: `sha256:483a94112583ff9c6d0a7b67348fc3b0ee5bbf104a86a9e24585c9ad1028fd25`
 -	Default Command: `["\/bin\/bash"]`
 
 ```dockerfile
-# Wed, 11 Oct 2023 18:04:48 GMT
+# Thu, 30 Nov 2023 17:54:17 GMT
 ARG RELEASE
-# Wed, 11 Oct 2023 18:04:48 GMT
+# Thu, 30 Nov 2023 17:54:17 GMT
 ARG LAUNCHPAD_BUILD_ARCH
-# Wed, 11 Oct 2023 18:04:48 GMT
+# Thu, 30 Nov 2023 17:54:17 GMT
 LABEL org.opencontainers.image.ref.name=ubuntu
-# Wed, 11 Oct 2023 18:04:49 GMT
+# Thu, 30 Nov 2023 17:54:17 GMT
 LABEL org.opencontainers.image.version=23.10
-# Wed, 11 Oct 2023 18:04:50 GMT
-ADD file:492ae1940ef5a9a4d7af92b9120b5b7c7d3bfd8107ce94d28eab844ace024981 in / 
-# Wed, 11 Oct 2023 18:04:50 GMT
+# Thu, 30 Nov 2023 17:54:19 GMT
+ADD file:5430e0b4ea856c760b6e2b88e8c2cd2d49704ed2f3c53ae34c10750a608d40ec in / 
+# Thu, 30 Nov 2023 17:54:19 GMT
 CMD ["/bin/bash"]
 ```
 
 -	Layers:
-	-	`sha256:d1cf823cf1f0c938d15f343c52a2110dffb08010fe39e69aba493326b5629709`  
-		Last Modified: Wed, 11 Oct 2023 18:17:47 GMT  
-		Size: 27.3 MB (27271091 bytes)  
+	-	`sha256:767829bcf202e4fa7e777f29d390307e29ac437f131685a1ff1293d44705ca23`  
+		Last Modified: Thu, 30 Nov 2023 18:06:39 GMT  
+		Size: 27.3 MB (27273553 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
 ### `ubuntu:mantic` - linux; arm variant v7
