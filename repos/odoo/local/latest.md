@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:eeb591a7d8a95c271d1bbdfdbcfade49852ff05eebeaf067f803981f84e9b813`
-- Created: `2023-11-28T23:36:07.450857844Z`
+- Image ID: `sha256:c299d6f2e0704e14f7cb259ee0f48b435465f884c7d02d7f022f5a7bd9bbf9e6`
+- Created: `2023-12-02T04:53:23.477742501Z`
 - Virtual Size: ~ 1.78 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -102,21 +102,25 @@ $ apt-get source -qq --print-uris appdirs=1.4.4-2
 'http://archive.ubuntu.com/ubuntu/pool/main/a/appdirs/appdirs_1.4.4-2.debian.tar.xz' appdirs_1.4.4-2.debian.tar.xz 3520 SHA512:f264fb567f29e38bba575b40f9d86496745063a042a82d420e120b766c89963d0d9efd3819cc8e133975f4b51667e009a77fbb61751ab2908cd410272e5a1006
 ```
 
-### `dpkg` source package: `apt=2.4.10`
+### `dpkg` source package: `apt=2.4.11`
 
 Binary Packages:
 
-- `apt=2.4.10`
-- `libapt-pkg6.0:amd64=2.4.10`
+- `apt=2.4.11`
+- `libapt-pkg6.0:amd64=2.4.11`
 
 Licenses: (parsed from: `/usr/share/doc/apt/copyright`, `/usr/share/doc/libapt-pkg6.0/copyright`)
 
 - `GPL-2`
 - `GPLv2+`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris apt=2.4.11
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.11.dsc' apt_2.4.11.dsc 2801 SHA512:c47ed96f9f4abed3b7acbe78872c1621334ae3e7e45bee08cee5db266553e2dfe21312d49b4c66ce7330a664e13f227d285995b5963a5498c0c4f9f930b757ff
+'http://archive.ubuntu.com/ubuntu/pool/main/a/apt/apt_2.4.11.tar.xz' apt_2.4.11.tar.xz 2323076 SHA512:4eb92111cd897cafd8c37e79e97d8f7fbfbc32c614ad377cb6a5685a57c2144bb9b12a646abedc55444f9b5e203e8007818c7a407d7e86ff106568150ba3a248
+```
 
 ### `dpkg` source package: `attr=1:2.5.1-1build1`
 
@@ -1131,11 +1135,11 @@ $ apt-get source -qq --print-uris gnupg2=2.2.27-3ubuntu2.1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.27-3ubuntu2.1.debian.tar.xz' gnupg2_2.2.27-3ubuntu2.1.debian.tar.xz 66676 SHA512:6f8aea12b515ef1b8558ac925bb84ae6f1743739c0edfc64e02952479d4a1271f8f6ee8fc23461164116f3f8396376009ed1ea609c55a59e4936f7d02b1f828a
 ```
 
-### `dpkg` source package: `gnutls28=3.7.3-4ubuntu1.2`
+### `dpkg` source package: `gnutls28=3.7.3-4ubuntu1.3`
 
 Binary Packages:
 
-- `libgnutls30:amd64=3.7.3-4ubuntu1.2`
+- `libgnutls30:amd64=3.7.3-4ubuntu1.3`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
@@ -1153,9 +1157,15 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `LGPLv3+_or_GPLv2+`
 - `The main library is licensed under GNU Lesser`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris gnutls28=3.7.3-4ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3-4ubuntu1.3.dsc' gnutls28_3.7.3-4ubuntu1.3.dsc 3572 SHA512:7c1ba5548662544f4e165fc6f1203e256ebdc54a305747e3ae0ee4b607036276ef9bc76a3d7279c52c815396f835c5b63a3e7b32a5e650239b60d3ad8aa60070
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3.orig.tar.xz' gnutls28_3.7.3.orig.tar.xz 6119292 SHA512:3ace744affe23e284342658d6d2d2de49dd50065489cbc8be18fc7d38187253e5268ca54027ce5cd517056c249ac039a7481e4548cec04325de37ae85617d077
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3.orig.tar.xz.asc' gnutls28_3.7.3.orig.tar.xz.asc 833 SHA512:cd0d30298377deddf20a835863b71e3f119588061f659906ad2684004758943179531508b1c77c730e930e2131148095e60ad9be365353cce772472d5f5345df
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.3-4ubuntu1.3.debian.tar.xz' gnutls28_3.7.3-4ubuntu1.3.debian.tar.xz 77476 SHA512:106d83934c67478db78c92c23a463e5954e0e64b2c0b938f6ec000e50df58080da1e09fbd909e28fe962572b8ff0b3461d4cb7eb15a5e442f44017ee1e060589
+```
 
 ### `dpkg` source package: `graphite2=1.3.14-1build2`
 
@@ -1474,22 +1484,27 @@ $ apt-get source -qq --print-uris keyutils=1.6.1-2ubuntu3
 'http://archive.ubuntu.com/ubuntu/pool/main/k/keyutils/keyutils_1.6.1-2ubuntu3.debian.tar.xz' keyutils_1.6.1-2ubuntu3.debian.tar.xz 18936 SHA512:16f390f0fc3154a77c8ca3666d44881a6ca2f0d11cfe0398cd82b57b6f552af85c156de358d0b87e39f301331897d72de058050e3cb53720a76b5b5ebf07aa3d
 ```
 
-### `dpkg` source package: `krb5=1.19.2-2ubuntu0.2`
+### `dpkg` source package: `krb5=1.19.2-2ubuntu0.3`
 
 Binary Packages:
 
-- `libgssapi-krb5-2:amd64=1.19.2-2ubuntu0.2`
-- `libk5crypto3:amd64=1.19.2-2ubuntu0.2`
-- `libkrb5-3:amd64=1.19.2-2ubuntu0.2`
-- `libkrb5support0:amd64=1.19.2-2ubuntu0.2`
+- `libgssapi-krb5-2:amd64=1.19.2-2ubuntu0.3`
+- `libk5crypto3:amd64=1.19.2-2ubuntu0.3`
+- `libkrb5-3:amd64=1.19.2-2ubuntu0.3`
+- `libkrb5support0:amd64=1.19.2-2ubuntu0.3`
 
 Licenses: (parsed from: `/usr/share/doc/libgssapi-krb5-2/copyright`, `/usr/share/doc/libk5crypto3/copyright`, `/usr/share/doc/libkrb5-3/copyright`, `/usr/share/doc/libkrb5support0/copyright`)
 
 - `GPL-2`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris krb5=1.19.2-2ubuntu0.3
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2-2ubuntu0.3.dsc' krb5_1.19.2-2ubuntu0.3.dsc 3356 SHA512:924ae89c4c515c01416856d0ef4f3ff50e6258bfb922ec7d2d7b9c1af5d07af092ba07ae5f74a48859e2a0bcb507e572dd55c3ba5221ec37e264bfa7f9c4f800
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2.orig.tar.gz' krb5_1.19.2.orig.tar.gz 8741053 SHA512:b90d6ed0e1e8a87eb5cb2c36d88b823a6a6caabf85e5d419adb8a930f7eea09a5f8491464e7e454cca7ba88be09d19415962fe0036ad2e31fc584f9fc0bbd470
+'http://archive.ubuntu.com/ubuntu/pool/main/k/krb5/krb5_1.19.2-2ubuntu0.3.debian.tar.xz' krb5_1.19.2-2ubuntu0.3.debian.tar.xz 108848 SHA512:368d8da9d03856e93341fe25483e3108f12b661dc00176ec0c42c40a73bf55f62f1f97724b1e811b9f15e2cf4aa6b43fde44d5b00ef9c2729fef1ed717538d3f
+```
 
 ### `dpkg` source package: `lcms2=2.12~rc1-2build2`
 
@@ -2986,11 +3001,11 @@ $ apt-get source -qq --print-uris nettle=3.7.3-1build2
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.7.3-1build2.debian.tar.xz' nettle_3.7.3-1build2.debian.tar.xz 22100 SHA512:c1935d35e9f04798273053ab92c7405ec225a5d72ba6c2869b0f2bf54b459ac428e113bc149796e91834a8b56082f8bbfbb906a6cd6787142b8932bd1dd83cec
 ```
 
-### `dpkg` source package: `nghttp2=1.43.0-1build3`
+### `dpkg` source package: `nghttp2=1.43.0-1ubuntu0.1`
 
 Binary Packages:
 
-- `libnghttp2-14:amd64=1.43.0-1build3`
+- `libnghttp2-14:amd64=1.43.0-1ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 
@@ -3005,10 +3020,10 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris nghttp2=1.43.0-1build3
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.43.0-1build3.dsc' nghttp2_1.43.0-1build3.dsc 2655 SHA512:9bc6ee4bf6949d480cf6782eb6d0f27159d0c74a64e3fbbb3173f2053777591fd43951776714e9a0dd5ca633c5cf3e195688ab970a2a6a97ccb47eba44bb18f7
+$ apt-get source -qq --print-uris nghttp2=1.43.0-1ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.43.0-1ubuntu0.1.dsc' nghttp2_1.43.0-1ubuntu0.1.dsc 2638 SHA512:a2b2662cd6976dc6d8c7398ccbf59150893ca34a0c06dc3c4e3aff7297dabebd0142c9db031406b30374425fe782870d8ad032907dbd5f983ff15f7e0d8ee83c
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.43.0.orig.tar.bz2' nghttp2_1.43.0.orig.tar.bz2 4521786 SHA512:f2e6665ad6c73f0a1a8c7b34ca821a905868d41dafca913e6a054eb5afb534a85ae91618c1a4b098e43f350ca3703fd1ece7848f0a771e8393a3eb0581ceaf59
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.43.0-1build3.debian.tar.xz' nghttp2_1.43.0-1build3.debian.tar.xz 16528 SHA512:a3c7be43142e4976a395052ff4eba22e4f610c31659eed2b03987c58d0b0ae83335f0593ceeea0f05f5d7db8f56c3c3b3651bd92fae3a8353b95595179926bd1
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.43.0-1ubuntu0.1.debian.tar.xz' nghttp2_1.43.0-1ubuntu0.1.debian.tar.xz 22312 SHA512:df80f395e566bd3aefb77425446aaa12f5e65dfbd3239eb68219afa6863e96ee79cdb0fc8cd8a6b7ba72a3483963158b3b80fd5a61bbce5efc2fb59573deb7fd
 ```
 
 ### `dpkg` source package: `node-abbrev=1.1.1+~1.1.2-1`
@@ -5597,13 +5612,13 @@ $ apt-get source -qq --print-uris node-yallist=4.0.0+~4.0.1-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/n/node-yallist/node-yallist_4.0.0%2b%7e4.0.1-1.debian.tar.xz' node-yallist_4.0.0+~4.0.1-1.debian.tar.xz 3392 SHA512:4471e895fe38898f3aa0168457053cc28247d05b37b919543d2ebe46b41d640bb6869ad2e3e276ba4111366d88aa237b352ad9b37c73cca6a2bbc0b57d950003
 ```
 
-### `dpkg` source package: `nodejs=12.22.9~dfsg-1ubuntu3.1`
+### `dpkg` source package: `nodejs=12.22.9~dfsg-1ubuntu3.2`
 
 Binary Packages:
 
-- `libnode-dev=12.22.9~dfsg-1ubuntu3.1`
-- `libnode72:amd64=12.22.9~dfsg-1ubuntu3.1`
-- `nodejs=12.22.9~dfsg-1ubuntu3.1`
+- `libnode-dev=12.22.9~dfsg-1ubuntu3.2`
+- `libnode72:amd64=12.22.9~dfsg-1ubuntu3.2`
+- `nodejs=12.22.9~dfsg-1ubuntu3.2`
 
 Licenses: (parsed from: `/usr/share/doc/libnode-dev/copyright`, `/usr/share/doc/libnode72/copyright`, `/usr/share/doc/nodejs/copyright`)
 
@@ -5638,9 +5653,15 @@ Licenses: (parsed from: `/usr/share/doc/libnode-dev/copyright`, `/usr/share/doc/
 - `curl`
 - `zlib`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris nodejs=12.22.9~dfsg-1ubuntu3.2
+'http://archive.ubuntu.com/ubuntu/pool/universe/n/nodejs/nodejs_12.22.9%7edfsg-1ubuntu3.2.dsc' nodejs_12.22.9~dfsg-1ubuntu3.2.dsc 3545 SHA512:7dec66ea26693f8e34b46f4e2e7fe4be2045ddec2d5bd388210efbc20c117ac6fd32f93a437bb4e78008021476c957485c627c78d4e884ede07e6c03b73ce205
+'http://archive.ubuntu.com/ubuntu/pool/universe/n/nodejs/nodejs_12.22.9%7edfsg.orig-types-node.tar.xz' nodejs_12.22.9~dfsg.orig-types-node.tar.xz 86416 SHA512:ff967a05831a1a43c3bcf96744007713b51c279ee1b2b77075f8476b5791e28cc212511dc64c34e6c7d516865fd7f3cd7150c1664e664ada4e7c64f8b40fbcfc
+'http://archive.ubuntu.com/ubuntu/pool/universe/n/nodejs/nodejs_12.22.9%7edfsg.orig.tar.xz' nodejs_12.22.9~dfsg.orig.tar.xz 19022540 SHA512:83002dbabb3228fd9b1b9777246b2b8aebb6ba7ead005c1c65124a5809fdde7d9d9aa47d907e9a6fdf452e0febfa4c6e521c5d62ae8d6100454ba57f16110eb7
+'http://archive.ubuntu.com/ubuntu/pool/universe/n/nodejs/nodejs_12.22.9%7edfsg-1ubuntu3.2.debian.tar.xz' nodejs_12.22.9~dfsg-1ubuntu3.2.debian.tar.xz 157948 SHA512:8915294fdeb127644f71f8b79e52ebd6fd104a3ca8a7f40dbcf8b7e71b6e597fa8b4912edd2e1e002a5f108e967f1741d038e4eb159d234e9f08f833da54b891
+```
 
 ### `dpkg` source package: `npm=8.5.1~ds-1`
 
@@ -5936,14 +5957,14 @@ $ apt-get source -qq --print-uris pdfminer=20220319+dfsg-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/p/pdfminer/pdfminer_20220319%2bdfsg-1.debian.tar.xz' pdfminer_20220319+dfsg-1.debian.tar.xz 11588 SHA512:b45bc893aa8fcd6b57b84aefb4a4eeb4e6b5a80153c039b518730403406c7bae06aa4fdd9b5945ced286b02b1ba4aef7234f1c0eeb8d6e749cb1b1a11ce8aaf1
 ```
 
-### `dpkg` source package: `perl=5.34.0-3ubuntu1.2`
+### `dpkg` source package: `perl=5.34.0-3ubuntu1.3`
 
 Binary Packages:
 
-- `libperl5.34:amd64=5.34.0-3ubuntu1.2`
-- `perl=5.34.0-3ubuntu1.2`
-- `perl-base=5.34.0-3ubuntu1.2`
-- `perl-modules-5.34=5.34.0-3ubuntu1.2`
+- `libperl5.34:amd64=5.34.0-3ubuntu1.3`
+- `perl=5.34.0-3ubuntu1.3`
+- `perl-base=5.34.0-3ubuntu1.3`
+- `perl-modules-5.34=5.34.0-3ubuntu1.3`
 
 Licenses: (parsed from: `/usr/share/doc/libperl5.34/copyright`, `/usr/share/doc/perl/copyright`, `/usr/share/doc/perl-base/copyright`, `/usr/share/doc/perl-modules-5.34/copyright`)
 
@@ -5975,9 +5996,15 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.34/copyright`, `/usr/share/doc/
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris perl=5.34.0-3ubuntu1.3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-3ubuntu1.3.dsc' perl_5.34.0-3ubuntu1.3.dsc 2976 SHA512:789ad2abeb08f1ce1e29734ff6b017ec310edf415efe1728654ff1b904ea623d03d4d46afe5cb9ea98302e241ae6fe0ecaaa6e0aae66550bdf93e35ea02c9f31
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0.orig-regen-configure.tar.xz' perl_5.34.0.orig-regen-configure.tar.xz 415412 SHA512:2581152e0747105314c4fa4167f1f97d286436b996341b9b75e4099ba18f15eb0d2b42888622fbe9b5499d3fe304bc8aa9ad207a945f590135beccfb68ea28b0
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0.orig.tar.xz' perl_5.34.0.orig.tar.xz 12881416 SHA512:691b4b31eacec357191fba777612b4e3eae59e946a22998a50766697c0d61db1d42a9b3bc1e41abf0d1ca1893e4a7c06d7bf3290480cf03d7f79befd7a8a3267
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.34.0-3ubuntu1.3.debian.tar.xz' perl_5.34.0-3ubuntu1.3.debian.tar.xz 194972 SHA512:2e59cdae22e90953cd91fd2c3f1c5b30ed92afc3b696d577719a8919d475fe52152fa2c7090d9a5f889e0816e847124e9457e0cd0dba206551303bd82297cad1
+```
 
 ### `dpkg` source package: `pillow=9.0.1-1ubuntu0.1`
 
@@ -6102,12 +6129,12 @@ Licenses: (parsed from: `/usr/share/doc/postgresql-client/copyright`, `/usr/shar
 This is *usually* due to a new package version being released and the old version being removed.
 
 
-### `dpkg` source package: `procps=2:3.3.17-6ubuntu2`
+### `dpkg` source package: `procps=2:3.3.17-6ubuntu2.1`
 
 Binary Packages:
 
-- `libprocps8:amd64=2:3.3.17-6ubuntu2`
-- `procps=2:3.3.17-6ubuntu2`
+- `libprocps8:amd64=2:3.3.17-6ubuntu2.1`
+- `procps=2:3.3.17-6ubuntu2.1`
 
 Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/procps/copyright`)
 
@@ -6121,10 +6148,10 @@ Licenses: (parsed from: `/usr/share/doc/libprocps8/copyright`, `/usr/share/doc/p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris procps=2:3.3.17-6ubuntu2
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.17-6ubuntu2.dsc' procps_3.3.17-6ubuntu2.dsc 2237 SHA512:0692d993d91644b7e2f4414cad81282c43dd5144e2f650d3e680a4ba62bb3545860c23f8ad3c99d05bf2ceea31e3f8772a4b0b9f79ea56c76fd1f49f3982ba61
+$ apt-get source -qq --print-uris procps=2:3.3.17-6ubuntu2.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.17-6ubuntu2.1.dsc' procps_3.3.17-6ubuntu2.1.dsc 2111 SHA512:585933efef8d8e93b4187c65b678d146960480386ac3172097c790723ffadbf1d5347e05cc6de2682adcb96dd5b45ec1f98a3e00cff33ad2b30f729939896aca
 'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.17.orig.tar.xz' procps_3.3.17.orig.tar.xz 1008428 SHA512:59e9a5013430fd9da508c4655d58375dc32e025bb502bb28fb9a92a48e4f2838b3355e92b4648f7384b2050064d17079bf4595d889822ebb5030006bc154a1a7
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.17-6ubuntu2.debian.tar.xz' procps_3.3.17-6ubuntu2.debian.tar.xz 34228 SHA512:68ba4678fde89a5f7fce8b04e5ea0b24f9addc7c15b949b01f908cb9a179d68eb8313fc108a99f260d3cb5dff9fd5c9d33f678d3d8bfdd0cba02bcdd9b0bd3c5
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_3.3.17-6ubuntu2.1.debian.tar.xz' procps_3.3.17-6ubuntu2.1.debian.tar.xz 35488 SHA512:720a52d14be82aecd59e2456fbb19574c99cc5281660a36994ef4aa619c14bbec43fd30b5e949446e5db6b6bebf8003a5f173298fe8bf56ac949d61ad0225a79
 ```
 
 ### `dpkg` source package: `psycopg2=2.9.2-1build2`
@@ -6692,11 +6719,11 @@ $ apt-get source -qq --print-uris python-phonenumbers=8.12.1-1
 'http://archive.ubuntu.com/ubuntu/pool/universe/p/python-phonenumbers/python-phonenumbers_8.12.1-1.debian.tar.xz' python-phonenumbers_8.12.1-1.debian.tar.xz 2224 SHA512:5d85021d91ae66e58ff33b856c7a1d44c9b24bfa9955b57e3edbd31a946b543ebe0f1ce426923f803da31b429cfa03c0737b3f7955ef4d115b828cfcb065b39e
 ```
 
-### `dpkg` source package: `python-pip=22.0.2+dfsg-1ubuntu0.3`
+### `dpkg` source package: `python-pip=22.0.2+dfsg-1ubuntu0.4`
 
 Binary Packages:
 
-- `python3-pip=22.0.2+dfsg-1ubuntu0.3`
+- `python3-pip=22.0.2+dfsg-1ubuntu0.4`
 
 Licenses: (parsed from: `/usr/share/doc/python3-pip/copyright`)
 
@@ -7079,14 +7106,14 @@ $ apt-get source -qq --print-uris python3-stdlib-extensions=3.10.8-1~22.04
 'http://archive.ubuntu.com/ubuntu/pool/main/p/python3-stdlib-extensions/python3-stdlib-extensions_3.10.8-1%7e22.04.debian.tar.xz' python3-stdlib-extensions_3.10.8-1~22.04.debian.tar.xz 25884 SHA512:214b4a62091181291a22ce1a2016e5b3d8f24f62f245494f82bd3a527b46886f1537f1e33fcde5261c81cb50d6d177cdeb899955d7da7c367511594ed99825ce
 ```
 
-### `dpkg` source package: `python3.10=3.10.12-1~22.04.2`
+### `dpkg` source package: `python3.10=3.10.12-1~22.04.3`
 
 Binary Packages:
 
-- `libpython3.10-minimal:amd64=3.10.12-1~22.04.2`
-- `libpython3.10-stdlib:amd64=3.10.12-1~22.04.2`
-- `python3.10=3.10.12-1~22.04.2`
-- `python3.10-minimal=3.10.12-1~22.04.2`
+- `libpython3.10-minimal:amd64=3.10.12-1~22.04.3`
+- `libpython3.10-stdlib:amd64=3.10.12-1~22.04.3`
+- `python3.10=3.10.12-1~22.04.3`
+- `python3.10-minimal=3.10.12-1~22.04.3`
 
 Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/share/doc/libpython3.10-stdlib/copyright`, `/usr/share/doc/python3.10/copyright`, `/usr/share/doc/python3.10-minimal/copyright`)
 
@@ -7108,9 +7135,14 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.10-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris python3.10=3.10.12-1~22.04.3
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.12-1%7e22.04.3.dsc' python3.10_3.10.12-1~22.04.3.dsc 3715 SHA512:15a6ba4e2315bc61bf08c81b7eb70ac1a26a967c6929648bd641f8451eff994b4ead860e4e6c7d2b1fc944615100c58f670c04a1624e17ff3b05e5605fe5ffaf
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.12.orig.tar.xz' python3.10_3.10.12.orig.tar.xz 19654836 SHA512:5ea018e71bfe7872e02eaf8aef56d5583c0880e4ce5fbbdf8ea76da20c2e94ac6a3ba8badb4b7d1bc21853402a3b63541b04181737417b1626e786b696595cf5
+'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.10/python3.10_3.10.12-1%7e22.04.3.debian.tar.xz' python3.10_3.10.12-1~22.04.3.debian.tar.xz 221980 SHA512:7a7d89449ba4f5e55fad05a856d40e790e868e07873cc6287b1a215aec7081c17d19b1d58b64e771cb42810c93f5210a1f426a0d5cc24687b5d135fdfb084c72
+```
 
 ### `dpkg` source package: `pyusb=1.2.1-1`
 
@@ -7436,12 +7468,12 @@ $ apt-get source -qq --print-uris sqlite3=3.37.2-2ubuntu0.1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sqlite3/sqlite3_3.37.2-2ubuntu0.1.debian.tar.xz' sqlite3_3.37.2-2ubuntu0.1.debian.tar.xz 29208 SHA512:db22aee842a2bbeae82d43909e357fb8e0985b1410decf82240d1f86939fd5ac10b116512566d87f2250e7a99e36c3736675d23111e851a7c1cb0d0192157955
 ```
 
-### `dpkg` source package: `systemd=249.11-0ubuntu3.10`
+### `dpkg` source package: `systemd=249.11-0ubuntu3.11`
 
 Binary Packages:
 
-- `libsystemd0:amd64=249.11-0ubuntu3.10`
-- `libudev1:amd64=249.11-0ubuntu3.10`
+- `libsystemd0:amd64=249.11-0ubuntu3.11`
+- `libudev1:amd64=249.11-0ubuntu3.11`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -7454,9 +7486,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=249.11-0ubuntu3.11
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.11.dsc' systemd_249.11-0ubuntu3.11.dsc 5932 SHA512:ea0c4eb76d8cfabf7744cdd8219a9ec7830d5a5c163bff7e07cf9668df62f5fecd4c9bf63bdf73b10c318c389c20e8ef079ed67ad0047a94c4e00ed4709d5c7b
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11.orig.tar.gz' systemd_249.11.orig.tar.gz 10622702 SHA512:fed7f81933648945a4bfac9fb12150ecd84d32181f79be0e14e0b3a789343a87569f868670e0b8dfc2801fab39f7490f95ee8c29ba831d7611f78c14ace5ddd8
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_249.11-0ubuntu3.11.debian.tar.xz' systemd_249.11-0ubuntu3.11.debian.tar.xz 251744 SHA512:86cb4ad3ba3869c88cc7ce1e6c40f5dcd593ebdec61e2eeae9a42ebd4bbda5b3da84c2d9551c924ae54244e00049f9e975e36b5e8d0fc0c8a795558f338b0889
+```
 
 ### `dpkg` source package: `sysvinit=3.01-1ubuntu1`
 
@@ -7498,19 +7535,25 @@ $ apt-get source -qq --print-uris tar=1.34+dfsg-1ubuntu0.1.22.04.1
 'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1ubuntu0.1.22.04.1.debian.tar.xz' tar_1.34+dfsg-1ubuntu0.1.22.04.1.debian.tar.xz 19908 SHA512:26348cafd78134c0a993b1b99ffbb051d3190444608ab7953c7dbb6a4e8520df53502994f0ae933b18ecbdcb50dac9feb20ecea224de7f7e5d536ac5dd32d420
 ```
 
-### `dpkg` source package: `tiff=4.3.0-6ubuntu0.6`
+### `dpkg` source package: `tiff=4.3.0-6ubuntu0.7`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.3.0-6ubuntu0.6`
+- `libtiff5:amd64=4.3.0-6ubuntu0.7`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
 - `Hylafax`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tiff=4.3.0-6ubuntu0.7
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6ubuntu0.7.dsc' tiff_4.3.0-6ubuntu0.7.dsc 2573 SHA512:97b3f09abb1ba0720546159af3a9dde1926e6b988e0bd05742da65e0134f0e9641668fdfa3db1bf19c4916ed51a3f540b79e67602d75ef7278b44550cdd2bd61
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz' tiff_4.3.0.orig.tar.gz 2808254 SHA512:e04a4a6c542e58a174c1e9516af3908acf1d3d3e1096648c5514f4963f73e7af27387a76b0fbabe43cf867a18874088f963796a7cd6e45deb998692e3e235493
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0.orig.tar.gz.asc' tiff_4.3.0.orig.tar.gz.asc 488 SHA512:115a4c5714b52d0fbea800c494d83c8a96b70b2c9ce84a8df03205d9afc517faa17963f5f9508c013d7d3e2be6675b84b594a771a829406473234c4bd85e469e
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tiff/tiff_4.3.0-6ubuntu0.7.debian.tar.xz' tiff_4.3.0-6ubuntu0.7.debian.tar.xz 46852 SHA512:dd997306dda648e35e2ca741144a57a34ef124fb42984f4102b69eefd15d56bc758cae4c44760973e300e27e567f3598d6de7cfebc54c5792b43f0b31a663f9e
+```
 
 ### `dpkg` source package: `tzdata=2023c-0ubuntu0.22.04.2`
 
