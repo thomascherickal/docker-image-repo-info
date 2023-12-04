@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:5ada03ded8df0b711bdb2107773731fa1534a5a90caa63a44d9177d1f93dd9da`
-- Created: `2023-11-14T18:26:56.369172548Z`
-- Virtual Size: ~ 152.31 Mb  
+- Image ID: `sha256:b93ca80f2c300324db535534cbe38ace4596600cc09e9c839d54ba5a2b8079ef`
+- Created: `2023-12-01T07:19:06.448388305Z`
+- Virtual Size: ~ 149.09 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/usr/local/bin/docker-varnish-entrypoint"]`
@@ -222,16 +222,16 @@ BSD-2-Clause AND BSD-3-Clause
 ### `apk` package: `libcrypto1.1`
 
 ```console
-libcrypto1.1-1.1.1w-r0 description:
+libcrypto1.1-1.1.1w-r1 description:
 Crypto library from openssl
 
-libcrypto1.1-1.1.1w-r0 webpage:
+libcrypto1.1-1.1.1w-r1 webpage:
 https://www.openssl.org/
 
-libcrypto1.1-1.1.1w-r0 installed size:
+libcrypto1.1-1.1.1w-r1 installed size:
 2684 KiB
 
-libcrypto1.1-1.1.1w-r0 license:
+libcrypto1.1-1.1.1w-r1 license:
 OpenSSL
 
 ```
@@ -324,16 +324,16 @@ ISC AND (BSD-3-Clause OR MIT)
 ### `apk` package: `libssl1.1`
 
 ```console
-libssl1.1-1.1.1w-r0 description:
+libssl1.1-1.1.1w-r1 description:
 SSL shared libraries
 
-libssl1.1-1.1.1w-r0 webpage:
+libssl1.1-1.1.1w-r1 webpage:
 https://www.openssl.org/
 
-libssl1.1-1.1.1w-r0 installed size:
+libssl1.1-1.1.1w-r1 installed size:
 528 KiB
 
-libssl1.1-1.1.1w-r0 license:
+libssl1.1-1.1.1w-r1 license:
 OpenSSL
 
 ```
