@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:0ddc6a05bb037726020036f5c2f19ff612fae75e5799a8ffda9d21d08d57bedf`
+- Image ID: `sha256:e7668d97f41da46b5f31b1d11149589724306b26455cbd7953709cc197beaa0f`
 - Created: `2023-09-20T22:07:44Z`
-- Virtual Size: ~ 185.64 Mb  
+- Virtual Size: ~ 179.01 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-php-entrypoint"]`
@@ -130,16 +130,16 @@ MIT
 ### `apk` package: `busybox`
 
 ```console
-busybox-1.36.1-r2 description:
+busybox-1.36.1-r5 description:
 Size optimized toolbox of many common UNIX utilities
 
-busybox-1.36.1-r2 webpage:
+busybox-1.36.1-r5 webpage:
 https://busybox.net/
 
-busybox-1.36.1-r2 installed size:
+busybox-1.36.1-r5 installed size:
 924 KiB
 
-busybox-1.36.1-r2 license:
+busybox-1.36.1-r5 license:
 GPL-2.0-only
 
 ```
@@ -147,16 +147,16 @@ GPL-2.0-only
 ### `apk` package: `busybox-binsh`
 
 ```console
-busybox-binsh-1.36.1-r2 description:
+busybox-binsh-1.36.1-r5 description:
 busybox ash /bin/sh
 
-busybox-binsh-1.36.1-r2 webpage:
+busybox-binsh-1.36.1-r5 webpage:
 https://busybox.net/
 
-busybox-binsh-1.36.1-r2 installed size:
+busybox-binsh-1.36.1-r5 installed size:
 8192 B
 
-busybox-binsh-1.36.1-r2 license:
+busybox-binsh-1.36.1-r5 license:
 GPL-2.0-only
 
 ```
@@ -555,16 +555,16 @@ MIT
 ### `apk` package: `musl-utils`
 
 ```console
-musl-utils-1.2.4-r1 description:
+musl-utils-1.2.4-r2 description:
 the musl c library (libc) implementation
 
-musl-utils-1.2.4-r1 webpage:
+musl-utils-1.2.4-r2 webpage:
 https://musl.libc.org/
 
-musl-utils-1.2.4-r1 installed size:
+musl-utils-1.2.4-r2 installed size:
 132 KiB
 
-musl-utils-1.2.4-r1 license:
+musl-utils-1.2.4-r2 license:
 MIT AND BSD-2-Clause AND GPL-2.0-or-later
 
 ```
@@ -691,16 +691,16 @@ blessing
 ### `apk` package: `ssl_client`
 
 ```console
-ssl_client-1.36.1-r2 description:
+ssl_client-1.36.1-r5 description:
 EXternal ssl_client for busybox wget
 
-ssl_client-1.36.1-r2 webpage:
+ssl_client-1.36.1-r5 webpage:
 https://busybox.net/
 
-ssl_client-1.36.1-r2 installed size:
+ssl_client-1.36.1-r5 installed size:
 28 KiB
 
-ssl_client-1.36.1-r2 license:
+ssl_client-1.36.1-r5 license:
 GPL-2.0-only
 
 ```
