@@ -1110,20 +1110,13 @@ Licenses: (parsed from: `/usr/share/doc/libcap-ng0/copyright`)
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libcap-ng=0.8.3-1
-'http://deb.debian.org/debian/pool/main/libc/libcap-ng/libcap-ng_0.8.3-1.dsc' libcap-ng_0.8.3-1.dsc 1634 SHA256:1bf38dbc0c30bcbc776d2d5c25e31d89202de0858f9ca9379c993d55103d7ef0
-'http://deb.debian.org/debian/pool/main/libc/libcap-ng/libcap-ng_0.8.3.orig.tar.gz' libcap-ng_0.8.3.orig.tar.gz 455383 SHA256:bed6f6848e22bb2f83b5f764b2aef0ed393054e803a8e3a8711cb2a39e6b492d
-'http://deb.debian.org/debian/pool/main/libc/libcap-ng/libcap-ng_0.8.3-1.debian.tar.xz' libcap-ng_0.8.3-1.debian.tar.xz 10488 SHA256:710577902c260f50f8cfc9d7e264131f880eab0581d12ceab17ebe48e2ac53c6
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libcap-ng/0.8.3-1/
 
-- https://sources.debian.net/src/libcap-ng/0.8.3-1/ (for browsing the source)
-- https://sources.debian.net/src/libcap-ng/0.8.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libcap-ng/0.8.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libcap2=1:2.66-4`
 
@@ -1652,21 +1645,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 - `GPL-2.0-only`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20231102-1
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20231102-1.dsc' mawk_1.3.4.20231102-1.dsc 2180 SHA256:ce5694bae6c04dae66b16ba8fa99c481eeaecd0d0874f31a50a086234d124efb
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20231102.orig.tar.gz' mawk_1.3.4.20231102.orig.tar.gz 413107 SHA256:1721c6949bd0d7a4bcf4924c1ff244b4be02a4e58a8b2a6ecbeb935ad0fd700a
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20231102.orig.tar.gz.asc' mawk_1.3.4.20231102.orig.tar.gz.asc 729 SHA256:692c9c52bfcffb18a261aa946d62248a3fd0468b841938a1beb5b134fd2e07fc
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20231102-1.debian.tar.xz' mawk_1.3.4.20231102-1.debian.tar.xz 15532 SHA256:cf4ad9702f41708547906db5d47381d147343c60fde63306358897b493adda3b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mawk/1.3.4.20231102-1/
 
-- https://sources.debian.net/src/mawk/1.3.4.20231102-1/ (for browsing the source)
-- https://sources.debian.net/src/mawk/1.3.4.20231102-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mawk/1.3.4.20231102-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ncurses=6.4+20231118-1`
 

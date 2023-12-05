@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:48546e409c323ebe47eda00f7fdc3413d76e86f117df3fd0594b8a26df12af38`
-- Created: `2023-11-15T05:16:50.360468184Z`
-- Virtual Size: ~ 790.26 Mb  
+- Image ID: `sha256:bfef5d2082eaa961e2d3cefef8e67a7d13c9269c329297040dd1ca2d2360b92f`
+- Created: `2023-12-02T04:26:15.051172148Z`
+- Virtual Size: ~ 789.39 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -1320,11 +1320,11 @@ $ apt-get source -qq --print-uris gnupg2=2.2.40-1.1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.40-1.1ubuntu1.debian.tar.xz' gnupg2_2.2.40-1.1ubuntu1.debian.tar.xz 65264 SHA512:1efaad1ebfcda85888670e613bb4488ff2ad773190a593f4d2ac298e731a5641e84bfc2c0dba4b5fd8f1af455212a388b99f903dfc770a772d45b4ccaafcb2e1
 ```
 
-### `dpkg` source package: `gnutls28=3.8.1-4ubuntu1`
+### `dpkg` source package: `gnutls28=3.8.1-4ubuntu1.1`
 
 Binary Packages:
 
-- `libgnutls30:amd64=3.8.1-4ubuntu1`
+- `libgnutls30:amd64=3.8.1-4ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
@@ -1345,11 +1345,11 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gnutls28=3.8.1-4ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.8.1-4ubuntu1.dsc' gnutls28_3.8.1-4ubuntu1.dsc 3338 SHA512:90612b0f2f41cda397a050c57c470a40dc3754fa373c4c9d36565f9219bdc139da11a2b2688cfd56999fccbea4df433295999dcbe4a4c35e0a83aa9c95992761
+$ apt-get source -qq --print-uris gnutls28=3.8.1-4ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.8.1-4ubuntu1.1.dsc' gnutls28_3.8.1-4ubuntu1.1.dsc 3346 SHA512:5649921bc85996ab6942677313c0e8d99b6b2864248c8f823897461fbdc00bda85e0d0603dc23ec4b7f52443fed179c1321d24f66226e2d73bb6fcd5ec910193
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.8.1.orig.tar.xz' gnutls28_3.8.1.orig.tar.xz 6447056 SHA512:22e78db86b835843df897d14ad633d8a553c0f9b1389daa0c2f864869c6b9ca889028d434f9552237dc4f1b37c978fbe0cce166e3768e5d4e8850ff69a6fc872
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.8.1.orig.tar.xz.asc' gnutls28_3.8.1.orig.tar.xz.asc 996 SHA512:ad42a077718a91b82959ee7ed8282b69e73825c70c5c60eb4a1f87aab055dee2ac74a03f489d5f11c2094ec6ac01ea44c0daffb61cb4daae714dcaf5ea89ecd0
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.8.1-4ubuntu1.debian.tar.xz' gnutls28_3.8.1-4ubuntu1.debian.tar.xz 71404 SHA512:2b6f0ee849aa962015738ff9ece284e7c07d75ff9e650b6e830a3804d5d1af1fd2ffffe05719f8c7ea0aa5136611521cbc3ac5ab70012e41a2cf62884295d456
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.8.1-4ubuntu1.1.debian.tar.xz' gnutls28_3.8.1-4ubuntu1.1.debian.tar.xz 73432 SHA512:a298420308677b92f11c58e7ed46e1cd99f4a3ff36e2d649a56a78902a04fa01622184480fcab7832116162008a0678bc450878b981e8076546e2544d53b4cab
 ```
 
 ### `dpkg` source package: `gobject-introspection=1.78.1-1`
@@ -3145,11 +3145,11 @@ $ apt-get source -qq --print-uris libzstd=1.5.5+dfsg2-1ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/libz/libzstd/libzstd_1.5.5%2bdfsg2-1ubuntu2.debian.tar.xz' libzstd_1.5.5+dfsg2-1ubuntu2.debian.tar.xz 21400 SHA512:ea28ea8fb4eb2ccabb1d959c25dbdbc85b10467f18660c28d97687c3c8383458b70217182c4531da0e5838b91fb743defabf59a643466d12f2034aa373b2150f
 ```
 
-### `dpkg` source package: `linux=6.5.0-10.10`
+### `dpkg` source package: `linux=6.5.0-13.13`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=6.5.0-10.10`
+- `linux-libc-dev:amd64=6.5.0-13.13`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -3490,11 +3490,11 @@ $ apt-get source -qq --print-uris nettle=3.9.1-2
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nettle/nettle_3.9.1-2.debian.tar.xz' nettle_3.9.1-2.debian.tar.xz 24440 SHA512:5ecbb74a3e05032f4d13cb6f393f6d23b7a2fff4240370f05d973a331c279d6c9cb0fd5ca7d551febf4fd54e30ebb296729284c6327114529c101edcf80ec2cb
 ```
 
-### `dpkg` source package: `nghttp2=1.55.1-1`
+### `dpkg` source package: `nghttp2=1.55.1-1ubuntu0.1`
 
 Binary Packages:
 
-- `libnghttp2-14:amd64=1.55.1-1`
+- `libnghttp2-14:amd64=1.55.1-1ubuntu0.1`
 
 Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 
@@ -3508,10 +3508,10 @@ Licenses: (parsed from: `/usr/share/doc/libnghttp2-14/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris nghttp2=1.55.1-1
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.55.1-1.dsc' nghttp2_1.55.1-1.dsc 2534 SHA512:fb8153ab5621f26acee1f219768ff43a28753956ed97c28a4f1aa54fc4e2d560b0b7aac0bfe79179cffd33665473c53fdb4b86e2ff3829159814f017f21ebaa8
+$ apt-get source -qq --print-uris nghttp2=1.55.1-1ubuntu0.1
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.55.1-1ubuntu0.1.dsc' nghttp2_1.55.1-1ubuntu0.1.dsc 2624 SHA512:680aceda2fa5ee0e69f74796058e006cb4eb47cea8cb465fe3d2433c8b896019f90edba061d13d6c6e5bac92d4a85e16e43e927c244b6c9c42054e35fc929202
 'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.55.1.orig.tar.gz' nghttp2_1.55.1.orig.tar.gz 1071258 SHA512:0ab1a987ec99f7b0652e75a93bebff9a5363f52758be1f6ae8626dcf9f4b2f931dec0a276cdd7b81522c61040e008345ecc5011c17a763b97a48b0f7e2615451
-'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.55.1-1.debian.tar.xz' nghttp2_1.55.1-1.debian.tar.xz 11704 SHA512:cd00b3bdb6a76f3f2b4d600686941586641cb443702ab7ab2d065034f734c4a25469ba9a43cdd3d560f60a95ec28235029e89a7eaed8c2ebdbd5cd48b3d0180c
+'http://archive.ubuntu.com/ubuntu/pool/main/n/nghttp2/nghttp2_1.55.1-1ubuntu0.1.debian.tar.xz' nghttp2_1.55.1-1ubuntu0.1.debian.tar.xz 17772 SHA512:a0dc51a5c697271befb66d2231cda1775eabb53e9dbe85f24932fed105f29bb45254195d59b243a1d060c0e725e20f4a1680b85ea3948a6c6fd4deaa02d501ef
 ```
 
 ### `dpkg` source package: `npth=1.6-3build2`
@@ -3817,14 +3817,14 @@ $ apt-get source -qq --print-uris pcre2=10.42-4
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre2/pcre2_10.42-4.diff.gz' pcre2_10.42-4.diff.gz 8111 SHA512:d13593a4e46d686238e766b253886eed102d8728a943f2f55d1459311d6e9715be46dd4fc2353d7375100d0200c9c0037521b5072f7ea30826c19af2d48f93e3
 ```
 
-### `dpkg` source package: `perl=5.36.0-9ubuntu1`
+### `dpkg` source package: `perl=5.36.0-9ubuntu1.1`
 
 Binary Packages:
 
-- `libperl5.36:amd64=5.36.0-9ubuntu1`
-- `perl=5.36.0-9ubuntu1`
-- `perl-base=5.36.0-9ubuntu1`
-- `perl-modules-5.36=5.36.0-9ubuntu1`
+- `libperl5.36:amd64=5.36.0-9ubuntu1.1`
+- `perl=5.36.0-9ubuntu1.1`
+- `perl-base=5.36.0-9ubuntu1.1`
+- `perl-modules-5.36=5.36.0-9ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/libperl5.36/copyright`, `/usr/share/doc/perl/copyright`, `/usr/share/doc/perl-base/copyright`, `/usr/share/doc/perl-modules-5.36/copyright`)
 
@@ -3859,11 +3859,11 @@ Licenses: (parsed from: `/usr/share/doc/libperl5.36/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris perl=5.36.0-9ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-9ubuntu1.dsc' perl_5.36.0-9ubuntu1.dsc 3026 SHA512:d4ddd92d2291be5f8ed08833a7baedcf7d3af81d3053700dd621c6107c37022c32ebfe10b2e09b444f387bce75cd35042c2428ac617c77b45feb46c3140c39f5
+$ apt-get source -qq --print-uris perl=5.36.0-9ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-9ubuntu1.1.dsc' perl_5.36.0-9ubuntu1.1.dsc 3009 SHA512:ffd2fa91526b4cfbca018c25c491dc3a0b5e2ff8bc7518045f9282289808a6e1020d24d7e8d2e2343639a9ead3f180ac94fb45e4bf00627682363b5975828853
 'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig-regen-configure.tar.xz' perl_5.36.0.orig-regen-configure.tar.xz 417784 SHA512:4d16685f569a5b1dea79d607b6d62718111c32efaf5547bb9e1528bd755acf0c8fc74a1cc1f4d68fcb10aef9da7d8fea17a5cc10dabce6efa4721ab45ab03a65
 'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig.tar.xz' perl_5.36.0.orig.tar.xz 13051500 SHA512:6dd6ac2a77566c173c5ab9c238cf555f2c3e592e89abb5600bc23ce1cbd0c349e0233f6417cbbf1f6d0aefc6a734ba491285af0d3dc68a605b658b65c89f1dab
-'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-9ubuntu1.debian.tar.xz' perl_5.36.0-9ubuntu1.debian.tar.xz 170808 SHA512:e2ea25d29a46e5cb5ee15bd43f0310ffd652c684f705603a34d8821d48f21956cd14dc46067dbffd7ec6228520ed36b1ec731989e696796b28d19e573a83cfa2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-9ubuntu1.1.debian.tar.xz' perl_5.36.0-9ubuntu1.1.debian.tar.xz 172720 SHA512:9213709c3e6718d3b8c5cb235e1c729e19a44e86622beebcaa553456a73e0373ca7d70d0b68544f2b4398a57245ea051a8e9249f00a9a44545f08d2d4b2b6099
 ```
 
 ### `dpkg` source package: `pinentry=1.2.1-1ubuntu1`
@@ -4316,12 +4316,12 @@ $ apt-get source -qq --print-uris subversion=1.14.2-4build2
 'http://archive.ubuntu.com/ubuntu/pool/universe/s/subversion/subversion_1.14.2-4build2.debian.tar.xz' subversion_1.14.2-4build2.debian.tar.xz 337324 SHA512:53c2d0312401cfb1a1704799b607a819c8f1a1c8a177d352e138118a7bbcd0545d84580898dcdbb64395a8482e49d9ca8604af1c1839f0029166453c7c74e790
 ```
 
-### `dpkg` source package: `systemd=253.5-1ubuntu6`
+### `dpkg` source package: `systemd=253.5-1ubuntu6.1`
 
 Binary Packages:
 
-- `libsystemd0:amd64=253.5-1ubuntu6`
-- `libudev1:amd64=253.5-1ubuntu6`
+- `libsystemd0:amd64=253.5-1ubuntu6.1`
+- `libudev1:amd64=253.5-1ubuntu6.1`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -4337,10 +4337,10 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 Source:
 
 ```console
-$ apt-get source -qq --print-uris systemd=253.5-1ubuntu6
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_253.5-1ubuntu6.dsc' systemd_253.5-1ubuntu6.dsc 6902 SHA512:6ea1c67c71a4b3418c3c39c3ecb04aa2f2c2e86017a4d5947761691f729ef5a1308a1ae9938b73b93d5c1510d6bc6d2f907ebfe9e47d4e18184f264392a9d8a8
+$ apt-get source -qq --print-uris systemd=253.5-1ubuntu6.1
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_253.5-1ubuntu6.1.dsc' systemd_253.5-1ubuntu6.1.dsc 6910 SHA512:7aa167b2a6de8bd48b53a4bda661659fd340cf5bb31c7a848442abf3e201c761e478a41342ebaca016c376630fc25e6e88bc541222aaac5793fc3af74638cd91
 'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_253.5.orig.tar.gz' systemd_253.5.orig.tar.gz 12015672 SHA512:39709b485cd9287e26ac8e973fa1692b280bec3b96e1da6667e4a4f2ac2228aa072b22802720a254698d32c82f5306d7feb32229e4b6d54cc0e2b1e2caa4cc2e
-'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_253.5-1ubuntu6.debian.tar.xz' systemd_253.5-1ubuntu6.debian.tar.xz 220184 SHA512:5a693c2f365c6f35d6169b5eb3da701b90f207c9d7390309df5765a00196b41187766ce5964773f0c3b852779ef9365b724bcbf8cc57ca5b555aa5540bb8e299
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_253.5-1ubuntu6.1.debian.tar.xz' systemd_253.5-1ubuntu6.1.debian.tar.xz 220212 SHA512:613fa22f71f77d43f1c483b322f2e4601418ae584948e3088386f0edbf14e643730126de1d5b04bf5921c169cbe4a3a5d69c135bb8556b4e1098f97818bf1274
 ```
 
 ### `dpkg` source package: `sysvinit=3.07-1ubuntu1`

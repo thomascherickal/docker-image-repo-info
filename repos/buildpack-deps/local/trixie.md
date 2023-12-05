@@ -2688,21 +2688,13 @@ Licenses: (parsed from: `/usr/share/doc/libfido2-1/copyright`)
 - `ISC`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libfido2=1.13.0-1
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.13.0-1.dsc' libfido2_1.13.0-1.dsc 2588 SHA256:1c19b0d0d47d288ab6d6c40c4a3c2b11cda2c05b2af913ef0be26b53dd01d0ec
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.13.0.orig.tar.gz' libfido2_1.13.0.orig.tar.gz 652777 SHA256:51d43727e2a1c4544c7fd0ee47786f443e39f1388ada735a509ad4af0a2459ca
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.13.0.orig.tar.gz.asc' libfido2_1.13.0.orig.tar.gz.asc 228 SHA256:8dee00378ddd1aa9dde41f425a75120f9de81682422b1dddfd2d16c29fea4259
-'http://deb.debian.org/debian/pool/main/libf/libfido2/libfido2_1.13.0-1.debian.tar.xz' libfido2_1.13.0-1.debian.tar.xz 52864 SHA256:dd43c5e3b3bdf1115f846bac88b2a86ab63fbfc651ddc0f69a49bfb151ab5f09
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libfido2/1.13.0-1/
 
-- https://sources.debian.net/src/libfido2/1.13.0-1/ (for browsing the source)
-- https://sources.debian.net/src/libfido2/1.13.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libfido2/1.13.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libgcrypt20=1.10.2-3`
 
@@ -3354,21 +3346,13 @@ Licenses: (parsed from: `/usr/share/doc/libssh2-1/copyright`)
 
 - `BSD3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libssh2=1.11.0-2
-'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2_1.11.0-2.dsc' libssh2_1.11.0-2.dsc 2289 SHA256:f14acaa679899bdbd6e42076573d57b6dfe957b22bf721be34e4e2b0fe925ff3
-'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2_1.11.0.orig.tar.gz' libssh2_1.11.0.orig.tar.gz 1053562 SHA256:3736161e41e2693324deb38c26cfdc3efe6209d634ba4258db1cecff6a5ad461
-'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2_1.11.0.orig.tar.gz.asc' libssh2_1.11.0.orig.tar.gz.asc 488 SHA256:b6a32c85a3f9b6f30f2b3595ba034b48a8508ee9c94708ef811f58fd7adfcdee
-'http://deb.debian.org/debian/pool/main/libs/libssh2/libssh2_1.11.0-2.debian.tar.xz' libssh2_1.11.0-2.debian.tar.xz 10092 SHA256:0cac7b00a142f4728fe70d506e7ef1fd88608864fe25e1ef3560f70e3192bc2d
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libssh2/1.11.0-2/
 
-- https://sources.debian.net/src/libssh2/1.11.0-2/ (for browsing the source)
-- https://sources.debian.net/src/libssh2/1.11.0-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libssh2/1.11.0-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libtasn1-6=4.19.0-3`
 
@@ -4113,21 +4097,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 - `GPL-2.0-only`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20231102-1
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20231102-1.dsc' mawk_1.3.4.20231102-1.dsc 2180 SHA256:ce5694bae6c04dae66b16ba8fa99c481eeaecd0d0874f31a50a086234d124efb
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20231102.orig.tar.gz' mawk_1.3.4.20231102.orig.tar.gz 413107 SHA256:1721c6949bd0d7a4bcf4924c1ff244b4be02a4e58a8b2a6ecbeb935ad0fd700a
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20231102.orig.tar.gz.asc' mawk_1.3.4.20231102.orig.tar.gz.asc 729 SHA256:692c9c52bfcffb18a261aa946d62248a3fd0468b841938a1beb5b134fd2e07fc
-'http://deb.debian.org/debian/pool/main/m/mawk/mawk_1.3.4.20231102-1.debian.tar.xz' mawk_1.3.4.20231102-1.debian.tar.xz 15532 SHA256:cf4ad9702f41708547906db5d47381d147343c60fde63306358897b493adda3b
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mawk/1.3.4.20231102-1/
 
-- https://sources.debian.net/src/mawk/1.3.4.20231102-1/ (for browsing the source)
-- https://sources.debian.net/src/mawk/1.3.4.20231102-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mawk/1.3.4.20231102-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `media-types=10.1.0`
 
@@ -5344,20 +5320,13 @@ Licenses: (parsed from: `/usr/share/doc/shared-mime-info/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris shared-mime-info=2.2-1
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_2.2-1.dsc' shared-mime-info_2.2-1.dsc 2226 SHA256:784cc01bb041b9aab4e56b061258e44ed4ce810bf94d458f743ff9bfbbea076b
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_2.2.orig.tar.bz2' shared-mime-info_2.2.orig.tar.bz2 6428871 SHA256:418c480019d9865f67f922dfb88de00e9f38bf971205d55cdffab50432919e61
-'http://deb.debian.org/debian/pool/main/s/shared-mime-info/shared-mime-info_2.2-1.debian.tar.xz' shared-mime-info_2.2-1.debian.tar.xz 10148 SHA256:a19c3d13a867c2780dcddd04215b925a7c16c80df0fc2798bef910de6d5cc6a2
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/shared-mime-info/2.2-1/
 
-- https://sources.debian.net/src/shared-mime-info/2.2-1/ (for browsing the source)
-- https://sources.debian.net/src/shared-mime-info/2.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/shared-mime-info/2.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `sqlite3=3.44.0-1`
 
