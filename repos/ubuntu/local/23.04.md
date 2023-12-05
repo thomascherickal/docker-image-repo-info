@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:639282825872ec6978281e00795f8f02e3b752112dfa01a5f55a19a0f6cf47dc`
-- Created: `2023-10-04T12:18:19.96488157Z`
-- Virtual Size: ~ 70.31 Mb  
+- Image ID: `sha256:f4cdeba72b994748f5eb1f525a70a9cc553b66037ec37e23645fbf3f0f5c160d`
+- Created: `2023-11-28T09:02:19.540625795Z`
+- Virtual Size: ~ 70.32 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Command: `["/bin/bash"]`
@@ -548,11 +548,11 @@ $ apt-get source -qq --print-uris gnupg2=2.2.40-1.1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnupg2/gnupg2_2.2.40-1.1ubuntu1.debian.tar.xz' gnupg2_2.2.40-1.1ubuntu1.debian.tar.xz 65264 SHA512:1efaad1ebfcda85888670e613bb4488ff2ad773190a593f4d2ac298e731a5641e84bfc2c0dba4b5fd8f1af455212a388b99f903dfc770a772d45b4ccaafcb2e1
 ```
 
-### `dpkg` source package: `gnutls28=3.7.8-5ubuntu1`
+### `dpkg` source package: `gnutls28=3.7.8-5ubuntu1.1`
 
 Binary Packages:
 
-- `libgnutls30:amd64=3.7.8-5ubuntu1`
+- `libgnutls30:amd64=3.7.8-5ubuntu1.1`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
@@ -573,11 +573,11 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris gnutls28=3.7.8-5ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.8-5ubuntu1.dsc' gnutls28_3.7.8-5ubuntu1.dsc 3496 SHA512:8a493bae4b585f683db6df3c43ca0f6c5b3a5a3d6db0767a807d76130f5ed6894c271af53c39989c2dfff1816cd6420ec1fd9b74679c20d1b71a10ace6f9ca35
+$ apt-get source -qq --print-uris gnutls28=3.7.8-5ubuntu1.1
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.8-5ubuntu1.1.dsc' gnutls28_3.7.8-5ubuntu1.1.dsc 3504 SHA512:0efb42824f803708ee353c38f3cad5e0b9e1c27e5e24585457e5d85afc686500921e8879a66e021333d9fae90a05119f523a616832df161d13e116ad9acc9932
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.8.orig.tar.xz' gnutls28_3.7.8.orig.tar.xz 6029220 SHA512:4199bcf7c9e3aab2f52266aadceefc563dfe2d938d0ea1f3ec3be95d66f4a8c8e5494d3a800c03dd02ad386dec1738bd63e1fe0d8b394a2ccfc7d6c6a0cc9359
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.8.orig.tar.xz.asc' gnutls28_3.7.8.orig.tar.xz.asc 1760 SHA512:f6aa8c7e263e7413d469d5bf045ece612337e6d5cfdd0618191a27aa0d01050a03ffef9c8b92e3bae3d1f0355102797c9d96b1e83b3f02bcc9582d64651bc2da
-'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.8-5ubuntu1.debian.tar.xz' gnutls28_3.7.8-5ubuntu1.debian.tar.xz 89872 SHA512:a0d67b507173da8ad127dc19d584f81229857fd24c7928f1008b1025343f4a9aeceff5ef9dd4eb0eb07e4ae78683f6f1828f16260575fe3b3990c54652109b3d
+'http://archive.ubuntu.com/ubuntu/pool/main/g/gnutls28/gnutls28_3.7.8-5ubuntu1.1.debian.tar.xz' gnutls28_3.7.8-5ubuntu1.1.debian.tar.xz 91232 SHA512:824934fca5624f6400cc89132282cf2a835d0e1702c98ef8ecbf842ad5bef3f469c221bc77198e7eb3989d9420af4ba1c120081ff89e5fc5d1aa748534bfdc96
 ```
 
 ### `dpkg` source package: `grep=3.8-5`
@@ -1183,11 +1183,11 @@ $ apt-get source -qq --print-uris pcre2=10.42-1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/pcre2/pcre2_10.42-1.diff.gz' pcre2_10.42-1.diff.gz 7895 SHA512:381b28be73dbaceba13d6bc3498ae10155d6c614add038a306481ad86a9033586e3873822cdfadd037b155bb9ae9c2fa6bcfd66001dad653fb09b238caa11eb2
 ```
 
-### `dpkg` source package: `perl=5.36.0-7ubuntu0.23.04.1`
+### `dpkg` source package: `perl=5.36.0-7ubuntu0.23.04.2`
 
 Binary Packages:
 
-- `perl-base=5.36.0-7ubuntu0.23.04.1`
+- `perl-base=5.36.0-7ubuntu0.23.04.2`
 
 Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 
@@ -1219,16 +1219,22 @@ Licenses: (parsed from: `/usr/share/doc/perl-base/copyright`)
 - `Unicode`
 - `ZLIB`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris perl=5.36.0-7ubuntu0.23.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7ubuntu0.23.04.2.dsc' perl_5.36.0-7ubuntu0.23.04.2.dsc 3000 SHA512:8f61e4bcb739eb0e9014e81254a5036eef0cd1309bee028fee3dcc0d18ccb52df873f4d30aab5d5229e4426624a275358c2394b8d29d766ac665aac1517cbe70
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig-regen-configure.tar.xz' perl_5.36.0.orig-regen-configure.tar.xz 417784 SHA512:4d16685f569a5b1dea79d607b6d62718111c32efaf5547bb9e1528bd755acf0c8fc74a1cc1f4d68fcb10aef9da7d8fea17a5cc10dabce6efa4721ab45ab03a65
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0.orig.tar.xz' perl_5.36.0.orig.tar.xz 13051500 SHA512:6dd6ac2a77566c173c5ab9c238cf555f2c3e592e89abb5600bc23ce1cbd0c349e0233f6417cbbf1f6d0aefc6a734ba491285af0d3dc68a605b658b65c89f1dab
+'http://archive.ubuntu.com/ubuntu/pool/main/p/perl/perl_5.36.0-7ubuntu0.23.04.2.debian.tar.xz' perl_5.36.0-7ubuntu0.23.04.2.debian.tar.xz 171596 SHA512:9797c233416626e48da6e7b3745f8612a187852a8daccc28045f02cf108073f2cac951b86f93b7246b09386aacbe85fc36168db20f1f597c5e5fe4dcf52e5712
+```
 
-### `dpkg` source package: `procps=2:4.0.3-1ubuntu1`
+### `dpkg` source package: `procps=2:4.0.3-1ubuntu1.23.04.1`
 
 Binary Packages:
 
-- `libproc2-0:amd64=2:4.0.3-1ubuntu1`
-- `procps=2:4.0.3-1ubuntu1`
+- `libproc2-0:amd64=2:4.0.3-1ubuntu1.23.04.1`
+- `procps=2:4.0.3-1ubuntu1.23.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libproc2-0/copyright`, `/usr/share/doc/procps/copyright`)
 
@@ -1242,10 +1248,10 @@ Licenses: (parsed from: `/usr/share/doc/libproc2-0/copyright`, `/usr/share/doc/p
 Source:
 
 ```console
-$ apt-get source -qq --print-uris procps=2:4.0.3-1ubuntu1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_4.0.3-1ubuntu1.dsc' procps_4.0.3-1ubuntu1.dsc 2215 SHA512:92d9fa524b872bb2ebb5b23a8b449a8b09168a31cb34d27ecad328cbad72afde0d8d3e93c6f97df1056ce686f24b73fb0e2bc8eaa5572c4adb2f15ea64dbc9be
+$ apt-get source -qq --print-uris procps=2:4.0.3-1ubuntu1.23.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_4.0.3-1ubuntu1.23.04.1.dsc' procps_4.0.3-1ubuntu1.23.04.1.dsc 2113 SHA512:324cc07027a88c1fa018eca2ae1b1015705df099d72d9ff46aaf64567bff242b95b9c7c8c74bae814484fba1de1ec7481c05ca3b3c38380ddd40d9f2b9cab9b1
 'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_4.0.3.orig.tar.xz' procps_4.0.3.orig.tar.xz 1294992 SHA512:be9dc5ac4a50fc1b8256af44ac2c5b50f74ef5e48c5c3dcac2779d508988daf3b60989d22db8fc8b699c2f2f338ad367e91b9c01ab46ac9fa0d5c5bbec6f16af
-'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_4.0.3-1ubuntu1.debian.tar.xz' procps_4.0.3-1ubuntu1.debian.tar.xz 33148 SHA512:efd9dd3ff8ef41c620f7ea4615b3d1d0539dfff7c18f82fc13f21cc74901c8c5b0e35a49344b5bd9f9014ac1ac4dbab889d6b406d801fe7a3b5e1d5aa64999ef
+'http://archive.ubuntu.com/ubuntu/pool/main/p/procps/procps_4.0.3-1ubuntu1.23.04.1.debian.tar.xz' procps_4.0.3-1ubuntu1.23.04.1.debian.tar.xz 34420 SHA512:8cdc62716a80038a2aa1f15aa525934b909b533846572fe81c56e59cc7d513017de65271ba77b58a7c5cad7e123fe816e51526bdb596525d041d53b3a330816a
 ```
 
 ### `dpkg` source package: `sed=4.9-1`
@@ -1322,12 +1328,12 @@ $ apt-get source -qq --print-uris shadow=1:4.13+dfsg1-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/shadow/shadow_4.13%2bdfsg1-1ubuntu1.debian.tar.xz' shadow_4.13+dfsg1-1ubuntu1.debian.tar.xz 91380 SHA512:9c8909ca0d9552d1094598fee5b96dcdf9f3b5a8265920466cadde63151996ade671760b40ccb99fcca43c90a28d35b66ad0d2dbf03782bf5daf7815fd406664
 ```
 
-### `dpkg` source package: `systemd=252.5-2ubuntu3.1`
+### `dpkg` source package: `systemd=252.5-2ubuntu3.2`
 
 Binary Packages:
 
-- `libsystemd0:amd64=252.5-2ubuntu3.1`
-- `libudev1:amd64=252.5-2ubuntu3.1`
+- `libsystemd0:amd64=252.5-2ubuntu3.2`
+- `libudev1:amd64=252.5-2ubuntu3.2`
 
 Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/libudev1/copyright`)
 
@@ -1340,9 +1346,14 @@ Licenses: (parsed from: `/usr/share/doc/libsystemd0/copyright`, `/usr/share/doc/
 - `LGPL-2.1+`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris systemd=252.5-2ubuntu3.2
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_252.5-2ubuntu3.2.dsc' systemd_252.5-2ubuntu3.2.dsc 6783 SHA512:b90dc47634314191c5b8a540628affcd280f7d98a54acb868e489bcca4c9bbd89c780a8c510598403ef026620228d56be8b91abcd2548fc9e63b6c5cbdced662
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_252.5.orig.tar.gz' systemd_252.5.orig.tar.gz 11762414 SHA512:f3359e0496b673033d6c8da5c117890e0dc26c9db51003b28f629ac751d9bae117be32d9f54c377eb2d5a7c2d36ac0dbdc2116498698e993550fbdd9aae535b9
+'http://archive.ubuntu.com/ubuntu/pool/main/s/systemd/systemd_252.5-2ubuntu3.2.debian.tar.xz' systemd_252.5-2ubuntu3.2.debian.tar.xz 234312 SHA512:72f09f34166d46a00ab42fad969cdc8115acb1ddcf38dfbd9c42a48b5feb0e483c1ce91ede278785b13d2200c1cf47a583edaeb53ebfe65c0c79e399383e1855
+```
 
 ### `dpkg` source package: `sysvinit=3.06-2ubuntu1`
 
