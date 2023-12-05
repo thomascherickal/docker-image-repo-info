@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:3831419d4c5c0017ab63379fe91c0dfa44bfa41534ea78cb3f7e61a9d3ec571d`
-- Created: `2023-11-22T04:36:42.083727636Z`
-- Virtual Size: ~ 798.00 Mb  
+- Image ID: `sha256:ab2b6f86335e6f5e1084dd347b42772447de089c81481d5977ec566d219b327d`
+- Created: `2023-12-01T20:33:47.119150338Z`
+- Virtual Size: ~ 796.39 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -16,8 +16,8 @@
   - `PYTHON_VERSION=3.8.18`
   - `PYTHON_PIP_VERSION=23.0.1`
   - `PYTHON_SETUPTOOLS_VERSION=57.5.0`
-  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/c6add47b0abf67511cdfb4734771cbab403af062/public/get-pip.py`
-  - `PYTHON_GET_PIP_SHA256=22b849a10f86f5ddf7ce148ca2a31214504ee6c83ef626840fde6e5dcd809d11`
+  - `PYTHON_GET_PIP_URL=https://github.com/pypa/get-pip/raw/4cfa4081d27285bda1220a62a5ebf5b4bd749cdb/public/get-pip.py`
+  - `PYTHON_GET_PIP_SHA256=9cc01665956d22b3bf057ae8287b035827bfd895da235bcea200ab3b811790b6`
   - `PIP=22.2.2`
   - `ZC_BUILDOUT=3.0.1`
   - `SETUPTOOLS=65.7.0`
@@ -3458,11 +3458,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.34+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.34+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.2.0-1+deb11u4`
+### `dpkg` source package: `tiff=4.2.0-1+deb11u5`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.2.0-1+deb11u4`
+- `libtiff5:amd64=4.2.0-1+deb11u5`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
@@ -3471,18 +3471,18 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tiff=4.2.0-1+deb11u4
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0-1%2bdeb11u4.dsc' tiff_4.2.0-1+deb11u4.dsc 2116 SHA256:ea272ad3472a618611b72a5c246c07588cdcd6d61d6ec1865cf2edb6c036e9c3
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0.orig.tar.gz' tiff_4.2.0.orig.tar.gz 2809373 SHA256:eb0484e568ead8fa23b513e9b0041df7e327f4ee2d22db5a533929dfc19633cb
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0.orig.tar.gz.asc' tiff_4.2.0.orig.tar.gz.asc 228 SHA256:119bb62934603ff4d3cd81c739d11904b28812a860773b9b2268cc96a339b14f
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0-1%2bdeb11u4.debian.tar.xz' tiff_4.2.0-1+deb11u4.debian.tar.xz 40308 SHA256:c6ff022e3f91bdf12daf725c1d025d9257668b855291c3fced8c0e5bc8197d93
+$ apt-get source -qq --print-uris tiff=4.2.0-1+deb11u5
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0-1%2bdeb11u5.dsc' tiff_4.2.0-1+deb11u5.dsc 2116 SHA256:eeb72e3449968ab5d39fdf7f999b787580837fcf7751f30e16750659919fd3d4
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0.orig.tar.gz' tiff_4.2.0.orig.tar.gz 2809373 SHA256:eb0484e568ead8fa23b513e9b0041df7e327f4ee2d22db5a533929dfc19633cb
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0.orig.tar.gz.asc' tiff_4.2.0.orig.tar.gz.asc 228 SHA256:119bb62934603ff4d3cd81c739d11904b28812a860773b9b2268cc96a339b14f
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0-1%2bdeb11u5.debian.tar.xz' tiff_4.2.0-1+deb11u5.debian.tar.xz 41268 SHA256:472770be431abb4f9fdaf2f0e2306b8980a47b1a55a3c10a2224f2c8833fa6a0
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tiff/4.2.0-1+deb11u4/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.2.0-1+deb11u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tiff/4.2.0-1+deb11u5/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.2.0-1+deb11u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tzdata=2021a-1+deb11u10`
 
