@@ -358,20 +358,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-cluster/copyright`)
 - `GPL-2`
 - `GPL-2+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris cluster=2.1.4-1
-'http://deb.debian.org/debian/pool/main/c/cluster/cluster_2.1.4-1.dsc' cluster_2.1.4-1.dsc 1831 SHA256:ce277562952708c41387e9d8bb2bfcd401588fb572ff34bde60dbe23a7539b6e
-'http://deb.debian.org/debian/pool/main/c/cluster/cluster_2.1.4.orig.tar.gz' cluster_2.1.4.orig.tar.gz 352076 SHA256:c6f10ceca29a176ba833f24ebf71fd451629052c2338398ba286df5689d6f5b6
-'http://deb.debian.org/debian/pool/main/c/cluster/cluster_2.1.4-1.debian.tar.xz' cluster_2.1.4-1.debian.tar.xz 4312 SHA256:66b4c3d4bbf804497bd58849ca22b59457f57e121c1922877cb9de57d3e9bc34
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/cluster/2.1.4-1/
 
-- https://sources.debian.net/src/cluster/2.1.4-1/ (for browsing the source)
-- https://sources.debian.net/src/cluster/2.1.4-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/cluster/2.1.4-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `codetools=0.2-19-1`
 
@@ -813,20 +806,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-foreign/copyright`)
 - `GPL`
 - `GPL `
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris foreign=0.8.85-1
-'http://deb.debian.org/debian/pool/main/f/foreign/foreign_0.8.85-1.dsc' foreign_0.8.85-1.dsc 1838 SHA256:018c8dfb3925601468b4a567336766fca574a71be14b482835b67fb185efab79
-'http://deb.debian.org/debian/pool/main/f/foreign/foreign_0.8.85.orig.tar.gz' foreign_0.8.85.orig.tar.gz 361720 SHA256:9079d20a1807122f3a6b5a72737d76eb4c011dd35d7099dfbf6171e84e52ecab
-'http://deb.debian.org/debian/pool/main/f/foreign/foreign_0.8.85-1.debian.tar.xz' foreign_0.8.85-1.debian.tar.xz 4332 SHA256:eedb39648ee3633b2205596fea98d66c00257d657b37567eb20eba01e9aa639c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/foreign/0.8.85-1/
 
-- https://sources.debian.net/src/foreign/0.8.85-1/ (for browsing the source)
-- https://sources.debian.net/src/foreign/0.8.85-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/foreign/0.8.85-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `freetype=2.13.2+dfsg-1`
 
@@ -1566,10 +1552,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris libcap-ng=0.8.3-1
-'http://http.debian.net/debian/pool/main/libc/libcap-ng/libcap-ng_0.8.3-1.dsc' libcap-ng_0.8.3-1.dsc 1634 SHA256:1bf38dbc0c30bcbc776d2d5c25e31d89202de0858f9ca9379c993d55103d7ef0
-'http://http.debian.net/debian/pool/main/libc/libcap-ng/libcap-ng_0.8.3.orig.tar.gz' libcap-ng_0.8.3.orig.tar.gz 455383 SHA256:bed6f6848e22bb2f83b5f764b2aef0ed393054e803a8e3a8711cb2a39e6b492d
-'http://http.debian.net/debian/pool/main/libc/libcap-ng/libcap-ng_0.8.3-1.debian.tar.xz' libcap-ng_0.8.3-1.debian.tar.xz 10488 SHA256:710577902c260f50f8cfc9d7e264131f880eab0581d12ceab17ebe48e2ac53c6
+'http://deb.debian.org/debian/pool/main/libc/libcap-ng/libcap-ng_0.8.3-1.dsc' libcap-ng_0.8.3-1.dsc 1634 SHA256:1bf38dbc0c30bcbc776d2d5c25e31d89202de0858f9ca9379c993d55103d7ef0
+'http://deb.debian.org/debian/pool/main/libc/libcap-ng/libcap-ng_0.8.3.orig.tar.gz' libcap-ng_0.8.3.orig.tar.gz 455383 SHA256:bed6f6848e22bb2f83b5f764b2aef0ed393054e803a8e3a8711cb2a39e6b492d
+'http://deb.debian.org/debian/pool/main/libc/libcap-ng/libcap-ng_0.8.3-1.debian.tar.xz' libcap-ng_0.8.3-1.debian.tar.xz 10488 SHA256:710577902c260f50f8cfc9d7e264131f880eab0581d12ceab17ebe48e2ac53c6
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/libcap-ng/0.8.3-1/ (for browsing the source)
+- https://sources.debian.net/src/libcap-ng/0.8.3-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libcap-ng/0.8.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libcap2=1:2.66-4`
 
@@ -2471,15 +2463,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 - `GPL-2.0-only`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20231102-1
-'http://http.debian.net/debian/pool/main/m/mawk/mawk_1.3.4.20231102-1.dsc' mawk_1.3.4.20231102-1.dsc 2180 SHA256:ce5694bae6c04dae66b16ba8fa99c481eeaecd0d0874f31a50a086234d124efb
-'http://http.debian.net/debian/pool/main/m/mawk/mawk_1.3.4.20231102.orig.tar.gz' mawk_1.3.4.20231102.orig.tar.gz 413107 SHA256:1721c6949bd0d7a4bcf4924c1ff244b4be02a4e58a8b2a6ecbeb935ad0fd700a
-'http://http.debian.net/debian/pool/main/m/mawk/mawk_1.3.4.20231102.orig.tar.gz.asc' mawk_1.3.4.20231102.orig.tar.gz.asc 729 SHA256:692c9c52bfcffb18a261aa946d62248a3fd0468b841938a1beb5b134fd2e07fc
-'http://http.debian.net/debian/pool/main/m/mawk/mawk_1.3.4.20231102-1.debian.tar.xz' mawk_1.3.4.20231102-1.debian.tar.xz 15532 SHA256:cf4ad9702f41708547906db5d47381d147343c60fde63306358897b493adda3b
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/mawk/1.3.4.20231102-1/
+
 
 ### `dpkg` source package: `mgcv=1.9-0-1`
 
@@ -2630,14 +2620,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-nlme/copyright`)
 - `GPL`
 - `GPL `
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris nlme=3.1.163-1
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.163-1.dsc' nlme_3.1.163-1.dsc 1840 SHA256:dc1322fed0268f8d64d24001e6a0f19d3ff391654ec3fdc5c63fb24173bb9d2c
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.163.orig.tar.gz' nlme_3.1.163.orig.tar.gz 848981 SHA256:7d46ff4c4fb7fda8df6129b28cd2aa7d32e814eac87dae8ea9fa7560593c128a
-'http://http.debian.net/debian/pool/main/n/nlme/nlme_3.1.163-1.debian.tar.xz' nlme_3.1.163-1.debian.tar.xz 7316 SHA256:81c17a22ff00cdc70e454864f94a71cf2278c16c3409831a5a226113cc6583a2
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/nlme/3.1.163-1/
+
 
 ### `dpkg` source package: `openblas=0.3.24+ds-1`
 
