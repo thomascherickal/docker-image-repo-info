@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4edd1e4ceca927368463df13b9ce30311a25c60cc45a50a5fbf72a42974f9310`
-- Created: `2023-11-22T02:33:04.146207382Z`
-- Virtual Size: ~ 556.81 Mb  
+- Image ID: `sha256:4a946dff3f28c7f6c7fe290ab3eec9f9063f5c437ef0105f315ed32b9f3c3070`
+- Created: `2023-12-05T00:33:44.835030536Z`
+- Virtual Size: ~ 561.45 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint-dev.sh"]`
@@ -16,11 +16,11 @@
   - `PHP_CFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_CPPFLAGS=-fstack-protector-strong -fpic -fpie -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64`
   - `PHP_LDFLAGS=-Wl,-O1 -pie`
-  - `GPG_KEYS=1729F83938DA44E27BA0F4D3DBDB397470D12172 BFDDD28642824F8118EF77909B67A5C12229118F 2C16C765DBE54A088130F1BC4B9B5F600B55F3B4 39B641343D8C104B2B146DC3F9C39DC0B9698544`
-  - `PHP_VERSION=8.0.30`
-  - `PHP_URL=https://www.php.net/distributions/php-8.0.30.tar.xz`
-  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.0.30.tar.xz.asc`
-  - `PHP_SHA256=216ab305737a5d392107112d618a755dc5df42058226f1670e9db90e77d777d9`
+  - `GPG_KEYS=528995BFEDFBA7191D46839EF9BA0ADA31CBD89E 39B641343D8C104B2B146DC3F9C39DC0B9698544 F1F692238FBC1666E5A5CCD4199F9DFEF6FFBAFD`
+  - `PHP_VERSION=8.1.26`
+  - `PHP_URL=https://www.php.net/distributions/php-8.1.26.tar.xz`
+  - `PHP_ASC_URL=https://www.php.net/distributions/php-8.1.26.tar.xz.asc`
+  - `PHP_SHA256=17f87133596449327451ad4b8d9911bfaea59ff5109f3a6f2bb679f967a8ea0f`
   - `GOSU_VERSION=1.14`
   - `PHP_MEMORY_LIMIT=512M`
   - `PHP_UPLOAD_LIMIT=512M`
@@ -3965,11 +3965,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.34+dfsg-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.34+dfsg-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tiff=4.2.0-1+deb11u4`
+### `dpkg` source package: `tiff=4.2.0-1+deb11u5`
 
 Binary Packages:
 
-- `libtiff5:amd64=4.2.0-1+deb11u4`
+- `libtiff5:amd64=4.2.0-1+deb11u5`
 
 Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 
@@ -3978,18 +3978,18 @@ Licenses: (parsed from: `/usr/share/doc/libtiff5/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris tiff=4.2.0-1+deb11u4
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0-1%2bdeb11u4.dsc' tiff_4.2.0-1+deb11u4.dsc 2116 SHA256:ea272ad3472a618611b72a5c246c07588cdcd6d61d6ec1865cf2edb6c036e9c3
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0.orig.tar.gz' tiff_4.2.0.orig.tar.gz 2809373 SHA256:eb0484e568ead8fa23b513e9b0041df7e327f4ee2d22db5a533929dfc19633cb
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0.orig.tar.gz.asc' tiff_4.2.0.orig.tar.gz.asc 228 SHA256:119bb62934603ff4d3cd81c739d11904b28812a860773b9b2268cc96a339b14f
-'http://deb.debian.org/debian/pool/main/t/tiff/tiff_4.2.0-1%2bdeb11u4.debian.tar.xz' tiff_4.2.0-1+deb11u4.debian.tar.xz 40308 SHA256:c6ff022e3f91bdf12daf725c1d025d9257668b855291c3fced8c0e5bc8197d93
+$ apt-get source -qq --print-uris tiff=4.2.0-1+deb11u5
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0-1%2bdeb11u5.dsc' tiff_4.2.0-1+deb11u5.dsc 2116 SHA256:eeb72e3449968ab5d39fdf7f999b787580837fcf7751f30e16750659919fd3d4
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0.orig.tar.gz' tiff_4.2.0.orig.tar.gz 2809373 SHA256:eb0484e568ead8fa23b513e9b0041df7e327f4ee2d22db5a533929dfc19633cb
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0.orig.tar.gz.asc' tiff_4.2.0.orig.tar.gz.asc 228 SHA256:119bb62934603ff4d3cd81c739d11904b28812a860773b9b2268cc96a339b14f
+'http://deb.debian.org/debian-security/pool/updates/main/t/tiff/tiff_4.2.0-1%2bdeb11u5.debian.tar.xz' tiff_4.2.0-1+deb11u5.debian.tar.xz 41268 SHA256:472770be431abb4f9fdaf2f0e2306b8980a47b1a55a3c10a2224f2c8833fa6a0
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/tiff/4.2.0-1+deb11u4/ (for browsing the source)
-- https://sources.debian.net/src/tiff/4.2.0-1+deb11u4/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u4/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/tiff/4.2.0-1+deb11u5/ (for browsing the source)
+- https://sources.debian.net/src/tiff/4.2.0-1+deb11u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tiff/4.2.0-1+deb11u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tini=0.19.0-1`
 
