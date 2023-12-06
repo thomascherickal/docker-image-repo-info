@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d7794a59b084ca9e191c7577d2cebf476102cfcfe16e80ac3f55a2ae8a0fdb83`
-- Created: `2023-12-02T01:25:14.933166053Z`
+- Image ID: `sha256:d15e7ab6f49ce917e95bb80ae8cbbce0c9a24eb0c36f5a70c4ca942c4638409e`
+- Created: `2023-12-06T00:23:04.499727948Z`
 - Virtual Size: ~ 1.01 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -11,7 +11,7 @@
 - Command: `["node"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `NODE_VERSION=21.3.0`
+  - `NODE_VERSION=21.4.0`
   - `YARN_VERSION=1.22.19`
 
 ## `dpkg` (`.deb`-based packages)
