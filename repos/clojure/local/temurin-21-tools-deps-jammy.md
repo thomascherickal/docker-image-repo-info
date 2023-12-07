@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:4553c0aa83a7e6cf50f51ae5cfaa5f5d1f1691c9deb35116eac6ccc38fa8d62d`
-- Created: `2023-12-02T10:10:13.244651932Z`
-- Virtual Size: ~ 559.63 Mb  
+- Image ID: `sha256:0bfebc8435166243cc02dc0a3d2b8fe4a5cb66e452e450ec99c6cc47b613bcc2`
+- Created: `2023-12-05T18:33:22.468579427Z`
+- Virtual Size: ~ 559.86 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["entrypoint"]`
@@ -16,7 +16,7 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-21.0.1+12`
-  - `CLOJURE_VERSION=1.11.1.1413`
+  - `CLOJURE_VERSION=1.11.1.1429`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
   - `org.opencontainers.image.version=22.04`
@@ -325,15 +325,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.81.0-1ubuntu1.14
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.14.dsc' curl_7.81.0-1ubuntu1.14.dsc 3143 SHA512:1c937dd675502657bd4ed5b4f76e8a79eaddecf9e7150d79ee2987b6b649cb1bf51810e7e54b28cf82c8b6793cf9cfc5ed7a0a4569474e85452cca8dd234bc5a
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz' curl_7.81.0.orig.tar.gz 4188040 SHA512:e3084f0fa083f7f93eac923edbfdddb5fd0a372b94673ba9d4427a2b95508898c15ecdf63b99a1c1f6cf3215e27b06cbaa2b7073df038d43b362e586f92495d3
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0.orig.tar.gz.asc' curl_7.81.0.orig.tar.gz.asc 488 SHA512:92bc5ede831551285d67b03abe8400c609ad31c9d33e324ee5c41b92dd5c2a0245a09a396bd76807b3e44bcfef944b1e16ac266264f7b85d27cc1c072a6e82bd
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.81.0-1ubuntu1.14.debian.tar.xz' curl_7.81.0-1ubuntu1.14.debian.tar.xz 72928 SHA512:868772eef638747a080425e2a50138819f618bc59809fb78f46a5d52fe0c75090b1ba245b6057261f7764889d31a0889cb8594b46de1697659d88addba81718f
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg2-3ubuntu1.2`
 
