@@ -391,14 +391,9 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.20
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.20.dsc' curl_7.68.0-1ubuntu2.20.dsc 2737 SHA512:fc602637e036ba63548581b1950c055cc5fdb0b950848baac342fe117715a6021e7ecb00db10c9e44d777feba7c911c48b80f27880be8d9252250857414f614b
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.20.debian.tar.xz' curl_7.68.0-1ubuntu2.20.debian.tar.xz 69464 SHA512:63c11b6186ed3dded8f90bcdac432ce4a79de6dc6364eb29d7fa88ad367961be3a9f34035b30e7ba2c1d3d7d7a80d765ffdbe9466e03512bd73339b3023e009e
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -725,14 +720,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.12
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.12.dsc' glibc_2.31-0ubuntu9.12.dsc 9378 SHA512:2055d7f2d479789f44629fc4f9f938e3bcfdc035b6ca49ee5238aa0de18e4db3da1197591951838514565c1c1bad825273026bc6eb146394f646039d13c787a9
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA512:2ff56628fe935cacbdf1825534f15d45cb87a159cbdb2e6a981590eeb6174ed4b3ff7041519cdecbd4f624ac20b745e2dd9614c420dd3ea186b8f36bc4c2453c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.12.debian.tar.xz' glibc_2.31-0ubuntu9.12.debian.tar.xz 879820 SHA512:94fe56d6feb9507ad0d6d81080a064729e259aa92130e0cb08567a61ec2615b11899959f909396a54df0a1e67e29f03ee9e10c2fad406ee9f3333e7269758a32
-```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4ubuntu0.1`
 

@@ -4401,20 +4401,13 @@ Licenses: (parsed from: `/usr/share/doc/python3-numpy/copyright`)
 - `Public-Domain`
 - `zlib`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris numpy=1:1.24.2-1
-'http://deb.debian.org/debian/pool/main/n/numpy/numpy_1.24.2-1.dsc' numpy_1.24.2-1.dsc 2462 SHA256:33f8acc8cb64f72787b965e8713dd9dbb4f1dd0d54018fbdcbe99c55aff2541b
-'http://deb.debian.org/debian/pool/main/n/numpy/numpy_1.24.2.orig.tar.xz' numpy_1.24.2.orig.tar.xz 8239412 SHA256:a7c88b0cf7c7c5ea03a76593ce4065af3beb8f50c25db6a7ee72369b2c936c65
-'http://deb.debian.org/debian/pool/main/n/numpy/numpy_1.24.2-1.debian.tar.xz' numpy_1.24.2-1.debian.tar.xz 31632 SHA256:f87ec8c98f283b2d04eef73db7fdffd5c90c35db778dd0ddec04a0aaa15d14ed
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/numpy/1:1.24.2-1/
 
-- https://sources.debian.net/src/numpy/1:1.24.2-1/ (for browsing the source)
-- https://sources.debian.net/src/numpy/1:1.24.2-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/numpy/1:1.24.2-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `openexr=3.1.5-5.1`
 
@@ -5040,20 +5033,13 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.11/copyright`, `/usr/share/do
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.11=3.11.6-3
-'http://deb.debian.org/debian/pool/main/p/python3.11/python3.11_3.11.6-3.dsc' python3.11_3.11.6-3.dsc 3655 SHA256:6dccbe0a9171577e3a99c794ac4fd1b428651b3f1c04c4e46556f688c2455208
-'http://deb.debian.org/debian/pool/main/p/python3.11/python3.11_3.11.6.orig.tar.xz' python3.11_3.11.6.orig.tar.xz 20067204 SHA256:0fab78fa7f133f4f38210c6260d90d7c0d5c7198446419ce057ec7ac2e6f5f38
-'http://deb.debian.org/debian/pool/main/p/python3.11/python3.11_3.11.6-3.debian.tar.xz' python3.11_3.11.6-3.debian.tar.xz 213928 SHA256:8175199337b83a7fa566742a5a80b949334076c6fdb87cc9d4c6f01a8d915b61
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/python3.11/3.11.6-3/
 
-- https://sources.debian.net/src/python3.11/3.11.6-3/ (for browsing the source)
-- https://sources.debian.net/src/python3.11/3.11.6-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/python3.11/3.11.6-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `readline=8.2-1.3`
 

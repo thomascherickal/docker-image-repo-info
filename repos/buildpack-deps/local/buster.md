@@ -5064,20 +5064,13 @@ Binary Packages:
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u11
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u11.dsc' tzdata_2021a-0+deb10u11.dsc 2071 SHA256:fded995a1d0bbc9582e8655f3ba944e4dfe60d28b9cf19f14ad9626dc75ea432
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
-'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u11.debian.tar.xz' tzdata_2021a-0+deb10u11.debian.tar.xz 125268 SHA256:69f2530f28967f31e7bc4e8f9b928e66b205463608c0430971bc56f55e715e57
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u11/
 
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u11/ (for browsing the source)
-- https://sources.debian.net/src/tzdata/2021a-0+deb10u11/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ucf=3.0038+nmu1`
 
