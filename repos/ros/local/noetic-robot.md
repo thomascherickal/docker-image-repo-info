@@ -696,14 +696,9 @@ Licenses: (parsed from: `/usr/share/doc/libcurl4/copyright`)
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.20
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.20.dsc' curl_7.68.0-1ubuntu2.20.dsc 2737 SHA512:fc602637e036ba63548581b1950c055cc5fdb0b950848baac342fe117715a6021e7ecb00db10c9e44d777feba7c911c48b80f27880be8d9252250857414f614b
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
-'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.20.debian.tar.xz' curl_7.68.0-1ubuntu2.20.debian.tar.xz 69464 SHA512:63c11b6186ed3dded8f90bcdac432ce4a79de6dc6364eb29d7fa88ad367961be3a9f34035b30e7ba2c1d3d7d7a80d765ffdbe9466e03512bd73339b3023e009e
-```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -1296,14 +1291,9 @@ Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/lib
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.12
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.12.dsc' glibc_2.31-0ubuntu9.12.dsc 9378 SHA512:2055d7f2d479789f44629fc4f9f938e3bcfdc035b6ca49ee5238aa0de18e4db3da1197591951838514565c1c1bad825273026bc6eb146394f646039d13c787a9
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA512:2ff56628fe935cacbdf1825534f15d45cb87a159cbdb2e6a981590eeb6174ed4b3ff7041519cdecbd4f624ac20b745e2dd9614c420dd3ea186b8f36bc4c2453c
-'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.12.debian.tar.xz' glibc_2.31-0ubuntu9.12.debian.tar.xz 879820 SHA512:94fe56d6feb9507ad0d6d81080a064729e259aa92130e0cb08567a61ec2615b11899959f909396a54df0a1e67e29f03ee9e10c2fad406ee9f3333e7269758a32
-```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4ubuntu0.1`
 
@@ -3041,9 +3031,9 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris linux=5.4.0-167.184
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-167.184.dsc' linux_5.4.0-167.184.dsc 7067 SHA512:fd14b9b944b141f6608ae92457e2d077c4f4b59c3ee7b3ff2434cd415fb6f1f64166173b88a1a91e9be8cbb88e78b1622a712b30768e0b7ef3e4e81401c1019c
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
-'http://archive.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-167.184.diff.gz' linux_5.4.0-167.184.diff.gz 11130240 SHA512:187d3ad3215964b5b7e139defc2c4ed6916925029728f25cd4bafa97b8770b3ee9108eab909e8f0dd2104b313472e316fdf4804c666929237c03ca4e260db849
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-167.184.dsc' linux_5.4.0-167.184.dsc 7067 SHA512:fd14b9b944b141f6608ae92457e2d077c4f4b59c3ee7b3ff2434cd415fb6f1f64166173b88a1a91e9be8cbb88e78b1622a712b30768e0b7ef3e4e81401c1019c
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
+'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-167.184.diff.gz' linux_5.4.0-167.184.diff.gz 11130240 SHA512:187d3ad3215964b5b7e139defc2c4ed6916925029728f25cd4bafa97b8770b3ee9108eab909e8f0dd2104b313472e316fdf4804c666929237c03ca4e260db849
 ```
 
 ### `dpkg` source package: `lksctp-tools=1.0.18+dfsg-1`
@@ -4157,14 +4147,9 @@ Licenses: (parsed from: `/usr/share/doc/python3-cryptography/copyright`)
 - `Apache-2.0`
 - `Expat`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python-cryptography=2.8-3ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-cryptography/python-cryptography_2.8-3ubuntu0.1.dsc' python-cryptography_2.8-3ubuntu0.1.dsc 3632 SHA512:f1353a295c1120950255c4003ca6a46375eef741788523f67bb160d63dcc3cff1e9f555ddf3ccc466afd492abbe501934a4338c1b1c78b2f6798fa845ee4076d
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-cryptography/python-cryptography_2.8.orig.tar.gz' python-cryptography_2.8.orig.tar.gz 504516 SHA512:bf3ca44123c693b0602be19445925f9efebd46c469909e47b7907d57141fb6bd99268c33e1fe3f42a08ab8b4edd4f98f21b6a682f530352313334dfd31ba91e7
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python-cryptography/python-cryptography_2.8-3ubuntu0.1.debian.tar.xz' python-cryptography_2.8-3ubuntu0.1.debian.tar.xz 12808 SHA512:acd0099ea81b787ae7fd501eac9522a97fd917cfe632354c2c0f2174419eeb7ad1f7eb989f2b21b7d26fd12b4845360490b3576df838370582e5f67cbd637eba
-```
 
 ### `dpkg` source package: `python-dateutil=2.7.3-3ubuntu1`
 
