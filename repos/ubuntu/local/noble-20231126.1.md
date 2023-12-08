@@ -135,13 +135,13 @@ Licenses: (parsed from: `/usr/share/doc/base-passwd/copyright`)
 - `GPL-2`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris base-passwd=3.6.2
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.6.2.dsc' base-passwd_3.6.2.dsc 1762 SHA512:66578b5db0687e74a0daff500db52e2e5fbb3fc5e8bee023ebe99a289915e3f1ce94a1ad313e955fd3d6702dca35c7e54b301b2580393eb4f1e0c716641a25c9
-'http://archive.ubuntu.com/ubuntu/pool/main/b/base-passwd/base-passwd_3.6.2.tar.xz' base-passwd_3.6.2.tar.xz 58264 SHA512:f2ff9463ecae4d85345ae9c75f377eeb2baea12ca25082c69440d320f96a4b71bd3d261c06cfc687ad8a2ae072c42924c42ad59dcda08e0ee247186e4c581a96
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/base-passwd/3.6.2/
+
 
 ### `dpkg` source package: `bash=5.2.15-2ubuntu1`
 
@@ -1070,15 +1070,13 @@ Licenses: (parsed from: `/usr/share/doc/mawk/copyright`)
 - `GPL-2.0-only`
 - `X11`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mawk=1.3.4.20231102-1
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20231102-1.dsc' mawk_1.3.4.20231102-1.dsc 2180 SHA512:0c3a8a85de06c9c353940341cd7a091de151952d49cec157623ae9fc78d01230aa53f63f45efef6a7bcd7f7c12f1779795fd59302ad26dc4af9a1faf4c993708
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20231102.orig.tar.gz' mawk_1.3.4.20231102.orig.tar.gz 413107 SHA512:53173a49ad2a63d096755964d0585517180a8555034cee519e2e6cc0c5392408b61960813eec101dd8ded298b6bc86128cd3469c1acb03141c264f24e52446b2
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20231102.orig.tar.gz.asc' mawk_1.3.4.20231102.orig.tar.gz.asc 729 SHA512:5933f1cadea90b8349136b0b31f45b04b3e182b61de7ad62fb2142973e64fd8ffc7d3ee17bebd3b9b209d08d3732b2e807fe5554899fe8d4130e1a0d12dc9de8
-'http://archive.ubuntu.com/ubuntu/pool/main/m/mawk/mawk_1.3.4.20231102-1.debian.tar.xz' mawk_1.3.4.20231102-1.debian.tar.xz 15532 SHA512:5add92ae49ef4c232e31ffbaf237c0739c102f3aa54d9993a6d7d44524ba523df509dda8b368e408f712275c704abacada815fc5e72994cbbf7d8848de398d65
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/mawk/1.3.4.20231102-1/
+
 
 ### `dpkg` source package: `ncurses=6.4+20231121-1build1`
 
@@ -1445,13 +1443,9 @@ Licenses: (parsed from: `/usr/share/doc/ubuntu-keyring/copyright`)
 
 - `GPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris ubuntu-keyring=2021.03.26
-'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2021.03.26.dsc' ubuntu-keyring_2021.03.26.dsc 1855 SHA512:7502f4f4d9a288fab9fb84b6ae5f8500cb3f14c68ed586b489dee95f12087b232bcecd9369e98258bb710afda50e5672dfbc6422b1436e896fb529dec8832252
-'http://archive.ubuntu.com/ubuntu/pool/main/u/ubuntu-keyring/ubuntu-keyring_2021.03.26.tar.gz' ubuntu-keyring_2021.03.26.tar.gz 34529 SHA512:04a76e2bfa88fb428face9e01976ff98a3a26fe2b555340c14200fc6099ee3b474a6733486cedfe933933c0a6826ee3550660499d7b26bda8a27a620b1d6a35f
-```
 
 ### `dpkg` source package: `usrmerge=35ubuntu1`
 
