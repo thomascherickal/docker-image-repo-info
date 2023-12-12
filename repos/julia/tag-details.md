@@ -725,7 +725,12 @@ $ docker pull julia@sha256:4a3ea5316226b8411daf4be817e3a1d5823aafc95a5cf8abcaf41
 
 ## `julia:1-alpine3.19`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1-bookworm`
 
@@ -2333,7 +2338,12 @@ $ docker pull julia@sha256:afa2c6fd74c84bbfae57eaea501ca6fab7563caac98fa37c7edc1
 
 ## `julia:1.10-rc-alpine3.19`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.10-rc-bookworm`
 
@@ -3863,7 +3873,12 @@ $ docker pull julia@sha256:afa2c6fd74c84bbfae57eaea501ca6fab7563caac98fa37c7edc1
 
 ## `julia:1.10.0-rc2-alpine3.19`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.10.0-rc2-bookworm`
 
@@ -5315,7 +5330,12 @@ $ docker pull julia@sha256:60c2ad8910be350b924b83fcef0d98145b99fd05c536e3e041083
 
 ## `julia:1.6-alpine3.19`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.6-bookworm`
 
@@ -6923,7 +6943,12 @@ $ docker pull julia@sha256:60c2ad8910be350b924b83fcef0d98145b99fd05c536e3e041083
 
 ## `julia:1.6.7-alpine3.19`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.6.7-bookworm`
 
@@ -8531,7 +8556,12 @@ $ docker pull julia@sha256:4a3ea5316226b8411daf4be817e3a1d5823aafc95a5cf8abcaf41
 
 ## `julia:1.9-alpine3.19`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.9-bookworm`
 
@@ -10139,7 +10169,12 @@ $ docker pull julia@sha256:4a3ea5316226b8411daf4be817e3a1d5823aafc95a5cf8abcaf41
 
 ## `julia:1.9.4-alpine3.19`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:1.9.4-bookworm`
 
@@ -11278,7 +11313,12 @@ $ docker pull julia@sha256:4a3ea5316226b8411daf4be817e3a1d5823aafc95a5cf8abcaf41
 
 ## `julia:alpine3.19`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:bookworm`
 
@@ -13056,7 +13096,12 @@ $ docker pull julia@sha256:afa2c6fd74c84bbfae57eaea501ca6fab7563caac98fa37c7edc1
 
 ## `julia:rc-alpine3.19`
 
-**does not exist** (yet?)
+```console
+$ docker pull julia@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `julia:rc-bookworm`
 
