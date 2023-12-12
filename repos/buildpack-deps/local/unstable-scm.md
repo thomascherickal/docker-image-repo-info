@@ -889,20 +889,13 @@ Licenses: (parsed from: `/usr/share/doc/git/copyright`, `/usr/share/doc/git-man/
 - `dlmalloc`
 - `mingw-runtime`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris git=1:2.42.0-1
-'http://deb.debian.org/debian/pool/main/g/git/git_2.42.0-1.dsc' git_2.42.0-1.dsc 2825 SHA256:b5bc4f48d8ee242ec7d485e5bceb3e1bd96cfdcaa2a545591fa4d902b3f6c48a
-'http://deb.debian.org/debian/pool/main/g/git/git_2.42.0.orig.tar.xz' git_2.42.0.orig.tar.xz 7346760 SHA256:3278210e9fd2994b8484dd7e3ddd9ea8b940ef52170cdb606daa94d887c93b0d
-'http://deb.debian.org/debian/pool/main/g/git/git_2.42.0-1.debian.tar.xz' git_2.42.0-1.debian.tar.xz 757596 SHA256:db6b5bdacb87cd716453c8bdd5d5652da9f8c3b1be062ee3b2624056889103b4
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/git/1:2.42.0-1/
 
-- https://sources.debian.net/src/git/1:2.42.0-1/ (for browsing the source)
-- https://sources.debian.net/src/git/1:2.42.0-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/git/1:2.42.0-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `glibc=2.37-12`
 
@@ -2045,21 +2038,13 @@ Licenses: (parsed from: `/usr/share/doc/mercurial/copyright`, `/usr/share/doc/me
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris mercurial=6.5.3-1
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.5.3-1.dsc' mercurial_6.5.3-1.dsc 2806 SHA256:cc0a63ef67375e4868cfcef83659384220f601ac53ed947e1fd3defdf79843d7
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.5.3.orig.tar.gz' mercurial_6.5.3.orig.tar.gz 8235306 SHA256:2cdc81fade129cf56b128417527f190ba72fd776567394ce54eed764e667e7d5
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.5.3.orig.tar.gz.asc' mercurial_6.5.3.orig.tar.gz.asc 659 SHA256:6c5baf4f73e11b855cf3a0f1badc2d750d23a9ba7d7e1c9cfbb6449babc50d8e
-'http://deb.debian.org/debian/pool/main/m/mercurial/mercurial_6.5.3-1.debian.tar.xz' mercurial_6.5.3-1.debian.tar.xz 69264 SHA256:ad0bfb76db1aaf5ec0cef9219165300d9bfab740f07accfe62728f3db18ffd95
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/mercurial/6.5.3-1/
 
-- https://sources.debian.net/src/mercurial/6.5.3-1/ (for browsing the source)
-- https://sources.debian.net/src/mercurial/6.5.3-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/mercurial/6.5.3-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `ncurses=6.4+20231118-1`
 
@@ -3051,20 +3036,13 @@ Licenses: (parsed from: `/usr/share/doc/bsdutils/copyright`, `/usr/share/doc/lib
 - `MIT`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris util-linux=2.39.2-6
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.39.2-6.dsc' util-linux_2.39.2-6.dsc 4601 SHA256:42b2a38031c85c2383bfdd4eba1f75d1e06946e6ebf9b9fb4ecd48b5fb3eee39
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.39.2.orig.tar.xz' util-linux_2.39.2.orig.tar.xz 8362220 SHA256:87abdfaa8e490f8be6dde976f7c80b9b5ff9f301e1b67e3899e1f05a59a1531f
-'http://deb.debian.org/debian/pool/main/u/util-linux/util-linux_2.39.2-6.debian.tar.xz' util-linux_2.39.2-6.debian.tar.xz 99836 SHA256:47143ceff6893470cd29d7afdff010df62ac18f84bedc6a9f9ac32e1c1d6039c
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/util-linux/2.39.2-6/
 
-- https://sources.debian.net/src/util-linux/2.39.2-6/ (for browsing the source)
-- https://sources.debian.net/src/util-linux/2.39.2-6/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/util-linux/2.39.2-6/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `wget=1.21.4-1`
 

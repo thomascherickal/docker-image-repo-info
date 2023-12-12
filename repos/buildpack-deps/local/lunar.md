@@ -4079,14 +4079,9 @@ Licenses: (parsed from: `/usr/share/doc/libpython3.11-minimal/copyright`, `/usr/
 - `use in source`
 - `without`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris python3.11=3.11.4-1~23.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.11/python3.11_3.11.4-1%7e23.04.1.dsc' python3.11_3.11.4-1~23.04.1.dsc 3684 SHA512:26461f8625e4e27baaa19df37bc99a290d7d4c609055eeab31dccac0f3da5771b58b5d6d259867ff94039a0b91909368c26a23fae49b14753cfc45a4cf8ac67f
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.11/python3.11_3.11.4.orig.tar.xz' python3.11_3.11.4.orig.tar.xz 19954828 SHA512:7eb14fecbf60824d10c22a9057584c3a142c2866f4af6caa2525c10c8bcb24e6e7afb32a44a0e118df0a2b2543d578c3b422ffd4a5fa317dfe6ea371cc7ee1ee
-'http://archive.ubuntu.com/ubuntu/pool/main/p/python3.11/python3.11_3.11.4-1%7e23.04.1.debian.tar.xz' python3.11_3.11.4-1~23.04.1.debian.tar.xz 219824 SHA512:97e81bba2dfebfd89bf79c144a5099e1a25fb41b309b507e172a9cd18b532f8e281f9f0d938777686a5e3b7e696c45b287e08736eae8687cc3b56b6866feef3f
-```
 
 ### `dpkg` source package: `readline=8.2-1.3`
 
@@ -4419,14 +4414,9 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `LGPL-3`
 - `LGPL-3+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.34+dfsg-1.2ubuntu0.1
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1.2ubuntu0.1.dsc' tar_1.34+dfsg-1.2ubuntu0.1.dsc 2113 SHA512:31c2f33cf45991bfe5e6cc595b37aa7804d4d017892833321070fc9b111df6649dfd5565a168504cb733d01776592dedf648452cbd2b09175c0a54ae7c7f3446
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg.orig.tar.xz' tar_1.34+dfsg.orig.tar.xz 1981736 SHA512:ec5553c53c4a5f523f872a8095f699c17bf41400fbe2f0f8b45291ccbaf9ac51dea8445c81bd95697f8853c95dcad3250071d23dbbcab857a428ee92e647bde9
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1.2ubuntu0.1.debian.tar.xz' tar_1.34+dfsg-1.2ubuntu0.1.debian.tar.xz 20900 SHA512:f0c492c8a8670dff82ff1ba4378fe23fb968375b9e2a35b877d7ed18da9de75ac69ac3b69e25e0c23577e18a10a52ac32d5d56429cbcea15f3597b39bd4fdf23
-```
 
 ### `dpkg` source package: `tiff=4.5.0-5ubuntu1.2`
 

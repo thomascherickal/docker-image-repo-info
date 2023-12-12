@@ -312,14 +312,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.34-6ubuntu1.6
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.6.dsc' binutils_2.34-6ubuntu1.6.dsc 8829 SHA512:ede7b4a1eb205a14599a2e61b3793d4e982f6481c9a5dd326bb1a2f6954bef8c1a523180e3d5b0f39235c2fda5b3c133e3a86c16db0edb282c3131ee7c54d092
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34.orig.tar.xz' binutils_2.34.orig.tar.xz 21637796 SHA512:2c7976939dcf5e8c5b7374cccd39bfe803b1bec73c6abfa0eb17c24e1942574c6bdb874c66a092a82adc443182eacd8a5a8001c19a76101f0c7ba40c27de0bbd
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.6.debian.tar.xz' binutils_2.34-6ubuntu1.6.debian.tar.xz 163364 SHA512:cbfd5bfd9c1e795de037a65fcedf4f9cc2b5d81df1d72d7c930fd09b0784070607577707db6b129027cdc8f8382800e9eb470bb16147e705c7376ea40eab5dcb
-```
 
 ### `dpkg` source package: `breezy=3.0.2-4ubuntu2`
 
@@ -2817,14 +2812,9 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
 - `GPL-2`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris linux=5.4.0-167.184
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-167.184.dsc' linux_5.4.0-167.184.dsc 7067 SHA512:fd14b9b944b141f6608ae92457e2d077c4f4b59c3ee7b3ff2434cd415fb6f1f64166173b88a1a91e9be8cbb88e78b1622a712b30768e0b7ef3e4e81401c1019c
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0.orig.tar.gz' linux_5.4.0.orig.tar.gz 170244619 SHA512:62b09a7231fd793973c5f59b16c4f6ffce621188b02a71915874b05e8e3f956fb6146d4a4fb1a4475bebe463949ca5a18da12842c3ce7c52e996e6bc4012a074
-'http://security.ubuntu.com/ubuntu/pool/main/l/linux/linux_5.4.0-167.184.diff.gz' linux_5.4.0-167.184.diff.gz 11130240 SHA512:187d3ad3215964b5b7e139defc2c4ed6916925029728f25cd4bafa97b8770b3ee9108eab909e8f0dd2104b313472e316fdf4804c666929237c03ca4e260db849
-```
 
 ### `dpkg` source package: `lsb=11.1.0ubuntu2`
 
@@ -4080,14 +4070,9 @@ Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 - `GPL-2`
 - `GPL-3`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris tar=1.30+dfsg-7ubuntu0.20.04.3
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.3.dsc' tar_1.30+dfsg-7ubuntu0.20.04.3.dsc 2120 SHA512:add6306bd1e8467d91f57fd5a8ee9b6e98ac3aab90fbb5a66b87c0c72c6319f168e8d48ac0ef62fc6dd0bfebc1929f77b339990f1dce20508f5f037a3fbeb999
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg.orig.tar.xz' tar_1.30+dfsg.orig.tar.xz 1883220 SHA512:f9b3843bd4da03f58d6f88de70ecb36b8ac29312714fd2120ff00f17c99e6d77cc82a8f9de348f4c2bdba9a6cc8e8c6c78039b6c14cdee15d68f2517000c36f2
-'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.3.debian.tar.xz' tar_1.30+dfsg-7ubuntu0.20.04.3.debian.tar.xz 23940 SHA512:c554d5f405ba5f7d5ddd84d0753bcf9bc3ef944f4cb12ae5371d2a51c461ddf0768ef25b11aefd4d9f77f7e6c354b8afc9788e93dc0c34fd914e8604a24a747b
-```
 
 ### `dpkg` source package: `tiff=4.1.0+git191117-2ubuntu0.20.04.11`
 
