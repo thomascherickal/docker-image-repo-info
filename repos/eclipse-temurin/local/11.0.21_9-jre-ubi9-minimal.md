@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:cea5576e4382f31b55eddfde1ac26d55e0c1b699625407bd93b212b3ad8e7b96`
-- Created: `2023-11-17T04:11:22.261737184Z`
-- Virtual Size: ~ 300.98 Mb  
+- Image ID: `sha256:f3b80db9c9d3e56cf704c45dc2ef97f18a4d26073840c6b0ca965b240dae95cb`
+- Created: `2023-12-14T01:50:57.676358263Z`
+- Virtual Size: ~ 300.99 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/__cacert_entrypoint.sh"]`
@@ -18,7 +18,7 @@
   - `JAVA_VERSION=jdk-11.0.21+9`
 - Labels:
   - `architecture=x86_64`
-  - `build-date=2023-11-09T16:40:47`
+  - `build-date=2023-12-07T04:10:36`
   - `com.redhat.component=ubi9-minimal-container`
   - `com.redhat.license_terms=https://www.redhat.com/en/about/red-hat-end-user-license-agreements#UBI`
   - `description=The Universal Base Image Minimal is a stripped down image that uses microdnf as a package manager. This base image is freely redistributable, but Red Hat only supports Red Hat technologies through subscriptions for Red Hat products. This image is maintained by Red Hat and updated regularly.`
@@ -30,9 +30,9 @@
   - `io.openshift.tags=minimal rhel9`
   - `maintainer=Red Hat, Inc.`
   - `name=ubi9-minimal`
-  - `release=1361.1699548032`
+  - `release=1475`
   - `summary=Provides the latest release of the minimal Red Hat Universal Base Image 9.`
-  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.3-1361.1699548032`
+  - `url=https://access.redhat.com/containers/#/registry.access.redhat.com/ubi9-minimal/images/9.3-1475`
   - `vcs-ref=e8510c65a9be4b0635372fd09bee126ce7e08bc7`
   - `vcs-type=git`
   - `vendor=Red Hat, Inc.`
@@ -652,7 +652,7 @@ Licenses (from `rpm --query`): LGPLv2+ and BSD and Public Domain
 
 **WARNING:** unable to find source (`dnf download` failed or returned no results)!
 
-### `rpm` package: `libxml2-2.9.13-4.el9.x86_64`
+### `rpm` package: `libxml2-2.9.13-5.el9_3.x86_64`
 
 Licenses (from `rpm --query`): MIT
 

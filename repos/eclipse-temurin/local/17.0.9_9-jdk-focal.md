@@ -201,14 +201,9 @@ Licenses: (parsed from: `/usr/share/doc/binutils/copyright`, `/usr/share/doc/bin
 - `GPL`
 - `LGPL`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris binutils=2.34-6ubuntu1.6
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.6.dsc' binutils_2.34-6ubuntu1.6.dsc 8829 SHA512:ede7b4a1eb205a14599a2e61b3793d4e982f6481c9a5dd326bb1a2f6954bef8c1a523180e3d5b0f39235c2fda5b3c133e3a86c16db0edb282c3131ee7c54d092
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34.orig.tar.xz' binutils_2.34.orig.tar.xz 21637796 SHA512:2c7976939dcf5e8c5b7374cccd39bfe803b1bec73c6abfa0eb17c24e1942574c6bdb874c66a092a82adc443182eacd8a5a8001c19a76101f0c7ba40c27de0bbd
-'http://archive.ubuntu.com/ubuntu/pool/main/b/binutils/binutils_2.34-6ubuntu1.6.debian.tar.xz' binutils_2.34-6ubuntu1.6.debian.tar.xz 163364 SHA512:cbfd5bfd9c1e795de037a65fcedf4f9cc2b5d81df1d72d7c930fd09b0784070607577707db6b129027cdc8f8382800e9eb470bb16147e705c7376ea40eab5dcb
-```
 
 ### `dpkg` source package: `brotli=1.0.7-6ubuntu0.1`
 
