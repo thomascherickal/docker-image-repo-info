@@ -1,7 +1,7 @@
 ## `lightstreamer:7-jdk8-temurin`
 
 ```console
-$ docker pull lightstreamer@sha256:dc7e7d40957d5165de0c2512e2a0277adb0fe88589743962cfc7a09042dc69dd
+$ docker pull lightstreamer@sha256:397d9b01382f516dccf7faab0a4caf77e09a40a8e034f616695523901748a470
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
@@ -12,14 +12,14 @@ $ docker pull lightstreamer@sha256:dc7e7d40957d5165de0c2512e2a0277adb0fe88589743
 ### `lightstreamer:7-jdk8-temurin` - linux; amd64
 
 ```console
-$ docker pull lightstreamer@sha256:a10419d37709118d687b5fd45fab1e0ee3ae421101fb3bd0d511a64556620a64
+$ docker pull lightstreamer@sha256:daa3ddfab913fd730063832e4e0146ffd354f3abd0a9cff5430cb24d1fda2339
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **209.7 MB (209727654 bytes)**  
+-	Total Size: **210.1 MB (210055878 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:e91c53766c5e856709abd37c249ea705b813115679d9d10eaeed973b042cbc8d`
+-	Image ID: `sha256:286eb111fda2e66528e851172af27259137744f9133fa0904eab76d63ff44911`
 -	Entrypoint: `["\/__cacert_entrypoint.sh"]`
 -	Default Command: `[".\/LS.sh","run"]`
 
@@ -60,19 +60,19 @@ LABEL maintainer=Lightstreamer Server Development Team <support@lightstreamer.co
 RUN apt-get -y update         && apt-get -y install gnupg         && rm -rf /var/lib/apt/lists/*
 # Sat, 02 Dec 2023 09:08:47 GMT
 RUN gpg --batch --keyserver hkp://keyserver.ubuntu.com --recv-keys 9B90BFD14309C7DA5EF58D7D4A8C08966F29B4D2
-# Sat, 02 Dec 2023 09:10:44 GMT
-ENV LIGHTSTREAMER_VERSION=7.4.0
-# Sat, 02 Dec 2023 09:10:44 GMT
-ENV LIGHTSTREAMER_URL_DOWNLOAD=https://lightstreamer.com/distr/ls-server/7.4.0/Lightstreamer-7.4.0.tar.gz
-# Sat, 02 Dec 2023 09:10:51 GMT
+# Thu, 14 Dec 2023 19:28:07 GMT
+ENV LIGHTSTREAMER_VERSION=7.4.1
+# Thu, 14 Dec 2023 19:28:07 GMT
+ENV LIGHTSTREAMER_URL_DOWNLOAD=https://lightstreamer.com/distr/ls-server/7.4.1/Lightstreamer-7.4.1.tar.gz
+# Thu, 14 Dec 2023 19:28:10 GMT
 RUN set -ex;         mkdir /lightstreamer && cd /lightstreamer         && curl -fSL -o Lightstreamer.tar.gz ${LIGHTSTREAMER_URL_DOWNLOAD}         && curl -fSL -o Lightstreamer.tar.gz.asc ${LIGHTSTREAMER_URL_DOWNLOAD}.asc         && gpg --batch --verify Lightstreamer.tar.gz.asc Lightstreamer.tar.gz         && tar -xvf Lightstreamer.tar.gz --strip-components=1         && sed -i -e 's/<appender-ref ref="LSDailyRolling" \/>/<appender-ref ref="LSConsole" \/>/'                   -e '/<logger name="LightstreamerLogger.init/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerLogger.license/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerProxyAdapters/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   conf/lightstreamer_log_conf.xml         && groupadd -r -g 10000 lightstreamer         && useradd --no-log-init -r -g lightstreamer -u 10000 lightstreamer         && chown -R lightstreamer:lightstreamer ../lightstreamer         && rm Lightstreamer.tar.gz Lightstreamer.tar.gz.asc
-# Sat, 02 Dec 2023 09:10:52 GMT
+# Thu, 14 Dec 2023 19:28:10 GMT
 USER lightstreamer
-# Sat, 02 Dec 2023 09:10:52 GMT
+# Thu, 14 Dec 2023 19:28:10 GMT
 EXPOSE 8080
-# Sat, 02 Dec 2023 09:10:52 GMT
+# Thu, 14 Dec 2023 19:28:11 GMT
 WORKDIR /lightstreamer/bin/unix-like
-# Sat, 02 Dec 2023 09:10:52 GMT
+# Thu, 14 Dec 2023 19:28:11 GMT
 CMD ["./LS.sh" "run"]
 ```
 
@@ -105,22 +105,22 @@ CMD ["./LS.sh" "run"]
 		Last Modified: Sat, 02 Dec 2023 09:11:43 GMT  
 		Size: 2.4 KB (2400 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:642a98267979b75f77770f21533cda66b3af5cffb764351c739a15667f370ad8`  
-		Last Modified: Sat, 02 Dec 2023 09:15:08 GMT  
-		Size: 59.2 MB (59179185 bytes)  
+	-	`sha256:3c6c1ec01991cd9692635183183e4bf7865ff8f3121ccc7256e07cca6f9891e3`  
+		Last Modified: Thu, 14 Dec 2023 19:29:15 GMT  
+		Size: 59.5 MB (59507409 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `lightstreamer:7-jdk8-temurin` - linux; arm64 variant v8
 
 ```console
-$ docker pull lightstreamer@sha256:303a655ef969aa129d9c67c785d0c1c5f1a0e8767a25d38e267a022f61e907dd
+$ docker pull lightstreamer@sha256:f61fa943d6fbe076c67e447208d6618f26b0ff26cde7ffbd98759e028ba87c21
 ```
 
 -	Docker Version: 20.10.23
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **206.7 MB (206705408 bytes)**  
+-	Total Size: **207.0 MB (207033562 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:bc47466f02c81de1174055b92971adb3435a9f8041068d0aaa82f568d3f45518`
+-	Image ID: `sha256:ad061d409ae65e1b4ff8ebc8ef1d9460fd96e66a6b1c8dc08ae17211d95c8e33`
 -	Entrypoint: `["\/__cacert_entrypoint.sh"]`
 -	Default Command: `[".\/LS.sh","run"]`
 
@@ -161,19 +161,19 @@ LABEL maintainer=Lightstreamer Server Development Team <support@lightstreamer.co
 RUN apt-get -y update         && apt-get -y install gnupg         && rm -rf /var/lib/apt/lists/*
 # Sat, 02 Dec 2023 12:13:38 GMT
 RUN gpg --batch --keyserver hkp://keyserver.ubuntu.com --recv-keys 9B90BFD14309C7DA5EF58D7D4A8C08966F29B4D2
-# Sat, 02 Dec 2023 12:14:58 GMT
-ENV LIGHTSTREAMER_VERSION=7.4.0
-# Sat, 02 Dec 2023 12:14:58 GMT
-ENV LIGHTSTREAMER_URL_DOWNLOAD=https://lightstreamer.com/distr/ls-server/7.4.0/Lightstreamer-7.4.0.tar.gz
-# Sat, 02 Dec 2023 12:15:02 GMT
+# Thu, 14 Dec 2023 18:56:22 GMT
+ENV LIGHTSTREAMER_VERSION=7.4.1
+# Thu, 14 Dec 2023 18:56:22 GMT
+ENV LIGHTSTREAMER_URL_DOWNLOAD=https://lightstreamer.com/distr/ls-server/7.4.1/Lightstreamer-7.4.1.tar.gz
+# Thu, 14 Dec 2023 18:56:26 GMT
 RUN set -ex;         mkdir /lightstreamer && cd /lightstreamer         && curl -fSL -o Lightstreamer.tar.gz ${LIGHTSTREAMER_URL_DOWNLOAD}         && curl -fSL -o Lightstreamer.tar.gz.asc ${LIGHTSTREAMER_URL_DOWNLOAD}.asc         && gpg --batch --verify Lightstreamer.tar.gz.asc Lightstreamer.tar.gz         && tar -xvf Lightstreamer.tar.gz --strip-components=1         && sed -i -e 's/<appender-ref ref="LSDailyRolling" \/>/<appender-ref ref="LSConsole" \/>/'                   -e '/<logger name="LightstreamerLogger.init/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerLogger.license/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   -e '/<logger name="LightstreamerProxyAdapters/,+2s/<appender-ref ref="LSConsole" \/>/<!-- <appender-ref ref="LSConsole" \/> -->/'                   conf/lightstreamer_log_conf.xml         && groupadd -r -g 10000 lightstreamer         && useradd --no-log-init -r -g lightstreamer -u 10000 lightstreamer         && chown -R lightstreamer:lightstreamer ../lightstreamer         && rm Lightstreamer.tar.gz Lightstreamer.tar.gz.asc
-# Sat, 02 Dec 2023 12:15:02 GMT
+# Thu, 14 Dec 2023 18:56:26 GMT
 USER lightstreamer
-# Sat, 02 Dec 2023 12:15:02 GMT
+# Thu, 14 Dec 2023 18:56:26 GMT
 EXPOSE 8080
-# Sat, 02 Dec 2023 12:15:02 GMT
+# Thu, 14 Dec 2023 18:56:26 GMT
 WORKDIR /lightstreamer/bin/unix-like
-# Sat, 02 Dec 2023 12:15:03 GMT
+# Thu, 14 Dec 2023 18:56:27 GMT
 CMD ["./LS.sh" "run"]
 ```
 
@@ -206,7 +206,7 @@ CMD ["./LS.sh" "run"]
 		Last Modified: Sat, 02 Dec 2023 12:15:49 GMT  
 		Size: 2.4 KB (2392 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
-	-	`sha256:a56c3d6c6f5db883a3ba46da735bcb9c6a384409b22fa3a6e0ab9ca1e89c2bb0`  
-		Last Modified: Sat, 02 Dec 2023 12:19:23 GMT  
-		Size: 59.2 MB (59179226 bytes)  
+	-	`sha256:8cb4964393bd72eb01698611ee40f0a346d92869fad5dcd3a44aecf0781f5dc4`  
+		Last Modified: Thu, 14 Dec 2023 18:57:31 GMT  
+		Size: 59.5 MB (59507380 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
