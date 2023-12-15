@@ -318,7 +318,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url glibc-2.32-15.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/glibc-2.32-15.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/glibc-2.32-15.mga8.src.rpm
 ```
 
 ### `rpm` package: `gnupg2-2.2.27-1.mga8.x86_64`
@@ -852,7 +852,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64gio2.0_0-2.66.8-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/glib2.0-2.66.8-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/glib2.0-2.66.8-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64girepository1.0_1-1.66.1-1.mga8.x86_64`
@@ -885,7 +885,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64glib2.0_0-2.66.8-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/glib2.0-2.66.8-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/glib2.0-2.66.8-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64gmp10-6.2.1-1.mga8.x86_64`
@@ -1061,7 +1061,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64ldap2.4_2-2.4.57-1.1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/openldap-2.4.57-1.1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/openldap-2.4.57-1.1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64lua5.3-5.3.5-5.mga8.x86_64`
@@ -1259,7 +1259,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64openssl1.1-1.1.1k-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/openssl-1.1.1k-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/openssl-1.1.1k-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64p11-kit0-0.23.22-2.mga8.x86_64`
@@ -1369,7 +1369,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64python3.8-3.8.8-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/python3-3.8.8-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/python3-3.8.8-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64python3.8-stdlib-3.8.8-1.mga8.x86_64`
@@ -1380,7 +1380,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64python3.8-stdlib-3.8.8-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/python3-3.8.8-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/python3-3.8.8-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64qrencode4-4.1.1-1.mga8.x86_64`
@@ -1424,7 +1424,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64rpm9-4.16.1.3-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/rpm-4.16.1.3-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/rpm-4.16.1.3-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64rpmbuild9-4.16.1.3-1.mga8.x86_64`
@@ -1435,7 +1435,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64rpmbuild9-4.16.1.3-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/rpm-4.16.1.3-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/rpm-4.16.1.3-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64rpmsign9-4.16.1.3-1.mga8.x86_64`
@@ -1446,7 +1446,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64rpmsign9-4.16.1.3-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/rpm-4.16.1.3-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/rpm-4.16.1.3-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64sasl2_3-2.1.27-3.mga8.x86_64`
@@ -1545,7 +1545,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64systemd0-246.13-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/systemd-246.13-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/systemd-246.13-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64tasn1_6-4.16.0-4.mga8.x86_64`
@@ -1589,7 +1589,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64udev1-246.13-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/systemd-246.13-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/systemd-246.13-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64unistring2-0.9.10-4.mga8.x86_64`
@@ -1611,7 +1611,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url lib64usb1.0_0-1.0.24-2.1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/libusb-1.0.24-2.1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/libusb-1.0.24-2.1.mga8.src.rpm
 ```
 
 ### `rpm` package: `lib64user1-0.62-16.mga8.x86_64`
@@ -1963,7 +1963,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url nss-myhostname-246.13-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/systemd-246.13-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/systemd-246.13-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `nss_tcb-1.1-12.mga8.x86_64`
@@ -1985,7 +1985,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url openldap-2.4.57-1.1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/openldap-2.4.57-1.1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/openldap-2.4.57-1.1.mga8.src.rpm
 ```
 
 ### `rpm` package: `p11-kit-0.23.22-2.mga8.x86_64`
@@ -2348,7 +2348,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python3-3.8.8-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/python3-3.8.8-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/python3-3.8.8-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `python3-dnf-4.6.0-1.mga8.noarch`
@@ -2436,7 +2436,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url python3-rpm-4.16.1.3-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/rpm-4.16.1.3-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/rpm-4.16.1.3-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `python3-rpm-macros-3.9-5.mga8.noarch`
@@ -2491,7 +2491,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url rootcerts-20210223.00-1.mga8.noarch
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/rootcerts-20210223.00-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/rootcerts-20210223.00-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `rootfiles-11.0-16.mga8.noarch`
@@ -2513,7 +2513,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url rpm-4.16.1.3-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/rpm-4.16.1.3-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/rpm-4.16.1.3-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `rpm-helper-0.24.21-1.mga8.noarch`
@@ -2612,7 +2612,7 @@ Source:
 
 ```console
 $ dnf --quiet download --source --url systemd-246.13-1.mga8
-http://mirrors.kernel.org/mageia/distrib/8/SRPMS/core/updates/systemd-246.13-1.mga8.src.rpm
+http://mirror.math.princeton.edu/pub/mageia/distrib/8/SRPMS/core/updates/systemd-246.13-1.mga8.src.rpm
 ```
 
 ### `rpm` package: `tar-1.33-2.mga8.x86_64`
