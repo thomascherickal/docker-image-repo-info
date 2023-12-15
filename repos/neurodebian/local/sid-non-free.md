@@ -131,20 +131,13 @@ Licenses: (parsed from: `/usr/share/doc/libaudit-common/copyright`, `/usr/share/
 - `GPL-2`
 - `LGPL-2.1`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris audit=1:3.1.1-1
-'http://deb.debian.org/debian/pool/main/a/audit/audit_3.1.1-1.dsc' audit_3.1.1-1.dsc 2402 SHA256:61ae8d226039ab2c4c241266c699d22a80a5a85db94dd030cff44ca7a8729bd5
-'http://deb.debian.org/debian/pool/main/a/audit/audit_3.1.1.orig.tar.gz' audit_3.1.1.orig.tar.gz 1218111 SHA256:46e46b37623cce09e6ee134e78d668afc34f4e1c870c853ef12e4193078cfe87
-'http://deb.debian.org/debian/pool/main/a/audit/audit_3.1.1-1.debian.tar.xz' audit_3.1.1-1.debian.tar.xz 18944 SHA256:b16ea47b6562a2530ec48e752ef6f31cd72b5dcdeec49b8720911584a54769cb
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/audit/1:3.1.1-1/
 
-- https://sources.debian.net/src/audit/1:3.1.1-1/ (for browsing the source)
-- https://sources.debian.net/src/audit/1:3.1.1-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/audit/1:3.1.1-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `base-files=13`
 
@@ -1168,21 +1161,13 @@ Licenses: (parsed from: `/usr/share/doc/libksba8/copyright`)
 - `GPL-3`
 - `LGPL-2.1-or-later`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libksba=1.6.4-2
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.4-2.dsc' libksba_1.6.4-2.dsc 2482 SHA256:0fa874c62277bc3183824ab4abfddf37ebd2bc59c3595a8f2fb8d8313fba606f
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.4.orig.tar.bz2' libksba_1.6.4.orig.tar.bz2 668445 SHA256:bbb43f032b9164d86c781ffe42213a83bf4f2fee91455edfa4654521b8b03b6b
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.4.orig.tar.bz2.asc' libksba_1.6.4.orig.tar.bz2.asc 228 SHA256:f6e892a76842f81955f369f628386f5657cdcf4cc3b1b7d911d1168d773e7d87
-'http://deb.debian.org/debian/pool/main/libk/libksba/libksba_1.6.4-2.debian.tar.xz' libksba_1.6.4-2.debian.tar.xz 14652 SHA256:45fed2acfff4735fdb5404e8597f9d129e3ef5500bf656f2c113097d64755493
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/libksba/1.6.4-2/
 
-- https://sources.debian.net/src/libksba/1.6.4-2/ (for browsing the source)
-- https://sources.debian.net/src/libksba/1.6.4-2/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/libksba/1.6.4-2/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libmd=1.1.0-1`
 
@@ -2027,20 +2012,13 @@ Licenses: (parsed from: `/usr/share/doc/sysvinit-utils/copyright`)
 - `LGPL-2.1`
 - `LGPL-2.1+`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris sysvinit=3.08-3
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.08-3.dsc' sysvinit_3.08-3.dsc 2359 SHA256:d2a262316ce2a141b46f21c4cbaa0a9308fd8de47fb1a61eba8ea17eca52006e
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.08.orig.tar.gz' sysvinit_3.08.orig.tar.gz 513674 SHA256:325e42ae4ae5ae3e4d989e0604aeb5e4eae5f3ee21e401db3c79000718f8c836
-'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.08-3.debian.tar.xz' sysvinit_3.08-3.debian.tar.xz 137976 SHA256:56d9e48a636ddb13f0bdba837692020f39501605b378142416a7848725075d28
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/sysvinit/3.08-3/
 
-- https://sources.debian.net/src/sysvinit/3.08-3/ (for browsing the source)
-- https://sources.debian.net/src/sysvinit/3.08-3/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/sysvinit/3.08-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1.2`
 
