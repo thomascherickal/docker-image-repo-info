@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8277c139de054f33551ccde6f38b8b47e8bff72af1e59f5028e1338ee65c6dee`
-- Created: `2023-12-07T22:27:51.998978209Z`
-- Virtual Size: ~ 743.33 Mb  
+- Image ID: `sha256:1ff4c47ea1b3607e22cd87c1ea17602119b24f3238697f97363d787282d8ec1b`
+- Created: `2023-12-06T20:31:30Z`
+- Virtual Size: ~ 742.44 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
@@ -635,11 +635,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/coreutils/9.1-1/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/coreutils/9.1-1/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `cups=2.4.2-3+deb12u4`
+### `dpkg` source package: `cups=2.4.2-3+deb12u5`
 
 Binary Packages:
 
-- `libcups2:amd64=2.4.2-3+deb12u4`
+- `libcups2:amd64=2.4.2-3+deb12u5`
 
 Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`)
 
@@ -650,13 +650,21 @@ Licenses: (parsed from: `/usr/share/doc/libcups2/copyright`)
 - `FSFUL`
 - `Zlib`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris cups=2.4.2-3+deb12u5
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.4.2-3%2bdeb12u5.dsc' cups_2.4.2-3+deb12u5.dsc 3389 SHA256:05837683045be69917e3285bfdb7b18d66929567ed257666db8ac97827b64ec1
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.4.2.orig.tar.gz' cups_2.4.2.orig.tar.gz 8128785 SHA256:f03ccb40b087d1e30940a40e0141dcbba263f39974c20eb9f2521066c9c6c908
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.4.2.orig.tar.gz.asc' cups_2.4.2.orig.tar.gz.asc 228 SHA256:1c116a5fb52e013f4569c3e4cb09a9934ea5e498b9e9d3b823bc2ae09066555b
+'http://deb.debian.org/debian/pool/main/c/cups/cups_2.4.2-3%2bdeb12u5.debian.tar.xz' cups_2.4.2-3+deb12u5.debian.tar.xz 384644 SHA256:8bb0491671580182fb75cd599eb7a30c8e2ce1f3447d2bba82c2f31cddc1c043
+```
 
-- http://snapshot.debian.org/package/cups/2.4.2-3+deb12u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/cups/2.4.2-3+deb12u5/ (for browsing the source)
+- https://sources.debian.net/src/cups/2.4.2-3+deb12u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/cups/2.4.2-3+deb12u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `curl=7.88.1-10+deb12u4`
 
@@ -2208,11 +2216,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libcap2/1:2.66-4/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libcap2/1:2.66-4/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `libde265=1.0.11-1`
+### `dpkg` source package: `libde265=1.0.11-1+deb12u1`
 
 Binary Packages:
 
-- `libde265-0:amd64=1.0.11-1`
+- `libde265-0:amd64=1.0.11-1+deb12u1`
 
 Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 
@@ -2224,13 +2232,20 @@ Licenses: (parsed from: `/usr/share/doc/libde265-0/copyright`)
 - `other-1`
 - `public-domain-1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris libde265=1.0.11-1+deb12u1
+'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.11-1%2bdeb12u1.dsc' libde265_1.0.11-1+deb12u1.dsc 2381 SHA256:6c8d2332e81b73be23fba2ce6cae7c71dbbd8974f006f26f4ab16ce8dd349cb1
+'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.11.orig.tar.gz' libde265_1.0.11.orig.tar.gz 845996 SHA256:2f8f12cabbdb15e53532b7c1eb964d4e15d444db1be802505e6ac97a25035bab
+'http://deb.debian.org/debian/pool/main/libd/libde265/libde265_1.0.11-1%2bdeb12u1.debian.tar.xz' libde265_1.0.11-1+deb12u1.debian.tar.xz 15512 SHA256:0c33577ab6a790c221dea6c6397365db46c214394127e718baaae6b3c0fdece0
+```
 
-- http://snapshot.debian.org/package/libde265/1.0.11-1/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/libde265/1.0.11-1+deb12u1/ (for browsing the source)
+- https://sources.debian.net/src/libde265/1.0.11-1+deb12u1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/libde265/1.0.11-1+deb12u1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `libdeflate=1.14-1`
 
