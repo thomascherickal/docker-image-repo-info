@@ -1,7 +1,7 @@
 ## `docker:25-rc-dind-rootless`
 
 ```console
-$ docker pull docker@sha256:f762c394756669684ca82fdf314d2f30c5297f0ca468d44cc3abaab86f229d44
+$ docker pull docker@sha256:247bce94aec510f2236ed1353f0cd898112e66f2a4626c9f6dc14389bc563471
 ```
 
 -	Manifest MIME: `application/vnd.oci.image.index.v1+json`
@@ -203,13 +203,13 @@ $ docker pull docker@sha256:78ca5b7f82e064947e939076dd48a2536e0147c298d38a023279
 ### `docker:25-rc-dind-rootless` - linux; arm64 variant v8
 
 ```console
-$ docker pull docker@sha256:4e36b09af8ed6abe3fa5e1f91c95d72bc6be7ae461e4ee6beb1ec828ac20e957
+$ docker pull docker@sha256:16dda6576f6c87873a6a65a9e5daaadae17f588cd67851707b17501634f1f360
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **135.6 MB (135638115 bytes)**  
+-	Total Size: **135.7 MB (135731956 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:a08397d45b674ebe3dfb6c6f6aa2da2f4f295073cd841451742ede7aa9d2a4a0`
+-	Image ID: `sha256:c05ce124f5c520149a3ce7ea516d8c3a7a8c4e502cf72000625a7346f0de3fca`
 -	Entrypoint: `["dockerd-entrypoint.sh"]`
 
 ```dockerfile
@@ -247,6 +247,8 @@ ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["sh"]
 # Tue, 12 Dec 2023 23:39:18 GMT
 RUN set -eux; 	apk add --no-cache 		btrfs-progs 		e2fsprogs 		e2fsprogs-extra 		ip6tables 		iptables 		openssl 		shadow-uidmap 		xfsprogs 		xz 		pigz 	; 	if zfs="$(apk info --no-cache --quiet zfs)" && [ -n "$zfs" ]; then 		apk add --no-cache zfs; 	fi # buildkit
+# Tue, 12 Dec 2023 23:39:18 GMT
+RUN set -eux; 	apk add --no-cache iptables-legacy; 	mkdir -p /usr/local/sbin/.iptables-legacy; 	for f in 		iptables 		iptables-save 		iptables-restore 		ip6tables 		ip6tables-save 		ip6tables-restore 	; do 		b="/sbin/${f/tables/tables-legacy}"; 		"$b" --version; 		ln -svT "$b" "/usr/local/sbin/.iptables-legacy/$f"; 	done; 	export PATH="/usr/local/sbin/.iptables-legacy:$PATH"; 	iptables --version | grep legacy # buildkit
 # Tue, 12 Dec 2023 23:39:18 GMT
 RUN set -eux; 	addgroup -S dockremap; 	adduser -S -G dockremap dockremap; 	echo 'dockremap:165536:65536' >> /etc/subuid; 	echo 'dockremap:165536:65536' >> /etc/subgid # buildkit
 # Tue, 12 Dec 2023 23:39:18 GMT
@@ -322,63 +324,67 @@ USER rootless
 		Last Modified: Fri, 15 Dec 2023 00:16:15 GMT  
 		Size: 7.4 MB (7428532 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:8776e23e38a6520c70918d6168d8911ab68f347e38d697c653589573bd0b168a`  
-		Last Modified: Fri, 15 Dec 2023 00:16:15 GMT  
-		Size: 1.3 KB (1296 bytes)  
+	-	`sha256:b03314a3b836481d0aac03d1e20f2ae943732c793099292fdda3cfdc8d0d204c`  
+		Last Modified: Fri, 15 Dec 2023 19:31:26 GMT  
+		Size: 93.1 KB (93073 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:d786f3ebbbaa7171e0e5ac2f18d77dbd8b1b49a3cb156b1ab9aeb24e5deb752f`  
-		Last Modified: Fri, 15 Dec 2023 00:16:17 GMT  
-		Size: 51.3 MB (51254962 bytes)  
+	-	`sha256:aef74db21cd26fe2395cc2c881ece363e8afd44defd10e4217f463b0c9e299b0`  
+		Last Modified: Fri, 15 Dec 2023 19:31:26 GMT  
+		Size: 1.3 KB (1295 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:d78b1ef491c5d85142c4e41441b70f86fe18ab97462fe16c83fa77219902b5a7`  
-		Last Modified: Fri, 15 Dec 2023 00:16:15 GMT  
+	-	`sha256:5b3405f023fb4562997c83102ed389f8c6125a5d7c40eb0c1a1b38c695129e67`  
+		Last Modified: Fri, 15 Dec 2023 19:31:28 GMT  
+		Size: 51.3 MB (51254976 bytes)  
+		MIME: application/vnd.oci.image.layer.v1.tar+gzip
+	-	`sha256:af747d35186ec57ef6624163868d6325fd89bbd48485ac0235d3574f7226c684`  
+		Last Modified: Fri, 15 Dec 2023 19:31:26 GMT  
 		Size: 1.5 KB (1514 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:3357970b4537e1e803a6f2ddda092a1cc8f0691cc302d1493a0f821bd5f614fb`  
-		Last Modified: Fri, 15 Dec 2023 00:16:16 GMT  
-		Size: 2.8 KB (2816 bytes)  
+	-	`sha256:e81b560f148ccaf4029b9d73dda9e61f1a7ae146e8063af6dae3724d7788377c`  
+		Last Modified: Fri, 15 Dec 2023 19:31:27 GMT  
+		Size: 2.9 KB (2878 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:481c436345c3fce95c64ed6183aba564cafa49fdebbe6a7bc125c6dd80ccb8f3`  
-		Last Modified: Fri, 15 Dec 2023 01:03:22 GMT  
-		Size: 1.0 MB (1015519 bytes)  
+	-	`sha256:7f02fbf2ed8fce5b8dbcf506b3431abd0fce65d4c10c6b8625c6652d07de8760`  
+		Last Modified: Fri, 15 Dec 2023 19:53:35 GMT  
+		Size: 1.0 MB (1016219 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:2ca3c93123d240761c982bb1a2872fda44eb890b3048dcc202a1834bc38014f7`  
-		Last Modified: Fri, 15 Dec 2023 01:03:21 GMT  
-		Size: 116.0 B  
+	-	`sha256:591fcca901c77cb2dbd53c1d2bceb8059b7d03ee1c9127fa87f44a4d238a5d27`  
+		Last Modified: Fri, 15 Dec 2023 19:53:34 GMT  
+		Size: 115.0 B  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:9b51690254bb071c0b80c6d254959cebe2e584f9827dd9f8b108de8cfd691395`  
-		Last Modified: Fri, 15 Dec 2023 01:03:21 GMT  
-		Size: 1.3 KB (1325 bytes)  
+	-	`sha256:553ab0cbf3342a4d600b6f39ed7f5949034c081e5405be25b0185a3bdd706adf`  
+		Last Modified: Fri, 15 Dec 2023 19:53:35 GMT  
+		Size: 1.3 KB (1322 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:686683b358c2064c9cf27775f00aac336929cdd8305160d832e80ec4ae3df99c`  
-		Last Modified: Fri, 15 Dec 2023 01:03:23 GMT  
-		Size: 22.7 MB (22729180 bytes)  
+	-	`sha256:cd580303f5033a3684ac577fd2d720b24be56566bdc4367fbd68ea90c5c6c9bf`  
+		Last Modified: Fri, 15 Dec 2023 19:53:36 GMT  
+		Size: 22.7 MB (22729178 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:b46d1da11849122a575a06c89b1ccc053d2379b9efd2ce528f001d083d5d755b`  
-		Last Modified: Fri, 15 Dec 2023 01:03:22 GMT  
-		Size: 190.0 B  
+	-	`sha256:ad87b37face86e0762ece67959932a7f0dd41566b9d652146257e7ca5b02e1a5`  
+		Last Modified: Fri, 15 Dec 2023 19:53:35 GMT  
+		Size: 189.0 B  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
 ### `docker:25-rc-dind-rootless` - unknown; unknown
 
 ```console
-$ docker pull docker@sha256:fc9fb7e639b611cc835e8cdcbadb0c8651b0bc4bd4ca16858e23e0788da84ea5
+$ docker pull docker@sha256:fa8576fd81a6a1d318019eff377fc9bc4426dc8f0e6a0f61fa12214dcb5ac327
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **753.1 KB (753134 bytes)**  
+-	Total Size: **759.1 KB (759077 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:b7f4116fde96b0b87ea9cdb118e129d73d6849ca80c7913b8ec62123682fd675`
+-	Image ID: `sha256:bde418813affb652105e5592cc1efa5dc81d4dd8820feeb1d1e7998dd1d76525`
 
 ```dockerfile
 ```
 
 -	Layers:
-	-	`sha256:cffa397303458bc0b07a695c4522f7b31c1c7391c69df236b69abd23f6a54908`  
-		Last Modified: Fri, 15 Dec 2023 01:03:20 GMT  
-		Size: 722.2 KB (722220 bytes)  
+	-	`sha256:7133e0a2e061718c008fe149daa8daf8cae779cb5c29a69ceda9ee4eea8d1c04`  
+		Last Modified: Fri, 15 Dec 2023 19:53:34 GMT  
+		Size: 727.1 KB (727071 bytes)  
 		MIME: application/vnd.in-toto+json
-	-	`sha256:9671202fc727bf224d7134391758849a8f420d6d49971befbdbcd2480e9e033f`  
-		Last Modified: Fri, 15 Dec 2023 01:03:20 GMT  
-		Size: 30.9 KB (30914 bytes)  
+	-	`sha256:0790df993b093290b1a0ee35dca7a42f8e0205101803eb39211eb6c33c4a4f0e`  
+		Last Modified: Fri, 15 Dec 2023 19:53:34 GMT  
+		Size: 32.0 KB (32006 bytes)  
 		MIME: application/vnd.in-toto+json
