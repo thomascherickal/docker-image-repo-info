@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:7af9ff3b47c8af3fd9d9dea50619f760a34fbd9dc26b96fd7660fd11c43e2933`
-- Created: `2023-12-06T19:47:01.771384957Z`
+- Image ID: `sha256:962d33433377d04dbf76fc09dd3c35c108b8230162b4918b750f0b27b29827ba`
+- Created: `2023-12-16T13:11:44.965428927Z`
 - Virtual Size: ~ 3.14 Gb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -839,13 +839,13 @@ $ apt-get source -qq --print-uris cups=2.3.1-9ubuntu1.6
 'http://archive.ubuntu.com/ubuntu/pool/main/c/cups/cups_2.3.1-9ubuntu1.6.debian.tar.xz' cups_2.3.1-9ubuntu1.6.debian.tar.xz 359696 SHA512:9aab4becd11309c088cd0b00f7bf73a6a2f2908bdca6b51aaeb74178930fb1b40672493efa0b975f27dd2b6770e4409c85970eca4ab94a40ff247a388edfe63e
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.20`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.21`
 
 Binary Packages:
 
-- `curl=7.68.0-1ubuntu2.20`
-- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.20`
-- `libcurl4:amd64=7.68.0-1ubuntu2.20`
+- `curl=7.68.0-1ubuntu2.21`
+- `libcurl3-gnutls:amd64=7.68.0-1ubuntu2.21`
+- `libcurl4:amd64=7.68.0-1ubuntu2.21`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl3-gnutls/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -856,9 +856,14 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.21
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.21.dsc' curl_7.68.0-1ubuntu2.21.dsc 2737 SHA512:6637e374c7078dd9535a898ac4eed18088543d73152d631f65c6068bd5682fc2aaf5de7173a95d778c2ac44d1cf2e99860f4576c84a006af82de36707aac7673
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.21.debian.tar.xz' curl_7.68.0-1ubuntu2.21.debian.tar.xz 69924 SHA512:c2e15589ce3f296ebe4d42f3baa4c03237ad7b8d5d7fd2a3f0e1e2a6e3a41a8cb046c21bcbab8820e8cab0cd70a6eba5bb0ed8678158f9c1003c60f5293e3c06
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -1981,22 +1986,27 @@ $ apt-get source -qq --print-uris glib2.0=2.64.6-1~ubuntu20.04.6
 'http://archive.ubuntu.com/ubuntu/pool/main/g/glib2.0/glib2.0_2.64.6-1%7eubuntu20.04.6.debian.tar.xz' glib2.0_2.64.6-1~ubuntu20.04.6.debian.tar.xz 131188 SHA512:fedbc326b4d0d1eba16f4db8dcccbed8e257f9f7d07e8efac687cf61aa19d014cd06d286abf4a220ee02c2346a766f00173cc4d8b7c20a81e452b5d7d9d5118d
 ```
 
-### `dpkg` source package: `glibc=2.31-0ubuntu9.12`
+### `dpkg` source package: `glibc=2.31-0ubuntu9.14`
 
 Binary Packages:
 
-- `libc-bin=2.31-0ubuntu9.12`
-- `libc6:amd64=2.31-0ubuntu9.12`
-- `locales=2.31-0ubuntu9.12`
+- `libc-bin=2.31-0ubuntu9.14`
+- `libc6:amd64=2.31-0ubuntu9.14`
+- `locales=2.31-0ubuntu9.14`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/locales/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.14
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.14.dsc' glibc_2.31-0ubuntu9.14.dsc 9256 SHA512:a868a97063e183d64871bc005b5b6cfcec87236a2cd5b37a4fad11a8291c5de4674800c3d7aa995125d1149c130cbb0b73f0a9817a02e67fd5a779d7d9e6577b
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA512:2ff56628fe935cacbdf1825534f15d45cb87a159cbdb2e6a981590eeb6174ed4b3ff7041519cdecbd4f624ac20b745e2dd9614c420dd3ea186b8f36bc4c2453c
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.14.debian.tar.xz' glibc_2.31-0ubuntu9.14.debian.tar.xz 885020 SHA512:6cb9078cf6222ee9ff936fda8591aa3790a1fe3742531f1b32c317271c726d365ee32f72cbfc31945bda497bbcc7f4f3a588b03fdd8f74479f175515924bb9bd
+```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4ubuntu0.1`
 
@@ -5175,52 +5185,52 @@ $ apt-get source -qq --print-uris libraw1394=2.1.2-1
 'http://archive.ubuntu.com/ubuntu/pool/main/libr/libraw1394/libraw1394_2.1.2-1.debian.tar.xz' libraw1394_2.1.2-1.debian.tar.xz 8760 SHA256:5cee0e0049d820a8e4e5d3dbd94fb2c3d7b782ec09134c6c714ed523829dc1c3
 ```
 
-### `dpkg` source package: `libreoffice=1:6.4.7-0ubuntu0.20.04.8`
+### `dpkg` source package: `libreoffice=1:6.4.7-0ubuntu0.20.04.9`
 
 Binary Packages:
 
-- `fonts-opensymbol=2:102.11+LibO6.4.7-0ubuntu0.20.04.8`
-- `libjuh-java=1:6.4.7-0ubuntu0.20.04.8`
-- `libjurt-java=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-base=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-base-core=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-base-drivers=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-calc=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-common=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-core=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-draw=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-gnome=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-gtk3=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-impress=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-java-common=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-math=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-nlpsolver=0.9+LibO6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-report-builder=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-report-builder-bin=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-script-provider-bsh=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-script-provider-js=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-script-provider-python=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-sdbc-firebird=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-sdbc-hsqldb=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-sdbc-mysql=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-sdbc-postgresql=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-style-colibre=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-style-elementary=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-style-tango=1:6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-wiki-publisher=1.2.0+LibO6.4.7-0ubuntu0.20.04.8`
-- `libreoffice-writer=1:6.4.7-0ubuntu0.20.04.8`
-- `libridl-java=1:6.4.7-0ubuntu0.20.04.8`
-- `libuno-cppu3=1:6.4.7-0ubuntu0.20.04.8`
-- `libuno-cppuhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.8`
-- `libuno-purpenvhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.8`
-- `libuno-sal3=1:6.4.7-0ubuntu0.20.04.8`
-- `libuno-salhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.8`
-- `libunoil-java=1:6.4.7-0ubuntu0.20.04.8`
-- `libunoloader-java=1:6.4.7-0ubuntu0.20.04.8`
-- `python3-uno=1:6.4.7-0ubuntu0.20.04.8`
-- `uno-libs-private=1:6.4.7-0ubuntu0.20.04.8`
-- `ure=1:6.4.7-0ubuntu0.20.04.8`
+- `fonts-opensymbol=2:102.11+LibO6.4.7-0ubuntu0.20.04.9`
+- `libjuh-java=1:6.4.7-0ubuntu0.20.04.9`
+- `libjurt-java=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-base=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-base-core=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-base-drivers=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-calc=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-common=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-core=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-draw=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-gnome=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-gtk3=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-impress=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-java-common=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-math=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-nlpsolver=0.9+LibO6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-report-builder=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-report-builder-bin=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-script-provider-bsh=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-script-provider-js=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-script-provider-python=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-sdbc-firebird=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-sdbc-hsqldb=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-sdbc-mysql=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-sdbc-postgresql=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-style-colibre=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-style-elementary=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-style-tango=1:6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-wiki-publisher=1.2.0+LibO6.4.7-0ubuntu0.20.04.9`
+- `libreoffice-writer=1:6.4.7-0ubuntu0.20.04.9`
+- `libridl-java=1:6.4.7-0ubuntu0.20.04.9`
+- `libuno-cppu3=1:6.4.7-0ubuntu0.20.04.9`
+- `libuno-cppuhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.9`
+- `libuno-purpenvhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.9`
+- `libuno-sal3=1:6.4.7-0ubuntu0.20.04.9`
+- `libuno-salhelpergcc3-3=1:6.4.7-0ubuntu0.20.04.9`
+- `libunoil-java=1:6.4.7-0ubuntu0.20.04.9`
+- `libunoloader-java=1:6.4.7-0ubuntu0.20.04.9`
+- `python3-uno=1:6.4.7-0ubuntu0.20.04.9`
+- `uno-libs-private=1:6.4.7-0ubuntu0.20.04.9`
+- `ure=1:6.4.7-0ubuntu0.20.04.9`
 
 Licenses: (parsed from: `/usr/share/doc/fonts-opensymbol/copyright`, `/usr/share/doc/libjuh-java/copyright`, `/usr/share/doc/libjurt-java/copyright`, `/usr/share/doc/libreoffice/copyright`, `/usr/share/doc/libreoffice-base/copyright`, `/usr/share/doc/libreoffice-base-core/copyright`, `/usr/share/doc/libreoffice-base-drivers/copyright`, `/usr/share/doc/libreoffice-calc/copyright`, `/usr/share/doc/libreoffice-common/copyright`, `/usr/share/doc/libreoffice-core/copyright`, `/usr/share/doc/libreoffice-draw/copyright`, `/usr/share/doc/libreoffice-gnome/copyright`, `/usr/share/doc/libreoffice-gtk3/copyright`, `/usr/share/doc/libreoffice-impress/copyright`, `/usr/share/doc/libreoffice-java-common/copyright`, `/usr/share/doc/libreoffice-math/copyright`, `/usr/share/doc/libreoffice-nlpsolver/copyright`, `/usr/share/doc/libreoffice-report-builder/copyright`, `/usr/share/doc/libreoffice-report-builder-bin/copyright`, `/usr/share/doc/libreoffice-script-provider-bsh/copyright`, `/usr/share/doc/libreoffice-script-provider-js/copyright`, `/usr/share/doc/libreoffice-script-provider-python/copyright`, `/usr/share/doc/libreoffice-sdbc-firebird/copyright`, `/usr/share/doc/libreoffice-sdbc-hsqldb/copyright`, `/usr/share/doc/libreoffice-sdbc-mysql/copyright`, `/usr/share/doc/libreoffice-sdbc-postgresql/copyright`, `/usr/share/doc/libreoffice-style-colibre/copyright`, `/usr/share/doc/libreoffice-style-elementary/copyright`, `/usr/share/doc/libreoffice-style-tango/copyright`, `/usr/share/doc/libreoffice-wiki-publisher/copyright`, `/usr/share/doc/libreoffice-writer/copyright`, `/usr/share/doc/libridl-java/copyright`, `/usr/share/doc/libuno-cppu3/copyright`, `/usr/share/doc/libuno-cppuhelpergcc3-3/copyright`, `/usr/share/doc/libuno-purpenvhelpergcc3-3/copyright`, `/usr/share/doc/libuno-sal3/copyright`, `/usr/share/doc/libuno-salhelpergcc3-3/copyright`, `/usr/share/doc/libunoil-java/copyright`, `/usr/share/doc/libunoloader-java/copyright`, `/usr/share/doc/python3-uno/copyright`, `/usr/share/doc/uno-libs-private/copyright`, `/usr/share/doc/ure/copyright`)
 
@@ -5243,13 +5253,13 @@ Licenses: (parsed from: `/usr/share/doc/fonts-opensymbol/copyright`, `/usr/share
 Source:
 
 ```console
-$ apt-get source -qq --print-uris libreoffice=1:6.4.7-0ubuntu0.20.04.8
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7-0ubuntu0.20.04.8.dsc' libreoffice_6.4.7-0ubuntu0.20.04.8.dsc 30379 SHA512:d6da8798f10a28940683dbd78274eed76456bec90799705dae5222fd4c66b4b3d945e383339d203f60430c2bdccb54c56b43538d4684c40660a8896cdbaeda08
+$ apt-get source -qq --print-uris libreoffice=1:6.4.7-0ubuntu0.20.04.9
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7-0ubuntu0.20.04.9.dsc' libreoffice_6.4.7-0ubuntu0.20.04.9.dsc 30509 SHA512:43e8bc465ca513638081528a32050caf1813c610ccee7dbede7caff19e7c28a3cdacb371da404d486df0635bd30087ba3e527657f713637b3877d1c0c0a64ac0
 'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7.orig-helpcontent2.tar.xz' libreoffice_6.4.7.orig-helpcontent2.tar.xz 88073752 SHA512:3d6459cd4eab764d1fc15eb6edd6c1b16272f51869de1e9379328e81e03adb146d73c2acaf147d13b8ccc9a99721e023d404a0cf2f99a05264cc5536604828da
 'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7.orig-tarballs.tar.xz' libreoffice_6.4.7.orig-tarballs.tar.xz 200916520 SHA512:10dc6e7b0521dff9aea57859312bb9802e1671f52d97f0f3fb7e030e779f778842088160ee14f446a8cc457d67b21b683c90c94bf0aa797ff890b2dea344f5ab
 'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7.orig-translations.tar.xz' libreoffice_6.4.7.orig-translations.tar.xz 179847328 SHA512:6496ce816b136504c9511aeac5e881f329360e144ea48f28e9b56720ed727719339703431e0e0cee931d721c0e2b308366f0a3af771ebc980952c410f400c1cd
 'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7.orig.tar.xz' libreoffice_6.4.7.orig.tar.xz 211530416 SHA512:a0ee0c0e617b33655dce0fbb14e2af12c3d810a3a9631d4b2204a75c8ac64c8797ab52735b799d078e1fff5a14d188ee850c239dab7bce4035a7ca704d6caa97
-'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7-0ubuntu0.20.04.8.debian.tar.xz' libreoffice_6.4.7-0ubuntu0.20.04.8.debian.tar.xz 2427028 SHA512:9e8cb3c97b8c875824ea12d799debee2a22c56d72effdb1f9bba22ad31b01f69f516fa0d3bc4c3dec012f06ede55cd27c045c714ba5d6e40fae23e1aa8120b4b
+'http://archive.ubuntu.com/ubuntu/pool/main/libr/libreoffice/libreoffice_6.4.7-0ubuntu0.20.04.9.debian.tar.xz' libreoffice_6.4.7-0ubuntu0.20.04.9.debian.tar.xz 2436488 SHA512:379cfd885f7b31c83b8f266b4c75334f910975ca2c2640c165fa9068328232dacb3a19f407d0975dca2a8e96b6684620cfaa97b854d6094130d1f29f52476e5d
 ```
 
 ### `dpkg` source package: `librest=0.8.1-1`
@@ -7989,11 +7999,11 @@ $ apt-get source -qq --print-uris poppler=0.86.1-0ubuntu1.4
 'http://archive.ubuntu.com/ubuntu/pool/main/p/poppler/poppler_0.86.1-0ubuntu1.4.debian.tar.xz' poppler_0.86.1-0ubuntu1.4.debian.tar.xz 40712 SHA512:38dd125da56578dd58cfc22a6cad1076158f6dd4723d5bb9bb30213ba1cd2a0c5b80dc6d0d58c38bf9422556571a6d8c47b8f7faf94be85dd0fce7929fe0852a
 ```
 
-### `dpkg` source package: `postgresql-12=12.16-0ubuntu0.20.04.1`
+### `dpkg` source package: `postgresql-12=12.17-0ubuntu0.20.04.1`
 
 Binary Packages:
 
-- `libpq5:amd64=12.16-0ubuntu0.20.04.1`
+- `libpq5:amd64=12.17-0ubuntu0.20.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 
@@ -8013,9 +8023,14 @@ Licenses: (parsed from: `/usr/share/doc/libpq5/copyright`)
 - `nagaysau-ishii`
 - `rijndael`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris postgresql-12=12.17-0ubuntu0.20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.17-0ubuntu0.20.04.1.dsc' postgresql-12_12.17-0ubuntu0.20.04.1.dsc 3764 SHA512:defc663f44c5051436201285e26aad0f69876d32b1137d2a808f4e6ed9229b8aeb1399602c53105ed5822456802541b89e427cb0fbe7ba6eefe82be364cd816e
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.17.orig.tar.gz' postgresql-12_12.17.orig.tar.gz 27792441 SHA512:445d2c530517022d2cae9dfc54cf5ab84845837896103c1474ad9f7cb752cca62fb51062838bfb06155673fba73cd313e3496311c7b897629208af1b4844f746
+'http://archive.ubuntu.com/ubuntu/pool/main/p/postgresql-12/postgresql-12_12.17-0ubuntu0.20.04.1.debian.tar.xz' postgresql-12_12.17-0ubuntu0.20.04.1.debian.tar.xz 28896 SHA512:00de68270644f769b6b0775685c6e8e7b958013d8615c817f3f7b13c1ae749205b405ed606560fa2935f2b57b1085edd16ec0dc136037f3f6087bcd61cac748d
+```
 
 ### `dpkg` source package: `procps=2:3.3.16-1ubuntu2.4`
 
@@ -8708,20 +8723,25 @@ $ apt-get source -qq --print-uris sysvinit=2.96-2.1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96-2.1ubuntu1.debian.tar.xz' sysvinit_2.96-2.1ubuntu1.debian.tar.xz 128840 SHA256:528041e261c90a957d9794bddb07217c89484d9c76a0279da508baec9684c4e6
 ```
 
-### `dpkg` source package: `tar=1.30+dfsg-7ubuntu0.20.04.3`
+### `dpkg` source package: `tar=1.30+dfsg-7ubuntu0.20.04.4`
 
 Binary Packages:
 
-- `tar=1.30+dfsg-7ubuntu0.20.04.3`
+- `tar=1.30+dfsg-7ubuntu0.20.04.4`
 
 Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 
 - `GPL-2`
 - `GPL-3`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tar=1.30+dfsg-7ubuntu0.20.04.4
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.4.dsc' tar_1.30+dfsg-7ubuntu0.20.04.4.dsc 1812 SHA512:a771e996dad6c7b2d75336bae73a0c9e52f030a7474bdebe519a9c072819530541ff3200046ddc5277b0204e1eac056ff3679062c182cb28404bdac73da768fa
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg.orig.tar.xz' tar_1.30+dfsg.orig.tar.xz 1883220 SHA512:f9b3843bd4da03f58d6f88de70ecb36b8ac29312714fd2120ff00f17c99e6d77cc82a8f9de348f4c2bdba9a6cc8e8c6c78039b6c14cdee15d68f2517000c36f2
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.4.debian.tar.xz' tar_1.30+dfsg-7ubuntu0.20.04.4.debian.tar.xz 24572 SHA512:942a7fb6e2edb7e50b26b1588219d0a99caf17ff1dfa1748449c3fa84ab8cf3e3e94bafb8334cc3b8397562d6a3ecd57bc0df2ddb2b90644a361fa63426d2982
+```
 
 ### `dpkg` source package: `tcp-wrappers=7.6.q-30`
 
@@ -8943,14 +8963,14 @@ $ apt-get source -qq --print-uris util-linux=2.34-0.1ubuntu9.4
 'http://archive.ubuntu.com/ubuntu/pool/main/u/util-linux/util-linux_2.34-0.1ubuntu9.4.debian.tar.xz' util-linux_2.34-0.1ubuntu9.4.debian.tar.xz 98148 SHA512:4e1c5e0d1c8fcd735bbab4418a16dbd60280a6707ceb41338bf7d25f0991139b569e42e713c9f33b3e924116c638480f8cf2a92b16c9584f5a845086e1858b69
 ```
 
-### `dpkg` source package: `vim=2:8.1.2269-1ubuntu5.20`
+### `dpkg` source package: `vim=2:8.1.2269-1ubuntu5.21`
 
 Binary Packages:
 
-- `vim=2:8.1.2269-1ubuntu5.20`
-- `vim-common=2:8.1.2269-1ubuntu5.20`
-- `vim-runtime=2:8.1.2269-1ubuntu5.20`
-- `xxd=2:8.1.2269-1ubuntu5.20`
+- `vim=2:8.1.2269-1ubuntu5.21`
+- `vim-common=2:8.1.2269-1ubuntu5.21`
+- `vim-runtime=2:8.1.2269-1ubuntu5.21`
+- `xxd=2:8.1.2269-1ubuntu5.21`
 
 Licenses: (parsed from: `/usr/share/doc/vim/copyright`, `/usr/share/doc/vim-common/copyright`, `/usr/share/doc/vim-runtime/copyright`, `/usr/share/doc/xxd/copyright`)
 
@@ -8981,10 +9001,10 @@ Licenses: (parsed from: `/usr/share/doc/vim/copyright`, `/usr/share/doc/vim-comm
 Source:
 
 ```console
-$ apt-get source -qq --print-uris vim=2:8.1.2269-1ubuntu5.20
-'http://archive.ubuntu.com/ubuntu/pool/main/v/vim/vim_8.1.2269-1ubuntu5.20.dsc' vim_8.1.2269-1ubuntu5.20.dsc 2944 SHA512:99ebdf64577398808c1ab51f2690fe28ee941bb51d2ee531ab9785db0299251e607f4b826e71e136dbb3a21e540da6cb84089d201e2f096f79199dda00d4cec1
+$ apt-get source -qq --print-uris vim=2:8.1.2269-1ubuntu5.21
+'http://archive.ubuntu.com/ubuntu/pool/main/v/vim/vim_8.1.2269-1ubuntu5.21.dsc' vim_8.1.2269-1ubuntu5.21.dsc 2944 SHA512:e0c9afbf57ff44acdf02c9dac84c8cf1c1d7c089ceae0b177a0c0768b4dedb289be5a891efbc069d1dc85bcbc4614bd99e740a32874dacdd53a4bb536c604805
 'http://archive.ubuntu.com/ubuntu/pool/main/v/vim/vim_8.1.2269.orig.tar.gz' vim_8.1.2269.orig.tar.gz 14590233 SHA512:5194817a5665e08816e87e3b10219e19510ca87c5c377ddc0a50aa84ffd4d7391badad3e993f83802d6da5e9da8834635c1acbdd4a909e75b4947f99f13c1746
-'http://archive.ubuntu.com/ubuntu/pool/main/v/vim/vim_8.1.2269-1ubuntu5.20.debian.tar.xz' vim_8.1.2269-1ubuntu5.20.debian.tar.xz 256020 SHA512:457828a093b173cd57587f53371aa661421d47fbd0423ab597a60de021338b80092b0aa993effc92722210f195c773ff83c45c5e72b43f30deb2bec39607b159
+'http://archive.ubuntu.com/ubuntu/pool/main/v/vim/vim_8.1.2269-1ubuntu5.21.debian.tar.xz' vim_8.1.2269-1ubuntu5.21.debian.tar.xz 261980 SHA512:f715aff083b7efe59d2bb223e2a2ece8844faebb06b7fedecfa69a9d720368ae12bfed8dc0dbe2216e145149220e9de9721a32a378fb8d4d0c2cb0922de0101e
 ```
 
 ### `dpkg` source package: `vulkan-loader=1.2.131.2-1`
@@ -9411,11 +9431,11 @@ $ apt-get source -qq --print-uris xz-utils=5.2.4-1ubuntu1.1
 'http://archive.ubuntu.com/ubuntu/pool/main/x/xz-utils/xz-utils_5.2.4-1ubuntu1.1.debian.tar.xz' xz-utils_5.2.4-1ubuntu1.1.debian.tar.xz 136944 SHA512:627df70d2ff3b0227d6dd74137a660c5d722cce059ee36c1db8a50105ba6c236910bba5687290a7d88c9a53ead2a3b3ab00216f279f26a57d7e4020c6db23a24
 ```
 
-### `dpkg` source package: `yajl=2.1.0-3`
+### `dpkg` source package: `yajl=2.1.0-3ubuntu0.20.04.1`
 
 Binary Packages:
 
-- `libyajl2:amd64=2.1.0-3`
+- `libyajl2:amd64=2.1.0-3ubuntu0.20.04.1`
 
 Licenses: (parsed from: `/usr/share/doc/libyajl2/copyright`)
 
@@ -9424,10 +9444,10 @@ Licenses: (parsed from: `/usr/share/doc/libyajl2/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris yajl=2.1.0-3
-'http://archive.ubuntu.com/ubuntu/pool/main/y/yajl/yajl_2.1.0-3.dsc' yajl_2.1.0-3.dsc 1934 SHA256:bb35b92eda156bf114902e231859f241b67207d7b978878f6a595a995e5cf29d
-'http://archive.ubuntu.com/ubuntu/pool/main/y/yajl/yajl_2.1.0.orig.tar.gz' yajl_2.1.0.orig.tar.gz 83997 SHA256:3fb73364a5a30efe615046d07e6db9d09fd2b41c763c5f7d3bfb121cd5c5ac5a
-'http://archive.ubuntu.com/ubuntu/pool/main/y/yajl/yajl_2.1.0-3.debian.tar.xz' yajl_2.1.0-3.debian.tar.xz 5616 SHA256:b8056025a0d41af27127bc0993ffbff2ff3c09285494f4498f8ad769443a7463
+$ apt-get source -qq --print-uris yajl=2.1.0-3ubuntu0.20.04.1
+'http://archive.ubuntu.com/ubuntu/pool/main/y/yajl/yajl_2.1.0-3ubuntu0.20.04.1.dsc' yajl_2.1.0-3ubuntu0.20.04.1.dsc 2128 SHA512:58ed79827f68bc9330e108e2f3b44106545fc2d2d781e8987d0dac549364de930538f6b48c5eea30dd24c4be8bcce9d38c6a9dbc2384fe5626c98fae98994fb9
+'http://archive.ubuntu.com/ubuntu/pool/main/y/yajl/yajl_2.1.0.orig.tar.gz' yajl_2.1.0.orig.tar.gz 83997 SHA512:9e786d080803df80ec03a9c2f447501e6e8e433a6baf636824bc1d50ecf4f5f80d7dfb1d47958aeb0a30fe459bd0ef033d41bc6a79e1dc6e6b5eade930b19b02
+'http://archive.ubuntu.com/ubuntu/pool/main/y/yajl/yajl_2.1.0-3ubuntu0.20.04.1.debian.tar.xz' yajl_2.1.0-3ubuntu0.20.04.1.debian.tar.xz 7092 SHA512:255a4dbd809b145f44906c82ae51bff5c53db6211fd9d0110cbf30c2fb894adb44419befe60d875f5c494249ddfc69db3205c9d687b4b1304330937a3bc0dd2f
 ```
 
 ### `dpkg` source package: `zeromq3=4.3.2-2ubuntu1`
