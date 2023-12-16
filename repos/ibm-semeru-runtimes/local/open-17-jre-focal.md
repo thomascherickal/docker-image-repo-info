@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:187083fb702587d750b0e24cd304bc134f21ae408046f329bc2e5e259ede0f1a`
-- Created: `2023-12-02T02:32:30.194343885Z`
+- Image ID: `sha256:6898d56ce1a958093218b2e8098f980b2f9b200dbeeb870c3c0f464cd109816e`
+- Created: `2023-12-16T11:47:31.721024384Z`
 - Virtual Size: ~ 279.61 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -281,12 +281,12 @@ $ apt-get source -qq --print-uris coreutils=8.30-3ubuntu2
 'http://archive.ubuntu.com/ubuntu/pool/main/c/coreutils/coreutils_8.30-3ubuntu2.debian.tar.xz' coreutils_8.30-3ubuntu2.debian.tar.xz 39636 SHA256:98204ef9d94e5c567880cd0245fdb7940eaf7592d6c6830c300ad117628b351f
 ```
 
-### `dpkg` source package: `curl=7.68.0-1ubuntu2.20`
+### `dpkg` source package: `curl=7.68.0-1ubuntu2.21`
 
 Binary Packages:
 
-- `curl=7.68.0-1ubuntu2.20`
-- `libcurl4:amd64=7.68.0-1ubuntu2.20`
+- `curl=7.68.0-1ubuntu2.21`
+- `libcurl4:amd64=7.68.0-1ubuntu2.21`
 
 Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl4/copyright`)
 
@@ -297,9 +297,14 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris curl=7.68.0-1ubuntu2.21
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.21.dsc' curl_7.68.0-1ubuntu2.21.dsc 2737 SHA512:6637e374c7078dd9535a898ac4eed18088543d73152d631f65c6068bd5682fc2aaf5de7173a95d778c2ac44d1cf2e99860f4576c84a006af82de36707aac7673
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0.orig.tar.gz' curl_7.68.0.orig.tar.gz 4096350 SHA512:58b42c08b1cf4cb6e68f8e469d5b5f6298eebe286ba2677ad29e1a7eefd15b8609af54544f4c5a7dadebbd3b23bd77700830f2f60fbea7ae3f2f306e640010b0
+'http://archive.ubuntu.com/ubuntu/pool/main/c/curl/curl_7.68.0-1ubuntu2.21.debian.tar.xz' curl_7.68.0-1ubuntu2.21.debian.tar.xz 69924 SHA512:c2e15589ce3f296ebe4d42f3baa4c03237ad7b8d5d7fd2a3f0e1e2a6e3a41a8cb046c21bcbab8820e8cab0cd70a6eba5bb0ed8678158f9c1003c60f5293e3c06
+```
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2ubuntu0.1`
 
@@ -611,22 +616,27 @@ $ apt-get source -qq --print-uris gcc-10=10.5.0-1ubuntu1~20.04
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gcc-10/gcc-10_10.5.0-1ubuntu1%7e20.04.debian.tar.xz' gcc-10_10.5.0-1ubuntu1~20.04.debian.tar.xz 5953836 SHA512:d68b8b10628bec39c370c9af1baa39bd76f3fb885d765b2d449435981ab772443187cba3bcb629e69a4a7c4b1e890babc4ea9ed8a3a3eb9a8e7e1e76abb8b526
 ```
 
-### `dpkg` source package: `glibc=2.31-0ubuntu9.12`
+### `dpkg` source package: `glibc=2.31-0ubuntu9.14`
 
 Binary Packages:
 
-- `libc-bin=2.31-0ubuntu9.12`
-- `libc6:amd64=2.31-0ubuntu9.12`
-- `locales=2.31-0ubuntu9.12`
+- `libc-bin=2.31-0ubuntu9.14`
+- `libc6:amd64=2.31-0ubuntu9.14`
+- `locales=2.31-0ubuntu9.14`
 
 Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/locales/copyright`)
 
 - `GPL-2`
 - `LGPL-2.1`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris glibc=2.31-0ubuntu9.14
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.14.dsc' glibc_2.31-0ubuntu9.14.dsc 9256 SHA512:a868a97063e183d64871bc005b5b6cfcec87236a2cd5b37a4fad11a8291c5de4674800c3d7aa995125d1149c130cbb0b73f0a9817a02e67fd5a779d7d9e6577b
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31.orig.tar.xz' glibc_2.31.orig.tar.xz 17317924 SHA512:2ff56628fe935cacbdf1825534f15d45cb87a159cbdb2e6a981590eeb6174ed4b3ff7041519cdecbd4f624ac20b745e2dd9614c420dd3ea186b8f36bc4c2453c
+'http://archive.ubuntu.com/ubuntu/pool/main/g/glibc/glibc_2.31-0ubuntu9.14.debian.tar.xz' glibc_2.31-0ubuntu9.14.debian.tar.xz 885020 SHA512:6cb9078cf6222ee9ff936fda8591aa3790a1fe3742531f1b32c317271c726d365ee32f72cbfc31945bda497bbcc7f4f3a588b03fdd8f74479f175515924bb9bd
+```
 
 ### `dpkg` source package: `gmp=2:6.2.0+dfsg-4ubuntu0.1`
 
@@ -1705,20 +1715,25 @@ $ apt-get source -qq --print-uris sysvinit=2.96-2.1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_2.96-2.1ubuntu1.debian.tar.xz' sysvinit_2.96-2.1ubuntu1.debian.tar.xz 128840 SHA256:528041e261c90a957d9794bddb07217c89484d9c76a0279da508baec9684c4e6
 ```
 
-### `dpkg` source package: `tar=1.30+dfsg-7ubuntu0.20.04.3`
+### `dpkg` source package: `tar=1.30+dfsg-7ubuntu0.20.04.4`
 
 Binary Packages:
 
-- `tar=1.30+dfsg-7ubuntu0.20.04.3`
+- `tar=1.30+dfsg-7ubuntu0.20.04.4`
 
 Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 
 - `GPL-2`
 - `GPL-3`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tar=1.30+dfsg-7ubuntu0.20.04.4
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.4.dsc' tar_1.30+dfsg-7ubuntu0.20.04.4.dsc 1812 SHA512:a771e996dad6c7b2d75336bae73a0c9e52f030a7474bdebe519a9c072819530541ff3200046ddc5277b0204e1eac056ff3679062c182cb28404bdac73da768fa
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg.orig.tar.xz' tar_1.30+dfsg.orig.tar.xz 1883220 SHA512:f9b3843bd4da03f58d6f88de70ecb36b8ac29312714fd2120ff00f17c99e6d77cc82a8f9de348f4c2bdba9a6cc8e8c6c78039b6c14cdee15d68f2517000c36f2
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.30%2bdfsg-7ubuntu0.20.04.4.debian.tar.xz' tar_1.30+dfsg-7ubuntu0.20.04.4.debian.tar.xz 24572 SHA512:942a7fb6e2edb7e50b26b1588219d0a99caf17ff1dfa1748449c3fa84ab8cf3e3e94bafb8334cc3b8397562d6a3ecd57bc0df2ddb2b90644a361fa63426d2982
+```
 
 ### `dpkg` source package: `tzdata=2023c-0ubuntu0.20.04.2`
 
