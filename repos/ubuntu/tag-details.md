@@ -1311,7 +1311,12 @@ CMD ["/bin/bash"]
 
 ## `ubuntu:focal-20231211`
 
-**does not exist** (yet?)
+```console
+$ docker pull ubuntu@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `ubuntu:jammy`
 
@@ -1499,7 +1504,12 @@ CMD ["/bin/bash"]
 
 ## `ubuntu:jammy-20231211.1`
 
-**does not exist** (yet?)
+```console
+$ docker pull ubuntu@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `ubuntu:latest`
 
@@ -2607,7 +2617,12 @@ CMD ["/bin/bash"]
 
 ## `ubuntu:noble-20231214`
 
-**does not exist** (yet?)
+```console
+$ docker pull ubuntu@sha256:eb37f58646a901dc7727cf448cae36daaefaba79de33b5058dab79aa4c04aefb
+```
+
+-	Manifest MIME: `application/vnd.oci.image.index.v1+json`
+-	Platforms: 0
 
 ## `ubuntu:rolling`
 
