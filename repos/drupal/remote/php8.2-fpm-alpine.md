@@ -1,7 +1,7 @@
 ## `drupal:php8.2-fpm-alpine`
 
 ```console
-$ docker pull drupal@sha256:8e19d75fb3543f9bbdfaf1f340738452ac87a31c6455da294d4d3ac12fdc5e08
+$ docker pull drupal@sha256:7d067f285f31c80c743f4a232a306dd65f0928d32b0e459882e8ae0f2734655e
 ```
 
 -	Manifest MIME: `application/vnd.oci.image.index.v1+json`
@@ -190,13 +190,13 @@ $ docker pull drupal@sha256:dfb929b1b2e11c7185e22d6fe39e432e456ed66761fd42602a3d
 ### `drupal:php8.2-fpm-alpine` - linux; arm variant v6
 
 ```console
-$ docker pull drupal@sha256:85d66bf2778943138fee4d392156ea513f47838538d589862fc1dd246991ee3f
+$ docker pull drupal@sha256:7e48236db13b4cf2bed377bb2e1327a48d1c0169bf840b064957e35ca8590f4f
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
--	Total Size: **50.8 MB (50769185 bytes)**  
+-	Total Size: **50.8 MB (50769170 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:29289eba92d1a2737a28ad93b93fd3c4618eb49128a533f6fe81ab60ffa9a506`
+-	Image ID: `sha256:157994038f3b4a65dbf39679a39d0b0d0a9c9e075a938a248ce272258fe0f8c4`
 -	Entrypoint: `["docker-php-entrypoint"]`
 -	Default Command: `["php-fpm"]`
 
@@ -233,23 +233,23 @@ ENV PHP_SHA256=2629bba10117bf78912068a230c68a8fd09b7740267bd8ebd3cfce91515d454b
 RUN set -eux; 		apk add --no-cache --virtual .fetch-deps gnupg; 		mkdir -p /usr/src; 	cd /usr/src; 		curl -fsSL -o php.tar.xz "$PHP_URL"; 		if [ -n "$PHP_SHA256" ]; then 		echo "$PHP_SHA256 *php.tar.xz" | sha256sum -c -; 	fi; 		if [ -n "$PHP_ASC_URL" ]; then 		curl -fsSL -o php.tar.xz.asc "$PHP_ASC_URL"; 		export GNUPGHOME="$(mktemp -d)"; 		for key in $GPG_KEYS; do 			gpg --batch --keyserver keyserver.ubuntu.com --recv-keys "$key"; 		done; 		gpg --batch --verify php.tar.xz.asc php.tar.xz; 		gpgconf --kill all; 		rm -rf "$GNUPGHOME"; 	fi; 		apk del --no-network .fetch-deps
 # Tue, 12 Dec 2023 21:10:39 GMT
 COPY file:ce57c04b70896f77cc11eb2766417d8a1240fcffe5bba92179ec78c458844110 in /usr/local/bin/ 
-# Tue, 12 Dec 2023 21:17:22 GMT
-RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		gnu-libiconv-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		readline-dev 		sqlite-dev 	; 		rm -vf /usr/include/iconv.h; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-iconv=/usr 		--with-openssl 		--with-readline 		--with-zlib 				--disable-phpdbg 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				--disable-cgi 				--enable-fpm 		--with-fpm-user=www-data 		--with-fpm-group=www-data 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find 		/usr/local 		-type f 		-perm '/0111' 		-exec sh -euxc ' 			strip --strip-all "$@" || : 		' -- '{}' + 	; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
-# Tue, 12 Dec 2023 21:17:23 GMT
+# Thu, 14 Dec 2023 23:34:22 GMT
+RUN set -eux; 	apk add --no-cache --virtual .build-deps 		$PHPIZE_DEPS 		argon2-dev 		coreutils 		curl-dev 		gnu-libiconv-dev 		libsodium-dev 		libxml2-dev 		linux-headers 		oniguruma-dev 		openssl-dev 		readline-dev 		sqlite-dev 	; 		rm -vf /usr/include/iconv.h; 		export 		CFLAGS="$PHP_CFLAGS" 		CPPFLAGS="$PHP_CPPFLAGS" 		LDFLAGS="$PHP_LDFLAGS" 		PHP_BUILD_PROVIDER='https://github.com/docker-library/php' 		PHP_UNAME='Linux - Docker' 	; 	docker-php-source extract; 	cd /usr/src/php; 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; 	./configure 		--build="$gnuArch" 		--with-config-file-path="$PHP_INI_DIR" 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" 				--enable-option-checking=fatal 				--with-mhash 				--with-pic 				--enable-ftp 		--enable-mbstring 		--enable-mysqlnd 		--with-password-argon2 		--with-sodium=shared 		--with-pdo-sqlite=/usr 		--with-sqlite3=/usr 				--with-curl 		--with-iconv=/usr 		--with-openssl 		--with-readline 		--with-zlib 				--disable-phpdbg 				--with-pear 				$(test "$gnuArch" = 's390x-linux-musl' && echo '--without-pcre-jit') 				--disable-cgi 				--enable-fpm 		--with-fpm-user=www-data 		--with-fpm-group=www-data 	; 	make -j "$(nproc)"; 	find -type f -name '*.a' -delete; 	make install; 	find 		/usr/local 		-type f 		-perm '/0111' 		-exec sh -euxc ' 			strip --strip-all "$@" || : 		' -- '{}' + 	; 	make clean; 		cp -v php.ini-* "$PHP_INI_DIR/"; 		cd /; 	docker-php-source delete; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-cache $runDeps; 		apk del --no-network .build-deps; 		pecl update-channels; 	rm -rf /tmp/pear ~/.pearrc; 		php --version
+# Thu, 14 Dec 2023 23:34:22 GMT
 COPY multi:869bde9dbeae74886a05c9e2107b3e3b4877116db8c6d9adbaff2719f9fb5262 in /usr/local/bin/ 
-# Tue, 12 Dec 2023 21:17:24 GMT
+# Thu, 14 Dec 2023 23:34:22 GMT
 RUN docker-php-ext-enable sodium
-# Tue, 12 Dec 2023 21:17:24 GMT
+# Thu, 14 Dec 2023 23:34:22 GMT
 ENTRYPOINT ["docker-php-entrypoint"]
-# Tue, 12 Dec 2023 21:17:25 GMT
+# Thu, 14 Dec 2023 23:34:22 GMT
 WORKDIR /var/www/html
-# Tue, 12 Dec 2023 21:17:26 GMT
+# Thu, 14 Dec 2023 23:34:22 GMT
 RUN set -eux; 	cd /usr/local/etc; 	if [ -d php-fpm.d ]; then 		sed 's!=NONE/!=!g' php-fpm.conf.default | tee php-fpm.conf > /dev/null; 		cp php-fpm.d/www.conf.default php-fpm.d/www.conf; 	else 		mkdir php-fpm.d; 		cp php-fpm.conf.default php-fpm.d/www.conf; 		{ 			echo '[global]'; 			echo 'include=etc/php-fpm.d/*.conf'; 		} | tee php-fpm.conf; 	fi; 	{ 		echo '[global]'; 		echo 'error_log = /proc/self/fd/2'; 		echo; echo '; https://github.com/docker-library/php/pull/725#issuecomment-443540114'; echo 'log_limit = 8192'; 		echo; 		echo '[www]'; 		echo '; php-fpm closes STDOUT on startup, so sending logs to /proc/self/fd/1 does not work.'; 		echo '; https://bugs.php.net/bug.php?id=73886'; 		echo 'access.log = /proc/self/fd/2'; 		echo; 		echo 'clear_env = no'; 		echo; 		echo '; Ensure worker stdout and stderr are sent to the main error log.'; 		echo 'catch_workers_output = yes'; 		echo 'decorate_workers_output = no'; 	} | tee php-fpm.d/docker.conf; 	{ 		echo '[global]'; 		echo 'daemonize = no'; 		echo; 		echo '[www]'; 		echo 'listen = 9000'; 	} | tee php-fpm.d/zz-docker.conf; 	mkdir -p "$PHP_INI_DIR/conf.d"; 	{ 		echo '; https://github.com/docker-library/php/issues/878#issuecomment-938595965'; 		echo 'fastcgi.logging = Off'; 	} > "$PHP_INI_DIR/conf.d/docker-fpm.ini"
-# Tue, 12 Dec 2023 21:17:26 GMT
+# Thu, 14 Dec 2023 23:34:22 GMT
 STOPSIGNAL SIGQUIT
-# Tue, 12 Dec 2023 21:17:26 GMT
+# Thu, 14 Dec 2023 23:34:22 GMT
 EXPOSE 9000
-# Tue, 12 Dec 2023 21:17:26 GMT
+# Thu, 14 Dec 2023 23:34:22 GMT
 CMD ["php-fpm"]
 # Thu, 14 Dec 2023 23:34:22 GMT
 RUN set -eux; 		apk add --no-cache --virtual .build-deps 		coreutils 		freetype-dev 		libjpeg-turbo-dev 		libpng-dev 		libwebp-dev 		libzip-dev 		postgresql-dev 	; 		docker-php-ext-configure gd 		--with-freetype 		--with-jpeg=/usr/include 		--with-webp 	; 		docker-php-ext-install -j "$(nproc)" 		gd 		opcache 		pdo_mysql 		pdo_pgsql 		zip 	; 		runDeps="$( 		scanelf --needed --nobanner --format '%n#p' --recursive /usr/local 			| tr ',' '\n' 			| sort -u 			| awk 'system("[ -e /usr/local/lib/" $1 " ]") == 0 { next } { print "so:" $1 }' 	)"; 	apk add --no-network --virtual .drupal-phpexts-rundeps $runDeps; 	apk del --no-network .build-deps # buildkit
@@ -292,60 +292,60 @@ ENV PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/drupa
 		Last Modified: Tue, 12 Dec 2023 22:16:28 GMT  
 		Size: 494.0 B  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:3a12bdf0eb1ceef936b50f84480002fab590b3e7c042c62bb2b8bb8992607a92`  
-		Last Modified: Tue, 12 Dec 2023 22:16:58 GMT  
-		Size: 11.7 MB (11722775 bytes)  
+	-	`sha256:e2b588921548dd0b11920ac48b51b244d381e1bee97c3a81cd55d1397179ce7f`  
+		Last Modified: Sat, 16 Dec 2023 03:37:59 GMT  
+		Size: 11.7 MB (11722741 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:0d821c6d29ba15b0f28299af7b552c80e0c72871c59ac0ea41160f15374b77e1`  
-		Last Modified: Tue, 12 Dec 2023 22:16:54 GMT  
-		Size: 2.5 KB (2450 bytes)  
+	-	`sha256:f5afce0a2a6e4888e1905521e17e1e4124d99d9b2f45a0555b1e29b87ae3a4ad`  
+		Last Modified: Sat, 16 Dec 2023 03:37:56 GMT  
+		Size: 2.4 KB (2448 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:184ac341b1726f11ac1353576dbee08e8ff93678d46ac2c12853a793df9b72ad`  
-		Last Modified: Tue, 12 Dec 2023 22:16:55 GMT  
-		Size: 19.1 KB (19125 bytes)  
+	-	`sha256:f68a65da779473dfe078791c868c488cbc78814c44a02dd2feb7e77d6fe3d15a`  
+		Last Modified: Sat, 16 Dec 2023 03:37:56 GMT  
+		Size: 19.1 KB (19129 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:8865d309f370322135dfdd92ca3c686e4f3afd7443ee40cd9e6175eded313934`  
-		Last Modified: Tue, 12 Dec 2023 22:16:54 GMT  
-		Size: 9.2 KB (9182 bytes)  
+	-	`sha256:b32e534b2afb3bb9513960c404db8726d2c5ced58c4abc24db04e27a7a8c976b`  
+		Last Modified: Sat, 16 Dec 2023 03:37:56 GMT  
+		Size: 9.2 KB (9173 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:3b19a2f7ca706a4335f2c3adb078a515da84240175f51120f8692782934772c2`  
-		Last Modified: Fri, 15 Dec 2023 21:52:12 GMT  
-		Size: 1.7 MB (1739708 bytes)  
+	-	`sha256:ee2d5b6d2309e6b89522a040c26d9d51dd8e02720ef91f074e01e4bd18190304`  
+		Last Modified: Sat, 16 Dec 2023 05:02:47 GMT  
+		Size: 1.7 MB (1739701 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:f0a626f50ba64ca436929b36bb9e1c51e00521053c25318756d7b6afd585c35d`  
-		Last Modified: Fri, 15 Dec 2023 21:52:12 GMT  
-		Size: 312.0 B  
+	-	`sha256:eabb942d4f58b60e0b701c2eb4575b6d8f49e26a42caac017c7c8cba7089a677`  
+		Last Modified: Sat, 16 Dec 2023 05:02:46 GMT  
+		Size: 310.0 B  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:9725ff260a92ca1d80a2a8af5a64f35a8abb53bcd236935941fa778061cd1e96`  
-		Last Modified: Fri, 15 Dec 2023 21:52:12 GMT  
-		Size: 705.2 KB (705211 bytes)  
+	-	`sha256:da24002a1804eb7e1e8e0a4f93930abcddd28528f8dfebf8b4877ac844f47f70`  
+		Last Modified: Sat, 16 Dec 2023 05:02:47 GMT  
+		Size: 705.2 KB (705209 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:49e2cd18b2073a93139b117ea4a424e411fe1293dab98d10c164e2ef2cff9939`  
-		Last Modified: Fri, 15 Dec 2023 21:52:12 GMT  
+	-	`sha256:bae98212d936c68c37283fea3a45dff049369584a712389323baa0e604fc3e26`  
+		Last Modified: Sat, 16 Dec 2023 05:02:47 GMT  
 		Size: 114.0 B  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
-	-	`sha256:58c1cd97fdb3e6bd7ce0afb7860fabafd032db7c90662d32db178f69e71189b4`  
-		Last Modified: Fri, 15 Dec 2023 21:52:46 GMT  
-		Size: 18.6 MB (18551918 bytes)  
+	-	`sha256:29f7187e36a42424aadfe8e8fb3ba20d4d70d11be73cec7d7145f08671afc343`  
+		Last Modified: Sat, 16 Dec 2023 05:04:40 GMT  
+		Size: 18.6 MB (18551955 bytes)  
 		MIME: application/vnd.oci.image.layer.v1.tar+gzip
 
 ### `drupal:php8.2-fpm-alpine` - unknown; unknown
 
 ```console
-$ docker pull drupal@sha256:f9b6ce01783f09f89533680eaf2d2165c950dec783a858e4d650ba835eaea0cb
+$ docker pull drupal@sha256:af2783b5097fb72d1ed00df5dd1b4f32d822fefa972a7cb458796109648feb53
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
 -	Total Size: **34.5 KB (34458 bytes)**  
 	(compressed transfer size, not on-disk size)
--	Image ID: `sha256:71a346ace18eff3e8dfa7f940b2a1d99bad9b7a0e7b98d78f84ad60a17e24f12`
+-	Image ID: `sha256:b3cbf6165ff78c590f4a90461168ad349c35f80f6cf390d25188fac982241b49`
 
 ```dockerfile
 ```
 
 -	Layers:
-	-	`sha256:36ca47a1ca14d9537f0f20ac2d6e58855fc94bca424078c08637ba29103dca3b`  
-		Last Modified: Fri, 15 Dec 2023 21:52:44 GMT  
+	-	`sha256:3bbe1107c962c31b8e0e657bd98518f75754ef5d55b0baa3605d1d723fb6f42d`  
+		Last Modified: Sat, 16 Dec 2023 05:52:35 GMT  
 		Size: 34.5 KB (34458 bytes)  
 		MIME: application/vnd.in-toto+json
 
