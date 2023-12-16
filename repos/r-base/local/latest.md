@@ -1468,10 +1468,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris lerc=4.0.0+ds-3
-'http://http.debian.net/debian/pool/main/l/lerc/lerc_4.0.0%2bds-3.dsc' lerc_4.0.0+ds-3.dsc 2638 SHA256:49d68994f4570a72d781914aecdbfd0cb2a40b2c9dd81344f9517d97643f9c57
-'http://http.debian.net/debian/pool/main/l/lerc/lerc_4.0.0%2bds.orig.tar.xz' lerc_4.0.0+ds.orig.tar.xz 348140 SHA256:acf855502fd3b950ee78f0b67bc9e9b39316b3526fbf6d8b8b1a9482fb756723
-'http://http.debian.net/debian/pool/main/l/lerc/lerc_4.0.0%2bds-3.debian.tar.xz' lerc_4.0.0+ds-3.debian.tar.xz 8024 SHA256:1d6ed278a6dde4f7c703a77d4e9fab10dcf1b61881572a8da4f2103b2ee4da65
+'http://deb.debian.org/debian/pool/main/l/lerc/lerc_4.0.0%2bds-3.dsc' lerc_4.0.0+ds-3.dsc 2638 SHA256:49d68994f4570a72d781914aecdbfd0cb2a40b2c9dd81344f9517d97643f9c57
+'http://deb.debian.org/debian/pool/main/l/lerc/lerc_4.0.0%2bds.orig.tar.xz' lerc_4.0.0+ds.orig.tar.xz 348140 SHA256:acf855502fd3b950ee78f0b67bc9e9b39316b3526fbf6d8b8b1a9482fb756723
+'http://deb.debian.org/debian/pool/main/l/lerc/lerc_4.0.0%2bds-3.debian.tar.xz' lerc_4.0.0+ds-3.debian.tar.xz 8024 SHA256:1d6ed278a6dde4f7c703a77d4e9fab10dcf1b61881572a8da4f2103b2ee4da65
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/lerc/4.0.0+ds-3/ (for browsing the source)
+- https://sources.debian.net/src/lerc/4.0.0+ds-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/lerc/4.0.0+ds-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `less=590-2`
 
@@ -3126,14 +3132,13 @@ Licenses: (parsed from: `/usr/share/doc/r-cran-rpart/copyright`)
 - `GPL-2`
 - `GPL-2+ | license included below`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris rpart=4.1.21-1
-'http://http.debian.net/debian/pool/main/r/rpart/rpart_4.1.21-1.dsc' rpart_4.1.21-1.dsc 1843 SHA256:fd3a13b0f033aa138e63069dae89f2a50ac1c0e8106f3e9e104944987ea85743
-'http://http.debian.net/debian/pool/main/r/rpart/rpart_4.1.21.orig.tar.gz' rpart_4.1.21.orig.tar.gz 617857 SHA256:e77c1c675b211705be18181913a97b67379ccae699c1406acf7814ad8a45622b
-'http://http.debian.net/debian/pool/main/r/rpart/rpart_4.1.21-1.debian.tar.xz' rpart_4.1.21-1.debian.tar.xz 4404 SHA256:3a69f457cd99af3305da6a64e1139ccd113577b21410df047ed4e6b5a7a10d38
-```
+The source package *may* still be available for download from:
+
+- http://snapshot.debian.org/package/rpart/4.1.21-1/
+
 
 ### `dpkg` source package: `rpcsvc-proto=1.4.3-1`
 
@@ -3330,10 +3335,16 @@ Source:
 
 ```console
 $ apt-get source -qq --print-uris sysvinit=3.08-3
-'http://http.debian.net/debian/pool/main/s/sysvinit/sysvinit_3.08-3.dsc' sysvinit_3.08-3.dsc 2359 SHA256:d2a262316ce2a141b46f21c4cbaa0a9308fd8de47fb1a61eba8ea17eca52006e
-'http://http.debian.net/debian/pool/main/s/sysvinit/sysvinit_3.08.orig.tar.gz' sysvinit_3.08.orig.tar.gz 513674 SHA256:325e42ae4ae5ae3e4d989e0604aeb5e4eae5f3ee21e401db3c79000718f8c836
-'http://http.debian.net/debian/pool/main/s/sysvinit/sysvinit_3.08-3.debian.tar.xz' sysvinit_3.08-3.debian.tar.xz 137976 SHA256:56d9e48a636ddb13f0bdba837692020f39501605b378142416a7848725075d28
+'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.08-3.dsc' sysvinit_3.08-3.dsc 2359 SHA256:d2a262316ce2a141b46f21c4cbaa0a9308fd8de47fb1a61eba8ea17eca52006e
+'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.08.orig.tar.gz' sysvinit_3.08.orig.tar.gz 513674 SHA256:325e42ae4ae5ae3e4d989e0604aeb5e4eae5f3ee21e401db3c79000718f8c836
+'http://deb.debian.org/debian/pool/main/s/sysvinit/sysvinit_3.08-3.debian.tar.xz' sysvinit_3.08-3.debian.tar.xz 137976 SHA256:56d9e48a636ddb13f0bdba837692020f39501605b378142416a7848725075d28
 ```
+
+Other potentially useful URLs:
+
+- https://sources.debian.net/src/sysvinit/3.08-3/ (for browsing the source)
+- https://sources.debian.net/src/sysvinit/3.08-3/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/sysvinit/3.08-3/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `tar=1.34+dfsg-1.2`
 
