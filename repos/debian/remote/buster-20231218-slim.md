@@ -1,12 +1,13 @@
 ## `debian:buster-20231218-slim`
 
 ```console
-$ docker pull debian@sha256:61e877db832ab700e0016a1f65861021d98f51696951bf59e563e768776596f3
+$ docker pull debian@sha256:f149ba7869035b3aaca9afa676104d08a5fc44abf450eedd3ea73f9d8714b669
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 3
+-	Platforms: 4
 	-	linux; amd64
+	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; 386
 
@@ -34,6 +35,32 @@ CMD ["bash"]
 	-	`sha256:faac0b3889808c27af96e662a1082eef35772c35dcee1c7334f5f5a22b4149d7`  
 		Last Modified: Tue, 19 Dec 2023 01:26:21 GMT  
 		Size: 27.2 MB (27188221 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `debian:buster-20231218-slim` - linux; arm variant v7
+
+```console
+$ docker pull debian@sha256:ad079efd8b25f15e48cee433ed49df4eff3d1622d669ed8f548b7c9a0fea2ded
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **22.8 MB (22795803 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:e6f8774cdb6b3107f83e7847a0003578dd5afdb8bedeae350e730c268fd8b1e0`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Tue, 19 Dec 2023 02:08:27 GMT
+ADD file:24df0653e55efc5ba9ec22911758d187c26dbe6bda2d417ff56bc3d9a9072dd4 in / 
+# Tue, 19 Dec 2023 02:08:27 GMT
+CMD ["bash"]
+```
+
+-	Layers:
+	-	`sha256:99a10db9a1b078c63980e0e4fc7242bdb6d9ba7c91dd8e0883a55756584bea0f`  
+		Last Modified: Tue, 19 Dec 2023 02:13:13 GMT  
+		Size: 22.8 MB (22795803 bytes)  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:buster-20231218-slim` - linux; arm64 variant v8

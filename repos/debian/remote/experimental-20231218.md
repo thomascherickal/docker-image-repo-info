@@ -1,16 +1,19 @@
 ## `debian:experimental-20231218`
 
 ```console
-$ docker pull debian@sha256:ba58ab81aeffb3b27abece5c3ec43f2574900580d190c31b5b2c46019f10c09e
+$ docker pull debian@sha256:9498694dbad50918e866f3e21e1cd8df24ec8ac67f38b91d9bd914fcd27d816c
 ```
 
 -	Manifest MIME: `application/vnd.docker.distribution.manifest.list.v2+json`
--	Platforms: 6
+-	Platforms: 9
 	-	linux; amd64
 	-	linux; arm variant v5
+	-	linux; arm variant v7
 	-	linux; arm64 variant v8
 	-	linux; 386
+	-	linux; mips64le
 	-	linux; ppc64le
+	-	linux; riscv64
 	-	linux; s390x
 
 ### `debian:experimental-20231218` - linux; amd64
@@ -77,6 +80,38 @@ RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources
 		Size: 220.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `debian:experimental-20231218` - linux; arm variant v7
+
+```console
+$ docker pull debian@sha256:1398349d9be9f6ca48735cf55160d4095619bb7ef2936176135ea50bd96ed0ec
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **44.9 MB (44898984 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:dc49f2727aae1d8ba1209b179803ed8631d7757a97180f9f12b2f01d848e825b`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Tue, 19 Dec 2023 02:10:22 GMT
+ADD file:8c572d76514c8c3ab2fbc43b33253870636fdd9346ec932b8b28fb144417b995 in / 
+# Tue, 19 Dec 2023 02:10:22 GMT
+CMD ["bash"]
+# Tue, 19 Dec 2023 02:10:33 GMT
+RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources.list.d/experimental.list
+```
+
+-	Layers:
+	-	`sha256:ef74c9caa47d85169a03d60e3f17305d9a3aa24a2699bf19e2c9a7231abb198d`  
+		Last Modified: Tue, 19 Dec 2023 02:16:38 GMT  
+		Size: 44.9 MB (44898765 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:1394aa29505df7884ab0b087fd74b8f1f2322e22f678e6cfb08cdbd0e8252c6c`  
+		Last Modified: Tue, 19 Dec 2023 02:16:58 GMT  
+		Size: 219.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ### `debian:experimental-20231218` - linux; arm64 variant v8
 
 ```console
@@ -141,6 +176,38 @@ RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources
 		Size: 219.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
+### `debian:experimental-20231218` - linux; mips64le
+
+```console
+$ docker pull debian@sha256:0c7e43fb354df78f6ddb66e620f331543698ed17ad9e8a4f636e7f1389469ae0
+```
+
+-	Docker Version: 20.10.23
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **49.3 MB (49348069 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:96d296171bec472fbd0e31f81c100b2330f3bfacee28a8aab8b5a56242b52c55`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Tue, 19 Dec 2023 02:21:33 GMT
+ADD file:84a1f7155d4dfd433fef3204de38861d231cda5320de89584741b14da1e4c1a6 in / 
+# Tue, 19 Dec 2023 02:21:39 GMT
+CMD ["bash"]
+# Tue, 19 Dec 2023 02:22:21 GMT
+RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources.list.d/experimental.list
+```
+
+-	Layers:
+	-	`sha256:4fd948dbc4658e150756cf1c458b5d880c3b99ae83cf2208a9ce82b46b1f3dc3`  
+		Last Modified: Tue, 19 Dec 2023 02:32:56 GMT  
+		Size: 49.3 MB (49347845 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:3a91429edfd93e0903aca100a9e8bfc6a257289ff5655cc3431d3f897364b730`  
+		Last Modified: Tue, 19 Dec 2023 02:33:35 GMT  
+		Size: 224.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
 ### `debian:experimental-20231218` - linux; ppc64le
 
 ```console
@@ -171,6 +238,38 @@ RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources
 	-	`sha256:f5b07a8dd4ef570b865cb61683551cacc9daff3728e5e2f63ccc1a7cad5fb942`  
 		Last Modified: Tue, 19 Dec 2023 01:31:14 GMT  
 		Size: 221.0 B  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+
+### `debian:experimental-20231218` - linux; riscv64
+
+```console
+$ docker pull debian@sha256:e0bf38cfc5462b792b87e71081f3ae37d56da48a46f61a1446b03c1a65cdbbbf
+```
+
+-	Docker Version: 20.10.25
+-	Manifest MIME: `application/vnd.docker.distribution.manifest.v2+json`
+-	Total Size: **48.2 MB (48232774 bytes)**  
+	(compressed transfer size, not on-disk size)
+-	Image ID: `sha256:9a9dadeb4e9e455ad05c8f8a61ace661f7863bb03519ce93058c91748067cd94`
+-	Default Command: `["bash"]`
+
+```dockerfile
+# Tue, 19 Dec 2023 02:11:00 GMT
+ADD file:cacd9b8eda0a4db6199752d3c802d84baa80f1cfb12c41e0c567aea97d7d6f76 in / 
+# Tue, 19 Dec 2023 02:11:02 GMT
+CMD ["bash"]
+# Tue, 19 Dec 2023 02:11:36 GMT
+RUN echo 'deb http://deb.debian.org/debian experimental main' > /etc/apt/sources.list.d/experimental.list
+```
+
+-	Layers:
+	-	`sha256:63f5282077c764e50b037060efc122153a325e5126b84d94374504cf95b4b665`  
+		Last Modified: Tue, 19 Dec 2023 02:14:11 GMT  
+		Size: 48.2 MB (48232549 bytes)  
+		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
+	-	`sha256:56b94132f8863bc3e6ceee88d025f4ec9794193b63d54500eec256ca40fef10d`  
+		Last Modified: Tue, 19 Dec 2023 02:14:57 GMT  
+		Size: 225.0 B  
 		MIME: application/vnd.docker.image.rootfs.diff.tar.gzip
 
 ### `debian:experimental-20231218` - linux; s390x
