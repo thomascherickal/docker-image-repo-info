@@ -1,9 +1,9 @@
-# `openjdk:22-ea-27-jdk-bullseye`
+# `openjdk:22-ea-28-jdk-bullseye`
 
 ## Docker Metadata
 
-- Image ID: `sha256:97cae20e0724c56ac0131ee3eb9003070aab8dad285e833a86d38c8b9a5944e6`
-- Created: `2023-12-09T05:52:55.6759981Z`
+- Image ID: `sha256:693fcc505ffe13a2a1a4da54e6ff0dbe2042fb0d1877e0e4a2f45e3c2f855027`
+- Created: `2023-12-15T19:48:12Z`
 - Virtual Size: ~ 691.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -12,7 +12,7 @@
   - `PATH=/usr/local/openjdk-22/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
   - `JAVA_HOME=/usr/local/openjdk-22`
   - `LANG=C.UTF-8`
-  - `JAVA_VERSION=22-ea+27`
+  - `JAVA_VERSION=22-ea+28`
 
 ## `dpkg` (`.deb`-based packages)
 
