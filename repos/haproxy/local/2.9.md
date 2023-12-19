@@ -1,19 +1,19 @@
-# `haproxy:2.9.0`
+# `haproxy:2.9.1`
 
 ## Docker Metadata
 
-- Image ID: `sha256:fabf94802a1334e6693812b5ceafd3716447fa9a5ea4818aba72cbc70791e71c`
-- Created: `2023-12-11T23:56:16Z`
-- Virtual Size: ~ 121.13 Mb  
+- Image ID: `sha256:b7b500699a224e5f02e2aa308de296433c036725ecebaf924c47b99986828a8a`
+- Created: `2023-12-15T18:13:27Z`
+- Virtual Size: ~ 121.14 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["docker-entrypoint.sh"]`
 - Command: `["haproxy","-f","/usr/local/etc/haproxy/haproxy.cfg"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `HAPROXY_VERSION=2.9.0`
-  - `HAPROXY_URL=https://www.haproxy.org/download/2.9/src/haproxy-2.9.0.tar.gz`
-  - `HAPROXY_SHA256=fba18acd1a46337fe20ae07c816c2496c8602b80a1bc9ff3768d4caa5fb80eab`
+  - `HAPROXY_VERSION=2.9.1`
+  - `HAPROXY_URL=https://www.haproxy.org/download/2.9/src/haproxy-2.9.1.tar.gz`
+  - `HAPROXY_SHA256=d5801c772aab9c43f40964b7b33b4388d14b5b45750be4d2671785863cdb9f1c`
 
 ## `dpkg` (`.deb`-based packages)
 
@@ -1464,11 +1464,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/libzstd/1.5.4+dfsg2-5/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/libzstd/1.5.4+dfsg2-5/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `linux=6.1.66-1`
+### `dpkg` source package: `linux=6.1.67-1`
 
 Binary Packages:
 
-- `linux-libc-dev:amd64=6.1.66-1`
+- `linux-libc-dev:amd64=6.1.67-1`
 
 Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 
@@ -1483,17 +1483,17 @@ Licenses: (parsed from: `/usr/share/doc/linux-libc-dev/copyright`)
 Source:
 
 ```console
-$ apt-get source -qq --print-uris linux=6.1.66-1
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.66-1.dsc' linux_6.1.66-1.dsc 290924 SHA256:769e7dae9fe82bc29b55eb606fda6b0cc6221294a2ba3d7e7fcc78de84683f61
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.66.orig.tar.xz' linux_6.1.66.orig.tar.xz 137491816 SHA256:71edfafca7cd8eaae26a8d29c1091bd39cfc2d196de38570b159c94f0d3e1ad5
-'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.66-1.debian.tar.xz' linux_6.1.66-1.debian.tar.xz 1580256 SHA256:907af29ab9ff38594df378ba5c60619110389b92ba2a09a21adc0382f76e0240
+$ apt-get source -qq --print-uris linux=6.1.67-1
+'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.67-1.dsc' linux_6.1.67-1.dsc 290924 SHA256:1da84a3bc6950236ff6b22504ba279804bb18d05dc5b03c86ffb29ff1ef4c6e9
+'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.67.orig.tar.xz' linux_6.1.67.orig.tar.xz 137495096 SHA256:a1307f650d1a9c24e0318c3a92b16f152409195140f52bc75ec38c431433e3ca
+'http://deb.debian.org/debian/pool/main/l/linux/linux_6.1.67-1.debian.tar.xz' linux_6.1.67-1.debian.tar.xz 1580580 SHA256:ddf9925ca2b5fdda7a8372154da7bf80d1cb9ec324b7b39d2f4ed296456b1aad
 ```
 
 Other potentially useful URLs:
 
-- https://sources.debian.net/src/linux/6.1.66-1/ (for browsing the source)
-- https://sources.debian.net/src/linux/6.1.66-1/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/linux/6.1.66-1/ (for access to the source package after it no longer exists in the archive)
+- https://sources.debian.net/src/linux/6.1.67-1/ (for browsing the source)
+- https://sources.debian.net/src/linux/6.1.67-1/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/linux/6.1.67-1/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `lua5.3=5.3.6-2`
 
