@@ -2,9 +2,9 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:8fe4e5ad49217353845345f5c3c2fe2956779f72183d94823a97b6fe4018b4f7`
-- Created: `2023-12-13T03:22:08.911176749Z`
-- Virtual Size: ~ 734.60 Mb  
+- Image ID: `sha256:ff66e19ad5fe7ca103b8d57660a8aacc3b25234553c786d8963714b2474b8f2c`
+- Created: `2023-12-16T19:30:58.75597125Z`
+- Virtual Size: ~ 719.38 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/entrypoint.sh"]`
@@ -693,30 +693,15 @@ $ apt-get source -qq --print-uris gdbm=1.23-1
 'http://archive.ubuntu.com/ubuntu/pool/main/g/gdbm/gdbm_1.23-1.debian.tar.xz' gdbm_1.23-1.debian.tar.xz 18484 SHA512:e7ca0a608da94e5b5bc5949e27b794c87e032202eb09359ad55f6c1a7a6e895f01126781a4e0fbfdb8fef3de7c4a312b9d5a653aaf55ce8c5afbceb945945253
 ```
 
-### `dpkg` source package: `glibc=2.35-0ubuntu3.4`
-
-Binary Packages:
-
-- `libc-bin=2.35-0ubuntu3.4`
-- `locales=2.35-0ubuntu3.4`
-
-Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/locales/copyright`)
-
-- `GFDL-1.3`
-- `GPL-2`
-- `LGPL-2.1`
-
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
-
-
 ### `dpkg` source package: `glibc=2.35-0ubuntu3.5`
 
 Binary Packages:
 
+- `libc-bin=2.35-0ubuntu3.5`
 - `libc6:amd64=2.35-0ubuntu3.5`
+- `locales=2.35-0ubuntu3.5`
 
-Licenses: (parsed from: `/usr/share/doc/libc6/copyright`)
+Licenses: (parsed from: `/usr/share/doc/libc-bin/copyright`, `/usr/share/doc/libc6/copyright`, `/usr/share/doc/locales/copyright`)
 
 - `GFDL-1.3`
 - `GPL-2`
@@ -1948,20 +1933,25 @@ $ apt-get source -qq --print-uris sysvinit=3.01-1ubuntu1
 'http://archive.ubuntu.com/ubuntu/pool/main/s/sysvinit/sysvinit_3.01-1ubuntu1.debian.tar.xz' sysvinit_3.01-1ubuntu1.debian.tar.xz 131304 SHA512:4c835855b58742480284b17959d54b8ac734466fc87321ddf021b61bb3e38b58aab6d07a7f27f09c0b109b4e442c0dce4d797feccce2884f5b401e13abf73554
 ```
 
-### `dpkg` source package: `tar=1.34+dfsg-1ubuntu0.1.22.04.1`
+### `dpkg` source package: `tar=1.34+dfsg-1ubuntu0.1.22.04.2`
 
 Binary Packages:
 
-- `tar=1.34+dfsg-1ubuntu0.1.22.04.1`
+- `tar=1.34+dfsg-1ubuntu0.1.22.04.2`
 
 Licenses: (parsed from: `/usr/share/doc/tar/copyright`)
 
 - `GPL-2`
 - `GPL-3`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
+```console
+$ apt-get source -qq --print-uris tar=1.34+dfsg-1ubuntu0.1.22.04.2
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1ubuntu0.1.22.04.2.dsc' tar_1.34+dfsg-1ubuntu0.1.22.04.2.dsc 1829 SHA512:e716a22f84cf0ebc0250a4ebb5d7c1fb5f055470a376c20d37a9378e85535aba8d547b6fe64df17bdedd5130d47647613dd5f2083f93cae934961b1b5ba37077
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg.orig.tar.xz' tar_1.34+dfsg.orig.tar.xz 1981736 SHA512:ec5553c53c4a5f523f872a8095f699c17bf41400fbe2f0f8b45291ccbaf9ac51dea8445c81bd95697f8853c95dcad3250071d23dbbcab857a428ee92e647bde9
+'http://archive.ubuntu.com/ubuntu/pool/main/t/tar/tar_1.34%2bdfsg-1ubuntu0.1.22.04.2.debian.tar.xz' tar_1.34+dfsg-1ubuntu0.1.22.04.2.debian.tar.xz 20544 SHA512:9840407a1364154c831665c3f1739c80a84806567fe5ad27ee3ac70f4c18e27d7f2f9e0557b6e2a634ab39449a8fc95b96f1813f5c203df8ece5226a6afe8c7c
+```
 
 ### `dpkg` source package: `tzdata=2023c-0ubuntu0.22.04.2`
 
