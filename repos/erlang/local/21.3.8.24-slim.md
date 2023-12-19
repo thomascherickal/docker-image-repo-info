@@ -2,8 +2,8 @@
 
 ## Docker Metadata
 
-- Image ID: `sha256:d0af5925592beb14f2993b844f354766c549deaf9f3d45e1258e4ca8f8e2ea95`
-- Created: `2023-11-21T12:13:23.655497173Z`
+- Image ID: `sha256:92e95833848abcd980d3a522967226bef8b61c789be4426c67da06eecce0d71d`
+- Created: `2023-12-19T06:22:39.851475141Z`
 - Virtual Size: ~ 250.15 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
@@ -686,11 +686,11 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/gnupg2/2.2.12-1+deb10u2/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/gnupg2/2.2.12-1+deb10u2/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `gnutls28=3.6.7-4+deb10u10`
+### `dpkg` source package: `gnutls28=3.6.7-4+deb10u11`
 
 Binary Packages:
 
-- `libgnutls30:amd64=3.6.7-4+deb10u10`
+- `libgnutls30:amd64=3.6.7-4+deb10u11`
 
 Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 
@@ -706,13 +706,20 @@ Licenses: (parsed from: `/usr/share/doc/libgnutls30/copyright`)
 - `The MIT License (MIT)`
 - `The main library is licensed under GNU Lesser`
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris gnutls28=3.6.7-4+deb10u11
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7-4%2bdeb10u11.dsc' gnutls28_3.6.7-4+deb10u11.dsc 3265 SHA256:973b459a8c0fa5019354b1d903f727f505aea77ca9e1a250dea3ad5f9eea2797
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7.orig.tar.xz' gnutls28_3.6.7.orig.tar.xz 8153728 SHA256:5b3409ad5aaf239808730d1ee12fdcd148c0be00262c7edf157af655a8a188e2
+'http://deb.debian.org/debian-security/pool/updates/main/g/gnutls28/gnutls28_3.6.7-4%2bdeb10u11.debian.tar.xz' gnutls28_3.6.7-4+deb10u11.debian.tar.xz 103904 SHA256:81e40a799a93438cdf14cd01ab1c73b4841d7d524cf018a9e764911af13a05af
+```
 
-- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u10/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u11/ (for browsing the source)
+- https://sources.debian.net/src/gnutls28/3.6.7-4+deb10u11/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/gnutls28/3.6.7-4+deb10u11/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `grep=3.3-1`
 
@@ -1394,26 +1401,33 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/mawk/1.3.3-17/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/mawk/1.3.3-17/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u4`
+### `dpkg` source package: `ncurses=6.1+20181013-2+deb10u5`
 
 Binary Packages:
 
-- `libncursesw6:amd64=6.1+20181013-2+deb10u4`
-- `libtinfo6:amd64=6.1+20181013-2+deb10u4`
-- `ncurses-base=6.1+20181013-2+deb10u4`
-- `ncurses-bin=6.1+20181013-2+deb10u4`
+- `libncursesw6:amd64=6.1+20181013-2+deb10u5`
+- `libtinfo6:amd64=6.1+20181013-2+deb10u5`
+- `ncurses-base=6.1+20181013-2+deb10u5`
+- `ncurses-bin=6.1+20181013-2+deb10u5`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris ncurses=6.1+20181013-2+deb10u5
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u5.dsc' ncurses_6.1+20181013-2+deb10u5.dsc 3914 SHA256:69ec0fb487636ca83f5f85501188f5df982efd5396390a7e78746012b14d9bdf
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013.orig.tar.gz' ncurses_6.1+20181013.orig.tar.gz 3411288 SHA256:aeb1d098ee90b39a763b57b00da19ff5bbb573dea077f98fbd85d59444bb3b59
+'http://deb.debian.org/debian-security/pool/updates/main/n/ncurses/ncurses_6.1%2b20181013-2%2bdeb10u5.debian.tar.xz' ncurses_6.1+20181013-2+deb10u5.debian.tar.xz 64164 SHA256:8fdb752c13ffc01fe09803a2b862783d769b320992816dbf79f863194eb1f80f
+```
 
-- http://snapshot.debian.org/package/ncurses/6.1+20181013-2+deb10u4/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u5/ (for browsing the source)
+- https://sources.debian.net/src/ncurses/6.1+20181013-2+deb10u5/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/ncurses/6.1+20181013-2+deb10u5/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `nettle=3.4.1-1+deb10u1`
 
@@ -1750,23 +1764,30 @@ Other potentially useful URLs:
 - https://sources.debian.net/src/tar/1.30+dfsg-6/debian/copyright/ (for direct copyright/license information)
 - http://snapshot.debian.org/package/tar/1.30+dfsg-6/ (for access to the source package after it no longer exists in the archive)
 
-### `dpkg` source package: `tzdata=2021a-0+deb10u11`
+### `dpkg` source package: `tzdata=2021a-0+deb10u12`
 
 Binary Packages:
 
-- `tzdata=2021a-0+deb10u11`
+- `tzdata=2021a-0+deb10u12`
 
 **WARNING:** unable to detect licenses! (package likely not compliant with DEP-5)  
 If source is available (seen below), check the contents of `debian/copyright` within it.
 
 
-**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
-This is *usually* due to a new package version being released and the old version being removed.
+Source:
 
-The source package *may* still be available for download from:
+```console
+$ apt-get source -qq --print-uris tzdata=2021a-0+deb10u12
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u12.dsc' tzdata_2021a-0+deb10u12.dsc 2071 SHA256:96ba5768928acf5539b110a6042ae81c6796f32ac97f3fb58127af3a97288a14
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a.orig.tar.gz' tzdata_2021a.orig.tar.gz 411892 SHA256:39e7d2ba08c68cbaefc8de3227aab0dec2521be8042cf56855f7dc3a9fb14e08
+'http://deb.debian.org/debian-security/pool/updates/main/t/tzdata/tzdata_2021a-0%2bdeb10u12.debian.tar.xz' tzdata_2021a-0+deb10u12.debian.tar.xz 125736 SHA256:56d68937d3a1a2172d61674bd0a696ea6a2a2c8a134ac2fba0b1b94c7a9ed541
+```
 
-- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u11/
+Other potentially useful URLs:
 
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u12/ (for browsing the source)
+- https://sources.debian.net/src/tzdata/2021a-0+deb10u12/debian/copyright/ (for direct copyright/license information)
+- http://snapshot.debian.org/package/tzdata/2021a-0+deb10u12/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `unixodbc=2.3.6-0.1`
 
