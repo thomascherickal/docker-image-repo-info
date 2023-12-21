@@ -1177,15 +1177,9 @@ Licenses: (parsed from: `/usr/share/doc/libssh-4/copyright`)
 - `LGPL-2.1+~OpenSSL`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris libssh=0.9.6-2ubuntu0.22.04.1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.6-2ubuntu0.22.04.1.dsc' libssh_0.9.6-2ubuntu0.22.04.1.dsc 2884 SHA512:e7a13bc669e9c4e26695a717451f20df1c13cd67537f69c84bb9621784acac6d6f98e83d3ef3cd60d2dcbefce8cf55a0b262c0ce3da2b96fc3339dd30d844cb3
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.6.orig.tar.xz' libssh_0.9.6.orig.tar.xz 1053056 SHA512:4040ec4af937e95be2e41313ef6d4db60b46b8d4dea10c09402398127c1d1ca8843392d207088aeee3c7ef631c6ae7b66861327dcebf78ed3af0723777619fd1
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.6.orig.tar.xz.asc' libssh_0.9.6.orig.tar.xz.asc 833 SHA512:1b6223efe9e4ce864cd8d97d517f9f0d38c1cd502b5874fdc6a58731038c2830a72ce753f02fc062d9d4d5922107ec9a2e62fe24a704bb5dec0dcfecdb569fe6
-'http://archive.ubuntu.com/ubuntu/pool/main/libs/libssh/libssh_0.9.6-2ubuntu0.22.04.1.debian.tar.xz' libssh_0.9.6-2ubuntu0.22.04.1.debian.tar.xz 37124 SHA512:d922c7764cd6be6221594eb4f9c246849d54acbc722a4841ef100ff6bd5414a240fb15e0f25dffcd76b3fc3cd0294ec66a9c4298325cbd3e47690fc4c873b0b7
-```
 
 ### `dpkg` source package: `libtasn1-6=4.18.0-4build1`
 
