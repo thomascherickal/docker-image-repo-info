@@ -1,10 +1,10 @@
-# `jetty:10.0.18`
+# `jetty:10.0.19`
 
 ## Docker Metadata
 
-- Image ID: `sha256:ff05d12a47fe2e0bcf2a3268e7b32721bcebaa0ed11ada11b51532b20b0226fe`
-- Created: `2023-12-16T13:37:47.983513793Z`
-- Virtual Size: ~ 449.28 Mb  
+- Image ID: `sha256:f9076d26afcbf3c439179b9e3ff7a50cf9baa69ae11e23b8baf688a250e8bc96`
+- Created: `2023-12-21T18:45:23.351671937Z`
+- Virtual Size: ~ 449.23 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["/docker-entrypoint.sh"]`
@@ -16,11 +16,11 @@
   - `LANGUAGE=en_US:en`
   - `LC_ALL=en_US.UTF-8`
   - `JAVA_VERSION=jdk-21.0.1+12`
-  - `JETTY_VERSION=10.0.18`
+  - `JETTY_VERSION=10.0.19`
   - `JETTY_HOME=/usr/local/jetty`
   - `JETTY_BASE=/var/lib/jetty`
   - `TMPDIR=/tmp/jetty`
-  - `JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/10.0.18/jetty-home-10.0.18.tar.gz`
+  - `JETTY_TGZ_URL=https://repo1.maven.org/maven2/org/eclipse/jetty/jetty-home/10.0.19/jetty-home-10.0.19.tar.gz`
   - `JETTY_GPG_KEYS=AED5EE6C45D0FE8D5D1B164F27DED4BF6216DB8F 	2A684B57436A81FA8706B53C61C3351A438A3B7D 	5989BAF76217B843D66BE55B2D0E1FB8FE4B68B4 	B59B67FD7904984367F931800818D9D68FB67BAC 	BFBB21C246D7776836287A48A04E0C74ABB35FEA 	8B096546B1A8F02656B15D3B1677D141BCF3584D 	F254B35617DC255D9344BCFA873A8E86B4372146 	E22488CC94F63E3FC928536C4241C08270D999C3`
 - Labels:
   - `org.opencontainers.image.ref.name=ubuntu`
