@@ -611,20 +611,13 @@ Licenses: (parsed from: `/usr/share/doc/curl/copyright`, `/usr/share/doc/libcurl
 - `other`
 - `public-domain`
 
-Source:
+**WARNING:** unable to find source (`apt-get source` failed or returned no results)!  
+This is *usually* due to a new package version being released and the old version being removed.
 
-```console
-$ apt-get source -qq --print-uris curl=7.74.0-1.3+deb11u10
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u10.dsc' curl_7.74.0-1.3+deb11u10.dsc 2703 SHA256:991d08ec7e549e5db57ef7c010d5014db2f96be7772b07b487bb65974aee0683
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0.orig.tar.gz' curl_7.74.0.orig.tar.gz 4043409 SHA256:e56b3921eeb7a2951959c02db0912b5fcd5fdba5aca071da819e1accf338bbd7
-'http://deb.debian.org/debian-security/pool/updates/main/c/curl/curl_7.74.0-1.3%2bdeb11u10.debian.tar.xz' curl_7.74.0-1.3+deb11u10.debian.tar.xz 72728 SHA256:ec93985b1f1a40221dfe06650db17e84d38432d7f7520d7ffd6018fff43e6c3a
-```
+The source package *may* still be available for download from:
 
-Other potentially useful URLs:
+- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u10/
 
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u10/ (for browsing the source)
-- https://sources.debian.net/src/curl/7.74.0-1.3+deb11u10/debian/copyright/ (for direct copyright/license information)
-- http://snapshot.debian.org/package/curl/7.74.0-1.3+deb11u10/ (for access to the source package after it no longer exists in the archive)
 
 ### `dpkg` source package: `cyrus-sasl2=2.1.27+dfsg-2.1+deb11u1`
 
