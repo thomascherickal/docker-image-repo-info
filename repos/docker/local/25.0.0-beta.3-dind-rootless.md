@@ -1,16 +1,16 @@
-# `docker:25.0.0-beta.2-dind-rootless`
+# `docker:25.0.0-beta.3-dind-rootless`
 
 ## Docker Metadata
 
-- Image ID: `sha256:d83140112e2582356325aa1cc8e8e8b5183c8bda9a4e741d978c3ea8441dca03`
-- Created: `2023-12-12T23:39:18Z`
-- Virtual Size: ~ 391.55 Mb  
+- Image ID: `sha256:8d9419a545032921b1362e01d3e83da836b8f0cf991373a70e184563a5b24510`
+- Created: `2023-12-21T18:04:29Z`
+- Virtual Size: ~ 391.62 Mb  
   (total size of all layers on-disk)
 - Arch: `linux`/`amd64`
 - Entrypoint: `["dockerd-entrypoint.sh"]`
 - Environment:
   - `PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin`
-  - `DOCKER_VERSION=25.0.0-beta.2`
+  - `DOCKER_VERSION=25.0.0-beta.3`
   - `DOCKER_BUILDX_VERSION=0.12.0`
   - `DOCKER_COMPOSE_VERSION=2.23.3`
   - `DOCKER_TLS_CERTDIR=/certs`
@@ -922,16 +922,16 @@ X11
 ### `apk` package: `openssh-client-common`
 
 ```console
-openssh-client-common-9.5_p1-r0 description:
+openssh-client-common-9.6_p1-r0 description:
 OpenBSD's SSH client common files
 
-openssh-client-common-9.5_p1-r0 webpage:
+openssh-client-common-9.6_p1-r0 webpage:
 https://www.openssh.com/portable.html
 
-openssh-client-common-9.5_p1-r0 installed size:
-2828 KiB
+openssh-client-common-9.6_p1-r0 installed size:
+2872 KiB
 
-openssh-client-common-9.5_p1-r0 license:
+openssh-client-common-9.6_p1-r0 license:
 SSH-OpenSSH
 
 ```
@@ -939,16 +939,16 @@ SSH-OpenSSH
 ### `apk` package: `openssh-client-default`
 
 ```console
-openssh-client-default-9.5_p1-r0 description:
+openssh-client-default-9.6_p1-r0 description:
 OpenBSD's SSH client
 
-openssh-client-default-9.5_p1-r0 webpage:
+openssh-client-default-9.6_p1-r0 webpage:
 https://www.openssh.com/portable.html
 
-openssh-client-default-9.5_p1-r0 installed size:
-908 KiB
+openssh-client-default-9.6_p1-r0 installed size:
+916 KiB
 
-openssh-client-default-9.5_p1-r0 license:
+openssh-client-default-9.6_p1-r0 license:
 SSH-OpenSSH
 
 ```
@@ -956,16 +956,16 @@ SSH-OpenSSH
 ### `apk` package: `openssh-keygen`
 
 ```console
-openssh-keygen-9.5_p1-r0 description:
+openssh-keygen-9.6_p1-r0 description:
 ssh helper program for generating keys
 
-openssh-keygen-9.5_p1-r0 webpage:
+openssh-keygen-9.6_p1-r0 webpage:
 https://www.openssh.com/portable.html
 
-openssh-keygen-9.5_p1-r0 installed size:
+openssh-keygen-9.6_p1-r0 installed size:
 556 KiB
 
-openssh-keygen-9.5_p1-r0 license:
+openssh-keygen-9.6_p1-r0 license:
 SSH-OpenSSH
 
 ```
